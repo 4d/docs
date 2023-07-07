@@ -477,7 +477,7 @@ O seguinte código:
 
 ### `<!--#4DLOOP array-->`
 
-This syntax makes a loop for each array item. The array current item is increased when each code portion is repeated.
+Esta sintaxe cria um ciclo para cada item do array. The array current item is increased when each code portion is repeated.
 
 > This syntax cannot be used with two dimension arrays. In this case, it is better to combine a method with nested loops.
 
@@ -595,11 +595,11 @@ In case of an interpretation error, the text "`<!--#4DLOOP expression-->`: descr
 
 Podem ser mostradas as seguintes mensagens:
 
-- Unexpected expression type (standard error);
+- Tipo de expressão inesperado (erro padrão);
 - Incorrect table name (error on the table name);
 - An array was expected (the variable is not an array or is a two dimension array);
 - The method does not exist;
-- Syntax error (when the method is executing);
+- Erro de sintaxe (quando o método está em execução);
 - Access error (you do not have the appropriate access privileges to access the table or the method).
 - 4DENDLOOP expected (the `<!--#4DENDLOOP-->` number does not match the `<!--#4DLOOP -->`).
 
@@ -615,7 +615,7 @@ O método deve devolver o texto em `$0`. If the string starts with the code char
 
 For example, let’s say that you insert the following comment `“Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
-The `MYMETH` method is as follows:
+O método `MYMETH` é o seguinte:
 
 ```4d
   //MYMETH
@@ -633,7 +633,7 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 
 #### Sintaxe alternativa: `$4DTEXT(expressão)`
 
-The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. For example, if you write (in an HTML page):
+The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. Por exemplo, se escrever (numa página HTML):
 
 ```html
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>

@@ -279,16 +279,16 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 #### Descrição
 
-A função `.delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
 
-If the file is currently open, an error is generated.
+Se o arquivo estiver aberto atualmente, um erro é gerado.
 
-If the file does not exist on disk, the function does nothing (no error is generated).
+Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
 > **ATENÇÃO**: `.delete()` pode apagar qualquer arquivo de um disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
 
 #### Exemplo
 
-You want to delete a specific file in the database folder:
+Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -319,9 +319,9 @@ You want to delete a specific file in the database folder:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                        |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| Resultados | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                            |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
+| Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist|<!-- END REF -->
 
 
 |
@@ -329,17 +329,17 @@ You want to delete a specific file in the database folder:
 
 #### Descrição
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+A função `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retorna os conteúdos de um arquivo de informação **.exe**, **.dll** ou **.plist** como um objeto<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o arquivo não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função devolve um objecto vazio (não é gerado nenhum erro).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-**Returned object with a .exe or .dll file**
+**Objeto devolvido com um arquivo .exe ou .dll**
 
 > A leitura de um .exe ou .dll só é possível no Windows.
 
-All property values are Text.
+Todos os valores de propriedades são Texto.
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
@@ -410,15 +410,15 @@ ALERT($info.
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                             |
-| ----------------- | ---------- | -- | ------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                      |
-| newName           | Text       | -> | Full name for the moved file          |
-| Resultados        | 4D. File   | <- | Moved file|<!-- END REF -->
+| Parâmetro         | Tipo       |    | Descrição                                 |
+| ----------------- | ---------- | -- | ----------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                          |
+| newName           | Text       | -> | Nome completo do ficheiro movido          |
+| Resultados        | 4D. File   | <- | Arquivo movido|<!-- END REF -->
 
 
 |
@@ -426,15 +426,15 @@ ALERT($info.
 
 #### Descrição
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->move ou renomeia o objeto `File` na *destinationFolder* especificada<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
-By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
+Por padrão, o arquivo mantém o seu nome quando é movido. Se quiser renomear o arquivo movido, passe o novo nome completo no parâmetro *newName*. O novo nome deve cumprir com as regras de nomenclatura (por exemplo, não deve conter caracteres como ":", "/", etc.), do contrário se devolve um erro.
 
 **Objeto devolvido**
 
-The moved `File` object.
+O objecto `File` movido.
 
 #### Exemplo
 
@@ -461,38 +461,38 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetro  | Tipo                             |    | Descrição                                         |
-| ---------- | -------------------------------- | -- | ------------------------------------------------- |
-| mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
-| options    | Object                           | -> | Opening options                                   |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
+| Parâmetro  | Tipo                             |    | Descrição                                          |
+| ---------- | -------------------------------- | -- | -------------------------------------------------- |
+| mode       | Text                             | -> | Modo de abertura: "read", "write", "append"        |
+| options    | Object                           | -> | Opções de abertura                                 |
+| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
+A função `.open()` <!-- REF #FileClass.open().Summary -->cria e devolve um novo objeto [4D. FileHandle](FileHandleClass) no arquivo, no *mode* ou como as *options* especificadas<!-- END REF -->. Pode utilizar funções e propriedades da classe [4D. FileHandle](FileHandleClass) para escrever, ler ou anexar conteúdo ao arquivo.
 
-If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+Se utilizar o parâmetro *mode* (text), passe o modo de abertura para o file handle:
 
 
 
-| *mode*   | Descrição                                                                                                                                                                                                                        |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
-| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
-| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
+| *mode*   | Descrição                                                                                                                                                                                                                      |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "read"   | (Padrão) Cria um file handle para ler os valores do arquivo. Se o arquivo não existir em disco, um erro é retornado. Pode abrir quantos file handles quiser em modo "ler" no mesmo objeto File.                                |
+| "write"  | Cria um file handle para escrever os valores no arquivo (começando no início do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único file handle em modo "write" no mesmo objeto File. |
+| "append" | Cria um file handle para escrever os valores no arquivo (começando no fim do conteúdo do arquivo). Se o arquivo não existir em disco, é criado. Só se pode abrir um único file handle em modo "append" no mesmo objeto File.   |
 
 > O valor do modo ** é sensível a maiúsculas e minúsculas.
 
-If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
+Se utilizar o parâmetro *options* (objecto), pode passar mais opções para o file handle através das seguintes propriedades (estas propriedades podem ser lidas posteriormente a partir do [objeto file handle](FileHandleClass) aberto):
 
-| *options*         | Tipo           | Descrição                                                                                                                     | Default       |
-| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
-| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
-| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
+| *options*         | Tipo           | Descrição                                                                                                                                  | Por padrão    |
+| ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| `.mode`           | Text           | Modo de abertura (ver *mode* acima)                                                                                                        | "read"        |
+| `.charset`        | Text           | Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text ou Number | Processing mode for line breaks used when reading in the file (see below)                                                                  | "native" or 1 |
+| `.breakModeWrite` | Text ou Number | Processing mode for line breaks used when writing to the file (see below)                                                                  | "native" or 1 |
 
 The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
@@ -595,7 +595,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
@@ -623,9 +623,9 @@ For the `WinIcon` property, if the icon file does not exist or has an incorrect 
 
 ***info* parameter object with a .plist file**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Value types are preserved when possible.
+Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Os tipos de valores são preservados sempre que possível.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
+Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .plist, o seu valor é atualizado, mantendo o seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
 > Para definir um valor de tipo de data, o formato a utilizar é uma string de carimbo temporal json formada em ISO UTC sem milissegundos ("2003-02-01T01:02:03Z") como no editor plist de Xcode.
 
@@ -672,15 +672,15 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetro | Tipo |    | Descrição                                            |
-| --------- | ---- | -- | ---------------------------------------------------- |
-| content   | BLOB | -> | New contents for the file|<!-- END REF -->
+| Parâmetro | Tipo |    | Descrição                                                 |
+| --------- | ---- | -- | --------------------------------------------------------- |
+| content   | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescreve todo o conteúdo do ficheiro utilizando os dados armazenados no BLOB *content*<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 #### Exemplo
 
@@ -695,10 +695,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v19 R3 | Default for new projects: no BOM and (macOS) LF for EOL |
-| v17 R5 | Adicionado                                              |
+| Versão | Mudanças                                                   |
+| ------ | ---------------------------------------------------------- |
+| v19 R3 | Padrão para novos projectos: sem BOM e (macOS) LF para EOL |
+| v17 R5 | Adicionado                                                 |
 
 </details>
 
@@ -707,12 +707,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parâmetro   | Tipo    |    | Descrição                                                  |
-| ----------- | ------- | -- | ---------------------------------------------------------- |
-| text        | Text    | -> | Text to store in the file                                  |
-| charSetName | Text    | -> | Nome do conjunto de caracteres                             |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres                          |
-| breakMode   | Integer | -> | Processing mode for line breaks|<!-- END REF -->
+| Parâmetro   | Tipo    |    | Descrição                                                               |
+| ----------- | ------- | -- | ----------------------------------------------------------------------- |
+| text        | Text    | -> | Texto a armazenar no arquivo                                            |
+| charSetName | Text    | -> | Nome do conjunto de caracteres                                          |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres                                       |
+| breakMode   | Integer | -> | Modo de processamento para retornos de linha|<!-- END REF -->
 
 
 |
@@ -720,9 +720,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Descrição
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do ficheiro<!-- END REF -->.
 
-If the file referenced in the `File` object does not exist on the disk, it is created by the function. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
+Se o ficheiro referenciado no objeto `File` não existir no disco, é criado pela função. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 

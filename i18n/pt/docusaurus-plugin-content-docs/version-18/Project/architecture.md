@@ -27,7 +27,7 @@ A 4D project is made of several folders and files, stored within a single parent
 
 The Project folder typically contains the following hierarchy:
 
-- *databaseName*.4DProject file
+- Arquivo *databaseName*.4DProject
 - Sources
   - Classes
   - DatabaseMethods
@@ -38,7 +38,7 @@ The Project folder typically contains the following hierarchy:
 - DerivedData
 - Trash (se houver)
 
-### *databaseName*.4DProject file
+### Arquivo *databaseName*.4DProject
 
 Project development file, used to designate and launch the project. Esse arquivo pode ser aberto por:
 
@@ -173,7 +173,7 @@ The Logs folder contains all log files used by the project. Os ficheiros de regi
 
 ## Settings folder
 
-This folder contains **user settings files** used for database administration. File are added to the folder when necessary.
+This folder contains **user settings files** used for database administration. Os ficheiros são adicionados à pasta quando necessário.
 
 > If a data settings file exists in a Settings folder [in the data folder](#settings-folder), it takes priority over user settings file.
 

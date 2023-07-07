@@ -143,9 +143,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Gramática JSON
 
-| Nome | Tipo de dados | Valores possíveis                            |
-| ---- | ------------- | -------------------------------------------- |
-| icon | picture       | Relative or filesystem path in POSIX syntax. |
+| Nome | Tipo de dados | Valores possíveis                                |
+| ---- | ------------- | ------------------------------------------------ |
+| icon | picture       | Caminho relativo ou filesystem na sintaxe POSIX. |
 
 #### Objectos suportados
 
@@ -163,7 +163,7 @@ Here are the results using the various options for this property:
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
 | **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Esquerda** | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Esquerda** | O texto é colocado à direita do ícone. The contents of the button are aligned to the left.                                                       | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
 | **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
 | **Centrado** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 

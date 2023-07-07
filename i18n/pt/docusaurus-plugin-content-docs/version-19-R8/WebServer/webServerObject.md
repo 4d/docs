@@ -28,7 +28,7 @@ This allows you to develop independant components and features that come with th
 
 ## Instantiating a web server object
 
-The web server object of the host application (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created project:
+The web server object of the host application (default web server) is automatically loaded by 4D at startup. Assim, se escrever num projeto recém-criado:
 
 ```4d
 $nbSrv:=WEB Server list.length   

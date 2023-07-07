@@ -104,7 +104,7 @@ The `On Web Authentication` database method is NOT called:
 | $6         | Text       | <- | Senha                                                 |
 | $0         | Parâmetros | -> | True = request accepted, False = request rejected     |
 
-You must declare these parameters as follows:
+Estes parâmetros devem ser declarados da seguinte forma:
 
 ```4d
 //Método base On Web Authentication

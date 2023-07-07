@@ -3,7 +3,7 @@ id: webServerConfig
 title: Configuração
 ---
 
-The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
+The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D fornece valores padrão para cada configuração.
 
 ## Onde configurar os parâmetros?
 
@@ -194,7 +194,7 @@ Estado da comunicação por HTTPS. This option is described in [this section](Ad
 | webServer object      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Boolean, true to enable HSTS (default is false) |
 | `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)           |
 
-HTTP Strict Transport Security (HSTS) status.
+Estado do HTTP Strict Transport Security (HSTS).
 
 When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabled](#enable-http), the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace "https" by "http"). To forbid http redirections, you can [disable HTTP](#enable-http), however in this case an error message is displayed to client HTTP requests.
 
@@ -335,7 +335,7 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 | ---------------------------------- | -------------------------------------------------- | ----------- |
 | webServer object                   | [`keepSession`](API/WebServerClass.md#keepsession) |             |
 | `WEB SET OPTION`                   | `Web keep session`                                 |             |
-| Caixa de diálogos de configurações | Options (I) page/Automatic Session Management      |             |
+| Caixa de diálogos de configurações | Página Opções (I)/Gestão automática de sessões     |             |
 
 Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
 
@@ -357,7 +357,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 | Valor | Nome do formato         | Descrição                                                                                                                                                                                                                |
 | ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | Sem ficheiro de registo | Default                                                                                                                                                                                                                  |
+| 0     | Sem ficheiro de registo | Por padrão                                                                                                                                                                                                               |
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
 | 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
@@ -407,7 +407,7 @@ Default value: 100 (pass 0 to restore the default value).
 | --------------------- | ------------------------------------------------------ | ----------- |
 | webServer object      | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
-Minimum TLS version accepted for connections. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
+Versão mínima de TLS aceita para ligações. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
 
 Valores possíveis:
 

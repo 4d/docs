@@ -190,7 +190,7 @@ The most simple and secured way to log a user on the 4D web server is based upon
 - Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
 - The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
 
-1. Create a table with some fields, for example:
+1. Criar uma tabela com alguns campos, por exemplo:
 
 ![](../assets/en/WebServer/helloUsers.png)
 

@@ -953,7 +953,7 @@ Há, entretanto, uma diferença entre ambas as afirmações quando a seleção e
 
 #### Descrição
 
-A função `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->returns the dataclass of the entity selection<!-- END REF -->.
+A função `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->retorna a dataclass da entity selection<!-- END REF -->.
 
 Esta função é principalmente útil  no contexto do código genérico.
 
@@ -1478,7 +1478,7 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 | ----------- | ------------------- |:--:| ---------------------------------------------------------------------- |
 | pathString  | Text                | -> | Attribute path(s) and sorting instruction(s) for the entity selection  |
 | pathObjects | Collection          | -> | Coleção de objetos criterio                                            |
-| Resultados  | 4D. EntitySelection | <- | New entity selection in the specified order|<!-- END REF -->
+| Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada|<!-- END REF -->
 
 |
 

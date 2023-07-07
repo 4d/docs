@@ -13,7 +13,7 @@ This parameter allows you to define the operation to execute with the returned e
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request |
 | [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Releases an existing entity set stored in 4D Server's cache                                                |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Creates an entity set based on the collection of related entities defined in the REST request              |
-| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Updates and/or creates one or more entities                                                                |
+| [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Actualiza e/ou cria uma ou mais entidades                                                                  |
 
 
 
@@ -36,7 +36,7 @@ You can then write the following REST request to delete the entity whose key is 
 
  `POST  /rest/Employee(22)/?$method=delete`
 
-You can also do a query as well using $filter:
+Também é possível efetuar uma consulta utilizando $filter:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
@@ -187,7 +187,7 @@ If you want to retrieve only the related entities for a specific entity, you can
 ## $method=update
 
 
-Updates and/or creates one or more entities
+Actualiza e/ou cria uma ou mais entidades
 
 ### Descrição
 

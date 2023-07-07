@@ -46,12 +46,12 @@ MyLength:=Length("How did I get here?")
 
 Toda subrutina puede devolver un valor. Sólo se puede declarar un único parámetro de salida por método o función de clase.
 
-Los valores de entrada y salida son [evaluados](#values-or-references) en el momento de la llamada y copiados en o desde variables locales dentro de la función o método de la clase llamada. Variable parameters must be [declared](#declaring-parameters) in the called code.
+Los valores de entrada y salida son [evaluados](#values-or-references) en el momento de la llamada y copiados en o desde variables locales dentro de la función o método de la clase llamada. Los parámetros variables deben ser [declarados](#declaring-parameters) en el código llamado.
 
 
 :::info Compatibilidad
 
-Throughout the 4D documentation, you might see examples where parameters are automatically copied in sequentially numbered local variables ($0, $1, etc.) and declared using compiler directives. Ej: `C_TEXT($1;$2)`. Esta sintaxis heredada sigue siendo compatible, pero ya no se recomienda.
+A lo largo de la documentación de 4D, puede ver ejemplos en los que los parámetros se copian automáticamente en variables locales numeradas secuencialmente ($0, $1, etc.) y se declaran utilizando directivas del compilador. Ej: `C_TEXT($1;$2)`. Esta sintaxis heredada sigue siendo compatible, pero ya no se recomienda.
 
 :::
 
@@ -245,7 +245,7 @@ Para declarar parámetros genéricos, se utiliza una directiva del compilador a 
 ```
 
 
-Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo texo. The first three parameters can be of any data type. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. Así, será del tipo de datos texto, aunque para usted fuera, por ejemplo, del tipo de datos Real.
+Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo texo. Los tres primeros parámetros pueden ser de todo tipo de datos. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. Así, será del tipo de datos texto, aunque para usted fuera, por ejemplo, del tipo de datos Real.
 
 > El número en la declaración tiene que ser una constante y no una variable.
 
@@ -255,20 +255,20 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 ## Método `Compilador`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project.
+Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos o funciones llamados tan pronto como pretenda compilar su proyecto.
 
-When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. Por ejemplo:
+Cuando se utiliza la palabra clave `#DECLARE` o el prototipo `Function`, los parámetros se declaran automáticamente. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
     // todos los parámetros se declaran con su tipo
 ```
 
-However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
+Sin embargo, una característica del compilador 4D le permite declarar todos sus parámetros en un método específico utilizando una sintaxis especial:
 
 - puede agrupar todos los parámetros de variables locales para métodos de proyecto en uno o más métodos de proyecto
 - el(los) nombre(s) del método debe(n) empezar por "**Compiler**", por ejemplo "Compiler_MyParameters".
-- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- dentro de un método de este tipo, puede predeclarar los parámetros de cada método utilizando la siguiente sintaxis: `C_XXX(nombredelmétodo;parámetro)`.
 
 Por ejemplo:
 
@@ -279,7 +279,7 @@ Por ejemplo:
 
 :::note
 
-This syntax is not executable in interpreted mode.
+Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
@@ -287,7 +287,7 @@ You can create and fill automatically a `Compiler` method containing all you par
 
 La declaración de parámetros también es obligatoria en los siguientes contextos (estos contextos no soportan la declaración en un método "Compiler"):
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
+- Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de tipo de datos Text. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
 
 ```4d
 // On Web Connection
@@ -334,7 +334,7 @@ Este caso es tratado por 4D en función del contexto:
 - en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. En caso contrario, se genera un error cuando se llama al método.
 - en los proyectos interpretados:
     + si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
-    + if the parameter was declared using (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
+    + si el parámetro se declaró utilizando (`C_XXX`), no se genera ningún error, el método llamado recibe un valor vacío del tipo esperado.
 
 
 

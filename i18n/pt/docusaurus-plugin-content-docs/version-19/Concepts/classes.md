@@ -291,7 +291,7 @@ $o:=cs.MyClass.new("HelloWorld")
 // $o = {"name":"HelloWorld"}
 ```
 
-### Class extends `\<ClassName>`
+### Class extends `<ClassName>`
 
 #### Sintaxe
 

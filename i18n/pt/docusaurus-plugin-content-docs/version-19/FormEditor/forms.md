@@ -84,7 +84,7 @@ Cada formulário é composto por, pelo menos, duas páginas:
 - uma página 1: uma página principal, exibida por defeito
 - uma página 0: uma página de fundo, cujo conteúdo é exibido em todas as outras páginas.
 
-É possível criar várias páginas para um formulário de entrada. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
+É possível criar várias páginas para um formulário de entrada. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. As páginas múltiplas permitem-lhe fazer o seguinte:
 
 - Place the most important information on the first page and less important information on other pages.
 - Organize cada tópico na sua própria página.

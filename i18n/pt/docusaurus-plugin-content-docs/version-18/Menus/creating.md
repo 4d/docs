@@ -36,7 +36,7 @@ You can modify this menu bar as desired or create additional ones.
 
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. In both cases, it consists of a list of items. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. Em ambos os casos, consiste numa lista de itens. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 
@@ -60,7 +60,7 @@ Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in e
 
 ### Utilizar o editor de menus
 
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
+You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. When you delete the last reference of a menu, 4D displays an alert.
 
 Para eliminar uma barra de menu, um menu ou um item de menu:
 

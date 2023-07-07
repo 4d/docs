@@ -329,14 +329,14 @@ Os campos abaixo são registrados para cada petição:
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
 | sequenceNumber | Número de operação único e sequencial da sessão de histórico | 104                                                     |
 | url            | URL de petição de cliente ORDA                               | "rest/Persons(30001)"                                   |
-| startTime      | Starting date and time using ISO 8601 format                 | "2019-05-28T08:25:12.346Z"                              |
+| startTime      | Data e hora de início utilizando o formato ISO 8601          | "2019-05-28T08:25:12.346Z"                              |
 | endTime        | Data e hora final usando formato ISO 8601                    | "2019-05-28T08:25:12.371Z"                              |
 | duration       | Duração de processamento do cliente (ms)                     | 25                                                      |
 | response       | Objeto resposta servidor                                     | {"status":200,"body":{"__entityModel":"Persons",\[...] |
 
 ## Using a log configuration file
 
-You can use a **log configuration file** to easily manage log recording in a production environment. This file is preconfigured by the developer. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
+You can use a **log configuration file** to easily manage log recording in a production environment. Este ficheiro é pré-configurado pelo programador. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
 
 ### Como activar o ficheiro
 

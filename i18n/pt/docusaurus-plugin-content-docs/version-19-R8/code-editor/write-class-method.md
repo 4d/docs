@@ -7,7 +7,7 @@ title: Editor de método
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
-The Code Editor works much like a text editor. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. You can also use various type-ahead functions to create methods faster.
+O editor de código funciona de forma semelhante a um editor de texto. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. You can also use various type-ahead functions to create methods faster.
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
@@ -518,7 +518,7 @@ Constructors, method declarations, functions and computed attributes are automat
 
 When there is no tag in the class/method, the tool displays "No tag".
 
-The following items are added automatically:
+Os seguintes itens são adicionados automaticamente:
 
 | Ícone                                                                       | Elemento                                         |
 | --------------------------------------------------------------------------- | ------------------------------------------------ |
@@ -537,7 +537,7 @@ By adding markers in your code, you can add the following tags to the dropdown:
 | ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: etiqueta  |
 | ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: etiqueta |
 
-You declare them by adding comments such as:
+Declara-os acrescentando comentários como:
 
 ```4d
 // FIXME: Fix following items

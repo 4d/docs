@@ -12,7 +12,7 @@ title: On Mouse Move
 
 Este evento é gerado:
 
-- when the mouse cursor moves at least one pixel
+- quando o cursor do rato se move pelo menos um píxel
 - OR when a modifier key (**Shift**, **Alt/Option**, **Shift Lock**) was pressed. This makes it possible to manage copy- or move-type drag-and-drop operations.
 
 If the event is checked for an object only, it is generated only when the cursor is within the graphic area of the object.

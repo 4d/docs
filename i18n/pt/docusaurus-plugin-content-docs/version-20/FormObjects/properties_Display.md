@@ -114,7 +114,7 @@ If the user enters a negative number, the leftmost character is displayed as a m
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
-Suponha que utiliza o formato ##0 para mostrar três dígitos. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
+Suponha que utiliza o formato ##0 para mostrar três dígitos. If the user enters nothing in the field, the field displays 0. Se o usuário introduzir 26, o campo apresenta 26.
 
 ### Caracteres separadores
 
@@ -128,7 +128,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
-You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format:
+You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. Por exemplo, se utilizar o seguinte formato:
 
  $##0
 

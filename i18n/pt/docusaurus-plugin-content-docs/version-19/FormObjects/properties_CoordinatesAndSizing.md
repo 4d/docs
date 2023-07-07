@@ -13,7 +13,7 @@ When used, the height of every row in the column will automatically be calculate
 
 When this property is enabled, the height of every row is automatically calculated in order to make the cell contents entirely fit without being truncated (unless the [Wordwrap](properties_Display.md#wordwrap) option is disabled.
 
-* The row height calculation takes into account:
+* O cálculo da altura da linha tem em conta:
   * any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
   * any control types (inputs, check boxes, lists, dropdowns),
   * tipos, estilos e tamanhos de letra,
@@ -160,7 +160,7 @@ This property designates an object's horizontal size.
 
 ## Largura máxima
 
-The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
+A largura máxima da coluna (em píxeis). The width of the column cannot be increased beyond this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
@@ -177,7 +177,7 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 ## Largura mínima
 
-The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
+A largura mínima da coluna (em píxeis). The width of the column cannot be reduced below this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
