@@ -120,6 +120,6 @@ The 4D development framework includes a file access manager to control concurren
 
 * or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
 * **Edit**: standard and completely modifiable.
-* **Cancel**: do not save
+* **Cancelar**: não guardar
 
 This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
