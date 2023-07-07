@@ -119,7 +119,7 @@ This theme lets you keep track of the values of the objects or expressions:
 * used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
 * used in the previous line of code
 
-Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Let's say you execute the following method:
+Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Digamos que executa o seguinte método:
 
 ```4d
 TRACE
@@ -165,7 +165,7 @@ This theme is composed of the following subthemes:
 | Parâmetros    | Lista dos parâmetros recebidos pelo método                   | Sim                               |
 | Self          | Pointer to the current object, when tracing an Object Method | Não                               |
 
-Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. O depurador apresenta os primeiros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
 To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
 
@@ -259,7 +259,7 @@ Na imagem acima:
 
 You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
 
-Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Values appear on the right side of the pane. Clicking on any value on the right side allows you to change the value of any parameter or function result.
+Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Os valores aparecem no lado direito do painel. Clicking on any value on the right side allows you to change the value of any parameter or function result.
 
 To display the parameter type, check the **Show types** option in the contextual menu:
 
@@ -344,7 +344,7 @@ This also works with selections:
 
 ![source-code-pane-tip](../assets/en/Debugging/sourcePaneTip.png)
 
-### Adding expressions to the Custom Watch Pane
+### Adição de expressões ao painel de controle personalizado
 
 You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
