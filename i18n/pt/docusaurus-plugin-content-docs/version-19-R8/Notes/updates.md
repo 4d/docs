@@ -77,7 +77,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 - Built Client/Server applications:
     - The project [directory.json file](Users/editing#directoryjson-file) can now be [embedded in the server](../Desktop/building#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
     - You can now [deselect useless modules](../Desktop/building#deselecting-modules) in your built applications.
-- [Client/Server optimization](../ORDA/datastores#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/datastores#preconfiguring-contexts) and [ORDA Cache](../ORDA/datastores#orda-cache) for more information. > These functions are intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use them.
+- [Client/Server optimization](../ORDA/datastores#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/datastores#preconfiguring-contexts) and [ORDA Cache](../ORDA/datastores#orda-cache) for more information. > These functions are intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não é necessário utilizá-los.
 - [DataClass class](../API/DataClassClass): The new [.getCount()](../API/DataClassClass#getcount) function returns the number of entities in a dataclass.
 -
 :::
