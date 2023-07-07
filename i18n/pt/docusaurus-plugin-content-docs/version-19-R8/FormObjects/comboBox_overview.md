@@ -17,7 +17,7 @@ You initialize a combo box in exactly the same way as a [drop-down list](dropdow
 
 ### Utilização de um objecto
 
-> This feature is only available in 4D projects.
+> Esta funcionalidade só está disponível em projectos 4D.
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
 
