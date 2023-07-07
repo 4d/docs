@@ -66,7 +66,7 @@ Also, object instances from ORDA data model user classes benefit from their pare
 | Versão | Mudanças                                                                                           |
 | ------ | -------------------------------------------------------------------------------------------------- |
 | v19 R4 | Atributos alias na Entity Class                                                                    |
-| v19 R3 | Computed attributes in the Entity Class                                                            |
+| v19 R3 | Atributos calculados en la Entity Class                                                            |
 | v18 R5 | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
@@ -384,12 +384,12 @@ The *$value* parameter receives the value assigned to the attribute.
 
 The *$event* parameter contains the following properties:
 
-| Propriedade   | Tipo         | Descrição                                     |
-| ------------- | ------------ | --------------------------------------------- |
-| attributeName | Text         | Computed attribute name                       |
-| dataClassName | Text         | Nome do dataclass                             |
-| kind          | Text         | "set"                                         |
-| value         | Diferente de | Value to be handled by the computed attribute |
+| Propriedade   | Tipo         | Descrição                              |
+| ------------- | ------------ | -------------------------------------- |
+| attributeName | Text         | Computed attribute name                |
+| dataClassName | Text         | Nome do dataclass                      |
+| kind          | Text         | "set"                                  |
+| value         | Diferente de | Valor a tratar pelo atributo calculado |
 
 #### Exemplo
 
@@ -436,7 +436,7 @@ The *$event* parameter contains the following properties:
 | attributeName | Text         | Computed attribute name                                                                                                                                                                                                                                                                                                                                            |
 | dataClassName | Text         | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                  |
 | kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                            |
-| value         | Diferente de | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                      |
+| value         | Diferente de | Valor a tratar pelo atributo calculado                                                                                                                                                                                                                                                                                                                             |
 | operator      | Text         | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (igual a, @ não é wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (não é igual a, @ não é wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
 | result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                           |
 
@@ -569,7 +569,7 @@ The *$event* parameter contains the following properties:
 | attributeName | Text         | Computed attribute name                                                                                    |
 | dataClassName | Text         | Nome do dataclass                                                                                          |
 | kind          | Text         | "orderBy"                                                                                                  |
-| value         | Diferente de | Value to be handled by the computed attribute                                                              |
+| value         | Diferente de | Valor a tratar pelo atributo calculado                                                                     |
 | operator      | Text         | "desc" ou "asc" (padrão)                                                                                   |
 | descending    | Parâmetros   | `true` for descending order, `false` for ascending order                                                   |
 | result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
@@ -600,7 +600,7 @@ Function orderBy fullName($event : Object)-> $result : Text
 
 ```
 
-Conditional code is necessary in some cases:
+O código condicional é necessário em alguns casos:
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text
