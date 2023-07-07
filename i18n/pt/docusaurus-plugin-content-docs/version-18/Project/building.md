@@ -10,7 +10,7 @@ The application builder allows you to:
 * Build a compiled database, without interpreted code,
 * Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
 * Build different applications from the same compiled database via an XML project,
-* Build homogeneous client-server applications,
+* Criar aplicações cliente-servidor homogêneas,
 * Build client-server applications with automatic updating of client and server parts.
 * Save your build settings for future use (*Save settings* button).
 
