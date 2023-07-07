@@ -44,7 +44,7 @@ Parameters indicated as customized may have been modified directly in the dialog
 
 A parameter still appears in bold even when its value is replaced manually with its default values. This way it is always possible to visually identify any parameters that have been customized.
 
-Most of the settings are applied immediately. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
+A maioria dos parâmetros é aplicada imediatamente. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
 
 
 ## Repor os parâmetros
