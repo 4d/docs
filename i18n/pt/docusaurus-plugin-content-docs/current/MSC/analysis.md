@@ -15,7 +15,7 @@ This information allows you to identify the source and context of each operation
 
 - **Operation**: Sequence number of operation in the log file.
 - **Action**: Type of operation performed on the data. This column can contain one of the following operations:
-    - Opening of Data File: Opening of a data file.
+    - Abertura de ficheiro de dados: Abertura de um ficheiro de dados.
     - Closing of Data File: Closing of an open data file.
     - Creation of a Context: Creation of a process that specifies an execution context.
     - Encerramento de um contexto: encerramento de um processo.
