@@ -131,7 +131,7 @@ Para chamar esta função é necessário que o servidor Web [4D](WebServerClass.
 
 No parâmetro *WSSHandler*, passe uma instância de uma classe de usuário que será chamada sempre que ocorrer um evento no servidor WebSocket - essencialmente, eventos de conexão. A classe deve definir as seguintes funções de retorno de chamada (apenas `onConnection` é obrigatório):
 
-| Propriedade  | Tipo                         | Descrição                                                                                   | Default    |
+| Propriedade  | Tipo                         | Descrição                                                                                   | Por padrão |
 | ------------ | ---------------------------- | ------------------------------------------------------------------------------------------- | ---------- |
 | onConnection | [Function](FunctionClass.md) | (obrigatório) Chamada de retorno quando é iniciada uma nova ligação de cliente (ver abaixo) | indefinido |
 | onOpen       | [Function](FunctionClass.md) | Callback quando o servidor WebSocket é iniciado (ver abaixo)                                | indefinido |
@@ -326,7 +326,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 No parâmetro opcional *options* , passe um objecto que contenha as seguintes propriedades:
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                         | Default    |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                                                                         | Por padrão |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | path        | Text | Representa o caminho para aceder ao servidor WebSocket. Se não for definido um caminho, o servidor WebSocket gere todas as ligações                                                                                                                                                                                                               | indefinido |
 | dataType    | Text | Tipo dos dados recebidos através da função `connectionHandler.onMessage` e dos dados enviados pela função [`WebSocketConnection.send()`](WebSocketConnectionClass.md#send) . Values: "text", "blob","object"). Se "object": (enviar) transforma o objecto num formato json e envia-o; (recepção): recebe o formato json e transforma-o em objecto | text       |
