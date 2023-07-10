@@ -1032,6 +1032,7 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.next().Syntax -->**.next()** : 4D.Entity<!-- END REF -->
 
 
+
 <!-- REF #EntityClass.next().Params -->
 | 引数  | タイプ       |    | 説明                                                                    |
 | --- | --------- |:--:| --------------------------------------------------------------------- |
@@ -1102,7 +1103,7 @@ $info:=$address.getRemoteContextAttributes()
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
-## .reload( )
+## .reload()
 
 <details><summary>履歴</summary>
 
