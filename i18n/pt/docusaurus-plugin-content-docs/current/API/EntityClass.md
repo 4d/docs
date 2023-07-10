@@ -1030,6 +1030,7 @@ Exemplo com `dk reload se o selo mudou a opção`:
 <!-- REF #EntityClass.next().Syntax -->Parâmetros<!-- END REF -->
 
 
+
 <!-- REF #EntityClass.next().Params -->
 | Parâmetro  | Tipo       |    | Descrição                                                                                                     |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------- |
@@ -1100,7 +1101,7 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
-## .reload( )
+## .reload()
 
 <details><summary>Histórico</summary>
 
