@@ -18,7 +18,7 @@ In this list, you select the theme to apply to the code editor. All available th
 *   **Tema Light predefinido**
 *   **Tema escuro predefinido**
 
-> Default themes cannot be modified or deleted.
+> Os temas padrão não podem ser modificados ou eliminados.
 
 A **myTheme** theme is automatically added if you already customized Code Editor styles in previous 4D releases.
 
@@ -59,19 +59,19 @@ These options configure the various colors used in the Code Editor and debugger 
 ![](../assets/en/Preferences/categories.png)
 
 
-|                                                   | Descrição                                                                                                                                                                |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Cor de fundo**                                  | Cor de fundo da janela do editor de código.                                                                                                                              |
-| **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Cor de fundo da linha do cursor**               | Background color of line containing the cursor.                                                                                                                          |
-| **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
-| **Destaque das palavras encontradas**             | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                                  |
-| **Destaque dos parênteses**                       | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
-| **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Realce da mesma variável ou campo**             | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Cor de fundo da seleção**                       | Background color of selection.                                                                                                                                           |
-| **Texto sugerido**                                | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
+|                                                | Descrição                                                                                                                                                                |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Cor de fundo**                               | Cor de fundo da janela do editor de código.                                                                                                                              |
+| **Border of the running line in the debugger** | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
+| **Cor de fundo da linha do cursor**            | Background color of line containing the cursor.                                                                                                                          |
+| **Execution line background color**            | Background color of line being executed in the debugger.                                                                                                                 |
+| **Destaque das palavras encontradas**          | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                                  |
+| **Destaque dos parênteses**                    | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
+| **Highlight of the blocks**                    | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
+| **Realce da mesma variável ou campo**          | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
+| **Destaque da linha em execução no depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
+| **Cor de fundo da seleção**                    | Background color of selection.                                                                                                                                           |
+| **Texto sugerido**                             | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
 
 
 
@@ -143,7 +143,7 @@ Allows you to hide all expand/collapse icons by default when displaying code. Wh
 
 #### Insert () and closing } ) ] "
 
-Enables automatic insertion of () and closing braces while typing code. This option controls two automatic features:
+Enables automatic insertion of () and closing braces while typing code. Esta opção controla duas funcionalidades automáticas:
 
 - **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. For example, if you type "C_OB" and press Tab, 4D writes "C_OBJECT()" and sets the insertion point inside the ().
 
@@ -156,7 +156,7 @@ Enables automatic insertion of () and closing braces while typing code. This opt
 
 Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. As opções abaixo estão disponíveis:
 
-- **None**: No signaling
+- **Nenhum**: Sem sinalização
 - **Rectangle** (default): Braces surrounded by a black line  
   ![](../assets/en/Preferences/optionsRectangle.png)
 - **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).

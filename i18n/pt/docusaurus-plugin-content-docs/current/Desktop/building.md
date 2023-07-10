@@ -10,7 +10,7 @@ The application builder allows you to:
 * Gerar um banco de dados compilado, sem código interpretado
 * Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
 * Gerar aplicações diferentes a partir do mesmo banco de dados compilado mediante um projeto XML,
-* Build homogeneous client-server applications,
+* Criar aplicações cliente-servidor homogêneas,
 * Build client-server applications with automatic updating of client and server parts.
 * Save your build settings for future use (*Save settings* button).
 
@@ -25,7 +25,7 @@ Building a project package can be carried out using:
 
 :::tip
 
-You can also download and use `[Build4D]`(https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
+You can also download and use [`Build4D`](https://github.com/4d-depot/Build4D), a component that provides classes to compile, build, and sign 4D projects, even from a headless application.
 
 :::
 

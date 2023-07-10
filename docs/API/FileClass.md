@@ -254,18 +254,16 @@ You want to create an alias to a file in your database folder:
 |Version|Changes|
 |---|---|
 |v17 R5|Added
+
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
-
 |Parameter|Type||Description|
-|---|----|---|---|
+|---|----|:---:|---|
 ||||Does not require any parameters|<!-- END REF -->
-
-
 
 #### Description
 
@@ -457,6 +455,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
 If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+
 
 
 

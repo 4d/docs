@@ -32,7 +32,7 @@ The following rules apply for all 4D frameworks.
 
 ## Tabelas
 
-You designate a table by placing its name between brackets: [...]. A table name can contain up to 31 characters.
+You designate a table by placing its name between brackets: [...]. O nome de uma tabela pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -44,7 +44,7 @@ ADD RECORD([Letters])
 
 ## Campos
 
-You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. A field name can contain up to 31 characters.
+You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. Um nome de campo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -296,7 +296,7 @@ An interprocess set name can contain up to 255 characters, not including the `<>
 
 ### Conjuntos process
 
-Para designar um conjunto processo se utilizar uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A set name can contain up to 255 characters.
+Para designar um conjunto processo se utilizar uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). O nome de um conjunto pode conter até 255 caracteres.
 
 ### Conjuntos clientes
 

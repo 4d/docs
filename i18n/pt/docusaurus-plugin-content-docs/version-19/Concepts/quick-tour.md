@@ -251,7 +251,7 @@ This.name:="Square"
 
 
 ## Operadores
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
+When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. Estes cálculos são efectuados com operadores. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. Já está familiarizado com muitos operadores. You are already familiar with many operators. You are already familiar with many operators.
 
 | Operador | Operação      | Exemplo   |
 | -------- | ------------- | --------- |

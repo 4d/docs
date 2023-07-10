@@ -279,9 +279,9 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 #### Description
 
-La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
+La fonction `delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-Si le fichier est ouvert, une erreur est générée.
+Si le fichier est déjà ouvert, une erreur est générée.
 
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 > **ATTENTION** : `.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
@@ -319,9 +319,9 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Paramètres | Type   |    | Description                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Résultat   | Object | <- | Contenu du fichier de ressource version .exe/.dll ou .plist|<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                        |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------- |
+| Résultat   | Object | <- | Contenu du fichier version resource .exe/.dll ou .plist|<!-- END REF -->
 
 
 |
@@ -329,9 +329,9 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 #### Description
 
-La fonction `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retourne le contenu d'un fichier d'information **.exe**, **.dll** ou **.plist** sous forme d'objet<!-- END REF -->.
+La fonction `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->renvoie le contenu d'un fichier d'information **.exe**, **.dll** ou **.plist** sous la forme d'un objet<!-- END REF -->.
 
-Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction retourne un objet vide (aucune erreur n'est générée).
+La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction renvoie un objet vide (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
@@ -354,7 +354,7 @@ Toutes les valeurs de propriétés sont de type Texte.
 
 **Objet retourné dans le cas d'un fichier .plist**
 
-Le contenu xml du fichier est analysé et les clés sont retournées en tant que propriétés de l'objet, en préservant leur type (texte, booléen, numérique). `.plist dict` est retourné sous forme d'objet JSON et `.plist array` est retourné sous forme de tableau JSON.
+Le contenu du fichier xml est analysé et les clés sont renvoyées en tant que propriétés de l'objet, en préservant leur type (texte, booléen, numérique). `.plist dict` est renvoyé sous forme d'objet JSON et `.plist array` est renvoyé sous forme de tableau JSON.
 
 #### Exemple
 
@@ -463,7 +463,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 <!--REF #FileClass.open().Params -->
 | Paramètres | Type                             |    | Description                                         |
 | ---------- | -------------------------------- | -- | --------------------------------------------------- |
-| mode       | Text                             | -> | Mode d'ouverture :"read", "write", "append"         |
+| mode       | Text                             | -> | Mode d'ouverture : "read", "write", "append"        |
 | options    | Object                           | -> | Options d'ouverture                                 |
 | Résultat   | [4D.FileHandle](FileHandleClass) | <- | Nouvel objet File handle|<!-- END REF -->
 
@@ -471,7 +471,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode * ou avec les *options* spécifié(es)<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter le contenu du fichier.
+La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode* spécifié ou avec les *options* spécifiées<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter du contenu au fichier.
 
 Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 
@@ -487,21 +487,21 @@ Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour l
 
 Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres options pour le file handle par le biais des propriétés suivantes (ces propriétés peuvent être lues ultérieurement à partir de l'[objet file handle](FileHandleClass) ouvert) :
 
-| *options*         | Type           | Description                                                                                                                                          | Par défaut    |
-| ----------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text           | Mode d'ouverture (voir *mode* ci-dessus)                                                                                                             | "read"        |
-| `.charset`        | Text           | Jeu de caractères utilisé lors de la lecture ou de l'écriture dans le fichier. Utilisez le nom standard du jeu (par exemple "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text ou number | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                       | "native" ou 1 |
-| `.breakModeWrite` | Text ou number | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                  | "native" ou 1 |
+| *options*         | Type              | Description                                                                                                                                          | Par défaut    |
+| ----------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text              | Mode d'ouverture (voir *mode* ci-dessus)                                                                                                             | "read"        |
+| `.charset`        | Text              | Jeu de caractères utilisé lors de la lecture ou de l'écriture dans le fichier. Utilisez le nom standard du jeu (par exemple "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                       | "native" ou 1 |
+| `.breakModeWrite` | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                  | "native" ou 1 |
 
 Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
 
-| Break mode en texte | Break mode en numérique (constante) | Description                                                                                                                                                           |
-| ------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"            | 1 (`Document with native format`)   | (Défaut) Les fins de ligne sont converties au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
-| "crlf"              | 2 (`Document with CRLF`)            | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                           |
-| "cr"                | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                        |
-| "lf"                | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                               |
+| Mode de rupture en texte | Break mode en numérique (constante) | Description                                                                                                                                                          |
+| ------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"                 | 1 (`Document with native format`)   | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
+| "crlf"                   | 2 (`Document with CRLF`)            | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                          |
+| "cr"                     | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                       |
+| "lf"                     | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                              |
 
 > La valeur du paramètre *break mode en texte* est sensible à la casse.
 
@@ -575,10 +575,10 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications              |
-| ------- | -------------------------- |
-| v20     | Prise en charge de WinIcon |
-| v19     | Ajout                      |
+| Version | Modifications      |
+| ------- | ------------------ |
+| v20     | Support of WinIcon |
+| v19     | Ajout              |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -595,7 +595,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés de *info* comme contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
+La fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
@@ -698,10 +698,10 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                       |
-| ------- | ----------------------------------------------------------------------------------- |
-| v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
-| v17 R5  | Ajout                                                                               |
+| Version | Modifications                                           |
+| ------- | ------------------------------------------------------- |
+| v19 R3  | Default for new projects: no BOM and (macOS) LF for EOL |
+| v17 R5  | Ajout                                                   |
 
 </details>
 
@@ -710,12 +710,12 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 
 <!--REF #FileClass.setText().Params -->
-| Paramètres  | Type    |    | Description                                                         |
-| ----------- | ------- | -- | ------------------------------------------------------------------- |
-| text        | Text    | -> | Texte à stocker dans le fichier                                     |
-| charSetName | Text    | -> | Nom du jeu de caractères                                            |
-| charSetNum  | Integer | -> | Numéro du jeu de caractères                                         |
-| breakMode   | Integer | -> | Mode de traitement des retours à la ligne<!-- END REF -->
+| Paramètres  | Type    |    | Description                                                          |
+| ----------- | ------- | -- | -------------------------------------------------------------------- |
+| text        | Text    | -> | Texte à stocker dans le fichier                                      |
+| charSetName | Text    | -> | Nom du jeu de caractères                                             |
+| charSetNum  | Integer | -> | Numéro du jeu de caractères                                          |
+| breakMode   | Integer | -> | Mode de traitement des retours à la ligne|<!-- END REF -->
 
 
 |

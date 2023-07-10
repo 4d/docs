@@ -81,7 +81,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
-4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). É então mantido automaticamente por 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
+4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. Se necessário, pode alterar o conjunto predefinido. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). É então mantido automaticamente por 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
 > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
 > * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
 

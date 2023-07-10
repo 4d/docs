@@ -138,7 +138,7 @@ Placing groups into other groups lets you create a user hierarchy. The users of 
 
 To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
 
-### Assigning a group to a plug-in or to a server
+### Atribuição de um grupo a um plug-in ou a um servidor
 
 You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins.
 

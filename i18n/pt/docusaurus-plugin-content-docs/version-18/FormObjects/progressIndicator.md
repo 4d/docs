@@ -21,7 +21,7 @@ The variable associated with the indicator controls the display. You place value
 
 Este método atribui o valor do campo Salary à variável $vTherm. This method would be attached to the Salary field.
 
-Conversely, you could use the indicator to control the value in a field. The user drags the indicator to set the value. In this case the method becomes:
+Conversely, you could use the indicator to control the value in a field. O usuário arrasta o indicador para definir o valor. In this case the method becomes:
 
 ```4d
  [Employees]Salary:=$vTherm

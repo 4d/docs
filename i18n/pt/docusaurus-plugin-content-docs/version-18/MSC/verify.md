@@ -39,11 +39,11 @@ Para cada linha da tabela, a coluna "Ação" indica as operações a realizar. W
 
 The "Status" column displays the verification status of each item using symbols:
 
-| ![](../assets/en/MSC/MSC_OK.png)  | A verificação foi efetuada sem problema        |
-| --------------------------------- | ---------------------------------------------- |
-| ![](../assets/en/MSC/MSC_KO2.png) | Verification carried out, problems encountered |
-| ![](../assets/en/MSC/MSC_KO3.png) | Verificação parcialmente efectuada             |
-| ![](../assets/en/MSC/MSC_KO.png)  | Verificação não efectuada                      |
+| ![](../assets/en/MSC/MSC_OK.png)  | A verificação foi efetuada sem problema      |
+| --------------------------------- | -------------------------------------------- |
+| ![](../assets/en/MSC/MSC_KO2.png) | Verificação efectuada, problemas encontrados |
+| ![](../assets/en/MSC/MSC_KO3.png) | Verificação parcialmente efectuada           |
+| ![](../assets/en/MSC/MSC_KO.png)  | Verificação não efectuada                    |
 
 Click on **Verify** to begin the verification or on **Standard** to go back to the standard page.
 

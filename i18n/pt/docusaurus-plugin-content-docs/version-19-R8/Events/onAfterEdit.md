@@ -76,11 +76,11 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = clipboardPasted
 
-| Propriedade | Tipo          | Descrição                                                                                                                                                                                                |
-| ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object        | Cell range                                                                                                                                                                                               |
-| pasteOption | inteiro longo | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: somente as fórmulas são coladas</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
-| pasteData   | object        | Os dados da área de transferência a serem colados<li>"text" (texto): O texto da área de transferência</li><li>"html" (texto): O HTML da área de transferência</li>                                                                                                    |
+| Propriedade | Tipo          | Descrição                                                                                                                                                                                                       |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object        | Cell range                                                                                                                                                                                                      |
+| pasteOption | inteiro longo | Especifica o que é colado da área de transferência:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: somente as fórmulas são coladas</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
+| pasteData   | object        | Os dados da área de transferência a serem colados<li>"text" (texto): O texto da área de transferência</li><li>"html" (texto): O HTML da área de transferência</li>                                                                                                           |
 
 #### Exemplo
 

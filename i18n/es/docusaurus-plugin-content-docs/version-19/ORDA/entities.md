@@ -251,20 +251,20 @@ $comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
 
 :::note Entity selections returned from the server
 
-In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Ejemplo:
+En la arquitectura cliente/servidor, las selecciones de entidades devueltas por el servidor son siempre compartibles en el cliente, incluso si [`copy()`](API/EntitySelectionClass.md#copy) fue llamada en el servidor. Para que dicha selección de entidades sea alterable en el cliente, es necesario ejecutar [`copa()`](API/EntitySelectionClass.md#copa) del lado del cliente. Ejemplo:
 
 ```4d
-    //a function is always executed on the server
+    /una función se ejecuta siempre en el servidor
 exposed Function getSome() : cs.MembersSelection
-    return This.query("ID >= :1"; 15).orderBy("ID ASC")
+    devuelve This.query("ID >= :1"; 15).orderBy("ID ASC")
 
-    //in a method, executes on the remote side
+    //en un método, se ejecuta en el lado remoto
 var $result : cs.MembersSelection
 var $alterable : Boolean
-$result:=ds.Members.getSome() //$result is shareable
+$result:=ds.Members.getSome() //$result es compartible
 $alterable:=$result.isAlterable() //False
 
-$result:=ds.Members.getSome().copy() // $result is now alterable
+$result:=ds.Members.getSome().copy() // $result es ahora alterable
 $alterable:=$result.isAlterable() // True
 ```
 

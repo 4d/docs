@@ -260,22 +260,18 @@ Quiere crear un alias para un archivo en su carpeta principal:
 | Versión | Modificaciones |
 | ------- | -------------- |
 | v17 R5  | Añadidos       |
+
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
 
 
 <!-- REF #FileClass.delete().Params -->
-
 | Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
+| ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
-
-
 |
-
-
 
 #### Descripción
 
@@ -435,7 +431,7 @@ Por defecto, el archivo conserva su nombre cuando se mueve. Si desea renombrar e
 
 **Objeto devuelto**
 
-El objeto `File` movido.
+El objeto `File` desplazado.
 
 #### Ejemplo
 
@@ -478,6 +474,7 @@ Si utiliza el parámetro *mode* (text), pase el modo de apertura para el file ha
 
 
 
+
 | *mode*   | Descripción                                                                                                                                                                                                                                |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Por defecto) Crea un file handle para leer los valores en el archivo. Si el archivo no existe en el disco, se devuelve un error. Puede abrir tantos file handles como quiera en modo "read" en el mismo objeto File.                      |
@@ -488,27 +485,27 @@ Si utiliza el parámetro *mode* (text), pase el modo de apertura para el file ha
 
 Si utiliza el parámetro *options* (object), puede pasar más opciones para el file handle a través de las siguientes propiedades (estas propiedades se pueden leer después desde el [objeto file handle](FileHandleClass) abierto):
 
-| *options*         | Tipo          | Descripción                                                                                                                                      | Por defecto  |
-| ----------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
-| `.mode`           | Text          | Modo de apertura (ver *mode* arriba)                                                                                                             | "read"       |
-| `.charset`        | Text          | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
-| `.breakModeRead`  | Text o Number | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                           | "native" o 1 |
-| `.breakModeWrite` | Text o Number | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                    | "native" o 1 |
+| *options*         | Tipo           | Descripción                                                                                                                                      | Por defecto  |
+| ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ |
+| `.mode`           | Text           | Modo de apertura (ver *mode* arriba)                                                                                                             | "read"       |
+| `.charset`        | Text           | Conjunto de caracteres utilizado al leer o escribir en el archivo. Utilice el nombre estándar del conjunto (por ejemplo, "ISO-8859-1" o "UTF-8") | "UTF-8"      |
+| `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                           | "native" o 1 |
+| `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                    | "native" o 1 |
 
 `.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
 
-| Break mode en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                |
-| ------------------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"            | 1 (`Document with native format`)  | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (retorno de carro + salto de línea) en Windows |
-| "crlf"              | 2 (`Document with CRLF`)           | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
-| "cr"                | 3 (`Document with CR`)             | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| "lf"                | 4 (`Document with LF`)             | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| Modo de ruptura en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                |
+| ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"                 | 1 (`Document with native format`)  | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (retorno de carro + salto de línea) en Windows |
+| "crlf"                   | 2 (`Document with CRLF`)           | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
+| "cr"                     | 3 (`Document with CR`)             | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
+| "lf"                     | 4 (`Document with LF`)             | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                             |
 
 > El valor del parámetro *break mode as text* es sensible a las mayúsculas y minúsculas.
 
 #### Ejemplo
 
-Quiere crear un file handle para leer el archivo "ReadMe.txt":
+You want to create a file handle for reading the "ReadMe.txt" file:
 
 ```4d
 var $f : 4D.File
@@ -542,28 +539,28 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| newName    | Text    | -> | Nuevo nombre completo del archivo             |
-| Result     | 4D.File | <- | Archivo renombrado|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| newName    | Text    | -> | New full name for the file              |
+| Result     | 4D.File | <- | Renamed file|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.rename()` <!-- REF #FileClass.rename().Summary -->renombra el archivo con el nombre que se le ha pasado en *newName* y devuelve el objeto `File` renombrado<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
-El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
-Tenga en cuenta que la función modifica el nombre completo del archivo, es decir, si no pasa una extensión en *newName*, el archivo tendrá un nombre sin extensión.
+Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
 **Objeto devuelto**
 
-El objeto `File` renombrado.
+The renamed `File` object.
 
 #### Ejemplo
 
-Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
+You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -578,7 +575,7 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 | Versión | Modificaciones     |
 | ------- | ------------------ |
-| v20     | Soporte de WinIcon |
+| v20     | Support of WinIcon |
 | v19     | Añadidos           |
 </details>
 
@@ -730,16 +727,16 @@ If the file referenced in the `File` object does not exist on the disk, it is cr
 
 In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
 
-Optionally, you can designate the character set to be used for writing the contents. Puede pasar:
+Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:
 
 * en *charSetName*, una cadena que contiene el nombre del conjunto estándar (por ejemplo "ISO-8859-1" o "UTF-8"),
 * o en *charSetNum*, el ID MIBEnum (número) del nombre del conjunto estándar.
 
 > Para conocer la lista de los conjuntos de caracteres que soporta 4D, consulte la descripción del comando `CONVERT FROM TEXT`.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
+Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D la inserta en el archivo a menos que el conjunto de caracteres utilizado contenga el sufijo "-no-bom" (por ejemplo, "UTF-8-no-bom"). Si no especifica un conjunto de caracteres, por defecto 4D utiliza el conjunto de caracteres "UTF-8" sin BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
+En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
 
 | Constante                     | Valor | Comentario                                                                                                                                                                 |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -747,7 +744,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 | `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |
 | `Document with CRLF`          | 2     | Los fines de línea se convierten en CRLF (retorno de carro + salto de línea), el formato predeterminado de Windows                                                         |
 | `Document with CR`            | 3     | Los fines de línea se convierten en CR (retorno de carro), el formato clásico por defecto de Mac OS                                                                        |
-| `Document with LF`            | 4     | Los fines de línea se convierten en LF (salto de línea), el formato Unix y macOS por defecto                                                                               |
+| `Document with LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                             |
 
 Por defecto, cuando se omite el parámetro *breakMode*, los saltos de línea se procesan en modo nativo (1).
 

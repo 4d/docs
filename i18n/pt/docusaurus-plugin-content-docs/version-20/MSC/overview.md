@@ -8,7 +8,7 @@ The Maintenance and Security Center (MSC) window contains all the tools needed f
 
 **Note:** The MSC window is not available from a 4D remote connection.
 
-There are several ways to open the MSC window. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. In standard mode, the project is opened by 4D.
+Existem várias maneiras de abrir a janela do CSM. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. No modo padrão, o projeto é aberto por 4D.
 
 
 ## Acesso no modo de manutenção

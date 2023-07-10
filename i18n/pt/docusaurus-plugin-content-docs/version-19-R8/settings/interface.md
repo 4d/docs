@@ -51,7 +51,7 @@ This option can be selected on macOS but will be ignored when the application is
 
 This menu lets you select the color scheme to use at the main application level. A color scheme defines a global set of interface colors for texts, backgrounds, windows, etc., used in your forms.
 
-> This option only works on macOS. On Windows, the "Light" scheme is always used.
+> This option only works on macOS. No Windows, é sempre utilizado o esquema "Light".
 
 The following schemes are available:
 

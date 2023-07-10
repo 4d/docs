@@ -2490,7 +2490,7 @@ With the following *NumberGreaterThan0* method:
 
 #### Descrição
 
-A função `.shift()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> e também devolve a coleção ordenada.
+A função `.shift()` <!-- REF #collection.sort().Summary -->ordena os elementos da coleção original<!-- END REF --> e também devolve a coleção ordenada.
 > Essa função modifica a coleção original.
 
 Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.

@@ -39,7 +39,7 @@ Função de uma classe de modelo de dados ORDA.
 
 A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
 
-A dataclass is related to a single datastore.
+Uma dataclass está relacionada com um único datastore.
 
 ## DataClass class
 
@@ -52,11 +52,11 @@ A datastore is the interface object provided by ORDA to reference a structure an
 A datastore provides:
 
 * a connection to the 4D database
-* a set of dataclasses to work with the database
+* um conjunto de classes de dados para trabalhar com a base de dados
 
 The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
 
-A datastore references only a single database. It is, however, possible to open several datastores to access several databases.
+Um datastore faz referência apenas a uma única base de dados. It is, however, possible to open several datastores to access several databases.
 
 ## DataStore class
 
@@ -175,7 +175,7 @@ Entity selections may refer to related entities according to the relation attrib
 
 ## Remote datastore
 
-A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). This use is submitted to a licencing system.
+A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). Esta utilização é submetida a um sistema de licenciamento.
 
 ## Session
 

@@ -126,7 +126,7 @@ Displays/hides both background images and background color.
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showBackground|boolean|true (default), false|
+ showBackground|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -162,7 +162,7 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- withFormulaBar|boolean|true (default), false|
+ withFormulaBar|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -274,7 +274,7 @@ With the Show references property on, the reference is displayed:
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showReferences|boolean|true, false (default)|
+ showReferences|booléen|true, false (par défaut)|
 
 #### Objectos suportados
 
@@ -386,7 +386,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Há tr�
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- layoutMode|text|"page", "draft", "embedded"|
+ layoutMode|texte|"page", "draft", "embedded"|
 
 #### Objectos suportados
 

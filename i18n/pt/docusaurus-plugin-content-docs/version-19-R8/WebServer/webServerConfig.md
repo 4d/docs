@@ -3,7 +3,7 @@ id: webServerConfig
 title: Configuração
 ---
 
-The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D provides default values for every settings.
+The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D fornece valores padrão para cada configuração.
 
 
 ## Onde configurar os parâmetros?
@@ -27,7 +27,7 @@ There are different ways to configure the 4D web server settings, depending on t
 
 Ativa e configura a cache da página Web.
 
-The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. If it finds the page, it sends it immediately. If not, 4D loads the page from disk and places it in the cache.
+The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. Se encontrar a página, envia-a imediatamente. If not, 4D loads the page from disk and places it in the cache.
 
 You can modify the size of the cache in the **Pages Cache Size** area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.
 > While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it. The [/4DSTATS] and [/4DHTMLSTATS] URLs allow you to also obtain information about the cache’s state.
@@ -205,7 +205,7 @@ Estado da comunicação por HTTPS. This option is described in [this section](Ad
 | webServer object      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Boolean, true to enable HSTS (default is false) |
 | `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)           |
 
-HTTP Strict Transport Security (HSTS) status.
+Estado do HTTP Strict Transport Security (HSTS).
 
 When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabled](#enable-http), the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace "https" by "http"). To forbid http redirections, you can [disable HTTP](#enable-http), however in this case an error message is displayed to client HTTP requests.
 
@@ -385,7 +385,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 | Valor | Nome do formato         | Descrição                                                                                                                                                                                                                |
 | ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | Sem ficheiro de registo | Default                                                                                                                                                                                                                  |
+| 0     | Sem ficheiro de registo | Por padrão                                                                                                                                                                                                               |
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
 | 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
@@ -439,7 +439,7 @@ Default value: 100 (pass 0 to restore the default value).
 | --------------------- | ------------------------------------------------------ | ----------- |
 | webServer object      | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
-Minimum TLS version accepted for connections. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
+Versão mínima de TLS aceita para ligações. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
 
 Valores possíveis:
 

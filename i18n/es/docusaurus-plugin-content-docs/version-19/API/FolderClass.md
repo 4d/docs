@@ -409,9 +409,9 @@ Quiere mover y renombrar una carpeta:
 
 #### Descripción
 
-La función `.rename()` <!-- REF #FolderClass.rename().Summary -->renombra la carpeta con el nombre que se le ha pasado en *newName* y devuelve el objeto `Folder` renombrado<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renombra la carpeta con el nombre que se le ha pasado en *newName* y devuelve el objeto `Folder` renombrado<!-- END REF -->.
 
-El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
+The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
 
 **Objeto devuelto**
 

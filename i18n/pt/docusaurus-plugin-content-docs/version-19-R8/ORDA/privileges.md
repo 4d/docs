@@ -118,25 +118,25 @@ In a context other than *Qodly* (cloud), you have to create this file at the fol
 
 The `roles.json` file syntax is the following:
 
-| Nome da propriedade |                 |               | Tipo                               | Obrigatório | Descrição                                                                    |
-| ------------------- | --------------- | ------------- | ---------------------------------- | ----------- | ---------------------------------------------------------------------------- |
-| privileges          |                 |               | Coleção de objectos `privilege`    | X           | List of defined privileges                                                   |
-|                     | \[].privilege  |               | String                             |             | Nome do privilégio                                                           |
-|                     | \[].includes   |               | Coleção de strings                 |             | List of included privilege names                                             |
-| roles               |                 |               | Coleção de objetos `role`          |             | List of defined roles                                                        |
-|                     | \[].role       |               | String                             |             | Role name                                                                    |
-|                     | \[].privileges |               | Coleção de strings                 |             | List of included privilege names                                             |
-| permissions         |                 |               | Object                             | X           | Lista de acções permitidas                                                   |
-|                     | allowed         |               | Collection of `permission` objects |             | Lista de permissões permitidas                                               |
-|                     |                 | \[].applyTo  | String                             | X           | Targeted [resource](#resources) name                                         |
-|                     |                 | \[].type     | String                             | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
-|                     |                 | \[].read     | Coleção de strings                 |             | Lista de privilégios                                                         |
-|                     |                 | \[].create   | Coleção de strings                 |             | Lista de privilégios                                                         |
-|                     |                 | \[].update   | Coleção de strings                 |             | Lista de privilégios                                                         |
-|                     |                 | \[].drop     | Coleção de strings                 |             | Lista de privilégios                                                         |
-|                     |                 | \[].describe | Coleção de strings                 |             | Lista de privilégios                                                         |
-|                     |                 | \[].execute  | Coleção de strings                 |             | Lista de privilégios                                                         |
-|                     |                 | \[].promote  | Coleção de strings                 |             | Lista de privilégios                                                         |
+| Nome da propriedade |                 |               | Tipo                             | Obrigatório | Descrição                                                                    |
+| ------------------- | --------------- | ------------- | -------------------------------- | ----------- | ---------------------------------------------------------------------------- |
+| privileges          |                 |               | Coleção de objectos `privilege`  | X           | List of defined privileges                                                   |
+|                     | \[].privilege  |               | String                           |             | Nome do privilégio                                                           |
+|                     | \[].includes   |               | Coleção de strings               |             | List of included privilege names                                             |
+| roles               |                 |               | Coleção de objetos `role`        |             | List of defined roles                                                        |
+|                     | \[].role       |               | String                           |             | Role name                                                                    |
+|                     | \[].privileges |               | Coleção de strings               |             | List of included privilege names                                             |
+| permissions         |                 |               | Object                           | X           | Lista de acções permitidas                                                   |
+|                     | allowed         |               | Coleção de objectos `permission` |             | Lista de permissões permitidas                                               |
+|                     |                 | \[].applyTo  | String                           | X           | Targeted [resource](#resources) name                                         |
+|                     |                 | \[].type     | String                           | X           | [Resource](#resources) type: "datastore", "dataclass", "attribute", "method" |
+|                     |                 | \[].read     | Coleção de strings               |             | Lista de privilégios                                                         |
+|                     |                 | \[].create   | Coleção de strings               |             | Lista de privilégios                                                         |
+|                     |                 | \[].update   | Coleção de strings               |             | Lista de privilégios                                                         |
+|                     |                 | \[].drop     | Coleção de strings               |             | Lista de privilégios                                                         |
+|                     |                 | \[].describe | Coleção de strings               |             | Lista de privilégios                                                         |
+|                     |                 | \[].execute  | Coleção de strings               |             | Lista de privilégios                                                         |
+|                     |                 | \[].promote  | Coleção de strings               |             | Lista de privilégios                                                         |
 
 
 :::caution Lembrete
