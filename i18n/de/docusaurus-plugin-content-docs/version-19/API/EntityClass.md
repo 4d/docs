@@ -161,6 +161,7 @@ If one of the compared entities is **Null**, an error is raised.
  var $diff1; $diff2 : Collection
  employee:=ds.Employee.query("ID=1001").first()
  $clone:=employee.clone()
+
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
@@ -1036,7 +1037,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
-## .reload( )
+## .reload()
 
 <details><summary>History</summary>
 
