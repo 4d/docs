@@ -33,10 +33,6 @@ module.exports = {
               label: 'v20',
               banner: 'none',
             },
-           '19-R8': {
-              label: 'v19 R8',
-              banner: 'none',
-            },
             '19': {
               label: 'v19',
               banner: 'none',
