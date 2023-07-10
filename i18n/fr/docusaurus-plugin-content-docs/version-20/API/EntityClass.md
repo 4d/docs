@@ -1031,6 +1031,7 @@ Exemple avec option `dk reload if stamp changed` :
 <!-- REF #EntityClass.next().Syntax -->**.next()** : 4D.Entity<!-- END REF -->
 
 
+
 <!-- REF #EntityClass.next().Params -->
 | Paramètres | Type      |    | Description                                                                                            |
 | ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------ |
@@ -1101,7 +1102,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
-## .reload( )
+## .reload()
 
 <details><summary>Historique</summary>
 
