@@ -30,7 +30,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
            '20': {
-              label: 'v20 BETA',
+              label: 'v20',
               banner: 'none',
             },
            '19-R8': {
