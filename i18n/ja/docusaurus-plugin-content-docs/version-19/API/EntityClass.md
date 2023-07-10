@@ -161,12 +161,13 @@ title: Entity
  var $diff1; $diff2 : Collection
  employee:=ds.Employee.query("ID=1001").first()
  $clone:=employee.clone()
+
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // すべての差異が返されます
+ $diff1:=$clone.diff(employee) // All differences are returned
  $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // firstName と lastName についての差異のみが返されます
+  // Only differences on firstName and lastName are returned
 ```
 
 $diff1:
@@ -1036,7 +1037,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
-## .reload( )
+## .reload()
 
 <details><summary>履歴</summary>
 
