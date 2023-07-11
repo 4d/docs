@@ -49,7 +49,7 @@ Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta
 * The name and full access path of the files generated,
 * The date and time of the build,
 * Todos os erros que forem produzidos.
-* Any signing issues (e.g. a non-signed plug-in).
+* Quaisquer problemas de assinatura (por exemplo, um plug-in não assinado).
 
 Checking this file may help you saving time during the subsequent deployment steps, for example if you intend to notarize your application.
 
@@ -85,7 +85,7 @@ Quando se marca esta opção, todas as pastas relacionadas com o banco de dados 
 
 ### Build component
 
-Builds a compiled component from the structure.
+Constrói um componente compilado a partir da estrutura.
 
 A component is a standard 4D project in which specific functionalities have been developed. A component is a standard 4D project in which specific functionalities have been developed.
 
@@ -304,7 +304,7 @@ The [current version number](build-server-application) is set on the Client/Serv
 
 If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. A aplicação vai agora desistir."
 
-There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
+Existem muitas causas possíveis para este erro. When you get this message, it is advisable to check the following parameters first off:
 
 * **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
 * **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
