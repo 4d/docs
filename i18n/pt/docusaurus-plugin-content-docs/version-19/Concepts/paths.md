@@ -32,7 +32,7 @@ The following filesystem pathnames are supported:
 
 ## Sintaxe POSIX
 
-The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
+A sintaxe POSIX é suportada em todas as plataformas. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
 
 With this syntax:
 
@@ -104,7 +104,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser cham
 
 ### `File` and `Folder` constructors
 
-[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. For example, the following code is not allowed:
+[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. Por exemplo, o seguinte código não é permitido:
 
 ```4d
     //ERROR
