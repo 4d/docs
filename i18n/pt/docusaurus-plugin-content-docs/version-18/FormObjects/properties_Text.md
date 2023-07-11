@@ -222,9 +222,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                               |
-| -------------- | ------------- | ----------------------------------------------- |
-| rowStyleSource | string        | Style expression to evaluate for each row/cell. |
+| Nome           | Tipo de dados | Valores possíveis                                     |
+| -------------- | ------------- | ----------------------------------------------------- |
+| rowStyleSource | string        | Expressão de estilo a avaliar para cada linha/célula. |
 
 #### Objectos suportados
 
@@ -273,7 +273,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 ## Meta Info expression
 
-`Collection or entity selection type list boxes`
+`List box do tipo Collection ou entity selection`
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. As propriedades abaixo são compatíveis:
 
@@ -286,7 +286,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 | textDecoration            | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                   |
 | unselectable              | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". This setting is ignored if the list box selection mode is "None". |
 | disabled                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                          |
-| cell.`<columnName>` | object  | Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                                                           |
+| cell.`<columnName>` | object  | Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. São ignorados se forem passados no objeto "célula"                                                                                                                                                        |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
