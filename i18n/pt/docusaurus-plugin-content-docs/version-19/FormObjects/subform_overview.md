@@ -111,7 +111,7 @@ Communication between the parent form and the instances of the subform may requi
 * Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
 * Execution of a method in the context of the subform via the `EXECUTE METHOD IN SUBFORM` command.
 
-#### Object get pointer and Object get name commands
+#### Comandos "Object get pointer" e "Object get name
 
 In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
 

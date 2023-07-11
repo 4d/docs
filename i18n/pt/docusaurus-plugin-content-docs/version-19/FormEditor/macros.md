@@ -36,7 +36,7 @@ In this short example, you'll see how to create and call a macro that adds a "He
 }
 ```
 
-2. Create a 4D class named `AddButton`.
+2. Criar uma classe 4D com o nome `AddButton`.
 
 3. Within the `AddButton` class, write the following function:
 
@@ -141,7 +141,7 @@ Each macro you want to instantiate in your project or component must be declared
 
 The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
 
-Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
+As macros são instanciadas no arranque da aplicação. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
 
 ## Funções macro
 
@@ -245,7 +245,7 @@ When handling the `method` attribute of form objects, you can define the attribu
 |             |      |           |
  source|String|method code|
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
+4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. Esta funcionalidade só está disponível para o código macro.
 
 #### Propriedade `$4dId` em `currentPage.objects`
 
@@ -297,7 +297,7 @@ A função `onError` é executada quando o processador de macros encontra um err
 When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. It is the case for example if executing a macro would result in:
 
 * deleting or modifying a script whose file is read-only.
-* creating two objects with the same internal ID.
+* criar dois objectos com o mesmo ID interno.
 
 #### Exemplo
 

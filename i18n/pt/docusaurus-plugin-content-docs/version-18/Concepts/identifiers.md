@@ -220,7 +220,7 @@ OBJECT SET FONT(*;"Binfo";"Times")
 
 ## Métodos projeto
 
-You designate a project method (procedure or function) by using its name. A method name can contain up to 31 characters.
+You designate a project method (procedure or function) by using its name. O nome de um método pode conter até 31 caracteres.
 
 **Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
 

@@ -19,7 +19,7 @@ Parameters are passed to methods in the same way. For example, if a project meth
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
-The parameters are separated by semicolons (;). Their value is evaluated at the moment of the call.
+Os parâmetros são separados por ponto e vírgula (;). Their value is evaluated at the moment of the call.
 
 In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. A numeração das variáveis locais representam a ordem dos parâmetros.
 
@@ -368,7 +368,7 @@ This function is called in the following manner:
 
 In this case, the calling method will get the string “182.70”, which is the sum of the numbers, formatted as specified. The function's parameters must be passed in the correct order: first the format and then the values.
 
-Here is the function, named `MySum`:
+Aqui está a função, denominada `MySum`:
 ```4d
  $Sum:=0
  For($i;2;Count parameters)

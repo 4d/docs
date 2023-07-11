@@ -333,7 +333,7 @@ local Function getYoungest
 
 Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
 
-On the *StudentsEntity* class:
+Na classe *StudentsEntity*:
 
 ```4d
 Class extends Entity

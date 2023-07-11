@@ -32,7 +32,7 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 The form Detail area is displayed on the screen and printed once for each record in a report. The Detail area is defined as the area between the Header control line and the Detail control line.
 
-You can make the Detail area smaller or larger. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
+É possível aumentar ou diminuir a área Detalhe. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
 
 #### Gramática JSON
 
@@ -62,7 +62,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
 
-You can make the Header area smaller or larger. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
+Pode aumentar ou diminuir a área do cabeçalho. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
 
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Podem ser inseridos os seguintes objetos ativos:
 

@@ -221,9 +221,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                               |
-| -------------- | ------------- | ----------------------------------------------- |
-| rowStyleSource | string        | Style expression to evaluate for each row/cell. |
+| Nome           | Tipo de dados | Valores possíveis                                     |
+| -------------- | ------------- | ----------------------------------------------------- |
+| rowStyleSource | string        | Expressão de estilo a avaliar para cada linha/célula. |
 
 #### Objectos suportados
 
@@ -279,7 +279,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 ## Meta Info expression
 
-`Collection or entity selection type list boxes`
+`List box do tipo Collection ou entity selection`
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. As propriedades abaixo são compatíveis:
 
@@ -295,11 +295,11 @@ Specifies an expression or a variable which will be evaluated for each row displ
 
 The special "cell" property allows you to apply a set of properties to a single column:
 
-| Nome da propriedade |              |                                                                                                    | Tipo   | Descrição                                                                                                                                                                                                                   |
-| ------------------- | ------------ | -------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cell                |              |                                                                                                    | object | Allows applying the property to a single column.                                                                                                                                                                            |
-|                     | *columnName* |                                                                                                    | object | Pass in `\<columnName>` the object name of the list box column.                                                                                                                                                      |
-|                     |              | *Esta propriedade só está disponível quando não estiver selecionado [tema de fonte](#font-theme).* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object |
+| Nome da propriedade |              |                                                                                                    | Tipo   | Descrição                                                                                                                                                                                                                      |
+| ------------------- | ------------ | -------------------------------------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cell                |              |                                                                                                    | object | Allows applying the property to a single column.                                                                                                                                                                               |
+|                     | *columnName* |                                                                                                    | object | Pass in `\<columnName>` the object name of the list box column.                                                                                                                                                         |
+|                     |              | *Esta propriedade só está disponível quando não estiver selecionado [tema de fonte](#font-theme).* | string | "stroke", "fill", "fontStyle", "fontWeight", or "textDecoration" property (see above). **Note**: "unselectable" and "disabled" properties can only be defined at row level. São ignorados se forem passados no objeto "célula" |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 

@@ -98,7 +98,7 @@ You can selectively disable certain warnings during compilation by inserting the
   //%W-<warning number>
 ```
 
-Apenas os avisos com números podem ser desactivados. Warning numbers are specified at the end of each message in the list of compilation errors. For example, to disable the following warning:
+Apenas os avisos com números podem ser desactivados. Warning numbers are specified at the end of each message in the list of compilation errors. Por exemplo, para desativar o seguinte aviso:
 
 *1: Ponteiro numa declaração de array (518.5)*
 
@@ -241,7 +241,7 @@ Although the errors can be accessed directly via the [compiler window](#compile)
 
 The length of the error file depends on the number of errors and warnings issued by the compiler.
 
-The structure of the error file is as follows:
+A estrutura do ficheiro de erros é a seguinte:
 
 - At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
@@ -304,7 +304,7 @@ Ambos os compiladores estão integrados em 4D. The appropriate compiler is autom
 
 ### Compilador clássico
 
-The classic compiler generates native compiled code for Intel/AMD processors on any machines. It does not require any specific configuration.
+The classic compiler generates native compiled code for Intel/AMD processors on any machines. Não necessita de qualquer configuração específica.
 
 Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
 

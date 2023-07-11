@@ -88,7 +88,7 @@ The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.S
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Padrão = False
+A propriedade `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser realçada<!-- END REF -->. Padrão = False
 
 
 ### .showFooter
@@ -198,7 +198,7 @@ A propriedade `.borderRight` é a <!-- REF #TableStyle.borderRight.Summary -->ri
 <!-- REF #TableStyle.borderBottom.Syntax -->
 **.borderBottom** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
+A propriedade `.borderBottom` é o <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
 
 
 
@@ -252,7 +252,7 @@ The `.highlightLastColumn` property <!-- REF #TableTheme.highlightLastColumn.Sum
 <!-- REF #TableTheme.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->.
+A propriedade `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser realçada<!-- END REF -->.
 
 ### .theme
 

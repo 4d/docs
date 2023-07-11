@@ -735,7 +735,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 | Versão | Mudanças                                                                                                    |
 | ------ | ----------------------------------------------------------------------------------------------------------- |
 | v19 R8 | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | Support of `allowAutoExpand` option                                                                         |
+| v19 R7 | Suporte da opção `allowAutoExpand`                                                                          |
 | v19 R6 | Adicionado                                                                                                  |
 </details>
 
@@ -1306,7 +1306,7 @@ You want to trace the execution of the commands and empty the command buffer:
 
 #### Descrição
 
-The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->returns an object from a font shorthand string<!-- END REF -->. This object can then be used to set or get font property settings via object notation.
+The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->devolve um objeto a partir de uma cadeia de caracteres abreviada<!-- END REF -->. This object can then be used to set or get font property settings via object notation.
 
 In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
 

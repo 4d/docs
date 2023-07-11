@@ -277,7 +277,7 @@ The Form editor provides a virtual magnetic grid that can help you place and ali
 This works as follows: When you move an object in the form, 4D indicates possible locations for this object based on noticeable alignments with other form objects. É estabelecido um alinhamento perceptível cada vez que isso acontece:
 
 - Horizontalmente, os bordos ou centros de dois objetos coincidem,
-- Vertically, the edges of two objects coincide.
+- Verticalmente, as arestas de dois objectos coincidem.
 
 When this happens, 4D places the object at the location and displays a red line indicating the noticeable alignment taken into account:
 
@@ -590,7 +590,7 @@ Existem duas formas de adicionar vistas adicionais:
 
 ![](../assets/en/FormEditor/addView2.png)
 
-There is no limitation on the number of views.
+Não há limite para o número de vistas.
 
 #### Renomear vistas
 

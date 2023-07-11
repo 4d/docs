@@ -21,10 +21,10 @@ You initialize a combo box in exactly the same way as a [drop-down list](dropdow
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
 
-| Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                  |
-| -------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>strings</li><li>números</li><li>datas</li><li>horas</li>If empty or not defined, the combo box is empty |
-| `currentValue` | igual a Colecção | Text entered by the user                                                                                                                                                                                                                                   |
+| Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                                     |
+| -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>strings</li><li>números</li><li>datas</li><li>horas</li>Se estiver vazia ou não for definida, a caixa combinada está vazia |
+| `currentValue` | igual a Colecção | Text entered by the user                                                                                                                                                                                                                                                      |
 
 If the object contains other properties, they are ignored.
 

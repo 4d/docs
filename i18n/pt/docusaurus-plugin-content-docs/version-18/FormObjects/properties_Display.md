@@ -128,7 +128,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
-You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. Por exemplo, se utilizar o seguinte formato:
+Pode utilizar quaisquer outros caracteres no formato. When used alone, or placed before or after placeholders, the characters always appear. Por exemplo, se utilizar o seguinte formato:
 
  $##0
 
@@ -404,7 +404,7 @@ Allows a check box object to accept a third state. A variável associada à caix
 
 #### Three-states check boxes in list box columns
 
-List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
+List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. Se for selecionado, são apresentados os seguintes valores:
 
 * 0 = caixa não assinalada,
 * 1 = caixa marcada,
