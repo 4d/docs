@@ -491,8 +491,8 @@ Se utilizar o parâmetro *options* (objecto), pode passar mais opções para o f
 | ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
 | `.mode`           | Text           | Modo de abertura (ver *mode* acima)                                                                                                        | "read"        |
 | `.charset`        | Text           | Conjunto de carateres utilizado para ler ou escrever no ficheiro. Utilizar o nome padrão do conjunto (por exemplo "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text ou Number | Processing mode for line breaks used when reading in the file (see below)                                                                  | "native" or 1 |
-| `.breakModeWrite` | Text ou Number | Processing mode for line breaks used when writing to the file (see below)                                                                  | "native" or 1 |
+| `.breakModeRead`  | Text ou Number | Modo de tratamento das quebras de linha utilizadas na leitura do arquivo (veja abaixo)                                                     | "native" ou 1 |
+| `.breakModeWrite` | Text ou Number | Processing mode for line breaks used when writing to the file (see below)                                                                  | "native" ou 1 |
 
 The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
