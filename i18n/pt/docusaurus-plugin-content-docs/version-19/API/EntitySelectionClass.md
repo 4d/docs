@@ -500,7 +500,7 @@ Se quisermos encontrar o número total de empregados para uma empresa sem contar
 
 #### Descrição
 
-A função `.copy()` <!-- REF #EntitySelectionClass.copy().Summary -->returns a copy of the original entity selection<!-- END REF -->.
+A função `.copy()` <!-- REF #EntitySelectionClass.copy().Summary -->retorna uma cópia da entity selection original<!-- END REF -->.
 
 > Esta função não modifica a seleção de entidades original.
 
