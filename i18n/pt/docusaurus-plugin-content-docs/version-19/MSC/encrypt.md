@@ -55,7 +55,7 @@ Nesta fase, tem duas opções:
 
 In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
 
-### Re-encrypt data with the current encryption key
+### Volte a encriptar os dados com a chave de encriptação atual
 
 This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
 
