@@ -78,7 +78,7 @@ A deep copy duplicates an object and all the references it contains. After a dee
 
 An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
+An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. No entanto, uma entidade também contém dados relacionados. The purpose of the entity is to manage data (create, update, delete).
 
 Para mais informações, consulte Entidades.
 

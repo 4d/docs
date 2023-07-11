@@ -728,7 +728,7 @@ La función `.setText()` <!-- REF #FileClass.setText().Summary -->escribe *text*
 
 Si el archivo referenciado en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
-En *text*, pase el texto a escribir en el archivo. It can be a literal ("my text"), or a 4D text field or variable.
+En *text*, pase el texto a escribir en el archivo. Puede ser un texto literal ("my text"), o un campo / variable texto 4D.
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para la escritura del contenido. Puede pasar:
 

@@ -118,7 +118,7 @@ El parámetro de retorno de una función se declara añadiendo una flecha (->) y
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression). Por ejemplo:
+También puede declarar el parámetro de retorno añadiendo sólo `: type`, en cuyo caso puede ser manejado por un [return](#return-expression). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -283,7 +283,7 @@ Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Puede crear y rellenar automáticamente un método `Compiler` que contenga todos sus parámetros utilizando el botón [**Métodos Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** del diálogo de Propiedades del compilador.
 
 La declaración de parámetros también es obligatoria en los siguientes contextos (estos contextos no soportan la declaración en un método "Compiler"):
 
