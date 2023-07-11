@@ -196,7 +196,7 @@ Apresenta/oculta caracteres invisíveis
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showHiddenChars|boolean|true (default), false|
+ showHiddenChars|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -230,7 +230,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showHTMLWysiwyg|boolean|true, false (default)|
+ showHTMLWysiwyg|boolean|true, false (padrão)|
 
 #### Objectos suportados
 
