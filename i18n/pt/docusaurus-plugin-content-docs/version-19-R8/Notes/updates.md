@@ -150,7 +150,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 
 ## Tabela da biblioteca
 
-<details><summary>Click to see the table of libraries used in 4D</summary>
+<details><summary>Clique para ver a tabela de bibliotecas utilizadas em 4D</summary>
 
 | Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                               |
 | ---------- | ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
