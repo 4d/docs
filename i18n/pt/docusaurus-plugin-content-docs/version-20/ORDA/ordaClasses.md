@@ -331,7 +331,7 @@ The *$event* parameter contains the following properties:
 
 #### Exemplos
 
-- *fullName* computed attribute:
+- atributo calculado *fullName*:
 
 ```4d
 Function get fullName($event : Object)-> $fullName : Text
@@ -438,7 +438,7 @@ The *$event* parameter contains the following properties:
 | kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Diferente de | Valor a tratar pelo atributo calculado                                                                                                                                                                                                                                                                                                                             |
 | operator      | Text         | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (igual a, @ é um wildcard)</li><li>=== (igual a, @ não é wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (não é igual a, @ não é wildcard)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (maior que)</li><li>>= (greater than or equal to)</li><li>IN (incluído em)</li><li>% (contém palavra-chave)</li> |
-| result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                           |
+| result        | Diferente de | Valor a tratar pelo atributo calculado. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                                  |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
@@ -564,15 +564,15 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 The *$event* parameter contains the following properties:
 
-| Propriedade   | Tipo         | Descrição                                                                                                  |
-| ------------- | ------------ | ---------------------------------------------------------------------------------------------------------- |
-| attributeName | Text         | Computed attribute name                                                                                    |
-| dataClassName | Text         | Nome do dataclass                                                                                          |
-| kind          | Text         | "orderBy"                                                                                                  |
-| value         | Diferente de | Valor a tratar pelo atributo calculado                                                                     |
-| operator      | Text         | "desc" ou "asc" (padrão)                                                                                   |
-| descending    | Parâmetros   | `true` for descending order, `false` for ascending order                                                   |
-| result        | Diferente de | Value to be handled by the computed attribute. Pass `Null` if you want to let 4D execute the default sort. |
+| Propriedade   | Tipo         | Descrição                                                                                           |
+| ------------- | ------------ | --------------------------------------------------------------------------------------------------- |
+| attributeName | Text         | Computed attribute name                                                                             |
+| dataClassName | Text         | Nome do dataclass                                                                                   |
+| kind          | Text         | "orderBy"                                                                                           |
+| value         | Diferente de | Valor a tratar pelo atributo calculado                                                              |
+| operator      | Text         | "desc" ou "asc" (padrão)                                                                            |
+| descending    | Parâmetros   | `true` for descending order, `false` for ascending order                                            |
+| result        | Diferente de | Valor a tratar pelo atributo calculado. Pass `Null` if you want to let 4D execute the default sort. |
 
 > You can use either the `operator` or the `descending` property. It is essentially a matter of programming style (see examples).
 
@@ -844,7 +844,7 @@ local Function getYoungest
 
 Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
 
-On the *StudentsEntity* class:
+Na classe *StudentsEntity*:
 
 ```4d
 Class extends Entity
