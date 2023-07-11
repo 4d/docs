@@ -8,7 +8,7 @@ SDI applications are opposed to MDI (Multiple Documents Interface) applications,
 
 :::info
 
-The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+O conceito SDI/MDI não existe no macOS. This feature concerns Windows applications only and related options are ignored on macOS.
 
 :::
 
