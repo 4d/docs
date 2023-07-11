@@ -14,7 +14,7 @@ This parameter allows you to define the filter for your dataclass or method.
 
 ### Utilizar um filtro simples
 
-A filter is composed of the following elements:
+Um filtro é composto pelos seguintes elementos:
 
 **{attribute} {comparator} {value}**
 
