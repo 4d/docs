@@ -128,7 +128,7 @@ Quando o formulário for executado, 4D automaticamente gerencia o menu pop up ou
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
 
-#### Selected item value or Selected item reference
+#### Valor do item selecionado ou Referência do item selecionado
 
 Quando associar um menu pop up/lista drop down com uma lista de escolhas e com um campo, pode usar a propriedade [Save as Value/Reference](properties_DataSource.md#save-as). Essa opção permite otimizar o tamanho dos dados salvos.
 
