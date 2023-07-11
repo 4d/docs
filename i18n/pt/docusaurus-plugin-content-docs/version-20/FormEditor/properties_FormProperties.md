@@ -6,7 +6,7 @@ title: Propriedades do formulário
 ---
 
 ## Esquema de cores
-> Color scheme property is only applied on macOS.
+> A propriedade Esquema de cores só é aplicada no macOS.
 
 This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
