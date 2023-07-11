@@ -249,6 +249,6 @@ Unordered entity selections are created in the following cases:
 > > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
 > * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
-> * entity selections built upon remote datastores.
+> * selecções de entidades construídas em datastores remotos.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
