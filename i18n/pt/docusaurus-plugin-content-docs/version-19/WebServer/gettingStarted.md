@@ -51,7 +51,7 @@ The [`On Web Connection`](httpRequests.md#on-web-connection) database method is 
 http://localhost/hello
 ```
 
-The web server handles the request and returns:
+O servidor Web processa o pedido e devolve-o:
 
 ![](../assets/en/WebServer/hello.png)
 
