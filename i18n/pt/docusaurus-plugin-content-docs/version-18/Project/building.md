@@ -78,7 +78,7 @@ When you check this option, any folders related to the database are copied into 
 
 ### Build component
 
-Builds a compiled component from the structure.
+Constrói um componente compilado a partir da estrutura.
 
 A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components" documentation.
 
@@ -270,7 +270,7 @@ The [current version number](build-server-application) is set on the Client/Serv
 
 If 4D cannot carry out the update of the client application, the client machine displays the following error message: “The update of the client application failed. A aplicação vai agora desistir."
 
-There are many possible causes for this error. When you get this message, it is advisable to check the following parameters first off:
+Existem muitas causas possíveis para este erro. When you get this message, it is advisable to check the following parameters first off:
 
 * **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
 * **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
@@ -297,7 +297,7 @@ When building a double-clickable application, 4D copies the contents of the 4D V
 
 * Install a 4D Volume Desktop version corresponding to a specific language;
 * Adicionar uma pasta personalizada PlugIns;
-* Customize the contents of the Resources folder.
+* Personalize o conteúdo da pasta Resources.
 
 #### Localização de ficheiros Web
 
