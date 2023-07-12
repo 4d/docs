@@ -191,7 +191,7 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
 
 Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Nota:** Os parâmetros $1, $2... passados para os métodos são variáveis locais. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** Os parâmetros $1, $2... passados para os métodos são variáveis locais. Para mais informações, consultar [Parâmetros](Concepts/parameters.md).
 
 ### Variáveis processo
 
