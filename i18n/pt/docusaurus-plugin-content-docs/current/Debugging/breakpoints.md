@@ -70,11 +70,11 @@ To open the Break list page:
 Usando esta janela, pode:
 
 * Set conditions for breakpoints in the **Conditions** column
-* Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
+* Enable or disable breakpoints by clicking the bullets in the margin. Os pontos de interrupção desactivados apresentam marcadores transparentes
 * Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
 * Open the methods where the breakpoint are located by double-clicking any line in the list
 
-You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Code Editor.
+Não é possível adicionar novos pontos de paragem a partir desta janela. Breakpoints can only be created from within the Debugger window or the Code Editor.
 
 
 ## Comandos de captura

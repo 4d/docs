@@ -57,13 +57,13 @@ Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar est
 #### Network Layer
 
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
--   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
+-   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
 -   **ServerNet** (by default): Available since 4D v15, ServerNet is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security.
 -   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available from 4D v20 in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
 
      **Notes**:
-    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
-    - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command.
+    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
+    - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
     - Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
     - QUIC automatically connects to the port 19813 for both application server and DB4D server.
     - When the QUIC layer option is selected:

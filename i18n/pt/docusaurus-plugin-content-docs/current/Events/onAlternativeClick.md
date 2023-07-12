@@ -3,9 +3,9 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Pode ser chamado por                                                                                                                                         | Definição                                          |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
-| 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | <li>Buttons: The "arrow" area of a button is clicked</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li> |
+| Code | Pode ser chamado por                                                                                                                                           | Definição                                          |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 38   | [Botão](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Coluna de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Botões: A área da "seta" de um botão é clicada</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li> |
 
 ## Descrição
 
@@ -26,4 +26,4 @@ This event is generated in columns of [object array type list boxes](FormObjects
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](FormObjects/listbox_overview.md#alternatebutton).
+Ver a [descrição do atributo "alternateButton"](FormObjects/listbox_overview.md#alternatebutton).

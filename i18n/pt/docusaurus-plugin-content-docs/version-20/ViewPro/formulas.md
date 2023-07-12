@@ -250,7 +250,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
-An error is returned in the 4D View Pro cell if:
+É devolvido um erro na célula 4D View Pro se:
 
 *   the 4D method returns another type other than those listed above,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).

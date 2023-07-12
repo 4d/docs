@@ -18,7 +18,7 @@ Las áreas de interrupción del formulario se muestran una vez al final de la li
 
 The Break area is defined as the area between the Detail control line and the Break control line. Puede haber [varias áreas de ruptura](#additional-areas) en su informe.
 
-You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. En un informe impreso, puede utilizar un área de Ruptura para calcular e imprimir subtotales y otros cálculos de resumen.
+You can make Break areas smaller or larger. Puede utilizar un área de pausa para mostrar información que no forme parte de los registros (instrucciones, fecha actual, hora actual, etc.), o para mostrar una línea u otro elemento gráfico que concluya la visualización de la pantalla. En un informe impreso, puede utilizar un área de Ruptura para calcular e imprimir subtotales y otros cálculos de resumen.
 
 #### Gramática JSON
 
@@ -88,11 +88,11 @@ You can create additional Break areas and Header areas for a report. Estas área
 
 Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
 
-> In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
+> En el editor de formularios 4D, puede crear líneas de control adicionales manteniendo presionada la tecla **Alt** mientras hace clic en el marcador de control apropiado.
 
-A form always starts with a Header, Detail, Break level 0, and Footer areas.
+Un formulario comienza siempre con las áreas de Encabezado, Detalle, Nivel 0 y Pie de página.
 
-Break at level 0 zero takes in all the records; it occurs after all the records are printed. Se pueden añadir áreas de ruptura adicionales, es decir, un nivel de ruptura 1, un nivel de ruptura 2, etc.
+La interrupción en el nivel 0 cero toma todos los registros; se produce después de imprimir todos los registros. Se pueden añadir áreas de ruptura adicionales, es decir, un nivel de ruptura 1, un nivel de ruptura 2, etc.
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 

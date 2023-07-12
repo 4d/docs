@@ -9,7 +9,7 @@ title: Gestão de usuários e grupos 4D
 
 O usuário mais poderoso é chamado **Designer**. No aspect of the database is closed to the Designer. O Designer pode:
 
-- access all database servers without restriction,
+- aceder a todos os servidores de bases de dados sem restrições,
 - criar usuários e grupos,
 - atribuir privilégios de acesso a grupos,
 - acessar o ambiente Design. Em ambiente monousuário, direitos de acesso de Designer são sempre usados. Em ambiente cliente/servidor, atribuir uma senha ao Designer ativa a exibição do diálogo de login de usuário 4D.  Acesso ao ambiente Design é apenas leitura.

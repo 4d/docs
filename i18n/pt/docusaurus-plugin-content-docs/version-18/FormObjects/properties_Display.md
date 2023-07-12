@@ -408,7 +408,7 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 
 * 0 = caixa não assinalada,
 * 1 = caixa marcada,
-* 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
+* 2 (or any value >0) = semi-checked box (third state). Para a introdução de dados, este estado devolve o valor 2.
 * -1 = invisible check box,
 * -2 = caixa desmarcada, não editável,
 * -3 = checked box, not enterable,
@@ -458,7 +458,7 @@ This option is available for columns with any type of contents, except pictures 
 * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
  ![](../assets/en/FormObjects/property_truncate1.png)
-> The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
+> A posição das elipses depende do sistema operativo. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
 
 * When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 

@@ -40,7 +40,7 @@ $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory
 
 **Resultadoi**:
 
-If the login was successful, the result will be:
+Se o login for bem-sucedido, o resultado será:
 
 ```
 {

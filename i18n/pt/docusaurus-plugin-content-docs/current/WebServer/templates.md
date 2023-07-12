@@ -24,7 +24,7 @@ Estão disponíveis as seguintes etiquetas 4D:
 - 4DHTML, para inserir código HTML,
 - 4DEVAL, para avaliar qualquer expressão 4D,
 - 4DSCRIPT, to execute a 4D method,
-- 4DINCLUDE, to include a page within another one,
+- 4DINCLUDE, para incluir uma página dentro de outra,
 - 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
 - 4DCODE, to insert 4D code,
 - 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
@@ -33,7 +33,7 @@ Estão disponíveis as seguintes etiquetas 4D:
 
 These tags are described in the [Transformation Tags](Tags/tags.md) page.
 
-É possível combinar etiquetas. For example, the following HTML code is allowed:
+É possível combinar etiquetas. Por exemplo, é permitido o seguinte código HTML:
 
 ```html
 <HTML>

@@ -14,7 +14,7 @@ Uma grelha de botões é um objecto transparente colocado em cima de um gráfico
 
 To create the button grid, add a background graphic to the form and place a button grid on top of it. Specify the number of [rows](properties_Crop.md#rows) and [columns](properties_Crop.md#columns).
 
-In 4D, a button grid is used as a color palette:
+Em 4D, uma grelha de botões é utilizada como uma paleta de cores:
 
 ![](../assets/en/FormObjects/button_buttonGrid.png)
 

@@ -40,7 +40,7 @@ The page lists all the tables of the database (including invisible tables) as we
 ## Dados
 
 The **Data** page provides information about the available and used storage space in the data file.
-> This page cannot be accessed in maintenance mode
+> Esta página não pode ser acedida em modo manutenção
 
 As informações são fornecidas sob a forma de gráficos:
 

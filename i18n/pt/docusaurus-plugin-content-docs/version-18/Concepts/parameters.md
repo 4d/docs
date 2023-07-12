@@ -359,7 +359,7 @@ A indireção de parâmetros se gerencia melhor se respeitar a convenção abaix
 
 For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
-This function is called in the following manner:
+Esta função é chamada da seguinte forma:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)
@@ -377,7 +377,7 @@ Aqui está a função, denominada `MySum`:
  $0:=String($Sum;$1)
 ```
 
-This function can now be called in various ways:
+Esta função pode agora ser chamada de várias formas:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24)

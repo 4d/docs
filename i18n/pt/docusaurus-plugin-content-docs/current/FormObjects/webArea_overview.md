@@ -45,7 +45,7 @@ $4d. HelloWorld();
 ```
 > JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
 
-The syntax of calls to 4D methods is as follows:
+A sintaxe das chamadas aos métodos 4D é a seguinte:
 
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})

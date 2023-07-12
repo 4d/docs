@@ -60,9 +60,9 @@ São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
 - the text contains ':' and '\' as the second and third character,
-- the text starts with "\\".
+- o texto começa por "\\".
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+Exemplos com [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -77,7 +77,7 @@ The `\` character is also used as the separator in pathnames in Windows.
 
 ### macOS
 
-The following patterns are supported (HFS+ syntax):
+São suportados os seguintes padrões (sintaxe HFS+):
 
 - os separadores de pasta são ":"
 - o caminho não deve começar com um ":"

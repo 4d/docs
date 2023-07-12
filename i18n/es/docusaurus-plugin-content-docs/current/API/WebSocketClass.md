@@ -12,7 +12,7 @@ title: WebSocket
 </details>
 
 
-The `WebSocket` class allows you to open a WebSocket client connection with a server, send and receive data, and close the connection.
+La clase `WebSocket` permite abrir una conexión de cliente WebSocket con un servidor, enviar y recibir datos y cerrar la conexión.
 
 WebSocket client connections are useful, for example, to receive financial data in real time or send and receive messages from a chat.
 
@@ -73,11 +73,11 @@ WebSocket objects provide the following properties and functions:
 
 
 <!-- REF #4D.WebSocket.new().Params -->
-| Parámetros                                        | Tipo         |    | Descripción                                                          |
-| ------------------------------------------------- | ------------ |:--:| -------------------------------------------------------------------- |
-| url                                               | Text         | -> | URL to which to connect                                              |
-| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Object declaring WebSocket callbacks                                 |
-| Result                                            | 4D.WebSocket | <- | New [WebSocket object](#websocket-object)|<!-- END REF -->
+| Parámetros                                        | Tipo         |    | Descripción                                                            |
+| ------------------------------------------------- | ------------ |:--:| ---------------------------------------------------------------------- |
+| url                                               | Text         | -> | URL a la que conectarse                                                |
+| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objeto que declara las retrollamadas WebSocket                         |
+| Resultado                                         | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)|<!-- END REF -->
 
 
 |
@@ -93,7 +93,7 @@ In *url*, pass the URL to which the WebSocket server will respond. The following
 If the connection is not possible, a `null` object is returned and an error is generated (that you can intercept using a method installed with `ON ERR CALL`).
 
 
-### *connectionHandler* parameter
+### Parámetro *connectionHandler*
 
 In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, and data type to handle.
 
@@ -102,10 +102,10 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 | Propiedad   | Tipo                         | Descripción                                                                                                                                                                                                          |
 | ----------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onMessage   | [Function](FunctionClass.md) | Callback function for WebSocket data. Called each time the WebSocket has received data. La retrollamada recibe los siguientes parámetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul> |
-| onError     | [Function](FunctionClass.md) | Callback function for execution errors. La retrollamada recibe los siguientes parámetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul>                                                 |
-| onTerminate | [Function](FunctionClass.md) | Callback function when the WebSocket is terminated. La retrollamada recibe los siguientes parámetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li><li>`$2.wasClean` (boolean, read-only): Indicates whether or not the connection was cleanly closed.</li></ul>                                     |
-| onOpen      | [Function](FunctionClass.md) | Callback function when the websocket is open. La retrollamada recibe los siguientes parámetros:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>                                        |
+| onMessage   | [Function](FunctionClass.md) | Callback function for WebSocket data. Called each time the WebSocket has received data. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (text): siempre "message"</li><li>`$2.data` (text, blob, or object, see `dataType`): Received data</li></ul> |
+| onError     | [Function](FunctionClass.md) | Callback function for execution errors. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (text): always "error"</li><li>`$2.errors`: collection of 4D errors stack in case of execution error.<ul><li>`[].errCode` (number): 4D error code</li><li>`[].message` (text): Description of the 4D error</li><li>`[].componentSignature` (text): Signature of the internal component which returned the error</li></ul></li></ul>                                                 |
+| onTerminate | [Function](FunctionClass.md) | Callback function when the WebSocket is terminated. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li><li>`$2.wasClean` (boolean, read-only): Indicates whether or not the connection was cleanly closed.</li></ul>                                     |
+| onOpen      | [Function](FunctionClass.md) | Callback function when the websocket is open. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (texto): siempre "open"</li></ul>                                        |
 | dataType    | Text                         | Type of the data received or sent. Available values: "text" (default), "blob", "object". "text" = utf-8                                                                                                              |
 
 Esta es la secuencia de llamadas de retorno:
@@ -166,15 +166,15 @@ Esta propiedad es de sólo lectura.
 
 
 <!-- REF #WebSocketClass.send().Params -->
-| Parámetros | Tipo               |    | Descripción        |
-| ---------- | ------------------ |:--:| ------------------ |
-| message    | Text, Blob, Object | -> | Message to be sent |
+| Parámetros | Tipo               |    | Descripción      |
+| ---------- | ------------------ |:--:| ---------------- |
+| message    | Text, Blob, Object | -> | Mensaje a enviar |
 <!-- END REF -->
 
 
 #### Descripción
 
-La función `.send()` <!-- REF #WebSocketClass.send().Summary -->sends *message* to the WebSocket server in the defined data type (Text, Blob, or Object)<!-- END REF -->.
+La función `.send()` <!-- REF #WebSocketClass.send().Summary -->envía *message* al servidor WebSocket en el tipo de datos definido (Text, Blob u Object)<!-- END REF -->.
 
 Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
@@ -196,7 +196,7 @@ Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
 #### Descripción
 
-La propiedad `.status` contiene <!-- REF #WebSocketClass.status.Summary -->the current connection status (can be "Connecting", "Closing", "Closed", or "Connected")<!-- END REF -->.
+La propiedad `.status` contiene <!-- REF #WebSocketClass.status.Summary -->el estado actual de la conexión (puede ser "Connecting", "Closing", "Closed", o "Connected")<!-- END REF -->.
 
 Esta propiedad es de sólo lectura.
 
@@ -212,7 +212,7 @@ Esta propiedad es de sólo lectura.
 <!-- REF #WebSocketClass.terminate().Params -->
 | Parámetros | Tipo    |    | Descripción                                                         |
 | ---------- | ------- |:--:| ------------------------------------------------------------------- |
-| code       | Integer | -> | Status code explaining why the connection is being closed           |
+| code       | Integer | -> | Código de estado que explica por qué se cierra la conexión          |
 | reason     | Text    | -> | The reason why the connection is closing|<!-- END REF -->
 
 

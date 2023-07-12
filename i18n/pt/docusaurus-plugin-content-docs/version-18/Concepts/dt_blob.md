@@ -10,7 +10,7 @@ title: BLOB
 - Um BLOB é carregado na memória na sua totalidade. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
 - Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
 
-## Parameter passing, Pointers and function results
+## Passagem de parâmetros, ponteiros e resultados de funções
 
 4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
 
