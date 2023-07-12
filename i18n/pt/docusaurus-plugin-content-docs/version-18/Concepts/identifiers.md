@@ -7,7 +7,7 @@ This section describes the conventions and rules for naming various elements in 
 
 ## Regras básicas
 
-The following rules apply for all 4D frameworks.
+As regras seguintes aplicam-se a todas as estruturas 4D.
 
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
@@ -353,7 +353,7 @@ In the single-user version, or in Client/Server on the Client side, there are tw
 
 ### Processos globais
 
-Pode determinar um processo global usando uma expressão string que represente seu nome (que não pode começar com o sinal de dólar $). A process name can contain up to 255 characters.
+Pode determinar um processo global usando uma expressão string que represente seu nome (que não pode começar com o sinal de dólar $). Um nome de processo pode conter até 255 caracteres.
 
 ### Processos locais
 
@@ -408,4 +408,4 @@ Be sure to use unique names for the different elements in your database. If a pa
 5. Constantes predefinidas
 6. Variables.
 
-For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. This would prevent you from calling your method. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Isto impedi-lo-ia de chamar o seu método. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
