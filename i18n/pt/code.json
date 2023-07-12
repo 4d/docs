@@ -135,7 +135,7 @@
     "message": "Menus"
   },
   "User Settings": {
-    "message": "User Settings"
+    "message": "Propriedades usuário"
   },
   "Build Application": {
     "message": "Build application overview"
@@ -485,7 +485,7 @@
     "description": "The title for error screen of search modal"
   },
   "theme.SearchModal.errorScreen.helpText": {
-    "message": "You might want to check your network connection.",
+    "message": "É possível que queira verificar a sua ligação de rede.",
     "description": "The help text for error screen of search modal"
   },
   "theme.SearchModal.footer.selectText": {
