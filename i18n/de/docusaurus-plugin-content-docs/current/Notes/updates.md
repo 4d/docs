@@ -12,7 +12,10 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Highlights
 
 - New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
-
+- New QUIC network layer [interface setting](../settings/client-server.md#network-layer).
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R2): list of all bugs that have been fixed in 4D v20 R2.
 
 #### Behavior changes
 
@@ -123,7 +126,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 - New [HTTPRequest](../API/HTTPRequestClass.md) class.
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
-- Listbox cells support [horizontal](FormObjects/propertiesCoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/propertiesCoordinatesAndSizing.md#vertical-padding) padding.
+- Listbox cells support [horizontal](../FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](../FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
 - Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer.md#basics).
 - To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. This will have no impact on performance. See the new page explaining [why and how 4D collects data](../Admin/data-collect.md).
@@ -168,12 +171,12 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 ## 4D v19 R4
 
 - [Alias attributes](../ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
-- Support for [break and continue](../Concepts/looping.md#break-and-continue) statements in loops.
-- Support for [return](../Concepts/control-flow.md#return-expression) statement and [return expression](../Concepts/parameters.md#return-expression) to return values.
+- Support for [break and continue](../Concepts/flow-control.md#break-and-continue) statements in loops.
+- Support for [return](../Concepts/flow-control.md#return-expression) statement and [return expression](../Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](../Concepts/operators.md#compound-assignment-operators), [short-circuit operators](../Concepts/operators.md#short-circuit-operators), and [ternary operator](../Concepts/operators.md#ternary-operator)
 - The [Code Editor](../code-editor/overview.md) now includes an dropdown tool and supports markers for better code navigation.
 - New Preferences: [**Include tokens in project source files**](../Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](../Preferences/methods.md#show-clipboards) option on the Methods page.
-- New REST request to [lock/unlock](../REST/lock.md) entities.
+- New REST request to [lock/unlock](../REST/$lock.md) entities.
 - [4D View Pro](../ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
 - New [SystemWorker class](../API/SystemWorkerClass.md).
 - The `Alias selection` constant has been renamed `Allow alias files` to resolve a conflict resulting from the support of alias attributes in ORDA.
@@ -245,10 +248,10 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 - [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](../FormEditor/propertiesForm.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
+- Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
 - [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
-- [Variable calculation](../FormObjects/propertiesObject.md#variable-calculation) property is now supported by entity selection list box columns.
+- [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
 - New, comprehensive [CLI](../Admin/cli.md) page.
 
 
