@@ -71,7 +71,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
 
-An entry filter operates only during data entry. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
+Um filtro de entrada funciona apenas durante a introdução de dados. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
 
 During data entry, an entry filter evaluates each character as it is typed. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
 
@@ -97,7 +97,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &A                            | Permitir apenas letras maiúsculas.                                                                                                                            |
 | &a                            | Permitir apenas letras (maiúsculas e minúsculas).                                                                                                             |
 | &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                           |
-| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Allow any two letters, but convert to uppercase.                                                             |
+| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Permite duas letras quaisquer, mas converte-as em maiúsculas.                                                |
 | !0&9##/##/##                  | Formato de entrada de data standard. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
 | !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                                   |
 | !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. São permitidos quatro números quaisquer, separados por dois pontos. |
