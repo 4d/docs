@@ -78,7 +78,7 @@ The datastore object itself cannot be copied as an object:
 $mydatastore:=OB Copy(ds) //retorna nulo
 ```
 
-The datastore properties are however enumerable:
+No entanto, as propriedades do datastore são enumeráveis:
 
 ```4d
  ARRAY TEXT($prop;0)
@@ -118,7 +118,7 @@ The dataclass object itself cannot be copied as an object:
 $mydataclass:=OB Copy(ds. Employee) //returns null
 ```
 
-The dataclass properties are however enumerable:
+No entanto, as propriedades da dataclass são enumeráveis:
 
 ```code4d
 ARRAY TEXT($prop;0)
