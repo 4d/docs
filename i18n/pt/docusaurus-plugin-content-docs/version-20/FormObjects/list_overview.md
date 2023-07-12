@@ -120,7 +120,7 @@ Each item of a hierarchical list has a reference number (*itemRef*) of the Longi
 
 > Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
 
-Here are a few tips for using reference numbers:
+Seguem-se algumas sugestões para a utilização de números de referência:
 
 1. You do not need to identify each item with a unique number (beginner level).
 
