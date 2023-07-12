@@ -192,7 +192,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
-A 4D expression to be associated with a column. You can enter:
+Uma expressão 4D a associar a uma coluna. You can enter:
 
 - A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 

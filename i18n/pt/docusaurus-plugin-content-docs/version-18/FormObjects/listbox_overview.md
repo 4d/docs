@@ -791,7 +791,7 @@ O único atributo obrigatório é "valueType" e os seus valores suportados são 
 
 #### value
 
-Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+Os valores das células são armazenados no atributo "value". This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
 
 ````4d
  C_OBJECT($ob1)
@@ -849,7 +849,7 @@ When a "choiceList" or a "requiredList" attribute is present inside the object, 
 * If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
-> The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
+> Os valores do widget são definidos através de um array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
 
 Exemplos:
 

@@ -1267,7 +1267,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
 
-It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped.
+Fecha efetivamente o documento aberto no disco. On the client side, if the log was started in memory, it is stopped.
 
 This function does nothing if logging of ORDA requests was not started on the machine.
 

@@ -128,7 +128,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
-You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. Por exemplo, se utilizar o seguinte formato:
+Pode utilizar quaisquer outros caracteres no formato. When used alone, or placed before or after placeholders, the characters always appear. Por exemplo, se utilizar o seguinte formato:
 
  $##0
 
@@ -404,11 +404,11 @@ Allows a check box object to accept a third state. A variável associada à caix
 
 #### Three-states check boxes in list box columns
 
-List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
+List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. Se for selecionado, são apresentados os seguintes valores:
 
 * 0 = caixa não assinalada,
 * 1 = caixa marcada,
-* 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
+* 2 (or any value >0) = semi-checked box (third state). Para a introdução de dados, este estado devolve o valor 2.
 * -1 = invisible check box,
 * -2 = caixa desmarcada, não editável,
 * -3 = checked box, not enterable,
@@ -458,7 +458,7 @@ This option is available for columns with any type of contents, except pictures 
 * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
  ![](../assets/en/FormObjects/property_truncate1.png)
-> The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
+> A posição das elipses depende do sistema operativo. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
 
 * When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 

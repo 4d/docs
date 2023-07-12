@@ -61,7 +61,7 @@ These options configure the various colors used in the Method editor and debugge
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Cor de fundo**                               | Cor de fundo da janela do editor de métodos.                                                                                                                             |
 | **Border of the running line in the debugger** | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Cor de fundo da linha do cursor**            | Background color of line containing the cursor.                                                                                                                          |
+| **Cor de fundo da linha do cursor**            | Cor de fundo da linha que contém o cursor.                                                                                                                               |
 | **Execution line background color**            | Background color of line being executed in the debugger.                                                                                                                 |
 | **Destaque das palavras encontradas**          | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                                  |
 | **Destaque dos parênteses**                    | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
@@ -116,7 +116,7 @@ The highlight color can be set in the [Theme](#theme-definition) page.
 
 #### Always show block lines
 
-Allows to hide vertical block lines permanently. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+Oculta permanentemente as linhas verticais dos blocos. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
 
 ![](../assets/en/Preferences/optionsBlockLines.png)
 

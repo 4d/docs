@@ -1159,7 +1159,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`Std deviation`](https://doc.4d.com/4dv19/help/command/en/page26.html)                                       | 26     |
 | [`STOP MONITORING ACTIVITY`](https://doc.4d.com/4dv19/help/command/en/page1721.html)                          | 1721   |
 | [`STOP SQL SERVER`](https://doc.4d.com/4dv19/help/command/en/page963.html)                                    | 963    |
-| [`Storage`](https://doc.4d.com/4dv19/help/command/en/page1525.html)                                           | 1525   |
+| [`Armazenamento`](https://doc.4d.com/4dv19/help/command/en/page1525.html)                                     | 1525   |
 | [`String`](https://doc.4d.com/4dv19/help/command/en/page10.html)                                              | 10     |
 | [`STRING LIST TO ARRAY`](https://doc.4d.com/4dv19/help/command/en/page511.html)                               | 511    |
 | [`Structure file`](https://doc.4d.com/4dv19/help/command/en/page489.html)                                     | 489    |

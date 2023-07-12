@@ -161,12 +161,13 @@ Si una de las entidades comparadas es **Null**, se produce un error.
  var $diff1; $diff2 : Collection
  employee:=ds.Employee.query("ID=1001").first()
  $clone:=employee.clone()
+
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // Se devuelven todas las diferencias
+ $diff1:=$clone.diff(employee) // All differences are returned
  $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Sólo se devuelven las diferencias en el firstName y lastName
+  // Only differences on firstName and lastName are returned
 ```
 
 $diff1:
@@ -1036,7 +1037,7 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 <!-- END REF -->
 
 <!-- REF EntityClass.reload().Desc -->
-## .reload( )
+## .reload()
 
 <details><summary>Histórico</summary>
 

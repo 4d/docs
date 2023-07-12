@@ -81,7 +81,7 @@ $mydatastore:=OB Copy(ds) //retorna nulo
 ```
 
 
-The datastore properties are however enumerable:
+No entanto, as propriedades do datastore são enumeráveis:
 
 
 ```4d 
@@ -124,7 +124,7 @@ The dataclass object itself cannot be copied as an object:
 $mydataclass:=OB Copy(ds. Employee) //returns null
 ```
 
-The dataclass properties are however enumerable:
+No entanto, as propriedades da dataclass são enumeráveis:
 
 ```code4d 
 ARRAY TEXT($prop;0)
@@ -249,6 +249,6 @@ Unordered entity selections are created in the following cases:
 > > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
 > * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
-> * entity selections built upon remote datastores.
+> * selecções de entidades construídas em datastores remotos.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

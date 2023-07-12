@@ -8,7 +8,7 @@ You can use the Backup page to view some backup parameters of the database and t
 
 ![](../assets/en/MSC/msc_Backup.png)
 
-This page consists of the following three areas:
+Esta página é composta pelas três áreas seguintes:
 
 - **Backup File Destination**: displays information about the location of the application backup file. It also indicates the free/used space on the backup disk.
 - **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.

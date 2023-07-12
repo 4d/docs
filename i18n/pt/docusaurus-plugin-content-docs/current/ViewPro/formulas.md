@@ -67,7 +67,7 @@ The following operators can be used with two operands of the same type:
 
 ### Precedência do operador
 
-List of operators from most to least important:
+Lista dos operadores, do mais importante para o menos importante:
 
 | Operador                                      | Descrição                     |
 | --------------------------------------------- | ----------------------------- |
@@ -108,7 +108,7 @@ If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the 
 
 You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
 
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. A reference to a named cell is always absolute. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
+A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
 
 The following table shows the effect of the different notations:
 
@@ -250,7 +250,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
-An error is returned in the 4D View Pro cell if:
+É devolvido um erro na célula 4D View Pro se:
 
 *   the 4D method returns another type other than those listed above,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
@@ -276,7 +276,7 @@ $o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information
 
 Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
 
-### Referencing fields using the virtual structure
+### Referência a campos utilizando a estrutura virtual
 
 
 4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).

@@ -9,11 +9,11 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Localização do parâmetro                | Scope                                               | Involved web server                             |
-| --------------------------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| [webServer object](webServerObject.md)  | Temporário (sessão atual)                           | Any web server, including component web servers |
-| `WEB SET OPTION` or a `WEB XXX` command | Temporário (sessão atual)                           | Servidor principal                              |
-| **Settings** dialog box (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                              |
+| Localização do parâmetro                | Scope                                               | Involved web server                                            |
+| --------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
+| [webServer object](webServerObject.md)  | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| `WEB SET OPTION` or a `WEB XXX` command | Temporário (sessão atual)                           | Servidor principal                                             |
+| **Settings** dialog box (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
 > Some settings are not available from all locations.
 
@@ -189,10 +189,10 @@ Estado da comunicação por HTTPS. This option is described in [this section](Ad
 
 ## Ativar HSTS
 
-| Pode ser definido com | Nome                                               | Comentários                                     |
-| --------------------- | -------------------------------------------------- | ----------------------------------------------- |
-| webServer object      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Boolean, true to enable HSTS (default is false) |
-| `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)           |
+| Pode ser definido com | Nome                                               | Comentários                                          |
+| --------------------- | -------------------------------------------------- | ---------------------------------------------------- |
+| webServer object      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Booleano, true para ativar HSTS (por padrão é false) |
+| `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)                |
 
 Estado do HTTP Strict Transport Security (HSTS).
 
@@ -271,7 +271,7 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 | `WEB SET OPTION`                   | `Web HTTPS port ID`                            |             |
 | Caixa de diálogos de configurações | Configuration page/HTTPS Port                  |             |
 
-Listening IP port number for HTTPS connections via TLS. By default, the value is 443 (standard value). See also [HTTP Port](#http-port) for information on port numbers.
+Listening IP port number for HTTPS connections via TLS. Por defeito, o valor é 443 (valor padrão). See also [HTTP Port](#http-port) for information on port numbers.
 
 ## Inactive Process Timeout
 
@@ -426,7 +426,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 | --------------------- | ------------------------------------ | ----------- |
 | webServer object      | [`name`](API/WebServerClass.md#name) |             |
 
-Nome da aplicação do servidor web. Useful when component web servers are started.
+Nome da aplicação do servidor web. Útil quando são iniciados servidores Web de componentes.
 
 ## Versão OpenSSL
 

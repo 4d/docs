@@ -160,7 +160,7 @@
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.User Settings": {
-    "message": "User Settings",
+    "message": "Propriedades usuário",
     "description": "The label for category User Settings in sidebar docs"
   },
   "sidebar.docs.category.Build Application": {
@@ -268,7 +268,7 @@
     "description": "The generated-index page title for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Applications.link.generated-index.description": {
-    "message": "Guides for developing Web applications with 4D",
+    "message": "Guias para desenvolver aplicações Web com 4D",
     "description": "The generated-index page description for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.REST Server.link.generated-index.title": {
@@ -332,7 +332,7 @@
     "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
   },
   "sidebar.docs.doc.User Settings": {
-    "message": "User Settings",
+    "message": "Propriedades usuário",
     "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
   },
   "sidebar.docs.doc.Build Application": {

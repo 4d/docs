@@ -63,7 +63,7 @@ A propriedade `.allowAutoExpand` <!-- REF #TableOptions.allowAutoExpand.Summary 
 ### .bandColumns
 
 <!-- REF #TableOptions.bandColumns.Syntax -->
-**.bandColumns** : Boolean<!-- END REF -->
+**.bandColumns**: Boolean<!-- END REF -->
 
 A propriedade `.bandColumns` <!-- REF #TableOptions.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->. Padrão = False
 
@@ -81,14 +81,14 @@ A propriedade `.bandRows` <!-- REF #TableOptions.bandRows.Summary -->indicates w
 <!-- REF #TableOptions.highlightLastColumn.Syntax -->
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableOptions.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->. Padrão = False
+A propriedade `.highlightLastColumn` <!-- REF #TableOptions.highlightLastColumn.Summary -->indica se a última coluna deve ser realçada<!-- END REF -->. Padrão = False
 
 ### .highlightFirstColumn
 
 <!-- REF #TableOptions.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableOptions.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->. Padrão = False
+A propriedade `.highlightFirstColumn` <!-- REF #TableOptions.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser realçada<!-- END REF -->. Padrão = False
 
 
 ### .showFooter
@@ -137,7 +137,7 @@ See the [native SpreadJS themes](https://www.grapecity.com/spreadjs/api/classes/
 <!-- REF #TableOptions.useFooterDropDownList.Syntax -->
 **.useFooterDropDownList** : Boolean<!-- END REF -->
 
-The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Padrão = False
+A propriedade `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownList.Summary -->indicates whether to use a dropdown list in footer cells that calculate the total value of a column<!-- END REF -->. Padrão = False
 
 
 
@@ -174,7 +174,7 @@ A propriedade `.font` é o <!-- REF #TableStyle.font.Summary -->font name (see [
 <!-- REF #TableStyle.textDecoration.Syntax -->
 **.textDecoration** : Integer<!-- END REF -->
 
-The `.textDecoration` property is the <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md/#fonts-and-text))<!-- END REF -->.
+A propriedade `.textDecoration` é a <!-- REF #TableStyle.textDecoration.Summary -->text decoration of the table (see [**Fonts and text**](configuring.md/#fonts-and-text))<!-- END REF -->.
 
 
 ### .borderLeft
@@ -198,7 +198,7 @@ A propriedade `.borderRight` é a <!-- REF #TableStyle.borderRight.Summary -->ri
 <!-- REF #TableStyle.borderBottom.Syntax -->
 **.borderBottom** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
+A propriedade `.borderBottom` é o <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->.
 
 
 
@@ -217,7 +217,7 @@ The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Su
 <!-- REF #TableStyle.borderVertical.Syntax -->
 **.borderVertical** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderVertical` property is the <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->.
+A propriedade `.borderVertical` é a <!-- REF #TableStyle.borderVertical.Summary -->vertical border line of the table <!-- END REF -->.
 
 
 
@@ -235,7 +235,7 @@ A propriedade `.bandRows` <!-- REF #TableTheme.bandRows.Summary -->indicates whe
 ### .bandColumns
 
 <!-- REF #TableTheme.bandColumns.Syntax -->
-**.bandColumns** : Boolean<!-- END REF -->
+**.bandColumns**: Boolean<!-- END REF -->
 
 A propriedade `.bandColumns` <!-- REF #TableTheme.bandColumns.Summary -->indicates whether to display an alternating column style<!-- END REF -->.
 
@@ -245,14 +245,14 @@ A propriedade `.bandColumns` <!-- REF #TableTheme.bandColumns.Summary -->indicat
 <!-- REF #TableTheme.highlightLastColumn.Syntax -->
 **.highlightLastColumn** : Boolean<!-- END REF -->
 
-The `.highlightLastColumn` property <!-- REF #TableTheme.highlightLastColumn.Summary -->indicates whether to highlight the last column<!-- END REF -->.
+A propriedade `.highlightLastColumn` <!-- REF #TableTheme.highlightLastColumn.Summary -->indica se a última coluna deve ser realçada<!-- END REF -->.
 
 ### .highlightFirstColumn
 
 <!-- REF #TableTheme.highlightFirstColumn.Syntax -->
 **.highlightFirstColumn** : Boolean<!-- END REF -->
 
-The `.highlightFirstColumn` property <!-- REF #TableTheme.highlightFirstColumn.Summary -->indicates whether to highlight the first column<!-- END REF -->.
+A propriedade `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.Summary -->indica se a primeira coluna deve ser realçada<!-- END REF -->.
 
 ### .theme
 
@@ -314,14 +314,14 @@ The `.firstRowStripStyle` property is the <!-- REF #TableThemeOptions.firstRowSt
 <!-- REF #TableThemeOptions.footerRowStyle.Syntax -->
 **.footerRowStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.footerRowStyle` property is the <!-- REF #TableThemeOptions.footerRowStyle.Summary -->default style of the footer area<!-- END REF -->.
+A propriedade `.footerRowStyle` é o <!-- REF #TableThemeOptions.footerRowStyle.Summary -->default style of the footer area<!-- END REF -->.
 
 ### .headerRowStyle
 
 <!-- REF #TableThemeOptions.headerRowStyle.Syntax -->
 **.headerRowStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.headerRowStyle` property is the <!-- REF #TableThemeOptions.headerRowStyle.Summary -->default style of the header area<!-- END REF -->.
+A propriedade `.headerRowStyle` é o <!-- REF #TableThemeOptions.headerRowStyle.Summary -->default style of the header area<!-- END REF -->.
 
 ### .highlightFirstColumnStyle
 

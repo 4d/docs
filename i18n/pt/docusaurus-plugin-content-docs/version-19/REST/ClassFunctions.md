@@ -536,7 +536,7 @@ The entities with primary keys 1 and 2 have been updated.
 }
 ```
 
-### Using an entity selection updated on the client
+### Utilizar uma seleção de entidade actualizada no cliente
 
 Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).
 

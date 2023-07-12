@@ -57,13 +57,13 @@ When Single Sign On (SSO) is enabled (see above), you must fill in this field if
 #### Network Layer
 
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
--   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
+-   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
 -   **ServerNet** (by default): Available since 4D v15, ServerNet is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security.
 -   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available from 4D v20 in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
 
      **Notes**:
-    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/4D/20/SET-DATABASE-PARAMETER.301-6238084.fe.html) command.
-    - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/4D/20/Get-application-info.301-6238061.fe.html) command.
+    - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
+    - You can know if a 4D application is running with a QUIC network layer using the [Get application info](https://doc.4d.com/4Dv20/help/command/page1599.html) command.
     - Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
     - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
     - Quando a opção de camada QUIC é selecionada:
@@ -97,7 +97,7 @@ This option lets you activate the secured mode for communications between the se
 
 This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Three settings are available:
 
--   **Never**: The local **Resources** folder is not updated during the session. The notification sent by the server is ignored. The local **Resources** folder may be updated manually using the **Update Local Resources** action menu command (see [Using the Resources explorer](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
+-   **Never**: The local **Resources** folder is not updated during the session. A notificação enviada pelo servidor é ignorada. The local **Resources** folder may be updated manually using the **Update Local Resources** action menu command (see [Using the Resources explorer](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
 -   **Always**: The synchronization of the local **Resources** folder is automatically carried out during the session whenever notification is sent by the server.
 -   **Ask**: When the notification is sent by the server, a dialog box is displayed on the client machines, indicating the modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\
   The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Automatic or manual mechanisms can be used to notify each client when the contents of this folder have been modified. For more information, please refer to the [Managing the Resources folder](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.en.html) section.

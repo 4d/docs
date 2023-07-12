@@ -974,7 +974,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *methodName* receives the following parameters:
 
 * in *$1.value*: element value to be filtered
-* in *$2*: *param*
+* em *$2*: *param*
 * em *$N...*: param2...paramN
 
 *methodName* sets the following parameter(s):
@@ -1788,7 +1788,7 @@ Ordenar com uma rota de propriedade:
 <!-- REF #collection.orderByMethod().Params -->
 | Parâmetro  | Tipo       |    | Descrição                                                                |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| methodName | Text       | -> | Name of method used to specify the sorting order                         |
+| methodName | Text       | -> | Nome do método utilizado para especificar a ordem de ordenação           |
 | extraParam | expressão  | -> | Parâmetros para o método                                                 |
 | Resultados | Collection | <- | Cópia ordenada da coleção (cópia superficial)|<!-- END REF -->
 
@@ -2480,10 +2480,10 @@ With the following *NumberGreaterThan0* method:
 
 
 <!-- REF #collection.sort().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                             |
-| ---------- | ---------- |:--:| ----------------------------------------------------- |
-| methodName | Text       | -> | Name of method used to specify the sorting order      |
-| extraParam | any        | -> | Parâmetros para o método                              |
+| Parâmetro  | Tipo       |    | Descrição                                                      |
+| ---------- | ---------- |:--:| -------------------------------------------------------------- |
+| methodName | Text       | -> | Nome do método utilizado para especificar a ordem de ordenação |
+| extraParam | any        | -> | Parâmetros para o método                                       |
 | Resultados | Collection | <- | Colecção original ordenada|<!-- END REF -->
 
 |

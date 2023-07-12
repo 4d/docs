@@ -107,7 +107,7 @@ When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-tempora
 
 Not available with [scalable sessions](../WebServer/sessions.md).
 
-Strictly high limit of concurrent web processes. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Limite estritamente superior de processos Web em simultâneo. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 
 #### Reuse Temporary Contexts
@@ -221,7 +221,7 @@ The following table lists the fields available for each format (in alphabetical 
 | Campo          | ELF | WLF | Valor                                                                      |
 | -------------- | --- | --- | -------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                    |
-| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
+| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                          |
 | C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
 | CONNECTION_ID  |     | X   | Número de identificação da ligação                                         |
@@ -238,7 +238,7 @@ The following table lists the fields available for each format (in alphabetical 
 | PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
 | TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                        |
-| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
+| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                       |
 | USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
 |                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
 | URL            |     | X   | URL solicitado pelo cliente                                                |
@@ -253,7 +253,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 -   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24.
 
     -   **starting at**: Used to set the time at which the first back up will begin.
--   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
+-   **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
 -   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
 -   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
 -   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
