@@ -60,7 +60,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 ## Sublinhado
 
-Sets the text to have a line running beneath it.
+Define o texto para ter uma linha por baixo.
 
 #### Gramática JSON
 
@@ -286,7 +286,7 @@ Specifies an expression or a variable which will be evaluated for each row displ
 | textDecoration            | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                   |
 | unselectable              | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". This setting is ignored if the list box selection mode is "None". |
 | disabled                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                          |
-| cell.`<columnName>` | object  | Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. São ignorados se forem passados no objeto "célula"                                                                                                                                                        |
+| cell.`<columnName>` | object  | Permite aplicar a propriedade a uma única coluna. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. São ignorados se forem passados no objeto "célula"                                                                                                                                                       |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
@@ -332,9 +332,9 @@ O método *Color* iria conter :
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                |
-| ---------- | ------------- | ------------------------------------------------ |
-| metaSource | string        | Object expression to evaluate for each row/cell. |
+| Nome       | Tipo de dados | Valores possíveis                                     |
+| ---------- | ------------- | ----------------------------------------------------- |
+| metaSource | string        | Expressão do objeto a avaliar para cada linha/célula. |
 
 #### Objectos suportados
 
