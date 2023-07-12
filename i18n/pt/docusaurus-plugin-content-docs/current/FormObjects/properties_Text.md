@@ -61,7 +61,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 ## Sublinhado
 
-Sets the text to have a line running beneath it.
+Define o texto para ter uma linha por baixo.
 
 #### Gramática JSON
 
@@ -343,9 +343,9 @@ O método *Color* iria conter :
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                |
-| ---------- | ------------- | ------------------------------------------------ |
-| metaSource | string        | Object expression to evaluate for each row/cell. |
+| Nome       | Tipo de dados | Valores possíveis                                     |
+| ---------- | ------------- | ----------------------------------------------------- |
+| metaSource | string        | Expressão do objeto a avaliar para cada linha/célula. |
 
 #### Objectos suportados
 
