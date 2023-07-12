@@ -304,10 +304,10 @@ Para cada petição, os campos abaixo estão logados:
 
 ## Pedidos ORDA
 
-ORDA requests logs can record each ORDA request and server response. Estão disponíveis dois registos de pedidos ORDA:
+Os registos de pedidos ORDA podem registar cada pedido ORDA e a resposta do servidor. Estão disponíveis dois registos de pedidos ORDA:
 
 - um registo de pedidos ORDA do lado do cliente, em formato .txt
-- a server-side ORDA request log, in .jsonl format
+- um registo de pedidos ORDA do lado do servidor, em formato .jsonl
 
 ### Do lado do cliente
 
@@ -316,10 +316,10 @@ The client-side ORDA log records each ORDA request sent from a remote machine. Y
 Como iniciar esse log:
 
 ```4d
-    //on a remote machine
+    //numa máquina remota
 SET DATABASE PARAMETER(Client Log Recording;1)  
 ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //can be also sent to memory
+    //pode também ser enviado para a memória
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -338,7 +338,7 @@ Os campos abaixo são registrados para cada petição:
 | url            | Request URL                                                  | "rest/Persons(30001)"                                   |
 | startTime      | Data e hora de início utilizando o formato ISO 8601          | "2019-05-28T08:25:12.346Z"                              |
 | endTime        | Data e hora final usando formato ISO 8601                    | "2019-05-28T08:25:12.371Z"                              |
-| duration       | Client processing duration in milliseconds (ms)              | 25                                                      |
+| duration       | Duração do processamento do cliente em milissegundos (ms)    | 25                                                      |
 | response       | Objeto resposta servidor                                     | {"status":200,"body":{"__entityModel":"Persons",\[...] |
 
 #### Exemplo
