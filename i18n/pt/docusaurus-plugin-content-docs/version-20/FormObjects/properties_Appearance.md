@@ -291,7 +291,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showVerticalRuler|boolean|true (default), false|
+ showVerticalRuler|boolean|true (padrão), false|
 
 #### Objectos suportados
 
