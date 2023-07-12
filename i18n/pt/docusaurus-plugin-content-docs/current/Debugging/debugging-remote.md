@@ -90,4 +90,4 @@ If a machine tries to attach the debugger while it is already attached, the atta
 Attaching the debugger in this case requires that:
 
 * the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
-* the attached remote 4D client session is closed.
+* a sessão do cliente remoto 4D anexado é encerrada.
