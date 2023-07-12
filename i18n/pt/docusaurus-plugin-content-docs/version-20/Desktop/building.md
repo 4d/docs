@@ -120,7 +120,7 @@ This tab allows you can build a stand-alone, single-user version of your applica
 
 Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
 
-The following elements are required for the build:
+Os seguintes elementos são necessários para a construção:
 
 * 4D Volume Desktop (o motor de base de dados 4D),
 * uma [licença apropriada](#licenses)
@@ -644,7 +644,7 @@ Para definir e utilizar um ficheiro de dados padrão:
 * You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 * When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
 
-The following graphic illustrates this feature:
+O gráfico seguinte ilustra esta funcionalidade:
 
 ![](../assets/en/Project/DefaultData.png)
 
@@ -676,7 +676,7 @@ The whole procedure is described in the following diagram:
 
 ### Armazenar o último caminho do servidor
 
-The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. This folder is stored at the following location:
+The last used and validated server path is automatically saved in a file named "lastServer.xml" in the application's user preferences folder. Esta pasta está armazenada na seguinte localização:
 
 ```4d
 userPrefs:=Get 4D folder(Pasta 4D activa)
