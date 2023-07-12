@@ -73,7 +73,7 @@ You use the Shortcuts area for viewing and modifying default shortcuts for three
 Os atalhos predefinidos são os seguintes:
 
 -   Accept input form: **Enter**
--   Cancel input form: **Esc**
+-   Cancelamento de entrada: **Esc**
 -   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
 
 To change the shortcut of an operation, click the corresponding **Edit** button. Aparece a seguinte caixa de diálogo:
