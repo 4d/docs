@@ -4747,7 +4747,7 @@ End case
 |---|---|---|---|
 |vpAreaName |Object|->|4D View Pro area form object name|
 |dataObj|Object|->|Data object to load in the data context|
-|dataColl|Object|->|Data collection to load in the data context|
+|dataColl|Collection|->|Data collection to load in the data context|
 |options |Object|->|Additional options|
 |sheet|Integer|->|Sheet index|<!-- END REF -->
 

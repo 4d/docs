@@ -2800,6 +2800,7 @@ If the object returned includes a date or time, it is treated as a datetime and 
 If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. The command returns a null object if the cell is empty.
 
 
+
 #### Example
 
 ```4d
@@ -4001,6 +4002,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |row|Integer|->|Row index|
 |rowCount  |Integer|->|Number of rows|
+
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
@@ -4621,6 +4623,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . The current sheet is the selected sheet in the document.
 
+
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
 In *sheet*, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
@@ -4747,7 +4750,7 @@ End case
 |---|---|---|---|
 |vpAreaName |Object|->|4D View Pro area form object name|
 |dataObj|Object|->|Data object to load in the data context|
-|dataColl|Object|->|Data collection to load in the data context|
+|dataColl|Collection|->|Data collection to load in the data context|
 |options |Object|->|Additional options|
 |sheet|Integer|->|Sheet index|<!-- END REF -->
 
@@ -5161,6 +5164,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
 <!-- END REF -->
 
+
 #### Description
 
 The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen. The location of the line depends on where the frozen column or row is on the sheet:
@@ -5420,6 +5424,7 @@ The `VP SET SELECTION` command <!-- REF #_method_.VP SET SELECTION.Summary -->de
 In *rangeObj*, pass a range object of cells to designate as the current selection.
 
 #### Example
+
 
 ```4d
 $currentSelection:=VP Combine ranges(VP Cells("myVPArea";3;2;1;6);VP Cells("myVPArea";5;7;1;7))
