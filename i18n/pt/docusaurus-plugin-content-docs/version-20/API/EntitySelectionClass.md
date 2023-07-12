@@ -1228,7 +1228,7 @@ Form.products.add(Form.product)
 
 #### Descrição
 
-A função `.isOrdered()` <!-- REF #EntitySelectionClass.isOrdered().Summary -->returns True if the entity selection is ordered<!-- END REF -->, e False se não for ordenada.
+A função `.isOrdered()` <!-- REF #EntitySelectionClass.isOrdered().Summary -->devolve True se a entity selection estiver ordenada<!-- END REF -->, e False se não for ordenada.
 > Esta função devolve sempre True quando a selecção da entidade provém de um datastore remoto.
 
 Para mais informação, consulte [Entity selection ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
@@ -1320,7 +1320,7 @@ Se a entity selection estiver vazia, a função devolve Null.
 
 #### Descrição
 
-A propriedade `.length` <!-- REF #EntitySelectionClass.length.Summary -->retorna o número de entidades na seleção de entidade<!-- END REF -->. If the entity selection is empty, it returns 0.
+A propriedade `.length` <!-- REF #EntitySelectionClass.length.Summary -->retorna o número de entidades na seleção de entidade<!-- END REF -->. Se a entity selection estiver vazia, devolve 0.
 
 As entity selections sempre têm uma propriedade `.length`.
 
