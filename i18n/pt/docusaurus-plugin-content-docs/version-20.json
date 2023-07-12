@@ -132,7 +132,7 @@
     "description": "The generated-index page title for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Applications.link.generated-index.description": {
-    "message": "Guides for developing Web applications with 4D",
+    "message": "Guias para desenvolver aplicações Web com 4D",
     "description": "The generated-index page description for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
@@ -300,7 +300,7 @@
     "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
   },
   "sidebar.docs.doc.User Settings": {
-    "message": "User Settings",
+    "message": "Propriedades usuário",
     "description": "The label for the doc item User Settings in sidebar docs, linking to the doc Desktop/user-settings"
   },
   "sidebar.docs.doc.Build Application": {
