@@ -293,7 +293,7 @@ There are several ways to add expressions to the list:
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
 * Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
 
-You can enter any formula that returns a result.
+Pode introduzir qualquer fórmula que devolva um resultado.
 
 To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
 
