@@ -321,7 +321,7 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 #### Descrição
 
-O comando `VP ALL` <!-- REF #_method_.VP All.Summary -->returns a new range object referencing all cells<!-- END REF -->.
+O comando `VP ALL` <!-- REF #_method_.VP All.Summary -->devolve um novo objeto de intervalo que faz referência a todas as células<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -779,7 +779,7 @@ The length of the *tableColumns* collection must be equal to the range column co
   * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
   * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
 
-If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
+If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Caso contrário, é utilizada a primeira célula do intervalo. When generating columns automatically, the following rules apply:
 
 * If the data passed to the command is a collection of objects, the property names are used as column titles. Por exemplo:
 
@@ -985,7 +985,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 | Variável |               | Tipo    | Descrição                                                    |
 | -------- | ------------- | ------- | ------------------------------------------------------------ |
 | $1       |               | text    | O nome do objeto 4D View Pro                                 |
-| $2       |               | text    | The filepath of the exported 4D View Pro object              |
+| $2       |               | text    | O caminho do ficheiro do objeto 4D View Pro exportado        |
 | $3       |               | object  | A reference to the command's *paramObj*                      |
 | $4       |               | object  | An object returned by the method with a status message       |
 |          | .success      | boolean | True se a exportação for bem sucedida, False caso contrário. |
@@ -1621,17 +1621,17 @@ $index:=VP Get current sheet("ViewProArea")
 
 <!-- REF #_method_.VP Get data context.Params -->
 
-| Parâmetro  | Tipo                     |    | Descrição                                       |
-| ---------- | ------------------------ | -- | ----------------------------------------------- |
-| vpAreaName | Object                   | -> | 4D View Pro area form object name               |
-| sheet      | Integer                  | -> | Index of the sheet to get the data context from |
+| Parâmetro  | Tipo                     |    | Descrição                                                     |
+| ---------- | ------------------------ | -- | ------------------------------------------------------------- |
+| vpAreaName | Object                   | -> | 4D View Pro area form object name                             |
+| sheet      | Integer                  | -> | Índice da folha a partir da qual se obtém o contexto de dados |
 | Resultados | Object &#124; Collection | <- | Contexto de dados|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->returns the current data context of a worksheet<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
+O comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->devolve o data context atual de uma folha de cálculo<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
 
 In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
 
@@ -1914,7 +1914,7 @@ You can define where to get the names in *scope* using either the sheet index (c
 
 ##### Coleção devolvida
 
-The returned collection contains one object per name. The following object properties can be returned:
+The returned collection contains one object per name. As seguintes propriedades do objeto podem ser devolvidas:
 
 | Propriedade         | Tipo | Descrição                      |
 | ------------------- | ---- | ------------------------------ |
@@ -2247,7 +2247,7 @@ If the passed sheet index does not exist, the method returns an empty name.
 
 #### Exemplo
 
-Get the name of the third sheet in the document:
+Obtém o nome da terceira folha do documento:
 
 ```4d
 $sheetName:=VP Get sheet name("ViewProArea";2)
@@ -2633,7 +2633,7 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 
 #### Descrição
 
-The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+O comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -2698,7 +2698,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 #### Descrição
 
-O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->returns the range of *tableName*<!-- END REF -->.
+O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->devolve o intervalo de *tableName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -2707,7 +2707,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | Parâmetros            | Valor | Descrição                                                                         |
 | --------------------- | ----- | --------------------------------------------------------------------------------- |
 | `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1     | Get the cell range for the table data area only                                   |
+| `vk table data range` | 1     | Obter o intervalo de células apenas para a área de dados da tabela                |
 
 In *sheet*, pass the index of the target sheet. The `VP Get sheet index` command
 > A indexação começa em 0.
@@ -3236,7 +3236,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | ----------- | ------- | -- | ------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | 4D View Pro area form object name                                   |
 | tableName   | Text    | -> | Nome da tabela                                                      |
-| row         | Integer | -> | Index in the table of the starting row to insert                    |
+| row         | Integer | -> | Índice na tabela da linha inicial a inserir                         |
 | count       | Text    | -> | Número de linhas a adicionar (tem de ser >0)                        |
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*           |
 | sheet       | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
@@ -6171,10 +6171,10 @@ The following table lists the available workbook options:
 | highlightInvalidData                  | boolean                 | Os dados inválidos são realçados.                                                                                                                                                                                                                      |
 | iterativeCalculation                  | boolean                 | Enables iterative calculation. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                            |
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
-| iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
+| iterativeCalculationMaximumIterations | numeric                 | Número de vezes que a fórmula deve ser recalculada.                                                                                                                                                                                                    |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. Se a célula seguinte estiver vazia, transborda o conteúdo.</td></tr></table>                                                                                                                          |
-| pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
+| pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.      |
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                                  |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                              |
 | rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
