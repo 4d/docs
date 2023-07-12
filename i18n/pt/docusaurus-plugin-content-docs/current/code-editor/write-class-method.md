@@ -62,7 +62,7 @@ The change bars change colors to indicate whether or not the modifications were 
 
 The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
 
-By default, the Code Editor displays four lists. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
+Por padrão, o editor de código apresenta quatro listas. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
 
 You can enlarge or reduce the relative width of each list area by dragging one of its partitions. It is also possible to adjust the size of the list area in relation to that of the editing area by dragging the dividing line between them.
 
@@ -94,7 +94,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Commands by themes**: 4D language commands classified by theme in the form of a hierarchical list.
 - **Menu bars**: Names and numbers of menu bars [created with the 4D Menu bar editor](../Menus/creating.md).
 - **Constants**: 4D constants and those of any plug-ins, classified by theme in the form of a hierarchical list.
-- **Lists**: Names of lists.
+- **Listas**: Nomes de listas.
 - **All plug-in commands**: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.
 - **SQL Keywords**: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).
 - **SQL Functions**: 4D SQL functions.
@@ -162,12 +162,12 @@ When there is no tag in the class/method, the tool displays "No tag".
 
 Os seguintes itens são adicionados automaticamente:
 
-| Ícone                                                                       | Elemento                                         |
-| --------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                     |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou declaração de método        |
-| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](../assets/en/code-editor/function.png)                     | Nome da função de classe                         |
+| Ícone                                                                       | Elemento                                       |
+| --------------------------------------------------------------------------- | ---------------------------------------------- |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                   |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou declaração de método      |
+| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Atributo calculado (get, set, orderBy e query) |
+| ![function-icon](../assets/en/code-editor/function.png)                     | Nome da função de classe                       |
 
 #### Marcação manual
 
@@ -236,7 +236,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Alt]+[seta para baixo]                                          | Move the line(s) where the cursor is to the bottom                                                                                         |
 | [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                  |
 | [Home]                                                           | Place the insertion point at the beginning of the line                                                                                     |
-| [End]                                                            | Place the insertion point at the end of the line                                                                                           |
+| [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                |
 | [Ctrl]+[Home]                                                    | Place the insertion point at the beginning of the method                                                                                   |
 | [Ctrl]+[End]                                                     | Place the insertion point at the end of the method                                                                                         |
 | [Shift]+[Home]                                                   | Select all the characters in the line that are to the left of the cursor                                                                   |
@@ -258,7 +258,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
 | [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
 | [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
-| [Ctrl]+click on clipboard icon                                   | Paste contents of a clipboard at cursor location                                                                                           |
+| [Ctrl]+click on clipboard icon                                   | Colar o conteúdo de uma área de transferência na localização do cursor                                                                     |
 | [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
 
 :::tip
@@ -354,7 +354,7 @@ You can move the line where the cursor is directly without selecting it first us
 
 ### Autocomplete functions
 
-The Code Editor provides autocomplete functions. 4D automatically displays suggestions based on the first few characters typed.
+O editor de código fornece funções de preenchimento automático. 4D automatically displays suggestions based on the first few characters typed.
 
 In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
 
@@ -380,7 +380,7 @@ By default, you can also insert a suggested value by hitting one of the followin
 
 You can press the **Esc** key to close the pop-up list or you can continue typing while it is open. The values suggested in the pop-up list are updated as additional characters are typed.
 
-If the characters typed correspond to different types of objects, the list displays them in their current style. The following types of objects can be displayed:
+If the characters typed correspond to different types of objects, the list displays them in their current style. Podem ser visualizados os seguintes tipos de objetos:
 
 - Comandos 4D
 - Comandos SQL
