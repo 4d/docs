@@ -258,10 +258,11 @@ Function add($x : Variant; $y : Integer): Integer
 #### Example 1
 
 ```4d
+property name : Text
+property height; width : Integer
+
 // Class: Rectangle
 Class constructor($width : Integer; $height : Integer)
- property name : Text
- property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
@@ -430,9 +431,9 @@ The type of the computed property is defined by the `$return` type declaration o
 
 ```4d  
 //Class: Person.4dm
+property firstName; lastName : Text
 
 Class constructor($firstname : Text; $lastname : Text)
- property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
