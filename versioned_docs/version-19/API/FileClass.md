@@ -257,6 +257,7 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
+
 |Parameter|Type||Description|
 |---|----|---|---|
 | |  ||Does not require any parameters|<!-- END REF -->
@@ -265,11 +266,18 @@ You want to create an alias to a file in your database folder:
 
 The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-If the file is currently open, an error is generated.
-
 If the file does not exist on disk, the function does nothing (no error is generated).
 
->**WARNING**: `.delete( )` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete( )` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+If the file is currently open:
+
+- on Windows, an error is generated,
+- on macOS, no error is generated and the file is deleted.  
+
+:::caution
+
+`.delete()` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete()` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+
+:::
 
 #### Example
 
