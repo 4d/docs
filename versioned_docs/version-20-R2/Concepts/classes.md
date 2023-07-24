@@ -101,6 +101,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
 Available classes are accessible from their class stores. Two class stores are available:
 
 
+
 - `cs` for user class store
 - `4D` for built-in class store
 
@@ -370,7 +371,7 @@ The property type can be one of the following supported types:
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` block.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class Constructor` block.
 
 :::
 
