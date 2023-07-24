@@ -271,7 +271,7 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 
 If the file does not exist on disk, the function does nothing (no error is generated).
 
-If the file is currently open:
+If the file is currently open, the result depends on the OS:
 
 - on Windows, an error is generated,
 - on macOS, no error is generated and the file is deleted.  
