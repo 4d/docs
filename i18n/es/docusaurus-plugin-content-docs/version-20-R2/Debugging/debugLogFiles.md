@@ -239,7 +239,7 @@ Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de r
 | --------- | ----------------------------------------------------------------------------------------------- | ------------------------------- |
 | ERROR     | Una parte de la aplicación no funciona                                                          | ERROR                           |
 | WARN      | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | ERROR, WARN                     |
-| INFO      | ID Proceso 4D                                                                                   | ERROR, WARN, INFO               |
+| INFO      | *Nivel por defecto* - Evento de aplicación importante                                           | ERROR, WARN, INFO               |
 | DEBUG     | Detalle del flujo de aplicación (para los servicios técnicos 4D)                                | ERROR, WARN, INFO, DEBUG        |
 | TRACE     | Otra información interna (para los servicios técnicos de 4D)                                    | ERROR, WARN, INFO, DEBUG, TRACE |
 
