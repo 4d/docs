@@ -9,7 +9,7 @@ When this property is enabled (`rightToLeft` value in JSON), list box columns ar
 
 When this property is disabled (`legacy` value in JSON), only the rightmost column of the list box is resized, even if its width exceeds the maximum value defined.
 
-### How column auto-resizing works
+### Como funciona o redimensionamento automático de colunas
 
 * As the list box width increases, its columns are enlarged, one by one, starting from right to left, until each reaches its [maximum width](properties_CoordinatesAndSizing.md#maximum-width). Only columns with the [Resizable](#resizable) property selected are resized.
 
@@ -47,7 +47,7 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Estão disponíveis três opções:
 
-| Option   | Valor JSON | Resultados                                                                                                             |
+| Opção    | Valor JSON | Resultados                                                                                                             |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
 | Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
@@ -72,7 +72,7 @@ This property specifies if the vertical size of an object should be moved or res
 
 Estão disponíveis três opções:
 
-| Option   | Valor JSON | Resultados                                                                                                           |
+| Opção    | Valor JSON | Resultados                                                                                                           |
 | -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Mover    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
