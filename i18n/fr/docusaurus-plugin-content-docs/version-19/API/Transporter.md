@@ -59,7 +59,7 @@ Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilis
 
 Valeurs possibles :
 
-| Value    | Constantes                     | Commentaire                                     |
+| Valeur   | Constantes                     | Commentaire                                     |
 | -------- | ------------------------------ | ----------------------------------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | Authentification à l'aide du protocole CRAM-MD5 |
 | LOGIN    | `IMAP authentication login`    | Authentification à l'aide du protocole LOGIN    |
@@ -91,7 +91,7 @@ Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilis
 
 Valeurs possibles :
 
-| Value    | Constantes                     | Commentaire                                                   |
+| Valeur   | Constantes                     | Commentaire                                                   |
 | -------- | ------------------------------ | ------------------------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentification à l'aide du protocole APOP (POP3 uniquement) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentification à l'aide du protocole CRAM-MD5               |
@@ -124,7 +124,7 @@ Par défaut, le mode le plus sécurisé pris en charge par le serveur est utilis
 
 Valeurs possibles :
 
-| Value    | Constantes                     | Commentaire                                     |
+| Valeur   | Constantes                     | Commentaire                                     |
 | -------- | ------------------------------ | ----------------------------------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | Authentification à l'aide du protocole CRAM-MD5 |
 | LOGIN    | `SMTP authentication login`    | Authentification à l'aide du protocole LOGIN    |
@@ -156,7 +156,7 @@ La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary
 
 **Valeurs possibles :**
 
-| Constante                | Value                          | Commentaire                                                                                                    |
+| Constante                | Valeur                         | Commentaire                                                                                                    |
 | ------------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset* : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset* : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                      |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset* : ISO-8859-1 et 8 bits</li></ul>                                                                                      |
@@ -211,7 +211,7 @@ La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Sum
 
 **Valeurs possibles :**
 
-| Constante                | Value                          | Commentaire                                                                                                |
+| Constante                | Valeur                         | Commentaire                                                                                                |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset* : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li>*bodyCharset* : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul>                                                                                  |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset* : ISO-8859-1 & Quoted-printable</li><li>*bodyCharset* : ISO-8859-1 et 8 bits</li></ul>                                                                                 |
