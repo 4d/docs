@@ -14,13 +14,13 @@ title: WebSocket
 
 La clase `WebSocket` permite abrir una conexión de cliente WebSocket con un servidor, enviar y recibir datos y cerrar la conexión.
 
-WebSocket client connections are useful, for example, to receive financial data in real time or send and receive messages from a chat.
+Las conexiones cliente WebSocket son útiles, por ejemplo, para recibir datos financieros en tiempo real o enviar y recibir mensajes de un chat.
 
 ### Ejemplo
 
-In this example, we create a very basic WebSocket client.
+En este ejemplo, creamos un cliente WebSocket muy básico.
 
-1. Create the `WSConnectionHandler` user class containing callback function(s) used to handle WebSocket event callbacks:
+1. Cree la clase usuario `WSConnectionHandler` que contiene la(s) función(es) de retrollamada utilizada(s) para gestionar las retrollamadas evento WebSocket:
 
 ```4d
 // WSConnectionHandler class
@@ -34,13 +34,13 @@ Function onTerminate($ws : 4D.WebSocket; $event : Object)
    ALERT("Connection closed")
 ```
 
-2. Connect to the WebSocket server from a 4D form by instantiating a 4D.WebSocket:
+2. Conécte al servidor WebSocket desde un formulario 4D instanciando un 4D.WebSocket:
 
 ```4d
 Form.webSocket:=4D.WebSocket.new($wssUrl; cs.WSConnectionHandler.new())
 ```
 
-3. To send messages to the WebSocket server from the 4D form, you can write:
+3. Para enviar mensajes al servidor WebSocket desde el formulario 4D, puede escribir:
 
 ```4d
 Form.webSocket.send("Hello world")
@@ -50,9 +50,9 @@ Form.webSocket.send("Hello world")
 
 
 
-### WebSocket object
+### Objeto WebSocket
 
-WebSocket objects provide the following properties and functions:
+Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |

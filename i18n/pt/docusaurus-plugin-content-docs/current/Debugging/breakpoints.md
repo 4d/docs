@@ -6,7 +6,7 @@ title: Breakpoints and Command Catching
 ## Visão Geral
 
 
-Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
+Breakpoints and command catching are very efficient debugging techniques. Ambas têm o mesmo efeito: fazem uma pausa na execução do código (e apresentam a janela do depurador, se ainda não tiver sido apresentada) num passo pretendido.
 
 You set breakpoints on any line of code where you want the execution to be paused. É possível associar uma condição ao ponto de interrupção.
 
@@ -49,7 +49,7 @@ Segue-se uma descrição das propriedades:
 * **Breakpoint is disabled**: If you currently do not need a break point, but might need it later, you can temporarily disable it. A disabled break point appears as a dash (-) instead of a bullet (•)|
 
 
-### Breakpoints in remote debugging
+### Pontos de interrupção na depuração remota
 
 A lista de pontos de paragem é armazenada localmente. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
 
@@ -69,12 +69,12 @@ To open the Break list page:
 
 Usando esta janela, pode:
 
-* Set conditions for breakpoints in the **Conditions** column
-* Enable or disable breakpoints by clicking the bullets in the margin. Os pontos de interrupção desactivados apresentam marcadores transparentes
-* Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
-* Open the methods where the breakpoint are located by double-clicking any line in the list
+* Definir condições para os pontos de paragem na coluna **Condições**
+* Ative ou desative os pontos de interrupção clicando nos marcadores na margem. Os pontos de interrupção desactivados apresentam marcadores transparentes
+* Elimine os pontos de interrupção premindo a tecla `Delete` ou `Backspace`, ou clique no botão **Delete** abaixo da lista.
+* Abrir os métodos onde se encontram os pontos de interrupção fazendo duplo clique em qualquer linha da lista
 
-Não é possível adicionar novos pontos de paragem a partir desta janela. Breakpoints can only be created from within the Debugger window or the Code Editor.
+Não é possível adicionar novos pontos de paragem a partir desta janela. Os pontos de paragem só podem ser criados a partir da janela do depurador ou do editor de código.
 
 
 ## Comandos de captura
@@ -93,7 +93,7 @@ To open the Caught Commands page:
 
 ![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
-Esta página lista os comandos que devem ser capturados durante a execução. It is composed of two columns:
+Esta página lista os comandos que devem ser capturados durante a execução. É composto por duas colunas:
 
 * The left column displays the Enable/Disable status of the caught command, followed by the name of the command
 * The right column displays the condition associated with the caught command, if any

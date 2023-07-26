@@ -269,7 +269,7 @@ La mayoría de estos atajos pueden personalizarse en la caja de diálogo [Prefer
 
 
 
-## Editing Code
+## Edición de código
 
 4D utiliza técnicas estándar de edición de texto para digitar y editar en el Editor de código.
 
@@ -299,7 +299,7 @@ El caracter de barra invertida (`\`) se utiliza como separador en [los nombres d
 
 ### Arrastrar y soltar
 
-Desde el Explorador, puede arrastrar y soltar tablas, campos, formularios, métodos proyecto, constantes o comandos 4D. Cuando arrastra y suelta un elemento, 4D siempre utiliza la sintaxis correcta. For example, if you drag the field name First Name from the `[People]` table, it appears in the Code Editor as `[People]First Name`. Similarly, if you drag the Form name Input from the People table, it appears in the Code Editor as `[People];"Input"`.
+Desde el Explorador, puede arrastrar y soltar tablas, campos, formularios, métodos proyecto, constantes o comandos 4D. Cuando arrastra y suelta un elemento, 4D siempre utiliza la sintaxis correcta. Por ejemplo, si arrastra el nombre del campo First Name `[People]`, aparecerá en el Editor de código como `[People]First Name`. Del mismo modo, si arrastra el nombre del formulario Entrada desde la tabla People, aparecerá en el Editor de Código como `[People];"Input"`.
 
 Cuando inserta un comando arrastrándolo desde la página **Comandos** del Explorador, aparece con su sintaxis (que consiste en todos sus parámetros) en el Editor de Código. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
@@ -475,7 +475,7 @@ El comando **Buscar el mismo** se utiliza para buscar cadenas de caracteres idé
 
 La búsqueda realizada es del tipo "Buscar siguiente" en la ventana actual del editor de código.
 
-The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+Los comandos **Find Same Next** y **Find Same Previous** se utilizan para encontrar cadenas de caracteres *estrictamente* idénticas a las seleccionadas. Por ejemplo, las mayúsculas y minúsculas deben coincidir.
 
 
 ### Bookmark All
