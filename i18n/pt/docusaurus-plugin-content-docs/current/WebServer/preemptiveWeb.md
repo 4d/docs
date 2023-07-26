@@ -12,11 +12,11 @@ For in-depth information on preemptive process in 4D, please refer to the *Preem
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
-| 4D Server             | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpreted (debugger detached) | Compilado       |
-| --------------------- | ------------------------------------------------------------------- | ------------------------------- | --------------- |
-| Servidor REST         | cooperativo                                                         | preemptive                      | preemptive      |
-| Servidor Web          | cooperativo                                                         | *parâmetro web*                 | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                         | *parâmetro web*                 | *parâmetro web* |
+| 4D Server             | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
+| --------------------- | ------------------------------------------------------------------- | ----------------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                         | preemptive                                | preemptive      |
+| Servidor Web          | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
 
 | 4D remote/single-user | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |
@@ -39,7 +39,7 @@ The following table indicates whether the preemptive mode is used or is availabl
 
 All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
 
-*   All web-related database methods:
+*   Todos os métodos bases relacionados com a Web:
     *   [`On Web Authentication`](authentication.md#on-web-authentication)
     *   [`On Web Connection`](httpRequests.md#on-web-connection)
     *   [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
@@ -61,7 +61,7 @@ For each of these methods and code parts, the compiler will check if the thread-
 
 Most of the web-related 4D commands and functions, database methods and URLs are thread-safe and can be used in preemptive mode.
 
-### 4D commands and database methods
+### Comandos 4D e métodos base
 
 All 4D web-related commands are thread-safe, *i.e.*:
 
