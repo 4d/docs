@@ -41,18 +41,18 @@ You can use a sequence number to create a unique number for each record in the t
 
 ## Lista de excluídos
 
-Allows setting a list whose values cannot be entered in the object. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+Permite definir uma lista cujos valores não podem ser introduzidos no objeto. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
+> Se uma lista especificada for hierárquica, apenas os itens do primeiro nível são tidos em conta.
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis                |
-| ------------ | ------------- | -------------------------------- |
-| excludedList | lista         | A list of values to be excluded. |
+| Nome         | Tipo de dados | Valores possíveis               |
+| ------------ | ------------- | ------------------------------- |
+| excludedList | lista         | Uma lista de valores a excluir. |
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
 
 ---
 
@@ -61,7 +61,7 @@ Allows setting a list whose values cannot be entered in the object. Se um valor 
 Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
 
 Tornar uma lista obrigatória não apresenta automaticamente a lista quando o campo é selecionado. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+> Se uma lista especificada for hierárquica, apenas os itens do primeiro nível são tidos em conta.
 
 #### Gramática JSON
 
@@ -71,4 +71,4 @@ Tornar uma lista obrigatória não apresenta automaticamente a lista quando o ca
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[Combo Box](comboBox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Entrada](input_overview.md)
