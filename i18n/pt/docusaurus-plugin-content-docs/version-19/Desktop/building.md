@@ -3,7 +3,7 @@ id: building
 title: Building a project package
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.
+4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
 
 The application builder allows you to:
 
@@ -14,11 +14,11 @@ The application builder allows you to:
 * Build client-server applications with automatic updating of client and server parts.
 * Save your build settings for future use (*Save settings* button).
 
-> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Keep in mind that using commands or functions that modify the source files (such as `CREATE INDEX` or `CREATE TABLE` (SQL)) is not possible by default in compiled applications. However, you can build specific applications that support local modifications by using the `PackProject` XML key (see [doc.4d.com](https://doc.4d.com)).
+> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Tenha em atenção que a utilização de comandos ou funções que modificam os ficheiros de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, pode criar aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
 ## Build application overview
 
-Building a project package can be carried out using:
+A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * o comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
 * or the [Build Application window](#application-builder).
@@ -47,7 +47,7 @@ Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta
 
 * O início e o fim da construção de objetivos,
 * The name and full access path of the files generated,
-* The date and time of the build,
+* A data e a hora da geração,
 * Todos os erros que forem produzidos.
 * Quaisquer problemas de assinatura (por exemplo, um plug-in não assinado).
 
@@ -104,7 +104,7 @@ This tab allows you can build a stand-alone, single-user version of your applica
 
 ![](../assets/en/Project/standaloneProj.png)
 
-### Build stand-alone Application
+### Criar uma aplicação autónoma
 
 Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
 
@@ -279,7 +279,7 @@ This feature requires that you click on the **[...]** button and designate the l
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
-#### Displaying update notification
+#### Mostrar notificação de atualização
 
 The client application update notification is carried out automatically following the server application update.
 
@@ -488,7 +488,7 @@ In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been 
 
 For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Customizing application icons
+## Personalizar ícones de uma aplicação
 
 4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
 
