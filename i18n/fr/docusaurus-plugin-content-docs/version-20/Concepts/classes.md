@@ -96,6 +96,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
 Les classes disponibles sont accessibles depuis leurs class stores. Deux class stores sont disponibles :
 
 
+
 - `cs` pour le class store utilisateur
 - `4D` pour le class store intégré
 
@@ -253,9 +254,10 @@ Function add($x : Variant; $y : Integer): Integer
 
 ```4d
 // Class: Rectangle
+property name : Text
+property height; width : Integer
+
 Class constructor($width : Integer; $height : Integer)
- property name : Text
- property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
@@ -364,7 +366,7 @@ Le type de propriété peut être l'un des types suivants :
 
 :::info
 
-Le mot-clé `property` ne peut être utilisé que dans les méthodes de classe et en dehors de tout bloc `Function`.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class Constructor` block.
 
 :::
 
@@ -425,9 +427,9 @@ Le type de la propriété calculée est défini par la déclaration de type `$re
 
 ```4d  
 //Class: Person.4dm
+property firstName; lastName : Text
 
 Class constructor($firstname : Text; $lastname : Text)
- property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
