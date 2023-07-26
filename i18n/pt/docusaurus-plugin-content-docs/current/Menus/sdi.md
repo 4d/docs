@@ -8,7 +8,7 @@ SDI applications are opposed to MDI (Multiple Documents Interface) applications,
 
 :::info
 
-O conceito SDI/MDI não existe no macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+O conceito SDI/MDI não existe no macOS. Esta funcionalidade diz respeito apenas a aplicações Windows e as opções relacionadas são ignoradas no macOS.
 
 :::
 
@@ -36,7 +36,7 @@ Because the development environment is executed in MDI, switching from developme
 :::
 
 
-## Managing applications in SDI mode
+## Gerir aplicações no modo SDI
 
 Executing a 4D application in SDI mode does not require any specific implementation: existing menu bars are automatically moved in SDI windows themselves. However, you need to pay attention to specific principles that are listed below.
 
@@ -66,7 +66,7 @@ When executed in MDI mode, a 4D application simply quits when the user closes th
 To handle this case, 4D applications executed in SDI mode include a mechanism to automatically quit (by calling the `QUIT 4D` command) when the following conditions are met:
 
 - the user cannot interact anymore with the application
-- there are no live user processes
+- não existem processos usuário ativos
 - 4D processes or worker processes are waiting for an event
 - the Web server is not started.
 - Merged stand-alone or client 4D application
@@ -81,7 +81,7 @@ When a menu with an associated *quit* standard action is called, the application
 
 Although it is transparently handled by 4D, the SDI mode introduces small variations in the application interface management. Specificities in the 4D language are listed below.
 
-| Command/feature                   | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                           |
+| Comando/funcionalidad             | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                           |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Open form window`                | Options to support floating windows in SDI (`Controller form window`) and to remove the menu bar (`Form has no menu bar`)                                                                                                                                                                                       |
 | `Menu bar height`                 | Returns the height in pixels of a single menu bar line even if the menu bar has been wrapped on two or more lines. Returns 0 when the command is called from a process without a form window                                                                                                                    |
