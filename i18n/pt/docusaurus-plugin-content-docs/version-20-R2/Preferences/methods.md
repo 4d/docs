@@ -64,13 +64,13 @@ These options configure the various colors used in the Code Editor and debugger 
 | **Cor de fundo**                               | Cor de fundo da janela do editor de código.                                                                                                                              |
 | **Border of the running line in the debugger** | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
 | **Cor de fundo da linha do cursor**            | Cor de fundo da linha que contém o cursor.                                                                                                                               |
-| **Execution line background color**            | Background color of line being executed in the debugger.                                                                                                                 |
+| **Cor de fundo da linha de execução**          | Background color of line being executed in the debugger.                                                                                                                 |
 | **Destaque das palavras encontradas**          | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                                  |
 | **Destaque dos parênteses**                    | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
 | **Highlight of the blocks**                    | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Realce da mesma variável ou campo**          | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Destaque da linha em execução no depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Cor de fundo da seleção**                    | Background color of selection.                                                                                                                                           |
+| **Cor de fundo da seleção**                    | Cor de fundo da seleção.                                                                                                                                                 |
 | **Texto sugerido**                             | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
 
 
@@ -131,7 +131,7 @@ The highlight color can be set in the [Theme](#theme-definition) page.
 
 #### Always show block lines
 
-Allows to hide vertical block lines permanently. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+Oculta permanentemente as linhas verticais dos blocos. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
 
 ![](../assets/en/Preferences/optionsBlockLines.png)
 
@@ -141,7 +141,7 @@ Allows you to hide all expand/collapse icons by default when displaying code. Wh
 
 ![](../assets/en/Preferences/optionsHideIcons.png)
 
-#### Insert () and closing } ) ] "
+#### Inserir () e fechar } ) ] "
 
 Enables automatic insertion of () and closing braces while typing code. Esta opção controla duas funcionalidades automáticas:
 
@@ -162,7 +162,7 @@ Sets the graphic signaling of matching braces in the code. This signaling appear
 - **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
 - **Bold**: Braces displayed in bold.
 
-#### Highlighted variables and fields
+#### Destaque de variáveis e campos
 
 Allows to highlight all occurrences of the same variable or field in an open method window.
 
@@ -186,9 +186,9 @@ If you deselect this option, only the yellow arrow is shown.
 
 This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
 
-|                                 | Descrição                                                                                                                                                                                                                                               |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Automatic opening of window for | Triggers the automatic display of the suggestion window for:<ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tabelas</li><li>Protótipos (ou seja, as funções de classe)</li></ul><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validation of a suggestion for  | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                      |
+|                               | Descrição                                                                                                                                                                                                                                               |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Abertura automática da janela | Triggers the automatic display of the suggestion window for:<ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tabelas</li><li>Protótipos (ou seja, as funções de classe)</li></ul><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
+| Validação de uma sugestão     | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                      |
 	
 
