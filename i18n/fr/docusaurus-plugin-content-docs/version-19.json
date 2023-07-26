@@ -80,7 +80,7 @@
     "description": "The label for category Client/Server in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "Forms",
+    "message": "Formulaires",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Properties": {
@@ -108,7 +108,7 @@
     "description": "The label for category Build application in sidebar docs"
   },
   "sidebar.docs.category.4D Language Reference": {
-    "message": "Référence du langage 4D",
+    "message": "Manuel Langage 4D",
     "description": "The label for category 4D Language Reference in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
