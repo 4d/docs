@@ -79,7 +79,7 @@ Valores disponíveis:
 | Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                |
 | --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sim                   | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Não                   | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Não                   | "hidden"    | A barra de deslocação nunca é visível                                                                                                                    |
 | Automático            | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -291,7 +291,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showVerticalRuler|boolean|true (default), false|
+ showVerticalRuler|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -348,7 +348,7 @@ Valores disponíveis:
 | Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                |
 | --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sim                   | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Não                   | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Não                   | "hidden"    | A barra de deslocação nunca é visível                                                                                                                    |
 | Automático            | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
