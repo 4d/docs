@@ -54,7 +54,7 @@ The lower part of the area indicates the server configuration parameters (launch
 This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
 
 
-### Application Server Connections
+### Ligações aplicação servidor
 
 - **Maximum**: maximum number of simultaneous client connections allowed for the application server. This value depends on the license installed on the server machine.
 - **Used**: actual number of connections currently being used.
