@@ -51,7 +51,7 @@ This option can be selected on macOS but will be ignored when the application is
 
 This menu lets you select the color scheme to use at the main application level. A color scheme defines a global set of interface colors for texts, backgrounds, windows, etc., used in your forms.
 
-> This option only works on macOS. No Windows, é sempre utilizado o esquema "Light".
+> Esta opção só funciona no macOS. No Windows, é sempre utilizado o esquema "Light".
 
 The following schemes are available:
 
@@ -61,7 +61,7 @@ The following schemes are available:
 
 > Os temas predefinidos podem ser tratados com CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
 
-The main application scheme will be applied to forms by default. However, it can be overriden:
+The main application scheme will be applied to forms by default. No entanto, ele pode ser substituído:
 
 -   by the [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) command at the working session level;
 -   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
