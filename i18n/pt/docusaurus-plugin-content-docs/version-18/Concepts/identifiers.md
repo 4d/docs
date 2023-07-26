@@ -19,7 +19,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 ### Additional rules for object property and ORDA names
 
-- Space characters are not allowed.
+- Não são permitidos caracteres de espaço.
 - Pontos (".") e parênteses ("[ ]") não são permitidos.
 - Names are case sensitive.
 
@@ -302,7 +302,7 @@ Para designar um conjunto processo se utilizar uma expressão de tipo string que
 
 O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
-**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. To do so, you use Client sets.
+**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. Para isso, utilizam-se os conjuntos clientes.
 
 Exemplos:
 
@@ -322,10 +322,10 @@ If(Records in set("$Selection"+String($i))>0)
 
 From the scope point of view, there are two types of named selections:
 
-- Interprocess named selections
+- Seleções temporárias interprocesso
 - Process named selections.
 
-### Interprocess Named Selections
+### Seleções temporárias interprocesso
 
 A named selection is an interprocess named selection if its name is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
 
@@ -368,7 +368,7 @@ $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
-## Summary of Naming Conventions
+## Resumo das convenções de escrita em 4D
 
 The following table summarizes 4D naming conventions.
 
