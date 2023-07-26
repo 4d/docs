@@ -365,7 +365,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s) if any<!-- END REF -->.
+A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contém uma coleção de erros 4D em caso de erro(s) de execução, se existirem<!-- END REF -->.
 
 Cada elemento da coleção é um objeto com as seguintes propriedades:
 
@@ -375,7 +375,7 @@ Cada elemento da coleção é um objeto com as seguintes propriedades:
 | [].message             | text   | Descrição do erro 4D                                 |
 | [ ].componentSignature | text   | Assinatura da componente interna que devolveu o erro |
 
-If no error occured, `.errors` is undefined.
+Se não tiver ocorrido nenhum erro, `.errors` é indefinido.
 
 <!-- END REF -->
 
