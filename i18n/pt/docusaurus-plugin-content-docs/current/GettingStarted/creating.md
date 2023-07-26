@@ -9,11 +9,11 @@ Multi-user development is managed via standard **source control** repository too
 
 ## Criar arquivos de projeto
 
-**Nota:** Servidor 4D pode abrir arquivos .4DProject em modo apenas leitura, mas apenas para propósitos de teste. Para lançamento, projetos 4D são oferecidos como arquivos .4dz (arquivos compactados zipados). Para saber mais, consulte [Construir um pacote de projetos](building.md). In any case, project files are stored on the local machine.
+**Nota:** Servidor 4D pode abrir arquivos .4DProject em modo apenas leitura, mas apenas para propósitos de teste. Para lançamento, projetos 4D são oferecidos como arquivos .4dz (arquivos compactados zipados). Para saber mais, consulte [Construir um pacote de projetos](building.md). Em qualquer caso, os ficheiros de projeto são armazenados na máquina local.
 
 Para criar um novo projeto de banco de dados:
 
-1. Launch 4D or 4D Server.
+1. Inicie 4D ou 4D Server.
 2. Faça uma das seguintes opções:
     * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder. ![](../assets/en/getStart/projectCreate1.png)
     * When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
@@ -42,7 +42,7 @@ The standard Open dialog appears.
 
 2. Select the project's `.4dproject` file and click **Open**.
 
-    By default, the project is opened with its current data file. Other file types are suggested:
+    By default, the project is opened with its current data file. São sugeridos outros tipos de ficheiros:
 
     * *Packed project files*: `.4dz` extension  - deployment projects
     * *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
@@ -58,7 +58,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 * **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
 
-## Project opening shortcuts
+## Atalhos de abertura de projectos
 
 4D offers several ways to open projects directly and bypass the Open dialog:
 
@@ -73,7 +73,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 ### Abrir um projeto com um ficheiro 4DLink
 
-You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. There are two ways to do this:
+You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. Há duas formas de o fazer:
 
 * double-click or drag and drop the `.4DLink` file onto the 4D application
 * go to **File** > **Open Recent Projects** and select a project
@@ -122,4 +122,4 @@ The 4D development framework includes a file access manager to control concurren
 * **Edit**: standard and completely modifiable.
 * **Cancelar**: não guardar
 
-This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
+Esta funcionalidade está ativada para todos os editores 4D incorporados (Estrutura, Formulário, Método, Definições e Caixa de Ferramentas).
