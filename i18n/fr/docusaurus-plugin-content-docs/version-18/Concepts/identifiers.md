@@ -197,7 +197,7 @@ monObjet.monAttribut:="10"
 
 **Note :** Des règles supplémentaires s'appliquent aux noms des attributs d'objets (ils doivent être conformes à la spécification ECMA Script). Pour plus d'informations, reportez-vous à la section [Identificateurs des propriétés d'objets](Concepts/dt_object.md#object-property-identifiers).
 
-## Forms
+## Formulaires
 
 Vous désignez un formulaire en utilisant une expression de type chaîne alphanumérique qui représente son nom. Le nom d’un formulaire peut contenir jusqu’à 31 caractères.
 
