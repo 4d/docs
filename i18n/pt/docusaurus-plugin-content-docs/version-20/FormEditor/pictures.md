@@ -63,7 +63,7 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 
 *(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi*
 
-## Dark mode pictures (macOS only)
+## Imagens em modo escuro (apenas macOS)
 
 You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
 
@@ -76,7 +76,7 @@ At runtime, 4D will automatically load the light or dark image according to the 
 
 ![](../assets/en/FormEditor/darkicon.png)
 
-## Mouse Coordinates in a Picture
+## Coordenadas do rato numa imagem
 
 4D permite recuperar as coordenadas locais do mouse em um [objeto de entrada](FormObjects/input_overview.md) associado a uma [expressão de imagem](FormObjects/properties_Object.md#expression-type), no caso de que clique ou passe o cursor por cima, mesmo se não tiver aplicado um deslocamento ou zoom na imagem. Esse mecanismo, similar ao de um mapa de imagens, pode ser utilizado, por exemplo, para manejar barras de botões deslocáveis ou a interface de um software de cartografia.
 
