@@ -4,7 +4,7 @@ title: About 4D Forms
 ---
 
 
-Forms provide the interface through which information is entered, modified, and printed in a desktop application. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
+Os formulários constituem a interface através da qual a informação é introduzida, modificada e impressa numa aplicação de desktop. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
 
 ![](../assets/en/FormObjects/form1.png)
 
@@ -19,7 +19,7 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 - **Limits**, **Rulers**, ...: check items that must be displayed by default in each new window of the Form editor. It is possible to modify the display of each window individually using the **Display** hierarchical menu of the Form editor.
 - **Default display shield**: sets which shields to display by default in each new window of the Form editor. For more information about shields, refer to [Using shields](FormEditor/formEditor.md#using-shields).
-- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Exemplo:
+- **Código JSON:** Crie e conceba os seus formulários utilizando JSON e guarde os ficheiros de formulário na [localização adequada](Project/architecture.md#sources-folder). Exemplo:
 
 ```
 {
