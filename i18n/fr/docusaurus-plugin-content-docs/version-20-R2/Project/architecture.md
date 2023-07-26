@@ -6,7 +6,7 @@ title: Architecture d'un projet
 Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un dossier racine de projet (dossier package). Par exemple :
 
 - MyPackage (*project root folder*)
-    - `Components`
+    - `Composants`
     - `Data`
         - `Logs`
         - `Settings`
@@ -33,7 +33,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
     + `Classes`
     + `DatabaseMethods`
     + `Methods`
-    + `Forms`
+    + `Formulaires`
     + `TableForms`
     + `Triggers`
 - `DerivedData`
@@ -53,18 +53,18 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 
 ### `Sources`
 
-| Contenu                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Format |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | XML    |
-| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | JSON   |
-| menus.json              | Définit les menus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | JSON   |
-| settings.4DSettings     | Propriétés de la base *Structure*. Elles ne sont pas prises en compte si les *[paramètres utilisateur](#settings-folder-1)* ou les *[paramètres utilisateur des données](#settings-folder)* sont définis. **Attention** : dans les applications compilées, les paramètres de structure sont stockés dans le fichier .4dz (lecture seule). Pour le déploiement, il est nécessaire d'utiliser les *paramètres utilisateur* ou les *paramètres utilisateur pour les données* afin de définir des paramètres personnalisés. | XML    |
-| tips.json               | Définit les messages d'aide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | JSON   |
-| lists.json              | Listes définies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
-| filters.json            | Filtres définis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | JSON   |
-| styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | CSS    |
-| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                   | CSS    |
-| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                               | CSS    |
+| Contenu                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Format |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| catalog.4DCatalog       | Définit des tables et des champs                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML    |
+| folders.json            | Définitions des dossiers de l'Explorateur                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | JSON   |
+| menus.json              | Définit les menus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | JSON   |
+| settings.4DSettings     | Propriétés de la base *Structure*. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Attention** : dans les applications compilées, les paramètres de structure sont stockés dans le fichier .4dz (lecture seule). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings. | XML    |
+| tips.json               | Définit les messages d'aide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | JSON   |
+| lists.json              | Listes définies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | JSON   |
+| filters.json            | Filtres définis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | JSON   |
+| styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | CSS    |
+| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | CSS    |
+| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | CSS    |
 
 
 #### `DatabaseMethods`
@@ -86,7 +86,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 | *className*.4dm | Méthode de définition de classe utilisateur, permettant d'instancier des objets spécifiques. Un fichier par classe, le nom du fichier est le nom de la classe | text   |
 
 
-#### `Forms`
+#### `Formulaires`
 
 | Contenu                                   | Description                                  | Format  |
 | ----------------------------------------- | -------------------------------------------- | ------- |
@@ -122,7 +122,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
 - `Methods`
-- `Forms`
+- `Formulaires`
 - `TableForms`
 
 Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources).
@@ -162,11 +162,11 @@ Le dossier Data contient le fichier de données ainsi que tous les fichiers et d
 
 (*) Lorsque le projet est créé depuis une base binaire .4b, le fichier de données demeure inchangé. Ainsi, il peut être nommé différemment et placé dans un autre emplacement.
 
-### `Settings`
+### `Settings` (user data)
 
-Ce dossier contient des **fichiers de propriétés utilisateur des données** utilisés pour l'administration de l'application.
+This folder contains [**user settings for data**](../Desktop/user-settings.md#user-settings-for-data-file) used for application administration.
 
-> Ces paramètres ont la priorité sur les **[fichiers de propriétés utilisateur](#settings-1)** et les fichiers de **[propriétés structure](#sources)**.
+> These settings take priority over [user settings](#settings-user) and [structure settings](#sources). See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                    | Format |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -187,11 +187,11 @@ Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les
 
 > Un dossier Logs supplémentaire est disponible dans le dossier des préférences système de l'utilisateur (dossier 4D actif, voir commande [Get 4D folder](https://doc.4d.com/4dv19R/help/command/en/page485.html)) pour les fichiers journaux de maintenance et dans les cas où le dossier de données est en lecture seule.
 
-## `Settings`
+## `Settings` (user)
 
-Ce dossier contient des **fichiers de propriétés utilisateur** utilisés pour l'administration de l'application.
+This folder contains [**user settings**](../Desktop/user-settings.md#user-settings) used for application administration.
 
-> Ces paramètres ont la priorité sur les fichiers de **[propriétés structure](#sources)**. Toutefois, si un **[fichier de paramètres utilisateur](#settings)** existe, il est prioritaire par rapport au fichier des propriétés utilisateur.
+> These settings take priority over [structure settings](#sources) file. However, if [user settings for data](#settings-user-data) exist, they take priority over the user settings. See also [Priority of settings](../Desktop/user-settings.md#priority-of-settings).
 
 | Contenu             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        | Format |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -218,7 +218,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 | CompilerIntermediateFiles  | Fichiers intermédiaires résultant de la compilation Apple Silicon     | Folder |
 
 
-## `Components`
+## `Composants`
 
 Ce dossier contient les composants qui seront disponibles dans le projet d'application. Il doit être stocké au même niveau que le dossier Project.
 
