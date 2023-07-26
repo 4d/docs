@@ -5,7 +5,7 @@ title: Ajuda
 
 ## Dica de Ajuda
 
-This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
+This property allows associating help messages with active objects in your forms. Podem ser apresentados em tempo de execução:
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
@@ -37,7 +37,7 @@ You can also associate help messages with form objects in two other ways:
 
 When different tips are associated with the same object in several locations, the following priority order is applied:
 
-1. structure level (lowest priority)
+1. nível de estrutura (prioridade mais baixa)
 2. nível do editor de formulários
 3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
 
