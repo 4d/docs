@@ -23,7 +23,7 @@ To unlock the entity for other sessions and 4D processes:
 ```
 
 
-The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
+A propriedade [`lockKindText`](../API/EntityClass.md#lock) é "Locked by session".
 
 
 ### Descrição
@@ -65,13 +65,13 @@ The returned "__STATUS" object has the following properties:
 |              | task_name      | text    | Nome de processo                                                                                                                                            |
 |              | client_version | text    | Versão do cliente                                                                                                                                           |
 |              |                |         | ***Disponível só para um processo trava REST:***                                                                                                            |
-|              | host           | text    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
+|              | host           | text    | URL que bloqueou a entidade (por exemplo, "127.0.0.1:8043")                                                                                                 |
 |              | IPAddr         | text    | Endereço IP da trava (por exemplo. "127.0.0.1")                                                                                                             |
 |              | recordNumber   | number  | Número de registo do registo bloqueado                                                                                                                      |
 |              | userAgent      | text    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
-The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
+Os seguintes valores podem ser devolvidos nas propriedades *status* e *statusText* do objeto *__STATUS* em caso de erro:
 
 | status | statusText                      | Comentário                                                                                                         |
 | ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -103,7 +103,7 @@ GET /rest/Customers(1)/?$lock=true
 }
 ```
 
-In a second browser (other session), we send the same request.
+Num segundo navegador (outra sessão), enviamos o mesmo pedido.
 
 **Responsa:**
 
