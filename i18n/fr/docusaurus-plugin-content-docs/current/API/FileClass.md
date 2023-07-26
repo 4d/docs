@@ -277,10 +277,18 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 La fonction `delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-Si le fichier est déjà ouvert, une erreur est générée.
-
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
-> **ATTENTION** : `.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
+
+If the file is currently open, the result depends on the OS:
+
+- on Windows, an error is generated,
+- on macOS, no error is generated and the file is deleted.
+
+:::caution
+
+`.delete()` can delete any file on a disk. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
+
+:::
 
 #### Exemple
 
