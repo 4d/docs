@@ -23,7 +23,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | ------------------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Execução do método**         | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
 | **Procurar no método**         | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                               |
-| **Macros**                     | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                                        |
+| **Macros**                     | ![macros-button](../assets/en/code-editor/macros.png)                             | Insere uma macro na seleção. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                                             |
 | **Expand all / Collapse all**  | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
 | **Informações sobre o método** | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**      | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
@@ -62,7 +62,7 @@ The change bars change colors to indicate whether or not the modifications were 
 
 The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
 
-By default, the Code Editor displays four lists. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
+Por padrão, o editor de código apresenta quatro listas. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
 
 You can enlarge or reduce the relative width of each list area by dragging one of its partitions. It is also possible to adjust the size of the list area in relation to that of the editing area by dragging the dividing line between them.
 
@@ -94,7 +94,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Commands by themes**: 4D language commands classified by theme in the form of a hierarchical list.
 - **Menu bars**: Names and numbers of menu bars [created with the 4D Menu bar editor](../Menus/creating.md).
 - **Constants**: 4D constants and those of any plug-ins, classified by theme in the form of a hierarchical list.
-- **Lists**: Names of lists.
+- **Listas**: Nomes de listas.
 - **All plug-in commands**: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.
 - **SQL Keywords**: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).
 - **SQL Functions**: 4D SQL functions.
@@ -162,12 +162,12 @@ When there is no tag in the class/method, the tool displays "No tag".
 
 Os seguintes itens são adicionados automaticamente:
 
-| Ícone                                                                       | Elemento                                         |
-| --------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                     |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou declaração de método        |
-| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](../assets/en/code-editor/function.png)                     | Nome da função de classe                         |
+| Ícone                                                                       | Elemento                                       |
+| --------------------------------------------------------------------------- | ---------------------------------------------- |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Sem etiqueta                                   |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou declaração de método      |
+| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Atributo calculado (get, set, orderBy e query) |
+| ![function-icon](../assets/en/code-editor/function.png)                     | Nome da função de classe                       |
 
 #### Marcação manual
 
@@ -182,7 +182,7 @@ By adding markers in your code, you can add the following tags to the dropdown:
 Declara-os acrescentando comentários como:
 
 ```4d
-// FIXME: Fix following items
+// FIXME: Correção dos seguintes itens
 ```
 
 Declarations are not case-sensitive; writing `fixme:` has the same effect.
@@ -223,7 +223,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | **Atalho**                                                       | **Ação**                                                                                                                                   |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Selecção e navegação**                                         |                                                                                                                                            |
-| Duplo clique                                                     | Select a language element name                                                                                                             |
+| Duplo clique                                                     | Selecionar o nome de um elemento da linguagem                                                                                              |
 | [Alt]+Clique duas vezes                                          | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
 | [Shift]+[seta para a direita]                                    | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
 | [Shift]+[seta para a esquerda]                                   | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
@@ -236,7 +236,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Alt]+[seta para baixo]                                          | Move the line(s) where the cursor is to the bottom                                                                                         |
 | [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                  |
 | [Home]                                                           | Place the insertion point at the beginning of the line                                                                                     |
-| [End]                                                            | Place the insertion point at the end of the line                                                                                           |
+| [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                |
 | [Ctrl]+[Home]                                                    | Place the insertion point at the beginning of the method                                                                                   |
 | [Ctrl]+[End]                                                     | Place the insertion point at the end of the method                                                                                         |
 | [Shift]+[Home]                                                   | Select all the characters in the line that are to the left of the cursor                                                                   |
@@ -258,7 +258,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
 | [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
 | [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
-| [Ctrl]+click on clipboard icon                                   | Paste contents of a clipboard at cursor location                                                                                           |
+| [Ctrl]+clique no ícone da área de transferência                  | Colar o conteúdo de uma área de transferência na localização do cursor                                                                     |
 | [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
 
 :::tip
@@ -354,7 +354,7 @@ You can move the line where the cursor is directly without selecting it first us
 
 ### Autocomplete functions
 
-The Code Editor provides autocomplete functions. 4D automatically displays suggestions based on the first few characters typed.
+O editor de código fornece funções de preenchimento automático. 4D automatically displays suggestions based on the first few characters typed.
 
 In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
 
@@ -370,7 +370,7 @@ If there are several suggestions available, 4D displays them in a pop-up list wh
 
 ![](../assets/en/code-editor/autocomplete-popup.png)
 
-The list is in alphabetical order. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
+A lista está por ordem alfabética. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
 
 By default, you can also insert a suggested value by hitting one of the following delimiter `( ; : = < [ {` keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.
 
@@ -380,7 +380,7 @@ By default, you can also insert a suggested value by hitting one of the followin
 
 You can press the **Esc** key to close the pop-up list or you can continue typing while it is open. The values suggested in the pop-up list are updated as additional characters are typed.
 
-If the characters typed correspond to different types of objects, the list displays them in their current style. The following types of objects can be displayed:
+If the characters typed correspond to different types of objects, the list displays them in their current style. Podem ser visualizados os seguintes tipos de objetos:
 
 - Comandos 4D
 - Comandos SQL
@@ -393,7 +393,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Comandos Plug-in
 - Palavras-chave 4D
 - Palavras-chave SQL
-- Macros (displayed between < >)
+- Macros (apresentadas entre < >)
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
@@ -475,7 +475,7 @@ The **Find Same** command is used to find character strings identical to the one
 
 The search carried out is of the "Find Next" type in the current code editor window.
 
-The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. Por exemplo, as maiúsculas e minúsculas devem corresponder.
 
 
 ### Bookmark All
