@@ -96,6 +96,7 @@ In verschiedenen 4D Entwicklerfenstern (Code-Editor, Compiler, Debugger, Runtime
 Klassen sind über Stores für Klassen verfügbar. Es gibt zwei Stores:
 
 
+
 - `cs` Store für Benutzerklassen
 - `4D` Store für vorgegebene Klassen
 
@@ -253,9 +254,10 @@ Function add($x : Variant; $y : Integer): Integer
 
 ```4d
 // Class: Rectangle
+property name : Text
+property height; width : Integer
+
 Class constructor($width : Integer; $height : Integer)
- property name : Text
- property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
@@ -364,7 +366,7 @@ The property type can be one of the following supported types:
 
 :::info
 
-The `property` keyword can only be used in class methods and outside any `Function` block.
+The `property` keyword can only be used in class methods and outside any `Function` or `Class Constructor` block.
 
 :::
 
@@ -433,9 +435,9 @@ The type of the computed property is defined by the `$return` type declaration o
 
 ```4d  
 //Class: Person.4dm
+property firstName; lastName : Text
 
 Class constructor($firstname : Text; $lastname : Text)
- property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
