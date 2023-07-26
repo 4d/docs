@@ -27,7 +27,7 @@ Pode escolher entre [dois motores de renderização](properties_WebArea.md#use-e
 
 Selecting the embedded web rendering engine allows you to call 4D methods from the web area. Selecting the system rendering engine is recommended when the web area is connected to the Internet because it always benefits from the latest security updates.
 
-### Access 4D methods
+### Acesso a métodos 4D
 
 Quando selecionar a propriedade [Acessar aos métodos 4D](properties_WebArea.md#access-4d-methods), pode chamar aos métodos 4D desde uma área Web.
 
@@ -45,7 +45,7 @@ $4d. HelloWorld();
 ```
 > JavaScript is case sensitive so it is important to note that the object is named $4d (with a lowercase "d").
 
-The syntax of calls to 4D methods is as follows:
+A sintaxe das chamadas aos métodos 4D é a seguinte:
 
 ```codeJS
 $4d.4DMethodName(param1,paramN,function(result){})
@@ -56,7 +56,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
 
-> By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
+> Por padrão, 4D trabalha em UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Exemplo 1
 
@@ -103,8 +103,8 @@ The 4D project method `calcSum` receives parameters (`$1...$n`) and returns thei
 Código 4D do método `calcSum`:
 
 ```4d
- C_REAL(${1}) // receives n REAL type parameters
- C_REAL($0) // returns a Real
+ C_REAL(${1}) // recebe n parâmetros do tipo REAL
+ C_REAL($0) // devolve um Real
  C_LONGINT($i;$n)
  $n:=Count parameters
  For($i;1;$n)
@@ -124,7 +124,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## Ações padrão
 
-Há quatro ações padrão específicas para gerenciar as áreas web de forma automática: `Open Back URL`, `Open Next URL`, `Refresh Current URL` e `Stop Loading URL`. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Há quatro ações padrão específicas para gerenciar as áreas web de forma automática: `Open Back URL`, `Open Next URL`, `Refresh Current URL` e `Stop Loading URL`. Essas ações podem ser associadas com botões ou comandos de menu e permite implementação rápida de interfaces web básicas. Estas ações são descritas em [ações standard](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
 ## Eventos formulário
@@ -174,7 +174,7 @@ Por razões relacionadas com os mecanismos de redesenho de janelas, a inserção
 
 Em Windows, não é recomendado acessar, através de uma área web, o servidor web da aplicação 4D que contenha a área, já que esta configuração poderia provocar um conflito que paralise a aplicação. Com certeza um 4D remoto pode acessar ao servidor web de 4D Server, mas não ao seu próprio servidor web.
 
-### Insertion of protocol (macOS)
+### Inserção de protocolo (macOS)
 
 As URLs manejadas por programação em áreas web em macOS devem começar com o  protocolo. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
 
