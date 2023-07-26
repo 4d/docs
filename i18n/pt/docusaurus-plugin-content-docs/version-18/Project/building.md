@@ -3,7 +3,7 @@ id: building
 title: Building a project package
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.
+4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
 
 The application builder allows you to:
 
@@ -16,7 +16,7 @@ The application builder allows you to:
 
 ## Build application overview
 
-Building a project package can be carried out using:
+A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command,
 * or the [Build Application window](#application-builder).
@@ -45,7 +45,7 @@ When an application is built, 4D generates a log file in the **Logs** folder. Th
 
 * O início e o fim da construção de objetivos,
 * The name and full access path of the files generated,
-* The date and time of the build,
+* A data e a hora da geração,
 * Any errors that occurred.
 
 ## Nome da aplicação e pasta de destino
@@ -97,7 +97,7 @@ This tab allows you can build a stand-alone, single-user version of your applica
 
 ![](../assets/en/Project/standaloneProj.png)
 
-### Build stand-alone Application
+### Criar uma aplicação autónoma
 
 Checking the **Build stand-alone Application** option and clicking **Build** will create a stand-alone (double-clickable) application directly from your database project.
 
@@ -245,7 +245,7 @@ The options of this area to set up the mechanism for updating the client parts o
 
  For example, if you build your application in Windows, you must use the **[...]** button to designate the 4D Volume Desktop macOS application (provided as a package).
 
-#### Displaying update notification
+#### Mostrar notificação de atualização
 
 The client application update notification is carried out automatically following the server application update.
 
@@ -401,7 +401,7 @@ In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been 
 
 For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
-## Customizing application icons
+## Personalizar ícones de uma aplicação
 
 4D associates a default icon with stand-alone, server, and client applications, however you can customize the icon for each application.
 
