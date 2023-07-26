@@ -9,18 +9,18 @@ Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes
 
 ![](../assets/en/FormObjects/popupDropdown_appearance.png)
 
-## Drop-down list types
+## Tipos de listas pendentes
 
 You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
-| Tipo                       | Funcionalidades                                        | Tipo de expressão | Tipo de dados                   | Definição JSON                                                                                                                                                |
-| -------------------------- | ------------------------------------------------------ | ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object                     | Construído sobre uma colecção                          | Object            | Numeric, Text, Date, ou Time    | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
-| Array                      | Construído sobre um array                              | Array             | Numeric, Text, Date, ou Time    | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
-| Choice list saved as value | Construído com base numa lista de opções (“padrão”)    | Lista             | Valor do item seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Salvar como                | Built upon a choice list. A posição do item é guardada | Lista             | Referência do item seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Hierarchical choice list   | Can display hierarchical contents                      | Lista             | Referência da lista             | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Ação padrão                | Automatically built by the action                      | *any*             | *any except List reference*     | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Tipo                                | Funcionalidades                                        | Tipo de expressão | Tipo de dados                   | Definição JSON                                                                                                                                                |
+| ----------------------------------- | ------------------------------------------------------ | ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object                              | Construído sobre uma colecção                          | Object            | Numeric, Text, Date, ou Time    | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` ou `dateFormat: <format>` or `timeFormat: <format>` |
+| Array                               | Construído sobre um array                              | Array             | Numeric, Text, Date, ou Time    | `dataSourceTypeHint: arrayNumber` ou `arrayText` ou `arrayDate` ou `arrayTime`                                                                                |
+| Lista de opções guardada como valor | Construído com base numa lista de opções (“padrão”)    | Lista             | Valor do item seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Salvar como                         | Built upon a choice list. A posição do item é guardada | Lista             | Referência do item seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Lista de seleção hierárquica        | Pode apresentar conteúdos hierárquicos                 | Lista             | Referência da lista             | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Ação padrão                         | Criado automaticamente pela ação                       | *any*             | *any except List reference*     | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 ## Handling drop-down lists
 
@@ -28,7 +28,7 @@ You can create different types of drop-down lists with different features. To de
 
 > Esta funcionalidade só está disponível em projectos 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
+An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo             | Descrição                                                                                                                                                                                                                                                       |
 | -------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ The drop-down list is displayed with the placeholder string:
 
 ![](../assets/en/FormObjects/fruits2.png)
 
-After the user selects a value:
+Depois de o utilizador selecionar um valor:
 
 ![](../assets/en/FormObjects/fruits3.png)
 
@@ -138,7 +138,7 @@ A hierarchical drop-down list has a sublist associated with each item in the lis
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
-> In forms, hierarchical drop-down lists are limited to two levels.
+> Nos formulários, as listas pendentes hierárquicas estão limitadas a dois níveis.
 
 You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
 
@@ -154,7 +154,7 @@ Pode atribuir uma ação padrão a menu pop up ou lista drop down ([Action](prop
   * a styled text area ([4D Write Pro area](writeProArea_overview.md) or [input](input_overview.md) with [multistyle](properties_Text.md#multi-style) property) is present in the form as the standard action target.
   * the [focusable](properties_Entry.md#focusable) property is not set to the drop-down list. At runtime the drop-down list will display an automatic list of values, e.g. background colors. Pode substituir esta lista automática atribuindo além disso uma lista de seleção na qual cada elemento tenha atribuída uma ação padrão personalizada.
 
-> This feature cannot be used with a hierarchical drop-down list.
+> Esta funcionalidade não pode ser utilizada com uma lista pendente hierárquica.
 
 ## Propriedades compatíveis
 
