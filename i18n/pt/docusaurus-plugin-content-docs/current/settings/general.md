@@ -3,7 +3,7 @@ id: general
 title: Página geral
 ---
 
-The General page contains options to configure generic parameters for the 4D project.
+A página Geral contém opções para configurar parâmetros genéricos do projeto 4D.
 
 ## Design
 
