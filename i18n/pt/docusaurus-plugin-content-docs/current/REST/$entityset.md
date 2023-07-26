@@ -53,7 +53,7 @@ After creating an entity set (entity set #1) by using `$method=entityset`, you c
 
 You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
 
-Here are the logical operators:
+Eis os operadores lógicos:
 
 | Operador  | Descrição                                                                                                                                                  |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
