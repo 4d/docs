@@ -3,7 +3,7 @@ id: basics
 title: Depuração
 ---
 
-Os erros são comuns. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+Os erros são comuns. It would be unusual to write a substantial number of lines of code without generating any errors. Por outro lado, tratar e/ou corrigir erros também é normal!
 
 The 4D development environment provides several debugging tools for all types of errors.
 
@@ -16,7 +16,7 @@ Os erros de digitação são detectados pelo editor de código. They are display
 ![break-point](../assets/en/Debugging/typing-error.png)
 
 
-Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
+Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. Quando isso ocorrer, corrija o erro de digitação e digite Enter para validar a correção.
 
 ### Erros de sintaxe
 
@@ -28,21 +28,21 @@ Expand the **Details** area to display the last error and its number.
 
 ### Environmental Errors
 
-Occasionally, there may not be enough memory to create a BLOB. Or, when you access a document on disk, the document may not exist or may already be opened by another application. These environmental errors do not directly occur because of your code or the way you wrote it. Most of the time, these errors are easy to treat with an [error catching method](Concepts/error-handling.md) installed using the `ON ERR CALL` command.
+Ocasionalmente, pode não haver memória suficiente para criar um BLOB. Ou, quando se acede a um documento no disco, o documento pode não existir ou pode já estar aberto por outra aplicação. Estes erros ambientais não ocorrem diretamente devido ao seu código ou à forma como o escreveu. Na maior parte das vezes, estes erros são fáceis de tratar com um [método de deteção de erros](Concepts/error-handling.md) instalado através do comando `ON ERR CALL`.
 
 ### Erros de concepção ou de lógica
 
-These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Utilize o depurador [](debugger.md) para os detectar. Por exemplo:
+Estes são geralmente o tipo de erro mais difícil de encontrar. Com exceção dos erros de digitação, todos os tipos de erros acima enumerados são, em certa medida, abrangidos pela expressão "erro de conceção ou de lógica". Utilize o depurador [](debugger.md) para os detectar. Por exemplo:
 
-- A *syntax error* may occur when you try to use a variable that is not yet initialized.
+- Pode ocorrer um *erro de sintaxe* quando tenta utilizar uma variável que ainda não foi inicializada.
 - An *environmental error* can occur when you try to open a document, because that document's name is received by a subroutine that did not get the right value as a parameter.
 
-Design or logic errors also include such situations as:
+Os erros de concepção ou lógicos incluem também situações como:
 
-- A record is not properly updated because, while calling `SAVE RECORD`, you forgot to first test whether or not the record was locked.
-- A method does not do exactly what you expect, because the presence of an optional parameter is not tested.
+- Um registo não é corretamente atualizado porque, ao chamar `SAVE RECORD`, se esqueceu de testar primeiro se o registo estava ou não bloqueado.
+- Um método não faz exatamente o que se espera, porque a presença de um parâmetro opcional não é testada.
 
-Sometimes the piece of code that displays the error may be different than the code that is actually the origin of the problem.
+Por vezes, a parte do código que apresenta o erro pode ser diferente do código que está efetivamente na origem do problema.
 
 ### Erros de execução
 
@@ -67,31 +67,31 @@ A janela de erro de sintaxe propõe várias opções:
 
 - **Editar**: Pára toda a execução do método. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Utilize esta opção quando reconhecer imediatamente o erro e puder corrigi-lo sem mais investigações.
 
-- **Trace**: Entra no modo Trace/Debugger. É apresentada a janela [Debugger](debugger.md). If the current line has only executed partially, you may have to click the **Trace** button several times.
+- **Trace**: Entra no modo Trace/Debugger. É apresentada a janela [Debugger](debugger.md). Se a linha atual só tiver sido executada parcialmente, poderá ter de clicar várias vezes no botão **Trace**.
 
-- **Continuar**: A execução continua. The line with the error may be partially executed, depending on where the error is located. Continue with caution: the error may prevent the rest of your method from executing properly. We recommend clicking **Continue** only if the error is in a trivial call (such as `SET WINDOW TITLE`) that does not prevent executing and testing the rest of your code.
+- **Continuar**: A execução continua. A linha com o erro pode ser parcialmente executada, dependendo da localização do erro. Continue com cuidado: o erro pode impedir que o resto do seu método seja executado corretamente. Recomendamos clicar em **Continuar** apenas se o erro estiver numa chamada trivial (como `SET WINDOW TITLE`) que não impede a execução e o teste do resto do código.
 
-> Tip: To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
+> Sugestão: Para ignorar um erro que ocorre repetidamente (por exemplo, em loops), pode transformar o botão **Continuar** num botão **Ignorar**. Mantenha pressionada a tecla **Alt** (Windows) ou **Opção** (macOS) e clique no botão **Continuar** na primeira vez que ele aparecer. A etiqueta do botão muda para **Ignorar** se a caixa de diálogo for chamada novamente para o mesmo erro.
 
-- **Abort**: Stops method execution and returns to the state before the method started executing:
+- **Abortar**: Interrompe a execução do método e regressa ao estado anterior ao início da execução do método:
 
-    - If a form method or object method is executing in response to an event, it is stopped and you return to the form.
+    - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
     - If the method is executing from within the Application environment, you return to that environment.
 
-- **Copy**: Copies the debugging information into the clipboard. The info describes the internal environment of the error (number, internal component, etc.). It is formatted as tabbed text.
+- **Copiar**: Copia as informações de depuração para a área de transferência. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
 
-- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
+- **Guardar...**: Guarda o conteúdo da janela de erros de sintaxe e a cadeia de chamadas num ficheiro `.txt`.
 
 ## Depurador
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Não faça isso! You will save plenty of time and energy by always using the **Debugger**.
+Um erro comum de principiante ao lidar com a detecção de erros é clicar em **Abortar** na Janela de Erro de Sintaxe, voltar ao Editor de Código e tentar descobrir o que acontece olhando para o código. Não faça isso! Poupará muito tempo e energia se utilizar sempre o **Depurador**.
 
-The Debugger allows you to step through methods slowly. It displays all the information you need in order to understand why an error occurred. Once you have this information, you know how to fix the error.
+O depurador permite-lhe percorrer os métodos lentamente. Apresenta todas as informações necessárias para compreender o motivo do erro. Assim que tiver esta informação, saberá como corrigir o erro.
 
-Another reason to use the Debugger is for developing code. Sometimes you may write an algorithm that is more complex than usual. Despite all feelings of accomplishment, you can't be totally sure that your coding is 100% correct. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
+Outra razão para utilizar o depurador é para desenvolver código. Por vezes, pode escrever um algoritmo que é mais complexo do que o habitual. Apesar de todos os sentimentos de realização, não pode ter a certeza absoluta de que a sua codificação está 100% correcta. Em vez de o executar "às cegas", pode utilizar o comando `TRACE` no início do seu código e, em seguida, executá-lo passo a passo para ficar atento ao que acontece.
 
 ## Rupturas
 
-In the debugging process, you may need to skip the tracing of some parts of the code until a certain line. Or, you may want to trace the code when a given expression has a certain value (e.g. "$myVar > 1000"), or every time a specific 4D command is called.
+No processo de depuração, pode ser necessário saltar o rastreio de algumas partes do código até uma determinada linha. Ou, pode querer rastrear o código quando uma dada expressão tem um certo valor (por exemplo, "$myVar > 1000"), ou cada vez que um comando 4D específico é chamado.
 
-These needs are covered by **breakpoints** and **command catching** features. They can be configured from the Code Editor, the debugger, or the Runtime Explorer.
+These needs are covered by **breakpoints** and **command catching** features. Podem ser configurados a partir do editor de código, do depurador ou do explorador de execução.
