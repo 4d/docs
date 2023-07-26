@@ -26,7 +26,7 @@ Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formO
 ## Nome de objeto
 
 Each active form object is associated with an object name. Each object name must be unique.
-> Object names are limited to a size of 255 bytes.
+> Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
 
@@ -97,7 +97,7 @@ You can use an expression as data source for an object. Any valid 4D expression 
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
-When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. There are two ways to do this:
+When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. Há duas formas de o fazer:
 
 - You can set the type using the [Expression type](#expression-type) property.
 - You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
@@ -200,7 +200,7 @@ The collection or the entity selection must be available to the form when it is 
 
 ## Fonte de dados
 
-Specify the type of list box.
+Especifique o tipo de list box.
 
 ![](../assets/en/FormObjects/listbox_dataSource.png)
 
