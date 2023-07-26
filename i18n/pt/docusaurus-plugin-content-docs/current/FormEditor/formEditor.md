@@ -4,11 +4,11 @@ slug: overview
 title: Editor de formulários
 ---
 
-4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+4D fornece um editor de formulários completo que permite modificar seu formulário até conseguir o efeito que deseja. Com o editor de formulários, é possível criar e eliminar objetos, manipulá-los diretamente e definir as propriedades de objetos e formulários.
 
 ## Interface
 
-The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time.
+O editor de formulários apresenta cada formulário JSON na sua própria janela, que tem uma barra de ferramentas e de uma barra de objetos. É possível ter vários formulários abertos ao mesmo tempo.
 
 ### Opções de visualização
 
@@ -157,7 +157,7 @@ Para selecionar um objecto utilizando a Lista de Propriedades:
 
 ### Selecção de múltiplos objectos
 
-Pode querer realizar a mesma operação em mais de um objecto de forma - por exemplo, para mover os objectos, alinhá-los, ou alterar a sua aparência. 4D lets you select several objects at the same time. Há várias maneiras de seleccionar vários objectos:
+Pode querer realizar a mesma operação em mais de um objecto de forma - por exemplo, para mover os objectos, alinhá-los, ou alterar a sua aparência. 4D permite-lhe selecionar vários objectos ao mesmo tempo. Há várias maneiras de seleccionar vários objectos:
 
 - Escolher **Seleccionar Todos** a partir do menu Editar para seleccionar todos os objectos.
 - Right-click on the object and choose the **Select Similar Objects** command in the context menu.
@@ -381,7 +381,7 @@ Para ver ou alterar a ordem de entrada:
 
 While you are changing the data entry order, you can select a group of objects in a form so that the standard data entry order applies to the objects within the group. This allows you to easily set the data entry order on forms in which fields are separated into groups or columns.
 
-To create a data entry group:
+Para criar um grupo de entrada de dados:
 
 1. Escolha **Ordem de entrada** a partir do menu *Formulário* ou clique no botão na barra de ferramentas.
 2. Draw a marquee around the objects you want to group for data entry.
@@ -424,7 +424,7 @@ The CSS preview mode reflects the priority order applied to style sheets vs JSON
 Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
 > When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.
 
-### CSS support in the Property List
+### Suporte CSS na lista de propriedades
 
 In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
 
@@ -463,7 +463,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
  ![](../assets/en/FormEditor/listboxBuilderIcon.png)
 
- The List box builder is displayed:
+ O gerador do list box é exibido:
 
  ![](../assets/en/FormEditor/listboxBuilder.png)
 
@@ -608,7 +608,7 @@ Para mudar o nome de uma vista, pode utilizar:
 
  ![](../assets/en/FormEditor/rename.png)
 
-- Right-click on the view name. The name then becomes editable:
+- Clique com o botão direito do rato no nome da vista. The name then becomes editable:
 
  ![](../assets/en/FormEditor/rename2.png)
 
@@ -651,7 +651,7 @@ To create an object in another view, simply select the view in the View palette 
 
 ![](../assets/en/FormEditor/addObject.png)
 
-#### Moving objects between views
+#### Mover objectos entre vistas
 
 It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
 
