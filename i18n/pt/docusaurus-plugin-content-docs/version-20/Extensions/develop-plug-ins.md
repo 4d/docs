@@ -40,4 +40,4 @@ Um plug-in pode ser muito simples, com apenas uma rotina executando uma tarefa m
 
 ## Partilhar plug-ins
 
-We encourage you to support the 4D developer community by sharing your plug-ins, preferably on the [GitHub platform](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.  
+Encorajamo-lo a apoiar a comunidade de programadores 4D partilhando os seus plug-ins, de preferência na plataforma [GitHub](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.  
