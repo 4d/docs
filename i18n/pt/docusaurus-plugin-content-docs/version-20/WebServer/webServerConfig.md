@@ -50,11 +50,11 @@ With 4D in remote mode, these files must be located in the local resources folde
 
 ## Conjunto de caracteres
 
-| Pode ser definido com              | Nome                                                              | Comentários                    |
-| ---------------------------------- | ----------------------------------------------------------------- | ------------------------------ |
-| webServer object                   | `characterSet`                                                    | MIBEnum integer or Name string |
-| `WEB SET OPTION`                   | `Web character set`                                               | MIBEnum integer or Name string |
-| Caixa de diálogos de configurações | [Options (II) page/Standard Set](../settings/web.md#standard-set) | Menu pop-up                    |
+| Pode ser definido com              | Nome                                                                     | Comentários                    |
+| ---------------------------------- | ------------------------------------------------------------------------ | ------------------------------ |
+| webServer object                   | `characterSet`                                                           | Integer MIBEnum ou string Name |
+| `WEB SET OPTION`                   | `Web character set`                                                      | Integer MIBEnum ou string Name |
+| Caixa de diálogos de configurações | [Página Opções (II) /Conjunto standard](../settings/web.md#standard-set) | Menu pop-up                    |
 
 Defines the set of characters to be used by the 4D web server. O valor padrão realmente depende da linguagem do SO.
 > This setting is also used for generating Quick Reports in HTML format .
@@ -128,7 +128,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 | Valor | Parâmetros                     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 0     | wdl disable                    | Web HTTP debug log is disabled                                                                                                                                                                                                                                                                                                                                                                                           |
+| 0     | wdl disable                    | Os debug logs Web HTTP são desativados                                                                                                                                                                                                                                                                                                                                                                                   |
 | 1     | wdl enable without body        | Default is true (enabled).                                                                                                                                                                                                                                                                                                                                                                                               |
 | 3     | wdl enable with response body  | |1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request| |
 | 5     | wdl enable with request body   | Web HTTP debug log is enabled with body part in request only                                                                                                                                                                                                                                                                                                                                                             |
@@ -161,11 +161,11 @@ If you do not specify any default home page, the `On Web Connection` database me
 
 ## Activar CORS
 
-| Pode ser definido com              | Nome                                                            | Comentários                                         |
-| ---------------------------------- | --------------------------------------------------------------- | --------------------------------------------------- |
-| webServer object                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)              | Boolean, true to enable the CORS (false by default) |
-| `WEB SET OPTION`                   | `Web CORS enabled`                                              | 0 (desativado, padrão) ou 1 (ativado)               |
-| Caixa de diálogos de configurações | [Options (II) page/Enable CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                        |
+| Pode ser definido com              | Nome                                                               | Comentários                                         |
+| ---------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------- |
+| webServer object                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled)                 | Boolean, true to enable the CORS (false by default) |
+| `WEB SET OPTION`                   | `Web CORS enabled`                                                 | 0 (desativado, padrão) ou 1 (ativado)               |
+| Caixa de diálogos de configurações | [Página Options (II)/Activar CORS](../settings/web.md#enable-cors) | Não seleccionado por defeito                        |
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
@@ -178,11 +178,11 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 
 ## Ativar HTTP
 
-| Pode ser definido com              | Nome                                                             | Comentários |
-| ---------------------------------- | ---------------------------------------------------------------- | ----------- |
-| webServer object                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)               | boolean     |
-| `WEB SET OPTION`                   | `Web HTTP enabled`                                               |             |
-| Caixa de diálogos de configurações | [Configuration page/Enable HTTP](../settings/web.md#enable-http) |             |
+| Pode ser definido com              | Nome                                                       | Comentários |
+| ---------------------------------- | ---------------------------------------------------------- | ----------- |
+| webServer object                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled)         | boolean     |
+| `WEB SET OPTION`                   | `Web HTTP enabled`                                         |             |
+| Caixa de diálogos de configurações | [Configuração/Ativar HTTP](../settings/web.md#enable-http) |             |
 
 Indicates whether or not the web server will accept non-secure connections.
 
@@ -233,10 +233,10 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 ## Nível de compressão HTTP
 
-| Pode ser definido com | Nome                                                                 | Comentários                    |
-| --------------------- | -------------------------------------------------------------------- | ------------------------------ |
-| webServer object      | [`HTTPCompressionLevel`](API/WebServerClass.md#httpcompressionlevel) |                                |
-| `WEB SET OPTION`      | `Web HTTP compression level`                                         | Applies to Web and Web Service |
+| Pode ser definido com | Nome                                                                 | Comentários                      |
+| --------------------- | -------------------------------------------------------------------- | -------------------------------- |
+| webServer object      | [`HTTPCompressionLevel`](API/WebServerClass.md#httpcompressionlevel) |                                  |
+| `WEB SET OPTION`      | `Web HTTP compression level`                                         | Aplica-se à Web e ao Serviço Web |
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
 
@@ -394,7 +394,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
 
 
-## Maximum Concurrent Web Processes
+## Processos Web em simultâneo máximo
 
 | Pode ser definido com              | Nome                                                                                                     | Comentários |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------- |
@@ -404,7 +404,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
-By default, the value is 100. You can set the number anywhere between 10 and 32000.
+Por padrão, o valor é 100. You can set the number anywhere between 10 and 32000.
 
 
 ## Tamanho máximo do pedido
@@ -642,7 +642,7 @@ The following settings are still supported but rely on deprecated features or te
 
 This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs.
 
-#### Session IP Address Validation
+#### Validação do endereço IP da sessão
 
 > This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
 
@@ -651,7 +651,7 @@ IP address validation status for session cookies. For security reasons, by defau
 
 
 
-#### Send Extended Characters Directly
+#### Enviar diretamente caracteres expandidos
 
 When this option is checked, the web server sends extended characters “as is” in semi-dynamic pages, without converting them into HTML entities. This option has shown a speed increase on most foreign operating systems (especially the Japanese system).
 
