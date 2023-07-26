@@ -1,6 +1,6 @@
 ---
 id: string
-title: Chaîne
+title: String
 ---
 
 Chaîne est un terme générique utilisé pour :
@@ -36,7 +36,7 @@ Les séquences d’échappement suivantes peuvent être utilisées dans les cha�
 
 ## Opérateurs sur les chaînes
 
-| Opération           | Syntaxe          | Retourne | Expression              | Value    |
+| Opération           | Syntaxe          | Retourne | Expression              | Valeur   |
 | ------------------- | ---------------- | -------- | ----------------------- | -------- |
 | Concaténation       | Chaîne + Chaîne  | String   | "abc" + "def"           | "abcdef" |
 | Répétition          | Chaîne * Nombre  | String   | "ab" * 3                | "ababab" |
