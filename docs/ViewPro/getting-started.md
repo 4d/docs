@@ -167,6 +167,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 * .4vp
 * .xlsx
 * .txt and .csv
+* .sjs
 * .pdf (for export only)
 
 For more details, check out the description of [VP IMPORT DOCUMENT](method-list.md#vp-import-document) and [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
