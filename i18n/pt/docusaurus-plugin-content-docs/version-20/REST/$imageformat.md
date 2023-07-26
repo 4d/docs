@@ -7,15 +7,15 @@ Define o formato de imagem a utilizar para a recuperação de imagens (*por exem
 
 ## Descrição
 
-Definir o formato a utilizar para mostrar imagens. You can use one of the following formats (extensions, mime types and OsType Mac are supported):
+Definir o formato a utilizar para mostrar imagens. Pode utilizar um dos seguintes formatos (são suportadas extensões, tipos mime e OsType Mac):
 
-| Tipo                    | Descrição                      |
-| ----------------------- | ------------------------------ |
-| "best"                  | Best format based on the image |
-| ".gif" ou "image/gif"   | Formato GIF                    |
-| ".png" ou "image/png"   | Formato PNG                    |
-| ".jpeg" or "image/jpeg" | Formato JPEG                   |
-| ".tiff" ou "image/tiff" | Formato TIFF                   |
+| Tipo                    | Descrição                         |
+| ----------------------- | --------------------------------- |
+| "best"                  | Melhor formato com base na imagem |
+| ".gif" ou "image/gif"   | Formato GIF                       |
+| ".png" ou "image/png"   | Formato PNG                       |
+| ".jpeg" or "image/jpeg" | Formato JPEG                      |
+| ".tiff" ou "image/tiff" | Formato TIFF                      |
 
 Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
 
