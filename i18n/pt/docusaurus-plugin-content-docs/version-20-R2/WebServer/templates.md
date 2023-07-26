@@ -23,8 +23,8 @@ Estão disponíveis as seguintes etiquetas 4D:
 - 4DTEXT, to insert 4D variables and expressions as text,
 - 4DHTML, para inserir código HTML,
 - 4DEVAL, para avaliar qualquer expressão 4D,
-- 4DSCRIPT, to execute a 4D method,
-- 4DINCLUDE, to include a page within another one,
+- 4DSCRIPT, para executar um método 4D,
+- 4DINCLUDE, para incluir uma página dentro de outra,
 - 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
 - 4DCODE, to insert 4D code,
 - 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
@@ -33,7 +33,7 @@ Estão disponíveis as seguintes etiquetas 4D:
 
 These tags are described in the [Transformation Tags](Tags/tags.md) page.
 
-É possível combinar etiquetas. For example, the following HTML code is allowed:
+É possível combinar etiquetas. Por exemplo, é permitido o seguinte código HTML:
 
 ```html
 <HTML>
@@ -82,7 +82,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 
 (*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
 
-## Accessing 4D methods via the Web
+## Aceder aos métodos 4D através da Web
 
 Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
 
