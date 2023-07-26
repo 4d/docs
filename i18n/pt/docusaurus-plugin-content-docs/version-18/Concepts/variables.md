@@ -15,7 +15,7 @@ You create variables by declaring them using one of the "Compiler" or "Arrays" t
 
 **Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. Para mais informações, consulte por favor [Arrays](Concepts/arrays.md).
 
-Por exemplo, se quiser definir uma variável texto, escreva:
+Por exemplo, se quisermos definir uma variável de texto, escrevemos:
 
 ```4d
  C_TEXT(myText)
