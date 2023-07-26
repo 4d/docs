@@ -3,13 +3,13 @@ id: dsmapping
 title: Objetos Data Model
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying 4D structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
+The ORDA technology is based upon an automatic mapping of an underlying 4D structure. Também fornece acesso aos dados através de objetos seleção de entidades (entity selection) e entidades (entity). Como resultado, ORDA expõe toda a base de dados como um conjunto de objetos de modelo de dados.
 
 ## Mapeamento da estrutura
 
 When you call a datastore using the `ds` or the `Open datastore` command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
 
-* Tables are mapped to dataclasses.
+* As tabelas correspondem às dataclasses.
 * Os campos são mapeados para atributos de armazenamento.
 * Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
 
@@ -31,7 +31,7 @@ The following rules are applied for any conversions:
 > * the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
 > * the "Manual" or "Automatic" property of relations.
 
-### Rules for remote access control
+### Regras para o controlo do acesso remoto
 
 When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
 
@@ -105,7 +105,7 @@ var $compClass : cs. Company //declares a $compClass object variable of the Comp
 $compClass:=ds. Company //assigns the Company dataclass reference to $compClass
 ```
 
-A dataclass object can contain:
+Um objeto de classe de dados pode conter:
 
 * attributes
 * relation attributes
@@ -139,7 +139,7 @@ This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the
 
 All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
 
-#### Storage and Relation attributes
+#### Atributos de armazenamento e de relação
 
 Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support the standard 4D data type (integer, text, object, etc.).
 
