@@ -29,7 +29,7 @@ No modo standard, está aberto um projeto. In this mode, certain maintenance fun
 - Use the “msc” standard action that it is possible to associate with a menu command or a form object.
 - Use the `OPEN SECURITY CENTER` language command.
 
-## Feature availability
+## Disponibilidade de funcionalidades
 
 Certain MSC functions are not available depending on the MSC opening mode:
 
