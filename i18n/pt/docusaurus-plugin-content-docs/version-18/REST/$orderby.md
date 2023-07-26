@@ -4,7 +4,7 @@ title: "$orderby"
 ---
 
 
-Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)
+Ordena os dados devolvidos pelo atributo e pela ordem de ordenação definidos (*e.g.*, `$orderby="lastName desc, salary asc"`)
 
 ## Descrição
 
