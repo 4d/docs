@@ -7,7 +7,7 @@ title: Coordenadas e dimensionamento
 
 This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
-- collection or entity selection,
+- collection ou entity selection,
 - array (non-hierarchical).
 
 A propriedade não está selecionada por padrão. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
@@ -117,9 +117,9 @@ Coordenada superior do objecto no formulário.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                          |
-| ------ | --------------------------------- |
-| v19 R7 | Support for inputs and text areas |
+| Versão | Mudanças                               |
+| ------ | -------------------------------------- |
+| v19 R7 | Suporte para entradas e áreas de texto |
 
 </details>
 
@@ -263,9 +263,9 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis            |
-| --------------- | ------------- | ---------------------------- |
-| rowHeightSource | string        | Name of a 4D array variable. |
+| Nome            | Tipo de dados | Valores possíveis              |
+| --------------- | ------------- | ------------------------------ |
+| rowHeightSource | string        | Nome de uma variável array 4D. |
 
 #### Objectos suportados
 
