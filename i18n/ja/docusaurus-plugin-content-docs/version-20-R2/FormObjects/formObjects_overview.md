@@ -22,7 +22,7 @@ title: フォームオブジェクト
 
 * **4D ランゲージ**: [オブジェクト(フォーム)](https://doc.4d.com/4Dv18/4D/18/Objects-Forms.201-4504342.ja.html) テーマのコマンド (`OBJECT DUPLICATE` や `OBJECT SET FONT STYLE` など) を使って、フィームオブジェクトを作成・定義することができます。
 
-*   **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他のプロパティのうち必要なものを設定します。  詳細については [ダイナミックフォーム](https://doc.4d.com/4Dv18/4D/18/Dynamic-Forms.300-4575729.ja.html) ページを参照ください。  
+*   **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他のプロパティのうち必要なものを設定します。  詳細については [ダイナミックフォーム](https://doc.4d.com/4Dv20/4D/20/Dynamic-Forms.300-6263740.ja.html) ページを参照ください。  
   次はボタンオブジェクトの例です:  
   ```
   { "type": "button", "style": "bevel", "text": "OK", "action": "Cancel", "left": 60, "top": 160, "width": 100, "height": 20 }
