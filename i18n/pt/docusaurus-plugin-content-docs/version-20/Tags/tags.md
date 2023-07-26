@@ -62,7 +62,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 ### Utilizar o "." como separador decimal
 
-4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Regional settings are ignored. This feature facilitates code maintenance and compatibility between 4D languages and versions.
+4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Os parâmetros regionais são ignorados. This feature facilitates code maintenance and compatibility between 4D languages and versions.
 
 ## 4DBASE
 
@@ -153,7 +153,7 @@ $graphType:=1
 -->
 ```
 
-Here are the 4DCODE tag features:
+Eis as características da etiqueta 4DCODE:
 
 - The `TRACE` command is supported and activates the 4D debugger, thus allowing you to debug your template code.
 - Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.
@@ -304,7 +304,7 @@ The properties of the object are processed according to their creation order. Du
 
 The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
-For example, you can execute:
+Por exemplo, é possível executar:
 
 ```
  $input:="<!--#4DEVAL a:=42-->" //atribuição
@@ -550,7 +550,7 @@ O método `my_method` pode ser o seguinte:
 
 With this syntax, the `4DLOOP` tag makes a loop as long as the *expression* returns `True`. The expression can be any valid Boolean expression and must contain a variable part to be evaluated in each loop to avoid infinite loops.
 
-For example, the following code:
+Por exemplo, o seguinte código:
 
 ```html
 <!--#4DEVAL $i:=0-->
