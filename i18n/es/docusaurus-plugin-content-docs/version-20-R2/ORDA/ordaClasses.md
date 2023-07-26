@@ -236,7 +236,7 @@ Para más información, consulte la sección [Atributos calculados](#computed-at
 
 #### Atributos de tipo alias
 
-Entity classes allow you to define **alias attributes**, usually over related attributes, using the `Alias` keyword:
+Las clases Entity permiten definir **atributos alias**, normalmente sobre atributos relacionados, utilizando la palabra clave `Alias`:
 
 `Alias` *attributeName* *targetPath*
 
@@ -626,7 +626,7 @@ Los atributos del alias son particularmente útiles para manejar las relaciones 
 
 ### Cómo definir los atributos alias
 
-You create an alias attribute in a dataclass by using the `Alias` keyword in the [**entity class**](#entity-class) of the dataclass.
+Se crea un atributo alias en una clase de datos utilizando la palabra clave `Alias` en la clase entity [****](#entity-class) de la clase de datos.
 
 
 ### `Alias <attributeName> <targetPath>`
@@ -676,7 +676,7 @@ Los atributos alias son de sólo lectura (excepto cuando se basan en un atributo
 
 Atributo alias [`kind`](../API/DataClassAttributeClass.md#kind) es "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
+Un atributo alias hereda su propiedad [`type`](../API/DataClassAttributeClass.md#type) del atributo destino:
 
 - si el atributo de destino [`kind`](../API/DataClassAttributeClass.md#kind) es "storage", el tipo de datos del alias es del mismo tipo,
 - if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
@@ -700,7 +700,7 @@ Class extends Entity
 Alias students courses.student //relatedEntities 
 ```
 
-In the Student dataclass, an alias attribute returns all teachers of a student:
+En la clase Student, un atributo alias devuelve todos los profesores de un alumno:
 
 
 ```4d
@@ -768,7 +768,7 @@ $arch.save() //courseName y name son "Archaeology II"
 
 ## Funciones expuestas y no expuestas
 
-For security reasons, all of your data model class functions and alias attributes are **not exposed** (i.e., private) by default to remote requests.
+Por razones de seguridad, todas sus funciones de clase de modelo de datos y atributos de alias son **no expuestas** (es decir, privadas) por defecto a peticiones remotas.
 
 Las peticiones remotas incluyen:
 
