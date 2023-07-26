@@ -51,11 +51,11 @@ There are several ways to supply the labels for a tab control:
 
 ### Utilização de um objecto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. O objeto deve conter as seguintes propriedades:
 
 | Propriedade    | Tipo       | Descrição                                                                                                                                |
 | -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Obrigatório - Coleção de valores escalares. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
+| `values`       | Collection | Obrigatório - Coleção de valores escalares. Só são suportados valores cadeia. If invalid, empty or not defined, the tab control is empty |
 | `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                      |
 | `currentValue` | Text       | Valor atual selecionado                                                                                                                  |
 
@@ -98,7 +98,7 @@ FORM GOTO PAGE(arrPages)
 
 The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
 
-Here is an example object method:
+Eis um exemplo de método objeto:
 
 ```4d
  Case of
