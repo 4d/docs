@@ -15,12 +15,12 @@ Indicates whether the Web server will be launched on startup of the 4D applicati
 
 #### Ativar HTTP
 
-Indicates whether or not the Web server will accept non-secure connections. See [Enable HTTP](../WebServer/webServerConfig.md#enable-http).
+Indicates whether or not the Web server will accept non-secure connections. Ver [Ativar HTTP](../WebServer/webServerConfig.md#enable-http).
 
 
 #### Porta HTTP
 
-Número da porta IP (TCP) de escuta para HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
+Número da porta IP (TCP) de escuta para HTTP. Ver [Porta HTTP](../WebServer/webServerConfig.md#http-port).
 
 #### Endereço IP
 
@@ -61,18 +61,18 @@ Designate a default home page for the Web server. See [Default Home page](../Web
 
 #### Usar o cache Web 4D
 
-Ativar o cache da página Web. See [Cache](../WebServer/webServerConfig.md#cache).
+Ativar o cache da página Web. Ver [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Tamanho da cache das Páginas
 
-Define o tamanho da cache. See [Cache](../WebServer/webServerConfig.md#cache).
+Define o tamanho da cache. Ver [Cache](../WebServer/webServerConfig.md#cache).
 
 
 #### Limpar cache
 
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). The cache is then immediately cleared.
 
-> You can also use the special URL [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
+> Também pode utilizar o URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
 ### Processo Web
 
@@ -91,7 +91,7 @@ When this option is selected, the web server does not provide any specific suppo
 
 In this mode, you can configure additional web server setttings:
 
--   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
+-   [Processos Web em simultâneo máximo](#maximum-concurrent-web-processes)
 -   [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
 -   [Use preemptive processes](#use-preemptive-web-processes)
 
@@ -103,22 +103,22 @@ This option enables the handling of legacy user sessions by the 4D HTTP server. 
 
 When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
 
-#### Maximum Concurrent Web Processes
+#### Processos Web em simultâneo máximo
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
 Limite estritamente superior de processos Web em simultâneo. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 
 #### Reuse Temporary Contexts
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
 Allows you to optimize the operation of the 4D Web server in remote mode. See [Reuse temporary contexts in remote mode)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
 
 #### Use preemptive processes
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
 Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
 
@@ -127,7 +127,7 @@ Enables preemptive web processes in your compiled applications. When **Use preem
 
 #### Inactive Process Timeout
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
 Allows you to set the maximum timeout before closing for inactive Web processes on the server. See [Inactive Process Timeout](../WebServer/webServerConfig.md#inactive-process-timeout).
 
@@ -146,27 +146,27 @@ Using **Custom** authentication is recommended. See [**Authentication**](../WebS
 
 ### Conversão texto
 
-#### Send Extended Characters Directly
+#### Enviar diretamente caracteres expandidos
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#deprecated-settings).
+Ver [Propriedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings).
 
 #### Standard Set
 
-Define the set of characters to be used by the 4D Web server. See [Character Set](../WebServer/webServerConfig.md#character-set).
+Define the set of characters to be used by the 4D Web server. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
 
 ### Ligações Keep-Alive
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections).
+Ver [Propriedades obsoletas](../WebServer/webServerConfig.md#keep-alive-connections).
 
 ### Parâmetros CORS
 
 #### Ativar CORS
 
-Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
+Enables Cross-origin resource sharing (CORS) service. Ver [Ativar CORS](../WebServer/webServerConfig.md#enable-cors-service).
 
 #### Nomes de domínio/Métodos HTTP permitidos
 
-List of allowed hosts and methods for the CORS service. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
+List of allowed hosts and methods for the CORS service. Ver [Parâmetros CORS](../WebServer/webServerConfig.md#cors-settings).
 
 
 
@@ -214,7 +214,7 @@ The log format menu provides the following options:
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
-**Note**: You cannot select the same field twice.
+**Nota**: Não é possível selecionar duas vezes o mesmo campo.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
@@ -226,11 +226,11 @@ The following table lists the fields available for each format (in alphabetical 
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
 | CONNECTION_ID  |     | X   | Número de identificação da ligação                                         |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
-| CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                  |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
 | CS_SIP         | X   | X   | Endereço IP do servidor                                                    |
-| CS_URI         | X   | X   | URI on which the request is made                                           |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                              |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                   |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
@@ -291,7 +291,7 @@ This page contains the options used to enable and control advanced Web features 
 
 #### Expor como servidor REST
 
-Inicia e pára o servidor REST. See [REST Server Configuration](../REST/configuration.md).
+Inicia e pára o servidor REST. Ver [Configuração do servidor REST](../REST/configuration.md).
 
 ### Acesso
 
