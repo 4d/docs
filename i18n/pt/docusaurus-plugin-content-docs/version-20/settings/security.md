@@ -7,7 +7,7 @@ This page contains options related to data access and protection for your deskto
 
 **Note**: For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
 
-## Data Access / Remote Users Access
+## Acesso aos dados / Acesso de usuários remotos
 
 > These settings do not apply to project databases opened in single-user mode.
 
@@ -38,7 +38,7 @@ This page contains options related to data access and protection for your deskto
 
 -   **Enable User Settings**: You need to check this option to be able to display separated dialog boxes for user settings. When this option is checked, up to three dialog boxes are available: **Structure Settings**, **User Settings**, and **User Settings for Data File**. For more information, refer to [User settings](overview.md#user-settings).
 
--   **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](https://doc.4d.com/4D-Language-Reference-19-R4/Database-Methods/On-Host-Database-Event-database-method.301-5739713.en.html) facilitates the initialization and backup phases for 4D components. For security reasons, you must explicitly authorize the execution of this method in each host database. Para o efeito, é necessário marcar esta opção. By default, it is not checked.
+-   **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](https://doc.4d.com/4D-Language-Reference-19-R4/Database-Methods/On-Host-Database-Event-database-method.301-5739713.en.html) facilitates the initialization and backup phases for 4D components. For security reasons, you must explicitly authorize the execution of this method in each host database. Para o efeito, é necessário marcar esta opção. Por padrão, não está marcada.
 
     Quando esta opção está seleccionada:
     * 4D components are loaded,
