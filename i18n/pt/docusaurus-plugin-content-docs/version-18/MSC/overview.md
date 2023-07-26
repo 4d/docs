@@ -30,7 +30,7 @@ No modo standard, está aberta uma base de dados. In this mode, certain maintena
 
 - Use the `OPEN SECURITY CENTER` language command.
 
-## Feature availability
+## Disponibilidade de funcionalidades
 
 Certain MSC functions are not available depending on the MSC opening mode:
 
