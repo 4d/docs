@@ -95,7 +95,7 @@ You can release an entity set, which you created using [`$method=entityset`](#me
 
 ### Exemplo
 
-Release an existing entity set:
+Mostra um conjunto de entidades existente:
 
 `GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
 
@@ -206,12 +206,13 @@ If a problem arises while adding or modifying an entity, an error will be return
 :::note
 *   **Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
 *   **Booleans** are either true or false.
-*   Os ficheiros carregados utilizando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objecto devolvido no seguinte formato `{"ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
+*   Os ficheiros carregados utilizando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objecto devolvido no seguinte formato `{"ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+:::
 
 
 ### Exemplo
 
-To update a specific entity, you use the following URL:
+Para atualizar uma entidade específica, utilizar o seguinte URL:
 
  `POST  /rest/Person/?$method=update`
 
