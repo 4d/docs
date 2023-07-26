@@ -24,7 +24,7 @@
     "description": "The label for category Project Databases in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
-    "message": "Éditeur de formulaire",
+    "message": "Éditeur de formulaires",
     "description": "The label for category Form Editor in sidebar docs"
   },
   "sidebar.docs.category.Form Objects": {
@@ -68,7 +68,7 @@
     "description": "The label for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.4D Language Reference": {
-    "message": "Référence du langage 4D",
+    "message": "Manuel Langage 4D",
     "description": "The label for category 4D Language Reference in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
