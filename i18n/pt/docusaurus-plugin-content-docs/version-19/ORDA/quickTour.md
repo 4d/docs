@@ -3,9 +3,9 @@ id: quickTour
 title: Uma visita rápida à ORDA
 ---
 
-Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
+Uma vez que o ORDA é baseado em objectos, a sua utilização requer conhecimentos básicos de programação de objectos.
 
-## Exploring the datastore
+## Explorar o datastore
 
 The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
@@ -43,7 +43,7 @@ It means that, whenever you need to access the list of employees working for a c
 ds. Company.hires //returns the list of employees
 ```
 
-Mas não vá demasiado depressa. Let's see now how to record data in ORDA dataclasses.
+Mas não vá demasiado depressa. Vejamos agora como registar dados em dataclasses ORDA.
 
 ## Adicionar dados
 
