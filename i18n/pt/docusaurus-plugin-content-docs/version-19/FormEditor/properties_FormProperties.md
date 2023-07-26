@@ -8,7 +8,7 @@ title: Propriedades do formulário
 ## Esquema de cores
 > A propriedade Esquema de cores só é aplicada no macOS.
 
-This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
+Esta propriedade define o esquema de cores para o formulário. Por defeito, quando a propriedade não está definida, o valor para um esquema de cores é **herdado** (o formulário utiliza o esquema definido ao [nível da aplicação](https://doc.4d.com/4dv19/help/command/en/page1762.html)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 *   dark - texto claro sobre um fundo escuro
 *   light - texto escuro sobre um fundo claro
@@ -24,16 +24,16 @@ This property defines the color scheme for the form. This property defines the c
 
 ## CSS
 
-This property allows you to load specific CSS file(s) for the form.
+Esta propriedade permite-lhe carregar ficheiros CSS específicos para o formulário.
 
-A CSS file defined at the form level will override default style sheet(s). Para mais informações, consulte a página [Folhas de estilo](createStylesheet.md).
+Um ficheiro CSS definido ao nível do formulário substituirá a(s) folha(s) de estilo predefinida(s). Para mais informações, consulte a página [Folhas de estilo](createStylesheet.md).
 
 
 #### Gramática JSON
 
-| Nome | Tipo de dados      | Valores possíveis                                                                                        |
-| ---- | ------------------ | -------------------------------------------------------------------------------------------------------- |
-| css  | cadeia ou colecção | CSS file path(s) provided as:<li>uma cadeia de caracteres (um ficheiro para ambas plataformas)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| Nome | Tipo de dados      | Valores possíveis                                                                                                              |
+| ---- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| css  | cadeia ou colecção | Caminho(s) do(s) ficheiro(s) CSS fornecido(s) como:<li>uma cadeia de caracteres (um ficheiro para ambas plataformas)</li><li>uma coleção de cadeias de caracteres (uma lista de ficheiros para ambas as plataformas)</li><li>uma coleção de objectos {"path":string; "media": "mac" &#124; "win"} </li> |
 
 ---
 
@@ -50,9 +50,9 @@ Para mais informações, consulte por favor [Páginas formulário](forms.md#form
 
 #### Gramática JSON
 
-| Nome  | Tipo de dados | Valores possíveis                                                        |
-| ----- | ------------- | ------------------------------------------------------------------------ |
-| pages | collection    | Collection of pages (each page is an object, page 0 is the first element |
+| Nome  | Tipo de dados | Valores possíveis                                                              |
+| ----- | ------------- | ------------------------------------------------------------------------------ |
+| pages | collection    | Coleção de páginas (cada página é um objeto, a página 0 é o primeiro elemento) |
 
 ---
 
@@ -88,7 +88,7 @@ Os tipos suportados dependem da categoria do formulário:
 | Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice        | Formulários projeto - Formulários tabela |
 | Formulário lista                   | listScreen       | Um formulário para listar os registos no ecrã                        | Formularios tabla                        |
 | Formulário de lista para impressão | listPrinter      | Um relatório impresso que lista os registos                          | Formularios tabla                        |
-| Nenhum                             | *no destination* | A form with no specific feature                                      | Formulários projeto - Formulários tabela |
+| Nenhum                             | *no destination* | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
 
 
 #### Gramática JSON
