@@ -680,7 +680,7 @@ Function orderBy age($event : Object)-> $result : Text
 
 エイリアス属性は読み取り専用です (同じデータクラスのスカラー属性に基づく場合は例外です; 最後の例題参照)。 エイリアス属性は、次のようなクラス関数において、ターゲット属性パスの代わりに使用することができます:
 
-| 関数                                             |
+| Function                                       |
 | ---------------------------------------------- |
 | `dataClass.query()`, `entitySelection.query()` |
 | `entity.toObject()`                            |
