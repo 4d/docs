@@ -20,7 +20,7 @@ You can create [several types of methods](../Concepts/methods.md):
 - Triggers can also be created or opened from the Structure editor.
 - Form methods can also be created or opened from the [Form editor](../FormEditor/formEditor.md).
 
-## Creating classes
+## Criação de classes
 
 A user class in 4D is defined by a specific method file (**.4dm**), stored in the [`/Project/Sources/Classes/`](../Project/architecture.md#sources) folder. O nome do arquivo é o nome da classe.
 
@@ -156,7 +156,7 @@ This attribute is only available when the "Web Service" attribute is checked. It
 
 In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
-#### 4D tags and URLs (4DACTION...)
+#### Etiquetas 4D e URLs (4DACTION...)
 
 This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/tags.md).
 
@@ -193,9 +193,9 @@ Para modificar os atributos do método globalmente:
 
 Use the wildcard character @ to help define groups of methods:
 
-- To designate methods whose names begin with..., type @ at the end of the string. For example: `web@`
+- To designate methods whose names begin with..., type @ at the end of the string. Por exemplo: `web@`
 - To designate methods whose names contain..., type @ in the middle of the string. Por exemplo: `web@write`
-- To designate methods whose names end with..., type @ at the beginning of the string. For example: `@write`
+- To designate methods whose names end with..., type @ at the beginning of the string. Por exemplo: `@write`
 - To designate all of the methods, just type @ in the area.
 
 **Notas:**
