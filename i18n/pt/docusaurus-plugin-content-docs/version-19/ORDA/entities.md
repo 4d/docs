@@ -3,11 +3,11 @@ id: entities
 title: Trabalhar com dados
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das [selecções de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
 
 ## Criar uma entidade
 
-There are two ways to create a new entity in a dataclass:
+Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 * Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
 * You can also create an entity using the `dataClass.new( )` method.
@@ -416,7 +416,7 @@ These principles are shown in the following diagram:
 * Exemplo com um bloqueio definido por um comando clássico:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
 * Exemplo com um bloqueio definido por um método ORDA:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
 
-## Client/server optimization
+## Otimização cliente/servidor
 
 4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
 
@@ -439,7 +439,7 @@ The following methods automatically associate the optimization context of the so
 
 **Exemplo**
 
-Given the following code:
+Dado o seguinte código:
 
 ```4d
  $sel:=$ds. Employee.query("firstname = ab@")
@@ -478,7 +478,7 @@ A same optimization context property can be passed to unlimited number of entity
  $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization associated to context "longList" is applied
 ```
 
-### Entity selection-based list box
+### List box baseado em uma seleção de entidades
 
 Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
 
