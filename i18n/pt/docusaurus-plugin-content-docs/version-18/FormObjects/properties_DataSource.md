@@ -124,7 +124,7 @@ List of values that will be used as default values for the list box column (arra
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 
-You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+É necessário introduzir uma lista de valores. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
