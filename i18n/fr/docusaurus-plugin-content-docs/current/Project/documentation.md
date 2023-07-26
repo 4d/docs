@@ -44,7 +44,7 @@ L'architecture du dossier `Documentation` est la suivante :
     + `DatabaseMethods`
         * onStartup.md
         * ...
-    + `Forms`
+    + `Formulaires`
         * loginDial.md
         * ...
     + `Methods`
