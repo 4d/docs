@@ -90,7 +90,7 @@ The font theme property designates an automatic style name. Automatic styles det
 
 With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
 
-Three font themes are available:
+Estão disponíveis três temas de tipos de letra:
 
 - **normal**: automatic style, applied by default to any new object created in the Form editor.
 - **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
@@ -153,7 +153,7 @@ Designates the font color.
 
 > This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
 
-The color can be specified by:
+A cor pode ser especificada por:
 
 - a color name - like "red"
 - um valor HEX - como "#ff0000"
@@ -177,7 +177,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 `Selection and collection/entity selection type list boxes`
 
-Used to apply a custom font color to each row of the list box. You must use RGB color values. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
+Used to apply a custom font color to each row of the list box. É necessário utilizar valores de cor RGB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
@@ -355,7 +355,7 @@ O método *Color* iria conter :
 
 ## Multistyle
 
-Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. When this option is checked, 4D interprets any `<SPAN> HTML` tags found in the area.
+Esta propriedade ativa a possibilidade de usar estilos específicos na área selecionada. Quando esta opção está marcada, 4D interpreta qualquer etiqueta `<SPAN> HTML` encontrada na área.
 
 Por defeito, esta opção não está activada.
 
@@ -412,7 +412,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -422,7 +422,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 
-O nome do array LongInt deve ser usado. Each element of this array corresponds to a row of the list box (if applied to the list box) or to a cell of the column (if applied to a column), so the array must be the same size as the array associated with the column. Para preencher esse array (usando um método) use as constantes do tema [Estillos de Fonte](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
+O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Para preencher esse array (usando um método) use as constantes do tema [Estillos de Fonte](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html). Pode acionar constantes juntas para combinar estilos. Se quiser que a célula herde o estilo definido no nível mais alto, passe o valor -255 para o elemento array correspondente.
 
 #### Gramática JSON
 
@@ -436,7 +436,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 ---
 
-## Store with default style tags
+## Armazenar com etiquetas de estilo predefinidas
 
 Essa propriedade só está disponível para a área input [Multiestilo](#multi-style). Quando essa propriedade for ativada, a área armazena as tags de estilo com o texto, mesmo se nenhuma modificação for feita. Nesse caso, as tags correspondem ao estilo padrão. Quando essa propriedade for desativada, só as tags de estilo modificadas são armazenadas.
 
