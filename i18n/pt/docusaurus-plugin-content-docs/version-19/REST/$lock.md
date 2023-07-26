@@ -23,7 +23,7 @@ To unlock the entity for other sessions and 4D processes:
 ```
 
 
-The [`lockKindText` property](../API/EntityClass.md#lock) is "Locked by session".
+A propriedade [`lockKindText`](../API/EntityClass.md#lock) é "Locked by session".
 
 
 ### Descrição
@@ -57,7 +57,7 @@ The returned "__STATUS" object has the following properties:
 | lockKindText |  | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                   |
 
 
-The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
+Os seguintes valores podem ser devolvidos nas propriedades *status* e *statusText* do objeto *__STATUS* em caso de erro:
 
 | status | statusText                      | Comentário                                                                                                         |
 | ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -89,7 +89,7 @@ GET /rest/Customers(1)/?$lock=true
 }
 ```
 
-In a second browser (other session), we send the same request.
+Num segundo navegador (outra sessão), enviamos o mesmo pedido.
 
 **Responsa:**
 
