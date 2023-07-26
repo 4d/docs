@@ -3,44 +3,44 @@ id: paths
 title: Pathnames
 ---
 
-File and Folder functions, properties, and commands allow you to handle files and folders as objects. This makes file and folder management powerful and flexible. For example, to create a new file in the current user's Documents folder, you can write:
+As funções, propriedades e comandos de File e Folders permitem tratar arquivos e pastas como objetos. Isto torna a gestão de arquivos e pastas poderosa e flexível. Por exemplo, para criar um novo arquivo na pasta Documentos do utilizador atual, pode escrever:
 
 ```4d
 $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 ```
 
-In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
+Além disso, os objectos de arquivos e pastas suportam `fileSystems`, que fornecem o caminho contextual para as pastas principais da aplicação.
 
 
 ## Filesystem pathnames
 
-4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. Filesystem pathnames are useful for two main reasons:
+4D aceita vários `filesystem` pathnames que designam pastas 4D específicas com localização variável em macOS e Windows. Os nomes de caminho do sistema de arquivos são úteis por duas razões principais:
 
-- Independence: You can move your solution from one place to another regardless of the OS, without having to worry about paths,
-- Security: No code can access elements located above the file system root on the disk (sandboxing).
+- Independência: Pode mover a sua solução de um local para outro, independentemente do sistema operativo, sem ter de se preocupar com caminhos,
+- Segurança: Nenhum código pode acessar elementos localizados acima da raiz do sistema de arquivos no disco (sandboxing).
 
-The following filesystem pathnames are supported:
+São compatíveis os seguintes nomes de caminho do sistema de arquivos:
 
-| filesystem   | Designa                                                |
-| ------------ | ------------------------------------------------------ |
-| "/DATA"      | Pasta de dados actual                                  |
-| "/LOGS"      | Pasta Logs                                             |
-| "/PACKAGE"   | Project root folder (with or without 4dbase extension) |
-| "/PROJECT"   | Pasta Project                                          |
-| "/RESOURCES" | Current project resources folder                       |
-| "/SOURCES"   | Current project sources folder                         |
+| filesystem   | Designa                                               |
+| ------------ | ----------------------------------------------------- |
+| "/DATA"      | Pasta de dados actual                                 |
+| "/LOGS"      | Pasta Logs                                            |
+| "/PACKAGE"   | Pasta de raiz do projeto (com ou sem extensão 4dbase) |
+| "/PROJECT"   | Pasta Project                                         |
+| "/RESOURCES" | Pasta de recursos do projeto atual                    |
+| "/SOURCES"   | Pasta de fontes do projeto atual                      |
 
 ## Sintaxe POSIX
 
-A sintaxe POSIX é suportada em todas as plataformas. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
+A sintaxe POSIX é suportada em todas as plataformas. **A sintaxe POSIX é recomendada** por ser a mais flexível. É utilizado por predefinição (devolvido pelas propriedades [file.path](../API/FileClass.md#path) e [folder.path](../API/FolderClass.md#path)).
 
-With this syntax:
+Com esta sintaxe:
 
 - as pastas são separadas por "/"
 - os nomes de caminho absolutos começam com um "/"
-- to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
+- para subir uma pasta num caminho relativo, utilize "../" à frente do nome do caminho (por segurança, não pode subir no sistema de arquivos).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
+Na sintaxe POSIX, utiliza-se geralmente `filesystem` pathnames com os comandos [`File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder) , por exemplo:
 
 ```4d
 $pathFile:=File("/DATA/Archives/file 2.txt")
@@ -51,7 +51,7 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 
 ## Sintaxe específica da plataforma
 
-A sintaxe específica da plataforma depende do sistema operativo em que o comando é executado. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+A sintaxe específica da plataforma depende do sistema operativo em que o comando é executado. Note-se que, ao criar um objeto de ficheiro ou pasta com esta sintaxe, é necessário declará-lo utilizando como parâmetro a constante `fk platform path` .
 
 ### Windows
 
@@ -70,7 +70,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Entering Windows pathnames and escape sequences
 
-The 4D code editor allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+The 4D code editor allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. Por exemplo, `\t` é a sequência de escape para o carácter `Tab` .
 
 The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the code editor by replacing single backslashes `\` with double backslashes ``\\`. For example,``C:\Folder`will become`C:\\Folder`.
 
@@ -100,18 +100,18 @@ $ok:=Folder("macintosh hd:";fk platform path).create()
 $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser chamado Monday
 ```
 
-## Absolute and relative pathnames
+## Nomes de caminho absolutos e relativos
 
-### `File` and `Folder` constructors
+### Construtores `File` e `Folder`
 
-[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. Por exemplo, o seguinte código não é permitido:
+[`Os comandos File`](../API/FileClass.md#file) e [`Folder`](../API/FolderClass.md#folder) só aceitam **nomes de caminho absolutos**. Os nomes de caminho relativos não são suportados e devolverão erros. Por exemplo, o seguinte código não é permitido:
 
 ```4d
     //ERROR
 $ko:=Folder("myFolder").create() //nome do caminho relativo com construtor
 ```
 
-If you want to handle files or folders in various locations (project folder, system folders, etc.), you can use `filesystems` (see above). Por exemplo, pode escrever:
+Se quiser tratar a arquivos pastas em várias localizações (pasta do projeto, pastas do sistema, etc.), pode utilizar os  `filesystems` (ver acima). Por exemplo, pode escrever:
 
 ```4d
 $okFolder:=Folder("/PACKAGE/myFolder").create() //pasta criada ao nível da estrutura
@@ -120,21 +120,21 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de da
 
 ### `.file()` and `.folder()` folder methods
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por exemplo:
+As funções dos objetos pasta, tais como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
 
 ```4d
-  //to reference a "Picture" folder within the user documents folder
+  //para referenciar uma pasta "Picture" dentro da pasta de documentos do utilizador
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para criar uma pasta no ambiente de trabalho
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
-Absolute pathnames are not supported and will return errors.
+Os nomes de caminho absolutos não são suportados e devolverão erros.
 
 
 ## Exemplos
 
-The flexibility of file and folder functions offers you various possibilities for handling files and folders, like in the following examples:
+A flexibilidade das funções de arquivos e pastas oferece-lhe várias possibilidades de tratamento de arquivos e pastas, como nos exemplos seguintes:
 
 ```4d
 $f:=Folder(fk desktop folder).folder("archive/jan2019")
