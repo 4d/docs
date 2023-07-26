@@ -2910,6 +2910,7 @@ If the object returned includes a date or time, it is treated as a datetime and 
 If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. The command returns a null object if the cell is empty.
 
 
+
 #### Beispiel
 
 ```4d
@@ -4151,15 +4152,13 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                                      |
-| ---------- | -------- | -- | ------------------------------------------------- |
-| vpAreaName | Text     | -> | 4D View Pro area form object name                 |
-| row        | Ganzzahl | -> | Row index                                         |
-| rowCount   | Ganzzahl | -> | Number of rows                                    |
-| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)            |
-| Ergebnis   | Objekt   | <- | Range object of row(s)|<!-- END REF -->
+| Parameter  | Typ      |    | Beschreibung                      |
+| ---------- | -------- | -- | --------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name |
+| row        | Ganzzahl | -> | Row index                         |
+| rowCount   | Ganzzahl | -> | Number of rows                    |
 
-|
+|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### Beschreibung
 
@@ -4798,6 +4797,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . The current sheet is the selected sheet in the document.
 
+
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
 In *sheet*, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
@@ -4919,13 +4919,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                                |
-| ---------- | -------- | -- | ------------------------------------------- |
-| vpAreaName | Objekt   | -> | 4D View Pro area form object name           |
-| dataObj    | Objekt   | -> | Data object to load in the data context     |
-| dataColl   | Objekt   | -> | Data collection to load in the data context |
-| options    | Objekt   | -> | Additional options                          |
-| sheet      | Ganzzahl | -> | Sheet index|<!-- END REF -->
+| Parameter  | Typ        |    | Beschreibung                                |
+| ---------- | ---------- | -- | ------------------------------------------- |
+| vpAreaName | Objekt     | -> | 4D View Pro area form object name           |
+| dataObj    | Objekt     | -> | Data object to load in the data context     |
+| dataColl   | Collection | -> | Data collection to load in the data context |
+| options    | Objekt     | -> | Additional options                          |
+| sheet      | Ganzzahl   | -> | Sheet index|<!-- END REF -->
 
 |
 
@@ -5341,6 +5341,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 | sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)              |
 <!-- END REF -->
 
+
 #### Beschreibung
 
 The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. . Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen.
@@ -5644,6 +5645,7 @@ The `VP SET SELECTION` command <!-- REF #_method_.VP SET SELECTION.Summary -->de
 In *rangeObj*, pass a range object of cells to designate as the current selection.
 
 #### Beispiel
+
 
 ```4d
 $currentSelection:=VP Combine ranges(VP Cells("myVPArea";3;2;1;6);VP Cells("myVPArea";5;7;1;7))
