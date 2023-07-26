@@ -42,7 +42,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 Control whether and how the object can be the destination of a drag and drop operation.
 
-Two drop modes are available:
+Há dois modos de soltar em 4D:
 
 - **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. You then manage the drop action using a method.    
   In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
@@ -90,7 +90,7 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 Referência de um método ligado ao objeto. Object methods generally "manage" the object while the form is displayed or printed. You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
-Several types of method references are supported:
+São suportados vários tipos de referências de métodos:
 
 - a standard object method file path, i.e. that uses the following pattern:  
   `ObjectMethods/objectName.4dm`  
