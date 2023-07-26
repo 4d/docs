@@ -4919,13 +4919,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                                |
-| ---------- | -------- | -- | ------------------------------------------- |
-| vpAreaName | Objekt   | -> | 4D View Pro area form object name           |
-| dataObj    | Objekt   | -> | Data object to load in the data context     |
-| dataColl   | Objekt   | -> | Data collection to load in the data context |
-| options    | Objekt   | -> | Additional options                          |
-| sheet      | Ganzzahl | -> | Sheet index|<!-- END REF -->
+| Parameter  | Typ        |    | Beschreibung                                |
+| ---------- | ---------- | -- | ------------------------------------------- |
+| vpAreaName | Objekt     | -> | 4D View Pro area form object name           |
+| dataObj    | Objekt     | -> | Data object to load in the data context     |
+| dataColl   | Collection | -> | Data collection to load in the data context |
+| options    | Objekt     | -> | Additional options                          |
+| sheet      | Ganzzahl   | -> | Sheet index|<!-- END REF -->
 
 |
 
