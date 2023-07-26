@@ -17,7 +17,7 @@ Pode modificar os seguintes parâmetros de impressão:
 *   Escala de página
 
 
-> Available options depend on the system configuration.
+> As opções disponíveis dependem da configuração do sistema.
 
 
 
@@ -26,7 +26,7 @@ Pode modificar os seguintes parâmetros de impressão:
 
 | Nome        | Tipo de dados | Valores possíveis                                                                                               |
 | ----------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| pageFormat  | object        | Available print properties: paperName, paperWidth, paperHeight, orientation, scale                              |
+| pageFormat  | object        | Propriedades de impressão disponíveis: paperName, paperWidth, paperHeight, orientation, scale                   |
 | paperName   | string        | "A4", "US Letter"...                                                                                            |
 | paperWidth  | string        | Utilizado se não tiver sido encontrado um papel com o nome paperName. Requer sufixo de unidade: pt, in, mm, cm. |
 | paperHeight | string        | Utilizado se não tiver sido encontrado um papel com o nome paperName. Requer sufixo de unidade: pt, in, mm, cm. |
