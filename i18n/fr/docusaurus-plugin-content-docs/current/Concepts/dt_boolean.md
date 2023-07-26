@@ -31,14 +31,14 @@ monBooléen:=(monBouton=1)
 
 4D supporte deux opérateurs logiques : l'opérateur d'intersection (AND) et l'opérateur de réunion inclusive (OR). Le AND logique retourne TRUE si les deux expressions sont VRAIES. Le OR logique retourne TRUE si au moins une des expressions est VRAIE. Le tableau suivant décrit les opérateurs logiques :
 
-| Opération | Syntaxe           | Retourne | Expression                   | Value |
-| --------- | ----------------- | -------- | ---------------------------- | ----- |
-| AND       | Booléen & Booléen | Boolean  | ("A" = "A") & (15 # 3)       | True  |
-|           |                   |          | ("A" = "B") & (15 # 3)       | False |
-|           |                   |          | ("A" = "B") & (15 = 3)       | False |
-| OU        | Booléen & Booléen | Boolean  | ("A" = "A") &#124; (15 # 3)  | True  |
-|           |                   |          | ("A" = "B") &#124;  (15 # 3) | True  |
-|           |                   |          | ("A" = "B") &#124;  (15 = 3) | False |
+| Opération | Syntaxe           | Retourne | Expression                   | Valeur |
+| --------- | ----------------- | -------- | ---------------------------- | ------ |
+| AND       | Booléen & Booléen | Boolean  | ("A" = "A") & (15 # 3)       | True   |
+|           |                   |          | ("A" = "B") & (15 # 3)       | False  |
+|           |                   |          | ("A" = "B") & (15 = 3)       | False  |
+| OU        | Booléen & Booléen | Boolean  | ("A" = "A") &#124; (15 # 3)  | True   |
+|           |                   |          | ("A" = "B") &#124;  (15 # 3) | True   |
+|           |                   |          | ("A" = "B") &#124;  (15 = 3) | False  |
 
 Voici la "table de vérité" pour l'opérateur logique "AND" :
 
