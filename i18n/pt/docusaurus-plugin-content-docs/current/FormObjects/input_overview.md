@@ -33,9 +33,9 @@ Pode gerir os dados com objectos ou formulários [métodos](Concepts/methods.md)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                          |
-| ------ | --------------------------------- |
-| v19 R7 | Support of Corner radius property |
+| Versão | Mudanças                             |
+| ------ | ------------------------------------ |
+| v19 R7 | Suporte da propriedade Raio de canto |
 
 </details>
 
