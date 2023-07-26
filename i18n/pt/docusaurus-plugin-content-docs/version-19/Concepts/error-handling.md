@@ -57,7 +57,7 @@ An error-handling method installed by the `ON ERR CALL` command only applies to 
 
 Within the custom error method, you have access to several pieces of information that will help you identifying the error:
 
-- dedicated system variables(*):
+- variáveis sistema dedicadas(*):
 
   - `Error` (inteiro longo): código de erro
   - `Error method`(texto): nome do método que provocou o erro
