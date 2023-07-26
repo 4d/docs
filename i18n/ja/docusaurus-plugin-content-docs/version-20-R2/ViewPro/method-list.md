@@ -2879,6 +2879,7 @@ $tables:=VP Get tables("ViewProArea")
 *rangeObj* のレンジが複数セルあるいは複数レンジを含んでいる場合、最初のセルの値が返されます。 セルが空の場合には、コマンドは null オブジェクトを返します。
 
 
+
 #### 例題
 
 ```4d
@@ -2920,7 +2921,7 @@ End if
 
  | プロパティ | タイプ  | 説明                     |
  | ----- | ---- | ---------------------- |
- | value | 日付   | セルの値 (時間部分を除く)         |
+ | value | Date | セルの値 (時間部分を除く)         |
  | time  | Real | 値が js 日付型の場合、時間値 (秒単位) |
 
 日付または時間は 日付時間 (datetime) として扱われ、以下のように補完されます:
@@ -4120,15 +4121,13 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 <!-- REF #_method_.VP Row.Params -->
 
-| 引数         | タイプ     |    | 説明                                     |
-| ---------- | ------- | -- | -------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                |
-| row        | Integer | -> | 行のインデックス                               |
-| rowCount   | Integer | -> | 行数                                     |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)            |
-| 戻り値        | Object  | <- | 行のレンジオブジェクト|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                      |
+| ---------- | ------- | -- | ----------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名 |
+| row        | Integer | -> | 行のインデックス                |
+| rowCount   | Integer | -> | 行数                      |
 
-|
+|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### 説明
 
@@ -4767,6 +4766,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 `VP SET CURRENT SHEET` コマンドは、 <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->*vpAreaName* 引数で指定した View Pro エリアのカレントシートを設定します<!-- END REF --> 。 カレントシートとは、ドキュメント内で選択されているシートのことです。
 
+
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 *sheet* 引数には、カレントシートに設定したいシートのインデックスを渡します。 index 引数が 0未満の場合、またはシートの総数より多い場合、コマンドは何もしません。
@@ -4888,13 +4888,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| 引数         | タイプ     |    | 説明                                    |
-| ---------- | ------- | -- | ------------------------------------- |
-| vpAreaName | Object  | -> | 4D View Pro フォームオブジェクト名               |
-| dataObj    | Object  | -> | データコンテキストに読み込むデータオブジェクト               |
-| dataColl   | Object  | -> | データコンテキストに読み込むデータのコレクション              |
-| options    | Object  | -> | 追加のオプション                              |
-| sheet      | Integer | -> | シートのインデックス|<!-- END REF -->
+| 引数         | タイプ        |    | 説明                                    |
+| ---------- | ---------- | -- | ------------------------------------- |
+| vpAreaName | Object     | -> | 4D View Pro フォームオブジェクト名               |
+| dataObj    | Object     | -> | データコンテキストに読み込むデータオブジェクト               |
+| dataColl   | Collection | -> | データコンテキストに読み込むデータのコレクション              |
+| options    | Object     | -> | 追加のオプション                              |
+| sheet      | Integer    | -> | シートのインデックス|<!-- END REF -->
 
 |
 
@@ -5027,7 +5027,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 | ------------- | ------ | -- | ----------------------------------- |
 | rangeObj      | Object | -> | レンジオブジェクト                           |
 | dateValue     | Date   | -> | 設定する日付値                             |
-| timeValue     | Time   | -> | 設定する時間値                             |
+| timeValue     | 時間     | -> | 設定する時間値                             |
 | formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
 
 |
@@ -5310,6 +5310,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)   |
 <!-- END REF -->
 
+
 #### 説明
 
 `VP SET FROZEN PANES` コマンドは、 <!-- REF #_method_.VP SET FROZEN PANES.Summary -->*vpAreaName* 引数で指定した View Pro エリア内の、*paneObj* 引数のカラムと行の固定化ステータスを設定します<!-- END REF -->。 固定化されたカラムと行は固定された位置に表示され続け、ドキュメントの他の部分がスクロールされても移動しません。 そのカラムと行が固定化されていることを示すために、太い実線が表示されます。 実線の位置は、固定化されたカラムまたは行がシートのどこにあるかによって変わります:
@@ -5576,6 +5577,7 @@ VP SET ROW COUNT("ViewProArea";5)
 *rangeObj* には、カレントセレクションとして定義するセルのレンジオブジェクトを渡します。
 
 #### 例題
+
 
 ```4d
 $currentSelection:=VP Combine ranges(VP Cells("myVPArea";3;2;1;6);VP Cells("myVPArea";5;7;1;7))
@@ -6357,8 +6359,8 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 | セレクター                 | 説明                                                                                                         | *vPos* で利用可 | *hPos* で利用可 |
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | ----------- | ----------- |
-| `vk position bottom`  | セルあるいは行の下辺に対する垂直揃え。                                                                                        | ○           |             |
-| `vk position center`  | 中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li>                        | ○           | ○           |
+| `vk position bottom`  | セルあるいは行の下辺に対する垂直揃え。                                                                                        | X           |             |
+| `vk position center`  | 中央揃え。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 - セルあるいは行</li><li>横方向の表示位置 - セルあるいはカラム</li>                        | X           | X           |
 | `vk position left`    | セルあるいはカラムの左辺に対する水平揃え。                                                                                      |             | X           |
 | `vk position nearest` | 一番近い基準に対する位置揃え (上、下、左、右、中央)。 セル・行・カラムの境界に対して位置を揃えます:<li>縦方向の表示位置 (上、中央、下) - セルあるいは行 </li><li>横方向の表示位置 (左、中央、右) - セルあるいはカラム</li> | X           | X           |
 | `vk position right`   | セルあるいはカラムの右辺に対する水平揃え。                                                                                      |             | X           |
