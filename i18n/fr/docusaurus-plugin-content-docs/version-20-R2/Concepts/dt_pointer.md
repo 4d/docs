@@ -77,12 +77,12 @@ Avec :
  vPtrC:=->autreObjet
 ```
 
-| Opération | Syntaxe             | Retourne | Expression    | Value |
-| --------- | ------------------- | -------- | ------------- | ----- |
-| Egalité   | Pointeur = Pointeur | Boolean  | vPtrA = vPtrB | True  |
-|           |                     |          | vPtrA = vPtrC | False |
-| Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True  |
-|           |                     |          | vPtrA # vPtrB | False |
+| Opération | Syntaxe             | Retourne | Expression    | Valeur |
+| --------- | ------------------- | -------- | ------------- | ------ |
+| Egalité   | Pointeur = Pointeur | Boolean  | vPtrA = vPtrB | True   |
+|           |                     |          | vPtrA = vPtrC | False  |
+| Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True   |
+|           |                     |          | vPtrA # vPtrB | False  |
 
 ## Principales utilisations
 ### Utiliser des pointeurs vers des tables
