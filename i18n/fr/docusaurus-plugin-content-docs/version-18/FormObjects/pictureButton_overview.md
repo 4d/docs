@@ -11,13 +11,13 @@ Les boutons image peuvent être utilisés de deux manières :
 
 * Comme boutons de commande dans un formulaire. Dans ce cas, le bouton image accepte généralement quatre états : actif, désactivé, enfoncé et survolé. Par exemple, un tableau de vignettes qui comporte une ligne de quatre colonnes, chaque vignette correspond aux états Par défaut, Cliqué, Survol et Désactivé.
 
-  | Propriété                  | Nom JSON               | Value |
-  | -------------------------- | ---------------------- | ----- |
-  | Lignes                     | rowCount               | 1     |
-  | Colonnes                   | columnCount            | 4     |
-  | Switch back when Released  | switchBackWhenReleased | vrai  |
-  | Switch when Roll Over      | switchWhenRollover     | vrai  |
-  | Use Last Frame as Disabled | useLastFrameAsDisabled | vrai  |
+  | Propriété                  | Nom JSON               | Valeur |
+  | -------------------------- | ---------------------- | ------ |
+  | Lignes                     | rowCount               | 1      |
+  | Colonnes                   | columnCount            | 4      |
+  | Switch back when Released  | switchBackWhenReleased | vrai   |
+  | Switch when Roll Over      | switchWhenRollover     | vrai   |
+  | Use Last Frame as Disabled | useLastFrameAsDisabled | vrai   |
 
 * Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
 
