@@ -100,7 +100,7 @@ It is possible to modify the appearance of a hierarchical list form objects usin
 Certain properties of hierarchical lists (for example, the **Enterable** attribute or the color) can be set in different ways: in the form properties, via a command of the “Object Properties” theme or via a command of the “Hierarchical Lists” theme. When all three of these means are used to set list properties, the following order of priority is applied:
 
 1. Comandos do tema "Listas hierárquicas"
-2. Generic object property commands
+2. Comandos genéricos de propriedades de objectos
 3. Propriedade formulário
 
 This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
@@ -120,7 +120,7 @@ Each item of a hierarchical list has a reference number (*itemRef*) of the Longi
 
 > Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
 
-Here are a few tips for using reference numbers:
+Seguem-se algumas sugestões para a utilização de números de referência:
 
 1. You do not need to identify each item with a unique number (beginner level).
 
