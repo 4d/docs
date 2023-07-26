@@ -206,8 +206,8 @@ Especifique el tipo de list box.
 
 - **Arrays**(por defecto): utiliza elementos de array como líneas del list box.
 - **Selección actual**: utiliza expresiones, campos o métodos cuyos valores se evaluarán para cada registro de la selección actual de una tabla.
-- **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Tenga en cuenta que con este tipo de list box, debe definir la propiedad [Colección o Selección de entidades](properties_Object.md#collection-or-entity-selection).
+- **Selección temporal**: utiliza expresiones, campos o métodos cuyos valores se evaluarán para cada registro de una selección temporal.
+- **Colección o Selección de entidades**: utilice elementos de colección o entidades para definir el contenido de las líneas del list box. Tenga en cuenta que con este tipo de list box, debe definir la propiedad [Colección o Selección de entidades](properties_Object.md#collection-or-entity-selection).
 
 #### Gramática JSON
 
