@@ -29,7 +29,7 @@ A more compex filter is composed of the following elements, which joins two quer
 
 Por exemplo: `$filter="firstName=john AND salary>20000"` onde `firstName` y `salary` são atributos da classe de dados Employee.
 
-### Using the params property
+### Utilizar a propriedade params
 
 Também pode usar a propriedade params de 4D.
 
@@ -43,7 +43,7 @@ For more information regarding how to query data in 4D, refer to the [dataClass.
 > <li>Aspas ('): \u0027</li>
   <li>Quotes ('): \u0027 Double quotes ("): \u0022</li>
 > 
-> For example, you can write the following when passing a value with a quote when using the *params* property:  
+> Por exemplo, pode escrever o seguinte ao passar um valor com uma aspa ao utilizar a propriedade *params*:  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 > 
 > If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
@@ -62,13 +62,13 @@ You can also query attributes of type Object by using dot-notation. For example,
 }
 ```
 
-You can search in the object by writing the following:
+É possível pesquisar no objeto escrevendo o seguinte:
 
 `GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
 ## Comparador
 
-The comparator must be one of the following values:
+O comparador deve ser um dos seguintes valores:
 
 | Comparador | Descrição            |
 | ---------- | -------------------- |
@@ -82,7 +82,7 @@ The comparator must be one of the following values:
 
 ## Exemplos
 
-In the following example, we look for all employees whose last name begins with a "j":
+No exemplo seguinte, procuramos todos os empregados cujo apelido começa por "j":
 
 ```
  GET  /rest/Employee?$filter="lastName begin j"
