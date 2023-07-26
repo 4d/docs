@@ -4,9 +4,9 @@ title: Tamanho formulário
 ---
 
  
-4D lets you set the size of both the form and the [window](properties_WindowSize.md). These properties are interdependent and your application interface results from their interaction.
+4D permite-lhe definir o tamanho do formulário e da [janela](properties_WindowSize.md). Estas propriedades são interdependentes e a interface da aplicação resulta da sua interação.
 
-Size options depend on the value of the **Size based on** option.
+As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
 
 ---
 ## Tamanho baseado em
@@ -27,14 +27,14 @@ Size options depend on the value of the **Size based on** option.
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                                     |
-| -------------- | ------------- | ----------------------------------------------------- |
-| formSizeAnchor | string        | Name of object to use to defined the size of the form |
+| Nome           | Tipo de dados | Valores possíveis                                              |
+| -------------- | ------------- | -------------------------------------------------------------- |
+| formSizeAnchor | string        | Nome do objeto a utilizar para definir o tamanho do formulário |
 
 ---
 ## Alto
 
-Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+Altura do formulário (em pixéis) quando o [tamanho do formulário](#size-based-on) é **Definir tamanho**.
 
 
 #### Gramática JSON
@@ -45,7 +45,7 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 
 
 ---
-## Hor. Margem
+## Margem hor.
 
 Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`
 
@@ -61,11 +61,11 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ---
 
-## Vert. Margem
+## Margem hor.
 
 Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
 
-This value also determines the top margins of forms used in the Label editor.
+Este valor também determina as margens superiores dos formulários utilizados no editor de etiquetas.
 
 #### Gramática JSON
 
@@ -77,7 +77,7 @@ This value also determines the top margins of forms used in the Label editor.
 ---
 ## Largura
 
-Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+Largura do formulário (em pixeis) quando o [tamanho do formulário](#size-based-on) é **Definir tamanho**.
 
 
 #### Gramática JSON
