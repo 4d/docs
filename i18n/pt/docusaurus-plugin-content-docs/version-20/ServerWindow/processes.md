@@ -42,7 +42,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
     - Processo web - caminho URL,
 - Nome do processo,
 - Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). The process number is the number assigned on the server. In the case of a global process, this number may be different from that assigned on the client machine.
-- Current state of the process,
+- Estado atual do processo,
 - Running time (in seconds) of the process since its creation,
 - Percentage of time that 4D Server has devoted to this process (ratio).
 
@@ -54,7 +54,7 @@ Each process is identified by an icon as well as a type. The color and form of t
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Admin/server-icon-1.png)  | Servidor de aplicações                                                                                                                                                                              |
 | ![](../assets/en/Admin/server-icon-2.png)  | Servidor SQL                                                                                                                                                                                        |
-| ![](../assets/en/Admin/server-icon-3.png)  | DB4D Server (database engine)                                                                                                                                                                       |
+| ![](../assets/en/Admin/server-icon-3.png)  | Servidor DB4D (motor de base de dados)                                                                                                                                                              |
 | ![](../assets/en/Admin/server-icon-4.png)  | Servidor Web                                                                                                                                                                                        |
 | ![](../assets/en/Admin/server-icon-5.png)  | Servidor SOAP                                                                                                                                                                                       |
 | ![](../assets/en/Admin/server-icon-6.png)  | Protected 4D client process (development process of a connected 4D)                                                                                                                                 |
