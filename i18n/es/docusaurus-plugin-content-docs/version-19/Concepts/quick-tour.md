@@ -238,13 +238,13 @@ This.name:="Rectangle"
 Una clase puede extender otra clase utilizando `Class extends <ClassName>`. Las superclasses se pueden llamar con el comando `Super`. Por ejemplo:
 
 ```4d  
-//in the Square.4dm file
+//en el archivo Square.4dm
 Class extends rectangle
 
-Class constructor($length : Integer)
+Class constructor ($length : Integer)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // Llama al constructor de la clase padre con las longitudes   
+  // ofrecidas para el ancho y alto del rectángulo
 Super($length;$length)
 
 This.name:="Square"
