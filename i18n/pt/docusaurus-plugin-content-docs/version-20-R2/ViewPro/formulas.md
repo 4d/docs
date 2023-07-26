@@ -35,7 +35,7 @@ Todas as fórmulas têm operandos e operadores:
 *   **Operands** include several categories:
     *   [values](#values-and-operators) (5 data types are supported)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
-    *   [standard spreadsheet functions](#using-functions)
+    *   [funções standard de folha de cálculo](#using-functions)
     *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
 
 ## Valores e operadores
@@ -250,7 +250,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
-An error is returned in the 4D View Pro cell if:
+É devolvido um erro na célula 4D View Pro se:
 
 *   the 4D method returns another type other than those listed above,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
