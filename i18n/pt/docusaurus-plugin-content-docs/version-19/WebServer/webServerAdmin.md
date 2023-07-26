@@ -67,7 +67,7 @@ The **Watch** page (**Web** heading) in the Runtime Explorer displays web server
 
 Website administration URLS allow you to control the website published on your server. 4D Web Server accepts four particular URLs: */4DSTATS*, */4DHTMLSTATS*, /*4DCACHECLEAR* and */4DWEBTEST*.
 
-> */4DSTATS*, */4DHTMLSTATS* and */4DCACHECLEAR* are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST is always available.
+> */4DSTATS*, */4DHTMLSTATS* and */4DCACHECLEAR* are only available to the Designer and Administrator of the database. If the 4D password system has not been activated, these URLs are available to all the users. /4DWEBTEST está sempre disponível.
 
 ### /4DSTATS
 
@@ -76,7 +76,7 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 | Elemento                | Descrição                                                    |
 | ----------------------- | ------------------------------------------------------------ |
 | Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)            |
-| Tamanho máximo da cache | Maximum size of cache (in bytes)                             |
+| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                           |
 | Cached Object Max Size  | Maximum size of each object in the cache (in bytes)          |
 | Cache Use               | Percentage of cache used                                     |
 | Cached Objects          | Number of objects found in the cache, **including pictures** |
@@ -91,7 +91,7 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 | Elemento                | Descrição                                                              |
 | ----------------------- | ---------------------------------------------------------------------- |
 | Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                      |
-| Tamanho máximo da cache | Maximum size of cache (in bytes)                                       |
+| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                     |
 | Cached Object Max Size  | Maximum size of each object in the cache (in bytes)                    |
 | Cache Use               | Percentage of cache used                                               |
 | Cached Objects          | Number of objects found in the cache, **without pictures**             |
@@ -180,11 +180,11 @@ The following table lists the fields available for each format (in alphabetical 
 | C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
 | CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                          |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                     |
-| CS(HOST)       | X   | X   | Host field of the HTTP request                                                                                              |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                   |
 | CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                                                                          |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
 | CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                     |
-| CS_URI         | X   | X   | URI on which the request is made                                                                                            |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                               |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                                                                    |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                    |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
