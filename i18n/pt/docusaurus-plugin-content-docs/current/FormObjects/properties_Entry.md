@@ -51,7 +51,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 The Enterable attribute indicates whether users can enter values into the object.
 
-Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
@@ -90,26 +90,26 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Filtro de entrada             | Descrição                                                                                                                                                     |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                            | Permite quaisquer letras, mas converte-as em maiúsculas.                                                                                                      |
-| &9                            | Permitir apenas números.                                                                                                                                      |
-| &A                            | Permitir apenas letras maiúsculas.                                                                                                                            |
-| &a                            | Permitir apenas letras (maiúsculas e minúsculas).                                                                                                             |
-| &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                           |
-| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Permite duas letras quaisquer, mas converte-as em maiúsculas.                                                |
-| !0&9##/##/##                  | Formato de entrada de data standard. Display zeros in entry spaces. Permitir quaisquer números.                                                               |
-| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Display zeros in entry spaces. Permitir quaisquer números. Limited to hours and minutes.                                                   |
-| !0&9##:##                     | Formato do registo de horas. Limited to hours and minutes. Display zeros in entry spaces. São permitidos quatro números quaisquer, separados por dois pontos. |
-| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números antes de cada palavra.                                                      |
-| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Display zeros in entry spaces. Permitir dois números quaisquer depois de cada palavra.                                           |
-| !0&9##-##-##-##               | Local telephone number format. Display zeros in entry spaces. Permitir qualquer número. Três entradas, hífen, quatro entradas.                                |
-| !_&9(###)!0###-####           | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                                          |
-| !0&9###-###-###               | Long distance telephone number. Display zeros in entry spaces. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries.          |
-| !0&9###-##-####               | Número de segurança social. Display zeros in entry spaces. Permitir quaisquer números.                                                                        |
-| ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                     |
-| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                           |
-| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                        |
+| Filtro de entrada             | Descrição                                                                                                                                                             |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ~A                            | Permite quaisquer letras, mas converte-as em maiúsculas.                                                                                                              |
+| &9                            | Permitir apenas números.                                                                                                                                              |
+| &A                            | Permitir apenas letras maiúsculas.                                                                                                                                    |
+| &a                            | Permitir apenas letras (maiúsculas e minúsculas).                                                                                                                     |
+| &@                            | Permitir apenas caracteres alfanuméricos. Sem caracteres especiais.                                                                                                   |
+| ~a##                          | Abreviatura do nome do estado (por exemplo, CA). Permite duas letras quaisquer, mas converte-as em maiúsculas.                                                        |
+| !0&9##/##/##                  | Formato de entrada de data standard. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                             |
+| !0&9 Dia: ## Mês: ## Ano: ##  | Time entry format. Apresentar zeros nos espaços de entrada. Permitir quaisquer números. Limited to hours and minutes.                                                 |
+| !0&9##:##                     | Formato do registo de horas. Limitado a horas e minutos. Apresentar zeros nos espaços de entrada. São permitidos quatro números quaisquer, separados por dois pontos. |
+| !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números antes de cada palavra.                                                    |
+| !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números quaisquer depois de cada palavra.                                         |
+| !0&9##-##-##-##               | Formato do número de telefone local. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Três entradas, hífen, quatro entradas.                        |
+| !_&9(###)!0###-####           | Número de telefone interurbano. Display underscores in first three entry spaces, zeros in remainder.                                                                  |
+| !0&9###-###-###               | Número de telefone interurbano. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries.        |
+| !0&9###-##-####               | Número de segurança social. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                                      |
+| ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                             |
+| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                   |
+| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                                |
 
 #### Gramática JSON
 
@@ -157,9 +157,9 @@ By default, the object uses the current keyboard layout.
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis                                                                  |
-| --------------- | ------------- | ---------------------------------------------------------------------------------- |
-| keyboardDialect | text          | Código da linguajem, por exemplo, "ar-ma" ou "cs". See RFC3066, ISO639 and ISO3166 |
+| Nome            | Tipo de dados | Valores possíveis                                                                |
+| --------------- | ------------- | -------------------------------------------------------------------------------- |
+| keyboardDialect | text          | Código da linguajem, por exemplo, "ar-ma" ou "cs". Ver RFC3066, ISO639 e ISO3166 |
 
 #### Objectos suportados
 
@@ -274,7 +274,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 | shortcutControl | boolean       | true, false (macOS: Control)                       |
 | shortcutShift   | boolean       | true, false                                        |
 |                 |               |                                                    |
-| shortcutKey     | string        | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| shortcutKey     | string        | <li>qualquer tecla de carácter: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objectos suportados
 
