@@ -28,14 +28,14 @@ Cria-se variáveis declarando-as. A linguagem 4D oferece duas maneiras de declar
  MyDate:=Current date+30 //MyDate é criada e obtém a data atual mais  30 días
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+Quando as variáveis são declaradas, são inicializadas com o valor predefinido [**correspondente ao seu tipo**](data-types.md#default-values), que manterão durante a sessão, desde que não lhes tenha sido [atribuído](#assigning-data).
 
 
 ### Usando a palavra-chave `var`
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+Recomenda-se a declaração de variáveis utilizando a palavra-chave `var` , uma vez que esta sintaxe permite associar variáveis de objeto a classes. A utilização desta sintaxe melhora as sugestões do editor de código e as funcionalidades de antecipação de escrita.
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+Para declarar uma variável de qualquer tipo com a palavra-chave `var` , utilize a seguinte sintaxe:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -48,17 +48,16 @@ var $myFile : 4D. File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` é o nome da variável, que deve estar em conformidade com as regras [4D](Concepts/identifiers.md) sobre identificadores. Esta sintaxe apenas suporta [declarações de variáveis locais e de processo](#local-process-and-interprocess-variables) , excluindo assim [variáveis inter-processo](#interprocess-variables) e [matrizes](Concepts/arrays.md).
 
 `varType` pode ser:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- um [tipo básico](Concepts/data-types.md), caso em que a variável contém um valor do tipo declarado,
+- uma referência à classe [](Concepts/classes.md) (classe 4D ou classe de utilizador), caso em que a variável contém uma referência a um objeto da classe definida.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Se `varType` for omitido, é criada uma variável do tipo **variante** .
 
-The following table lists all supported `varType` values:
+A tabela seguinte enumera todos os valores `varType` suportados:
 
 | varType                                 | Conteúdos                                                                                                                                         |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -112,9 +111,9 @@ var $entity : cs. EmployeeEntity
 
 > **Nota:** Os parâmetros $1, $2... passados aos métodos são variáveis locais. Para mais informações, consulte por favor [Parâmetros](Concepts/parameters.md).
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+As directivas dos comandos do tema "Compilador" permitem-lhe declarar variáveis de tipos básicos.
 
-Por exemplo, se quiser definir uma variável texto, escreva:
+Por exemplo, se quisermos definir uma variável de texto, escrevemos:
 
 ```4d
  C_TEXT(myText)
@@ -146,7 +145,7 @@ MyNumber:=3
 
 cria a variável _MyNumber_ e coloca o número 3 na mesma. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> Normalmente, não se recomenda a criação de variáveis sem [declarar o seu tipo](#declaring-variables).
 
 Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obter dados delas. Mais uma vez, utiliza-se o operador de atribuição. Se precisar  colocar o valor do MyNumber num campo chamado [Products]Size, escreva _MyNumber_ no lado direito do operador de atribuição:
 
@@ -191,7 +190,7 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
 
 Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Nota:** Os parâmetros $1, $2... passados para os métodos são variáveis locais. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** Os parâmetros $1, $2... passados para os métodos são variáveis locais. Para mais informações, consultar [Parâmetros](Concepts/parameters.md).
 
 ### Variáveis processo
 
