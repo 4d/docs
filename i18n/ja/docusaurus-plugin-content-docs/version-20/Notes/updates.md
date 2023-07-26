@@ -269,6 +269,6 @@ ALERT($param1+" "+$param2)
 | Zlib      | 1.2.13    | 20             |                                                                                                                          |
 | webKit    | WKWebView | 19             |                                                                                                                          |
 | PHP       | 8.2.4     | 20             |                                                                                                                          |
-| libldap   | 2.4.48    | 18 R2          |                                                                                                                          |
+| libldap   | 2.6.4     | 20             |                                                                                                                          |
 | libsasl   | 2.1.28    | 20             |                                                                                                                          |
 
