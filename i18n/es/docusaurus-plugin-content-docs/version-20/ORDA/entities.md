@@ -254,7 +254,7 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
 ```
 
-:::note Entity selections returned from the server
+:::note Selecciones de entidades devueltas por el servidor
 
 En la arquitectura cliente/servidor, las selecciones de entidades devueltas por el servidor son siempre compartibles en el cliente, incluso si [`copy()`](API/EntitySelectionClass.md#copy) fue llamada en el servidor. Para que dicha selección de entidades sea alterable en el cliente, es necesario ejecutar [`copa()`](API/EntitySelectionClass.md#copa) del lado del cliente. Ejemplo:
 
