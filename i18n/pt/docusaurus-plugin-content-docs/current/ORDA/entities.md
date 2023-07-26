@@ -3,12 +3,12 @@ id: entities
 title: Trabalhar com dados
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das [selecções de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
 
 
 ## Criar uma entidade
 
-There are two ways to create a new entity in a dataclass:
+Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 *   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
 *   You can also create an entity using the `dataClass.new( )` method.
