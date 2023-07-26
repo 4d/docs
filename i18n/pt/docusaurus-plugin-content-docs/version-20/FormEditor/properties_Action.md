@@ -10,7 +10,7 @@ Reference of a method attached to the object. Pode-se utilizar um método de for
 
 You do not call an object method—4D calls it automatically when an event involves the object to which the object method is attached.
 
-Several types of method references are supported:
+São suportados vários tipos de referências de métodos:
 
 - a standard object method file path, i.e. that uses the following pattern:  
   `ObjectMethods/objectName.4dm`  
