@@ -3,23 +3,23 @@ id: directory
 title: '$directory'
 ---
 
-The directory handles user access through REST requests.
+O diretório processa o acesso dos usuários através de pedidos REST.
 
 
 ## $directory/login
 
-Opens a REST session on your 4D application and logs in the user.
+Abre uma sessão REST na sua aplicação 4D e faz o login do usuário.
 
 ### Descrição
-Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
+Utilize `$directory/login` para abrir uma sessão na sua aplicação 4D através de REST e fazer o login de um usuário. Também pode modificar o tempo limite predefinido da sessão 4D.
 
-All parameters must be passed in **headers** of a POST method:
+Todos os parâmetros devem ser transmitidos nos **cabeçalhos ** de um método POST:
 
 | Chave de cabeçalho | Valor do cabeçalho                                                                     |
 | ------------------ | -------------------------------------------------------------------------------------- |
 | username-4D        | Usuário - Não obrigatório                                                              |
 | password-4D        | Palavra-passe - Não obrigatória                                                        |
-| hashed-password-4D | Hashed password - Not mandatory                                                        |
+| hashed-password-4D | Palavra-passe com hash - Não obrigatório                                               |
 | session-4D-length  | Tempo de inatividade da sessão (minutos). Não pode ser inferior a 60 - Não obrigatório |
 
 
@@ -40,7 +40,7 @@ $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory
 
 **Resultadoi**:
 
-If the login was successful, the result will be:
+Se o login for bem-sucedido, o resultado será:
 
 ```
 {
@@ -48,7 +48,7 @@ If the login was successful, the result will be:
 }
 ```
 
-Otherwise, the response will be:
+Caso contrário, a resposta será:
 
 ```
 {
