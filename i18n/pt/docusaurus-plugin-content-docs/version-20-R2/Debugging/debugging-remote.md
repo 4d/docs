@@ -24,7 +24,7 @@ Apenas um depurador pode depurar uma aplicação 4D Server num determinado momen
 O depurador anexado é chamado sempre que um 4D Server se encontra:
 * um ponto de ruptura
 * um comando `TRACE`
-* a caught command
+* um ponto de interrupção para fazer o pedido
 * um erro
 
 Tenga en cuenta que los mensajes de error se envían a la máquina depuradora asociada. Isso significa que, no caso de um depurador remoto, as mensagens de erro do servidor são exibidas no cliente 4D remoto.
@@ -41,9 +41,9 @@ Por defeito, quando se inicia uma aplicação interpretada:
 * se o 4D Server não estiver funcionando sem interface, o depurador está associado ao servidor,
 * se 4D Server funciona sem interface, nenhum depurador está ligado.
 
-You can attach the debugger to any remote 4D client allowed to connect to the 4D Server application.
+Pode anexar o depurador a qualquer cliente 4D remoto autorizado a conectar-se à aplicação 4D Server.
 
-> The remote 4D client's user session must have access to the Design environment of the database.
+> A sessão usuário do cliente 4D remoto deve ter acesso ao ambiente de desenho do banco de dados.
 
 Para anexar o depurador a um cliente 4D remoto:
 
