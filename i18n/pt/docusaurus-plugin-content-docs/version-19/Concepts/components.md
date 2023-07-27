@@ -9,7 +9,7 @@ A 4D component is a set of 4D methods and forms representing one or more functio
 
 ### Definições
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. Um projeto matricial forma um componente único.
+- **Matrix Project**: 4D project used for developing the component. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project, compiled or not, copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
@@ -286,7 +286,7 @@ By default, all the project methods of a matrix project installed as a component
 - The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. However, it's not possible to open them in the Method editor or modify them.
 - The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
 
-To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
+To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. Quando um projeto compilado usado como uma matriz é instalado como um componente:
 
 - The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host project. However, their contents will not appear in the preview area and in the debugger.
-- The other project methods of the matrix project will never appear.
+- Os outros métodos projeto do projeto matriz nunca aparecerão.
