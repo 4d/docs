@@ -1222,7 +1222,7 @@ End if
 
 | Parâmetro  | Tipo   |    | Descrição                                 |
 | ---------- | ------ | -- | ----------------------------------------- |
-| rangeObj   | Object | -> | Cell range                                |
+| rangeObj   | Object | -> | Intervalo de células                      |
 | Resultados | Text   | <- | Nome da tabela|<!-- END REF -->
 
 |
