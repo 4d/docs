@@ -43,10 +43,10 @@ If a break point already exists, the window is displayed for that break point. O
 
 Segue-se uma descrição das propriedades:
 
-* **Location**: indicates the name of the method and the line number attached to the breakpoint.
-* **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list).
-* **Number of times to skip before breaking**: You can attach a breakpoint to a line located in a loop structure (While, Repeat, or For) or located in subroutine or function called from within a loop.
-* **Breakpoint is disabled**: If you currently do not need a break point, but might need it later, you can temporarily disable it. A disabled break point appears as a dash (-) instead of a bullet (•)|
+* **Localização**: indica o nome do método e o número de linha associado ao ponto de paragem.
+* **Interromper quando a expressão seguinte é true**: pode criar **pontos de interrupção condicionais** introduzindo uma fórmula 4D que devolva `True` ou `False`. Por exemplo, insira `Records in selection(\[aTable])=0` para garantir que a quebra ocorre apenas se não houver nenhum registo selecionado para a tabela \[aTable]. As condições dos pontos de paragem estão disponíveis na coluna **Condição** da [lista de interrupções](#break-list).
+* **Número de vezes a saltar antes de interromper**: pode anexar um ponto de interrupção a uma linha localizada numa estrutura de ciclo (While, Repeat, ou For) ou localizada numa sub-rotina ou função chamada a partir de um ciclo.
+* **O ponto de interrupção está desativado**: se não necessitar atualmente de um ponto de interrupção, mas poderá precisar dele mais tarde, pode desativá-lo temporariamente. A disabled break point appears as a dash (-) instead of a bullet (•)|
 
 
 ### Pontos de interrupção na depuração remota
@@ -89,37 +89,37 @@ To open the Caught Commands page:
 
 1. Choose **Run** > **Runtime explorer...** to open the Runtime Explorer.
 
-2. Click **Catch** to display the Caught Commands List:
+2. Clique em **Catch** para exibir a lista de pontos de interrupção nos comandos:
 
 ![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
 Esta página lista os comandos que devem ser capturados durante a execução. É composto por duas colunas:
 
-* The left column displays the Enable/Disable status of the caught command, followed by the name of the command
-* The right column displays the condition associated with the caught command, if any
+* A coluna da esquerda mostra o estado de ativação/desativação do ponto de interrupção no comando, seguido pelo nome do comando
+* A coluna da direita mostra a condição associada ao ponto de interrupção do comando, se houver
 
-To add a command to be caught:
+Para adicionar um ponto de interrupção personalizado:
 
-1. Click on the **Add New Catch** button (in the shape of a +) located below the list. A new entry is added to the list with the `ALERT` command as default
-2. Click the **ALERT** label, type the name of the command you want to catch, then press **Enter**.
+1. Clique no botão **Add New Catch** (com a forma de um +) situado por baixo da lista. É adicionada uma nova entrada à lista com o comando `ALERT` por padrão
+2. Clique na etiqueta **ALERT**, digite o nome do comando em que deseja definir um ponto de interrupção e pressione **Enter**.
 
-To enable or disable a caught command, click on the bullet (•) in front of the command label. The bullet is transparent when the command is disabled.
+Para ativar ou desativar um ponto de interrupção de ordem, clique no ponto (-) na frente da etiqueta do comando. A bala é transparente quando o controle é desativado.
 
-> Disabling a caught command has almost the same effect as deleting it. During execution, the debugger spends almost no time on the entry. The advantage of disabling an entry is that you do not have to recreate it when you need it again.
+> Desativar um ponto de interrupção no comando tem praticamente o mesmo efeito que excluí-lo. Durante a execução, o depurador quase não passa tempo na entrada. A vantagem de desativar uma entrada é que não tem de a recriar quando voltar a precisar dela.
 
 Para remover um ponto de interrupção no comando:
 
 1. Seleccione um comando na lista.
-2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
+2. Prima **Backspace** ou **Delete** no seu teclado ou clique no botão **Delete** abaixo da lista (**Delete All** remove todos os comandos da lista).
 
-### Setting a Condition for catching a command
+### Definir uma condição para um ponto de interrupção no comando
 
 1. Clique na entrada na coluna da direita
-2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.
+2. Introduza uma fórmula 4D (expressão, chamada comando ou método de projeto) que devolve um valor booleano.
 
 > Para remover uma condição, elimine a sua fórmula.
 
-Adding conditions allows you to stop execution when the command is invoked only if the condition is met. For example, if you associate the condition `Records in selection(\[Emp]>10)` with the break point on the `DELETE SELECTION` command, the code will not be stopped during execution of the `DELETE SELECTION` command if the current selection of the \[Emp] table only contains 9 records (or less).
+A adição de condições permite-lhe parar a execução quando o comando é invocado apenas se a condição for cumprida. Por exemplo, se associar a condição `Records in selection(\[Emp]>10)` ao ponto de interrupção do comando `DELETE SELECTION`, o código não será interrompido durante a execução do comando `DELETE SELECTION` se a seleção atual da tabela \[Emp] contiver apenas 9 registos (ou menos).
 
-Adding conditions to caught commands slows the execution, because the condition has to be evaluated each time an exception is met. On the other hand, adding conditions accelerates the debugging process, because 4D automatically skips occurrences that do not match the conditions.
+A adição de condições a pontos de interrupção em comandos torna a execução mais lenta, pois a condição precisa ser avaliada toda vez que uma exceção é encontrada. Por outro lado, adicionar condições acelera o processo de depuração, porque 4D automaticamente ignora ocorrências que não correspondem às condições.
 
