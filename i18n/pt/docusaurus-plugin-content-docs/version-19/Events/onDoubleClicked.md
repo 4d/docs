@@ -26,7 +26,7 @@ Este evento é gerado quando o utilizador clica duas vezes em qualquer lugar num
 | description | text          | "On Double Clicked"      |
 | objectName  | text          | Nome da área 4D View Pro |
 | sheetName   | text          | Nome da folha do evento  |
-| range       | object        | Cell range               |
+| range       | object        | Intervalo de células     |
 
 #### Exemplo
 
