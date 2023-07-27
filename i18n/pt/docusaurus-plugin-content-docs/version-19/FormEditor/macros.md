@@ -8,7 +8,7 @@ O editor de formulários 4D suporta macros. A macro is a set of instructions to 
 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
-* Create and execute 4D code
+* Criar e executar código 4D
 * Exibir diálogos
 * Seleccionar objectos do formulário
 * Add / delete / modify forms, form objects as well as their properties
@@ -104,7 +104,7 @@ A estrutura do ficheiro `formMacros.json` é a seguinte:
 }
 ```
 
-Here is the description of the JSON file contents:
+Eis a descrição do conteúdo do ficheiro JSON:
 
 | Atributo |                     |                          | Tipo   | Descrição                                              |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
