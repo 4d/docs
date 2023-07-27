@@ -4,6 +4,24 @@ title: Release Notes
 ---
 
 
+## 4D v20 R3
+
+Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), the blog post that lists all new features and enhancements in 4D v20 R3.
+
+
+#### Points forts
+
+
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) on doc.4d.com.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R3): list of all bugs that have been fixed in 4D v20 R3.
+
+
+#### Behavior changes
+
+- Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*.
+
+
 ## 4D v20 R2
 
 Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
@@ -17,7 +35,6 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R2): list of all bugs that have been fixed in 4D v20 R2.
 
-#### Behavior changes
 
 
 ## 4D v20
