@@ -3,7 +3,7 @@ id: user-settings
 title: Propriedades usuário
 ---
 
-4D provides two modes of operation for project Settings:
+4D oferece dois modos de operação para as configurações dos projetos:
 
 *   **Standard** mode: all [settings](../settings/overview.md) are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. This is the default mode, suitable for development phase (all applications).
 
@@ -11,7 +11,7 @@ title: Propriedades usuário
 
 By defining user settings, you can keep custom settings between updates of your 4D applications, or manage different settings for the same 4D application deployed on several different sites. It also makes it possible to use programming to manage setting files using XML.
 
-4D can generate and use two types of user settings:
+4D pode gerar e usar dois tipos de propriedades usuário:
 
 -   **User Settings**: They are used instead of structure settings for any data file opened with the application.
 -   **User Settings for Data file**: They can be defined specifically for each data file used with your application, configuring for example the port ID or the server cache.
@@ -22,7 +22,7 @@ Consider for example the following configuration, where an application is duplic
 
 ![](../assets/en/settings/user-settings-config.png)
 
-## Enabling User settings
+## Ativar as propriedades usuário
 
 To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
 
@@ -30,7 +30,7 @@ To enable user settings, you need to check the **Settings** > **Security** > **E
 
 When you check this option, the settings are separated into three dialog boxes:
 
-* **Structure Settings**
+* **Propriedades estrutura**
 * **Propriedades usuário**
 * **Propriedades usuário para o arquivo de dados**
 
@@ -117,13 +117,13 @@ Settings files are XML files; they can be read and modified using integrated 4D 
 :::
 
 
-## Priority of settings
+## Prioridade dos parâmetros
 
 As definições podem ser guardadas em três níveis. Each setting defined at one level overrides the same setting defined at a previous level, if any:
 
 | **Nível de prioridade** | **Nome**                                                                  | **Localização**                                                                                                                                               | **Comentários**                                                                                                                        |
 | ----------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (mais baixo)          | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                                          |
+| 3 (mais baixo)          | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Aplicado a todos os exemplares da aplicação.                                       |
 | 2                       | Propriedades usuário (todos os ficheiros de dados)                        | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Substitui as definições da estrutura. Armazenado no pacote da aplicação.                                                               |
 | 1 (mais alto)           | Propriedades usuário (ficheiro de dados atual)                            | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Substitui as propriedades de estrutura e as propriedades usuário. Applied only when the linked data file is used with the application. |
 
