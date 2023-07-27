@@ -246,13 +246,13 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 property name : Text
 property height; width : Integer
 
-// Class: Rectangle
+// Classe: Rectangle
 Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
 
-// Function definition
+// Definição da função
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
