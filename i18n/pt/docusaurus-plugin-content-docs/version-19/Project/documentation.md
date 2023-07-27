@@ -7,7 +7,7 @@ title: Documentar um projecto
 
 In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
-The following project elements accept documentation:
+Os seguintes elementos do projeto aceitam documentação:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Formulários
@@ -23,7 +23,7 @@ It can also be partially exposed as [code editor tips](#viewing-documentation-in
 
 ## Ficheiros documentação
 
-### Documentation file name
+### Nome do ficheiro de documentação
 
 Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
@@ -77,7 +77,7 @@ Para visualizar a documentação na janela do Explorer:
 
 - Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
 
-### Editing documentation file
+### Editar o ficheiro de documentação
 
 You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
 
