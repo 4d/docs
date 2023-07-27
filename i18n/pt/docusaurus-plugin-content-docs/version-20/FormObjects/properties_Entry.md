@@ -51,7 +51,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 The Enterable attribute indicates whether users can enter values into the object.
 
-Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. Pode ainda utilizar os eventos de formulário `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` e `On Losing Focus` com objetos não inseríveis. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
@@ -81,7 +81,7 @@ Entry filters can also be used to display required formatting characters so that
 
 Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
 
-- you can directly enter a filter definition string
+- pode introduzir diretamente uma cadeia de definição de filtro
 - or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
@@ -151,7 +151,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
 
-By default, the object uses the current keyboard layout.
+Por padrão, o objeto utiliza a disposição atual do teclado.
 
 > You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
 
@@ -189,9 +189,9 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                 |
-| ---------- | ------------- | ------------------------------------------------- |
-| multilinha | text          | "yes", "no", "automatic" (default if not defined) |
+| Nome       | Tipo de dados | Valores possíveis                                     |
+| ---------- | ------------- | ----------------------------------------------------- |
+| multilinha | text          | "yes", "no", "automatic" (padrão se não for definido) |
 
 #### Objectos suportados
 
@@ -207,9 +207,9 @@ Placeholder text appears as watermark text in a field, supplying a help tip, ind
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
-The placeholder text is displayed again if the contents of the field is erased.
+O texto do marcador de posição é apresentado novamente se o conteúdo do campo for apagado.
 
-A placeholder can be displayed for the following types of data:
+Pode ser apresentado um marcador de posição para os seguintes tipos de dados:
 
 - string (text or alpha)
 - date and time when the **Blank if null** property is enabled.
