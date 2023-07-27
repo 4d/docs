@@ -199,12 +199,12 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF FileHandleClass.file.Desc -->
 ## .file
 
-<!-- REF #FileHandleClass.file.Syntax -->**.file** : 4D.File<!-- END REF -->
+<!-- REF #FileHandleClass.file.Syntax -->**.file**: 4D.File<!-- END REF -->
 
 
 #### Descripción
 
-The `.file` property returns <!-- REF #FileHandleClass.file.Summary -->the [4D.File](FileClass.md) object on which the handle has been created<!-- END REF -->.
+La propiedad `.file` devuelve <!-- REF #FileHandleClass.file.Summary -->the [4D.File](FileClass.md) object on which the handle has been created<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
