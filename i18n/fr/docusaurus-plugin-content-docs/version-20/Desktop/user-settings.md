@@ -7,13 +7,13 @@ title: Propriétés utilisateur
 
 *   Mode **standard** : tous les [paramètres](../settings/overview.md) sont stockés dans le fichier [*settings.4DSettings* au niveau du projet](../Project/architecture.md#sources) et sont appliqués dans tous les cas. C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
 
-*  Mode **propriétés utilisateur** : une partie des paramètres personnalisés sont stockés dans un fichier *settings.4DSettings* [dans le dossier Settings](../Project/architecture.md#settings-1) (pour tous les fichiers de données) ou [dans le dossier Data](../Project/architecture.md#settings) (pour ce fichier de données) et sont utilisés à la place des paramètres de structure. Ce mode convient à la phase de déploiement pour les applications Desktop. Activez ce mode à l'aide d'une option située sur la [page Sécurité](../settings/security.md) des Propriétés.
+*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Ce mode convient à la phase de déploiement pour les applications Desktop. Activez ce mode à l'aide d'une option située sur la [page Sécurité](../settings/security.md) des Propriétés.
 
 En définissant des propriétés utilisateur, vous pouvez conserver des paramètres personnalisés entre les mises à jour de vos applications 4D, ou gérer des paramètres différents pour une même application 4D déployée sur plusieurs sites différents. Cela permet également d'utiliser la programmation pour gérer les fichiers de paramètres à l'aide de XML.
 
 4D peut générer et utiliser deux types de propriétés utilisateur :
 
--   **Les propriétés utilisateur (standard)** : elles sont utilisées à la place des propriétés de structure pour tout fichier de données ouvert avec l'application.
+-   **User Settings**: They are used instead of structure settings for any data file opened with the application.
 -   **Propriétés utilisateur pour le fichier de données** : elles peuvent être définies spécifiquement pour chaque fichier de données utilisé avec votre application, en configurant par exemple l'ID du port ou le cache du serveur.
 
 Avec cette option, vous pouvez facilement déployer et mettre à jour plusieurs copies de la même application Desktop avec plusieurs fichiers de données, chacun contenant des propriétés différentes.
@@ -87,11 +87,11 @@ Lorsque la fonctionnalité **Propriétés utilisateur** est activée, les propri
 
 Lorsque vous [cochez l'option **Autoriser les propriétés utilisateur**](#enabling-user-settings), des fichiers de propriétés utilisateur sont automatiquement créés. Leur emplacement dépend du type de propriété utilisateur définie.
 
-### Paramètres utilisateur (standard)
+### Propriétés utilisateur
 
 Le fichier de propriété utilisateur standard est automatiquement créé et placé dans un dossier de propriétés à l'emplacement suivant :
 
-[`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-1)
+[`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-user)
 
 ... où *ProjectFolder* est le nom du dossier contenant le fichier de structure du projet.
 
@@ -104,13 +104,18 @@ Dans les applications fusionnées, le fichier de propriétés utilisateur est pl
 
 Le fichier de propriétés utilisateur lié au fichier de données est automatiquement créé et placé dans un dossier de propriétés à l'emplacement suivant :
 
-[`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings)
+[`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
 
 ... où *Data* est le nom du dossier contenant le fichier de données actuel de l'application.
 
 > Lorsque le fichier de données est situé au même niveau que le fichier de structure du projet, les fichiers de propriétés utilisateur basés sur la structure et sur les données partagent le même emplacement et le même fichier. La commande de menu **Propriétés utilisateur pour le fichier de données...** n'est pas proposée.
 
+:::note
+
 Les fichiers de propriétés sont des fichiers XML ; ils peuvent être lus et modifiés à l'aide des commandes XML intégrées de 4D ou d'un éditeur XML. Cela signifie que vous pouvez gérer les paramètres par programmation, notamment dans le cadre d'applications compilées et fusionnées avec 4D Volume Desktop. Lorsque vous modifiez ce fichier par programmation, les changements ne sont pris en compte que lors de la prochaine ouverture de la base de données.
+
+:::
+
 
 ## Priorité des paramètres
 

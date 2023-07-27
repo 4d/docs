@@ -281,10 +281,18 @@ You want to create an alias to a file in your database folder:
 
 The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
-If the file is currently open, an error is generated.
-
 If the file does not exist on disk, the function does nothing (no error is generated).
-> **WARNING**: `.delete()` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete()` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+
+If the file is currently open, the result depends on the OS:
+
+- on Windows, an error is generated,
+- on macOS, no error is generated and the file is deleted.
+
+:::caution
+
+`.delete()` can delete any file on a disk. This includes documents created with other applications, as well as the applications themselves. `.delete()` should be used with extreme caution. Deleting a file is a permanent operation and cannot be undone.
+
+:::
 
 #### Beispiel
 
@@ -475,6 +483,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
 If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+
 
 
 

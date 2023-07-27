@@ -241,7 +241,7 @@ En cas de problème non lié au traitement SMTP (par exemple une propriété obl
 
 Dans ce cas, l'objet erreur qui en résulte contient les valeurs suivantes :
 
-| Propriété  | Value                  |
+| Propriété  | Valeur                 |
 | ---------- | ---------------------- |
 | success    | False                  |
 | status     | 0                      |

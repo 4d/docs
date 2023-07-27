@@ -181,7 +181,7 @@ HTTPサーバーまたは WebSocketサーバーが終了したときに発生す
 | WSServer |        | 4D.WebSocketServer | <- | カレントの WebSocketサーバーオブジェクト                                                                            |
 | event    |        | Object             | <- | 引数                                                                                                   |
 |          | type   | Text               |    | "error"                                                                                              |
-|          | errors | Collection         |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |
+|          | errors | Collection         |    | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (number) - 4Dエラーコード</li><li>\[].message (text) - 4Dエラーの説明</li><li>\[].componentSignature (text) - エラーを返した内部コンポーネントの署名</li> |
 
 
 WebSocketサーバーでエラーが発生したときに発生するイベントです。
@@ -284,7 +284,7 @@ WebSocket 終了したときに呼び出されます。
 | ws    |        |            | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) |                                                  <-                                                  | カレントの WebSocket 接続オブジェクト |
 | event |        |            | Object                                                  |                                                  <-                                                  | 引数                       |
 |       | type   |            | Text                                                    |                                                                                                      | "error"                  |
-|       | errors | Collection |                                                         | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (数値) - 4Dエラーコード</li><li>\[].message (テキスト) - 4Dエラーの説明</li><li>\[].componentSignature (テキスト) - エラーを返した内部コンポーネントの署名</li> |                          |
+|       | errors | Collection |                                                         | 実行エラーの場合、4Dエラースタックのコレクション<li>\[].errCode (number) - 4Dエラーコード</li><li>\[].message (text) - 4Dエラーの説明</li><li>\[].componentSignature (text) - エラーを返した内部コンポーネントの署名</li> |                          |
 
 エラーが発生したときに呼び出されます。
 

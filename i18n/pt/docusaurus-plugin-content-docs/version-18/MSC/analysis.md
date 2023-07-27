@@ -4,7 +4,7 @@ title: Página análise de atividades
 sidebar_label: Página análise de atividades
 ---
 
-The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.
+A página Análise da atividade permite visualizar o conteúdo do ficheiro de registo atual. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.
 > It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
 
 ![](../assets/en/MSC/MSC_analysis.png)
@@ -21,7 +21,7 @@ This information allows you to identify the source and context of each operation
   - Encerramento de um contexto: encerramento de um processo.
   - Adição: Criação e armazenamento de um registo.
   - Adding a BLOB: Storage of a BLOB in a BLOB field.
-  - Deletion: Deletion of a record.
+  - Eliminação: Eliminação de um registo.
   - Modificação: modificação de um registo.
   - Início da transação: A transação foi iniciada.
   - Validation of Transaction: Transaction validated.

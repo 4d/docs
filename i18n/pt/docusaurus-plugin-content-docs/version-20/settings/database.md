@@ -5,7 +5,7 @@ title: Página Base de dados
 
 ## Página de armazenamento de dados
 
-You use this page to configure data storage on disk for the 4D database.
+Esta página é utilizada para configurar o armazenamento de dados no disco para a base de dados 4D.
 
 ### Parámetros generales
 

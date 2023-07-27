@@ -96,7 +96,7 @@ Possible values are:
 | Wert     | Konstanten                     | Kommentar                                      |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
-| CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentication using CRAM-MD5 protocol         |
+| CRAM-MD5 | `POP3 authentication CRAM MD5` | Authentication using CRAM-MD5 protocol         |
 | LOGIN    | `POP3 authentication login`    | Authentication using LOGIN protocol            |
 | OAUTH2   | `POP3 authentication OAUTH2`   | Authentication using OAuth2 protocol           |
 | PLAIN    | `POP3 authentication plain`    | Authentication using PLAIN protocol            |

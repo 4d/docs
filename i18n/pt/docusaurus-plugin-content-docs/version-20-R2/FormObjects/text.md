@@ -44,9 +44,9 @@ Once a text is rotated, you can still change its size or position, as well as al
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                          |
-| ------ | --------------------------------- |
-| v19 R7 | Support of Corner radius property |
+| Versão | Mudanças                             |
+| ------ | ------------------------------------ |
+| v19 R7 | Suporte da propriedade Raio de canto |
 
 </details>
 

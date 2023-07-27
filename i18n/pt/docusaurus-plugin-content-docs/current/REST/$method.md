@@ -95,7 +95,7 @@ You can release an entity set, which you created using [`$method=entityset`](#me
 
 ### Exemplo
 
-Release an existing entity set:
+Mostra um conjunto de entidades existente:
 
 `GET  /rest/Employee/$entityset/4C51204DD8184B65AC7D79F09A077F24?$method=release`
 
@@ -211,7 +211,7 @@ If a problem arises while adding or modifying an entity, an error will be return
 
 ### Exemplo
 
-To update a specific entity, you use the following URL:
+Para atualizar uma entidade específica, utilizar o seguinte URL:
 
  `POST  /rest/Person/?$method=update`
 

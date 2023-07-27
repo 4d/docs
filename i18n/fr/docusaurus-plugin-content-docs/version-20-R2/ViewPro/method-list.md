@@ -2878,6 +2878,7 @@ Si l'objet retourné inclut une date ou une heure, il est traité en tant que da
 Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la première cellule est retournée. La commande retourne un objet null si la cellule est vide.
 
 
+
 #### Exemple
 
 ```4d
@@ -4118,15 +4119,13 @@ Voir l'exemple dans [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Paramètres | Type    |    | Description                                              |
-| ---------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| row        | Integer | -> | Indice de la ligne                                       |
-| rowCount   | Integer | -> | Nombre de lignes                                         |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Plage de ligne(s)|<!-- END REF -->
+| Paramètres | Type    |    | Description                             |
+| ---------- | ------- | -- | --------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
+| row        | Integer | -> | Indice de la ligne                      |
+| rowCount   | Integer | -> | Nombre de lignes                        |
 
-|
+|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### Description
 
@@ -4765,6 +4764,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
+
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
 In *sheet*, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
@@ -4886,13 +4886,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Paramètres | Type    |    | Description                                              |
-| ---------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName | Object  | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| dataObj    | Object  | -> | Data object to load in the data context                  |
-| dataColl   | Object  | -> | Data collection to load in the data context              |
-| options    | Object  | -> | Options supplémentaires                                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille|<!-- END REF -->
+| Paramètres | Type       |    | Description                                              |
+| ---------- | ---------- | -- | -------------------------------------------------------- |
+| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| dataObj    | Object     | -> | Data object to load in the data context                  |
+| dataColl   | Collection | -> | Data collection to load in the data context              |
+| options    | Object     | -> | Options supplémentaires                                  |
+| sheet      | Integer    | -> | Numéro d'indice de la feuille|<!-- END REF -->
 
 |
 
@@ -5308,6 +5308,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assigner à des cellule
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)           |
 <!-- END REF -->
 
+
 #### Description
 
 The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. . Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen.
@@ -5574,6 +5575,7 @@ The `VP SET SELECTION` command <!-- REF #_method_.VP SET SELECTION.Summary -->de
 Dans *rangeObj*, passez un objet plage de cellule(s) à désigner comme sélection courante.
 
 #### Exemple
+
 
 ```4d
 $currentSelection:=VP Combine ranges(VP Cells("myVPArea";3;2;1;6);VP Cells("myVPArea";5;7;1;7))

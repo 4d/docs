@@ -40,14 +40,14 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 
 | Propriedade | Tipo    | Descrição                |
 | ----------- | ------- | ------------------------ |
-| range       | object  | Cell range               |
+| range       | object  | Intervalo de células     |
 | editingText | variant | O valor do editor actual |
 
 #### action = valueChanged
 
 | Propriedade | Tipo    | Descrição                          |
 | ----------- | ------- | ---------------------------------- |
-| range       | object  | Cell range                         |
+| range       | object  | Intervalo de células               |
 | oldValue    | variant | Valor da célula antes da alteração |
 | newValue    | variant | Valor da célula após a alteração   |
 
@@ -65,21 +65,21 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 | Propriedade | Tipo   | Descrição                                |
 | ----------- | ------ | ---------------------------------------- |
 | fillRange   | object | Intervalo utilizado para o preenchimento |
- autoFillType|longint|Valor utilizado para o enchimento.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: As células são preenchidas apenas com formatação</li><li>3: Cells are filled with values but not formatting</li><li>4: Os valores são removidos das células</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: As células à esquerda são preenchidas</li><li>1: As células à direita estão preenchidas</li><li>2: As células acima estão preenchidas</li><li>3: As células abaixo estão preenchidas</li>|
+ autoFillType|longint|Valor utilizado para o enchimento.<li>0: as células são preenchidas com todos os dados (valores, formatação e fórmulas)</li><li>1: as células são preenchidas com dados automáticos sequenciais</li><li>2: As células são preenchidas apenas com formatação</li><li>3: as células são preenchidas com valores, mas não com formatação</li><li>4: Os valores são removidos das células</li><li>5: As células são preenchidas automaticamente</li>| |fillDirection|longint|Direction of the fill.<li>0: As células à esquerda são preenchidas</li><li>1: As células à direita estão preenchidas</li><li>2: As células acima estão preenchidas</li><li>3: As células abaixo estão preenchidas</li>|
 
 #### action = formulaChanged
 
 | Propriedade | Tipo   | Descrição             |
 | ----------- | ------ | --------------------- |
-| range       | object | Cell range            |
+| range       | object | Intervalo de células  |
 | formula     | text   | A fórmula introduzida |
 
 #### action = clipboardPasted
 
 | Propriedade | Tipo          | Descrição                                                                                                                                                                                                       |
 | ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object        | Cell range                                                                                                                                                                                                      |
-| pasteOption | inteiro longo | Especifica o que é colado da área de transferência:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: somente as fórmulas são coladas</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
+| range       | object        | Intervalo de células                                                                                                                                                                                            |
+| pasteOption | inteiro longo | Especifica o que é colado da área de transferência:<li>0: tudo é colado (valores, formatação e fórmulas)</li><li>1: apenas os valores são colados</li><li>2: Apenas a formatação é colada</li><li>3: somente as fórmulas são coladas</li><li>4: os valores e a formatação são colados (não as fórmulas)</li><li>5: as fórmulas e a formatação são coladas (não os valores)</li> |
 | pasteData   | object        | Os dados da área de transferência a serem colados<li>"text" (texto): O texto da área de transferência</li><li>"html" (texto): O HTML da área de transferência</li>                                                                                                           |
 
 #### Exemplo

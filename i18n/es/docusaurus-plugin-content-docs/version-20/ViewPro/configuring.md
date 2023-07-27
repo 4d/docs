@@ -257,7 +257,7 @@ Los atributos de columna y línea se utilizan para especificar el inicio, el fin
 | repeatRowEnd      | entero largo | La última línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas)  |
 | repeatRowStart    | entero largo | La primera línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas) |
 | rowEnd            | entero largo | The last column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                              |
-| rowStart          | entero largo | The first column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                             |
+| rowStart          | entero largo | La primera línea a imprimir en un rango de celdas. Valor por defecto = -1 (todas las líneas)                                     |
 
 ### Encabezados / Pies de página
 
@@ -286,7 +286,7 @@ Los siguientes caracteres especiales permiten añadir o dar formato automáticam
 
 | Caracter | Descripción                       | Ejemplo                                                                | Result                                               |
 | -------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &        | Escape character                  | (ver ejemplos más abajo)                                               |                                                      |
+| &        | Caracter de escape                | (ver ejemplos más abajo)                                               |                                                      |
 | P        | Página actual                     | printInfo.headerLeft:="Esta es la página &P."                          | Esta es la página 5.|                                |
 | N        | Conteo de páginas                 | printInfo.headerLeft:="Hay &N páginas."                                | Hay 10 páginas.                                      |
 | D        | Fecha actual (formato yyyy/mm/dd) | printInfo.headerLeft:="Es &D."                                         | Es 2015/6/19.                                        |
@@ -311,7 +311,7 @@ Los atributos margen se utilizan para especificar los márgenes del área 4D Vie
 |           | top    | entero largo | Margen superior, en centésimas de pulgada. Por defecto = 75                  |
 |           | bottom | entero largo | El margen inferior, en centésimas del pulgada. Por defecto = 75              |
 |           | left   | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
-|           | right  | entero largo | Margen izquierdo, en centésimas de pulgada. Por defecto = 70                 |
+|           | right  | entero largo | Margen derecho, en centésimas de pulgada. Por defecto = 70                   |
 |           | header | entero largo | Desplazamiento del encabezado, en centésimas de pulgada. Por defecto = 30    |
 |           | footer | entero largo | Desplazamiento del pie de página, en centésimas de pulgada. Por defecto = 30 |
 

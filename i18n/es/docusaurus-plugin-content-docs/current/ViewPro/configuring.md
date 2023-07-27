@@ -286,7 +286,7 @@ Los siguientes caracteres especiales permiten añadir o dar formato automáticam
 
 | Caracter | Descripción                       | Ejemplo                                                                | Result                                               |
 | -------- | --------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &        | Escape character                  | (ver ejemplos más abajo)                                               |                                                      |
+| &        | Caracter de escape                | (ver ejemplos más abajo)                                               |                                                      |
 | P        | Página actual                     | printInfo.headerLeft:="Esta es la página &P."                          | Esta es la página 5.|                                |
 | N        | Conteo de páginas                 | printInfo.headerLeft:="Hay &N páginas."                                | Hay 10 páginas.                                      |
 | D        | Fecha actual (formato yyyy/mm/dd) | printInfo.headerLeft:="Es &D."                                         | Es 2015/6/19.                                        |

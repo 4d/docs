@@ -278,7 +278,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | ICU        | 68.1         | 20               | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
 | CEF        | 113          | 20 R2            | Chromium 5672                                                                            |
 | Hunspell   | 7.3.27       | 20               | Used for spell checking in 4D forms and 4D Write Pro                                     |
-| PDFWriter  | 4.3          | 20               | FreeType dependency in 12.2.1                                                            |
+| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                           |
 | SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                        |
 | OpenSSL    | 3.1.1        | 20               |                                                                                          |
 | libZip     | 19.5         | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                            |

@@ -83,12 +83,12 @@ O tipo de valor do atributo depende do tipo do atributo [atributo](DataClassAttr
 
 
 <!-- REF #EntityClass.clone().Params -->
-| Parâmetro                  | Tipo       |    | Descrição                         |
-| -------------------------- | ---------- |:--:| --------------------------------- |
-| Resultados                 | 4D. Entity | <- | New entity referencing the record |
+| Parâmetro                  | Tipo       |    | Descrição                              |
+| -------------------------- | ---------- |:--:| -------------------------------------- |
+| Resultados                 | 4D. Entity | <- | Nova entidade referenciando o registro |
 |<!-- END REF -->
 
-|            |    |                                   |
+|            |    |                                        |
 
 #### Descrição
 

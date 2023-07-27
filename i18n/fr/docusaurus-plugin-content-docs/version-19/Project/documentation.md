@@ -10,7 +10,7 @@ In application projects, you can document your methods as well as your forms, ta
 Les éléments de projet suivants peuvent être documentés :
 
 - Méthodes (méthodes base, méthodes composant, méthodes projet, méthodes formulaire, méthodes 4D Mobile, triggers et classes)
-- Forms
+- Formulaires
 - Tables et champs
 
 Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. Ils sont stockés en tant que fichiers indépendants dans votre dossier Project.
@@ -41,7 +41,7 @@ L'architecture du dossier `Documentation` est la suivante :
   - **DatabaseMethods**
     - onStartup.md
     - ...
-  - **Forms**
+  - **Formulaires**
     - loginDial.md
     - ...
   - **Methods**

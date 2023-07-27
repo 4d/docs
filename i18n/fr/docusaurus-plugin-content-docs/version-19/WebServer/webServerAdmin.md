@@ -172,7 +172,7 @@ Lorsque vous choisissez le format ELF ou WLF, la zone "Web Log Token Selection" 
 
 Le tableau suivant répertorie les champs disponibles pour chaque format (par ordre alphabétique) et décrit leur contenu :
 
-| Champ          | ELF | WLF | Value                                                                                                                                                                |
+| Champ          | ELF | WLF | Valeur                                                                                                                                                               |
 | -------------- | --- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Nombre d'octets reçus par le serveur                                                                                                                                 |
 | BYTES_SENT     | X   | X   | Nombre d’octets envoyés par le serveur au client                                                                                                                     |

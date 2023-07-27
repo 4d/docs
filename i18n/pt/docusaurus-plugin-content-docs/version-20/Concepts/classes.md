@@ -90,6 +90,7 @@ Nas várias janelas 4D (editor de código, compilador, depurador, explorador de 
 As classes disponíveis são acessíveis a partir das suas class stores. Estão disponíveis duas class stores:
 
 
+
 - `cs` para class stores dos usuários
 - `4D` para class stores incorporadas
 
@@ -242,12 +243,17 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 #### Exemplo 1
 
 ```4d
-// Class: Rectangle Class constructor($width : Integer; $height : Integer)
+// Class: Rectangle
+property name : Text
+property height; width : Integer
+
+Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
 
-// Function definition Function getArea()->$result : Integer
+// Function definition
+Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
 
@@ -342,7 +348,7 @@ O tipo de propriedade pode ser um dos seguintes tipos suportados:
 
 :::info
 
-A palavra-chave `property` só pode ser utilizada em métodos classe e fora de qualquer bloco `Function`.
+A palavra-chave `property` só pode ser utilizada em métodos classe e fora de qualquer bloco `Function` ou `Class Constructor`.
 
 :::
 
@@ -398,11 +404,17 @@ O tipo da propriedade calculada é definido pela declaração de tipo `$return` 
 #### Exemplo 1
 
 ```4d  
-//Class: Person.4dm Class constructor($firstname : Text; $lastname : Text)
- property firstName; lastName : Text
+//Class: Person.4dm
+property firstName; lastName : Text
+
+Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
- This.lastName:=$lastname Function get fullName() -> $fullName : Text
- $fullName:=This.firstName+" "+This.lastName Function set fullName( $fullName : Text )
+ This.lastName:=$lastname
+
+Function get fullName() -> $fullName : Text
+ $fullName:=This.firstName+" "+This.lastName
+
+Function set fullName( $fullName : Text )
  $p:=Position(" "; $fullName)
  This.firstName:=Substring($fullName; 1; $p-1)
  This.lastName:=Substring($fullName; $p+1)

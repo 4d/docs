@@ -30,7 +30,7 @@ Une date nulle s’écrit _!00-00-00!_.
 
 ## Opérateurs sur les dates
 
-| Opération           | Syntaxe          | Retourne | Expression                   | Value        |
+| Opération           | Syntaxe          | Retourne | Expression                   | Valeur       |
 | ------------------- | ---------------- | -------- | ---------------------------- | ------------ |
 | Différence          | Date - Date      | Number   | !2017-01-20! - !2017-01-01!  | 19           |
 | Addition            | Date + Numérique | Date     | !2017-01-20! !2017-01-20!    | !2017-01-29! |

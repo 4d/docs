@@ -7,7 +7,7 @@ title: Classes de modelo de dados
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
 
-For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple as calling:
+For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. Seria tão simples como chamar:
 
 ```4d
 $nextHigh:=ds. Employee.get(1).getNextWithHigherSalary()
@@ -81,7 +81,7 @@ You can create functions in the DataStore class that will be available through t
   $0:="Database exposing employees and their companies"
 ```
 
-This function can then be called:
+Esta função pode então ser chamada:
 
 ```4d
 $desc:=ds.getDesc() //"Database exposing..."
@@ -118,7 +118,7 @@ Then you can get an entity selection of the "best" companies by executing:
  $best:=ds.Company.GetBestOnes()
 ```
 
-#### Example with a remote datastore
+#### Exemplo com um datastore remoto
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
@@ -240,7 +240,7 @@ When creating or editing data model classes, you must pay attention to the follo
 
 - You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
-## Exposed vs non-exposed functions
+## Funções expostas vs não expostas
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
@@ -353,7 +353,7 @@ We want to check the consistency of the attributes of an entity loaded on the cl
 On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
 
 ```4d
-Class extends Entity
+Classe extends Entity
 
 local Function checkData() -> $status : Object
 
@@ -361,11 +361,11 @@ $status:=New object("success"; True)
 Case of
     : (This.age()=Null)
         $status.success:=False
-        $status.statusText:="The birthdate is missing" 
+        $status.statusText:="Falta a data de nascimento" 
 
     :((This.age() <15) | (This.age()>30) )
         $status.success:=False
-        $status.statusText:="The student must be between 15 and 30 - This one is "+String(This.age())
+        $status.statusText:="O estudante tem de ter entre 15 e 30 anos - Este é "+String(This.age())
 End case
 ```
 
@@ -386,7 +386,7 @@ If ($status.success)
 
 An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
 
-### Creating classes
+### Criação de classes
 
 4D automatically pre-creates empty classes in memory for each available data model object.
 

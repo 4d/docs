@@ -261,7 +261,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | ICU        | 68.1         | 20               | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                                           |
 | CEF        | 109          | 20               | Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
 | Hunspell   | 7.3.27       | 20               | Used for spell checking in 4D forms and 4D Write Pro                                                                                                               |
-| PDFWriter  | 4.3          | 20               | FreeType dependency in 12.2.1                                                                                                                                      |
+| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                                                                                     |
 | SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                                                                                  |
 | OpenSSL    | 3.1.1        | 20               |                                                                                                                                                                    |
 | libZip     | 19.5         | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                                                                                                      |
@@ -269,6 +269,6 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | Zlib       | 14.1.6       | 20               |                                                                                                                                                                    |
 | webKit     | WKWebView    | 19               |                                                                                                                                                                    |
 | PHP        | 8.2.4        | 20               |                                                                                                                                                                    |
-| libldap    | 2.4.48       | 18 R2            |                                                                                                                                                                    |
+| libldap    | 2.6.4        | 20               |                                                                                                                                                                    |
 | libsasl    | 2.1.28       | 20               |                                                                                                                                                                    |
 

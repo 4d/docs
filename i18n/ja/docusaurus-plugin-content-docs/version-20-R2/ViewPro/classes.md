@@ -300,7 +300,7 @@ title: クラス
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-`.firstRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->一つ目の交互の行スタイルを適用する行数を指定します<!-- END REF -->。 デフォルト = 1。
+`.firstRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->一つ目の交互の列スタイルを適用する列数を指定します<!-- END REF -->。 デフォルト = 1。
 
 ### .firstRowStripStyle
 
@@ -377,7 +377,7 @@ title: クラス
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-`.secondRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->二つ目の交互の行スタイルを適用する行数を指定します<!-- END REF -->。 デフォルト = 1。
+`.secondRowStripSize` プロパティは、 <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->二つ目の交互の列スタイルを適用する列数を指定します<!-- END REF -->。 デフォルト = 1。
 
 ### .secondRowStripStyle
 

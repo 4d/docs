@@ -33,7 +33,7 @@ The method assigns the value of the indicator to the Salary field. As the user d
 
 ![](../assets/en/FormObjects/indicator_progressBar.png)
 
-The thermometer is the basic progress indicator.
+O termómetro é o indicador básico de progresso.
 
 You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
 

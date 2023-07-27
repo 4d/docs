@@ -1074,11 +1074,11 @@ End case
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                   |
-| ---------- | ------- | -- | ----------------------------------------------------------------------------- |
-| file       | 4D.File | -> | Objeto File                                                                   |
-| options    | Integer | -> | Log response option (server only)                                             |
-| reqNum     | Integer | -> | Number of requests to keep in memory (client only)|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                                                |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------------ |
+| file       | 4D.File | -> | Objeto File                                                                                |
+| options    | Integer | -> | Opción de registro de respuesta (servidor únicamente)                                      |
+| reqNum     | Integer | -> | Número de peticiones a mantener en memoria (cliente únicamente)|<!-- END REF -->
 
 |
 
@@ -1094,9 +1094,9 @@ Para una descripción del formato del registro de peticiones ORDA, consulte la s
 
 #### Del lado del cliente
 
-To create a client-side ORDA request log, call this function on a remote machine. The log can be sent to a file or to memory, depending on the parameter type:
+Para crear un registro de peticiones ORDA del lado del cliente, llame a esta función en una máquina remota. El registro puede enviarse a un archivo o a la memoria, según el tipo de parámetro:
 
-* Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él. If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+* Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él. Si se llama a `.startRequestLog()` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
 * Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. Mantendrá *reqNum* peticiones en memoria hasta que se alcance el número, en cuyo caso se vacían las entradas más antiguas (pila FIFO).<br/>Si se llama a `.startRequestLog()` con un *reqNum* mientras se ha iniciado previamente un registro en un archivo, se detiene el registro del archivo.
@@ -1105,7 +1105,7 @@ To create a client-side ORDA request log, call this function on a remote machine
 
 #### Del lado del servidor
 
-To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
+Para crear un registro de peticiones ORDA del lado del servidor, llame a esta función en la máquina servidor. Los datos del registro se escriben en un archivo en formato `.jsonl`. Cada objeto representa una petición. Si el archivo no existe, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él.
 
 - Si ha pasado el parámetro *file*, los datos de registro se escriben en este archivo, en la ubicación solicitada. - Si omite el parámetro *file* o si es nulo, los datos de registro se escriben en un archivo llamado *ordaRequests.jsonl* y se almacenan en la carpeta "/LOGS".
 - El parámetro *options* puede utilizarse para especificar si la respuesta del servidor debe registrarse y si debe incluir el cuerpo. Por defecto, cuando se omite el parámetro, se registra la respuesta completa. En este parámetro se pueden utilizar las siguientes constantes:

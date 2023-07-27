@@ -80,7 +80,7 @@ Case 1: The value of the parent form variable or expression is modified and this
 
 In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example). Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform.
 
-The following code is executed:
+O seguinte código é executado:
 
 ```4d  
 // Subform form method If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
@@ -111,7 +111,7 @@ Case 2: The contents of the subform are modified and this modification must be p
 
 This triggers the [On Data Change](../Events/onDataChange.md) form event inside the clock object (this event must be selected for the object), which updates the `Form.parisTime` value in the main form. Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object.
 
-The following code is executed:
+O seguinte código é executado:
 
 ```4d  
 // subform clock object method If (Form event code=On Data Change) //whatever the way the value is changed
@@ -130,7 +130,7 @@ Everytime the value of `Form.clockValue` changes in the subform, `parisTime` or 
 
 4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
 
-In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself. On the other hand, if a property of the object is modified by the user in the parent form or by programming, it will be automatically updated in the subform. No event management is necessary.
+In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself. On the other hand, if a property of the object is modified by the user in the parent form or by programming, it will be automatically updated in the subform. Não é necessária qualquer gestão de eventos.
 
 For example, in a subform, inputs are bound to the `Form` object properties (of the subform form):
 
@@ -155,7 +155,7 @@ If you modify a value either in the parent form or in the subform, it is automat
 
 ![](../assets/en/FormObjects/subnew4.png) ![](../assets/en/FormObjects/subnew5.png)
 
-### Using pointers (compatibility)
+### Utilização de ponteiros (compatibilidade)
 
 In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. For example, to update a subform object, you could call the following code:
 
@@ -196,7 +196,7 @@ This mechanism is illustrated in the following diagram:
 
 ![](../assets/en/FormObjects/subforms6.png)
 
-For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
+Para mais informações, consultar a descrição do comando `EXECUTE METHOD IN SUBFORM`.
 
 
 

@@ -947,25 +947,25 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 唯一必須の属性は "valueType" であり、サポートされる値は "text"、"real"、"integer"、"boolean"、"color" そして "event"です。 以下の表には、リストボックスオブジェクト配列において "valueType"の値に応じてサポートされるすべての属性がまとめてあります (他の属性はすべて無視されます)。 表示フォーマットに関しては、その更に下に詳細な説明と例があります。
 
-|                       | valueType                | text | real | integer | boolean | color | event |
-| --------------------- | ------------------------ | ---- | ---- | ------- | ------- | ----- | ----- |
-| *属性*                  | *説明*                     |      |      |         |         |       |       |
-| value                 | セルの値 (入力または出力)           | ○    | ○    | ○       |         |       |       |
-| min                   | 最小値                      |      | ○    | ○       |         |       |       |
-| max                   | 最大値                      |      | ○    | ○       |         |       |       |
-| behavior              | "スリーステート" の値             |      |      | ○       |         |       |       |
-| requiredList          | オブジェクト内で定義されたドロップダウンリスト  | ○    | ○    | ○       |         |       |       |
-| choiceList            | オブジェクト内で定義されたコンボボックス     | ○    | ○    | ○       |         |       |       |
-| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○    | ○       |         |       |       |
-| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○    | ○       |         |       |       |
-| saveAs                | "reference" または "value"  | ○    | ○    | ○       |         |       |       |
-| choiceListReference   | 4D リスト参照、コンボボックスを表示      | ○    | ○    | ○       |         |       |       |
-| choiceListName        | 4D リスト名、コンボボックスを表示       | ○    | ○    | ○       |         |       |       |
-| unitList              | X要素の配列                   | ○    | ○    | ○       |         |       |       |
-| unitReference         | 選択された要素のインデックス           | ○    | ○    | ○       |         |       |       |
-| unitsListReference    | 単位の4D リスト参照              | ○    | ○    | ○       |         |       |       |
-| unitsListName         | 単位の4D リスト名               | ○    | ○    | ○       |         |       |       |
-| alternateButton       | 切り替えボタンを追加               | ○    | ○    | ○       | ○       | ○     |       |
+|                       | valueType                | text | 実数 | integer | boolean | color | event |
+| --------------------- | ------------------------ | ---- | -- | ------- | ------- | ----- | ----- |
+| *属性*                  | *説明*                     |      |    |         |         |       |       |
+| value                 | セルの値 (入力または出力)           | ○    | ○  | ○       |         |       |       |
+| min                   | 最小値                      |      | ○  | ○       |         |       |       |
+| max                   | 最大値                      |      | ○  | ○       |         |       |       |
+| behavior              | "スリーステート" の値             |      |    | ○       |         |       |       |
+| requiredList          | オブジェクト内で定義されたドロップダウンリスト  | ○    | ○  | ○       |         |       |       |
+| choiceList            | オブジェクト内で定義されたコンボボックス     | ○    | ○  | ○       |         |       |       |
+| requiredListReference | 4D リスト参照 ("saveAs"の値による) | ○    | ○  | ○       |         |       |       |
+| requiredListName      | 4D リスト名 ("saveAs"の値による)  | ○    | ○  | ○       |         |       |       |
+| saveAs                | "reference" または "value"  | ○    | ○  | ○       |         |       |       |
+| choiceListReference   | 4D リスト参照、コンボボックスを表示      | ○    | ○  | ○       |         |       |       |
+| choiceListName        | 4D リスト名、コンボボックスを表示       | ○    | ○  | ○       |         |       |       |
+| unitList              | X要素の配列                   | ○    | ○  | ○       |         |       |       |
+| unitReference         | 選択された要素のインデックス           | ○    | ○  | ○       |         |       |       |
+| unitsListReference    | 単位の4D リスト参照              | ○    | ○  | ○       |         |       |       |
+| unitsListName         | 単位の4D リスト名               | ○    | ○  | ○       |         |       |       |
+| alternateButton       | 切り替えボタンを追加               | ○    | ○  | ○       | ○       | ○     |       |
 
 #### value
 

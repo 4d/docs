@@ -161,13 +161,12 @@ Si una de las entidades comparadas es **Null**, se produce un error.
  var $diff1; $diff2 : Collection
  employee:=ds.Employee.query("ID=1001").first()
  $clone:=employee.clone()
-
  employee.firstName:="MARIE"
  employee.lastName:="SOPHIE"
  employee.salary:=500
- $diff1:=$clone.diff(employee) // All differences are returned
- $diff2:=$clone.diff(employee;New collection"firstName";"lastName"))
-  // Only differences on firstName and lastName are returned
+ $diff1:=$clone.diff(employee) // Se devuelven todas las diferencias
+ $diff2:=$clone.diff(employee;New collection"firstName"; "lastName"))
+  // Sólo se devuelven las diferencias en firstName y lastName
 ```
 
 $diff1:

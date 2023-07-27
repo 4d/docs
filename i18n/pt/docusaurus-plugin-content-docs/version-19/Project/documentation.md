@@ -7,7 +7,7 @@ title: Documentar um projecto
 
 In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
-The following project elements accept documentation:
+Os seguintes elementos do projeto aceitam documentação:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Formulários
@@ -23,13 +23,13 @@ It can also be partially exposed as [code editor tips](#viewing-documentation-in
 
 ## Ficheiros documentação
 
-### Documentation file name
+### Nome do ficheiro de documentação
 
 Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
 
 In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
 
-### Documentation file architecture
+### Arquitetura dos ficheiros de documentação
 
 All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
 
@@ -61,7 +61,7 @@ The `Documentation` folder architecture is the following:
 
 > Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
 
-## Documentation in the Explorer
+## Documentação no Explorador
 
 ### Ver a documentação
 
@@ -77,7 +77,7 @@ Para visualizar a documentação na janela do Explorer:
 
 - Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
 
-### Editing documentation file
+### Editar o ficheiro de documentação
 
 You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
 
@@ -107,7 +107,7 @@ If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/doc
 
  > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
-## Documentation file definition
+## Definição do ficheiro de documentação
 
 4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
 
@@ -170,7 +170,7 @@ $txt:="Hello world!"
 [1]: https://blog.4d.com
 ```
 
-- The image tags are supported:
+- As etiquetas de imagem são suportadas:
 
 ```
 ![image info](pictures/image.png)
@@ -182,11 +182,11 @@ $txt:="Hello world!"
 
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo blog 4D")](https://blog.4d.com)
 
-> For more information, see the [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/).
+> Para obter mais informações, consulte o [guia GitHub Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ## Exemplo
 
-In the `WP SwitchToolbar.md` file, you can write:
+No ficheiro `WP SwitchToolbar.md`, pode escrever:
 
 ```4d
 <!-- This method returns a different logo depending on the size parameter -->

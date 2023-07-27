@@ -116,7 +116,7 @@ Pode declarar o parâmetro retornado de uma função adicionado uma flecha (->) 
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-Também é possível declarar o parâmetro de retorno apenas acrescentando `: type`, caso em que pode ser tratado por uma declaração de retorno [](#return-expression). Por exemplo:
+Também é possível declarar o parâmetro de retorno apenas acrescentando `: type`, caso em que pode ser tratado por um [return](#return-expression). Por exemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer

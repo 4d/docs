@@ -130,7 +130,7 @@ La propriété `.bodyStructure` contient l' <!-- REF #EmailObjectClass.bodyStruc
 
 L'objet `.bodyStructure` contient les propriété suivantes :
 
-| Propriété   | Type                 | Value                                                                                                                                                                           |
+| Propriété   | Type                 | Valeur                                                                                                                                                                          |
 | ----------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | partID      | Text                 | Identifie la partie de manière unique dans l'email                                                                                                                              |
 | type        | Text                 | (obligatoire) Valeur du champ d'en-tête Content-Type de la partie                                                                                                               |
@@ -152,7 +152,7 @@ La propriété `.bodyValues` contient l' <!-- REF #EmailObjectClass.bodyValues.S
 
 L'objet `.bodyValues` contient les propriété suivantes :
 
-| Propriété                  | Type    | Value                                                                                                                                                                      |
+| Propriété                  | Type    | Valeur                                                                                                                                                                     |
 | -------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | *partID*.value             | text    | Valeur de la partie body                                                                                                                                                   |
 | *partID*.isEncodingProblem | boolean | Vrai si des sections malformées sont identifiées durant le décodage du charset, si le charset est inconnu, ou si le content transfer-encoding est inconnu. Faux par défaut |
@@ -204,7 +204,7 @@ La propriété `.headers` contient une <!-- REF #EmailObjectClass.headers.Summar
 
 Chaque objet de la collection de headers peut contenir les propriétés suivantes :
 
-| Propriété | Type | Value                                                                                                                                                                                      |
+| Propriété | Type | Valeur                                                                                                                                                                                     |
 | --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [].name   | text | (obligatoire) Nom du champ en-tête, tel que défini dans la [RFC#5322](https://tools.ietf.org/html/rfc5322). S'il est null ou indéfini, le champ en-tête n'est pas ajouté à l'en-tête MIME. |
 | [].value  | text | Valeur du champ d'en-tête telle que définie dans la [RFC#5322](https://tools.ietf.org/html/rfc5322)                                                                                        |
@@ -247,7 +247,7 @@ La propriété `.keywords` contient un <!-- REF #EmailObjectClass.keywords.Summa
 
 Cette propriété est l'en-tête "keywords" (voir la [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
-| Propriété      | Type    | Value                                                         |
+| Propriété      | Type    | Valeur                                                        |
 | -------------- | ------- | ------------------------------------------------------------- |
 | .\<keyword\> | boolean | Mot-clé à définir à définir (la valeur doit être mise à vrai) |
 
@@ -479,7 +479,7 @@ Dans *options*, vous pouvez configurer l'encodage et le charset du mail. Les pro
 
 | Propriété     | Type | Description                                                                                                                                                             |
 | ------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headerCharset | Text | Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<table><tr><th>Constante</th><th>Value</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li><i>bodyCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &<i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & base64</td></tr></table> |
+| headerCharset | Text | Charset et encodage utilisés pour les parties de mail suivantes : le sujet, les noms de fichiers joints et le nom du mail. Valeurs possibles :<table><tr><th>Constante</th><th>Valeur</th><th>Commentaire</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) & Quoted-printable si possible, sinon UTF-8 & Quoted-printable</li><li><i>bodyCharset</i> : US-ASCII si possible, japonais (ISO-2022-JP) et 7 bits si possible, sinon UTF-8 et Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & Quoted-printable (**valeur par défaut**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> &<i>bodyCharset</i> : US-ASCII si possible, sinon UTF-8 & base64</td></tr></table> |
 | bodyCharset   | Text | Charset et encodage utilisés pour le contenu html et le texte du body du mail. Valeurs possibles : Identiques à celles de headerCharset (voir ci-dessus)                |
 
 Si le paramètre *options* est omis, la configuration mail mode UTF8 est utilisée pour les parties en-tête et corps.

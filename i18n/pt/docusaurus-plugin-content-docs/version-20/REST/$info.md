@@ -10,7 +10,7 @@ When you call this request for your project, you retrieve information in the fol
 
 | Propriedade    | Tipo       | Descrição                                                                           |
 | -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Number     | 4D Server's cache size.                                                             |
+| cacheSize      | Number     | Tamanho da cache do servidor 4D.                                                    |
 | usedCache      | Number     | Quanto do cache do 4D Server foi usado.                                             |
 | entitySetCount | Number     | Número de selecções de entidades.                                                   |
 | entitySet      | Collection | A collection in which each object contains information about each entity selection. |

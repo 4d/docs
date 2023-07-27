@@ -93,7 +93,7 @@ A continuación se presenta una tabla que explica cada una de las opciones de fi
 
 | Filtro de entrada                      | Descripción                                                                                                                                                              |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ~A                                     | Permitir la entrada de toda letra, pero convertir a mayúsculas.                                                                                                          |
+| ~A                                     | Permite la entrada de todas las letras, pero las conviete a mayúsculas.                                                                                                  |
 | &9                                     | Permitir sólo números.                                                                                                                                                   |
 | &A                                     | Permitir sólo letras mayúsculas.                                                                                                                                         |
 | &a                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                                          |

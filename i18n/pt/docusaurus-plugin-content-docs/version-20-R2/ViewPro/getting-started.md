@@ -38,9 +38,9 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 
 ## Noções básicas de seleção, introdução e navegação
 
-As folhas de cálculo são compostas por linhas e colunas. A cada linha está associado um número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
+As folhas de cálculo são compostas por linhas e colunas. A cada linha está associado um número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. As células podem ser seleccionadas e o seu conteúdo editado.
 
-### Selecting cells, columns and rows
+### Seleção de células, colunas e linhas
 
 *   To select a cell, simply click on it or use the direction arrows on the keyboard. Its content (or formula) is displayed within the cell.
 
@@ -82,7 +82,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
  Depending on the clicked area, the following options are also available:
 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
-*   click on a cell or a cell range:
+*   clique numa célula ou num intervalo de células:
     *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
     *   **Sort**: sorts the column contents.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
@@ -99,7 +99,7 @@ Since 4D View Pro is a built-in 4D component, you can access its list of methods
 
 For a detailed list of component methods, see [Method list](method-list.md).
 
-### Addressing a 4D View Pro area
+### Processamento de uma zona 4D View Pro
 
 A 4D View Pro area handles several objects and elements.
 
@@ -142,11 +142,11 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 | Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                    |
 | ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | -------------------------------------------------- |
-| area        |                   | text       | 4D View Pro area form object name                                   | sempre disponível                                  |
+| area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                  |
 | ranges      |                   | collection | Collection of range(s)                                              | sempre disponível                                  |
 |             | \[ ].name        | text       | Range name                                                          | name                                               |
 |             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
-|             | \[ ].row         | number     | Row index (counting begins at 0)                                    | célula, células, linha, linhas                     |
+|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                     |
 |             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                    |
 |             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                   |
 |             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                     |

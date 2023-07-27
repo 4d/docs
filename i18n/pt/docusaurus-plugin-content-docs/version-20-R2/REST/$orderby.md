@@ -4,7 +4,7 @@ title: '$orderby'
 ---
 
 
-Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$orderby="lastName desc, salary asc"`)
+Ordena os dados devolvidos pelo atributo e pela ordem de ordenação definidos (*e.g.*, `$orderby="lastName desc, salary asc"`)
 
 ## Descrição
 
@@ -21,7 +21,7 @@ The example below sorts the entity set by lastName attribute in ascending order:
 
  `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
-**Resultado**:
+**Resultadoi**:
 
 ```
 {

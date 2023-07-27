@@ -32,7 +32,7 @@
     "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
-    "message": "The main concepts of the 4D Language",
+    "message": "Les principaux concepts du langage 4D",
     "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -52,7 +52,7 @@
     "description": "The generated-index page title for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Class Functions.link.generated-index.description": {
-    "message": "List of built-in 4D classes",
+    "message": "Liste des classes 4D",
     "description": "The generated-index page description for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Handling Code": {
@@ -84,7 +84,7 @@
     "description": "The generated-index page title for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Administration.link.generated-index.description": {
-    "message": "How to monitor your 4D applications",
+    "message": "Comment contrôler vos applications 4D",
     "description": "The generated-index page description for category Administration in sidebar docs"
   },
   "sidebar.docs.category.4D Server Administration Window": {
@@ -100,7 +100,7 @@
     "description": "The generated-index page title for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.description": {
-    "message": "4D web tools for administrating and monitoring your applications.",
+    "message": "Outils web 4D pour l'administration et la surveillance de vos applications.",
     "description": "The generated-index page description for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
@@ -132,7 +132,7 @@
     "description": "The generated-index page title for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Applications.link.generated-index.description": {
-    "message": "Guides for developing Web applications with 4D",
+    "message": "Guides pour le développement d'applications Web avec 4D",
     "description": "The generated-index page description for category Web Applications in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
@@ -152,7 +152,7 @@
     "description": "The generated-index page title for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.REST Server.link.generated-index.description": {
-    "message": "Configuring the 4D REST Server and using the REST API.",
+    "message": "Configuration du serveur 4D REST et utilisation de l'API REST.",
     "description": "The generated-index page description for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.Guides": {
@@ -168,7 +168,7 @@
     "description": "The generated-index page title for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.description": {
-    "message": "REST API for global information",
+    "message": "API REST pour les informations globales",
     "description": "The generated-index page description for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass)": {
@@ -180,7 +180,7 @@
     "description": "The generated-index page title for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass).link.generated-index.description": {
-    "message": "REST API for dataClass.",
+    "message": "API REST pour dataClass.",
     "description": "The generated-index page description for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications": {
@@ -192,7 +192,7 @@
     "description": "The generated-index page title for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
-    "message": "Guides for developing Desktop applications with 4D",
+    "message": "Guides pour le développement d'applications Desktop avec 4D",
     "description": "The generated-index page description for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
@@ -204,15 +204,15 @@
     "description": "The generated-index page title for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.description": {
-    "message": "Access control and user privileges for desktop applications.",
+    "message": "Contrôle d'accès et privilèges des utilisateurs pour les applications Desktop.",
     "description": "The generated-index page description for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
-    "message": "Forms",
+    "message": "Formulaires",
     "description": "The label for category Forms in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
-    "message": "Éditeur de formulaire",
+    "message": "Éditeur de formulaires",
     "description": "The label for category Form Editor in sidebar docs"
   },
   "sidebar.docs.category.Form Properties": {
@@ -240,7 +240,7 @@
     "description": "The label for category Mobile Applications in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference": {
-    "message": "Référence du langage 4D",
+    "message": "Manuel Langage 4D",
     "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv20/4D/20/4D-Language-Reference.100-6237190.en.html"
   },
   "sidebar.docs.link.4D Write Pro": {

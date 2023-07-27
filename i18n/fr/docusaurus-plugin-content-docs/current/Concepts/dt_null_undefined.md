@@ -23,14 +23,14 @@ Undefined (Indéfinie) n'est pas véritablement un type de données. Une variabl
 ## Opérateurs sur les Null
 
 
-| Opération | Syntaxe                    | Retourne | Expression                     | Value |
-| --------- | -------------------------- | -------- | ------------------------------ | ----- |
-| Egalité   | Null `=` Null              | Boolean  | a.nullProp `=` b.nullProp      | True  |
-|           | Null `=` Undefined         | Boolean  | a.nullProp `=` b.undefinedProp | True  |
-|           | Null `=` *valeur scalaire* | Boolean  | a.nullProp `=` 42              | False |
-| Inégalité | Null `#` Null              | Boolean  | a.nullProp `#` b.nullProp      | False |
-|           | Null `#` Undefined         | Boolean  | a.nullProp `#` b.undefinedProp | False |
-|           | Null `#` *scalar value*    | Boolean  | a.nullProp `#` 42              | True  |
+| Opération | Syntaxe                    | Retourne | Expression                     | Valeur |
+| --------- | -------------------------- | -------- | ------------------------------ | ------ |
+| Egalité   | Null `=` Null              | Boolean  | a.nullProp `=` b.nullProp      | True   |
+|           | Null `=` Undefined         | Boolean  | a.nullProp `=` b.undefinedProp | True   |
+|           | Null `=` *valeur scalaire* | Boolean  | a.nullProp `=` 42              | False  |
+| Inégalité | Null `#` Null              | Boolean  | a.nullProp `#` b.nullProp      | False  |
+|           | Null `#` Undefined         | Boolean  | a.nullProp `#` b.undefinedProp | False  |
+|           | Null `#` *scalar value*    | Boolean  | a.nullProp `#` 42              | True   |
 
 Les *valeurs scalaires* sont des valeurs de type chaîne, date, heure, booléen, nombre ou Blob. Lorsqu'elles sont déclarées, leur [valeur par défaut](data-types.md#valeurs-par-defaut) n'est ni undefined ni null. Les autres types (Pointeur, Image, Objet, Collection) ont une valeur par défaut undefined ou null. Ex :
 
@@ -51,18 +51,18 @@ Les comparaisons avec les opérateurs Supérieur à (`>`), Inférieur à (`<`), 
 ## Opérateurs sur les Undefined
 
 
-| Opération           | Syntaxe                                               | Retourne | Expression                          | Value |
-| ------------------- | ----------------------------------------------------- | -------- | ----------------------------------- | ----- |
-| Egalité             | Undefined `=` Undefined                               | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
-|                     | Undefined `=` Null                                    | Boolean  | a.undefinedProp `=` c.nullProp      | True  |
-|                     | Undefined `=` *autres valeurs*                        | Boolean  | a.undefinedProp `=` 42              | False |
-| Inégalité           | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
-|                     | Undefined `#` Null                                    | Boolean  | a.undefinedProp `#` b.nullProp      | False |
-|                     | Undefined `#` *autres valeurs*                        | Boolean  | a.undefinedProp `#` 42              | True  |
-| Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"        | False |
-| Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"        | False |
-| Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"       | False |
-| Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"       | False |
+| Opération           | Syntaxe                                               | Retourne | Expression                          | Valeur |
+| ------------------- | ----------------------------------------------------- | -------- | ----------------------------------- | ------ |
+| Egalité             | Undefined `=` Undefined                               | Boolean  | a.undefinedProp `=` b.undefinedProp | True   |
+|                     | Undefined `=` Null                                    | Boolean  | a.undefinedProp `=` c.nullProp      | True   |
+|                     | Undefined `=` *autres valeurs*                        | Boolean  | a.undefinedProp `=` 42              | False  |
+| Inégalité           | Undefined `#` Undefined                               | Boolean  | a.undefinedProp `#` b.undefinedProp | False  |
+|                     | Undefined `#` Null                                    | Boolean  | a.undefinedProp `#` b.nullProp      | False  |
+|                     | Undefined `#` *autres valeurs*                        | Boolean  | a.undefinedProp `#` 42              | True   |
+| Supérieur à         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"        | False  |
+| Inférieur à         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"        | False  |
+| Supérieur ou égal à | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"       | False  |
+| Inférieur ou égal à | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"       | False  |
 
 *autres valeurs* sont des expressions de tout type dont la valeur n'est ni Undefined ni Null.
 

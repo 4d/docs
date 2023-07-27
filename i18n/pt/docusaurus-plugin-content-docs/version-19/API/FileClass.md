@@ -263,6 +263,7 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 
 <!-- REF #FileClass.delete().Params -->
+
 | Parâmetro | Tipo |  | Descrição                                             |
 | --------- | ---- |  | ----------------------------------------------------- |
 |           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
@@ -273,10 +274,18 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 A função `.delete()` <!-- REF #FileClass.delete().Summary -->apaga o arquivo<!-- END REF -->.
 
-Se o arquivo estiver aberto atualmente, um erro é gerado.
-
 Se o arquivo não existir no disco, a função não faz nada (não é gerado nenhum erro).
-> **ATENÇÃO**: `.delete( )` pode apagar qualquer arquivo de um disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete( )` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
+
+Se o ficheiro estiver atualmente aberto, o resultado depende do sistema operativo:
+
+- no Windows, é gerado um erro,
+- no macOS, não é gerado qualquer erro e o ficheiro é eliminado.
+
+:::caution
+
+`.delete()` pode apagar qualquer ficheiro num disco. Isto inclui documentos criados com outras aplicações, bem como as próprias aplicações. `.delete()` deve ser utilizado com extrema cautela. A eliminação de um arquivo é uma operação permanente e não pode ser desfeita.
+
+:::
 
 #### Exemplo
 
@@ -454,28 +463,28 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetro  | Tipo     |    | Descrição                               |
-| ---------- | -------- | -- | --------------------------------------- |
-| newName    | Text     | -> | New full name for the file              |
-| Resultados | 4D. File | <- | Renamed file|<!-- END REF -->
+| Parâmetro  | Tipo     |    | Descrição                                     |
+| ---------- | -------- | -- | --------------------------------------------- |
+| newName    | Text     | -> | Novo nome completo para o ficheiro            |
+| Resultados | 4D. File | <- | Ficheiro renomeado|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+A função `.rename()` <!-- REF #FileClass.rename().Summary -->renomeia o ficheiro com o nome que passou em *newName* e devolve o objecto renomeado `File`<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+O parâmetro *newName* deve cumprir as regras de nomeação (por exemplo, não deve conter caracteres como ":", "/", etc.), caso contrário é devolvido um erro. Se já existir um ficheiro com o mesmo nome, é devolvido um erro.
 
-Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
+Note que a função modifica o nome completo do ficheiro, isto é, se não passar uma extensão em *newName*, o ficheiro terá um nome sem uma extensão.
 
 **Objeto devolvido**
 
-The renamed `File` object.
+O objeto `File` renomeado.
 
 #### Exemplo
 
-You want to rename "ReadMe.txt" in "ReadMe_new.txt":
+Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 ```4d
  $toRename:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
@@ -497,25 +506,25 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                   |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info      | Object | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                                                                                        |
+| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+A função `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escreve as propriedades de *info* como conteúdo informativo de um arquivo **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function does nothing (no error is generated).
+A função deve ser utilizada com um arquivo .exe, .dll ou .plist existente. Se o ficheiro não existir no disco ou não for um ficheiro .exe, .dll ou .plist válido, a função não faz nada (não é gerado qualquer erro).
 
 > A função apenas é compatível com arquivos .plist em formato xml (baseado em texto). Um erro é retornado se usado com um arquivo .plist em formato binário.
 
-***info* parameter object with a .exe or .dll file**
+**Parâmetro *info* com um arquivo .exe ou .dll**
 
 > A escrita de um arquivo .exe ou .dll só é possível no Windows.
 
-Each valid property set in the *info* object parameter is written in the version resource of the .exe or .dll file. Available properties are (any other property will be ignored):
+Cada propriedade válida definida no parâmetro objeto *info* está escrita no recurso de versão do arquivo .exe ou .dll. As propriedades disponíveis são (qualquer outra propriedade será ignorada):
 
 | Propriedade      | Tipo |
 | ---------------- | ---- |
@@ -528,11 +537,11 @@ Each valid property set in the *info* object parameter is written in the version
 | FileVersion      | Text |
 | OriginalFilename | Text |
 
-If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
+If you pass a null or empty text as value, an empty string is written in the property. Se passar um tipo de valor diferente de texto, este é transformado em string.
 
-***info* parameter object with a .plist file**
+**Parâmetro *info* com um arquivo .plist**
 
-Each valid property set in the *info* object parameter is written in the .plist file as a key. Any key name is accepted. Os tipos de valores são preservados sempre que possível.
+Cada propriedade válida definida no parâmetro objeto *info* está escrita no arquivo .plist como uma chave. Qualquer nome chave é aceito. Os tipos de valores são preservados sempre que possível.
 
 Se um conjunto de chaves no parâmetro *info* já estiver definido no arquivo .plist, o seu valor é atualizado, mantendo o seu tipo original. Outras chaves existentes no arquivo .plist são deixadas intocadas.
 
@@ -630,11 +639,11 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 A função `.setText()` <!-- REF #FileClass.setText().Summary -->escreve *text* como o novo conteúdo do ficheiro<!-- END REF -->.
 
-Se o ficheiro referenciado no objeto `File` não existir no disco, é criado pela função. When the file already exists on the disk, its prior contents are erased, except if it is already open, in which case, its contents are locked and an error is generated.
+Se o ficheiro referenciado no objeto `File` não existir no disco, é criado pela função. Quando o ficheiro já existir no disco, o seu conteúdo anterior é apagado, exceto se já estiver aberto, caso em que o seu conteúdo é bloqueado e é gerado um erro.
 
-In *text*, pass the text to write to the file. It can be a literal ("my text"), or a 4D text field or variable.
+Em *text*, passe o texto a escrever no ficheiro. Pode ser um texto literal ("my text"), ou um campo/variável texto 4D.
 
-Optionally, you can designate the character set to be used for writing the contents. Você pode passar também:
+Opcionalmente, pode designar o conjunto de caracteres a utilizar para escrever o conteúdo. Você pode passar também:
 
 * in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
 * ou em *charSetNum*, o MIBEnum ID (número) do nome de configuração padrão.
@@ -643,15 +652,15 @@ Optionally, you can designate the character set to be used for writing the conte
 
 If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. The following constants, found in the **System Documents** theme are available:
 
 | Parâmetros                    | Valor | Comentário                                                                                                                                               |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Não processado                                                                                                                                           |
 | `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                              |
-| `Documento com CR`            | 3     | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                     |
-| `Documento com LF`            | 4     | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                           |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                       |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                  |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                   |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

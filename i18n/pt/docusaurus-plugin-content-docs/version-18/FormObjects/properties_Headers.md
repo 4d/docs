@@ -50,9 +50,9 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis               |
-| ------------ | ------------- | ------------------------------- |
-| headerHeight | string        | positive decimal+px &#124; em ) |
+| Nome         | Tipo de dados | Valores possíveis                   |
+| ------------ | ------------- | ----------------------------------- |
+| headerHeight | string        | décimales positives +px &#124; em ) |
 
 #### Objectos suportados
 
@@ -60,4 +60,4 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Veja também
 
-[Footers](properties_Footers.md) - [List box headers](listbox_overview.md#list-box-headers)
+[Rodapés](properties_Footers.md) - [Cabeçalhos de List box](listbox_overview.md#list-box-headers)

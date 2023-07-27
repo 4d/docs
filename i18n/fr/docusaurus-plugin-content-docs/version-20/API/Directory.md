@@ -417,9 +417,9 @@ Par défaut, le dossier est copié avec le nom du dossier original. Si vous souh
 
 S'il existe déjà un dossier portant le même nom dans *destinationFolder*, par défaut 4D génère une erreur. Vous pouvez passer la constante `fk overwrite` dans le paramètre *overwrite* pour ignorer et écraser le dossier existant :
 
-| Constante      | Value | Commentaire                                   |
-| -------------- | ----- | --------------------------------------------- |
-| `fk overwrite` | 4     | Écrase les éléments existants, le cas échéant |
+| Constante      | Valeur | Commentaire                                   |
+| -------------- | ------ | --------------------------------------------- |
+| `fk overwrite` | 4      | Écrase les éléments existants, le cas échéant |
 
 **Valeur retournée**
 
@@ -509,10 +509,10 @@ La fonction `.files()` retourne <!-- REF #directory.files().Summary -->une colle
 
 Par défaut, si vous omettez le paramètre *options*, seuls les fichiers à la racine du dossier sont retournés dans la collection, ainsi que les fichiers et dossiers invisibles. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
-| Constante             | Value | Commentaire                                                                            |
-| --------------------- | ----- | -------------------------------------------------------------------------------------- |
-| `fk recursive`        | 1     | La collection contient les fichiers du dossier spécifié ainsi que de ses sous-dossiers |
-| `fk ignore invisible` | 8     | Les fichiers invisibles ne sont pas répertoriés                                        |
+| Constante             | Valeur | Commentaire                                                                            |
+| --------------------- | ------ | -------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | La collection contient les fichiers du dossier spécifié ainsi que de ses sous-dossiers |
+| `fk ignore invisible` | 8      | Les fichiers invisibles ne sont pas répertoriés                                        |
 
 **Valeur retournée**
 
@@ -614,10 +614,10 @@ La fonction `.folders()` <!-- REF #directory.folders().Summary -->retourne une c
 
 Par défaut, si vous omettez le paramète *options*, seuls les dossiers à la racine du dossier sont retournés dans la collection. Vous pouvez modifier cela en passant, dans le paramètre *options* parameter, une ou plusieurs des constantes suivantes :
 
-| Constante             | Value | Commentaire                                                                            |
-| --------------------- | ----- | -------------------------------------------------------------------------------------- |
-| `fk recursive`        | 1     | La collection contient les dossiers du dossier spécifié ainsi que de ses sous-dossiers |
-| `fk ignore invisible` | 8     | Les dossiers invisibles ne sont pas répertoriés                                        |
+| Constante             | Valeur | Commentaire                                                                            |
+| --------------------- | ------ | -------------------------------------------------------------------------------------- |
+| `fk recursive`        | 1      | La collection contient les dossiers du dossier spécifié ainsi que de ses sous-dossiers |
+| `fk ignore invisible` | 8      | Les dossiers invisibles ne sont pas répertoriés                                        |
 
 **Valeur retournée**
 
