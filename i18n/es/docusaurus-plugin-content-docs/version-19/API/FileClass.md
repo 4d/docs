@@ -276,14 +276,14 @@ La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archi
 
 Si el archivo no existe en el disco, la función no hace nada (no se genera ningún error).
 
-If the file is currently open, the result depends on the OS:
+Si el archivo está abierto, el resultado depende del sistema operativo:
 
-- on Windows, an error is generated,
-- on macOS, no error is generated and the file is deleted.
+- en Windows, se genera un error,
+- en macOS, no se genera ningún error y el archivo se elimina.
 
 :::caution
 
-`.delete()` can delete any file on a disk. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
+`.delete()` puede eliminar cualquier archivo de un disco. Esto incluye los documentos creados con otras aplicaciones, así como las propias aplicaciones. `.delete()` debe utilizarse con extrema precaución. Eliminar un archivo es una operación permanente y no se puede deshacer.
 
 :::
 
