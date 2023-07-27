@@ -8,7 +8,7 @@ O editor de formulários 4D suporta macros. A macro is a set of instructions to 
 
 For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
 
-* Create and execute 4D code
+* Criar e executar código 4D
 * Exibir diálogos
 * Seleccionar objectos do formulário
 * Add / delete / modify forms, form objects as well as their properties
@@ -38,7 +38,7 @@ In this short example, you'll see how to create and call a macro that adds a "He
 
 2. Criar uma classe 4D com o nome `AddButton`.
 
-3. Within the `AddButton` class, write the following function:
+3. Na classe `AddButton`, escreva a seguinte função:
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
@@ -69,7 +69,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 You can then call the macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
 
-## Calling macros in the Form editor
+## Chamar macros no editor de formulários
 
 When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
 
@@ -104,7 +104,7 @@ A estrutura do ficheiro `formMacros.json` é a seguinte:
 }
 ```
 
-Here is the description of the JSON file contents:
+Eis a descrição do conteúdo do ficheiro JSON:
 
 | Atributo |                     |                          | Tipo   | Descrição                                              |
 | -------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
@@ -210,7 +210,7 @@ Here are the properties returned in the *$editor* parameter:
 | $editor.editor.currentPageNumber | number     | O número da página actual                                                         |
 | $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
 | $editor.editor.currentSelection  | Collection | Colecção de nomes de objectos seleccionados                                       |
-| $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
+| $editor.editor.formProperties    | Object     | Propriedades do formulário atual                                                  |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Todas as propriedades são opcionais:

@@ -3,7 +3,7 @@ id: glossary
 title: Glossary
 ---
 
-## Main concepts at a glance
+## Principais conceitos em resumo
 
 ![](../assets/en/ORDA/mainConcepts.png)
 
@@ -64,7 +64,7 @@ A datastore is the interface object provided by ORDA to reference a structure an
 
 A datastore provides:
 
-*   a connection to the 4D database
+*   uma ligação à base de dados 4D
 *   um conjunto de classes de dados para trabalhar com a base de dados
 
 The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
@@ -98,9 +98,9 @@ Para mais informações, consulte Entidades.
 
 ## Seleção de entidades
 
-An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+Uma seleção de entidades é um objeto. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
 
-An entity selection contains:
+Uma seleção de entidade contém:
 
 
 *   um conjunto de 0 a X referências de entidades,

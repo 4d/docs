@@ -19,7 +19,7 @@ End if
 
 ## Objecto evento
 
-Each event is returned as an object by the `FORM Event` command. By default, it contains the following properties:
+Each event is returned as an object by the `FORM Event` command. Por defeito, contém as seguintes propriedades:
 
 | Propriedade | Tipo | Descrição |
 | ----------- | ---- | --------- |
@@ -36,7 +36,7 @@ Additional properties are returned when the event occurs on specific objects. Em
 
 ## Eventos e métodos
 
-When a form event occurs, 4D performs the following actions:
+Quando um evento formulário ocorre, 4D executa as seguintes ações:
 
 - First, it browses the objects of the form and calls the object method for any object (involved in the event) whose corresponding object event property has been selected.
 - Second, it calls the form method if the corresponding form event property has been selected.
@@ -99,7 +99,7 @@ A tabela seguinte resume a forma como os métodos objeto e formulário são cham
 | On Footer Click          | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
 | On After Sort            | Sim (List box)                    | Nunca             | Apenas objecto envolvido   |
 | On Long Click            | Sim (Botão)                       | Sim               | Apenas objecto envolvido   |
-| On Alternative Click     | Yes (Button and List box)         | Nunca             | Apenas objecto envolvido   |
+| On Alternative Click     | Sim (botão e List box)            | Nunca             | Apenas objecto envolvido   |
 | On Expand                | Sim (Hier. lista e list box)      | Nunca             | Apenas objecto envolvido   |
 | On Collapse              | Sim (Hier. lista e list box)      | Nunca             | Apenas objecto envolvido   |
 | On Delete Action         | Sim (Hier. lista e list box)      | Nunca             | Apenas objecto envolvido   |

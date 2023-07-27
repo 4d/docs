@@ -233,7 +233,7 @@ Para ser chamado em uma petição REST, um método deve:
 
 Também pode passar parâmetros a um método e um POST.
 
-`POST  /rest/Employee/addEmployee`
+`POST /rest/Employee/addEmployee`
 
 Pode fazer um POST de dados no corpo da consulta, por exemplo:
 

@@ -51,7 +51,7 @@ If you want to get all the computations for an attribute of type Number, you can
 }
 ````
 
-If you want to get all the computations for an attribute of type String, you can write:
+Se quiser obter todos os cálculos para um atributo do tipo String, pode escrever:
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 

@@ -96,6 +96,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 定義されたクラスには、クラスストアよりアクセスすることができます。 クラスストアには次の二つが存在します:
 
 
+
 - `cs` - ユーザークラスストア
 - `4D` - ビルトインクラスストア
 
@@ -253,9 +254,10 @@ Function add($x : Variant; $y : Integer): Integer
 
 ```4d
 // クラス: Rectangle
+property name : Text
+property height; width : Integer
+
 Class constructor($width : Integer; $height : Integer)
- property name : Text
- property height; width : Integer
  This.name:="Rectangle"
  This.height:=$height
  This.width:=$width
@@ -363,7 +365,7 @@ $o:=cs.MyClass.new("John";42)
 
 :::info
 
-`property` キーワードは、クラス関数内の `Function` ブロック外でのみ使用できます。
+`property` キーワードは、クラス関数内の `Function` および `Class Constructor` ブロック外でのみ使用できます。
 
 :::
 
@@ -424,9 +426,9 @@ Function set <name>($parameterName : type)
 
 ```4d  
 // クラス: Person.4dm
+property firstName; lastName : Text
 
 Class constructor($firstname : Text; $lastname : Text)
- property firstName; lastName : Text
  This.firstName:=$firstname
  This.lastName:=$lastname
 
@@ -635,7 +637,7 @@ This -> Object
 | --- | ------ | -- | ---------- |
 | 戻り値 | object | <- | カレントオブジェクト |
 
-`This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv19/4D/19.1/This.301-5654037.ja.html) で使用することができます。
+`This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv19/help/command/ja/page1470.html) で使用することができます。
 
 `This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 

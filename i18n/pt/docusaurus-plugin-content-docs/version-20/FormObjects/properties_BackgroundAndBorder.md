@@ -119,7 +119,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 ## Cor da linha
 
-Designa a cor das linhas do objeto. The color can be specified by:
+Designa a cor das linhas do objeto. A cor pode ser especificada por:
 
 * a color name - like "red"
 * um valor HEX - como "#ff0000"

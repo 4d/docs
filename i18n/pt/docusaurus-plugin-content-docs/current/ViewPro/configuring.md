@@ -37,15 +37,15 @@ With visible formula bar:
 
 Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
-| Tab      | Acções                          | Ribbon Interface | Interface da barra de ferramentas |
-| -------- | ------------------------------- |:----------------:|:---------------------------------:|
-| File     | File manipulation               |        X         |                                   |
-| Inicio   | Aspecto do texto                |        X         |                 X                 |
-| Inserir  | Adicionar itens                 |        X         |                 X                 |
-| Fórmulas | Formula calculation and library |        X         |                 X                 |
-| Dados    | Data manipulation               |        X         |                 X                 |
-| Mostrar  | Apresentação visual             |        X         |                 X                 |
-| Settings | Presentação da folha            |        X         |                                   |
+| Tab      | Acções                           | Ribbon Interface | Interface da barra de ferramentas |
+| -------- | -------------------------------- |:----------------:|:---------------------------------:|
+| File     | File manipulation                |        X         |                                   |
+| Inicio   | Aspecto do texto                 |        X         |                 X                 |
+| Inserir  | Adicionar itens                  |        X         |                 X                 |
+| Fórmulas | Cálculo de fórmulas e biblioteca |        X         |                 X                 |
+| Dados    | Data manipulation                |        X         |                 X                 |
+| Mostrar  | Apresentação visual              |        X         |                 X                 |
+| Settings | Presentação da folha             |        X         |                                   |
 
 ## Eventos formulário
 
@@ -90,9 +90,9 @@ The 4D View Pro sheet options object allows you to control various options of yo
 | colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                |
 | selectionBackColor   |                        | string        | A cor de fundo da seleção para a folha. (formato RGBA preferido)                                                                                                                                                                                                                                           |
 | selectionBorderColor |                        | string        | A cor do contorno da seleção para a folha.                                                                                                                                                                                                                                                                 |
-| sheetAreaOffset      |                        | object        | The sheetAreaOffset's options.                                                                                                                                                                                                                                                                             |
+| sheetAreaOffset      |                        | object        | As opções de sheetAreaOffset.                                                                                                                                                                                                                                                                              |
 |                      | left                   | inteiro longo | The offset left of sheet from host.                                                                                                                                                                                                                                                                        |
-|                      | top                    | inteiro longo | The offset top of sheet from host.                                                                                                                                                                                                                                                                         |
+|                      | top                    | inteiro longo | O deslocamento superior da folha em relação ao host.                                                                                                                                                                                                                                                       |
 > Todas as propriedades são opcionais.
 
 ### Protecção da folha
@@ -136,7 +136,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 | Caracteres | Descrição                                                                                                                                                                                                               | Exemplo                                                                                                                    |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 0          | Placeholder that displays zeros.                                                                                                                                                                                        | #.00 mostrará 1.1 como 1.10                                                                                                |
+| 0          | Marcador de posição mostrando zeros.                                                                                                                                                                                    | #.00 mostrará 1.1 como 1.10                                                                                                |
 | .          | Displays a decimal point                                                                                                                                                                                                | 0.00 mostrará 1999 como 1999.00                                                                                            |
 | ,          | Mostra o separador de milhares num número. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 mostrará 12200000 como 12,200,000                                                                                      |
 | \_       | Salta a largura do carácter seguinte.                                                                                                                                                                                   | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
@@ -184,30 +184,30 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                       | Exemplo              |
-| ---- | --------------------------------------------------------- | ----------------------------------------------- | -------------------- |
-| Date |                                                           |                                                 | (January 1, 2019)    |
-|      | m                                                         | Número do mês sem zero à esquerda               | 1                    |
-|      | mm                                                        | Month number with leading zero                  | 01                   |
-|      | mmm                                                       | Nome do mês, abreviado                          | Jan                  |
-|      | mmmm                                                      | Nome do mês, long                               | January              |
-|      | d                                                         | Day number without leading zero                 | 1                    |
-|      | dd                                                        | Número do dia com zero à esquerda               | 01                   |
-|      | ddd                                                       | Dia da semana, curto                            | Tue                  |
-|      | dddd                                                      | Dia da semana, longo                            | Tuesday              |
-|      | yy                                                        | Ano, breve                                      | 19                   |
-|      | yyyy                                                      | Ano, longo                                      | 2019                 |
-| Hora |                                                           |                                                 | (2:03:05 PM)         |
-|      | h                                                         | Hour without leading zero. 0-23                 | 2                    |
-|      | hh                                                        | Hora com zero à esquerda. 00-23                 | 02                   |
-|      | m                                                         | Minutes without leading zero. 0-59              | 3                    |
-|      | mm                                                        | Minutes with leading zero. 00-59                | 03                   |
-|      | s                                                         | Seconds without leading zero. 0-59              | 5                    |
-|      | ss                                                        | Seconds with leading zero. 00-59                | 05                   |
-|      | \[h]                                                     | Tempo decorrido em horas                        | 14 (pode exceder 24) |
-|      | \[mm]                                                    | Tempo decorrido em minutos                      | 843                  |
-|      | \[ss]                                                    | Tempo decorrido em segundos                     | 50585                |
-|      | AM/PM                                                     | Períodos do dia. 24 hour fomat used if omitted. | PM                   |
+|      | Código<br/>(não sensível a maiúsculas e minúsculas) | Descrição                                                      | Exemplo              |
+| ---- | --------------------------------------------------------- | -------------------------------------------------------------- | -------------------- |
+| Date |                                                           |                                                                | (January 1, 2019)    |
+|      | m                                                         | Número do mês sem zero à esquerda                              | 1                    |
+|      | mm                                                        | Número do mês com zero à esquerda                              | 01                   |
+|      | mmm                                                       | Nome do mês, abreviado                                         | Jan                  |
+|      | mmmm                                                      | Nome do mês, long                                              | January              |
+|      | d                                                         | Day number without leading zero                                | 1                    |
+|      | dd                                                        | Número do dia com zero à esquerda                              | 01                   |
+|      | ddd                                                       | Dia da semana, curto                                           | Tue                  |
+|      | dddd                                                      | Dia da semana, longo                                           | Tuesday              |
+|      | yy                                                        | Ano, breve                                                     | 19                   |
+|      | yyyy                                                      | Ano, longo                                                     | 2019                 |
+| Hora |                                                           |                                                                | (2:03:05 PM)         |
+|      | h                                                         | Hour without leading zero. 0-23                                | 2                    |
+|      | hh                                                        | Hora com zero à esquerda. 00-23                                | 02                   |
+|      | m                                                         | Minutos sem zero à esquerda. 0-59                              | 3                    |
+|      | mm                                                        | Minutes with leading zero. 00-59                               | 03                   |
+|      | s                                                         | Segundos sem zero à esquerda. 0-59                             | 5                    |
+|      | ss                                                        | Seconds with leading zero. 00-59                               | 05                   |
+|      | \[h]                                                     | Tempo decorrido em horas                                       | 14 (pode exceder 24) |
+|      | \[mm]                                                    | Tempo decorrido em minutos                                     | 843                  |
+|      | \[ss]                                                    | Tempo decorrido em segundos                                    | 50585                |
+|      | AM/PM                                                     | Períodos do dia. Se omitido, utiliza-se o formato de 24 horas. | PM                   |
 > The code 'm' is interpreted depending on its position in the pattern. If it's immediately after 'h' or 'hh' or immediately before 's' or 'ss', it will be interpreted as minutes, otherwise it will be interpreted as months.
 
 ### Símbolos adicionais
@@ -246,16 +246,16 @@ In addition to the special characters and codes described in the previous sectio
 
 Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
 
-| Propriedade       | Tipo          | Descrição                                                                                                  |
-| ----------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
-| columnEnd         | inteiro longo | A última coluna a imprimir num intervalo de células. Default value = -1 (all columns)                      |
-| columnStart       | inteiro longo | A primeira coluna a imprimir num intervalo de células. Default value = -1 (all columns)                    |
-| repeatColumnEnd   | inteiro longo | The last column of a range of columns to print on the left of each page. Default value = -1 (all columns)  |
-| repeatColumnStart | inteiro longo | The first column of a range of columns to print on the left of each page. Default value = -1 (all columns) |
-| repeatRowEnd      | inteiro longo | The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)            |
-| repeatRowStart    | inteiro longo | The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)           |
-| rowEnd            | inteiro longo | A última linha a imprimir num intervalo de células. Default value = -1 (all rows)                          |
-| rowStart          | inteiro longo | A primeira linha a imprimir num intervalo de células. Default value = -1 (all rows)                        |
+| Propriedade       | Tipo          | Descrição                                                                                                      |
+| ----------------- | ------------- | -------------------------------------------------------------------------------------------------------------- |
+| columnEnd         | inteiro longo | A última coluna a imprimir num intervalo de células. Valor padrão = -1 (todas as colunas)                      |
+| columnStart       | inteiro longo | A primeira coluna a imprimir num intervalo de células. Valor padrão = -1 (todas as colunas)                    |
+| repeatColumnEnd   | inteiro longo | The last column of a range of columns to print on the left of each page. Valor padrão = -1 (todas as colunas)  |
+| repeatColumnStart | inteiro longo | The first column of a range of columns to print on the left of each page. Valor padrão = -1 (todas as colunas) |
+| repeatRowEnd      | inteiro longo | The last row of a range of rows to print on the top of each page. Valor padrão = -1 (todas as linhas)          |
+| repeatRowStart    | inteiro longo | The first row of a range of rows to print at the top of each page. Valor padrão = -1 (todas as linhas)         |
+| rowEnd            | inteiro longo | A última linha a imprimir num intervalo de células. Valor padrão = -1 (todas as linhas)                        |
+| rowStart          | inteiro longo | A primeira linha a imprimir num intervalo de células. Valor padrão = -1 (todas as linhas)                      |
 
 ### Cabeçalhos / Rodapés
 
@@ -282,22 +282,22 @@ Header and footer attributes are used to specify text or images in the left, rig
 
 The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
 
-| Caracteres | Descrição                        | Exemplo                                                                | Resultados                                           |
-| ---------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &          | Escape character                 | (ver exemplos abaixo)                                                  |                                                      |
-| P          | Página actual                    | printInfo.headerLeft:="This is page &P."                               | Esta é a página 5.|                                  |
-| N          | Contagem de páginas              | printInfo.headerLeft:="Existem &N páginas."                            | Existem 10 páginas.                                  |
-| D          | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="É &D."                                          | Estamos em 2015/6/19.                                |
-| T          | Hora actual                      | printInfo.headerLeft:="É &T."                                          | São 16:30:36.                                        |
-| G          | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
-| S          | Riscado                          | printInfo.headerLeft:="&SThis is text."                                | ~Isto é texto.~                                      |
-| U          | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | Isto é texto. (Sublinhado)                           |
-| B          | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **Isto é texto.**                                    |
-| I          | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *Isto é texto.*                                      |
-| "          | Prefixo do tipo de letra         | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
-| K          | Prefixo da cor do texto          | printInfo.headerLeft:="&KFF0000This is text."                          | Este é o texto (a vermelho).                         |
-| F          | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
-| A          | Nome da folha de cálculo         | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
+| Caracteres | Descrição                       | Exemplo                                                                | Resultados                                           |
+| ---------- | ------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
+| &          | Escape character                | (ver exemplos abaixo)                                                  |                                                      |
+| P          | Página actual                   | printInfo.headerLeft:="This is page &P."                               | Esta é a página 5.|                                  |
+| N          | Contagem de páginas             | printInfo.headerLeft:="Existem &N páginas."                            | Existem 10 páginas.                                  |
+| D          | Data atual (formato yyyy/mm/dd) | printInfo.headerLeft:="É &D."                                          | Estamos em 2015/6/19.                                |
+| T          | Hora actual                     | printInfo.headerLeft:="É &T."                                          | São 16:30:36.                                        |
+| G          | Imagem                          | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+| S          | Riscado                         | printInfo.headerLeft:="&SThis is text."                                | ~Isto é texto.~                                      |
+| U          | Sublinhado                      | printInfo.headerLeft:="&UThis is text."                                | Isto é texto. (Sublinhado)                           |
+| B          | Negrito                         | printInfo.headerLeft:="&BThis is text."                                | **Isto é texto.**                                    |
+| I          | Itálico                         | printInfo.headerLeft:="&IThis is text."                                | *Isto é texto.*                                      |
+| "          | Prefixo do tipo de letra        | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
+| K          | Prefixo da cor do texto         | printInfo.headerLeft:="&KFF0000This is text."                          | Este é o texto (a vermelho).                         |
+| F          | Workbook name                   | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
+| A          | Nome da folha de cálculo        | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
 
 ### Margens
 
@@ -342,7 +342,7 @@ Os atributos de página são utilizados para especificar as definições gerais 
 Paper size attributes are used to specify the dimensions or model of paper to use for printing. Existem duas formas de definir o tamanho do papel:
 
 * Tamanho personalizado - atributos de altura e largura
-* Standard size - kind attribute
+* Tamanho normal - atributo kind
 
 | Propriedade |        | Tipo          | Descrição                                                                                                        |
 | ----------- | ------ | ------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -375,7 +375,7 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 | Propriedade      | Tipo          | Descrição                                                                                                                                                                                            |
 | ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                                    |
-| showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`                   |
+| showColumnHeader | inteiro longo | Parâmetros de impressão do cabeçalho da coluna. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
 | showGridLine     | boolean       | Prints the gridlines. Valor padrão = "false"                                                                                                                                                         |
 | showRowHeader    | inteiro longo | Parâmetros de impressão de cabeçalhos de linha. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
 
@@ -399,7 +399,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.
 
-### Style objects & Style sheets
+### Objectos de estilo & Folhas de estilo
 
 Style objects contain the style settings. They can be used either in a style sheet or on their own. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands. You can also use style objects when defining custom table themes using the [VP SET TABLE THEME](method-list.md#vp-set-table-theme) or [VP CREATE TABLE](method-list.md#vp-create-table) commands.
 
@@ -427,7 +427,7 @@ Exemplo:
 | Propriedade           | Tipo          | Descrição                                | Valores possíveis                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------- | ------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | backColor             | text          | Define a cor do fundo.                   | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
-| backgroundImage       | picture, text | Specifies a background image.            | Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included. |
+| backgroundImage       | picture, text | Especifica uma imagem de fundo.          | Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included. |
 | backgroundImageLayout | inteiro longo | Define o esquema para a imagem de fundo. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                       |
 | foreColor             | text          | Define a cor do primeiro plano.          | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
 
@@ -436,7 +436,7 @@ Exemplo:
 | Propriedade                                                                |       | Tipo          | Descrição                                                                               | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------- | ----- | ------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Define a linha de fronteira correspondente                                              |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text          | Defines the color of the border. Predefinição = black.                                  | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
+|                                                                            | color | text          | Define a cor da margem. Predefinição = black.                                           | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
 |                                                                            | style | inteiro longo | Defines the style of the border. Predefinição = vazio. Não pode ser null ou indefinido. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### Fontes e texto
@@ -463,7 +463,7 @@ Exemplo:
 | ----------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | cellPadding | text          | Defines the cell padding                                                                                                     |                                                                                                                      |
 | hAlign      | inteiro longo | Defines the horizontal alignment of cell contents.                                                                           | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | boolean       | Especifica o estado de proteção da célula. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = locked, False = unlocked.                                                                                     |
+| locked      | boolean       | Especifica o estado de proteção da célula. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = bloqueado, False = desbloqueado.                                                                              |
 | shrinkToFit | boolean       | Specifies if the contents of the cell should be reduced.                                                                     | True = conteúdo reduzido, False = sem redução.                                                                       |
 | tabStop     | boolean       | Specifies if the focus to the cell can be set using the Tab key.                                                             | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
 | vAlign      | inteiro longo | Specifies the vertical alignment of cell contents.                                                                           | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
@@ -472,7 +472,7 @@ Exemplo:
 
 | Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                         |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | text | Defines the name of the style                                                                                                                                                                                                                                                                     |
+| name        | text | Define o nome do estilo                                                                                                                                                                                                                                                                           |
 | parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Apenas disponível quando se utiliza uma folha de estilos. |
 
 ## Objeto 4D View Pro

@@ -88,7 +88,7 @@
     "description": "The generated-index page description for category Administration in sidebar docs"
   },
   "sidebar.docs.category.4D Server Administration Window": {
-    "message": "4D Server Administration Window",
+    "message": "Janela de administração de 4D Server",
     "description": "The label for category 4D Server Administration Window in sidebar docs"
   },
   "sidebar.docs.category.Web Administration": {
@@ -168,7 +168,7 @@
     "description": "The generated-index page title for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.description": {
-    "message": "REST API for global information",
+    "message": "API REST para informações globais",
     "description": "The generated-index page description for category API (general) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass)": {

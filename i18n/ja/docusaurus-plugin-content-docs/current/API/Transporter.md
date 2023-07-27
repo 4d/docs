@@ -96,7 +96,7 @@ title: Transporter クラス
 | 値        | 定数                             | 説明                          |
 | -------- | ------------------------------ | --------------------------- |
 | APOP     | `POP3 authentication APOP`     | APOP プロトコルを使用した認証 (POP3 のみ) |
-| CRAM-MD5 | `POP3 authentication CRAM-MD5` | CRAM-MD5 プロトコルを使用した認証       |
+| CRAM-MD5 | `POP3 authentication CRAM MD5` | CRAM-MD5 プロトコルを使用した認証       |
 | LOGIN    | `POP3 authentication login`    | LOGIN プロトコルを使用した認証          |
 | OAUTH2   | `POP3 authentication OAUTH2`   | OAuth2 プロトコルを使用した認証         |
 | PLAIN    | `POP3 authentication plain`    | PLAIN プロトコルを使用した認証          |

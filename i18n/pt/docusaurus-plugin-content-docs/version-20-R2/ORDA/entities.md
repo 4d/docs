@@ -3,12 +3,12 @@ id: entities
 title: Trabalhar com dados
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das [selecções de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
 
 
 ## Criar uma entidade
 
-There are two ways to create a new entity in a dataclass:
+Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 *   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
 *   You can also create an entity using the `dataClass.new( )` method.
@@ -114,7 +114,7 @@ You can access data through the related object(s):
  $EntitySel:=ds. Company.all().first().companyProjects //get the selection of projects for the company
 ```
 
-Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
+Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. Por exemplo, considere a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
@@ -337,7 +337,7 @@ This code returns in *$localEmails* a collection of email addresses as strings.
 
 ### Selecções de entidades e atributos de relações
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. Por exemplo, considere a seguinte estrutura:
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
@@ -354,7 +354,7 @@ The last line will return in $myInvoices an entity selection of all invoices tha
 
 You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
 
-ORDA provides you with two entity locking modes:
+ORDA fornece-lhe dois modos de bloqueio de entidades:
 
 - an automatic "optimistic" mode, suitable for most applications,
 - a "pessimistic" mode allowing you to lock entities prior to their access.

@@ -5,7 +5,7 @@ title: Criação de menus e barras de menus
 
 É possível criar menus e barras de menu:
 
-- using the Menus editor of the 4D Toolbox window. In this case, menus and menu bars are stored in the application's structure.
+- usando o editor de menus da janela da caixa de ferramentas 4D. In this case, menus and menu bars are stored in the application's structure.
 - dynamically, using the language commands from the "Menus" theme. In this case, menus and menu bars are not stored, they only exist in memory.
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
@@ -32,7 +32,7 @@ You can modify this menu bar as desired or create additional ones.
 ### Utilizar o editor de menus
 
 1. Select the item you want to create and click the add ![](../assets/en/Menus/PlussNew.png) button below the menu bar area. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
-2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Menu bar names must be unique. Podem conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
+2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Os nomes das barras de menu devem ser únicos. Podem conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### Utilizar a linguagem 4D
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
@@ -92,7 +92,7 @@ A menu can be attached to a menu bar or to another menu.
 
 - To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](../assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
 - To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-  ![](../assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
+  ![](../assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. O menu que está a ser anexado torna-se assim um sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
 
 #### Desvinculação de menus
 

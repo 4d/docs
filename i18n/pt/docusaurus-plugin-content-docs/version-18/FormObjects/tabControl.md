@@ -65,7 +65,7 @@ FORM GOTO PAGE(arrPages)
 
 The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
 
-Here is an example object method:
+Eis um exemplo de método objeto:
 
 ```4d
  Case of

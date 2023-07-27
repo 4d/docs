@@ -453,10 +453,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| 引数   | タイプ     |    | 説明                                                         |
-| ---- | ------- | -- | ---------------------------------------------------------- |
-| path | Text    | -> | ファイルのPOSIX相対パス名                                            |
-| 戻り値  | 4D.File | <- | `File` オブジェクト (無効なパスの場合には null)|<!-- END REF -->
+| 引数   | タイプ     |    | 説明                                                               |
+| ---- | ------- | -- | ---------------------------------------------------------------- |
+| path | Text    | -> | ファイルのPOSIX相対パス名                                                  |
+| 戻り値  | 4D.File | <- | `File` オブジェクト (無効な POSIXパスの場合には null)|<!-- END REF -->
 
 |
 
@@ -468,7 +468,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 **戻り値**
 
-`File` オブジェクト (無効な *path* の場合には null)。
+`File` オブジェクト (無効な POSIX *path* の場合には null)。
 
 #### 例題
 
@@ -558,10 +558,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.folder().Params -->
-| 引数   | タイプ       |    | 説明                                                                       |
-| ---- | --------- | -- | ------------------------------------------------------------------------ |
-| path | Text      | -> | ファイルのPOSIX相対パス名                                                          |
-| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null)|<!-- END REF -->
+| 引数   | タイプ       |    | 説明                                                                             |
+| ---- | --------- | -- | ------------------------------------------------------------------------------ |
+| path | Text      | -> | ファイルのPOSIX相対パス名                                                                |
+| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な POSIX *path* の場合には null)|<!-- END REF -->
 
 |
 
@@ -573,7 +573,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 **戻り値**
 
-`Folder` オブジェクト (無効な *path* の場合には null)。
+`Folder` オブジェクト (無効な POSIX *path* の場合には null)。
 
 #### 例題
 

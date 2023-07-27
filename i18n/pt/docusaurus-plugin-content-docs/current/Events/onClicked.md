@@ -12,7 +12,7 @@ title: On Clicked
 
 The `On Clicked` event is generated when the user clicks on an object.
 
-> Some form objects can be activated with the keyboard. For example, once a check box gets the focus, it can be entered using the space bar. In such a case, the `On Clicked` event is still generated.
+> Alguns objetos do formulário podem ser ativados com o teclado. Por exemplo, quando uma caixa de verificação recebe o foco, pode ser introduzida utilizando a barra de espaços. In such a case, the `On Clicked` event is still generated.
 
 The `On Clicked` event usually occurs once the mouse button is released. No entanto, há várias excepções:
 
@@ -24,7 +24,7 @@ The `On Clicked` event usually occurs once the mouse button is released. No enta
 
 In the context of an `On Clicked` event, you can test the number of clicks made by the user by means of the `Clickcount` command.
 
-### On Clicked and On Double Clicked
+### On Clicked e On Double Clicked
 
 After the `On Clicked` or [`On Double Clicked`](onDoubleClicked.md) object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns `On Clicked` or [`On Double Clicked`](onDoubleClicked.md), depending on the case.
 
@@ -40,7 +40,7 @@ This event is generated when the user clicks anywhere on a 4D View Pro document.
 | description | text          | "On Clicked"             |
 | objectName  | text          | Nome da área 4D View Pro |
 | sheetName   | text          | Nome da folha do evento  |
-| range       | object        | Cell range               |
+| range       | object        | Intervalo de células     |
 
 #### Exemplo
 

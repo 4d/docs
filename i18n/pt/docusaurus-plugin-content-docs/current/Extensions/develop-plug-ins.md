@@ -9,7 +9,7 @@ Although 4D provides hundred of built-in methods used to manipulate objects, rec
 
 It is obvious that covering all areas of both the macOS and Windows operating systems by way of 4D commands would certainly lead to a product with thousands of commands, and at the same time, most users would have no need for such a large set of capabilities. Also, creating such an all-encompassing tool would make the 4D environment incredibly complex and would take most users months of study before useful results could be expected.
 
-The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. 4D Plug-ins multiply that application or user's power and productivity.
+The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. Os 4D Plug-ins multiplicam o poder e a produtividade da aplicação ou do usuário.
 
 ## Por que a necessidade de um plug-in?
 
@@ -40,4 +40,4 @@ Um plug-in pode ser muito simples, com apenas uma rotina executando uma tarefa m
 
 ## Partilhar plug-ins
 
-We encourage you to support the 4D developer community by sharing your plug-ins, preferably on the [GitHub platform](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.  
+Encorajamo-lo a apoiar a comunidade de programadores 4D partilhando os seus plug-ins, de preferência na plataforma [GitHub](https://github.com/topics/4d-plugin). We recommend that you use the **`4d-plugin`** topic to be correctly referenced.  

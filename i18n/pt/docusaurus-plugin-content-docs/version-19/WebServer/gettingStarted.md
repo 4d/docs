@@ -55,7 +55,7 @@ O servidor Web processa o pedido e devolve-o:
 
 ![](../assets/en/WebServer/hello.png)
 
-## Getting data from the database
+## Obter dados da base de dados
 
 Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
 

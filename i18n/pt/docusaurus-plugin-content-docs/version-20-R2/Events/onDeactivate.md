@@ -3,9 +3,9 @@ id: onDeactivate
 title: On Deactivate
 ---
 
-| Code | Pode ser chamado por | Definição                                           |
-| ---- | -------------------- | --------------------------------------------------- |
-| 12   | Formulário           | The form’s window ceases to be the frontmost window |
+| Code | Pode ser chamado por | Definição                                                  |
+| ---- | -------------------- | ---------------------------------------------------------- |
+| 12   | Formulário           | A janela do formulário deixa de ser a janela mais à frente |
 
 
 ## Descrição

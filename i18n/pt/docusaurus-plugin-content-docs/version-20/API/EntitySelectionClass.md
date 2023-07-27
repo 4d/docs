@@ -290,7 +290,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 #### Descrição
 
-The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->addiciona a *entity* especificada ou *entitySelection* para a selleção de entidade original e retona a seleção de entidade modificada<!-- END REF -->.
+A função `.add()` <!-- REF #EntitySelectionClass.add().Summary -->addiciona a *entity* especificada ou *entitySelection* para a selleção de entidade original e retona a seleção de entidade modificada<!-- END REF -->.
 > Esta função não modifica a entity selection original.
 
 :::info warning
@@ -379,7 +379,7 @@ $sellist2:=$sellist2.add($sellist1)
 
 #### Descrição
 
-The `.and()` function <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; se retornar uma nova e não ordenada seleção de entidade que contenha só as entidades referenciaadas tanto na seleção de entidade quanto no parâmetro.
+A função `.and()` <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; se retornar uma nova e não ordenada seleção de entidade que contenha só as entidades referenciaadas tanto na seleção de entidade quanto no parâmetro.
 
 *   Se passar *entity* como parâmetro, se combina esta entidade com a entity selection. Se a entidade pertencer à entity selection, se devolve uma nova entity selection que só contém a entidade. Senão, uma seleção de entidades vazia é retornada.
 *   Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Uma nova seleção de entidade que contenha só as entidades que são referenciadas em ambas as seleções sejam retornadas. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.

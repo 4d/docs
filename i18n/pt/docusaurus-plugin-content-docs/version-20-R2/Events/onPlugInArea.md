@@ -3,9 +3,9 @@ id: onPlugInArea
 title: On Plug in Area
 ---
 
-| Code | Pode ser chamado por                                               | Definição                                                     |
-| ---- | ------------------------------------------------------------------ | ------------------------------------------------------------- |
-| 19   | Form - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) | An external object requested its object method to be executed |
+| Code | Pode ser chamado por                                               | Definição                                                   |
+| ---- | ------------------------------------------------------------------ | ----------------------------------------------------------- |
+| 19   | Form - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) | Um objeto externo solicitou a execução do seu método objeto |
 
 
 ## Descrição

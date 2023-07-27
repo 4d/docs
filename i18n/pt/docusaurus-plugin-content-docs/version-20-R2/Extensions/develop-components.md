@@ -3,14 +3,14 @@ id: develop-components
 title: Componentes de desenvolvimento
 ---
 
-A 4D component is a set of 4D functions, methods, and forms representing one or more functionalities that can be [installed and used in 4D applications](Concepts/components.md). For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
+Um componente 4D é um conjunto de funções, métodos e formulários 4D que representam uma ou mais funcionalidades que podem ser [instaladas e utilizadas nas aplicações 4D](Concepts/components.md). For example, you can develop a 4D e-mail component that manages every aspect of sending, receiving and storing e-mails in 4D applications.
 
 You can develop 4D components for your own needs and keep them private. You can also [share your components with the 4D community](https://github.com/topics/4d-component).
 
 
 ## Definições
 
-- **Matrix Project**: 4D project used for developing the component. The matrix project is a standard project with no specific attributes. Um projeto matricial forma um componente único.
+- **Matrix Project**: 4D project used for developing the component. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
@@ -86,7 +86,7 @@ Conversely, for security reasons, by default a component cannot execute project 
 Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. Por exemplo:
 
 ```4d 
-// Host Method
+// Método host
 component_method("host_method_name")
 ```
 
@@ -101,11 +101,11 @@ component_method("host_method_name")
 > Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
 
 
-## Sharing of classes and functions
+## Partilha de classes e funções
 
 By default, component classes and functions cannot be called from the 4D Code Editor of the host project. If you want your component classes and functions to be exposed in the host projects, you need to declare a component namespace. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
 
-### Declaring the component namespace
+### Declaração do namespace
 
 To allow classes and functions of your component to be exposed in the host projects, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. By default, the area is empty: component classes are not available outside of the component context.
 
@@ -138,7 +138,7 @@ A component's ORDA classes are not available in its host project. For example, i
 
 Just like in any project, you can create hidden classes and functions in the component by prefixing names with an underscore ("_"). When a [component namespace is defined](#declaring-the-component-namespace), hidden classes and functions of the component will not appear as suggestions when using code completion.
 
-Note however that they can still be used if you know their names. For example, the following syntax is valid even if the `_Rectangle` class is hidden:
+No entanto, se souberes os seus nomes, podes utilizá-los. For example, the following syntax is valid even if the `_Rectangle` class is hidden:
 
 ```4d
 $rect:=cs.eGeometry._Rectangle.new(10;20)
@@ -327,8 +327,8 @@ Lendo de um banco externo:
 
 ## Uso de formulários
 
-- Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente.
-- A component can call table forms of the host project. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
+- Só os "formulários projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente.
+- Um componente pode chamar formulários tabela do projeto host. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
 
 > Se um componente utilizar o comando `ADD RECORD`, se mostrará o formulário de entrada atual do projeto local, no contexto do projeto local. Por isso se o formulário incluir variáveis, o componente não terá acesso às mesmas.
 
@@ -363,10 +363,10 @@ By default, all the code of a matrix project installed as a component is potenti
 - The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
 - The non-hidden classes and functions can be viewed in the debugger [if a namespace is declared](#declaring-the-component-namespace).
 
-To protect the code of a component effectively, simply [compile and build](Desktop/building.md#build-component) the matrix project and provide it in the form of a .4dz file. When a compiled matrix project is installed as a component:
+To protect the code of a component effectively, simply [compile and build](Desktop/building.md#build-component) the matrix project and provide it in the form of a .4dz file. Quando um projeto compilado usado como uma matriz é instalado como um componente:
 
 - The shared project methods, classes and functions can be called in the methods of the host project and are also visible on the Methods Page of the Explorer. However, their contents will not appear in the preview area and in the debugger.
-- The other project methods of the matrix project will never appear.
+- Os outros métodos projeto do projeto matriz nunca aparecerão.
 
 
 ## Partilha de componentes

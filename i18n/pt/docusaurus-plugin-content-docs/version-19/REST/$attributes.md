@@ -64,11 +64,11 @@ Se passarmos a petição REST seguinte para nossa classe de dados Company (que t
 }
 ```
 
-If you want to get all attributes from employees:
+Se se pretender obter todos os atributos dos empregados:
 
  `GET  /rest/Company(1)/?$attributes=employees.*`
 
-If you want to get last name and job name attributes from employees:
+Se pretender obter os atributos apelido e nome da profissão dos empregados:
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
@@ -101,6 +101,6 @@ Se quiser obter todos os atributos do empregador:
 
  `GET  /rest/Employee(1)?$attributes=employer.*`
 
-If you want to get the last names of all employees of the employer:
+Se quiser obter os sobrenomes de todos os funcionários da empresa:
 
  `GET  /rest/Employee(1)?$attributes=employer.employees.lastname`

@@ -32,7 +32,7 @@ These principles are illustrated in the following graphics:
 Processes that manage sessions for datastore access are shown in the 4D Server administration window:
 
 - nome: "REST Handler: \<process name\>"
-- type: HTTP Server Worker type
+- type: type Worker Server HTTP
 - session: session name is the user name passed to the Open datastore command.
 
 In the following example, two processes are running for the same session:

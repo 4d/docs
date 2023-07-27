@@ -747,7 +747,7 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Índice para início do teste em                                                     |
 | methodName | Text       | -> | Nome do método a chamar para o teste                                               |
-| param      | Mixed      | -> | Parameter(s) to pass to methodName                                                 |
+| param      | Mixed      | -> | Parâmetro(s) a transmitir a methodName                                             |
 | Resultados | Parâmetros | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
 |
@@ -1281,7 +1281,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 #### Descrição
 
-A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
+A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->e não os elementos em si. Indices são retornados em ordem ascendente.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:

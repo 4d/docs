@@ -34,7 +34,7 @@ These principles are illustrated in the following graphics:
 Processes that manage sessions for datastore access are shown in the 4D Server administration window:
 
 *   nome: "REST Handler: \<process name\>"
-*   type: HTTP Server Worker type
+*   type: type Worker Server HTTP
 *   session: session name is the user name passed to the Open datastore command.
 
 In the following example, two processes are running for the same session:
@@ -59,10 +59,10 @@ A session is automatically closed by 4D when there has been no activity during i
 
 If a request is sent to the remote datastore after the session has been closed, it is automatically re-created if possible (license available, server not stopped...). However, keep in mind that the context of the session regarding locks and transactions is lost (see above).
 
-## Client/server optimization
+## Otimização cliente/servidor
 
 4D provides optimizations for ORDA requests that use entity selections or load entities in client/server configurations (datastore accessed remotely through `ds` or via `Open datastore`). These optimizations speed up the execution of your 4D application by reducing drastically the volume of information transmitted over the network. Estes incluem:
-* the **optimization context**
+* o **contexto de otimização**
 * a **cache ORDA**
 
 ### Contexto
@@ -95,7 +95,7 @@ The optimization context is based upon the following implementations:
 
 #### Exemplo
 
-Given the following code:
+Dado o seguinte código:
 
 ```4d
  $sel:=$ds. Employee.query("firstname = ab@")
@@ -139,7 +139,7 @@ All ORDA functions that handle entity selections support the **context** propert
  // associated to context "longList" is applied
 ```
 
-#### Entity selection-based list box
+#### List box baseado em uma seleção de entidades
 
 Entity selection optimization is automatically applied to entity selection-based list boxes in client/server configurations, when displaying and scrolling a list box content: only the attributes displayed in the list box are requested from the server.
 

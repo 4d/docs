@@ -43,7 +43,7 @@ A barra de ferramentas do depurador inclui vários botões, associados a atalhos
 
 > Os atalhos padrão podem ser personalizados na página Atalhos da caixa de diálogo Preferências.
 
-#### No Trace
+#### Retomar execução
 
 Tracing stops and normal method execution resumes.
 
@@ -136,7 +136,7 @@ $c:=a+b
 
     A variável `$a` ainda não está inicializada, mas é exibida porque é usada na linha a ser executada.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. Nesta altura, o tema mostra:
+2. Clique no botão **Step Over**. The program counter is now set to the line `b:=a+1`. Nesta altura, o tema mostra:
 
     | $a | 1          |
     | -- | ---------- |
@@ -254,7 +254,7 @@ Na imagem acima:
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
   * $1 é um ponteiro para a tabela `[Employee]`
-  * $2 is a pointer to the `ID` field in the  `[Employee]` table
+  * $2 é um ponteiro para o campo `ID` na tabela  `[Employee]`
   * $3 é um parâmetro alfanumérico cujo valor é "Z"
 
 Você pode clicar duas vezes no nome de qualquer método para exibir seu conteúdo no [painel código fonte](#source-code-pane).
@@ -387,18 +387,18 @@ The contextual menu of the Source Code Pane provides access to several functions
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 * **Goto Definition**: Goes to where the selected object is defined. Este comando está disponível para:
-  * *Project methods:* displays method contents in a new window of the Code Editor
-  * *Fields:* Displays field properties in the inspector of the Structure window
-  * *Tables:* Displays table properties in the inspector of the Structure window
-  * *Forms:* Displays form in the Form editor
-  * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
-* **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
+  * *Métodos projeto:* apresenta o conteúdo do método numa nova janela do editor de código
+  * *Campos:* exibe as propriedades do campo no inspetor da janela de estrutura
+  * *Tabelas:* apresenta as propriedades da tabela no inspetor da janela de estrutura
+  * *Formulários:* apresenta o formulário no editor de formulários
+  * *Variáveis* (local, processo, inter-processo ou parâmetro $n): apresenta a linha no método atual ou entre os métodos do compilador onde a variável é declarada
+* **Pesquisar Referências** (também disponível no Editor de Código): procura todos os objetos do projeto (métodos e formulários) nos quais o elemento atual do método é referenciado. O elemento atual é o elemento selecionado ou o elemento onde se encontra o cursor. Pode ser o nome de um campo, variável, comando, cadeia de caracteres, etc. Os resultados da pesquisa são apresentados numa nova janela de resultados padrão.
 * **Copiar**: cópia padrão da expressão selecionada no contêiner de dados.
 * **Copiar para a janela de expressão**: copia a expressão selecionada para a janela de avaliação.
 * **Execute to cursor**:Executa as instruções entre o contador de programas e a linha selecionada do método (onde está o cursor).
 * **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
 * **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
-* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
+* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Quaisquer alterações efetuadas modificam permanentemente o ponto de interrupção.
 
 ### Localizar seguinte/anterior
 
@@ -407,7 +407,7 @@ Os atalhos específicos permitem-lhe encontrar cadeias de caracteres idênticas 
 * Para procurar as cadeias de caracteres idênticas seguintes, prima **Ctrl+E** (Windows) ou **Cmd+E** (macOS)
 * Para procurar as cadeias de caracteres idênticas anteriores, prima **Ctrl+Shift+E** (Windows) ou **Cmd+Shift+E** (macOS)
 
-The search is carried out only if you select at least one character in the Source code pane.
+A pesquisa só é efetuada se selecionar pelo menos um carácter no painel Código fonte.
 
 ## Atalhos
 

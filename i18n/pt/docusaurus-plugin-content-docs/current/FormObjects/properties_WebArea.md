@@ -4,7 +4,7 @@ title: Área Web
 ---
 
 ---
-## Access 4D methods
+## Acesso a métodos 4D
 
 You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
 
@@ -34,9 +34,9 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis          |
-| -------------- | ------------- | -------------------------- |
-| progressSource | string        | Name of a Longint variable |
+| Nome           | Tipo de dados | Valores possíveis            |
+| -------------- | ------------- | ---------------------------- |
+| progressSource | string        | Nome de uma variável Longint |
 
 #### Objectos suportados
 
@@ -79,7 +79,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 
 ---
-## Use embedded Web rendering engine
+## Utilizar o motor de renderização Web integrado
 
 This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
 

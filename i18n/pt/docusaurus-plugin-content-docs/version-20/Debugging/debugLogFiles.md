@@ -366,10 +366,10 @@ The server-side ORDA log records each ORDA request processed by the server, as w
 Como iniciar esse log:
 
 ```4d
-    //on the server
+    //no servidor
 SET DATABASE PARAMETER(4D Server log recording;1)
 ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-    //srl... parameter is optional 
+    //srl... O parâmetro é opcional 
 SET DATABASE PARAMETER(4D Server log recording;0) 
 ```
 

@@ -4888,13 +4888,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| 引数         | タイプ     |    | 説明                                    |
-| ---------- | ------- | -- | ------------------------------------- |
-| vpAreaName | Object  | -> | 4D View Pro フォームオブジェクト名               |
-| dataObj    | Object  | -> | データコンテキストに読み込むデータオブジェクト               |
-| dataColl   | Object  | -> | データコンテキストに読み込むデータのコレクション              |
-| options    | Object  | -> | 追加のオプション                              |
-| sheet      | Integer | -> | シートのインデックス|<!-- END REF -->
+| 引数         | タイプ        |    | 説明                                    |
+| ---------- | ---------- | -- | ------------------------------------- |
+| vpAreaName | Object     | -> | 4D View Pro フォームオブジェクト名               |
+| dataObj    | Object     | -> | データコンテキストに読み込むデータオブジェクト               |
+| dataColl   | Collection | -> | データコンテキストに読み込むデータのコレクション              |
+| options    | Object     | -> | 追加のオプション                              |
+| sheet      | Integer    | -> | シートのインデックス|<!-- END REF -->
 
 |
 

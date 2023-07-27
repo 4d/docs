@@ -58,7 +58,7 @@ Também pode obter uma referencia em um datastore remoto aberto passando seu id 
 
 Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. The following rules are applied:
+Using `ds` requires that the target database is compliant with ORDA, as specified in the **ORDA prerequisites** section. São aplicadas as seguintes regras:
 
 * Uma datastore só referencia as tabelas com uma única chave primária. Tables without a primary key or with composite primary keys are not referenced.
 * BLOB type attributes are not managed in the datastore.

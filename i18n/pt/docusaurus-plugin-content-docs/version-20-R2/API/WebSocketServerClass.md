@@ -154,11 +154,11 @@ Esta chamada de retorno é feita quando o handshake estiver concluído. Deve ser
 
 **WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
-| Parâmetro |      | Tipo               |    | Descrição                        |
-| --------- | ---- | ------------------ |:--:| -------------------------------- |
-| WSServer  |      | 4D.WebSocketServer | <- | Objeto servidor WebSocket actual |
-| "event"   |      | Object             | <- | Parâmetros                       |
-|           | type | Text               |    | "open"                           |
+| Parâmetro |      | Tipo               |    | Descrição                            |
+| --------- | ---- | ------------------ |:--:| ------------------------------------ |
+| WSServer  |      | 4D.WebSocketServer | <- | Objecto actual do servidor WebSocket |
+| "event"   |      | Object             | <- | Parâmetros                           |
+|           | type | Text               |    | "open"                               |
 
 Evento emitido quando o servidor websocket é iniciado.
 
@@ -367,7 +367,7 @@ Esta propriedade é só de leitura.
 
 #### Descrição
 
-A propriedade `.handler` contém <!-- REF #WebSocketServerClass.handler.Summary -->o acessor que obtém o objecto `WSSHandler` utilizado para iniciar o servidor WebSocket<!-- END REF -->.
+The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary -->o acessor que obtém o objecto `WSSHandler` utilizado para iniciar o servidor WebSocket<!-- END REF -->.
 
 <!-- END REF -->
 

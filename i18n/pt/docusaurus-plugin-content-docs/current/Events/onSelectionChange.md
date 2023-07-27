@@ -16,14 +16,14 @@ This event can be generated in different contexts.
 ### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Propriedade   | Tipo          | Descrição                |
-| ------------- | ------------- | ------------------------ |
-| code          | inteiro longo | 31                       |
-| description   | text          | "On Selection Change"    |
-| objectName    | text          | Nome da área 4D View Pro |
-| sheetName     | text          | Nome da folha do evento  |
-| oldSelections | object        | Cell range before change |
-| newSelections | object        | Cell range after change  |
+| Propriedade   | Tipo          | Descrição                               |
+| ------------- | ------------- | --------------------------------------- |
+| code          | inteiro longo | 31                                      |
+| description   | text          | "On Selection Change"                   |
+| objectName    | text          | Nome da área 4D View Pro                |
+| sheetName     | text          | Nome da folha do evento                 |
+| oldSelections | object        | Intervalo de células antes da alteração |
+| newSelections | object        | Intervalo de células após a alteração   |
 
 #### Exemplo
 
@@ -36,7 +36,7 @@ The current selection of rows or columns is modified. In this context, the [even
 
 ### Formulário lista
 
-The current record or the current selection of rows is modified in a list form.
+O registo atual ou a seleção atual de linhas é modificado num formulário lista.
 
 
 ### Lista hierárquica

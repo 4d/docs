@@ -42,7 +42,7 @@
     "message": "Administração"
   },
   "4D Server Administration Window": {
-    "message": "4D Server Administration Window"
+    "message": "Janela de administração de 4D Server"
   },
   "Web Administration": {
     "message": "Administração Web"
@@ -60,7 +60,7 @@
     "message": "Direitos de acesso"
   },
   "Maintenance and Security Center": {
-    "message": "Maintenance and Security Center"
+    "message": "Centro de manutenção e segurança"
   },
   "Backup and Restore": {
     "message": "Cópia de segurança e restauração"
@@ -153,7 +153,7 @@
     "message": "Logótipo da faixa 4D"
   },
   "homepage.hero.title": {
-    "message": "Documentation for 4D developers"
+    "message": "Documentação para os programadores 4D"
   },
   "Documentation updates": {
     "message": "Actualizações da documentação"
@@ -243,7 +243,7 @@
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tagged with \"{tagName}\"",
+    "message": "{nPosts} etiquetados com \"{tagName}\"",
     "description": "The title of the page for a blog tag"
   },
   "theme.tags.tagsPageLink": {
@@ -314,7 +314,7 @@
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
+    "message": "{nDocsTagged} com \"{tagName}\"",
     "description": "The title of the page for a docs tag"
   },
   "theme.common.headingLinkTitle": {
@@ -469,7 +469,7 @@
     "description": "The label for save recent search button"
   },
   "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
-    "message": "Remove this search from history",
+    "message": "Remover esta pesquisa do histórico",
     "description": "The label for remove recent search button"
   },
   "theme.SearchModal.startScreen.favoriteSearchesTitle": {

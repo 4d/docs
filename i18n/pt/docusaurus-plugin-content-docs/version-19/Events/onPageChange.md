@@ -16,4 +16,4 @@ Note that it is generated after the page is fully loaded, i.e. once all the obje
 
 > The only exception is 4D View Pro areas, for which you need to call the [On VP Ready](onVpReady.md) specific event.
 
-The `On Page Change` event is useful for executing code that requires all objects to be initialized beforehand. You can also use it to optimize the application by executing code (for example, a search) only after a specific page of the form is displayed and not just as soon as page 1 is loaded. If the user does not go to this page, the code is not executed.
+The `On Page Change` event is useful for executing code that requires all objects to be initialized beforehand. You can also use it to optimize the application by executing code (for example, a search) only after a specific page of the form is displayed and not just as soon as page 1 is loaded. Se o usuário não for a esta página, o código não é executado.

@@ -61,6 +61,7 @@ FileHandle オブジェクトは共有できません。
 | [<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeWrite.Summary -->|
 | [<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.charset.Summary -->|
 | [<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.eof.Summary -->|
+| [<!-- INCLUDE #FileHandleClass.file.Syntax -->](#file)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.file.Summary -->|
 | [<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.getSize().Summary -->|
 | [<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.mode.Summary -->|
 | [<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.offset.Summary -->|
@@ -175,6 +176,20 @@ FileHandle オブジェクトは共有できません。
 
 <!-- END REF -->
 
+
+<!-- REF FileHandleClass.file.Desc -->
+## .file
+
+<!-- REF #FileHandleClass.file.Syntax -->**.file** : 4D.File<!-- END REF -->
+
+
+#### 説明
+
+`.file` プロパティは、 <!-- REF #FileHandleClass.file.Summary -->作成された FileHandle の対象である [4D.File](FileClass.md) オブジェクトを格納します<!-- END REF -->。
+
+このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
 
 
 <!-- REF FileHandleClass.getSize().Desc -->

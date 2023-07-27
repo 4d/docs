@@ -970,7 +970,7 @@ El único atributo obligatorio es "valueType" y sus valores soportados son "text
 
 #### value
 
-Los valores de las celdas se almacenan en el atributo "valor". Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
+Los valores de las celdas se almacenan en el atributo "value". Este atributo se utiliza tanto para la entrada como para la salida. También puede utilizarse para definir valores por defecto cuando se utilizan listas (ver a continuación).
 
 ````4d
  ARRAY OBJECT(obColumn;0) //array columna 

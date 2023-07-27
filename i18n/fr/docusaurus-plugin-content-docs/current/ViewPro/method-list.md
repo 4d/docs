@@ -4886,13 +4886,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Paramètres | Type    |    | Description                                              |
-| ---------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName | Object  | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| dataObj    | Object  | -> | Data object to load in the data context                  |
-| dataColl   | Object  | -> | Data collection to load in the data context              |
-| options    | Object  | -> | Options supplémentaires                                  |
-| sheet      | Integer | -> | Numéro d'indice de la feuille|<!-- END REF -->
+| Paramètres | Type       |    | Description                                              |
+| ---------- | ---------- | -- | -------------------------------------------------------- |
+| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| dataObj    | Object     | -> | Data object to load in the data context                  |
+| dataColl   | Collection | -> | Data collection to load in the data context              |
+| options    | Object     | -> | Options supplémentaires                                  |
+| sheet      | Integer    | -> | Numéro d'indice de la feuille|<!-- END REF -->
 
 |
 

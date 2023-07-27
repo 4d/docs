@@ -235,9 +235,9 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis            |
-| --------------- | ------------- | ---------------------------- |
-| rowHeightSource | string        | Name of a 4D array variable. |
+| Nome            | Tipo de dados | Valores possíveis              |
+| --------------- | ------------- | ------------------------------ |
+| rowHeightSource | string        | Nome de uma variável array 4D. |
 
 #### Objectos suportados
 

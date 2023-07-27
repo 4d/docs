@@ -5,7 +5,7 @@ title: Arquitetura de um projeto 4D
 
 A 4D project is made of several folders and files, stored within a single project root folder (package folder). Por exemplo:
 
-- MyPackage (*project root folder*)
+- MyPackage (*pasta de raiz do projeto*)
   - Componentes
   - Dados
     - Logs
@@ -21,11 +21,11 @@ A 4D project is made of several folders and files, stored within a single projec
   - userPreferences.username
   - WebFolder
 
-> If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
+> Se o seu projeto tiver sido convertido a partir de uma base de dados binária, poderão existir pastas adicionais. Consulte "Conversão de bases de dados em projetos" em [doc.4d.com](https://doc.4d.com).
 
 ## Pasta Project
 
-The Project folder typically contains the following hierarchy:
+A pasta Project contém normalmente a seguinte hierarquia:
 
 - Ficheiro *nomApplication*.4DProject
 - Sources
@@ -40,12 +40,12 @@ The Project folder typically contains the following hierarchy:
 
 ### Ficheiro *nomApplication*.4DProject
 
-Project development file, used to designate and launch the project. Esse arquivo pode ser aberto por:
+Ficheiro de desenvolvimento do projeto, utilizado para designar e lançar o projeto. Esse arquivo pode ser aberto por:
 
 - 4D
 - 4D Server (apenas leitura, ver [Desenvolver um projeto](developing.md))
 
-> **Nota:** nos projetos 4D, o desenvolvimento se realiza com 4D Developer e o desenvolvimento multiusuários se gerencia através das ferramentas de controle de versão. 4D Server can open .4DProject files for testing purposes.
+> **Nota:** nos projetos 4D, o desenvolvimento se realiza com 4D Developer e o desenvolvimento multiusuários se gerencia através das ferramentas de controle de versão. 4D Server pode abrir arquivos .4DProject para fins de teste.
 
 ### Pasta Sources
 
@@ -53,7 +53,7 @@ Project development file, used to designate and launch the project. Esse arquivo
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
 | catalog.4DCatalog       | Definições de tabelas e campos                                                                                                                                                                                                                                                                                                                                                                   | XML     |
 | folders.json            | Definições de pasta do Explorer                                                                                                                                                                                                                                                                                                                                                                  | JSON    |
-| menus.json              | Menu definitions                                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
+| menus.json              | Definições de menus                                                                                                                                                                                                                                                                                                                                                                              | JSON    |
 | settings.4DSettings     | Propriedades de la base *Structure*. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
 | tips.json               | Dicas definidas                                                                                                                                                                                                                                                                                                                                                                                  | JSON    |
 | lists.json              | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
@@ -82,31 +82,31 @@ Project development file, used to designate and launch the project. Esse arquivo
 
 #### Pasta Forms
 
-| Conteúdos                                 | Descrição                                   | Formato |
-| ----------------------------------------- | ------------------------------------------- | ------- |
-| *formName*/form.4DForm                    | Descrição do formulário projeto             | json    |
-| *formName*/method.4dm                     | Método formulário projecto                  | text    |
-| *formName*/Images/*pictureName*           | Imagem estática do formulário projeto       | picture |
-| *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. One file per object method | text    |
+| Conteúdos                                 | Descrição                                      | Formato |
+| ----------------------------------------- | ---------------------------------------------- | ------- |
+| *formName*/form.4DForm                    | Descrição do formulário projeto                | json    |
+| *formName*/method.4dm                     | Método formulário projecto                     | text    |
+| *formName*/Images/*pictureName*           | Imagem estática do formulário projeto          | picture |
+| *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. Um ficheiro por método objeto | text    |
 
 #### Pasta TableForms
 
-| Conteúdos                                            | Descrição                                              | Formato |
-| ---------------------------------------------------- | ------------------------------------------------------ | ------- |
-| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
-| *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | picture |
-| *n*/Input/*formName*/method.4dm                      | Input table form method                                | text    |
-| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Input form object methods. One file per object method  | text    |
-| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)  | json    |
-| *n*/Output/*formName*/Images/*pictureName*           | Output table form static pictures                      | picture |
-| *n*/Output/*formName*/method.4dm                     | Output table form method                               | text    |
-| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Output form object methods. One file per object method | text    |
+| Conteúdos                                            | Descrição                                                              | Formato |
+| ---------------------------------------------------- | ---------------------------------------------------------------------- | ------- |
+| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)                   | json    |
+| *n*/Input/*formName*/Images/*pictureName*            | Imagens estáticas do formulário de entrada da tabela                   | picture |
+| *n*/Input/*formName*/method.4dm                      | Método do formulário de entrada da tabela                              | text    |
+| *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Métodos objeto do formulário de entrada. Um ficheiro por método objeto | text    |
+| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)                  | json    |
+| *n*/Output/*formName*/Images/*pictureName*           | Imagens estáticas do formulário de saída da tabela                     | picture |
+| *n*/Output/*formName*/method.4dm                     | Método do formulário de saída da tabela                                | text    |
+| *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Métodos objeto do formulário de saída. Um ficheiro por método objeto   | text    |
 
 #### Pasta Triggers
 
-| Conteúdos     | Descrição                                                                                 | Formato |
-| ------------- | ----------------------------------------------------------------------------------------- | ------- |
-| table_*n*.4dm | Métodos trigger definidos na database. One trigger file per table (n is the table number) | text    |
+| Conteúdos     | Descrição                                                                                             | Formato |
+| ------------- | ----------------------------------------------------------------------------------------------------- | ------- |
+| table_*n*.4dm | Métodos trigger definidos na database. Um ficheiro de acionamento por tabela (n é o número da tabela) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. É compatível com as ferramentas de controlo da versão.
 
@@ -191,7 +191,7 @@ Esta pasta contém **arquivos de configuração de dados** utilizados para a adm
 
 ## userPreferences.*userName* folder
 
-Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. Contém, por exemplo:
+Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. Pode simplesmente ignorar esta pasta. Contém, por exemplo:
 
 | Conteúdos                  | Descrição                                                   | Formato |
 | -------------------------- | ----------------------------------------------------------- | ------- |

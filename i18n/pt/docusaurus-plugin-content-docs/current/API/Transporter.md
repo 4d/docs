@@ -93,13 +93,13 @@ Por padrão, o modo mais seguro suportado pelo servidor é usado.
 
 Valores possíveis:
 
-| Valor    | Constantes                   | Comentário                                         |
-| -------- | ---------------------------- | -------------------------------------------------- |
-| APOP     | `Autenticação POP3 APOP`     | Autenticação usando o protocolo APOP (POP3 apenas) |
-| CRAM-MD5 | `Autenticação POP3 CRAM-MD5` | Autenticação usando o protocolo CRAM-MD5           |
-| LOGIN    | `POP3 authentication login`  | Autenticação usando o protocolo LOGIN              |
-| OAUTH2   | `POP3 authentication OAUTH2` | Autenticação usando o protocolo OAuth2             |
-| PLAIN    | `Autenticação POP3 simples`  | Autenticação usando o protocolo PLAIN              |
+| Valor    | Constantes                     | Comentário                                         |
+| -------- | ------------------------------ | -------------------------------------------------- |
+| APOP     | `Autenticação POP3 APOP`       | Autenticação usando o protocolo APOP (POP3 apenas) |
+| CRAM-MD5 | `POP3 authentication CRAM MD5` | Autenticação usando o protocolo CRAM-MD5           |
+| LOGIN    | `POP3 authentication login`    | Autenticação usando o protocolo LOGIN              |
+| OAUTH2   | `POP3 authentication OAUTH2`   | Autenticação usando o protocolo OAuth2             |
+| PLAIN    | `Autenticação POP3 simples`    | Autenticação usando o protocolo PLAIN              |
 
 <!-- END REF -->
 

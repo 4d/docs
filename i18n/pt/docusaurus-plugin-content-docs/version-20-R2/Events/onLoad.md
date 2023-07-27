@@ -19,7 +19,7 @@ All the objects of the form (from any page) whose `On Load` object event propert
 
 ### Subformulário
 
-The `On Load` event is generated when opening the subform (this event must also have been activated at the parent form level in order to be taken into account). The event is generated before those of the parent form. Also note that, in accordance with the operating principles of form events, if the subform is placed on a page other than page 0 or 1, this event will only be generated when that page is displayed (and not when the form is displayed).
+The `On Load` event is generated when opening the subform (this event must also have been activated at the parent form level in order to be taken into account). O evento é gerado antes dos eventos do formulário principal. Also note that, in accordance with the operating principles of form events, if the subform is placed on a page other than page 0 or 1, this event will only be generated when that page is displayed (and not when the form is displayed).
 
 
 ### Veja também

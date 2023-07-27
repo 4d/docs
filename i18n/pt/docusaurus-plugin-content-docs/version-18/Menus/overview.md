@@ -20,7 +20,7 @@ When you design menus, keep the following two rules in mind:
 
 To create menus and menu bars, you can use either:
 
-- the Menu editor from the Toolbox,
+- o editor de menus da caixa de ferramentas,
 - comandos de linguagem para o tema "Menus",
 - uma combinação de ambos.
 

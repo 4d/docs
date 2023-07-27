@@ -62,7 +62,7 @@ The `On Bound Variable Change` form event is generated:
 
 Note that, as in the above example, it is preferable to use the `OBJECT Get pointer` command which returns a pointer to the subform container rather than its variable because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks). In this case, only a pointer lets you know which subform container is at the origin of the event.
 
-#### Updating parent form contents
+#### Atualização do conteúdo do formulário parent
 
 Case 2: The contents of the subform are modified and this modification must be passed on to the parent form. In our example, imagine that the subform interface lets the user "manually" move the hands of the clock.
 
@@ -74,7 +74,7 @@ Assigning the value to the variable generates the `On Data Change` form event in
 
 > If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
 
-### Using the subform bound object
+### Utilizar o objeto vinculado ao subformulário
 
 4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
 
@@ -139,7 +139,7 @@ This mechanism is illustrated in the following diagram:
 
 ![](../assets/en/FormObjects/subforms6.png)
 
-For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
+Para mais informações, consultar a descrição do comando `EXECUTE METHOD IN SUBFORM`.
 
 #### Comando GOTO OBJECT
 

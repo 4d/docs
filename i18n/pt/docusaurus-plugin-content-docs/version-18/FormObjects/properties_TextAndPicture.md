@@ -12,9 +12,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Gramática JSON
 
-| Nome                    | Tipo de dados | Valores possíveis                                                                                            |
-| ----------------------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string        | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| Nome                    | Tipo de dados | Valores possíveis                                                                                                |
+| ----------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------- |
+| customBackgroundPicture | string        | Caminho relativo na sintaxe POSIX. Must be used in conjunction with the style property with the "custom" option. |
 
 #### Objectos suportados
 
@@ -24,7 +24,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 ## Estilo de botão
 
-General appearance of the button. The button style also plays a part in the availability of certain options.
+Aspeto geral do botão. O estilo do botão também desempenha um papel na disponibilidade de determinadas opções.
 
 #### Gramática JSON
 
@@ -40,7 +40,7 @@ General appearance of the button. The button style also plays a part in the avai
 
 ## Margem horizontal
 
-Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. This margin delimits the area that the button icon and title must not surpass.
+Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 This parameter is useful, for example, when the background picture contains borders:
 
@@ -149,7 +149,7 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Descrição                                                                                                                                        | Exemplo                                                           |
+| Opção        | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
 | **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
@@ -171,7 +171,7 @@ Here are the results using the various options for this property:
 
 ## Margem vertical
 
-This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
+This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
 This parameter is useful, for example, when the background picture contains borders.
 

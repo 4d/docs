@@ -23,7 +23,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | ------------------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Execução do método**         | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
 | **Procurar no método**         | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                               |
-| **Macros**                     | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                                        |
+| **Macros**                     | ![macros-button](../assets/en/code-editor/macros.png)                             | Insere uma macro na seleção. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                                             |
 | **Expand all / Collapse all**  | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
 | **Informações sobre o método** | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**      | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
@@ -37,7 +37,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                    | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                   |
+| Opção                                     | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                   |
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **tipo de letra** e **tamanho de letra**  | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                            |
 | **estilo e cor dos elementos de sintaxe** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Submenu > **Estilo**. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
@@ -182,7 +182,7 @@ By adding markers in your code, you can add the following tags to the dropdown:
 Declara-os acrescentando comentários como:
 
 ```4d
-// FIXME: Fix following items
+// FIXME: Correção dos seguintes itens
 ```
 
 Declarations are not case-sensitive; writing `fixme:` has the same effect.
@@ -223,7 +223,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | **Atalho**                                                       | **Ação**                                                                                                                                   |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Selecção e navegação**                                         |                                                                                                                                            |
-| Duplo clique                                                     | Select a language element name                                                                                                             |
+| Duplo clique                                                     | Selecionar o nome de um elemento da linguagem                                                                                              |
 | [Alt]+Clique duas vezes                                          | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
 | [Shift]+[seta para a direita]                                    | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
 | [Shift]+[seta para a esquerda]                                   | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
@@ -258,7 +258,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
 | [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
 | [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
-| [Ctrl]+click on clipboard icon                                   | Colar o conteúdo de uma área de transferência na localização do cursor                                                                     |
+| [Ctrl]+clique no ícone da área de transferência                  | Colar o conteúdo de uma área de transferência na localização do cursor                                                                     |
 | [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
 
 :::tip
@@ -370,7 +370,7 @@ If there are several suggestions available, 4D displays them in a pop-up list wh
 
 ![](../assets/en/code-editor/autocomplete-popup.png)
 
-The list is in alphabetical order. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
+A lista está por ordem alfabética. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
 
 By default, you can also insert a suggested value by hitting one of the following delimiter `( ; : = < [ {` keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.
 
@@ -393,7 +393,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Comandos Plug-in
 - Palavras-chave 4D
 - Palavras-chave SQL
-- Macros (displayed between < >)
+- Macros (apresentadas entre < >)
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
@@ -475,7 +475,7 @@ The **Find Same** command is used to find character strings identical to the one
 
 The search carried out is of the "Find Next" type in the current code editor window.
 
-The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. Por exemplo, as maiúsculas e minúsculas devem corresponder.
 
 
 ### Bookmark All
