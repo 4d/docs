@@ -311,7 +311,7 @@ In any cases, the 4D Silicon compiler will warn you if your configuration does n
 
 #### Compilador incremental
 
-The Silicon compiler is incremental, which means that:
+O compilador Silicon é incremental, o que significa que:
 
 - During the very first compilation, **all 4D methods** are compiled. Esta etapa pode demorar algum tempo. No entanto, só ocorre uma vez.
 - During all subsequent compilations, only **new or modified methods** are processed, thus reducing drastically the compilation time.
