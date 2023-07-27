@@ -6,7 +6,7 @@ title: Bibliotecas de objetos
 
 Pode utilizar bibliotecas de objectos nos seus formulários. An object library offers a collection of preconfigured objects that can be used in your forms by simple or copy-paste or drag-and-drop.
 
-4D proposes two kinds of object libraries:
+4D propõe dois tipos de bibliotecas de objetos:
 
 - a standard, preconfigured object library, available in all your projects.
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
