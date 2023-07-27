@@ -15,7 +15,7 @@ This event is generated when a click occurs on the header of a column in the lis
 
 If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
 
-- If `$0` equals 0, a standard sort is performed.
+- Se `$0` é igual a 0, é efetuada uma ordenação padrão.
 - If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. The developer can still generate a column sort based on customized sort criteria using the 4D language.
 
 If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
@@ -30,8 +30,8 @@ This event is generated when the user clicks on a column or row header in a 4D V
 | description | text          | "On Header Click"                                                                                                                |
 | objectName  | text          | Nome da área 4D View Pro                                                                                                         |
 | sheetName   | text          | Nome da folha do evento                                                                                                          |
-| range       | object        | Cell range                                                                                                                       |
-| sheetArea   | inteiro longo | O local da folha onde o evento teve lugar:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
+| range       | object        | Intervalo de células                                                                                                             |
+| sheetArea   | inteiro longo | O local da folha onde o evento teve lugar:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: os cabeçalhos das colunas (área que indica os números/letras das colunas)</li><li>2: os cabeçalhos das linhas (área que indica os números das linhas)</li> |
 
 #### Exemplo
 
