@@ -67,7 +67,7 @@ Pode aumentar ou diminuir a área do cabeçalho. You can use the Header area for
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Podem ser inseridos os seguintes objetos ativos:
 
 - Botões, botões imagem,
-- Combo boxes, drop-down lists,  picture pop-up menus,
+- Combo boxes, listas pendentes, menus pop-up de imagens,
 - listas hierárquicas, list boxes
 - Botões rádio, caixas de selecção, caixas de selecção 3D,
 - Indicadores de progresso, réguas, degraus, fiadeiras.
