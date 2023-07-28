@@ -188,7 +188,7 @@ Evento emitido cuando se produce un error en el servidor WebSocket.
 
 ### Ejemplo de clase `WSSHandler`
 
-This example of a basic chat feature illustrates how to handle WebSocket server connections in a *WSSHandler* class.
+Este ejemplo de una función básica de chat ilustra cómo manejar conexiones de servidor WebSocket en una clase *WSSHandler*.
 
 ```4d
 //myWSServerHandler class 
