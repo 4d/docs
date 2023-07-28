@@ -41,10 +41,10 @@ the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIS
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados     | Valores possíveis                                   |
-| ---------- | ----------------- | --------------------------------------------------- |
-| choiceList | liste, collection | Uma lista de valores possíveis                      |
-| lista      | liste, collection | A list of possible values (hierarchical lists only) |
+| Nome       | Tipo de dados     | Valores possíveis                                           |
+| ---------- | ----------------- | ----------------------------------------------------------- |
+| choiceList | liste, collection | Uma lista de valores possíveis                              |
+| lista      | liste, collection | Uma lista de valores possíveis (apenas listas hierárquicas) |
 
 #### Objectos suportados
 
@@ -52,7 +52,7 @@ the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIS
 
 ---
 
-## Choice List (static list)
+## Lista de opções (lista estática)
 
 List of static values to use as labels for the tab control object.
 
@@ -123,7 +123,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 | Nome               | Tipo de dados | Valores possíveis                                  |
 | ------------------ | ------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string        | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| dataSourceTypeHint | string        | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**listas pendentes:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objectos suportados
 
@@ -147,7 +147,7 @@ Estão disponíveis três opções:
 Using the **Selected item reference** option requires compliance with the following principles:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
-- Valid and unique references must be associated with list items.
+- Devem ser associadas referências válidas e únicas aos itens da lista.
 - The drop-down list must be associated with a field or a variable.
 
 #### Gramática JSON
@@ -205,7 +205,7 @@ Uma expressão 4D a associar a uma coluna. You can enter:
   - Boolean  
     You can use fields from the Master Table or from other tables.
 
-- A **4D expression** (simple expression, formula or 4D method). A expressão deve devolver um valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results. São suportados os seguintes tipos de expressão:
+- A **4D expression** (simple expression, formula or 4D method). A expressão deve devolver um valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. O resultado da expressão será automaticamente apresentado quando mudar para o modo Aplicação. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Se estiver vazia, a coluna não apresentará nenhum resultado. São suportados os seguintes tipos de expressão:
   - String
   - Numeric
   - Date
@@ -235,7 +235,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 `Current selection list boxes`
 
-Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
+Especifica a tabela cuja seleção atual será utilizada. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
 
 All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
 
@@ -268,7 +268,7 @@ This option lets you optimize memory usage: storing numeric values in fields use
 Using this property requires compliance with the following principles:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
-- Valid and unique references must be associated with list items.
+- Devem ser associadas referências válidas e únicas aos itens da lista.
 
 #### Gramática JSON
 
