@@ -21,13 +21,13 @@ This property is used to display or hide [list box column headers](listbox_overv
 
 ## Alto
 
-This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
+This property is used to set the row height for a list box header in **pixels** or **text lines** (when displayed). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
 * *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. Se um tipo de letra for demasiado grande, o texto é truncado. Moreover, pictures are truncated or resized according to their format.
 
 * *Line* - the height is calculated while taking into account the font size of the row concerned.
-  * If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
-  * This calculation does not take into account the size of pictures nor any styles applied to the fonts.
+  * Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
+  * Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   * In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
 > > > This property can also be set dynamically using the [LISTBOX SET HEADERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-SET-HEADERS-HEIGHT.301-4311129.en.html) command.
 
