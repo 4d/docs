@@ -15,7 +15,7 @@ To create a picture pop-up menu, you need to [refer to a picture](properties_Pic
 
 ### Programação
 
-You can manage picture pop-up menus using methods. As with [button grids](buttonGrid_overview.md), variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. Se nenhum elemento for seleccionado, o valor é 0. Elements are numbered, row by row, from left to right starting with the top row.
+You can manage picture pop-up menus using methods. As with [button grids](buttonGrid_overview.md), variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. Se nenhum elemento for seleccionado, o valor é 0. Os elementos são numerados, linha a linha, da esquerda para a direita, começando pela linha superior.
 
 ### Ir para página
 
