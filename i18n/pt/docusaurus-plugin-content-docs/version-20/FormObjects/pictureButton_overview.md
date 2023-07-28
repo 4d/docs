@@ -26,7 +26,7 @@ Clicar no objeto altera a imagem.
 
 ## Usar os botões imagem
 
-You can implement a picture button in the following manner:
+É possível implementar um botão imagem da seguinte forma:
 
 1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
 
@@ -48,7 +48,7 @@ In addition to the standard positioning and appearance settings, you can set som
 - By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. In other words, it does not cycle back to the first picture in the series.
 
 Estão disponíveis os seguintes outros modos:
-- [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
+- [Repetir a sequência](properties_Animation.md#loopBackToFirstFrame)
 - [Switch back when Released](properties_Animation.md#switch-back-when-released)
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
