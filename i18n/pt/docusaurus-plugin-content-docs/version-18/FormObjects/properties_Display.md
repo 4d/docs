@@ -17,11 +17,11 @@ The number sign (#) is the placeholder for an alphanumeric display format. You c
 
 For example, consider a part number with a format such as "RB-1762-1".
 
-The alpha format would be:
+O formato alfa seria:
 
  ##-####-#
 
-When the user enters "RB17621," the field displays:
+Quando o usuário introduz "RB17621", o campo é apresentado:
 
  RB-1762-1
 
@@ -31,7 +31,7 @@ If the user enters more characters than the format allows, 4D displays the last 
 
  (#######)
 
-and the user enters "proportion", the field displays:
+e o usuário introduzir "proportion", o campo é apresentado:
 
  (portion)
 
@@ -98,12 +98,12 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| Placeholder (valores provisórios) | Effect for leading or trailing zero |
-| --------------------------------- | ----------------------------------- |
-| #                                 | Não apresenta nada                  |
-| 0                                 | Mostra 0                            |
-| ^                                 | Apresenta um espaço (1)             |
-| *                                 | Apresenta um asterisco              |
+| Placeholder (valores provisórios) | Efeito do zero à esquerda ou à direita |
+| --------------------------------- | -------------------------------------- |
+| #                                 | Não apresenta nada                     |
+| 0                                 | Mostra 0                               |
+| ^                                 | Apresenta um espaço (1)                |
+| *                                 | Apresenta um asterisco                 |
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
@@ -114,7 +114,7 @@ If the user enters a negative number, the leftmost character is displayed as a m
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
-Suponha que utiliza o formato ##0 para mostrar três dígitos. If the user enters nothing in the field, the field displays 0. Se o usuário introduzir 26, o campo apresenta 26.
+Suponha que utiliza o formato ##0 para mostrar três dígitos. Se o utilizador não introduzir nada no campo, o campo apresenta 0. Se o usuário introduzir 26, o campo apresenta 26.
 
 ### Caracteres separadores
 
@@ -126,7 +126,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 ### Pontos decimais e outros caracteres de visualização
 
-You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+É possível utilizar um ponto decimal num formato de apresentação de números. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
 Pode utilizar quaisquer outros caracteres no formato. When used alone, or placed before or after placeholders, the characters always appear. Por exemplo, se utilizar o seguinte formato:
 
@@ -138,7 +138,7 @@ If characters are placed between placeholders, they appear only if digits are di
 
  ###.##0
 
-the point appears only if the user enters at least four digits.
+o ponto só aparece se o usuário introduzir pelo menos quatro dígitos.
 
 Spaces are treated as characters in number display formats.
 
@@ -148,7 +148,7 @@ A number display format can have up to three parts allowing you to specify displ
 
  Positivo;Negativo;Zero
 
-You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
+Não é necessário especificar as três partes do formato. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
 > The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
@@ -161,7 +161,7 @@ Notice that the presence of the second semicolon instructs 4D to use nothing to 
 
  $###,##0.00;($###,##0.00)
 
-In this case, the display for zero would be $0.00.
+Neste caso, a indicação de zero seria $0,00.
 
 ### Notação científica
 
@@ -248,7 +248,7 @@ The following table shows how different formats affect the display of numbers. T
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
-The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
+The truncation and scaling options do not affect the picture itself. O conteúdo de um campo Imagem é sempre guardado. Only the display on the particular form is affected by the picture display format.
 
 ### Escalado para caber
 
@@ -260,7 +260,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ### Truncado (centrado e não centrado)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
 The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
 
@@ -271,7 +271,7 @@ O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior e
 
 ### Scaled to fit (proportional) and Scaled to fit centered (proportional)
 
-`JSON grammar: "proportionalTopLeft" / "proportionalCenter"`
+`Gramática JSON: "proportionalTopLeft" / "proportionalCenter"`
 
 When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
 
@@ -321,14 +321,14 @@ The table below shows the Time field display formats and gives examples:
 | Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270 minutos 25 segundos        |
 | ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
 | System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                     | 04:30:25                       |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                     |
-| System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC                |
+| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: this format is the same as the System time short format         | 4•30•25 AM                     |
+| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: this format is the same as the System time short format             | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                                                                                                                                                        |
-| ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string        | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| Nome       | Tipo de dados | Valores possíveis                                                                                                                                                                                            |
+| ---------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| timeFormat | string        | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (pode ser combinado com os outros valores possíveis) |
 
 #### Objectos suportados
 
@@ -338,9 +338,9 @@ The table below shows the Time field display formats and gives examples:
 
 ## Texto quando False/Texto quando True
 
-When a [boolean expression](properties_Object.md#expression-type) is displayed as:
+Quando uma [expressão booleana](properties_Object.md#expression-type) é apresentada como:
 
-* a text in an [input object](input_overview.md)
+* um texto num [objeto de entrada](input_overview.md)
 * a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
 
 ... you can select the text to display for each value:
@@ -362,7 +362,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 ## Display Type
 
-Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
+Utilizado para associar um formato de visualização aos dados da coluna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
 Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
 
@@ -400,16 +400,16 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 ## Três Estados
 
-Allows a check box object to accept a third state. A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
+Permite que um objeto de caixa de verificação aceite um terceiro estado. A variável associada à caixa de seleção devolve o valor 2 quando a caixa estiver no terceiro estado.
 
-#### Three-states check boxes in list box columns
+#### Caixas de verificação de três estados em colunas list box
 
 List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. Se for selecionado, são apresentados os seguintes valores:
 
 * 0 = caixa não assinalada,
 * 1 = caixa marcada,
-* 2 (or any value >0) = semi-checked box (third state). Para a introdução de dados, este estado devolve o valor 2.
-* -1 = invisible check box,
+* 2 (ou qualquer valor >0) = caixa semi-marcada (terceiro estado). Para a introdução de dados, este estado devolve o valor 2.
+* -1 = caixa de seleção invisível,
 * -2 = caixa desmarcada, não editável,
 * -3 = caixa marcada, não pode ser introduzida,
 * -4 = caixa semi-marcada, não editável
@@ -430,7 +430,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 ## Título
 
-This property is available for a list box column if:
+Esta propriedade está disponível para uma coluna list box se:
 
 * the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
 * the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
