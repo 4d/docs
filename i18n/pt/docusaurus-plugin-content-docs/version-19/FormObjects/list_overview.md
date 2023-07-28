@@ -8,7 +8,7 @@ Hierarchical lists are form objects that can be used to display data as lists wi
 
 ![](../assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
+Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. As listas hierárquicas suportam um número ilimitado de subníveis.
 
 ## Fonte de dados de lista hierárquica
 
