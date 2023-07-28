@@ -17,7 +17,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 * O cálculo da altura da linha tem em conta:
   * any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
-  * any control types (inputs, check boxes, lists, dropdowns),
+  * quaisquer tipos de controlo (entradas, caixas de verificação, listas, listas suspensas),
   * tipos, estilos e tamanhos de letra,
   * the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
@@ -179,7 +179,7 @@ A largura máxima da coluna (em píxeis). The width of the column cannot be incr
 
 ## Largura mínima
 
-A largura mínima da coluna (em píxeis). The width of the column cannot be reduced below this value when resizing the column or form.
+A largura mínima da coluna (em píxeis). A largura da coluna não pode ser reduzida abaixo deste valor quando se redimensiona a coluna ou o formulário.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
@@ -196,7 +196,7 @@ A largura mínima da coluna (em píxeis). The width of the column cannot be redu
 
 ## Array altura linha
 
-Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
+Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). By default, the row height is set according to the platform and the font size.
 
 #### Gramática JSON
 
