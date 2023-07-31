@@ -3,30 +3,30 @@ id: basics
 title: Depuração
 ---
 
-Os erros são comuns. It would be unusual to write a substantial number of lines of code without generating any errors. Por outro lado, tratar e/ou corrigir erros também é normal!
+Os erros são comuns. Seria incomum escrever um número substancial de linhas de código sem gerar quaisquer erros. Por outro lado, tratar e/ou corrigir erros também é normal!
 
-The 4D development environment provides several debugging tools for all types of errors.
+O ambiente de desenvolvimento 4D fornece várias ferramentas de depuração para todos os tipos de erros.
 
 ## Tipos de erro
 
 ### Erros de dactilografia
 
-Os erros de digitação são detectados pelo editor de código. They are displayed in red and additional information is provided at the bottom of the window. Aqui está um erro de dactilografia:
+Os erros de digitação são detectados pelo editor de código. São exibidos em vermelho e são fornecidas informações adicionais na parte inferior da janela. Aqui está um erro de dactilografia:
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
 
-Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. Quando isso ocorrer, corrija o erro de digitação e digite Enter para validar a correção.
+Esses erros de digitação geralmente causam erros de sintaxe (na imagem acima, o nome da tabela é desconhecido). Obtém a descrição do erro quando validar a linha de código. Quando isso ocorrer, corrija o erro de digitação e digite Enter para validar a correção.
 
 ### Erros de sintaxe
 
-Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. Por exemplo:
+Alguns erros só podem ser detectados quando o método for executado. A janela [Syntax Error Window](#syntax-error-window) aparece quando ocorre um erro durante a execução do código. Por exemplo:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
-Expand the **Details** area to display the last error and its number.
+Expanda a área **Details** para apresentar o último erro e o seu número.
 
-### Environmental Errors
+### Erros ambientais
 
 Ocasionalmente, pode não haver memória suficiente para criar um BLOB. Ou, quando se acede a um documento no disco, o documento pode não existir ou pode já estar aberto por outra aplicação. Estes erros ambientais não ocorrem diretamente devido ao seu código ou à forma como o escreveu. Na maior parte das vezes, estes erros são fáceis de tratar com um [método de deteção de erros](Concepts/error-handling.md) instalado através do comando `ON ERR CALL`.
 
@@ -35,7 +35,7 @@ Ocasionalmente, pode não haver memória suficiente para criar um BLOB. Ou, quan
 Estes são geralmente o tipo de erro mais difícil de encontrar. Com exceção dos erros de digitação, todos os tipos de erros acima enumerados são, em certa medida, abrangidos pela expressão "erro de conceção ou de lógica". Utilize o depurador [](debugger.md) para os detectar. Por exemplo:
 
 - Pode ocorrer um *erro de sintaxe* quando tenta utilizar uma variável que ainda não foi inicializada.
-- An *environmental error* can occur when you try to open a document, because that document's name is received by a subroutine that did not get the right value as a parameter.
+- Pode ocorrer um erro ambiental ** quando se tenta abrir um documento, porque o nome desse documento é recebido por uma sub-rotina que não obteve o valor correto como parâmetro.
 
 Os erros de concepção ou lógicos incluem também situações como:
 
@@ -65,7 +65,7 @@ A área de texto superior apresenta uma mensagem que descreve o erro. A área de
 
 A janela de erro de sintaxe propõe várias opções:
 
-- **Editar**: Pára toda a execução do método. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Utilize esta opção quando reconhecer imediatamente o erro e puder corrigi-lo sem mais investigações.
+- **Editar**: Pára toda a execução do método. 4D muda para o ambiente de Design e o método com o erro é aberto no Editor de Código, permitindo sua correção. Utilize esta opção quando reconhecer imediatamente o erro e puder corrigi-lo sem mais investigações.
 
 - **Trace**: Entra no modo Trace/Debugger. É apresentada a janela [Debugger](debugger.md). Se a linha atual só tiver sido executada parcialmente, poderá ter de clicar várias vezes no botão **Trace**.
 
@@ -76,7 +76,7 @@ A janela de erro de sintaxe propõe várias opções:
 - **Abortar**: Interrompe a execução do método e regressa ao estado anterior ao início da execução do método:
 
     - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
-    - If the method is executing from within the Application environment, you return to that environment.
+    - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
 
 - **Copiar**: Copia as informações de depuração para a área de transferência. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
 
@@ -94,4 +94,4 @@ Outra razão para utilizar o depurador é para desenvolver código. Por vezes, p
 
 No processo de depuração, pode ser necessário saltar o rastreio de algumas partes do código até uma determinada linha. Ou, pode querer rastrear o código quando uma dada expressão tem um certo valor (por exemplo, "$myVar > 1000"), ou cada vez que um comando 4D específico é chamado.
 
-These needs are covered by **breakpoints** and **command catching** features. Podem ser configurados a partir do editor de código, do depurador ou do explorador de execução.
+Estas necessidades são cobertas pelos  **pontos de interrupção** e pelas funcionalidades de  **captura de comandos**. Podem ser configurados a partir do editor de código, do depurador ou do explorador de execução.
