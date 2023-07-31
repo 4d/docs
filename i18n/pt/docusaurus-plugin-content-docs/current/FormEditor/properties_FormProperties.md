@@ -184,7 +184,7 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 *   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
 *   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
 
-> The number of characters for a window title is limited to 31.
+> O número de caracteres para um título de janela é limitado a 31.
 
 #### Gramática JSON
 
