@@ -47,10 +47,10 @@ Para inicializar el objeto asociado a la lista desplegable, puede:
 ```4d
 // Form.myDrop es la fuente de datos del objeto formulario
 
-Form.myDrop:=Nuevo objeto
-Form.myDrop.values:=Nueva colección("manzanas"; "nueces"; "peras"; "naranjas"; "zanahorias")
-Form.myDrop.index:=-1 //currentValue es un marcador de posición
-Form.myDrop.currentValue:="Selecciona una fruta" 
+Form.myDrop:=New object
+Form.myDrop.values:=New collection("apples"; "nuts"; "pears"; "oranges"; "carrots")
+Form.myDrop.index:=-1  //currentValue es un marcador de posición
+Form.myDrop.currentValue:="Select a fruit" 
 ```
 
 La lista desplegable se muestra con la cadena del marcador de posición:
