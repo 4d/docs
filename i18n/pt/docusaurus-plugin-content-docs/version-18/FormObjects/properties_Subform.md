@@ -67,10 +67,10 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `Subformulário lista`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
+Sets the action to be performed when a user double-clicks on a row in a list subform. As opções disponíveis são:
 
 *   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). The record is opened in read-write mode so it can be modified.
+*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). O registo é aberto em modo de leitura-escrita para poder ser modificado.
 *   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
@@ -133,7 +133,7 @@ List subforms can be used for data entry in two ways: the user can enter data di
 ---
 ## Source
 
-Specifies the table that the list subform belongs to (if any).
+Especifica a tabela a que pertence o subformulário Lista (se existir).
 
 #### Gramática JSON
 

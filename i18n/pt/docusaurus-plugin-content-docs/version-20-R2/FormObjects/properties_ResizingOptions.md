@@ -49,7 +49,7 @@ Estão disponíveis três opções:
 
 | Opção    | Valor JSON | Resultados                                                                                                             |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Agrandar | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
+| Agrandar | "grow"     | A mesma percentagem é aplicada à largura do objeto quando o usuário redimensiona a largura da janela,                  |
 | Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
 | Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                                 |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.

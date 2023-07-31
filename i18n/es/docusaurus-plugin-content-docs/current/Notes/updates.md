@@ -19,7 +19,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 #### Cambios de comportamiento
 
-- Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*.
+- Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. Se ha realizado una corrección para que los siguientes errores se detecten también en modo compilado: *Indice fuera de rango*, *Tipo incompatible*, y *Desreferenciación de un puntero Null*.
 
 
 ## 4D v20 R2

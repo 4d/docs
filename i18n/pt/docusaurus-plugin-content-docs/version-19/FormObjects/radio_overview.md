@@ -55,7 +55,7 @@ The Toolbar radio button style is primarily intended for integration in a toolba
 
 By default, the Toolbar style has a transparent background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- *Windows* - the button is highlighted.
+- *Windows* - o botão é realçado.
 
 ![](../assets/en/FormObjects/radio_toolbar.png)
 
@@ -65,7 +65,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 The Bevel radio button style is similar to the [Toolbar](#toolbar) style's behavior, except that it has a light gray background and a gray outline. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
-- *Windows* - the button is highlighted.
+- *Windows* - o botão é realçado.
 
   ![](../assets/en/FormObjects/radio_bevel.png)
 
@@ -77,7 +77,7 @@ O estilo de botão Bevel arredondado é quase idêntico ao estilo [Bevel](#bevel
 
 - *Windows* - the button is identical to the [Bevel](#bevel) style.
 
-- *macOS* - the corners of the button are rounded. ![](../assets/en/FormObjects/roundedBevel.png)
+- *macOS* - os cantos do botão são arredondados. ![](../assets/en/FormObjects/roundedBevel.png)
 
 ### OS X Gradient
 

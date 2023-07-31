@@ -26,7 +26,7 @@ An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_coll
 | `values`       | Collection       | Obrigatório - Coleção de valores escalares. Todos os valores devem ser do mesmo tipo. Tipos suportados:<li>strings</li><li>números</li><li>datas</li><li>horas</li>Se estiver vazia ou não for definida, a caixa combinada está vazia |
 | `currentValue` | igual a Colecção | Texto introduzido pelo usuário                                                                                                                                                                                                                                                |
 
-If the object contains other properties, they are ignored.
+Se o objeto contiver outras propriedades, estas são ignoradas.
 
 When the user enters text into the combo box, the `currentValue` property of the object gets the entered text.
 

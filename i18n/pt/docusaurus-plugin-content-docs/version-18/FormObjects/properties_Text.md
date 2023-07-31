@@ -156,7 +156,7 @@ Designates the font color.
 
 A cor pode ser especificada por:
 
-- a color name - like "red"
+- um nome de cor - como "red"
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
@@ -250,7 +250,7 @@ Horizontal location of text within the area that contains it.
 
 ## Cor linha vertical
 
-Vertical location of text within the area that contains it.
+Localização vertical do texto na área que o contém.
 
 The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
 

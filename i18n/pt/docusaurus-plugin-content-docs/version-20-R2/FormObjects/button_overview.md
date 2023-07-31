@@ -128,7 +128,7 @@ The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.
 
 By default, the Bevel style has a light gray background with a label in the center. A aparência do botão pode ser diferente quando o cursor passar por cima dele, dependendo do SO:
 
- - *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - o botão é realçado. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
 
 ![](../assets/en/FormObjects/button_bevel.png)
 
@@ -162,7 +162,7 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
   ![](../assets/en/FormObjects/button_roundedbevel.png)
 
- - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - os cantos do botão são arredondados. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Exemplo
 
@@ -217,7 +217,7 @@ O estilo do botão OS X Textured é quase igual ao estilo [Bevel](#bevel), mas p
 
 Como padrão, o estilo OS X Textured aparece como:
 
- - *Windows* - a standard system button with a light gray background with a label in the center. It has the special feature of being transparent in Vista.
+ - *Windows* - a standard system button with a light gray background with a label in the center. Tem a particularidade de ser transparente no Vista.
 
  ![](../assets/en/FormObjects/button_osxtextured.png)
 
@@ -298,7 +298,7 @@ The Help button style can be used to display a standard system help button. By d
 
 ### Círculo
 
-The Circle button style appears as a round system button. Este estilo de botão foi concebido para macOS.
+O estilo de botão Círculo aparece como um botão sistema redondo. Este estilo de botão foi concebido para macOS.
 
 ![](../assets/en/FormObjects/button_circleM.png)
 

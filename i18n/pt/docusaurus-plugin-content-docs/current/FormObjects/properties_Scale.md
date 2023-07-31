@@ -37,7 +37,7 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 ## Graduation step
 
-Scale display measurement.
+Medição do visor da escala.
 
 #### Gramática JSON
 
@@ -56,8 +56,8 @@ Scale display measurement.
 Specifies the location of an object's displayed text.
 
 * Nenhum - não é apresentada qualquer etiqueta
-* Top - Displays labels to the left of or above an indicator
-* Bottom - Displays labels to the right of or below an indicator
+* Topo - Apresenta etiquetas à esquerda ou acima de um indicador
+* Inferior - Apresenta etiquetas à direita ou por baixo de um indicador
 
 #### Gramática JSON
 

@@ -91,17 +91,17 @@ Describes dotted line type as a sequence of black and white points.
 
 #### Objectos suportados
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Retângulo](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Linha](shapes_overview.md#line)
 
 ---
 
 ## Esconder linhas em branco extras
 
-Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
+Controls the display of extra blank rows added at the bottom of a list box object. Por defeito, 4D adiciona essas linhas extra para preencher a área vazia:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
+Pode remover estas linhas vazias selecionando esta opção. A parte inferior do objeto do list box é deixada em branco:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -121,7 +121,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 Designa a cor das linhas do objeto. A cor pode ser especificada por:
 
-* a color name - like "red"
+* um nome de cor - como "red"
 * um valor HEX - como "#ff0000"
 * um valor RGB - como "rgb(255,0,0)"
 

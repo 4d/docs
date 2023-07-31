@@ -3,7 +3,7 @@ id: propertiesAnimation
 title: Animação
 ---
 
-## Loop back to first frame
+## Repetir a sequência
 
 As imagens são apresentadas num ciclo contínuo. When the user reaches the last picture and clicks again, the first picture appears, and so forth.
 

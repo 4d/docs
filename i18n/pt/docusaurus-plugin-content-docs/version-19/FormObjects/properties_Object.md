@@ -25,7 +25,7 @@ Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formO
 
 ## Nome de objeto
 
-Each active form object is associated with an object name. Each object name must be unique.
+Cada objeto de formulário ativo está associado a um nome de objeto. Cada nome de objeto deve ser único.
 > Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
@@ -50,13 +50,13 @@ This property is available when the [Save Geometry](FormEditor/properties_FormPr
 
 This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
 
-Here is the list of objects whose value can be saved:
+Eis a lista de objetos cujo valor pode ser guardado:
 
 | Object                                                  | Valor guardado                                                                         |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Caixa de selecção](checkbox_overview.md)               | Valor da variável associada (0, 1, 2)                                                  |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
-| [Botão rádio](radio_overview.md)                        | Value of associated variable (1, 0, True or False for buttons according to their type) |
+| [Botão rádio](radio_overview.md)                        | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
 | [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
 
 #### Gramática JSON
@@ -143,14 +143,14 @@ Specify the data type for the expression or variable associated to the object. N
 However, this property has a typing function in the following specific cases:
 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
-- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Também estão disponíveis quaisquer formatos personalizados existentes.
+- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. O tipo de texto não tem formatos de visualização específicos. Também estão disponíveis quaisquer formatos personalizados existentes.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 #### Gramática JSON
 
 | Nome               | Tipo de dados | Valores possíveis                                  |
 | ------------------ | ------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string        | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
+| dataSourceTypeHint | string        | <li>**objectos standard:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
 
 #### Objectos suportados
 
@@ -255,15 +255,15 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Título
 
-Permite inserir uma etiqueta num objeto. The font and the style of this label can be specified.
+Permite inserir uma etiqueta num objeto. O tipo de letra e o estilo desta etiqueta podem ser especificados.
 
-You can force a carriage return in the label by using the \ character (backslash).
+Pode forçar um retorno de carro na etiqueta utilizando o carácter \ (barra invertida).
 
 ![](../assets/en/FormObjects/property_title.png)
 
 Para inserir um \ na etiqueta, introduzir "&#92;&#92;".
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+Por padrão, a etiqueta é colocada no centro do objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
 Para a tradução do banco de dados, pode introduzir uma referência XLIFF na área do título de um botão (ver [Apêndice B: arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -292,7 +292,7 @@ There are several types of calculations available. The following table shows whi
 | Máximo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Soma                   | X   |      |      | X    | X    |      | Igual ao tipo de coluna |
 | Contagem               | X   | X    | X    | X    | X    | X    | Longint                 |
-| Average                | X   |      |      | X    |      |      | Real                    |
+| Média                  | X   |      |      | X    |      |      | Real                    |
 | Desvio padrão(*)       | X   |      |      | X    |      |      | Real                    |
 | Variância(*)           | X   |      |      | X    |      |      | Real                    |
 | Soma dos quadrados(*)  | X   |      |      | X    |      |      | Real                    |
