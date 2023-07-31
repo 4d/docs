@@ -8,7 +8,7 @@ Pode utilizar bibliotecas de objectos nos seus formulários. An object library o
 
 4D propõe dois tipos de bibliotecas de objetos:
 
-- a standard, preconfigured object library, available in all your projects.
+- uma biblioteca de objetos padrão, pré-configurada, disponível em todos os seus projetos.
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
 
@@ -17,7 +17,7 @@ Pode utilizar bibliotecas de objectos nos seus formulários. An object library o
 The standard object library is available from the Form editor: click on the last button of the toolbar:  
 ![](../assets/en/FormEditor/library1.png)
 
-The library is displayed in a separate window:
+A biblioteca é apresentada numa janela separada:
 
 ![](../assets/en/FormEditor/library2.png)
 
@@ -25,11 +25,11 @@ A janela tem as seguintes características principais:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
 - Pode filtrar o conteúdo da janela utilizando o menu **Categorias**: ![](../assets/en/FormEditor/library3.png)
-- To use an object from the library to your form, you can either:
-    - right-click on an object and select **Copy** in the contextual menu
+- Para utilizar um objeto da biblioteca no seu formulário, pode:
+    - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
     - or drag and drop the object from the library The object is then added to the form.
 
-This library is read-only. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
+Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
 All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
