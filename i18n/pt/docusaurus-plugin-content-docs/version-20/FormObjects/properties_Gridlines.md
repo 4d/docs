@@ -5,7 +5,7 @@ title: Linhas de grelha
 
 ## Cor linha horizontal
 
-Defines the color of the horizontal lines in a list box (gray by default).
+Define a cor das linhas horizontais num list box (cinzento por predefinição).
 
 #### Gramática JSON
 
@@ -21,7 +21,7 @@ Defines the color of the horizontal lines in a list box (gray by default).
 
 ## Array cores de fundo
 
-Defines the color of the vertical lines in a list box (gray by default).
+Define a cor das linhas verticais num list box (cinzento por predefinição).
 
 #### Gramática JSON
 
