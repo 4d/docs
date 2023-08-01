@@ -73,7 +73,7 @@ Os objectos são colocados numa biblioteca de objectos usando o método de arras
 
 > In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
 
-Basic operations are available in the context menu or the options menu of the window:
+As operações básicas estão disponíveis no menu de contexto ou no menu de opções da janela:
 
 ![](../assets/en/FormEditor/library5.png)
 
@@ -92,9 +92,9 @@ Uma biblioteca de objectos pode conter até 32.000 elementos.
 Os objectos são copiados com todas as suas propriedades, tanto gráficas como funcionais, incluindo os seus métodos. Estas propriedades são mantidas na íntegra quando o elemento é copiado para um formulário ou outra biblioteca.
 
 #### Objetos dependentes
-Using copy-paste or drag-and-drop with certain library objects also causes their dependent objects to be copied. For example, copying a button will cause the object method that may be attached to be copied as well. These dependent objects cannot be copied or dragged and dropped directly.
+A utilização de copiar-colar ou arrastar-e-soltar com determinados objetos de biblioteca também faz com que os seus objetos dependentes sejam copiados. Por exemplo, copiar um botão fará com que o método objeto que pode estar anexado também seja copiado. Estes objetos dependentes não podem ser copiados ou arrastados e largados diretamente.
 
-The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
+Segue-se uma lista de objetos dependentes que serão colados na biblioteca enquanto o objeto principal que os utiliza (quando aplicável):
 
 - Listas
 - Formatos/Filtros
