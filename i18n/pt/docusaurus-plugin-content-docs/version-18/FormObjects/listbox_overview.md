@@ -845,7 +845,7 @@ The behavior attribute provides variations to the regular representation of valu
 
 When a "choiceList" or a "requiredList" attribute is present inside the object, the text input is replaced by a drop-down list or a combo box, depending of the attribute:
 
-* Se o atributo é "choiceList", a célula é apresentada como um combo box. This means that the user can select or type a value.
+* Se o atributo é "choiceList", a célula é apresentada como um combo box. Isto significa que o usuário pode selecionar ou escrever um valor.
 * If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
@@ -886,7 +886,7 @@ Exemplos:
 
 #### requiredListName e requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
+The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). A célula será então apresentada como uma lista pendente. This means that the user can only select one of the values provided in the list.
 
 Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
 > * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
@@ -954,7 +954,7 @@ You can use specific attributes to add units associated with cell values (*e.g.*
 
 * "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
 * "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
-* "unitsListName": a name of a design-based 4D list that contains available units. Use this attribute to define units with a 4D list created in the Tool box.
+* "unitsListName": a name of a design-based 4D list that contains available units. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Regardless of the way the unit list is defined, it can be associated with the following attribute:
 
