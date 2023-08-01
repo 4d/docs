@@ -397,13 +397,13 @@ Los atributos de marca de agua se utilizan para superponer texto o una imagen en
 
 \* Si utiliza el tipo texto, pase la ruta de archivo (absoluta o relativa) de la imagen. Si pasa una ruta relativa, el archivo debe estar situado junto al archivo de estructura de la base de datos. En Windows, la extensión del archivo debe ser indicada. No importa el tipo utilizado para establecer una imagen, la imagen en sí (no una referencia) se almacena en el área de 4D View Pro y es devuelta por [VP Get print info](method-list.md#vp-get-print-info).
 
-## Style Objects
+## Objetos Estilo
 
 Los objetos de estilo y las hojas de estilo de 4D View Pro le permiten controlar los aspectos gráficos y el aspecto de sus documentos 4D View Pro.
 
 ### Objetos de estilo & Hojas de estilo
 
-Style objects contain the style settings. Se pueden utilizar en una hoja de estilo o por su cuenta. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. Puede utilizar objetos de estilo directamente con los comandos [VP SET CELL STYLE](method-list.md#vp-set-cell-style) y [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style). También puede utilizar objetos de estilo al definir temas de tabla personalizados mediante los comandos [VP SET TABLE THEME](method-list.md#vp-set-table-theme) o [VP CREATE TABLE](method-list.md#vp-create-table).
+Los objetos Estilo contienen parámetros de estilo. Se pueden utilizar en una hoja de estilo o por su cuenta. Los objetos Estilo también pueden utilizarse además de una hoja de estilo, de modo que puedan definirse diferentes parámetros para rangos de celdas individuales sin que ello afecte al resto del documento. Puede utilizar objetos de estilo directamente con los comandos [VP SET CELL STYLE](method-list.md#vp-set-cell-style) y [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style). También puede utilizar objetos de estilo al definir temas de tabla personalizados mediante los comandos [VP SET TABLE THEME](method-list.md#vp-set-table-theme) o [VP CREATE TABLE](method-list.md#vp-create-table).
 
 Una **hoja de estilo** agrupa una combinación de propiedades en un objeto estilo para especificar el aspecto de todas las celdas de sus documentos 4D View Pro. Las hojas de estilo guardadas con el documento pueden utilizarse para definir las propiedades de una sola hoja, de varias hojas o de todo un libro de trabajo. Cuando se crea, una hoja de estilo 4D View Pro recibe un nombre que se guarda dentro de la hoja de estilo en la propiedad "name". Esto permite utilizar fácilmente una hoja de estilo y si se selecciona cuidadosamente, puede facilitar su identificación y finalidad (por ejemplo, Membrete_interno, Membrete_externo).
 

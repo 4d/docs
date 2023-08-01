@@ -44,7 +44,7 @@ The form Detail area is displayed on the screen and printed once for each record
 
 ## Rodapé do formulário
 
-The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
+The Form Footer area is displayed on screen under the list of records. É sempre impresso na parte inferior de cada página de um relatório. The Footer area is defined as the area between the Break control line and the Footer control line.
 
 A área de rodapé pode ser aumentada ou diminuída.
 

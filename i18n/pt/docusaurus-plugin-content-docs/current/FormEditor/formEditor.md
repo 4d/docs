@@ -697,25 +697,25 @@ By default, all views are shown, as indicated by the *Show/Hide* icon:
 
 ![](../assets/en/FormEditor/showHide.png)
 
-To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the corresponding view are no longer shown in the form:
+Para ocultar uma vista, clique no ícone *Mostrar/Ocultar*. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
 
 ![](../assets/en/FormEditor/hidden.png)
-> The [Current view](#before-you-begin) cannot be hidden.
+> A [vista atual](#before-you-begin) não pode ser ocultada.
 
-To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
+Para mostrar uma vista oculta, basta selecioná-la ou clicar no ícone *Mostrar/Ocultar* para essa vista.
 
 #### Bloqueio de objetos de uma vista
 
-É possível bloquear os objectos de uma vista. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. Esta função é útil para evitar erros de tratamento.
+É possível bloquear os objectos de uma vista. Isto impede que sejam selecionados, alterados ou eliminados do formulário. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. Esta função é útil para evitar erros de tratamento.
 
 By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut, which means that the view is now locked:
+To lock the objects of a view, click the *Lock/Unlock* icon. O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
-> The [Current view](#before-you-begin) cannot be locked.
+> A [vista atual](#before-you-begin) não pode ser bloqueada.
 
 To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
 
@@ -725,9 +725,9 @@ Pode fazer zoom no formulário atual. Switch to “Zoom” mode by clicking on t
 
 ![](../assets/en/FormEditor/zoom.png)
 
-- When you click on the magnifying glass, the cursor changes into one. You can then click in the form to increase the display or hold down Shift and click to reduce the display percentage.
+- Quando se clica na lupa, o cursor transforma-se numa lupa. Pode então clicar no formulário para aumentar a visualização ou manter premida a tecla Shift e clicar para reduzir a percentagem de visualização.
 - When you click on a percentage bar, the display is immediately modified.
 
-In Zoom mode, all Form editor functions remain available(*).
+No modo Zoom, todas as funções do editor de formulários permanecem disponíveis(*).
 
 (*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.

@@ -146,9 +146,9 @@ List of values that will be used as default values for the list box column (arra
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
-Uma expressão 4D a associar a uma coluna. You can enter:
+Uma expressão 4D a associar a uma coluna. Você pode entrar:
 
-- A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- A **simple variable** (in this case, it must be explicitly declared for compilation). Pode utilizar qualquer tipo de variável, exceto BLOBs e arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Podem ser utilizados os seguintes tipos de campos:
   - String
@@ -207,9 +207,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 ## Salvar como
 
-This property is available in the following conditions:
+Esta propriedade está disponível nas seguintes condições:
 
-- a [choice list](#choice-list) is associated with the object
+- uma [lista de escolha](#choice-list) está associada ao objeto
 - for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
 
 This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
@@ -219,7 +219,7 @@ This property specifies, in the context of a field or variable associated with a
 
 This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
 
-Using this property requires compliance with the following principles:
+A utilização deste bem exige o cumprimento dos seguintes princípios:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list).
 - Devem ser associadas referências válidas e únicas aos itens da lista.
@@ -244,7 +244,7 @@ Using this property requires compliance with the following principles:
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.
 
 - for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
-- for an entity selection list box, an entity selection object is built. You must use an object variable or an assignable expression that accepts objects.
+- para um list box seleção de entidades, é criado um objeto de seleção de entidades. You must use an object variable or an assignable expression that accepts objects.
 > This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
 
 #### Gramática JSON

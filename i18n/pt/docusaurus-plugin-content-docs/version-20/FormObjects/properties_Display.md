@@ -51,7 +51,7 @@ O campo contém efetivamente "proportion". 4D accepts and stores the entire entr
 
 ## Formato Data
 
-Date formats control the way dates appear when displayed or printed. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
+Os formatos de data controlam como as datas aparecem quando são apresentadas ou impressas. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
 
 A tabela seguinte apresenta as opções disponíveis:
@@ -77,9 +77,9 @@ A tabela seguinte apresenta as opções disponíveis:
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                                                                                                                                |
-| ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string        | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| Nome       | Tipo de dados | Valores possíveis                                                                                                                                                                    |
+| ---------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dateFormat | string        | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (pode ser combinado com os outros valores possíveis) |
 
 #### Objectos suportados
 
@@ -188,13 +188,13 @@ The `&xml` format will make a number compliant with XML standard rules. In parti
 
 ### Mostrar um número como hora
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
+You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. O dígito no formato corresponde à ordem em que o formato da hora aparece no menu pendente Formato.
 
 Por exemplo, o formato:
 
  &/5
 
-corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. A number field with this format would display 25000 as:
+corresponde ao 5.º formato de hora no menu pop-up, especificamente a hora AM/PM. Um campo numérico com este formato apresentaria 25000 como:
 
  6:56 AM
 
@@ -234,9 +234,9 @@ The following table shows how different formats affect the display of numbers. T
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados | Valores possíveis                                              |
-| ------------ | ------------- | -------------------------------------------------------------- |
-| numberFormat | string        | Numbers (including a decimal point or minus sign if necessary) |
+| Nome         | Tipo de dados | Valores possíveis                                                     |
+| ------------ | ------------- | --------------------------------------------------------------------- |
+| numberFormat | string        | Números (incluindo um ponto decimal ou sinal de menos, se necessário) |
 
 #### Objectos suportados
 
@@ -262,14 +262,14 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D corta igualmente de cada borda e da parte superior e inferior.
 
 O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior esquerdo da imagem no canto superior esquerdo da área e recorte qualquer parte que não caiba na área. 4D corta da direita e de baixo para cima.
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+> Quando o formato da imagem for **Truncado (não centrado)**, é possível adicionar barras de deslocamento à área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-### Scaled to fit (proportional) and Scaled to fit centered (proportional)
+### Escalado para caber (proporcional) e Escalado para caber centrado (proporcional)
 
 `Gramática JSON: "proportionalTopLeft" / "proportionalCenter"`
 
@@ -305,7 +305,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 ## Formato Hora
 
-Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
+Os formatos de hora controlam a forma como as horas aparecem quando são apresentadas ou impressas. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
 
 The table below shows the Time field display formats and gives examples:
@@ -343,16 +343,16 @@ Quando uma [expressão booleana](properties_Object.md#expression-type) é aprese
 * um texto num [objeto de entrada](input_overview.md)
 * a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
 
-... you can select the text to display for each value:
+... pode selecionar o texto a apresentar para cada valor:
 
-* **Text when True** - the text to be displayed when the value is "true"
-* **Text when False** - the text to be displayed when the value is "false"
+* **Texto quando True** - o texto a ser apresentado quando o valor é "true"
+* **Texto quando False** - o texto a ser apresentado quando o valor é "false"
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis                                                        |
-| ------------- | ------------- | ------------------------------------------------------------------------ |
-| booleanFormat | string        | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Nome          | Tipo de dados | Valores possíveis                                                                |
+| ------------- | ------------- | -------------------------------------------------------------------------------- |
+| booleanFormat | string        | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", por exemplo, "Assigned;Unassigned" |
 
 #### Objectos suportados
 
@@ -372,7 +372,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 | Nome        | Tipo de dados | Valores possíveis                                  |
 | ----------- | ------------- | -------------------------------------------------- |
-| controlType | string        | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| controlType | string        | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**colunas booleanas**: "checkbox" (padrão) ou "popup"</li> |
 
 #### Objectos suportados
 
@@ -384,7 +384,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
-In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+Em particular, esta propriedade permite implementar botões "invisíveis".  Os botões não renderizados podem ser colocados em cima de objetos gráficos. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
 
 #### Gramática JSON
 
@@ -530,7 +530,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 * In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
 
-* In multiline columns/areas, 4D carries out automatic line returns.
+* Em colunas/áreas com várias linhas, 4D efetua retornos de linha automáticos.
 
 ![](../assets/en/FormObjects/wordwrap2.png)
 
@@ -561,9 +561,9 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Gramática JSON
 
-| Nome     | Tipo de dados | Valores possíveis                                  |
-| -------- | ------------- | -------------------------------------------------- |
-| wordwrap | string        | "automatic" (excluding list box), "normal", "none" |
+| Nome     | Tipo de dados | Valores possíveis                                 |
+| -------- | ------------- | ------------------------------------------------- |
+| wordwrap | string        | "automatic" (exceto list box), "normal", "nenhum" |
 
 #### Objectos suportados
 

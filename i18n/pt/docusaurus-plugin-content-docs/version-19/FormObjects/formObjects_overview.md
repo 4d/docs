@@ -13,9 +13,9 @@ You build and customize your application forms by manipulating the objects on th
 - **static objects** are generally used for setting the appearance of the form and its labels as well as for the graphic interface. Static objects do not have associated variables like active objects. However, you can insert dynamic objects into static objects.
 
 
-## Handling form objects
+## Manipulação de objectos de formulário
 
-You can add or modify 4D form objects in the following ways:
+Pode adicionar ou modificar objetos de formulários 4D das seguintes formas:
 
 *   **[Form Editor](FormEditor/formEditor.md):** Drag an object from the Form Editor toolbar onto the form. Then use the Property List to specify the object's properties.   
   See the [Building Forms](https://doc.4d.com/4Dv17R6/4D/17-R6/Building-forms.200-4354618.en.html) chapter for more information.

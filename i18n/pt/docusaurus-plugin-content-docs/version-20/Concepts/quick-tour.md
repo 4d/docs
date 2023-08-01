@@ -408,9 +408,9 @@ Em 4D, podem ser utilizadas as seguintes sequências de escape:
 | ``\\` |``&#96; (Barra invertida) |                      |
 | `\"`                               | " (aspas)            |
 
-> It is possible to use either upper or lower case in escape sequences.
+> É possível utilizar maiúsculas ou minúsculas nas sequências de escape.
 
-In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
+No exemplo seguinte, o carácter **Retorno de carro** (sequência de escape `\r`) é inserido numa expressão para obter uma caixa de diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
 

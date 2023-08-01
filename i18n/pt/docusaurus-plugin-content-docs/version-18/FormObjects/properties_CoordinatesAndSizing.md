@@ -126,8 +126,8 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 ## Alto
 
-This property designates an object's vertical size.
-> Some objects may have a predefined height that cannot be altered.
+Esta propriedade designa o tamanho vertical de um objeto.
+> Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
 
 #### Gramática JSON
 
@@ -143,8 +143,8 @@ This property designates an object's vertical size.
 
 ## Largura
 
-This property designates an object's horizontal size.
-> * Some objects may have a predefined height that cannot be altered.
+Esta propriedade designa o tamanho horizontal de um objeto.
+> * Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
 > * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
 > * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 

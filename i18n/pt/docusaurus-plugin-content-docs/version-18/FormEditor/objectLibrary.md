@@ -9,7 +9,7 @@ Pode utilizar bibliotecas de objectos nos seus formulários. An object library o
 
 4D propõe dois tipos de bibliotecas de objetos:
 
-- a standard, preconfigured object library, available in all your projects.
+- uma biblioteca de objetos padrão, pré-configurada, disponível em todos os seus projetos.
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
 ## Criar e utilizar bibliotecas de objetos personalizadas
@@ -17,7 +17,7 @@ Pode utilizar bibliotecas de objectos nos seus formulários. An object library o
 The standard object library is available from the Form editor: click on the last button of the toolbar:  
 ![](../assets/en/FormEditor/library1.png)
 
-The library is displayed in a separate window:
+A biblioteca é apresentada numa janela separada:
 
 ![](../assets/en/FormEditor/library2.png)
 
@@ -25,11 +25,11 @@ A janela tem as seguintes características principais:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
 - Pode filtrar o conteúdo da janela utilizando o menu **Categorias**: ![](../assets/en/FormEditor/library3.png)
-- To use an object from the library to your form, you can either:
-  - right-click on an object and select **Copy** in the contextual menu
+- Para utilizar um objeto da biblioteca no seu formulário, pode:
+  - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
   - or drag and drop the object from the library The object is then added to the form.
 
-This library is read-only. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
+Esta biblioteca é só de leitura. If you want to edit default objects or create your own library of preconfigured objects or project forms, you need to create a custom object library (see below).
 
 All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
@@ -71,7 +71,7 @@ Os objectos são colocados numa biblioteca de objectos usando o método de arras
 
 > In order to be able to drag and drop objects from forms to object libraries, you must make sure the **Start drag and drop** option in the 4D Preferences is selected.
 
-Basic operations are available in the context menu or the options menu of the window:
+As operações básicas estão disponíveis no menu de contexto ou no menu de opções da janela:
 
 ![](../assets/en/FormEditor/library5.png)
 
@@ -90,9 +90,9 @@ Os objectos são copiados com todas as suas propriedades, tanto gráficas como f
 
 #### Objetos dependentes
 
-Using copy-paste or drag-and-drop with certain library objects also causes their dependent objects to be copied. For example, copying a button will cause the object method that may be attached to be copied as well. These dependent objects cannot be copied or dragged and dropped directly.
+A utilização de copiar-colar ou arrastar-e-soltar com determinados objetos de biblioteca também faz com que os seus objetos dependentes sejam copiados. Por exemplo, copiar um botão fará com que o método objeto que pode estar anexado também seja copiado. Estes objetos dependentes não podem ser copiados ou arrastados e largados diretamente.
 
-The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
+Segue-se uma lista de objetos dependentes que serão colados na biblioteca enquanto o objeto principal que os utiliza (quando aplicável):
 
 - Listas
 - Formatos/Filtros

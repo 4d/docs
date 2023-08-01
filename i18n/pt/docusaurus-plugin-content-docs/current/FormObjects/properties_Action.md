@@ -23,7 +23,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Nome     | Tipo de dados | Valores possíveis                                            |
 | -------- | ------------- | ------------------------------------------------------------ |
-| dragging | text          | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
 
 
 #### Objectos suportados
@@ -55,7 +55,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Nome     | Tipo de dados | Valores possíveis                                            |
 | -------- | ------------- | ------------------------------------------------------------ |
-| dropping | text          | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
 
 #### Objectos suportados
 
@@ -158,7 +158,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 ---
 ## Ordenável
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Os arrays de tipo imagem (colunas) não podem ser ordenadas com esta funcionalidade.
 
 In list boxes based on a selection of records, the standard sort function is available only:
 *   When the data source is *Current Selection*,
@@ -190,9 +190,9 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                                                                                                |
-| ------ | ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string        | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Nome   | Tipo de dados | Valores possíveis                                                                                                  |
+| ------ | ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| action | string        | O nome de uma [ação normalizada válida](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objectos suportados
 

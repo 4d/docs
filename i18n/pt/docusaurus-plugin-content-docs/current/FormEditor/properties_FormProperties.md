@@ -85,7 +85,7 @@ Os tipos suportados dependem da categoria do formulário:
 | Tipo de formulário                 | Gramática JSON   | Descrição                                                            | Suportado por                            |
 | ---------------------------------- | ---------------- | -------------------------------------------------------------------- | ---------------------------------------- |
 | Formulário detalhado               | detailScreen     | Um formulário de visualização para introdução e modificação de dados | Formulários projeto - Formulários tabela |
-| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice        | Formulários projeto - Formulários tabela |
+| Detail Form for Printing           | detailPrinter    | Um relatório impresso com uma página por registo, como uma fatura    | Formulários projeto - Formulários tabela |
 | Formulário lista                   | listScreen       | Um formulário para listar os registos no ecrã                        | Formularios tabla                        |
 | Formulário de lista para impressão | listPrinter      | Um relatório impresso que lista os registos                          | Formularios tabla                        |
 | Nenhum                             | *no destination* | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
@@ -184,7 +184,7 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 *   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
 *   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
 
-> The number of characters for a window title is limited to 31.
+> O número de caracteres para um título de janela é limitado a 31.
 
 #### Gramática JSON
 

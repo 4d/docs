@@ -12,21 +12,21 @@ A progress indicator (also called "thermometer") is designed to display or set n
 
 Os indicadores podem ser utilizados para visualizar ou definir valores. Por exemplo, se um indicador de progresso recebe um valor por um método, ele exibe o valor. Se o usuário arrastar o ponto indicador, o valor muda. The value can be used in another object such as a field or an enterable or non-enterable object.
 
-The variable associated with the indicator controls the display. You place values into, or use values from, the indicator using methods. For example, a method for a field or enterable object could be used to control a progress indicator:
+A variável associada ao indicador controla a visualização. O usuário coloca valores no código ou utiliza valores do código através de métodos. For example, a method for a field or enterable object could be used to control a progress indicator:
 
 ```4d
  $vTherm:=[Employees]Salary
 ```
 
-Este método atribui o valor do campo Salary à variável $vTherm. This method would be attached to the Salary field.
+Este método atribui o valor do campo Salary à variável $vTherm. Este método seria anexado ao campo Salário.
 
-Conversely, you could use the indicator to control the value in a field. O usuário arrasta o indicador para definir o valor. Neste caso, o método torna-se:
+Por outro lado, é possível utilizar o indicador para controlar o valor num campo. O usuário arrasta o indicador para definir o valor. Neste caso, o método torna-se:
 
 ```4d
  [Employees]Salary:=$vTherm
 ```
 
-The method assigns the value of the indicator to the Salary field. As the user drags the indicator, the value in the Salary field changes.
+O método atribui o valor do código ao campo Salary. À medida que o usuário arrasta o indicador, o valor no campo Salário muda.
 
 
 ## Termómetro predefinido
@@ -35,9 +35,9 @@ The method assigns the value of the indicator to the Salary field. As the user d
 
 O termómetro é o indicador básico de progresso.
 
-You can display horizontal or vertical thermometers bars. Isto é determinado pela forma do objeto que desenha.
+É possível apresentar barras de termômetros horizontais ou verticais. Isto é determinado pela forma do objeto que desenha.
 
-Multiple graphical options are available: minimum/maximum values, graduations, steps.
+Estão disponíveis várias opções gráficas: valores mínimos/máximos, graduações, passos.
 
 ### Propriedades compatíveis
 [Barber shop](properties_Scale.md#barber-shop) - [Negrito](properties_Text.md#bold) - [Estilo de linha de borda](properties_BackgroundAndBorder.md#border-line-style) -\[Abaixo\](properties_CoordinatesAndSizing. md#bottom) - [Clase](properties_Object.md#css-class) - [Graduação da tela](properties_Scale.md#display-graduation) - \[Enterable\](properties_Entry. md#enterable) - [Executar método objeto](properties_Action.md#execute-object-method) - [Tipo de expressão](properties_Object.md#expression-type) (só "inteiro", "número", "data" ou "hora") - \[Altura\](properties_CoordinatesAndSizing. md#height) - [Etapa de graduação](properties_Scale.md#graduation-step) -[Conselho de ajuda](properties_Help.md#help-tip) - \[Tamanho horizontal\](properties_ResizingOptions. md#horizontal-sizing) - [Lugar da etiqueta](properties_Scale.md#label-location) - [Esquerda](properties_CoordinatesAndSizing.md#left) - \[Máximo\](properties_Scale. md#maximum) - [Mínimo](properties_Scale.md#minimum) - [Formato numérico](properties_Display.md#number-format) - [Nome de objeto](properties_Object.md#object-name) - \[Direita\](properties_CoordinatesAndSizing. md#right) - [Paso](properties_Scale.md#step) - [Acima](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - \[Variável ou expressão\](properties_Object. md#variable-or-expression) - [Tamanho vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
@@ -47,7 +47,7 @@ Multiple graphical options are available: minimum/maximum values, graduations, s
 
 ![](../assets/en/FormObjects/indicator.gif)
 
-**Barber shop** is a variant of the default thermometer. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
+**Barber shop** é uma variante do termômetro predefinido. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
 > In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
 
 Barber shop displays a continuous animation, like the [spinner](spinner.md). These thermometers are generally used to indicate to the user that the program is in the process of carrying out a long operation. When this thermometer variant is selected, [graphical Scale properties](properties_Scale.md) are not available.

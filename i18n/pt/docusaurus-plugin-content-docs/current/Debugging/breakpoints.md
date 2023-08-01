@@ -1,69 +1,69 @@
 ---
 id: breakpoints
-title: Breakpoints and Command Catching
+title: Pontos de interrupção e captura de comandos
 ---
 
 ## Visão Geral
 
 
-Breakpoints and command catching are very efficient debugging techniques. Ambas têm o mesmo efeito: fazem uma pausa na execução do código (e apresentam a janela do depurador, se ainda não tiver sido apresentada) num passo pretendido.
+Os pontos de interrupção e a captura de comandos são técnicas de depuração muito eficientes. Ambas têm o mesmo efeito: fazem uma pausa na execução do código (e apresentam a janela do depurador, se ainda não tiver sido apresentada) num passo pretendido.
 
-You set breakpoints on any line of code where you want the execution to be paused. É possível associar uma condição ao ponto de interrupção.
+Os pontos de interrupção são definidos em qualquer linha de código onde se pretenda que a execução seja interrompida. É possível associar uma condição ao ponto de interrupção.
 
-Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process.
+A captura de um comando permite começar a rastrear a execução de qualquer processo assim que um comando for chamado por esse processo.
 
 
 
 ## Breakpoints
 
 
-To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor.
+Para criar um ponto de interrupção, clique na margem esquerda do painel Código-fonte no depurador ou no Editor de código.
 
-In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
+No exemplo a seguir, um ponto de interrupção (o marcador vermelho) foi definido, no depurador, na linha `If ($in.dataClass#Null)`:
 
 ![break-point](../assets/en/Debugging/break.png)
 
-In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. That line is not executed itself — you are taken back to trace mode. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
+No exemplo acima, clicar no botão [**No Trace**](./debugger.md/#no-trace) retoma a execução normal até a linha marcada com o ponto de interrupção. Essa linha não é executada - o usuário é levado de volta ao modo de rastreio. Definir um ponto de interrupção para além do contador do programa e clicar no botão **No Trace** permite saltar partes do método que está sendo rastreado.
 
-To remove a break point, click the corresponding bullet.
+Para remover um ponto de interrupção, clique no marcador correspondente.
 
 
 ### Propriedades do ponto de interrupção
 
-You can edit the behavior of a breakpoint using the Breakpoint Properties window:
+Pode editar o comportamento de um ponto de interrupção utilizando a janela Propriedades do ponto de paragem:
 
 ![breakpoint-properties](../assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). Pode:
+Esta janela está disponível no Editor de código ou no [Painel de código-fonte](debugger.md#source-code-pane). Pode:
 
-- right-click a line and select **Edit Breakpoint** in the contextual menu, or
-- `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.
+- clique com o botão direito do mouse numa linha e selecione **Edit Breakpoint** no menu contextual, ou
+- `Alt+clique em` (Windows) ou `Option+clique em` (macOS) na margem esquerda.
 
-If a break point already exists, the window is displayed for that break point. Otherwise, a break point is created and the window is displayed for the newly created break point.
+Se já existir um ponto de paragem, a janela é apresentada para esse ponto de paragem. Caso contrário, é criado um ponto de paragem e a janela é apresentada para o novo ponto de paragem criado.
 
 Segue-se uma descrição das propriedades:
 
 * **Localização**: indica o nome do método e o número de linha associado ao ponto de paragem.
 * **Interromper quando a expressão seguinte é true**: pode criar **pontos de interrupção condicionais** introduzindo uma fórmula 4D que devolva `True` ou `False`. Por exemplo, insira `Records in selection(\[aTable])=0` para garantir que a quebra ocorre apenas se não houver nenhum registo selecionado para a tabela \[aTable]. As condições dos pontos de paragem estão disponíveis na coluna **Condição** da [lista de interrupções](#break-list).
 * **Número de vezes a saltar antes de interromper**: pode anexar um ponto de interrupção a uma linha localizada numa estrutura de ciclo (While, Repeat, ou For) ou localizada numa sub-rotina ou função chamada a partir de um ciclo.
-* **O ponto de interrupção está desativado**: se não necessitar atualmente de um ponto de interrupção, mas poderá precisar dele mais tarde, pode desativá-lo temporariamente. A disabled break point appears as a dash (-) instead of a bullet (•)|
+* **O ponto de interrupção está desativado**: se não necessitar atualmente de um ponto de interrupção, mas poderá precisar dele mais tarde, pode desativá-lo temporariamente. Um ponto de interrupção desativado aparece como um traço (-) em vez de um marcador (-)|.
 
 
 ### Pontos de interrupção na depuração remota
 
-A lista de pontos de paragem é armazenada localmente. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
+A lista de pontos de paragem é armazenada localmente. No modo de depuração remota, se o depurador anexado for um 4D remoto, a lista de pontos de interrupção remota substitui temporariamente a lista de pontos de interrupção do servidor durante a sessão de depuração.
 
-The server break point list is automatically restored if it becomes again the attached debugger.
+A lista de pontos de paragem do servidor é automaticamente restaurada se voltar a ser o depurador ligado.
 
-### Break List
+### Lista de pausas
 
-The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+A lista de interrupções é uma página do explorador do tempo de execução que lhe permite gerir os pontos de interrupção criados na janela do depurador ou no editor de código. Para mais informações sobre o Explorador de tempo de execução, consulte a sua página dedicada em [o manual de referência do projeto](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
-To open the Break list page:
+Para abrir a página da lista de pontos de interrupção:
 
-1. From the **Run menu**, click **Runtime Explorer...**
+1. No **menu Executar**, clique em **Executar Explorer...**
 
-2. Click the **Break** tab to display the Break list:
+2. Clique no separador **Break** para visualizar a lista de pausas:
 
 ![break-list-runtime-explorer](../assets/en/Debugging/break-list.png)
 
@@ -79,15 +79,15 @@ Não é possível adicionar novos pontos de paragem a partir desta janela. Os po
 
 ## Comandos de captura
 
-The **Catch** tab of the Runtime Explorer lets you add additional breaks to your code by catching calls to 4D commands. Unlike a break point, which is located in a particular project method (and therefore triggers a trace exception only when it is reached), the scope of catching a command includes all the processes that execute 4D code and call that command.
+O separador **Catch** do Runtime Explorer permite-lhe adicionar quebras adicionais ao seu código, capturando chamadas para comandos 4D. Ao contrário de um ponto de interrupção, que está localizado em um método particular do projeto (e, portanto, desencadeia uma exceção de rastreamento apenas quando é alcançado), o escopo de captura de um comando inclui todos os processos que executam o código 4D e chamam esse comando.
 
-Catching a command is a convenient way to trace large portions of code without setting break points at arbitrary locations. For example, if a record that should not be deleted is deleted after you've executed one or several processes, you can try to reduce the field of your investigation by catching commands such as `DELETE RECORD` and `DELETE SELECTION`. Each time these commands are called, you can check if the record in question has been deleted, and thus isolate the faulty part of the code.
+A captura de um comando é uma forma conveniente de rastrear grandes porções de código sem definir pontos de interrupção em locais arbitrários. Por exemplo, se um registo que não deveria ser eliminado for eliminado depois de ter executado um ou vários processos, pode tentar reduzir o campo da sua investigação capturando comandos como `DELETE RECORD` e `DELETE SELECTION`. Cada vez que estes comandos forem chamados, é possível verificar se o registo em questão foi eliminado e, assim, isolar a parte defeituosa do código.
 
-Feel free to combine breakpoints and command catching.
+Pode combinar pontos de interrupção e captura de comandos.
 
-To open the Caught Commands page:
+Para abrir a página Comandos apanhados:
 
-1. Choose **Run** > **Runtime explorer...** to open the Runtime Explorer.
+1. Escolha **Run** > **Runtime explorer...** para abrir o Runtime Explorer.
 
 2. Clique em **Catch** para exibir a lista de pontos de interrupção nos comandos:
 
