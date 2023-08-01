@@ -8,7 +8,7 @@ title: Aparência
 
 The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
 
-There can only be one default button per form page.
+Só pode haver um botão predefinido por página de formulário.
 
 In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
 
@@ -51,7 +51,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 ## Esconder ressalte seleção
 
-`Selection type list boxes`
+`List boxes de tipo de seleção`
 
 Esta propriedade é utilizada para desativar o realce de seleção nos list boxes.
 
@@ -380,7 +380,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Há tr�
 - **Draft**: draft mode with basic document properties
 - **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
-> The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
+> A propriedade Mode vista só é utilizada para a renderização no ecrã. Regarding printing settings, specific rendering rules are automatically used.
 
 #### Gramática JSON
 
