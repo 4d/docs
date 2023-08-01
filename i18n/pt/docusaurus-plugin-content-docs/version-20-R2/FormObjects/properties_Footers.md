@@ -5,7 +5,7 @@ title: Rodapés
 
 ## Exibir rodapés
 
-This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
+This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
 
 #### Gramática JSON
 
@@ -23,7 +23,7 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-* *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. Se um tipo de letra for demasiado grande, o texto é truncado. Moreover, pictures are truncated or resized according to their format.
+* *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
 * *Line* - the height is calculated while taking into account the font size of the row concerned.
   * Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
@@ -60,4 +60,4 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Veja também
 
-[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)
+[Cabeçalhos](properties_Headers.md) - [Rodapés List box](listbox_overview.md#list-box-footers)
