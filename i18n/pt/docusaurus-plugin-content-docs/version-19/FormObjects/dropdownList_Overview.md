@@ -138,7 +138,7 @@ Quando associar um menu pop up/lista drop down com uma lista de escolhas e com u
 
 ### Se usar uma lista hierárquica, só o primeiro nível é mostrado e pode ser selecionado.
 
-A hierarchical drop-down list has a sublist associated with each item in the list. Here is an example of a hierarchical drop-down list:
+A hierarchical drop-down list has a sublist associated with each item in the list. Eis um exemplo de uma lista pendente hierárquica:
 
 ![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
