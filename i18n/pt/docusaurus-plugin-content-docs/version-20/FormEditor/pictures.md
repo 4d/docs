@@ -44,22 +44,22 @@ As imagens de alta resolução com a convenção @nx podem ser utilizadas nos se
 
 * [Imagens estáticas](FormObjects/staticPicture.md)
 * [Botões](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[caixas de verificação](FormObjects/checkbox_overview.md)
-* [Picture buttons](FormObjects/pictureButton_overview.md)/[Picture pop-ups](FormObjects/picturePopupMenu_overview.md)
+* [Botões imagem](FormObjects/pictureButton_overview.md)/[Pop-ups imagem](FormObjects/picturePopupMenu_overview.md)
 * [Tab controls](FormObjects/tabControl.md)
 * [Cabeçalhos de list box](FormObjects/listbox_overview.md#list-box-headers)
 * [Ícones de menu](Menus/properties.md#item-icon)
 
-4D automatically prioritizes pictures with the highest resolution. 4D automatically prioritizes pictures with the highest resolution. Even if a command or property specifies *circle.png*, *circle@3x.png* will be used (if it exists).
-> Note that resolution prioritization occurs only for displaying pictures onscreen, there is no automatic prioritization made when printing.
+4D dá automaticamente prioridade às imagens com a resolução mais alta. 4D automatically prioritizes pictures with the highest resolution. Mesmo que um comando ou propriedade especifique *circle.png*, *circle@3x.png* será utilizado (se existir).
+> Note que a priorização da resolução ocorre apenas para a apresentação de imagens no ecrã, não havendo priorização automática durante a impressão.
 
 ### DPI (macOS and Windows)
 
 While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
-| Operação                                                                                                                                 | Comportamento                                                 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| Soltar o pegar                                                                                                                           | Se a imagem tiver:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul>                   |
-| [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu) | If the picture's display format  is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul> |
+| Operação                                                                                                                                 | Comportamento                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Soltar o pegar                                                                                                                           | Se a imagem tiver:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul>                        |
+| [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu) | Se o formato de apresentação da imagem é:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul> |
 
 *(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi*
 
@@ -67,10 +67,10 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 
 You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
 
-A dark mode picture is defined in the following way:
+Uma imagem em modo escuro é definida da seguinte forma:
 
 * dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
-* dark mode picture is stored next to the standard version.
+* a imagem do modo escuro é guardada ao lado da versão padrão.
 
 At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).
 
