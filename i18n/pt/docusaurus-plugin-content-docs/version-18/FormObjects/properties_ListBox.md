@@ -38,7 +38,7 @@ O formulário especificado é apresentado:
 
 | Nome       | Tipo de dados | Valores possíveis         |
 | ---------- | ------------- | ------------------------- |
-| detailForm | string        | <ul><li>Nome (string) da tabela ou formulário projeto</li><li>POSIX path (string) to a .json file describing the form</li><li>Objeto que descreve o formulário</li></ul> |
+| detailForm | string        | <ul><li>Nome (string) da tabela ou formulário projeto</li><li>Caminho POSIX (cadeia de caracteres) para um ficheiro .json que descreve o formulário</li><li>Objeto que descreve o formulário</li></ul> |
 
 #### Objectos suportados
 
