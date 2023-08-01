@@ -1,6 +1,6 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Background and Border
+title: Fundo e margem
 ---
 
 
@@ -65,7 +65,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 ## Estilo borda linha
 
-Allows setting a standard style for the object border.
+Permite definir um estilo padrão para o contorno do objeto.
 
 #### Gramática JSON
 
@@ -81,7 +81,7 @@ Allows setting a standard style for the object border.
 
 ## Tipo de linha pontilhada
 
-Describes dotted line type as a sequence of black and white points.
+Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e brancos.
 
 #### Gramática JSON
 
@@ -174,7 +174,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+De seguida, deve colorir as células com valores negativos a laranja-escuro. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // laranja escura
