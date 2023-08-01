@@ -21,7 +21,7 @@ The [variable](properties_Object.md#variable-or-expression) associated with a bu
 
 
 
-> A button can be assigned both a standard action and a method. In this case, if the button is not disabled by the standard action, the method is executed before the standard action.
+> A um botão pode ser atribuída uma ação padrão e um método. In this case, if the button is not disabled by the standard action, the method is executed before the standard action.
 
 
 
