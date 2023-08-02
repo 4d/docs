@@ -64,10 +64,10 @@ You can use an expression as data source for an object. Any valid 4D expression 
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
-When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. Há duas formas de o fazer:
+When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). Esta variável temporária será destruída quando o formulário for fechado. Para que este princípio funcione em modo compilado, é imperativo que as variáveis dinâmicas sejam explicitamente tipadas. Há duas formas de o fazer:
 
-- You can set the type using the [Expression type](#expression-type) property.
-- You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
+- Pode definir o tipo utilizando a propriedade [Tipo de expressão](#expression-type).
+- É possível utilizar um código de inicialização específico quando o formulário é carregado, que utiliza, por exemplo, o comando `VARIABLE TO VARIABLE`:
 
 ```4d
  If(Form event=On Load)
@@ -78,18 +78,18 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por exemplo:
+No código 4D, as variáveis dinâmicas podem ser acedidas através de um ponteiro obtido com o comando `OBJECT Get pointer`. Por exemplo:
 
 ```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
- $p :=OBJECT Get pointer(Object named;"tstart")
+  // atribuir a hora 12:00:00 à variável do objeto "tstart"
+ $p :=OBJECT Get pointer(Object named; "tstart")
  $p->:=?12:00:00?
 ```
 
 Este mecanismo tem duas vantagens:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
+- Por outro lado, pode ser utilizado para limitar a utilização da memória. De facto, os objectos formulário só funcionam com variáveis processo ou inter-processo. No entanto, no modo compilado, uma instância de cada variável de processo é criada em todos os processos, incluindo os processos do servidor. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 ### List box array
 
@@ -111,7 +111,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. Não digita efetivamente a variável em si. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
 
 However, this property has a typing function in the following specific cases:
 
@@ -133,13 +133,13 @@ However, this property has a typing function in the following specific cases:
 
 ## Classe CSS
 
-A list of space-separated words used as class selectors in css files.
+Uma lista de palavras separadas por espaços utilizadas como selectores de classe em ficheiros css.
 
 #### Gramática JSON
 
-| Nome    | Tipo de dados | Valores possíveis                                         |
-| ------- | ------------- | --------------------------------------------------------- |
-| "class" | string        | One string with CSS name(s) separated by space characters |
+| Nome    | Tipo de dados | Valores possíveis                                                                   |
+| ------- | ------------- | ----------------------------------------------------------------------------------- |
+| "class" | string        | Uma cadeia de caracteres com o(s) nome(s) do CSS separados por caracteres de espaço |
 
 #### Objectos suportados
 
@@ -162,9 +162,9 @@ The collection or the entity selection must be available to the form when it is 
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                            |
-| ---------- | ------------- | ------------------------------------------------------------ |
-| dataSource | string        | Expression that returns a collection or an entity selection. |
+| Nome       | Tipo de dados | Valores possíveis                                              |
+| ---------- | ------------- | -------------------------------------------------------------- |
+| dataSource | string        | Expressão que devolve uma coleção ou uma seleção de entidades. |
 
 #### Objectos suportados
 
@@ -201,9 +201,9 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                                             |
-| -------------- | ------------- | ------------------------------------------------------------- |
-| pluginAreaKind | string        | Name of the plug-in external area (starts with a % character) |
+| Nome           | Tipo de dados | Valores possíveis                                          |
+| -------------- | ------------- | ---------------------------------------------------------- |
+| pluginAreaKind | string        | Nome da área externa do plug-in (começa com um carácter %) |
 
 #### Objectos suportados
 
