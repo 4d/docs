@@ -4,18 +4,18 @@ title: Handling Code
 ---
 
 
-The 4D code used across your application is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
+O código 4D utilizado na sua aplicação está escrito nos [métodos ](../Concepts/methods.md) e nas classes[](../Concepts/classes.md).
 
-The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](write-class-method.md) to work with your code.
+O IDE 4D fornece vários recursos para criar, editar, exportar ou excluir seu código. Normalmente utiliza o editor de código 4D [](write-class-method.md) para trabalhar com o seu código.
 
 
 ## Criação de métodos
 
-A method in 4D is stored in a **.4dm** file located in the appropriate folder of the [`/Project/Sources/`](../Project/architecture.md#sources) folder.
+Um método em 4D é armazenado num ficheiro **.4dm** localizado na pasta apropriada da pasta [`/Project/Sources/`](../Project/architecture.md#sources).
 
-You can create [several types of methods](../Concepts/methods.md):
+É possível criar [vários tipos de métodos](../Concepts/methods.md):
 
-- All types of methods can be created or opened from the **Explorer** window (except Object methods which are managed from the [Form editor](../FormEditor/formEditor.md)).
+- Todos os tipos de métodos podem ser criados ou abertos a partir da janela **Explorer** (exceto os métodos Objeto que são geridos a partir do [editor de formulários](../FormEditor/formEditor.md)).
 - Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](write-class-method.md#shortcuts).
 - Triggers can also be created or opened from the Structure editor.
 - Form methods can also be created or opened from the [Form editor](../FormEditor/formEditor.md).
@@ -26,7 +26,7 @@ A user class in 4D is defined by a specific method file (**.4dm**), stored in th
 
 You can create a class file from the **File** menu or toolbar (**New/Class...**) or in the **Methods** page of the **Explorer** window.
 
-For more information, please refer to the [Classes](../Concepts/classes.md) section.
+Para mais informações, consulte a secção [Classes](../Concepts/classes.md).
 
 
 ## Excluir os métodos ou as classes
@@ -199,7 +199,7 @@ Use the wildcard character @ to help define groups of methods:
 - To designate all of the methods, just type @ in the area.
 
 **Notas:**
-- The search does not take upper/lower case into account.
+- A pesquisa não tem em conta as maiúsculas e minúsculas.
 - You can enter several @ characters in the string, for example `dtro_@web@pro.@`
 
 3.  In the "Attribute to Modify" area, choose an attribute from the drop-down list, then click on the **True** or **False** radio button corresponding to the value to be applied.
