@@ -28,7 +28,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 ---
 ## Progressão
 
-Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
+Nome de uma variável do tipo Longint. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Atualizado automaticamente por 4D, não pode ser modificado manualmente.
 
 > As of 4D v19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
 
@@ -53,11 +53,11 @@ A String type variable that designates the URL loaded or being loading by the as
 *   If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
 *   Any browsing done within the Web area will automatically update the contents of the variable.
 
-Schematically, this variable functions like the address area of a Web browser. You can represent it via a text area above the Web area.
+Schematically, this variable functions like the address area of a Web browser. Pode representá-lo através de uma área de texto por cima da área Web.
 
 ### Variável URL e comando WA OPEN URL
 
-The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. The following differences should nevertheless be noted:
+The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. No entanto, há que assinalar as seguintes diferenças:
 - For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command accepts both notations.
 - If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command generates an error in this case.
 - If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
@@ -83,7 +83,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between platforms. No Windows, 4D usa Microsoft Edge WebView2. On macOS, 4D uses the current version of WebKit (Safari).
+*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between platforms. No Windows, 4D usa Microsoft Edge WebView2. No macOS, 4D usa a versão atual do WebKit (Safari).
 
 > On Windows, if Microsoft Edge WebView2 is not installed, 4D uses the embedded engine as system rendering engine. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
 
