@@ -108,7 +108,7 @@ Valor mínimo de um indicador. For numeric steppers, this property represent sec
 
 ## Step
 
-Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
+Intervalo mínimo aceite entre valores durante a utilização. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
 #### Gramática JSON
 
