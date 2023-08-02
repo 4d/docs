@@ -365,7 +365,7 @@ Este es un ejemplo de un registro de archivo de historial ORDA del lado del clie
 
 ### Del lado del servidor
 
-The server-side ORDA log records each ORDA request processed by the server, as well as the server response (optional). Log information is saved in a .jsonl file on the server machine disk (by default, *ordaRequests.jsonl*).
+El registro ORDA del lado del servidor registra cada petición ORDA procesada por el servidor, así como la respuesta del servidor (opcional). La información de registro se guarda en un archivo .jsonl en el disco de la máquina del servidor (por defecto, *ordaRequests.jsonl*).
 
 Como iniciar este historial:
 
