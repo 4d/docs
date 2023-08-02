@@ -75,7 +75,7 @@ Stops method execution, and returns to the state before the method started execu
 #### Abortar e editar
 
 Pausa na execução do método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Quando terminar as alterações, volte a executar o método.
 
 #### Editar
 
@@ -136,15 +136,15 @@ $c:=a+b
 
     A variável `$a` ainda não está inicializada, mas é exibida porque é usada na linha a ser executada.
 
-2. Clique no botão **Step Over**. The program counter is now set to the line `b:=a+1`. Nesta altura, o tema mostra:
+2. Clique no botão **Step Over**. O contador de programa está agora definido para a linha `b:=a+1`. Nesta altura, o tema mostra:
 
     | $a | 1          |
     | -- | ---------- |
     | $b | Indefinido |
 
-    O valor da variável `$a` é agora 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    O valor da variável `$a` é agora 1. A variável `$b` ainda não está inicializada, mas é exibida porque é usada na linha a ser executada.
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
+3. Clique novamente no botão **Step Over**. O contador do programa está agora definido na linha com c:=a+b. At this point the Line Objects theme displays:
 
     | $c | Indefinido |
     | -- | ---------- |
@@ -159,8 +159,8 @@ This theme is composed of the following subthemes:
 
 | Subtema       | Descrição                                                    | Os valores podem ser modificados? |
 | ------------- | ------------------------------------------------------------ | --------------------------------- |
-| Interprocesso | List of interprocess variables being used at this point      | Sim                               |
-| Processo      | List of process variables used by the current process        | Sim                               |
+| Interprocesso | Lista de variáveis interprocessos que são utilizadas agora   | Sim                               |
+| Processo      | Lista de variáveis processo utilizadas pelo processo atual   | Sim                               |
 | Local         | List of local variables used by the method being traced      | Sim                               |
 | Parâmetros    | Lista dos parâmetros recebidos pelo método                   | Sim                               |
 | Self          | Pointer to the current object, when tracing an Object Method | Não                               |
@@ -223,7 +223,7 @@ This theme displays information regarding the main Web server of the application
 * Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
 * Number of active Web processes: number of active Web processes, all Web processes together
 
-The expressions contained within this theme cannot be modified.
+As expressões contidas neste tema não podem ser modificadas.
 
 ### Menu contextual
 
@@ -285,7 +285,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
-### Handling expressions
+### Manuseamento de expressões
 
 Existem várias formas de adicionar expressões à lista:
 
@@ -348,7 +348,7 @@ Isto também funciona com as selecções:
 
 You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
-1. In the Source code pane, select the expression to evaluate
+1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)

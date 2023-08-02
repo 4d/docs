@@ -67,7 +67,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 
 #### Objectos suportados
 
-[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
+[Caixa de verificação](checkbox_overview.md) - [Lista pendente](dropdownList_Overview.md) - [Botão de rádio](radio_overview.md) - [Controlo de separadores](tabControl.md)
 
 ---
 
@@ -75,7 +75,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
-Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
+Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. O nome da variável pode diferir do nome do objeto. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 > O tamanho do nome da variável é limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
 The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
