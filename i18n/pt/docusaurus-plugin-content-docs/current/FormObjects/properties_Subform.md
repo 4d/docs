@@ -153,7 +153,7 @@ Designa a opção que permite aos utilizadores selecionar linhas:
 - **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
   The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
-    - The selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command.
+    - Os sub-registos selecionados são devolvidos pelo comando `GET HIGHLIGHTED RECORDS`.
     - Clicking on the record will select it, but it does not modify the current record.
     - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the selected record is changed.
 
