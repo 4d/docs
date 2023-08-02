@@ -28,7 +28,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 ---
 ## Progressão
 
-Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
+Nome de uma variável do tipo Longint. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Atualizado automaticamente por 4D, não pode ser modificado manualmente.
 
 #### Gramática JSON
 
@@ -51,11 +51,11 @@ A String type variable that designates the URL loaded or being loading by the as
 *   If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
 *   Any browsing done within the Web area will automatically update the contents of the variable.
 
-Schematically, this variable functions like the address area of a Web browser. You can represent it via a text area above the Web area.
+Schematically, this variable functions like the address area of a Web browser. Pode representá-lo através de uma área de texto por cima da área Web.
 
 ### Variável URL e comando WA OPEN URL
 
-The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. The following differences should nevertheless be noted:
+The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command. No entanto, há que assinalar as seguintes diferenças:
 - For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command accepts both notations.
 - If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command generates an error in this case.
 - If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
@@ -81,7 +81,7 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. On Windows, 4D automatically uses the most recent version of the browser found on the machine (IE11, MS Edge, etc.). On macOS, 4D uses the current version of WebKit (Safari). This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and WebKit ones.
+*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. On Windows, 4D automatically uses the most recent version of the browser found on the machine (IE11, MS Edge, etc.). No macOS, 4D usa a versão atual do WebKit (Safari). This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between Internet Explorer/Edge implementations and WebKit ones.
 *   **checked** - `JSON value: embedded`: In this case, 4D uses Blink engine from Google (CEF). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are provided through 4D.
 
 O motor Blink tem as seguintes limitações:
