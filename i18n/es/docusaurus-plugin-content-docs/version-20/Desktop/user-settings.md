@@ -7,13 +7,13 @@ title: Propiedades usuario
 
 *   Modo **estándar**: todos los [parámetros](../settings/overview.md) se almacenan en el archivo [*settings.4DSettings* al nivel del proyecto](../Project/architecture.md#sources) y se aplican en todos los casos. Este es el modo por defecto, adecuado para la fase de desarrollo (todas las aplicaciones).
 
-*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
+*  Modo **propiedades usuario**: algunos de los parámetros personalizados se almacenan en un archivo *settings.4DSettings* [en la carpeta Settings](../Project/architecture.md#settings-user) (para todos los archivos de datos) o [en la carpeta Data](../Project/architecture.md#settings-user-data) (para este archivo de datos) y se utilizan en lugar de los parámetros de estructura. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
 
 Al definir las propiedades usuario, puede conservar los parámetros personalizados entre las actualizaciones de sus aplicaciones 4D, o gestionar parámetros diferentes para una misma aplicación 4D desplegada en varios sitios diferentes. También permite utilizar la programación para gestionar los archivos de configuración utilizando XML.
 
 4D puede generar y utilizar dos tipos de propiedades usuario:
 
--   **User Settings**: They are used instead of structure settings for any data file opened with the application.
+-   Los **parámetros usuario**: se utilizan en lugar de los parámetros de estructura para todo archivo de datos abierto con la aplicación.
 -   **Propiedades usuario para el archivo de datos**: se pueden definir específicamente para cada archivo de datos utilizado con su aplicación, configurando por ejemplo el ID del puerto o la caché del servidor.
 
 Con esta opción, puede desplegar y actualizar fácilmente varias copias de la misma aplicación de escritorio con varios archivos de datos, cada uno de los cuales contiene propiedades diferentes.
