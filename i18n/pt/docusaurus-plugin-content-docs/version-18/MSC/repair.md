@@ -22,15 +22,15 @@ By default, the original data file will be duplicated before the repair operatio
 
 ### Ficheiros reparados
 
-4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (database folder by default). The blank file is filled with the recovered data.
+4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (database folder by default). O ficheiro em branco é preenchido com os dados recuperados.
 
 ## Reparação standard
 
 Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). Os dados são compactados e reparados. This type of repair can only be performed when the data and structure file match.
 
-When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. Se for assim, pode abrir a base de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
+When the repair procedure is finished, the "Repair" page of the MSC is displayed. Uma mensagem indica se a reparação foi bem sucedida. Se for assim, pode abrir a base de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
 
-## Recover by record headers
+## Recuperar por cabeçalhos de registos
 
 Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
 
@@ -38,20 +38,20 @@ Use this low-level repair option only when the data file is severely damaged and
 
 > If you have deselected the **Records definitively deleted** option in the properties of a table in the database structure, performing a recovery by header markers may cause records that were previously deleted to reappear. Recovery by headers does not take integrity constraints into account. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
+When you click on **Scan and repair...**, 4D performs a complete scan of the data file. Quando a verificação estiver concluída, os resultados aparecem na janela seguinte:
 
 ![](../assets/en/MSC/mscrepair2.png)
 > Se todos os registos e todas as tabelas tiverem sido atribuídos, apenas a área principal é mostrada.
 
 The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
 
-- The first table lists the information from the data file scan. Each row shows a group of recoverable records in the data file:
+- A primeira tabela lista as informações provenientes da verificação do ficheiro de dados. Cada linha mostra um grupo de registos recuperáveis no ficheiro de dados:
   - The **Order** column indicates the recovery order for the group of records.
   - The **Count** column indicates the number of the records in the table.
-  - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
+  - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. Os nomes das tabelas atribuídas aparecem automaticamente a verde. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
   - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
 
-- The second table lists the tables of the project file.
+- A segunda tabela lista as tabelas do ficheiro de projeto.
 
 ### Atribuição manual
 

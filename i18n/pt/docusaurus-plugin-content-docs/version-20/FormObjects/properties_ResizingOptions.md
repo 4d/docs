@@ -51,7 +51,7 @@ Estão disponíveis três opções:
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | A mesma percentagem é aplicada à largura do objeto quando o usuário redimensiona a largura da janela,                  |
 | Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                                 |
+| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                   |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
 #### Gramática JSON
@@ -76,7 +76,7 @@ Estão disponíveis três opções:
 | -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Mover    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                               |
+| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                 |
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
 #### Gramática JSON
@@ -99,7 +99,7 @@ Here is the result of a “pusher” splitter being moved: ![](../assets/en/Form
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)
 
-When this property is not applied to the splitter, the result is as follows:
+Quando esta propriedade não é aplicada ao splitter, o resultado é o seguinte:
 
 ![](../assets/en/FormObjects/splitter_pusher2.png)
 
@@ -117,7 +117,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 ## Redimensionável
 
-Designates if the size of the column can be modified by the user.
+Designa se o tamanho da coluna pode ser modificado pelo usuário.
 
 #### Gramática JSON
 

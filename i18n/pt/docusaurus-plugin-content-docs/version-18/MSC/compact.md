@@ -13,7 +13,7 @@ A compactação de ficheiros responde a dois tipos de necessidades:
 - **Redução do tamanho e otimização dos arquivos**: os arquivos podem conter espaços não utilizados ("ocos"). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
 
 - **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
-> Compacting is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the database will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the database (see [Compact records and indexes](#compact-records-and-indexes) below).
+> A compactação só está disponível no modo de manutenção. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the database will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the database (see [Compact records and indexes](#compact-records-and-indexes) below).
 
 ## Compactação standard
 
@@ -22,7 +22,7 @@ To directly begin the compacting of the data file, click on the compacting butto
 ![](../assets/en/MSC/MSC_compact.png)
 > Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file.
 
-This operation compacts the main file as well as any index files. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. If you have carried out several compacting operations, a new folder is created each time. It will be named “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, and so on. You can modify the folder where the original files are saved using the advanced mode.
+Esta operação compacta o ficheiro principal, bem como quaisquer ficheiros de índice. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. If you have carried out several compacting operations, a new folder is created each time. It will be named “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, and so on. You can modify the folder where the original files are saved using the advanced mode.
 
 When the operation is completed, the compacted files automatically replace the original files. The database is immediately operational without any further manipulation.
 > When the database is encrypted, compacting includes decryption and encryption steps and thus, requires the current data encryption key. If no valid data key has already been provided, a dialog box requesting the passphrase or the data key is displayed.
@@ -57,13 +57,13 @@ When this option is checked, 4D rewrites every record for each table during the 
 - When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
 
 - Quando as tabelas ou campos foram eliminados. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
-> All the indexes are updated when this option is selected.
+> Todos os índices são atualizados quando esta opção é selecionada.
 
 ### Compact address table
 
-(option only active when preceding option is checked)
+(opção apenas ativa quando a opção anterior está marcada)
 
-This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.
+This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. Noutros casos, a otimização não é um fator decisivo.
 
 Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
 > - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.

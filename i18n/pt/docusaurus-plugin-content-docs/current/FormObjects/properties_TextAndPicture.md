@@ -12,9 +12,9 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Gramática JSON
 
-| Nome                    | Tipo de dados | Valores possíveis                                                                                                |
-| ----------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| customBackgroundPicture | string        | Caminho relativo na sintaxe POSIX. Must be used in conjunction with the style property with the "custom" option. |
+| Nome                    | Tipo de dados | Valores possíveis                                                                                                     |
+| ----------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| customBackgroundPicture | string        | Caminho relativo na sintaxe POSIX. Deve ser utilizado em conjunto com a opção "Personalizado" da propriedade "Style". |
 
 #### Objectos suportados
 
@@ -155,17 +155,17 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 ## Title/Picture Position
 
-This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture.
+Esta propriedade permite modificar a localização relativa do título do botão em relação ao ícone associado. Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título). Por predefinição, quando um botão contém um título e uma imagem, o texto é colocado por baixo da imagem.
 
-Here are the results using the various options for this property:
+Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
-| Opção        | Descrição                                                                                                                                        | Exemplo                                                           |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Direita**  | O texto é colocado à esquerda do ícone. The contents of the button are aligned to the right.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                            | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Esquerda** | O texto é colocado à direita do ícone. The contents of the button are aligned to the left.                                                       | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                           | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centrado** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
+| Opção        | Descrição                                                                                                                             | Exemplo                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Direita**  | O texto é colocado à esquerda do ícone. O conteúdo do botão é alinhado à direita.                                                     | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **Topo**     | O texto é colocado por cima do ícone. O conteúdo do botão é centrado.                                                                 | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **Esquerda** | O texto é colocado à direita do ícone. O conteúdo do botão é alinhado à esquerda.                                                     | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **Fundo**    | O texto é colocado por baixo do ícone. O conteúdo do botão é centrado.                                                                | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **Centrado** | O texto do ícone é centrado vertical e horizontalmente no botão. Este parâmetro é útil, por exemplo, para o texto incluído num ícone. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### Gramática JSON
 
@@ -183,7 +183,7 @@ Here are the results using the various options for this property:
 
 This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
 
-This property has no effect when the button contains only a title (no associated picture) or a picture (no title).
+Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
 By default, when a button contains a title and a picture, the elements are joined. The following graphic shows the effect of the `imageHugsTitle` property (true when property is enabled) with different button alignments:
 

@@ -308,9 +308,9 @@ You can also drag-and-drop within a method, class, function or between two diffe
 
 
 
-### Changing case
+### Alternancia entre mayúsculas y minúsculas
 
-You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
+Puede modificar automáticamente las mayúsculas y minúsculas de los caracteres seleccionados utilizando los comandos en **Métodos** > **Mayúsculas y minúsculas** o el menú contextual del editor:
 
 - **Mayúsculas** / **Minúsculas**: cambia los caracteres seleccionados a mayúsculas o minúsculas.
 - **camelCase** / **CamelCase** : Switch the selected characters to "camel case". Consiste en cambiar cada primera letra de un grupo de palabras adjuntas a mayúsculas. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate y PurchaseDate son ejemplos de dos variantes de la notación cameyúsculas.

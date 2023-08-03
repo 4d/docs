@@ -14,9 +14,9 @@ As formas 4D suportam as seguintes formas básicas:
 
 ## Retângulo
 
-A static rectangle is a decorative object for forms. Os rectângulos são limitados a formas quadradas.
+Um retângulo estático é um objeto decorativo para os formulários. Os rectângulos são limitados a formas quadradas.
 
-The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+O desenho dos retângulos é controlado através de muitas propriedades (cor, espessura da linha, padrão, etc.). Especificamente, a [circularidade](properties_CoordinatesAndSizing.md#corner-radius) dos seus cantos pode ser definida.
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
@@ -39,7 +39,7 @@ The design of rectangles is controlled through many properties (color, line thic
 
 ## Linha
 
-A static line is a decorative object for forms, drawn between two plots. Lines can be horizontal, vertical, or of any angle shapes.
+A static line is a decorative object for forms, drawn between two plots. As linhas podem ser horizontais, verticais ou de qualquer forma angular.
 
 The design of lines is controlled through many properties (color, line thickness, etc.).
 
@@ -87,7 +87,7 @@ Result: ![](../assets/en/FormObjects/shape_line2.png)
 
 ## Oval
 
-A static oval is a decorative object for forms. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Uma oval estática é um objeto decorativo para formas. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
 
 ![](../assets/en/FormObjects/shape_oval.png)
 

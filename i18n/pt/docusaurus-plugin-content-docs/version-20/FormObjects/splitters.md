@@ -12,10 +12,10 @@ Splitter are used for example in output forms so that columns can be resized:
 ![](../assets/en/FormObjects/split1.png)
 
 
-Some of the splitter’s general characteristics:
+Algumas das características gerais do repartidor:
 
 *   You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
-*   Um separador pode passar por um objeto. This object will be resized when the splitter is moved.
+*   Um separador pode passar por um objeto. Este objeto será redimensionado quando o divisor for movido.
 *   Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
 *   If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
 
@@ -57,10 +57,10 @@ In a form, splitters interact with the objects that are around them according to
 
 You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
 
-A [variable](properties_Object.md#variable-or-expression) of the *Longint* type is associated with each splitter. This variable can be used in your object and/or form methods. Its value indicates the splitter’s current position, in pixels, in relation to its initial position.
+Uma [variável ](properties_Object.md#variable-or-expression) do tipo *Longint* está associada a cada divisor. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Its value indicates the splitter’s current position, in pixels, in relation to its initial position.
 
 *   If the value is negative: the splitter was moved toward the top or toward the left,
 *   If the value is positive: the splitter was moved toward the bottom or toward the right,
-*   If the value is 0: the splitter was moved to its original position.
+*   Se o valor for 0: o divisor foi movido para a sua posição original.
 
 You can also move the splitter programmatically: you just have to set the value of the associated variable. For example, if a vertical splitter is associated with a variable named `split1`, and if you execute the following statement: `split1:=-10`, the splitter will be moved 10 pixels to the left — as if the user did it manually. The move is actually performed at the end of the execution of the form or object method containing the statement. 

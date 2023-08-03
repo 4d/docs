@@ -25,7 +25,7 @@ Encrypting your data for the first time using the MSC requires the following ste
 3. Click on the Encrypt picture button.  
    ![](../assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
-4. Enter to confirm your secured passphrase.
+4. Introduza para confirmar a sua frase-passe protegida.
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
 
@@ -44,7 +44,7 @@ When a database is encrypted (see above), the Encrypt page provides several encr
 For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
 
 - If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
-- If the data encryption key is not found, you must provide it. O seguinte diálogo se mostra: ![](../assets/en/MSC/MSC_encrypt7.png)
+- Se a chave de encriptação de dados não for encontrada, é necessário fornecê-la. O seguinte diálogo se mostra: ![](../assets/en/MSC/MSC_encrypt7.png)
 
 Nesta fase, tem duas opções:
 
@@ -74,7 +74,7 @@ This operation is useful when you need to change the current encryption data key
 
 ### Desencriptar todos os dados
 
-This operation removes all encryption from the data file. If you no longer want to have your data encrypted:
+Esta operação remove toda a encriptação do ficheiro de dados. Se já não pretender que os seus dados sejam encriptados:
 
 1. Click on **Decrypt all data**.
 2. Enter the current data encryption key (see Providing the current data encryption key).
@@ -91,7 +91,7 @@ You can save the encryption key each time a new passphrase has been provided:
 - quando o banco de dados for criptografado pela primeira vez,
 - quando o banco de dados for re-criptografado com uma nova frase secreta.
 
-Successive encryption keys can be stored on the same device.
+Podem ser armazenadas chaves de encriptação sucessivas no mesmo dispositivo.
 
 ## Arquivo histórico
 
