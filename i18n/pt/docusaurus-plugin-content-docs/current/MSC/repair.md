@@ -19,16 +19,16 @@ Nome do caminho do ficheiro de dados atual. The **[...]** button can be used to 
 By default, the original data file will be duplicated before the repair operation. By default, the original data file will be duplicated before the repair operation. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
 
 ### Ficheiros reparados
-4D creates a new blank data file at the location of the original file. 4D creates a new blank data file at the location of the original file. The blank file is filled with the recovered data.
+4D creates a new blank data file at the location of the original file. 4D creates a new blank data file at the location of the original file. O ficheiro em branco é preenchido com os dados recuperados.
 
 
 ## Reparação standard
 
 Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). Os dados são compactados e reparados. This type of repair can only be performed when the data and structure file match.
 
-When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. Se for assim, pode abrir o banco de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
+When the repair procedure is finished, the "Repair" page of the MSC is displayed. Uma mensagem indica se a reparação foi bem sucedida. Se for assim, pode abrir o banco de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
 
-## Recover by record headers
+## Recuperar por cabeçalhos de registos
 Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
 
 4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
@@ -37,20 +37,20 @@ Use this low-level repair option only when the data file is severely damaged and
 > 
 > Recovery by headers does not take integrity constraints into account. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
+When you click on **Scan and repair...**, 4D performs a complete scan of the data file. Quando a verificação estiver concluída, os resultados aparecem na janela seguinte:
 
 ![](../assets/en/MSC/mscrepair2.png)
 > Se todos os registos e todas as tabelas tiverem sido atribuídos, apenas a área principal é mostrada.
 
 The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
 
-- The first table lists the information from the data file scan. Each row shows a group of recoverable records in the data file:
+- A primeira tabela lista as informações provenientes da verificação do ficheiro de dados. Cada linha mostra um grupo de registos recuperáveis no ficheiro de dados:
     - The **Order** column indicates the recovery order for the group of records.
     - The **Count** column indicates the number of the records in the table.
-    - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
+    - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. Os nomes das tabelas atribuídas aparecem automaticamente a verde. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
     - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
 
-- The second table lists the tables of the project file.
+- A segunda tabela lista as tabelas do ficheiro de projeto.
 
 
 ### Atribuição manual
