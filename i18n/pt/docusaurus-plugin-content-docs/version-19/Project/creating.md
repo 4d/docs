@@ -16,12 +16,12 @@ Para criar um novo projeto de banco de dados:
 1. Inicie 4D ou 4D Server.
 2. Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**. This name will be used:
+3. Enter the name of your project folder and click **Save**. Este nome será utilizado:
 
 - as the name of the .4DProject file at the first level of the "Project" folder.
 - as the name of the .4DProject file at the first level of the "Project" folder.
 
- You can choose any name allowed by your operating system. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
+ Pode escolher qualquer nome permitido pelo seu sistema operacional. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
 
 Quando validar a caixa de diálogo, 4D fecha o banco de dados atual (se houver) e cria uma pasta "Project" no local indicado e coloca nela todos os arquivos necessários para o funcioanamento correto do banco de dados projeto. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
 
@@ -31,9 +31,9 @@ Pode então começar a desenvolver o seu projeto.
 
 Lance uma aplicação 4D Developer.
 
-1. Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. The standard Open dialog appears.
+1. Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. Aparece a caixa de diálogo padrão Abrir.
 
-2. Select the project's `.4dproject` file and click **Open**. By default, the project is opened with its current data file. São sugeridos outros tipos de ficheiros:
+2. Select the project's `.4dproject` file and click **Open**. Por defeito, o projeto é aberto com o seu ficheiro de dados atual. São sugeridos outros tipos de ficheiros:
 
 - *Packed project files*: `.4dz` extension  - deployment projects
 - *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
@@ -57,7 +57,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
   - *Menu bar* - **File** > **Open Recent Projects / {project name}**
   - OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 
-- via preferences:
+- através das preferências:
   - Set the **At startup** general preference to **Open last used project**.
 
 - utilizando um ficheiro `.4DLink`.
