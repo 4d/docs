@@ -167,6 +167,6 @@ Todos os botões rádio partilham o mesmo conjunto de propriedades básicas:
 
 > (1) Not supported by the [Regular](#regular) and [Flat](#flat) styles.<br/> (2) Not supported by the [Regular](#regular), [Flat](#flat), [Disclosure](#disclosure) and [Collapse/Expand](#collapseexpand) styles.
 
-Additional specific properties are available depending on the [button style](#button-styles):
+Propriedades específicas adicionais estão disponíveis dependendo do [estilo botão](#button-styles):
 
 - [Rota de acesso do fundo](properties_TextAndPicture.md#backgroundPathname) - [Margem horizontal](properties_TextAndPicture.md#horizontalMargin) - [Deslocamento ícone](properties_TextAndPicture.md#icon-offset) - [Margem vertical](properties_TextAndPicture.md#verticalMargin) (Personalizado)
