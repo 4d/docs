@@ -6,9 +6,9 @@ title: Texto e imagem
 
 ## Rota de acesso ao Fundo
 
-Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
+Define o caminho da imagem que será desenhada no fundo do objeto. Se o objeto utilizar um [ícone ](#picture-pathname) com [estados diferentes](#number-of-states), a imagem de fundo suportará automaticamente o mesmo número de estados.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para imagens estáticas](properties_Picture.md#pathname).
 
 #### Gramática JSON
 
@@ -18,7 +18,7 @@ The pathname to enter is similar as for the [Pathname property for static pictur
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
 
 ---
 
@@ -34,7 +34,7 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Botão](button_overview.md) - [Botão rádio](radio_overview.md) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
 
 ---
 
@@ -42,13 +42,13 @@ Aspeto geral do botão. O estilo do botão também desempenha um papel na dispon
 
 Esta propriedade permite definir o tamanho (em píxeis) das margens horizontais do botão. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
-This parameter is useful, for example, when the background picture contains borders:
+Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos:
 
 | Com / Sem               | Exemplo                                                      |
 | ----------------------- | ------------------------------------------------------------ |
 | Sem margem              | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | Com margem de 13 píxeis | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
-> This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
+> Esta propriedade funciona em conjunto com a propriedade [Margem vertical](#vertical-margin).
 
 #### Gramática JSON
 
@@ -58,7 +58,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
 
 ---
 
@@ -80,9 +80,9 @@ Designates the placement of an icon in relation to the form object.
 
 ## Offset do ícone
 
-Sets a custom offset value in pixels, which will be used when the button is clicked
+Define um valor de desvio personalizado em pixeis, que será utilizado quando se clica no botão
 
-The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
+O título do botão será deslocado para a direita e para baixo em função do número de pixeis introduzidos. Isto permite aplicar um efeito 3D personalizado quando o botão é clicado.
 
 #### Gramática JSON
 
@@ -92,7 +92,7 @@ The title of the button will be shifted to the right and toward the bottom for t
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
 
 ---
 
@@ -137,7 +137,7 @@ Each state is represented by a different picture. In the source picture, the sta
 
 Sets the path of the picture that will be used as icon for the object.
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para imagens estáticas](properties_Picture.md#pathname).
 
 > When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
 
@@ -218,7 +218,7 @@ This parameter is useful, for example, when the background picture contains bord
 
 #### Objectos suportados
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[Botão personalizado](button_overview.md#custom) - [Caixa de verificação personalizada](checkbox_overview.md#custom) - [Botão rádio personalizado](radio_overview.md#custom)
 
 ---
 
