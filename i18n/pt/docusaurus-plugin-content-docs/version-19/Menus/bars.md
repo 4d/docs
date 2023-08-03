@@ -9,16 +9,16 @@ Menu bars provide the major interface for custom applications. For each custom a
 
 ## Splash screen
 
-You can enhance the appearance of each menu bar by associating a custom splash screen with it. The window containing the splash screen is displayed below the menu bar when it appears. Pode conter um logótipo ou qualquer tipo de imagem. By default, 4D displays the 4D logo in the splash screen:
+You can enhance the appearance of each menu bar by associating a custom splash screen with it. The window containing the splash screen is displayed below the menu bar when it appears. Pode conter um logótipo ou qualquer tipo de imagem. Por padrão, 4D mostra o logo 4D na tela inicial:
 
 ![](../assets/en/Menus/splash1.png)
 
-A custom splash screen picture can come from any graphic application. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Any standard picture format supported by 4D can be used.
+A custom splash screen picture can come from any graphic application. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Qualquer formato de imagem padrão suportado por 4D pode ser usado.
 
 The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. É apresentado um menu de contexto:
 
 - To paste a picture from the clipboard, choose **Paste**.
-- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Once set, the picture is displayed in miniature in the area. É então associado à barra de menus.
+- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Uma vez definida, a imagem é apresentada em miniatura na área. É então associado à barra de menus.
 
 ![](../assets/en/Menus/splash2.png)
 
