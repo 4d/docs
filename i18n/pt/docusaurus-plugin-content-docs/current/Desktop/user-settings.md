@@ -24,17 +24,15 @@ Considere, por exemplo, a seguinte configuração, em que uma aplicação é dup
 
 ## Ativar as definições do utilizador
 
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
+Para ativar as definições do usuário, é necessário marcar a opção **Definições** > **Segurança** > **Enable user Settings** :
 
 ![](../assets/en/settings/user-settings-enable.png)
 
-When you check this option, the settings are separated into three dialog boxes:
-
-* **Propriedades estrutura**
+* **Definições de estrutura**
 * **Propriedades usuário**
 * **Propriedades usuário para o arquivo de dados**
 
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
+Pode acessar estas caixas de diálogo utilizando o menu **Design > Settings...** ou o botão **Settings** na barra de ferramentas:
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
