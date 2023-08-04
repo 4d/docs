@@ -98,15 +98,15 @@ O título do botão será deslocado para a direita e para baixo em função do n
 
 ## Número de estados
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md).
+Esta propriedade define o número exato de estados presentes na imagem utilizada como ícone para um [botão com ícone](button_overview.md), uma [caixa de verificação](checkbox_overview.md) ou um [botão radio](radio_overview.md) personalizado.
 
 A imagem pode conter de 2 a 6 estados.
 
 - 2 estados: false, true
 - 3 estados: false, true, rollover,
 - 4 estados: false, true, rollover, desativado,
-- 5 states (check box and radio button only): false, true, false rollover, true rollover, disabled
-- 6 states (check box and radio button only): false, true, false rollover, true rollover, false disabled, true disable.
+- 5 estados (apenas para caixas de verificação e botões rádio): false, true, false rollover, true rollover, desativado
+- 6 estados (apenas para caixas de verificação e botões rádio): false, true, false rollover, true rollover, false desativado, true disable.
 
 :::note
 
@@ -115,7 +115,7 @@ A imagem pode conter de 2 a 6 estados.
 
 :::
 
-Each state is represented by a different picture. In the source picture, the states must be stacked vertically:
+Cada estado é representado por uma imagem diferente. Na imagem de origem, os estados devem ser empilhados verticalmente:
 
 ![](../assets/en/FormObjects/six-states.png)
 
@@ -129,17 +129,17 @@ Each state is represented by a different picture. In the source picture, the sta
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
 
 ---
 
-## Picture pathname
+## Caminho da imagem
 
-Sets the path of the picture that will be used as icon for the object.
+Define o caminho da imagem que será utilizada como ícone para o objeto.
 
 O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para imagens estáticas](properties_Picture.md#pathname).
 
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
+> Quando utilizada como ícone para objetos ativos, a imagem deve ser concebida para suportar [um número de estados](#number-of-states) variável.
 
 #### Gramática JSON
 
@@ -149,11 +149,11 @@ O nome do caminho a introduzir é semelhante ao [da propriedade Caminho para ima
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
+[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Cabeçalho da caixa de listagem](listbox_overview.md#list-box-headers) - [Botão rádio](radio_overview.md)
 
 ---
 
-## Title/Picture Position
+## Posição título/Imagem
 
 Esta propriedade permite modificar a localização relativa do título do botão em relação ao ícone associado. Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título). Por predefinição, quando um botão contém um título e uma imagem, o texto é colocado por baixo da imagem.
 
@@ -175,13 +175,13 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 #### Objectos suportados
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[Botão](button_overview.md) (todos os estilos exceto [Ajuda](button_overview.md#help)) - [Caixa de verificação](checkbox_overview.md) - [Botão rádio](radio_overview.md)
 
 ---
 
 ## Image hugs title
 
-This property allows you to define whether the title and the picture of the button should be visually adjoined or separated, according to the [Title/Picture position](#titlepicture-position) and [Horizontal Alignment](#horizontal-alignment) properties.
+Esta propriedade permite-lhe definir se o título e a imagem do botão devem ser visualmente adjacentes ou separados, conforme as propriedades [Posição do título/da imagem](#titlepicture-position) e [Alinhamento horizontal](#horizontal-alignment).
 
 Esta propriedade não tem efeito quando o botão contém apenas um título (sem imagem associada) ou uma imagem (sem título).
 
