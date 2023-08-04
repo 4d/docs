@@ -372,7 +372,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 The following table summarizes 4D naming conventions.
 
-| Identifier                     | Max. Largura     | Exemplo                            |
+| Identificador                  | Max. Largura     | Exemplo                            |
 | ------------------------------ | ---------------- | ---------------------------------- |
 | Tabela                         | 31               | [Invoices]                         |
 | Campo                          | 31               | [Employees]Last Name               |
@@ -386,7 +386,7 @@ The following table summarizes 4D naming conventions.
 | Rotina Plug-in                 | 31               | PDF SET ROTATION                   |
 | Interprocess Set               | `<>` + 255 | `"<>Records to be Archived"` |
 | Conjunto process               | 255              | "Current selected records"         |
-| Client Set                     | $ + 255          | "$Previous Subjects"               |
+| Conjunto cliente               | $ + 255          | "$Previous Subjects"               |
 | Seleção nomeada                | 255              | "Employees A to Z"                 |
 | Seleção temporal interprocesso | `<>` + 255 | `"<>Employees Z to A"`       |
 | Processo local                 | $ + 255          | "$Follow Events"                   |
@@ -406,6 +406,6 @@ Be sure to use unique names for the different elements in your database. If a pa
 3. Página Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
-6. Variables.
+6. Variáveis.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Isto impedi-lo-ia de chamar o seu método. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
