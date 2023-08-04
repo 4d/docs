@@ -57,7 +57,7 @@ The **Check Syntax** button starts the execution of the syntax-checking phase. A
 
 Syntax checking can also be launched directly using the **Check Syntax** command associated with the **Compiler** toolbar button. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
 
-### Generate Typing
+### Gerar digitação
 
 The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
 
