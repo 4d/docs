@@ -3,7 +3,7 @@ id: shapesOverview
 title: Formas
 ---
 
-Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
+As formas são [objectos estáticos](formObjects_overview.md#active-and-static-objects) que podem ser adicionados a formas 4D.
 
 As formas 4D suportam as seguintes formas básicas:
 
@@ -39,15 +39,15 @@ O desenho dos retângulos é controlado através de muitas propriedades (cor, es
 
 ## Linha
 
-A static line is a decorative object for forms, drawn between two plots. As linhas podem ser horizontais, verticais ou de qualquer forma angular.
+Uma linha estática é um objeto decorativo para os formulários, desenhado entre duas tramas. As linhas podem ser horizontais, verticais ou de qualquer forma angular.
 
-The design of lines is controlled through many properties (color, line thickness, etc.).
+O desenho das linhas é controlado através de muitas propriedades (cor, espessura da linha, etc.).
 
 
 ### propriedade startPoint
-The `startPoint` JSON property defines from which coordinate to draw the line (see example).
+A propriedade JSON `startPoint` define a coordenada a partir da qual a linha deve ser desenhada (ver exemplo).
 
-> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
+> a propriedade `startPoint` não está exposta na Lista de Propriedades, onde a direção do desenho da linha é visível.
 
 
 
