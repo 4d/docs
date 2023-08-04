@@ -73,7 +73,7 @@ Para eliminar uma barra de menu, um menu ou um item de menu:
 
 Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
 
-## Attaching menus
+## Anexar os menus
 
 Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
 
