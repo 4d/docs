@@ -12,7 +12,7 @@ Methods that are associated with objects in these areas are executed when the ar
 
 ---
 
-## Form Break
+## Quebra de formulário
 
 Form Break areas are displayed once at the end of the list of records and are printed once after the records have been printed in a report.
 
@@ -96,11 +96,11 @@ Break at level 0 zero takes in all the records; it occurs after all the records 
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 
-| Etiqueta | Descrição        | Prints after groups created by: |
-| -------- | ---------------- | ------------------------------- |
-| B1       | Break at level 1 | Primeiro campo classificado     |
-| B2       | Break at level 2 | Segundo campo ordenado          |
-| B3       | Break at level 3 | Terceiro campo classificado     |
+| Etiqueta | Descrição          | Prints after groups created by: |
+| -------- | ------------------ | ------------------------------- |
+| B1       | Nível de ruptura 1 | Primeiro campo classificado     |
+| B2       | Nível de ruptura 2 | Segundo campo ordenado          |
+| B3       | Nível de ruptura 3 | Terceiro campo classificado     |
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
