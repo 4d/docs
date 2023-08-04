@@ -29,9 +29,9 @@ When the operation is completed, the compacted files automatically replace the o
 
 **Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. It is important to take this into account (especially under macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful in order to keep the package size down.
 
-## Open log file
+## Abrir ficheiro de registo
 
-Depois que a compactação é completada, 4D gera um arquivo de log na pasta Logs da base de dados. This file allows you to view all the operations carried out. It is created in XML format and named:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Depois que a compactação é completada, 4D gera um arquivo de log na pasta Logs da base de dados. Este ficheiro permite visualizar todas as operações efectuadas. It is created in XML format and named:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".

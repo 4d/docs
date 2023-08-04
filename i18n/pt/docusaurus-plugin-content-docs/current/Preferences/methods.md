@@ -113,7 +113,7 @@ Lets you display the line numbers by default in each window of the Code Editor. 
 
 Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. You can also show or hide each list directly from the Code Editor.
 
-#### Show clipboards
+#### Mostrar pranchetas
 
 Lets you choose whether or not to show the multiple clipboards in the code editor.
 

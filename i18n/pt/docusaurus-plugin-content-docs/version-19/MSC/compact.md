@@ -29,9 +29,9 @@ When the operation is completed, the compacted files automatically replace the o
 
 **Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. It is important to take this into account (especially under macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful in order to keep the package size down.
 
-## Open log file
+## Abrir ficheiro de registo
 
-Depois que a compactação termina, 4D gera um arquivo de histórico na pasta Logs do banco de dados. This file allows you to view all the operations carried out. É criada no formato XML e se chama  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
+Depois que a compactação termina, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este ficheiro permite visualizar todas as operações efectuadas. É criada no formato XML e se chama  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
 - *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".

@@ -5,36 +5,34 @@ title: Propriedades usuário
 
 4D oferece dois modos de operação para as configurações dos projetos:
 
-*   **Standard** mode: all [settings](../settings/overview.md) are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. This is the default mode, suitable for development phase (all applications).
+*   **Standard** : todas as  [definições](../settings/overview.md) são armazenadas no arquivo [*settings.4DSettings* ao nível do projeto](../Project/architecture.md#sources) e são aplicadas em todos os casos. Este é o modo predefinido, adequado para a fase de desenvolvimento (todas as aplicações).
 
-*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-user) (for all data files) or [in the Data folder](../Project/architecture.md#settings-user-data) (for this data file) and are used instead of the structure settings. This mode is suitable for deployment phase for Desktop applications. You enable this mode using an option located on the [Security page](../settings/security.md) of the Settings.
+*  Modo **User settings**: parte das definições personalizadas são armazenadas num arquivo *settings.4DSettings* [na pasta Settings](../Project/architecture.md#settings-user) (para todos os ficheiros de dados) ou [na pasta Data](../Project/architecture.md#settings-user-data) (para este ficheiro de dados) e são utilizadas em vez das definições de estrutura. Este modo é adequado para a fase de implantação de aplicações de ambiente de trabalho. Este modo é ativado através de uma opção localizada na página [Security](../settings/security.md) das Definições.
 
-By defining user settings, you can keep custom settings between updates of your 4D applications, or manage different settings for the same 4D application deployed on several different sites. It also makes it possible to use programming to manage setting files using XML.
+Ao definir as definições do utilizador, pode manter as definições personalizadas entre actualizações das suas aplicações 4D, ou gerir diferentes definições para a mesma aplicação 4D implementada em vários sites diferentes. Permite igualmente utilizar a programação para gerir os arquivos de configuração através de XML.
 
 4D pode gerar e usar dois tipos de propriedades usuário:
 
--   **User Settings**: They are used instead of structure settings for any data file opened with the application.
--   **User Settings for Data file**: They can be defined specifically for each data file used with your application, configuring for example the port ID or the server cache.
+-   **Definições do usuário**: São utilizadas em vez das definições de estrutura para qualquer arquivo de dados aberto com a aplicação.
+-   **Definições do usuário para o arquivo de dados**: Podem ser definidas especificamente para cada arquivo de dados utilizado com a sua aplicação, configurando, por exemplo, o ID da porta ou a cache do servidor.
 
-With this option, you can easily deploy and update several copies of the same desktop application with several data files, each containing different settings.
+Com esta opção, pode facilmente implementar e atualizar várias cópias da mesma aplicação de ambiente de trabalho com vários arquivos de dados, cada um contendo definições diferentes.
 
-Consider for example the following configuration, where an application is duplicated and each copy uses a different Port ID setting. If this user setting is linked to the data file, you will be able to update the application without having to manually change the Port ID:
+Considere, por exemplo, a seguinte configuração, em que uma aplicação é duplicada e cada cópia utiliza uma definição de ID de porta diferente. Se esta definição do usuário estiver ligada ao arquivo de dados, será possível atualizar a aplicação sem ter de alterar manualmente o ID do porto:
 
 ![](../assets/en/settings/user-settings-config.png)
 
-## Ativar as propriedades usuário
+## Ativar as definições do utilizador
 
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
+Para ativar as definições do usuário, é necessário marcar a opção **Definições** > **Segurança** > **Enable user Settings** :
 
 ![](../assets/en/settings/user-settings-enable.png)
 
-When you check this option, the settings are separated into three dialog boxes:
-
-* **Propriedades estrutura**
+* **Definições de estrutura**
 * **Propriedades usuário**
 * **Propriedades usuário para o arquivo de dados**
 
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
+Pode acessar estas caixas de diálogo utilizando o menu **Design > Settings...** ou o botão **Settings** na barra de ferramentas:
 
 ![](../assets/en/settings/user-settings-dialog.png)
 

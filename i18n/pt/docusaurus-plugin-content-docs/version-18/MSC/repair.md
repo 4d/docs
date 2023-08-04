@@ -61,9 +61,9 @@ If several groups of records could not be assigned to tables due to a damaged ad
 
 Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Também pode atribuir uma tabela utilizando a função arrastar e largar. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
-## Open log file
+## Abrir ficheiro de registo
 
-After repair is completed, 4D generates a log file in the Logs folder of the database. This file allows you to view all the operations carried out. It is created in XML format and named:  *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+After repair is completed, 4D generates a log file in the Logs folder of the database. Este ficheiro permite visualizar todas as operações efectuadas. It is created in XML format and named:  *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".

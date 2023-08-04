@@ -91,17 +91,17 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 
 4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
 
-* Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* Windows 7 e superior: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
 * OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX represents the version number of the application. Por exemplo, "Favorites v19" para 4D v19.
+XX representa o número da versão da aplicação. Por exemplo, "Favorites v19" para 4D v19.
 
 Esta pasta está dividida em duas subpastas:
 
 * the **Local** folder contains the `.4DLink` files that can be used to open local projects
 * the **Remote** folder contains the `.4DLink` files of recent remote projects
 
-`.4DLink` files can also be created with an XML editor.
+Os ficheiros `.4DLink` podem também ser criados com um editor XML.
 
 4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
 

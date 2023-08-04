@@ -112,7 +112,7 @@ At any point, you can drag and drop themes, theme sublists (if any), and theme i
 
 ### Lista de expressões
 
-#### Line Objects
+#### Objetos linha
 
 This theme lets you keep track of the values of the objects or expressions:
 

@@ -26,7 +26,7 @@ If a user attempts to execute an action and does not have the appropriate access
 
 You can assign specific permission actions to the following exposed resources in your project:
 
-- the datastore
+- o armazenamento de dados
 - uma classe de dados
 - um atributo (inclusive calculado e aliases)
 - uma função de classe de modelo de dados

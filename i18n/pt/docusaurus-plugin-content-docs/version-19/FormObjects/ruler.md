@@ -4,13 +4,13 @@ title: Regra
 ---
 
 
-The ruler is a standard interface object used to set or get values using a cursor moved along its graduations.
+A régua é um objeto de interface padrão utilizado para definir ou obter valores utilizando um cursor movido ao longo das suas graduações.
 
 ![](../assets/en/FormObjects/indicator_ruler.png)
 
-You can assign its [associated variable or expression](properties_Object.md#expression-type) to an enterable area (field or variable) to store or modify the current value of the object.
+[A variável ou expressão associada](properties_Object.md#expression-type) ao objeto pode ser atribuída a uma área gravável (campo ou variável) para armazenar ou modificar o valor atual do objeto.
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicatire) in the "Progress Indicator" page.
+Para mais informações, consultar [Utilizar indicadores](progressIndicator.md#using-indicatire) na página "Indicadores de progresso".
 
 ### Propriedades compatíveis
 
