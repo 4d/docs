@@ -16,7 +16,7 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 - **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
 > > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
-## Open log file
+## Abrir ficheiro de registo
 
 Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
