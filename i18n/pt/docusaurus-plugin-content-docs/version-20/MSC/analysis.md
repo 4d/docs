@@ -14,7 +14,7 @@ Cada operação registada no ficheiro de registo aparece como uma linha. The col
 This information allows you to identify the source and context of each operation:
 
 - **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. This column can contain one of the following operations:
+- **Ação**: tipo de operação efetuada sobre os dados. Esta coluna pode conter uma das seguintes operações:
     - Abertura de ficheiro de dados: Abertura de um ficheiro de dados.
     - Encerramento do ficheiro de dados: encerramento de um ficheiro de dados aberto.
     - Criação de um contexto: criação de um processo que especifica um contexto de execução.
