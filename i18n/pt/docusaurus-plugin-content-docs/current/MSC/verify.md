@@ -19,7 +19,7 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 > > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 
-## Open log file
+## Abrir ficheiro de registo
 
 Independente da verificação solicitada, 4D gera um arquivo de histórico na pasta `Logs` do banco de dados. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *ApplicationName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
