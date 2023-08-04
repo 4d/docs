@@ -20,7 +20,7 @@ A stepper can be associated directly with a number, time or date variable.
 * Para valores do tipo data, o valor introduzido na propriedade [passo](properties_Scale.md#step) representa dias. As propriedades Mínimo e Máximo são ignoradas.
 > > > For the stepper to work with a time or date variable, it is imperative to set its type in the form AND to declare it explicitly via the [C_TIME](https://doc.4d.com/4Dv17R5/4D/17-R5/C-TIME.301-4128557.en.html) or [C_DATE](https://doc.4d.com/4Dv17R5/4D/17-R5/C-DATE.301-4128570.en.html) command.
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicatire) in the "Progress Indicator" page.
+Para mais informações, consultar [Utilizar indicadores](progressIndicator.md#using-indicatire) na página "Indicadores de progresso".
 
 ## Propriedades compatíveis
 
