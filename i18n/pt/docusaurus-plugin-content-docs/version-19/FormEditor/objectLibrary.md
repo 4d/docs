@@ -50,7 +50,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 You can create as many libraries as desired per project. A library created and built under macOS can be used under Windows and vice-versa.
 
-### Opening an object library
+### Abrir uma biblioteca de objetos
 
 Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dados por vez. Entretanto, várias livrarias diferentes podem ser abertas no mesmo banco de dados.
 
