@@ -36,7 +36,7 @@ If key values are not defined in a custom theme, they default to the values from
 
 ## Definição do tema
 
-Defining a theme means:
+Definir um tema significa:
 
 - setting a global font and font size for the whole code editor,
 - assigning specific styles and colors to each 4D language element (fields, tables, variables, parameters, SQL, etc.), SQL language element (keywords, functions, etc.), and color backgrounds.
@@ -67,7 +67,7 @@ These options configure the various colors used in the Code Editor and debugger 
 | **Cor de fundo da linha de execução**          | Background color of line being executed in the debugger.                                                                                                                 |
 | **Destaque das palavras encontradas**          | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                                  |
 | **Destaque dos parênteses**                    | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
-| **Highlight of the blocks**                    | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
+| **Destaque dos blocos**                        | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Realce da mesma variável ou campo**          | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Destaque da linha em execução no depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
 | **Cor de fundo da seleção**                    | Cor de fundo da seleção.                                                                                                                                                 |
@@ -129,7 +129,7 @@ When checked, the whole code belonging to a logical block (If/End if for example
 
 The highlight color can be set in the [Theme](#theme-definition) page.
 
-#### Always show block lines
+#### Mostrar sempre as linhas de bloco
 
 Oculta permanentemente as linhas verticais dos blocos. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
 
