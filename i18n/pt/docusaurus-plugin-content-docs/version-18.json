@@ -8,7 +8,7 @@
     "description": "The label for category Getting Started in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
-    "message": "4D Language Concepts",
+    "message": "Conceitos da linguagem 4D",
     "description": "The label for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -20,7 +20,7 @@
     "description": "The label for category Control Flow in sidebar docs"
   },
   "sidebar.docs.category.Project Databases": {
-    "message": "Project Databases",
+    "message": "Bases projetos",
     "description": "The label for category Project Databases in sidebar docs"
   },
   "sidebar.docs.category.Form Editor": {
