@@ -147,7 +147,7 @@ The data folder contains the data file and all files and folders relating to the
 
 (*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
-### Settings folder
+### Pasta Settings
 
 This folder contains **user settings files for data** used for database administration.
 
@@ -171,7 +171,7 @@ The Logs folder contains all log files used by the project. Os ficheiros de regi
 
 > An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv17R6/4D/17-R6/Get-4D-folder.301-4311294.en.html) command) for maintenance log files and in cases where data folder is read-only.
 
-## Settings folder
+## Pasta Settings
 
 This folder contains **user settings files** used for database administration. Os ficheiros são adicionados à pasta quando necessário.
 
