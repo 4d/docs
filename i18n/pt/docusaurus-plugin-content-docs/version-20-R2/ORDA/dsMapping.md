@@ -114,7 +114,7 @@ $compClass:=ds. Company //assigns the Company dataclass reference to $compClass
 Um objeto de classe de dados pode conter:
 
 *   attributes
-*   relation attributes
+*   atributos relacionais
 
 The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. Uma consulta é feita a partir de uma única dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
 
