@@ -93,7 +93,7 @@ In this mode, you can configure additional web server setttings:
 
 -   [Processos Web em simultâneo máximo](#maximum-concurrent-web-processes)
 -   [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
--   [Use preemptive processes](#use-preemptive-web-processes)
+-   [Utilizar processos preemptivos](#use-preemptive-web-processes)
 
 #### Sessões herdadas (sessões de processo único)
 
@@ -110,13 +110,13 @@ Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 Limite estritamente superior de processos Web em simultâneo. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 
-#### Reuse Temporary Contexts
+#### Reutilização de contextos temporários
 
 Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
 Allows you to optimize the operation of the 4D Web server in remote mode. See [Reuse temporary contexts in remote mode)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
 
-#### Use preemptive processes
+#### Utilizar processos preemptivos
 
 Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
@@ -125,7 +125,7 @@ Enables preemptive web processes in your compiled applications. When **Use preem
 > This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client).  See [Enabling the preemptive mode for the web server](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
 
 
-#### Inactive Process Timeout
+#### Tempo limite do processo inativo
 
 Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
