@@ -1,6 +1,6 @@
 ---
 id: httpRequests
-title: Processing HTTP requests
+title: Processamento de pedidos HTTP
 ---
 
 The 4D web server provides several features to handle HTTP requests:
@@ -16,7 +16,7 @@ The 4D web server provides several features to handle HTTP requests:
 
 The `On Web Connection` database method can be used as the entry point for the 4D Web server.
 
-### Database method calls
+### Chamadas métodos de base
 
 The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. O método da base de dados é chamado com o URL.
 
@@ -150,7 +150,7 @@ var $BlobVar : Blob
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd" READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format WEB SEND BLOB($BLOB;"image/png")
 ```
 
-### 4DACTION to post forms
+### 4DACCIÓN para publicar formulários
 
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
