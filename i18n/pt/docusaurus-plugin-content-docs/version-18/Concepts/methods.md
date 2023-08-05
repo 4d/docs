@@ -22,7 +22,7 @@ A method is basically a piece of code that executes one or several actions. In t
 
 Um método de projecto pode ter uma das seguintes funções, dependendo de como é executado e utilizado:
 
-- Subroutine and function
+- Sub-rotina e função
 - Method attached to object
 - Método do menu
 - Método de gerenciamento de processos
