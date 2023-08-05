@@ -39,11 +39,11 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 | Tab      | Acções                           | Ribbon Interface | Interface da barra de ferramentas |
 | -------- | -------------------------------- |:----------------:|:---------------------------------:|
-| File     | File manipulation                |        X         |                                   |
+| File     | Manipulação de ficheiros         |        X         |                                   |
 | Inicio   | Aspecto do texto                 |        X         |                 X                 |
 | Inserir  | Adicionar itens                  |        X         |                 X                 |
 | Fórmulas | Cálculo de fórmulas e biblioteca |        X         |                 X                 |
-| Dados    | Data manipulation                |        X         |                 X                 |
+| Dados    | Manipulação de dados             |        X         |                 X                 |
 | Mostrar  | Apresentação visual              |        X         |                 X                 |
 | Settings | Presentação da folha             |        X         |                                   |
 
@@ -284,7 +284,7 @@ The following special characters allow the automatic addition or formatting of i
 
 | Caracteres | Descrição                       | Exemplo                                                                | Resultados                                           |
 | ---------- | ------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &          | Escape character                | (ver exemplos abaixo)                                                  |                                                      |
+| &          | Carácter de escape              | (ver exemplos abaixo)                                                  |                                                      |
 | P          | Página actual                   | printInfo.headerLeft:="This is page &P."                               | Esta é a página 5.|                                  |
 | N          | Contagem de páginas             | printInfo.headerLeft:="Existem &N páginas."                            | Existem 10 páginas.                                  |
 | D          | Data atual (formato yyyy/mm/dd) | printInfo.headerLeft:="É &D."                                          | Estamos em 2015/6/19.                                |
