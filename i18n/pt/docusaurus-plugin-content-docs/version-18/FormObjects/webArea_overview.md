@@ -175,7 +175,7 @@ The use of Web plugins and Java applets is not recommended in Web areas because 
 
 The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
 
-## Access to Web inspector
+## Acesso ao inspetor Web
 
 You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
 
@@ -191,7 +191,7 @@ The following conditions must be met in order to view the Web inspector in a Web
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-### Using the Web inspector
+### Utilizar o inspetor Web
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the Web inspector window is displayed.
 
