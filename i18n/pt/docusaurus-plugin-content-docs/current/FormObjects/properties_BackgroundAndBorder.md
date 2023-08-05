@@ -85,9 +85,9 @@ Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e branc
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados          | Valores possíveis                                                                |
-| --------------- | ---------------------- | -------------------------------------------------------------------------------- |
-| strokeDashArray | number array or string | Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Nome            | Tipo de dados               | Valores possíveis                                                                |
+| --------------- | --------------------------- | -------------------------------------------------------------------------------- |
+| strokeDashArray | arrays numéricos ou strings | Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
 #### Objectos suportados
 
