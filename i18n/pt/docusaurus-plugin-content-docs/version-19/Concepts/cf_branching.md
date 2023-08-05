@@ -1,6 +1,6 @@
 ---
 id: branching
-title: Branching structures
+title: Estruturas condicionais
 ---
 
 A branching structure allows methods to test a condition and take alternative paths, depending on the result.
