@@ -225,7 +225,7 @@ Os campos abaixo estão registrados para cada evento:
 
 Dependendo do evento, vários outros campos podem ser registrados, como task, socket, etc.
 
-### Diagnostic log levels
+### Níveis de registo de diagnóstico
 
 The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
 
