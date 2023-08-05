@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Access Control overview
+title: Descrição geral do controlo de acesso
 ---
 
 If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
