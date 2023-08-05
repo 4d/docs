@@ -170,7 +170,7 @@ Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
 ```
 
 
-### EntitySelection Class
+### Classe EntitySelection
 
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
@@ -259,7 +259,7 @@ When creating or editing data model classes, you must pay attention to the follo
 - You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
 
-### Preemptive execution
+### Execução preventiva
 
 When compiled, data model class functions are executed:
 
@@ -323,7 +323,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 
 | Propriedade   | Tipo         | Descrição                                                                                 |
 | ------------- | ------------ | ----------------------------------------------------------------------------------------- |
-| attributeName | Text         | Computed attribute name                                                                   |
+| attributeName | Text         | Nome do atributo computado                                                                |
 | dataClassName | Text         | Nome do dataclass                                                                         |
 | kind          | Text         | "get"                                                                                     |
 | result        | Diferente de | Opcional. Add this property with Null value if you want a scalar attribute to return Null |
@@ -386,7 +386,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 
 | Propriedade   | Tipo         | Descrição                              |
 | ------------- | ------------ | -------------------------------------- |
-| attributeName | Text         | Computed attribute name                |
+| attributeName | Text         | Nome do atributo computado             |
 | dataClassName | Text         | Nome do dataclass                      |
 | kind          | Text         | "set"                                  |
 | value         | Diferente de | Valor a tratar pelo atributo calculado |
@@ -423,7 +423,7 @@ Esta função suporta três sintaxes:
     | Propriedade        | Tipo       | Descrição                                           |
     | ------------------ | ---------- | --------------------------------------------------- |
     | $result.query      | Text       | Valid query string with placeholders (:1, :2, etc.) |
-    | $result.parameters | Collection | values for placeholders                             |
+    | $result.parameters | Collection | valores para marcadores                             |
 
 The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
@@ -433,7 +433,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 
 | Propriedade   | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                          |
 | ------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| attributeName | Text         | Computed attribute name                                                                                                                                                                                                                                                                                                                                            |
+| attributeName | Text         | Nome do atributo computado                                                                                                                                                                                                                                                                                                                                         |
 | dataClassName | Text         | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                  |
 | kind          | Text         | "query"                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Diferente de | Valor a tratar pelo atributo calculado                                                                                                                                                                                                                                                                                                                             |
@@ -566,7 +566,7 @@ O parâmetro *$event* contém as seguintes propriedades:
 
 | Propriedade   | Tipo         | Descrição                                                                                           |
 | ------------- | ------------ | --------------------------------------------------------------------------------------------------- |
-| attributeName | Text         | Computed attribute name                                                                             |
+| attributeName | Text         | Nome do atributo computado                                                                          |
 | dataClassName | Text         | Nome do dataclass                                                                                   |
 | kind          | Text         | "orderBy"                                                                                           |
 | value         | Diferente de | Valor a tratar pelo atributo calculado                                                              |
