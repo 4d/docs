@@ -49,7 +49,7 @@ Class for specific dataclass objects, in which you can add custom functions.
 
 A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
 
-A datastore provides:
+Um datastore fornece:
 
 * uma ligação à base de dados 4D
 * um conjunto de classes de dados para trabalhar com a base de dados
