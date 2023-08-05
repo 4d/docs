@@ -28,7 +28,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Informações sobre o método**               | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Últimos valores da área de transferência** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
 | **Pranchetas**                               | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
-| **Navigation dropdown**                      | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. Ver abaixo                                                                                                                                                                                                                        |
+| **Menu de navegação suspenso**               | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. Ver abaixo                                                                                                                                                                                                                        |
 
 
 ### Área de edição
@@ -138,11 +138,11 @@ The status bar located at the bottom right part of the editor window displays th
 - **Ln**: Número da linha
 - **Col**: Column number, i.e., the level in the hierarchy of programming structures. O primeiro nível é 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
 - **Ch**: Location of character in the line.
-- ![](../assets/en/code-editor/show-hide-list.png): Hide/display lists.
+- ![](../assets/en/code-editor/show-hide-list.png): Ocultar/apresentar listas.
 
 When you set the cursor in a command, function or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png)
 
-### Navigation dropdown
+### Menu de navegação suspenso
 
 The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
 
@@ -269,7 +269,7 @@ A maioria desses atalhos pode ser personalizada na caixa de diálogo [Preferenci
 
 
 
-## Editing Code
+## Editar código
 
 4D uses standard text editing techniques for typing and editing in the Code Editor.
 
@@ -308,7 +308,7 @@ In the Code Editor, the drag-and-drop mechanism is activated as soon as a portio
 
 
 
-### Changing case
+### Alternância entre letras maiúsculas e minúsculas
 
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
@@ -352,7 +352,7 @@ You can move the line where the cursor is directly without selecting it first us
 
 
 
-### Autocomplete functions
+### Funções de preenchimento automático
 
 O editor de código fornece funções de preenchimento automático. 4D automatically displays suggestions based on the first few characters typed.
 
@@ -389,7 +389,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Nomes de campos
 - Constantes
 - Variável local, processo ou inter-processo, declarada no método
-- Object property names
+- Nomes de propriedade de objeto
 - Comandos Plug-in
 - Palavras-chave 4D
 - Palavras-chave SQL
@@ -397,7 +397,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
-#### Object property names
+#### Nomes de propriedade de objeto
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
