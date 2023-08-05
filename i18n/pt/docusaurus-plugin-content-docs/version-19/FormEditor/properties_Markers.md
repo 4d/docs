@@ -36,9 +36,9 @@ The form Detail area is displayed on the screen and printed once for each record
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                 |
-| ---------- | ------------- | --------------------------------- |
-| markerBody | integer       | Detail marker position. Mínimo: 0 |
+| Nome       | Tipo de dados | Valores possíveis                         |
+| ---------- | ------------- | ----------------------------------------- |
+| markerBody | integer       | Posição do marcador de detalhe. Mínimo: 0 |
 
 ---
 
