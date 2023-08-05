@@ -84,7 +84,7 @@ Lista dos operadores, do mais importante para o menos importante:
 
 
 
-## Cell references
+## Referências de células
 
 Formulas often refer to other cells by cell addresses. Pode copiar estas fórmulas para outras células. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
 
