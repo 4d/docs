@@ -10,7 +10,7 @@ The Settings configure how the current project functions. These parameters may b
 > 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
 
 
-## Accessing the settings
+## Aceder os parâmetros
 
 Pode aceder à caixa de diálogo Parâmetros:
 
