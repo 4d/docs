@@ -211,7 +211,7 @@ O texto do marcador de posição é apresentado novamente se o conteúdo do camp
 
 Pode ser apresentado um marcador de posição para os seguintes tipos de dados:
 
-- string (text or alpha)
+- string (text ou alpha)
 - date and time when the **Blank if null** property is enabled.
 
 You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
