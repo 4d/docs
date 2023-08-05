@@ -18,7 +18,7 @@ Os produtos 4D são instalados a partir do site web de 4D:
 1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
 2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
 
-## Activation of a product
+## Ativação de um produto
 
 Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. You also need to activate any additional licenses you obtain.
 
