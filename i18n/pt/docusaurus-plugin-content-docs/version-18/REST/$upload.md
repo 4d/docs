@@ -11,7 +11,7 @@ Post this request when you have a file that you want to upload to the Server. If
 
 You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
 
-## Image upload example
+## Exemplo de carregamento de imagens
 To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. 4D uses the MIME type attribute of the file object so it can handle it appropriately.
 
 Depois, carregamos a imagem selecionada para 4D Server:
