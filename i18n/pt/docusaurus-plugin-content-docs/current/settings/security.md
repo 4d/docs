@@ -45,7 +45,7 @@ This page contains options related to data access and protection for your deskto
     * each [On Host Database Event database method](https://doc.4d.com/4Dv19/4D/19.1/On-Host-Database-Event-database-method.301-5653908.en.html) of the component (if any) is called by the host database,
     * o código do método é executado.
 
-    When it is not checked:
+    Quando não é verificado:
     * 4D components are loaded but they have to manage their initialization and backup phases themselves.
     * the developer of the component has to publish the component methods that must be called by the host database during these phases (startup and shutdown)
     * the developer of the host database must call the appropriate methods of the component at the right time (must be covered in the component documentation).
