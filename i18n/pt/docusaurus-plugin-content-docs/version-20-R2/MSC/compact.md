@@ -60,7 +60,7 @@ When this option is checked, 4D rewrites every record for each table during the 
 - Quando as tabelas ou campos foram eliminados. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
 > Todos os índices são atualizados quando esta opção é selecionada.
 
-### Compact address table
+### Compactar a tabela de endereços
 
 (opção apenas ativa quando a opção anterior está marcada)
 

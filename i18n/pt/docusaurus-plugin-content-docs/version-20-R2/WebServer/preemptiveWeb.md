@@ -18,11 +18,11 @@ The following table indicates whether the preemptive mode is used or is availabl
 | Servidor Web          | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
 | Servidor Web Services | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
 
-| 4D remote/single-user | Interpretado | Compilado       |
-| --------------------- | ------------ | --------------- |
-| Servidor REST         | cooperativo  | preemptive      |
-| Servidor Web          | cooperativo  | *parâmetro web* |
-| Servidor Web Services | cooperativo  | *parâmetro web* |
+| 4D remoto/usuário único | Interpretado | Compilado       |
+| ----------------------- | ------------ | --------------- |
+| Servidor REST           | cooperativo  | preemptive      |
+| Servidor Web            | cooperativo  | *parâmetro web* |
+| Servidor Web Services   | cooperativo  | *parâmetro web* |
 
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
@@ -94,6 +94,6 @@ Both the Runtime Explorer and the 4D Server administration window display a spec
 
 | Tipo de processo      | Ícone                                       |
 | --------------------- | ------------------------------------------- |
-| Preemptive web method | ![](../assets/en/WebServer/processIcon.png) |
+| Método web preventivo | ![](../assets/en/WebServer/processIcon.png) |
 
 

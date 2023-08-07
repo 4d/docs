@@ -449,7 +449,7 @@ In that cases, the title of the check box can be entered using this property.
 
 ---
 
-## Truncate with ellipsis
+## Truncar com reticências
 
 Controls the display of values when list box columns are too narrow to show their full contents.
 

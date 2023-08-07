@@ -84,7 +84,7 @@ The following escape sequences are recognized by 4D:
 | `\t`                        | HT (Tabulação horizontal) |
 | `\r`                        | CR (Carriage return)      |
 | ``\\`|``&#96; (Backslash) |                           |
-| `\"`                        | `"` (Quotes)              |
+| `\"`                        | `"` (Citações)            |
 
 ### macOS
 

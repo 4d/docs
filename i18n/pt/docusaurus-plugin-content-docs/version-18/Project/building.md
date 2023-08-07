@@ -187,7 +187,7 @@ On this tab, you can build customized client-server applications that are homoge
 
 Uma aplicação cliente/servidor provém da combinação de três itens:
 
-* A compiled 4D database,
+* Um banco de dados 4D compilado,
 * A aplicação 4D Server,
 * A aplicação 4D Volume Desktop (macOS e/ou Windows).
 

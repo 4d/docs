@@ -160,13 +160,13 @@ For example, the following code loads the selected entity and allows browsing in
  $myEntity:=$myEntity.next() //loads the next entity using the same context
 ```
 
-#### Preconfiguring contexts
+#### Pré-configuração de contextos
 
 An optimization context should be defined for every feature or algorithm of your application, in order to have the best performances. For example, a context can be used for queries on customers, another context for queries on products, etc.
 
 If you want to deliver final applications with the highest level of optimization, you can preconfigure your contexts and thus save learning phases by following these steps:
 
-1. Design your algorithms.
+1. Desenho dos seus algoritmos.
 2. Run your application and let the automatic learning mechanism fill the optimization contexts.
 3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
 4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.

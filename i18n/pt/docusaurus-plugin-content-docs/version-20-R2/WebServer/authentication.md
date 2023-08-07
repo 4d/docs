@@ -73,7 +73,7 @@ As in BASIC mode, users must enter their name and password when they connect. Th
 
 The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a dynamic HTTP request is received.
 
-### Database method calls
+### Chamadas métodos de base
 
 The `On Web Authentication` database method is automatically called when a request or processing requires the execution of some 4D code (except for REST calls). It is also called when the web server receives an invalid static URL (for example, if the static page requested does not exist).
 

@@ -111,7 +111,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
 
-## Request examples
+## Exemplos de petições
 
 This database is exposed as a remote datastore on localhost (port 8111):
 

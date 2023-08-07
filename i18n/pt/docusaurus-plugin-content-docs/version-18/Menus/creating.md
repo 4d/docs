@@ -36,7 +36,7 @@ You can modify this menu bar as desired or create additional ones.
 
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. Em ambos os casos, consiste numa lista de itens. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. Em ambos os casos, consiste numa lista de itens. Apenas a sua utilização é diferente. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 

@@ -11,7 +11,7 @@ $queryplan returns the query plan as it was passed to 4D Server.
 
 | Propriedade | Tipo   | Descrição                                                                                   |
 | ----------- | ------ | ------------------------------------------------------------------------------------------- |
-| item        | String | Actual query executed                                                                       |
+| item        | String | Petição executada                                                                           |
 | subquery    | Array  | If there is a subquery, an additional object containing an item property (as the one above) |
 
 For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).

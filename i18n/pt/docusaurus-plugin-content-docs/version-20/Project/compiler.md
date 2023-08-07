@@ -84,7 +84,7 @@ Depending on circumstances and the programming style used, these warnings may be
 
 ![](../assets/en/Project/compilerWin4.png)
 
-When this option is checked, the warnings (if any) are displayed in the window, after the other error types. They appear in italics:
+When this option is checked, the warnings (if any) are displayed in the window, after the other error types. Estas aparecem em itálico:
 
 ![](../assets/en/Project/compilerWin5.png)
 
@@ -110,7 +110,7 @@ Apenas os avisos com números podem ser desactivados. Warning numbers are specif
 
 
 
-## Compiler Settings
+## Parâmetros do compilador
 
 The "Compiler" page of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window) by clicking on the **Compiler Settings** button:
 
@@ -207,7 +207,7 @@ Estas duas listas contêm quatro colunas:
 
 > When compiling, the compiler cannot determine in which process a given process variable is used. A process variable can have a different value in each process. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
 
-#### List of local variables
+#### Lista de variáveis locais
 
 The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
 

@@ -110,7 +110,7 @@ Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 Limite estritamente superior de processos Web em simultâneo. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
 
 
-#### Reuse Temporary Contexts
+#### Reutilização de contextos temporários
 
 Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
@@ -125,7 +125,7 @@ Enables preemptive web processes in your compiled applications. When **Use preem
 > This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client).  See [Enabling the preemptive mode for the web server](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
 
 
-#### Inactive Process Timeout
+#### Tempo limite do processo inativo
 
 Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 

@@ -331,7 +331,7 @@ A named selection is an interprocess named selection if its name is preceded by 
 
 An interprocess named selection name can contain up to 255 characters, not including the `<>` symbols.
 
-### Process Named Selections
+### Seleções temporárias processos
 
 Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A named selection name can contain up to 255 characters.
 

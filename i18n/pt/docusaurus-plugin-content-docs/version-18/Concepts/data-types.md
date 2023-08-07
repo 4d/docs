@@ -47,20 +47,20 @@ The default value depends on the variable type and category, its execution conte
 
 The following table illustrates these default values:
 
-| Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compilado "não"       |
-| ------------ | ----------------------------------------------------------------------------------- | ----------------------- | --------------------------- |
-| Booleano     | False                                                                               | True                    | True (varia)                |
-| Date         | 00-00-00                                                                            | 00-00-00                | 00-00-00                    |
-| Longint      | 0                                                                                   | 1919382119              | 909540880 (varia)           |
-| Hora         | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varia)        |
-| Imagem       | tamanho da imagem=0                                                                 | tamanho da imagem=0     | tamanho da imagem=0         |
-| Real         | 0                                                                                   | 1.250753659382e+243     | 1,972748538022e-217 (varia) |
-| Ponteiro     | Nil=true                                                                            | Nil=true                | Nil=true                    |
-| Text         | ""                                                                                  | ""                      | ""                          |
-| Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0      | Tamanho do Blob =0          |
-| Object       | null                                                                                | null                    | null                        |
-| Collection   | null                                                                                | null                    | null                        |
-| Diferente de | indefinido                                                                          | indefinido              | indefinido                  |
+| Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compilado "aleatório" | Local compilado "não"       |
+| ------------ | ----------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
+| Booleano     | False                                                                               | True                        | True (varia)                |
+| Date         | 00-00-00                                                                            | 00-00-00                    | 00-00-00                    |
+| Longint      | 0                                                                                   | 1919382119                  | 909540880 (varia)           |
+| Hora         | 00:00:00                                                                            | 533161:41:59                | 249345:34:24 (varia)        |
+| Imagem       | tamanho da imagem=0                                                                 | tamanho da imagem=0         | tamanho da imagem=0         |
+| Real         | 0                                                                                   | 1.250753659382e+243         | 1,972748538022e-217 (varia) |
+| Ponteiro     | Nil=true                                                                            | Nil=true                    | Nil=true                    |
+| Text         | ""                                                                                  | ""                          | ""                          |
+| Blob         | Tamanho do Blob =0                                                                  | Tamanho do Blob =0          | Tamanho do Blob =0          |
+| Object       | null                                                                                | null                        | null                        |
+| Collection   | null                                                                                | null                        | null                        |
+| Diferente de | indefinido                                                                          | indefinido                  | indefinido                  |
 
 
 ## Conversão de tipos de dados

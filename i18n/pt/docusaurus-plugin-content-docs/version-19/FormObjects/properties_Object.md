@@ -84,9 +84,9 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados           | Valores possíveis                                                           |
-| ---------- | ----------------------- | --------------------------------------------------------------------------- |
-| dataSource | string, or string array | <li>4D variable, field name, or arbitrary complex language expression. </li><li>Empty string for [dynamic variables](#dynamic-variables). </li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| Nome       | Tipo de dados              | Valores possíveis                                                           |
+| ---------- | -------------------------- | --------------------------------------------------------------------------- |
+| dataSource | string ou array de strings | <li>4D variable, field name, or arbitrary complex language expression. </li><li>Empty string for [dynamic variables](#dynamic-variables). </li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
 
 ### Expressões
 

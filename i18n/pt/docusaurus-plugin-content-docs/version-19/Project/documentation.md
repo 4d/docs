@@ -180,7 +180,7 @@ $txt:="Hello world!"
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
 
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo blog 4D")](https://blog.4d.com)
+[![logo blog 4D com ligação](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "Logo blog 4D")](https://blog.4d.com)
 
 > Para obter mais informações, consulte o [guia GitHub Markdown](https://guides.github.com/features/mastering-markdown/).
 
