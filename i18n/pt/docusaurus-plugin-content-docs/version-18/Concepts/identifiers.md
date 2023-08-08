@@ -21,7 +21,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 - Não são permitidos caracteres de espaço.
 - Pontos (".") e parênteses ("[ ]") não são permitidos.
-- Names are case sensitive.
+- Os nomes são sensíveis a maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL
 
@@ -323,7 +323,7 @@ If(Records in set("$Selection"+String($i))>0)
 From the scope point of view, there are two types of named selections:
 
 - Seleções temporárias interprocesso
-- Process named selections.
+- Seleções temporárias processo.
 
 ### Seleções temporárias interprocesso
 
