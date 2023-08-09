@@ -1,7 +1,7 @@
 ---
 id: restore
-title: Restore Page
-sidebar_label: Restore Page
+title: Página Restauração
+sidebar_label: Página Restauração
 ---
 
 ## Restoring a backup
