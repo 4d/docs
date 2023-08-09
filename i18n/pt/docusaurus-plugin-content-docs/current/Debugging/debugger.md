@@ -45,15 +45,15 @@ A barra de ferramentas do depurador inclui vários botões, associados a atalhos
 
 #### Retomar execução
 
-Tracing stops and normal method execution resumes.
+Interrompe o modo de rastreamento e retoma o curso normal da execução do método.
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. It also disables all the subsequent TRACE calls for the current process.
+> **Shift** + **F5** ou **Shift** + clicar no botão **No Trace** retoma a execução. Também desativa todas as chamadas TRACE subsequentes para o processo atual.
 
-#### Passar por cima
+#### Executar passo a passo
 
-Executes the current method line, indicated by the program counter (the yellow arrow). O depurador passa para a linha seguinte.
+Executa a linha de método atual, indicada pelo contador de programa (a seta amarela). O depurador passa para a linha seguinte.
 
-The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. Se pretender rastrear também as chamadas de sub-rotinas e funções, utilize o botão **Passo a Passo detalhado**.
 
 In remote debugging, if the method executes on the server, the parent method is called after the last line of the child method executes. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
 
