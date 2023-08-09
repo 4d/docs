@@ -48,7 +48,7 @@ Both objects (time variable and subform container) *have the same variable name*
 
 When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
 
-#### Updating subform contents
+#### Atualização do conteúdo do subformulário
 
 Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
 
