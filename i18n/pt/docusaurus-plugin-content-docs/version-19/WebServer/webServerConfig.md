@@ -256,10 +256,10 @@ If you specify 0, 4D will use the default HTTP port number 80.
 
 ## HTTP Trace
 
-| Pode ser definido com | Nome                                           | Comentários                     |
-| --------------------- | ---------------------------------------------- | ------------------------------- |
-| objeto webServer      | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Boolean, padrão = false         |
-| `WEB SET OPTION`      | `Web HTTP TRACE`                               | Integer, default = 0 (disabled) |
+| Pode ser definido com | Nome                                           | Comentários                        |
+| --------------------- | ---------------------------------------------- | ---------------------------------- |
+| objeto webServer      | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Boolean, padrão = false            |
+| `WEB SET OPTION`      | `Web HTTP TRACE`                               | Integer, 0 por padrão (desativado) |
 
 HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
 
@@ -339,7 +339,7 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 
 Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
 
-Default is true (enabled).
+True por padrão (ativado).
 
 > When this option is checked, the "Reuse Temporary Contexts" option is automatically checked (and locked).
 
