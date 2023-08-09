@@ -327,7 +327,7 @@ Este estilo de caixa de seleção pode ser usado para adicionar um ícone padrã
 
 :::info
 
-The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+O estilo Contrair/Expandir tem o nome "disclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -362,7 +362,7 @@ Em macOS e Windows, uma caixa de seleção com o estilo de botão "Divulgação"
 
 :::info
 
-The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+O estilo Disclosure tem o nome "roundedDisclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
