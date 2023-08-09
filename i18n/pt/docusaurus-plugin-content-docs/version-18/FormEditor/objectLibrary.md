@@ -41,7 +41,7 @@ Objects are stored with all their properties, including their object methods. Li
 
 Using libraries, you can build form object backgrounds grouped by graphic families, by behavior, etc.
 
-### Creating an object library
+### Criar uma biblioteca de objetos
 
 To create an object library, select **New>Object Library...** from the 4D **File** menu or tool bar. A standard save file dialog box appears, which allows you to choose the name and the location of the object library.
 
