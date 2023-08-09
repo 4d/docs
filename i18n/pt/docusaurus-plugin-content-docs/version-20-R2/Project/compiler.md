@@ -247,7 +247,7 @@ A estrutura do ficheiro de erros é a seguinte:
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
     - line number in the method (0 indicates general errors)
     - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
-    - diagnostic describing the error
+    - diagnóstico que descreve o erro
 
 If your project does not have any general errors, the file will not have a *General errors* section.
 
@@ -284,7 +284,7 @@ To do this, you must surround the code to be excluded from range checking with t
 
 ## Sobre os compiladores
 
-4D contains two compilers:
+4D contém dois compiladores:
 
 - a "classic" compiler, used to compile native code for Intel/AMD processors;
 - a Silicon compiler, used to compile native code for Apple Silicon processors.
