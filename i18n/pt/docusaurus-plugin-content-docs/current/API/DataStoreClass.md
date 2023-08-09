@@ -1080,7 +1080,7 @@ persons.lastname, persons.firstname"; "main"; 30)
 | Parâmetro | Tipo     |    | Descrição                                                                     |
 | --------- | -------- | -- | ----------------------------------------------------------------------------- |
 | file      | 4D. File | -> | Objeto File                                                                   |
-| options   | Integer  | -> | Log response option (server only)                                             |
+| options   | Integer  | -> | Opção de registo de resposta (apenas servidor)                                |
 | reqNum    | Integer  | -> | Number of requests to keep in memory (client only)|<!-- END REF -->
 
 |
