@@ -95,7 +95,7 @@ Same properties as for an [entity parameter](#entity-parameter). In addition, th
 See examples for [creating](#creating-an-entity-with-a-related-entity) or [updating](#updating-an-entity-with-a-related-entity) entities with related entities.
 
 
-### Entity selection parameter
+### Parâmetro de seleção da entidade
 
 The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset).
 
