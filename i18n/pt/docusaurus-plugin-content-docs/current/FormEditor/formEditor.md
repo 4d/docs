@@ -457,7 +457,7 @@ You can create new entity selection list boxes quickly with the **List box build
 
 The List box builder lets you create and fill entity selection list boxes in a few simple operations.
 
-### Using the List Box Builder
+### Usando o gerador de list box
 
 1. In the Form Editor toolbar, click on the List box builder icon:
 
@@ -543,7 +543,7 @@ A gestão das vistas é efetuada através da paleta de vistas.
 
 ![](../assets/en/FormEditor/viewEditor.png)
 
-### Accessing the View palette
+### Aceder à paleta de vistas
 
 Existem três formas de aceder à paleta de vistas:
 
@@ -604,11 +604,11 @@ By default views are named as "View" + the view number, however you can change t
 
 Para mudar o nome de uma vista, pode utilizar:
 
-- Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+- Double-click directly on the view name (the selected view in this case). O nome torna-se então editável:
 
  ![](../assets/en/FormEditor/rename.png)
 
-- Clique com o botão direito do rato no nome da vista. The name then becomes editable:
+- Clique com o botão direito do rato no nome da vista. O nome torna-se então editável:
 
  ![](../assets/en/FormEditor/rename2.png)
 
