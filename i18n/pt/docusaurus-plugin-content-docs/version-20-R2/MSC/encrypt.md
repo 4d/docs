@@ -19,7 +19,7 @@ A new folder is created each time you perform an encryption/decryption operation
 Encrypting your data for the first time using the MSC requires the following steps:
 
 1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. Ver a secção "Propriedades das tabelas".
-2. Open the Encrypt page of the MSC. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](../assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](../assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. ![](../assets/en/MSC/MSC_encrypt2.png)<p>
+2. Abra a página Encriptar do CSM. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](../assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](../assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. ![](../assets/en/MSC/MSC_encrypt2.png)<p>
 This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
 <strong x-id="1">Note:</strong>The same message is displayed when the <strong x-id="1">Encryptable</strong> status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
 3. Click on the Encrypt picture button.  

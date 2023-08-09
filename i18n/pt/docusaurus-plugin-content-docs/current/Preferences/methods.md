@@ -135,7 +135,7 @@ Oculta permanentemente as linhas verticais dos blocos. The block lines are desig
 
 ![](../assets/en/Preferences/optionsBlockLines.png)
 
-#### Hide collapse/expand icons
+#### Ocultar ícones recolher/expandir
 
 Allows you to hide all expand/collapse icons by default when displaying code. When the option is checked, node icons (as well as local block lines, see above), are displayed temporarily when the mouse is placed over a node:
 

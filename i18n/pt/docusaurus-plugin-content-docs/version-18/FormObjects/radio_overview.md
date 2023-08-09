@@ -11,9 +11,9 @@ Usually, a radio button shows a small bullseye with text. However, radio buttons
 
 ![](../assets/en/FormObjects/radio1.png)
 
-A radio button is selected:
+É selecionado um botão rádio:
 
-- when the user clicks on it
+- quando o usuário clica nele
 - when it has the focus and the user presses the **Space bar** key.
 
 ## Configuração de botões radio

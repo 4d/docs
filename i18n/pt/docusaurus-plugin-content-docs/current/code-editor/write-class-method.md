@@ -588,7 +588,7 @@ Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you t
 **Note:** If the insertion point is placed in an `If` or `Else` type structure, the enclosing block will be the one containing, respectively, the `If` or `Else` statement.
 
 
-### Start of Block or End of Block
+### Início do bloco ou fim do bloco
 
 Two commands make it easier to move around within code structures (e.g. `If... Else... End if`):
 

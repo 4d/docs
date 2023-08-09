@@ -2161,7 +2161,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 #### Exemplo
 
-In the following document:
+No documento seguinte:
 
 ![](../assets/en/ViewPro/vp-sheet-3.png)
 
@@ -2205,7 +2205,7 @@ In *index*, pass the index of the sheet to remove. If the passed *index* does no
 
 #### Exemplo
 
-In the following document:
+No documento seguinte:
 
 ![](../assets/en/ViewPro/vp-sheet-index-name.png)
 
@@ -2650,7 +2650,7 @@ Each *dirty row* object in the returned collection contains the following proper
 | Propriedade  | Tipo    | Descrição                             |
 | ------------ | ------- | ------------------------------------- |
 | item         | object  | Objeto modificado da linha modificada |
-| originalItem | object  | Object before modification            |
+| originalItem | object  | Objeto antes da modificação           |
 | row          | integer | Index of the modified row             |
 
 If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
@@ -3827,7 +3827,7 @@ In *options*, you can specify additional behavior. Valores possíveis:
 | Parâmetros            | Valor | Descrição                                   |
 | --------------------- | ----- | ------------------------------------------- |
 | vk table remove all   | 0     | Remover tudo, incluindo o estilo e os dados |
-| vk table remove style | 1     | Remove style but keep data                  |
+| vk table remove style | 1     | Remover o estilo, mas manter os dados       |
 | vk table remove data  | 2     | Remove data but keep style                  |
 
 Os nomes das tabelas são definidos ao nível da folha. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).

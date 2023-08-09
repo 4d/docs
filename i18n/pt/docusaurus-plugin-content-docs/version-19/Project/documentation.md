@@ -159,7 +159,7 @@ $txt:="Hello world!"
 | toolbar   | String |Toolbar name  |
 ```
 
-- The link tag is supported:
+- A etiqueta de ligação é suportada:
 
 ```
 // Case 1 The [documentation](https://doc.4d.com) of the command ....

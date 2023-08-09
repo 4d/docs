@@ -14,7 +14,7 @@ This group of options sets parameters for moving objects using the keyboard or t
 
 This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
 
-### When moving beyond window limits
+### Ao ultrapassar os limites da janela
 
 This option allows setting the behavior of the Form editor when moving an object using the mouse beyond window limits.
 

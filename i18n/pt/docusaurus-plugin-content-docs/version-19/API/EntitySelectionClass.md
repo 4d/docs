@@ -1212,7 +1212,7 @@ Se quisermos ter uma seleção de empregados mulheres que se chamam "Jones" que 
 
 #### Descrição
 
-The `.or()` function <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; retorna uma nova seleção de entidade não ordenada que contenha todas as entidades da seleção de entidade e o parâmetro.
+A função `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; retorna uma nova seleção de entidade não ordenada que contenha todas as entidades da seleção de entidade e o parâmetro.
 
 * Se passar como parâmetro *entitySelection* pode comparar seleções de entidade. Se a entidade pertencer à selecção de entidades, é devolvida uma nova referência à selecção de entidades. Senão, uma nova seleção de entidade contém a seleção de entidade original e a entidade é retornada.
 * Se a seleção de entidade original e o parâmetro *entitySelection* for vazio, uma seleção de entidade vazia é retornada. Se a seleção de entidade original for vazia, uma referência a  *entitySelection* ou uma seleção de entidade contendo apenas *entity* será retornada.

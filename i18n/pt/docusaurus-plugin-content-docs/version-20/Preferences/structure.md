@@ -16,7 +16,7 @@ As opções abaixo estão disponíveis:
 
 This group of options configures the display of the 4D Structure editor.
 
-### Graphic quality of the structure
+### Qualidade gráfica da estrutura
 
 This option varies the level of graphic detail in the Structure editor. By default, the quality is set to **High**. You can select Standard quality in order to give priority to display speed. The effect of this setting is mainly perceptible when using the zoom function (see the "Zoom" paragraph in [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
 

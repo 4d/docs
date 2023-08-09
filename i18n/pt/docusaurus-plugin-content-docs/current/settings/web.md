@@ -299,6 +299,6 @@ This option specifies a group of 4D users that is authorized to establish the li
 
 ### Web Studio
 
-#### Enable access to the web studio
+#### Ativar o acesso ao estúdio Web
 
 Ativa o acesso geral ao Web studio. You still need to configure it at every project level.
