@@ -1,5 +1,5 @@
 ---
-id: 4dwriteprointerface
+id: writeprointerface
 title: 4D Write Pro Interface
 ---
 
@@ -76,7 +76,7 @@ In the current implementation (4D v20 R2), formulas in breaks, data sources and 
 
 :::
  
-The template file must be stored in a "[`Resources`](../project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
+The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
 
 The template file in JSON format contains the following attributes:
 
@@ -156,7 +156,7 @@ Here's a brief example of what your JSON file might look like:
 
 #### Translation files
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
 
 Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
 
@@ -216,7 +216,7 @@ The translation file serves an additional role when a user selects a table in th
 
 #### Theme files
 
-A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
+A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
 
 The theme file in JSON format contains the following attributes:
 
@@ -297,4 +297,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### See also
 
-[`4D Write Pro - Table Wizard (tutorial video)`](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)

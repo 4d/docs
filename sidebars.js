@@ -365,9 +365,9 @@ module.exports =
 						  href: 'https://doc.4d.com/4Dv20R2/4D/20-R2/4D-Write-Pro-Reference.100-6390313.en.html', 
 						},					
 						{
-						  type: 'link',
+						  type: 'doc',
 						  label: '4D Write Pro Interface', // The link label
-						  href: 'https://github.com/4d/4D-WritePro-Interface', 
+						  id: "WritePro/writeprointerface", 
 						},					
 						{
 						  type: 'link',
