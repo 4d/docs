@@ -113,6 +113,7 @@ The **Segment Size** menu is a combo box that allows you to set the size in MB f
 - **Compression Rate**
 By default, 4D compresses backups to help save disk space. However, the file compression phase can noticeably slow down backups when dealing with large volumes of data. The **Compression Rate** option allows you to adjust file compression:
   - **None:** No file compression is applied. The backup is faster but the archive files are considerably larger.
+
   - **Fast** (default): This option is a compromise between backup speed and archive size.
   - **Compact**: The maximum compression rate is applied to archives. The archive files take up the least amount of space possible on the disk, but the backup is noticeable slowed.
 
@@ -140,3 +141,9 @@ The user does not see any dialog box; the operation is completely automatic. The
 > - External Data folder
 >
 > If you wish to get the attached files or the project files, you must perform a [manual restore](restore.md#manually-restoring-a-backup-standard-dialog).
+
+:::caution
+
+If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+
+:::
