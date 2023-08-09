@@ -46,7 +46,7 @@ When an application is built, 4D generates a log file in the **Logs** folder. Th
 * O início e o fim da construção de objetivos,
 * The name and full access path of the files generated,
 * A data e a hora da geração,
-* Any errors that occurred.
+* Todos os erros produzidos.
 
 ## Nome da aplicação e pasta de destino
 
