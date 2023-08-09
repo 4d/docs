@@ -279,7 +279,7 @@ Existem duas formas de criar comentários:
 
 Ambos os estilos de comentários podem ser utilizados em simultâneo.
 
-#### Single line comments (//)
+#### Linha de comentário (//)
 
 Inserir `//` no início de uma linha ou depois de uma declaração para adicionar um comentário de linha única. Exemplo:
 
