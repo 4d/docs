@@ -173,7 +173,7 @@ _italic_
 ```
 
 
-- The link tag is supported:
+- A etiqueta de ligação é suportada:
 
 ```md
 // Case 1 The [documentation](https://doc.4d.com) of the command ....
