@@ -487,7 +487,7 @@ Function query fullName($event : Object)->$result : Object
 
 > Keep in mind that using placeholders in queries based upon user text input is recommended for security reasons (see [`query()` description](API/DataClassClass.md#query)).
 
-Calling code, for example:
+Código de chamada, por exemplo:
 
 ```4d
 $emps:=ds. Employee.query("fullName = :1"; "Flora Pionsin")
@@ -535,7 +535,7 @@ Function query age($event : Object)->$result : Object
 
 ```
 
-Calling code, for example:
+Código de chamada, por exemplo:
 
 ```4d
 // people aged between 20 and 21 years (-1 day)
@@ -581,7 +581,7 @@ You can return the `orderBy` string either in the `$event.result` object propert
 
 #### Exemplo
 
-You can write conditional code:
+É possível escrever código condicional:
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
