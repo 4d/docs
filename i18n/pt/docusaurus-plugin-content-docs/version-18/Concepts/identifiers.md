@@ -15,7 +15,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Commas, slashes, quotation marks, and colons are not allowed.
 - Characters reserved for use as operators, such as * and +, are not allowed.
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
-- Any trailing spaces are ignored.
+- Os espaços finais são ignorados.
 
 ### Additional rules for object property and ORDA names
 
