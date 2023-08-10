@@ -55,7 +55,7 @@ XML keys provide additional options besides those displayed in the Build Applica
 Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. The log file stores the following information for each build:
 
 * O início e o fim da construção de objetivos,
-* The name and full access path of the files generated,
+* O nome e o caminho de acesso completo dos ficheiros gerados,
 * A data e a hora da geração,
 * Todos os erros que forem produzidos.
 * Quaisquer problemas de assinatura (por exemplo, um plug-in não assinado).
