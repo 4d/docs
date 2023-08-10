@@ -150,7 +150,7 @@ However, this property has a typing function in the following specific cases:
 
 | Nome               | Tipo de dados | Valores possíveis                                  |
 | ------------------ | ------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string        | <li>**objectos standard:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
+| dataSourceTypeHint | string        | <li>**objectos standard:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Apenas para Array/seleção list box*: "integer", "object"</li> |
 
 #### Objectos suportados
 
@@ -284,7 +284,7 @@ Para a tradução do banco de dados, pode introduzir uma referência XLIFF na á
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > Ó cálculo de rodapés também pode ser definido com o comando 4D `LISTBOX SET FOOTER CALCULATION`.
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
 | Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
