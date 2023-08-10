@@ -8,7 +8,7 @@ Esta página é utilizada para reparar o ficheiro de dados quando este foi danif
 
 **Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
 > Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the database will be closed and restarted in maintenance mode.
-> When the database is encrypted, repairing data includes decryption and encryption steps and thus, requires the current data encryption key. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
+> Quando o banco de dados está encriptado, a reparação dos dados inclui passos de desencriptação e encriptação e, por isso, requer a chave de encriptação de dados atual. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
 
 ## overview
 
@@ -22,11 +22,11 @@ By default, the original data file will be duplicated before the repair operatio
 
 ### Ficheiros reparados
 
-4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (database folder by default). O ficheiro em branco é preenchido com os dados recuperados.
+4D cria um ficheiro de dados em branco no local do ficheiro original. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (database folder by default). O ficheiro em branco é preenchido com os dados recuperados.
 
 ## Reparação standard
 
-Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). Os dados são compactados e reparados. This type of repair can only be performed when the data and structure file match.
+A reparação padrão deve ser escolhida quando apenas alguns registos ou índices estão danificados (as tabelas de endereços estão intactas). Os dados são compactados e reparados. This type of repair can only be performed when the data and structure file match.
 
 When the repair procedure is finished, the "Repair" page of the MSC is displayed. Uma mensagem indica se a reparação foi bem sucedida. Se for assim, pode abrir a base de dados imediatamente. ![](../assets/en/MSC/MSC_RepairOK.png)
 
@@ -36,7 +36,7 @@ Use this low-level repair option only when the data file is severely damaged and
 
 4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
 
-> If you have deselected the **Records definitively deleted** option in the properties of a table in the database structure, performing a recovery by header markers may cause records that were previously deleted to reappear. Recovery by headers does not take integrity constraints into account. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> If you have deselected the **Records definitively deleted** option in the properties of a table in the database structure, performing a recovery by header markers may cause records that were previously deleted to reappear. A recuperação por cabeçalhos não tem em conta as restrições de integridade. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
 
 When you click on **Scan and repair...**, 4D performs a complete scan of the data file. Quando a verificação estiver concluída, os resultados aparecem na janela seguinte:
 
@@ -59,7 +59,7 @@ If several groups of records could not be assigned to tables due to a damaged ad
 
 ![](../assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Também pode atribuir uma tabela utilizando a função arrastar e largar. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Também pode atribuir uma tabela utilizando a função arrastar e largar. The group of records is then associated with the table and it will be recovered in this table. Os nomes das tabelas atribuídas manualmente aparecem a preto. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
 ## Abrir ficheiro de registo
 
