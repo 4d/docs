@@ -144,28 +144,28 @@ $c:=a+b
 
     O valor da variável `$a` é agora 1. A variável `$b` ainda não está inicializada, mas é exibida porque é usada na linha a ser executada.
 
-3. Clique novamente no botão **Step Over**. O contador do programa está agora definido na linha com c:=a+b. At this point the Line Objects theme displays:
+3. Clique novamente no botão **Step Over**. O contador do programa está agora definido na linha com c:=a+b. Neste ponto, é exibido o tema Objetos de linha:
 
     | $c | Indefinido |
     | -- | ---------- |
     | $a | 1          |
     | $b | 2          |
 
-    O valor da variável `$b` é agora 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    O valor da variável `$b` é agora 2. A variável `$c` ainda não está inicializada, mas é exibida porque é usada na linha a ser executada.
 
 #### Variáveis.
 
-This theme is composed of the following subthemes:
+Este tema é composto pelos seguintes subtemas:
 
-| Subtema       | Descrição                                                    | Os valores podem ser modificados? |
-| ------------- | ------------------------------------------------------------ | --------------------------------- |
-| Interprocesso | Lista de variáveis interprocessos que são utilizadas agora   | Sim                               |
-| Processo      | Lista de variáveis processo utilizadas pelo processo atual   | Sim                               |
-| Local         | List of local variables used by the method being traced      | Sim                               |
-| Parâmetros    | Lista dos parâmetros recebidos pelo método                   | Sim                               |
-| Self          | Pointer to the current object, when tracing an Object Method | Não                               |
+| Subtema       | Descrição                                                         | Os valores podem ser modificados? |
+| ------------- | ----------------------------------------------------------------- | --------------------------------- |
+| Interprocesso | Lista de variáveis interprocessos que são utilizadas agora        | Sim                               |
+| Processo      | Lista de variáveis processo utilizadas pelo processo atual        | Sim                               |
+| Local         | Lista de variáveis locais utilizadas pelo método rastreado        | Sim                               |
+| Parâmetros    | Lista dos parâmetros recebidos pelo método                        | Sim                               |
+| Self          | Ponteiro para o objeto atual, quando se rastreia um método objeto | Não                               |
 
-Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. O depurador apresenta os primeiros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+Os arrays, como outras variáveis, aparecem nos subtemas Interprocesso, Processo e Local, dependendo do seu escopo. O depurador apresenta os primeiros 100 elementos. Na coluna **Valor**, pode modificar os valores dos elementos array, mas não o tamanho dos arrays.
 
 Para apresentar os tipos de variáveis e os seus nomes internos, clique com o botão direito do rato e selecione a opção **Mostrar tipos** no menu de contexto:
 
