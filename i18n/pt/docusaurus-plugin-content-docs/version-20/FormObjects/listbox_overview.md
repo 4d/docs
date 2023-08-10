@@ -569,7 +569,7 @@ São exibidas duas colunas:
 | ----------- | ---------------------------- |
 | `This.name` | `This.parent.extra.nickname` |
 
-If you want to sort the list box using the values of the second column, you have to write:
+Se quiser ordenar o list box utilizando os valores da segunda coluna, tem de escrever:
 
 ```4d
 If (Form event code=On Header Click)
@@ -588,7 +588,7 @@ P valor da variável column header variable[](properties_Object.md#variable-or-e
 
 - Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.![](../assets/en/FormObjects/sorticon2.png)
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
+> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Não são suportados outros tipos de [expressões](Concepts/quick-tour.md#expressions), como `Form.sortValue`.
 
 Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar” a exibição da flecha de ordenação. A ordenação de coluna não é modificada nesse caso; depende do desenvolvedor como vai manejá-la.
 
