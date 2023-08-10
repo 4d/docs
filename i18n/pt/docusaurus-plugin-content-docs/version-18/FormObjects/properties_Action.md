@@ -27,7 +27,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### Objectos suportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista hierárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de plug-in](pluginArea_overview.md#overview)
 
 #### Veja também
 
@@ -96,9 +96,9 @@ São suportados vários tipos de referências de métodos:
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                                                  |
-| ------ | ------------- | ------------------------------------------------------------------ |
-| method | text          | Object method standard or custom file path, or project method name |
+| Nome   | Tipo de dados | Valores possíveis                                                                       |
+| ------ | ------------- | --------------------------------------------------------------------------------------- |
+| method | text          | Caminho de ficheiro padrão ou personalizado do método objeto, ou nome do método projeto |
 
 #### Objectos suportados
 
@@ -145,7 +145,7 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Os arrays de tipo imagem (colunas) não podem ser ordenadas com esta funcionalidade.
 
 In list boxes based on a selection of records, the standard sort function is available only:
-- When the data source is *Current Selection*,
+- Quando a fonte de dados é *Seleção atual*,
 - With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
 
 In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
