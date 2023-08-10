@@ -106,7 +106,7 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 
 Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
-4D has implemented the following mechanisms to meet these needs:
+4D implementou os seguintes mecanismos para atender a essas necessidades:
 
 * Use of the "subform" parameter with the `OBJECT Get name` command to specify the subform object and the `OBJECT Get pointer` command.
 * Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
