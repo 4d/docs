@@ -147,9 +147,9 @@ Designa a espessura de uma linha.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                 |
-| ----------- | ------------- | ----------------------------------------------------------------- |
-| strokeWidth | number        | 0 for smallest width on a printed form, or any integer value < 20 |
+| Nome        | Tipo de dados | Valores possíveis                                                                     |
+| ----------- | ------------- | ------------------------------------------------------------------------------------- |
+| strokeWidth | number        | 0 para a largura mais pequena num formulário impresso, ou qualquer valor inteiro < 20 |
 
 #### Objectos suportados
 
