@@ -47,13 +47,13 @@ The Compact page contains an **Advanced>** button, which can be used to access a
 
 The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
 
-The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. This option can be used more particularly when compacting voluminous files while using different disks.
+The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. Esta opção pode ser utilizada mais particularmente para compactar ficheiros volumosos enquanto utiliza discos diferentes.
 
 ### Forçar a atualização dos registos
 
-When this option is checked, 4D rewrites every record for each table during the compacting operation, according to its description in the structure. If this option is not checked, 4D just reorganizes the data storage on disk. Esta opção é útil nos seguintes casos:
+When this option is checked, 4D rewrites every record for each table during the compacting operation, according to its description in the structure. Se esta opção não estiver marcada, 4D apenas reorganiza o armazenamento de dados no disco. Esta opção é útil nos seguintes casos:
 
-- When field types are changed in the application structure after data were entered. For example, you may have changed a Longint field to a Real type. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. In this case, 4D does not convert data already entered retroactively; data is converted only when records are loaded and then saved. Esta opção força a conversão de todos os dados.
+- When field types are changed in the application structure after data were entered. Por exemplo, pode ter alterado um campo Longint para um tipo Real. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. Neste caso, 4D não converte dados já introduzidos retroativamente; os dados são convertidos apenas quando os registos são carregados e depois guardados. Esta opção força a conversão de todos os dados.
 
 - When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
 
