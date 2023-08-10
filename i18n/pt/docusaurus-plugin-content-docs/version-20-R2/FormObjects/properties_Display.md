@@ -7,11 +7,11 @@ title: Visualização
 
 ## Formato Alfa
 
-Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
+Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Segue-se uma lista de formatos fornecidos para campos alfanuméricos:
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
-You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. Neste caso, o formato não pode ser modificado nas propriedades do objeto. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
 
 The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
@@ -56,19 +56,19 @@ Os formatos de data controlam como as datas aparecem quando são apresentadas ou
 
 A tabela seguinte apresenta as opções disponíveis:
 
-| Nome do formato                 | Cadeia JSON  | Exemplo (sistema americano)   |
-| ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (o padrão) | 03/25/20                      |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
-| System date long                | systemLong   | Wednesday, March 25, 2020     |
-| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 25/03/20 mas 25/04/2032 *(2)* |
-| Internal date long              | long         | March 25, 2020                |
-| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
-| Internal date short             | short        | 03/25/2020                    |
-| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
+| Nome do formato                 | Cadeia JSON  | Exemplo (sistema americano)       |
+| ------------------------------- | ------------ | --------------------------------- |
+| System date short               | - (o padrão) | 03/25/20                          |
+| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020                 |
+| System date long                | systemLong   | Quarta-feira, 25 de março de 2020 |
+| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT     |
+| Short Century                   | shortCentury | 25/03/20 mas 25/04/2032 *(2)*     |
+| Internal date long              | long         | March 25, 2020                    |
+| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                      |
+| Internal date short             | short        | 03/25/2020                        |
+| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00               |
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
+*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidade só se aplica às versões francesas de 4D.
 
 *(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
@@ -140,7 +140,7 @@ If characters are placed between placeholders, they appear only if digits are di
 
 o ponto só aparece se o usuário introduzir pelo menos quatro dígitos.
 
-Spaces are treated as characters in number display formats.
+Os espaços são tratados como caracteres nos formatos de apresentação de números.
 
 ### Formatos para positivo, negativo e zero
 
@@ -151,7 +151,7 @@ A number display format can have up to three parts allowing you to specify displ
 Não é necessário especificar as três partes do formato. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
-> The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
+> The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. Por outras palavras, o que é realmente introduzido é o que será apresentado para o valor zero.
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
@@ -248,7 +248,7 @@ The following table shows how different formats affect the display of numbers. T
 
 Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
-The truncation and scaling options do not affect the picture itself. O conteúdo de um campo Imagem é sempre guardado. Only the display on the particular form is affected by the picture display format.
+As opções de truncagem e escala não afetam a imagem em si. O conteúdo de um campo Imagem é sempre guardado. Only the display on the particular form is affected by the picture display format.
 
 ### Escalado para caber
 
@@ -275,7 +275,7 @@ O formato **Truncado (não centrado)** faz com que 4D coloque o canto superior e
 
 When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
 
-If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Since it is proportionally reduced, the picture will not appear distorted.
+If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Uma vez que é proporcionalmente reduzida, a imagem não aparece distorcida.
 
 If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
 
@@ -364,9 +364,9 @@ Quando uma [expressão booleana](properties_Object.md#expression-type) é aprese
 
 Utilizado para associar um formato de visualização aos dados da coluna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
-Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
+Boolean and number (numeric or integer) columns can be displayed as check boxes. Neste caso, pode ser definida a propriedade [Título](#title).
 
-Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
+As colunas booleanas também podem ser apresentadas como menus pop-up. Neste caso, as propriedades [Text quando False e Text quando True](#text-when-false-text-when-true) devem ser definidas.
 
 #### Gramática JSON
 
@@ -394,7 +394,7 @@ Em particular, esta propriedade permite implementar botões "invisíveis".  Os b
 
 #### Objectos suportados
 
-[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
+[Botão](button_overview.md) - [Lista pendente](dropdownList_Overview.md)
 
 ---
 
@@ -458,7 +458,7 @@ This option is available for columns with any type of contents, except pictures 
 * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
  ![](../assets/en/FormObjects/property_truncate1.png)
-> A posição das elipses depende do sistema operativo. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
+> A posição das elipses depende do sistema operativo. In the above example (Windows), it is added on the right side of the text. No macOS, as reticências são adicionadas no meio do texto.
 
 * When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
@@ -470,8 +470,8 @@ The Truncate with ellipsis option is enabled by default and can be specified wit
 
 The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
 
-* For Pop-up type Boolean formats, labels are truncated with an ellipsis,
-* For Check box type Boolean formats, labels are always clipped.
+* Para formatos booleanos do tipo pop-up, as etiquetas são truncadas com uma elipse,
+* Para formatos booleanos do tipo caixa de verificação, as etiquetas são sempre cortadas.
 
 #### Gramática JSON
 
@@ -489,7 +489,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 This property allows hiding the object in the Application environment.
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default.
+É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default.
 
 #### Visibilidade automática em formulários lista
 
@@ -538,7 +538,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 `Gramática JSON: "none"`
 
-When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
+When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. Nas áreas de tipo de texto, são suportadas os retornos de carro:
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
@@ -555,7 +555,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 `Gramática JSON: "automatic"`
 
 * In single-line areas, words located at the end of lines are truncated and there are no line returns.
-* In multiline areas, 4D carries out automatic line returns.
+* Em áreas com várias linhas, 4D efetua retornos automáticos de linha.
 
 ![](../assets/en/FormObjects/wordwrap1.png)
 
