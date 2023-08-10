@@ -246,7 +246,7 @@ Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). By de
 
 ## Array estilo linha
 
-This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
+This property is used to specify the name of a row height array that you want to associate with the list box. Um array de altura de linha deve ser do tipo numérico (longint por defeito).
 
 When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
 
