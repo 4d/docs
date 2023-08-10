@@ -23,7 +23,7 @@ The default value can only be used if the [data source type](properties_Object.m
 | #H    | Hora actual         |
 | #N    | Número de sequência |
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. Os números começam em um (1) e aumentam gradualmente em um (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
+You can use a sequence number to create a unique number for each record in the table for the current data file. Um número de sequência é um longint gerado para cada novo registo. Os números começam em um (1) e aumentam gradualmente em um (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Cada tabela tem o seu próprio contador interno de números de sequência. Para obter mais informações, consulte o parágrafo [Autoincremento](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029).
 
 > Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
 
