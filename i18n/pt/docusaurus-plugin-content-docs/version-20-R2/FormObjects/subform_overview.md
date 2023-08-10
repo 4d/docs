@@ -172,7 +172,7 @@ In versions prior to 4D v19 R5, synchronization between parent forms and subform
 
 Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
-4D has implemented the following mechanisms to meet these needs:
+4D implementou os seguintes mecanismos para atender a essas necessidades:
 
 - Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
 - Execution of a method in the context of the subform via the `EXECUTE METHOD IN SUBFORM` command.
