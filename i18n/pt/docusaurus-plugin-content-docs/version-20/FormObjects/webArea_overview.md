@@ -196,7 +196,7 @@ To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 
 > With [Windows system rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine), a change in this preference requires a navigation action in the area (for example, a page refresh) to be taken into account.
 
-For more information, refer to the description of the `WA SET PREFERENCE` command.
+Para mais informações, consultar a descrição do comando `WA SET PREFERENCE`.
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 
