@@ -3,18 +3,18 @@ id: building
 title: Building a project package
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
+4D inclui um gerador de aplicativos para criar um pacote de projeto (versão final). Esse gerador simplifica o processo de finalização e desenvolvimento de aplicativos compilados 4D. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
 
 O construtor de aplicações permite-lhe:
 
 * Gerar um banco de dados compilado, sem código interpretado
-* Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
+* Construir uma aplicação autônoma, de duplo clique, *i.e.*, fundida com 4D Volume Desktop, o motor de banco de dados 4D,
 * Gerar aplicações diferentes a partir do mesmo banco de dados compilado mediante um projeto XML,
 * Criar aplicações cliente-servidor homogêneas,
-* Build client-server applications with automatic updating of client and server parts.
-* Save your build settings for future use (*Save settings* button).
+* Construir aplicações cliente-servidor com atualização automática de partes do cliente e do servidor.
+* Salve seus parâmetros de geração para uso futuro (botão *Salvar parâmetros*).
 
-> Compiled applications are based upon [.4dz files](#build-compiled-structure) that are **read-only**. Tenha em atenção que a utilização de comandos ou funções que modificam os ficheiros de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, pode criar aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
+> As aplicações compiladas baseiam-se em ficheiros [.4dz](#build-compiled-structure) que são **só de leitura**. Tenha em atenção que a utilização de comandos ou funções que modificam os ficheiros de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, pode criar aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
 ## Build application overview
 
@@ -27,7 +27,7 @@ To display the Build Application dialog, select **Design** > **Build Application
 
 ![](../assets/en/Project/buildappProj.png)
 
-The Build Application dialog includes several pages that can be accessed using tabs:
+A caixa de diálogo Criar aplicação inclui várias páginas que podem ser acedidas através de separadores:
 
 ![](../assets/en/Project/appbuilderProj.png)
 
@@ -37,7 +37,7 @@ A geração do banco de dados só pode ser realizado quando o banco de dados for
 
 Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the `Settings` folder of the project.
 
-Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
+Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
 XML keys provide additional options besides those displayed in the Build Application dialog box. XML keys provide additional options besides those displayed in the Build Application dialog box.
 
@@ -83,17 +83,17 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 Quando se marca esta opção, todas as pastas relacionadas com o banco de dados na pasta Build como pastas *Components* e *Resources*. Para saber mais sobre essas pastas, consulte [Arquitetura do banco de dados](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
 
-### Build component
+### Gerar um componente
 
 Constrói um componente compilado a partir da estrutura.
 
-A component is a standard 4D project in which specific functionalities have been developed. A component is a standard 4D project in which specific functionalities have been developed.
+Um componente é um projeto padrão 4D onde foram desenvolvidas funcionalidades específicas. A component is a standard 4D project in which specific functionalities have been developed.
 
 Se tiver nomeado sua aplicação, *MeuComponente*, 4D criará uma pasta Components que contém a pasta *MeuComponente.4dbase*:
 
 \&#060;destination&#062;/Components/name.4dbase/\&#060;name&#062;.4DZ
 
-The *MyComponent.4dbase* folder contains:
+A pasta *MyComponent.4dbase* contém:
 
 * ficheiro *MyComponent.4DZ*
 * Uma pasta *Resources* - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
