@@ -55,33 +55,33 @@ Executa a linha de método atual, indicada pelo contador de programa (a seta ama
 
 O botão Executar não entra em sub-rotinas e funções, mantém-se ao nível do método que rastreia atualmente. Se pretender rastrear também as chamadas de sub-rotinas e funções, utilize o botão **Passo a Passo detalhado**.
 
-Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+Na depuração remota, se o método for executado no servidor, o método principal é chamado após a execução da última linha do método secundário. Se o método principal for executado no lado remoto, o botão **Executar passo a passo** tem o mesmo efeito que o botão **Retomar execução**.
 
-#### Passo a passo
+#### Passo a passo detalhado
 
-When a line that calls another method (subroutine or function) is executed, click this button to display the the other method and step through it.
+Quando uma linha que chama outro método (sub-rotina ou função) é executada, clique neste botão para exibir o outro método e percorrê-lo.
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+O novo método se torna o método atual (superior) na janela de [cadeia de chamadas](#call-chain-pane) da janela do depurador.
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+Ao executar uma linha que não chama outro método, este botão tem o mesmo efeito que o botão **Executar passo a passo**.
 
 #### Abortar
 
-Stops method execution, and returns to the state before the method started executing:
+Interrompe a execução do método e regressa ao estado anterior ao início da execução do método:
 
-* When tracing a form or object method executing in response to an event: Stops and returns to the form.
-* When tracing a method executing from within the Application environment: Stops and returns to the environment.
+* Ao rastrear um método formulário ou um método objeto em execução em resposta a um evento: pára e retorna ao formulário.
+* Ao rastrear um método em execução no ambiente do aplicativo: pára e retorna ao ambiente.
 
 #### Abortar e editar
 
-Pausa na execução do método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Quando terminar as alterações, volte a executar o método.
+Pausa na execução do método. O método que está a ser executado quando se clica no botão **Abortar e Editar** abre-se no Editor de código.
+> **Sugestão**: utilize este botão quando souber quais as alterações necessárias no seu código e quando estas alterações forem necessárias para prosseguir o teste dos seus métodos. Quando terminar as alterações, volte a executar o método.
 
 #### Editar
 
-Pausa na execução do método. The method that is executing at the time you click the Edit button opens in the Code Editor.
+Pausa na execução do método. O método executado no momento em que se clica no botão Editar abre-se no Editor de código.
 
-If you use this button to modify a method, the modifications are only effective the next time it executes.
+Se utilizar este botão para modificar um método, as modificações só entram em vigor na próxima vez que este for executado.
 
 > **Dica:** Utilize este botão quando sabe quais as alterações necessárias no seu código e quando estas não interferem com o resto do código a ser executado ou rastreado.
 
@@ -106,7 +106,7 @@ A **janela de expressão** é apresentado no canto superior esquerdo da janela d
 
 A **janela de expressão** exibe informações gerais úteis sobre o sistema, o ambiente 4D e o ambiente de execução.
 
-The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
+A coluna **Expression** apresenta os nomes dos objetos e das expressões. A coluna **Value** apresenta os valores correspondentes actuais. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
@@ -207,27 +207,27 @@ Este tema lista os conjuntos definidos no processo atual (aquele que está sendo
 
 #### Seleções temporárias
 
-This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. As expressões deste tema não podem ser modificadas.
+Este tema lista as seleções temporárias definidas no processo atual (aquele que está sendo rastreado no momento); ele também lista as seleções temporárias entre processos. Para cada seleção temporária, a coluna Valor apresenta o número de registos e o nome da tabela. As expressões deste tema não podem ser modificadas.
 
 #### Informação
 
-This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
+Este tema contém informações gerais sobre o funcionamento da base de dados, tais como a tabela predefinida atual (se existir), espaço de memória físico, virtual, livre e utilizado, destino da consulta, etc.
 
 #### Web
 
-This theme displays information regarding the main Web server of the application (only available if the Web server is active):
+Este tema apresenta informações sobre o servidor Web principal da aplicação (apenas disponível se o servidor Web estiver ativo):
 
-* Web File To Send: name of Web file waiting to be sent (if any)
-* Web Cache Usage: number of pages present in Web cache as well as its use percentage
-* Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format
-* Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
-* Number of active Web processes: number of active Web processes, all Web processes together
+* Ficheiro Web a enviar: nome do ficheiro Web que está à espera de ser enviado (se existir)
+* Utilização da cache Web: número de páginas presentes na cache Web, bem como a sua percentagem de utilização
+* Tempo decorrido do servidor Web: duração da utilização do servidor Web no formato horas:minutos:segundos
+* Contagem de visitas à Web: número total de pedidos HTTP recebidos desde o lançamento do servidor Web, bem como o número instantâneo de pedidos por segundo
+* Número de processos Web ativos: número de processos Web ativos, todos os processos Web em conjunto
 
 As expressões contidas neste tema não podem ser modificadas.
 
 ### Menu contextual
 
-Additional options are available from the contextual menu of the Watch pane.
+O menu contextual da janela de expressão oferece opções adicionais.
 
 ![context-menu](../assets/en/Debugging/contextual-menu.png)
 
@@ -237,22 +237,22 @@ Additional options are available from the contextual menu of the Watch pane.
 * **Mostrar os números dos campos e das tabelas**: Apresenta o número de cada tabela ou campo. Útil se trabalhar com números de tabelas ou de campos, ou com apontadores utilizando comandos como `Table` ou `Field`.
 * **Mostrar ícones**: Cada objeto é precedido por um ícone que indica seu tipo. Pode desativar esta opção para acelerar a visualização, ou simplesmente porque prefere utilizar apenas a opção **Mostrar os tipos**.
 * **Tabelas e campos ordenados**: Ordena as tabelas e os campos por ordem alfabética nas respectivas listas.
-* **Mostrar números inteiros em hexadecimal**: Os números são normalmente apresentados em notação decimal. Esta opção apresenta-os em notação hexadecimal. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
-* **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
+* **Mostrar números inteiros em hexadecimal**: Os números são normalmente apresentados em notação decimal. Esta opção apresenta-os em notação hexadecimal. Nota: para introduzir um valor numérico em hexadecimal, digite 0x (zero + "x"), seguido dos dígitos hexadecimais.
+* **Ativar a monitorização da atividade**: ativa a monitorização da atividade (verificação avançada da atividade interna da aplicação) e apresenta as informações obtidas nos temas adicionais: **Agendador**, **Web** e **Rede**.
 
 ## Painel da cadeia de chamadas
 
-A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
+Um método pode chamar outros métodos ou funções de classe, que podem chamar outros métodos ou funções. O painel Cadeia de chamadas permite-lhe acompanhar essa hierarquia.
 
 ![call-chain-pane](../assets/en/Debugging/call-chain-example.png)
 
-Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
+Cada item do nível principal é o nome de um método ou função classe. O item superior é o que é atualmente rastreado, o item seguinte do nível principal é o nome do chamador (o método ou função que chamou o que é atualmente rastreado), o item seguinte é o chamador do chamador, e assim por diante.
 
 Na imagem acima:
 
 * `thirdMethod` não recebeu nenhum parâmetro
-* `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
-* `secondMethod` has received three parameters from `firstMethod`:
+* `$0` está atualmente indefinido, porque o método não atribuiu nenhum valor a `$0` (porque ainda não executou esta atribuição ou por o método ser uma sub-rotina e não uma função)
+* `secondMethod` recebeu três parâmetros de `firstMethod`:
   * $1 é um ponteiro para a tabela `[Employee]`
   * $2 é um ponteiro para o campo `ID` na tabela  `[Employee]`
   * $3 é um parâmetro alfanumérico cujo valor é "Z"
@@ -364,7 +364,7 @@ Por padrão, a linha do contador de programas (também designada por linha de ex
 
 Para efeitos de depuração, é possível deslocar o contador de programa para o método no topo da cadeia de chamadas (o método atualmente em execução). Para o fazer, clique e arraste a seta amarela para outra linha.
 
-Isto apenas diz ao depurador para prosseguir o rastreio ou a execução a partir de um ponto diferente. Não executa linhas nem anula a sua execução. All current settings, fields, variables, etc. are not impacted.
+Isto apenas diz ao depurador para prosseguir o rastreio ou a execução a partir de um ponto diferente. Não executa linhas nem anula a sua execução. Todos os parâmetros, campos, variáveis, etc. atuais não são afetados.
 
 Por exemplo:
 
@@ -386,7 +386,7 @@ The contextual menu of the Source Code Pane provides access to several functions
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Goto Definition**: Goes to where the selected object is defined. Este comando está disponível para:
+* **Ir para definição**: vai para onde o objeto selecionado está definido. Este comando está disponível para:
   * *Métodos projeto:* apresenta o conteúdo do método numa nova janela do editor de código
   * *Campos:* exibe as propriedades do campo no inspetor da janela de estrutura
   * *Tabelas:* apresenta as propriedades da tabela no inspetor da janela de estrutura
