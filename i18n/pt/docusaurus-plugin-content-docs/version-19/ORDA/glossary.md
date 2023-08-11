@@ -9,7 +9,7 @@ title: Glossary
 
 ## Atributo
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
+An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Não confundir atributos de dataclass com atributos de entidades:
 
 * In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
 * In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
@@ -72,45 +72,45 @@ A deep copy duplicates an object and all the references it contains. After a dee
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
+`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. Corresponde ao datastore disponível no banco de dados principal 4D.
 
 ## Entity
 
-An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
+Uma entidade é um objeto que corresponde a um modelo de dataclass. Uma entidade contém os mesmos atributos que a dataclass.
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. No entanto, uma entidade também contém dados relacionados. The purpose of the entity is to manage data (create, update, delete).
+An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. No entanto, uma entidade também contém dados relacionados. O objetivo da entidade é gerir dados (criar, atualizar, apagar).
 
 Para mais informações, consulte Entidades.
 
 ## Seleção de entidades
 
-Uma seleção de entidades é um objeto. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+Uma seleção de entidades é um objeto. Quando uma solicitação é enviada ao datastore, uma seleção de entidades é retornada. Uma seleção de entidade é um conjunto de referências a entidades relacionadas com a mesma dataclass.
 
 Uma seleção de entidade contém:
 
 * um conjunto de 0 a X referências de entidades,
 * uma propriedade length (sempre),
-* queryPlan and queryPath properties (if asked while querying).
+* propriedades queryPlan e queryPath (se solicitadas durante a consulta).
 
 Uma seleção de entidade também pode estar vazia.
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+Classe incorporada para objetos ORDA, tais como entidades ou dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
 
 ## Lazy loading
 
-Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
+Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. Este princípio de otimização é chamado lazy loading.
 
 ## Datastore principal
 
-The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
+O objeto Datastore que corresponde ao banco de dados 4D aberto (autônomo ou cliente/servidor). O datastore principal é devolvido pelo comando ds.
 
 ## Métodos
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. Estes métodos são também designados por funções membro. Such methods are used by calling them on an instance of the object.
+ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. Fornecem métodos específicos para interagir diretamente com eles. Estes métodos são também designados por funções membro. Estes métodos são utilizados chamando-os a uma instância do objeto.
 
-For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
+Por exemplo, o método `quer()` é uma "member function" de dataclass. If you have stored a dataclass object in the `$myClass` variable, you can write:
 
 ```code4d
 $myClass.query("name = smith")
