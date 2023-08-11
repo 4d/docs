@@ -17,7 +17,7 @@ Algumas das características gerais do repartidor:
 *   You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
 *   Um separador pode passar por um objeto. Este objeto será redimensionado quando o divisor for movido.
 *   Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
-*   If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
+*   If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Quando um formulário é fechado, as dimensões iniciais são restauradas.
 
 Uma vez inserido, o separador aparece como uma linha. Pode modificar o seu [estilo de contorno](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) para obter uma linha mais fina ou [alterar a sua cor](properties_BackgroundAndBorder.md##font-color-line-color).
 

@@ -5,7 +5,7 @@ title: Botão rádio
 
 Radio buttons are objects that allow the user to select one of a group of buttons.
 
-Usually, a radio button shows a small bullseye with text. However, radio buttons can have [various appearances](#button-styles).
+Um botão radio aparece na forma de um texto seguido de um círculo. However, radio buttons can have [various appearances](#button-styles).
 
 ![](../assets/en/FormObjects/radio1.png)
 
@@ -136,7 +136,7 @@ Este estilo de botão pode ser utilizado para adicionar um ícone padrão contra
 
 :::info
 
-The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+O estilo Contrair/Expandir tem o nome "disclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -149,7 +149,7 @@ The disclosure radio button style displays the radio button as a standard disclo
 
 :::info
 
-The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+O estilo Disclosure tem o nome "roundedDisclosure" na [gramática JSON do estilo de botão](properties_TextAndPicture.md#button-style).
 
 :::
 

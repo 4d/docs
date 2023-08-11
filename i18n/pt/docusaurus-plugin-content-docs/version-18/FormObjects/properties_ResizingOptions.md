@@ -44,7 +44,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 ## Dimensionamento horizontal
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. Também pode ser definido dinamicamente através do comando de linguagem `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
@@ -69,7 +69,7 @@ Estão disponíveis três opções:
 
 ## Alinhamento vertical
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. Também pode ser definido dinamicamente através do comando de linguagem `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 

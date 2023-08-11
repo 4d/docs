@@ -3,7 +3,7 @@ id: debugLogFiles
 title: Descrição de arquivos de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os registos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
@@ -64,7 +64,7 @@ Para cada petição, os campos abaixo estão logados:
 | systemid                                   | ID de sistema                                                                                                                                                                      |
 | componente                                 | Assinatura de componente (por exemplo '4SQLS' ou 'dbmg')                                                                                                                           |
 | process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                           |
-| request                                    | [C/S or ORDA request ID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) or message string for SQL requests or `LOG EVENT` messages                      |
+| request                                    | [ID do pedido C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou cadeia de mensagens para pedidos SQL, ou mensagens `LOG EVENT`             |
 | bytes_in                                   | Número de bytes recebidos                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                           |
 | server\_duration &#124; exec\_duration | Depende de onde o histórico for gerado:<li>*server\_duration* se for gerado no cliente - tempo que levou em microssegundos para o servidor processar a petição e retornar a resposta. B a F na imagem abaixo OU</li><li>*exec\_duration* se gerado no servidor - tempo que levou em microssegundos para o servidor processar a petição. B a E na imagem abaixo.</li>                                                                                          |

@@ -64,7 +64,7 @@ Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contorno
 
 ## Localização do ícone
 
-Designates the placement of an icon in relation to the form object.
+Designa a colocação de um ícone em relação ao objeto formulário.
 
 #### Gramática JSON
 

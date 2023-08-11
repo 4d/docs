@@ -53,7 +53,7 @@ Medição do visor da escala.
 
 ## Localização da etiqueta
 
-Specifies the location of an object's displayed text.
+Especifica a localização do texto de um objeto.
 
 * Nenhum - não é apresentada qualquer etiqueta
 * Topo - Apresenta etiquetas à esquerda ou acima de um indicador

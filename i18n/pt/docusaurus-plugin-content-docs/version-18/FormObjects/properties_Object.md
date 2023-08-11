@@ -258,7 +258,7 @@ For database translation purposes, you can enter an XLIFF reference in the title
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
 | Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |

@@ -3,7 +3,7 @@ id: bars
 title: Barras de menus
 ---
 
-Menu bars provide the major interface for custom applications. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
+As barras de menu constituem a principal interface das aplicações personalizadas. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
 
 4D lets you associate a custom splash screen picture with each menu bar and to preview this menu bar at any time.
 
@@ -36,4 +36,4 @@ To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X
 
 ![](../assets/en/Menus/splash3.png)
 
-4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. No entanto, estes menus não estão activos. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+4D mostra uma pré-visualização da barra de menu assim como o ecrã inicial. You can scroll down the menus and sub-menus to preview their contents. No entanto, estes menus não estão activos. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.

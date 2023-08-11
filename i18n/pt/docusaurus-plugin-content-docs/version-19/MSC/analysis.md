@@ -5,11 +5,11 @@ sidebar_label: Página análise de atividades
 ---
 
 A página Análise da atividade permite visualizar o conteúdo do ficheiro de registo atual. Esta função é útil para analisar o uso de um banco de dados ou detectar as operações que causaram erros ou mal funcionamento. No caso de um banco de dados em modo cliente-servidor, permite verificar as operações realizadas por cada máquina cliente.
-> It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
+> It is also possible to rollback the operations carried out on the data of the database. Para mais informações, consulte [página Retornar](rollback.md).
 
 ![](../assets/en/MSC/MSC_analysis.png)
 
-Cada operação registada no ficheiro de registo aparece como uma linha. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
+Cada operação registada no ficheiro de registo aparece como uma linha. As colunas fornecem várias informações sobre a operação. Pode reorganizar as colunas conforme pretendido, clicando nos respectivos cabeçalhos.
 
 This information allows you to identify the source and context of each operation:
 
@@ -30,7 +30,7 @@ This information allows you to identify the source and context of each operation
 
 - **Table**: Table to which the added/deleted/modified record or BLOB belongs.
 - **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
+- **Process**: Internal number of process in which the operation was carried out. Este número interno corresponde ao contexto da operação.
 - **Size**: Size (in bytes) of data processed by the operation.
 - **Date and Hour**: Date and hour when the operation was performed.
 - **Usuario**: nome de usuário que realizou a operação. Em modo cliente-servidor, o nome da máquina do lado do cliente é exibido; em modo monousuário, a ID do usuário é exibida.

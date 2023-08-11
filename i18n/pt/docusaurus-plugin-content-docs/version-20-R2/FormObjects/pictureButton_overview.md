@@ -36,9 +36,9 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 
 2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. Definir as propriedades de [linhas e colunas](properties_Crop.md) do gráfico.
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. Especifique quando as imagens mudam selecionando as propriedades [animation](properties_Animation.md) adequadas.
 
 
 ## Animação

@@ -28,9 +28,9 @@ A text object allows you to display static written content (*e.g.*, instructions
 
 ![](../assets/en/FormObjects/staticText.png)
 
-> Text rotation can be defined for a process using the `OBJECT SET TEXT ORIENTATION` language command.
+> A rotação do texto pode ser definida para um processo utilizando o comando de linguagem `OBJECT SET TEXT ORIENTATION`.
 
-Once a text is rotated, you can still change its size or position, as well as all its properties. Note that the text area’s height and width properties do not depend on its orientation:
+Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, bem como todas as suas propriedades. Note that the text area’s height and width properties do not depend on its orientation:
 
 ![](../assets/en/FormObjects/staticText2.png)
 

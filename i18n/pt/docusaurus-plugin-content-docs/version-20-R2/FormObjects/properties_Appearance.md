@@ -34,7 +34,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 ## Esconder retangulo foco
 
-During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). Pode ocultar este retângulo ativando esta propriedade. Hiding the focus rectangle may be useful in the case of specific interfaces.
+Durante a execução, um campo ou qualquer área introduzível é delineado por um retângulo de seleção quando tem o foco (através da tecla Tab ou de um único clique). Pode ocultar este retângulo ativando esta propriedade. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
 #### Gramática JSON
 

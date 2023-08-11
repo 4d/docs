@@ -73,7 +73,7 @@ List of static values to use as labels for the tab control object.
 `List box de tipo collection ou entity selection`
 
 Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -96,7 +96,7 @@ Specifies a variable or expression that will be assigned a longint indicating th
 - if no element/entity is selected, the variable or expression receives zero,
 - if a single element/entity is selected, the variable or expression receives its location,
 - if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -123,7 +123,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 | Nome               | Tipo de dados | Valores possíveis                                  |
 | ------------------ | ------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string        | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**listas pendentes:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| dataSourceTypeHint | string        | <li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Apenas para Array/seleção list box*: "integer", "object"</li><li>**listas pendentes:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objectos suportados
 
@@ -133,7 +133,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 ## Tipo de dados (lista)
 
-Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). Esta propriedade é utilizada com:
+Define o tipo de dados a guardar no campo ou na variável associada à [lista pendente](dropdownList_Overview.md). Esta propriedade é utilizada com:
 
 - the [Choice List](properties_DataSource.md#choice-list) JSON property
 - Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
@@ -178,9 +178,9 @@ List of values that will be used as default values for the list box column (arra
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                                                |
-| ------ | ------------- | ---------------------------------------------------------------- |
-| values | collection    | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| Nome   | Tipo de dados | Valores possíveis                                                                           |
+| ------ | ------------- | ------------------------------------------------------------------------------------------- |
+| values | collection    | Uma coleção de valores por defeito (cadeias de caracteres), por exemplo: "a", "b", "c", "d" |
 
 #### Objectos suportados
 
@@ -290,7 +290,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 - for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
 - para um list box seleção de entidades, é criado um objeto de seleção de entidades. You must use an object variable or an assignable expression that accepts objects.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+> This property is "read-only", it is automatically updated according to user actions in the list box. Não é possível editar o seu valor para modificar o estado de seleção do list box.
 
 #### Gramática JSON
 
@@ -308,7 +308,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 `Named selection list boxes`
 
-Especifica a seleção nomeada a ser utilizada. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica a seleção nomeada a ser utilizada. You must enter the name of a valid named selection. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

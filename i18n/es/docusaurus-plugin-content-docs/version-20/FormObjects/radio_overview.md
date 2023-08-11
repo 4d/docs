@@ -136,7 +136,7 @@ Este estilo de botón se puede utilizar para añadir un icono estándar contraer
 
 |
 
-The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -149,7 +149,7 @@ El estilo de botón radio de divulgación muestra el botón radio como un botón
 
 |
 
-The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
 :::
 

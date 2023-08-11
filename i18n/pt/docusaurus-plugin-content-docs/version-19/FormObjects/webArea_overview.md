@@ -189,7 +189,7 @@ To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-For more information, refer to the description of the `WA SET PREFERENCE` command.
+Para mais informações, consultar a descrição do comando `WA SET PREFERENCE`.
 
 ### Utilizar o inspector Web
 
