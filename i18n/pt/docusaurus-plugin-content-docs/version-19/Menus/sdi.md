@@ -34,7 +34,7 @@ No modo SDI, a barra de menu de processo é exibida automaticamente em todas as 
 
 Os menus são adicionados por cima das janelas sem alterar o tamanho do seu conteúdo:
 
-![](../assets/pt/Menus/sdi1.png)
+![](../assets/en/Menus/sdi1.png)
 
 Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necessário recalcular a posição dos objectos.
 
