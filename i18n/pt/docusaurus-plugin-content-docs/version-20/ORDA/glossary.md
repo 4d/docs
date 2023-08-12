@@ -182,50 +182,50 @@ Estas são dataclasses ligadas pelos atributos de relação.
 
 Os atributos de relação são utilizados para conceitualizar relações entre as dataclasses (N a 1 e 1 a N).
 
-*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   Relação N a 1 (a dataclassA referir-se a uma ocorrência da dataclassB): um atributo da relação está disponível na dataclassA e referir-se a uma instância da dataclassB.
+*   Relação 1 a N (uma ocorrência de dataclassB referencia várias ocorrências de dataclassA): um atributo de relação está disponível na dataclassB e referencia várias instâncias de dataclassA.
 
-A dataclass can have recursive relation attributes.
+Um dataclass pode ter atributos de relação recursivos.
 
-In an entity, the value of a relation attribute can be an entity or an entity selection.
+Numa entidade, o valor de um atributo de relação pode ser uma entidade ou uma seleção de entidade.
 
 ## Entidades relacionadas
 
-A related entity can be seen as the instance of a relation attribute in a dataclass.
+Uma entidade relacionada pode ser vista como a instância de um atributo de relação numa dataclass.
 
-Entity selections may refer to related entities according to the relation attributes defined in the corresponding dataclasses.
+As selecções de entidades podem referir-se a entidades relacionadas conforme os atributos de relação definidos nas dataclasses correspondentes.
 
 ## Remote datastore
 
-A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). Esta utilização é submetida a um sistema de licenciamento.
+Um banco de dados 4D aberto em 4D ou 4D Server (disponível através de HTTP) e exposto como um recurso REST. Este banco de dados pode ser referenciada localmente como um Datastore a partir de outras estações de trabalho, onde lhe é atribuído um locaID. O datastore remoto pode ser utilizado através de conceitos ORDA (datastore, dataclass, seleção de entidades...). Esta utilização é submetida a um sistema de licenciamento.
 
 
 ## Recurso
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+Um elemento ORDA em que qualquer [ação ](#action) pode ser permitida ou não de acordo com um [privilégio](#privilege). Os recursos disponíveis são: o datastore, a dataclass, um atributo dataclass, uma função do modelo de dados ORDA ou um método projeto.
 
 
 ## Role
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. Pode conter um ou mais privilégios.
+Um role é um [privilégio](#privilege) publicado destinado a ser utilizado por um administrador. Pode conter um ou mais privilégios.
 
 
 ## Session
 
-When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
+Quando a aplicação 4D se conecta a um datastore remoto, uma sessão é criada no 4D Server (HTTP). É gerado um cookie de sessão que é associado ao Id do datastore local.
 
-Each time a new session is opened, a license is used. Each time a session is closed, the license is freed.
+Cada vez que uma nova sessão é aberta, é utilizada uma licença. Sempre que uma sessão é encerrada, a licença é libertada.
 
-Inactive sessions are automatically closed after a timeout. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
+As sessões inativas são automaticamente encerradas após um tempo limite. O timeout padrão é de 48 horas, podendo ser definido pelo programador (deve ser >= 60 minutos).
 
 ## Cópia superficial (Shallow copy)
 
-A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. Ver também Deep copy.
+Uma cópia superficial apenas duplica a estrutura dos elementos e mantém as mesmas referências internas. Após uma cópia superficial, duas coleções partilharão os elementos individuais. Ver também Deep copy.
 
 ## Stamp
 
-Utilizado na tecnologia de bloqueio "otimista". All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+Utilizado na tecnologia de bloqueio "otimista". Todas as entidades têm um contador interno, o marcador, incrementado sempre que a entidade é salva. Ao comparar automaticamente os marcadores entre uma entidade salva e sua versão armazenada no disco, 4D pode evitar modificações simultâneas nas mesmas entidades.
 
 ## Atributo de armazenamento
 
-A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.
+Um atributo de armazenamento (às vezes chamado atributo escalar) é o tipo mais básico de atributo em uma classe de datastore e corresponde mais diretamente a um campo em um banco de dados relacional. Um atributo de armazenamento contém um único valor para cada entidade da classe.
