@@ -134,7 +134,7 @@ New documentation files are created with the following default contents:
 ### Title 3
 ```
 
-- The style tags (italic, bold, strikethrough) are supported:
+- As etiquetas de estilo (itálico, negrito, riscado) são suportadas:
 
 ```
 _italic_
@@ -143,7 +143,7 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- A etiqueta de bloco de código (\```4d ... ```) é suportada com realce do código 4D:
 
  \``` 4d  
 C_TEXT($txt)  
@@ -153,10 +153,10 @@ $txt:="Hello world!"
 - A etiqueta de tabela é suportada:
 
 ```
-| Parameter | Type   | Description  |
+| Parâmetro | Tipo | Descrição |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea | String |Área de escrita profissional|
+| toolbar | String |Nome da barra de ferramentas |
 ```
 
 - A etiqueta de ligação é suportada:
