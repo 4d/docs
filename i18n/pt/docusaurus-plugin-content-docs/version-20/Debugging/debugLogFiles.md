@@ -71,7 +71,7 @@ Para cada petição, os campos abaixo estão logados:
 | write\_duration                          | Tempo que levou em microssegundos para enviar:<li>a petição (quando rodar no cliente). A a B na imagem abaixo.</li><li>Resposta (quando rodar no servidor). E a F na imagem abaixo.</li>                                                                                   |
 | task_kind                                  | Preemptivo ou cooperativo (respectivamente 'p' ou 'c')                                                                                                                             |
 | rtt                                        | Tempo estimado em microssegundos para o cliente enviar a petição e o servidor para reconhecê-la. A a D e E a H na imagem abaixo.<li>Só medido quando usar a capa de rede ServerNet, retorna 0 se usado com capa de rede legado.</li><li>Para versões de Windows anteriores a Windows 10 ou Windows Server 2016, a chamada retorna 0.</li> |
-| extra                                      | Additional information related to the context, for example dataclass name and/or attribute name in case of ORDA request                                                            |
+| extra                                      | Informações adicionais relacionadas com o contexto, por exemplo, nome da classe de dados e/ou nome do atributo no caso de um pedido ORDA                                           |
 
 Fluxo de petição:
 
@@ -381,17 +381,17 @@ Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DAT
 
 Os campos abaixo são registrados para cada petição:
 
-| Campo nome     | Descrição                                                                                                     | Exemplo                                                 |
-| -------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| sequenceNumber | Número de operação único e sequencial da sessão de histórico                                                  | 104                                                     |
-| url            | Solicitar URL                                                                                                 | "rest/Persons(30001)"                                   |
-| startTime      | Data e hora de início utilizando o formato ISO 8601                                                           | "2019-05-28T08:25:12.346Z"                              |
-| duration       | Duração do processamento do servidor em microssegundos (µ)                                                    | 2500                                                    |
-| response       | Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...] |
-| ipAddress      | Endereço IP do usuário                                                                                        | "192.168.1.5"                                           |
-| userName       | Nome do usuário 4D                                                                                            | "henry"                                                 |
-| systemUserName | Nome de login do usuário na máquina                                                                           | "hsmith"                                                |
-| machineName    | Nome da máquina do utilizador                                                                                 | "PC of Henry Smith"                                     |
+| Campo nome     | Descrição                                                                                                                | Exemplo                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| sequenceNumber | Número de operação único e sequencial da sessão de histórico                                                             | 104                                                     |
+| url            | Solicitar URL                                                                                                            | "rest/Persons(30001)"                                   |
+| startTime      | Data e hora de início utilizando o formato ISO 8601                                                                      | "2019-05-28T08:25:12.346Z"                              |
+| duration       | Duração do processamento do servidor em microssegundos (µ)                                                               | 2500                                                    |
+| response       | Objeto de resposta do servidor, pode ser configurado em [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| ipAddress      | Endereço IP do usuário                                                                                                   | "192.168.1.5"                                           |
+| userName       | Nome do usuário 4D                                                                                                       | "henry"                                                 |
+| systemUserName | Nome de login do usuário na máquina                                                                                      | "hsmith"                                                |
+| machineName    | Nome da máquina do utilizador                                                                                            | "PC of Henry Smith"                                     |
 
 #### Exemplo
 
