@@ -73,7 +73,7 @@ Uma base de dados 4D expõe a sua própria classe DataStore na loja de classes `
 - **Extends**: 4D. DataStoreImplementation
 - **Class name**: cs. DataStore
 
-É possível criar funções na classe DataStore que estarão disponíveis através do objeto `ds` .
+É possível criar funções na classe DataStore que estarão disponíveis através do objeto `ds`.
 
 #### Exemplo
 
@@ -90,7 +90,7 @@ $desc:=ds.getDesc() //"Database exposing..."
 
 ### Classe DataClass
 
-Cada tabela exposta com ORDA oferece uma classe DataClass no armazenamento de classes `cs` .
+Cada tabela exposta com ORDA oferece uma classe DataClass no armazenamento de classes `cs`.
 
 - **Extends**: 4D. DataClass
 - **Nome da classe**: cs.*DataClassName* (em que *DataClassName* é o nome da tabela)
@@ -146,13 +146,13 @@ Function getCityName()
  End if
 ```
 
-The client application opens a session on the remote datastore:
+A aplicação cliente abre uma sessão no datastore remoto:
 
 ```4d
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
 ```
 
-Then a client application can use the API to get the city matching a zip code (for example) from a form:
+Em seguida, uma aplicação cliente pode utilizar a API para obter a cidade correspondente a um código postal (por exemplo) a partir de um formulário:
 
 ```4d
 Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
@@ -161,11 +161,11 @@ Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
 
 ### Classe EntitySelection
 
-Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
+Cada tabela exposta com ORDA oferece uma classe EntitySelection no repositório de classes `cs` .
 
 - **Extends**: 4D. EntitySelection
-- **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Example name**: cs. EmployeeSelection
+- **Nome da classe**: *DataClassName*Seleção (em que *DataClassName* é o nome da tabela)
+- **Exemplo de nome**: cs.EmployeeSelection
 
 #### Exemplo
 
@@ -183,7 +183,7 @@ Function withSalaryGreaterThanAverage
 
 ```
 
-Then you can get employees with a salary greater than the average in any entity selection by executing:
+Em seguida, é possível obter empregados com um salário superior à média em qualquer seleção de entidade através da execução:
 
 ```4d
 $moreThanAvg:=ds. Company.all().employees.withSalaryGreaterThanAverage()
@@ -191,10 +191,10 @@ $moreThanAvg:=ds. Company.all().employees.withSalaryGreaterThanAverage()
 
 ### Entity Class
 
-Each table exposed with ORDA offers an Entity class in the `cs` class store.
+Cada tabela exposta com ORDA oferece uma classe de Entidade no armazenamento de classes `cs`.
 
 - **Extends**: 4D. Entity
-- **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
+- **Nome da classe**: *DataClassName*Entity (em que *DataClassName* é o nome da tabela)
 - **Example name**: cs. CityEntity
 
 #### Exemplo
@@ -229,17 +229,17 @@ End if
 
 ### Regras específicas
 
-When creating or editing data model classes, you must pay attention to the following rules:
+Ao criar ou editar classes de modelo de dados, é necessário preste atenção às seguintes regras:
 
-- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. Em particular:
-  - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
+- Já que são utilizadas para definir nomes de classes DataClass automáticas no armazenamento de classes **cs** [](Concepts/classes.md#class-stores), as tabelas 4D devem ser nomeadas de modo a evitar qualquer conflito no namespace **cs** . Em particular:
+  - Não dê o mesmo nome a uma tabela 4D e a um nome de classe de utilizador [](Concepts/classes.md#class-names). Se isso acontecer, o construtor da classe de utilizador torna-se inutilizável (o compilador emite um aviso).
   - Não use um nome reservado para uma tabela 4D (por exemplo, "DataClass").
 
-- When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement exactly matches the parent class name (remember that they're case sensitive). For example, `Class extends EntitySelection` for an entity selection class.
+- Ao definir uma classe, certifique-se de que a instrução [`Class extends`](Concepts/classes.md#class-extends-classnameclass) corresponde exatamente ao nome da classe-mãe (lembre-se de que são sensíveis a maiúsculas e minúsculas). Por exemplo, `Class extends EntitySelection` para uma classe de seleção de entidades.
 
-- You cannot instantiate a data model class object with the `new()` keyword (an error is returned). You must use a regular method as listed in the [`Instantiated by` column of the ORDA class table](#architecture).
+- Não é possível instanciar um objeto de classe de modelo de dados com a palavra-chave `new()` (é devolvido um erro). É necessário utilizar um método normal, tal como indicado na coluna [`Instantiated by` da tabela de classes ORDA](#architecture).
 
-- You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
+- Não é possível substituir uma função de classe ORDA nativa da loja de classes **`4D`** [](Concepts/classes.md#class-stores) por uma função de classe de utilizador do modelo de dados.
 
 ## Funções expostas vs não expostas
 
@@ -247,25 +247,25 @@ For security reasons, all of your data model class functions are **not exposed**
 
 Os pedidos remotos incluem:
 
-- Requests sent by remote 4D applications connected through `Open datastore`
+- Pedidos enviados por aplicações 4D remotas ligadas através de `Open datastore`
 - Pedidos REST
 
-> Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.
+> Os pedidos regulares de cliente/servidor 4D não são afetados. As funções de classe do modelo de dados estão sempre disponíveis nesta arquitetura.
 
-A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
+Uma função que não esteja exposta não está disponível em aplicações remotas e não pode ser chamada em qualquer instância de objeto a partir de um pedido REST. Se uma aplicação remota tentar aceder a uma função não exposta, é devolvido o erro "-10729 - Método de membro desconhecido".
 
-To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. A sintaxe formal é:
+Para permitir que uma função de classe de modelo de dados seja chamada por um pedido remoto, é necessário declará-la explicitamente utilizando a palavra-chave `exposed` . A sintaxe formal é:
 
 ```4d  
-// declare an exposed function
-exposed Function <functionName>   
+// declarar uma função exposta
+Função exposta <functionName>   
 ```
 
-> The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
+> A palavra-chave `exposed` só pode ser utilizada com funções de classe de modelo de dados. Se for utilizada com uma função [da classe de usuário regular](Concepts/classes.md) , é ignorada e o compilador devolve um erro.
 
 ### Exemplo
 
-You want an exposed function to use a private function in a dataclass class:
+Se quiser que uma função exposta utilize uma função privada numa classe de dataclass:
 
 ```4d
 Class extends DataClass
@@ -302,20 +302,20 @@ $id:=$remoteDS. Schools.computeIDNumber() // Error "Unknown member method"
 
 ## Funções locais
 
-By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
+Por padrão, na arquitetura cliente/servidor, as funções do modelo de dados ORDA são executadas **no servidor**. Normalmente, proporciona o melhor desempenho, uma vez que apenas o pedido de função e o resultado são enviados através da rede.
 
-However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. A sintaxe formal é:
+No entanto, pode acontecer que uma função seja totalmente executável no lado do cliente (por exemplo, quando processa dados que já estão na cache local). Neste caso, pode poupar pedidos ao servidor e, assim, melhorar o desempenho da aplicação, inserindo a palavra-chave `local` . A sintaxe formal é:
 
 ```4d  
-// declare a function to execute locally in client/server
+// declarar uma função para executar localmente no cliente/servidor
 local Function <functionName>   
 ```
 
-With this keyword, the function will always be executed on the client side.
+Com esta palavra-chave, a função será sempre executada no lado do cliente.
 
-> The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
+> A palavra-chave `local` só pode ser utilizada com funções de classe de modelo de dados. Se for utilizada com uma função [da classe de usuário regular](Concepts/classes.md) , é ignorada e o compilador devolve um erro.
 
-Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. For example, consider the following function on the Schools entity class:
+Note-se que a função funcionará mesmo que eventualmente seja necessário aceder ao servidor (por exemplo, se a cache ORDA tiver expirado). No entanto, é altamente recomendável certificar-se de que a função local não acede a dados no servidor, caso contrário a execução local não poderá trazer qualquer benefício em termos de desempenho. Uma função local que gera muitos pedidos ao servidor é menos eficiente do que uma função executada no servidor que apenas devolveria os valores resultantes. Por exemplo, considere a seguinte função na classe de entidade Escolas:
 
 ```4d
 // Get the youngest students  
@@ -325,14 +325,14 @@ local Function getYoungest
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 
-- **without** the `local` keyword, the result is given using a single request
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
+- **sem** a palavra-chave `local` , o resultado é dado através de um único pedido
+- **Com** a palavra-chave `local` , são necessários 4 pedidos: um para obter a entidade Schools students, um para `query()`, um para `orderBy()`, e um para `slice()`. Neste exemplo, a utilização da palavra-chave `local` não é adequada.
 
 ### Exemplos
 
 #### Cálculo da idade
 
-Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
+Dada uma entidade com um atributo *birthDate* , pretendemos definir uma função `age()` que seria chamada numa caixa de listagem. Esta função pode ser executada no cliente, o que evita desencadear um pedido ao servidor para cada linha da caixa de listagem.
 
 Na classe *StudentsEntity*:
 
@@ -349,9 +349,9 @@ Else
 
 #### Verificação de atributos
 
-We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
+Pretendemos verificar a consistência dos atributos de uma entidade carregada no cliente e actualizada pelo utilizador antes de solicitar ao servidor que os guarde.
 
-On the *StudentsEntity* class, the local `checkData()` function checks the Student's age:
+Na classe *StudentsEntity* , a função local `checkData()` verifica a idade do Aluno:
 
 ```4d
 Classe extends Entity
@@ -385,27 +385,27 @@ If ($status.success)
 
 ### Ficheiros de classe (class files)
 
-An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
+Uma classe de usuário do modelo de dados ORDA é definida adicionando, na [mesma localização que os arquivos classe normais](Concepts/classes.md#class-files) (*ou seja.* na pasta `/Sources/Classes` da pasta do projeto), um arquivo .4dm com o nome da classe. Por exemplo, uma classe de entidade para a classe de dados `Utilities` será definida através de um arquivo `UtilitiesEntity.4dm` .
 
 ### Criação de classes
 
-4D automatically pre-creates empty classes in memory for each available data model object.
+4D pré-criou automaticamente classes vazias na memória para cada objeto de modelo de dados disponível.
 
-![](../assets/en/ORDA/ORDA_Classes-3.png)
+![](../assets/pt/ORDA/ORDA_Classes-3.png)
 
-> By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](../assets/en/ORDA/showClass.png)
+> Por padrão, as classes ORDA vazias não são exibidas no Explorer. Para as mostrar, é necessário selecionar **Mostrar todas as classes de dados** no menu de opções do Explorador: ![](../assets/en/ORDA/showClass.png)
 
-ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+As classes de utilizadores ORDA têm um ícone diferente das classes normais. As classes vazias são escurecidas:
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. Por exemplo, para uma classe Entity:
+Para criar um arquivo de classe ORDA, basta fazer duplo clique na classe predefinida correspondente no Explorador. 4D cria o arquivo de classe e adiciona o código `extends` . Por exemplo, para uma classe Entity:
 
 ```
 Class extends Entity
 ```
 
-Once a class is defined, its name is no longer dimmed in the Explorer.
+Quando uma classe for definida, o seu nome deixa de estar obscurecido no Explorador.
 
 ### Edição de classes
 
@@ -413,7 +413,7 @@ To open a defined ORDA class in the 4D method editor, select or double-click on 
 
 ![](../assets/en/ORDA/classORDA4.png)
 
-For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
+Para as classes ORDA baseadas no armazenamento de dados local (`ds`), pode aceder diretamente ao código da classe a partir da janela 4D Structure:
 
 ![](../assets/en/ORDA/classORDA5.png)
 
