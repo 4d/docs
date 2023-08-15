@@ -59,8 +59,8 @@ Ficheiro de desenvolvimento do projeto, utilizado para designar e lançar o proj
 | lists.json              | Listas definidas                                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
 | filters.json            | Filtros definidos                                                                                                                                                                                                                                                                                                                                                                                | JSON    |
 | styleSheets.css         | Folhas de estilo CSS                                                                                                                                                                                                                                                                                                                                                                             | CSS     |
-| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                            | CSS     |
-| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                        | CSS     |
+| styleSheets_mac.css     | Folhas de estilo css para Mac (de um banco de dados binário convertido)                                                                                                                                                                                                                                                                                                                          | CSS     |
+| styleSheets_windows.css | Folhas de estilo css em Windows (de um banco de dados binário convertido)                                                                                                                                                                                                                                                                                                                        | CSS     |
 
 #### Pasta DatabaseMethods
 
@@ -76,9 +76,9 @@ Ficheiro de desenvolvimento do projeto, utilizado para designar e lançar o proj
 
 #### Pasta Classes
 
-| Conteúdos       | Descrição                                                                                                                          | Formato |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text    |
+| Conteúdos       | Descrição                                                                                                                                        | Formato |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| *className*.4dm | Método de definição de classe usuário, que permite instanciar objetos específicos. Um ficheiro por classe, o nome do ficheiro é o nome da classe | text    |
 
 #### Pasta Forms
 
@@ -93,11 +93,11 @@ Ficheiro de desenvolvimento do projeto, utilizado para designar e lançar o proj
 
 | Conteúdos                                            | Descrição                                                              | Formato |
 | ---------------------------------------------------- | ---------------------------------------------------------------------- | ------- |
-| *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)                   | json    |
+| *n*/Input/*formName*/form.4DForm                     | Descrição do formulário de entrada da tabela (n é o número da tabela)  | json    |
 | *n*/Input/*formName*/Images/*pictureName*            | Imagens estáticas do formulário de entrada da tabela                   | picture |
 | *n*/Input/*formName*/method.4dm                      | Método do formulário de entrada da tabela                              | text    |
 | *n*/Input/*formName*/ObjectMethods/*objectName*.4dm  | Métodos objeto do formulário de entrada. Um ficheiro por método objeto | text    |
-| *n*/Output/*formName*/form.4DForm                    | Output table form description (n is the table number)                  | json    |
+| *n*/Output/*formName*/form.4DForm                    | Descrição do formulário de saída da tabela (n é o número da tabela)    | json    |
 | *n*/Output/*formName*/Images/*pictureName*           | Imagens estáticas do formulário de saída da tabela                     | picture |
 | *n*/Output/*formName*/method.4dm                     | Método do formulário de saída da tabela                                | text    |
 | *n*/Output/*formName*/ObjectMethods/*objectName*.4dm | Métodos objeto do formulário de saída. Um ficheiro por método objeto   | text    |
@@ -112,42 +112,42 @@ Ficheiro de desenvolvimento do projeto, utilizado para designar e lançar o proj
 
 ### Pasta Trash
 
-The Trash folder contains methods and forms that were deleted from the project (if any). Pode conter as seguintes pastas:
+A pasta Trash contém métodos e formulários eliminados do projeto (se existirem). Pode conter as seguintes pastas:
 
 - Página Métodos
 - Formulários
 - TableForms
 
-Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
+Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". A organização das pastas é idêntica à da pasta [Sources](#sources).
 
 ### DerivedData folder
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. Você pode ignorar essa pasta.
+A pasta DerivedData contém dados em cache usados internamente por 4D para otimizar o processamento. É criado ou recriado automaticamente quando necessário. Você pode ignorar essa pasta.
 
 ## Pasta Libraries
 
 > Esta pasta é utilizada apenas no macOS.
 
-The Librairies folder contains the file resulting from a compilation with the [Silicon compiler](compiler.md#silicon-compiler) on macOS.
+A pasta Librairies contém o ficheiro resultante de uma compilação com o compilador [Silicon](compiler.md#silicon-compiler) no macOS.
 
 ## Pasta Resources
 
-A pasta Resources contém todos os arquivos e pastas de recursos personalizados do projeto. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
+A pasta Resources contém todos os arquivos e pastas de recursos personalizados do projeto. Nesta pasta, pode colocar todos os ficheiros necessários para a tradução ou personalização da interface da aplicação (ficheiros imagem, ficheiros texto, ficheiros XLIFF, etc.). 4D usa mecanismos automáticos para trabalhar com o conteúdo desta pasta, em particular para a manipulação de ficheiros XLIFF e imagens estáticas. Para utilizar no modo remoto, a pasta Recursos permite-lhe partilhar ficheiros entre o servidor e todas as máquinas clientes. Consulte o *Manual 4D Server*.
 
-| Conteúdos             | Descrição                                                                                                                                                         | Formato |
-| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                                  | vários  |
-| Images/Library/*item* | Pictures from the Picture Library as separate files(*). Os nomes destes itens tornam-se nomes de ficheiros. If a duplicate exists, a number is added to the name. | picture |
+| Conteúdos             | Descrição                                                                                                                                                                      | Formato |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                                               | vários  |
+| Images/Library/*item* | Imagens da biblioteca de imagens como ficheiros separados(*). Os nomes destes itens tornam-se nomes de ficheiros. Se existir uma duplicação, é acrescentado um número ao nome. | picture |
 
-(*) only if the project was exported from a .4db binary database.
+(*) apenas se o projeto tiver sido exportado de um banco de dados binário .4db.
 
 ## Pasta Data
 
-The data folder contains the data file and all files and folders relating to the data.
+A pasta Data contém o ficheiro de dados e todos os ficheiros e pastas relacionados com os dados.
 
 | Conteúdos    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Formato |
 | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | binary  |
+| data.4dd(*)  | Ficheiro de dados que contém os dados introduzidos nos registos e todos os dados pertencentes aos registos. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                                                                                | binary  |
 | data.journal | Criado apenas quando a base de dados utiliza um ficheiro de registo. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. It is generated by default when a database is created. | binary  |
 | data.match   | (interno) UUID correspondente ao número da tabela                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML     |
 
@@ -193,20 +193,20 @@ Esta pasta contém **arquivos de configuração de dados** utilizados para a adm
 
 Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. Pode simplesmente ignorar esta pasta. Contém, por exemplo:
 
-| Conteúdos                  | Descrição                                                   | Formato |
-| -------------------------- | ----------------------------------------------------------- | ------- |
-| methodPreferences.json     | Preferências do editor dos métodos do usuário atual         | JSON    |
-| methodWindowPositions.json | Posição da janela do usuário atual para os métodos          | JSON    |
-| formWindowPositions.json   | Posição da janela do usuário atual para os formulários      | JSON    |
-| workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
-| debuggerCatches.json       | Chamadas aos comandos                                       | JSON    |
-| recentTables.json          | Lista ordenada de tabelas                                   | JSON    |
-| preferences.4DPreferences  | Rota de dados atual e posições da janela principal          | XML     |
-| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder  |
+| Conteúdos                  | Descrição                                                     | Formato |
+| -------------------------- | ------------------------------------------------------------- | ------- |
+| methodPreferences.json     | Preferências do editor dos métodos do usuário atual           | JSON    |
+| methodWindowPositions.json | Posição da janela do usuário atual para os métodos            | JSON    |
+| formWindowPositions.json   | Posição da janela do usuário atual para os formulários        | JSON    |
+| workspace.json             | List of opened windows; on macOS, order of tab windows        | JSON    |
+| debuggerCatches.json       | Chamadas aos comandos                                         | JSON    |
+| recentTables.json          | Lista ordenada de tabelas                                     | JSON    |
+| preferences.4DPreferences  | Rota de dados atual e posições da janela principal            | XML     |
+| CompilerIntermediateFiles  | Ficheiros intermédios resultantes da compilação Apple Silicon | Folder  |
 
 ## Pasta Components
 
-Esta carpeta contém os componentes que devem estar disponíveis unicamente no banco de dados projeto. It must be stored at the same level as the Project folder.
+Esta carpeta contém os componentes que devem estar disponíveis unicamente no banco de dados projeto. Deve ser armazenado ao mesmo nível que a pasta Project.
 
 > An application project can be used itself as a component:
 > 
@@ -215,14 +215,14 @@ Esta carpeta contém os componentes que devem estar disponíveis unicamente no b
 
 ## Pasta Plugins
 
-This folder contains the plug-ins to be available in the project database only. It must be stored at the same level as the Project folder.
+This folder contains the plug-ins to be available in the project database only. Deve ser armazenado ao mesmo nível que a pasta Project.
 
 ## Pasta Documentation
 
-This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+Esta pasta contém todos os ficheiros de documentação (.md) criados para os elementos do projeto, tais como classes, métodos ou formulários. Os ficheiros de documentação são geridos e apresentados no Explorer 4D.
 
-For more information, refer to [Documenting a project](Project/documentation.md).
+Para mais informações, consulte [Documentar um projeto](Project/documentation.md).
 
 ## WebFolder
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. It is automatically created when the Web server is launched for the first time.
+Pasta raiz padrão do servidor Web 4D para páginas, imagens, etc. É criado automaticamente quando o servidor Web é iniciado pela primeira vez.
