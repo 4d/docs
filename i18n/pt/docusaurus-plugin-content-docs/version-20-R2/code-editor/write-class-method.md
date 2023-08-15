@@ -257,9 +257,9 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Alt]+[Shift]+G                                           | Reemplazar anterior                                                                                                                        |
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
 | [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
-| [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
+| [Ctrl]+[Shift]+tecla numérica                                    | Copiar texto selecionado numa área de transferência numérica                                                                               |
 | [Ctrl]+clique no ícone da área de transferência                  | Colar o conteúdo de uma área de transferência na localização do cursor                                                                     |
-| [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
+| [Ctrl]+chave numérica                                            | Colar o conteúdo da área de transferência numérica na localização do cursor                                                                |
 
 :::tip
 
@@ -453,7 +453,7 @@ Hit the **Enter** key to select closest occurrence to the cursor. You can also c
 #### Opções
 
 - **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
-- **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient."
+- **Palavra inteira** ![full-word](../assets/en/code-editor/full-word.png): limita a pesquisa a ocorrências exatas da palavra pesquisada. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient."
 
 
 
@@ -509,11 +509,11 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 ## Dicas de ajuda
 
-The Code Editor provides various contextual information using help tips. Aparecem quando se passa o rato por cima de um objeto.
+O Editor de código fornece várias informações contextuais utilizando dicas de ajuda. Aparecem quando se passa o rato por cima de um objeto.
 
 :::tip
 
-The [status bar](#status-bar) also provides contextual information.
+A [barra de estado](#status-bar) também fornece informações contextuais.
 
 :::
 
@@ -598,7 +598,7 @@ Two commands make it easier to move around within code structures (e.g. `If... E
 These commands are found in the **Method** menu as well as the context menu of the editor. Também pode utilizar os seguintes atalhos:
 
 - Windows: **Ctrl + seta para cima** ou **Ctrl** + **seta para baixo**'
-- macOS: **Command** + **up arrow** or **Command** +**down arrow**.
+- macOS: **Comando** + **seta para cima** ou **Comando** +**seta para baixo**.
 
 ## Marcadores
 
