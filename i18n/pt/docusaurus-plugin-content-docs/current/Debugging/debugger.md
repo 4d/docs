@@ -106,17 +106,17 @@ A **janela de expressão** é apresentado no canto superior esquerdo da janela d
 
 A **janela de expressão** exibe informações gerais úteis sobre o sistema, o ambiente 4D e o ambiente de execução.
 
-A coluna **Expression** apresenta os nomes dos objetos e das expressões. A coluna **Value** apresenta os valores correspondentes actuais. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
+A coluna **Expression** apresenta os nomes dos objetos e das expressões. A coluna **Value** apresenta os valores correspondentes actuais. Clicar em qualquer valor no lado direito do painel permite-lhe modificar o valor do objeto, se tal for permitido para esse objeto.
 
-At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
+Em qualquer momento, pode arrastar e largar temas, sublistas de temas (se existirem) e itens de temas para a [Janela de expressão](#custom-watch-pane).
 
 ### Lista de expressões
 
 #### Objetos linha
 
-This theme lets you keep track of the values of the objects or expressions:
+Este tema permite-lhe acompanhar os valores dos objetos ou expressões:
 
-* used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
+* usado na linha de código a ser executada (aquela marcada com o contador de programa - a seta amarela no [painel de código-fonte](#source-code-pane)),
 * utilizado na linha de código anterior
 
 Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Digamos que executa o seguinte método:
