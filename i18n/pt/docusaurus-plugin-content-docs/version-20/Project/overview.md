@@ -8,26 +8,26 @@ Um projeto 4D contém todo o código fonte de uma aplicação 4D, qualquer que s
 
 ## Ficheiros do projecto
 
-Os ficheiros de projeto 4D são abertos e editados usando aplicações normais da plataforma 4D (4D ou 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a Code Editor, a form editor, a menu editor...
+Os ficheiros de projeto 4D são abertos e editados usando aplicações normais da plataforma 4D (4D ou 4D Server). Com 4D, editores completos estão disponíveis para gerir ficheiros, incluindo um editor de estrutura, um editor de código, um editor de formulários, um editor de menus...
 
-Since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
+Quando os projetos estão em ficheiros de texto simples legíveis (JSON, XML, etc.), podem ser lidos ou editados manualmente pelos programadores, utilizando qualquer editor de código.
 
-In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
+Além disso, os ficheiros de projeto 4D facilitam a programação genérica, a criação de modelos de aplicação e a partilha de código. Os projetos são organizados internamente em [pastas e ficheiros](Project/architecture.md).
 
 
 ## Desenvolvimento
 
-4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project.
+Os projetos 4D são desenvolvidos utilizando a aplicação **4D**. Fornece um ambiente de desenvolvimento Integrado (IDE) para projetos 4D, bem como um servidor Web, um gerador de projetos móveis e um tempo de execução de aplicações, permitindo-lhe desenvolver, testar e depurar qualquer tipo de projeto.
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
 ## Aplicação final
 
-Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
+Os ficheiros de projeto podem ser [compilados](compiler.md) e facilmente implementados. 4D permite criar três tipos de aplicações a partir de seus projetos:
 
-- [web](WebServer/webServer.md) applications,
-- [mobile](https://developer.4d.com/go-mobile/) applications,
-- [desktop](Desktop/building.md) applications (client/server or single-user).
+- aplicações [web](WebServer/webServer.md),
+- [aplicações móveis](https://developer.4d.com/go-mobile/),
+- aplicações [desktop](Desktop/building.md) (cliente/servidor ou usuário único).
 
-Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](../Desktop/building.md).
+As aplicações back end podem ser implementadas usando 4D Server, 4D, ou [fundido com a licença 4D Volume](../Desktop/building.md).
