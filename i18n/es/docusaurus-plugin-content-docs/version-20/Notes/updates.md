@@ -12,7 +12,7 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 
 4D v20 incluye una actualización de la librería ICU (ver abajo) que forzará una reconstrucción automática de los índices de tipo alpha, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
-#### Puntos fuertes
+#### Destacados
 
 - 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) soportan palabras claves personalizadas.
@@ -54,7 +54,7 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-r8/), la entrada de blog que lista todas las nuevas funcionalidades y mejoras de 4D v19 R8.
 
 
-#### Puntos fuertes
+#### Destacados
 
 - Se pueden instalar métodos de gestión de errores para [contextos de ejecución globales y de componentes](../Concepts/error-handling.md#scope-and-components).
 - Los listboxes con fuentes de datos colección o selección de entidades ahora soportan la propiedad de columna [Alto de línea automático](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height).
@@ -82,7 +82,7 @@ Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/), la entrada del blog que enumera todas las nuevas funcionalidades y mejoras de 4D v19 R7.
 
 
-#### Puntos fuertes
+#### Destacados
 
 - Los datos relacionados y los atributos calculados/alias pueden mostrarse en el [explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
