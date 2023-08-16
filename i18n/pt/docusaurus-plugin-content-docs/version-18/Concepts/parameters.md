@@ -39,7 +39,7 @@ Os mesmos princípios são usados quando métodos forem executados através de c
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/10!)  
-//pass the !05/05/10! date as parameter to the SetCalendarDate  
+//passe a data !05/05/10! date as parameter to the SetCalendarDate  
 // in the context of a subform
 ```
 

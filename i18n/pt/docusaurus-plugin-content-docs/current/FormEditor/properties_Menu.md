@@ -12,7 +12,7 @@ The selection of a menu command causes an `On Menu Selected` event to be sent to
 
 > If the menu bar of the form is identical to the current menu bar, it is not added.
 
-The form menu bar will operate for both input and output forms.
+A barra de menu do formulário funciona tanto para os formulários de entrada como para os de saída.
 
 
 #### Gramática JSON

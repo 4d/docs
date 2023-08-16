@@ -58,7 +58,7 @@ The **Check Syntax** button starts the execution of the syntax-checking phase. A
 
 Syntax checking can also be launched directly using the **Check Syntax** command associated with the **Compiler** toolbar button. This option is the only one available if you do not have a suitable license to allow the compilation of applications.
 
-### Generate Typing
+### Gerar digitação
 
 The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
 
@@ -84,7 +84,7 @@ Depending on circumstances and the programming style used, these warnings may be
 
 ![](../assets/en/Project/compilerWin4.png)
 
-When this option is checked, the warnings (if any) are displayed in the window, after the other error types. They appear in italics:
+When this option is checked, the warnings (if any) are displayed in the window, after the other error types. Estas aparecem em itálico:
 
 ![](../assets/en/Project/compilerWin5.png)
 
@@ -110,7 +110,7 @@ Apenas os avisos com números podem ser desactivados. Warning numbers are specif
 
 
 
-## Compiler Settings
+## Parâmetros do compilador
 
 The "Compiler" page of the Settings dialog box lets you set parameters related to project compilation. You can directly open this page from the [compiler window](#compiler-window) by clicking on the **Compiler Settings** button:
 
@@ -207,7 +207,7 @@ Estas duas listas contêm quatro colunas:
 
 > When compiling, the compiler cannot determine in which process a given process variable is used. A process variable can have a different value in each process. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
 
-#### List of local variables
+#### Lista de variáveis locais
 
 The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
 
@@ -247,7 +247,7 @@ A estrutura do ficheiro de erros é a seguinte:
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
     - line number in the method (0 indicates general errors)
     - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
-    - diagnostic describing the error
+    - diagnóstico que descreve o erro
 
 If your project does not have any general errors, the file will not have a *General errors* section.
 
@@ -284,7 +284,7 @@ To do this, you must surround the code to be excluded from range checking with t
 
 ## Sobre os compiladores
 
-4D contains two compilers:
+4D contém dois compiladores:
 
 - a "classic" compiler, used to compile native code for Intel/AMD processors;
 - a Silicon compiler, used to compile native code for Apple Silicon processors.

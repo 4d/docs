@@ -8,7 +8,7 @@ title: Ação
 
 ## Arrastável
 
-Control whether and how the user can drag the object. Por defeito, não é permitida qualquer operação de arrastamento.
+Controlar se e como o usuário pode arrastar o objeto. Por defeito, não é permitida qualquer operação de arrastamento.
 
 Estão disponíveis dois modos de arrastamento:
 
@@ -23,11 +23,11 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Nome     | Tipo de dados | Valores possíveis                                            |
 | -------- | ------------- | ------------------------------------------------------------ |
-| dragging | text          | "none" (default), "custom", "automatic" (excluding list box) |
+| dragging | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
 
 #### Objectos suportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Entrada](input_overview.md) - [Lista hierárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Área de plug-in](pluginArea_overview.md#overview)
 
 #### Veja também
 
@@ -42,7 +42,7 @@ Control whether and how the object can be the destination of a drag and drop ope
 Há dois modos de soltar em 4D:
 
 - **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. You then manage the drop action using a method. In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
-- **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
+- **Automático**: neste modo, 4D gere automaticamente - se possível - a inserção de dados arrastados do tipo texto ou imagem largada no objeto (os dados são colados no objeto). Os eventos formulário `On Drag Over` e `On Drop` NÃO são gerados. Por outro lado, são gerados os eventos `On After Edit` (durante a descida) e `On Data Change` (quando o objeto perde o foco).
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
 
@@ -50,7 +50,7 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 | Nome     | Tipo de dados | Valores possíveis                                            |
 | -------- | ------------- | ------------------------------------------------------------ |
-| dropping | text          | "none" (default), "custom", "automatic" (excluding list box) |
+| dropping | text          | "none" (por padrão), "custom", "automatic" (exceto list box) |
 
 #### Objectos suportados
 
@@ -96,9 +96,9 @@ São suportados vários tipos de referências de métodos:
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                                                  |
-| ------ | ------------- | ------------------------------------------------------------------ |
-| method | text          | Object method standard or custom file path, or project method name |
+| Nome   | Tipo de dados | Valores possíveis                                                                       |
+| ------ | ------------- | --------------------------------------------------------------------------------------- |
+| method | text          | Caminho de ficheiro padrão ou personalizado do método objeto, ou nome do método projeto |
 
 #### Objectos suportados
 
@@ -110,7 +110,7 @@ São suportados vários tipos de referências de métodos:
 
 `List box de tipo array`
 
-Authorizes the movement of rows during execution. Esta opção é selecionada por defeito. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
+Autoriza a deslocação de linhas durante a execução. Esta opção é selecionada por defeito. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
 
 #### Gramática JSON
 
@@ -142,10 +142,10 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 ## Ordenável
 
-Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Picture type arrays (columns) cannot be sorted using this feature.
+Allows sorting column data by clicking a [listbox](listbox_overview.md) header. Esta opção é selecionada por defeito. Os arrays de tipo imagem (colunas) não podem ser ordenadas com esta funcionalidade.
 
 In list boxes based on a selection of records, the standard sort function is available only:
-- When the data source is *Current Selection*,
+- Quando a fonte de dados é *Seleção atual*,
 - With columns associated with fields (of the Alpha, Number, Date, Time or Boolean type).
 
 In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
@@ -172,9 +172,9 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                                                                                                |
-| ------ | ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string        | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Nome   | Tipo de dados | Valores possíveis                                                                                                  |
+| ------ | ------------- | ------------------------------------------------------------------------------------------------------------------ |
+| action | string        | O nome de uma [ação normalizada válida](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objectos suportados
 

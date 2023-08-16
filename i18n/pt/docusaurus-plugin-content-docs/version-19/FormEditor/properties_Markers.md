@@ -12,7 +12,7 @@ Methods that are associated with objects in these areas are executed when the ar
 
 ---
 
-## Form Break
+## Quebra de formulário
 
 Form Break areas are displayed once at the end of the list of records and are printed once after the records have been printed in a report.
 
@@ -36,15 +36,15 @@ The form Detail area is displayed on the screen and printed once for each record
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                 |
-| ---------- | ------------- | --------------------------------- |
-| markerBody | integer       | Detail marker position. Mínimo: 0 |
+| Nome       | Tipo de dados | Valores possíveis                         |
+| ---------- | ------------- | ----------------------------------------- |
+| markerBody | integer       | Posição do marcador de detalhe. Mínimo: 0 |
 
 ---
 
 ## Rodapé do formulário
 
-The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
+The Form Footer area is displayed on screen under the list of records. É sempre impresso na parte inferior de cada página de um relatório. The Footer area is defined as the area between the Break control line and the Footer control line.
 
 A área de rodapé pode ser aumentada ou diminuída.
 
@@ -67,7 +67,7 @@ Pode aumentar ou diminuir a área do cabeçalho. You can use the Header area for
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Podem ser inseridos os seguintes objetos ativos:
 
 - Botões, botões imagem,
-- Combo boxes, drop-down lists,  picture pop-up menus,
+- Combo boxes, listas pendentes, menus pop-up de imagens,
 - listas hierárquicas, list boxes
 - Botões rádio, caixas de selecção, caixas de selecção 3D,
 - Indicadores de progresso, réguas, degraus, fiadeiras.
@@ -98,11 +98,11 @@ Break at level 0 zero takes in all the records; it occurs after all the records 
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 
-| Etiqueta | Descrição        | Imprime após grupos criados por: |
-| -------- | ---------------- | -------------------------------- |
-| B1       | Break at level 1 | Primeiro campo classificado      |
-| B2       | Break at level 2 | Segundo campo ordenado           |
-| B3       | Break at level 3 | Terceiro campo classificado      |
+| Etiqueta | Descrição          | Imprime após grupos criados por: |
+| -------- | ------------------ | -------------------------------- |
+| B1       | Nível de ruptura 1 | Primeiro campo classificado      |
+| B2       | Nível de ruptura 2 | Segundo campo ordenado           |
+| B3       | Nível de ruptura 3 | Terceiro campo classificado      |
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 

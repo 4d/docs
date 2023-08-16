@@ -4,6 +4,24 @@ title: リリースノート
 ---
 
 
+## 4D v20 R3
+
+[**4D v20 R3 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R3/): 4D v20 R3 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+
+#### ハイライト
+
+
+- 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.ja.html) ページ。
+- 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.ja.html) ページ。
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R3): 4D v20 R3 で修正されたバグのリストです。
+
+
+#### 動作の変更
+
+- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみで "キャッチ可能" でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。
+
+
 ## 4D v20 R2
 
 [**4D v20 R2 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R2/): 4D v20 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -17,7 +35,6 @@ title: リリースノート
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R2): 4D v20 R2 で修正されたバグのリストです。
 
-#### 動作の変更
 
 
 ## 4D v20

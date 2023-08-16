@@ -52,16 +52,16 @@ Para anexar o depurador a um cliente 4D remoto:
 
 If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the menu command becomes **Detach Remote Debugger**.
 
-The debugger is then attached to the remote 4D client:
+O depurador é então ligado ao cliente 4D remoto:
 * até ao fim da sessão do usuário
-* until you select `Detach Remote Debugger`
+* até selecionar `Detach Remote Debugger`
 
 Para ligar o depurador de novo ao servidor:
 
 1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
 2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
 
-> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. This can have a significant impact on performance. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. Este facto pode ter um impacto significativo no desempenho. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
 
 
 

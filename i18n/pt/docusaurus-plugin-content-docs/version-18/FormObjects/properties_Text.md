@@ -6,7 +6,7 @@ title: Text
 
 ## Permitir a selecção de tipo de letra/cor
 
-When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) and [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) commands can be called to display the system font and color picker windows. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
+Quando esta propriedade está activada, os comandos [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-FONT-PICKER.301-4505612.en.html) e [OPEN COLOR PICKER](https://doc.4d.com/4Dv18/4D/18/OPEN-COLOR-PICKER.301-4505611.en.html) podem ser chamados para apresentar as janelas de seleção de fontes sistema e de cores. Using these windows, the users can change the font or color of a form object that has the focus directly by clicking. When this property is disabled (default), the open picker commands have no effect.
 
 #### Gramática JSON
 
@@ -22,7 +22,7 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 ## Negrito
 
-Sets the selected text to appear darker and heavier.
+Define o texto selecionado para aparecer mais escuro e mais pesado.
 
 You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 > This is normal text.<br/> **This is bold text.**
@@ -41,7 +41,7 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 ## Itálico
 
-Sets the selected text to slant slightly to the right.
+Define o texto selecionado como ligeiramente inclinado para a direita.
 
 You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command.
 > This is normal text.<br/> *This is text in italics.*
@@ -77,26 +77,26 @@ Define o texto para ter uma linha por baixo.
 ## Fonte
 
 This property allows you to specify either the **font theme** or the **font family** used in the object.
-> **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
+> **Font theme** and **font family** properties are mutually exclusive. Um tema de tipo de letra controla os atributos do tipo de letra, incluindo o tamanho. Uma família de tipos de letra permite-lhe definir o nome, o tamanho e a cor do tipo de letra.
 
 ### Tema Fonte
 
-The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. Esses parâmetros dependem de:
+A propriedade de tema do tipo de letra designa um nome de estilo automático. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. Esses parâmetros dependem de:
 
 - a plataforma,
 - a língua do sistema,
 - e o tipo de objeto do formulário.
 
-With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. However, their size may vary from one machine to another.
+With the font theme, you are guaranteed that titles are always displayed in accordance with the current interface standards of the system. No entanto, o seu tamanho pode variar de uma máquina para outra.
 
 Estão disponíveis três temas de tipos de letra:
 
 - **normal**: automatic style, applied by default to any new object created in the Form editor.
-- **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). These themes are primarily intended for designing dialog boxes. They refer to font styles used, respectively, for main text and additional information in your interface windows. Here are typical dialog boxes (macOS and Windows) using these font themes:
+- **main** and **additional** font themes are only supported by [text areas](text.md) and [inputs](input_overview.md). Estes temas destinam-se principalmente a desenho de caixas de diálogo. They refer to font styles used, respectively, for main text and additional information in your interface windows. Aqui estão as caixas de diálogo típicas (macOS e Windows) que utilizam estes temas de tipos de letra:
 
 ![](../assets/en/FormObjects/FontThemes.png)
 
-> Font themes manage the font as well as its size and color. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
+> Os temas de tipo de letra gerem o tipo de letra, bem como o seu tamanho e cor. If you modify one of the properties managed by a font theme, it no longer works dynamically. However, you can apply custom style properties (Bold, Italic or Underline) without altering its functioning.
 
 #### Gramática JSON
 
@@ -112,17 +112,17 @@ Estão disponíveis três temas de tipos de letra:
 
 Existem dois tipos de nomes de famílias de letras:
 
-- *family-name:* The name of a font-family, like "times", "courier", "arial", etc.
-- *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
+- *family-name:* o nome de uma família de tipos de letra, como "times", "courier", "arial", etc.
+- *generic-family:* o nome de uma família genérica, como "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
-You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.
+Pode ser definido utilizando o comando [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html).
 
 #### Gramática JSON
 
 | Nome       | Tipo de dados | Valores possíveis             |
 | ---------- | ------------- | ----------------------------- |
 | fontFamily | string        | Nome da família de fontes CSS |
-> 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
+> 4D recomenda usar apenas fontes [seguras para a web](https://www.w3schools.com/cssref/css_websafe_fonts.asp).
 
 #### Objectos suportados
 
@@ -134,7 +134,7 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 > This property is only available when no [font theme](#font-theme) is selected.
 
-Allows defining the object's font size in points.
+Permite definir o tamanho da fonte do objeto em pontos.
 
 #### Gramática JSON
 
@@ -150,13 +150,13 @@ Allows defining the object's font size in points.
 
 ## Cor fonte
 
-Designates the font color.
+Designa a cor do tipo de letra.
 
-> This property also sets the color of object's [border](#border-line-style-dotted-line-type) (if any) when "plain" or "dotted" style is used.
+> Esta propriedade também define a cor da [borda](#border-line-style-dotted-line-type) (se existir) quando é utilizado o estilo "simples" ou "pontilhado".
 
 A cor pode ser especificada por:
 
-- a color name - like "red"
+- um nome de cor - como "red"
 - um valor HEX - como "#ff0000"
 - um valor RGB - como "rgb(255,0,0)"
 
@@ -176,16 +176,16 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Expressão cor fonte
 
-`Selection and collection/entity selection type list boxes`
+`List box do tipo coleção/seleção de entidade`
 
-Used to apply a custom font color to each row of the list box. É necessário utilizar valores de cor RGB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
+Utilizado para aplicar uma cor de letra personalizada a cada linha do list box. É necessário utilizar valores de cor RGB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/OBJECT-SET-RGB-COLORS.301-4311385.en.html) command in the 4D Language Reference manual.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
+Deve introduzir uma expressão ou uma variável (não podem ser utilizadas variáveis do tipo array). A expressão ou variável será avaliada para cada linha exibida. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html) theme.
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font color expression` constant.
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+Também pode definir esta propriedade utilizando o comando `LISTBOX SET PROPERTY` com a constante `lk font color expression`.
+> Esta propriedade também pode ser definida utilizando uma [expressão Meta Info](properties_Text.md#meta-info-expression).
 
-The following example uses a variable name: enter *CompanyColor* for the **Font Color Expression** and, in the form method, write the following code:
+O exemplo seguinte utiliza um nome de variável: introduza *CompanyColor* para a **expressão cor fonte** e, no método formulário, escreva o seguinte código:
 
 ```4d
 CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foreground color;Dark shadow color)
@@ -205,11 +205,11 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 ## Expressão estilo
 
-`Selection and collection/entity selection type list boxes`
+`List box do tipo coleção/seleção de entidade`
 
-Used to apply a custom character style to each row of the list box or each cell of the column.
+Utilizado para aplicar um estilo de carácter personalizado a cada linha do list box ou a cada célula da coluna.
 
-You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
+Deve introduzir uma expressão ou uma variável (não podem ser utilizadas variáveis do tipo array). A expressão ou variável será avaliada para cada linha apresentada (se aplicada à list box) ou para cada célula apresentada (se aplicada a uma coluna). Pode utilizar as constantes do tema [Estilos de fonte](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html).
 
 Exemplo:
 
@@ -217,8 +217,8 @@ Exemplo:
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
 ```
 
-You can also set this property using the `LISTBOX SET PROPERTY` command with `lk font style expression` constant.
-> This property can also be set using a [Meta Info Expression](properties_Text.md#meta-info-expression).
+Também pode definir esta propriedade utilizando o comando `LISTBOX SET PROPERTY` com a constante `lk font style expression`.
+> Esta propriedade também pode ser definida utilizando uma [expressão Meta Info](properties_Text.md#meta-info-expression).
 
 #### Gramática JSON
 
@@ -234,7 +234,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 ## Alihamento horizontal
 
-Horizontal location of text within the area that contains it.
+Localização horizontal do texto na área que o contém.
 
 #### Gramática JSON
 
@@ -250,11 +250,11 @@ Horizontal location of text within the area that contains it.
 
 ## Cor linha vertical
 
-Vertical location of text within the area that contains it.
+Localização vertical do texto na área que o contém.
 
-The **Default** option (`automatic` JSON value) sets the alignment according to the type of data found in each column:
+A opção **Padrão** (valor JSON `automático`) define o alinhamento conforme o tipo de dados encontrados em cada coluna:
 
-- `bottom` for all data (except pictures) and
+- `abaixo` para todos os dados (exceto imagens) e
 - `topo` para dados de tipo imagem.
 
 This property can also be handled by the [OBJECT Get vertical alignment](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-vertical-alignment.301-4505442.en.html) and [OBJECT SET VERTICAL ALIGNMENT](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-VERTICAL-ALIGNMENT.301-4505430.en.html) commands.
@@ -267,7 +267,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers)
+[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns) - [Rodapé List Box](listbox_overview.md#list-box-footers) - [Cabeçalho List Box](listbox_overview.md#list-box-headers)
 
 ---
 
@@ -275,20 +275,20 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 `List box do tipo Collection ou entity selection`
 
-Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. As propriedades abaixo são compatíveis:
+Especifica uma expressão ou uma variável que será avaliada para cada linha exibida. Permite definir um conjunto completo de atributos de texto das linhas. É necessário transmitir uma **variável objeto** ou uma **expressão que devolva um objeto**. As propriedades abaixo são compatíveis:
 
-| Nome da propriedade       | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke                    | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                            |
-| fill                      | string  | Cor de fundo. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                |
-| fontStyle                 | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                      |
-| fontWeight                | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                        |
-| textDecoration            | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                   |
-| unselectable              | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". This setting is ignored if the list box selection mode is "None". |
-| disabled                  | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                          |
-| cell.`<columnName>` | object  | Permite aplicar a propriedade a uma única coluna. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. São ignorados se forem passados no objeto "célula"                                                                                                                                                       |
+| Nome da propriedade       | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke                    | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                 |
+| fill                      | string  | Cor de fundo. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                                                     |
+| fontStyle                 | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| fontWeight                | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| textDecoration            | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| unselectable              | boolean | Designa a linha correspondente como não sendo selecionável (*ou seja*, não é possível realçar). As áreas inseríveis deixam de o ser se esta opção estiver ativada, a menos que a opção "Editar com um clique" também esteja ativada. Os controlos como as caixas de verificação e as listas permanecem funcionais. Esta definição é ignorada se o modo de seleção do list box é "Nenhum". This setting is ignored if the list box selection mode is "None". |
+| disabled                  | boolean | Desactiva a linha correspondente. As áreas acessíveis deixam de ser acessíveis se esta opção estiver activada. O texto e os controlos (caixas de verificação, listas, etc.) aparecem esbatidos ou a cinzento. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                             |
+| cell.`<columnName>` | object  | Permite aplicar a propriedade a uma única coluna. Pass in `\<columnName>` the object name of the list box column. **Nota**: as propriedades "unselectable" e "disabled" só podem ser definidas ao nível da linha. São ignorados se forem passados no objeto "célula"                                                                                                                                                                                 |
 
-> Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
+> Os parâmetros de estilo definidos com esta propriedade são ignorados se outros parâmetros de estilo já estiverem definidoas através de expressões (*ou seja*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
 **Exemplo**
 

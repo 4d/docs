@@ -20,7 +20,7 @@ This option allows you to configure the default 4D display at startup, when the 
 * **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
 > > > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
-### Automatic form creation
+### Criação de formulários automática
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
@@ -87,7 +87,7 @@ A 4D database can thus operate in a language different from that of the system. 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
 > You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
-## Documentation location
+## Localização da documentação
 
 Esta área configura o acesso à documentação HTML 4D mostrada no navegador atual:
 

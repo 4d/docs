@@ -11,14 +11,14 @@ Splitter are used for example in output forms so that columns can be resized:
 
 ![](../assets/en/FormObjects/split1.png)
 
-Some of the splitter’s general characteristics:
+Algumas das características gerais do repartidor:
 
 * You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
-* Um separador pode passar por um objeto. This object will be resized when the splitter is moved.
+* Um separador pode passar por um objeto. Este objeto será redimensionado quando o divisor for movido.
 * Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
-* If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
+* If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Quando um formulário é fechado, as dimensões iniciais são restauradas.
 
-Once it is inserted, the splitter appears as a line. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
+Uma vez inserido, o separador aparece como uma linha. Pode modificar o seu [estilo de contorno](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) para obter uma linha mais fina ou [alterar a sua cor](properties_BackgroundAndBorder.md##font-color-line-color).
 
 #### JSON Exemplo
 
@@ -39,25 +39,25 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
 
 ## Interação com as propriedades dos objetos vizinhos
 
-In a form, splitters interact with the objects that are around them according to these objects’ resizing options:
+Num formulário, os separadores interagem com os objetos que estão à sua volta conforme as opções de redimensionamento desses objetos:
 
-| Opções de redimensionamento para os objetos | Object(s) above an horizontal splitter or to the left of a vertical splitter (1)    | Object(s) below an horizontal *non-Pusher* splitter or to the right of a vertical *non-Pusher* splitter                                                                                              | Object(s) below an horizontal *Pusher* splitter or to the right of a vertical *Pusher* splitter                                                        |
-| ------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Nenhum                                      | Manter-se como está                                                                 | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. Não é aplicada qualquer paragem (ver parágrafo seguinte) |
-| Redimensionar                               | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                                        |
-| Mover                                       | Mover-se com o separador                                                            |                                                                                                                                                                                                      |                                                                                                                                                        |
+| Opções de redimensionamento para os objetos | Objeto(s) acima de um separador horizontal ou à esquerda de um separador vertical (1)                | Objeto(s) abaixo de um separador horizontal *non-Pusher* ou à direita de um separador vertical *non-Pusher*                                                                                               | Objeto(s) abaixo de um separador horizontal *Pusher* ou à direita de um divisor vertical *Pusher*                                                    |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nenhum                                      | Manter-se como está                                                                                  | São deslocados com o separador (a posição relativa ao separador não é modificada) até à paragem seguinte. A paragem quando se desloca para baixo ou para a direita é o limite da janela ou outro divisor. | São movidos com o divisor (a posição relativa ao divisor não é modificada) indefinidamente. Não é aplicada qualquer paragem (ver parágrafo seguinte) |
+| Redimensionar                               | Mantêm a(s) posição(ões) original(ais), mas são redimensionadas conforme a nova posição do separador |                                                                                                                                                                                                           |                                                                                                                                                      |
+| Mover                                       | Mover-se com o separador                                                                             |                                                                                                                                                                                                           |                                                                                                                                                      |
 
-*(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
-> An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.
+*(1) Não é possível arrastar o divisor para além do lado direito (horizontal) ou inferior (vertical) de um objeto situado nesta posição.*
+> Um objeto completamente contido no retângulo que define o divisor é movido enquanto o divisor.
 
 ## Gestão programada dos separadores
 
-You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
+Pode associar um método objeto a um separador e este será chamado com o evento `On Clicked` durante todo o movimento.
 
-A [variable](properties_Object.md#variable-or-expression) of the *Longint* type is associated with each splitter. This variable can be used in your object and/or form methods. Its value indicates the splitter’s current position, in pixels, in relation to its initial position.
+Uma [variável ](properties_Object.md#variable-or-expression) do tipo *Longint* está associada a cada divisor. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Its value indicates the splitter’s current position, in pixels, in relation to its initial position.
 
 * If the value is negative: the splitter was moved toward the top or toward the left,
 * If the value is positive: the splitter was moved toward the bottom or toward the right,
-* If the value is 0: the splitter was moved to its original position.
+* Se o valor for 0: o divisor foi movido para a sua posição original.
 
 You can also move the splitter programmatically: you just have to set the value of the associated variable. For example, if a vertical splitter is associated with a variable named `split1`, and if you execute the following statement: `split1:=-10`, the splitter will be moved 10 pixels to the left — as if the user did it manually. The move is actually performed at the end of the execution of the form or object method containing the statement.

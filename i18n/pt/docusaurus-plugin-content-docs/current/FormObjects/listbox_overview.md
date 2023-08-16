@@ -226,10 +226,10 @@ Propriedades compatíveis dependem do tipo de list box.
 | On Drop              | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                       |                                                                                                                                                     |
 | On Expand            | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                       | *Apenas list box hierárquicos*                                                                                                                      |
 | On Footer Click      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[footerName](#additional-properties)</li>                                                                       | *List box arrays, seleção atual e seleção temporal apenas*                                                                                          |
-| On Getting Focus     | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                       | *Additional properties returned only when editing a cell*                                                                                           |
+| On Getting Focus     | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                       | *Propriedades adicionais devolvidas apenas quando se edita uma célula*                                                                              |
 | On Header Click      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>                                                                       |                                                                                                                                                     |
 | On Load              |                                                                                                                                                      |                                                                                                                                                     |
-| On Losing Focus      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                       | *Additional properties returned only when editing a cell has been completed*                                                                        |
+| On Losing Focus      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                       | *Propriedades adicionais devolvidas apenas quando a edição de uma célula tiver sido concluída*                                                      |
 | On Mouse Enter       | <li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                   |                                                                                                                                                     |
 | On Mouse Leave       |                                                                                                                                                      |                                                                                                                                                     |
 | On Mouse Move        | <li>[area](#additional-properties)</li><li>[areaName](#additional-properties)</li><li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                   |                                                                                                                                                     |
@@ -244,22 +244,22 @@ Propriedades compatíveis dependem do tipo de list box.
 
 Form events on list box or list box column objects may return the following additional properties:
 
-| Propriedade          | Tipo          | Descrição                                                             |
-| -------------------- | ------------- | --------------------------------------------------------------------- |
-| area                 | text          | List box object area ("header", "footer", "cell")                     |
-| areaName             | text          | Nome da zona                                                          |
-| column               | inteiro longo | Número da coluna                                                      |
-| columnName           | text          | Nome da coluna                                                        |
-| footerName           | text          | Nome do rodapé                                                        |
-| headerName           | text          | Nome do cabeçalho                                                     |
-| horizontalScroll     | inteiro longo | Positive if scroll is towards the right, negative if towards the left |
-| isRowSelected        | boolean       | True se a linha estiver selecionada, senão False                      |
-| newPosition          | inteiro longo | Nova posição da coluna ou linha                                       |
-| newSize              | inteiro longo | Novo tamanho (em pixéis) da coluna ou linha                           |
-| oldPosition          | inteiro longo | Posição anterior da coluna ou da linha                                |
-| oldSize              | inteiro longo | Tamanho anterior (em pixéis) da coluna ou linha                       |
-| row                  | inteiro longo | Número da linha                                                       |
-| Alinhamento vertical | inteiro longo | Positive if scroll is towards the bottom, negative if towards the top |
+| Propriedade          | Tipo          | Descrição                                                                    |
+| -------------------- | ------------- | ---------------------------------------------------------------------------- |
+| area                 | text          | Área de objeto List box ("header", "footer", "cell")                         |
+| areaName             | text          | Nome da zona                                                                 |
+| column               | inteiro longo | Número da coluna                                                             |
+| columnName           | text          | Nome da coluna                                                               |
+| footerName           | text          | Nome do rodapé                                                               |
+| headerName           | text          | Nome do cabeçalho                                                            |
+| horizontalScroll     | inteiro longo | Positivo se a deslocação for para a direita, negativo se for para a esquerda |
+| isRowSelected        | boolean       | True se a linha estiver selecionada, senão False                             |
+| newPosition          | inteiro longo | Nova posição da coluna ou linha                                              |
+| newSize              | inteiro longo | Novo tamanho (em pixéis) da coluna ou linha                                  |
+| oldPosition          | inteiro longo | Posição anterior da coluna ou da linha                                       |
+| oldSize              | inteiro longo | Tamanho anterior (em pixéis) da coluna ou linha                              |
+| row                  | inteiro longo | Número da linha                                                              |
+| Alinhamento vertical | inteiro longo | Positivo se a deslocação for para baixo, negativo se for para cima           |
 > If an event occurs on a "fake" column or row that doesn't exist, an empty string is typically returned.
 
 
@@ -303,7 +303,7 @@ Pode estabelecer propriedades padrão (texto, cor de fundo, etc) para cada colun
 | On Getting Focus     | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                    | *Propriedades adicionais devolvidas apenas quando se edita uma célula*                                                                        |
 | On Header Click      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>                                                                    |                                                                                                                                               |
 | On Load              |                                                                                                                                                      |                                                                                                                                               |
-| On Losing Focus      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                    | *Additional properties returned only when editing a cell has been completed*                                                                  |
+| On Losing Focus      | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                                    | *Propriedades adicionais devolvidas apenas quando a edição de uma célula tiver sido concluída*                                                |
 | On Row Moved         | <li>[newPosition](#additional-properties)</li><li>[oldPosition](#additional-properties)</li>                                                                                               | *Esse princípio não é aplicado quando apenas uma variável for especificada na hierarquia: nesse caso, valores idênticos podem ser agrupados.* |
 | On Scroll            | <li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>                                                                                               |                                                                                                                                               |
 | On Unload            |                                                                                                                                                      |                                                                                                                                               |
@@ -538,10 +538,10 @@ O suporte de ordenação padrão depende do tipo de list box:
 | ----------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Uma coleção de objetos        | Sim                         | <li>As colunas "This.a" ou "This.a.b" podem ser ordenadas.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
 | Colecção de valores escalares | Não                         | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
-| Seleção de entidades          | Sim                         | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Seleção de entidades          | Sim                         | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Suportado: ordena por atributos relacionados (por exemplo, "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
 | Selecção actual               | Sim                         | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
 | Seleção temporal              | Não                         |                                                                                                              |
-| Arrays                        | Sim                         | Columns bound to picture and pointer arrays are not sortable                                                 |
+| Arrays                        | Sim                         | As colunas ligadas a arrays de imagens e ponteiros não podem ser ordenadas                                   |
 
 
 
@@ -569,7 +569,7 @@ São exibidas duas colunas:
 | ----------- | ---------------------------- |
 | `This.name` | `This.parent.extra.nickname` |
 
-If you want to sort the list box using the values of the second column, you have to write:
+Se quiser ordenar o list box utilizando os valores da segunda coluna, tem de escrever:
 
 ```4d
 If (Form event code=On Header Click)
@@ -588,7 +588,7 @@ P valor da variável column header variable[](properties_Object.md#variable-or-e
 
 - Se a variável for estabelecida como 2, a coluna é ordenada de forma descendente e a flecha de ordenação é exibida.![](../assets/en/FormObjects/sorticon2.png)
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
+> Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Não são suportados outros tipos de [expressões](Concepts/quick-tour.md#expressions), como `Form.sortValue`.
 
 Pode estabelecer o valor da variável (por exemplo, Header2:=2) para  “forçar” a exibição da flecha de ordenação. A ordenação de coluna não é modificada nesse caso; depende do desenvolvedor como vai manejá-la.
 
@@ -977,7 +977,7 @@ O único atributo obrigatório é "valueType" e os seus valores suportados são 
 
 #### value
 
-Os valores das células são armazenados no atributo "value". This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+Os valores das células são armazenados no atributo "value". Este atributo é utilizado tanto para a entrada como para a saída. Também pode ser utilizada para definir valores por defeito quando se utilizam listas (ver abaixo).
 
 ````4d
  C_OBJECT($ob1)
@@ -988,13 +988,13 @@ OB SET($ob;"value";$entry)
 ````
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
-> Null values are supported and result in an empty cell.
+> Os valores Null são suportados e resultam numa célula vazia.
 
 #### mín. e máx
 
 When the "valueType" is "real" or "integer", the object also accepts min and max attributes with appropriate values (values must be of the same type as the valueType).
 
-These attributes can be used to control the range of input values. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
+Estes atributos podem ser utilizados para controlar a gama de valores de entrada. When a cell is validated (when it loses the focus), if the input value is lower than the min value or greater than the max value, then it is rejected. In this case, the previous value is maintained and a tip displays an explanation.
 
 ````4d
  C_OBJECT($ob3)
@@ -1034,7 +1034,7 @@ The behavior attribute provides variations to the regular representation of valu
 
 When a "choiceList" or a "requiredList" attribute is present inside the object, the text input is replaced by a drop-down list or a combo box, depending of the attribute:
 
-*   If the attribute is "choiceList", the cell is displayed as a combo box. This means that the user can select or type a value.
+*   Se o atributo é "choiceList", a célula é apresentada como um combo box. Isto significa que o usuário pode selecionar ou escrever um valor.
 *   If the attribute is "requiredList" then the cell is displayed as a drop-down list and the user can only select one of the values provided in the list.
 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
@@ -1073,7 +1073,7 @@ Exemplos:
 
 #### requiredListName e requiredListReference
 
-The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). The cell will then be displayed as a drop-down list. This means that the user can only select one of the values provided in the list.
+The "requiredListName" and "requiredListReference" attributes allow you to use, in a list box cell, a list defined in 4D either in Design mode (in the Lists editor of the Tool box) or by programming (using the New list command). A célula será então apresentada como uma lista pendente. This means that the user can only select one of the values provided in the list.
 
 Use "requiredListName" or "requiredListReference" depending on the origin of the list: if the list comes from the Tool box, you pass a name; otherwise, if the list has been defined by programming, you pass a reference. In both cases, a "value" attribute can be used to preselect a value in the widget.
 > * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
@@ -1139,11 +1139,11 @@ You want to display a combo box based on a "colors" list defined in the Tool box
 
 #### unitsList, unitsListName, unitsListReference e unitReference
 
-You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). To define the unit list, you can use one of the following attributes:
+You can use specific attributes to add units associated with cell values (*e.g.*: "10 cm", "20 pixels", etc.). Para definir a lista de unidades, pode utilizar um dos seguintes atributos:
 
-*   "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Use this attribute to define units within the object.
-*   "unitsListReference": a reference to a 4D list containing available units. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
-*   "unitsListName": a name of a design-based 4D list that contains available units. Use this attribute to define units with a 4D list created in the Tool box.
+*   "unitsList": an array containing the x elements used to define the available units (e.g.: "cm", "inches", "km", "miles", etc.). Utilize este atributo para definir unidades no interior do objeto.
+*   "unitsListReference": uma referência de lista 4D que contém as unidades disponíveis. Use this attribute to define units with a 4D list created with the [New list](https://doc.4d.com/4Dv15/4D/15.6/New-list.301-3818474.en.html) command.
+*   "unitsListName": a name of a design-based 4D list that contains available units. Utilize este atributo para definir unidades com uma lista 4D criada na caixa de ferramentas.
 
 Regardless of the way the unit list is defined, it can be associated with the following attribute:
 
@@ -1153,7 +1153,7 @@ The current unit is displayed as a button that cycles through the "unitList", "u
 
 Exemplo:
 
-We want to set up a numeric input followed by two possible units: "rows" or "pixels". O valor atual é "2" + "linhas". We use values defined directly in the object ("unitsList" attribute):
+We want to set up a numeric input followed by two possible units: "rows" or "pixels". O valor atual é "2" + "linhas". Utilizamos valores definidos diretamente no objeto (atributo "unitsList"):
 
 ````4d
 ARRAY TEXT($_units;0)
@@ -1168,7 +1168,7 @@ OB SET($ob;"value";2) // 2 "units" OB SET($ob;"unitReference";1) //"lines" OB SE
 
 #### alternateButton
 
-If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. The button will be displayed in the cell automatically.
+If you want to add an ellipsis button [...] to a cell, you just need to pass the "alternateButton" with the True value in the object. O botão será automaticamente apresentado na célula.
 
 When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
 
@@ -1185,9 +1185,9 @@ OB SET($ob;"unitReference";1) //"lines" OB SET ARRAY($ob;"unitsList";$_units)
 
 #### valueType color
 
-The "color" valueType allows you to display either a color or a text.
+O valueType "color" permite-lhe apresentar uma cor ou um texto.
 
-*   If the value is a number, a colored rectangle is drawn inside the cell. Exemplo:
+*   Se o valor for um número, é desenhado um retângulo colorido no interior da célula. Exemplo:
 
     ````4d
     C_OBJECT($ob4)
@@ -1224,8 +1224,8 @@ Several events can be handled while using an object list box array:
     *   numa zona de introdução de texto
     *   numa lista pendente
     *   numa área combo box
-    *   in a unit button (switch from value x to value x+1)
-    *   in a check box (switch between checked/unchecked)
+    *   num botão de unidade (mudar do valor x para o valor x+1)
+    *   numa caixa de verificação (alternar entre verificado/não verificado)
 *   **On Clicked**: When the user clicks on a button installed using the "event" *valueType* attribute, an `On Clicked` event will be generated. Este evento é gerido pelo programador.
 *   **On Alternative Click**: When the user clicks on an ellipsis button ("alternateButton" attribute), an `On Alternative Click` event will be generated. Este evento é gerido pelo programador.
 

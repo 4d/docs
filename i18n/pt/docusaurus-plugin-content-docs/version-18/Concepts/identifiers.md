@@ -15,13 +15,13 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Commas, slashes, quotation marks, and colons are not allowed.
 - Characters reserved for use as operators, such as * and +, are not allowed.
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
-- Any trailing spaces are ignored.
+- Os espaços finais são ignorados.
 
 ### Additional rules for object property and ORDA names
 
 - Não são permitidos caracteres de espaço.
 - Pontos (".") e parênteses ("[ ]") não são permitidos.
-- Names are case sensitive.
+- Os nomes são sensíveis a maiúsculas e minúsculas.
 
 ### Regras adicionais para SQL
 
@@ -323,7 +323,7 @@ If(Records in set("$Selection"+String($i))>0)
 From the scope point of view, there are two types of named selections:
 
 - Seleções temporárias interprocesso
-- Process named selections.
+- Seleções temporárias processo.
 
 ### Seleções temporárias interprocesso
 
@@ -331,7 +331,7 @@ A named selection is an interprocess named selection if its name is preceded by 
 
 An interprocess named selection name can contain up to 255 characters, not including the `<>` symbols.
 
-### Process Named Selections
+### Seleções temporárias processos
 
 Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A named selection name can contain up to 255 characters.
 
@@ -372,7 +372,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 The following table summarizes 4D naming conventions.
 
-| Identifier                     | Max. Largura     | Exemplo                            |
+| Identificador                  | Max. Largura     | Exemplo                            |
 | ------------------------------ | ---------------- | ---------------------------------- |
 | Tabela                         | 31               | [Invoices]                         |
 | Campo                          | 31               | [Employees]Last Name               |
@@ -386,7 +386,7 @@ The following table summarizes 4D naming conventions.
 | Rotina Plug-in                 | 31               | PDF SET ROTATION                   |
 | Interprocess Set               | `<>` + 255 | `"<>Records to be Archived"` |
 | Conjunto process               | 255              | "Current selected records"         |
-| Client Set                     | $ + 255          | "$Previous Subjects"               |
+| Conjunto cliente               | $ + 255          | "$Previous Subjects"               |
 | Seleção nomeada                | 255              | "Employees A to Z"                 |
 | Seleção temporal interprocesso | `<>` + 255 | `"<>Employees Z to A"`       |
 | Processo local                 | $ + 255          | "$Follow Events"                   |
@@ -406,6 +406,6 @@ Be sure to use unique names for the different elements in your database. If a pa
 3. Página Métodos
 4. Comandos de plug-in
 5. Constantes predefinidas
-6. Variables.
+6. Variáveis.
 
 For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Isto impedi-lo-ia de chamar o seu método. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.

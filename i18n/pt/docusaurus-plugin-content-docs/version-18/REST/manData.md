@@ -59,7 +59,7 @@ Para computar todos os valores e retornar um objeto JSON:
 
 `/rest/Employee/salary/?$compute=$all`
 
-## Getting data from methods
+## Obter dados de métodos
 
 You can call 4D project methods that are [exposed as REST Service](%7BdataClass%7D.html#4d-configuration). Um método 4D pode retornar em $0:
 

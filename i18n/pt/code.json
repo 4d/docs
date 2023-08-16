@@ -15,7 +15,7 @@
     "message": "Gestão de projectos"
   },
   "Language Concepts": {
-    "message": "Language Concepts"
+    "message": "Conceitos da linguagem"
   },
   "Language Reference (4D Doc Center)": {
     "message": "Referência da linguagem (4D Doc Center)"
@@ -27,7 +27,7 @@
     "message": "Referência da API de classe"
   },
   "Handling code": {
-    "message": "Handling code"
+    "message": "Gerenciamento do código"
   },
   "Debugging": {
     "message": "Depuração"
@@ -54,7 +54,7 @@
     "message": "Protocolo TLS"
   },
   "Licenses & Data Collection": {
-    "message": "Licenses & Data Collection"
+    "message": "Licenças e recolha de dados"
   },
   "Access Rights": {
     "message": "Direitos de acesso"
@@ -211,7 +211,7 @@
     "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog list page navigation",
+    "message": "Navegação na página da lista de blogues",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -227,7 +227,7 @@
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog post page navigation",
+    "message": "Navegação na página do post do blogue",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
@@ -287,7 +287,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
+    "message": "Versão: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
@@ -318,7 +318,7 @@
     "description": "The title of the page for a docs tag"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Direct link to heading",
+    "message": "Link direto para o cabeçalho",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
@@ -354,7 +354,7 @@
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copy code to clipboard",
+    "message": "Copiar código para a área de transferência",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copy": {
@@ -386,7 +386,7 @@
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Read more about {title}",
+    "message": "Ler mais sobre {title}",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
@@ -410,7 +410,7 @@
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.SearchBar.seeAll": {
-    "message": "See all {count} results"
+    "message": "Ver todos os resultados {count}"
   },
   "theme.SearchPage.documentsFound.plurals": {
     "message": "Um documento encontrado|{count} documentos encontrados",
@@ -421,7 +421,7 @@
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "Search the documentation",
+    "message": "Pesquisar a documentação",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
@@ -433,7 +433,7 @@
     "description": "The ARIA label for search page input"
   },
   "theme.SearchPage.algoliaLabel": {
-    "message": "Search by Algolia",
+    "message": "Pesquisa por Algolia",
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
@@ -441,7 +441,7 @@
     "description": "The paragraph for empty search result"
   },
   "theme.SearchPage.fetchingNewResults": {
-    "message": "Fetching new results...",
+    "message": "Obtenção de novos resultados...",
     "description": "The paragraph for fetching new search results"
   },
   "theme.SearchBar.label": {
@@ -481,7 +481,7 @@
     "description": "The label for remove favorite search button"
   },
   "theme.SearchModal.errorScreen.titleText": {
-    "message": "Unable to fetch results",
+    "message": "Não é possível obter resultados",
     "description": "The title for error screen of search modal"
   },
   "theme.SearchModal.errorScreen.helpText": {
@@ -525,7 +525,7 @@
     "description": "The text explains that there are no results for the following search"
   },
   "theme.SearchModal.noResultsScreen.suggestedQueryText": {
-    "message": "Try searching for",
+    "message": "Tente pesquisar por",
     "description": "The text for the suggested query when no results are found for the following search"
   },
   "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
@@ -544,7 +544,7 @@
     "message": "Esta é a documentação da última"
   },
   "Looking for a LTS documentation?": {
-    "message": "Looking for a LTS documentation?"
+    "message": "Procura uma documentação LTS?"
   },
   "4D Write Pro": {
     "message": "4D Write Pro"
@@ -581,7 +581,7 @@
     "message": "Class Functions"
   },
   "Handling Code": {
-    "message": "Handling Code"
+    "message": "Gerenciamento do código"
   },
   "Transformation Tags": {
     "message": "Etiquetas de transformação"

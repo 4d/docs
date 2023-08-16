@@ -54,7 +54,7 @@ This option allows you to implement SSO (*Single Sign On*) capabilities in your 
 
 When Single Sign On (SSO) is enabled (see above), you must fill in this field if you want to use Kerberos as your authentication protocol. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html) section.
 
-#### Client-Server Connections Timeout
+#### Tempo para desconectar cliente-servidor
 
 This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. A opção Ilimitado remove o tempo limite. When this option is selected, client activity control is eliminated.
 
@@ -82,7 +82,7 @@ This setting can be used to globally set the updating mode for the local instanc
 
 ## Página Configuração IP
 
-### Allow-Deny Configuration Table
+### Tabela de configuração Autorização-Rejeição
 
 This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
 

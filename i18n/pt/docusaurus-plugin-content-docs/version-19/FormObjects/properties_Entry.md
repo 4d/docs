@@ -6,7 +6,7 @@ title: Entrada
 
 ## Verificação automática da ortografia
 
-4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D inclui funcionalidades de verificação ortográfica integrado e personalizável. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
 The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
@@ -31,7 +31,7 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fonts...**: displays the font system dialog box
-- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
+- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defeito, esta lista está vazia e a opção não é apresentada. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
@@ -52,7 +52,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 The Enterable attribute indicates whether users can enter values into the object.
 
-Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. Pode ainda utilizar os eventos de formulário `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` e `On Losing Focus` com objetos não inseríveis. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. Pode ainda utilizar os eventos de formulário `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` e `On Losing Focus` com objetos não inseríveis. Isto facilita a gerenciamento de menus de contexto personalizados e permite-lhe conceber interfaces onde pode arrastar e largar e selecionar variáveis não introduzíveis.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
@@ -70,9 +70,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 ## Filtro de entrada
 
-An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
+An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Pode até controlar as letras e os números específicos.
 
-Um filtro de entrada funciona apenas durante a introdução de dados. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
+Um filtro de entrada funciona apenas durante a introdução de dados. Não tem nenhum efeito na apresentação de dados após o usuário ter anulado a seleção do objeto. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
 
 During data entry, an entry filter evaluates each character as it is typed. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
 
@@ -83,7 +83,7 @@ Entry filters can also be used to display required formatting characters so that
 Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
 
 - pode introduzir diretamente uma cadeia de definição de filtro
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
+- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. Os nomes dos filtros personalizados que criar começam com uma barra vertical (|).
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
@@ -105,12 +105,12 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9## Hrs ## Mins ## Secs    | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números antes de cada palavra.                                                    |
 | !0&9Hrs: ## Mins: ## Secs: ## | Formato do registo de horas. Apresentar zeros nos espaços de entrada. Permitir dois números quaisquer depois de cada palavra.                                         |
 | !0&9##-##-##-##               | Formato do número de telefone local. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Três entradas, hífen, quatro entradas.                        |
-| !_&9(###)!0###-####           | Número de telefone interurbano. Display underscores in first three entry spaces, zeros in remainder.                                                                  |
-| !0&9###-###-###               | Número de telefone interurbano. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Three entries, hyphen, three entries, hyphen, four entries.        |
+| !_&9(###)!0###-####           | Número de telefone interurbano. Mostrar sublinhados nos três primeiros espaços de entrada, zeros nos restantes.                                                       |
+| !0&9###-###-###               | Número de telefone interurbano. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Três entradas, hífen, três entradas, hífen, quatro entradas.       |
 | !0&9###-##-####               | Número de segurança social. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                                      |
 | ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                             |
 | &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                   |
-| &"0-9;.;-"                    | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                                |
+| &"0-9;.;-"                    | Números. Só são permitidos números, pontos decimais e hífenes (sinal de menos).                                                                                       |
 
 #### Gramática JSON
 
@@ -170,12 +170,12 @@ Por padrão, o objeto utiliza a disposição atual do teclado.
 
 ## Multilinha
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
+This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. Pode ter três valores diferentes: Sim, Não, Automático (padrão).
 
 #### Automático
 
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- In multiline inputs, 4D carries out automatic line returns:  
+- Em entradas de várias linhas, 4D realiza retornos automáticos de linha:  
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### Não
@@ -212,7 +212,7 @@ O texto do marcador de posição é apresentado novamente se o conteúdo do camp
 
 Pode ser apresentado um marcador de posição para os seguintes tipos de dados:
 
-- string (text or alpha)
+- string (text ou alpha)
 - date and time when the **Blank if null** property is enabled.
 
 You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
@@ -261,7 +261,7 @@ This property allows setting special meaning keys (keyboard shortcuts) for [butt
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> Também é possível atribuir um atalho a um comando de menu personalizado. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 
@@ -285,7 +285,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 ## Editar com um clique
 
-Enables direct passage to edit mode in list boxes.
+Permite a passagem direta para o modo de edição em list boxes.
 
 When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
 

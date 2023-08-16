@@ -6,7 +6,7 @@ title: Imprimir
 
 ## Settings
 
-Allows defining specific print settings for the form. This feature is useful to view printing page limits in the form editor.
+Permite definir os parâmetros de impressão específicos para o formulário. Esta funcionalidade é útil para visualizar os limites da página de impressão no editor de formulários.
 
 > **Compatibility:** Even if these settings are taken into account when the form is printed in Application mode, it is discouraged to rely on this feature to store print settings for the form, due to limitations regarding the platform and driver dependency. It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful.
 

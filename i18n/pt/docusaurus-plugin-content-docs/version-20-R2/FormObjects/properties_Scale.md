@@ -21,7 +21,7 @@ Ativa a variante "barber shop" para o termómetro.
 
 ## Exibir graduação
 
-Displays/Hides the graduations next to the labels.
+Apresenta/oculta as graduações junto às etiquetas.
 
 #### Gramática JSON
 
@@ -37,7 +37,7 @@ Displays/Hides the graduations next to the labels.
 
 ## Graduation step
 
-Scale display measurement.
+Medição do visor da escala.
 
 #### Gramática JSON
 
@@ -53,11 +53,11 @@ Scale display measurement.
 
 ## Localização da etiqueta
 
-Specifies the location of an object's displayed text.
+Especifica a localização do texto de um objeto.
 
 * Nenhum - não é apresentada qualquer etiqueta
-* Top - Displays labels to the left of or above an indicator
-* Bottom - Displays labels to the right of or below an indicator
+* Topo - Apresenta etiquetas à esquerda ou acima de um indicador
+* Inferior - Apresenta etiquetas à direita ou por baixo de um indicador
 
 #### Gramática JSON
 
@@ -109,7 +109,7 @@ Valor mínimo de um indicador. For numeric steppers, this property represent sec
 
 ## Step
 
-Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
+Intervalo mínimo aceite entre valores durante a utilização. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
 #### Gramática JSON
 

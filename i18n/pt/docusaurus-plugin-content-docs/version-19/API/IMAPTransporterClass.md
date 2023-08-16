@@ -174,7 +174,7 @@ The `keywords` parameter lets you pass an object with keyword values for specifi
 | $flagged  | Parâmetros | True para adicionar o marcador "flagged" na mensagem  |
 | $answered | Parâmetros | True para adicionar o marcador "answered" na mensagem |
 | $deleted  | Parâmetros | True para adicionar o marcador "deleted" na mensagem  |
-> * False values are ignored.
+> * Os valores falsos são ignorados.
 > * A interpretação dos marcadores de palavras-chave pode variar por cliente de correio.
 
 **Objeto devolvido**

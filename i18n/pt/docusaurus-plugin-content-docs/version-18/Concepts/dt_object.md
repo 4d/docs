@@ -15,7 +15,7 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
     - ponteiro (armazenado como tal, avaliado usando o comando `JSON Stringify` ou quando copiando),
     - data (tipo de data ou cadeia de formato de data ISO)
     - objeto (os objetos podem ser aninhados em vários níveis)
-    - picture(*)
+    - imagem(*)
     - collection
 
 (*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".

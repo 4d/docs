@@ -6,7 +6,11 @@ sidebar_label: Encrypt Page
 
 You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. 
 
-> For detailed information about data encryption in 4D, please refer to the "Encrypting data" section in the *Design Reference* manual. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post. 
+:::info
+
+For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post. 
+
+:::
 
 A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 
@@ -99,7 +103,7 @@ The data file is fully decrypted and a confirmation message is displayed:
 
 ## Saving the encryption key
 
-4D allows you to save the data encryption key in a dedicated file. Storing this file on an external device such a USB key will facilitate the use of an encrypted application, since the user would only need to connect the device to provide the key before opening the application in order to access encrypted data. 
+4D allows you to save the data encryption key in a dedicated file. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". Storing this file on an external device such a USB key will facilitate the use of an encrypted application, since the user would only need to connect the device to provide the key before opening the application in order to access encrypted data. 
 
 You can save the encryption key each time a new passphrase has been provided:
 
@@ -107,6 +111,12 @@ You can save the encryption key each time a new passphrase has been provided:
 - when the application is re-encrypted with a new passphrase.
 
 Successive encryption keys can be stored on the same device.
+
+:::caution
+
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+
+:::
 
 ## Log file
 After an encryption operation has been completed, 4D generates a file in the Logs folder of the application. It is created in XML format and named "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" or "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".

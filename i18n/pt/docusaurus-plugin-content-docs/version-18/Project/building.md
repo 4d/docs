@@ -3,16 +3,16 @@ id: building
 title: Building a project package
 ---
 
-4D Developer includes a final application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
+4D Developer includes a final application builder to create a project package (final build). Esse gerador simplifica o processo de finalização e desenvolvimento de aplicativos compilados 4D. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
 
 O construtor de aplicações permite-lhe:
 
 * Build a compiled database, without interpreted code,
-* Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
+* Construir uma aplicação autônoma, de duplo clique, *i.e.*, fundida com 4D Volume Desktop, o motor de banco de dados 4D,
 * Build different applications from the same compiled database via an XML project,
 * Criar aplicações cliente-servidor homogêneas,
-* Build client-server applications with automatic updating of client and server parts.
-* Save your build settings for future use (*Save settings* button).
+* Construir aplicações cliente-servidor com atualização automática de partes do cliente e do servidor.
+* Salve seus parâmetros de geração para uso futuro (botão *Salvar parâmetros*).
 
 ## Build application overview
 
@@ -25,7 +25,7 @@ To display the Build Application dialog, select **Design** > **Build Application
 
 ![](../assets/en/Project/buildappProj.png)
 
-The Build Application dialog includes several pages that can be accessed using tabs:
+A caixa de diálogo Criar aplicação inclui várias páginas que podem ser acedidas através de separadores:
 
 ![](../assets/en/Project/appbuilderProj.png)
 
@@ -35,7 +35,7 @@ Building can only be carried out once the database is compiled. If you select th
 
 Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
 
-Default parameters are used the first time the Build Application dialog box is used. The contents of the project file are updated, if necessary, when you click **Build** or **Save settings**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
+Os parâmetros padrão são utilizados na primeira vez que a caixa de diálogo Criar aplicação é utilizada. O conteúdo do ficheiro é atualizado, se necessário, quando se clica em **Criar** ou **Salvar os parâmetros**. You can define several other XML settings file for the same project and employ them using the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command.
 
 XML keys provide additional options besides those displayed in the Build Application dialog box. The description of these keys are detailed in the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) manual.
 
@@ -44,9 +44,9 @@ XML keys provide additional options besides those displayed in the Build Applica
 When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
 
 * O início e o fim da construção de objetivos,
-* The name and full access path of the files generated,
+* O nome e o caminho de acesso completo dos ficheiros gerados,
 * A data e a hora da geração,
-* Any errors that occurred.
+* Todos os erros produzidos.
 
 ## Nome da aplicação e pasta de destino
 
@@ -76,17 +76,17 @@ This feature creates a *.4dz* file within a *Compiled Database* folder. If you h
 
 When you check this option, any folders related to the database are copied into the Build folder as *Components* and *Resources* folders. For more information about these folders, refer to [Database Architecture](https://livedoc.4d.com/4D-Design-Reference-18/Managing-4D-databases/Description-of-4D-files.300-4575698.en.html#100374).
 
-### Build component
+### Gerar um componente
 
 Constrói um componente compilado a partir da estrutura.
 
-A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components" documentation.
+Um componente é um projeto padrão 4D onde foram desenvolvidas funcionalidades específicas. Once the component has been configured and installed in another 4D database (the host database), its functionalities are accessible from the host database. For more information about components, refer to the Developing and installing 4D components" documentation.
 
 If you have named your application, *MyComponent*, 4D will create a Components folder containing *MyComponent.4dbase* folder:
 
 `\&#060;destination&#062;/Components/name.4dbase/\&#060;name&#062;.4DZ`
 
-The *MyComponent.4dbase* folder contains:
+A pasta *MyComponent.4dbase* contém:
 
 * ficheiro *MyComponent.4DZ*
 * Uma pasta *Resources* - quaisquer Recursos associados são automaticamente copiados para esta pasta. Quaisquer outros componentes e/ou pastas de plug-ins não são copiados (um componente não pode utilizar plug-ins ou outros componentes).
@@ -187,7 +187,7 @@ On this tab, you can build customized client-server applications that are homoge
 
 Uma aplicação cliente/servidor provém da combinação de três itens:
 
-* A compiled 4D database,
+* Um banco de dados 4D compilado,
 * A aplicação 4D Server,
 * A aplicação 4D Volume Desktop (macOS e/ou Windows).
 

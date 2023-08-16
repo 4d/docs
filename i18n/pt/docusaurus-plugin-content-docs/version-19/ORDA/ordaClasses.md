@@ -158,7 +158,7 @@ Form.comp.city:=$cityManager. City.getCityName(Form.comp.zipcode)
 
 ```
 
-### EntitySelection Class
+### Classe EntitySelection
 
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
@@ -380,7 +380,7 @@ If ($status.success)
     $status:=Form.student.save() // call the server End if
 ```
 
-## Support in 4D projects
+## Suporte a projetos 4D
 
 ### Ficheiros de classe (class files)
 

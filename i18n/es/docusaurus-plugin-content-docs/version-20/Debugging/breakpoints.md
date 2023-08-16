@@ -1,6 +1,6 @@
 ---
 id: breakpoints
-title: Puntos de ruptura y captura de comandos
+title: Puntos de interrupción y punto de interrupción en comandos
 ---
 
 ## Generalidades
@@ -14,7 +14,7 @@ Los puntos de interrupción de comandos le permiten comenzar a rastrear la ejecu
 
 
 
-## Breakpoints
+## Puntos de interrupción
 
 
 Para crear un punto de interrupción, haga clic en el margen izquierdo de la ventana de evaluación del código fuente en el depurador o en el editor de código.
@@ -77,7 +77,7 @@ Utilizando esta ventana, puede:
 No puede añadir nuevos puntos de interrupción desde esta ventana. Los puntos de interrupción sólo pueden crearse desde la ventana del depurador o del editor de código.
 
 
-## Comandos de captura
+## Puntos de interrupción en comandos
 
 La pestaña **Catch** del Explorador de ejecución le permite añadir pausas adicionales a su código mediante la captura de llamadas a comandos 4D. A diferencia de un punto de interrupción, que se encuentra en un método particular del proyecto (y por lo tanto desencadena una excepción de rastreo sólo cuando se alcanza), el alcance de la captura de un comando incluye todos los procesos que ejecutan código 4D y llaman a ese comando.
 
@@ -89,7 +89,7 @@ Para abrir la página de los puntos de interrupción en comandos:
 
 1. Elija **Ejecutar** > **Explorador de ejecución...** para abrir el Explorador de ejecución.
 
-2. Haga clic en **Catch** para mostrar la lista de comandos capturados:
+2. Haga clic en **Catch** para mostrar la lista de puntos de interrupción en los comandos:
 
 ![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
@@ -101,7 +101,7 @@ Esta página lista los puntos de interrupción en el comando durante la ejecuci�
 Para añadir un punto de interrupción en el comando:
 
 1. Haga clic en el botón **Add New Catch** (en forma de +) situado debajo de la lista. Se añade una nueva entrada a la lista con el comando `ALERT` por defecto
-2. Haga clic en la etiqueta **ALERT**, escriba el nombre del comando que desea atrapar y pulse **Intro**.
+2. Haga clic en la etiqueta **ALERT**, escriba el nombre del comando en el cual desea poner un punto de interrupción y pulse **Enter**.
 
 Para activar o desactivar un punto de interrupción en un comando, haga clic en la viñeta (-) delante de la etiqueta del comando. La bala es transparente cuando el comando está desactivado.
 

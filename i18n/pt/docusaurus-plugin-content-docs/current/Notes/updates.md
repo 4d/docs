@@ -4,6 +4,24 @@ title: Notas de Lançamento
 ---
 
 
+## 4D v20 R3
+
+Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), the blog post that lists all new features and enhancements in 4D v20 R3.
+
+
+#### Destaques
+
+
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
+- 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
+- [**Lista de bugs corrigidos**](https://falhas.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D v20 R3.
+
+
+#### Mudanças de comportamento
+
+- Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*.
+
+
 ## 4D v20 R2
 
 Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
@@ -14,10 +32,9 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
 - New QUIC network layer [interface setting](../settings/client-server.md#network-layer).
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) on doc.4d.com.
+- 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R2): list of all bugs that have been fixed in 4D v20 R2.
 
-#### Mudanças de comportamento
 
 
 ## 4D v19.6
@@ -60,7 +77,7 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 #### Mudanças de comportamento
 
 - For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
-- TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new *option* property allows you to control this validation.
+- TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. Uma nova propriedade *option* permite-lhe controlar esta validação.
 - TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
 - For consistency, all buttons, checkboxes, and radio buttons are now rendered with a "3D" type at runtime: respectively `Object type 3D button`, `Object type 3D checkbox`, and `Object type 3D radio button` are returned by [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/en/page642.html) for these objects.
 - As of 4D v20, [4D for Mobile](https://developer.4d.com/go-mobile/) is no longer installed by default in the 4D environment. To benefit from the 4D for Mobile development features in 4D, you need to [install the 4D Mobile App component](https://developer.4d.com/go-mobile/docs/getting-started/installation) in the ["Components"](../Project/architecture.md#components) folder of your projects. If a converted project uses features from the [4D Mobile App Server component](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), make sure you also install it in the "Components" folder of the project.
@@ -115,8 +132,8 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 #### Mudanças de comportamento
 
 - For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- The 4D internal build numbering has been modified as of 4D v19 R7:
-    - releases up to 4D v19 R6 (included) are numbered 282xxx,
+- A numeração de compilação interna do 4D foi modificada a partir do 4D v19 R7:
+    - as versões até 4D v19 R6 (inclusive) são numeradas como 282xxx,
     - releases from 4D v19 R7 will be numbered 100xxx.   
       Note that a specific 4D version is still uniquely identified by a branch name and a build number. O número de build aumenta cronologicamente.
 - The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
@@ -124,10 +141,10 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 
 ## 4D v19.5 é certificado no Windows 11 22H2
 
-- New [HTTPRequest](../API/HTTPRequestClass.md) class.
+- Nova classe [HTTPRequest](../API/HTTPRequestClass.md).
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
 - Listbox cells support [horizontal](../FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](../FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
-- 4D View Pro: new [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
+- 4D View Pro: novos comandos [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) e [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) para tratar tabelas em folhas.
 - Ability to see related, computed, and alias attributes in the [Web Data Explorer](../Admin/dataExplorer.md#basics).
 - To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. Este facto não terá qualquer impacto no desempenho. See the new page explaining [why and how 4D collects data](../Admin/data-collect.md).
 - Components compiled for Silicon: On macOS Silicon platforms (Apple ARM CPUs), components must be recompiled with 4D v19 R6 or higher to be used with this release.
@@ -150,7 +167,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 - **4D View Pro**:
     - The new [VP SET DATA CONTEXT](../ViewPro/method-list.md#vp-set-data-context), [VP Get data context](../ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list.md#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
     - [VP EXPORT DOCUMENT](../ViewPro/method-list.md#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list.md#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
-    - (Windows only) 4D View Pro areas now use a new print settings window.
+    - (Apenas Windows) As áreas 4D View Pro utilizam agora uma nova janela de parâmetros de impressão.
 - **Áreas Web**:
     + New Windows system rendering engine: Web Areas using the [Windows system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) are now based upon **Microsoft Edge WebView2**. Isto afeta as seguintes funcionalidades:
         * The `WA Create URL history menu` and `WA GET URL HISTORY` commands only return the current URL.
@@ -170,7 +187,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 
 ## 4D v19 R4
 
-- [Alias attributes](../ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
+- [Atributos Alias](../ORDA/ordaClasses.md#alias-attributes-1) estão disponíveis nas classes ORDA.
 - Support for [break and continue](../Concepts/flow-control.md#break-and-continue) statements in loops.
 - Support for [return](../Concepts/flow-control.md#return-expression) statement and [return expression](../Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](../Concepts/operators.md#compound-assignment-operators), [short-circuit operators](../Concepts/operators.md#short-circuit-operators), and [ternary operator](../Concepts/operators.md#ternary-operator)
@@ -178,13 +195,13 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - New Preferences: [**Include tokens in project source files**](../Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](../Preferences/methods.md#show-clipboards) option on the Methods page.
 - New REST request to [lock/unlock](../REST/$lock.md) entities.
 - [4D View Pro](../ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
-- New [SystemWorker class](../API/SystemWorkerClass.md).
+- Nova [classe SystemWorker](../API/SystemWorkerClass.md).
 - The `Alias selection` constant has been renamed `Allow alias files` to resolve a conflict resulting from the support of alias attributes in ORDA.
-- For better compliance with ORDA specifications, the *Map NULL values to blank values* field property is now unchecked by default in databases created with 4D v19 R4 and higher. You can also enable this default behavior in your databases converted from previous versions by selecting the Map NULL values to blank values unchecked by default at field creation compatibility setting. Working with Null values is now recommended since they are fully supported by ORDA.
+- For better compliance with ORDA specifications, the *Map NULL values to blank values* field property is now unchecked by default in databases created with 4D v19 R4 and higher. You can also enable this default behavior in your databases converted from previous versions by selecting the Map NULL values to blank values unchecked by default at field creation compatibility setting. O trabalho com valores Null é agora recomendado, dado que são totalmente suportados pelo ORDA.
 - Because of the support of the [ternary operator](../Concepts/operators.md#ternary-operator), the colon ":" is no longer allowed in variable, field, constant, function, plugin and project method names. If your database/project contains identifiers with colons, you must replace them before converting it to v19 R4 or higher, otherwise errors may occur in your code. For example, if you have a variable named *a:b*, it could be interpreted as ternary operator syntax:
 
 ```4d
-$value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
+$value:=($size>1000)? a:b // Aqui 'a:b' é visto como um operador ternário.
 ```
 
 
@@ -199,7 +216,7 @@ $value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
 - Extended [support of dark mode](../Preferences/general.md#appearance-macos-only) on macOS.
 - Support of **OAuth2 token object** in [`IMAP New transporter`](../API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass.md#pop3-new-transporter), and [`SMTP New transporter`](../API/SMTPTransporterClass.md#smtp-new-transporter).
 - Users can now load a [log configuration file](../Debugging/debugLogFiles.md#using-a-log-configuration-file) using a button in the [server administration window](../ServerWindow/maintenance.md#load-logs-configuration-file).
-- Handling [optional parameters](../Concepts/parameters.md#optional-parameters) is more flexible in the 4D language when accessing parameters declared but not passed. For example, the following code no longer provokes an error:
+- Handling [optional parameters](../Concepts/parameters.md#optional-parameters) is more flexible in the 4D language when accessing parameters declared but not passed. Por exemplo, o código seguinte já não provoca um erro:
 
 ```4d
 // "concate" function of myClass Function concate ($param1 : Text ; $param2 : Text)
@@ -210,17 +227,17 @@ ALERT($param1+" "+$param2)
  $class.concate("Hello") // Displays "Hello "
  $class.concate() // Displays " "
 ```
-For detailed information, please refer to [this blog post](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). To benefit from this overall simplification, you need to recompile both calling and called methods; thus components must be recompiled.
+Para obter informações pormenorizadas, consulte [esta publicação do blogue](https://blog.4d.com/stop-press-accessing-parameters-not-being-passed-is-possible). Para beneficiar desta simplificação global, é necessário recompilar tanto os métodos chamados como os que são chamados; assim, os componentes devem ser recompilados.
 - Debugging web server sessions [is easier on 4D Server](../WebServer/sessions.md#preemptive-mode).
-- The new [4D NetKit](https://github.com/4d/4D-NetKit) component allows you to connect to third-party APIs such as Microsoft Graph.
-- 4D v19 R3 uses a stronger hashing algorithm for 4D user passwords: Bcrypt. This new algorithm is automatically used when a password is changed using the Tool Box, the `CHANGE PASSWORD` command, or the `Set user properties` command. Once a password is modified, opening the database with a version prior to 4D v19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D v19 R3 or later.
+- O novo componente [4D NetKit](https://github.com/4d/4D-NetKit) permite-lhe ligar-se a APIs de terceiros, como Microsoft Graph.
+- 4D v19 R3 usa um algoritmo hash mais forte para senhas de usuários 4D: Bcrypt. This new algorithm is automatically used when a password is changed using the Tool Box, the `CHANGE PASSWORD` command, or the `Set user properties` command. Once a password is modified, opening the database with a version prior to 4D v19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D v19 R3 or later.
 - For accuracy, the `4D digest` constant has been renamed `4D REST digest`.
 
-- End-of-line and BOM management for XML commands: When opened in 4D v19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. This allows a better compatibility with VCS tools. If necessary, you can restore the v19 R2 behavior using the `XML SET OPTIONS` command. In projects or databases converted from versions prior to 19 R2, these options are managed by two compatibility settings.
-- Runtime Explorer shortcut removed in built projects: The **Cmd/Ctrl+Shift+F9** shortcut does no longer display the Runtime Explorer window in single-user merged project applications. This shortcut can now be a user application shortcut. You can call the Runtime Explorer window using the new `OPEN RUNTIME EXPLORER` command.
+- End-of-line and BOM management for XML commands: When opened in 4D v19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. Isto permite uma melhor compatibilidade com as ferramentas VCS. If necessary, you can restore the v19 R2 behavior using the `XML SET OPTIONS` command. In projects or databases converted from versions prior to 19 R2, these options are managed by two compatibility settings.
+- Runtime Explorer shortcut removed in built projects: The **Cmd/Ctrl+Shift+F9** shortcut does no longer display the Runtime Explorer window in single-user merged project applications. Este atalho pode agora ser um atalho de aplicação do usuário. You can call the Runtime Explorer window using the new `OPEN RUNTIME EXPLORER` command.
 - Extended debugging capabilities with 4D Server: In interpreted mode, 4D Server can now debug all kinds of processes, including scalable web sessions. This is available when the debugger is attached to the server or to a remote client.   
   *Warning: In interpreted mode, in order to make extented debugging available on the server machine, all server processes are now automatically executed in cooperative mode when the debugger is attached to the server (default setting). This can have a significant impact on the performance of your converted applications when they run with 4D Server v19 R3 and higher. To restore preemptive execution on the server in this case, all you need to do is detach the debugger from the server (and attach it to a remote client if necessary).*
-- On Windows, 4D projects and databases created with 4D v19 R3 and higher use the [DirectWrite API](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) in forms. This API improves text rendering, especially in high DPI configurations. DirectWrite is used for text rendering with static and input text, checkboxes, buttons, and radio buttons. Note-se que os listboxes já utilizam DirectWrite. A compatibility option allows you to enable DirectWrite in projects and databases created with previous 4D versions.
+- On Windows, 4D projects and databases created with 4D v19 R3 and higher use the [DirectWrite API](https://docs.microsoft.com/en-us/windows/win32/DirectWrite/direct-write-portal) in forms. Esta API melhora a renderização de texto, especialmente em configurações de DPI elevado. DirectWrite is used for text rendering with static and input text, checkboxes, buttons, and radio buttons. Note-se que os listboxes já utilizam DirectWrite. A compatibility option allows you to enable DirectWrite in projects and databases created with previous 4D versions.
 - If you use components compiled with 4D v19.0 for Silicon (Apple ARM CPUs) which call the `Count parameters` command, we recommend to recompile them with 4D v19 R3 to provide compatibility with 4D v19 R3 and future releases. If a component is not compiled for Silicon, there is no need to recompile.
 
 
@@ -260,9 +277,9 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 - [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
-- New [WebAdmin](../Admin/webAdmin.md) web server component
-- New [DataExplorer](../Admin/dataExplorer.md) interface
-- New web [user sessions](../WebServer/sessions.md) and [their API](../API/SessionClass.md).
+- Novo componente [WebAdmin](../Admin/webAdmin.md) do servidor Web
+- Nova interface [DataExplorer](../Admin/dataExplorer.md)
+- Novas [sessões de usuário](../WebServer/sessions.md) Web e [sua API](../API/SessionClass.md).
 
 
 </details>
@@ -276,11 +293,11 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | ---------- | ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
 | ICU        | 68.1         | 20               | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
 | CEF        | 113          | 20 R2            | Chromium 5672                                                                            |
-| Hunspell   | 7.3.27       | 20               | Used for spell checking in 4D forms and 4D Write Pro                                     |
+| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                      |
 | PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                           |
 | SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                        |
 | OpenSSL    | 3.1.1        | 20               |                                                                                          |
-| libZip     | 19.5         | 20               | Used by zip class, 4D Write Pro, svg and serverNet components                            |
+| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                     |
 | LZMA       | 5.4.1        | 20               |                                                                                          |
 | Zlib       | 14.1.6       | 20               |                                                                                          |
 | webKit     | WKWebView    | 19               |                                                                                          |

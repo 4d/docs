@@ -14,7 +14,7 @@ Once a user is successfully logged, a session is open. See below to know how to 
 
 The session will automatically be closed once the timeout is reached.
 
-## Session cookie
+## Cookie de sessão
 
 Each REST request is handled through a specific session on the 4D server.
 

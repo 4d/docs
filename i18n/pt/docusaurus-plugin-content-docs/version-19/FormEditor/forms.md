@@ -1,6 +1,6 @@
 ---
 id: forms
-title: About 4D Forms
+title: Sobre os formulários 4D
 ---
 
 
@@ -73,7 +73,7 @@ Existem duas categorias de formulários:
 
 - **Formulários projecto** - Formulários independentes que não estão anexados a qualquer tabela. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
 
-- **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.
+- **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Normalmente, uma tabela tem formulários de entrada e saída separados.
 
 Typically, you select the form category when you create the form, but you can change it afterwards.
 
@@ -91,9 +91,9 @@ Cada formulário é composto por, pelo menos, duas páginas:
 - Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
 - Provide space around the form elements for an attractive screen design.
 
-Multiple pages are a convenience used for input forms only. Não são para produção impressa. When a multi-page form is printed, only the first page is printed.
+As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
 
-There are no restrictions on the number of pages a form can have. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
+Não há restrições quanto ao número de páginas que um formulário pode ter. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
 
 A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
 
@@ -114,9 +114,9 @@ When a form is executed, the objects are loaded and combined in the following or
 
 This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
 
-> Only pages 0 and 1 of an inherited form can appear in other forms.
+> Apenas as páginas 0 e 1 de um formulário herdado podem aparecer noutros formulários.
 
-The properties and method of a form are not considered when that form is used as an inherited form. On the other hand, the methods of objects that it contains are called.
+The properties and method of a form are not considered when that form is used as an inherited form. Por outro lado, são chamados os métodos dos objetos que contém.
 
 To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
 

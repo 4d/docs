@@ -6,7 +6,7 @@ title: Página Métodos
 
 A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
 
-- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Built-in methods include:
+- **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Os métodos incorporados incluem:
     - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
     - Methods attached to collections or native objects, such as `collection.orderBy()` or `entity.save()`.
     - Commands from plug-ins or components, provided by 4D or third-party developers, such as `SVG_New_arc`.
@@ -22,13 +22,13 @@ A method is basically a piece of code that executes one or several actions. In t
 
 Um método de projecto pode ter uma das seguintes funções, dependendo de como é executado e utilizado:
 
-- Subroutine and function
-- Method attached to object
+- Sub-rotina e função
+- Método ligado ao objeto
 - Método do menu
 - Método de gerenciamento de processos
 - Método de captura de eventos ou erros
 
-### Subroutines and functions
+### Sub-rotinas e funções
 Uma sub-rotina é um método de projecto que pode ser pensado como um servo. Executa as tarefas que outros métodos lhe pedem para executar. Uma função é uma sub-rotina que devolve um valor ao método que a chamou.
 
 When you create a project method, it becomes part of the language of the database in which you create it. You can then call the project method from other project methods, or from [predefined methods](#predefined-methods) in the same way that you call 4D’s built-in commands. Um método de projecto utilizado desta forma é chamado de sub-rotina.

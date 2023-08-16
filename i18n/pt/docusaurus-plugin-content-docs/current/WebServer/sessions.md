@@ -53,7 +53,7 @@ The current `Session` object can then be accessed through the [`Session`](API/Se
 
 Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
-### Preemptive mode
+### Modo preventivo
 
 On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
 
@@ -66,7 +66,7 @@ With 4D single-user, interpreted code is always run in cooperative mode.
 
 Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) property which is a [shared object](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 
-## Session lifetime
+## Duração da sessão
 
 Uma sessão Web escalável é encerrada quando:
 

@@ -70,7 +70,7 @@ In addition to the built-in class functions, the 4D language contains hundreds o
 | [`ARRAY TO SELECTION`](https://doc.4d.com/4dv19/help/command/en/page261.html)                                 | 261    |
 | [`ASSERT`](https://doc.4d.com/4dv19/help/command/en/page1129.html)                                            | 1129   |
 | [`Asserted`](https://doc.4d.com/4dv19/help/command/en/page1132.html)                                          | 1132   |
-| [`Average`](https://doc.4d.com/4dv19/help/command/en/page2.html)                                              | 2      |
+| [`Média`](https://doc.4d.com/4dv19/help/command/en/page2.html)                                                | 2      |
 | <a name="B">**B**</a>                                                                                     |        |
 | [`BACKUP`](https://doc.4d.com/4dv19/help/command/en/page887.html)                                             | 887    |
 | [`BASE64 DECODE`](https://doc.4d.com/4dv19/help/command/en/page896.html)                                      | 896    |

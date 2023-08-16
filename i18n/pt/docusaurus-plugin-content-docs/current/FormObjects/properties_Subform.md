@@ -22,13 +22,13 @@ Especifica se o utilizador pode eliminar sub-registos num subformulário lista.
 ---
 ## Formulário detalhado
 
-You use this property to declare the detail form to use in the subform. Pode ser:
+Esta propriedade é utilizada para declarar o formulário detalhado a utilizar no subformulário. Pode ser:
 
-- a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
+- um widget, ou seja, um subformulário de tipo página, dotado de funções específicas. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
   You can select a component form name when it is published in the component.
-> You can generate [components](Concepts/components.md) providing additional functionalities through subforms.
+> É possível gerar [componentes](Concepts/components.md) fornecendo funcionalidades adicionais através de subformulários.
 
-- the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
+- o formulário detalhado para associar ao [subformulário lista](#list-form). O formulário detalhado pode ser utilizado para introduzir ou visualizar sub-registos. Geralmente contém mais informações do que o subformulário lista. Naturalmente, o formulário detalhado deve pertencer à mesma tabela que o subformulário. Normalmente, utiliza-se um formulário de saída como formulário lista e um formulário de entrada como formulário detalhado. Se não especificar o formulário a ser usado para a entrada de página inteira, 4D automaticamente usa o formato de entrada padrão da tabela.
 
 
 #### Gramática JSON
@@ -67,10 +67,10 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 
 `Subformulário lista`
 
-Sets the action to be performed when a user double-clicks on a row in a list subform. The available options are:
+Sets the action to be performed when a user double-clicks on a row in a list subform. As opções disponíveis são:
 
 *   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). The record is opened in read-write mode so it can be modified.
+*   **Edit Record**: Double-clicking a row displays the corresponding record in the [detail form defined for the list subform](#detail-form). O registo é aberto em modo de leitura-escrita para poder ser modificado.
 *   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
@@ -133,7 +133,7 @@ List subforms can be used for data entry in two ways: the user can enter data di
 ---
 ## Source
 
-Specifies the table that the list subform belongs to (if any).
+Especifica a tabela a que pertence o subformulário Lista (se existir).
 
 #### Gramática JSON
 
@@ -148,14 +148,14 @@ Specifies the table that the list subform belongs to (if any).
 ---
 ## Modo seleção
 
-Designates the option for allowing users to select rows:
+Designa a opção que permite aos utilizadores selecionar linhas:
 - **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Enterable in list](subform_overview.md#enterable-in-list) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
 - **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
   The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the current row is changed.
 - **Multiple**: Several rows can be selected simultaneously in this mode.
-    - The selected subrecords are returned by the `GET HIGHLIGHTED RECORDS` command.
+    - Os sub-registos selecionados são devolvidos pelo comando `GET HIGHLIGHTED RECORDS`.
     - Clicking on the record will select it, but it does not modify the current record.
-    - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the selected record is changed.
+    - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento do formulário `On Selection Change` é gerado sempre que o registo selecionado é alterado.
 
 
 #### Gramática JSON

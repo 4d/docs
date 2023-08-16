@@ -24,11 +24,11 @@
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
-    "message": "4D Language Concepts",
+    "message": "Conceitos da linguagem 4D",
     "description": "The label for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.title": {
-    "message": "4D Language Concepts",
+    "message": "Conceitos da linguagem 4D",
     "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
@@ -56,7 +56,7 @@
     "description": "The generated-index page description for category Class Functions in sidebar docs"
   },
   "sidebar.docs.category.Handling Code": {
-    "message": "Handling Code",
+    "message": "Gerenciamento do código",
     "description": "The label for category Handling Code in sidebar docs"
   },
   "sidebar.docs.category.Tags": {
@@ -180,7 +180,7 @@
     "description": "The generated-index page title for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass).link.generated-index.description": {
-    "message": "REST API for dataClass.",
+    "message": "API REST para dataClass.",
     "description": "The generated-index page description for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications": {

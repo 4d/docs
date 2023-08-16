@@ -13,12 +13,12 @@ You can have many separate menu bars for each database. For example, you can use
 
 You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
 
-When you design menus, keep the following two rules in mind:
+Quando conceber menus, tenha em mente as duas regras seguintes:
 
 - Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
 - Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
 
-To create menus and menu bars, you can use either:
+Para criar menus e barras de menu, pode utilizar qualquer um deles:
 
 - o editor de menus da caixa de ferramentas,
 - comandos de linguagem para o tema "Menus",
@@ -30,6 +30,6 @@ The Menu editor is accessed using the **Menus** button of the Toolbox.
 
 ![](../assets/en/Menus/editor1.png)
 
-Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Each menu can be attached to a menu bar or to another menu. No segundo caso, o menu torna-se um sub-menu.
+Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Cada menu pode ser anexado a uma barra de menus ou a outro menu. No segundo caso, o menu torna-se um sub-menu.
 
-4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. You can rename menu bars but you cannot change their numbers. Estes números são utilizados pelos comandos da linguaje.
+4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. É possível mudar o nome das barras de menu, mas não é possível alterar os seus números. Estes números são utilizados pelos comandos da linguaje.

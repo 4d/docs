@@ -8,13 +8,13 @@ title: Aparência
 
 The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
 
-There can only be one default button per form page.
+Só pode haver um botão predefinido por página de formulário.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
+In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
-> Button must have a standard height to get the default button appearance.
+> O botão tem de ter uma altura padrão para obter o aspeto de botão predefinido.
 
 On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline:
 
@@ -35,7 +35,7 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 ## Esconder retangulo foco
 
-During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
+Durante a execução, um campo ou qualquer área introduzível é delineado por um retângulo de seleção quando tem o foco (através da tecla Tab ou de um único clique). Pode ocultar este retângulo ativando esta propriedade. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
 #### Gramática JSON
 
@@ -51,9 +51,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 ## Esconder ressalte seleção
 
-`Selection type list boxes`
+`List boxes de tipo de seleção`
 
-This property is used to disable the selection highlight in list boxes.
+Esta propriedade é utilizada para desativar o realce de seleção nos list boxes.
 
 When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
 
@@ -103,7 +103,7 @@ Valores disponíveis:
 
 ## Resolução
 
-Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+Define a resolução do ecrã para o conteúdo da área 4D Write Pro. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
 
 #### Gramática JSON
 
@@ -120,7 +120,7 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 ## Mostrar fundo
 
-Displays/hides both background images and background color.
+Apresenta/oculta as imagens de fundo e a cor de fundo.
 
 #### Gramática JSON
 
@@ -137,7 +137,7 @@ Displays/hides both background images and background color.
 
 ## Mostrar rodapés
 
-Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
+Apresenta/oculta os rodapés quando o [modo de visualização da página](#view-mode) está definido como "Página".
 
 #### Gramática JSON
 
@@ -154,7 +154,7 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 ## Mostrar barra de fórmulas
 
-When enabled, the formula bar is visible below the Toolbar interface in the 4D View Pro area. Se não estiver selecionada, a barra de fórmulas fica oculta.
+Quando activada, a barra de fórmulas é visível por baixo da interface da barra de ferramentas na área 4D View Pro. Se não estiver selecionada, a barra de fórmulas fica oculta.
 
 > This property is available only for the [Toolbar](#user-interface) interface.
 
@@ -214,7 +214,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- showHorizontalRuler|boolean|true (default), false|
+ showHorizontalRuler|boolean|true (padrão), false|
 
 #### Objectos suportados
 
@@ -264,7 +264,7 @@ For example, you have inserted the current date along with a format, the date is
 
 ![](../assets/en/FormObjects/writePro1.png)
 
-With the Show references property on, the reference is displayed:
+Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 ![](../assets/en/FormObjects/writeProExpr.png)
 
@@ -328,7 +328,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- userInterface|text|"none" (default), "ribbon", "toolbar" |
+ userInterface|text|"none" (padrão), "ribbon", "toolbar" |
 
 #### Objectos suportados
 
@@ -380,7 +380,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Há tr�
 - **Draft**: draft mode with basic document properties
 - **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
-> The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
+> A propriedade Mode vista só é utilizada para a renderização no ecrã. Regarding printing settings, specific rendering rules are automatically used.
 
 #### Gramática JSON
 

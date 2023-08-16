@@ -1,6 +1,6 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Background and Border
+title: Fundo e margem
 ---
 
 
@@ -65,7 +65,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 ## Estilo borda linha
 
-Allows setting a standard style for the object border.
+Permite definir um estilo padrão para o contorno do objeto.
 
 #### Gramática JSON
 
@@ -81,27 +81,27 @@ Allows setting a standard style for the object border.
 
 ## Tipo de linha pontilhada
 
-Describes dotted line type as a sequence of black and white points.
+Descreve o tipo de linha pontilhada como uma sequência de pontos pretos e brancos.
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados          | Valores possíveis                                                                |
-| --------------- | ---------------------- | -------------------------------------------------------------------------------- |
-| strokeDashArray | number array or string | Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Nome            | Tipo de dados               | Valores possíveis                                                                |
+| --------------- | --------------------------- | -------------------------------------------------------------------------------- |
+| strokeDashArray | arrays numéricos ou strings | Ex. Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
 #### Objectos suportados
 
-[Rectangle](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Line](shapes_overview.md#line)
+[Retângulo](shapes_overview.md#rectangle) - [Oval](shapes_overview.md#oval) - [Linha](shapes_overview.md#line)
 
 ---
 
 ## Esconder linhas em branco extras
 
-Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
+Controls the display of extra blank rows added at the bottom of a list box object. Por defeito, 4D adiciona essas linhas extra para preencher a área vazia:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows1.png)
 
-You can remove these empty rows by selecting this option. The bottom of the list box object is then left blank:
+Pode remover estas linhas vazias selecionando esta opção. A parte inferior do objeto do list box é deixada em branco:
 
 ![](../assets/en/FormObjects/property_hideExtraBlankRows2.png)
 
@@ -121,7 +121,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 Designa a cor das linhas do objeto. A cor pode ser especificada por:
 
-* a color name - like "red"
+* um nome de cor - como "red"
 * um valor HEX - como "#ff0000"
 * um valor RGB - como "rgb(255,0,0)"
 
@@ -147,9 +147,9 @@ Designa a espessura de uma linha.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                 |
-| ----------- | ------------- | ----------------------------------------------------------------- |
-| strokeWidth | number        | 0 for smallest width on a printed form, or any integer value < 20 |
+| Nome        | Tipo de dados | Valores possíveis                                                                     |
+| ----------- | ------------- | ------------------------------------------------------------------------------------- |
+| strokeWidth | number        | 0 para a largura mais pequena num formulário impresso, ou qualquer valor inteiro < 20 |
 
 #### Objectos suportados
 
@@ -174,7 +174,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
+De seguida, deve colorir as células com valores negativos a laranja-escuro. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // laranja escura

@@ -43,15 +43,15 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 ## Dimensionamento horizontal
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. Também pode ser definido dinamicamente através do comando de linguagem `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
 | Opção    | Valor JSON | Resultados                                                                                                             |
 | -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Agrandar | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
+| Agrandar | "grow"     | A mesma percentagem é aplicada à largura do objeto quando o usuário redimensiona a largura da janela,                  |
 | Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                                 |
+| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                   |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
 #### Gramática JSON
@@ -68,7 +68,7 @@ Estão disponíveis três opções:
 
 ## Alinhamento vertical
 
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. Também pode ser definido dinamicamente através do comando de linguagem `OBJECT SET RESIZING OPTIONS`.
 
 Estão disponíveis três opções:
 
@@ -76,7 +76,7 @@ Estão disponíveis três opções:
 | -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Agrandar | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Mover    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                               |
+| Nenhum   | "fixed"    | O objeto permanece estacionário quando o formulário é redimensionado                                                 |
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
 #### Gramática JSON
@@ -99,7 +99,7 @@ Here is the result of a “pusher” splitter being moved: ![](../assets/en/Form
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)
 
-When this property is not applied to the splitter, the result is as follows:
+Quando esta propriedade não é aplicada ao splitter, o resultado é o seguinte:
 
 ![](../assets/en/FormObjects/splitter_pusher2.png)
 
@@ -117,7 +117,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 ## Redimensionável
 
-Designates if the size of the column can be modified by the user.
+Designa se o tamanho da coluna pode ser modificado pelo usuário.
 
 #### Gramática JSON
 

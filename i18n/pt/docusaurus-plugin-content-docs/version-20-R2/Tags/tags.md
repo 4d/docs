@@ -598,7 +598,7 @@ Podem ser mostradas as seguintes mensagens:
 - Tipo de expressão inesperado (erro padrão);
 - Incorrect table name (error on the table name);
 - An array was expected (the variable is not an array or is a two dimension array);
-- The method does not exist;
+- O método não existe;
 - Erro de sintaxe (quando o método está em execução);
 - Access error (you do not have the appropriate access privileges to access the table or the method).
 - 4DENDLOOP expected (the `<!--#4DENDLOOP-->` number does not match the `<!--#4DLOOP -->`).
@@ -647,7 +647,7 @@ Também é possível inserir expressões 4D. You can for example directly insert
 
 In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
 
-- You must use process variables.
+- É necessário utilizar variáveis processo.
 - É possível mostrar o conteúdo de um campo imagem. However, it is not possible to display the content of a picture array item.
 - It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
 - Normalmente, trabalha-se com variáveis de tipo texto. No entanto, também é possível utilizar variáveis BLOB. You just need to generate BLOBs in `Text without length` mode.

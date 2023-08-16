@@ -53,7 +53,7 @@ At any moment, you can clear the cache of the pages and images that it contains 
 To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box. The cache is then immediately cleared.
 > You can also use the [/4DCACHECLEAR](#cacheclear) URL.
 
-## Runtime Explorer
+## Explorador de execução
 
 The **Watch** page (**Web** heading) in the Runtime Explorer displays web server information, particularly:
 
@@ -95,7 +95,7 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 | Cached Object Max Size  | Maximum size of each object in the cache (in bytes)                    |
 | Cache Use               | Percentage of cache used                                               |
 | Cached Objects          | Number of objects found in the cache, **without pictures**             |
-| Filtered Objects        | Number of objects in cache not counted by URL, in particular, pictures |
+| Objectos filtrados      | Number of objects in cache not counted by URL, in particular, pictures |
 
 ### /4DCACHECLEAR
 
@@ -198,7 +198,7 @@ The following table lists the fields available for each format (in alphabetical 
 
 > As datas e horas são indicadas em GMT.
 
-#### Backup Frequency
+#### Frequência do backup
 
 Since a *logweb.txt* file can become considerably large, it is possible to set up an automatic archiving mechanism. The triggering of a backup can be based on a certain period of time (expressed in hours, days, week or months), or based on the file size; when the set deadline (or file size) is reached, 4D automatically closes and archives the current log file and creates a new one.
 

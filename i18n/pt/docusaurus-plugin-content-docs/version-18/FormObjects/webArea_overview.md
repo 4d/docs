@@ -52,7 +52,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `param1...paramN`: You can pass as many parameters as you need to the 4D method. These parameters can be of any type supported by JavaScript (string, number, array, object).
 
-- `function(result)`: Function to pass as last argument. This "callback" function is called synchronously once the 4D method finishes executing. Recebe o parâmetro `result`.
+- `function(result)`: função a passar como último argumento. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. Recebe o parâmetro `result`.
 
 - `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
 
@@ -175,7 +175,7 @@ The use of Web plugins and Java applets is not recommended in Web areas because 
 
 The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
 
-## Access to Web inspector
+## Acesso ao inspetor Web
 
 You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
 
@@ -191,7 +191,7 @@ The following conditions must be met in order to view the Web inspector in a Web
  WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
 ```
 
-### Using the Web inspector
+### Utilizar o inspetor Web
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the Web inspector window is displayed.
 

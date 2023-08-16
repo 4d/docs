@@ -6,7 +6,7 @@ title: Criação de menus e barras de menus
 É possível criar menus e barras de menu:
 
 - usando o editor de menus da janela da caixa de ferramentas 4D. In this case, menus and menu bars are stored in the application's structure.
-- dynamically, using the language commands from the "Menus" theme. In this case, menus and menu bars are not stored, they only exist in memory.
+- dinamicamente, utilizando os comandos de linguagem do tema "Menus". In this case, menus and menu bars are not stored, they only exist in memory.
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
 
@@ -21,9 +21,9 @@ A barra de menus predefinida inclui três menus:
 - **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
 - **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
-> > > Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
+> > > Menu items appear *in italics* because they consist of references and not hard-coded text. Consultar [Propriedade Título](properties.md#title).
 
-You can modify this menu bar as desired or create additional ones.
+Pode modificar esta barra de menu como desejar ou criar outras.
 
 ## Criar menus
 
@@ -36,7 +36,7 @@ You can modify this menu bar as desired or create additional ones.
 
 Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. Em ambos os casos, consiste numa lista de itens. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. Em ambos os casos, consiste numa lista de itens. Apenas a sua utilização é diferente. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
 
 `Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
 
@@ -54,13 +54,13 @@ Para adicionar um item de menu:
 
 ### Utilizar a linguagem 4D
 
-Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
+Utilize `INSERT MENU ITEM` ou `APPEND MENU ITEM` para inserir ou adicionar itens de menu em referências de menu existentes.
 
 ## Eliminar menus e itens
 
 ### Utilizar o editor de menus
 
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. When you delete the last reference of a menu, 4D displays an alert.
+You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. When you delete the last reference of a menu, 4D displays an alert.
 
 Para eliminar uma barra de menu, um menu ou um item de menu:
 
@@ -71,9 +71,9 @@ Para eliminar uma barra de menu, um menu ou um item de menu:
 
 ### Utilizar a linguagem 4D
 
-Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
+Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` to unload the menu reference from the memory.
 
-## Attaching menus
+## Anexar os menus
 
 Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
 

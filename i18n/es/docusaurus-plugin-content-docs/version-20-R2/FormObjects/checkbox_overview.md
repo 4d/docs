@@ -327,7 +327,7 @@ Este estilo de botón de casilla de selección se puede utilizar para añadir un
 
 |
 
-The Collapse/Expand style is named "disclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -362,7 +362,7 @@ En macOS y Windows, una casilla de selección con el estilo de botón "Divulgaci
 
 |
 
-The Disclosure style is named "roundedDisclosure" in the [button style JSON Grammar](properties_TextAndPicture.md#button-style).
+El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
 :::
 
@@ -420,11 +420,11 @@ Suele estar asociado a una [imagen de 4 estados](properties_TextAndPicture.md#nu
 Todas las casillas de selección comparten un mismo conjunto de propiedades básicas:
 
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment)(1) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Image hugs title](properties_TextAndPicture.md#image-hugs-title)(2) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Number of States](properties_TextAndPicture.md#number-of-states)(2) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(2) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(2) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Negrita](properties_Text.md#bold) - [Abajo](properties_CoordinatesAndSizing.md#bottom) - [Estilo de botón](properties_TextAndPicture.md#button-style) - [Clase](properties_Object.md#css-class) - [Editable](properties_Entry.md#enterable) - [Tipo de expresión](properties_Object.md#expression-type) - [Enfocable](properties_Entry.md#focusable) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Tamaño de fuente](properties_Text.md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help.md#help-tip) - [Alineación horizontal](properties_Text.md#horizontal-alignment)(1) - [Tamaño horizontal](properties_ResizingOptions.md#horizontal-sizing) - [La imagen abraza el título](properties_TextAndPicture.md#image-hugs-title)(2) - [Cursiva](properties_Text.md#italic) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Número de estados](properties_TextAndPicture.md#number-of-states)(2) - [Nombre del objeto](properties_Object.md#object-name) - [Nombre de la ruta de la imagen](properties_TextAndPicture.md#picture-pathname)(2) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Guardar valor](properties_Object.md#save-value) - [Acceso directo](properties_Entry.md#shortcut) - [Acción estándar](properties_Action.md#standard-action) - [Título](properties_Object.md#title) - [Título/Posición de la imagen](properties_TextAndPicture.md#title-picture-position)(2) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Subrayado](properties_Text.md#underline) - [Variable o expresión](properties_Object.md#variable-or-expression) - [Tamaño vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
 > (1) No compatible con los estilos [Regular](#regular) y [Plano](#flat).<br/> (2) No compatible con los estilos [Regular](#regular), [Plano](#flat), [Divulgación](#disclosure) y [Contraer/Expandir](#collapseexpand).
 
 Existen propiedades específicas adicionales, dependiendo del [estilo-de-botón](#button-styles):
 
-- Custom: [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin)
+- Personalizado: [Ruta de fondo](properties_TextAndPicture.md#backgroundPathname) - [Margen horizontal](properties_TextAndPicture.md#horizontalMargin) - [Desplazamiento icono](properties_TextAndPicture.md#icon-offset) - [Margen vertical](properties_TextAndPicture.md#verticalMargin)
 - Plana, Regular: [Tres Estados](properties_Display.md#three-states)

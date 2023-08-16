@@ -69,7 +69,7 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/views.png)           | [Gestão da vistas](#views)                                | Este botão apresenta ou oculta a paleta de vistas. Esta função é detalhada em Utilização de vistas de objeto.                                                                                                                                                                                                                                                                   |
 | ![](../assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                            | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                                                                          |
 | ![](../assets/en/FormEditor/library.png)         | [Librería de objetos preconfigurada](objectLibrary.html)  | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                                                                         |
-| ![](../assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                     | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                                                                            |
+| ![](../assets/en/FormEditor/listBoxBuilder1.png) | [Criação de list box](#list-box-builder)                  | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                                                                            |
 
 ### Barra de objetos
 
@@ -268,34 +268,34 @@ To display this dialog box, select the objects you want to align then choose the
 
 - In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.</p>
 
-- To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**. In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.OR:To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list.<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.</p>
+- To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**. In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Por exemplo, se quiser realizar um alinhamento correcto num conjunto de objectos, o objecto mais à direita será utilizado como âncora. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.OR:To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list.<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. Neste caso, a posição do objeto de referência não será alterada.</p>
 
-You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
-> This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
+Pode pré-visualizar os resultados do alinhamento clicando no botão **Pré-visualização**. Os objetos são então alinhados no editor de formulários, mas como a caixa de diálogo não desaparece, ainda é possível cancelar ou aplicar o alinhamento.
+> Esta caixa de diálogo permite-lhe alinhar e distribuir objetos numa única operação. Para mais informações sobre como distribuir objetos, consultar [Distribuir objetos](#distributing-objects).
 
 #### Utilização da Rede Magnética
 
-The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form.
+O editor de formulários fornece uma grelha magnética virtual que pode ajudá-lo a colocar e alinhar objetos num formulário. O alinhamento magnético dos objetos baseia-se na sua posição em relação uns aos outros. A grelha magnética só pode ser utilizada quando pelo menos dois objetos estão presentes no formulário.
 
-This works as follows: When you move an object in the form, 4D indicates possible locations for this object based on noticeable alignments with other form objects. É estabelecido um alinhamento perceptível cada vez que isso acontece:
+Isso funciona da seguinte maneira: quando se move um objeto no formulário, 4D indica possíveis localizações para este objeto baseado em alinhamentos notáveis com outros objetos do formulário. É estabelecido um alinhamento perceptível cada vez que isso acontece:
 
 - Horizontalmente, os bordos ou centros de dois objetos coincidem,
 - Verticalmente, as arestas de dois objectos coincidem.
 
-When this happens, 4D places the object at the location and displays a red line indicating the noticeable alignment taken into account:
+Quando isso acontece, 4D coloca o objeto no local e mostra uma linha vermelha indicando o alinhamento perceptível considerado:
 
 ![](../assets/en/FormEditor/magneticGrid1.png)
 
-Concerning the distribution of objects, 4D proposes a distance based on interface standards. Like with magnetic alignment, red lines indicate the noticeable differences once they are reached.
+No que diz respeito à distribuição dos objetos, 4D propõe uma distância baseada em normas de interface. Tal como no caso do alinhamento magnético, as linhas vermelhas indicam as diferenças visíveis quando estas são atingidas.
 
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
-Esta operação aplica-se a todos os tipos de objetos dos formulários. The Magnetic Grid can be enabled or disabled at any time using the **Magnetic Grid** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
+Esta operação aplica-se a todos os tipos de objetos dos formulários. A grelha magnética pode ser ativada ou desactivada em qualquer altura utilizando o comando **Ativar a grade magnética** no menu **Formulário** ou no menu contextual do editor. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
 > The Magnetic Grid also influences the manual resizing of objects.
 
 ### Distribuição de objectos
 
-You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. The latter allows you to align and distribute objects in one operation.
+You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. Este último permite-lhe alinhar e distribuir objetos numa única operação.
 > When the [Magnetic Grid](#using-the-magnetic-grid) is on, a visual guide is also provided for distribution when an object is moved manually.
 
 Para distribuir objetos com igual espaçamento:
@@ -304,7 +304,7 @@ Para distribuir objetos com igual espaçamento:
 
 2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OU<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.![](../assets/en/FormEditor/distributionTool.png)ORSelect a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.4D distributes the objects accordingly. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
 
-To distribute objects using the Align and Distribute dialog box:
+Para distribuir objetos utilizando a caixa de diálogo Alinhar e distribuir:
 
 1. Seleccione os objectos que pretende distribuir.
 
@@ -318,11 +318,11 @@ To distribute objects using the Align and Distribute dialog box:
 - Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
 
  You can preview the actual result of your settings by clicking on the **Preview** button: the operation is carried out in the Form editor but the dialog box stays in the foreground. You can then **Cancel** or **Apply** the modifications.
-> This dialog box lets you combine object alignment and distribution. For more information about alignment, refer to [Aligning objects](#aligning-objects).
+> Esta caixa de diálogo permite-lhe combinar o alinhamento e a distribuição de objetos. For more information about alignment, refer to [Aligning objects](#aligning-objects).
 
-### Layering objects
+### Gerenciar os planos dos objetos
 
-You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D provides four menu items, **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** that let you “layer” objects on the form. These layers also determine the default entry order (see Modifying data entry order). The figure below shows objects in front of and behind other objects:
+You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D provides four menu items, **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** that let you “layer” objects on the form. These layers also determine the default entry order (see Modifying data entry order). A figura abaixo mostra objetos à frente e atrás de outros objetos:
 
 ![](../assets/en/FormEditor/layering.png)
 
@@ -386,11 +386,11 @@ Para criar um grupo de entrada de dados:
 1. Escolha **Ordem de entrada** a partir do menu *Formulário* ou clique no botão na barra de ferramentas.
 2. Draw a marquee around the objects you want to group for data entry.
 
-When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. The data entry order for the remaining objects adjusts as necessary.
+When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. A ordem de entrada de dados para os restantes objetos ajustam-se conforme necessário.
 
 #### Excluir um objeto da ordem de entrada
 
-By default, all objects that support the focusable property are included in the entry order. Para excluir um objeto da ordem de entrada:
+Por defeito, todos os objetos que suportam a propriedade focusable são incluídos na ordem de entrada. Para excluir um objeto da ordem de entrada:
 
 1. Selecionar o modo ordem de entrada e, em seguida
 
@@ -412,11 +412,11 @@ A barra de ferramentas do editor de formulários fornece um botão CSS para a vi
 
 Seleccione um dos seguintes modos de pré-visualização a partir do menu:
 
-| Ícone barra de ferramentas              | Modo de pré-visualização CSS | Descrição                                                                                                                  |
-| --------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/cssNo.png)  | Nenhum                       | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.                           |
-| ![](../assets/en/FormEditor/cssWin.png) | Windows                      | Os valores CSS para a plataforma Windows são aplicados no formulário. CSS values and icons displayed in the Property List. |
-| ![](../assets/en/FormEditor/cssMac.png) | macOS                        | CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.                |
+| Ícone barra de ferramentas              | Modo de pré-visualização CSS | Descrição                                                                                                                         |
+| --------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/cssNo.png)  | Nenhum                       | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.                                  |
+| ![](../assets/en/FormEditor/cssWin.png) | Windows                      | Os valores CSS para a plataforma Windows são aplicados no formulário. Valores CSS e ícones apresentados na Lista de Propriedades. |
+| ![](../assets/en/FormEditor/cssMac.png) | macOS                        | Os valores CSS para a plataforma macOS são aplicados no formulário. Valores CSS e ícones apresentados na Lista de Propriedades.   |
 > If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
 
 The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
@@ -451,13 +451,13 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 | ![](../assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
 | ![](../assets/en/FormEditor/cssIconMixed.png) | Displayed when an attribute value defined in a style sheet for at least one item in a group or a selection of multiple objects is different from the other objects |
 
-## List Box Builder
+## Criação de list box
 
 You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
 
 The List box builder lets you create and fill entity selection list boxes in a few simple operations.
 
-### Using the List Box Builder
+### Usando o gerador de list box
 
 1. In the Form Editor toolbar, click on the List box builder icon:
 
@@ -543,7 +543,7 @@ A gestão das vistas é efetuada através da paleta de vistas.
 
 ![](../assets/en/FormEditor/viewEditor.png)
 
-### Accessing the View palette
+### Aceder à paleta de vistas
 
 Existem três formas de aceder à paleta de vistas:
 
@@ -604,11 +604,11 @@ By default views are named as "View" + the view number, however you can change t
 
 Para mudar o nome de uma vista, pode utilizar:
 
-- Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+- Double-click directly on the view name (the selected view in this case). O nome torna-se então editável:
 
  ![](../assets/en/FormEditor/rename.png)
 
-- Clique com o botão direito do rato no nome da vista. The name then becomes editable:
+- Clique com o botão direito do rato no nome da vista. O nome torna-se então editável:
 
  ![](../assets/en/FormEditor/rename2.png)
 
@@ -697,25 +697,25 @@ By default, all views are shown, as indicated by the *Show/Hide* icon:
 
 ![](../assets/en/FormEditor/showHide.png)
 
-To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the corresponding view are no longer shown in the form:
+Para ocultar uma vista, clique no ícone *Mostrar/Ocultar*. Em seguida, é escurecida e os objetos da vista correspondente deixam de ser mostrados no formulário:
 
 ![](../assets/en/FormEditor/hidden.png)
-> The [Current view](#before-you-begin) cannot be hidden.
+> A [vista atual](#before-you-begin) não pode ser ocultada.
 
-To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
+Para mostrar uma vista oculta, basta selecioná-la ou clicar no ícone *Mostrar/Ocultar* para essa vista.
 
 #### Bloqueio de objetos de uma vista
 
-É possível bloquear os objectos de uma vista. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. Esta função é útil para evitar erros de tratamento.
+É possível bloquear os objectos de uma vista. Isto impede que sejam selecionados, alterados ou eliminados do formulário. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. Esta função é útil para evitar erros de tratamento.
 
 By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut, which means that the view is now locked:
+To lock the objects of a view, click the *Lock/Unlock* icon. O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
-> The [Current view](#before-you-begin) cannot be locked.
+> A [vista atual](#before-you-begin) não pode ser bloqueada.
 
 To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
 
@@ -725,9 +725,9 @@ Pode fazer zoom no formulário atual. Switch to “Zoom” mode by clicking on t
 
 ![](../assets/en/FormEditor/zoom.png)
 
-- When you click on the magnifying glass, the cursor changes into one. You can then click in the form to increase the display or hold down Shift and click to reduce the display percentage.
+- Quando se clica na lupa, o cursor transforma-se numa lupa. Pode então clicar no formulário para aumentar a visualização ou manter premida a tecla Shift e clicar para reduzir a percentagem de visualização.
 - When you click on a percentage bar, the display is immediately modified.
 
-In Zoom mode, all Form editor functions remain available(*).
+No modo Zoom, todas as funções do editor de formulários permanecem disponíveis(*).
 
 (*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.

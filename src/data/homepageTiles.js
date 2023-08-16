@@ -162,7 +162,7 @@ const Sections = [
          <Link to={localizedLinks["homepage.sections.textensions.4D-Write-Pro-Reference-url"]}>
           <Translate>4D Write Pro</Translate>
         </Link>
-        <Link to="https://github.com/4d/4D-WritePro-Interface">
+        <Link to="WritePro/writeprointerface">
           <Translate>4D Write Pro Interface</Translate>
         </Link>
        <Link to="https://github.com/4d/4D-Mobile-App-Server">

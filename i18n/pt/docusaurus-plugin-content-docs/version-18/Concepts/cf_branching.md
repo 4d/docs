@@ -1,6 +1,6 @@
 ---
 id: branching
-title: Branching structures
+title: Estruturas condicionais
 ---
 
 ## If... Else... End if

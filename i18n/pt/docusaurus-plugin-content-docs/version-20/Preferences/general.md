@@ -18,7 +18,7 @@ This option allows you to configure the default 4D display at startup, when the 
 *   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
 > > > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
-### Automatic form creation
+### Criação de formulários automática
 
 > This option is only used in binary databases; it is ignored in project architecture. Ver doc.4d.com.
 
@@ -49,7 +49,7 @@ Estão disponíveis três opções:
 *   **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
 *   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
-### Appearance (macOS only)
+### Aspeto (apenas macOS)
 
 This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
 

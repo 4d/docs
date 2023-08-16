@@ -25,7 +25,7 @@ Esta propriedade designa o tipo de [objecto formulárioactivo ou inactivo](formO
 
 ## Nome de objeto
 
-Each active form object is associated with an object name. Each object name must be unique.
+Cada objeto de formulário ativo está associado a um nome de objeto. Cada nome de objeto deve ser único.
 > Os nomes dos objectos estão limitados a um tamanho de 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
@@ -48,7 +48,7 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 > See also **[Expression](properties_DataSource#expression)** for Selection and collection type list box columns.
 
-Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
+Esta propriedade especifica a fonte dos dados. Each active form object is associated with an object name and a variable name. O nome da variável pode diferir do nome do objeto. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 > O tamanho do nome da variável é limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
 The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
@@ -64,10 +64,10 @@ You can use an expression as data source for an object. Any valid 4D expression 
 
 You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
 
-When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. Há duas formas de o fazer:
+When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). Esta variável temporária será destruída quando o formulário for fechado. Para que este princípio funcione em modo compilado, é imperativo que as variáveis dinâmicas sejam explicitamente tipadas. Há duas formas de o fazer:
 
-- You can set the type using the [Expression type](#expression-type) property.
-- You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
+- Pode definir o tipo utilizando a propriedade [Tipo de expressão](#expression-type).
+- É possível utilizar um código de inicialização específico quando o formulário é carregado, que utiliza, por exemplo, o comando `VARIABLE TO VARIABLE`:
 
 ```4d
  If(Form event=On Load)
@@ -78,18 +78,18 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por exemplo:
+No código 4D, as variáveis dinâmicas podem ser acedidas através de um ponteiro obtido com o comando `OBJECT Get pointer`. Por exemplo:
 
 ```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
- $p :=OBJECT Get pointer(Object named;"tstart")
+  // atribuir a hora 12:00:00 à variável do objeto "tstart"
+ $p :=OBJECT Get pointer(Object named; "tstart")
  $p->:=?12:00:00?
 ```
 
 Este mecanismo tem duas vantagens:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
+- Por outro lado, pode ser utilizado para limitar a utilização da memória. De facto, os objectos formulário só funcionam com variáveis processo ou inter-processo. No entanto, no modo compilado, uma instância de cada variável de processo é criada em todos os processos, incluindo os processos do servidor. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 ### List box array
 
@@ -97,9 +97,9 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados           | Valores possíveis         |
-| ---------- | ----------------------- | ------------------------- |
-| dataSource | string, or string array | <ul><li>4D variable, field name, or arbitrary complex language expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
+| Nome       | Tipo de dados              | Valores possíveis         |
+| ---------- | -------------------------- | ------------------------- |
+| dataSource | string ou array de strings | <ul><li>4D variable, field name, or arbitrary complex language expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
 
 #### Objectos suportados
 
@@ -111,19 +111,19 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
+Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. Não digita efetivamente a variável em si. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
 
 However, this property has a typing function in the following specific cases:
 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
-- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Também estão disponíveis quaisquer formatos personalizados existentes.
+- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. O tipo de texto não tem formatos de visualização específicos. Também estão disponíveis quaisquer formatos personalizados existentes.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 #### Gramática JSON
 
 | Nome               | Tipo de dados | Valores possíveis         |
 | ------------------ | ------------- | ------------------------- |
-| dataSourceTypeHint | string        | <ul><li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
+| dataSourceTypeHint | string        | <ul><li>**objectos standard:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
 
 #### Objectos suportados
 
@@ -133,13 +133,13 @@ However, this property has a typing function in the following specific cases:
 
 ## Classe CSS
 
-A list of space-separated words used as class selectors in css files.
+Uma lista de palavras separadas por espaços utilizadas como selectores de classe em ficheiros css.
 
 #### Gramática JSON
 
-| Nome    | Tipo de dados | Valores possíveis                                         |
-| ------- | ------------- | --------------------------------------------------------- |
-| "class" | string        | One string with CSS name(s) separated by space characters |
+| Nome    | Tipo de dados | Valores possíveis                                                                   |
+| ------- | ------------- | ----------------------------------------------------------------------------------- |
+| "class" | string        | Uma cadeia de caracteres com o(s) nome(s) do CSS separados por caracteres de espaço |
 
 #### Objectos suportados
 
@@ -162,9 +162,9 @@ The collection or the entity selection must be available to the form when it is 
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                            |
-| ---------- | ------------- | ------------------------------------------------------------ |
-| dataSource | string        | Expression that returns a collection or an entity selection. |
+| Nome       | Tipo de dados | Valores possíveis                                              |
+| ---------- | ------------- | -------------------------------------------------------------- |
+| dataSource | string        | Expressão que devolve uma coleção ou uma seleção de entidades. |
 
 #### Objectos suportados
 
@@ -201,9 +201,9 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis                                             |
-| -------------- | ------------- | ------------------------------------------------------------- |
-| pluginAreaKind | string        | Name of the plug-in external area (starts with a % character) |
+| Nome           | Tipo de dados | Valores possíveis                                          |
+| -------------- | ------------- | ---------------------------------------------------------- |
+| pluginAreaKind | string        | Nome da área externa do plug-in (começa com um carácter %) |
 
 #### Objectos suportados
 
@@ -229,15 +229,15 @@ Enables radio buttons to be used in coordinated sets: only one button at a time 
 
 ## Título
 
-Permite inserir uma etiqueta num objeto. The font and the style of this label can be specified.
+Permite inserir uma etiqueta num objeto. O tipo de letra e o estilo desta etiqueta podem ser especificados.
 
-You can force a carriage return in the label by using the \ character (backslash).
+Pode forçar um retorno de carro na etiqueta utilizando o carácter \ (barra invertida).
 
 ![](../assets/en/FormObjects/property_title.png)
 
 Para inserir um \ na etiqueta, introduzir "&#92;&#92;".
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+Por padrão, a etiqueta é colocada no centro do objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
 For database translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -258,7 +258,7 @@ For database translation purposes, you can enter an XLIFF reference in the title
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > The calculation for footers can also be set using the `LISTBOX SET FOOTER CALCULATION` 4D command.
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
 | Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
@@ -266,7 +266,7 @@ There are several types of calculations available. The following table shows whi
 | Máximo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |
 | Soma                   | X   |      | X    |      | X    |      | Igual ao tipo de coluna |
 | Contagem               | X   | X    | X    | X    | X    | X    | Longint                 |
-| Average                | X   |      |      | X    |      |      | Real                    |
+| Média                  | X   |      |      | X    |      |      | Real                    |
 | Desvio padrão(*)       | X   |      |      | X    |      |      | Real                    |
 | Variância(*)           | X   |      |      | X    |      |      | Real                    |
 | Soma dos quadrados(*)  | X   |      |      | X    |      |      | Real                    |

@@ -9,9 +9,9 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Localização do parâmetro                | Scope                                               | Involved web server                                            |
+| Localização do parâmetro                | Scope                                               | Servidor Web a ser usado                                       |
 | --------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
-| [webServer object](webServerObject.md)  | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| [objeto webServer](webServerObject.md)  | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
 | `WEB SET OPTION` or a `WEB XXX` command | Temporário (sessão atual)                           | Servidor principal                                             |
 | **Settings** dialog box (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
@@ -35,7 +35,7 @@ You can modify the size of the cache in the **Pages Cache Size** area. The value
 
 | Pode ser definido com | Nome                | Comentários                                                                                                                             |
 | --------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| webServer object      | `certificateFolder` | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
+| objeto webServer      | `certificateFolder` | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
 
 Folder where the TLS certificate files for the web server are located.
 
@@ -49,7 +49,7 @@ With 4D in remote mode, these files must be located in the local resources folde
 
 | Pode ser definido com              | Nome                                  | Comentários                    |
 | ---------------------------------- | ------------------------------------- | ------------------------------ |
-| webServer object                   | `characterSet`                        | Integer MIBEnum ou string Name |
+| objeto webServer                   | `characterSet`                        | Integer MIBEnum ou string Name |
 | `WEB SET OPTION`                   | `Web character set`                   | Integer MIBEnum ou string Name |
 | Caixa de diálogos de configurações | Página Opções (II) /Conjunto standard | Menu pop-up                    |
 
@@ -60,7 +60,7 @@ Defines the set of characters to be used by the 4D web server. O valor padrão r
 
 | Pode ser definido com | Nome                                               | Comentários |
 | --------------------- | -------------------------------------------------- | ----------- |
-| webServer object      | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text        |
+| objeto webServer      | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text        |
 
 Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
@@ -70,7 +70,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 | Pode ser definido com              | Nome                                                    | Comentários                                                                    |
 | ---------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| webServer object                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
 | `WEB SET OPTION`                   | `Web CORS settings`                                     | Collection of objects (List of allowed hosts and methods for the CORS service) |
 | Caixa de diálogos de configurações | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)        |
 
@@ -114,7 +114,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, 
 
 | Pode ser definido com | Nome            | Comentários |
 | --------------------- | --------------- | ----------- |
-| webServer object      | `debugLog`      | number      |
+| objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
 Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
@@ -129,7 +129,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 
 | Pode ser definido com              | Nome                                                       | Comentários                               |
 | ---------------------------------- | ---------------------------------------------------------- | ----------------------------------------- |
-| webServer object                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text                                      |
+| objeto webServer                   | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text                                      |
 | `WEB SET HOME PAGE`                |                                                            | Pode ser diferente para cada processo web |
 | Caixa de diálogos de configurações | Página configuração/Página inicial padrão                  |                                           |
 
@@ -153,7 +153,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 
 | Pode ser definido com              | Nome                                               | Comentários                                         |
 | ---------------------------------- | -------------------------------------------------- | --------------------------------------------------- |
-| webServer object                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
+| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
 | `WEB SET OPTION`                   | `Web CORS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)               |
 | Caixa de diálogos de configurações | Página Options (II)/Activar CORS                   | Não seleccionado por defeito                        |
 
@@ -171,7 +171,7 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 
 | Pode ser definido com              | Nome                                               | Comentários |
 | ---------------------------------- | -------------------------------------------------- | ----------- |
-| webServer object                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean     |
+| objeto webServer                   | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean     |
 | `WEB SET OPTION`                   | `Web HTTP enabled`                                 |             |
 | Caixa de diálogos de configurações | Configuração/Ativar HTTP                           |             |
 
@@ -181,7 +181,7 @@ Indicates whether or not the web server will accept non-secure connections.
 
 | Pode ser definido com              | Nome                                                 | Comentários |
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
-| webServer object                   | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean     |
+| objeto webServer                   | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean     |
 | `WEB SET OPTION`                   | `Web HTTPS enabled`                                  |             |
 | Caixa de diálogos de configurações | Configuration page/Enable HTTPS                      |             |
 
@@ -191,7 +191,7 @@ Estado da comunicação por HTTPS. This option is described in [this section](Ad
 
 | Pode ser definido com | Nome                                               | Comentários                                          |
 | --------------------- | -------------------------------------------------- | ---------------------------------------------------- |
-| webServer object      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Booleano, true para ativar HSTS (por padrão é false) |
+| objeto webServer      | [`HSTSEnabled`](API/WebServerClass.md#hstsenabled) | Booleano, true para ativar HSTS (por padrão é false) |
 | `WEB SET OPTION`      | `Web HSTS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)                |
 
 Estado do HTTP Strict Transport Security (HSTS).
@@ -208,7 +208,7 @@ HSTS allows the 4D web server to declare that browsers should only interact with
 
 | Pode ser definido com | Nome                                             | Comentários        |
 | --------------------- | ------------------------------------------------ | ------------------ |
-| webServer object      | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | número em segundos |
+| objeto webServer      | [`HSTSMaxAge`](API/WebServerClass.md#hstsmaxage) | número em segundos |
 | `WEB SET OPTION`      | `Web HSTS max age`                               | número em segundos |
 
 Specifies the maximum length of time (in seconds) that HSTS is active for each new client connection. Esta informação é armazenada no lado do Cliente durante a duração especificada. O valor por defeito é 63072000 (2 anos)
@@ -219,7 +219,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 | Pode ser definido com | Nome                                                                 | Comentários                      |
 | --------------------- | -------------------------------------------------------------------- | -------------------------------- |
-| webServer object      | [`HTTPCompressionLevel`](API/WebServerClass.md#httpcompressionlevel) |                                  |
+| objeto webServer      | [`HTTPCompressionLevel`](API/WebServerClass.md#httpcompressionlevel) |                                  |
 | `WEB SET OPTION`      | `Web HTTP compression level`                                         | Aplica-se à Web e ao Serviço Web |
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
@@ -230,7 +230,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 
 | Pode ser definido com | Nome                                                                         | Comentários |
 | --------------------- | ---------------------------------------------------------------------------- | ----------- |
-| webServer object      | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |             |
+| objeto webServer      | [`HTTPCompressionThreshold`](API/WebServerClass.md#httpcompressionthreshold) |             |
 | `WEB SET OPTION`      | `Web HTTP compression threshold`                                             |             |
 
 In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
@@ -241,7 +241,7 @@ Passa o tamanho expresso em bytes como valor. By default, the compression thresh
 
 | Pode ser definido com              | Nome                                         | Comentários |
 | ---------------------------------- | -------------------------------------------- | ----------- |
-| webServer object                   | [`HTTPPort`](API/WebServerClass.md#httpport) | number      |
+| objeto webServer                   | [`HTTPPort`](API/WebServerClass.md#httpport) | number      |
 | `WEB SET OPTION`                   | `Web port ID`                                |             |
 | Caixa de diálogos de configurações | Página Configuração/Porta HTTP               |             |
 
@@ -256,10 +256,10 @@ If you specify 0, 4D will use the default HTTP port number 80.
 
 ## HTTP Trace
 
-| Pode ser definido com | Nome                                           | Comentários                     |
-| --------------------- | ---------------------------------------------- | ------------------------------- |
-| webServer object      | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Boolean, padrão = false         |
-| `WEB SET OPTION`      | `Web HTTP TRACE`                               | Integer, default = 0 (disabled) |
+| Pode ser definido com | Nome                                           | Comentários                        |
+| --------------------- | ---------------------------------------------- | ---------------------------------- |
+| objeto webServer      | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Boolean, padrão = false            |
+| `WEB SET OPTION`      | `Web HTTP TRACE`                               | Integer, 0 por padrão (desativado) |
 
 HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
 
@@ -267,17 +267,17 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 
 | Pode ser definido com              | Nome                                           | Comentários |
 | ---------------------------------- | ---------------------------------------------- | ----------- |
-| webServer object                   | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number      |
+| objeto webServer                   | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number      |
 | `WEB SET OPTION`                   | `Web HTTPS port ID`                            |             |
 | Caixa de diálogos de configurações | Página Configuração/Porta HTTPS                |             |
 
 Listening IP port number for HTTPS connections via TLS. Por defeito, o valor é 443 (valor padrão). See also [HTTP Port](#http-port) for information on port numbers.
 
-## Inactive Process Timeout
+## Tempo limite do processo inativo
 
 | Pode ser definido com              | Nome                                                                     | Comentários |
 | ---------------------------------- | ------------------------------------------------------------------------ | ----------- |
-| webServer object                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |             |
+| objeto webServer                   | [`inactiveProcessTimeout`](API/WebServerClass.md#inactiveprocesstimeout) |             |
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                           |             |
 | Caixa de diálogos de configurações | Página Opções (I)/Tempo limite dos processos inativos                    | Slider      |
 
@@ -285,22 +285,22 @@ Life duration (in minutes) of inactive processes associated with sessions. At th
 
 Default: 480 minutes (pass 0 to restore the default value)
 
-## Inactive Session Timeout
+## Tempo limite da sessão inativa
 
 | Pode ser definido com | Nome                                                                     | Comentários |
 | --------------------- | ------------------------------------------------------------------------ | ----------- |
-| webServer object      | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |             |
+| objeto webServer      | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |             |
 | `WEB SET OPTION`      | `Web inactive session timeout`                                           |             |
 
 Life duration (in minutes) of inactive sessions (duration set in cookie). No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
 Default: 480 minutes (pass 0 to restore the default value)
 
-## IP Address to listen
+## Endereço IP de escuta
 
 | Pode ser definido com              | Nome                                                           | Comentários |
 | ---------------------------------- | -------------------------------------------------------------- | ----------- |
-| webServer object                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
+| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
 | `WEB SET OPTION`                   | `Web IP address to listen`                                     |             |
 | Caixa de diálogos de configurações | Configuration page/IP Address                                  | Menu pop-up |
 
@@ -333,13 +333,13 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 
 | Pode ser definido com              | Nome                                               | Comentários |
 | ---------------------------------- | -------------------------------------------------- | ----------- |
-| webServer object                   | [`keepSession`](API/WebServerClass.md#keepsession) |             |
+| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession) |             |
 | `WEB SET OPTION`                   | `Web keep session`                                 |             |
 | Caixa de diálogos de configurações | Página Opções (I)/Gestão automática de sessões     |             |
 
 Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
 
-Default is true (enabled).
+True por padrão (ativado).
 
 > When this option is checked, the "Reuse Temporary Contexts" option is automatically checked (and locked).
 
@@ -347,7 +347,7 @@ Default is true (enabled).
 
 | Pode ser definido com              | Nome                                                 | Comentários |
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
-| webServer object                   | [`logRecording`](API/WebServerClass.md#logrecording) |             |
+| objeto webServer                   | [`logRecording`](API/WebServerClass.md#logrecording) |             |
 | `WEB SET OPTION`                   | `Web log recording`                                  |             |
 | Caixa de diálogos de configurações | Log (type) page/Log Format                           | Menu pop-up |
 
@@ -369,7 +369,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 | Pode ser definido com              | Nome                                                                     | Comentários |
 | ---------------------------------- | ------------------------------------------------------------------------ | ----------- |
-| webServer object                   | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |             |
+| objeto webServer                   | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |             |
 | `WEB SET OPTION`                   | `Web max concurrent processes`                                           |             |
 | Caixa de diálogos de configurações | Options (I) page/Maximum Concurrent Web Processes                        |             |
 
@@ -381,7 +381,7 @@ Por padrão, o valor é 100. You can set the number anywhere between 10 and 3200
 
 | Pode ser definido com | Nome                                                     | Comentários |
 | --------------------- | -------------------------------------------------------- | ----------- |
-| webServer object      | [`maxRequestSize`](API/WebServerClass.md#maxrequestsize) |             |
+| objeto webServer      | [`maxRequestSize`](API/WebServerClass.md#maxrequestsize) |             |
 | `WEB SET OPTION`      | `Web maximum requests size`                              |             |
 
 Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
@@ -394,7 +394,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 
 | Pode ser definido com | Nome                                               | Comentários |
 | --------------------- | -------------------------------------------------- | ----------- |
-| webServer object      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
+| objeto webServer      | [`maxSessions`](API/WebServerClass.md#maxsessions) |             |
 | `WEB SET OPTION`      | `Web max sessions`                                 |             |
 
 Número máximo de sessões simultâneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
@@ -405,7 +405,7 @@ Default value: 100 (pass 0 to restore the default value).
 
 | Pode ser definido com | Nome                                                   | Comentários |
 | --------------------- | ------------------------------------------------------ | ----------- |
-| webServer object      | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
+| objeto webServer      | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number      |
 
 Versão mínima de TLS aceita para ligações. As tentativas de ligação de clientes que suportam apenas versões abaixo do mínimo serão rejeitadas.
 
@@ -424,7 +424,7 @@ Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 | Pode ser definido com | Nome                                 | Comentários |
 | --------------------- | ------------------------------------ | ----------- |
-| webServer object      | [`name`](API/WebServerClass.md#name) |             |
+| objeto webServer      | [`name`](API/WebServerClass.md#name) |             |
 
 Nome da aplicação do servidor web. Útil quando são iniciados servidores Web de componentes.
 
@@ -432,7 +432,7 @@ Nome da aplicação do servidor web. Útil quando são iniciados servidores Web 
 
 | Pode ser definido com | Nome                                                     | Comentários     |
 | --------------------- | -------------------------------------------------------- | --------------- |
-| webServer object      | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Somente leitura |
+| objeto webServer      | [`openSSLVersion`](API/WebServerClass.md#opensslversion) | Somente leitura |
 
 Versão da biblioteca OpenSSL utilizada.
 
@@ -440,7 +440,7 @@ Versão da biblioteca OpenSSL utilizada.
 
 | Pode ser definido com | Nome                                                                   | Comentários             |
 | --------------------- | ---------------------------------------------------------------------- | ----------------------- |
-| webServer object      | [`perfectForwardSecrecy`](API/WebServerClass.md#perfectforwardsecrecy) | Booleano, só de leitura |
+| objeto webServer      | [`perfectForwardSecrecy`](API/WebServerClass.md#perfectforwardsecrecy) | Booleano, só de leitura |
 
 True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forward-secrecy-pfs) section).
 
@@ -482,7 +482,7 @@ In this case, robots are not allowed to access the entire site.
 
 | Pode ser definido com              | Nome                                             | Comentários                                                                                                                            |
 | ---------------------------------- | ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| webServer object                   | [`rootFolder`](API/WebServerClass.md#rootfolder) | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
+| objeto webServer                   | [`rootFolder`](API/WebServerClass.md#rootfolder) | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function |
 | `WEB SET ROOT FOLDER`              |                                                  |                                                                                                                                        |
 | Caixa de diálogos de configurações | Página configuração/Raiz HTML padrão             |                                                                                                                                        |
 
@@ -506,11 +506,11 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 
 > When the HTML root folder is modified, the cache is cleared so as to not store files whose access is restricted.
 
-## Session Cookie Domain
+## Domínio do cookie de sessão
 
 | Pode ser definido com | Nome                                                               | Comentários |
 | --------------------- | ------------------------------------------------------------------ | ----------- |
-| webServer object      | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
+| objeto webServer      | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`      | `Web session cookie domain`                                        |             |
 
 Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
@@ -519,7 +519,7 @@ Value of the "domain" field of the session cookie. Useful for controlling the sc
 
 | Pode ser definido com | Nome                                                           | Comentários |
 | --------------------- | -------------------------------------------------------------- | ----------- |
-| webServer object      | [`sessionCookieName`](API/WebServerClass.md#sessioncookiename) |             |
+| objeto webServer      | [`sessionCookieName`](API/WebServerClass.md#sessioncookiename) |             |
 | `WEB SET OPTION`      | `Web session cookie name`                                      |             |
 
 Name of the cookie used for saving the session ID. Predefinição = "4DSID".
@@ -528,7 +528,7 @@ Name of the cookie used for saving the session ID. Predefinição = "4DSID".
 
 | Pode ser definido com | Nome                                                           | Comentários |
 | --------------------- | -------------------------------------------------------------- | ----------- |
-| webServer object      | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |             |
+| objeto webServer      | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |             |
 | `WEB SET OPTION`      | `Web session cookie path`                                      |             |
 
 campo "caminho" do cookie da sessão. Utilizado para controlar o alcance dos cookies da sessão. Se definir, por exemplo, o valor "/4DACTION" para este selector, o cliente só enviará um cookie para pedidos dinâmicos que comecem por 4DACTION, e não para imagens, páginas estáticas, etc.
@@ -537,7 +537,7 @@ campo "caminho" do cookie da sessão. Utilizado para controlar o alcance dos coo
 
 | Pode ser definido com | Nome                                                                   | Comentários |
 | --------------------- | ---------------------------------------------------------------------- | ----------- |
-| webServer object      | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |             |
+| objeto webServer      | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |             |
 
 Value of the `SameSite` attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
 
@@ -553,7 +553,7 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 > It is not recommended to set `SameSite=None` on a HTTP server since the `Secure` attribute will be missing (used in HTTPS only) and cookies will be blocked.
 
-## Use preemptive processes
+## Utilizar processos preemptivos
 
 | Pode ser definido com              | Nome                                              | Comentários |
 | ---------------------------------- | ------------------------------------------------- | ----------- |
@@ -561,7 +561,7 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
-## Deprecated Settings
+## Parâmetros obsoletos
 
 The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values.
 

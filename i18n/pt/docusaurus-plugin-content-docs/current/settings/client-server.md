@@ -77,7 +77,7 @@ In case of a modification, you need to restart the application for the change to
 
 :::
 
-#### Client-Server Connections Timeout
+#### Tempo para desconectar cliente-servidor
 
 This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. A opção Ilimitado remove o tempo limite. When this option is selected, client activity control is eliminated.
 
@@ -105,7 +105,7 @@ This setting can be used to globally set the updating mode for the local instanc
 
 ## Página Configuração IP
 
-### Allow-Deny Configuration Table
+### Tabela de configuração Autorização-Rejeição
 
 This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
 

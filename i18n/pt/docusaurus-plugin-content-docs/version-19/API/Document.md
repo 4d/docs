@@ -457,7 +457,7 @@ A função `.getContent()`  <!-- REF #document.getContent().Summary -->returns a
 
 **Valor retornado**
 
-A `Blob`.
+Um `Blob`.
 
 #### Exemplo
 

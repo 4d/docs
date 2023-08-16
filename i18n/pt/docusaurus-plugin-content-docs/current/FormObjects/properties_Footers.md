@@ -5,7 +5,7 @@ title: Rodapés
 
 ## Exibir rodapés
 
-This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). There is one footer per column; each footer is configured separately.
+This property is used to display or hide [list box column footers](listbox_overview.md#list-box-footers). Existe um rodapé por coluna; cada rodapé é configurado separadamente.
 
 #### Gramática JSON
 
@@ -21,13 +21,13 @@ This property is used to display or hide [list box column footers](listbox_overv
 
 ## Alto
 
-This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Both types of units can be used in the same list box:
+This property is used to set the row height for a list box footer in **pixels** or **text lines** (when displayed). Ambos os tipos de unidades podem ser utilizados no mesmo list box:
 
-* *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. Se um tipo de letra for demasiado grande, o texto é truncado. Moreover, pictures are truncated or resized according to their format.
+* *Pixel* - the height value is applied directly to the row concerned, regardless of the font size contained in the columns. Se um tipo de letra for demasiado grande, o texto é truncado. Além disso, as imagens são truncadas ou redimensionadas conforme o seu formato.
 
 * *Line* - the height is calculated while taking into account the font size of the row concerned.
-  * If more than one size is set, 4D uses the biggest one. For example, if a row contains "Verdana 18", "Geneva 12" and "Arial 9", 4D uses "Verdana 18" to determine the row height (for instance, 25 pixels). This height is then multiplied by the number of rows defined.
-  * This calculation does not take into account the size of pictures nor any styles applied to the fonts.
+  * Se mais de um tamanho for definido, 4D usa o maior. Por exemplo, se uma linha contém "Verdana 18", "Geneva 12" e "Arial 9", 4D usa "Verdana 18" para determinar a altura da linha (por exemplo, 25 pixeis). Esta altura é depois multiplicada pelo número de linhas definido.
+  * Este cálculo não tem em conta o tamanho das imagens nem os estilos aplicados aos tipos de letra.
   * In macOS, the row height may be incorrect if the user enters characters that are not available in the selected font. When this occurs, a substitute font is used, which may cause variations in size.
 > > > This property can also be set dynamically using the [LISTBOX SET FOOTERS HEIGHT](https://doc.4d.com/4Dv17R6/4D/17-R6/List-box-footer-specific-properties.300-4354808.en.html) command.
 
@@ -60,4 +60,4 @@ Note that converting back and forth may lead to an end result that is different 
 
 #### Veja também
 
-[Headers](properties_Headers.md) - [List box footers](listbox_overview.md#list-box-footers)
+[Cabeçalhos](properties_Headers.md) - [Rodapés List box](listbox_overview.md#list-box-footers)

@@ -9,9 +9,9 @@ This "Getting started" section is geared at first-time users who want an overall
 
 Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
 
-### Starting the web server
+### Iniciar o servidor Web
 
-To start the 4D web server:
+Para iniciar o servidor web 4D:
 
 1. Launch your 4D application and create a new, empty 4D project.
 2. In the **Run** menu, select **Start Web Server**.
@@ -124,7 +124,7 @@ You get the catalog, i.e. the list of exposed dataclasses and attributes in the 
 
 You can also get any data.
 
-3. Enter the following URL:
+3. Introduzir o seguinte URL:
 
 ```
 http://localhost/rest/Friends

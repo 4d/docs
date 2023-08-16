@@ -19,7 +19,7 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 > > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 
-## Open log file
+## Abrir ficheiro de registo
 
 Independente da verificação solicitada, 4D gera um arquivo de histórico na pasta `Logs` do banco de dados. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *ApplicationName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
@@ -38,7 +38,7 @@ The **Table list** button displays a detailed page that can be used to view and 
 
 Specifying the items to be verified lets you save time during the verification procedure.
 
-The main list displays all the tables of the database. For each table, you can limit the verification to the records and/or indexes. Expand the contents of a table or the indexed fields and select/deselect the checkboxes as desired. Por padrão, tudo está selecionado. You can also use the **Select all**, **Deselect all**, **All records** and **All indexes** shortcut buttons.
+A lista principal apresenta todas as tabelas da base de dados. For each table, you can limit the verification to the records and/or indexes. Expand the contents of a table or the indexed fields and select/deselect the checkboxes as desired. Por padrão, tudo está selecionado. You can also use the **Select all**, **Deselect all**, **All records** and **All indexes** shortcut buttons.
 
 Para cada linha da tabela, a coluna "Ação" indica as operações a realizar. When the table is expanded, the "Records" and "Indexed fields" rows indicate the number of items concerned.
 

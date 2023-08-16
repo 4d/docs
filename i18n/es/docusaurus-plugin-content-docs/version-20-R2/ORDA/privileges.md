@@ -59,7 +59,7 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 - Se puede acceder a un atributo calculado aunque no haya permisos en los atributos sobre los que se crea.
 - Default values: in the current implementation, only *Null* is available as default value.
 
-Setting permissions requires to be consistent, in particular:
+La definición de permisos requiere ser coherente, en particular:
 
 - los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
 - **promote** permission also need **describe** permission.

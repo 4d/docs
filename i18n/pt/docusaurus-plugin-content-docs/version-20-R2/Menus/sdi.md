@@ -4,7 +4,7 @@ title: Modo SDI em Windows
 ---
 
 
-SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window. On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar.
+No Windows, os desenvolvedores 4D podem testar e configurar suas aplicações 4D fundidas para trabalhar como aplicações SDI (Single-Document Interface). Nas aplicações SDI, cada janela é independente das outras e pode ter a sua própria barra de menus. As aplicações SDI são opostas às aplicações MDI (Multiple Documents Interface), em que todas as janelas estão contidas na janela principal e dependem dela.
 
 :::info
 
@@ -14,86 +14,86 @@ O conceito SDI/MDI não existe no macOS. Esta funcionalidade diz respeito apenas
 
 ## Disponibilidade do modo SDI
 
-The SDI mode is available in the following execution environment only:
+O modo SDI está disponível apenas nos seguintes ambientes de execução:
 
 - Windows
-- Merged [stand-alone](../Desktop/building.md#build-stand-alone-application) or [client](../Desktop/building.md#build-client-application) 4D application
-- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
+- Aplicação 4D fundida [autônoma](../Desktop/building.md#build-stand-alone-application) ou [cliente](../Desktop/building.md#build-client-application)
+- Funcionalidade [**Aplicação de teste** ](bars.md#previewing-menu-bars) disponível no menu **Executar**.
 
 ## Activação do modo SDI
 
-Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
+Para ativar o modo SDI na sua aplicação, basta selecionar a opção **Utilizar o modo SDI no Windows** na página ["Interface" da caixa de diálogo Parâmetros](../settings/interface.md#display-windows).
 
-Enabling and using the SDI mode in your application require the following steps:
+Uma vez ativada, para executar efetivamente a sua aplicação no modo SDI, pode:
 
-- Build a merged application (standalone and/or client application).
-- Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+- criar uma aplicação combinada (autônoma e/ou aplicação cliente) e executá-la no Windows, ou
+- selecione **Test Application in SDI Mode** a partir do menu **Run** no Windows para testar o desenvolvimento.
 
 :::info
 
-Because the development environment is executed in MDI, switching from development mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+Como o ambiente de desenvolvimento é executado em MDI, mudar do modo de desenvolvimento para o modo de tempo de execução usando o item de menu **Test Application in SDI Mode** é equivalente a reiniciar sua aplicação.
 
 :::
 
 
 ## Gerir aplicações no modo SDI
 
-Executing a 4D application in SDI mode does not require any specific implementation: existing menu bars are automatically moved in SDI windows themselves. However, you need to pay attention to specific principles that are listed below.
+A execução de uma aplicação 4D em modo SDI não requer qualquer implementação específica: as barras de menu existentes são automaticamente movidas nas próprias janelas SDI. No entanto, é necessário prestar atenção a princípios específicos que são enumerados a seguir.
 
-### Menus em janelas
+### Menus no Windows
 
-In SDI mode, the process menu bar is automatically displayed in every document type window opened during the process life (this excludes, for example, floating palettes). When the process menu bar is not visible, menu item shortcuts remain active however.
+No modo SDI, a barra de menu de processo é exibida automaticamente em todas as janelas de tipo de documento abertas pela duração do processo (isso exclui, por exemplo, paletas flutuantes). Entretanto, quando a barra de menu do processo não estiver visível, os atalhos dos itens de menu permanecem ativos.
 
-Menus are added above windows without modifiying their contents size:
+Os menus são adicionados por cima das janelas sem alterar o tamanho do seu conteúdo:
 
 ![](../assets/en/Menus/sdi1.png)
 
-Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
+Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necessário recalcular a posição dos objectos.
 
 #### Splash screen
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
-- If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
+- Se selecionar a opção de interface **Splash screen** nas [ Definições](../settings/interface.md#display-windows), a janela inicial conterá todos os menus que teriam sido apresentados na janela MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
+- Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.
 
 ### Depurador
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to development environment requires to abort execution and restart the application in MDI mode.
+Quando apresentada no modo SDI, a janela do  [depurador](../Debugging/debugger.md) não contém [botões de edição ](../Debugging/debugger.md#tool-bar-buttons), porque a mudança para o ambiente de desenvolvimento exige que se aborte a execução e se reinicie a aplicação no modo MDI.
 
 ### Saída automática
 
-When executed in MDI mode, a 4D application simply quits when the user closes the application window (MDI window). However, when executed in SDI mode, 4D applications do not have an application window and, on the other hand, closing the last opened window does not necessarily mean that the user wants the application to quit (faceless processes can be running, for example) -- although it could be what they want.
+Quando executada em modo MDI, uma aplicação 4D simplesmente sai quando o utilizador fecha a janela da aplicação (janela MDI). No entanto, quando executadas em modo SDI, as aplicações 4D não têm uma janela de aplicação e, por outro lado, fechar a última janela aberta não significa necessariamente que o utilizador quer que a aplicação saia (podem estar a correr processos sem rosto, por exemplo) - embora possa ser o que ele quiser.
 
-To handle this case, 4D applications executed in SDI mode include a mechanism to automatically quit (by calling the `QUIT 4D` command) when the following conditions are met:
+Para lidar com este caso, as aplicações 4D executadas no modo SDI incluem um mecanismo para sair automaticamente (chamando o comando `QUIT 4D` ) quando as seguintes condições são cumpridas:
 
-- the user cannot interact anymore with the application
+- o utilizador já não pode interagir com a aplicação
 - não existem processos usuário ativos
-- 4D processes or worker processes are waiting for an event
-- the Web server is not started.
-- Merged stand-alone or client 4D application
+- Os processos 4D ou processos de trabalho estão à espera de um evento
+- o servidor Web não é iniciado
+- o servidor [WebAdmin](../Admin/webAdmin.md) não foi iniciado.
 
 :::note
 
-When a menu with an associated *quit* standard action is called, the application quits and all windows are closed, wherever the menu was called from.
+Quando um menu com uma ação padrão associada *quit* for chamado, a aplicação é encerrada e todas as janelas são fechadas, independentemente do local a partir do qual o menu foi chamado.
 
 :::
 
 ## Línguagem
 
-Although it is transparently handled by 4D, the SDI mode introduces small variations in the application interface management. Specificities in the 4D language are listed below.
+Embora seja tratado de forma transparente por 4D, o modo SDI introduz pequenas variações na gestão da interface da aplicação. As especificidades da língua 4D são enumeradas a seguir.
 
-| Comando/funcionalidad             | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                           |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Open form window`                | Options to support floating windows in SDI (`Controller form window`) and to remove the menu bar (`Form has no menu bar`)                                                                                                                                                                                       |
-| `Menu bar height`                 | Returns the height in pixels of a single menu bar line even if the menu bar has been wrapped on two or more lines. Returns 0 when the command is called from a process without a form window                                                                                                                    |
-| `SHOW MENU BAR` / `HIDE MENU BAR` | Applied to the current form window only (from where the code is executed)                                                                                                                                                                                                                                       |
-| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                    |
-| `CONVERT COORDINATES`             | `XY Screen` is the global coordinate system where the main screen is positioned at (0,0). Screens on its left side or on top of it can have negative coordinates and any screens on its right side or underneath it can have coordinates greater than the values returned by `Screen height` or `Screen width`. |
-| `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                    |
-| `GET WINDOW RECT`                 | When -1 is passed in window parameter, the command returns 0;0;0;0                                                                                                                                                                                                                                              |
-| `On Drop database method`         | Não suportado                                                                                                                                                                                                                                                                                                   |
+| Comando/funcionalidade            | Especificidade no modo SDI no Windows                                                                                                                                                                                                                                                                                   |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Open form window`                | Opções de compatibilidade com janelas flutuantes em SDI (`Janela do formulário do controlador`) e para remover a barra de menus (`O formulário não tem barra de menus`)                                                                                                                                                 |
+| `Menu bar height`                 | Devolve a altura em píxeis de uma única linha da barra de menus, mesmo que a barra de menus tenha sido envolvida em duas ou mais linhas. Devolve 0 quando o comando é chamado a partir de um processo sem uma janela de formulário                                                                                      |
+| `SHOW MENU BAR` / `HIDE MENU BAR` | Aplicado apenas à janela do formulário atual (a partir de onde o código é executado)                                                                                                                                                                                                                                    |
+| `MAXIMIZE WINDOW`                 | A janela é maximizada para o tamanho do ecrã                                                                                                                                                                                                                                                                            |
+| `CONVERT COORDINATES`             | ` XY Screen` é o sistema de coordenadas global onde a tela principal está posicionada em (0,0). Telas situadas à sua esquerda ou por cima podem ter coordenadas negativas e as telas situadas à sua direita ou por baixo podem ter coordenadas superiores aos valores devolvidos por `Screen height` ou `Screen width`. |
+| `GET MOUSE`                       | As coordenadas globais são relativas ao ecrã                                                                                                                                                                                                                                                                            |
+| `GET WINDOW RECT`                 | Quando -1 é passado no parâmetro da janela, o comando retorna 0;0;0;0;0                                                                                                                                                                                                                                                 |
+| `On Drop database method`         | Não compatível                                                                                                                                                                                                                                                                                                          |
 
 :::info
 
-You can use the [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) command to know the current running mode on Windows.
+Pode utilizar o comando [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) para conhecer o modo de execução atual no Windows.
 
 :::

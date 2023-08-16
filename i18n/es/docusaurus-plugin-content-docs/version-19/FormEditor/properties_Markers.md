@@ -14,25 +14,25 @@ Los métodos asociados a los objetos de estas áreas se ejecutan cuando las áre
 
 ## Ruptura de formulario
 
-Las áreas de interrupción del formulario se muestran una vez al final de la lista de registros y se imprimen una vez después de imprimir los registros en un informe.
+Las áreas de Ruptura del formulario se muestran una vez al final de la lista de registros y se imprimen una vez después de imprimir los registros en un informe.
 
-The Break area is defined as the area between the Detail control line and the Break control line. Puede haber [varias áreas de ruptura](#additional-areas) en su informe.
+El área Ruptura se define como el área comprendida entre la línea de control Detalle y la línea de control Ruptura. Puede haber [varias áreas de ruptura](#additional-areas) en su informe.
 
-You can make Break areas smaller or larger. Puede utilizar un área de pausa para mostrar información que no forme parte de los registros (instrucciones, fecha actual, hora actual, etc.), o para mostrar una línea u otro elemento gráfico que concluya la visualización de la pantalla. En un informe impreso, puede utilizar un área de Ruptura para calcular e imprimir subtotales y otros cálculos de resumen.
+Puede hacer que las áreas Ruptura sean más pequeñas o más grandes. Puede utilizar un área de pausa para mostrar información que no forme parte de los registros (instrucciones, fecha actual, hora actual, etc.), o para mostrar una línea u otro elemento gráfico que concluya la visualización de la pantalla. En un informe impreso, puede utilizar un área de Ruptura para calcular e imprimir subtotales y otros cálculos de resumen.
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos                    | Valores posibles                                                                                    |
-| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
+| Nombre      | Tipos de datos                    | Valores posibles                                                                                                         |
+| ----------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| markerBreak | integer &#x7c; integer collection | Posición del marcador de ruptura o colección de posiciones del marcador de ruptura en píxeles.<br/>Valor mínimo: 0 |
 
 ---
 
 ## Formulario detallado
 
-The form Detail area is displayed on the screen and printed once for each record in a report. El área Detalle se define como el área comprendida entre la línea de control Encabezado y la línea de control Detalle.
+El área Detalle del formulario se muestra en la pantalla y se imprime una vez por cada registro de un informe. El área Detalle se define como el área comprendida entre la línea de control Encabezado y la línea de control Detalle.
 
-Puede hacer el área Detalle más pequeña o más grande. Whatever you place in the Detail area is displayed or printed once for each record. Lo más habitual es colocar campos o variables en el área Detalle para que se muestre o imprima la información de cada registro, pero también se pueden colocar otros elementos en el área Detalle.
+Puede hacer el área Detalle más pequeña o más grande. Lo que coloque en el área Detalle se muestra o imprime una vez por cada registro. Lo más habitual es colocar campos o variables en el área Detalle para que se muestre o imprima la información de cada registro, pero también se pueden colocar otros elementos en el área Detalle.
 
 #### Gramática JSON
 
@@ -86,17 +86,17 @@ El formulario puede contener [áreas de encabezado adicionales](#additional-area
 
 ## Áreas adicionales
 
-You can create additional Break areas and Header areas for a report. Estas áreas adicionales permiten imprimir subtotales y otros cálculos en un informe y mostrar otra información de forma eficaz.
+Puede crear áreas de Ruptura y Encabezados adicionales para un informe. Estas áreas adicionales permiten imprimir subtotales y otros cálculos en un informe y mostrar otra información de forma eficaz.
 
-Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
+Las áreas adicionales se definen cuando se utiliza una colección de posiciones en las propiedades [Ruptura](#form-break) y [Encabezado](#form-header).
 
 > En el editor de formularios 4D, puede crear líneas de control adicionales manteniendo presionada la tecla **Alt** mientras hace clic en el marcador de control apropiado.
 
 Un formulario comienza siempre con las áreas de Encabezado, Detalle, Nivel 0 y Pie de página.
 
-La interrupción en el nivel 0 cero toma todos los registros; se produce después de imprimir todos los registros. Se pueden añadir áreas de ruptura adicionales, es decir, un nivel de ruptura 1, un nivel de ruptura 2, etc.
+La Ruptura en el nivel 0 cero toma todos los registros; se produce después de imprimir todos los registros. Se pueden añadir áreas de ruptura adicionales, es decir, un nivel de ruptura 1, un nivel de ruptura 2, etc.
 
-A Break level 1 occurs after the records grouped by the first sorted field are printed.
+Un nivel de Ruptura 1 se produce después de imprimir los registros agrupados por el primer campo ordenado.
 
 | Etiqueta | Descripción        | Imprime después de grupos creados por: |
 | -------- | ------------------ | -------------------------------------- |
@@ -112,4 +112,4 @@ Las áreas adicionales del encabezado están asociadas a las interrupciones. Se 
 | H2       | Encabezado en el nivel 2 | Segundo campo ordenado                 |
 | H3       | Encabezado en el nivel 3 | Tercer campo ordenado                  |
 
-If you use the `Subtotal` function to initiate Break processing, you should create a Break area for every level of Break that will be generated by the sort order, minus one. If you do not need anything printed in one of the Break areas, you can reduce its size to nothing by placing its marker on top of another control line. If you have more sort levels than Break areas, the last Break area will be repeated during printing.
+Si utiliza la función `Subtotal` para iniciar el procesamiento de Rupturas, deberá crear un área de Pausa para cada nivel de Ruptura que generará el orden de clasificación, menos uno. Si no necesita imprimir nada en una de las áreas de Ruptura, puede reducir su tamaño a nada colocando su marcador sobre otra línea de control. Si tiene más niveles de clasificación que áreas de pausa, la última área de pausa se repetirá durante la impresión.

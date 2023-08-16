@@ -70,13 +70,13 @@ The form name is defined by the name of the folder that contains the form.4Dform
 
 ## Tipo de formulário
 
-The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+O tipo de formulário, *ou seja,* o seu destino, define as características que estarão disponíveis para o formulário. Por exemplo, os [marcadores ](properties_Markers.md) só podem ser definidos para formulários tabela lista (saída).
 
-Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
+Cada tabela de um banco de dados tem geralmente pelo menos duas formas de tabela. Uma para listar os registos no ecrã e a outra para visualizar um registo de cada vez (utilizada para a introdução de dados e modificações):
 
-- Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](../assets/en/FormObjects/formOutput.png)
+- Formulário de saída - o *formulário de saída* ou o *formulário lista* apresenta uma lista de registos, com uma única linha por registo. Os resultados das consultas são apresentados num formulário de saída e os usuários podem fazer duplo clique numa linha para visualizar o formulário de entrada para esse registo. ![](../assets/en/FormObjects/formOutput.png)
 
-- Formulário de entrada - utilizado para entrada de dados. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
+- Formulário de entrada - utilizado para entrada de dados. Apresenta um único registo por ecrã e, normalmente, tem botões para guardar e cancelar alterações ao registo e para navegar de registo em registo (*i.e.*, Primeiro Registo, Último Registo, Registo Anterior, Registo Seguinte). ![](../assets/en/FormObjects/formInput.png)
 
 
 Os tipos suportados dependem da categoria do formulário:
@@ -85,7 +85,7 @@ Os tipos suportados dependem da categoria do formulário:
 | Tipo de formulário                 | Gramática JSON   | Descrição                                                            | Suportado por                            |
 | ---------------------------------- | ---------------- | -------------------------------------------------------------------- | ---------------------------------------- |
 | Formulário detalhado               | detailScreen     | Um formulário de visualização para introdução e modificação de dados | Formulários projeto - Formulários tabela |
-| Detail Form for Printing           | detailPrinter    | A printed report with one page per record, such as an invoice        | Formulários projeto - Formulários tabela |
+| Detail Form for Printing           | detailPrinter    | Um relatório impresso com uma página por registo, como uma fatura    | Formulários projeto - Formulários tabela |
 | Formulário lista                   | listScreen       | Um formulário para listar os registos no ecrã                        | Formularios tabla                        |
 | Formulário de lista para impressão | listPrinter      | Um relatório impresso que lista os registos                          | Formularios tabla                        |
 | Nenhum                             | *no destination* | Um formulário sem caraterística específica                           | Formulários projeto - Formulários tabela |
@@ -103,9 +103,9 @@ Os tipos suportados dependem da categoria do formulário:
 
 Esta propriedade designa o formulário [para herdar](forms.md#inherited-forms) no formulário atual.
 
-To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
+Para herdar de um formulário tabela, defina a tabela na propriedade [Tabela de formulário herdado](#inherited-form-table).
 
-To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
+Para remover a herança, selecione `\&#060;None&#062;` na Lista de Propriedades (ou " " em JSON).
 
 
 #### Gramática JSON
@@ -139,7 +139,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
 
-Only project forms can be specified as published subforms.
+Apenas os projetos formulário podem ser especificados como subformulários publicados.
 
 
 
@@ -176,20 +176,20 @@ When this option is selected, the [Save Value](FormObjects/properties_Object.md#
 
 ## Título da janela
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. O título da janela aparece na barra de título da janela.
 
 You can use dynamic references to set the window titles for forms, *i.e.*:
 
-*   A standard XLIFF reference stored in the Resources folder.
+*   Uma referência XLIFF padrão armazenada na pasta Resources.
 *   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
 *   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
 
-> The number of characters for a window title is limited to 31.
+> O número de caracteres para um título de janela é limitado a 31.
 
 #### Gramática JSON
 
 | Nome        | Tipo de dados | Valores possíveis                                      |
 | ----------- | ------------- | ------------------------------------------------------ |
-| windowTitle | string        | The name of the window as plain text or as a reference |
+| windowTitle | string        | O nome da janela como texto simples ou como referência |
 
 

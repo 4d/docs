@@ -13,9 +13,9 @@ Existem duas maneiras de criar uma nova entidade numa dataclass:
 *   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
 *   You can also create an entity using the `dataClass.new( )` method.
 
-Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
+Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the `entity.save( )` method.
 
-Entity attributes are directly available as properties of the entity object. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+Os atributos da entidade estão diretamente disponíveis como propriedades do objeto entidade. For more information, please refer to [Using entity attributes](#using-entity-attributes).
 
 For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
 
@@ -26,11 +26,11 @@ $myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
 $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
 $myEntity.save() //save the entity
 ```
-> An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> Uma entidade é definida apenas no processo em que foi criada. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
 
-## Entities and references
+## Entidades e referências
 
-Uma entidade contém uma referência a um registo 4D. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+Uma entidade contém uma referência a um registo 4D. Entidades diferentes podem fazer referência ao mesmo registo 4D. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
 
 Se executar o seguinte código:
 
@@ -63,7 +63,7 @@ Este facto é ilustrado pelo gráfico seguinte:
 
 ![](../assets/en/ORDA/entityRef2.png)
 
-Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+Note-se, no entanto, que as entidades se referem ao mesmo registo. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
 
 In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Por exemplo:
 
@@ -85,12 +85,12 @@ E o método é:
 ```
 
 You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+> With the entities, there is no concept of "current record" as in the classic 4D language. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
 
-## Using entity attributes
+## Utilização de atributos de entidades
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 > For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 
 Por exemplo, para definir um atributo de armazenamento:
@@ -181,9 +181,9 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 *   Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
 *   Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
 *   Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
-*   Using a relation attribute of type "related entities" (see below).
+*   Utilizando um atributo de relação do tipo "entidades relacionadas" (ver abaixo).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
+You can simultaneously create and use as many different entity selections as you want for a dataclass. Tenha em atenção que uma seleção de entidade apenas contém referências a entidades. Diferentes selecções de entidades podem conter referências às mesmas entidades.
 
 ### Entity selections partilháveis ou alteráveis
 
@@ -210,7 +210,7 @@ An **alterable** entity selection has the following characteristics:
 The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
 
-A new entity selection is **shareable** in the following cases:
+Uma nova seleção de entidade é **partilhável** nos seguintes casos:
 
 - the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
 - the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
@@ -222,7 +222,7 @@ $myComp:=ds. Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
 ```
 
-A new entity selection is **alterable** in the following cases:
+Uma nova seleção de entidade é **alterável** nos seguintes casos:
 
 - the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
 - the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
@@ -253,7 +253,7 @@ $lowSal:=ds. Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-:::note Entity selections returned from the server
+:::note Seleções de entidades devolvidas pelo servidor
 
 In client/server architecture, entity selections returned from the server are always shareable on the client, even if [`copy()`](API/EntitySelectionClass.md#copy) was called on the server. To make such an entity selection alterable on the client, you need to execute [`copy()`](API/EntitySelectionClass.md#copy) on the client side. Exemplo:
 
@@ -275,7 +275,7 @@ $alterable:=$result.isAlterable() // True
 :::
 
 
-#### Sharing an entity selection between processes (example)
+#### Partilhar uma seleção de entidade entre processos (exemplo)
 
 You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
 
@@ -355,29 +355,29 @@ You often need to manage possible conflicts that might arise when several users 
 
 ORDA fornece-lhe dois modos de bloqueio de entidades:
 
-- an automatic "optimistic" mode, suitable for most applications,
-- a "pessimistic" mode allowing you to lock entities prior to their access.
+- um modo automático "otimista", adequado à maioria das aplicações,
+- um modo "pessimista" que permite bloquear as entidades antes do seu acesso.
 
-### Automatic optimistic lock
+### Bloqueio optimista automático
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
+This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. Este conceito é caracterizado pelos seguintes princípios de funcionamento:
 
 *   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-*   Each entity has an internal locking stamp that is incremented each time it is saved.
+*   Cada entidade tem um carimbo de bloqueio interno incrementado sempre que é guardado.
 *   When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
     *   When the values match, the entity is saved and the internal stamp value is incremented.
-    *   When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
+    *   When the values do not match, it means that another user has modified this entity in the meantime. A gravação não é efetuada e é devolvido um erro.
 
-The following diagram illustrates optimistic locking:
+O diagrama seguinte ilustra o bloqueio otimista:
 
 1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. O primeiro processo modifica a entidade e valida a alteração. É chamado o método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Se coincidirem, a entidade é guardada e o seu valor de carimbo é incrementado.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. O segundo processo também modifica a entidade carregada e valida as suas alterações. É chamado o método `entity.save( )`. Uma vez que o valor do carimbo da entidade modificada não corresponde ao da entidade armazenada nos dados, a gravação não é efetuada e é devolvido um erro.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 
-This can also be illustrated by the following code:
+Isto também pode ser ilustrado pelo seguinte código:
 
 ```4d
  $person1:=ds. Person.get(1) //Reference to entity
@@ -388,24 +388,24 @@ This can also be illustrated by the following code:
  $result:=$person2.save() //$result.success=false, change not saved
 ```
 
-In this example, we assign to $person1 a reference to the person entity with a key of 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+Neste exemplo, atribuímos a $person1 uma referência à entidade pessoa com uma chave de 1. De seguida, atribuímos outra referência da mesma entidade à variável $person2. Utilizando $person1, alteramos o primeiro nome da pessoa e guardamos a entidade. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
 
 When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
 
 > Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
 
-### Pessimistic lock
+### Bloqueio pessimista
 
-You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+É possível bloquear e desbloquear entidades a pedido quando se acede aos dados. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
 This feature is based upon two methods of the `Entity` class:
 
 *   [`entity.lock()`](../API/EntityClass.md#lock)
 *   [`entity.unlock()`](../API/EntityClass.md#unlock)
 
-For more information, please refer to the descriptions for these functions.
+Para mais informações, consulte as descrições destas funções.
 
-> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+> Os bloqueios pessimistas também podem ser tratados através da API [REST](../REST/$lock.md).
 
 
 
@@ -416,7 +416,7 @@ Using both classic and ORDA commands to lock records is based upon the following
 *   A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
 *   A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
 
-These principles are shown in the following diagram:
+Estes princípios são apresentados no diagrama seguinte:
 
 ![](../assets/en/ORDA/concurrent1.png)
 

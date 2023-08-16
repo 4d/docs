@@ -95,7 +95,7 @@ If the connection is not possible, a `null` object is returned and an error is g
 In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, and data type to handle. 
 
 - Callbacks are automatically called in the context of the form or worker that initiates the connection. 
-- The lifetime of the WebSocket must be at least the same as the lifetime of the form or worker.
+- The WebSocket will be valid as long as the form or worker is not closed.
 
 |Property|Type|Description|
 |---|---|---|

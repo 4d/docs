@@ -10,23 +10,23 @@ A progress indicator (also called "thermometer") is designed to display or set n
 
 ## Utilizar os indicadores
 
-You can use indicators either to display or set values. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
+Os indicadores podem ser utilizados para visualizar ou definir valores. Por exemplo, se um indicador de progresso recebe um valor por um método, ele exibe o valor. Se o usuário arrastar o ponto indicador, o valor muda. The value can be used in another object such as a field or an enterable or non-enterable object.
 
-The variable associated with the indicator controls the display. You place values into, or use values from, the indicator using methods. For example, a method for a field or enterable object could be used to control a progress indicator:
+A variável associada ao indicador controla a visualização. O usuário coloca valores no código ou utiliza valores do código através de métodos. For example, a method for a field or enterable object could be used to control a progress indicator:
 
 ```4d
  $vTherm:=[Employees]Salary
 ```
 
-Este método atribui o valor do campo Salary à variável $vTherm. This method would be attached to the Salary field.
+Este método atribui o valor do campo Salary à variável $vTherm. Este método seria anexado ao campo Salário.
 
-Conversely, you could use the indicator to control the value in a field. O usuário arrasta o indicador para definir o valor. In this case the method becomes:
+Por outro lado, é possível utilizar o indicador para controlar o valor num campo. O usuário arrasta o indicador para definir o valor. Neste caso, o método torna-se:
 
 ```4d
  [Employees]Salary:=$vTherm
 ```
 
-The method assigns the value of the indicator to the Salary field. As the user drags the indicator, the value in the Salary field changes.
+O método atribui o valor do código ao campo Salary. À medida que o usuário arrasta o indicador, o valor no campo Salário muda.
 
 ## Termómetro predefinido
 
@@ -34,9 +34,9 @@ The method assigns the value of the indicator to the Salary field. As the user d
 
 O termómetro é o indicador básico de progresso.
 
-You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
+É possível apresentar barras de termômetros horizontais ou verticais. Isto é determinado pela forma do objeto que desenha.
 
-Multiple graphical options are available: minimum/maximum values, graduations, steps.
+Estão disponíveis várias opções gráficas: valores mínimos/máximos, graduações, passos.
 
 ### Propriedades compatíveis
 
@@ -46,12 +46,12 @@ Multiple graphical options are available: minimum/maximum values, graduations, s
 
 ![](../assets/en/FormObjects/indicator.gif)
 
-**Barber shop** is a variant of the default thermometer. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
+**Barber shop** é uma variante do termômetro predefinido. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
 > In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
 
 Barber shop displays a continuous animation, like the [spinner](spinner.md). These thermometers are generally used to indicate to the user that the program is in the process of carrying out a long operation. When this thermometer variant is selected, [graphical Scale properties](properties_Scale.md) are not available.
 
-When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+Quando o formulário é executado, o objeto não é animado. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
 
 * 1 = Iniciar a animação,
 * 0 = Parar a animação.

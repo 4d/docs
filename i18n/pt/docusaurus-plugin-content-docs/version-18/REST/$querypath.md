@@ -17,7 +17,7 @@ In the steps collection, there is an object with the following properties defini
 | ------------- | ---------- | --------------------------------------------------------------------------- |
 | description   | String     | Actual query executed or "AND" when there are multiple steps                |
 | time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Number of records found                                                     |
+| recordsfounds | Number     | Número de registos encontrados                                              |
 | steps         | Collection | An collection with an object defining the subsequent step of the query path |
 
 ## Exemplo

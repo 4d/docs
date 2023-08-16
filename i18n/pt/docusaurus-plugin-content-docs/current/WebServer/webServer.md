@@ -6,7 +6,7 @@ title: Servidor Web
 
 4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
 
-## Easy Monitoring
+## Monitorização fácil
 
 You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
 
@@ -44,7 +44,7 @@ The 4D web server allows accessing data stored in your 4D applications through R
 
 REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
 
-## Extended settings
+## Extensão dos parâmetros
 
 The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
 

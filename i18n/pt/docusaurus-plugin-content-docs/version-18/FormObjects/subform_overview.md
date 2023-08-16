@@ -26,7 +26,7 @@ For example, a Contacts manager database might use a list subform to display all
 
 Although list subforms are generally associated with Many tables, a subform instance can display the records of any other database table.
 
-You can also allow the user to enter data in the List form. Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
+Também é possível permitir que o usuário introduza dados no formulário Lista. Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
 
 > 4D offers three standard actions to meet the basic needs for managing subrecords: `Edit Subrecord`, `Delete Subrecord`, and `Add Subrecord`. When the form includes several subform instances, the action will apply to the subform that has the focus.
 
@@ -48,7 +48,7 @@ Both objects (time variable and subform container) *have the same variable name*
 
 When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
 
-#### Updating subform contents
+#### Atualização do conteúdo do subformulário
 
 Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
 
@@ -59,13 +59,13 @@ In this case, you must use the On Bound Variable Change form event. This event m
 The `On Bound Variable Change` form event is generated:
 
 * as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
-* if the subform belongs to the current form page or to page 0.
+* se o subformulário pertence à página formulário atual ou à página 0.
 
 Note that, as in the above example, it is preferable to use the `OBJECT Get pointer` command which returns a pointer to the subform container rather than its variable because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks). In this case, only a pointer lets you know which subform container is at the origin of the event.
 
 #### Atualização do conteúdo do formulário parent
 
-Case 2: The contents of the subform are modified and this modification must be passed on to the parent form. In our example, imagine that the subform interface lets the user "manually" move the hands of the clock.
+Caso 2: o conteúdo do subformulário é modificado e esta modificação deve ser transmitida ao formulário principal. In our example, imagine that the subform interface lets the user "manually" move the hands of the clock.
 
 In this case, from the subform, you must assign the object value to the variable of the parent subform container. As in the previous example, we recommend that you use the `OBJECT Get pointer` command with the `Object subform container` selector which returns a pointer to the subform container.
 
@@ -106,7 +106,7 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 
 Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
-4D has implemented the following mechanisms to meet these needs:
+4D implementou os seguintes mecanismos para atender a essas necessidades:
 
 * Use of the "subform" parameter with the `OBJECT Get name` command to specify the subform object and the `OBJECT Get pointer` command.
 * Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
@@ -126,9 +126,9 @@ For example, the following statement:
 
 #### Comando CALL SUBFORM CONTAINER
 
-The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. The event is received in the container object method. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
+The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. O evento é recebido no método do objeto contentor. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
 
-The code of the event is unrestricted (for example, 20000 or -100). You can use a code that corresponds to an existing event (for example, 3 for `On Validate`), or use a custom code. In the first case, you can only use events that you have checked in the Property List for subform containers. In the second case, the code must not correspond to any existing form event. It is recommended to use a negative value to be sure that this code will not be used by 4D in future versions.
+O código do evento não tem restrições (por exemplo, 20000 ou -100). You can use a code that corresponds to an existing event (for example, 3 for `On Validate`), or use a custom code. In the first case, you can only use events that you have checked in the Property List for subform containers. In the second case, the code must not correspond to any existing form event. It is recommended to use a negative value to be sure that this code will not be used by 4D in future versions.
 
 For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
 
@@ -136,7 +136,7 @@ For more information, refer to the description of the `CALL SUBFORM CONTAINER` c
 
 The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. Este método também pode receber parâmetros.
 
-This mechanism is illustrated in the following diagram:
+Este mecanismo é ilustrado no diagrama seguinte:
 
 ![](../assets/en/FormObjects/subforms6.png)
 

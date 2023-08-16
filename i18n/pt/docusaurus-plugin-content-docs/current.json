@@ -16,7 +16,7 @@
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
-    "message": "4D Language Concepts",
+    "message": "Conceitos da linguagem 4D",
     "description": "The label for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.Data Types": {
@@ -36,7 +36,7 @@
     "description": "The label for category Class API Reference in sidebar docs"
   },
   "sidebar.docs.category.Handling Code": {
-    "message": "Handling Code",
+    "message": "Gerenciamento do código",
     "description": "The label for category Handling Code in sidebar docs"
   },
   "sidebar.docs.category.Debugging": {
@@ -72,7 +72,7 @@
     "description": "The label for category TLS Protocol in sidebar docs"
   },
   "sidebar.docs.category.Licenses & Data Collection": {
-    "message": "Licenses & Data Collection",
+    "message": "Licenças e recolha de dados",
     "description": "The label for category Licenses & Data Collection in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
@@ -220,7 +220,7 @@
     "description": "The generated-index page title for category Core Development in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.title": {
-    "message": "4D Language Concepts",
+    "message": "Conceitos da linguagem 4D",
     "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
@@ -292,7 +292,7 @@
     "description": "The generated-index page title for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.API (dataClass).link.generated-index.description": {
-    "message": "REST API for dataClass.",
+    "message": "API REST para dataClass.",
     "description": "The generated-index page description for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.title": {

@@ -63,7 +63,7 @@ The message will be displayed as an alert on the remote machines.
 > You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
 
 
-### Watch Processes
+### Visualizar processos
 
 This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
 

@@ -17,7 +17,7 @@ O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Desi
 
 ![](../assets/en/Users/Access1.png)
 
-## Activating access control
+## Ativar o controlo de acesso
 
 You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
 

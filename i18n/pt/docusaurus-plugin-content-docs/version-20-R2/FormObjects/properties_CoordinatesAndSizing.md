@@ -8,7 +8,7 @@ title: Coordenadas e dimensionamento
 This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
 
 - collection ou entity selection,
-- array (non-hierarchical).
+- array (não hierárquico).
 
 A propriedade não está selecionada por padrão. When used, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
 
@@ -22,7 +22,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 * O cálculo da altura da linha tem em conta:
   * any content types (text, numerics, dates, times, pictures (calculation depends on the picture format), objects),
-  * any control types (inputs, check boxes, lists, dropdowns),
+  * quaisquer tipos de controlo (entradas, caixas de verificação, listas, listas suspensas),
   * tipos, estilos e tamanhos de letra,
   * the [Wordwrap](properties_Display.md#wordwrap) option: if disabled, the height is based on the number of paragraphs (lines are truncated); if enabled, the height is based on number of lines (not truncated).
 
@@ -156,8 +156,8 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 ## Alto
 
-This property designates an object's vertical size.
-> Some objects may have a predefined height that cannot be altered.
+Esta propriedade designa o tamanho vertical de um objeto.
+> Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
 
 #### Gramática JSON
 
@@ -173,8 +173,8 @@ This property designates an object's vertical size.
 
 ## Largura
 
-This property designates an object's horizontal size.
-> * Some objects may have a predefined height that cannot be altered.
+Esta propriedade designa o tamanho horizontal de um objeto.
+> * Alguns objetos podem ter uma altura predefinida que não pode ser alterada.
 > * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
 > * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
@@ -209,7 +209,7 @@ A largura máxima da coluna (em píxeis). The width of the column cannot be incr
 
 ## Largura mínima
 
-A largura mínima da coluna (em píxeis). The width of the column cannot be reduced below this value when resizing the column or form.
+A largura mínima da coluna (em píxeis). A largura da coluna não pode ser reduzida abaixo deste valor quando se redimensiona a coluna ou o formulário.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
 #### Gramática JSON
@@ -226,7 +226,7 @@ A largura mínima da coluna (em píxeis). The width of the column cannot be redu
 
 ## Array altura linha
 
-Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
+Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). By default, the row height is set according to the platform and the font size.
 
 #### Gramática JSON
 
@@ -246,7 +246,7 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 ## Array estilo linha
 
-This property is used to specify the name of a row height array that you want to associate with the list box. A row height array must be of the numeric type (longint by default).
+This property is used to specify the name of a row height array that you want to associate with the list box. Um array de altura de linha deve ser do tipo numérico (longint por defeito).
 
 When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
 

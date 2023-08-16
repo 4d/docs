@@ -22,7 +22,7 @@ Moreover, since projects are in human-readable, plain text files (JSON, XML, etc
 The flexibility of developing a 4D project is especially demonstrated when multiple developers need to work on the same part of an application, at the same time. 4D project files are particularly well suited to be managed by a **source control** repository (Perforce, Git, SVN, etc.), allowing development teams to take advantage of features such as:
 
 - Versioning
-- Revision comparisons
+- Comparações de revisões
 - Rollbacks
 
 

@@ -21,7 +21,7 @@ Em 4D, uma grelha de botões é utilizada como uma paleta de cores:
 
 ## Usar grades de botões
 
-The buttons on the grid are numbered from top left to bottom right. In the above example, the grid is 16 columns across by 16 rows down. O botão na posição superior-esquerda retorna 1 quando clicado. If the red button at the far right of the second row is selected, the button grid returns 32. Se nenhum elemento for seleccionado, o valor é 0
+Os botões da grelha estão numerados do canto superior esquerdo para o canto inferior direito. In the above example, the grid is 16 columns across by 16 rows down. O botão na posição superior-esquerda retorna 1 quando clicado. If the red button at the far right of the second row is selected, the button grid returns 32. Se nenhum elemento for seleccionado, o valor é 0
 
 ### Ir para página
 

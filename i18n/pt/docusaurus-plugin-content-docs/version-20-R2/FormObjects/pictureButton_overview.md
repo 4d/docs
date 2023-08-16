@@ -26,7 +26,7 @@ Clicar no objeto altera a imagem.
 
 ## Usar os botões imagem
 
-You can implement a picture button in the following manner:
+É possível implementar um botão imagem da seguinte forma:
 
 1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
 
@@ -36,25 +36,25 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 
 2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. Definir as propriedades de [linhas e colunas](properties_Crop.md) do gráfico.
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. Especifique quando as imagens mudam selecionando as propriedades [animation](properties_Animation.md) adequadas.
 
 
 ## Animação
 
 In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
 
-- By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. In other words, it does not cycle back to the first picture in the series.
+- By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. Por outras palavras, não regressa à primeira imagem da série.
 
 Estão disponíveis os seguintes outros modos:
-- [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
+- [Repetir a sequência](properties_Animation.md#loopBackToFirstFrame)
 - [Switch back when Released](properties_Animation.md#switch-back-when-released)
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
-- [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
+- [Utilizar o último marco como desativado](properties_Animation.md#use-last-frame-as-disabled)
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. A numeração das imagens no quadro começa com 0.
 
 ## Propriedades compatíveis
 

@@ -3,7 +3,7 @@ id: creating
 title: Trabalhar com um projecto
 ---
 
-4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** também pode criar novos projetos vazios.
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
@@ -18,12 +18,12 @@ Para criar um novo projeto de banco de dados:
     * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder. ![](../assets/en/getStart/projectCreate1.png)
     * When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
-3. Enter the name of your project folder and click **Save**. This name will be used:
+3. Enter the name of your project folder and click **Save**. Este nome será utilizado:
 
     * as the name of the .4DProject file at the first level of the "Project" folder.
     * as the name of the .4DProject file at the first level of the "Project" folder.
 
- You can choose any name allowed by your operating system. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
+ Pode escolher qualquer nome permitido pelo seu sistema operacional. *Atenção:* se seu banco projeto estiver destinado a funcionar em outros sistemas ou a ser guardada através de uma ferramenta de controle de código fonte, deve levar em consideração suas recomendações específicas de denominação.
 
 Quando validar a caixa de diálogo, 4D fecha o banco de dados atual (se houver) e cria uma pasta "Project" no local indicado e coloca nela todos os arquivos necessários para o funcioanamento correto do banco de dados projeto. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
 
@@ -38,11 +38,11 @@ Lance uma aplicação 4D Developer.
     * Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button.
     * Select **Open a local application project** in the Welcome Wizard dialog
 
-The standard Open dialog appears.
+Aparece a caixa de diálogo padrão Abrir.
 
 2. Select the project's `.4dproject` file and click **Open**.
 
-    By default, the project is opened with its current data file. São sugeridos outros tipos de ficheiros:
+    Por defeito, o projeto é aberto com o seu ficheiro de dados atual. São sugeridos outros tipos de ficheiros:
 
     * *Packed project files*: `.4dz` extension  - deployment projects
     * *Shortcut files*: `.4DLink` extension - store additional parameters needed for opening projects or applications (addresses, identifiers, etc.)
@@ -66,7 +66,7 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
   * *Menu bar* - **File** > **Open Recent Projects / {project name}**
   * OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 
-* via preferences:
+* através das preferências:
   * Set the **At startup** general preference to **Open last used project**.
 
 * utilizando um ficheiro `.4DLink`.
@@ -91,17 +91,17 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 
 4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
 
-* Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* Windows 7 e superior: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
 * OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
-XX represents the version number of the application. Por exemplo, "Favorites v19" para 4D v19.
+XX representa o número da versão da aplicação. Por exemplo, "Favorites v19" para 4D v19.
 
 Esta pasta está dividida em duas subpastas:
 
 * the **Local** folder contains the `.4DLink` files that can be used to open local projects
 * the **Remote** folder contains the `.4DLink` files of recent remote projects
 
-`.4DLink` files can also be created with an XML editor.
+Os ficheiros `.4DLink` podem também ser criados com um editor XML.
 
 4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
 
@@ -111,7 +111,7 @@ When working on a project in 4D, you can use built-in 4D editors to create, modi
 
 Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
 
-The 4D development framework includes a file access manager to control concurrent access:
+A estrutura de desenvolvimento 4D inclui um gerenciador de acesso a ficheiros para controlar o acesso simultâneo:
 
 * if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
 * if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
