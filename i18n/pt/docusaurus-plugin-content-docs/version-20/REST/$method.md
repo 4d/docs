@@ -9,9 +9,9 @@ This parameter allows you to define the operation to execute with the returned e
 
 | Sintaxe                                         | Exemplo                                                                                         | Descrição                                                                                                  |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Deletes the current entity, entity collection, or entity selection                                         |
+| [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | Elimina a entidade, coleção de entidades ou seleção de entidades atual                                     |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | Creates an entity set in 4D Server's cache based on the collection of entities defined in the REST request |
-| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Releases an existing entity set stored in 4D Server's cache                                                |
+| [**$method=release**](#methodrelease)           | `GET /Employee/$entityset/<entitySetID>?$method=release`                                  | Libera um conjunto de entidades existente armazenado no cache do 4D Server                                 |
 | [**$method=subentityset**](#methodsubentityset) | `GET /Company(1)/staff?$expand=staff& $method=subentityset&   $subOrderby=lastName ASC` | Creates an entity set based on the collection of related entities defined in the REST request              |
 | [**$method=update**](#methodupdate)             | `POST /Person/?$method=update`                                                                  | Actualiza e/ou cria uma ou mais entidades                                                                  |
 
@@ -40,7 +40,7 @@ Também é possível efetuar uma consulta utilizando $filter:
 
  `POST  /rest/Employee?$filter="ID=11"&$method=delete`
 
-You can also delete an entity set using $entityset/{entitySetID}:
+Também é possível eliminar um conjunto de entidades utilizando $entityset/{entitySetID}:
 
  `POST  /rest/Employee/$entityset/73F46BE3A0734EAA9A33CA8B14433570?$method=delete`
 
@@ -87,7 +87,7 @@ __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C7963
 
 ## $method=release
 
-Releases an existing entity set stored in 4D Server's cache.
+Libera um conjunto de entidades existente armazenado no cache do 4D Server.
 
 ### Descrição
 
@@ -101,7 +101,7 @@ Mostra um conjunto de entidades existente:
 
 #### Responsa:
 
-If the request was successful, the following response is returned:
+Se o pedido for bem sucedido, é devolvida a seguinte resposta:
 
 ```json
 {
@@ -129,7 +129,7 @@ Creates an entity set in 4D Server's cache based on the collection of related en
 
 `$method=subentityset` allows you to sort the data returned by the relation attribute defined in the REST request.
 
-To sort the data, you use the `$subOrderby` property. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. By default, the data is sorted in ascending order.
+Para ordenar os dados, utilize a propriedade `$subOrderby`. For each attribute, you specify the order as ASC (or asc) for ascending order and DESC (desc) for descending order. Por defeito, os dados são ordenados por ordem ascendente.
 
 If you want to specify multiple attributes, you can delimit them with a comma, µ, `$subOrderby="lastName desc, firstName asc"`.
 
@@ -197,15 +197,15 @@ In any cases, you must set the **POST** data in the **body** of the request.
 
 To update an entity, you must pass the `__KEY` and `__STAMP` parameters in the object along with any modified attributes. If both of these parameters are missing, an entity will be added with the values in the object you send in the body of your **POST**.
 
-Triggers are executed immediately when saving the entity to the server. The response contains all the data as it exists on the server.
+Os triggers são executados imediatamente ao guardar a entidade no servidor. A resposta contém todos os dados tal como existem no servidor.
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. If any errors occur during data validation, none of the entities are saved. You can also use `$method=validate` to validate the entities before creating or updating them.
+You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. You can also use `$method=validate` to validate the entities before creating or updating them.
 
 If a problem arises while adding or modifying an entity, an error will be returned to you with that information.
 
 :::note
 *   **Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
-*   **Booleans** are either true or false.
+*   **Booleanos** são true ou false.
 *   Os ficheiros carregados utilizando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objecto devolvido no seguinte formato `{"ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
 :::
 
@@ -229,7 +229,7 @@ Para atualizar uma entidade específica, utilizar o seguinte URL:
 
 The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.
 
-If you want to create an entity, you can POST the attributes using this URL:
+Se você quiser criar uma entidade, poderá enviar os atributos via POST usando este URL:
 
  `POST  /rest/Person/?$method=update`
 
@@ -277,7 +277,7 @@ When you add or modify an entity, it is returned to you with the attributes that
 }
 ```
 
-If, for example, the stamp is not correct, the following error is returned:
+Se, por exemplo, o carimbo não estiver correto, é apresentado o seguinte erro:
 
 ```json
 {
