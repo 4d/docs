@@ -20,7 +20,7 @@ title: 拡張機能
 | [4D SVG](https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html) | 一般的な svgグラフィックオブジェクトの作成・操作                                                                             | `SVGTool_Display_viewer`, 複数の `SVG_` メソッド                                                          |
 | [4D ViewPro](ViewPro/getting-started.md)                                      | フォームに追加できる表計算機能                                                                                        | [4D View Pro ドキュメンテーション](ViewPro/getting-started.md) 参照。                                           |
 | [4D Widgets](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html)   | DatePicker, TimePicker, SearchPicker 4Dウィジェットの管理                                                       | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ...            |
-| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface)          | [4D Write Pro](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Write-Pro-Reference.100-5606477.ja.html) パレットの管理 | `WP CreatePreview`, `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget` |
+| [4D WritePro Interface](WritePro/writeprointerface.md)                        | [4D Write Pro](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Write-Pro-Reference.100-5606477.ja.html) パレットの管理 | `WP CreatePreview`, `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget` |
 
 
 ## サードパーティーコンポーネント
