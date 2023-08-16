@@ -3,21 +3,21 @@ id: savedorderby
 title: '$savedorderby'
 ---
 
-Saves the order by defined by `$orderby` when creating an entity set (*e.g.*, `$savedorderby="{orderby}"`)
+Guarda a ordem definida por `$orderby` aquando da criação de um conjunto de entidades (*e.g.*, `$savedorderby="{orderby}"`)
 
 ## Descrição
 
-When you create an entity set, you can save the sort order along with the filter that you used to create it as a measure of security. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
+Quando se cria um conjunto de entidades, é possível gravar a ordem de ordenação com o filtro utilizado para o criar, como medida de segurança. Se o conjunto de entidades que criou for removido da cache do 4D Server (devido ao tempo limite, à necessidade de espaço do servidor, ou ao facto de o remover chamando [`$method=release`]($method.md#methodrelease)).
 
-You use `$savedorderby` to save the order you defined when creating your entity set, you then pass `$savedorderby` along with your call to retrieve the entity set each time.
+Utiliza-se `$savedorderby` para guardar a ordem que se definiu ao criar o conjunto de entidades e, em seguida, passa-se `$savedorderby` com a chamada para recuperar o conjunto de entidades de cada vez.
 
-If the entity set is no longer in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. If you have used both [`$savedfilter`]($savedfilter.md) and `$savedorderby` in your call when creating an entity set and then you omit one of them, the new entity set, having the same reference number, will reflect that.
+Se o conjunto de entidades não está mais no cache do 4D Server, ele será recriado com um novo timeout padrão de 10 minutos. Se tiver utilizado tanto [`$savedfilter`]($savedfilter.md) como `$savedorderby` na sua chamada ao criar um conjunto de entidades e depois omitir um deles, o novo conjunto de entidades, com o mesmo número de referência, refletirá esse facto.
 
 ## Exemplo
-You first call `$savedorderby` with the initial call to create an entity set:
+Primeiro, chama-se `$savedorderby` com a chamada inicial para criar um conjunto de entidades:
 
  `GET  /rest/People/?$filter="lastName!=''"&$savedfilter="lastName!=''"&$orderby="salary"&$savedorderby="salary"&$method=entityset`
 
-Then, when you access your entity set, you write the following (using both $savedfilter and $savedorderby) to ensure that the filter and its sort order always exists:
+Depois, quando acede ao seu conjunto de entidades, escreve o seguinte (utilizando tanto $savedfilter como $savedorderby) para garantir que o filtro e a sua ordem de ordenação existem sempre:
 
 `GET  /rest/People/$entityset/AEA452C2668B4F6E98B6FD2A1ED4A5A8?$savedfilter="lastName!=''"&$savedorderby="salary"`
