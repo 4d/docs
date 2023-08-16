@@ -915,7 +915,7 @@ Uma classe de usuário do modelo de dados ORDA é definida adicionando, na [mesm
 
 4D pré-criou automaticamente classes vazias na memória para cada objeto de modelo de dados disponível.
 
-![](../assets/pt/ORDA/ORDA_Classes-3.png)
+![](../assets/en/ORDA/ORDA_Classes-3.png)
 
 
 > Por padrão, as classes ORDA vazias não são exibidas no Explorer. Para as mostrar, é necessário selecionar **Mostrar todas as classes de dados** no menu de opções do Explorador: ![](../assets/en/ORDA/showClass.png)
