@@ -14,21 +14,21 @@ When you call this request for your project, you retrieve information in the fol
 | usedCache      | Number     | Quanto do cache do 4D Server foi usado.                                             |
 | entitySetCount | Number     | Número de selecções de entidades.                                                   |
 | entitySet      | Collection | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
-| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
+| ProgressInfo   | Collection | Uma coleção que contém informações sobre os indicadores de progresso.               |
+| sessionInfo    | Collection | Uma coleção em que cada objeto contém informações sobre cada sessão de usuário.     |
 
 ### entitySet
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                |
-| ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| id            | String     | Um UUID que faz referência ao conjunto de entidades.                                                                                                                                                                                                                     |
-| dataClass     | String     | Nome da dataclass.                                                                                                                                                                                                                                                       |
-| selectionSize | Number     | Número de entidades na seleção de entidades.                                                                                                                                                                                                                             |
-| sorted        | Parâmetros | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                       |
-| refreshed     | Date       | When the entity set was created or the last time it was used.                                                                                                                                                                                                            |
-| expires       | Date       | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. Este valor é de duas horas por defeito ou o valor que definiu utilizando `$timeout`. |
+| Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                       |
+| ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String     | Um UUID que faz referência ao conjunto de entidades.                                                                                                                                                                                                                            |
+| dataClass     | String     | Nome da dataclass.                                                                                                                                                                                                                                                              |
+| selectionSize | Number     | Número de entidades na seleção de entidades.                                                                                                                                                                                                                                    |
+| sorted        | Parâmetros | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                              |
+| refreshed     | Date       | Quando o conjunto de entidades foi criado ou utilizado a última vez.                                                                                                                                                                                                            |
+| expires       | Date       | When the entity set will expire (this date/time changes each time when the entity set is refreshed). A diferença entre refreshed e expires é o tempo limite para um conjunto de entidades. Este valor é de duas horas por defeito ou o valor que definiu utilizando `$timeout`. |
 
 For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
 > 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
@@ -38,12 +38,12 @@ For information about how to create an entity selection, refer to `$method=entit
 
 For each user session, the following information is returned in the *sessionInfo* collection:
 
-| Propriedade | Tipo   | Descrição                                                    |
-| ----------- | ------ | ------------------------------------------------------------ |
-| sessionID   | String | Um UUID que faz referência à sessão.                         |
-| userName    | String | O nome do usuário que executa a sessão.                      |
-| lifeTime    | Number | The lifetime of a user session in seconds (3600 by default). |
-| expiration  | Date   | The current expiration date and time of the user session.    |
+| Propriedade | Tipo   | Descrição                                                                  |
+| ----------- | ------ | -------------------------------------------------------------------------- |
+| sessionID   | String | Um UUID que faz referência à sessão.                                       |
+| userName    | String | O nome do usuário que executa a sessão.                                    |
+| lifeTime    | Number | O tempo de vida de uma sessão usuário em segundos (3600 por predefinição). |
+| expiration  | Date   | A data e hora de expiração atuais da sessão do usuário.                    |
 
 ## Exemplo
 
