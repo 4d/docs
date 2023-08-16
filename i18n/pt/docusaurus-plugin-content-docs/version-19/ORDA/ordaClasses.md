@@ -36,7 +36,7 @@ Além disso, 4D [pré-criou automaticamente](#creating-classes) as classes para 
 
 A ORDA fornece **classes genéricas** expostas através da loja de classes **`4D`** [](Concepts/classes.md#class-stores), bem como **classes de utilizador** (que estendem as classes genéricas) expostas na loja de classes **`cs`** [](Concepts/classes.md#class-stores):
 
-![](../assets/pt/ORDA/ClassDiagramImage.png)
+![](../assets/en/ORDA/ClassDiagramImage.png)
 
 
 Todas as classes do modelo de dados ORDA são expostas como propriedades do armazenamento de classes **`cs`** . Estão disponíveis as seguintes classes ORDA:
