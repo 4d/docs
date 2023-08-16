@@ -106,6 +106,7 @@ title: バックアップ設定
 
 - **圧縮率**: デフォルトで 4D はバックアップファイルを圧縮してディスクスペースを節約します。 しかし大量のデータがある場合、ファイルの圧縮処理はバックアップにかかる時間を長くします。 **圧縮率** オプションを使用してファイルの圧縮モードを調整できます:
   - **なし**: ファイルの圧縮はおこなわれません。 バックアップは早くおこなわれますが、ファイルサイズは大きくなります。
+
   - **速度** (デフォルト): このオプションはバックアップの速度とアーカイブサイズのバランスが考慮されたものです。
   - **圧縮率**: アーカイブに最大の圧縮率が適用されます。 アーカイブファイルはディスク上で最小のサイズとなりますが、バックアップの速度は低下します。
 
@@ -132,3 +133,9 @@ title: バックアップ設定
 > - External Data フォルダー
 > 
 > 添付ファイルやプロジェクトファイルを取得したい場合、[手動の復元](restore.md#手動でバックアップから復元する-標準ダイアログ) をおこなう必要があります。
+
+:::caution
+
+If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+
+:::
