@@ -9,14 +9,14 @@ Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.m
 
 ## Sintaxe
 
-To lock an entity for other sessions and 4D processes:
+Para bloquear uma entidade para outras sessões e processos 4D:
 
 ```
 /?$lock=true
 ```
 
 
-To unlock the entity for other sessions and 4D processes:
+Para desbloquear a entidade para outras sessões e processos 4D:
 
 ```
 /?$lock=false
@@ -35,7 +35,7 @@ A locked entity is seen as *locked* (i.e. lock / unlock / update / delete action
 - outras sessões REST
 - 4D processes (client/server, remote datastore, standalone) running on the REST server.
 
-An entity locked by the REST API can only be unlocked:
+Uma entidade bloqueada pela API REST só pode ser desbloqueada:
 
 - by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
 - or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
@@ -44,7 +44,7 @@ An entity locked by the REST API can only be unlocked:
 
 A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
 
-The returned "__STATUS" object has the following properties:
+O objeto "__STATUS" devolvido tem as seguintes propriedades:
 
 | Propriedade  |                | Tipo    | Descrição                                                                                                                                                   |
 | ------------ | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
