@@ -33,6 +33,7 @@ Lea [**Novedades en 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/)
 - Nueva capa de red QUIC [parámetros de interfaz](../settings/client-server.md#network-layer).
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) en doc.4d.com.
+- 4D Write Pro Interface: New [Table Wizard](../WritePro/writeprointerface.md).
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R2): lista de todos los errores que se han corregido en 4D v20 R2.
 
 
