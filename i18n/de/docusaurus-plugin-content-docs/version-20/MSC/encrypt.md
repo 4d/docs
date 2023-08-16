@@ -6,7 +6,11 @@ sidebar_label: Seite Verschlüsseln
 
 Auf dieser Seite können Sie die Datendatei verschlüsseln oder *entschlüsseln* (z.B. die Verschlüsselung entfernen). Das richtet sich nach der Eigenschaft **Verschlüsselbar**, die für jede Tabelle in der Anwendung gesetzt werden kann.
 
-> Weitere Informationen dazu finden Sie im Abschnitt "Daten verschlüsseln" des 4D Handbuchs *Designmodus*. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post.
+:::info
+
+For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. You can also read the [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) blog post.
+
+:::
 
 Bei jeder Operation Verschlüsselung/Entschlüsselung wird ein neuer Ordner angelegt. Er lautet "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> oder "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 > Verschlüsselung ist nur im [Wartungsmodus](overview.md#anzeige-im-wartungsmodus) verfügbar. Versuchen Sie, diese Operation im Standardmodus auszuführen, erhalten Sie die Meldung, dass die Anwendung geschlossen und im Wartungsmodus neu gestartet wird
@@ -81,7 +85,7 @@ The data file is fully decrypted and a confirmation message is displayed: ![](..
 
 ## Verschlüsselungscode sichern
 
-In 4D können Sie den Verschlüsselungscode für Daten in einer spezifischen Datei speichern. Speichern Sie diese Datei auf einem externen Gerät, z. B. einem USB Key, vereinfacht das den Einsatz einer verschlüsselten Anwendung. Der Benutzer muss vor dem Öffnen der Anwendung lediglich das Gerät anschließen und kann dann auf verschlüsselte Daten zugreifen.
+In 4D können Sie den Verschlüsselungscode für Daten in einer spezifischen Datei speichern. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". Speichern Sie diese Datei auf einem externen Gerät, z. B. einem USB Key, vereinfacht das den Einsatz einer verschlüsselten Anwendung. Der Benutzer muss vor dem Öffnen der Anwendung lediglich das Gerät anschließen und kann dann auf verschlüsselte Daten zugreifen.
 
 Sie können den Verschlüsselungscode jedes Mal sichern, wenn eine neue Passphrase angelegt wird:
 
@@ -89,6 +93,12 @@ Sie können den Verschlüsselungscode jedes Mal sichern, wenn eine neue Passphra
 - wenn die Anwendung mit einer neuen Passphrase erneut verschlüsselt wird.
 
 Aufeinanderfolgende Verschlüsselungscodes lassen sich auf dem gleichen Gerät speichern.
+
+:::caution
+
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+
+:::
 
 ## Logbuch
 Ist das Komprimieren abgeschlossen, erzeugt 4D eine Datei im Ordner Logs der Anwendung im XML Format mit Namen "*Anwendungsname_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" oder "*Anwendungsname_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
