@@ -202,9 +202,9 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 The `VP ADD SPAN` command combines the cells in *rangeObj* as a single span of cells.
 
-In *rangeObj*, pass a range object of cells. The cells in the range are joined to create a larger cell extending across multiple columns and/or rows. You can pass multiple cell ranges to create several spans at the same time. Note that if cell ranges overlap, only the first cell range is used.
+Em *rangeObj*, passe um intervalo de células. The cells in the range are joined to create a larger cell extending across multiple columns and/or rows. You can pass multiple cell ranges to create several spans at the same time. Note que se os intervalos de células se sobrepuserem, apenas o primeiro intervalo de células é utilizado.
 
-> * Only the data in the upper-left cell is displayed. Data in the other combined cells is hidden until the span is removed.
+> * Só são apresentados os dados da célula superior esquerda. Data in the other combined cells is hidden until the span is removed.
 > * Hidden data in spanned cells is accessible via formulas (beginning with the upper-left cell).
 
 #### Exemplo
@@ -332,7 +332,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 You want to define a range object for all of the cells of the current spreadsheet:
 
 ```4d
-$all:=VP All("ViewProArea") // all cells of the current sheet
+$all:=VP All("ViewProArea") // todas as células da folha atual
 ```
 
 #### Veja também
@@ -423,7 +423,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *column* parameter defines the first column of the cell range. Pass the column index (counting begins at 0) in this parameter. If the range is within multiple columns, you should also use the *columnCount* parameter.
 
-In the *row* parameter, you can define the row(s) of the cell range's position. Pass the row index (counting begins at 0) in this parameter. If the range is within multiple rows, you should also use the *rowCount* parameter.
+In the *row* parameter, you can define the row(s) of the cell range's position. Passar o índice da linha (a contagem começa em 0) neste parâmetro. If the range is within multiple rows, you should also use the *rowCount* parameter.
 
 The *columnCount* parameter allows you to define the total number of columns the range is within. *columnCount* must be greater than 0.
 
@@ -470,9 +470,9 @@ O comando `VP Column` <!-- REF #_method_.VP Column.Summary -->returns a new rang
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-The *column* parameter defines the first column of the column range. Pass the column index (counting begins at 0)  in this parameter. If the range contains multiple columns, you should also use the optional *columnCount* parameter.
+The *column* parameter defines the first column of the column range. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Se o intervalo contiver várias colunas, deve também utilizar o parâmetro opcional *columnCount*.
 
-The optional *columnCount* parameter allows you to define the total number of columns of the range. *columnCount* must be greater than 0. If omitted, the value will be set to 1 by default and a column type range is created.
+O parâmetro opcional *columnCount* permite-lhe definir o número total de colunas do intervalo. *columnCount* must be greater than 0. If omitted, the value will be set to 1 by default and a column type range is created.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
@@ -523,7 +523,7 @@ Selecionar as colunas e executar este código:
  VP COLUMN AUTOFIT(VP Get selection("ViewProarea"))
 ```
 
-... resizes the columns to fit the size of the contents:
+... redimensiona as colunas para se adaptarem ao tamanho do conteúdo:
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
@@ -548,9 +548,9 @@ Selecionar as colunas e executar este código:
 
 #### Descrição
 
-O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. All of the ranges must be from the same 4D View Pro area.
+O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Todos os intervalos devem ser da mesma área 4D View Pro.
 
-In *rangeObj*, pass the first range object.
+Em *rangeObj*, passe o primeiro intervalo.
 
 In *otherRangeObj*, pass another range object(s) to combine with *rangeObj*.
 > The command incorporates *rangeObj* and *otherRangeObj* objects by reference.
@@ -608,11 +608,11 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                                          |
-| ---------- | ------ | -- | -------------------------------------------------- |
-| vpObject   | Object | -> | 4D View Pro object containing the area to convert  |
-| rangeObj   | Object | -> | Range object                                       |
-| Resultados | Object | <- | SVG picture of the area|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                        |
+| ---------- | ------ | -- | ------------------------------------------------ |
+| vpObject   | Object | -> | Objeto 4D View Pro que contém a área a converter |
+| rangeObj   | Object | -> | Range object                                     |
+| Resultados | Object | <- | Imagem SVG da área|<!-- END REF -->
 
 |
 
@@ -628,9 +628,9 @@ Este comando é útil, por exemplo:
 Em *vpObject*, passe o objecto 4D View Pro que pretende converter. This object must have been previously parsed using [VP Export to object](#vp-export-to-object) or saved using [VP EXPORT DOCUMENT](#vp-export-document).
 > SVG conversion process requires that expressions and formats (cf. [Cell Format](configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. If you convert a document that was not evaluated beforehand, expressions or formats may be rendered in an unexpected way.
 
-In *rangeObj*, pass a range of cells to convert. By default, if this parameter is omitted, the whole document contents are converted.
+Em *rangeObj*, passe um intervalo de células a converter. By default, if this parameter is omitted, the whole document contents are converted.
 
-Document contents are converted with respect to their viewing attributes, including formats (see note above), visibility of headers, columns and rows. The conversion of the following elements is supported:
+Document contents are converted with respect to their viewing attributes, including formats (see note above), visibility of headers, columns and rows. A conversão dos seguintes elementos é suportada:
 
 * Text : style / font / size / alignment / orientation / rotation / format
 * Cell background : color / image
@@ -4102,7 +4102,7 @@ O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->returns a new range obje
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In the *row* parameter, you can define the row(s) of the cell range's position. Pass the row index (counting begins at 0) in this parameter. *rowCount* must be greater than 0.
+In the *row* parameter, you can define the row(s) of the cell range's position. Passar o índice da linha (a contagem começa em 0) neste parâmetro. *rowCount* must be greater than 0.
 
 The optional *rowCount* parameter allows you to define the total number of rows of the range. *rowCount* must be greater than 0. If omitted, the value will be set to 1 by default.
 
