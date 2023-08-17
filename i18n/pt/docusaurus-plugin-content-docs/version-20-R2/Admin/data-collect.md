@@ -138,4 +138,4 @@ O ficheiro é enviado para o seguinte endereço de servidor: `https://dcollector
 
 Pode desactivar a recolha automática de dados em [aplicações construídas cliente/servidor](../Desktop/building.md#clientserver-page).
 
-Para desativar a coleção, passar o valor **Falso** para a chave [`ServerDataCollection`](https://doc.4d.com/4Dv19R6/4D/19-R6/ServerDataCollection.300-6011712.en.html) no arquivo `buildApp.4DSettings` , utilizado para construir a aplicação cliente/servidor.
+To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.

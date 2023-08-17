@@ -7,7 +7,7 @@ If more than one person uses an application, which is usually the case in client
 
 4D access control strategy depends on your deployment configuration:
 
-- in multi-user applications, you can rely on 4D users and groups,
+- em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
 - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
@@ -17,7 +17,7 @@ If more than one person uses an application, which is usually the case in client
 
 ## Controlo de acesso em aplicações multi-usuário
 
-Multi-user applications are deployed with 4D Server. They include client-server, Web, or REST applications.
+Aplicações multi-usuário são implementadas com 4D Server. They include client-server, Web, or REST applications.
 
 In multi-user applications, access control is done through [4D users and groups](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
 

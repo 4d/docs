@@ -6,7 +6,11 @@ sidebar_label: Página de criptografia
 
 You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database.
 
-> You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database. Para informação detalhada sobre criptografia em 4D, veja a seção "Criptografia de dados".
+:::info
+
+For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. Para informação detalhada sobre criptografia em 4D, veja a seção "Criptografia de dados".
+
+:::
 
 A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 > Encryption is only available in [maintenance mode](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
@@ -80,7 +84,7 @@ The data file is fully decrypted and a confirmation message is displayed: ![](..
 
 ## Guardar a chave de encriptação
 
-4D permite salvar a chave de encriptação de dados em um arquivo dedicado. Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
+4D permite salvar a chave de encriptação de dados em um arquivo dedicado. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
 
 You can save the encryption key each time a new passphrase has been provided:
 
@@ -88,6 +92,12 @@ You can save the encryption key each time a new passphrase has been provided:
 - quando o banco de dados for re-criptografado com uma nova frase secreta.
 
 Podem ser armazenadas chaves de encriptação sucessivas no mesmo dispositivo.
+
+:::caution
+
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+
+:::
 
 ## Arquivo histórico
 Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. É criado no formato XML e se chama "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".

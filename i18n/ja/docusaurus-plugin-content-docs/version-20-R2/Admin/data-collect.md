@@ -138,4 +138,4 @@ title: データ収集
 
 [ビルドされたクライアント/サーバーのアプリケーション](../Desktop/building.md#クライアントサーバーページ) で、自動データ収集を無効にすることができます。
 
-データ収集を無効にするには、クライアント/サーバーアプリケーションのビルドに使用する `buildApp.4DSettings` ファイル内の [`ServerDataCollection`](https://doc.4d.com/4Dv19R6/4D/19-R6/ServerDataCollection.300-6011712.ja.html) キーに値 **False** を渡します。
+To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.

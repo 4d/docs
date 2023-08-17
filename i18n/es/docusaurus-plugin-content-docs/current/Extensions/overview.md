@@ -20,7 +20,7 @@ title: Extensiones
 | [4D SVG](https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html) | Crear y manipular objetos gráficos svg comunes                                                                          | `SVGTool_Display_viewer`, métodos múltiples `SVG_`                                                                      |
 | [4D ViewPro](ViewPro/getting-started.md)                                      | Funciones de hoja de cálculo en sus formularios                                                                         | Ver la [documentación 4D View Pro](ViewPro/getting-started.md)                                                          |
 | [4D Widgets](https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html)   | Gestione los widgets DatePicker, TimePicker, SearchPicker 4D                                                            | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ...                                 |
-| [Interfaz 4D WritePro](https://github.com/4d/4D-WritePro-Interface)           | Gestionar las paletas de [4D Write Pro](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Write-Pro-Reference.100-5606477.en.html) | `WP CreatePreview`, `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                      |
+| [Interfaz 4D WritePro](WritePro/writeprointerface.md)                         | Gestionar las paletas de [4D Write Pro](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Write-Pro-Reference.100-5606477.en.html) | `WP CreatePreview`, `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                      |
 
 
 ## Componentes de terceros

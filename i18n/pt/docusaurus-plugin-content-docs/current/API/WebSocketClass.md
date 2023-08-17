@@ -98,7 +98,7 @@ Se a ligação não for possível, é devolvido um objeto `null` sendo gerado um
 Em *connectionHandler*, pode passar um objeto que contenha funções de retorno de chamada a chamar conforme os eventos de ligação e o tipo de dados a tratar.
 
 - As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
-- O tempo de vida do WebSocket deve ser pelo menos igual ao tempo de vida do formulário ou do worker.
+- The WebSocket will be valid as long as the form or worker is not closed.
 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                                               |
 | ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

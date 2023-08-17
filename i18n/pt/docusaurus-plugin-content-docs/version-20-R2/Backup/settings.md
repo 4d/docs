@@ -135,3 +135,9 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 > In the case of an automatic restore, only the following elements are restored:
 > 
 > Se quiser os arquivos anexados ou os arquivos de projeto, precisa fazer uma restauração  manual
+
+:::caution
+
+If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+
+:::

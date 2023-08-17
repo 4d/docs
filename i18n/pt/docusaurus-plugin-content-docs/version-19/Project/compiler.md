@@ -207,11 +207,11 @@ Esta lista está dividida em três colunas:
 
 - lista das variáveis locais utilizadas no método;
 - tipo da variável;
-- number of dimensions if the variable is an array.
+- número de dimensões se a variável for um array.
 
 #### Lista completa de métodos
 
-A complete list of your database and project methods is given at the end of the file with:
+Uma lista completa de seus métodos banco de dados e projeto é apresentada no final do ficheiro com:
 
 - their type (procedure or function returning a value)
 - the data types of their parameters and the returned result

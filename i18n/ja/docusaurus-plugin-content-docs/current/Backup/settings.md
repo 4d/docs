@@ -134,3 +134,9 @@ title: バックアップ設定
 > 自動復元の場合、復元されるのは次の要素に限られます:<br /> - .4DD ファイル<br /> - .4DIndx ファイル<br /> - .4DSyncData ファイル<br /> - .4DSyncHeader ファイル <br /> - External Data フォルダー
 > 
 > 添付ファイルやプロジェクトファイルを取得したい場合、[手動の復元](restore.md#手動でバックアップから復元する-標準ダイアログ) をおこなう必要があります。
+
+:::caution
+
+If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+
+:::

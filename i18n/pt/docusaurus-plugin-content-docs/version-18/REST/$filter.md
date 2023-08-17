@@ -9,7 +9,7 @@ Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!=
 
 ## Descrição
 
-This parameter allows you to define the filter for your dataclass or method.
+Este parâmetro permite-lhe definir o filtro para a sua dataclass ou método.
 
 ### Utilizar um filtro simples
 
@@ -17,11 +17,11 @@ Um filtro é composto pelos seguintes elementos:
 
 **{attribute} {comparator} {value}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+Por exemplo: `$filter="firstName=john"` onde `firstName` é o **atributo**, `=` é o comparador **** e `john` é o **valor **.
 
 ### Utilizar um filtro complexo
 
-A more compex filter is composed of the following elements, which joins two queries:
+Um filtro mais complexo é composto pelos seguintes elementos, que juntam duas consultas:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
@@ -49,7 +49,7 @@ For more information regarding how to query data in 4D, refer to the [dataClass.
 
 If the attribute is in the same dataclass, you can just pass it directly (*e.g.*, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (*e.g.*, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
 
-You can also query attributes of type Object by using dot-notation. For example, if you have an attribute whose name is "objAttribute" with the following structure:
+Também é possível consultar atributos do tipo Object utilizando a notação de ponto. For example, if you have an attribute whose name is "objAttribute" with the following structure:
 
 ```
 {

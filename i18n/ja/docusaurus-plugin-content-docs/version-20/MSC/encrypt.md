@@ -6,7 +6,11 @@ sidebar_label: 暗号化ページ
 
 このページを使用して、データベースの各テーブルに対して定義された **暗号化可能** 属性に基づいて、データファイルを暗号化または *復号化* (つまりデータから暗号化を解除) することができます。
 
-> 4D のデータ暗号化についての詳細な情報に関しては、*デザインリファレンス* マニュアルの [データの暗号化](https://doc.4d.com/4Dv18/4D/18/Encrypting-data.300-4575694.ja.html) の章を参照してください。 また、[A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) のブログ記事 (英文) も参照ください。
+:::info
+
+For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. また、[A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) のブログ記事 (英文) も参照ください。
+
+:::
 
 暗号化/復号化操作をおこなうたびに、新しいフォルダーが作成されます。 そのフォルダーは "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*" あるいは "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*" と名前が付けられます。
 > 暗号化は [メンテナンスモード](overview.md#メンテナンスモードでの表示) でのみ利用可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログが表示され、アプリケーションを終了してメンテナンスモードで再起動することを知らせます。
@@ -83,7 +87,7 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 ## 暗号化キーを保存する
 
-4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 このファイルを USBキーなどの外部デバイスに保存しておくと、暗号化されたアプリケーションを使うのが簡単になります。なぜならユーザーは暗号化されたデータにアクセスするには、アプリケーションを開く前にデバイスを接続してキーを提供すればよいからです。
+4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". このファイルを USBキーなどの外部デバイスに保存しておくと、暗号化されたアプリケーションを使うのが簡単になります。なぜならユーザーは暗号化されたデータにアクセスするには、アプリケーションを開く前にデバイスを接続してキーを提供すればよいからです。
 
 新しいパスフレーズが提供されるたびに暗号化キーを保存することができます:
 
@@ -91,6 +95,12 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 - アプリケーションが新しいパスフレーズで再暗号化されたとき
 
 連続した暗号化キーを同じデバイスに保存することが可能です。
+
+:::caution
+
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+
+:::
 
 ## ログファイル
 暗号化オペレーションが完了すると、4D はアプリケーションの Logsフォルダー内にファイルを生成します。 このファイルは XML形式で作成され、"*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" または "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" という名前がつけられます。
