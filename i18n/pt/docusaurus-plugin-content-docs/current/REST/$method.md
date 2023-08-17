@@ -191,20 +191,20 @@ Actualiza e/ou cria uma ou mais entidades
 
 ### Descrição
 
-`$method=update` permite-lhe atualizar e/ou criar uma ou mais entidades num único **POST**. If you update and/or create one entity, it is done in an object with each property an attribute with its value, *e.g.*, `{ lastName: "Smith" }`. If you update and/or create multiple entities, you must create a collection of objects.
+`$method=update` permite-lhe atualizar e/ou criar uma ou mais entidades num único **POST**. Se atualizar e/ou criar uma entidade, isso é feito num objeto em que cada propriedade é um atributo com o respetivo valor, *por exemplo*, `{ lastName: "Smith" }`. Se forem atualizadas e/ou criadas várias entidades, é necessário criar uma coleção de objetos.
 
-In any cases, you must set the **POST** data in the **body** of the request.
+Em qualquer caso, é necessário definir os dados **POST** no corpo **** do pedido.
 
-To update an entity, you must pass the `__KEY` and `__STAMP` parameters in the object along with any modified attributes. If both of these parameters are missing, an entity will be added with the values in the object you send in the body of your **POST**.
+Para atualizar uma entidade, é necessário passar os parâmetros `__KEY` e `__STAMP` no objeto, com quaisquer atributos modificados. Se ambos os parâmetros estiverem em falta, será adicionada uma entidade com os valores do objeto que enviar no corpo do seu **POST**.
 
 Os triggers são executados imediatamente ao guardar a entidade no servidor. A resposta contém todos os dados tal como existem no servidor.
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. You can also use `$method=validate` to validate the entities before creating or updating them.
+Também é possível colocar estes pedidos para criar ou atualizar entidades numa transação, chamando `$atomic/$atOnce`. Se ocorrerem erros durante a validação de dados, nenhuma das entidades é guardada. Pode também utilizar `$method=validate` para validar as entidades antes de as criar ou atualizar.
 
-If a problem arises while adding or modifying an entity, an error will be returned to you with that information.
+Se surgir um problema ao adicionar ou modificar uma entidade, ser-lhe-á enviado um erro com essa informação.
 
 :::note
-*   **Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
+*   **As datas** devem ser expressas no formato YYYY-MM-DDTHH:MM:SSZ (por exemplo, "2010-10-05T23:00:00Z"). Se tiver selecionado a propriedade Apenas data para o seu atributo Data, o fuso horário e a hora (hora, minutos e segundos) serão removidos. Neste caso, também pode enviar a data no formato que lhe é devolvido dd!mm!yyyy (por exemplo, 05!10!2013).
 *   **Booleanos** são true ou false.
 *   Os ficheiros carregados utilizando `$upload` podem ser aplicados a um atributo do tipo Imagem ou BLOB passando o objecto devolvido no seguinte formato `{"ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
 
@@ -226,7 +226,7 @@ Para atualizar uma entidade específica, utilizar o seguinte URL:
 }
 ```
 
-The firstName and lastName attributes in the entity indicated above will be modified leaving all other attributes (except calculated ones based on these attributes) unchanged.
+Os atributos firstName e lastName na entidade indicada acima serão modificados, deixando todos os outros atributos (exceto os calculados com base nestes atributos) inalterados.
 
 Se você quiser criar uma entidade, poderá enviar os atributos via POST usando este URL:
 
@@ -241,7 +241,7 @@ Se você quiser criar uma entidade, poderá enviar os atributos via POST usando 
 }
 ```
 
-You can also create and update multiple entities at the same time using the same URL above by passing multiple objects in an array to the POST:
+Também é possível criar e atualizar várias entidades em simultâneo, utilizando o mesmo URL acima, passando vários objetos num array para o POST:
 
  `POST  /rest/Person/?$method=update`
 
@@ -262,7 +262,7 @@ You can also create and update multiple entities at the same time using the same
 
 **Responsa:**
 
-When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
+Quando se adiciona ou modifica uma entidade, esta é-lhe devolvida com os atributos modificados. Por exemplo, se criar o novo empregado acima, ser-lhe-á devolvido o seguinte:
 
 ```json
 {
