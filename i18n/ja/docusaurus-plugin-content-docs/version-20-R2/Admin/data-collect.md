@@ -39,7 +39,7 @@ title: データ収集
 | license                 | Object         | 製品ライセンスの名称と説明                                                                            |
 | isRosetta               | Boolean        | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
 | uniqueID                | Text           | 4D Server の固有ID                                                                          |
-| id                      | テキスト (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
+| id                      | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | dataFileSize            | Number         | データファイルのサイズ (バイト単位)                                                                      |
 | indexesSize             | Number         | インデックスのサイズ (バイト単位)                                                                       |
 | cacheSize               | Number         | キャッシュのサイズ (バイト単位)                                                                        |
@@ -138,4 +138,4 @@ title: データ収集
 
 [ビルドされたクライアント/サーバーのアプリケーション](../Desktop/building.md#クライアントサーバーページ) で、自動データ収集を無効にすることができます。
 
-To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.
+データ収集を無効にするには、クライアント/サーバーアプリケーションのビルドに使用する `buildApp.4DSettings` ファイル内の [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.ja.html) キーに値 **False** を渡します。
