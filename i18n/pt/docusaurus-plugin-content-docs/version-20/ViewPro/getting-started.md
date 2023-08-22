@@ -122,7 +122,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. This area can be composed of one or several cells. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
 
-For example, to create a range object for the following cells:
+Por exemplo, para criar um objeto intervalo para as seguintes células:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
@@ -130,7 +130,7 @@ You can use the [VP Cells](method-list.md#vp-cells) method:
 
 ```4d 
 var $myRange : Object
-$myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
+$myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 ```
 
 You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](method-list.md#vp-set-border)).
@@ -138,7 +138,7 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 4D View Pro range objects are composed of several properties:
 
 *   área - O nome da área 4D View Pro
-*   ranges - A collection of range object(s). Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
+*   intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
 | Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                    |
 | ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | -------------------------------------------------- |
