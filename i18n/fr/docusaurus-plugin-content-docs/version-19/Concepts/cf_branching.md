@@ -77,7 +77,7 @@ ou :
  End if
 ```
 
-## Au cas ou...Sinon...Fin de cas
+## Case of...Else...End case
 
 La syntaxe de la structure conditionnelle `Case of...Else...End case` est la suivante :
 ```4d
