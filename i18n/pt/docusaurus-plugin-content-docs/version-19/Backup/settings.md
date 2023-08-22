@@ -136,6 +136,6 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 
 :::caution
 
-If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+Se o [ficheiro de dados é encriptado](../MSC/encrypt.md), certifique-se de que [guardou a chave de encriptação de dados](../MSC/encrypt#saving-the-encryption-key) num ficheiro `.4DKeyChain` armazenado no primeiro nível da unidade, para que 4D possa aceder-lhe se a funcionalidade de restauração automática ativada. Caso contrário, será devolvido um erro durante a sequência de restauro.
 
 :::
