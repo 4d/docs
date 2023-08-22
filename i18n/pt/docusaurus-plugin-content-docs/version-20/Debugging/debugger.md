@@ -119,7 +119,7 @@ Este tema permite-lhe acompanhar os valores dos objetos ou expressões:
 * usado na linha de código a ser executada (aquela marcada com o contador de programa - a seta amarela no [painel de código-fonte](#source-code-pane)),
 * utilizado na linha de código anterior
 
-Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Digamos que executa o seguinte método:
+Como a linha de código anterior é a que acabou de ser executada antes, este tema mostra os objetos ou expressões da linha atual antes e depois da execução da linha.  Digamos que executa o seguinte método:
 
 ```4d
 TRACE
@@ -128,7 +128,7 @@ $b:=a+1
 $c:=a+b
 ```
 
-1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
+1. Uma janela Depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesta altura, é apresentado o tema **Objetos Linha**:
 
     | $a | Indefinido |
     | -- | ---------- |
