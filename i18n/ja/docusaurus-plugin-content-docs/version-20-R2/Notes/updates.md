@@ -15,12 +15,11 @@ title: リリースノート
 - 新しい QUICネットワークレイヤー [インタフェース設定](../settings/client-server.md#ネットワークレイヤー)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.ja.html) ページ。
-- 4D Write Pro Interface: New [Table Wizard](../WritePro/writeprointerface.md).
+- 4D Write Pro インターフェース: 新しい [表ウィザード](../WritePro/writeprointerface.md)。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R2): 4D v20 R2 で修正されたバグのリストです。
 
 
-
-## 4D v20
+## 4D v20.x
 
 [**4D v20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D v20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
@@ -29,8 +28,16 @@ title: リリースノート
 
 4D v20 では、ICUライブラリのアップデート (後述参照) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
+:::caution 4D v20.1 index rebuild warning
+
+4D v20.1 includes a new ICU library update which will also force an automatic rebuild of indexes of type alpha, text, and object.
+
+:::
+
+
 #### ハイライト
 
+- (4D v20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
 - 新しい [WebSocketServer](../API/WebSocketServerClass.md) と [WebSocketConnection](../API/WebSocketConnectionClass.md) クラスで、4D から WebSocket 接続を作成および管理できるようになりました。
@@ -53,7 +60,7 @@ title: リリースノート
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20): 4D v20 で修正されたバグのリストです。
+- Fixed bug lists: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
 
 
@@ -275,7 +282,7 @@ ALERT($param1+" "+$param2)
 
 | ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
 | --------- | --------- | -------------- | ----------------------------------------------------- |
-| ICU       | 72.1      | 20             | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
+| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
 | CEF       | 113       | 20 R2          | Chromium 5672                                         |
 | Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
 | PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                   |
