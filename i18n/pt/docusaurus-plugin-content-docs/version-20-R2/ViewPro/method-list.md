@@ -2796,7 +2796,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 #### Descrição
 
-O comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->returns a collection of all table names defined in the *sheet*<!-- END REF -->.
+O comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->devolve uma coleção de todos os nomes de tabelas definidos na *sheet*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -2840,7 +2840,7 @@ $tables:=VP Get tables("ViewProArea")
 
 #### Descrição
 
-O comando `VP Get value` <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
+O comando `VP Get value` <!-- REF #_method_.VP Get value.Summary -->recupera um valor de célula de um intervalo de células designado<!-- END REF -->.
 
 In *rangeObj*, pass a range whose value you want to retrieve.
 
@@ -3114,7 +3114,7 @@ New columns are inserted on the left, directly before the starting column in the
 
 #### Exemplo
 
-To insert three columns before the second column:
+Para inserir três colunas antes da segunda coluna:
 
 ```4d
 VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
@@ -3183,7 +3183,7 @@ O resultado é:
 | ----------- | ------- | -- | ------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | Nome de objeto formulário área 4D View Pro                          |
 | tableName   | Text    | -> | Nome da tabela                                                      |
-| column      | Integer | -> | Index in the table of the starting column to insert                 |
+| column      | Integer | -> | Índice na tabela da coluna inicial a inserir                        |
 | count       | Text    | -> | Número de colunas a adicionar (tem de ser >0)                       |
 | insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*        |
 | sheet       | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
@@ -3278,7 +3278,7 @@ $context.col.push(New object("name"; "Gross"; "salary"; 10500)) VP SET DATA CONT
 
 ![](../assets/en/ViewPro/table-base.png)
 
-You want to insert two rows and two columns in the table, you can write:
+Se quiser inserir duas linhas e duas colunas na tabela, pode escrever:
 
 ```4d
 VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
@@ -3313,10 +3313,10 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <!-- REF #_method_.VP MOVE CELLS.Params -->
 
-| Parâmetro   | Tipo   |    | Descrição                                            |
-| ----------- | ------ | -- | ---------------------------------------------------- |
-| originRange | Object | -> | Intervalo de células a partir do qual copiar         |
-| targetRange | Object | -> | Target range for the values, formatting and formulas |
+| Parâmetro   | Tipo   |    | Descrição                                                   |
+| ----------- | ------ | -- | ----------------------------------------------------------- |
+| originRange | Object | -> | Intervalo de células a partir do qual copiar                |
+| targetRange | Object | -> | Intervalo de destino para os valores, formatação e fórmulas |
 | options     | Object | -> | Opções adicionais|<!-- END REF -->
 
 |
@@ -3336,7 +3336,7 @@ The *options* parameter has several properties:
 | Propriedade  | Tipo       | Descrição                                                                                                                                         |
 | ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | copy         | Parâmetros | Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (padrão) para os remover</li><li>*True* para os manter</li></ul> |
-| pasteOptions | Longint    | Specifies what is pasted. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                            |
+| pasteOptions | Longint    | Especifica o que é colado. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Cola apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                           |
 
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
@@ -3383,7 +3383,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 #### Descrição
 
-O comando `VP Name` <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
+O comando `VP Name` <!-- REF #_method_.VP Name.Summary -->devolve um novo objeto intervalo que faz referência a um intervalo nomeado<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -3510,11 +3510,11 @@ $cellStyle.font:=VP Object to font($font)
 
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                           |
-| ---------- | ------- | -- | --------------------------------------------------- |
-| rangeObj   | Object  | -> | Cell range object                                   |
-| dataObject | Object  | -> | Objeto que contém os dados a colar                  |
-| options    | Longint | -> | Specifies what is pasted|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                            |
+| ---------- | ------- | -- | ---------------------------------------------------- |
+| rangeObj   | Object  | -> | Objeto intervalo de células                          |
+| dataObject | Object  | -> | Objeto que contém os dados a colar                   |
+| options    | Longint | -> | Especifica o que é colado|<!-- END REF -->
 
 |
 
@@ -3528,14 +3528,14 @@ In *dataObject*, pass the object that contains the cell data, formatting, and fo
 
 In the optional *options* parameter, you can specify what to paste in the cell range. Valores possíveis:
 
-| Parâmetros                                     | Descrição                                                            |
-| ---------------------------------------------- | -------------------------------------------------------------------- |
-| `vk clipboard options all`                     | Pastes all data objects, including values, formatting, and formulas. |
-| `vk clipboard options formatting`              | Cola apenas a formatação.                                            |
-| `vk clipboard options formulas`                | Pastes only the formulas.                                            |
-| `vk clipboard options formulas and formatting` | Pastes formulas and formatting.                                      |
-| `vk clipboard options values`                  | Cola apenas valores.                                                 |
-| `vk clipboard options value and formatting`    | Cola valores e formatação.                                           |
+| Parâmetros                                     | Descrição                                                                  |
+| ---------------------------------------------- | -------------------------------------------------------------------------- |
+| `vk clipboard options all`                     | Cola todos os objectos de dados, incluindo valores, formatação e fórmulas. |
+| `vk clipboard options formatting`              | Cola apenas a formatação.                                                  |
+| `vk clipboard options formulas`                | Cola apenas as fórmulas.                                                   |
+| `vk clipboard options formulas and formatting` | Pastes formulas and formatting.                                            |
+| `vk clipboard options values`                  | Cola apenas valores.                                                       |
+| `vk clipboard options value and formatting`    | Cola valores e formatação.                                                 |
 
 The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
 
@@ -3865,7 +3865,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | ---------- | ------- | -- | ------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                          |
 | tableName  | Text    | -> | Nome da tabela                                                      |
-| column     | Integer | -> | Index in the table of the starting column to remove                 |
+| column     | Integer | -> | Índice na tabela da coluna inicial a remover                        |
 | count      | Text    | -> | Número de colunas a remover (tem de ser >0)                         |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
@@ -5178,7 +5178,7 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 
 | Parâmetro   | Tipo       |    | Descrição                                       |
 | ----------- | ---------- | -- | ----------------------------------------------- |
-| rangeObj    | Object     | -> | Cell range object                               |
+| rangeObj    | Object     | -> | Objeto intervalo de células                     |
 | formulasCol | Collection | -> | Colecção de fórmulas|<!-- END REF -->
 
 |
