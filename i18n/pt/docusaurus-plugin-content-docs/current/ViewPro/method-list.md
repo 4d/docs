@@ -4066,7 +4066,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 #### Descrição
 
-O comando `VP RESUME COMPUTING` <!-- REF #_method_.VP RESUME COMPUTING.Summary --> restarts the calculation of formulas in *vpAreaName*<!-- END REF -->.
+O comando `VP RESUME COMPUTING` <!-- REF #_method_.VP RESUME COMPUTING.Summary --> reinicia o cálculo das fórmulas em *vpAreaName*<!-- END REF -->.
 
 The command reactivates the calculation service in 4D View Pro. Any formulas impacted by changes made while calculations were suspended are updated, and formulas added after `VP RESUME COMPUTING` is executed are calculated.
 
@@ -4101,11 +4101,11 @@ Ver exemplo em [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 #### Descrição
 
-O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+O comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devolve um novo objeto intervalo que referir-se a uma linha ou linhas específicas<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In the *row* parameter, you can define the row(s) of the cell range's position. Passar o índice da linha (a contagem começa em 0) neste parâmetro. *rowCount* must be greater than 0.
+O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índice da linha (a contagem começa em 0) neste parâmetro. *rowCount* must be greater than 0.
 
 The optional *rowCount* parameter allows you to define the total number of rows of the range. *rowCount* must be greater than 0. If omitted, the value will be set to 1 by default.
 
@@ -4144,13 +4144,13 @@ $row:=VP Row("ViewProArea";9) // linha 10
 
 #### Descrição
 
-O comando `VP ROW AUTOFIT` <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
+O comando `VP ROW AUTOFIT` <!-- REF #_method_.VP ROW AUTOFIT.Summary -->dimensiona automaticamente a(s) linha(s) em *rangeObj* conforme o seu conteúdo<!-- END REF -->.
 
 In *rangeObj*, pass a range object containing a range of the rows whose size will be automatically handled.
 
 #### Exemplo
 
-The following rows don't correctly display the text:
+As linhas seguintes não apresentam corretamente o texto:
 
 ![](../assets/en/ViewPro/cmd_vpRowAutoFit1.PNG)
 
@@ -4175,7 +4175,7 @@ Resultados:
 
 | Parâmetro  | Tipo   |    | Descrição                                                                                                  |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
-| parameters | Object | -> | Object containing the offscreen area's attributes                                                          |
+| parameters | Object | -> | Objeto que contém os atributos da área fora do ecrã                                                        |
 | Resultados | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
 
 |
@@ -4198,9 +4198,9 @@ In *parameters* object, pass any of the following optional properties. These pro
 
 The following property is automatically added by the command if necessary:
 
-| Propriedade    | Tipo    | Descrição                                          |
-| -------------- | ------- | -------------------------------------------------- |
-| timeoutReached | boolean | Added with true value if timeout has been exceeded |
+| Propriedade    | Tipo    | Descrição                                                       |
+| -------------- | ------- | --------------------------------------------------------------- |
+| timeoutReached | boolean | Adicionado com valor true se o tempo limite tiver sido excedido |
 
 > The offscreen area is only available during the execution of the `VP Run offscreen area` command. It will automatically be destroyed once execution has ended.
 
@@ -4311,11 +4311,11 @@ $result:=VP Run offscreen area($o)
 
 O comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define uma célula específica como ativa<!-- END REF -->.
 
-In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Em *rangeObj*, passe um intervalo que contenha uma única célula como um objeto (ver [VP Cell](#vp-cell)). Se *rangeObj* não for um intervalo de células ou contiver vários intervalos, é utilizada a primeira célula do primeiro intervalo.
 
 #### Exemplo
 
-To set the cell in column D, row 5 as the active cell:
+Para definir a célula na coluna D, linha 5 como a célula ativa:
 
 ```4d
 $activeCell:=VP Cell("myVPArea";3;4)
@@ -4367,7 +4367,7 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 
 #### Exemplo
 
-You want to allow two methods in your 4D View Pro areas:
+Pretende permitir dois métodos nas suas áreas 4D View Pro:
 
 ```4d
 C_OBJECT($allowed)
@@ -4413,16 +4413,16 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
-| Parâmetro            | Tipo   |    | Descrição                                                               |
-| -------------------- | ------ | -- | ----------------------------------------------------------------------- |
-| rangeObj             | Object | -> | Objeto intervalo                                                        |
-| dataContextAttribute | Text   | -> | Name of the attribute to bind to *rangeObj* |<!-- END REF -->
+| Parâmetro            | Tipo   |    | Descrição                                                           |
+| -------------------- | ------ | -- | ------------------------------------------------------------------- |
+| rangeObj             | Object | -> | Objeto intervalo                                                    |
+| dataContextAttribute | Text   | -> | Nome do atributo a associar a *rangeObj*|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. Depois de definir um contexto de dados utilizando o método [SET DATA CONTEXT](#vp-set-data-context). When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+O comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->liga um atributo do contexto de dados de uma folha a *rangeObj*<!-- END REF -->. Depois de definir um contexto de dados utilizando o método [SET DATA CONTEXT](#vp-set-data-context). When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
 In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
 
@@ -4468,7 +4468,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 #### Descrição
 
-O comando `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
+O comando `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->atribui um valor booleano especificado a um intervalo de células designado<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
@@ -4865,7 +4865,7 @@ To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object wit
 | value       | Integer, Real, Boolean, Text, Date, Null | Valor a inserir no contexto                          |
 | time        | Real                                     | Valor de hora (em segundos) a introduzir no contexto |
 
-In *options*, you can pass an object that specifies additional options. Possible properties are:
+In *options*, you can pass an object that specifies additional options. As propriedades possíveis são:
 
 | Propriedade         | Tipo   | Descrição                                                                                                                                                                                                                      |
 | ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -4878,7 +4878,7 @@ If you export your document to an object using [VP Export to object](#vp-export-
 
 #### Exemplo
 
-Pass an object and bind the context data to cells in the first row:
+Passa um objeto e associa os dados de contexto às células da primeira linha:
 
 ```4d
 var $data : Object
@@ -4913,7 +4913,7 @@ $options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProAr
 
 #### Exemplo 3
 
-The *data* passed as a parameter is a collection that contains subcollections. Cada subcoleção define o conteúdo de uma linha:
+*data* passada como parâmetro é uma coleção que contém subcoleções. Cada subcoleção define o conteúdo de uma linha:
 
 ```4d
 var $data : Collection
@@ -5005,13 +5005,13 @@ The optional *formatPattern* defines a pattern for the *dateValue* and *timeValu
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parameter|Type||Description|
+|Parâmetro|Tipo||Descrição|
 
 |---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Descrição
 
-O comando `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+O comando `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->atribui um valor de data especificado a um intervalo de células designado<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
@@ -5102,7 +5102,7 @@ $style.backColor:="#E6E6FA" //light purple color VP SET DEFAULT STYLE("myDoc";$s
 
 O comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->atribui um campo virtual do banco de dados 4D a um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
+Em *rangeObj*, passe um intervalo dá(s) célula(s) cujo valor pretende especificar. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
 
 The *field* parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
 
