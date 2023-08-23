@@ -283,7 +283,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. Para visualizar o conteúdo do BLOB, pode utilizar comandos BLOB, tais como [BLOB para texto](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Manuseamento de expressões
 
