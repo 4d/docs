@@ -11,7 +11,7 @@ The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/E
 
 You will find below the Table Wizard configuration documentation.
 
-## Table Wizard
+## 表ウィザード
 
 The Table Wizard is here to further simplify table creation based on database data using contexts, data sources, and formulas.
 
@@ -21,7 +21,7 @@ The Table Wizard comes with default templates and themes, which developers can c
 
 To implement the Table Wizard in your application, the developers are able to create and configure template files.
 
-### WP Table Wizard interface
+### WP表ウィザードのインターフェース
 
 The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
 
@@ -61,7 +61,7 @@ The templates configuration includes:
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
-#### Template files
+#### テンプレートファイル
 
 The template file allows you to define the following:
 
@@ -154,7 +154,7 @@ Here's a brief example of what your JSON file might look like:
 
 ```
 
-#### Translation files
+#### トランスレーションファイル
 
 Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
 
