@@ -99,7 +99,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 | Nombre     | Tipos de datos            | Valores posibles          |
 | ---------- | ------------------------- | ------------------------- |
-| dataSource | cadena o array de cadenas | <ul><li>Variable 4D, nombre de campo o expresión arbitraria en lenguaje complejo.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
+| dataSource | cadena o array de cadenas | <ul><li>Variable 4D, nombre de campo o expresión arbitraria en lenguaje complejo.</li><li>Cadena vacía para [variables dinámicas](#variables-dinámicas).</li><li>Array de cadenas (colección de nombres de array) para una columna [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes)]</li></ul> |
 
 #### Objetos soportados
 
