@@ -72,7 +72,7 @@ Uma imagem em modo escuro é definida da seguinte forma:
 * dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
 * a imagem do modo escuro é guardada ao lado da versão padrão.
 
-At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).
+Em tempo de execução, 4D carregará automaticamente a imagem clara ou escura de acordo com o [esquema de cores do formulário atual](https://doc.4d.com/4dv19/help/command/en/1761.html).
 
 ![](../assets/en/FormEditor/darkicon.png)
 
