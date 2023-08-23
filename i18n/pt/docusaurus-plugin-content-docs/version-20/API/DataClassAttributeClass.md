@@ -126,13 +126,13 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 
 **Valores possíveis:**
 
-| dataClassAttribute.kind | fieldType                                                                   |
-| ----------------------- | --------------------------------------------------------------------------- |
-| storage                 | Tipo de campo 4D correspondente                                             |
-| relatedEntity           | Ver o comando `Type`                                                        |
-| relatedEntities         | 42 (`Is collection`)                                                        |
-| calculated              | <li>escalar: tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>38 (Is object)</li><li>entity selection: 42 (`Is collection`)</li> |
-| alias                   | <li>escalar: tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>38 (Is object)</li><li>42 (Is collection)</li> |
+| dataClassAttribute.kind | fieldType                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------- |
+| storage                 | Tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
+| relatedEntity           | Ver o comando `Type`                                                                                        |
+| relatedEntities         | 42 (`Is collection`)                                                                                        |
+| calculated              | <li>escalar: tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>38 (Is object)</li><li>entity selection: 42 (`Is collection`)</li>                                 |
+| alias                   | <li>escalar: tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>38 (Is object)</li><li>42 (Is collection)</li>                                 |
 
 <!-- END REF -->
 

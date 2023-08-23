@@ -100,96 +100,96 @@ Quando se torna invisível um método projeto, este continua a estar disponível
 
 #### Partilhada pelos componentes e pela base de dados host
 
-This attribute is used within the framework of components. When it is checked, it indicates that the method will be available to components when the application is used as the host database. On the other hand, when the application is used as a component, the method will be available to the host databases.
+Este atributo é utilizado no âmbito dos componentes. Quando estiver selecionada, indica que o método estará disponível para os componentes quando a aplicação for utilizada como base de dados do anfitrião. Por outro lado, quando a aplicação for utilizada como um componente, o método estará disponível para as bases de dados do anfitrião.
 
-For more information about components, refer to the [Developing and installing 4D components](../Extensions/develop-components.md) chapter.
+Para saber mais sobre componentes, consulte o capítulo [Desenvolvimento e instalação de componentes 4D](../Extensions/develop-components.md) .
 
-#### Executar no Servidor
+#### Executar no servidor
 
-This attribute is only taken into account for a 4D application in client-server mode. When this option is checked, the project method is always executed on the server, regardless of how it is called.
+Este atributo só é levado em consideração para uma aplicação 4D em modo cliente-servidor. Quando esta opção estiver selecionada, o método do projeto é sempre executado no servidor, independentemente da forma como é chamado.
 
-For more information on this option, refer to [Execute on Server attribute](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.en.html).
+Para mais informações sobre esta opção, consulte [Executar no atributo Servidor](https://doc.4d.com/4Dv19R6/4D/19-R6/Execute-on-Server-attribute.300-5941841.en.html).
 
 ### Modo Execução
 
-This option allows you to declare the method eligible for execution in preemptive mode. By default, 4D executes all the project methods of your applications in cooperative mode.
+Esta opção permite-lhe declarar o método elegível para execução em modo preemptivo. Por padrão, 4D executa todos os métodos de projeto de suas aplicações em modo cooperativo.
 
-If you want to benefit from the preemptive mode feature, you must explicitly declare all the methods that you want to be started in preemptive mode. The compiler will then check that these methods are actually thread-safe.
+Para se beneficiar da funcionalidade de modo preemptivo, é necessário declarar explicitamente todos os métodos que deseja que sejam iniciados em modo preemptivo. O compilador verificará então se estes métodos são efetivamente seguros para as threads.
 
-**Note:** Execution in preemptive mode is only available in compiled mode. For more information, refer to the [Preemptive 4D processes](https://doc.4d.com/4Dv19R6/4D/19-R6/Preemptive-4D-processes.300-5911166.en.html) section.
+**Nota:** A execução em modo preemptivo só está disponível em modo compilado. Para mais informações, consulte a seção [Preemptive 4D processes](https://doc.4d.com/4Dv19R6/4D/19-R6/Preemptive-4D-processes.300-5911166.en.html) .
 
 São fornecidas as seguintes opções:
 
--   **Can be run in preemptive processes**: By checking this option, you declare that the method is capable of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. The "preemptive" property of the method is set to "capable".
+-   **Pode ser executado em processos preemptivos**: Ao marcar esta opção, declara que o método pode ser executado num processo preemptivo e, por conseguinte, deve ser executado em modo preemptivo sempre que possível. A propriedade "preemptive" do método é definida como "capable".
 
-When this option is checked, the 4D compiler will verify that the method is actually capable and will return errors if this is not the case -- for example, if it directly or indirectly calls commands or methods that cannot be run in preemptive mode (the entire call chain is parsed but errors are only reported to the first sublevel). You can then edit the method so that it becomes thread-safe, or select another option.
+Quando essa opção estiver marcada, o compilador 4D verificará se o método é realmente capaz e retornará erros se esse não for o caso -- por exemplo, se ele chama direta ou indiretamente comandos ou métodos que não podem ser executados em modo preemptivo (toda a cadeia de chamadas é analisada, mas os erros são reportados apenas ao primeiro subnível). Pode então editar o método para que se torne thread-safe, ou selecionar outra opção.
 
-If the method's preemptive capability is approved, it is tagged "thread-safe" internally and will be executed in preemptive mode whenever the required conditions are met. This property defines its eligibility for preemptive mode but does not guarantee that the method will actually be run in preemptive mode, since this execution mode requires a specific context (see [When is a process started preemptively?](https://doc.4d.com/4Dv19R5/4D/19-R5/Preemptive-4D-processes.300-5830919.en.html#2822148)).
+Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Esta propriedade define a sua elegibilidade para o modo preemptivo, mas não garante que o método será efetivamente executado em modo preemptivo, uma vez que este modo de execução requer um contexto específico (ver [Quando é que um processo é iniciado de forma preemptiva?](https://doc.4d.com/4Dv19R5/4D/19-R5/Preemptive-4D-processes.300-5830919.en.html#2822148)).
 
--   **Cannot be run in preemptive processes**: By checking this option, you declare that the method must never be run in preemptive mode, and therefore must always be run in cooperative mode, as in previous 4D versions. The "preemptive" property of the method is set to "incapable".
+-   **Cannot be run in preemptive processes**: Ao marcar esta opção, declara que o método nunca deve ser executado em modo preemptivo, e portanto deve ser sempre executado em modo cooperativo, como nas versões 4D anteriores. A propriedade "preemptive" do método é definida como "incapable".
 
-When this option is checked, the 4D compiler will not verify the ability of the method to run preemptively; it is automatically tagged "thread-unsafe" internally (even if it is theoretically capable). When called at runtime, this method will "contaminate" any other methods in the same thread, thus forcing this thread to be executed in cooperative mode, even if the other methods are thread-safe.
+Quando esta opção estiver marcada, o compilador 4D não verificará a habilidade do método de executar preemptivamente; ele é automaticamente marcado como "thread-unsafe" internamente (mesmo que seja teoricamente capaz). Quando chamado em tempo de execução, este método irá "contaminar" quaisquer outros métodos na mesma thread, forçando assim esta thread a ser executada em modo cooperativo, mesmo que os outros métodos sejam thread-safe.
 
--   **Indifferent**(default): By checking this option, you declare that you do not want to handle the preemptive property for the method. The "preemptive" property of the method is set to "indifferent".
+-   **Indiferente**(predefinição): Ao marcar esta opção, declara que não pretende tratar a propriedade preemptiva do método. A propriedade "preemptiva" do método é definida como "indiferente".
 
-When this option is checked, the 4D compiler will evaluate the preemptive capability of the method and will tag it internally as "thread-safe" or "thread-unsafe". No error related to preemptive execution is returned. If the method is evaluated as thread-safe, at runtime it will not prevent preemptive thread execution when called in a preemptive context. Conversely, if the method is evaluated "thread-unsafe", at runtime it will prevent any preemptive thread execution when called.
+Quando esta opção está marcada, o compilador 4D avaliará a capacidade preemptiva do método e o marcará internamente como "thread-safe" ou "thread-unsafe". Não é devolvido qualquer erro relacionado com a execução preemptiva. Se o método for avaliado como thread-safe, em tempo de execução não impedirá a execução preemptiva de threads quando chamado num contexto preemptivo. Por outro lado, se o método for avaliado como "thread-unsafe", em tempo de execução impedirá qualquer execução de thread preemptiva quando for chamado.
 
-Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the [New process](https://doc.4d.com/4Dv19R5/4D/19-R5/New-process.301-5830903.en.html) command). If tagged "thread-safe" internally, it is only taken into account when called from other methods inside a call chain.
+Note que com essa opção, qualquer que seja a avaliação interna de segurança de thread, o método será sempre executado em modo cooperativo quando chamado diretamente por 4D como o primeiro método pai (por exemplo, através do comando [New process](https://doc.4d.com/4Dv19R5/4D/19-R5/New-process.301-5830903.en.html)). Se for marcado internamente como "thread-safe", só é tido em conta quando chamado a partir de outros métodos dentro de uma cadeia de chamadas.
 
-***Particular case*:** If the method has also the [**Shared by components and host database**](shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
+***Caso particular*:** Se o método tiver também a propriedade [**Shared by components and host database**](shared-by-components-and-host-database) , a definição da opção **Indifferent** marcará automaticamente o método como thread-unsafe. Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**.
 
 ### Disponível através de
 
-Availability attributes specify the external services which are allowed to explicitly call the method.
+Os atributos de disponibilidade especificam os serviços externos que estão autorizados a chamar explicitamente o método.
 
 #### Serviços Web
 
-This attribute lets you publish the current method as a Web Service accessible via SOAP requests. For more information, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html) chapter. When this option is checked, the **Published in WSDL** option is enabled.
+Este atributo permite-lhe publicar o método atual como um serviço Web acessível através de pedidos SOAP. Para mais informações, consulte o capítulo [Publicação e utilização de serviços Web](https://doc.4d.com/4Dv19R5/4D/19-R5/Publication-and-use-of-Web-Services.200-5851321.en.html) . Quando esta opção está selecionada, a opção **Published in WSDL** está activada.
 
-In the Explorer, project methods that are offered as a Web Service are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
+No Explorador, os métodos de projeto que são oferecidos como um Serviço Web recebem um ícone específico ![](https://doc.4d.com/4Dv19R5/picture/440512/pict440512.fr.png).
 
-**Note:** You cannot publish a method as a Web service if its name includes characters that do not comply with XML nomenclature (e.g. containing spaces). If the method name is not in keeping with this, 4D does not assign the property.
+**Nota:** Não é possível publicar um método como um serviço Web se o seu nome incluir caracteres que não estejam em conformidade com a nomenclatura XML (por exemplo, contendo espaços). Se o nome do método não estiver de acordo com isso, 4D não atribui a propriedade.
 
 #### Publicado em WSDL
 
-This attribute is only available when the "Web Service" attribute is checked. It lets you include the current method in the WSDL of the 4D application. For more information about this, refer to [Generation of the WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
+Este atributo só está disponível quando o atributo "Serviço Web" está selecionado. Permite-lhe incluir o método atual no WSDL da aplicação 4D. Para mais informações sobre este assunto, consulte [Geração do WSDL](https://doc.4d.com/4Dv19R5/4D/19-R5/Publishing-a-Web-Service-with-4D.300-5851558.en.html#502689).
 
-In the Explorer, project methods that are offered as a Web Service and published in WSDL are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
+No Explorador, os métodos de projeto que são oferecidos como um Serviço Web e publicados em WSDL recebem um ícone específico ![](https://doc.4d.com/4Dv19R5/picture/440526/pict440526.fr.png).
 
 #### Etiquetas 4D e URLs (4DACTION...)
 
-This option is used to reinforce 4D Web server security: when it is not checked, the project method cannot be executed via an HTTP request containing the special [4DACTION URL](../WebServer/httpRequests.md#4daction) used for calling 4D methods, nor the special [4DSCRIPT, 4DTEXT and 4DHTML tags](../Tags/tags.md).
+Esta opção é usada para reforçar a segurança do servidor Web 4D: quando não está marcada, o método do projeto não pode ser executado através de um pedido HTTP que contenha o URL especial [4DACTION](../WebServer/httpRequests.md#4daction) usado para chamar métodos 4D, nem as etiquetas especiais [4DSCRIPT, 4DTEXT e 4DHTML](../Tags/tags.md).
 
-In the Explorer, project methods with this attribute are given a specific icon ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
+No Explorador, os métodos de projeto com este atributo recebem um ícone específico ![](https://doc.4d.com/4Dv19R5/picture/440496/pict440496.fr.png).
 
-For security reasons, this option is unchecked by default. Each method that can be executed using the special Web URL or tags must be indicated individually.
+Por razões de segurança, esta opção está desmarcada por padrão. Cada método que pode ser executado utilizando o URL ou as etiquetas especiais da Web deve ser indicado individualmente.
 
 #### SQL
 
-When it is checked, this option allows the project method to be executed by the SQL engine of 4D. By default, it is not selected, which means that, unless explicitly authorized, 4D project methods are protected and cannot be called by the SQL engine of 4D.
+Quando está marcada, esta opção permite que o método do projeto seja executado pelo motor SQL de 4D. Por padrão, não está selecionado, o que significa que, a menos que explicitamente autorizado, os métodos do projeto 4D são protegidos e não podem ser chamados pelo motor SQL de 4D.
 
-This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
+Esta propriedade aplica-se a todas as consultas SQL internas e externas --- executadas através do controlador ODBC, código SQL inserido entre as etiquetas [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  ou o comando [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) .
 
 **Notas:**
 
--   Even if a method has the "SQL" attribute, access rights set at the level of the database settings and method properties are taken into account for the execution of the method.
--   The ODBC **SQLProcedure** function only returns project methods with the "SQL" attribute.
+-   Mesmo que um método tenha o atributo "SQL", os direitos de acesso definidos ao nível das definições da base de dados e das propriedades do método são tidos em conta para a execução do método.
+-   A função ODBC **SQLProcedure** só devolve métodos de projeto com o atributo "SQL".
 
-For more information, refer to [4D SQL engine implementation](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) in the 4D SQL manual.
+Para mais informações, consulte [4D SQL engine implementation](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) no manual 4D SQL.
 
 #### Servidor REST
 
-*This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
+*Esta opção está obsoleta. O código de chamada através de chamadas REST só é compatível com as funções de classe do modelo de dados [ORDA](../REST/ClassFunctions.md).*
 
-#### Batch setting for method attributes
+#### Definição de lotes para atributos de métodos
 
-Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) for all or part of the database project methods in a single operation. This feature is especially useful for modifying the attributes of a large number of project methods. It can also be used during development to apply common attributes to groups of similar methods quickly.
+Utilizando a caixa de diálogo "Atributos dos métodos", pode modificar um atributo (Invisível, Oferecido como serviço Web, etc.) para todos ou parte dos métodos do projeto de base de dados numa única operação. Esta caraterística é especialmente útil para modificar os atributos de um grande número de métodos de projeto. Também pode ser utilizado durante o desenvolvimento para aplicar rapidamente atributos comuns a grupos de métodos semelhantes.
 
-Para modificar os atributos do método globalmente:
+Para a definição em lote dos atributos do método:
 
-1.  On the [Methods Page](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) of the 4D Explorer, expand the options menu, then choose the **Batch setting of attributes...** command. The **Attributes for methods** dialog appears.
+1.  Na página [Methods](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) do 4D Explorer, expanda o menu de opções, depois escolha o comando **Batch setting of attributes...** . É apresentada a caixa de diálogo **Attributes for methods** .
 
-2.  In the "Matching method name:" area, enter a string that lets you designate the methods you want to modify as a batch. The character string is used as a search criterion for the method names.
+2.  Na área "Nome do método correspondente:", introduza uma string que lhe permita designar os métodos que pretende modificar como um lote. A cadeia de caracteres é utilizada como critério de pesquisa para os nomes dos métodos.
 
 Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 
@@ -200,11 +200,11 @@ Utilize o carácter curinga @ para ajudar a definir grupos de métodos:
 
 **Notas:**
 - A pesquisa não tem em conta as maiúsculas e minúsculas.
-- You can enter several @ characters in the string, for example `dtro_@web@pro.@`
+- Pode introduzir vários caracteres @ na cadeia, por exemplo `dtro_@web@pro.@`
 
-3.  In the "Attribute to Modify" area, choose an attribute from the drop-down list, then click on the **True** or **False** radio button corresponding to the value to be applied.
+3.  Na área "Attribute to Modify" (Atributo a modificar), seleccione um atributo na lista pendente e, em seguida, clique no botão de rádio **True** ou **False** correspondente ao valor a aplicar.
 
-**Note:** If the "Published in WSDL" attribute is set to True, it will only be applied to project methods already containing the "Offered as a Web Service" attribute.
+**Nota:** Se o atributo "Publicado em WSDL" for definido como Verdadeiro, só será aplicado a métodos de projeto que já contenham o atributo "Oferecido como um serviço Web".
 
-4.  Clicar em **Aplicar**. The modification is applied instantly to all the project methods designated by the character string entered.
+4.  Clicar em **Aplicar**. A modificação é aplicada instantaneamente a todos os métodos de projeto designados pela cadeia de caracteres introduzida.
 

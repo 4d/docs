@@ -1,20 +1,20 @@
 ---
 id: control-flow
-title: Control flow
+title: Conditions et boucles
 ---
 
 Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonction, vous utiliserez toujours un ou plusieurs types de structure de programmation. Les structures de programmation déterminent si et dans quel ordre les lignes d’instructions sont exécutées à l’intérieur d’une méthode. Il existe trois types de structures :
 
-- **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **Branching**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. One branching structure is the [`If...Else...End if`](#ifelseend-if) structure, which directs program flow along one of two paths. The other branching structure is the [`Case of...Else...End case`](#case-ofelseend-case) structure, which directs program flow to one of many paths.
-- **Looping**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. To deal with this need, the 4D language provides the following looping structures:
+- **Séquentielle**: une structure séquentielle est une structure simple et linéaire. Une séquence est une série d'instructions que 4D exécute l'une après l'autre, de la première à la dernière. Une routine d'une ligne, fréquemment utilisée pour les méthodes objets, est le cas le plus simple d'une structure séquentielle. Par exemple : `[People]lastName:=Uppercase([People]lastName)`
+- **Conditionnelle** : une structure conditionnelle permet aux méthodes de tester une condition et d’exécuter des séquences d’instructions différentes en fonction du résultat. La condition est une expression booléenne, c'est-à-dire une expression qui est évaluée à vrai ou faux. L’une des structures conditionnelles est la structure [`If...Else...End if`](#ifelseend-if), qui aiguille le déroulement du programme vers une séquence ou une autre. L’autre structure conditionnelle est la structure [`Case of...Else...End case`](#case-ofelseend-case), qui oriente le programme vers une séquence parmi une ou plusieurs alternatives.
+- **Répétitive** : Il est très courant, lorsque vous écrivez des méthodes, de rencontrer des cas où vous devez répéter une séquence d’instructions un certain nombre de fois. Pour traiter ces besoins, le langage 4D vous propose plusieurs structures répétitives :
 
     - [`While...End while`](#whileend-while)
     - [`Repeat...Until`](#repeatuntil)
     - [`For...End for`](#forend-for)
     - [`For each...End for each`](#for-eachend-for-each)
 
-The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Chaque structure répétitive peut être utilisée de l’une ou l’autre manière, mais les boucles `While` et `Repeat` sont mieux adaptées à la répétition jusqu’à ce qu’une condition soit remplie, alors que les boucles `For` sont mieux adaptées à la répétition un certain nombre de fois. `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières.
+Les boucles sont contrôlées de deux manières : soit elles bouclent jusqu'à ce qu'une condition soit remplie, soit elles bouclent un certain nombre de fois. Chaque structure répétitive peut être utilisée de l’une ou l’autre manière, mais les boucles `While` et `Repeat` sont mieux adaptées à la répétition jusqu’à ce qu’une condition soit remplie, alors que les boucles `For` sont mieux adaptées à la répétition un certain nombre de fois. `For each...End for each`, destinée à effectuer des boucles dans les objets et les collections, permet de combiner les deux manières.
 
 **Note :** 4D vous permet d’imbriquer des structures de programmation jusqu’à une “profondeur” de 512 niveaux.
 
@@ -93,7 +93,7 @@ ou :
  End if
 ```
 
-## Au cas ou...Sinon...Fin de cas
+## Case of...Else...End case
 
 La syntaxe de la structure conditionnelle `Case of...Else...End case` est la suivante :
 ```4d
@@ -433,9 +433,9 @@ Les instructions `break` et `continue` sont [décrites ci-dessous](#break-and-co
 
 La plupart des structures `For...End for` que vous écrirez dans vos projets ressembleront à celles présentées ci-dessus.
 
-### Counter variable
+### Variable compteur
 
-#### Decrementing counter variable
+#### Décrémenter la variable compteur
 
 Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, *Start_Expression* doit être supérieure à *End_Expression* et *Increment_Expression* doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
 
@@ -495,14 +495,14 @@ Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur 
 
 #### Optimiser l'exécution de For...End for
 
-You can use Real and Integer variables as well as interprocess, process, and local variable counters. Pour des boucles longues, et particulièrement en mode compilé, nous vous conseillons d'employer des variables locales de type Entier long.
+Vous pouvez utiliser comme compteurs des variables réelles et entières, interprocess, process et locales. Pour des boucles longues, et particulièrement en mode compilé, nous vous conseillons d'employer des variables locales de type Entier long.
 
 10. Voici un exemple :
 
 ```4d
  var $vlCounter : Integer //use local Integer variables
  For($vlCounter;1;10000)
-  //Do something
+  //Faire quelque chose
  End for
 ```
 
@@ -535,7 +535,7 @@ Until($i=100) // Boucle 100 fois
 
 :::tip
 
-The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Par conséquent, nous vous conseillons de préférer à chaque fois que c'est possible la structure `For...End for`.
+La boucle `For...End for` est généralement plus rapide que les boucles `While...End while` et `Repeat...Until` , car 4D teste la condition en interne pour chaque cycle de la boucle et incrémente le compteur. Par conséquent, nous vous conseillons de préférer à chaque fois que c'est possible la structure `For...End for`.
 
 :::
 
@@ -656,7 +656,7 @@ Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 
 ### Boucle sur entity selections
 
-When `For each...End for each` is used with an *Expression* of the *Entity selection* type, the *Current_Item* parameter is the entity that is currently processed.
+Lorsque `For each...End for each` est utilisé avec une *Expression* du type *Entity selection* , le paramètre *Current_Item* est l'entité en cours de traitement.
 
 Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. A chaque itération de la boucle, le paramètre *Elément_courant* reçoit automatiquement l'entity qui est en cours de traitement.
 
@@ -770,7 +770,7 @@ Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
  ALERT(String($total)) //$total = 1001 (1000+1)
 ```
 
-## break and continue
+## break et continue
 
 Toutes les structures de boucles ci-dessus prennent en charge les instructions `break` et `continue`. Ces instructions vous donnent plus de contrôle sur les boucles en vous permettant de sortir de la boucle et de contourner, à tout moment, l'itération en cours.
 

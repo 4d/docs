@@ -137,6 +137,6 @@ title: バックアップ設定
 
 :::caution
 
-If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+[データファイルが暗号化されている場合](../MSC/encrypt.md)、[データ暗号化キー](../MSC/encrypt#暗号化キーを保存する) を `.4DKeyChain` ファイルに保存し、自動復元機能が発動した場合に 4D がアクセスできるよう、ドライブの一番上の階層に保存します。 そうでない場合は、復元中にエラーが返されます。
 
 :::

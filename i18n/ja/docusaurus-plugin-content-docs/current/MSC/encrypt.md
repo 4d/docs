@@ -8,7 +8,7 @@ sidebar_label: 暗号化ページ
 
 :::info
 
-For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. また、[A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) のブログ記事 (英文) も参照ください。
+4D のデータ暗号化についての詳細な情報に関しては、*デザインリファレンス* マニュアルの [データの暗号化](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.ja.html) の章を参照してください。 また、[A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/) のブログ記事 (英文) も参照ください。
 
 :::
 
@@ -87,7 +87,7 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 ## 暗号化キーを保存する
 
-4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". このファイルを USBキーなどの外部デバイスに保存しておくと、暗号化されたアプリケーションを使うのが簡単になります。なぜならユーザーは暗号化されたデータにアクセスするには、アプリケーションを開く前にデバイスを接続してキーを提供すればよいからです。
+4D ではデータ暗号化キーを専用ファイルに保存しておくことができます。 ファイル名には、`.4DKeyChain` の拡張子が必要です (例: "myKeys.4DKeyChain")。 このファイルを USBキーなどの外部デバイスに保存しておくと、暗号化されたアプリケーションを使うのが簡単になります。なぜならユーザーは暗号化されたデータにアクセスするには、アプリケーションを開く前にデバイスを接続してキーを提供すればよいからです。
 
 新しいパスフレーズが提供されるたびに暗号化キーを保存することができます:
 
@@ -98,7 +98,7 @@ MSC でデータファイルを初めて暗号化する場合、以下のよう�
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+[自動復元とログの統合](../Backup/settings.md#自動復元とログの統合) 機能を使用する場合、デバイスの一番上の階層にデータ暗号化キーファイルを保存することが必須となります。 復元処理がトリガーされるとき、4D は暗号化キーファイルにアクセスできなくてはなりません。できない場合には、エラーが発生します。
 
 :::
 
