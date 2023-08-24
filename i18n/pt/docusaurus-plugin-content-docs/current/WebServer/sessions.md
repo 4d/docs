@@ -8,7 +8,7 @@ The 4D web server provides built-in features for managing **user sessions**. Cre
 As sessões de usuário do servidor Web permitem:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
-- share data between the processes of a web client,
+- partilhar dados entre os processos de um cliente Web,
 - associar privilégios a sessões de usuário,
 - handle access through a `Session` object and the [Session API](API/SessionClass.md).
 
@@ -81,7 +81,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 - the `Session` object does not contain privileges (it is a Guest session)
 - the [`.storage`](API/SessionClass.md#storage) property is empty
-- a new session cookie is associated to the session
+- um novo cookie de sessão é associado à sessão
 
 
 ## Privilégios
