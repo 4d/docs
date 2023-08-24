@@ -553,7 +553,7 @@ O comando `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->de
 Em *rangeObj*, passe o primeiro intervalo.
 
 Em *otherRangeObj*, passe um ou vários intervalos para combinar com *rangeObj*.
-> The command incorporates *rangeObj* and *otherRangeObj* objects by reference.
+> O comando incorpora *rangeObj* e *otherRangeObj* por referência.
 
 #### Exemplo
 
@@ -632,8 +632,8 @@ Em *rangeObj*, passe um intervalo de células a converter. By default, if this p
 
 Document contents are converted with respect to their viewing attributes, including formats (see note above), visibility of headers, columns and rows. A conversão dos seguintes elementos é suportada:
 
-* Text : style / font / size / alignment / orientation / rotation / format
-* Cell background : color / image
+* Texto: estilo / tipo de letra / tamanho / alinhamento / orientação / rotação / formato
+* Fundo da célula: cor / imagem
 * Borda das células: espessura / cor / estilo
 * Fusão de células
 * Imagens
@@ -648,7 +648,7 @@ O comando devolve uma imagem em formato SVG.
 
 #### Exemplo
 
-You want to convert a 4D View Pro area in SVG, preview the result, and send it to a picture variable:
+Pretende converter uma área 4D View Pro em SVG, pré-visualizar o resultado e enviá-lo para uma variável imagem:
 
 ```4d
 C_OBJECT($vpAreaObj)
@@ -889,9 +889,9 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 O comando `VP DELETE ROWS` <!-- REF #_method_.VP DELETE ROWS.Summary -->remove as linhas do *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of rows  to remove. Se o intervalo passado contiver:
+Em *rangeObj*, passe um objeto que contenha um intervalo de linhas a remover. Se o intervalo passado contiver:
 
-* both columns and rows, only the rows  are removed.
+* tanto colunas como linhas, apenas as linhas são removidas.
 * apenas colunas, o comando não faz nada.
 > > > Rows are deleted from bottom to top.
 
@@ -1160,7 +1160,7 @@ You can pass the optional *searchCondition* parameter to specify how the search 
 | all         | Parâmetros | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                 |
 | flags       | Integer    | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" é o mesmo que "A".</td></tr><tr><td>`vk find flag none`</td><td>nenhum sinalizador de pesquisa é considerado (padrão)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>Esses marcadores podem ser combinados. Por exemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                              |
 | order       | Integer    | <table><tr><td>`vk find order by columns`</td><td>A pesquisa é efectuada por colunas. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>A pesquisa é efectuada por linhas. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                           |
-| target      | Integer    | <table><tr><td>`vk find target formula`</td><td>A pesquisa é efectuada na fórmula da célula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>Esses marcadores podem ser combinados. Por exemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                 |
+| target      | Integer    | <table><tr><td>`vk find target formula`</td><td>A pesquisa é efectuada na fórmula da célula</td></tr><tr><td>`vk find target tag`</td><td>A pesquisa é efetuada na etiqueta da célula</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>Esses marcadores podem ser combinados. Por exemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                 |
 
 In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
 
@@ -1458,7 +1458,7 @@ In *rangeObj*, pass a range containing the style to retrieve.
 
 #### Exemplo
 
-To get the details about the style in the selected cell (B2):
+Para obter os detalhes sobre o estilo na célula selecionada (B2):
 
 ![](../assets/en/ViewPro/cmd_vpGetCellStyle.PNG)
 
@@ -1551,7 +1551,7 @@ $attr:=VP Get column attributes($range)
 
 O comando `VP Get column count` <!-- REF #_method_.VP Get column count.Summary -->devolve o número total de colunas da *sheet* designada<!-- END REF -->.
 
-In *vpAreaName*, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
@@ -1672,7 +1672,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 O comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devolve um objeto style por padrão para uma folha<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method. For more information about style properties, see [Style Objects & Style Sheets](configuring.md#style-objects--style-sheets).
 
-In *vpAreaName*, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
@@ -1851,7 +1851,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 #### Descrição
 
-O comando `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->returns an object with information about the frozen columns and rows in *vpAreaName*<!-- END REF -->.
+O comando `VP Get frozen panes` <!-- REF #_method_.VP Get frozen panes.Summary -->devolve um objeto com informações sobre as colunas e linhas congeladas em *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -2078,7 +2078,7 @@ $attr:=VP Get row attributes($range)
 
 O comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->devolve o número total de linhas da *sheet* designada<!-- END REF -->.
 
-In *vpAreaName*, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the row count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
@@ -2155,7 +2155,7 @@ $currentSelection:=VP Get selection("myVPArea")
 
 #### Descrição
 
-O comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->returns the number of sheets in the document loaded in *vpAreaName*.<!-- END REF -->
+O comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->devolve o número de folhas no documento carregado em *vpAreaName*.<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -2165,7 +2165,7 @@ No documento seguinte:
 
 ![](../assets/en/ViewPro/vp-sheet-3.png)
 
-Get the sheet count and set the current sheet to the last sheet:
+Obter a contagem de folhas e definir a folha atual como a última folha:
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
@@ -2209,7 +2209,7 @@ No documento seguinte:
 
 ![](../assets/en/ViewPro/vp-sheet-index-name.png)
 
-Get the index of the sheet called "Total first quarter":
+Obter o índice da folha denominada "Total first quarter":
 
 ```4d
 $index:=VP Get sheet index("ViewProArea"; "Total do primeiro trimestre") //retorna 2
@@ -2448,7 +2448,7 @@ borderTop:{color:green,style:10}
 
 O comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *sheet*<!-- END REF -->.
 
-In *vpAreaName*, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the style sheets in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
@@ -2525,13 +2525,13 @@ Em *sheet*, passe o índice da folha de destino. If no index is specified or if 
 
 The command returns an object describing the current attributes of the *column*:
 
-| Propriedade         | Tipo    | Descrição                                                                                              |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------ |
-| dataField           | text    | Table column's property name in the data context. Not returned if the table is displayed automatically |
-| name                | text    | Nome da coluna da tabela.                                                                              |
-| footerText          | text    | Valor do rodapé da coluna.                                                                             |
-| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                           |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                |
+| Propriedade         | Tipo    | Descrição                                                                                                          |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados. Not returned if the table is displayed automatically |
+| name                | text    | Nome da coluna da tabela.                                                                                          |
+| footerText          | text    | Valor do rodapé da coluna.                                                                                         |
+| footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                       |
+| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                            |
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
 
@@ -2850,7 +2850,7 @@ The object returned will contain the `value` property, and, in case of a js date
 
 | Propriedade | Tipo                               | Descrição                                                   |
 | ----------- | ---------------------------------- | ----------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date | Value in the *rangeObj* (except- time)                      |
+| value       | Integer, Real, Boolean, Text, Date | Valor de *rangeObj* (exceto - time)                         |
 | time        | Real                               | Time value (in seconds) if the value is of the js date type |
 
 If the object returned includes a date or time, it is treated as a datetime and completed as follows:
@@ -2898,7 +2898,7 @@ In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* inc
 The collection returned by `VP Get values` contains a two-dimensional collection:
 
 * Each element of the first-level collection represents a row and contains a subcollection of values
-* Each subcollection contains cell values for the row. Values can be Integer, Real, Boolean, Text, Null. If a value is a date or time, it is returned in an object with the following properties:
+* Each subcollection contains cell values for the row. Os valores podem ser Inteiros, Reais, Booleanos, Texto, Null. If a value is a date or time, it is returned in an object with the following properties:
 
  | Propriedade | Tipo | Descrição                                                   |
  | ----------- | ---- | ----------------------------------------------------------- |
@@ -3569,7 +3569,7 @@ O comando `VP PRINT` <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog
 Pass the 4D View Pro area to be printed in *vpAreaName*. The command will open the system print dialog window where the printer can be specified and the page properties can be defined.
 > The properties defined in the print dialog window are for the printer paper, they are not the printing properties for the 4D View Pro area. Printing properties for 4D View Pro areas are defined using the [VP SET PRINT INFO](#vp-set-print-info) command. It is highly recommended that the properties for both the printer and the 4D View Pro area match, otherwise the printed document may not correspond to your expectations.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). If omitted, the current sheet is used by default. You can explicitly select the current spreadsheet or entire workbook with the following constants:
+In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). Se for omisso, a folha atual é utilizada por padrão. You can explicitly select the current spreadsheet or entire workbook with the following constants:
 
 * `vk current sheet`
 * `vk workbook`
@@ -4012,7 +4012,7 @@ As regras abaixo são válidas:
 
 - Headers must remain in the same row and the resulting table range must overlap the original table range.
 - If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](#vp-set-data-context), otherwise they are deleted.
-- If the table expands on cells containing data:
+- Se a tabela se expandir nas células que contêm dados:
     - if rows are added, data is deleted,
     - if columns are added, data are kept and are displayed in new columns.
 
@@ -5688,7 +5688,7 @@ Resultados:
 
 #### Exemplo
 
-You want to hide the grid lines as well as the row and column headers.
+Pretende ocultar as linhas da grelha, bem como os cabeçalhos das linhas e das colunas.
 
 ```4d
 var $options : Object
@@ -5719,14 +5719,14 @@ Resultados:
 | Parâmetro  | Tipo       |    | Descrição                                                           |
 | ---------- | ---------- | -- | ------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                          |
-| visible    | Parâmetros | -> | Print lines displayed if True (default), hidden if False            |
+| visible    | Parâmetros | -> | Linhas de impressão apresentadas se True (padrão), ocultas se False |
 | sheet      | Integer    | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->.
+O comando `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> define se as linhas de pré-visualização da impressão devem ser apresentadas numa folha.<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -5741,7 +5741,7 @@ The position of a spreadsheet's print lines varies according to that spreadsheet
 
 #### Exemplo
 
-The following code displays print lines in a document's second sheet:
+O código a seguir exibe linhas de impressão na segunda folha de um documento:
 
 ```4d
 VP SET SHOW PRINT LINES("ViewProArea";True;1)
@@ -5778,14 +5778,14 @@ Com uma quebra de página:
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                          |
 | tableName  | Text    | -> | Nome da tabela                                                      |
 | column     | Integer | -> | Índice da coluna na tabela                                          |
-| attributes | Object  | -> | Attribute(s) to apply to the *column*                               |
+| attributes | Object  | -> | Atributo(s) a aplicar à *column*                                    |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
+O comando `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->aplica os *attributes* definidos à *column* na tabela *tableName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -5793,7 +5793,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 
 | Propriedade         | Tipo    | Descrição                                                                                                                                                                           |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | Table column's property name in the data context.                                                                                                                                   |
+| dataField           | text    | Nome da propriedade da coluna da tabela no contexto de dados.                                                                                                                       |
 | name                | text    | Nome da coluna da tabela. Deve ser único na tabela. If this name already used by another column, it is not applied and a default name is automaticaly used.                         |
 | formula             | text    | Define a fórmula para cada célula da coluna. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
 | footerText          | text    | Valor do rodapé da coluna.                                                                                                                                                          |
@@ -5883,7 +5883,7 @@ $param.filterButtonVisible:=False VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; 
 
 #### Descrição
 
-O comando `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the *tableName*<!-- END REF -->.
+O comando `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifica o tema atual do *tableName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table to modify.
 
@@ -5892,7 +5892,7 @@ In the *options* parameter, pass an object of the [`cs. ViewPro. TableTheme` cla
 
 #### Exemplo 1
 
-You want to set a predefined theme to a table:
+Pretende-se definir um tema predefinido para uma tabela:
 
 ```4d
 var $param : cs. ViewPro. TableTheme
@@ -5902,7 +5902,7 @@ $param.theme:="medium2" VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 
 #### Exemplo 2
 
-You want to have this alternate column rendering:
+Pretende ter esta renderização de coluna alternativa:
 
 ![](../assets/en/ViewPro/col-bandering.png)
 
@@ -5961,7 +5961,7 @@ $param.theme.secondColumnStripStyle:=$styleColumn2 VP SET TABLE THEME("ViewProAr
 
 #### Descrição
 
-O comando `VP SET TEXT VALUE` <!-- REF #_method_.VP SET TEXT VALUE.Summary -->assigns a specified text value to a designated cell range<!-- END REF -->.
+O comando `VP SET TEXT VALUE` <!-- REF #_method_.VP SET TEXT VALUE.Summary -->atribui um valor de texto especificado a um intervalo de células designado<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
@@ -5996,7 +5996,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 #### Descrição
 
-O comando `VP SET TIME VALUE` <!-- REF #_method_.VP SET TIME VALUE.Summary -->assigns a specified time value to a designated cell range<!-- END REF -->.
+O comando `VP SET TIME VALUE` <!-- REF #_method_.VP SET TIME VALUE.Summary -->atribui um valor de tempo especificado a um intervalo de células designado<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
@@ -6023,16 +6023,16 @@ The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Parâmetro | Tipo   |    | Descrição                                                 |
-| --------- | ------ | -- | --------------------------------------------------------- |
-| rangeObj  | Object | -> | Objeto intervalo                                          |
-| valueObj  | Object | -> | Cell values and format options|<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                                         |
+| --------- | ------ | -- | ----------------------------------------------------------------- |
+| rangeObj  | Object | -> | Objeto intervalo                                                  |
+| valueObj  | Object | -> | Valores de células e opções de formato|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
+O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->atribui um valor especificado a um intervalo de células designado<!-- END REF -->.
 
 The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
 
@@ -6118,10 +6118,10 @@ $param.push(New collection(Null;New object("value";Current date;"time";42))) //f
 **VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                   |
-| ---------- | ------ | -- | --------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                  |
-| optionObj  | Object | -> | Object containing the workbook options to be set|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                                                 |
+| ---------- | ------ | -- | ------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                |
+| optionObj  | Object | -> | Objeto que contém as opções do livro a definir|<!-- END REF -->
 
 |
 
@@ -6154,19 +6154,19 @@ The following table lists the available workbook options:
 | allowUserDragDrop                     | boolean                 | É permitido arrastar e largar dados de intervalo                                                                                                                                                                                                           |
 | allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                               |
 | allowUserEditFormula                  | boolean                 | As fórmulas podem ser introduzidas nas células                                                                                                                                                                                                             |
-| allowUserResize                       | boolean                 | Columns and rows can be resized                                                                                                                                                                                                                            |
+| allowUserResize                       | boolean                 | As colunas e as linhas podem ser redimensionadas                                                                                                                                                                                                           |
 | allowUserZoom                         | boolean                 | É permitido fazer zoom (ctrl + roda do rato)                                                                                                                                                                                                               |
-| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                                 |
+| autoFitType                           | number                  | Content is formatted to fit in cells, or cells and headers. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> O conteúdo ajusta-se automaticamente às células</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> O conteúdo ajusta automaticamente as células e os cabeçalhos</td></tr></table>                                                                                                                                                 |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                              |
 | backgroundImage                       | string / picture / file | Imagem de fundo para a área.                                                                                                                                                                                                                               |
-| backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Mostrado com o seu rácio de aspeto original.</td></tr></table>                                                                                                                                                                      |
+| backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> No centro da zona.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Mostrado com o seu rácio de aspeto original.</td></tr></table>                                                                                                                                                                      |
 | calcOnDemand                          | boolean                 | Formulas are calculated only when they are demanded.                                                                                                                                                                                                       |
 | columnResizeMode                      | number                  | Resize mode for columns. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                   |
 | copyPasteHeaderOptions                | number                  | Headers to include when data is copied to or pasted. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                       |
 | customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada item da coleção é um conjunto de cadeias de caracteres. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b). |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                       |
 | cutCopyIndicatorVisible               | boolean                 | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                            |
-| defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Preenche as células apenas com formatação.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Preenche as células com valores e não com formatação. </td></tr></table>                                                                                                                                                            |
+| defaultDragFillType                   | number                  | O tipo de preenchimento de arrastamento padrão. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Preenche automaticamente as células. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Limpa os valores das células.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Preenche as células apenas com formatação.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Preenche as células com séries. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Preenche as células com valores e não com formatação. </td></tr></table>                                                                                                                                                            |
 | enableAccessibility                   | boolean                 | Accessibility support is enabled in the spreadsheet.                                                                                                                                                                                                       |
 | enableFormulaTextbox                  | boolean                 | A caixa de texto da fórmula está activada.                                                                                                                                                                                                                 |
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                  |
@@ -6179,7 +6179,7 @@ The following table lists the available workbook options:
 | pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.          |
 | referenceStyle                        | number                  | Style for cell and range references in cell formulas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                                      |
 | resizeZeroIndicator                   | number                  | Drawing policy when the row or column is resized to zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                                  |
-| rowResizeMode                         | number                  | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                                |
+| rowResizeMode                         | number                  | The way rows are resized. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                                        |
 | scrollbarAppearance                   | number                  | Aspeto da barra de deslocação. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>                                                                                                                                                                             |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                    |
 | scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                                 |
@@ -6190,8 +6190,8 @@ The following table lists the available workbook options:
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                              |
 | showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                                 |
 | showHorizontalScrollbar               | boolean                 | Mostrar a barra de deslocação horizontal.                                                                                                                                                                                                                  |
-| showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Só é mostrada a ponta de redimensionamento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                                 |
-| showScrollTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                                 |
+| showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Só é mostrada a ponta de redimensionamento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Somente a ponta de redimensionamento vertical é exibida.</td></tr></table>                                                                                                                                                                                 |
+| showScrollTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Só é apresentada a ponta de deslocamento vertical.</td></tr></table>                                                                                                                                                                                 |
 | showVerticalScrollbar                 | boolean                 | Mostrar a barra de deslocação vertical.                                                                                                                                                                                                                    |
 | tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                         |
 | tabNavigationVisible                  | boolean                 | Display the sheet tab navigation.                                                                                                                                                                                                                          |
