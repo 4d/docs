@@ -50,7 +50,7 @@ The list is updated in real time as you enter text in the area. It is possible t
 
 ## Botões de administração
 
-Esta página inclui três botões de controlo. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Esta página inclui três botões de controlo. Esses botões estarão ativos se pelo menos uma linha estiver selecionada. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
 
 ### Enviar mensagem
 
