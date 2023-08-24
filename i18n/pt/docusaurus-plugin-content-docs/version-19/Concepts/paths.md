@@ -68,7 +68,7 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Introduzir caminhos Windows e sequências de escape
 
 The 4D code editor allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. Por exemplo, `\t` é a sequência de escape para o carácter `Tab` .
 

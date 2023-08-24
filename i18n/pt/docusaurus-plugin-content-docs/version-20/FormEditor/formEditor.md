@@ -148,7 +148,7 @@ Para seleccionar um objecto utilizando a barra de ferramentas:
 
 <p>Click the Arrow tool  in the toolbar.<img src="../assets/en/FormEditor/selection.png" alt="" /> When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.</p>.
 
-2. Clique no objecto que deseja selecionar. Resizing handles identify the selected object.<p>../assets/en/FormEditor/selectResize.png</p>
+2. Clique no objecto que deseja selecionar. As pegas de redimensionamento identificam o objeto selecionado.<p>../assets/en/FormEditor/selectResize.png</p>
 
 Para selecionar um objecto utilizando a Lista de Propriedades:
 
@@ -514,7 +514,7 @@ To activate a shield, click the *Shield* icon from the toolbar until the desired
 If you don't want to display shields, select **No Shields** in the selection menu.
 > You can set which shields to display by default on the Forms Page of the application Preferences.
 
-### Shield descriptions
+### Descrição do badge
 
 Segue-se uma descrição de cada tipo de escudo:
 

@@ -38,7 +38,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 | $6         | Text | <- | Senha                                                 |
 
 
-You must declare these parameters as shown below:
+Estes parâmetros devem ser declarados como se indica a seguir:
 
 ```4d
 //On Web Connection database method

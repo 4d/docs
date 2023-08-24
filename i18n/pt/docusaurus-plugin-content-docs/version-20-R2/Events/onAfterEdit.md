@@ -57,8 +57,8 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 | ----------- | ------- | --------------------------------------------------- |
 | fromRange   | object  | Intervalo do células de origem (a ser arrastado)    |
 | toRange     | object  | Range of the destination cell range (drop location) |
-| copy        | boolean | Specifies if the source range is copied or not      |
-| insert      | boolean | Specifies if the source range is inserted or not    |
+| copy        | boolean | Especifica se o intervalo fonte é copiado ou não    |
+| insert      | boolean | Especifica se o intervalo fonte é inserido ou não   |
 
 #### action = DragFillBlock
 

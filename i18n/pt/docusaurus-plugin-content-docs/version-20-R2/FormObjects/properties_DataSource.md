@@ -309,7 +309,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 Especifica a seleção nomeada a ser utilizada. You must enter the name of a valid named selection. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
-> Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
+> As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 
 #### Gramática JSON
 
