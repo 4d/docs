@@ -18,7 +18,7 @@ Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 
 ## 4D v19.5
 
-#### Puntos fuertes
+#### Destacados
 
 - 4D v19.5 está certificado en Windows 11 22H2
 - 4D v19.5 está certificado en macOS Ventura (macOS 13)

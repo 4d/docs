@@ -28,7 +28,7 @@ Puede crear temas totalmente personalizables. Para crear un tema, seleccione un 
 
 ### Archivos de temas personalizados
 
-Cada tema personalizado se almacena en un único archivo JSON llamado *themeName.json* Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#storage) de 4D.
+Cada tema personalizado se almacena en un único archivo JSON llamado *themeName.json*. Los archivos JSON de los temas personalizados se almacenan en la carpeta `4D Editor Themes` situada en el mismo nivel que el [archivo de preferencias](overview.md#storage) de 4D.
 
 Si los valores de las teclas no se definen en un tema personalizado, se ajustan por defecto a los valores del tema *Default Light Theme*. Si un archivo de tema JSON es inválido, se carga el tema *Default Light Theme* y se genera un error.
 

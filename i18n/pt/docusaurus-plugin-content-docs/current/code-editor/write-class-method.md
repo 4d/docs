@@ -257,9 +257,9 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Alt]+[Shift]+G                                           | Reemplazar anterior                                                                                                                        |
 | [**Pranchetas**](#clipboards)                                    |                                                                                                                                            |
 | [Shift]+clique ou [Alt]+clique no ícone da área de transferência | Copiar texto selecionado para uma área de transferência                                                                                    |
-| [Ctrl]+[Shift]+tecla numérica                                    | Copy selected text to the number clipboard                                                                                                 |
+| [Ctrl]+[Shift]+tecla numérica                                    | Copiar texto selecionado numa área de transferência numérica                                                                               |
 | [Ctrl]+clique no ícone da área de transferência                  | Colar o conteúdo de uma área de transferência na localização do cursor                                                                     |
-| [Ctrl]+chave numérica                                            | Paste contents of the number clipboard at cursor location                                                                                  |
+| [Ctrl]+chave numérica                                            | Colar o conteúdo da área de transferência numérica na localização do cursor                                                                |
 
 :::tip
 
@@ -447,13 +447,13 @@ The **find** entry area enables you to enter the string to be searched for. This
 
 Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits.
 
-Hit the **Enter** key to select closest occurrence to the cursor. You can also click on the **Next / Previous** buttons ![find-next-previous](../assets/en/code-editor/find-next.png) to select all occurrences sequentially towards the beginning or end of the current method, starting from the initial location of the cursor, or use the **Find Next** and **Find Previous** commands of the [**Edit** menu](#shortcuts).
+Hit the **Enter** key to select closest occurrence to the cursor. Também pode clicar nos botões **Próximo / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para selecionar todas as ocorrências sequencialmente no início ou no fim do método atual, a partir da localização inicial do cursor, ou utilizar os comandos **Procurar seguinte** e **Procurar anterior** do menu [**Editar**](#shortcuts).
 
 
 #### Opções
 
-- **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
-- **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient."
+- **Sensível a maiúsculas e minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tem em conta as maiúsculas e minúsculas dos caracteres tal como foram introduzidos na área de pesquisa. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
+- **Palavra inteira** ![full-word](../assets/en/code-editor/full-word.png): limita a pesquisa a ocorrências exatas da palavra pesquisada. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient."
 
 
 
@@ -487,7 +487,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 ## Erros de sintaxe
 
-4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+4D automatically checks the method syntax to see if it is correct. Se introduzir texto ou selecionar um componente que não esteja sintaticamente correto, 4D apresenta um símbolo para indicar a expressão incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
@@ -509,11 +509,11 @@ The Code Editor can only check for obvious syntax errors (misspellings and the l
 
 ## Dicas de ajuda
 
-The Code Editor provides various contextual information using help tips. Aparecem quando se passa o rato por cima de um objeto.
+O Editor de código fornece várias informações contextuais utilizando dicas de ajuda. Aparecem quando se passa o rato por cima de um objeto.
 
 :::tip
 
-The [status bar](#status-bar) also provides contextual information.
+A [barra de estado](#status-bar) também fornece informações contextuais.
 
 :::
 
@@ -598,7 +598,7 @@ Two commands make it easier to move around within code structures (e.g. `If... E
 These commands are found in the **Method** menu as well as the context menu of the editor. Também pode utilizar os seguintes atalhos:
 
 - Windows: **Ctrl + seta para cima** ou **Ctrl** + **seta para baixo**'
-- macOS: **Command** + **up arrow** or **Command** +**down arrow**.
+- macOS: **Comando** + **seta para cima** ou **Comando** +**seta para baixo**.
 
 ## Marcadores
 

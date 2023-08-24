@@ -71,7 +71,7 @@ Para cada petição, os campos abaixo estão logados:
 | write\_duration                          | Tempo que levou em microssegundos para enviar:<li>a petição (quando rodar no cliente). A a B na imagem abaixo.</li><li>Resposta (quando rodar no servidor). E a F na imagem abaixo.</li>                                                                                   |
 | task_kind                                  | Preemptivo ou cooperativo (respectivamente 'p' ou 'c')                                                                                                                             |
 | rtt                                        | Tempo estimado em microssegundos para o cliente enviar a petição e o servidor para reconhecê-la. A a D e E a H na imagem abaixo.<li>Só medido quando usar a capa de rede ServerNet, retorna 0 se usado com capa de rede legado.</li><li>Para versões de Windows anteriores a Windows 10 ou Windows Server 2016, a chamada retorna 0.</li> |
-| extra                                      | Additional information related to the context, for example dataclass name and/or attribute name in case of ORDA request                                                            |
+| extra                                      | Informações adicionais relacionadas com o contexto, por exemplo, nome da classe de dados e/ou nome do atributo no caso de um pedido ORDA                                           |
 
 Fluxo de petição:
 
@@ -227,17 +227,17 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 ### Níveis de registo de diagnóstico
 
-The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+O arquivo *4DDiagnosticLog.txt* pode registar diferentes níveis de mensagens, desde `ERROR` (mais importante) a `TRACE` (menos importante). Por predefinição, o nível `INFO` está definido, o que significa que o arquivo registará apenas eventos importantes, incluindo erros e resultados inesperados (ver abaixo).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. Estão disponíveis os seguintes níveis:
+Pode selecionar o nível das mensagens utilizando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) , consoante as suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
-| Nível da mensagem | Descrição                                                                                     | Quando seleccionado, inclui     |
-| ----------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR             | Uma parte da aplicação não funciona                                                           | ERROR                           |
-| WARN              | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
-| INFO              | *Nível padrão* - Evento de aplicação importante                                               | ERROR, WARN, INFO               |
-| DEBUG             | Detalhe do fluxo de aplicação (para serviços técnicos 4D)                                     | ERROR, WARN, INFO, DEBUG        |
-| TRACE             | Outras informações internas (para serviços técnicos 4D)                                       | ERROR, WARN, INFO, DEBUG, TRACE |
+| Nível da mensagem | Descrição                                                                                            | Quando seleccionado, inclui     |
+| ----------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------- |
+| ERROR             | Uma parte da aplicação não funciona                                                                  | ERROR                           |
+| WARN              | Erro potencial, utilização de uma função obsoleta, má utilização, situação indesejável ou inesperada | ERROR, WARN                     |
+| INFO              | *Nível padrão* - Evento de aplicação importante                                                      | ERROR, WARN, INFO               |
+| DEBUG             | Detalhe do fluxo de aplicação (para serviços técnicos 4D)                                            | ERROR, WARN, INFO, DEBUG        |
+| TRACE             | Outras informações internas (para serviços técnicos 4D)                                              | ERROR, WARN, INFO, DEBUG, TRACE |
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, e 4DIMAPLog.txt
 
@@ -311,7 +311,7 @@ Os registos de pedidos ORDA podem registar cada pedido ORDA e a resposta do serv
 
 ### Do lado do cliente
 
-The client-side ORDA log records each ORDA request sent from a remote machine. You can direct log information to memory or to a .txt file on disk of the remote machine. O nome e rota desse arquivo pode ser escolhido.
+O registo ORDA do lado do cliente regista cada pedido ORDA enviado a partir de uma máquina remota. Pode direcionar as informações de registo para a memória ou para um arquivo .txt no disco da máquina remota. O nome e rota desse arquivo pode ser escolhido.
 
 Como iniciar esse log:
 
@@ -325,7 +325,7 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 
 :::note
 
-Triggering the client-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
+O acionamento do lado do cliente [4DRequestsLog.txt](#4drequestslogtxt) utilizando `SET DATABASE PARAMETER` não é obrigatório. No entanto, é necessário se pretender registar o campo único `sequenceNumber` .
 
 :::
 
@@ -361,7 +361,7 @@ Eis um exemplo de um registo de ficheiro de registo ORDA do lado do cliente:
 
 ### Do lado do servidor
 
-The server-side ORDA log records each ORDA request processed by the server, as well as the server response (optional). Log information is saved in a .jsonl file on the server machine disk (by default, *ordaRequests.jsonl*).
+O registo ORDA do lado do servidor regista cada pedido ORDA processado pelo servidor, bem como a resposta do servidor (opcional). As informações de registo são guardadas num arquivo .jsonl no disco da máquina do servidor (por predefinição, *ordaRequests.jsonl*).
 
 Como iniciar esse log:
 
@@ -375,23 +375,23 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 :::note
 
-Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
+O acionamento do servidor [4DRequestsLog.txt](#4drequestslogtxt) utilizando `SET DATABASE PARAMETER` não é obrigatório. No entanto, é necessário se pretender registar os campos únicos `sequenceNumber` e `duration` .
 
 :::
 
 Os campos abaixo são registrados para cada petição:
 
-| Campo nome     | Descrição                                                                                                     | Exemplo                                                 |
-| -------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| sequenceNumber | Número de operação único e sequencial da sessão de histórico                                                  | 104                                                     |
-| url            | Solicitar URL                                                                                                 | "rest/Persons(30001)"                                   |
-| startTime      | Data e hora de início utilizando o formato ISO 8601                                                           | "2019-05-28T08:25:12.346Z"                              |
-| duration       | Duração do processamento do servidor em microssegundos (µ)                                                    | 2500                                                    |
-| response       | Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...] |
-| ipAddress      | Endereço IP do usuário                                                                                        | "192.168.1.5"                                           |
-| userName       | Nome do usuário 4D                                                                                            | "henry"                                                 |
-| systemUserName | Nome de login do usuário na máquina                                                                           | "hsmith"                                                |
-| machineName    | Nome da máquina do utilizador                                                                                 | "PC of Henry Smith"                                     |
+| Campo nome     | Descrição                                                                                                                | Exemplo                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| sequenceNumber | Número de operação único e sequencial da sessão de histórico                                                             | 104                                                     |
+| url            | Solicitar URL                                                                                                            | "rest/Persons(30001)"                                   |
+| startTime      | Data e hora de início utilizando o formato ISO 8601                                                                      | "2019-05-28T08:25:12.346Z"                              |
+| duration       | Duração do processamento do servidor em microssegundos (µ)                                                               | 2500                                                    |
+| response       | Objeto de resposta do servidor, pode ser configurado em [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...] |
+| ipAddress      | Endereço IP do usuário                                                                                                   | "192.168.1.5"                                           |
+| userName       | Nome do usuário 4D                                                                                                       | "henry"                                                 |
+| systemUserName | Nome de login do usuário na máquina                                                                                      | "hsmith"                                                |
+| machineName    | Nome da máquina do utilizador                                                                                            | "PC of Henry Smith"                                     |
 
 #### Exemplo
 
@@ -419,33 +419,33 @@ Eis um exemplo de um registo de registo ORDA do lado do servidor:
 
 ## Utilizar um ficheiro de configuração de log
 
-You can use a **log configuration file** to easily manage log recording in a production environment. Este ficheiro é pré-configurado pelo programador. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
+É possível utilizar um arquivo de configuração de registo **** para gerir facilmente a gravação de registos num ambiente de produção. Este arquivo é pré-configurado pelo programador. Normalmente, pode ser enviado aos clientes para que estes apenas tenham de o selecionar ou copiar para uma pasta local. Uma vez ativado, o arquivo de configuração de registos desencadeia a gravação de registos específicos.
 
-### Como activar o ficheiro
+### Como activar o arquivo
 
-There are several ways to enable the log configuration file, depending on your configuration:
+Existem várias formas de ativar o arquivo de configuração do registo, dependendo da sua configuração:
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. Neste caso, pode utilizar qualquer nome para o ficheiro de configuração. É imediatamente ativado no servidor.
-- **um projeto interpretado ou compilado**: o ficheiro deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-1) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
-- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+- **Servidor 4D com interface**: pode abrir a página Manutenção e clicar no botão [Carregar arquivo de configuração dos registos](ServerWindow/maintenance.md#load-logs-configuration-file) , depois selecionar o arquivo. Neste caso, pode utilizar qualquer nome para o arquivo de configuração. É imediatamente ativado no servidor.
+- **um projeto interpretado ou compilado**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta [Settings](../Project/architecture.md#settings-1) do projeto (situada ao mesmo nível que a pasta [`Project`](../Project/architecture.md#project-folder)). É ativado no arranque do projeto (apenas no servidor em cliente/servidor).
+- **uma aplicação construída**: o arquivo deve ter o nome `logConfig.json` e ser copiado para a pasta seguinte:
     * Windows: `Users\[userName]\AppData\Roaming\[application]`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **todos os projetos com um 4D autônomo ou remoto**: o ficheiro deve chamar-se `logConfig.json` e ser copiado para a pasta seguinte:
+- **todos os projetos com um 4D autônomo ou remoto**: o arquivo deve chamar-se `logConfig.json` e ser copiado para a pasta seguinte:
     * Windows: `Users\[userName]\AppData\Roaming\4D`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **todos os projetos com 4D Server**: o ficheiro deve ser nomeado `logConfig.json` e copiado para a seguinte pasta:
+- **todos os projetos com 4D Server**: o arquivo deve ser nomeado `logConfig.json` e copiado para a seguinte pasta:
     * Windows: `Users\[userName]\AppData\Roaming\4D Server`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
-Se um ficheiro `logConfig.json` estiver instalado nas pastas Settings e AppData/Library, o ficheiro da pasta Settings terá prioridade.
+Se um ficheiro `logConfig.json` estiver instalado nas pastas Settings e AppData/Library, o arquivo da pasta Settings terá prioridade.
 
 :::
 
 ### Descrição do ficheiro JSON
 
-O ficheiro de configuração do registo é um ficheiro `.json` que deve estar em conformidade com o seguinte esquema json:
+O arquivo de configuração do registo é um arquivo `.json` que deve estar em conformidade com o seguinte esquema json:
 
 ```json
 {
@@ -529,7 +529,7 @@ O ficheiro de configuração do registo é um ficheiro `.json` que deve estar em
 
 ### Exemplo
 
-Aqui está um exemplo de ficheiro de configuração de log:
+Aqui está um exemplo de arquivo de configuração de log:
 
 ```json
 {

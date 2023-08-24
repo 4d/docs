@@ -134,3 +134,9 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 > In the case of an automatic restore, only the following elements are restored:
 > 
 > Se quiser os arquivos anexados ou os arquivos de projeto, precisa fazer uma restauração  manual
+
+:::caution
+
+Se o [ficheiro de dados é encriptado](../MSC/encrypt.md), certifique-se de que [guardou a chave de encriptação de dados](../MSC/encrypt#saving-the-encryption-key) num ficheiro `.4DKeyChain` armazenado no primeiro nível da unidade, para que 4D possa aceder-lhe se a funcionalidade de restauração automática ativada. Caso contrário, será devolvido um erro durante a sequência de restauro.
+
+:::

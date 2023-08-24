@@ -3,7 +3,7 @@ id: dataClass
 title: dataClass
 ---
 
-Dataclass names can be used directly in the REST requests to work with entities and entity selections, or class functions of the dataclass.
+Os nomes de dataclass podem ser utilizados diretamente nos pedidos REST para trabalhar com entidades e selecções de entidades, ou funções de classe da dataclass.
 
 ## Sintaxe disponível
 
@@ -16,7 +16,7 @@ Dataclass names can be used directly in the REST requests to work with entities 
 | [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executa uma função de classe de uma seleção de entidade                                     |
 | [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Executa uma função de classe de uma entidade                                                |
 
-> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
+> As chamadas de funções são descritas em detalho na secção [Chamada funções da classe ORDA](ClassFunctions.md).
 
 
 
@@ -46,7 +46,7 @@ Cada entidade contém as propriedades abaixo:
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                            |
 | __STAMP     | Number | Registro interno necessário quando modificar qualquer um dos valores na entidade quando usar`$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company/name,address`
 
@@ -146,9 +146,9 @@ Returns the data for the specific entity defined by the dataclass's primary key,
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
-For more information about the data returned, refer to [{DataClass}](#dataclass).
+Para saber mais sobre os dados retornados, veja [{DataClass}](#dataclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company[1]/name,address`
 
@@ -197,7 +197,7 @@ Passando *dataClass* e um *atributo* junto com o valor, pode recuperar toda a in
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
+Se quiser especificar quais atributos quer retornar, defina-os usando a sintaxe abaixo [{attribute1, attribute2, ...}](manData.md#selecting-attributes-to-get). Por exemplo:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 

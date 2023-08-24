@@ -125,7 +125,7 @@ Puede mostrar u ocultar los números de línea en el área de puntos de interrup
 - Para activar o desactivar la visualización de los números de línea por defecto, seleccione **Preferencias** > **Métodos** > **Mostrar números de línea**.
 - Para modificar esta visualización por separado para cada ventana del Editor de Código, elija **Método** > **Ver** > **Números de línea**.
 
-La visualización de los números de línea facilita la orientación en la ventana. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
+La visualización de los números de línea facilita la orientación en la ventana. **Método ** > **Ir al número de línea...** también le permite aprovechar esta visualización.
 
 Este tipo de búsqueda es útil cuando se utiliza junto con el [compilador](../Project/compiler.md), que señala los errores de ejecución por el número de línea en el que se producen.
 
@@ -304,7 +304,7 @@ Desde el Explorador, puede arrastrar y soltar tablas, campos, formularios, méto
 Cuando inserta un comando arrastrándolo desde la página **Comandos** del Explorador, aparece con su sintaxis (que consiste en todos sus parámetros) en el Editor de Código. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
 
-You can also drag-and-drop within a method, class, function or between two different ones. In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. By default, the drag-and-drop mechanism **moves** the selected text. Para **copiarlo**, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Opción** (macOS) durante la operación.
+También puede arrastrar y soltar dentro de un método, clase, función o entre dos diferentes. En el Editor de código, el mecanismo de arrastrar y soltar se activa en cuanto se selecciona una parte del texto. Por defecto, el mecanismo de arrastrar y soltar **mueve** el texto seleccionado. Para **copiarlo**, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Opción** (macOS) durante la operación.
 
 
 
@@ -313,13 +313,13 @@ You can also drag-and-drop within a method, class, function or between two diffe
 Puede modificar automáticamente las mayúsculas y minúsculas de los caracteres seleccionados utilizando los comandos en **Métodos** > **Mayúsculas y minúsculas** o el menú contextual del editor:
 
 - **Mayúsculas** / **Minúsculas**: cambia los caracteres seleccionados a mayúsculas o minúsculas.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". Consiste en cambiar cada primera letra de un grupo de palabras adjuntas a mayúsculas. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate y PurchaseDate son ejemplos de dos variantes de la notación cameyúsculas.
+- **cameyúsculas** / **cameyúsculas**: cambia los caracteres seleccionados a "cameyúsculas". Consiste en cambiar cada primera letra de un grupo de palabras adjuntas a mayúsculas. Este tipo de notación se utiliza a menudo para las nomenclaturas variables. hireDate y PurchaseDate son ejemplos de dos variantes de la notación cameyúsculas.
 
 Cuando aplica uno de estos comandos a una selección de texto, se eliminan los espacios y los caracteres "_" y la primera letra de cada palabra pasa a ser mayúscula.
 
 ### Intercambiar expresión
 
-The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por ejemplo,
+La función **cameyúsculas** puede utilizarse para invertir los argumentos de una expresión que asigna un valor. Por ejemplo,
 
 `variable1:=variable2`
 
@@ -480,7 +480,7 @@ Los comandos **Find Same Next** y **Find Same Previous** se utilizan para encont
 
 ### Bookmark All
 
-The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. Cuando selecciona este comando, 4D pone un marcador en cada línea que contiene un elemento correspondiente al criterio de búsqueda "actual". Esto facilita la localización de todos los resultados de la búsqueda. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
+El comando **Editar > Marcar todo** se activa cuando ya se ha especificado una búsqueda en la caja de diálogo buscar o reemplazar. Cuando selecciona este comando, 4D pone un marcador en cada línea que contiene un elemento correspondiente al criterio de búsqueda "actual". Esto facilita la localización de todos los resultados de la búsqueda. Para más información sobre marcadores, consulte [Marcadores](#bookmarks).
 
 
 
@@ -523,10 +523,10 @@ La [barra de estado](#status-bar) también ofrece información contextual.
 
 - **Tipo de variable y descripción**: al pasar el ratón sobre una variable, un mensaje de ayuda muestra su tipo (si se ha definido explícitamente en el método) y el comentario asociado, si existe. ![](../assets/en/code-editor/variable-type.png)
 
-- **Project methods or functions**: When you mouse over a project method or class function, a help tip displays:
+- **Métodos o funciones proyecto**: al pasar el ratón sobre un método proyecto o función clase, aparece un mensaje de ayuda:
 
   - o los comentarios especificados en el Explorador.
-  - or the first few lines of the method or class function if it includes comments (lines beginning with // or /*...*/ comment block). Es práctica habitual insertar la documentación del método, así como sus parámetros, en forma de comentarios al principio del método. Puede obtener esta información directamente en el mensaje de ayuda, sólo asegúrese de eliminar primero todo comentario que se encuentre en el Explorador. Comments at the beginning of a method: ![](../assets/en/code-editor/comments-method.png) Help tip in another method: ![](../assets/en/code-editor/help-tip.png)
+  - o las primeras líneas del método o función de clase si incluye comentarios (líneas que empiezan por // o /*...*/ bloque de comentarios). Es práctica habitual insertar la documentación del método, así como sus parámetros, en forma de comentarios al principio del método. Puede obtener esta información directamente en el mensaje de ayuda, sólo asegúrese de eliminar primero todo comentario que se encuentre en el Explorador. Comments at the beginning of a method: ![](../assets/en/code-editor/comments-method.png) Help tip in another method: ![](../assets/en/code-editor/help-tip.png)
 
 - También puede crear un **archivo de documentación dedicado** llamado `<MethodName>.md` en la carpeta `<package>/documentation`. Ver [Visualización de la documentación en el editor de código](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
@@ -568,7 +568,7 @@ Hay varias formas de expandir y contraer código:
   - **Contraer todo** / **Expandir todo**: contrae o expande todos los bucles y condiciones de un método. Estos comandos también están disponibles en la barra de herramientas del editor.
 
 
-## Blocks
+## Bloques
 
 Los bloques pueden definirse por:
 
@@ -577,9 +577,9 @@ Los bloques pueden definirse por:
 - Una estructura lógica (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Paréntesis
 
-### Select Enclosing Block
+### Seleccionar bloque envolvente
 
-The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point.
+La función **Seleccionar bloque envolvente** se utiliza para seleccionar el "bloque envolvente" del código que contiene el punto de inserción.
 
 Si ya se ha seleccionado un bloque de texto, la función selecciona el bloque adyacente del nivel inmediatamente superior, y así sucesivamente, hasta seleccionar todo el método.
 
@@ -592,7 +592,7 @@ Si presiona **Ctrl+Mayús+B** (Windows) o **Comando+Mayús+B** (macOS), podrá i
 
 Dos comandos facilitan el desplazamiento dentro de estructuras de código (por ejemplo, `If...Else...End if`):
 
-- **Start Of Block**: places the cursor at the start of the current structure, just before the initial keyword.
+- **Inicio de bloque**: sitúa el cursor al final de la estructura actual, justo después de la palabra clave inicial.
 - **Fin de bloque**: sitúa el cursor al final de la estructura actual, justo después de la palabra clave final.
 
 Estos comandos se encuentran en el menú **Método**, así como en el menú contextual del editor. También puede utilizar los siguientes atajos:
@@ -610,33 +610,33 @@ Un marcador se desplaza junto con su línea original si se insertan líneas adic
 
 Los marcadores se gestionan utilizando el submenú **Marcadores** del menú **Método**:
 
-- **Toggle**: Associates a bookmark with the current line (where the cursor is located) if it does not already have one or removes the existing bookmark if it does. Esta función también está disponible utilizando el comando **Alternar marcador** del menú contextual del editor o utilizando el atajo de teclado **Ctrl+F3** (Windows) o **Comando+F3** (macOS).
+- **Alternar**: asocia un marcador a la línea actual (donde se encuentra el cursor) si no tiene ya uno o elimina el marcador existente si lo tiene. Esta función también está disponible utilizando el comando **Alternar marcador** del menú contextual del editor o utilizando el atajo de teclado **Ctrl+F3** (Windows) o **Comando+F3** (macOS).
 - **Eliminar todo**: elimina todos los marcadores de la ventana en primer plano.
 - **Ir al siguiente** / **Ir al anterior**: permite navegar entre los marcadores de la ventana. Al seleccionar uno de estos comandos, el cursor se sitúa en el primer caracter de la línea asociada al marcador en cuestión. También puede utilizar los atajos de teclado **F3** (ir a la siguiente) o **Mayús+F3** (ir a la anterior).
 
 |
 
-Puede utilizar marcadores como señalizadores de líneas que contengan un elemento [encontrado mediante una búsqueda](#find). En este caso, 4D añade automáticamente los marcadores. For more information, refer to [Bookmark all](#bookmark-all).
+Puede utilizar marcadores como señalizadores de líneas que contengan un elemento [encontrado mediante una búsqueda](#find). En este caso, 4D añade automáticamente los marcadores. Para más información, consulte [Marcar todos](#bookmark-all).
 
 :::
 
 ## Revelar en el Explorador
 
-The **Reveal in Explorer...** command opens an Explorer window with the target element selected. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Revelar en el Explorador...**.
+El comando **Revelar en el Explorador...** abre una ventana del Explorador con el elemento de destino seleccionado. Para ello, coloque el cursor dentro del nombre del elemento o selecciónelo y, a continuación, elija **Método** > **Revelar en el Explorador...**.
 
 
-## Search Callers
+## Buscar los llamantes
 
-The **Search Callers** command in the **Method** menu is only enabled for project methods. Busca todos los objetos (otros métodos o menús) que hacen referencia al método proyecto.
+El comando **Buscar los llamantes** del menú **Método** solo está habilitado para métodos proyecto. Busca todos los objetos (otros métodos o menús) que hacen referencia al método proyecto.
 
 Selecting the **Find...** command displays the following dialog box:
 
 Este comando muestra sus resultados en una nueva ventana.
 
 
-## Goto Definition
+## Ir a definición
 
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. Para ello, coloque el cursor dentro del nombre del objeto o selecciónelo, y elija **Método** > **Ir a Definición...** o utilice el menú contextual del editor.
+El comando **Ir a definición** abre la definición de un elemento referenciado en el Editor de Código. Para ello, coloque el cursor dentro del nombre del objeto o selecciónelo, y elija **Método** > **Ir a Definición...** o utilice el menú contextual del editor.
 
 :::tip
 
@@ -644,7 +644,7 @@ Esta funcionalidad también está disponible a través del atajo de teclado **Ct
 
 :::
 
-The effect of the **Goto Definition...** command varies depending on the target element:
+El efecto del comando **Ir a definición...** varía en función del elemento de destino:
 
 - con un método proyecto, muestra el contenido del método en una nueva ventana del Editor de código
 - con un nombre clase o una función clase, abre la clase en el Editor de código

@@ -105,8 +105,8 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 | protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. If null : the protectionOptions parameter is reset. |
 |                   | allowSelectLockedCells   | boolean | Specifies whether the user can select locked cells, optional. True por defeito.                                                   |
 |                   | allowSelectUnlockedCells | boolean | Specifies whether the user can select unlocked cells, optional. True por defeito.                                                 |
-|                   | allowSort                | boolean | Specifies whether the user can sort ranges, optional. Padrão é falso.                                                             |
-|                   | allowFilter              | boolean | Specifies whether the user can filter ranges, optional. Padrão é falso.                                                           |
+|                   | allowSort                | boolean | Especifica se o usuário pode ordenar intervalos, opcional. Padrão é falso.                                                        |
+|                   | allowFilter              | boolean | Especifica se o usuário pode filtrar intervalos, opcional. Padrão é falso.                                                        |
 |                   | allowEditObjects         | boolean | Specifies whether the user can edit floating objects, optional. Padrão é falso.                                                   |
 |                   | allowResizeRows          | boolean | Specifies whether the user can resize rows, optional. Padrão é falso.                                                             |
 |                   | allowResizeColumns       | boolean | Specifies whether the user can resize columns, optional. Padrão é falso.                                                          |
@@ -246,16 +246,16 @@ In addition to the special characters and codes described in the previous sectio
 
 Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
 
-| Propriedade       | Tipo          | Descrição                                                                                                      |
-| ----------------- | ------------- | -------------------------------------------------------------------------------------------------------------- |
-| columnEnd         | inteiro longo | A última coluna a imprimir num intervalo de células. Valor padrão = -1 (todas as colunas)                      |
-| columnStart       | inteiro longo | A primeira coluna a imprimir num intervalo de células. Valor padrão = -1 (todas as colunas)                    |
-| repeatColumnEnd   | inteiro longo | The last column of a range of columns to print on the left of each page. Valor padrão = -1 (todas as colunas)  |
-| repeatColumnStart | inteiro longo | The first column of a range of columns to print on the left of each page. Valor padrão = -1 (todas as colunas) |
-| repeatRowEnd      | inteiro longo | The last row of a range of rows to print on the top of each page. Valor padrão = -1 (todas as linhas)          |
-| repeatRowStart    | inteiro longo | The first row of a range of rows to print at the top of each page. Valor padrão = -1 (todas as linhas)         |
-| rowEnd            | inteiro longo | A última linha a imprimir num intervalo de células. Valor padrão = -1 (todas as linhas)                        |
-| rowStart          | inteiro longo | A primeira linha a imprimir num intervalo de células. Valor padrão = -1 (todas as linhas)                      |
+| Propriedade       | Tipo          | Descrição                                                                                                               |
+| ----------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| columnEnd         | inteiro longo | A última coluna a imprimir num intervalo de células. Valor padrão = -1 (todas as colunas)                               |
+| columnStart       | inteiro longo | A primeira coluna a imprimir num intervalo de células. Valor padrão = -1 (todas as colunas)                             |
+| repeatColumnEnd   | inteiro longo | A última coluna de um intervalo de colunas a imprimir à esquerda de cada página. Valor padrão = -1 (todas as colunas)   |
+| repeatColumnStart | inteiro longo | A primeira coluna de um intervalo de colunas a imprimir à esquerda de cada página. Valor padrão = -1 (todas as colunas) |
+| repeatRowEnd      | inteiro longo | A última linha de um intervalo de linhas a imprimir no topo de cada página. Valor padrão = -1 (todas as linhas)         |
+| repeatRowStart    | inteiro longo | A primeira linha de um intervalo de linhas a imprimir no topo de cada página. Valor padrão = -1 (todas as linhas)       |
+| rowEnd            | inteiro longo | A última linha a imprimir num intervalo de células. Valor padrão = -1 (todas as linhas)                                 |
+| rowStart          | inteiro longo | A primeira linha a imprimir num intervalo de células. Valor padrão = -1 (todas as linhas)                               |
 
 ### Cabeçalhos / Rodapés
 
@@ -383,15 +383,15 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Propriedade   |                | Tipo                 | Descrição                                                                                                                                                  |
-| ------------- | -------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| marca de água |                | collection           | Coleção de parâmetros de marcas de água.  Default value: undefined                                                                                         |
-|               | \[ ].height   | inteiro longo        | A altura do texto/imagem da marca de água.                                                                                                                 |
-|               | \[ ].imageSrc | picture &#124; text* | O texto/imagem da marca de água.                                                                                                                           |
-|               | \[ ].page     | text                 | A(s) página(s) onde a marca de água é impressa. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|               | \[ ].width    | inteiro longo        | A largura do texto/imagem da marca de água.                                                                                                                |
-|               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                             |
-|               | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                               |
+| Propriedade   |                | Tipo                 | Descrição                                                                                                                                                                          |
+| ------------- | -------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| marca de água |                | collection           | Coleção de parâmetros de marcas de água.  Default value: undefined                                                                                                                 |
+|               | \[ ].height   | inteiro longo        | A altura do texto/imagem da marca de água.                                                                                                                                         |
+|               | \[ ].imageSrc | picture &#124; text* | O texto/imagem da marca de água.                                                                                                                                                   |
+|               | \[ ].page     | text                 | A(s) página(s) onde a marca de água é impressa. For all pages: "all". Para páginas específicas: números de página ou intervalos de páginas separados por vírgulas. Ex.: "1,3,5-12" |
+|               | \[ ].width    | inteiro longo        | A largura do texto/imagem da marca de água.                                                                                                                                        |
+|               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                     |
+|               | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                                                       |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 

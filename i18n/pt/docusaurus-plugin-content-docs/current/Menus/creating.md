@@ -31,7 +31,7 @@ Pode modificar esta barra de menu como desejar ou criar outras.
 
 ### Utilizar o editor de menus
 
-1. Select the item you want to create and click the add ![](../assets/en/Menus/PlussNew.png) button below the menu bar area. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
+1. Selecione o item que pretende criar e clique no botão Adicionar ![](../assets/en/Menus/PlussNew.png) abaixo da área da barra de menus. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
 2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Os nomes das barras de menu devem ser únicos. Podem conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
 
 ### Utilizar a linguagem 4D
@@ -64,7 +64,7 @@ You can delete a menu bar, a menu or a menu item in the Menu editor at any time.
 
 Para eliminar uma barra de menu, um menu ou um item de menu:
 
-- Select the item to be deleted and click on the delete ![](../assets/en/Menus/MinussNew.png) button located beneath the list.
+- Selecione o item a eliminar e clique no botão eliminar ![](../assets/en/Menus/MinussNew.png) situado por baixo da lista.
 - or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
 
 > Não é possível eliminar a barra de menus #1.

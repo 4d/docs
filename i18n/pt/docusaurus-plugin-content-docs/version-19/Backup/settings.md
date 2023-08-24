@@ -106,6 +106,7 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 - **Compression Rate** By default, 4D compresses backups to help save disk space. Entretanto, a fase de compressão de arquivo pode retardar o processo de backup quando lidar com grandes volumes de dados. A opção **Compression Rate** permite ajustar a compressão de arquivo:
   - **Nenhum:** Não se aplica compressão de arquivos. O backup é mais rápido, mas os arquivos são bem maiores.
+
   - **Rápido** (padrão): Essa opção é um compromisso entre a velocidade de backup e tamanho de arquivo.
   - **Compactar** : a taxa máxima de compressão é aplicada aos arquivos. Os arquivos ocupam o mínimo espaço possível no disco, mas o backup é mais lento.
 
@@ -132,3 +133,9 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 > - Pasta External Data
 > 
 > Se quiser os arquivos anexados ou os arquivos de projeto, precisa fazer uma restauração  manual
+
+:::caution
+
+Se o [ficheiro de dados é encriptado](../MSC/encrypt.md), certifique-se de que [guardou a chave de encriptação de dados](../MSC/encrypt#saving-the-encryption-key) num ficheiro `.4DKeyChain` armazenado no primeiro nível da unidade, para que 4D possa aceder-lhe se a funcionalidade de restauração automática ativada. Caso contrário, será devolvido um erro durante a sequência de restauro.
+
+:::

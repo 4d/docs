@@ -69,5 +69,5 @@ Note that this option substantially slows compacting and invalidates any sets sa
 > - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
 > - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). Será salvado automaticamente e um novo arquivo de histórico será criado na próxima vez que o banco for lançado.
 > - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
-> - The [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) command automatically resets the address table for the specified table.  
+> - O comando [`TRUNCATE TABLE`](https://doc.4d.com/4dv19R/help/command/en/page1051.html) reinicia automaticamente a tabela de endereços para a tabela especificada.  
 

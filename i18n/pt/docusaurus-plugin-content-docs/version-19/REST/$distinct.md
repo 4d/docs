@@ -9,12 +9,12 @@ Devolve os valores distintos de um atributo específico numa coleção (*e.g.*, 
 
 ## Descrição
 
-`$distinct` allows you to return a collection containing the distinct values for a query on a specific attribute. Only one attribute in the dataclass can be specified. Generally, the String type is best; however, you can also use it on any attribute type that could contain multiple values.
+`$distinct` permite-lhe devolver uma coleção que contém os valores distintos de uma consulta sobre um atributo específico. Só pode ser especificado um atributo na dataclass. Geralmente, o tipo String é o melhor; no entanto, também pode ser utilizado em qualquer tipo de atributo que possa conter vários valores.
 
-You can also use `$skip` and `$top/$limit` as well, if you'd like to navigate the selection before it's placed in an array.
+Também pode utilizar `$skip` e `$top/$limit`, se pretender navegar na seleção antes de esta ser colocada num array.
 
 ## Exemplo
-In our example below, we want to retrieve the distinct values for a company name starting with the letter "a":
+No nosso exemplo abaixo, queremos obter os valores distintos de um nome de empresa que começa com a letra "a":
 
  `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 

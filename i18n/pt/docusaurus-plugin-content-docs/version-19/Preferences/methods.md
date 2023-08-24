@@ -3,17 +3,17 @@ id: methods
 title: Página Métodos
 ---
 
-This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
+This page contains parameters defining the Method editor interface and it default display as well as options concerning its operation. Está dividida em duas secções às quais se acede através dos separadores Tema e Opções.
 
 ## Temas
 
-This page allows selecting, creating, or configuring Method editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
+This page allows selecting, creating, or configuring Method editor themes. Um tema define a fonte, o tamanho da fonte, as cores e os estilos dos itens apresentados no editor de código.
 
 ![](../assets/en/Preferences/themes.png)
 
 ### Lista de temas
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D fornece dois temas por padrão:
+Nesta lista, seleciona o tema a aplicar ao editor de código. São apresentados todos os temas disponíveis, incluindo os temas personalizados (se existirem). 4D fornece dois temas por padrão:
 
 * **Tema Light predefinido**
 * **Tema escuro predefinido**
@@ -24,24 +24,24 @@ A **myTheme** theme is automatically added if you already customized method edit
 
 ### Criar temas personalizados
 
-You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+É possível criar temas que podem ser totalmente personalizados. Para criar um tema, selecione um tema existente e clique em **+** na parte inferior da lista de temas. Também pode adicionar temas personalizados copiando ficheiros de temas na pasta `4D Editor Themes` (ver abaixo).
 
 ### Ficheiros de temas personalizados
 
-Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+Cada tema personalizado é armazenado em um único arquivo JSON chamado *themeName.json*. Os arquivos JSON para temas personalizados são armazenados na pasta `4D Editor Themes` localizada no mesmo nível que o [ficheiro de preferências](overview.md#storage) de 4D.
 
-If key values are not defined in a custom theme, they default to the values from the *Default Light Theme*. If a JSON theme file is invalid, the *Default Light Theme* is loaded and an error is generated.
+Se os valores-chave não forem definidos em um tema personalizado, eles terão como padrão os valores do tema *Default Light Theme*. Se um ficheiro de tema JSON for inválido, o tema *Default Light Theme* é carregado sendo gerado um erro.
 
-> When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
+> Quando um ficheiro de tema é modificado por um editor externo, 4D deve ser reiniciado para considerar a(s) modificação(ões).
 
 ## Definição do tema
 
 Definir um tema significa:
 
-* setting a global font and font size for the whole code editor,
-* assigning specific styles and colors to each 4D language element (fields, tables, variables, parameters, SQL, etc.), SQL language element (keywords, functions, etc.), and color backgrounds.
+* definir um tipo de letra e um tamanho de letra globais para todo o editor de código,
+* atribuir estilos e cores específicos a cada elemento da linguagem 4D (campos, tabelas, variáveis, parâmetros, SQL, etc.), elemento da linguagem SQL (palavras-chave, funções, etc.) e fundos de cor.
 
-Combining different colors and styles is particularly useful for code maintenance purposes.
+A combinação de cores e estilos diferentes é particularmente útil para manutenção do código.
 
 ### Tipo e tamanho de letra
 
@@ -49,7 +49,7 @@ The **font** and **font size** menus allows you to select the font name and size
 
 ### Linguagem 4D e Linguagem SQL
 
-You can set different font styles and colors (font color or background color) for each type of language element. You can select the element(s) to customize in the Category list.
+Pode definir estilos de letra e cores diferentes (cor da letra ou cor de fundo) cada tipo de elemento de linguagem. Pode selecionar o(s) elemento(s) a personalizar na lista Categoria.
 
 ### Outros estilos
 
@@ -57,19 +57,19 @@ These options configure the various colors used in the Method editor and debugge
 
 ![](../assets/en/Preferences/categories.png)
 
-|                                                | Descrição                                                                                                                                                                |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Cor de fundo**                               | Cor de fundo da janela do editor de métodos.                                                                                                                             |
-| **Border of the running line in the debugger** | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Cor de fundo da linha do cursor**            | Cor de fundo da linha que contém o cursor.                                                                                                                               |
-| **Cor de fundo da linha de execução**          | Background color of line being executed in the debugger.                                                                                                                 |
-| **Destaque das palavras encontradas**          | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                                  |
-| **Destaque dos parênteses**                    | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
-| **Destaque dos blocos**                        | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Realce da mesma variável ou campo**          | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Destaque da linha em execução no depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Cor de fundo da seleção**                    | Cor de fundo da seleção.                                                                                                                                                 |
-| **Texto sugerido**                             | Color of autocomplete text suggested by the Method editor.                                                                                                               |
+|                                                | Descrição                                                                                                                                                          |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Cor de fundo**                               | Cor de fundo da janela do editor de métodos.                                                                                                                       |
+| **Borda da linha em execução no depurador**    | Cor da borda que envolve a linha de execução no depurador quando a opção "Destacar linha de execução" está ativada na página [Opções](#options).                   |
+| **Cor de fundo da linha do cursor**            | Cor de fundo da linha que contém o cursor.                                                                                                                         |
+| **Cor de fundo da linha de execução**          | Cor de fundo da linha que está a ser executada no depurador.                                                                                                       |
+| **Destaque das palavras encontradas**          | Cor de destaque das palavras encontradas numa pesquisa.                                                                                                            |
+| **Destaque dos parênteses**                    | Cor de realce dos parênteses correspondentes (utilizada quando os pares de parênteses são assinalados por realce, ver [Opções](#options)).                         |
+| **Destaque dos blocos**                        | Cor de realce dos blocos lógicos selecionados quando a opção "Realçar blocos lógicos" está ativada em [Opções](#options).                                          |
+| **Realce da mesma variável ou campo**          | Cor de realce para outras ocorrências da mesma variável ou texto de campo quando uma das opções "Realçar variáveis e texto" estiver ativada em [Opções](#options). |
+| **Destaque da linha em execução no depurador** | Cor de realce da linha atualmente em execução no depurador quando a opção "Realçar linha em execução" está ativada em [Opções](#options).                          |
+| **Cor de fundo da seleção**                    | Cor de fundo da seleção.                                                                                                                                           |
+| **Texto sugerido**                             | Color of autocomplete text suggested by the Method editor.                                                                                                         |
 
 ## Opções
 
@@ -79,24 +79,24 @@ This page configures Method editor display options.
 
 ### Opções
 
-#### 4D Programming Language (Use regional system settings)
+#### Linguagem de programação 4D (Use os parâmetros regionais do sistema)
 
-Allows you to disable/enable the "international" code settings for the local 4D application.
+Permite-lhe desativar/ativar os parâmetros do código "internacional" para a aplicação 4D local.
 
-* **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
-* **checked**: Regional settings are used in 4D methods.
+* **não selecionado** (padrão): os parâmetros English-US e a linguajem de programação inglês são utilizados nos métodos 4D.
+* **verificado**: os parâmetros regionais são utilizados nos métodos 4D.
 
-> If you modify this option, you need to restart the 4D application so that the change is taken into account.
+> Se modificar esta opção, tem de reiniciar a aplicação 4D para que a alteração seja tida em conta.
 
 #### Indentação
 
-Changes the indentation value for the 4D code in the Method editor. The width must be specified in points (10 by default).
+Changes the indentation value for the 4D code in the Method editor. A largura deve ser especificada em pontos (10 por defeito).
 
-4D code is automatically indented in order to reveal its structure:
+O código 4D é automaticamente indentado para revelar a sua estrutura:
 
 ![](../assets/en/Preferences/optionsIndent.png)
 
-Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.
+A modificação deste valor predefinido pode ser útil se os seus métodos contiverem algoritmos complexos com muitos níveis de incorporação. Pode ser utilizada uma indentação mais estreita para limitar a deslocação horizontal.
 
 #### Mostrar los números de línea
 
@@ -108,70 +108,70 @@ Lets you choose whether or not to show the lists of objects (Commands, Tables an
 
 #### Destacar os blocos lógicos
 
-When checked, the whole code belonging to a logical block (If/End if for example) is highlighted when the mouse is placed over the expanded node:
+Quando marcada, todo o código pertencente a um bloco lógico (If/End if, por exemplo) é realçado quando o rato é colocado sobre o nó expandido:
 
 ![](../assets/en/Preferences/optionsLogicalBlocks.png)
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+A cor de destaque pode ser definida na página [Tema](#theme-definition).
 
 #### Mostrar sempre as linhas de bloco
 
-Oculta permanentemente as linhas verticais dos blocos. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+Oculta permanentemente as linhas verticais dos blocos. As linhas de bloco são concebidas para ligar visualmente os nós. Por padrão, são sempre apresentados (exceto quando os ícones de recolher/expandir estão ocultos, ver abaixo).
 
 ![](../assets/en/Preferences/optionsBlockLines.png)
 
 #### Ocultar ícones recolher/expandir
 
-Allows you to hide all expand/collapse icons by default when displaying code. When the option is checked, node icons (as well as local block lines, see above), are displayed temporarily when the mouse is placed over a node:
+Permite-lhe ocultar todos os ícones de expansão/recolhimento por padrão ao apresentar o código. Quando a opção está selecionada, os ícones dos nós (bem como as linhas de bloco locais, ver acima) são apresentados temporariamente quando o rato é colocado sobre um nó:
 
 ![](../assets/en/Preferences/optionsHideIcons.png)
 
 #### Inserir () e fechar } ) ] "
 
-Enables automatic insertion of () and closing braces while typing code. Esta opção controla duas funcionalidades automáticas:
+Permite a inserção automática de () e de chaves de fecho durante a escrita de código. Esta opção controla duas funcionalidades automáticas:
 
-* **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. For example, if you type "C_OB" and press Tab, 4D writes "C_OBJECT()" and sets the insertion point inside the ().
+* **par de parênteses ()**: adicionado após um comando 4D, palavra-chave ou método projeto inserido a partir de uma lista de sugestões ou de conclusão, se o elemento inserido requer um ou mais argumentos obrigatórios. Por exemplo, se escrever "C_OB" e pressionar Tab, 4D escreve "C_OBJECT()" e coloca o ponto de inserção dentro do ().
 
-* **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
+* **}, ), ], ou "**: carácter adicionado quando se escreve respetivamente uma abertura {, (, ], ou ". Esta função permite inserir pares de símbolos correspondentes no ponto de inserção ou à volta de um texto selecionado. Por exemplo, se realçar uma cadeia de caracteres e escrever um único ", toda a cadeia de caracteres selecionada será colocada entre "":
 
 ![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
 
 #### Correspondência \[]\(){}
 
-Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. As opções abaixo estão disponíveis:
+Define a sinalização gráfica das chaves correspondentes no código. Esta sinalização aparece sempre que é selecionado um parêntese quadrado, parêntese ou parêntese curvo. As opções abaixo estão disponíveis:
 
-* **Nenhum**: Sem sinalização
-* **Rectangle** (default): Braces surrounded by a black line  
+* **Nenhum**: sem sinalização
+* **Retângulo** (padrão): parêntesis rodeados por uma linha preta  
   ![](../assets/en/Preferences/optionsRectangle.png)
-* **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
-* **Bold**: Braces displayed in bold.
+* **Cor de fundo**: as chavetas são realçadas (a cor é definida na página [Tema](#theme-definition)).
+* **Negrito**: as chavetas são apresentadas a negrito.
 
 #### Destaque de variáveis e campos
 
-Allows to highlight all occurrences of the same variable or field in an open method window.
+Permite destacar todas as ocorrências da mesma variável ou campo numa janela de método aberta.
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
-* **No**(default): No highlight
-* **On cursor**: All occurrences are highlighted when the text is clicked
-* **On selection**: All occurrences are highlighted when the text is selected
+* **Não**(padrão): sem destaque
+* **No cursor**: todas as ocorrências são realçadas quando se clica no texto
+* **Na seleção**: todas as ocorrências são realçadas quando o texto é selecionado
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+A cor de destaque pode ser definida na página [Tema](#theme-definition).
 
 #### Depurar (Destacar a linha em execução)
 
-Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
+Destaca a linha que está atualmente em execução no depurador, para além do indicador de seta amarela normal.
 
 ![](../assets/en/Preferences/optionsLine.png)
 
-If you deselect this option, only the yellow arrow is shown.
+Se anular a seleção desta opção, só é mostrada a seta amarela.
 
 ### Sugestões
 
 This area lets you configure autocomplete mechanisms in the Method editor to adapt it to your own work habits.
 
-|                               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Abertura automática da janela | Triggers the automatic display of the suggestion window for: <ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tabelas</li><li>Protótipos (ou seja, as funções de classe)</li></ul>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:![](../assets/en/Preferences/suggestionsAutoOpen.png) You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validação de uma sugestão     | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                       |
+|                               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Abertura automática da janela | Acciona a apresentação automática da janela de sugestões para: <ul><li>Constantes</li><li>Variáveis (locais e interprocessos) e atributos de objetos</li><li>Tabelas</li><li>Protótipos (ou seja, as funções de classe)</li></ul>Por exemplo, quando a opção "Variáveis (locais ou interprocessos) e atributos de objeto" está selecionada, aparece uma lista de sugestões quando escreve o carácter $:![](../assets/en/Preferences/suggestionsAutoOpen.png) Pode desativar este funcionamento para certos elementos da língua, desmarcando a opção correspondente. |
+| Validação de uma sugestão     | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tabulação e delimitadores**<br/>Quando esta opção está selecionada, pode validar a seleção atual com a tecla Tab ou qualquer delimitador relevante para o contexto. Por exemplo, se introduzir "ALE" e depois "(", 4D escreve automaticamente "ALERT(" no editor. Eis a lista de delimitadores tidos em conta:<br/> ( ; : = < [ {</li><li>**Somente tabulação**<br/>Quando esta opção está selecionada, só pode utilizar a tecla Tab para inserir a sugestão atual. Isto pode ser utilizado mais particularmente para facilitar a introdução de caracteres delimitadores em nomes de elementos, tais como ${1}.**Note**: pode também fazer duplo clique na janela ou premir a tecla Retorno de carro para validar uma sugestão.</li></ul>                                                                                                                                                                                                                                                      |

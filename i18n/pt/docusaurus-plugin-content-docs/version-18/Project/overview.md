@@ -3,12 +3,12 @@ id: overview
 title: Visão Geral
 ---
 
-A 4D project contains all of the source code of a 4D database application, from the database structure to the user interface, including forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
+A 4D project contains all of the source code of a 4D database application, from the database structure to the user interface, including forms, menus, user settings, or any required resources. Um projeto 4D é principalmente composto por ficheiros texto.
 
 4D projects are created and handled using the 4D Developer application. Project files are then used to build final application deployment files, that can be opened by 4D Server or 4D Volume license (merged applications).
 
 
-## Ficheiros de projecto
+## Ficheiros do projecto
 
 4D project files are open and edited using regular 4D platform applications. Full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...
 
