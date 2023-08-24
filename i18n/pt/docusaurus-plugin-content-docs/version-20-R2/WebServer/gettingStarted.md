@@ -17,7 +17,7 @@ Para iniciar o servidor web 4D:
 1. Launch your 4D application and create a new, empty 4D project.
 2. In the **Run** menu, select **Start Web Server**.
 
-É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. To check it, we'll display the default home page.
+É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. Para o verificar, vamos apresentar a página inicial padrão.
 
 ### Displaying the default home page
 
