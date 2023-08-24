@@ -79,7 +79,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 | Propriedades          | Tipo                                       | Descrição                                                                  |
 | --------------------- | ------------------------------------------ | -------------------------------------------------------------------------- |
 | Atributos da entidade | misto                                      | Opcional - Valores a modificar                                             |
-| __DATACLASS           | String                                     | Mandatory - Indicates the Dataclass of the entity                          |
+| __DATACLASS           | String                                     | Obrigatório - Indica a Dataclass da entidade                               |
 | __ENTITY              | Parâmetros                                 | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                 | misto (do mesmo tipo que a chave primária) | Facultativo - Chave primária da entidade                                   |
 
