@@ -62,7 +62,7 @@ Para o fazer, pode:
 -   To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box.
 -   4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
 
-The cache is then immediately cleared.
+A cache é então imediatamente limpa.
 > You can also use the [/4DCACHECLEAR](#cacheclear) URL.
 
 
