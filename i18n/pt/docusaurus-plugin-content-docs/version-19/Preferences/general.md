@@ -51,7 +51,7 @@ Estão disponíveis três opções:
 * **Never**: Opening a new document in 4D form editor or method editor will always result in creating a new window (tabs are never created).
 * **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
 
-### Exit Design when going to Application Environment
+### Sair do modo Desenho ao passar para o modo Aplicação
 
 If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
 
