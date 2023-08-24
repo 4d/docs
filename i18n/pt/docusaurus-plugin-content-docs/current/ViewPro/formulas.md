@@ -312,7 +312,7 @@ For example, if you declared the "Name" field of the "People" table in the virtu
 
 We want to print the name of a person in a 4D View Pro area cell using a 4D virtual field:
 
-1.  Create an "Employee" table with a "L_Name" field:
+1.  Criar uma tabela "Employee" com um campo "L_Name":
 
 ![](../assets/en/ViewPro/vpFieldMeth1.PNG)
 
@@ -346,7 +346,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 5.  Validate the field to display the name of the current employee:
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
-> The \[Employee] table must have a current record.
+> A tabela \[Employee] tem de ter um registo atual.
 
 
 ### Declaring allowed methods
