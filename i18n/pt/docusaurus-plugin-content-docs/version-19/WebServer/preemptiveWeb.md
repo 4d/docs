@@ -8,7 +8,7 @@ The 4D Web Server allows you to take full advantage of multi-core computers by u
 
 For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
 
-## Availability of preemptive mode for web processes
+## Disponibilidade do modo preemptivo para os processos web
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
