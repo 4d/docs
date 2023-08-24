@@ -3,37 +3,37 @@ id: writeprointerface
 title: 4D WritePro インターフェース
 ---
 
-4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
+4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。
 
-A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
+4D のデベロッパーは、これらのパレットをアプリケーションに簡単に実装することができます。 それにより、エンドユーザーは、フォントやテキストの揃え方向、ブックマーク、表レイアウト、フレームなど、4D Write Pro のプロパティをすべて管理することができます。
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+インターフェースのマニュアルについては、*4D デザインリファレンス* の [4D Write Pro エリアのドキュメント](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.ja.html) を参照ください。
 
-You will find below the Table Wizard configuration documentation.
+表ウィザードの設定に関するドキュメントは以下のとおりです。
 
 ## 表ウィザード
 
-The Table Wizard is here to further simplify table creation based on database data using contexts, data sources, and formulas.
+表ウィザードは、コンテキスト、データソース、およびフォーミュラを使用した、データベースのデータに基づく表組みの作成をさらに簡素化します。
 
-The Table Wizard, accessible to end-users, loads templates provided and configured by 4D developers. This enables developers to customize the template according to the specific use cases and business requirements of the users.
+エンドユーザーがアクセスできる表ウィザードは、4D デベロッパーが設定し提供するテンプレートをロードします。 これにより、デベロッパーはユーザーの特定のユースケースやビジネス要件に応じてテンプレートをカスタマイズすることができます。
 
-The Table Wizard comes with default templates and themes, which developers can configure to adapt its content to match the specific requirements of the application.
+表ウィザードには、デフォルトのテンプレートおよびテーマが用意されており、デベロッパーはそれらを、アプリケーションで必要とされる内容に適合させることができます。
 
-To implement the Table Wizard in your application, the developers are able to create and configure template files.
+アプリケーションに表ウィザードを実装するために、デベロッパーはテンプレートファイルを作成し、設定することができます。
 
 ### WP表ウィザードのインターフェース
 
-The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
+ユーザーは、4D Write Pro インタフェースツールバーとサイドバーの "表を挿入" メニューボタンから表ウィザードダイアログを開きます。
 
 ![](../assets/en/WritePro/tablewizard-interface.png)
 
-From this interface, the user can select a template or a table from the first drop-down list and a theme from the second.
+このインターフェースで、ユーザーは最初のドロップダウンリストからテンプレートまたはテーブルを選択し、2番目のドロップダウンリストからテーマを選択します。
 
 ##### In Columns:
 
 ![](../assets/en/WritePro/columns2.PNG)
 
-Depending on the user's selection of a template or a table, the user can view the list of fields stored in the template (Blob and object types are automatically excluded). They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
+テンプレートまたはテーブルの選択に応じて、テンプレートに保存されているフィールドのリストが表示されます (BLOB およびオブジェクト型は自動的に除外されます)。 They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
 
 ##### In Rows:
 
