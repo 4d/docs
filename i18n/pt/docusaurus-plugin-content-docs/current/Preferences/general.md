@@ -152,7 +152,7 @@ Linguaje da documentação HTML a apresentar. You can modify it, for example if 
 
 4D builds calls to the pages of the documentation based on this URL.
 
-*   When it is checked, 4D first looks for the page in the local folder. If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
+*   When it is checked, 4D first looks for the page in the local folder. Se for encontrado, 4D mostra a página no navegador atual. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
 *   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
 
 ### Pasta local
