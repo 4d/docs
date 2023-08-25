@@ -134,7 +134,7 @@ Once the object is placed in the form, you can modify its characteristics using 
 
 É possível trabalhar com dois tipos de objetos nos formulários:
 
-- **Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. Estão disponíveis na barra de objetos do editor de formulários. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. Static objects do not have associated variables like active objects. However, you can insert dynamic objects into static objects.
+- **Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. Estão disponíveis na barra de objetos do editor de formulários. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. Static objects do not have associated variables like active objects. No entanto, é possível inserir objetos dinâmicos em objetos estáticos.
 
 - **Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable. Each active object is associated with either a field or a variable.
 
@@ -233,7 +233,7 @@ O agrupamento só afeta os objetos no editor de formulários. When the form is e
 Para agrupar objectos:
 
 1. Selecione o objecto agrupado que pretende desagrupar.
-2. Choose **Group** from the Object menu. OR Click the Group button  in the toolbar of the Form editor:<p>![](../assets/en/FormEditor/group.png)</p>
+2. Selecione **Grupo** no menu Objeto. OR Click the Group button  in the toolbar of the Form editor:<p>![](../assets/en/FormEditor/group.png)</p>
 Choose **Group** from the Object menu.OR Click the Group button  in the toolbar of the Form editor:![](../assets/en/FormEditor/group.png) 4D marks the boundary of the newly grouped objects with handles. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
 
 Para desagrupar objetos:
