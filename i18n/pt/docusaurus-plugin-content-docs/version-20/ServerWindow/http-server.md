@@ -4,14 +4,14 @@ title: Página Servidor HTTP
 ---
 
 
-The **HTTP Server** page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. The SOAP server manages the publication of Web Services. These servers rely on the internal HTTP server of 4D Server.
+The **HTTP Server** page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. These servers rely on the internal HTTP server of 4D Server.
 
 ![](../assets/en/Admin/server-admin-web-page.png)
 
 
 The upper part of the page provides information about the current status of the HTTP server of 4D Server.
 
-- **State**: Started or Stopped
+- **Estado**: Iniciado ou Parado
 - **Starting time**: Date and time the HTTP server was last launched.
 - **Uptime**: Time elapsed since last startup of the HTTP server.
 - **Total HTTP hits**: Number of (low level) HTTP hits received by the HTTP server since it was started.
