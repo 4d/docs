@@ -58,8 +58,8 @@ This menu lets you select the color scheme to use for the **4D development** env
 Estão disponíveis três opções:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-*   **Light**: Use the Light Theme
-*   **Dark**: Use the Dark Theme
+*   **Claro**: utilizar o tema claro
+*   **Escuro**: utilizar o tema escuro
 
 > Esta preferência só é suportada no macOS. No Windows, é sempre utilizado o esquema "Light".
 
@@ -159,6 +159,6 @@ Linguaje da documentação HTML a apresentar. You can modify it, for example if 
 
 > This option is only taken into account for command documentation access (excluding class functions).
 
-Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
+Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja). 
