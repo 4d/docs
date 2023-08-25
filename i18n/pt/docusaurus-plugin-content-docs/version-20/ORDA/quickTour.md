@@ -62,7 +62,7 @@ A new entity object contains a "copy" of all attributes of its parent dataclass,
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID is automatically filled
+//$entity.ID é automaticamente preenchido
 ```
 
 Atualmente, a entidade só existe na memória. To store it in the data file, you need to save it using the `save()` member method:
