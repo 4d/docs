@@ -13,7 +13,7 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 You create variables by declaring them using one of the "Compiler" or "Arrays" theme commands.
 
-**Note:**Arrays are a particular type of variables. An array is an ordered series of variables of the same type. Para mais informações, consulte por favor [Arrays](Concepts/arrays.md).
+**Note:**Arrays are a particular type of variables. Uma array é uma série ordenada de variáveis do mesmo tipo. Para mais informações, consulte por favor [Arrays](Concepts/arrays.md).
 
 Por exemplo, se quisermos definir uma variável de texto, escrevemos:
 
