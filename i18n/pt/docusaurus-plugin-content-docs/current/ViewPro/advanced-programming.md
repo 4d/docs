@@ -31,7 +31,7 @@ You can tap into the SpreadJS library of Javascript methods and call them direct
 
 #### Exemplo
 
-The following code undoes the last action in the spreadsheet:
+O código seguinte anula a última ação na folha de cálculo:
 
 ```4d
 WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
