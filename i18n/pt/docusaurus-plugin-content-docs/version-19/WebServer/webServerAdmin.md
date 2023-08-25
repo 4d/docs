@@ -11,7 +11,7 @@ title: Administração
 
 A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
 
-The main 4D web server can be started in different ways:
+O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
 * Utilizar um botão/comando de menu.
   * 4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
@@ -26,7 +26,7 @@ The web server of any component can be launched by calling the [`webServer.start
 
 ## Stopping the 4D Web Server
 
-The main 4D web server can be stopped in different ways:
+O servidor web principal de 4D pode ser parado de diferentes maneiras:
 
 * Using the **Run\>Stop Web Server** menu of 4D or the **Stop HTTP server** button of the HTTP Server page of 4D Server (both items show **Start...** when the server is not already started).
 
@@ -172,29 +172,29 @@ When you choose the ELF or WLF format, the “Web Log Token Selection” area di
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                                                                                                       |
-| -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                     |
-| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                                                                           |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                              |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
-| CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                          |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                     |
-| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                   |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                                                                          |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
-| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                     |
-| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                               |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                                                                    |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                    |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the “$” character                                                                      |
-| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                            |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                         |
-| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                                                                        |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
-| URL            |     | X   | URL solicitado pelo cliente                                                                                                 |
+| Campo          | ELF | WLF | Valor                                                                                                                                             |
+| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                                           |
+| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                                                                                                 |
+| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                                                    |
+| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                                                                                              |
+| CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                                                |
+| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                                           |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                         |
+| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                              |
+| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                                                 |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                           |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                     |
+| CS_URI_QUERY | X   | X   | Request query parameters                                                                                                                          |
+| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                                          |
+| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                                        |
+| METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                                               |
+| PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                               |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                  |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                               |
+| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                                                                                              |
+| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). If the user name contains spaces, they are replaced by _ (underlines) |
+| URL            |     | X   | URL solicitado pelo cliente                                                                                                                       |
 
 > As datas e horas são indicadas em GMT.
 
