@@ -12,12 +12,12 @@ For in-depth information on preemptive process in 4D, please refer to the *Preem
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
-| 4D Server             | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilado       |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------- |
-| Servidor REST         | cooperativo                                                                                                              | preemptive                                                   | preemptive      |
-| Servidor Web          | cooperativo                                                                                                              | *parâmetro web*                                              | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                                                                              | *parâmetro web*                                              | *parâmetro web* |
-| Legacy REST           | cooperativo                                                                                                              | *parâmetro web*                                              | *parâmetro web* |
+| 4D Server             | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, projeto (nenhum cliente ligado localmente) ou binário | Compilado       |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                                                                              | preemptive                                                          | preemptive      |
+| Servidor Web          | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
+| Legacy REST           | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |
 | ----------------------- | ------------ | --------------- |
@@ -51,7 +51,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 - Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
 
-- Triggers for tables with "Expose as REST resource" attribute
+- Triggers para as tabelas com o atributo "Expor como recurso REST"
 
 - [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
 
