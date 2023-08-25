@@ -68,6 +68,14 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 ## 4D.WebSocket.new()
 
+<details><summary>履歴</summary>
+
+| バージョン  | 内容                                                   |
+| ------ | ---------------------------------------------------- |
+| v20 R3 | Support of `headers` property in *connectionHandler* |
+
+</details>
+
 
 <!-- REF #4D.WebSocket.new().Syntax -->**4D.WebSocket.new**( *url* : Text { ; *connectionHandler* : Object } ) : 4D.WebSocket<!-- END REF -->
 
@@ -95,7 +103,7 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 ### *connectionHandler* パラメーター
 
-*connectionHandler* には、接続イベントや処理するデータ型に応じて呼び出されるコールバック関数を含むオブジェクトを渡すことができます。
+In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 
 - コールバックは、接続を開始したフォームまたはワーカーのコンテキストで自動的に呼び出されます。
 - フォームまたはワーカーが閉じられていない限り、WebSocket は有効です。
@@ -104,9 +112,11 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | WebSocket データ用のコールバック関数。 WebSocket がデータを受信するたびに呼び出されます。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "message"</li><li>`$2.data` (text, BLOB, または object。`dataType` 参照): 受信データ</li></ul> |
 | onError     | [Function](FunctionClass.md) | 実行エラー用のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "error"</li><li>`$2.errors`: 実行エラーの場合、4Dエラースタックのコレクション。<ul><li>`[].errCode` (number): 4Dエラーコード</li><li>`[].message` (text): 4Dエラーの説明</li><li>`[].componentSignature` (text) - エラーを返した内部コンポーネントの署名</li></ul></li></ul>                                        |
-| onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li><li>`$2.wasClean` (boolean、読み取り専用): 接続がきれいに閉じられたかどうかを示します。</li></ul>                              |
+| onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li><li>`$2.wasClean` (boolean、読み取り専用): 接続がきれいに閉じられたかどうかを示します。</li></ul>                             |
 | onOpen      | [Function](FunctionClass.md) | WebSocket が開始した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "open"</li></ul>                           |
 | dataType    | Text                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                 |
+| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                           |
+
 
 以下は、コールバック呼び出しの流れです:
 
@@ -117,6 +127,21 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 
 #### 例題
+
+You want to set headers in the `WSConnectionHandler` user class:
+
+```4d
+// WSConnectionHandler class
+
+Class constructor($myToken:Text)
+
+// Creation of the headers sent to the server
+This.headers:=New object("x-authorization";$myToken)
+// We define two cookies
+This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
+...
+
+```
 
 
 <!-- REF #WebSocketClass.dataType.Desc -->
