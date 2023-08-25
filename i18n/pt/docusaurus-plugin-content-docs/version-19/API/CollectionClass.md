@@ -973,7 +973,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-* in *$1.value*: element value to be filtered
+* em *$1.value*: valor do elemento a ser filtrado
 * em *$2*: *param*
 * em *$N...*: param2...paramN
 
@@ -1514,7 +1514,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *methodName* receives the following parameters:
 
 * in *$1.value* (any type): element value to be mapped
-* in *$2* (any type): *param*
+* em *$2* (qualquer tipo): *param*
 * in *$N...* (any type): *paramN...*
 
 *methodName* sets the following parameter(s):
@@ -1808,7 +1808,7 @@ Em *methodName*, passe um método de comparação que compare dois valores e dev
     * em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
   * $2...$N (qualquer tipo): parâmetros adicionais
-* *methodName* sets the following parameter:
+* *methodName* define o seguinte parâmetro:
   * *$1.result* (boolean): **true** se *$1.value < $1.value2*, **false** do contrário
 
 #### Exemplo 1
@@ -2090,7 +2090,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 <!-- REF #collection.reduce().Params -->
 | Parâmetro  | Tipo                                            |    | Descrição                                                            |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
-| methodName | Text                                            | -> | Name of the function to call to process collection elements          |
+| methodName | Text                                            | -> | Nome da função a chamar para processar os elementos da coleção       |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
 | param      | expressão                                       | -> | Parameter(s) to pass to *methodName*                                 |
 | Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador|<!-- END REF -->
@@ -2503,7 +2503,7 @@ If you want to sort the collection elements in some other order or sort any type
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
   * $2...$N (qualquer tipo): parâmetros adicionais
 
-*methodName* sets the following parameter:
+*methodName* define o seguinte parâmetro:
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
 
