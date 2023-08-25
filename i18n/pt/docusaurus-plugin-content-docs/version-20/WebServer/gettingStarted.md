@@ -44,7 +44,7 @@ Case of
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
+The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. Este código muito simples apenas envia o texto para o navegador.
 
 3. No seu browser, introduza o seguinte URL:
 
@@ -59,7 +59,7 @@ O servidor Web processa o pedido e devolve-o:
 
 ## Obter dados da base de dados
 
-Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
+Now we'll see how simple it is to get data from the database. Primeiro, vamos criar uma tabela e preenchê-la com alguns dados.
 
 Create a basic database with, for example, a single table containing some records:
 
@@ -200,7 +200,7 @@ The most simple and secured way to log a user on the 4D web server is based upon
 
 ![](../assets/en/WebServer/helloUsers.png)
 
-2. Write and execute the following code to create a user:
+2. Escreva e execute o seguinte código para criar um usuário:
 
 ```4d
 var $webUser : cs.WebUsersEntity
@@ -281,5 +281,5 @@ As credenciais incorretas serão rejeitadas:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page. 
+Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. Ver a página [Sessões de usuário](sessions.md). 
 
