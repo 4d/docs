@@ -1064,7 +1064,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-* in *$1.value:* element value to be evaluated
+* em *$1.value:* valor do elemento a ser avaliado
 * em *$2: param*
 * em *$N...*: param2...paramN
 
