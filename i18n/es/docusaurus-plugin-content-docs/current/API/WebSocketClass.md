@@ -68,6 +68,14 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 
 ## 4D.WebSocket.new()
 
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones                                       |
+| ------- | ---------------------------------------------------- |
+| v20 R3  | Support of `headers` property in *connectionHandler* |
+
+</details>
+
 
 <!-- REF #4D.WebSocket.new().Syntax -->**4D.WebSocket.new**( *url* : Text { ; *connectionHandler* : Object } ) : 4D.WebSocket<!-- END REF -->
 
@@ -95,7 +103,7 @@ Si la conexión no es posible, se devuelve un objeto `null` y se genera un error
 
 ### Parámetro *connectionHandler*
 
-En *connectionHandler*, puede pasar un objeto que contenga funciones de retrollamada a ser llamadas según los eventos de conexión y tipo de datos a manejar.
+In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 
 - Las retrollamadas se llaman automáticamente en el contexto del formulario o worker que inicia la conexión.
 - The WebSocket will be valid as long as the form or worker is not closed.
@@ -104,9 +112,11 @@ En *connectionHandler*, puede pasar un objeto que contenga funciones de retrolla
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | Función de retrollamada para datos WebSocket. Llamada cada vez que el WebSocket ha recibido datos. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (text): siempre "message"</li><li>`$2.data` (texto, blob u objeto, ver `dataType`): Datos recibidos</li></ul> |
 | onError     | [Function](FunctionClass.md) | Función de retrollamada para errores de ejecución. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (text): siempre "error"</li><li>`$2.errors`: colección de la pila de errores 4D en caso de error de ejecución.<ul><li>`[].errCode` (number): Código de error 4D</li><li>`[].message` (text): descripción del error 4D</li><li>`[].componentSignature` (text): firma del componente interno que ha devuelto el error</li></ul></li></ul>                                                 |
-| onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, solo lectura): corto sin firmar que contiene el código de cierre enviado por el servidor.</li><li>`$2.reason` (text, sólo lectura): razón por la que el servidor cerró la conexión. Esto es específico de cada servidor y subprotocolo.</li><li>`$2.wasClean` (boolean, sólo lectura): indica si la conexión se cerró limpiamente o no.</li></ul>                                            |
+| onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, solo lectura): corto sin firmar que contiene el código de cierre enviado por el servidor.</li><li>`$2.reason` (text, sólo lectura): razón por la que el servidor cerró la conexión. Esto es específico de cada servidor y subprotocolo.</li><li>`$2.wasClean` (boolean, sólo lectura): indica si la conexión se cerró limpiamente o no.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Función de retrollamada cuando el webSocket está abierto. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (texto): siempre "open"</li></ul>                                       |
 | dataType    | Text                         | Tipo de datos recibidos o enviados. Valores disponibles: "text" (por defecto), "blob", "object". "text" = utf-8                                                                                                                 |
+| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                                                                                                   |
+
 
 Esta es la secuencia de llamadas de retorno:
 
@@ -117,6 +127,21 @@ Esta es la secuencia de llamadas de retorno:
 
 
 #### Ejemplo
+
+You want to set headers in the `WSConnectionHandler` user class:
+
+```4d
+// WSConnectionHandler class
+
+Class constructor($myToken:Text)
+
+// Creation of the headers sent to the server
+This.headers:=New object("x-authorization";$myToken)
+// We define two cookies
+This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
+...
+
+```
 
 
 <!-- REF #WebSocketClass.dataType.Desc -->
