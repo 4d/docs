@@ -104,7 +104,7 @@ Accessing a related attribute depends on the attribute kind. Por exemplo, com a 
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
-You can access data through the related object(s):
+É possível aceder aos dados através do(s) objeto(s) relacionado(s):
 
 ```4d
  $entity:=ds. Project.all().first().theClient //get the Company entity associated to the project
@@ -115,7 +115,7 @@ Note that both *theClient* and *companyProjects* in the above example are primar
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of the manager of an employee, you can simply write:
 
 ```4d
  $myEmp:=ds. Employee.get(50)
@@ -129,7 +129,7 @@ In the ORDA architecture, relation attributes directly contain data related to e
 * An N->1 type relation attribute (**relatedEntity** kind) contains an entity
 * A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
 
-Let's look at the following (simplified) structure:
+Vejamos a seguinte estrutura (simplificada):
 
 ![](../assets/en/ORDA/entityAttributes3.png)
 
@@ -232,7 +232,7 @@ $toModify:=ds. Company.all().copy() //$toModify is alterable
 A new entity selection **inherits** from the original entity selection nature in the following cases:
 
 * the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
-* the new entity selection is based upon a relation:
+* a nova entity selection é baseada numa relação:
   * [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
   * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
   * [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
@@ -457,7 +457,7 @@ You can increase the benefits of the optimization by using the **context** prope
 A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
 
-**Example with `dataClass.query( )` method:**
+**Exemplo com o método `dataClass.query( )`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
