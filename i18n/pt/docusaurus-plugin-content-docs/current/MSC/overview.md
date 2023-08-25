@@ -29,7 +29,7 @@ No modo standard, está aberto um projeto. Neste modo, algumas funções de manu
 - Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
   ![](../assets/en/MSC/mscicon.png)
 - Use the “msc” standard action that it is possible to associate with a menu command or a form object.
-- Use the `OPEN SECURITY CENTER` language command.
+- Utilizar o comando `OPEN SECURITY CENTER`.
 
 ## Disponibilidade de funcionalidades
 
