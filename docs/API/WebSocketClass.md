@@ -112,7 +112,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 |onTerminate|[Function](FunctionClass.md)|Callback function when the WebSocket is terminated. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.code` (number, read-only): unsigned short containing the close code sent by the server.</li><li>`$2.reason` (text, read-only): Reason why the server closed the connection. This is specific to the particular server and sub-protocol.</li><li>`$2.wasClean` (boolean, read-only): Indicates whether or not the connection was cleanly closed.</li></ul>|
 |onOpen|[Function](FunctionClass.md)|Callback function when the websocket is open. The callback receives the following parameters:<li>`$1`: WebSocket object</li><li>`$2`: Object</li><ul><li>`$2.type` (text): always "open"</li></ul>|
 |dataType|Text|Type of the data received or sent. Available values: "text" (default), "blob", "object". "text" = utf-8|
-|headers|Object|Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookies assignment (particular case): `headers.Cookies:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>|
+|headers|Object|Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>|
 
 
 Here is the sequence of callback calls:
@@ -123,6 +123,22 @@ Here is the sequence of callback calls:
 4. `onTerminate` is always executed
 
 
+#### Example
+
+You want to set headers in the `WSConnectionHandler` user class:
+
+```4d
+// WSConnectionHandler class
+
+Class constructor($myToken:Text)
+
+// Creation of the headers sent to the server
+This.headers:=New object("x-authorization";$myToken)
+// We define two cookies
+This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
+...
+
+```
 
 
 <!-- REF #WebSocketClass.dataType.Desc -->
