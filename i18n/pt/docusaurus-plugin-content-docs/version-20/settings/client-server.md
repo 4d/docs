@@ -20,7 +20,7 @@ This option lets you indicate whether or not the 4D Server database will appear 
 
 #### Nome da publicação
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). By default, 4D Server uses the name of the project file. Pode introduzir qualquer nome personalizado que pretenda.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
 
 > This parameter is not taken into account in custom client-server applications. In theory, the client application connects directly to the server application, without passing by the connection dialog box. However, in the event of an error, this dialog box can appear; in this case, the publication name of the server application is the name of the compiled project.
 
@@ -86,7 +86,7 @@ This setting can be used to globally set the updating mode for the local instanc
 
 This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
 
-> This configuration table does not control Web connections.
+> Esta tabela de configuração não controla as ligações Web.
 
 The behavior of the configuration table is as follows:
 
@@ -94,7 +94,7 @@ The behavior of the configuration table is as follows:
 - The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
 - The application of rules is based on the display order of the table. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). Também pode mover linhas utilizando a função arrastar e largar.
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. Por exemplo:
-    - Deny 192.168.* (deny all addresses beginning with 192.168)
+    - Negar 192.168.* (negar todos os endereços que comecem por 192.168)
     - Autorizar * (e autorizar outros)
 
 By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.
