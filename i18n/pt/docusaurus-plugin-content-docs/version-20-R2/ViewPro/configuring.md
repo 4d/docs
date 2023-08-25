@@ -103,7 +103,7 @@ To lock the whole sheet, you only need to set the *isProtected* property to **tr
 | ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                            |
 | protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. Se null: o parâmetro protectionOptions é reposto. |
-|                   | allowSelectLockedCells   | boolean | Specifies whether the user can select locked cells, optional. True por defeito.                                                 |
+|                   | allowSelectLockedCells   | boolean | Especifica se o usuário pode selecionar células bloqueadas, opcional. True por defeito.                                         |
 |                   | allowSelectUnlockedCells | boolean | Specifies whether the user can select unlocked cells, optional. True por defeito.                                               |
 |                   | allowSort                | boolean | Especifica se o usuário pode ordenar intervalos, opcional. Padrão é falso.                                                      |
 |                   | allowFilter              | boolean | Especifica se o usuário pode filtrar intervalos, opcional. Padrão é falso.                                                      |
