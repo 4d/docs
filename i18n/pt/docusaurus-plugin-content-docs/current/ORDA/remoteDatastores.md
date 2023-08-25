@@ -176,7 +176,7 @@ If you want to deliver final applications with the highest level of optimization
 
 For optimization reasons, data requested from the server via ORDA is loaded in the ORDA remote cache (which is different from the 4D cache). The ORDA cache is organized by dataclass, and expires after 30 seconds.
 
-The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Os dados expirados permanecem na cache até que seja necessário espaço.
+The data contained in the cache is considered as expired when the timeout is reached. Qualquer acesso a dados expirados enviará um pedido ao servidor. Os dados expirados permanecem na cache até que seja necessário espaço.
 
 By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions:
 
