@@ -29,86 +29,86 @@ title: 4D WritePro インターフェース
 
 このインターフェースで、ユーザーは最初のドロップダウンリストからテンプレートまたはテーブルを選択し、2番目のドロップダウンリストからテーマを選択します。
 
-##### In Columns:
+##### 列について:
 
 ![](../assets/en/WritePro/columns2.PNG)
 
-テンプレートまたはテーブルの選択に応じて、テンプレートに保存されているフィールドのリストが表示されます (BLOB およびオブジェクト型は自動的に除外されます)。 They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
+テンプレートまたはテーブルの選択に応じて、テンプレートに保存されているフィールドのリストが表示されます (BLOB およびオブジェクト型は自動的に除外されます)。 表の列として表示させたいフィールドは、フィールド名の左にあるチェックボックスで選択します。また、表示する列の順序はフィールドをドラッグしてリスト内を移動させることで変更することができます。
 
-##### In Rows:
+##### 行について:
 
 ![](../assets/en/WritePro/rows.PNG)
 
-In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
+表ウィザードでは、ヘッダー行と追加の行の数 (それぞれ 0～5) を定義したり、[ブレーク行](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.ja.html#6233076) (小計行) を繰り返し行の上または下に設定したり、[キャリーオーバー行](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.ja.html#6236686) の表示/非表示を選択したりすることもできます。
 
-##### In Display:
+##### 表示について:
 
 ![](../assets/en/WritePro/display2.PNG)
 
-The user adjusts the zoom level according to their preference by selecting the desired option from a drop-down list, uses radio buttons to display formulas or data for clear presentation, and chooses to display a horizontal ruler using a checkbox.
+ユーザーは、ドロップダウンリストから希望するオプションを選択することで、好みのズームレベルを調整し、ラジオボタンを使ってフォーミュラまたはデータを表示し、チェックボックスを使って水平ルーラーを表示するかどうかを選択します。
 
-After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
+表の作成とカスタマイズが完了したら、**挿入** ボタンをクリックして、WPドキュメントに表組みを追加することができます。
 
-Once the table has been integrated into the document, the user can customize its style. The formatting tools of the toolbar and sidebar are still available.
+ドキュメントに表が統合されると、ユーザーはそのスタイルをカスタマイズできます。 ツールバーやサイドバーの書式設定ツールはすべて利用可能です。
 
-### WP Table Wizard template configuration
+### WP表ウィザードのテンプレートの設定
 
-The templates configuration includes:
+テンプレートの設定には以下が含まれます:
 
-* Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-* Translating table, field, and formula names from the [translation file](#translation-files).
-* Designing graphic styles and customized  themes from the [theme file](#theme-files).
+* [テンプレートファイル](#テンプレートファイル): テーブルとフィールドを定義し、アプリケーションに適合したフォーミュラを用意します。
+* [トランスレーションファイル](#トランスレーションファイル): テーブル、フィールド、フォーミュラの翻訳名を指定します。
+* [テーマファイル](#テーマファイル): グラフィックスタイルとテーマをデザインしカスタマイズします。
 
-These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
+表ウィザードを設定するにあたって、これら 3種類のファイルにはそれぞれ明確な役割がありますが、いずれも必須ではありません。
 
 #### テンプレートファイル
 
-The template file allows you to define the following:
+テンプレートファイルを使って、以下のことが定義できます:
 
-- the formula that returns an entity selection used as the table's data source,
-- the break formulas (if any break row can be inserted)
-- the dataclass attributes that can be used as table columns,
-- the formulas available as contextual menus inside break rows, carry-over row or extra rows.
+- 表のデータソースとして使用されるエンティティセレクションを返すフォーミュラ
+- ブレーク行のフォーミュラ (ブレーク行を挿入できる場合)
+- 表の列として使用できるデータクラス属性
+- ブレーク行、キャリーオーバー行、追加の行において、コンテキストメニューから選択可能なフォーミュラ
 
-:::info Limitation
+:::info 制限
 
-In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. This limitation will be removed in the next version.
+現在の実装 (4D v20 R2) では、ブレーク行、データソース、コンテキストメニューに使用されるフォーミュラは、ホストデータベースのメソッドの呼び出しをサポートしていません。 この制限は次のバージョンで外される予定です。
 
 :::
 
-The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
+テンプレートファイルはプロジェクトの "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" フォルダーに保存する必要があります。
 
-The template file in JSON format contains the following attributes:
+JSON形式のテンプレートファイルには、以下の属性が含まれます:
 
-| 属性                   | タイプ        | 必須 | 説明                                                                                                                                                       |
-|:-------------------- |:---------- |:-- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | ○  | Formula of table data source                                                                                                                             |
-| columns              | Collection | ○  | Collection of table columns                                                                                                                              |
-| columns.check        | Text       | ○  | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
-| columns.header       | Text       | ○  | Label shown to the user                                                                                                                                  |
-| columns.source       | Text       | ○  | Formula                                                                                                                                                  |
-| breaks               | Collection |    | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | ○  | Label shown to the user                                                                                                                                  |
-| breaks.source        | Text       | ○  | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |    | Collection of formula objects applicable to break rows                                                                                                   |
-| breakFormulas.label  | Text       | ○  | Label shown to the user                                                                                                                                  |
-| breakFormulas.source | Text       | ○  | Formula                                                                                                                                                  |
-| bcorFormulas         | Collection |    | Collection of formula objects applicable to bottom carry over rows                                                                                       |
-| bcorFormulas.label   | Text       | ○  | Label shown to the user                                                                                                                                  |
-| bcorFormulas.source  | Text       | ○  | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |    | Collection of formula objects applicable to extra rows                                                                                                   |
-| extraFormulas.label  | Text       | ○  | Label shown to the user                                                                                                                                  |
-| extraFormulas.source | Text       | ○  | Formula                                                                                                                                                  |
+| 属性                   | タイプ        | 必須 | 説明                                                                          |
+|:-------------------- |:---------- |:-- |:--------------------------------------------------------------------------- |
+| tableDataSource      | Text       | ○  | 表のデータソースのフォーミュラ                                                             |
+| columns              | Collection | ○  | 表の列のコレクション                                                                  |
+| columns.check        | Text       | ○  | 表ウィザードであらかじめチェックされている場合は true。 列のチェックをあらかじめ外しておく場合は false。                  |
+| columns.header       | Text       | ○  | ユーザーに提示する表示名                                                                |
+| columns.source       | Text       | ○  | フォーミュラ                                                                      |
+| breaks               | Collection |    | ブレークオブジェクトのコレクション。 ブレークの順番は重要です。 この順番は、ドキュメント内でブレーク行が繰り返し行の上にある場合の順番に対応します。 |
+| breaks.label         | Text       | ○  | ユーザーに提示する表示名                                                                |
+| breaks.source        | Text       | ○  | フォーミュラ                                                                      |
+| breakFormulas        | Collection |    | ブレーク行に適用可能なフォーミュラオブジェクトのコレクション                                              |
+| breakFormulas.label  | Text       | ○  | ユーザーに提示する表示名                                                                |
+| breakFormulas.source | Text       | ○  | フォーミュラ                                                                      |
+| bcorFormulas         | Collection |    | 下部キャリーオーバー行に適用可能なフォーミュラオブジェクトのコレクション                                        |
+| bcorFormulas.label   | Text       | ○  | ユーザーに提示する表示名                                                                |
+| bcorFormulas.source  | Text       | ○  | フォーミュラ                                                                      |
+| extraFormulas        | Collection |    | 追加の行に適用可能なフォーミュラオブジェクトのコレクション                                               |
+| extraFormulas.label  | Text       | ○  | ユーザーに提示する表示名                                                                |
+| extraFormulas.source | Text       | ○  | フォーミュラ                                                                      |
 
-:::note French language
+:::note フランス語
 
-If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
+もし、4Dランゲージがフランス語に設定された環境で実行される可能性があるのであれば、ランゲージ設定に関わらず正しく解釈されるよう、フォーミュラに [トークン](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.ja.html) を使用するようにしてください。
 
 :::
 
 ##### 例題
 
-Here's a brief example of what your JSON file might look like:
+JSONファイルの簡単な一例を以下に示します:
 
 ```json
 {
@@ -156,11 +156,11 @@ Here's a brief example of what your JSON file might look like:
 
 #### トランスレーションファイル
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+トランスレーションファイルは、テンプレート、テーマ、テーブル、フィールド、およびフォーミュラの翻訳名を指定します。 これらのファイルはプロジェクトの "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" フォルダーに追加します。
 
-Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
+各トランスレーションファイルには、対応する言語コード (英語なら "en"、日本語なら "ja" など) のファイル名を付けます。
 
-The translation file in JSON format contains the following attributes:
+JSON形式のトランスレーションファイルには、以下の属性が含まれます:
 
 | 属性        | タイプ        | 必須 | 説明                                                                                    |
 |:--------- |:---------- |:-- |:------------------------------------------------------------------------------------- |

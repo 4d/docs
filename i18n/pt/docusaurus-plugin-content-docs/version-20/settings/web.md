@@ -218,30 +218,30 @@ The log format menu provides the following options:
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                                                      |
-| -------------- | --- | --- | -------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                    |
-| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                          |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
-| CONNECTION_ID  |     | X   | Número de identificação da ligação                                         |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
-| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                  |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
-| CS_SIP         | X   | X   | Endereço IP do servidor                                                    |
-| CS_URI         | X   | X   | URI onde o pedido é efectuado                                              |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                   |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                        |
-| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                       |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
-|                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| URL            |     | X   | URL solicitado pelo cliente                                                |
+| Campo          | ELF | WLF | Valor                                                                       |
+| -------------- | --- | --- | --------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                     |
+| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                           |
+| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)              |
+| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                        |
+| CONNECTION_ID  |     | X   | Número de identificação da ligação                                          |
+| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                     |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                   |
+| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                        |
+| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client           |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                     |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                               |
+| CS_URI_QUERY | X   | X   | Request query parameters                                                    |
+| CS_URI_STEM  | X   | X   | Part of request without query parameters                                    |
+| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year  |
+| METHOD         | X   | X   | HTTP method used for the request sent to the server                         |
+| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                      |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                            |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                         |
+| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                        |
+| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). |
+|                |     |     | If the user name contains spaces, they are replaced by _ (underlines)       |
+| URL            |     | X   | URL solicitado pelo cliente                                                 |
 
 > As datas e horas são indicadas em GMT.
 
@@ -272,7 +272,7 @@ This area contains various options related to the use of 4D as a Web Services "s
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
 -   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
--   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
+-   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
 

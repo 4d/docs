@@ -74,7 +74,7 @@ This operation is useful when you need to change the current encryption data key
 
 Esta operação remove toda a encriptação do ficheiro de dados. Se já não pretender que os seus dados sejam encriptados:
 
-1. Click on **Decrypt all data**.
+1. Clique em **Decodificar todos os dados**.
 2. Enter the current data encryption key (see Providing the current data encryption key).
 
 The data file is fully decrypted and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt10.png)

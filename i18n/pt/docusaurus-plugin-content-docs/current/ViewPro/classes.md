@@ -127,7 +127,7 @@ A propriedade `tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->is a
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<!-- END REF -->
 
 
-A propriedade `.theme` <!-- REF #TableTheme.theme.Summary -->define um tema de tabela. Can also be a text (name of a native SpreadJS theme)<!-- END REF -->.
+A propriedade `.theme` <!-- REF #TableTheme.theme.Summary -->define um tema de tabela. Pode também ser um texto (nome de um tema SpreadJS nativo)<!-- END REF -->.
 
 See the [native SpreadJS themes](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
@@ -209,7 +209,7 @@ A propriedade `.borderBottom` é o <!-- REF #TableStyle.borderBottom.Summary -->
 
 **.borderHorizontal** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderHorizontal` property is the <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->.
+A propriedade `.borderHorizontal` é o <!-- REF #TableStyle.borderHorizontal.Summary -->horizontal border line of the table <!-- END REF -->.
 
 
 ### .borderVertical
@@ -300,14 +300,14 @@ The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHea
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->tamanho da primeira coluna alternada<!-- END REF -->. O padrão=1.
+A propriedade `.firstRowStripSize` é o <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->tamanho da primeira coluna alternada<!-- END REF -->. O padrão=1.
 
 ### .firstRowStripStyle
 
 <!-- REF #TableThemeOptions.firstRowStripStyle.Syntax -->
 **.firstRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstRowStripStyle` property is the <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->primeiro estilo de linha alternada<!-- END REF -->.
+A propriedade `.firstRowStripStyle` é o <!-- REF #TableThemeOptions.firstRowStripStyle.Summary -->primeiro estilo de linha alternada<!-- END REF -->.
 
 ### .footerRowStyle
 
@@ -328,7 +328,7 @@ A propriedade `.headerRowStyle` é o <!-- REF #TableThemeOptions.headerRowStyle.
 <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Syntax -->
 **.highlightFirstColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.highlightFirstColumnStyle` property is the <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->estilo da primeira coluna<!-- END REF -->. "highlightFirstColumn" tem de ser true.
+A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.highlightFirstColumnStyle.Summary -->estilo da primeira coluna<!-- END REF -->. "highlightFirstColumn" tem de ser true.
 
 ### .highlightLastColumnStyle
 
@@ -377,7 +377,7 @@ The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.second
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->tamanho da segunda coluna alternada<!-- END REF -->. O padrão=1.
+A propriedade `.secondRowStripSize` é o <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->tamanho da segunda coluna alternada<!-- END REF -->. O padrão=1.
 
 ### .secondRowStripStyle
 
@@ -391,7 +391,7 @@ The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRow
 <!-- REF #TableThemeOptions.wholeTableStyle.Syntax -->
 **.wholeTableStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.wholeTableStyle` property is the <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo padra-o da área de dados<!-- END REF -->.
+A propriedade `.wholeTableStyle` é o <!-- REF #TableThemeOptions.wholeTableStyle.Summary -->estilo padra-o da área de dados<!-- END REF -->.
 
 
 

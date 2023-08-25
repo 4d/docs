@@ -41,7 +41,7 @@ A permission action defined at a given level is inherited by default at lower le
 ## Acções de autorização
 
 
-Available actions are related to target resource.
+As ações disponíveis estão relacionadas com o recurso alvo.
 
 | Acções       | armazém de dados                                                                     | dataclass                                                                                                                                            | atributo                                                                                                              | função de modelo de dados                                                                                                                                                                                                                                                |
 | ------------ | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -70,7 +70,7 @@ Setting permissions requires to be consistent, in particular:
 
 A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
 
-A privilege or a role can be associated to several "action + resource" combinations. Several privileges can be associated to an action. Um privilégio pode incluir outros privilégios.
+A privilege or a role can be associated to several "action + resource" combinations. Podem ser associados vários privilégios a uma ação. Um privilégio pode incluir outros privilégios.
 
 - You **create** privileges and/or roles in the `roles.json` file (see below). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
@@ -117,7 +117,7 @@ In a context other than *Qodly* (cloud), you have to create this file at the fol
 :::
 
 
-The `roles.json` file syntax is the following:
+A sintaxe do ficheiro `roles.json` é a seguinte:
 
 | Nome da propriedade |                 |               | Tipo                             | Obrigatório | Descrição                                                                    |
 | ------------------- | --------------- | ------------- | -------------------------------- | ----------- | ---------------------------------------------------------------------------- |

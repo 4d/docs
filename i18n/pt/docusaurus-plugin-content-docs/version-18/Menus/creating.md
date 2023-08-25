@@ -85,7 +85,7 @@ At runtime, if an attached menu is modified by programming, every other instance
 
 ### Utilizar o editor de menus
 
-A menu can be attached to a menu bar or to another menu.
+Um menu pode ser anexado a uma barra de menus ou a outro menu.
 
 - To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](../assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
 - To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  

@@ -9,7 +9,7 @@ You can administer the 4D Server application from a remote 4D (client machine) b
 
 To open a server administration window from a client machine, you must be connected to the remote database as a Designer or Administrator. Otherwise, when you attempt to open the administration window, a privilege error (-9991) is generated.
 
-This window can be accessed in one of two manners:
+Esta janela pode ser acedida de duas maneiras:
 
 - Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
 - Execute the `OPEN ADMINISTRATION WINDOW` command.

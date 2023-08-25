@@ -11,7 +11,7 @@ O editor de código funciona de forma semelhante a um editor de texto. Writing a
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
-The 4D Code Editor provides basic syntax error-checking. Additional error-checking is performed when the code executes. Para obter mais informações sobre como lidar com erros, consulte [Depuração](../Debugging/basics.md).
+O Editor de código 4D fornece verificação básica de erros de sintaxe. Additional error-checking is performed when the code executes. Para obter mais informações sobre como lidar com erros, consulte [Depuração](../Debugging/basics.md).
 
 ## Interface
 
@@ -97,7 +97,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Listas**: Nomes de listas.
 - **All plug-in commands**: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.
 - **SQL Keywords**: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).
-- **SQL Functions**: 4D SQL functions.
+- **Funções SQL**: funções SQL 4D.
 
 **Nota:** com exceção do elemento Macros, todas as listas estão por ordem alfabética.
 
@@ -112,7 +112,7 @@ The following parameters are stored in the template:
 - Localização e conteúdo de cada lista
 - Largura relativa de cada lista
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
+To save a Code Editor window as a template, choose **Method** > **Save As Template**. O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
 
 ### Área de pontos de paragem
 
@@ -231,13 +231,13 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Shift]+[seta para cima]                                         | Create and enlarge a selection, line by line, from the bottom to the top                                                                   |
 | [Ctrl]+[Shift]+[seta para a direita]                             | Create and enlarge the selection, word by word, from the right                                                                             |
 | [Ctrl]+[Shift]+[seta para a esquerda]                            | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                      |
-| [Ctrl]+[seta para a direita]                                     | Move the insertion point, word by word, from left to right                                                                                 |
-| [Ctrl]+[left arrow]                                              | Move the insertion point, word by word, from right to left                                                                                 |
+| [Ctrl]+[seta para a direita]                                     | Mover o ponto de inserção, palavra a palavra, da esquerda para a direita                                                                   |
+| [Ctrl]+[left arrow]                                              | Mover o ponto de inserção, palavra a palavra, da direita para a esquerda                                                                   |
 | [Alt]+[seta para baixo]                                          | Move the line(s) where the cursor is to the bottom                                                                                         |
 | [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                  |
 | [Home]                                                           | Place the insertion point at the beginning of the line                                                                                     |
 | [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                |
-| [Ctrl]+[Home]                                                    | Place the insertion point at the beginning of the method                                                                                   |
+| [Ctrl]+[Home]                                                    | Colocar o ponto de inserção no início do método                                                                                            |
 | [Ctrl]+[End]                                                     | Place the insertion point at the end of the method                                                                                         |
 | [Shift]+[Home]                                                   | Select all the characters in the line that are to the left of the cursor                                                                   |
 | [Shift]+[End]                                                    | Select all the characters in the line that are to the right of the cursor                                                                  |
@@ -414,7 +414,7 @@ Once created, property names are stored in an internal global list and are avail
 
 The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
 
-When the database is restarted, the list is reinitialized.
+Quando o banco de dados é reiniciado, a lista é reinicializada.
 
 > You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
 
@@ -480,7 +480,7 @@ The **Find Same Next** and **Find Same Previous** commands are used to find char
 
 ### Bookmark All
 
-The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
+The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. Deste modo, é fácil identificar todos os resultados da pesquisa. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
 
 
 

@@ -140,7 +140,7 @@ ARRAY INTEGER($aiBigArray;10000)
 
 ### Elementos de arrays
 
-You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
+You reference an element of an interprocess, process or local array by using the curly braces("{ }"). O elemento referenciado é denotado por uma expressão numérica.
 
 Exemplos:
 
@@ -333,7 +333,7 @@ An interprocess named selection name can contain up to 255 characters, not inclu
 
 ### Seleções temporárias processos
 
-Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A named selection name can contain up to 255 characters.
+Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). Um nome de seleção temporal pode conter até 255 caracteres.
 
 Exemplos:
 

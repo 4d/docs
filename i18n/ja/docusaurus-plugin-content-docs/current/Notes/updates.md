@@ -47,9 +47,12 @@ title: リリースノート
 
 4D v20 では、ICUライブラリのアップデート (後述参照) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
-:::caution 4D v20.1 インデックス再構築の警告
+:::caution 4D v20.1 index rebuild and client/server versions
 
-4D v20.1 では、新しい ICUライブラリのアップデートにより、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。
+4D v20.1 also includes an ICU library update, which has the following consequences:
+
+- It will force an automatic rebuild of indexes of type alpha, text, and object.
+- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
 
 :::
 

@@ -8,7 +8,7 @@ You use the Interface page to set various options related to the project interfa
 
 ## Geral
 
-This area lets you set various options concerning display.
+Esta área permite-lhe definir várias opções relativas ao ecrã.
 
 ![](../assets/en/settings/interface-page.png)
 

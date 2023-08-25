@@ -17,11 +17,11 @@ As sessões de usuário do servidor Web permitem:
 
 ## Activação de sessões
 
-The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
+The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
 
 - Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting): ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-This option is selected by default in new projects. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
+Esta opção é selecionada por defeito nos novos projetos. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
@@ -71,7 +71,7 @@ Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) prope
 Uma sessão Web escalável é encerrada quando:
 
 - the web server is stopped,
-- the timeout of the session cookie has been reached.
+- o tempo limite do cookie de sessão foi atingido.
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
 

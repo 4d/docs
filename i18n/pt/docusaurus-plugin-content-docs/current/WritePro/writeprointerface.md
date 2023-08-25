@@ -63,16 +63,16 @@ These three types of files contribute to the configuration of the Table Wizard, 
 
 #### Template files
 
-The template file allows you to define the following:
+O ficheiro modelo permite-lhe definir o seguinte:
 
 - the formula that returns an entity selection used as the table's data source,
-- the break formulas (if any break row can be inserted)
+- as fórmulas de interrupção (se for possível inserir uma linha de interrupção)
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
 :::info Limitation
 
-In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. This limitation will be removed in the next version.
+In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. Esta limitação será eliminada na próxima versão.
 
 :::
 
@@ -84,7 +84,7 @@ The template file in JSON format contains the following attributes:
 |:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
 | columns              | Collection | x           | Collection of table columns                                                                                                                              |
-| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
+| columns.check        | Text       | x           | True when the column is already checked in the template editor. False quando a coluna não está selecionada no editor de modelos.                         |
 | columns.header       | Text       | x           | Label shown to the user                                                                                                                                  |
 | columns.source       | Text       | x           | Formula                                                                                                                                                  |
 | breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |

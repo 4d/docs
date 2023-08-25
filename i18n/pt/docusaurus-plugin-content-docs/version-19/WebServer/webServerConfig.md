@@ -93,7 +93,7 @@ Domain name or IP address from where external pages are allowed to send data req
 
 #### Métodos HTTP autorizados (propriedade methods)
 
-Accepted HTTP method(s) for the corresponding CORS host. São suportados os seguintes métodos HTTP:
+Método(s) HTTP aceite(s) para o host CORS correspondente. São suportados os seguintes métodos HTTP:
 
 - GET
 - HEAD
@@ -117,7 +117,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, 
 | objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
+Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 | Valor | Parâmetros  | Descrição                              |
 | ----- | ----------- | -------------------------------------- |
@@ -283,7 +283,7 @@ Listening IP port number for HTTPS connections via TLS. Por defeito, o valor é 
 
 Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
-Default: 480 minutes (pass 0 to restore the default value)
+Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 ## Tempo limite da sessão inativa
 
@@ -294,7 +294,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 Life duration (in minutes) of inactive sessions (duration set in cookie). No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
-Default: 480 minutes (pass 0 to restore the default value)
+Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 ## Endereço IP de escuta
 
@@ -351,9 +351,9 @@ True por padrão (ativado).
 | `WEB SET OPTION`                   | `Web log recording`                                  |             |
 | Caixa de diálogos de configurações | Log (type) page/Log Format                           | Menu pop-up |
 
-Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
+Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. Por padrão, os pedidos não são registados (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 
-This setting allows you to select the format of this file. Os valores disponíveis são:
+Este parâmetro permite-lhe selecionar o formato deste ficheiro. Os valores disponíveis são:
 
 | Valor | Nome do formato         | Descrição                                                                                                                                                                                                                |
 | ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -375,7 +375,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
-Por padrão, o valor é 100. You can set the number anywhere between 10 and 32000.
+Por padrão, o valor é 100. Pode definir o número entre 10 e 32000.
 
 ## Tamanho máximo do pedido
 
@@ -399,7 +399,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 
 Número máximo de sessões simultâneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
-Default value: 100 (pass 0 to restore the default value).
+Valor por defeito: 100 (passar 0 para repor o valor por defeito).
 
 ## Versão TLS mínima
 
@@ -448,7 +448,7 @@ True if PFS is available on the web server (see [TLS](Admin/tls.md#perfect-forwa
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
 
-To do so, put the ROBOTS.TXT file at the server's root. This file must be structured in the following manner:
+To do so, put the ROBOTS.TXT file at the server's root. Este ficheiro deve ser estruturado da seguinte forma:
 
 ```4d
    User-Agent: <name>
@@ -493,7 +493,7 @@ Moreover, the HTML root folder defines, on the web server hard drive, the hierar
 By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. A pasta raiz é criada:
 
 - with 4D (local) and 4D Server, at the same level as the [Project folder](Project/architecture.md#project-folder).
-- with 4D in remote mode, in the local resources folder.
+- com 4D em modo remoto, na pasta de recursos locais.
 
 You can designate another default HTML root folder by entering its pathname.
 
@@ -513,7 +513,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 | objeto webServer      | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`      | `Web session cookie domain`                                        |             |
 
-Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
+Value of the "domain" field of the session cookie. Útil para controlar o âmbito dos cookies de sessão. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
 
 ## Nome do cookie de sessão
 
@@ -598,7 +598,7 @@ The **Use Keep-Alive Connections** option enables or disables keep-alive TCP con
 
 The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.
 
-In some cases, other optimized internal functions may be invoked. Keep-alive connections are useful mainly for static pages.
+In some cases, other optimized internal functions may be invoked. As ligações persistentes são úteis principalmente para páginas estáticas.
 
 Two options allow you to set how the keep-alive connections work:
 

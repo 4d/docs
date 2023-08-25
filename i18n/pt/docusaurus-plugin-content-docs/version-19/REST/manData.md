@@ -71,11 +71,11 @@ Para computar todos os valores e retornar um objeto JSON:
 
 ## Chamar as funções de classe do modelo de dados
 
-You can call ORDA Data Model [user class functions](ClassFunctions.md) through POST requests, so that you can benefit from the exposed API of the targeted application. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+Pode chamar as [funções da classe usuário](ClassFunctions.md) ORDA do modelo de dados através de pedidos POST, para poder beneficiar da API da aplicação direcionada. For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
 
 `/rest/City/getCity`
 
-with data in the body of the request: `["Paris"]`
+com dados no corpo do pedido: `["Paris"]`
 
 
 > Pode chamar métodos de projeto 4D que são [expostos como serviços REST](%7BdataClass%7D.html#4d-configuration).

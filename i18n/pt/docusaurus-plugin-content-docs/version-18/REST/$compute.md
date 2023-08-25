@@ -3,32 +3,32 @@ id: compute
 title: "$compute"
 ---
 
-Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
+Calcular em atributos específicos (*por exemplo*, `Employee/salary/?$compute=sum)` ou no caso de um atributo de objeto (*por exemplo.*, Employee/objectAtt.property1/?$compute=sum)
 
 
 ## Descrição
 
-This parameter allows you to do calculations on your data.
+Este parâmetro permite-lhe efetuar cálculos sobre os seus dados.
 
-If you want to perform a calculation on an attribute, you write the following:
+Para efetuar um cálculo sobre um atributo, escreve-se o seguinte:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-If you want to pass an Object attribute, you must pass one of its property. Por exemplo:
+Se quiser passar um atributo de Objeto, tem de passar uma das suas propriedades. Por exemplo:
 
  `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
 Pode utilizar qualquer uma das seguintes palavras-chave:
 
 
-| Palavra-chave | Descrição                                                                                                                                                                             |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $all          | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
-| average       | Obter a média de um atributo numérico                                                                                                                                                 |
-| count         | Obter o número total na coleção ou na classe de dados (em ambos os casos há que especificar um atributo)                                                                              |
-| min           | Obter o valor mínimo num atributo numérico ou o valor mais baixo num atributo do tipo String                                                                                          |
-| max           | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
-| sum           | Obter a soma de um atributo numérico                                                                                                                                                  |
+| Palavra-chave | Descrição                                                                                                                                                                                  |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| $all          | Um objeto JSON que define todas as funções para o atributo (média, contagem, mínimo, máximo e soma para atributos do tipo Número e contagem, mínimo e máximo para atributos do tipo Cadeia |
+| average       | Obter a média de um atributo numérico                                                                                                                                                      |
+| count         | Obter o número total na coleção ou na classe de dados (em ambos os casos há que especificar um atributo)                                                                                   |
+| min           | Obter o valor mínimo num atributo numérico ou o valor mais baixo num atributo do tipo String                                                                                               |
+| max           | Obter o valor máximo num atributo numérico ou o valor mais alto num atributo do tipo String                                                                                                |
+| sum           | Obter a soma de um atributo numérico                                                                                                                                                       |
 
 
 ## Exemplo

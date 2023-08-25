@@ -76,7 +76,7 @@ The `\` character is also used as the separator in pathnames in Windows. In gene
 
 However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). You must therefore enter a double `\\` when you want to insert a backslash before a character that is used in one of the escape sequences recognized by 4D.
 
-The following escape sequences are recognized by 4D:
+As seguintes sequências de escape são reconhecidas por 4D:
 
 | Escape sequence              | Carácter substituído      |
 | ---------------------------- | ------------------------- |

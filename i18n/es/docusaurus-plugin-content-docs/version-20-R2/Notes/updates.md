@@ -28,9 +28,12 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 
 4D v20 incluye una actualización de la librería ICU (ver abajo) que forzará una reconstrucción automática de los índices de tipo alpha, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
-:::caution 4D v20.1 index rebuild warning
+:::caution 4D v20.1 index rebuild and client/server versions
 
-4D v20.1 includes a new ICU library update which will also force an automatic rebuild of indexes of type alpha, text, and object.
+4D v20.1 also includes an ICU library update, which has the following consequences:
+
+- It will force an automatic rebuild of indexes of type alpha, text, and object.
+- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
 
 :::
 

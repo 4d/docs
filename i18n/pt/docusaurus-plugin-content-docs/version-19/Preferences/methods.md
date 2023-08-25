@@ -69,11 +69,11 @@ These options configure the various colors used in the Method editor and debugge
 | **Realce da mesma variável ou campo**          | Cor de realce para outras ocorrências da mesma variável ou texto de campo quando uma das opções "Realçar variáveis e texto" estiver ativada em [Opções](#options). |
 | **Destaque da linha em execução no depurador** | Cor de realce da linha atualmente em execução no depurador quando a opção "Realçar linha em execução" está ativada em [Opções](#options).                          |
 | **Cor de fundo da seleção**                    | Cor de fundo da seleção.                                                                                                                                           |
-| **Texto sugerido**                             | Color of autocomplete text suggested by the Method editor.                                                                                                         |
+| **Texto sugerido**                             | Cor do texto do preenchimento automático sugerido pelo editor de métodos.                                                                                          |
 
 ## Opções
 
-This page configures Method editor display options.
+Esta página configura as opções de visualização do editor de métodos.
 
 ![](../assets/en/Preferences/options.png)
 

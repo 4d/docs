@@ -7,7 +7,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
 - Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
-- 4D for iOS queries for updating iOS applications. These accesses are handled by the **HTTP server**.
+- As petições 4D for iOS para atualizar aplicações iOS. These accesses are handled by the **HTTP server**.
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
@@ -21,7 +21,7 @@ The `localID` is local to the machine that connects to the remote datastore, whi
 - If another process of the same application opens the same remote datastore but with another `localID`, it will create a new session on the remote datastore.
 - If another machine connects to the same remote datastore with the same `localID`, it will create another session with another cookie.
 
-These principles are illustrated in the following graphics:
+Estes princípios são ilustrados nos gráficos seguintes:
 
 ![](../assets/en/ORDA/sessions.png)
 

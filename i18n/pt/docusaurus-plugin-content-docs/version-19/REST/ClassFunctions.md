@@ -94,10 +94,10 @@ The entity selection must have been defined beforehand using [$method=entityset]
 | Propriedades          | Tipo       | Descrição                                                                            |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------ |
 | Atributos da entidade | misto      | Opcional - Valores a modificar                                                       |
-| __DATASET             | String     | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __DATASET             | String     | Obrigatório - entitySetID (UUID) da seleção de entidades                             |
 | __ENTITIES            | Parâmetros | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
+Ver exemplo de[recepção de uma seleção de entidade](#receiving-an-entity-selection-as-parameter).
 
 ## Exemplos de petições
 
@@ -107,7 +107,7 @@ This database is exposed as a remote datastore on localhost (port 8111):
 
 ### Utilizar uma função de classe do datastore
 
-The US_Cities `DataStore` class provides an API:
+A classe de `DataStore` US_Cities fornece uma API:
 
 ```  
 // DataStore class Class extends DataStoreImplementation
@@ -148,7 +148,7 @@ Pode então executar este pedido:
 
 **POST** `127.0.0.1:8111/rest/City/getCity`
 
-Body of the request: ["Aguada"]
+Corpo do pedido: ["Aguada"]
 
 #### Resultados
 
@@ -471,7 +471,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### Receber uma seleção de entidade como parâmetro
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
+In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). Devolve as chaves primárias das entidades atualizadas.
 
 ```
 // Students class Class extends DataClass
