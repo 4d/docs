@@ -4,7 +4,7 @@ title: '$lock'
 ---
 
 
-Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
+Bloqueia e desbloqueia uma entidade utilizando o [mecanismo pessimista](../ORDA/entities.md#pessimistic-lock).
 
 
 ## Sintaxe
