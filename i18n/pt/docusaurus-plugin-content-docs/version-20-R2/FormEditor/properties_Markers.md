@@ -6,7 +6,7 @@ title: Marcadores
 
 These properties let you specify the precise location of markers on the vertical ruler of a **table form**. Os marcadores são utilizados principalmente em formulários de saída. They control the information that is listed and set header, breaks, detail and footer areas of the form. Any object that placed in these areas is displayed or printed at the appropriate location.
 
-Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. However, they have no effect when a form is used for input.
+Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. No entanto, não têm nenhum efeito quando é utilizado um formulário para introdução de dados.
 
 Methods that are associated with objects in these areas are executed when the areas are printed or displayed as long as the appropriate events have been activated. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
 
@@ -102,7 +102,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 | B2       | Nível de ruptura 2 | Segundo campo ordenado          |
 | B3       | Nível de ruptura 3 | Terceiro campo classificado     |
 
-Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+As áreas de cabeçalho adicionais estão associadas às pausas. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
 | Etiqueta | Descrição            | Prints after groups created by: |
 | -------- | -------------------- | ------------------------------- |
