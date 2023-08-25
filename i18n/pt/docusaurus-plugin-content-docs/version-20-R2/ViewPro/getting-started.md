@@ -42,7 +42,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 ### Seleção de células, colunas e linhas
 
-*   To select a cell, simply click on it or use the direction arrows on the keyboard. Its content (or formula) is displayed within the cell.
+*   To select a cell, simply click on it or use the direction arrows on the keyboard. O seu conteúdo (ou fórmula) é apresentado na célula.
 
 *   To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
 
@@ -50,7 +50,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 *   To select a column, click on the corresponding letter (or set of letters).
 
-*   To select a row, click on the corresponding number.
+*   Para selecionar uma linha, clique no número correspondente.
 
 *   To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
 
@@ -84,7 +84,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   clique numa célula ou num intervalo de células:
     *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
-    *   **Sort**: sorts the column contents.
+    *   **Ordenar**: ordena o conteúdo da coluna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](../assets/en/ViewPro/vpContext2.PNG)
 
@@ -101,7 +101,7 @@ For a detailed list of component methods, see [Method list](method-list.md).
 
 ### Processamento de uma zona 4D View Pro
 
-A 4D View Pro area handles several objects and elements.
+Uma área 4D View Pro lida com vários objetos e elementos.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
@@ -120,7 +120,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilização de objectos de intervalo
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. This area can be composed of one or several cells. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. Esta área pode ser composta por uma ou várias células. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
 
 Por exemplo, para criar um objeto intervalo para as seguintes células:
 
@@ -140,16 +140,16 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 *   área - O nome da área 4D View Pro
 *   intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
-| Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                    |
-| ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | -------------------------------------------------- |
-| area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                  |
-| ranges      |                   | collection | Collection of range(s)                                              | sempre disponível                                  |
-|             | \[ ].name        | text       | Range name                                                          | name                                               |
-|             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
-|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                     |
-|             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                    |
-|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                   |
-|             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                     |
+| Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                              |
+| ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
+| area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                            |
+| ranges      |                   | collection | Collection of range(s)                                              | sempre disponível                                            |
+|             | \[ ].name        | text       | Range name                                                          | name                                                         |
+|             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
+|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                               |
+|             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                              |
+|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                             |
+|             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                               |
 
 
 
