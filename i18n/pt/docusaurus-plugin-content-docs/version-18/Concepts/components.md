@@ -20,7 +20,7 @@ The component management mechanisms in 4D require the implementation of the foll
 - **Host Database**: Database in which a component is installed and used.
 - **Component**: Matrix database, compiled or not, copied into the Components folder of the 4D application or the host database and whose contents are used in the host databases.
 
-It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. However, a component cannot use “sub-components” itself.
+It should be noted that a database can be both a “matrix” and a “host,” in other words, a matrix database can itself use one or more components. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 
 ### Proteção dos componentes: compilação
 
