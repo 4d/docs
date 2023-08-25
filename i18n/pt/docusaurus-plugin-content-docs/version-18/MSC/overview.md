@@ -28,7 +28,7 @@ No modo standard, está aberta uma base de dados. Neste modo, algumas funções 
   ![](../assets/en/MSC/mscicon.png)
 - Use the “msc” standard action that it is possible to associated with a menu command or a form object (see "Standard actions" section).
 
-- Use the `OPEN SECURITY CENTER` language command.
+- Utilizar o comando `OPEN SECURITY CENTER`.
 
 ## Disponibilidade de funcionalidades
 
