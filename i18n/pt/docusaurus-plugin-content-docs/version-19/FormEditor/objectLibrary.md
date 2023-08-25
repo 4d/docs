@@ -34,7 +34,7 @@ All objects proposed in the standard object library are described on [this secti
 
 ## Utilização da biblioteca de objetos padrão
 
-You can create and use custom object libraries in 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. You can then reuse these objects in different forms and different projects.
+Pode criar e usar bibliotecas de objetos personalizados em 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. You can then reuse these objects in different forms and different projects.
 
 Objects are stored with all their properties, including their object methods. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
 
@@ -48,7 +48,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 ![](../assets/en/FormEditor/library4.png)
 
-You can create as many libraries as desired per project. A library created and built under macOS can be used under Windows and vice-versa.
+É possível criar tantas bibliotecas quantas as desejadas por projeto. A library created and built under macOS can be used under Windows and vice-versa.
 
 ### Abrir uma biblioteca de objetos
 
