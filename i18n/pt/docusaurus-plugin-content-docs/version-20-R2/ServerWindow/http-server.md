@@ -4,7 +4,7 @@ title: Página Servidor HTTP
 ---
 
 
-The **HTTP Server** page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. These servers rely on the internal HTTP server of 4D Server.
+The **HTTP Server** page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
 
 ![](../assets/en/Admin/server-admin-web-page.png)
 
@@ -32,7 +32,7 @@ This button toggles and can be used to control the activation of the 4D Server H
 
 This area provides specific information about the Web server of 4D Server.
 
-- **Web requests**: Accepted or Rejected. This information indicates whether the Web server is activated. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
+- **Pedidos Web**: aceites ou rejeitados. This information indicates whether the Web server is activated. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
 - **Maximum connections**: Maximum number of Web connections allowed. This value depends on the license installed on the server machine.
 
 ## Informação SOAP
