@@ -32,7 +32,7 @@ The web server object of the host application (default web server) is automatica
 
 ```4d
 $nbSrv:=WEB Server list.length   
-//$nbSrv value is 1
+//$nbSrv valor é 1
 ```
 
 To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
@@ -47,7 +47,7 @@ webServer:=WEB Server
 webServer:=WEB Server(Web server database)
 ```
 
-If the application uses components and you want to call:
+Se a aplicação utilizar componentes e o usuário pretender chamar:
 - the host application's web server from a component or
 - the server that received the request (whatever the server),
 
