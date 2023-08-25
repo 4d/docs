@@ -68,7 +68,7 @@ The main application scheme will be applied to forms by default. No entanto, ele
 
 ## Atalhos
 
-You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Key icons indicate the corresponding Windows and macOS keys.
+You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Os ícones das teclas indicam as teclas correspondentes para Windows e macOS.
 
 Os atalhos predefinidos são os seguintes:
 
