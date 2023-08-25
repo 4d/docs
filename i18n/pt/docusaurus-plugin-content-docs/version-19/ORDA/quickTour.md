@@ -124,7 +124,7 @@ Lembre que se um grupo for criado não pode ser apagado. Se quiser desativar um 
 
 Para criar um gurpo:
 
-1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. The list of groups displays all the groups of the database.
+1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. A lista de grupos apresenta todos os grupos do banco de dados.
 
 2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
