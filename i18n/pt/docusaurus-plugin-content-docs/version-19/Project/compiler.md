@@ -85,7 +85,7 @@ When this option is checked, the warnings (if any) are displayed in the window, 
 
 ![](../assets/en/Project/compilerWin5.png)
 
-Double-clicking a warning opens the corresponding method.
+Um duplo clique num aviso abre o método correspondente.
 
 #### Desativar os avisos durante a compilação
 
@@ -144,7 +144,7 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
 
 - **Intel/AMD** processors (all machines),
-- **Apple Silicon** processors.
+- os processadores **Apple Silicon**.
 
 Duas opções de alvo estão disponíveis. The result depends on the processor of the machine on which 4D is running.
 
@@ -213,7 +213,7 @@ Esta lista está dividida em três colunas:
 
 Uma lista completa de seus métodos banco de dados e projeto é apresentada no final do ficheiro com:
 
-- their type (procedure or function returning a value)
+- o seu tipo (procedimento ou função que devolve um valor)
 - the data types of their parameters and the returned result
 - o número de chamadas
 - a propriedade Thread Safe ou Thread Unsafe.
@@ -236,7 +236,7 @@ The length of the error file depends on the number of errors and warnings issued
 A estrutura do ficheiro de erros é a seguinte:
 
 - At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
-  - line number in the method (0 indicates general errors)
+  - número da linha no método (0 indica erros gerais)
   - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
   - diagnóstico que descreve o erro
 
@@ -250,7 +250,7 @@ An error file may contain three types of messages:
   - The data type of a process variable could not be determined.
   - Two different kinds of objects have the same name. General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. Na janela do compilador, os avisos aparecem em itálico. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
 ### Controlo de execução
 
