@@ -26,7 +26,7 @@ This event is generated when the width of a column is modified by a user. On thi
 | description | text          | "On Column Resize"                                                  |
 | objectName  | text          | Nome da área 4D View Pro                                            |
 | sheetName   | text          | Nome da folha do evento                                             |
-| range       | object        | Cell range of the columns whose widths have changed                 |
+| range       | object        | Intervalo de células das colunas cujas larguras foram alteradas     |
 | header      | boolean       | True if the row header column (first column) is resized, else false |
 
 #### Exemplo
