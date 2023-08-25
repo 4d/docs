@@ -23,7 +23,7 @@ The `localID` is local to the machine that connects to the remote datastore, whi
 *   If another process of the same application opens the same remote datastore but with another `localID`, it will create a new session on the remote datastore.
 *   If another machine connects to the same remote datastore with the same `localID`, it will create another session with another cookie.
 
-These principles are illustrated in the following graphics:
+Estes princípios são ilustrados nos gráficos seguintes:
 
 ![](../assets/en/ORDA/sessions.png)
 
@@ -176,7 +176,7 @@ If you want to deliver final applications with the highest level of optimization
 
 For optimization reasons, data requested from the server via ORDA is loaded in the ORDA remote cache (which is different from the 4D cache). The ORDA cache is organized by dataclass, and expires after 30 seconds.
 
-The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Expired data remains in the cache until space is needed.
+The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Os dados expirados permanecem na cache até que seja necessário espaço.
 
 By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions:
 
