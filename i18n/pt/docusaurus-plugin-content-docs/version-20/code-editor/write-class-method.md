@@ -53,7 +53,7 @@ Colored bars instantly show you where lines of code were modified since the meth
 
 The change bars change colors to indicate whether or not the modifications were saved:
 
-- yellow: Line was modified and method has not yet been saved.
+- amarelo: a linha foi modificada e o método ainda não foi guardado.
 - green: Line was modified and method has been saved.
 
 
@@ -503,7 +503,7 @@ When the method, class or function is validated, 4D checks for:
 
 > If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Execution errors are caught by 4D when the code is executed.
+The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Erros de execução são capturados por 4D quando o código é executado.
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
