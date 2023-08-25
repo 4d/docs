@@ -98,7 +98,7 @@ You can choose to access the 4D online documentation site directly or to access 
 
 ### Pasta local
 
-Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
+Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
