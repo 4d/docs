@@ -29,7 +29,7 @@ By default, all the project methods of a matrix database installed as a componen
 - The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host database. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. However, it is not possible to open them in the Method editor nor to modify them.
 - The other project methods of the matrix database do not appear in the Explorer but they too can be viewed in the debugger of the host database.
 
-To protect the project methods of a component effectively, simply compile the matrix database and provide it in the form of a .4dc file (compiled database that does not contain the interpreted code). When a compiled matrix database is installed as a component:
+To protect the project methods of a component effectively, simply compile the matrix database and provide it in the form of a .4dc file (compiled database that does not contain the interpreted code). Quando um banco de dados matriz compilado é instalado como um componente:
 
 - The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
 - The other project methods of the matrix database will never appear.
@@ -256,7 +256,7 @@ In a host database containing one or more components, each component as well as 
 
 ## Ajuda on-line para componentes
 
-A specific mechanism has been implemented in order to allow developers to add on-line help to their components. The principle is the same as that provided for 4D databases:
+A specific mechanism has been implemented in order to allow developers to add on-line help to their components. O princípio é o mesmo que o previsto para os bancos de dados 4D:
 
 - The component help must be provided as a file suffixed .htm, .html or (Windows only) .chm,
 - The help file must be put next to the structure file of the component and have the same name as the structure file,
