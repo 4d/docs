@@ -13,7 +13,7 @@ Let's start by making the web server send "Hello World" to the browser. The most
 
 Para iniciar o servidor web 4D:
 
-1. Launch your 4D application and create a new, empty 4D project.
+1. Inicie sua aplicação 4D e crie um projeto 4D novo e vazio.
 2. In the **Run** menu, select **Start Web Server**.
 
 É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. Para o verificar, vamos apresentar a página inicial padrão.
