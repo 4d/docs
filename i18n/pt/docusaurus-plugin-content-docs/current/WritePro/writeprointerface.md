@@ -84,7 +84,7 @@ The template file in JSON format contains the following attributes:
 |:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
 | columns              | Collection | x           | Collection of table columns                                                                                                                              |
-| columns.check        | Text       | x           | True when the column is already checked in the template editor. False quando a coluna não está selecionada no editor de modelos.                         |
+| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                          |
 | columns.header       | Text       | x           | Label shown to the user                                                                                                                                  |
 | columns.source       | Text       | x           | Formula                                                                                                                                                  |
 | breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
@@ -223,9 +223,9 @@ The theme file in JSON format contains the following attributes:
 | Atributo | Tipo   | Obrigatório | Descrição                                                                                                                             |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
 | default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
-| tabela   | Object |             | Object containing the style definition applicable to the table.                                                                       |
+| tabela   | Object |             | Objeto que contém a definição de estilo aplicável à tabela.                                                                           |
 | rows     | Object |             | Object containing the style definition applicable to all rows.                                                                        |
-| cells    | Object |             | Object containing the style definition applicable to all cells.                                                                       |
+| cells    | Object |             | Objeto que contém a definição de estilo aplicável a todas as células.                                                                 |
 | header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |
 | header2  | Object |             | Object containing the style definition applicable to the second header row.                                                           |
 | header3  | Object |             | Object containing the style definition applicable to the third header row.                                                            |
