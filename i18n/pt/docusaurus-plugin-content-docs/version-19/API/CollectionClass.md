@@ -764,7 +764,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * *methodName* recebe os parâmetros abaixo:
 * *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
 * *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
@@ -977,7 +977,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * em *$2*: *param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1068,7 +1068,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * em *$2: param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the search condition.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1162,7 +1162,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * em *$2: param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the search condition.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1517,7 +1517,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * em *$2* (qualquer tipo): *param*
 * in *$N...* (any type): *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (any type): new transformed value to add to the resulting collection
 * *$1.stop* (boolean): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -2112,7 +2112,7 @@ Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$
 * em *$2: param*
 * *methodName* estabelece os parâmetros abaixo:
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * $1.result:=$1.value&gt;0
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -2426,7 +2426,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * *methodName* recebe os parâmetros abaixo:
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
