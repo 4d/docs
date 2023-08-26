@@ -218,10 +218,10 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Parâmetro  | Tipo                |    | Descrição                                                                |
-| ---------- | ------------------- |:--:| ------------------------------------------------------------------------ |
-| entity     | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                     |
-| Resultados | 4D. EntitySelection | -> | Entity selection including the added *entity*|<!-- END REF -->
+| Parâmetro  | Tipo                |    | Descrição                                                                   |
+| ---------- | ------------------- |:--:| --------------------------------------------------------------------------- |
+| entity     | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                        |
+| Resultados | 4D. EntitySelection | -> | Entity selection incluindo a *entity* adicionada|<!-- END REF -->
 
 |
 
