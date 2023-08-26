@@ -89,7 +89,7 @@ When you select this option (recommended), a user session is managed through a *
 
 When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
 
-In this mode, you can configure additional web server setttings:
+Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 -   [Processos Web em simultâneo máximo](#maximum-concurrent-web-processes)
 -   [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
@@ -152,7 +152,7 @@ Ver [Propriedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings
 
 #### Standard Set
 
-Define the set of characters to be used by the 4D Web server. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
+Defina o conjunto de caracteres a serem usados pelo servidor Web 4D. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
 
 ### Ligações Keep-Alive
 
@@ -197,7 +197,7 @@ The log format menu provides the following options:
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
 -   estado: resposta dada pelo servidor.
--   length: size of the data returned (except the HTTP header) or 0.
+-   length: tamanho dos dados devolvidos (exceto o cabeçalho HTTP) ou 0.
 
 > **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
 
@@ -208,9 +208,9 @@ The log format menu provides the following options:
 
 > O formato DLF não pode ser personalizado.
 
--   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+-   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. O formato ELF está muito difundido no mundo dos navegadores HTTP. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Tal como o formato ELF, pode ser personalizado.
+-   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. It is similar to the ELF format, with only a few additional fields. Tal como o formato ELF, pode ser personalizado.
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
@@ -222,7 +222,7 @@ The following table lists the fields available for each format (in alphabetical 
 | -------------- | --- | --- | --------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                     |
 | BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                           |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)              |
+| C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                      |
 | C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                        |
 | CONNECTION_ID  |     | X   | Número de identificação da ligação                                          |
 | CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                     |
