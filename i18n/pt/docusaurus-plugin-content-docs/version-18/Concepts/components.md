@@ -10,7 +10,7 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 - A component consists of a regular structure file (compiled or not) having the standard architecture or in the form of a package (see .4dbase Extension).
 - To install a component in a database, you simply need to copy it into the "Components" folder of the database, placed next to the structure file or next to the 4D executable application.
 - A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, pictures from the library, and so on. Não pode chamar métodos de bancos de dados e triggers.
-- You cannot use standard tables or data files in 4D components. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
+- Não é possível utilizar tabelas standard ou ficheiros de dados em componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
 
 ## Definições
 
