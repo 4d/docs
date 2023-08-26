@@ -129,7 +129,7 @@ The Flat check box style is a minimalist appearance. A natureza gráfica do esti
 
 The Toolbar button check box style is primarily intended for integration in a toolbar.
 
-The Toolbar style has a transparent background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo da barra de ferramentas tem um fundo transparente com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 

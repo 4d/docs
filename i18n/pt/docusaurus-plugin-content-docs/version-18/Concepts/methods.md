@@ -64,7 +64,7 @@ Esta capacidade simplifica dramaticamente os seus métodos. In the example, you 
 
 If you need to change your method of finding customers in this example database, you will need to change only one method, not ten. Este é o próximo motivo para utilizar sub-rotinas para facilitar mudanças nos seus métodos.
 
-Usando sub-rotinas, você torna o seu código modular. Isto significa simplesmente a divisão do seu código em módulos (sub-rotinas), cada um dos quais executa uma tarefa lógica. Consider the following code from a checking account database:
+Usando sub-rotinas, você torna o seu código modular. Isto significa simplesmente a divisão do seu código em módulos (sub-rotinas), cada um dos quais executa uma tarefa lógica. Considere o seguinte código de um banco de dados de uma conta-corrente:
 
 ```4d
  FIND CLEARED CHECKS ` Find the cleared checks

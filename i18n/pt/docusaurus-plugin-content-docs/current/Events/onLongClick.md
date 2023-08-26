@@ -12,7 +12,7 @@ title: On Long Click
 
 This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
 
-This event can be generated for the following button styles:
+Este evento pode ser gerado para os seguintes estilos de botão:
 
 - [Barra de ferramentas](FormObjects/button_overview.md#toolbar)
 - [Bevel](FormObjects/button_overview.md#bevel)

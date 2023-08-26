@@ -12,7 +12,7 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 4D v20 inclui uma atualização da biblioteca da UCI (ver abaixo) que forçará uma reconstrução automática de índices do tipo alfa, texto e objeto. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
 
-:::caution 4D v20.1 index rebuild and client/server versions
+:::caution 4D v20.1 reconstrução do índice e versões cliente/servidor
 
 4D v20.1 also includes an ICU library update, which has the following consequences:
 

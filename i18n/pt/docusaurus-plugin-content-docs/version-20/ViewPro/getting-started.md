@@ -25,7 +25,7 @@ No entanto, 4D View Pro requer uma licença. You need to activate this license i
 
 ## Inserção de uma área 4D View Pro
 
-4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. To select this object, click on the last tool in the object bar:
+4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. Para selecionar este objeto, clique na última ferramenta da barra de objetos:
 
 ![](../assets/en/ViewPro/vpArea.png)
 
@@ -54,7 +54,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 *   To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
 
-*   To deselect cells, simply click anywhere within the spreadsheet.
+*   Para anular a seleção de células, basta clicar em qualquer parte da folha de cálculo.
 
 ### Introdução de dados
 
@@ -135,7 +135,7 @@ $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 a D7
 
 You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](method-list.md#vp-set-border)).
 
-4D View Pro range objects are composed of several properties:
+Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 *   área - O nome da área 4D View Pro
 *   intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.

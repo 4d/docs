@@ -44,7 +44,7 @@ The number of errors found during your first compilations may be daunting, but d
 
 Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
 
-When you switch from one mode to the other, 4D closes the current mode and opens the new one. This is equivalent to exiting and reopening the application. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
+When you switch from one mode to the other, 4D closes the current mode and opens the new one. Isto é equivalente a sair e reabrir a aplicação. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
 
 If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
 
@@ -150,7 +150,7 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
 
-- **Intel/AMD** processors (all machines),
+- Os processadores **Intel/AMD** (todas as máquinas),
 - os processadores **Apple Silicon**.
 
 Duas opções de alvo estão disponíveis. The result depends on the processor of the machine on which 4D is running.
@@ -205,7 +205,7 @@ Estas duas listas contêm quatro colunas:
     - If the variable was found in an object method, the object method’s name is given, preceded by the form name, table name, and by (OM).
     - If the variable is an object in a form and does not appear in any project, form, object method, or trigger, the name of the form in which it appears is given, preceded by (F). At the end of each list, you can find the sizes of the process and interprocess variables in bytes.
 
-> When compiling, the compiler cannot determine in which process a given process variable is used. A process variable can have a different value in each process. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
+> When compiling, the compiler cannot determine in which process a given process variable is used. Uma variável processo pode ter um valor diferente em cada processo. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
 
 #### Lista de variáveis locais
 
@@ -256,12 +256,12 @@ An error file may contain three types of messages:
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
 - In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. There are two cases in which the compiler reports a general error:
-    - The data type of a process variable could not be determined.
+    - Não foi possível determinar o tipo de dados de uma variável processo.
     - Two different kinds of objects have the same name.
 
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. Na janela do compilador, os avisos aparecem em itálico. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Avisos**: os avisos não são erros. They do not prevent the project from being compiled, but simply point out potential code errors. Na janela do compilador, os avisos aparecem em itálico. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
 
 

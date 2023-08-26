@@ -7,7 +7,7 @@ title: Área Web
 
 The Web areas can display various types of Web content within your forms: HTML pages with static or dynamic contents, files, pictures, Javascript, etc. The rendering engine of the Web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
-It is possible to create several Web areas in the same form. Note, however, that the use of Web areas must follow [several rules](#web-areas-rules).
+É possível criar várias áreas Web no mesmo formulário. Note, however, that the use of Web areas must follow [several rules](#web-areas-rules).
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of Web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 > The use of Web plugins and Java applets is not recommended in Web areas because they may lead to instability in the operation of 4D, particularly at the event management level.
@@ -16,7 +16,7 @@ Several dedicated [standard actions](#standard-actions), numerous [language comm
 
 ### Variáveis associadas
 
-Two specific variables can be associated with each Web area:
+Duas variáveis específicas podem ser associadas a cada área da Web:
 
 - [`URL`](properties_WebArea.md#url) --to control the URL displayed by the Web area
 - [`Progression`](properties_WebArea.md#progression) -- to control the loading percentage of the page displayed in the Web area.

@@ -25,7 +25,7 @@ Estão disponíveis as seguintes etiquetas 4D:
 - 4DEVAL, para avaliar qualquer expressão 4D,
 - 4DSCRIPT, para executar um método 4D,
 - 4DINCLUDE, para incluir uma página dentro de outra,
-- 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
+- 4DBASE, para modificar a pasta predefinida utilizada pela etiqueta 4DINCLUDE,
 - 4DCODE, to insert 4D code,
 - 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
 - 4DLOOP e 4DENDLOOP, para criar loops no código HTML,
@@ -76,7 +76,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 | Páginas chamadas através de URLs                 | X, exceto para páginas com extensões ".htm" ou ".html | X, exceto para páginas com extensões ".htm" ou ".html | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND FILE`                                  | X                                                     | -                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `WEB SEND TEXT`                                  | X                                                     | -                                                     | Não é necessária qualquer conversão                                                                                                                                                                         |
-| `WEB SEND BLOB`                                  | X, se o BLOB for do tipo "text/html                   | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
+| `WEB SEND BLOB`                                  | X, se o BLOB for do tipo "text/html                   | -                                                     | Utilização do conjunto de caracteres definido no cabeçalho "Content-Type" da resposta. Otherwise, use of default character set for the HTTP server                                                          |
 | Inclusão pela etiqueta `<!--#4DINCLUDE-->` | X                                                     | X                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
 | `PROCESS 4D TAGS`                                | X                                                     | X                                                     | Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                |
 

@@ -31,7 +31,7 @@ A propriedade `.style` é o <!-- REF #LineBorder.style.Summary -->[style](config
 <!-- REF #TableColumn.dataField.Syntax -->
 **.dataField**: Texto<!-- END REF -->
 
-A propriedade `.dataField` <!-- REF #TableColumn.dataField.Summary -->contains the table column's property name in the data context<!-- END REF -->.
+A propriedade `.dataField` <!-- REF #TableColumn.dataField.Summary -->contém o nome da propriedade da coluna da tabela no contexto de dados<!-- END REF -->.
 
 ### .formatter
 

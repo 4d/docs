@@ -53,7 +53,7 @@ With 4D in remote mode, these files must be located in the local resources folde
 | `WEB SET OPTION`                   | `Web character set`                   | Integer MIBEnum ou string Name |
 | Caixa de diálogos de configurações | Página Opções (II) /Conjunto standard | Menu pop-up                    |
 
-Defines the set of characters to be used by the 4D web server. O valor padrão realmente depende da linguagem do SO.
+Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor padrão realmente depende da linguagem do SO.
 > This setting is also used for generating Quick Reports in HTML format .
 
 ## Cipher list
@@ -117,7 +117,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, 
 | objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
+Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 | Valor | Parâmetros  | Descrição                              |
 | ----- | ----------- | -------------------------------------- |
@@ -224,7 +224,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
 
-Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).
+Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
 
 ## HTTP Compression Threshold
 
@@ -252,7 +252,7 @@ Número da porta IP (TCP) de escuta para HTTP. By default, 4D publishes a web ap
 From a web browser, you need to include the non-default HTTP port number into the address you enter for connecting to the web application. The address must have a suffix consisting of a colon followed by the port number. For example, if you are using the HTTP port number 8080, you will specify "123.4.567.89:8080".
 > **Warning**: If you use TCP port numbers other than the default numbers (80 for standard HTTP and 443 for HTTPS), be careful not to use port numbers that are defaults for other services that you might want to use simultaneously. For example, if you also plan to use the FTP protocol on your web server machine, do not use the TCP port 20 and 21, which are the default ports for that protocol. Ports numbers below 256 are reserved for well known services and ports numbers from 256 to 1024 are reserved for specific services originated on the UNIX platforms. For maximum security, specify a port number beyond these intervals (for example, in the 2000's or 3000's).
 
-If you specify 0, 4D will use the default HTTP port number 80.
+Se especificar 0, 4D usará o número de porta HTTP 80 por padrão.
 
 ## HTTP Trace
 
@@ -306,7 +306,7 @@ Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
-By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers.
+By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. É, por exemplo, frequentemente o caso da maioria dos fornecedores de alojamento.
 
 Valores possíveis: Cadeia de endereços IP. Both IPv6 string formats (e.g. "2001:0db8:0000:0000:0000:ff00:0042:8329") and IPv4 string formats (e.g. "123.45.67.89") are supported.
 
@@ -326,7 +326,7 @@ Valores possíveis: Cadeia de endereços IP. Both IPv6 string formats (e.g. "200
 To avoid this confusion, we recommend using the [ ] notation whenever you combine an IPv6 address with a port number, for instance:
 
 ```code4d
- [2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081
+ [2001:0DB8::85a3:0:ac1f:8001]:8081 //endereço IPv6 com porta 8081
 ```
 
 ## Keep Session
@@ -361,7 +361,7 @@ Este parâmetro permite-lhe selecionar o formato deste ficheiro. Os valores disp
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
 | 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
-| 4     | Registo em formato WLF  | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
+| 4     | Registo em formato WLF  | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                             |
 
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
 
@@ -476,7 +476,7 @@ Otro ejemplo:
    Disallow: /
 ```
 
-In this case, robots are not allowed to access the entire site.
+Neste caso, os robots não estão autorizados a aceder a todo o sítio.
 
 ## Pasta raiz
 

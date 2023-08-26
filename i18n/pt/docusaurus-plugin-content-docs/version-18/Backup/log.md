@@ -3,7 +3,7 @@ id: log
 title: Arquivo de Log (.journal)
 ---
 
-A continuously-used database is always record changes, additions or deletions. Realizar backups ou cópias de segurança regularmente é importante mas lembre que não permite (em caso de problemas) restaurar os dados registrados depois do último backup. Para responder à essa necessidade, 4D oferece agora uma ferramenta específica: o arquivo de log. Este arquivo permite garantir a segurança permanente dos dados do banco de dados. This file allows ensuring permanent security of database data.
+A continuously-used database is always record changes, additions or deletions. Realizar backups ou cópias de segurança regularmente é importante mas lembre que não permite (em caso de problemas) restaurar os dados registrados depois do último backup. Para responder à essa necessidade, 4D oferece agora uma ferramenta específica: o arquivo de log. Este arquivo permite garantir a segurança permanente dos dados do banco de dados. Este ficheiro permite garantir a segurança permanente dos dados do banco de dados.
 
 Além disso, 4D trabalha constantemente com dados cache em memória. Any changes made to the data of the database are stored temporarily in the cache before being written to the hard disk. Isso acelera a operação das aplicações; na verdade, acessar a memória é mais rápido que acessar o disco rígido. If an incident occurs in the database before the data stored in the cache could be written to the disk, you must include the current log file in order to restore the database entirely.
 

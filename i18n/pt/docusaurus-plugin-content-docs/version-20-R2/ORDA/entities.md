@@ -103,7 +103,7 @@ Por exemplo, para definir um atributo de armazenamento:
 
 > Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D. Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
 
-Accessing a related attribute depends on the attribute kind. Por exemplo, com a seguinte estrutura:
+O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
@@ -410,7 +410,7 @@ Para mais informações, consulte as descrições destas funções.
 
 
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### Utilização simultânea de bloqueios clássicos 4D e bloqueios pessimistas ORDA
 
 Using both classic and ORDA commands to lock records is based upon the following principles:
 

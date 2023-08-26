@@ -51,7 +51,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 *   Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
 
-*   Triggers for tables with "Expose as REST resource" attribute
+*   Triggers para as tabelas com o atributo "Expor como recurso REST"
 
 *   [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
 

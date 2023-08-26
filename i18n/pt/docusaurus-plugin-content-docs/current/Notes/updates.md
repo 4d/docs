@@ -11,7 +11,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 #### Destaques
 
-
+- Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
 - [**Lista de bugs corrigidos**](https://falhas.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D v20 R3.
@@ -47,7 +47,7 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 4D v20 inclui uma atualização da biblioteca da UCI (ver abaixo) que forçará uma reconstrução automática de índices do tipo alfa, texto e objeto. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
 
-:::caution 4D v20.1 index rebuild and client/server versions
+:::caution 4D v20.1 reconstrução do índice e versões cliente/servidor
 
 4D v20.1 also includes an ICU library update, which has the following consequences:
 

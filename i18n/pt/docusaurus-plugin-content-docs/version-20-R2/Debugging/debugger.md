@@ -352,7 +352,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 2. Faça uma das seguintes opções:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
-    * Right-click the selected text **>** **Copy to Expression Pane**
+    * Clique com o botão direito do rato no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 

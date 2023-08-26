@@ -64,7 +64,7 @@ See [this example](#request-receiving-an-entity-as-parameter) and [this example]
 
 Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parameters in body:** ["Aguada","Paris"]
+**Parâmetros no corpo:** ["Aguada", "Paris"]
 
 All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
 
@@ -73,7 +73,7 @@ All JSON data types are supported in parameters, including JSON pointers. Dates 
 
 Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
 
-> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
+> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. O usuário pode então decidir guardar ou não a entidade no servidor.
 
 
 | Propriedades          | Tipo                                       | Descrição                                                                  |

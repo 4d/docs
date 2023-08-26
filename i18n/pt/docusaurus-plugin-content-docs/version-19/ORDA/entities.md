@@ -100,7 +100,7 @@ Por exemplo, para definir um atributo de armazenamento:
 ```
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
-Accessing a related attribute depends on the attribute kind. Por exemplo, com a seguinte estrutura:
+O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
@@ -400,7 +400,7 @@ Para mais informações, consulte as descrições destas funções.
 
 > Os bloqueios pessimistas também podem ser tratados através da API [REST](../REST/$lock.md).
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### Utilização simultânea de bloqueios clássicos 4D e bloqueios pessimistas ORDA
 
 Using both classic and ORDA commands to lock records is based upon the following principles:
 
