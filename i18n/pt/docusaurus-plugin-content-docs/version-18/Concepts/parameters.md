@@ -6,7 +6,7 @@ title: Parâmetros
 
 ## Utilização de parâmetros
 
-You'll often find that you need to pass data to your methods. Isso é facilmente feito com parâmetros.
+É frequente ter de passar dados para os seus métodos. Isso é facilmente feito com parâmetros.
 
 **Parameters** (or **arguments**) are pieces of data that a method needs in order to perform its task. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
 
@@ -76,7 +76,7 @@ For example, the following function, called `Uppercase4`, returns a string with 
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 function:
+Segue-se um exemplo que utiliza a função Uppercase4:
 
 ```4d
 NewPhrase:=Uppercase4("This is good.")
@@ -355,7 +355,7 @@ In the following example, the project method `SEND PACKETS` accepts a time param
  End for
 ```
 
-A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} is called a **generic parameter**.
+A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros. Within the method, an indirection address is formatted: ${$i}, where $i is a numeric variable. ${$i} é designado por **parâmetro genérico**.
 
 For example, consider a function that adds values and returns the sum formatted according to a format that is passed as a parameter. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
