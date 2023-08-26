@@ -252,7 +252,7 @@ Quando se executa uma aplicação 4D Server construída:
 
 O ficheiro do directório de aplicação é apenas de leitura. Modifications made to users, groups and permissions during server execution are stored in the data directory file. If no data directory file already exists, it is automatically created. If the application directory file was embedded, it is duplicated as data directory file.
 
-Embedding the project directory file allows you to deploy a client/server application with a basic security user and group configuration. Subsequent modifications are added to the data directory file.
+Embedding the project directory file allows you to deploy a client/server application with a basic security user and group configuration. As alterações subsequentes são adicionadas ao ficheiro do diretório de dados.
 
 #### Permitir a ligação de clientes Silicon Mac
 
