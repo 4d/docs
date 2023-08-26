@@ -98,7 +98,7 @@ You can choose to access the 4D online documentation site directly or to access 
 
 ### Pasta local
 
-Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
+Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. You can view the location by clicking on the menu associated with the area. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
@@ -111,4 +111,4 @@ URL access to the on-line documentation for the version on 4D Doc Center. 4D bui
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
 * When it is checked, 4D first looks for the page in the local folder. Se for encontrado, 4D mostra a página no navegador atual. If not, 4D will automatically look for it in the on-line documentation of the Web site. This makes it possible to access the documentation even when you are offline.
-* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+* When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
