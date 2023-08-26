@@ -64,7 +64,7 @@ See [this example](#request-receiving-an-entity-as-parameter) and [this example]
 
 Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parameters in body:** ["Aguada","Paris"]
+**Parâmetros no corpo:** ["Aguada", "Paris"]
 
 All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
 
