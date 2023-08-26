@@ -40,7 +40,7 @@ You can display or hide elements at any moment in the Form editor’s current wi
 
 ### Regras
 
-The rulers on the side and bottom help you position objects in the form. They can be [displayed or hidden](#display-options).
+The rulers on the side and bottom help you position objects in the form. Podem ser [apresentados ou ocultos](#display-options).
 
 Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
 
@@ -58,7 +58,7 @@ A barra de ferramentas contém os seguintes elementos:
 | ![](../assets/en/FormEditor/selection.png)       | [Ferramenta de selecção](#selecting-objects)              | Allows selecting, moving and resizing form objects.**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                                                                                              |
 | ![](../assets/en/FormEditor/zOrder.png)          | [Ordem de entrada](#selecting-objects)                    | Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form.                                                                                                                                                                          |
 | ![](../assets/en/FormEditor/moving.png)          | [Deslocamento](#moving-objects)                           | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. O cursor assume a forma de uma mão. This navigation mode is particularly useful when zooming in the form.                                                                                                                                             |
-| ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                             | Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. Esta função é descrita em pormenor na secção anterior.                                                                                                                                            |
+| ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                             | Permite modificar a percentagem de visualização do formulário (100% por padrão). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. Esta função é descrita em pormenor na secção anterior.                                                                                                                           |
 | ![](../assets/en/FormEditor/alignment.png)       | [Alinhamento](#aligning-objects)                          | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.Available only with CSS Preview None                                                                                                                                                                                            |
 | ![](../assets/en/FormEditor/distribution.png)    | [Distribuição](#distributing-objects)                     | Este botão está ligado a um menu que permite agrupar e desagrupar seleções de objetos no formulário. It is enabled (or not) depending on the objects selected.Available only with CSS Preview None                                                                                                                                                                              |
 | ![](../assets/en/FormEditor/level.png)           | [Nível](#layering-objects)                                | This button is linked to a menu that allows aligning objects in the form. É ativada (ou não) em função dos objetos selecionados.                                                                                                                                                                                                                                                |
@@ -213,7 +213,7 @@ Para mover um objeto um píxel de cada vez:
 
 Para mover um objeto em passos:
 
-- Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. Por padrão, os passos são de 20 pixéis de cada vez. You can change this value on the Forms Page of the Preferences.
+- Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. Por padrão, os passos são de 20 pixéis de cada vez. Pode alterar este valor na página Formulários das Preferências.
 
 ### Agrupamento de objectos
 
@@ -421,7 +421,7 @@ Once a CSS preview mode is selected, objects are automatically displayed with th
 
 ### Suporte CSS na lista de propriedades
 
-In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
+In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. Por exemplo, os valores dos atributos definidos nesta folha de estilos:
 
 ```4d
 .myButton {
@@ -532,7 +532,7 @@ The 4D Form Editor enables you to build complex forms by distributing form objec
 
 For example, you can distribute objects according to type (fields, variables, static objects, etc.). Any type of form object, including subforms and plug-in areas, can be included in views.
 
-Não há limite para o número de vistas por formulário. Pode criar tantas vistas diferentes quantas as necessárias. Additionally, each view can be displayed, hidden, and/or locked.
+Não há limite para o número de vistas por formulário. Pode criar tantas vistas diferentes quantas as necessárias. Além disso, cada vista pode ser apresentada, ocultada e/ou bloqueada.
 
 A gestão das vistas é efetuada através da paleta de vistas.
 
@@ -647,7 +647,7 @@ To create an object in another view, simply select the view in the View palette 
 
 #### Mover objectos entre vistas
 
-It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
+It's also possible to move one or more objects from one view to another. No formulário, selecionar o(s) objeto(s) cuja vista se pretende alterar. The view list indicates, using a symbol, the view to which the selection belongs:
 
 ![](../assets/en/FormEditor/symbol.png)
 > The selection can contain several objects belonging to different views.
@@ -679,7 +679,7 @@ To do this, right-click on the view in which you wish to select all the objects,
 
 ![](../assets/en/FormEditor/selectAll.png)
 
-You can also use the button at the bottom of the View palette:
+Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 ![](../assets/en/FormEditor/selectAll2.png)
 
