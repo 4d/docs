@@ -32,7 +32,7 @@ You can also create named formulas that can be called via their name. To do so, 
 Todas as fórmulas têm operandos e operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
-*   **Operands** include several categories:
+*   **Operandos** inclui várias categorias:
     *   [values](#values-and-operators) (5 data types are supported)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
     *   [funções standard de folha de cálculo](#using-functions)
@@ -110,7 +110,7 @@ You can mix absolute and relative references by inserting a dollar sign in front
 
 A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
 
-The following table shows the effect of the different notations:
+A tabela seguinte mostra o efeito das diferentes notações:
 
 | Exemplo        | Tipo de referência | Descrição                                                                                                                                        |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -317,7 +317,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 ![](../assets/en/ViewPro/vpFieldMeth1.PNG)
 
 
-2.  Execute the following code to initialize a virtual structure:
+2.  Execute o seguinte código para inicializar uma estrutura virtual:
 
     ```4d
     ARRAY TEXT($tableTitles;1)
@@ -343,7 +343,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 ![](../assets/en/ViewPro/vpFieldMeth3.PNG)
 
 
-5.  Validate the field to display the name of the current employee:
+5.  Validar o campo para apresentar o nome do empregado atual:
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
 > A tabela \[Employee] tem de ter um registo atual.
@@ -356,7 +356,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 
 #### Requisitos
 
-To be called in a 4D View Pro formula, a project method must be:
+Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
