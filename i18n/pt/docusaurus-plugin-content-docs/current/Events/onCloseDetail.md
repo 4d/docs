@@ -3,9 +3,9 @@ id: onCloseDetail
 title: On Close Detail
 ---
 
-| Code | Pode ser chamado por                                     | Definição                                                      |
-| ---- | -------------------------------------------------------- | -------------------------------------------------------------- |
-| 26   | Formulário - [List Box](FormObjects/listbox_overview.md) | You left the detail form and are going back to the output form |
+| Code | Pode ser chamado por                                     | Definição                                                       |
+| ---- | -------------------------------------------------------- | --------------------------------------------------------------- |
+| 26   | Formulário - [List Box](FormObjects/listbox_overview.md) | Deixou o formulário detalhado e regressa ao formulário de saída |
 
 
 ## Descrição
