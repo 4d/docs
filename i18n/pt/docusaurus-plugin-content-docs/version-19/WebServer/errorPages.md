@@ -7,7 +7,7 @@ The 4D Web Server allows you to customize HTTP error pages sent to clients, base
 
 * status codes starting with 4 (client errors), for example 404
 
-* status codes starting with 5 (server errors), for example 501.
+* os códigos de estado que começam por 5 (erros do servidor), por exemplo, 501.
 
 For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
 
