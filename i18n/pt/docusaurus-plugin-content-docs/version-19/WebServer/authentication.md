@@ -46,7 +46,7 @@ If no custom authentication is provided, 4D calls the [`On Web Authentication`](
 
 When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
 
-> O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. This mode typically requires HTTPS to provide confidentiality.
+> O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. Este modo requer normalmente HTTPS para garantir a confidencialidade.
 
 Os valores introduzidos são então avaliados:
 
