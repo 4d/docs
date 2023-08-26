@@ -115,7 +115,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 **Usage:** URL or Form action.
 
-This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
+This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. O método receberá este parâmetro em *$1*.
 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
