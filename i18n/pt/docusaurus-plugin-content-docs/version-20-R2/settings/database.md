@@ -20,7 +20,7 @@ Unless this option is checked, it is not possible to open a database when its da
 
 #### Sobre ficheiros bloqueados
 
-Locked files can be read but their contents cannot be modified. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
+Os ficheiros bloqueados podem ser lidos, mas o seu conteúdo não pode ser modificado. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
 
 ### Temporary Folder Location
 
@@ -69,7 +69,7 @@ Three location options are provided:
 
 On Japanese systems, 4D supports the *MeCab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
 
-This algorithm is used by default in Japanese versions of 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
+Este algoritmo é usado por defeito nas versões japonesas de 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
 
 To disable *MeCab*, just check the **Consider only non-alphanumeric chars for keywords** option:
 
@@ -83,7 +83,7 @@ You use the settings on this tab to configure the cache memory for the database.
 
 ### Parâmetros da cache do banco de dados
 
--   **Calculation of adaptive cache**: When this option is checked, management of the memory cache is done dynamically by the system --- respecting limits that you set. This allows configuration of a high performance memory cache adapted to most configurations. The size of the memory cache is then calculated dynamically depending on set parameters. The values offered by default correspond to standard 4D usage.
+-   **Calculation of adaptive cache**: When this option is checked, management of the memory cache is done dynamically by the system --- respecting limits that you set. This allows configuration of a high performance memory cache adapted to most configurations. The size of the memory cache is then calculated dynamically depending on set parameters. Os valores oferecidos por defeito correspondem à utilização normal de 4D.
 
     -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
     -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
