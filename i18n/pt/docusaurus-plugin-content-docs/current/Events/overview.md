@@ -41,7 +41,7 @@ Quando um evento formulário ocorre, 4D executa as seguintes ações:
 - First, it browses the objects of the form and calls the object method for any object (involved in the event) whose corresponding object event property has been selected.
 - Second, it calls the form method if the corresponding form event property has been selected.
 
-Do not assume that the object methods, if any, will be called in a particular order. The rule of thumb is that the object methods are always called before the form method. If an object is a subform, the object methods of the subform’s list form are called, then the form method of the list form is called. 4D then continues to call the object methods of the parent form. In other words, when an object is a subform, 4D uses the same rule of thumb for the object and form methods within the subform object.
+Do not assume that the object methods, if any, will be called in a particular order. The rule of thumb is that the object methods are always called before the form method. If an object is a subform, the object methods of the subform’s list form are called, then the form method of the list form is called. 4D então continua a chamar os métodos objeto do formulário pai. In other words, when an object is a subform, 4D uses the same rule of thumb for the object and form methods within the subform object.
 
 Except for the [On Load](onLoad.md) and [On Unload](onUnload.md) events (see below), if the form event property is not selected for a given event, this does not prevent calls to object methods for the objects whose same event property is selected. In other words, enabling or disabling an event at the form level has no effect on the object event properties.
 
