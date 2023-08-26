@@ -14,7 +14,7 @@ Os seguintes elementos do projeto aceitam documentação:
 - Formulários
 - Tabela
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
+Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
 Documentation is displayed in the preview area (right-side panel) of the Explorer:
 
