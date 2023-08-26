@@ -84,7 +84,7 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 
 #### Exemplo
 
-Here is an example handling an `On After Edit` event:
+Eis um exemplo de tratamento de um evento `On After Edit`:
 
 ```4d
  If(FORM Event.code=On After Edit)
