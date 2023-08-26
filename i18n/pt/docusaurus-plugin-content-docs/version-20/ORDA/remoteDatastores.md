@@ -48,7 +48,7 @@ ORDA features related to entity locking and transaction are managed at process l
 *   If a process locks an entity from a remote datastore, the entity is locked for all other processes, even when these processes share the same session (see [Entity locking](entities.md#entity-locking)). If several entities pointing to a same record have been locked in a process, they must be all unlocked in the process to remove the lock. If a lock has been put on an entity, the lock is removed when there is no more reference to this entity in memory.
 *   Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. Não têm impacto noutros datastores.
 *   Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
-*   Locks on entities are removed and transactions are rollbacked:
+*   Os bloqueios nas entidades são removidos e as transações são anuladas:
     *   quando o processo é eliminado.
     *   quando a sessão é encerrada no servidor
     *   when the session is killed from the server administration window.
@@ -69,7 +69,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 
 The optimization context is based upon the following implementations:
 
-* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards. The following methods and functions trigger the learning phase:
+* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards. Os seguintes métodos e funções accionam a fase de aprendizagem:
   * [`Criar uma seleção de entidades (entity selection)`](../API/EntitySelectionClass.md#create-entity-selection)
   * [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   * [`dataClass.all()`](../API/DataClassClass.md#all)
