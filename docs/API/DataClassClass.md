@@ -843,7 +843,7 @@ attributePath|formula comparator value
 
 where:
 
-* **attributePath**: path of attribute on which you want to execute the query. This parameter can be a simple name (for example "country") or any valid attribute path (for example "country.name".) In case of an attribute path whose type is `Collection`, \[ ] notation is used to handle all the occurences (for example "children\[ ].age").
+* **attributePath**: path of attribute on which you want to execute the query. This parameter can be a simple name (for example "country") or any valid attribute path (for example "country.name".) In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 
  >*You cannot use directly attributes whose name contains special characters such as ".", "\[ ]", or "=", ">", "#"..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see* **Using placeholders** *below).*
 
@@ -866,14 +866,14 @@ where:
  |---|---|---|
  |Equal to |=, == |Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.|
  ||===, IS| Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic|
- |Not equal to| #, != |Supports the wildcard (@)|
+ |Not equal to| #, != |Supports the wildcard (@). Equivalent to "Not condition" (see below).|
  ||!==, IS NOT| Considers the @ as a standard character|
+ |Not condition applied on a statement| NOT| Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" (see below).|
  |Less than| <| |
  |Greater than| > ||
  |Less than or equal to| <=||
  |Greater than or equal to| >= ||
  |Included in| IN |Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)|
- |Not condition applied on a statement| NOT| Parenthesis are mandatory when NOT is used before a statement containing several operators|
  |Contains keyword| %| Keywords can be used in attributes of string or picture type|
 
 * **value**: the value to compare to the current value of the property of each entity in the entity selection or element in the collection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property.
@@ -952,7 +952,7 @@ Using placeholders in queries **is recommended** for the following reasons:
 3. It allows the use of variables or expressions in query arguments. Examples:
 
  ```4d
-  $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
  $result2:=$col.query("company.name = :1";"John's Pizzas")
  ```
 
@@ -969,6 +969,61 @@ You will not get the expected result because the null value will be evaluated by
 ```4d
  $vSingles:=ds.Person.query("spouse = null") //correct syntax
 ```
+
+**Not equal to in collections**
+
+When searching within dataclass object attributes containing collections, using the "not equal to *value*" (`!=`) comparator means "all elements in the collection different from *value*". This is equivalent to searching "Not(at least one collection element equals *value*"). For example, with the following entities:
+
+```
+Entity 1:
+ds.Class.name: "A"
+ds.Class.info:
+    { "coll" : [ {
+                "val":1,
+                "val":1
+            } ] }
+
+Entity 2:
+ds.Class.name: "B"
+ds.Class.info:
+    { "coll" : [ {
+                "val":1,
+                "val":0
+            } ] }
+
+Entity 3:
+ds.Class.name: "C"
+ds.Class.info:
+    { "coll" : [ {
+                "val":0,
+                "val":0
+            } ] }
+```
+
+Consider the following results:
+
+```4d
+ds.Class.query("info.coll[].val = :1";0) 
+// returns B and C
+// finds "entities with 0 in at least one val property"
+
+ds.Class.query("info.coll[].val != :1";0)
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to 
+ds.Class.query(not("info.coll[].val = :1";0)) 
+```
+
+If you want to implement a query that finds entities where "at least one attribute is different from" a value, you need to use the special `[a]` syntax:
+
+```4d
+ds.Class.query("info.coll[a].val != :1";0)  
+// returns A and B
+// finds "entities where at least one val property is different from 0"
+```
+
+You can use any letter from the alphabet as `[a]`.  
+
 
 **Linking collection attribute query arguments**
 
@@ -1056,6 +1111,8 @@ In our example, it would be:
 $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2";"Hanks";"Ryan")  
 // $es contains movies (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
+
+
 
 **formula parameter**
 
