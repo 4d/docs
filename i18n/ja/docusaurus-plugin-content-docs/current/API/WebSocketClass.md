@@ -70,9 +70,9 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                   |
-| ------ | ---------------------------------------------------- |
-| v20 R3 | Support of `headers` property in *connectionHandler* |
+| バージョン  | 内容                                         |
+| ------ | ------------------------------------------ |
+| v20 R3 | *connectionHandler* で `headers` プロパティをサポート |
 
 </details>
 
@@ -103,7 +103,7 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 ### *connectionHandler* パラメーター
 
-In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
+*connectionHandler* には、接続イベントに応じて呼び出されるコールバック関数のほか、処理するデータ型やヘッダーを含むオブジェクトを渡すことができます。
 
 - コールバックは、接続を開始したフォームまたはワーカーのコンテキストで自動的に呼び出されます。
 - フォームまたはワーカーが閉じられていない限り、WebSocket は有効です。
@@ -115,7 +115,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 | onTerminate | [Function](FunctionClass.md) | WebSocket が終了した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.code` (number、読み取り専用): 符号なし短整数型で、サーバーから送られたクローズコードを格納します。</li><li>2.reason` (text、読み取り専用): サーバーが接続を切断した理由。 これは、対象のサーバーとサブプロトコルに固有のものです。</li><li>`$2.wasClean` (boolean、読み取り専用): 接続がきれいに閉じられたかどうかを示します。</li></ul>                             |
 | onOpen      | [Function](FunctionClass.md) | WebSocket が開始した時のコールバック関数。 コールバックは以下の引数を受け取ります:<li>`$1`: WebSocket オブジェクト</li><li>`$2`: Object</li><ul><li>`$2.type` (text): 常に "open"</li></ul>                           |
 | dataType    | Text                         | 受信または送信されたデータの型。 可能な値: "text" (デフォルト), "blob", "object"。 "text" = utf-8                                                                                 |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                           |
+| headers     | Object                       | WebSocket のヘッダー。<li>標準的な key 割り当てのシンタックス: `headers.<key>:=<value>` (同じ key を複数指定する場合、*value* にコレクションを使用できます)</li><li>Cookie割り当てのシンタックス (特定の場合): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                                    |
 
 
 以下は、コールバック呼び出しの流れです:
@@ -128,16 +128,16 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 
 #### 例題
 
-You want to set headers in the `WSConnectionHandler` user class:
+`WSConnectionHandler` ユーザークラスでヘッダーを設定します:
 
 ```4d
-// WSConnectionHandler class
+// WSConnectionHandler クラス
 
 Class constructor($myToken:Text)
 
-// Creation of the headers sent to the server
+// サーバーに送信するヘッダーを作成します
 This.headers:=New object("x-authorization";$myToken)
-// We define two cookies
+// 2つの Cookie を設定します
 This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 ...
 
