@@ -248,7 +248,7 @@ Puede lanzar una instancia 4D Server en modo utilitario (headless) utilizando la
 3. 4D Server ejecuta el método de base de datos `On Exit`, excepto si se pasa el parámetro `--skip-onstartup`.
 4. 4D Server se cierra.
 
-|
+:::info
 
 A diferencia de tool4d, 4D Server en modo utilitario tiene todas sus funcionalidades activadas. Sin embargo, el servidor de aplicaciones y el resto de servidores no se inician.
 
