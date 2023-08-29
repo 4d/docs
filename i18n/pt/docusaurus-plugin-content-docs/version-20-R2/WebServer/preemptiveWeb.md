@@ -51,7 +51,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 *   Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
 
-*   Triggers for tables with "Expose as REST resource" attribute
+*   Triggers para as tabelas com o atributo "Expor como recurso REST"
 
 *   [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
 
@@ -65,8 +65,8 @@ Most of the web-related 4D commands and functions, database methods and URLs are
 
 All 4D web-related commands are thread-safe, *i.e.*:
 
-*   all commands from the *Web Server* theme,
-*   all commands from the *HTTP Client* theme.
+*   todos os comandos do tema *Servidor Web*,
+*   todos os comandos do tema *Cliente HTTP*.
 
 The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 

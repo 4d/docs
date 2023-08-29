@@ -15,14 +15,14 @@ The following information is provided for each line:
 
 - **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
 - **Duração** (ms): duração em milissegundos da operação em curso
-- **Information**: title of operation.
+- **Informações**: título da operação.
 - **Details**: this area displays detailed information which will vary according to the type of operation selected. Mais especificamente:
     + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
     + **Operation Details**: Operation type and (for query operations) query plan.
     + **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
     + **Process Details**: Additional information concerning the table, field, process or client, depending on the type of operation
 
-> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. More information can be found in this command description.
+> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. Para mais informações, consultar a descrição deste comando.
 
 The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 

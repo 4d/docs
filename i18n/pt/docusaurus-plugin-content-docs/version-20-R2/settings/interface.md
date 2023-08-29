@@ -8,7 +8,7 @@ You use the Interface page to set various options related to the project interfa
 
 ## Geral
 
-This area lets you set various options concerning display.
+Esta área permite-lhe definir várias opções relativas ao ecrã.
 
 ![](../assets/en/settings/interface-page.png)
 
@@ -61,14 +61,14 @@ The following schemes are available:
 
 > Os temas predefinidos podem ser tratados com CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
 
-The main application scheme will be applied to forms by default. No entanto, ele pode ser substituído:
+O esquema de aplicação principal será aplicado aos formulários por defeito. No entanto, ele pode ser substituído:
 
 -   by the [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) command at the working session level;
 -   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
 
 ## Atalhos
 
-You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Key icons indicate the corresponding Windows and macOS keys.
+You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Os ícones das teclas indicam as teclas correspondentes para Windows e macOS.
 
 Os atalhos predefinidos são os seguintes:
 

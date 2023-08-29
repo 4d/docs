@@ -851,7 +851,7 @@ La función `.query()` <!-- REF #DataClassClass.query().Summary -->busca entidad
 
 Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
-**parámetro queryString**
+#### queryString parameter
 
 El parámetro *queryString* utiliza la siguiente sintaxis:
 
@@ -861,9 +861,9 @@ attributePath|formula comparator value
  {order by attributePath {desc | asc}}
 ```
 
-donde:
+where:
 
-* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass
+* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 > *No puede utilizar directamente atributos cuyo nombre contenga caracteres especiales como ".", "\[ ]", o "=", ">", "#"..., porque se evaluarán incorrectamente en la cadena de consulta. Si necesita consultar dichos atributos, debe considerar el uso de marcadores, que permiten un rango ampliado de caracteres en las rutas de los atributos (ver* **Uso de marcadores de posición** *a continuación).*
 
 * **formula**: una fórmula válida pasada como `Text` o en `Object`. La fórmula se evaluará para cada entidad procesada y debe devolver un valor booleano. Dentro de la fórmula, la entidad está disponible a través del objeto `This`.
@@ -879,19 +879,19 @@ donde:
 
 * **comparator**: símbolo que compara *attributePath* y *value*. Se soportan los siguientes símbolos:
 
- | Comparación                           | Símbolo(s)  | Comentario                                                                                                                     |
- | ------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------ |
- | Igual a                               | =, ==       | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.             |
- |                                       | ===, IS     | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas |
- | Diferente de                          | #, !=       | Soporta el comodín (@)                                                                                                         |
- |                                       | !==, IS NOT | Considera la @ como un caracter estándar                                                                                       |
- | Menor que                             | <           |                                                                                                                                |
- | Mayor que                             | >           |                                                                                                                                |
- | Menor o igual que                     | <=          |                                                                                                                                |
- | Mayor o igual que                     | >=          |                                                                                                                                |
- | Incluído en                           | IN          | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)   |
- | Condición No aplicada a una sentencia | NOT         | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores                  |
- | Contiene palabra clave                | %           | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                      |
+ | Comparación                           | Símbolo(s)  | Comentario                                                                                                                                                            |
+ | ------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ | Igual a                               | =, ==       | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.                                                    |
+ |                                       | ===, IS     | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                        |
+ | Diferente de                          | #, !=       | Supports the wildcard (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).                                          |
+ |                                       | !==, IS NOT | Considera la @ como un caracter estándar                                                                                                                              |
+ | Condición No aplicada a una sentencia | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)). |
+ | Menor que                             | <           |                                                                                                                                                                       |
+ | Mayor que                             | >           |                                                                                                                                                                       |
+ | Menor o igual que                     | <=          |                                                                                                                                                                       |
+ | Mayor o igual que                     | >=          |                                                                                                                                                                       |
+ | Incluído en                           | IN          | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                          |
+ | Contiene palabra clave                | %           | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                             |
 
 * **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades o elemento en la colección. Puede ser un **marcador** (ver **Uso de marcadores** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. Al utilizar un valor constante, deben respetarse las siguientes reglas:
   * La constante de tipo **texto** puede pasarse con o sin comillas simples (ver **Uso de comillas** más abajo). Para consultar una cadena dentro de otra cadena (una consulta de tipo "contiene"), utilice el símbolo de comodín (@) en el valor para aislar la cadena a buscar como se muestra en este ejemplo: "@Smith@". Las siguientes palabras claves están prohibidas para las constantes de texto: true, false.
@@ -909,40 +909,40 @@ donde:
 
 * **order by attributePath**: puede incluir una declaración order by *attributePath* en la búsqueda para que los datos resultantes se ordenen de acuerdo con esa declaración. Puede utilizar varias instrucciones de ordenación, separadas por comas (por ejemplo, ordenación por *attributePath1* desc, *attributePath2* asc). Por defecto, el orden es ascendente. Pase 'desc' para definir un orden descendente y 'asc' para definir un orden ascendente. >Si utiliza esta instrucción, la selección de entidades devuelta es ordenada (para más información, consulte [>Selecciones de entidades ordenadas y no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-**Utilizar comillas**
+#### Using quotes
 
-Cuando utilice comillas dentro de las consultas, debe utilizar comillas simples ' ' dentro de la consulta y comillas dobles " " para encerrar toda la consulta, de lo contrario se devuelve un error. Por ejemplo:
+When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Por ejemplo:
 
 ```4d
 "employee.name = 'smith' AND employee.firstname = 'john'"
 ```
 > Las comillas simples (') no se admiten en los valores buscados, ya que romperían la cadena de búsqueda. Por ejemplo, "comp.name = 'John's pizza' " generará un error. Si necesita buscar en valores con comillas simples, puede considerar el uso de marcadores de posición (ver más abajo).
 
-**Uso del paréntesis**
+#### Using parenthesis
 
-Puede utilizar paréntesis en la búsqueda para dar prioridad al cálculo. Por ejemplo, puede organizar una búsqueda de la siguiente manera:
+You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
 
 ```4d
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
 
-**Uso de marcadores de posición**
+#### Using placeholders
 
-4D le permite utilizar marcadores para los argumentos *attributePath*, *formula* y *value* dentro del parámetro *queryString*. Un marcador es un parámetro que se inserta en las cadenas de búsqueda y que se sustituye por otro valor cuando se evalúa la cadena de búsqueda consulta. El valor de los marcadores se evalúa una vez al principio de la búsqueda; no se evalúa para cada elemento.
+4D allows you to use placeholders for *attributePath*, *formula* and *value* arguments within the *queryString* parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.
 
-Se pueden utilizar dos tipos de marcadores: **indexed placeholders** y los **named placeholders**:
+Two types of placeholders can be used: **indexed placeholders** and **named placeholders**:
 
 |            | Marcadores de posición indexados                                                                                                                                                                                            | Nombre del marcador de posición                                                                                                                                              |
 | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Definición | Los parámetros se insertan como `:paramIndex` (por ejemplo :1, :2...) en *queryString* y sus valores correspondientes son suministrados por la secuencia de parámetros *value*. Puede utilizar hasta 128 parámetros *valor* | Los parámetros se insertan como`: paramName` (por ejemplo :myparam) y sus valores se proporcionan en los atributos y/o objetos de parámetros en el parámetro *querySettings* |
 | Ejemplo    | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                 | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                             |
 
-Puede mezclar todos los tipos de argumentos en *queryString*. Una *queryString* puede contener, para los parámetros *attributePath*, *formula* y *value*:
+You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
 
 * valores directos (sin marcadores),
 * marcadores indexados y/o con nombre.
 
-El uso de marcadores de posición en las búsquedas **se recomienda** por las siguientes razones:
+Using placeholders in queries **is recommended** for the following reasons:
 
 1. Evita la inserción de código malicioso: si utiliza directamente variables completadas por el usuario dentro de la cadena de búsqueda, un usuario podría modificar las condiciones de búsqueda introduciendo argumentos de búsqueda adicionales. Por ejemplo, imagine una cadena de búsqueda como:
 
@@ -951,50 +951,105 @@ El uso de marcadores de posición en las búsquedas **se recomienda** por las si
        $result:=$col.query($vquery)
  ```
 
- Esta búsqueda parece segura ya que se filtran los datos no públicos. Sin embargo, si el usuario introduce en el área *myname* algo como *"smith OR status='private'*, la cadena de búsqueda se modificaría en la etapa de la interpretación y podría devolver datos privados.
+ This query seems secured since non-public data are filtered. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
 
- Cuando se utilizan marcadores de posición, no es posible anular las condiciones de seguridad:
+ When using placeholders, overriding security conditions is not possible:
 
  ```4d
   $result:=$col.query("status='public' & name=:1";myname)
  ```
 
- En este caso, si el usuario introduce *smith OR status='private'* en el área *myname*, no se interpretará en la cadena de búsqueda, sino que sólo se pasará como valor. La búsqueda de una persona llamada "smith OR status='private'" simplemente fallará.
+ In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. Looking for a person named "smith OR status='private'" will just fail.
 
 2. Evita tener que preocuparse por cuestiones de formato o caracteres, especialmente cuando se manejan los parámetros *attributePath* o *value* que pueden contener caracteres no alfanuméricos como ".", "['...
 
 3. Permite el uso de variables o expresiones en los argumentos de búsqueda. Ejemplos:
 
  ```4d
-  $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
  $result2:=$col.query("company.name = :1";"John's Pizzas")
  ```
 
-**Búsqueda de valores null**
+#### Looking for null values
 
-Cuando se buscan valores null, no se puede utilizar la sintaxis de marcador de posición porque el motor de búsqueda considera null como un valor de comparación invalido. Por ejemplo, si ejecuta la siguiente búsqueda:
+When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
 ```4d
 $vSingles:=ds.Person.query("spouse = :1";Null) // NO funcionará
 ```
 
-No obtendrá el resultado esperado porque el valor null será evaluado por 4D como un error resultante de la evaluación del parámetro (por ejemplo, un atributo procedente de otra búsqueda). Para este tipo de búsquedas, debe utilizar la sintaxis de búsqueda directa:
+You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
 
 ```4d
  $vSingles:=ds.Person.query("spouse = null") // Sintaxis correcta
 ```
 
-**Vinculación de los argumentos de búsqueda y los atributos de colección**
+#### Not equal to in collections
 
-|
+When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). For example, with the following entities:
 
-Esta funcionalidad sólo está disponible en las búsquedas en clases de datos y en las [selecciones de entidades](EntitySelectionClass.md#query). No se puede utilizar en las búsquedas en [colecciones](CollectionClass.md#query).
+```
+Entity 1:
+ds.Class.name: "A"
+ds.Class.info:
+    { "coll" : [ {
+                "val":1,
+                "val":1
+            } ] }
+
+Entity 2:
+ds.Class.name: "B"
+ds.Class.info:
+    { "coll" : [ {
+                "val":1,
+                "val":0
+            } ] }
+
+Entity 3:
+ds.Class.name: "C"
+ds.Class.info:
+    { "coll" : [ {
+                "val":0,
+                "val":0
+            } ] }
+```
+
+Consider the following results:
+
+```4d
+ds.Class.query("info.coll[].val = :1";0) 
+// returns B and C
+// finds "entities with 0 in at least one val property"
+
+ds.Class.query("info.coll[].val != :1";0)
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to 
+ds.Class.query(not("info.coll[].val = :1";0)) 
+```
+
+If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
+
+```4d
+ds.Class.query("info.coll[a].val != :1";0)  
+// returns A and B
+// finds "entities where at least one val property is different from 0"
+```
+
+You can use any letter from the alphabet as the `[a]` notation.
+
+
+#### Linking collection attribute query arguments
+
+:::info
+
+This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
 
 :::
 
-To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found. When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements.
+When searching within dataclass object attributes containing collections using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
 
-Por ejemplo, con las dos entidades siguientes:
+For example, with the following two entities:
 
 ```
 Entity 1:
@@ -1017,35 +1072,35 @@ ds. People.places:
             } ] }
 ```
 
-Quiere encontrar personas con un tipo de ubicación "home" en la ciudad "paris". Si escribe:
+You want to find people with a "home" location kind in the city "paris". If you write:
 
 ```4d
 ds.People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
 ```
 
-... la búsqueda devolverá "martin" **y** "smith" porque "smith" tiene un elemento "locations" cuyo "tipo" es "home" y un elemento "locations" cuya "ciudad" es "paris", aunque sean elementos diferentes.
+... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
 
-Si quiere obtener sólo las entidades en las que los argumentos correspondientes están en el mismo elemento de colección, necesita **enlazar los argumentos**. Para enlazar los argumentos de búsqueda:
+If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. To link query arguments:
 
 * Añada una letra entre los \[] en la primera ruta a enlazar y repita la misma letra en todos los argumentos enlazados. Por ejemplo: `locations[a].city and locations[a].kind`. Puede utilizar cualquier letra del alfabeto latino (no diferencia entre mayúsculas y minúsculas).
 * Para añadir diferentes criterios vinculados en la misma consulta, utilice otra letra. Puede crear hasta 26 combinaciones de criterios en una sola consulta.
 
-Con las entidades anteriores, si escribe:
+With the above entities, if you write:
 
 ```4d
 ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
 
-... la búsqueda sólo devolverá "martin" porque tiene un elemento "locations" cuyo "kind" es "home" y cuyo "city" es "paris". La búsqueda no devolverá "smith" porque los valores "home" y "paris" no están en el mismo elemento de colección.
+... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
 
 
-**Búsquedas en las relaciones Muchos a Muchos**
+#### Queries in many-to-many relations
 
-ORDA ofrece una sintaxis especial para facilitar las consultas en las relaciones de muchos a muchos. En este contexto, puede ser necesario buscar diferentes valores con un operador `AND` PERO en el mismo atributo. Por ejemplo, de una mirada a la siguiente estructura:
+ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. For example, take a look at the following structure:
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imagine que quiere buscar todas las películas en las que un actor A *y* un actor B tienen un papel. Si escribe una búsqueda simple utilizando un operador `AND`, no funcionará:
+Imagine that you want to search all movies in which *both* actor A and actor B have a role. If you write a simple query using an `AND` operator, it will not work:
 
 ```4d
 // código inválido
@@ -1053,17 +1108,17 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"H
 // $es está vacía
 ```
 
-Básicamente, el problema está relacionado con la lógica interna de la búsqueda: no se puede buscar un atributo cuyo valor sea tanto "A" como "B".
+Basically, the issue is related to the internal logic of the query: you cannot search for an attribute whose value would be both "A" and "B".
 
-Para poder realizar este tipo de búsqueda, ORDA permite una sintaxis especial: basta con añadir un *class index* entre **{}** en todos los atributos relacionales adicionales utilizados en la cadena:
+To make it possible to perform such queries, ORDA allows a special syntax: you just need to add a *class index* between **{}** in all additional relation attributes used in the string:
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
 
-**{x}** indica a ORDA que cree otra referencia para el atributo relacional. A continuación, realizará todas las operaciones de mapa de bits internas necesarias. Tenga en cuenta que **x** puede ser todo número **excepto 0**: {1}, o {2}, o {1540}... ORDA sólo necesita una referencia única en la búsqueda para cada class index.
+**{x}** tells ORDA to create another reference for the relation attribute. It will then perform all the necessary bitmap operations internally. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
 
-En nuestro ejemplo, sería:
+In our example, it would be:
 
 ```4d
 // código válido
@@ -1071,38 +1126,40 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 // $es contient des films (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
 
-**parámetro formula**
 
-Como alternativa a la inserción de fórmulas dentro del parámetro *queryString* (ver arriba), puede pasar directamente un objeto fórmula como criterio de búsqueda booleano. La utilización de un objeto fórmula para las búsquedas es **recomendada** ya que se beneficia de la tokenización, y el código es más fácil de buscar/leer.
 
-La fórmula debe haber sido creada utilizando los comandos [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string). En este caso:
+#### formula parameter
+
+As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
+
+La fórmula debe haber sido creada utilizando los comandos [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string). In this case:
 
 * *fórmula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 * dentro de la *fórmula*, la entidad está disponible a través del objeto `This`.
 * si el objeto `Formula` es **null**, se genera el error 1626 ("Esperando un texto o una fórmula"), que llama a interceptar utilizando un método instalado con `ON ERR CALL`.
 > Por razones de seguridad, las llamadas a fórmulas dentro de las funciones `query()` pueden ser desestimadas. Ver la descripción del parámetro *querySettings*.
 
-**Pasar parámetros a las fórmulas**
+#### Passing parameters to formulas
 
-Todo parámetro *formula* llamado por la función `query()` puede recibir parámetros:
+Any *formula* called by the `query()` class function can receive parameters:
 
 * Los parámetros deben pasarse a través de la propiedad **args** (objeto) del parámetro *querySettings*.
 * La fórmula recibe este objeto **args** como parámetro **$1**.
 
-Este pequeño código muestra los principios de cómo se pasan los parámetros a los métodos:
+This small code shows the principles of how parameter are passed to methods:
 
 ```4d
  $settings:=New object("args";New object("exclude";"-")) //objeto args a pasar los parámetros
  $es:=ds.Students.query("eval(checkName($1.exclude))";$settings) //args se recibe en $1
 ```
 
-En el ejemplo 3 se ofrecen más ejemplos.
+Additional examples are provided in example 3.
 
-**4D Server**: en cliente/servidor, las fórmulas se ejecutan en el servidor. En este contexto, sólo se envía a las fórmulas el objeto `querySettings.args`.
+**4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
 
-**Parámetro querySettings**
+#### querySettings parameter
 
-En el parámetro *querySettings* se puede pasar un objeto que contenga opciones adicionales. Se soportan las siguientes propiedades:
+In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
 | Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1114,11 +1171,11 @@ En el parámetro *querySettings* se puede pasar un objeto que contenga opciones 
 | queryPlan     | Boolean | En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda justo antes de que se ejecute, es decir, la búsqueda planificada. La propiedad devuelta es un objeto que incluye cada búsqueda y sub búsqueda prevista (en el caso de una búsqueda compleja). Esta opción es útil durante la fase de desarrollo de una aplicación. Suele utilizarse junto con queryPath. Por defecto si se omite: false. **Nota**: esta propiedad sólo la soportan las funciones `entitySelection.query()` y `dataClass.query()`.                                                                                                                                                            |
 | queryPath     | Boolean | En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda tal cual es realizada. La propiedad devuelta es un objeto que contiene la ruta utilizada para la búsqueda (normalmente idéntica a la de queryPlan, pero puede diferir si el motor consigue optimizar la búsqueda), así como el tiempo de procesamiento y el número de registros encontrados. Esta opción es útil durante la fase de desarrollo de una aplicación. Por defecto si se omite: false. **Nota**: esta propiedad sólo la soportan las funciones `entitySelection.query()` y `dataClass.query()`.                                                                                                   |
 
-**Sobre queryPlan y queryPath**
+#### About queryPlan and queryPath
 
-La información registrada en `queryPlan`/`queryPath` incluye el tipo de búsqueda (indexada y secuencial) y cada subconsulta necesaria junto con los operadores de conjunción. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Las rutas de acceso de las peticiones también contienen el número de entidades encontradas y el tiempo necesario para ejecutar cada criterio de búsqueda. Generalmente, la descripción del plan de consulta y su ruta de acceso son idénticas, pero pueden diferir porque 4D puede implementar optimizaciones dinámicas cuando se ejecuta una consulta para mejorar el rendimiento. Por ejemplo, el motor 4D puede convertir dinámicamente una consulta indexada en una secuencial si estima que es más rápida. Este caso concreto puede darse cuando el número de entidades que se buscan es bajo.
+The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
 
-Por ejemplo, si ejecuta la siguiente búsqueda:
+For example, if you execute the following query:
 
 ```4d
  $sel:=ds.Employee.query("salary < :1 and employer.name = :2 or employer.revenues > :3";\  
@@ -1147,46 +1204,46 @@ queryPath:
 
 #### Ejemplo 1
 
-Esta sección ofrece varios ejemplos de búsquedas.
+This section provides various examples of queries.
 
-Consultas en una cadena:
+Query on a string:
 
 ```4d
 $entitySelection:=ds.Customer.query("firstName = 'S@'")
 ```
 
-Búsqueda con una instrucción NOT:
+Query with a NOT statement:
 
 ```4d
 $entitySelection:=ds.Employee.query("not(firstName=Kim)")
 ```
 
-Búsquedas con fechas:
+Queries with dates:
 
 ```4d
 $entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
 $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 ```
 
-Búsqueda con marcadores de posición indexados para los valores:
+Query with indexed placeholders for values:
 
 ```4d
 $entitySelection:=ds.Customer.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@")
 ```
 
-Búsqueda con marcadores de posición indexados para valores en una dataclass relacionada:
+Query with indexed placeholders for values on a related dataclass:
 
 ```4d
 $entitySelection:=ds.Employee.query("lastName = :1 and manager.lastName = :2";"M@";"S@")
 ```
 
-Búsqueda con marcador de posición indexado que incluye una instrucción de orden descendente:
+Query with indexed placeholder including a descending order by statement:
 
 ```4d
 $entitySelection:=ds.Student.query("nationality = :1 order by campus.name desc, lastname";"French")
 ```
 
-Búsqueda con marcadores de posición con nombre para los valores:
+Query with named placeholders for values:
 
 ```4d
 var $querySettings : Object
@@ -1196,7 +1253,7 @@ $querySettings.parameters:=New object("userId";1234;"extraInfo";New object("name
 $managedCustomers:=ds.Customer.query("salesperson.userId = :userId and name = :extraInfo.name";$querySettings)
 ```
 
-Búsqueda que utiliza marcadores de posición con nombre e indexados para los valores:
+Query that uses both named and indexed placeholders for values:
 
 ```4d
 var $querySettings : Object
@@ -1205,7 +1262,7 @@ $querySettings.parameters:=New object("userId";1234)
 $managedCustomers:=ds.Customer.query("salesperson.userId = :userId and name=:1";"Smith";$querySettings)
 ```
 
-Búsqueda con objetos queryPlan y queryPath:
+Query with queryPlan and queryPath objects:
 
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
@@ -1216,19 +1273,19 @@ $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
 ```
 
-Búsqueda con una ruta de atributo de tipo Collection:
+Query with an attribute path of Collection type:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[].name = :1";"horsebackriding")
 ```
 
-Búsqueda con una ruta de atributos de tipo Collection y atributos vinculados:
+Query with an attribute path of Collection type and linked attributes:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2";"horsebackriding";2)
 ```
 
-Búsqueda con una ruta de atributos de tipo Collection y múltiples atributos vinculados:
+Query with an attribute path of Collection type and multiple linked attributes:
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
@@ -1236,25 +1293,25 @@ $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
  extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 ```
 
-Búsqueda con una ruta de atributo de tipo Objeto:
+Query with an attribute path of Object type:
 
 ```4d
 $entitySelection:=ds.Employee.query("extra.eyeColor = :1";"blue")
 ```
 
-Búsqueda con una instrucción IN:
+Query with an IN statement:
 
 ```4d
 $entitySelection:=ds.Employee.query("firstName in :1";New collection("Kim";"Dixie"))
 ```
 
-Búsqueda con instrucción NOT (IN):
+Query with a NOT (IN) statement:
 
 ```4d
 $entitySelection:=ds.Employee.query("not (firstName in :1)";New collection("John";"Jane"))
 ```
 
-Búsqueda con marcadores de posición indexados para los atributos:
+Query with indexed placeholders for attributes:
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1262,7 +1319,7 @@ $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
   //salesperson es una entidad relacionada
 ```
 
-Búsqueda con marcadores de posición indexados para los atributos y marcadores de posición con nombre para los valores:
+Query with indexed placeholders for attributes and named placeholders for values:
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1273,7 +1330,7 @@ $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"
   //salesperson es una entidad relacionada
 ```
 
-Búsqueda con marcadores de posición indexados para los atributos y los valores:
+Query with indexed placeholders for attributes and values:
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1283,11 +1340,11 @@ $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith
 
 #### Ejemplo 2
 
-Esta sección ilustra las búsquedas con marcadores de posición con nombre para los atributos.
+This section illustrates queries with named placeholders for attributes.
 
-Dada una dataclass Employee con 2 entidades:
+Given an Employee dataclass with 2 entities:
 
-Entidad 1:
+Entity 1:
 
 ```4d
 name: "Marie"
@@ -1299,7 +1356,7 @@ softwares:{
 }
 ```
 
-Entidad 2:
+Entity 2:
 
 ```4d
 name: "Sophie"
@@ -1311,7 +1368,7 @@ softwares:{
 }
 ```
 
-Búsqueda con marcadores de posición con nombre para los atributos:
+Query with named placeholders for attributes:
 
 ```4d
  var $querySettings : Object
@@ -1322,7 +1379,7 @@ Búsqueda con marcadores de posición con nombre para los atributos:
   //$es.length=1 (Employee Marie)
 ```
 
-Búsqueda con marcadores de posición con nombre para los atributos y los valores:
+Query with named placeholders for attributes and values:
 
 
 ```4d
@@ -1343,16 +1400,16 @@ Búsqueda con marcadores de posición con nombre para los atributos y los valore
 
 #### Ejemplo 3
 
-Estos ejemplos ilustran las distintas formas de utilizar fórmulas con o sin parámetros en sus búsquedas.
+These examples illustrate the various ways to use formulas with or without parameters in your queries.
 
-La fórmula se da como texto con `eval()` en el parámetro *queryString*:
+The formula is given as text with `eval()` in the *queryString* parameter:
 
 ```4d
  var $es : cs.StudentsSelection
  $es:=ds.Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-La fórmula se da como un objeto `Formula` a través de un marcador de posición:
+The formula is given as a `Formula` object through a placeholder:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1361,7 +1418,7 @@ La fórmula se da como un objeto `Formula` a través de un marcador de posición
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-Sólo se da como criterio un objeto `Formula`:
+Only a `Formula` object is given as criteria:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1370,7 +1427,7 @@ Sólo se da como criterio un objeto `Formula`:
  $es:=ds.Students.query($formula)
 ```
 
-Se pueden aplicar varias fórmulas:
+Several formulas can be applied:
 
 ```4d
  var $formula1; $1; $formula2 ;$0 : Object
@@ -1379,7 +1436,7 @@ Se pueden aplicar varias fórmulas:
  $0:=ds.Students.query(":1 and :2 and nationality='French'";$formula1;$formula2)
 ```
 
-Una fórmula texto en *queryString* recibe un parámetro:
+A text formula in *queryString* receives a parameter:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1395,7 +1452,7 @@ Una fórmula texto en *queryString* recibe un parámetro:
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Utilizando el mismo método ***checkName***, un objeto `Formula` como marcador de posición recibe un parámetro:
+Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1408,7 +1465,7 @@ Utilizando el mismo método ***checkName***, un objeto `Formula` como marcador d
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
-Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su consulta:
+We want to disallow formulas, for example when the user enters their query:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1423,7 +1480,7 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 #### Ver también
 
-[`.query()`](EntitySelectionClass.md#query) para selecciones de entidades
+[`.query()`](EntitySelectionClass.md#query) for entity selections
 <!-- END REF -->
 
 <!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
@@ -1437,13 +1494,13 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 </details>
 
-<!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->**.setRemoteCacheSettings**(*settings*: Object) <!-- END REF -->
+<!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->**.setRemoteCacheSettings**(*settings* : Object) <!-- END REF -->
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                                             |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------------------- |
-| settings   | Object | -> | Objeto que define el tiempo de espera y el tamaño máximo de la caché ORDA para el dataclass.|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                                                   |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
+| settings   | Object | -> | Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
 
 |
 
@@ -1451,30 +1508,30 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 #### Descripción
 
-La función `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->define el tiempo de espera y el tamaño máximo de la caché ORDA para una clase de datos.<!-- END REF -->.
+The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
 
-En el parámetro *settings*, pase un objeto con las siguientes propiedades:
+In the *settings* parameter, pass an object with the following properties:
 
 | Propiedad  | Tipo    | Descripción                   |
 | ---------- | ------- | ----------------------------- |
 | timeout    | Integer | Tiempo de espera en segundos. |
 | maxEntries | Integer | Número máximo de entidades.   |
 
-`timeout` define el tiempo de espera de la caché ORDA para la dataclass (por defecto es 30 segundos). Una vez transcurrido el tiempo de espera, las entidades de la dataclass en la caché son consideradas como vencidas. Esto significa que:
+`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. This means that:
 
 * los datos siguen estando ahí
 * la próxima vez que se necesiten los datos, se le pedirán al servidor
 * 4D elimina automáticamente los datos caducados cuando se alcanza el número máximo de entidades
 
-Definir la propiedad `timeout` define un nuevo timeout para las entidades ya presentes en la caché. Es útil cuando se trabaja con los datos que no cambian con mucha frecuencia y, por tanto, cuando no son necesarias nuevas peticiones al servidor.
+Setting a `timeout` property sets a new timeout for the entities already present in the cache. It is useful when working with data that does not change very frequently, and thus when new requests to the server are not necessary.
 
-`maxEntries` define el número máximo de entidades en la caché ORDA. Por defecto es 30 000.
+`maxEntries` sets the max number of entities in the ORDA cache. Default is 30 000.
 
-El número de entradas mínimo es 300, por lo que el valor de `maxEntries` debe ser igual o superior a 300. En caso contrario, se ignora y el número máximo de entradas se fija en 300.
+The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. Otherwise it is ignored and the maximum number of entries is set to 300.
 
-Si no se pasan propiedades válidas como `timeout` y `maxEntries`, la caché permanece sin cambios, con sus valores por defecto o previamente definidos.
+If no valid properties are passed as `timeout` and `maxEntries`, the cache remains unchanged, with its default or previously set values.
 
-Cuando se guarda una entidad, se actualiza en la caché y vence una vez alcanzado el timeout.
+When an entity is saved, it is updated in the cache and expires once the timeout is reached.
 
 #### Ejemplo
 

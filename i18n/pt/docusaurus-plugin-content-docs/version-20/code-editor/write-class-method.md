@@ -11,7 +11,7 @@ O editor de código funciona de forma semelhante a um editor de texto. Writing a
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
-The 4D Code Editor provides basic syntax error-checking. Additional error-checking is performed when the code executes. Para obter mais informações sobre como lidar com erros, consulte [Depuração](../Debugging/basics.md).
+O Editor de código 4D fornece verificação básica de erros de sintaxe. É efetuada uma verificação de erros adicional quando o código é executado. Para obter mais informações sobre como lidar com erros, consulte [Depuração](../Debugging/basics.md).
 
 ## Interface
 
@@ -23,7 +23,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | -------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Execução do método**                       | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
 | **Procurar no método**                       | ![search-icon](../assets/en/code-editor/search.png)                               | Displays the [*Search* area](#find-and-replace).                                                                                                                                                                                                                                                                                               |
-| **Macros**                                   | ![macros-button](../assets/en/code-editor/macros.png)                             | Insere uma macro na seleção. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                                             |
+| **Macros**                                   | ![macros-button](../assets/en/code-editor/macros.png)                             | Insere uma macro na seleção. Clique na seta pendente para visualizar uma lista de macros disponíveis. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                                    |
 | **Expandir tudo / Recolher tudo**            | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
 | **Informações sobre o método**               | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Últimos valores da área de transferência** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
@@ -39,7 +39,7 @@ You can customize the display of the editing area. Any customization is automati
 
 | Opção                                     | Descrição                                                                                                                                                                                                   | Definido em...                                                                                                                                                                                                                    |
 | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **tipo de letra** e **tamanho de letra**  | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Ver** > **Tipo de letra maior** ou **Tipo de letra menor**                                                                                              |
+| **tipo de letra** e **tamanho de letra**  | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                              | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Ver** > **Tipo de letra maior** ou **Tipo de letra menor**                                                                                              |
 | **estilo e cor dos elementos de sintaxe** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Submenu > **Estilo**. Ou **Preferências** > [**Métodos**](../Preferences/methods.md) |
 | **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espaços em branco**                                                                                                                                                                                              |
 | **temas**                                 | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
@@ -53,7 +53,7 @@ Colored bars instantly show you where lines of code were modified since the meth
 
 The change bars change colors to indicate whether or not the modifications were saved:
 
-- yellow: Line was modified and method has not yet been saved.
+- amarelo: a linha foi modificada e o método ainda não foi guardado.
 - green: Line was modified and method has been saved.
 
 
@@ -73,7 +73,7 @@ You can enlarge or reduce the relative width of each list area by dragging one o
 
 - To add or remove a list, click in the title area of one of the lists and choose the corresponding command in the pop-up menu. The **Remove this list** command is disabled when you click on the last list. If you want to hide all the lists, you must either click on the **show or hide lists**  button at the bottom right of the window or hide them by default in the **Preferences**.
 
-- You can hide the lists in all the windows in the following ways:
+- Pode ocultar as listas em todas as janelas das seguintes formas:
   - Select the **View > Lists** option in the **Method** menu (a check mark indicates whether lists are displayed)
   - Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option. For the modifications made in the **Preferences** dialog box to be taken into account, any open methods, classes or functions must first be closed then reopened.
 
@@ -87,7 +87,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Project forms**: Database project form names. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
 - **Table forms**: Database table and form names in the form of a hierarchical list. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. Por exemplo: [Table]; "Form".
 - **Methods**: Database project method names.
-- **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
+- **All folders**: Names of object folders and subfolders set in the database displayed in the form of a hierarchical list. As pastas podem ser utilizadas para organizar objetos de uma forma personalizada. They are managed from the Home Page of the Explorer.
 - **Folders** (submenu): Contents of the folder selected using the submenu.
 - **Macros**: Macro names defined for the database (see [Creating and using macros](#creating-and-using-macros)).
 - **Commands**: 4D language commands in alphabetical order.
@@ -97,7 +97,7 @@ You can display the following lists of items in the lists area of the Code Edito
 - **Listas**: Nomes de listas.
 - **All plug-in commands**: Commands for all the plug-ins installed in the database (if any), classified by theme in the form of a hierarchical list.
 - **SQL Keywords**: set of keywords recognized by the 4D SQL syntax parser. This list includes commands (e.g. SELECT), clauses (e.g. WHERE) as well as functions (ABS).
-- **SQL Functions**: 4D SQL functions.
+- **Funções SQL**: funções SQL 4D.
 
 **Nota:** com exceção do elemento Macros, todas as listas estão por ordem alfabética.
 
@@ -112,7 +112,7 @@ The following parameters are stored in the template:
 - Localização e conteúdo de cada lista
 - Largura relativa de cada lista
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
+To save a Code Editor window as a template, choose **Method** > **Save As Template**. O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
 
 ### Área de pontos de paragem
 
@@ -137,7 +137,7 @@ The status bar located at the bottom right part of the editor window displays th
 
 - **Ln**: Número da linha
 - **Col**: Column number, i.e., the level in the hierarchy of programming structures. O primeiro nível é 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
-- **Ch**: Location of character in the line.
+- **Ch**: localização do carácter na linha.
 - ![](../assets/en/code-editor/show-hide-list.png): Ocultar/apresentar listas.
 
 When you set the cursor in a command, function or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png)
@@ -229,15 +229,15 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Shift]+[seta para a esquerda]                                   | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
 | [Shift]+[seta para baixo]                                        | Create and enlarge a selection, line by line, from the top to the bottom                                                                   |
 | [Shift]+[seta para cima]                                         | Create and enlarge a selection, line by line, from the bottom to the top                                                                   |
-| [Ctrl]+[Shift]+[seta para a direita]                             | Create and enlarge the selection, word by word, from the right                                                                             |
+| [Ctrl]+[Shift]+[seta para a direita]                             | Criar e ampliar a seleção, palavra a palavra, a partir da direita                                                                          |
 | [Ctrl]+[Shift]+[seta para a esquerda]                            | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                      |
-| [Ctrl]+[seta para a direita]                                     | Move the insertion point, word by word, from left to right                                                                                 |
-| [Ctrl]+[left arrow]                                              | Move the insertion point, word by word, from right to left                                                                                 |
+| [Ctrl]+[seta para a direita]                                     | Mover o ponto de inserção, palavra a palavra, da esquerda para a direita                                                                   |
+| [Ctrl]+[left arrow]                                              | Mover o ponto de inserção, palavra a palavra, da direita para a esquerda                                                                   |
 | [Alt]+[seta para baixo]                                          | Move the line(s) where the cursor is to the bottom                                                                                         |
 | [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                  |
 | [Home]                                                           | Place the insertion point at the beginning of the line                                                                                     |
 | [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                |
-| [Ctrl]+[Home]                                                    | Place the insertion point at the beginning of the method                                                                                   |
+| [Ctrl]+[Home]                                                    | Colocar o ponto de inserção no início do método                                                                                            |
 | [Ctrl]+[End]                                                     | Place the insertion point at the end of the method                                                                                         |
 | [Shift]+[Home]                                                   | Select all the characters in the line that are to the left of the cursor                                                                   |
 | [Shift]+[End]                                                    | Select all the characters in the line that are to the right of the cursor                                                                  |
@@ -313,7 +313,7 @@ In the Code Editor, the drag-and-drop mechanism is activated as soon as a portio
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
 - **Uppercase** / **Lowercase**: Switch the selected characters to uppercase or lowercase.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. This type of notation is often used for variable nomenclatures. hireDate and PurchaseDate are examples of two variants of camel case notation.
+- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. Este tipo de notação é frequentemente utilizado para as nomenclaturas de variáveis. hireDate and PurchaseDate are examples of two variants of camel case notation.
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
@@ -402,7 +402,7 @@ If the characters typed correspond to different types of objects, the list displ
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
 - digite um ponto "." depois de um objeto ou
-- use the Tab key after a dereferenced object pointer "->".
+- utilizar a tecla Tab após um ponteiro objeto desreferenciado "->".
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
 
@@ -414,7 +414,7 @@ Once created, property names are stored in an internal global list and are avail
 
 The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
 
-When the database is restarted, the list is reinitialized.
+Quando o banco de dados é reiniciado, a lista é reinicializada.
 
 > You can disable the automatic display of object properties in **Preferences** > **Methods** > **suggestions**.
 
@@ -443,7 +443,7 @@ Select **Find > Find...** in the **Edit** menu or type **Ctrl+F** (Windows)/**Cm
 
 The search defined in this area will be performed in the code located in the window.
 
-The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
+The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. Pode então utilizar este texto ou substituí-lo por outro.
 
 Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits.
 
@@ -480,7 +480,7 @@ The **Find Same Next** and **Find Same Previous** commands are used to find char
 
 ### Bookmark All
 
-The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
+The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. Deste modo, é fácil identificar todos os resultados da pesquisa. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
 
 
 
@@ -493,7 +493,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
 
-When the method, class or function is validated, 4D checks for:
+Quando o método, classe ou função é validado, 4D verifica:
 
 - erros básicos de sintaxe
 - the structure of statements (`If`, `End if` and so on)
@@ -503,7 +503,7 @@ When the method, class or function is validated, 4D checks for:
 
 > If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
 
-The Code Editor can only check for obvious syntax errors (misspellings and the like). It does not check for errors that only occur during execution. Execution errors are caught by 4D when the code is executed.
+The Code Editor can only check for obvious syntax errors (misspellings and the like). Não verifica os erros que só ocorrem durante a execução. Erros de execução são capturados por 4D quando o código é executado.
 
 4D has a built-in debugger (see [Debugging](../Debugging/debugger.md)) for handling and correcting these errors. The compiler also provides indispensable help for detecting errors. For more information about the compiler, refer to the [Compilation](../Project/compiler.md) chapter.
 
@@ -556,7 +556,7 @@ Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** 
 
 If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
 
-A collapsed portion of code can be selected, copied, pasted or deleted. All the lines included therein will be copied, pasted or deleted respectively. When a portion of code is pasted, it is automatically expanded.
+A collapsed portion of code can be selected, copied, pasted or deleted. All the lines included therein will be copied, pasted or deleted respectively. Quando uma parte do código é colada, é automaticamente expandida.
 
 There are several ways to expand and collapse code:
 
@@ -565,7 +565,7 @@ There are several ways to expand and collapse code:
 
   - **Collapse Selection** / **Expand Selection**: collapses or expands all the code structures found in the text selection.
   - **Collapse Current Level** / **Expand Current Level**: collapses or expands the code structure at the level where the cursor is located. These commands are also available in the **context menu** of the editor.
-  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. These commands are also available in the toolbar of the editor.
+  - **Collapse All** / **Expand All**: collapses or expands all the loops and conditions of a method. Estes comandos também estão disponíveis na barra de ferramentas do editor.
 
 
 ## Blocos

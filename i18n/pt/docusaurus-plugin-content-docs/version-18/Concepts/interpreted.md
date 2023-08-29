@@ -32,7 +32,7 @@ Apesar de aplicações funcionarem da mesma forma em modo compilado e interpreta
 
 ## Utilização de directivas de compilação com o Intérprete
 
-Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
+As diretivas do compilador não são necessárias para bancos de dados não compilados. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
 
 Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.
 

@@ -52,7 +52,7 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 ### Arquivo histórico
 
-Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. The log file stores the following information for each build:
+Quando uma aplicação é construída, 4D gera um arquivo de histórico na pasta **Logs**. O ficheiro de historial armazena as seguintes informações para cada compilação:
 
 * O início e o fim da construção de objetivos,
 * O nome e o caminho de acesso completo dos ficheiros gerados,
@@ -252,7 +252,7 @@ Quando se executa uma aplicação 4D Server construída:
 
 O ficheiro do directório de aplicação é apenas de leitura. Modifications made to users, groups and permissions during server execution are stored in the data directory file. If no data directory file already exists, it is automatically created. If the application directory file was embedded, it is duplicated as data directory file.
 
-Embedding the project directory file allows you to deploy a client/server application with a basic security user and group configuration. Subsequent modifications are added to the data directory file.
+Embedding the project directory file allows you to deploy a client/server application with a basic security user and group configuration. As alterações subsequentes são adicionadas ao ficheiro do diretório de dados.
 
 #### Permitir a ligação de clientes Silicon Mac
 
@@ -337,7 +337,7 @@ To trigger client application update notifications, simply replace the old versi
 Do lado do cliente, quando a aplicação cliente "antiga" tenta conectar-se à aplicação servidor atualizada, se mostra uma caixa de diálogo na máquina cliente, indicando que há uma nova versão disponível. O utilizador pode tanto actualizar a sua versão como cancelar a caixa de diálogo.
 
 * Se o utilizador clicar em **OK**, a nova versão é descarregada para a máquina cliente através da rede. Uma vez terminado o download, a antiga aplicação cliente é fechada e a nova versão é lançada e liga-se ao servidor. Once the download is complete, the old client application is closed and the new version is launched and connects to the server.
-* If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Otherwise (by default), the connection is established.
+* If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Caso contrário (por defeito), a ligação é estabelecida.
 
 #### Forçar atualizações automáticas
 
@@ -416,7 +416,7 @@ O cenário básico é o seguinte:
 
 Automatic update 4D Server features ([Current version](#current-version) number, `SET UPDATE FOLDER` command...) work with single-user application as with standard remote application. At connection, the single-user application compares its `CurrentVers` key to the 4D Server version range. If outside the range, the updated client application is downloaded from the server and the Updater launches the local update process.
 
-### Customizing client and/or server cache folder names
+### Personalização dos nomes da pasta de cache cliente e/ou servidor
 
 Client and server cache folders are used to store shared elements such as resources or components. They are required to manage exchanges between server and remote clients. Client/server applications use default pathnames for both client and server system cache folders.
 
@@ -488,10 +488,10 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 ## Página Licenças e certificados
 
-The Licences & Certificate page can be used to:
+A página Licences & Certificate pode ser utilizada para:
 
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
-* sign the application by means of a certificate in macOS.
+* assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Admin/buildappCertif.png)
 
@@ -512,9 +512,9 @@ Once you have selected a file, the list will indicate the characteristics of the
 * **Data de expiração** - Data de expiração da licença (se houver)
 * **Caminho** - Localização em disco
 
-If a license is not valid, a message will warn you.
+Se uma licença não for válida, será avisado por uma mensagem.
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
+Pode designar o número de ficheiros válidos que desejar. When building an executable application, 4D will use the most appropriate license available.
 > Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
 
 After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
@@ -536,7 +536,7 @@ This option is displayed under both Windows and macOS, but it is only taken into
 To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 > This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
 
-* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. In the "Certificate Assistant", be sure to select the appropriate options: ![](../assets/en/Admin/Cert1.png) ![](../assets/en/Admin/Cert2.png)
+* **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. O usuário pode "forçar" a abertura da aplicação. In the "Certificate Assistant", be sure to select the appropriate options: ![](../assets/en/Admin/Cert1.png) ![](../assets/en/Admin/Cert2.png)
 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below).
 
@@ -609,7 +609,7 @@ The data file path is stored in a dedicated file, named *lastDataPath.xml*.
 
 Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+Este mecanismo é geralmente adequado para implantações padrão. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
 
 #### Configuração do modo de ligação de dados
 
@@ -696,7 +696,7 @@ You can choose whether or not to display the standard server selection dialog bo
 
 * **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button. `ServerSelectionAllowed`: **True** ![](../assets/en/Project/connect2.png) ![](../assets/en/Project/connect3.png)
 
-## Automatic updating of server or single-user applications
+## Atualização automática de aplicações servidor ou usuário único
 
 In principle, updating server applications or merged single-user applications require user intervention (or programming custom system routines): whenever a new version of the merged application is available, you have to exit the application in production and manually replace the old files with the new ones; then restart the application and select the current data file.
 

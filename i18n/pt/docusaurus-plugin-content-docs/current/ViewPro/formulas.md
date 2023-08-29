@@ -15,9 +15,9 @@ Para introduzir uma fórmula numa área 4D View Pro:
 2.  Enter = (the equal sign).
 3.  Type the formula and hit the **Enter** key.
 
-When writing a formula, you can use different shortcuts:
+Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
-- click on a cell to enter its reference in the formula:
+- clique numa célula para introduzir a sua referência na fórmula:
 
 ![](../assets/en/ViewPro/formulas.PNG)
 
@@ -32,7 +32,7 @@ You can also create named formulas that can be called via their name. To do so, 
 Todas as fórmulas têm operandos e operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
-*   **Operands** include several categories:
+*   **Operandos** inclui várias categorias:
     *   [values](#values-and-operators) (5 data types are supported)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
     *   [funções standard de folha de cálculo](#using-functions)
@@ -86,7 +86,7 @@ Lista dos operadores, do mais importante para o menos importante:
 
 ## Referências de células
 
-Formulas often refer to other cells by cell addresses. Pode copiar estas fórmulas para outras células. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+As fórmulas referem-se frequentemente a outras células através de endereços de células. Pode copiar estas fórmulas para outras células. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
 
 ```
 = C6 + C7
@@ -110,12 +110,12 @@ You can mix absolute and relative references by inserting a dollar sign in front
 
 A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. Uma referência a uma célula nomeada é sempre absoluta. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
 
-The following table shows the effect of the different notations:
+A tabela seguinte mostra o efeito das diferentes notações:
 
 | Exemplo        | Tipo de referência | Descrição                                                                                                                                        |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | C5             | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                     |
-| $C$5           | Absoluto           | A referência é absoluta. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C$5           | Absoluto           | A referência é absoluta. Referir-se-á sempre à célula C5, independentemente do local onde for utilizada.                                         |
 | $C5            | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.             |
 | C$5            | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used              |
 | Nome da célula | Absoluto           | A referência é absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
@@ -178,7 +178,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 We want to print "Hello World" in a 4D View Pro area cell using a 4D project method:
 
-1.  Create a "myMethod" project method with the following code:
+1.  Crie um método projeto "myMethod" com o seguinte código:
 
 ```4d
  #DECLARE->$hw Text
@@ -200,11 +200,11 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
  End case
 ```
 
-3.  Edit the content of a cell in a 4D View Pro area and type:
+3.  Editar o conteúdo de uma célula numa área 4D View Pro e digitar:
 
     ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-    "myMethod" is then called by 4D and the cell displays:
+    "myMethod" é então chamado por 4D e a célula aparece:
 
     ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
@@ -317,7 +317,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 ![](../assets/en/ViewPro/vpFieldMeth1.PNG)
 
 
-2.  Execute the following code to initialize a virtual structure:
+2.  Execute o seguinte código para inicializar uma estrutura virtual:
 
     ```4d
     ARRAY TEXT($tableTitles;1)
@@ -338,12 +338,12 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 ![](../assets/en/ViewPro/vpFieldMeth2.PNG)
 
 
-4.  Select EMP_NAME (use the Tab key) and enter the closing ).
+4.  Selecionar EMP_NAME (utilizar a tecla Tab) e introduzir o fecho.
 
 ![](../assets/en/ViewPro/vpFieldMeth3.PNG)
 
 
-5.  Validate the field to display the name of the current employee:
+5.  Validar o campo para apresentar o nome do empregado atual:
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
 > A tabela \[Employee] tem de ter um registo atual.
@@ -356,7 +356,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 
 #### Requisitos
 
-To be called in a 4D View Pro formula, a project method must be:
+Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).

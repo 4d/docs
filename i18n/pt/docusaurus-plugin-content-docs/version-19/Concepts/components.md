@@ -19,9 +19,9 @@ Creating and installing 4D components is carried out directly from 4D. Basically
 
 - A component consists of a regular 4D project file.
 - To install a component, you simply need to copy it into the [`Components` folder of the project](Project/architecture.md). Pode usar pseudónimos ou atalhos.
-- A project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. However, a component cannot use “sub-components” itself.
+- A project can be both a “matrix” and a “host,” in other words, a matrix project can itself use one or more components. No entanto, um componente não pode utilizar ele próprio "subcomponentes".
 - A component can call on most of the 4D elements: project methods, project forms, menu bars, choice lists, and so on. Não pode chamar métodos de bancos de dados e triggers.
-- You cannot use standard tables or data files in 4D components. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
+- Não é possível utilizar tabelas standard ou ficheiros de dados em componentes 4D. Entretanto um componente não pode criar ou usar tabelas, campos e arquivos de dados usando mecanismos de bancos de dados externos. São bancos 4D independentes com as que se trabalha utilizando comandos SQL.
 - Um projecto anfitrião executado em modo interpretado pode utilizar componentes interpretados ou compilados. Um projecto anfitrião executado em modo compilado não pode utilizar componentes interpretados. Por isso não pode ser usado em um componente.
 
 ## Escopo dos comandos de linguagem

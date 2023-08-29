@@ -53,12 +53,12 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 
 #### action = DragDropBlock
 
-| Propriedade | Tipo    | Descrição                                           |
-| ----------- | ------- | --------------------------------------------------- |
-| fromRange   | object  | Intervalo do células de origem (a ser arrastado)    |
-| toRange     | object  | Range of the destination cell range (drop location) |
-| copy        | boolean | Especifica se o intervalo fonte é copiado ou não    |
-| insert      | boolean | Especifica se o intervalo fonte é inserido ou não   |
+| Propriedade | Tipo    | Descrição                                          |
+| ----------- | ------- | -------------------------------------------------- |
+| fromRange   | object  | Intervalo do células de origem (a ser arrastado)   |
+| toRange     | object  | Intervalo de células de destino (local de largada) |
+| copy        | boolean | Especifica se o intervalo fonte é copiado ou não   |
+| insert      | boolean | Especifica se o intervalo fonte é inserido ou não  |
 
 #### action = DragFillBlock
 
@@ -84,7 +84,7 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 
 #### Exemplo
 
-Here is an example handling an `On After Edit` event:
+Eis um exemplo de tratamento de um evento `On After Edit`:
 
 ```4d
  If(FORM Event.code=On After Edit)
@@ -100,7 +100,7 @@ Here is an example handling an `On After Edit` event:
  End if
 ```
 
-The above example could generate an event object like this:
+O exemplo acima poderia gerar um objeto evento como este:
 
 ```
 {

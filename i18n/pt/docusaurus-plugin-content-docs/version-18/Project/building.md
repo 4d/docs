@@ -41,7 +41,7 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 ### Arquivo histórico
 
-When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
+When an application is built, 4D generates a log file in the **Logs** folder. O ficheiro de historial armazena as seguintes informações para cada compilação:
 
 * O início e o fim da construção de objetivos,
 * O nome e o caminho de acesso completo dos ficheiros gerados,
@@ -256,7 +256,7 @@ To trigger client application update notifications, simply replace the old versi
 Do lado do cliente, quando a aplicação cliente "antiga" tenta conectar-se à aplicação servidor atualizada, se mostra uma caixa de diálogo na máquina cliente, indicando que há uma nova versão disponível. O utilizador pode tanto actualizar a sua versão como cancelar a caixa de diálogo.
 
 * Se o utilizador clicar em **OK**, a nova versão é descarregada para a máquina cliente através da rede. Uma vez terminado o download, a antiga aplicação cliente é fechada e a nova versão é lançada e liga-se ao servidor. Once the download is complete, the old client application is closed and the new version is launched and connects to the server.
-* If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Otherwise (by default), the connection is established.
+* If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Caso contrário (por defeito), a ligação é estabelecida.
 
 #### Forçar atualizações automáticas
 
@@ -339,10 +339,10 @@ If there is a conflict between two different versions of the same plug-in (one l
 
 ## Página Licenças e certificados
 
-The Licences & Certificate page can be used to:
+A página Licences & Certificate pode ser utilizada para:
 
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
-* sign the application by means of a certificate in macOS.
+* assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Project/buildapplicenseProj.png)
 
@@ -363,9 +363,9 @@ Once you have selected a file, the list will indicate the characteristics of the
 * **Data de expiração** - Data de expiração da licença (se houver)
 * **Caminho** - Localização em disco
 
-If a license is not valid, a message will warn you.
+Se uma licença não for válida, será avisado por uma mensagem.
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
+Pode designar o número de ficheiros válidos que desejar. When building an executable application, 4D will use the most appropriate license available.
 > Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
 
 After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
@@ -454,7 +454,7 @@ The data file path is stored in a dedicated file, named *lastDataPath.xml*.
 
 Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+Este mecanismo é geralmente adequado para implantações padrão. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
 
 #### Configuração do modo de ligação de dados
 

@@ -20,7 +20,7 @@ Os produtos 4D são instalados a partir do site web de 4D:
 
 ## Ativação de um produto
 
-Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. You also need to activate any additional licenses you obtain.
+Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. Também é necessário ativar quaisquer licenças adicionais que obtenha.
 
 Não precisa ativar nada para os usos abaixo:
 

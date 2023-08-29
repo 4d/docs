@@ -61,7 +61,7 @@ O servidor 4D pode trabalhar em modo seguro. Um certificado é válido de 3 mese
 
 ## Instalação e ativação
 
-### `key.pem` and `cert.pem` files
+### Ficheiros `key.pem` e `cert.pem`
 
 To be able to use the TLS protocol with the server, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location:
 

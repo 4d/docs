@@ -764,7 +764,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * *methodName* recebe os parâmetros abaixo:
 * *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
 * *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
@@ -973,11 +973,11 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-* in *$1.value*: element value to be filtered
+* em *$1.value*: valor do elemento a ser filtrado
 * em *$2*: *param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1064,11 +1064,11 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* receives the following parameters:
 
-* in *$1.value:* element value to be evaluated
+* em *$1.value:* valor do elemento a ser avaliado
 * em *$2: param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the search condition.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1162,7 +1162,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * em *$2: param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the search condition.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1514,10 +1514,10 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 *methodName* receives the following parameters:
 
 * in *$1.value* (any type): element value to be mapped
-* in *$2* (any type): *param*
+* em *$2* (qualquer tipo): *param*
 * in *$N...* (any type): *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (any type): new transformed value to add to the resulting collection
 * *$1.stop* (boolean): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1808,7 +1808,7 @@ Em *methodName*, passe um método de comparação que compare dois valores e dev
     * em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
   * $2...$N (qualquer tipo): parâmetros adicionais
-* *methodName* sets the following parameter:
+* *methodName* define o seguinte parâmetro:
   * *$1.result* (boolean): **true** se *$1.value < $1.value2*, **false** do contrário
 
 #### Exemplo 1
@@ -2090,7 +2090,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 <!-- REF #collection.reduce().Params -->
 | Parâmetro  | Tipo                                            |    | Descrição                                                            |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
-| methodName | Text                                            | -> | Name of the function to call to process collection elements          |
+| methodName | Text                                            | -> | Nome da função a chamar para processar os elementos da coleção       |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
 | param      | expressão                                       | -> | Parameter(s) to pass to *methodName*                                 |
 | Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador|<!-- END REF -->
@@ -2112,7 +2112,7 @@ Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$
 * em *$2: param*
 * *methodName* estabelece os parâmetros abaixo:
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * $1.result:=$1.value&gt;0
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -2426,7 +2426,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 * *methodName* recebe os parâmetros abaixo:
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -2503,7 +2503,7 @@ If you want to sort the collection elements in some other order or sort any type
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
   * $2...$N (qualquer tipo): parâmetros adicionais
 
-*methodName* sets the following parameter:
+*methodName* define o seguinte parâmetro:
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
 

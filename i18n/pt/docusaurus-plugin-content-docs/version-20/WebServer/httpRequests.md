@@ -84,7 +84,7 @@ Note that you are free to use this parameter at your convenience. 4D simply igno
 The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
 If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 
 ### $3 - Endereço IP do cliente Web
@@ -115,7 +115,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 **Usage:** URL or Form action.
 
-This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
+This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. O método receberá este parâmetro em *$1*.
 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
 - When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
@@ -132,7 +132,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 #### Exemplo
 
-This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
+This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. Inserir as seguintes instruções numa página HTML estática:
 
 ```html
 <IMG SRC="/4DACTION/getPhoto/smith">
@@ -155,8 +155,8 @@ $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".ps
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
 A form can be submitted through two methods (both can be used with 4D):
-- POST, usually used to send data to the Web server,
-- GET, usually used to request data from the Web server.
+- POST, normalmente utilizado para enviar dados para o servidor Web,
+- GET, normalmente utilizado para pedir dados ao servidor Web.
 
 > When the Web server receives a posted form, it calls the `On Web Authentication` database method (if it exists).
 
@@ -320,7 +320,7 @@ return false
 </html>
 ```
 
-When 4D sends the page to a Web Browser, it looks like this:
+Quando 4D envia a página para um navegador Web, ela se parece com isso:
 
 ![](../assets/en/WebServer/spiders.png)
 
@@ -370,7 +370,7 @@ As funcionalidades deste método são:
 - The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
 - Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
 
-Keep in main that with HTML, all objects are text objects. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
 
 
 ## Other Web Server Commands
@@ -389,7 +389,7 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 
 ## Método projeto COMPILER_WEB
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. É necessário criá-lo explicitamente.
+The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
 

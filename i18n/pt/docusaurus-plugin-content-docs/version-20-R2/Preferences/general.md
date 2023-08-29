@@ -58,8 +58,8 @@ This menu lets you select the color scheme to use for the **4D development** env
 Estão disponíveis três opções:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-*   **Light**: Use the Light Theme
-*   **Dark**: Use the Dark Theme
+*   **Claro**: utilizar o tema claro
+*   **Escuro**: utilizar o tema escuro
 
 > Esta preferência só é suportada no macOS. No Windows, é sempre utilizado o esquema "Light".
 
@@ -110,7 +110,7 @@ You can configure your existing projects to save code **without tokens** by inse
 "tokenizedText": false
 ```
 
-> This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
+> Este parâmetro só é tida em conta quando os métodos são guardados. Existing methods in your projects are left untouched, unless you resave them.
 
 
 ### Criar o ficheiro `.gitignore`
@@ -152,13 +152,13 @@ Linguaje da documentação HTML a apresentar. You can modify it, for example if 
 
 4D builds calls to the pages of the documentation based on this URL.
 
-*   When it is checked, 4D first looks for the page in the local folder. If it is found, 4D displays the page in the current browser. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
-*   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+*   When it is checked, 4D first looks for the page in the local folder. Se for encontrado, 4D mostra a página no navegador atual. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
+*   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
 
 ### Pasta local
 
 > This option is only taken into account for command documentation access (excluding class functions).
 
-Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
+Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. You can view the location by clicking on the menu associated with the area. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja). 

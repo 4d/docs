@@ -6,7 +6,7 @@ sidebar_label: Página de cifrado
 
 Puede utilizar esta página para cifrar o *descifrar* (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
 
-|
+:::info
 
 For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
 

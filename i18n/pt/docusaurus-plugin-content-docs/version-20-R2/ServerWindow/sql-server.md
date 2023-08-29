@@ -11,7 +11,7 @@ The **SQL Server** page groups together information about the integrated SQL ser
 
 The upper part of the page provides information about the current status of the SQL server of 4D Server.
 
-- **State**: Started or Stopped
+- **Estado**: Iniciado ou Parado
 - **Starting time**: Date and time the SQL server was last launched.
 - **Uptime**: Time elapsed since last startup of the SQL server.
 

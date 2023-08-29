@@ -12,7 +12,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Um nome deve começar por um caractere alfabético, um subscrito ou um sinal de dólar ("$") (lembre que um sinal de dólar pode denotar um elemento local, ver abaixo).
 - Depois disso, o nome pode incluir caracteres alfabéticos, numéricos, o caractere espaço e o caractere de sublinhado/traço baixo ("_") .
 - Pontos (".") and brackets ("[ ]") are not allowed in table, field, method, or variable names.
-- Commas, slashes, quotation marks, and colons are not allowed.
+- Não são permitidas vírgulas, barras, aspas e dois pontos.
 - Characters reserved for use as operators, such as * and +, are not allowed.
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
 - Os espaços finais são ignorados.
@@ -140,7 +140,7 @@ ARRAY INTEGER($aiBigArray;10000)
 
 ### Elementos de arrays
 
-You reference an element of an interprocess, process or local array by using the curly braces("{ }"). The element referenced is denoted by a numeric expression.
+You reference an element of an interprocess, process or local array by using the curly braces("{ }"). O elemento referenciado é denotado por uma expressão numérica.
 
 Exemplos:
 
@@ -333,7 +333,7 @@ An interprocess named selection name can contain up to 255 characters, not inclu
 
 ### Seleções temporárias processos
 
-Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). A named selection name can contain up to 255 characters.
+Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>` ou o sinal de dólar $). Um nome de seleção temporal pode conter até 255 caracteres.
 
 Exemplos:
 
@@ -399,7 +399,7 @@ The following table summarizes 4D naming conventions.
 
 Be sure to use unique names for the different elements in your database. If a particular object has the same name as another object of a different type (for example, if a field is named Person and a variable is also named Person), 4D uses a priority system.
 
-4D identifies names used in procedures in the following order:
+4D identifica os nomes utilizados nos procedimentos na seguinte ordem:
 
 1. Campos
 2. Comandos
@@ -408,4 +408,4 @@ Be sure to use unique names for the different elements in your database. If a pa
 5. Constantes predefinidas
 6. Variáveis.
 
-For example, 4D has a built-in command called `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Isto impedi-lo-ia de chamar o seu método. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.
+Por exemplo, 4D tem um comando incorporado chamado `Date`. If you named a method *Date*, 4D would recognize it as the built-in `Date` command, and not as your method. Isto impedi-lo-ia de chamar o seu método. If, however, you named a field “Date”, 4D would try to use your field instead of the `Date` command.

@@ -6,7 +6,7 @@ title: Mode SDI bajo Windows
 
 En Windows, los desarrolladores 4D pueden probar y configurar sus aplicaciones fusionadas 4D para que funcionen como aplicaciones SDI (Single-Document Interface). En las aplicaciones SDI, cada ventana es independiente de las demás y puede tener su propia barra de menús. Las aplicaciones SDI se oponen a las aplicaciones MDI (Multiple Documents Interface), en las que todas las ventanas están contenidas y dependen de la ventana principal.
 
-|
+:::info
 
 El concepto de SDI/MDI no existe en macOS. Esta funcionalidad sólo afecta a las aplicaciones de Windows y las opciones relacionadas se ignoran en macOS.
 
@@ -29,7 +29,7 @@ Una vez habilitado, para ejecutar realmente su aplicación en modo SDI, puede:
 - crear una aplicación combinada (independiente y/o cliente) y ejecutarla en Windows, o bien
 - seleccione **Aplicación de prueba en modo SDI** en el menú **Ejecutar** en Windows para probar el desarrollo.
 
-|
+:::info
 
 Dado que el entorno de desarrollo se ejecuta en MDI, cambiar del modo de desarrollo al modo de ejecución utilizando el elemento de menú **Probar aplicación en modo SDI** equivale a reiniciar la aplicación.
 
@@ -92,7 +92,7 @@ Aunque es manejado de forma transparente por 4D, el modo SDI introduce pequeñas
 | `GET WINDOW RECT`                 | Cuando se pasa -1 en el parámetro ventana, el comando devuelve 0;0;0;0                                                                                                                                                                                                                                                 |
 | `On Drop database method`         | No soportado                                                                                                                                                                                                                                                                                                           |
 
-|
+:::info
 
 Puede utilizar el comando [**Get application info**](https://doc.4d.com/4dv19R/help/command/en/page1599.html) para conocer el modo de ejecución actual en Windows.
 

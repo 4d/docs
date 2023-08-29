@@ -61,7 +61,7 @@ A new entity object contains a "copy" of all attributes of its parent dataclass,
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID is automatically filled
+//$entity.ID é automaticamente preenchido
 ```
 
 Atualmente, a entidade só existe na memória. To store it in the data file, you need to save it using the `save()` member method:
@@ -124,7 +124,7 @@ Lembre que se um grupo for criado não pode ser apagado. Se quiser desativar um 
 
 Para criar um gurpo:
 
-1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. The list of groups displays all the groups of the database.
+1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. A lista de grupos apresenta todos os grupos do banco de dados.
 
 2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  

@@ -614,7 +614,7 @@ Los marcadores se gestionan utilizando el submenú **Marcadores** del menú **M�
 - **Eliminar todo**: elimina todos los marcadores de la ventana en primer plano.
 - **Ir al siguiente** / **Ir al anterior**: permite navegar entre los marcadores de la ventana. Al seleccionar uno de estos comandos, el cursor se sitúa en el primer caracter de la línea asociada al marcador en cuestión. También puede utilizar los atajos de teclado **F3** (ir a la siguiente) o **Mayús+F3** (ir a la anterior).
 
-|
+:::info
 
 Puede utilizar marcadores como señalizadores de líneas que contengan un elemento [encontrado mediante una búsqueda](#find). En este caso, 4D añade automáticamente los marcadores. Para más información, consulte [Marcar todos](#bookmark-all).
 

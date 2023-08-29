@@ -11,7 +11,7 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Destacados
 
-
+- Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R3): lista de todos los errores que se han corregido en 4D v20 R3.
@@ -47,9 +47,12 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 
 4D v20 incluye una actualización de la librería ICU (ver abajo) que forzará una reconstrucción automática de los índices de tipo alpha, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
-:::caution 4D v20.1 index rebuild warning
+:::caution 4D v20.1 reconstrucción de índices y versiones cliente/servidor
 
-4D v20.1 includes a new ICU library update which will also force an automatic rebuild of indexes of type alpha, text, and object.
+4D v20.1 también incluye una actualización de la biblioteca ICU, que tiene las siguientes consecuencias:
+
+- It will force an automatic rebuild of indexes of type alpha, text, and object.
+- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
 
 :::
 

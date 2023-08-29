@@ -5,7 +5,7 @@ title: Visão Geral
 
 4D includes a full database backup and restore module.
 
-This module allows backing up a database currently in use without having to exit it. Cada cópia de segurança ou backup inclui a pasta de projeto, o arquivo de dados e qualquer arquivo ou pastas adicionais. These parameters are first set in the Database Settings.
+This module allows backing up a database currently in use without having to exit it. Cada cópia de segurança ou backup inclui a pasta de projeto, o arquivo de dados e qualquer arquivo ou pastas adicionais. Estes parâmetros são definidos primeiro nas definições da base de dados.
 
 Cópias de segurança ou backups podem ser começadas de forma manual ou de forma automatica em intervalores regulares sem qualquer intervenção do usuário. Comandos específicos da linguagem, assim como métodos de bancos de dados específicos, permitem integrar funções de backup em uma interface personalizada.
 

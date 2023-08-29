@@ -64,7 +64,7 @@ See [this example](#request-receiving-an-entity-as-parameter) and [this example]
 
 Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parameters in body:** ["Aguada","Paris"]
+**Parâmetros no corpo:** ["Aguada", "Paris"]
 
 All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
 
@@ -73,7 +73,7 @@ All JSON data types are supported in parameters, including JSON pointers. Dates 
 
 Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
 
-> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
+> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. O usuário pode então decidir guardar ou não a entidade no servidor.
 
 
 | Propriedades          | Tipo                                       | Descrição                                                                  |
@@ -105,10 +105,10 @@ The entity selection must have been defined beforehand using [$method=entityset]
 | Propriedades          | Tipo       | Descrição                                                                            |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------ |
 | Atributos da entidade | misto      | Opcional - Valores a modificar                                                       |
-| __DATASET             | String     | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __DATASET             | String     | Obrigatório - entitySetID (UUID) da seleção de entidades                             |
 | __ENTITIES            | Parâmetros | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
+Ver exemplo de[recepção de uma seleção de entidade](#receiving-an-entity-selection-as-parameter).
 
 
 ## Exemplos de petições
@@ -119,7 +119,7 @@ This database is exposed as a remote datastore on localhost (port 8111):
 
 ### Utilizar uma função de classe do datastore
 
-The US_Cities `DataStore` class provides an API:
+A classe de `DataStore` US_Cities fornece uma API:
 
 ```  
 // DataStore class Class extends DataStoreImplementation
@@ -158,7 +158,7 @@ Pode então executar este pedido:
 
 **POST** `127.0.0.1:8111/rest/City/getCity`
 
-Body of the request: ["Aguada"]
+Corpo do pedido: ["Aguada"]
 
 #### Resultados
 
@@ -475,7 +475,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 
 ### Receber uma seleção de entidade como parâmetro
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
+In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). Devolve as chaves primárias das entidades atualizadas.
 
 ```
 // Students class Class extends DataClass

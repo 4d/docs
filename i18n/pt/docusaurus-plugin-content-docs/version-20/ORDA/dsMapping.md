@@ -161,7 +161,7 @@ For example, consider the following partial database structure and the relation 
 All storage attributes will be automatically available:
 
 *   in the Project dataclass: "ID", "name", and "companyID"
-*   in the Company dataclass: "ID", "name", and "discount"
+*   na dataclass Company: "ID", "name" e "discount"
 
 In addition, the following relation attributes will also be automatically available:
 

@@ -40,7 +40,7 @@ Para ello, basta con seleccionar la barra de menús y elegir **Probar la barra d
 
 4D muestra una vista previa de la barra de menús así como de la pantalla de inicio. Puede desplazarse por los menús y submenús para ver su contenido. Sin embargo, estos menús no están activos. Para probar el funcionamiento de los menús y la barra de herramientas, debe utilizar el comando **Probar la aplicación** en el menú **Ejecutar**.
 
-|
+:::info
 
 Si la opción **Utilizar el modo SDI en Windows** está seleccionada en la página ["Interfaz" de la caja de diálogo Configuración](../settings/interface.md#display-windows), el menú **Probar aplicación** le permite probar su aplicación en [modo SDI o MDI](sdi/md) en Windows:
 

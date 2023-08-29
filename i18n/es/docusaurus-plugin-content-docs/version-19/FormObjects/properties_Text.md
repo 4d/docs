@@ -251,7 +251,7 @@ Ubicación horizontal del texto dentro del área que lo contiene.
 
 #### Objetos soportados
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) (all styles except Regular and Flat) - [Group Box](groupBox.md) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Radio Button](radio_overview.md) (all styles except Regular and Flat) - [Text Area](text.md)
+[Botón](button_overview.md) - [Casilla de verificación](checkbox_overview.md) (todos los estilos excepto Regular y Plano) - [Caja grupo](groupBox.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Botón radio](radio_overview.md) (todos los estilos excepto Regular y Plano) - [Área de texto](text.md)
 
 ---
 
@@ -282,7 +282,7 @@ Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical
 
 `List box de tipo colección o entity selection (selección de entidades)`
 
-Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. Se soportan las siguientes propiedades:
+Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. The following properties are supported:
 
 | Nombre de propiedad | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

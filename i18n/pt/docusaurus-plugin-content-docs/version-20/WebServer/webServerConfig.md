@@ -27,7 +27,7 @@ There are different ways to configure the 4D web server settings, depending on t
 
 Ativa e configura a cache da página Web.
 
-The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. Se encontrar a página, envia-a imediatamente. If not, 4D loads the page from disk and places it in the cache.
+The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes. When the cache is enabled, the 4D Web server looks for any static page requested by the browser in the cache first. Se encontrar a página, envia-a imediatamente. Se não, 4D carrega a página do disco e a coloca no cache.
 
 You can modify the size of the cache in the **Pages Cache Size** area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.
 > While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it. The [/4DSTATS] and [/4DHTMLSTATS] URLs allow you to also obtain information about the cache’s state.
@@ -56,7 +56,7 @@ With 4D in remote mode, these files must be located in the local resources folde
 | `WEB SET OPTION`                   | `Web character set`                                                      | Integer MIBEnum ou string Name |
 | Caixa de diálogos de configurações | [Página Opções (II) /Conjunto standard](../settings/web.md#standard-set) | Menu pop-up                    |
 
-Defines the set of characters to be used by the 4D web server. O valor padrão realmente depende da linguagem do SO.
+Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor padrão realmente depende da linguagem do SO.
 > This setting is also used for generating Quick Reports in HTML format .
 
 
@@ -98,7 +98,7 @@ Domain name or IP address from where external pages are allowed to send data req
 
 #### Métodos HTTP autorizados (propriedade methods)
 
-Accepted HTTP method(s) for the corresponding CORS host. São suportados os seguintes métodos HTTP:
+Método(s) HTTP aceite(s) para o host CORS correspondente. São suportados os seguintes métodos HTTP:
 
 - GET
 - HEAD
@@ -124,7 +124,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, 
 | objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
+Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 | Valor | Parâmetros                     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -240,7 +240,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
 
-Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).
+Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
 
 ## HTTP Compression Threshold
 
@@ -269,7 +269,7 @@ Número da porta IP (TCP) de escuta para HTTP. By default, 4D publishes a web ap
 From a web browser, you need to include the non-default HTTP port number into the address you enter for connecting to the web application. The address must have a suffix consisting of a colon followed by the port number. For example, if you are using the HTTP port number 8080, you will specify "123.4.567.89:8080".
 > **Warning**: If you use TCP port numbers other than the default numbers (80 for standard HTTP and 443 for HTTPS), be careful not to use port numbers that are defaults for other services that you might want to use simultaneously. For example, if you also plan to use the FTP protocol on your web server machine, do not use the TCP port 20 and 21, which are the default ports for that protocol. Ports numbers below 256 are reserved for well known services and ports numbers from 256 to 1024 are reserved for specific services originated on the UNIX platforms. For maximum security, specify a port number beyond these intervals (for example, in the 2000's or 3000's).
 
-If you specify 0, 4D will use the default HTTP port number 80.
+Se especificar 0, 4D usará o número de porta HTTP 80 por padrão.
 
 
 ## HTTP Trace
@@ -308,7 +308,7 @@ Listening IP port number for HTTPS connections via TLS. Por defeito, o valor é 
 
 Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
-Default: 480 minutes (pass 0 to restore the default value)
+Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 
 ## Tempo limite da sessão inativa
@@ -320,7 +320,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 Life duration (in minutes) of inactive sessions (duration set in cookie). No final do período, o cookie da sessão expira e não é mais enviada pelo cliente HTTP.
 
-Default: 480 minutes (pass 0 to restore the default value)
+Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 
 ## Endereço IP de escuta
@@ -333,7 +333,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
-By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers.
+By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. É, por exemplo, frequentemente o caso da maioria dos fornecedores de alojamento.
 
 Valores possíveis: Cadeia de endereços IP. Both IPv6 string formats (e.g. "2001:0db8:0000:0000:0000:ff00:0042:8329") and IPv4 string formats (e.g. "123.45.67.89") are supported.
 
@@ -355,7 +355,7 @@ Se o seu servidor 4D não parecer responder na porta definida, pode testar o end
 To avoid this confusion, we recommend using the [ ] notation whenever you combine an IPv6 address with a port number, for instance:
 
 ```code4d
-    [2001:0DB8::85a3:0:ac1f:8001]:8081 //IPv6 address with port 8081
+    [2001:0DB8::85a3:0:ac1f:8001]:8081 //endereço IPv6 com porta 8081
 ```
 
 ## Keep Session
@@ -379,9 +379,9 @@ Legacy session management enabling status for the 4D web server (deprecated).
 | `WEB SET OPTION`                   | `Web log recording`                                         |             |
 | Caixa de diálogos de configurações | [Log (type) page/Log Format](../settings/web.md#log-format) | Menu pop-up |
 
-Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
+Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. Por padrão, os pedidos não são registados (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 
-This setting allows you to select the format of this file. Os valores disponíveis são:
+Este parâmetro permite-lhe selecionar o formato deste ficheiro. Os valores disponíveis são:
 
 | Valor | Nome do formato         | Descrição                                                                                                                                                                                                                |
 | ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -389,7 +389,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
 | 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
-| 4     | Registo em formato WLF  | WebStar Log Format - To be customized in the Settings dialog box                                                                                                                                                         |
+| 4     | Registo em formato WLF  | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                             |
 
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
 
@@ -404,7 +404,7 @@ This setting allows you to select the format of this file. Os valores disponíve
 
 Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
-Por padrão, o valor é 100. You can set the number anywhere between 10 and 32000.
+Por padrão, o valor é 100. Pode definir o número entre 10 e 32000.
 
 
 ## Tamanho máximo do pedido
@@ -430,7 +430,7 @@ Valores possíveis: 500 000 a 2 147 483 648.
 
 Número máximo de sessões simultâneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
-Default value: 100 (pass 0 to restore the default value).
+Valor por defeito: 100 (passar 0 para repor o valor por defeito).
 
 
 ## Versão TLS mínima
@@ -501,7 +501,7 @@ In return, you must make sure in this case to systematically initialize the vari
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
 
-To do so, put the ROBOTS.TXT file at the server's root. This file must be structured in the following manner:
+To do so, put the ROBOTS.TXT file at the server's root. Este ficheiro deve ser estruturado da seguinte forma:
 
 ```4d
    User-Agent: <name>
@@ -529,7 +529,7 @@ Otro ejemplo:
    Disallow: /
 ```
 
-In this case, robots are not allowed to access the entire site.
+Neste caso, os robots não estão autorizados a aceder a todo o sítio.
 
 
 ## Pasta raiz
@@ -546,7 +546,7 @@ Moreover, the HTML root folder defines, on the web server hard drive, the hierar
 
 By default, 4D defines a HTML Root folder named **WebFolder**. If it does not already exist, the HTML root folder is physically created on disk at the moment the Web server is launched for the first time. A pasta raiz é criada:
 - with 4D (local) and 4D Server, at the same level as the [Project folder](Project/architecture.md#project-folder).
-- with 4D in remote mode, in the local resources folder.
+- com 4D em modo remoto, na pasta de recursos locais.
 
 You can designate another default HTML root folder by entering its pathname.
 
@@ -579,7 +579,7 @@ Session management enabling status for the 4D web server. Session mechanism is d
 | objeto webServer      | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`      | `Web session cookie domain`                                        |             |
 
-Value of the "domain" field of the session cookie. Useful for controlling the scope of the session cookies. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
+Value of the "domain" field of the session cookie. Útil para controlar o âmbito dos cookies de sessão. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
 
 
 ## Nome do cookie de sessão
@@ -664,7 +664,7 @@ The **Use Keep-Alive Connections** option enables or disables keep-alive TCP con
 
 The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.
 
-In some cases, other optimized internal functions may be invoked. Keep-alive connections are useful mainly for static pages.
+In some cases, other optimized internal functions may be invoked. As ligações persistentes são úteis principalmente para páginas estáticas.
 
 Two options allow you to set how the keep-alive connections work:
 

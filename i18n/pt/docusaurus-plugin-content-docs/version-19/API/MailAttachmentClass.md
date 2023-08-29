@@ -42,7 +42,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 Comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->permite criar um objeto anexo que adicione um objeto [Email](EmailObjectClass.md#email-object)<!-- END REF -->.
 
-You can pass either a path or a Blob to define the attachment.
+Pode passar um caminho ou um Blob para definir o anexo.
 
 - If you use a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. Pode passar um nome de rota completo ou um nome de arquivo simples (em cujo caso 4D vai pesquisar para o arquivo no mesmo diretório como o arquivo projeto).
 

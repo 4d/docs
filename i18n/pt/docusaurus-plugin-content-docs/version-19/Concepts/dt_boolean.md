@@ -7,7 +7,7 @@ Um campo booleano, variável ou expressão pode ser VERDADEIRO ou FALSO.
 
 ## Funções booleanas
 
-4D fornece as funções booleanas `True`, `False`, e `Not` no tema dedicado **Boolean** . For more information, see the descriptions of these commands
+4D fornece as funções booleanas `True`, `False`, e `Not` no tema dedicado **Boolean** . Para obter mais informações, consulte as descrições desses comandos
 
 ### Exemplo
 

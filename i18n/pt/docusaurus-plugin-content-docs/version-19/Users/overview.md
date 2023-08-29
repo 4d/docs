@@ -3,7 +3,7 @@ id: overview
 title: Visão Geral
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
+If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. É igualmente essencial garantir a segurança dos dados sensíveis. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
 
 > Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
 

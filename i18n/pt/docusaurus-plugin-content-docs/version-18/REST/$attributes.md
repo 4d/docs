@@ -3,27 +3,27 @@ id: attributes
 title: "$attributes"
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+Permite selecionar os atributos relacionados que deseja obter da classe de dados (*por exemplo*, `Company(1)?$attributes=employees.lastname` ou `Employee?$attributes=employer.name`).
 
 
 ## Descrição
 
-When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+Quando tiver atributos de relação numa classe de dados, utilize `$attributes` para definir o caminho dos atributos cujos valores pretende obter para a entidade ou entidades relacionadas.
 
-You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity selection (*e.g.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
-
-
-- If `$attributes` is not specified in a query, or if the "*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
-
-- If `$attributes` is specified for **related entity** attributes:
-    - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
-    - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
-    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
+É possível aplicar `$attributes` a uma entidade (*por exemplo*, People(1)) ou a uma seleção de entidades (*por exemplo*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
 
 
-- If `$attributes` is specified for **related entities** attributes:
-    - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
-    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
+- Se `$attributes` não for especificado numa consulta, ou se for passado o valor "*", são extraídos todos os atributos disponíveis. **Os atributos da entidade relacionada** são extraídos de forma simples: um objeto com a propriedade `__KEY` (chave primária) e `URI`. Atributos de **Entidades relacionadas**  não são extraídos.
+
+- Se `$attributes` for especificado para atributos de **entidade relacionada**:
+    - `$attributes=relatedEntity`: a entidade relacionada é devolvida com um formulário simples (propriedade __KEY diferida (chave primária)) e `URI`.
+    - `$attributes=relatedEntity.*`: todos os atributos da entidade relacionada são devolvidos
+    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: só são devolvidos os atributos da entidade relacionada.
+
+
+- Se `$attributes` for especificado para **entidades relacionadas** atributos:
+    - `$attributes=relatedEntities.*`: todas as propriedades de todas as entidades relacionadas são devolvidas
+    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: só são devolvidos os atributos das entidades relacionadas.
 
 
 
