@@ -325,7 +325,7 @@ Este estilo de botón de casilla de selección se puede utilizar para añadir un
 
   ![](../assets/en/FormObjects/checkbox_collapse_mac.png)
 
-|
+:::info
 
 El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
@@ -360,7 +360,7 @@ En macOS y Windows, una casilla de selección con el estilo de botón "Divulgaci
 
     ![](../assets/en/FormObjects/checkbox_disclosure_mac.png)
 
-|
+:::info
 
 El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
