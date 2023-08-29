@@ -37,7 +37,7 @@ Passez la formule 4D View Pro que vous souhaitez nommer dans *vpFormula*. Pour p
 
 Passez le nouveau nom de la formule dans *name*. Si le nom est déjà utilisé dans le même scope, la nouvelle formule nommée remplace la formule existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-Vous pouvez passer un objet avec des propriétés additionnelles pour la plage nommée dans *options*. Les propriétés suivantes sont prises en charge :
+Vous pouvez passer un objet avec des propriétés additionnelles pour la plage nommée dans *options*. The following properties are supported:
 
 | Propriété | Type   | Description                                                                                                                                                                                                                                                                                                                                                                    |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -77,7 +77,7 @@ La commande `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->
 
 Dans *rangeObj*, passez la plage que vous souhaitez nommer, et passez le nouveau nom de la plage dans *name*. Si le nom est déjà utilisé dans le même scope, la nouvelle plage nommée remplace la plage existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-Vous pouvez passer un objet avec des propriétés supplémentaires pour la plage nommée dans *options*. Les propriétés suivantes sont prises en charge :
+Vous pouvez passer un objet avec des propriétés supplémentaires pour la plage nommée dans *options*. The following properties are supported:
 
 | Propriété | Type   | Description                                                                                                                                                                                                                                                                                                                                                                |
 | --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1160,7 +1160,7 @@ Dans le paramètre *rangeObj*, passez un objet contenant une plage dans laquelle
 
 Le paramètre *searchValue* vous permet de passer le texte à rechercher dans *rangeObj*.
 
-Vous pouvez passer le paramètre optionnel *searchCondition* pour préciser le fonctionnement de la recherche. Les propriétés suivantes sont prises en charge :
+Vous pouvez passer le paramètre optionnel *searchCondition* pour préciser le fonctionnement de la recherche. The following properties are supported:
 
 | Propriété   | Type    | Description                                                                                                                                                                                                                          |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -3485,7 +3485,7 @@ VP NEW DOCUMENT("myVPArea")
 
 The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
 
-Dans *fontObj*, passez un objet contenant les propriétés de police. Les propriétés suivantes sont prises en charge :
+Dans *fontObj*, passez un objet contenant les propriétés de police. The following properties are supported:
 
 | Propriété | Type | Description                                                                                                        | Possible values                                                                                                                                                                                                                                                                                                           | Obligatoire |
 | --------- | ---- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
