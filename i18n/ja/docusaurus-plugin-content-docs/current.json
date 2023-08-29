@@ -196,7 +196,7 @@
     "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R2/4D/20-R2/4D-Widgets.100-6439460.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
-    "message": "4D WritePro インターフェース",
+    "message": "4D WritePro Interface",
     "description": "The label for link 4D Write Pro Interface in sidebar docs, linking to https://github.com/4d/4D-WritePro-Interface"
   },
   "sidebar.docs.link.Go Mobile": {
