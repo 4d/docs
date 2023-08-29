@@ -1,6 +1,6 @@
 ---
 id: writeprointerface
-title: 4D WritePro インターフェース
+title: 4D WritePro Interface
 ---
 
 4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。
@@ -162,25 +162,25 @@ JSONファイルの簡単な一例を以下に示します:
 
 JSON形式のトランスレーションファイルには、以下の属性が含まれます:
 
-| 属性        | タイプ        | 必須 | 説明                                                                                    |
-|:--------- |:---------- |:-- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |    | Collection of translated table objects                                                |
-| fields    | Collection |    | Collection of translated field objects                                                |
-| formulas  | Collection |    | Collection of translated formula objects                                              |
-| fileNames | Collection |    | Collection of translated fileName objects (applicable to the theme and template name) |
+| 属性        | タイプ        | 必須 | 説明                                           |
+|:--------- |:---------- |:-- |:-------------------------------------------- |
+| tables    | Collection |    | 翻訳されたテーブルオブジェクトのコレクション                       |
+| fields    | Collection |    | 翻訳されたフィールドオブジェクトのコレクション                      |
+| formulas  | Collection |    | 翻訳されたフォーミュラオブジェクトのコレクション                     |
+| fileNames | Collection |    | 翻訳された fileNameオブジェクトのコレクション (テーマとテンプレート名に適用) |
 
-Whitin each one of these attribute, the translation object includes the following attributes:
+これら属性に含まれるコレクションの各オブジェクト要素は以下の属性を含みます:
 
-| 属性          | タイプ  | 必須 | 説明                                      |
-|:----------- |:---- |:-- |:--------------------------------------- |
-| original    | Text | ○  | Original text intended for translation  |
-| translation | Text | ○  | Translated version of the original text |
+| 属性          | タイプ  | 必須 | 説明         |
+|:----------- |:---- |:-- |:---------- |
+| original    | Text | ○  | 翻訳の対象となる原文 |
+| translation | Text | ○  | 原文を翻訳したもの  |
 
-Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
+これらの属性を定義することで、原文と翻訳されたコンテンツ間の適切な対応が確保されます。
 
-If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
+テンプレート名やフォーミュラ名 (ブレーク行、キャリーオーバー行、追加の行) がトランスレーションファイルに存在する場合、表ウィザードではその翻訳が表示されます。 また、トランスレーションファイル内で定義されたテーブルだけが表ウィザードに (翻訳されて) 表示されます。
 
-The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+ユーザーがインターフェースでテーブルを選択したときには、トランスレーションファイルは追加の役割を果たします。 具体的には、ユーザーに提案されるテーブルやフィールドをフィルターします。 たとえば、テーブルID を非表示にするなど、この動作は `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに似ています。
 
 ##### 例題
 
@@ -188,74 +188,74 @@ The translation file serves an additional role when a user selects a table in th
 {
     "tables": [{
             "original": "People",
-            "translation": "Personne"
+            "translation": "従業員"
         }
     ],
     "fields": [{
             "original": "lastname",
-            "translation": "Nom"
+            "translation": "名字"
         }, {
             "original": "firstname",
-            "translation": "Prénom"
+            "translation": "名前"
         }, {
             "original": "salary",
-            "translation": "Salaire"
+            "translation": "給与"
         }, {
             "original": "company",
-            "translation": "Société"
+            "translation": "会社"
         }
     ],
     "formulas": [{
             "original": "Sum of salary",
-            "translation": "Somme des salaires"
+            "translation": "給与の合計"
         }
     ]
 }
 
 ```
 
-#### Theme files
+#### テーマファイル
 
-A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
+4D WritePro Interface コンポーネントには、"Arial"、"CourierNew"、"YuGothic" などのテーマがデフォルトで用意されており、"Blue" や "Green" など複数のバリエーションが用意されています。 しかし、プロジェクト内の "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" フォルダーにテーマファイルを配置することで、独自のテーマを作成することができます。
 
-The theme file in JSON format contains the following attributes:
+JSON形式のテーマファイルには、以下の属性が含まれます:
 
-| 属性      | タイプ    | 必須 | 説明                                                                                                                                    |
-|:------- |:------ |:-- |:------------------------------------------------------------------------------------------------------------------------------------- |
-| default | Object |    | Object containing the default style applicable to all rows.                                                                           |
-| table   | Object |    | Object containing the style definition applicable to the table.                                                                       |
-| rows    | Object |    | Object containing the style definition applicable to all rows.                                                                        |
-| cells   | Object |    | Object containing the style definition applicable to all cells.                                                                       |
-| header1 | Object |    | Object containing the style definition applicable to the first header row.                                                            |
-| header2 | Object |    | Object containing the style definition applicable to the second header row.                                                           |
-| header3 | Object |    | Object containing the style definition applicable to the third header row.                                                            |
-| header4 | Object |    | Object containing the style definition applicable to the fourth header row.                                                           |
-| header5 | Object |    | Object containing the style definition applicable to the fifth header row.                                                            |
-| headers | Object |    | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
-| data    | Object |    | Object containing the style definition applicable to the repeated data row.                                                           |
-| break1  | Object |    | Object containing the style definition applicable to the first break row.                                                             |
-| break2  | Object |    | Object containing the style definition applicable to the second break row.                                                            |
-| break3  | Object |    | Object containing the style definition applicable to the third break row.                                                             |
-| break4  | Object |    | Object containing the style definition applicable to the fourth break row.                                                            |
-| break5  | Object |    | Object containing the style definition applicable to the fifth break row.                                                             |
-| breaks  | Object |    | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
-| bcor    | Object |    | Object containing the style definition applicable to the bottom carry-over row.                                                       |
+| 属性      | タイプ    | 必須 | 説明                                                             |
+|:------- |:------ |:-- |:-------------------------------------------------------------- |
+| default | Object |    | すべての行に適用されるデフォルトスタイルを格納したオブジェクト。                               |
+| table   | Object |    | 表組みに適用されるスタイル定義を格納したオブジェクト。                                    |
+| rows    | Object |    | すべての行に適用されるスタイル定義を格納したオブジェクト。                                  |
+| cells   | Object |    | すべてのセルに適用されるスタイル定義を格納したオブジェクト。                                 |
+| header1 | Object |    | 先頭のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                               |
+| header2 | Object |    | 2つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                              |
+| header3 | Object |    | 3つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                              |
+| header4 | Object |    | 4つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                              |
+| header5 | Object |    | 5つ目のヘッダー行に適用されるスタイル定義を格納したオブジェクト。                              |
+| headers | Object |    | header1、header2など専用のスタイル定義がない場合に、ヘッダー行に適用されるスタイル定義を格納したオブジェクト。 |
+| data    | Object |    | 繰り返し行に適用されるスタイル定義を格納したオブジェクト。                                  |
+| break1  | Object |    | 1つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                              |
+| break2  | Object |    | 2つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                              |
+| break3  | Object |    | 3つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                              |
+| break4  | Object |    | 4つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                              |
+| break5  | Object |    | 5つ目のブレーク行に適用されるスタイル定義を格納したオブジェクト。                              |
+| breaks  | Object |    | break1、break2など専用のスタイル定義がない場合に、ブレーク行に適用されるスタイル定義を格納したオブジェクト。   |
+| bcor    | Object |    | 下部キャリーオーバー行に適用されるスタイル定義を格納したオブジェクト。                            |
 
 
-For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
+JSONファイルで設定する各属性に対して、以下の WP属性を定義することができます ([対応する WP定数](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.ja.html) を指定します):
 
-| WP attributes   | Corresponding WP constant |
-|:--------------- |:------------------------- |
-| textAlign       | wk text align             |
-| backgroundColor | wk background color       |
-| borderColor     | wk border color           |
-| borderStyle     | wk border style           |
-| borderWidth     | wk border width           |
-| font            | wk font                   |
-| color           | wk font color             |
-| fontFamily      | wk font family            |
-| fontSize        | wk font size              |
-| padding         | wk padding                |
+| WP 属性           | 対応する WP定数           |
+|:--------------- |:------------------- |
+| textAlign       | wk text align       |
+| backgroundColor | wk background color |
+| borderColor     | wk border color     |
+| borderStyle     | wk border style     |
+| borderWidth     | wk border width     |
+| font            | wk font             |
+| color           | wk font color       |
+| fontFamily      | wk font family      |
+| fontSize        | wk font size        |
+| padding         | wk padding          |
 
 ##### 例題
 
@@ -297,4 +297,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### 参照
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - 表ウィザード (チュートリアル動画)](https://www.youtube.com/watch?v=2ChlTju-mtM)
