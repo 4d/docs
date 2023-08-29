@@ -33,7 +33,7 @@ Pode utilizar qualquer uma das seguintes palavras-chave:
 
 ## Exemplo
 
-If you want to get all the computations for an attribute of type Number, you can write:
+Se quiser obter todos os cálculos para um atributo do tipo Número, pode escrever:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
@@ -67,7 +67,7 @@ Se quiser obter todos os cálculos para um atributo do tipo String, pode escreve
 }
 ````
 
-If you want to just get one calculation on an attribute, you can write the following:
+Se pretender obter apenas um cálculo num atributo, pode escrever o seguinte:
 
  `GET  /rest/Employee/salary/?$compute=sum`
 
@@ -76,7 +76,7 @@ If you want to just get one calculation on an attribute, you can write the follo
 `235000`
 
 
-If you want to perform a calculation on an Object attribute, you can write the following:
+Se pretender efetuar um cálculo num atributo de um objeto, pode escrever o seguinte:
 
  `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
