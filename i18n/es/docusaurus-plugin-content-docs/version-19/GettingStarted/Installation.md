@@ -43,7 +43,7 @@ Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la ac
 
 ¡Disfrute de su experiencia 4D!
 
-|
+:::info
 
 ¿Necesita activar licencias específicas? Visite la página [Gestión de licencias 4D](../Admin/licenses.md).
 

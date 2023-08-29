@@ -851,7 +851,7 @@ The `.query()` function <!-- REF #DataClassClass.query().Summary -->searches for
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
-**queryString parameter**
+#### queryString parameter
 
 The *queryString* parameter uses the following syntax:
 
@@ -863,7 +863,7 @@ attributePath|formula comparator value
 
 where:
 
-* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass
+* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. In case of an attribute path whose type is `Collection`, `[]` notation is used to handle all the occurences (for example `children[].age`).
 > *You cannot use directly attributes whose name contains special characters such as ".", "\[ ]", or "=", ">", "#"..., because they will be incorrectly evaluated in the query string. If you need to query on such attributes, you must consider using placeholders, which allow an extended range of characters in attribute paths (see* **Using placeholders** *below).*
 
 * **formula**: a valid formula passed as `Text` or `Object`. The formula will be evaluated for each processed entity and must return a boolean value. Within the formula, the entity is available through the `This` object.
@@ -879,19 +879,19 @@ where:
 
 * **comparator**: symbol that compares *attributePath* and *value*. The following symbols are supported:
 
- | Comparison                           | Symbol(s)   | Kommentar                                                                                                      |
- | ------------------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------- |
- | Equal to                             | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                           |
- |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic              |
- | Not equal to                         | #, !=       | Supports the wildcard (@)                                                                                      |
- |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
- | Kleiner als                          | <           |                                                                                                                |
- | Größer als                           | >           |                                                                                                                |
- | Kleiner als oder gleich              | <=          |                                                                                                                |
- | Größer als oder gleich               | >=          |                                                                                                                |
- | Included in                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
- | Not condition applied on a statement | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators                     |
- | Mit Schlüsselwort                    | %           | Keywords can be used in attributes of string or picture type                                                   |
+ | Comparison                           | Symbol(s)   | Kommentar                                                                                                                                                             |
+ | ------------------------------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+ | Equal to                             | =, ==       | Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.                                                                                  |
+ |                                      | ===, IS     | Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic                                                                     |
+ | Not equal to                         | #, !=       | Supports the wildcard (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).                                          |
+ |                                      | !==, IS NOT | Considers the @ as a standard character                                                                                                                               |
+ | Not condition applied on a statement | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)). |
+ | Kleiner als                          | <           |                                                                                                                                                                       |
+ | Größer als                           | >           |                                                                                                                                                                       |
+ | Kleiner als oder gleich              | <=          |                                                                                                                                                                       |
+ | Größer als oder gleich               | >=          |                                                                                                                                                                       |
+ | Included in                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)                                                        |
+ | Mit Schlüsselwort                    | %           | Keywords can be used in attributes of string or picture type                                                                                                          |
 
 * **value**: the value to compare to the current value of the property of each entity in the entity selection or element in the collection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property. When using a constant value, the following rules must be respected:
   * **text** type constant can be passed with or without simple quotes (see **Using quotes** below). To query a string within a string (a "contains" query), use the wildcard symbol (@) in value to isolate the string to be searched for as shown in this example: "@Smith@". The following keywords are forbidden for text constants: true, false.
@@ -909,7 +909,7 @@ where:
 
 * **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order. >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-**Using quotes**
+#### Using quotes
 
 When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Beispiel:
 
@@ -918,7 +918,7 @@ When you use quotes within queries, you must use single quotes ' ' inside the qu
 ```
 > Single quotes (') are not supported in searched values since they would break the query string. For example "comp.name = 'John's pizza' " will generate an error. If you need to search on values with single quotes, you may consider using placeholders (see below).
 
-**Using parenthesis**
+#### Using parenthesis
 
 You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
 
@@ -926,7 +926,7 @@ You can use parentheses in the query to give priority to the calculation. For ex
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
 
-**Using placeholders**
+#### Using placeholders
 
 4D allows you to use placeholders for *attributePath*, *formula* and *value* arguments within the *queryString* parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.
 
@@ -966,11 +966,11 @@ Using placeholders in queries **is recommended** for the following reasons:
 3. It allows the use of variables or expressions in query arguments. Beispiele:
 
  ```4d
-  $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
+ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
  $result2:=$col.query("company.name = :1";"John's Pizzas")
  ```
 
-**Looking for null values**
+#### Looking for null values
 
 When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
@@ -984,7 +984,62 @@ You will not get the expected result because the null value will be evaluated by
  $vSingles:=ds.Person.query("spouse = null") //correct syntax
 ```
 
-**Linking collection attribute query arguments**
+#### Not equal to in collections
+
+When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). For example, with the following entities:
+
+```
+Entity 1:
+ds.Class.name: "A"
+ds.Class.info:
+    { "coll" : [ {
+                "val":1,
+                "val":1
+            } ] }
+
+Entity 2:
+ds.Class.name: "B"
+ds.Class.info:
+    { "coll" : [ {
+                "val":1,
+                "val":0
+            } ] }
+
+Entity 3:
+ds.Class.name: "C"
+ds.Class.info:
+    { "coll" : [ {
+                "val":0,
+                "val":0
+            } ] }
+```
+
+Consider the following results:
+
+```4d
+ds.Class.query("info.coll[].val = :1";0) 
+// returns B and C
+// finds "entities with 0 in at least one val property"
+
+ds.Class.query("info.coll[].val != :1";0)
+// returns A only
+// finds "entities where all val properties are different from 0"
+// which is the equivalent to 
+ds.Class.query(not("info.coll[].val = :1";0)) 
+```
+
+If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
+
+```4d
+ds.Class.query("info.coll[a].val != :1";0)  
+// returns A and B
+// finds "entities where at least one val property is different from 0"
+```
+
+You can use any letter from the alphabet as the `[a]` notation.
+
+
+#### Linking collection attribute query arguments
 
 :::info
 
@@ -1039,7 +1094,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 ... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
 
 
-**Queries in many-to-many relations**
+#### Queries in many-to-many relations
 
 ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. For example, take a look at the following structure:
 
@@ -1071,7 +1126,9 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 // $es contains movies (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
 
-**formula parameter**
+
+
+#### formula parameter
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
 
@@ -1082,7 +1139,7 @@ The formula must have been created using the [`Formula`](FunctionClass.md#formul
 * if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 > For security reasons, formula calls within `query()` functions can be disallowed. See *querySettings* parameter description.
 
-**Passing parameters to formulas**
+#### Passing parameters to formulas
 
 Any *formula* called by the `query()` class function can receive parameters:
 
@@ -1100,7 +1157,7 @@ Additional examples are provided in example 3.
 
 **4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
 
-**querySettings parameter**
+#### querySettings parameter
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
@@ -1114,9 +1171,9 @@ In the *querySettings* parameter, you can pass an object containing additional o
 | queryPlan     | Boolean | In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query()` and `dataClass.query()` functions.                                                                                 |
 | queryPath     | Boolean | In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false. **Note**: This property is supported only by the `entitySelection.query()` and `dataClass.query()` functions.               |
 
-**About queryPlan and queryPath**
+#### About queryPlan and queryPath
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. Query paths also contain the number of entities found and the time required to execute each search criterion. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
 
 For example, if you execute the following query:
 

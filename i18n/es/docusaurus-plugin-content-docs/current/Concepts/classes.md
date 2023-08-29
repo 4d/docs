@@ -364,7 +364,7 @@ El tipo de propiedad puede ser uno de los siguientes tipos soportados:
 | `cs.<className>`                   | Objeto del nombre de la clase usuario                            |
 | `cs.<namespace>.<className>` | Objeto del nombre de la clase del componente `<namespace>` |
 
-|
+:::info
 
 La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class Constructor`.
 

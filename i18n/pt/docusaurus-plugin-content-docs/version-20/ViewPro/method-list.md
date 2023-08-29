@@ -37,7 +37,7 @@ Passar a fórmula 4D View Pro que deseja nomear em *vpFormula*. Para obter infor
 
 Passar o novo nome da fórmula em *name*. Se o nome já estiver a ser utilizado no mesmo âmbito, a nova fórmula nomeada substitui a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-Pode passar um objeto com propriedades adicionais para a fórmula nomeada em *options*. As propriedades abaixo são compatíveis:
+Pode passar um objeto com propriedades adicionais para a fórmula nomeada em *options*. The following properties are supported:
 
 | Propriedade | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                 |
 | ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ O comando `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->cr
 
 Em *rangeObj*, passe o intervalo que pretende nomear e passe o novo nome para o intervalo em *name*. Se o nome já estiver a ser utilizado no mesmo âmbito, o novo intervalo nomeado substitui o existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-Pode passar um objeto com propriedades adicionais para o intervalo nomeado em *options*. As propriedades abaixo são compatíveis:
+Pode passar um objeto com propriedades adicionais para o intervalo nomeado em *options*. The following properties are supported:
 
 | Propriedade | Tipo   | Descrição                                                                                                                                                                                                                                                                                                                                                        |
 | ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1151,7 +1151,7 @@ In the *rangeObj* parameter, pass an object containing a range to search.
 
 The *searchValue* parameter lets you pass the text to search for within the *rangeObj*.
 
-You can pass the optional *searchCondition* parameter to specify how the search is performed. As propriedades abaixo são compatíveis:
+You can pass the optional *searchCondition* parameter to specify how the search is performed. The following properties are supported:
 
 | Propriedade | Tipo       | Descrição                                                                                                                                                                                                        |
 | ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3461,7 +3461,7 @@ VP NEW DOCUMENT("myVPArea")
 
 O comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
 
-In *fontObj*, pass an object containing the font properties. As propriedades abaixo são compatíveis:
+In *fontObj*, pass an object containing the font properties. The following properties are supported:
 
 | Propriedade | Tipo | Descrição                                                                                                           | Valores possíveis                                                                                                                                                                                                                                                                                                        | Obrigatório |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |

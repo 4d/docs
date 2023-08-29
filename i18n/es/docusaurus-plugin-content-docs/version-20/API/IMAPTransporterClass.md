@@ -1714,7 +1714,7 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | flags          | text   | Lista de banderas utilizadas actualmente para el buzón, separadas por espacios                                                                        |
 | permanentFlags | text   | Lista de banderas que el cliente puede cambiar permanentemente (excepto el indicador \Recent, que gestiona el servidor IMAP), separados por espacios |
 
-|
+:::info
 
 Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el servidor soporta [banderas personalizadas](#addflags).
 

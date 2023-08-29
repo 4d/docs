@@ -134,7 +134,7 @@ Este estilo de botón se puede utilizar para añadir un icono estándar contraer
 
 ![](../assets/en/FormObjects/checkbox_collapse.png)
 
-|
+:::info
 
 El estilo Contraer/Desplegar se denomina "disclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 
@@ -147,7 +147,7 @@ El estilo de botón radio de divulgación muestra el botón radio como un botón
 
 ![](../assets/en/FormObjects/checkbox_disclosure.png)
 
-|
+:::info
 
 El estilo Disclosure se denomina "roundedDisclosure" en la [gramática JSON del estilo de botón](properties_TextAndPicture.md#button-style).
 

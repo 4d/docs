@@ -60,7 +60,7 @@ Binding the same variable or expression to your subform container and other obje
 
 En el formulario padre, ambos objetos (área de entrada y contenedor subformulario) ***tienen el mismo valor que ***Variable o Expresión******. Puede ser una variable (por ejemplo, `parisTime`), o una expresión (por ejemplo, `Form.parisTime`).
 
-|
+:::info
 
 Para mostrar una hora estática, debe utilizar el [tipo de datos](properties_DataSource.md#data-type-expression-type) apropiado para la [variable o la expresión](properties_Object.md#variable-or-expression):
 

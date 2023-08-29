@@ -276,7 +276,7 @@ Esta propiedad también puede ser manejada por los comandos [OBJECT Get vertical
 
 `List box de tipo colección o entity selection (selección de entidades)`
 
-Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. Se soportan las siguientes propiedades:
+Indica una expresión o una variable que se evaluará para cada línea mostrada. Permite definir todo un conjunto de atributos texto de las líneas. Debe pasar una **variable objeto** o una **expresión que devuelva un objeto**. The following properties are supported:
 
 | Nombre de propiedad         | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

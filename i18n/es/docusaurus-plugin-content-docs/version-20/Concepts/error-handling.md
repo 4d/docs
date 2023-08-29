@@ -90,7 +90,7 @@ Dentro de un método de gestión de errores personalizado, tiene acceso a varios
   - `Error line` (entero largo): número de línea del método que ha provocado el error
   - `Error formula` (texto): fórmula del código 4D (texto bruto) que está en el origen del error.
 
-|
+:::info
 
 4D mantiene automáticamente una serie de variables denominadas **variables sistema**, que responden a diferentes necesidades. Consulte el *manual de referencia del lenguaje 4D*.
 

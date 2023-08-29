@@ -282,7 +282,7 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 `List box de type collection ou entity selection (sélection d'entité)`
 
-Indique une expression ou une variable qui sera évaluée pour chaque ligne affichée. Elle permet de définir un ensemble d'attributs texte des lignes. Vous devez passer une **variable objet** ou une **expression qui retourne un objet**. Les propriétés suivantes sont prises en charge :
+Indique une expression ou une variable qui sera évaluée pour chaque ligne affichée. Elle permet de définir un ensemble d'attributs texte des lignes. Vous devez passer une **variable objet** ou une **expression qui retourne un objet**. The following properties are supported:
 
 | Nom de propriété | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

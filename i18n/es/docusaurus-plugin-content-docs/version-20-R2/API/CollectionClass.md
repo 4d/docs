@@ -186,7 +186,7 @@ El comando `New shared collection` <!-- REF #_command_.New shared collection.Sum
 
 La adición de un elemento a esta colección utilizando el operador de asignación debe estar rodeada por la estructura [`Use...End use`](Concepts/shared.md#useend-use), de lo contrario se genera un error (esto no es necesario cuando se añaden elementos utilizando funciones como [`push()`](#push) o [`map()`](#map) porque activan automáticamente una estructura interna *Use...End use*). Sin embargo, es posible leer un elemento sin una estructura *Use...End use*.
 
-|
+:::info
 
 Para más información sobre las colecciones compartidas, consulte la página [Objetos y colecciones compartidos](Concepts/shared.md).
 
