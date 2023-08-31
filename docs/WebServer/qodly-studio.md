@@ -171,7 +171,7 @@ Renderer buttons are displayed only when the [configuration options](#enabling-r
 
 ## Using Qodly Studio
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio).
+The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio/overview.md).
 
 You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
 
@@ -334,6 +334,12 @@ To avoid using more licenses than necessary, we recommend doing one of the follo
 - Ensure the Qodly Studio and your database are reached on the same URL scheme.
 
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server. 
+
+
+## Known issues
+
+- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file. 
+
 
 ## Hello, World
 
