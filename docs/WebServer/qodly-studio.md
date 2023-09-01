@@ -36,7 +36,9 @@ The recommended resolution is 1920x1080.
 
 #### 4D application
 
-Qodly Studio only works with 4D projects (binary databases are not supported).
+- Development: 4D v20 R2 or higher
+- Deployment: 4D Server v20 R2 or higher
+- Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
 ### Enabling access to Qodly Studio
@@ -185,13 +187,29 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ||Qodly Studio for 4D developers using 4D IDE|Qodly Studio for Qodly developers|
 |---|---|---|
-|View and edit tables (dataclasses), attributes and relations|4D Structure Editor|Qodly Studio Model Editor| 
+|View and edit tables (dataclasses), attributes and relations|4D Structure Editor(1)|Qodly Studio Model Editor| 
 |Webforms|Qodly Studio Webform Editor|Qodly Studio Webform Editor| 
 |Desktop forms|4D IDE|*not supported*| 
 |Programming language|4D Language featuring ORDA|QodlyScript featuring ORDA| 
-|Coding IDE|4D IDE code editor/VS Code with 4D extension|Qodly Studio code editor| 
+|Coding IDE|4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2)|Qodly Studio code editor| 
 |Debugger|4D IDE debugger|Qodly Studio debugger| 
 |REST/Web roles and privileges|roles.json direct edit/Qodly Studio roles and privileges editor|Qodly Studio role and privileges editor| 
+
+(1) If you click on the **Model** button in Qodly Studio, nothing happens.
+(2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
+
+
+### Project management
+
+In accordance with the management of 4D projects, only the following usages are supported:
+
+- development with Qodly Studio must be done using **4D** (single-user).
+- deployment of 4D applications powered with Qodly webforms must be done using **4D Server**. 
+
+
+### Known issue
+
+- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file. 
 
 
 ### From QodlyScript to 4D Language
@@ -330,15 +348,10 @@ For more information on the `SameSite` attribute, check out [this blog post](htt
 To avoid using more licenses than necessary, we recommend doing one of the following:
 
 - Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
-
 - Ensure the Qodly Studio and your database are reached on the same URL scheme.
-
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server. 
 
 
-## Known issues
-
-- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file. 
 
 
 ## Hello, World
