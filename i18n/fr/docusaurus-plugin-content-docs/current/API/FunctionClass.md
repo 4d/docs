@@ -250,18 +250,20 @@ Appeler une formule à l'aide de la notation objet :
 
 | Version | Modifications                                             |
 | ------- | --------------------------------------------------------- |
+| v20 R3  | Support of *context* parameter                            |
 | v17 R6  | Renommée : New formula from string -> Formula from string |
 | v17 R3  | Ajout                                                     |
 
 </details>
 
-<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<br/>**Formula from string**( *formulaString* : Text ; *context* : Longint ) : 4D.Function<!-- END REF -->
 
 
 <!-- REF #_command_.Formula from string.Params -->
-| Paramètres    | Type        |    | Description                                                   |
-| ------------- | ----------- |:--:| ------------------------------------------------------------- |
-| formulaString | Text        | -> | Formule texte à retourner comme objet                         |
+| Paramètres    | Type        |    | Description                                                                 |
+| ------------- | ----------- |:--:| --------------------------------------------------------------------------- |
+| formulaString | Text        | -> | Formule texte à retourner comme objet                                       |
+| context       | Number      | -> | `sk execute in current database` (default) or `sk execute in host database` |
 | Résultat      | 4D.Function | <- | Objet natif encapsulant la formule|<!-- END REF -->
 
 
@@ -270,10 +272,17 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Description
 
-La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet 4D.Function basé sur la formule *formulaString*<!-- END REF -->.  .
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  .
 
-Cette commande est similaire à [`Formula`](#formula), sauf qu'elle traite une formule de type texte. Dans la plupart des cas, il est recommandé d'utiliser la commande `Formula`. `Formula from string` ne doit être utilisée que lorsque la formule d'origine a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON). Dans ce contexte, l'utilisation de la syntaxe avec des tokens est fortement conseillée.
+This command is similar to [`Formula`](#formula), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. Using syntax with tokens is highly advised with this command.
 > Le contenu des variables locales n'étant pas accessible par son nom en mode compilé, il ne peut pas être utilisé dans la *formulaString*. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).
+
+If the formula is created in a component, you might consider using the *context* parameter. By default, since formulas are executed in the context in which they were created, it will not be able to call a variable, function, or a non-shared method of the host database. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Les constantes suivantes sont disponibles :
+
+| Constante                        | Type    | Description                                                          |
+| -------------------------------- | ------- | -------------------------------------------------------------------- |
+| `sk execute in current database` | Longint | (default) The formula will be executed in the context it was created |
+| `sk execute in host database`    | Longint | The formula will be executed in the host database context            |
 
 
 #### Exemple
