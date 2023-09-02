@@ -32,11 +32,11 @@ Para cada seleção de entidades atualmente armazenada no cache do 4D Server, a 
 
 Para obter informações sobre como criar uma seleção de entidades, consultar `$method=entityset`. Se quiser remover a seleção de entidades da cache de 4D Server, use `$method=release`.
 > 4D também cria suas próprias seleções de entidades para fins de otimização, então as que você cria com `$method=entityset` não são as únicas retornadas.
-> **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+> **IMPORTANTE** Se o seu projeto estiver no **Modo Controlled Admin Access**, tem de iniciar sessão no projeto como usuário do grupo Admin.
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* collection:
+Para cada sessão usuário, são devolvidas as seguintes informações na coleção *sessionInfo*:
 
 | Propriedade | Tipo   | Descrição                                                                  |
 | ----------- | ------ | -------------------------------------------------------------------------- |
@@ -47,7 +47,7 @@ For each user session, the following information is returned in the *sessionInfo
 
 ## Exemplo
 
-Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
+Recupera informação sobre os conjuntos de entidades atualmente armazenados na cache de 4D Server assim como sessões usuário:
 
 `GET /rest/$info`
 
@@ -113,4 +113,4 @@ sessionInfo: [
 ]
 }
 ```
-> The progress indicator information listed after the entity selections is used internally by 4D.
+> A informação do indicador de progresso listada após as seleções de entidades é usada internamente por 4D.
