@@ -4,9 +4,9 @@ title: Chamada de funções de classe ORDA
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Pode chamar as [funções de classe de modelos de dados](ORDA/ordaClasses.md) definidas para o modelo de dados ORDA através dos seus pedidos REST, para poder beneficiar da API da aplicação 4D objetivo.
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+As funções são simplesmente chamadas em pedidos POST na interface ORDA apropriada, sem (). Por exemplo, se tiver definido uma função `getCity()` na dataclass City, pode chamá-la utilizando o seguinte pedido:
 
 `/rest/City/getCity`
 
@@ -18,11 +18,11 @@ Na linguagem 4D, esta chamada é equivalente a:
 $city:=ds. City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Apenas as funções com a palavra-chave `exposed` podem ser diretamente chamadas a partir de pedidos REST. Ver a secção [Funções expostas vs não expostas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ## Chamadas funções
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+As funções têm de ser sempre chamadas através de pedidos **POST** REST (um pedido GET dará origem a um erro).
 
 As funções são chamadas no objeto correspondente no datastore do servidor.
 
