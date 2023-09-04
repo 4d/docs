@@ -250,7 +250,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 | バージョン  | 内容                                                    |
 | ------ | ----------------------------------------------------- |
-| v20 R3 | Support of *context* parameter                        |
+| v20 R3 | *context* パラメーターをサポート                                 |
 | v17 R6 | 名称変更 (New formula from string -> Formula from string) |
 | v17 R3 | 追加                                                    |
 
@@ -260,10 +260,10 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 
 <!-- REF #_command_.Formula from string.Params -->
-| 引数            | タイプ         |    | 説明                                                                          |
-| ------------- | ----------- |:--:| --------------------------------------------------------------------------- |
-| formulaString | Text        | -> | オブジェクトとして返されるフォーミュラ文字列                                                      |
-| context       | Number      | -> | `sk execute in current database` (default) or `sk execute in host database` |
+| 引数            | タイプ         |    | 説明                                                                         |
+| ------------- | ----------- |:--:| -------------------------------------------------------------------------- |
+| formulaString | Text        | -> | オブジェクトとして返されるフォーミュラ文字列                                                     |
+| context       | Number      | -> | `sk execute in current database` (デフォルト) または `sk execute in host database` |
 | 戻り値           | 4D.Function | <- | フォーミュラを格納しているネイティブなオブジェクト|<!-- END REF -->
 
 
@@ -272,9 +272,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 説明
 
-`Formula from string` コマンドは、 <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
+`Formula from string` コマンドは、 <!-- REF #_command_.Formula from string.Summary -->*formulaString* と任意の *context* 引数に基づいた `4D.Function` オブジェクトを作成します<!-- END REF -->。  *formulaString* には単一の値のようにシンプルなものから、引数を持つプロジェクトメソッドのように複雑なものまで指定することができます。
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. Using syntax with tokens is highly advised with this command.
+このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点と、実行コンテキストを定義できる点が異なります。 It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. Using syntax with tokens is highly advised with this command.
 > ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、*formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー(-10737) が生成されます。
 
 If the formula is created in a component, you might consider using the *context* parameter. By default, since formulas are executed in the context in which they were created, it will not be able to call a variable, function, or a non-shared method of the host database. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. 以下の定数を使用することができます:
