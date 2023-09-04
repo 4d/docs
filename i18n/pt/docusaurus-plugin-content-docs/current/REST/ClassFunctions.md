@@ -4,9 +4,9 @@ title: Chamada de funções de classe ORDA
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Pode chamar as [funções de classe de modelos de dados](ORDA/ordaClasses.md) definidas para o modelo de dados ORDA através dos seus pedidos REST, para poder beneficiar da API da aplicação 4D objetivo.
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+As funções são simplesmente chamadas em pedidos POST na interface ORDA apropriada, sem (). Por exemplo, se tiver definido uma função `getCity()` na dataclass City, pode chamá-la utilizando o seguinte pedido:
 
 `/rest/City/getCity`
 
@@ -18,11 +18,11 @@ Na linguagem 4D, esta chamada é equivalente a:
 $city:=ds. City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Apenas as funções com a palavra-chave `exposed` podem ser diretamente chamadas a partir de pedidos REST. Ver a secção [Funções expostas vs não expostas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions).
 
 ## Chamadas funções
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+As funções têm de ser sempre chamadas através de pedidos **POST** REST (um pedido GET dará origem a um erro).
 
 As funções são chamadas no objeto correspondente no datastore do servidor.
 
@@ -38,7 +38,8 @@ As funções são chamadas no objeto correspondente no datastore do servidor.
 
 
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. Se não for encontrado, é procurado na dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
+> `/rest/{dataClass}/Function` pode ser utilizada para chamar uma função de dataclass ou de seleção de entidades (`/rest/{dataClass}` devolve todas as entidades da DataClass como uma seleção de entidades).   
+> A função é pesquisada primeiro na classe de seleção de entidades. Se não for encontrado, é procurado na dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
 
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
