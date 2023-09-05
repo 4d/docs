@@ -42,7 +42,7 @@ You can customize the display of the editing area. Any customization is automati
 | **tipo de letra** e **tamanho de letra**  | Define o tipo de letra e o tamanho dos caracteres a utilizar na área de edição                                                                                                                              | **Preferências** > [**Métodos**](../Preferences/methods.md) ou **Método > Ver** > **Tipo de letra maior** ou **Tipo de letra menor**                                                                                              |
 | **estilo e cor dos elementos de sintaxe** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Submenu > **Estilo**. Ou **Preferências** > [**Métodos**](../Preferences/methods.md) |
 | **espaços**                               | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espaços em branco**                                                                                                                                                                                              |
-| **temas**                                 | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
+| **temas**                                 | Pode selecionar o tema Escuro ou Claro, ou definir um tema personalizado                                                                                                                                    | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
 | **largura das indentações de código**     | Definir a largura das indentações do código                                                                                                                                                                 | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
 
 #### Change bars
@@ -275,7 +275,7 @@ A maioria desses atalhos pode ser personalizada na caixa de diálogo [Preferenci
 
 The Code Editor uses display conventions (style, color) for the syntax elements. You can [customize these conventions](#customizing-the-editing-area). As you type, when you validate your entry, 4D evaluates the text of the line and applies the appropriate display format. 4D also indents each line to its proper level in relation to the preceding line when you use programming structures (If, End if...).
 
-You can use the arrow keys to move from line to line quickly. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.
+Pode utilizar as teclas de setas para se deslocar rapidamente de uma linha para outra. Using the arrow keys to move across several lines is quicker than clicking because the editor delays evaluating the line for errors.
 
 Under Windows, the code editor includes an Input Code Editor (IME) to facilitate code editing on Japanese or Chinese systems.
 
@@ -337,7 +337,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
-    The first few words of the copied or cut items are displayed. Select an item to insert it at the current location of the cursor.
+    São apresentadas as primeiras palavras dos itens copiados ou cortados. Select an item to insert it at the current location of the cursor.
 
 - Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
 
