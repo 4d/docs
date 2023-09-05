@@ -59,7 +59,7 @@ As ações disponíveis estão relacionadas com o recurso alvo.
 - A computed attribute can be accessed even if there are no permissions on the attributes upon which it is built.
 - Default values: in the current implementation, only *Null* is available as default value.
 
-Setting permissions requires to be consistent, in particular:
+A definição das permissões deve ser coerente, nomeadamente:
 
 - **update** and **drop** permissions also need **read** permission (but **create** does not need it)
 - **promote** permission also need **describe** permission.
@@ -142,14 +142,14 @@ A sintaxe do ficheiro `roles.json` é a seguinte:
 
 :::caution Lembrete
 
-- The "WebAdmin" privilege name is reserved to the application. It is not recommended to use this name for custom privileges.
+- O nome do privilégio "WebAdmin" está reservado à aplicação. Não se recomenda a utilização deste nome para privilégios personalizados.
 - `privileges` and `roles` names are case insensitive.
 
 :::
 
 ### ficheiro `Roles_Errors.json`
 
-The `roles.json` file is parsed by 4D at startup. You need to restart the application if you want modifications in this file to be taken into account.
+O arquivo `roles.json` é analisado por 4D na inicialização. You need to restart the application if you want modifications in this file to be taken into account.
 
 In case of error(s) when parsing the `roles.json` file, 4D loads the project but disables the global access protection - this allows the developer to access the files and to fix the error. An error file named `Roles_Errors.json` is generated in the [`Logs` folder of the project](../Project/architecture.md#logs) and describes the error line(s). This file is automatically deleted when the `roles.json` file no longer contains error(s).
 
