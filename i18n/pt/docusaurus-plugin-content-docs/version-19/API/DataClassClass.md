@@ -650,7 +650,7 @@ A função `.query( )` <!-- REF #DataClassClass.query().Summary -->pesquisa por 
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
-**queryString parameter**
+**parâmetro queryString**
 
 O parâmetro *queryString* usa a sintaxe abaixo:
 
@@ -660,7 +660,7 @@ attributePath|formula comparator value
  {order by attributePath {desc | asc}}
 ```
 
-where:
+onde:
 
 * **attributePath**: caminho de atributo no qual se pretende executar a consulta. Os atributos se expressam como pares propriedade/ valor, onde propriedade é o nome do marcador de posição inserido para uma rota de atributo em *queryString* ou *formula* (":placeholder") e valor pode ser uma string ou uma coleção de strings. Cada valor e uma rota que pode designar um escalar ou um atributo relacionado da dataclass ou uma propriedade num campo de objeto da dataclass You can also use a **placeholder** (see below).
 > *Não pode usar diretamente atributos cujo nome contenha caracteres especiais como ".", "\[ ]", or "=", ">", "#"..., porque serão avaliados incorretamente na string da query. Se precisar de uma query com esses atributos, deve considerar o uso de placeholders que permitem uma gama estendida de caracteres em rotas de atributo (ver* **Using placeholders** *below).*
@@ -708,7 +708,7 @@ where:
 * **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente.
 > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-**Using quotes**
+**Usar aspas**
 
 When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Por exemplo:
 
@@ -717,7 +717,7 @@ When you use quotes within queries, you must use single quotes ' ' inside the qu
 ```
 > Aspas siples (') não são permitidas nos valores pesquisados, já que quebrariam a string de pesquisa. Por exemplo, "comp.name = 'John's pizza' " gerará um erro. Se precisar pesquisar valores com aspas simples, pode considerar o uso de placeholders (ver abaixo).
 
-**Using parenthesis**
+**Usando parêntesis**
 
 You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
 
@@ -777,7 +777,7 @@ When you look for null values, you cannot use the placeholder syntax because the
 $vSingles:=ds. Person.query("spouse = :1";Null) // will NOT work
 ```
 
-You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). For these kinds of queries, you must use the direct query syntax:
+You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta:
 
 ```4d
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
@@ -869,7 +869,7 @@ ds. People.places:
             } ] }
 ```
 
-You want to find people with a "home" location kind in the city "paris". If you write:
+You want to find people with a "home" location kind in the city "paris". Se escrever:
 
 ```4d
 ds. People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
@@ -1015,7 +1015,7 @@ $querySettings.parameters:=New object("userId";1234;"extraInfo";New object("name
 $managedCustomers:=ds. Customer.query("salesperson.userId = :userId and name = :extraInfo.name";$querySettings)
 ```
 
-Query that uses both named and indexed placeholders for values:
+Pesquisa que usa marcadores de posição nomeados e indexados para valores:
 
 ```4d
 var $querySettings : Object
