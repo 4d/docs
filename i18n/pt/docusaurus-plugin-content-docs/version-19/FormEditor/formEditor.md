@@ -454,7 +454,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
 ### Usando o gerador de list box
 
-1. In the Form Editor toolbar, click on the List box builder icon:
+1. Na barra de ferramentas do Editor de formulários, clique no ícone do construtor de List box:
 
  ![](../assets/en/FormEditor/listboxBuilderIcon.png)
 
