@@ -15,7 +15,7 @@ A method is basically a piece of code that executes one or several actions. In t
 
 - **project methods**, where you can write your own code to execute any custom actions. Once a project method is created, it becomes part of the language of the database in which you create it. A project method is composed of statements; each statement consists of one line in the method. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). The maximum size of a project method is limited to 2 GB of text or 32,000 lines of command.
 
-**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. See [Specialized methods](#specialized-methods).
+**Note:** 4D also provides specific methods that are automatically executed depending on database or form events. Ver [Métodos especializados](#specialized-methods).
 
 
 ## Métodos projeto recursivos
