@@ -218,7 +218,7 @@ Aqui estão as propriedades para cada atributo exposto que são devolvidas:
 
 ### Método(s)
 
-Defines the project methods asociated to the dataclass, if any.
+Define os métodos projeto associados à dataclass, se existirem.
 
 ### Chave primária
 
