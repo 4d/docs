@@ -3726,7 +3726,7 @@ VP REMOVE SHEET("ViewProArea";2)
 |
 #### Descrição
 
-O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
+O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o intervalo das células em *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range object of the cell span. The spanned cells in the range are divided into individual cells.
 
@@ -4108,7 +4108,7 @@ O parâmetro *row* define a primeira linha do intervalo de linhas. Passar o índ
 
 The optional *rowCount* parameter allows you to define the total number of rows of the range. *rowCount* tem de ser superior a 0. Se for omisso, o valor será definido como 1 por padrão.
 
-No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). If not specified, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
+No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se não for especificada, a folha de cálculo atual é utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -6044,7 +6044,7 @@ The parameter *valueObj* is an object that includes properties for the value and
 
 | Propriedade | Tipo                                     | Descrição                                                                                                                                                        |
 | ----------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date, Null | Value to assign to *rangeObj* (except- time). Passar null para apagar o conteúdo da célula.                                                                      |
+| value       | Integer, Real, Boolean, Text, Date, Null | Valor a atribuir a *rangeObj* (exceto - hora). Passar null para apagar o conteúdo da célula.                                                                     |
 | time        | Real                                     | Valor hora (em segundos) a atribuir a *rangeObj*                                                                                                                 |
 | format      | Text                                     | Pattern for value/time property. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
 
@@ -6086,7 +6086,7 @@ In *rangeObj*, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 > * If *rangeObj* is not a cell range, only the first cell of the range is used.
 > * If *rangeObj* includes multiple ranges, only the first cell of the first range is used.
 
-The *valuesCol* parameter is two-dimensional:
+O parâmetro *valuesCol* é bidimensional:
 
 
 * A coleção de primeiro nível contém subcoleções de valores. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha.
