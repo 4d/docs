@@ -100,11 +100,11 @@ When rendering webforms in the Web Studio, the renderer will connect to the 4D w
 
 :::info
 
-See [this page](https://docs.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
 
 :::
 
-Note that when you click on the "Render in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
+Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
 
 Keep in mind that the Qodly Web Studio runs through the 4D WebAdmin web server. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out). 
 
@@ -112,7 +112,7 @@ However, webform rendering happens outside 4D Web Studio, and is served by the s
 
 :::note
 
-Renderer buttons are hidden if the configuration options are not activated.
+[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are hidden if the configuration options are not activated.
 
 ::: 
 
@@ -156,25 +156,6 @@ For example, after launching a local web server on port 7080, type this address 
 `localhost:7080/studio`
 
 You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
-
-## Rendering webforms
-
-Webforms can be rendered from the Qodly Studio IDE or from a browser window.
-
-- From the Qodly Studio IDE: in the webform editor, click on the preview button (![preview-button](../assets/en/WebServer/preview-ide.png). 
-In this case, the webform is rendered by the WebAdmin web server with access to all database resources. 
-
-- Form a browser window: in the webform editor, click on the Render in a new tab button (![preview-button-tab](../assets/en/WebServer/preview-tab.png).
-A tab will open at `IP:port/$lib/renderer/?w=WebFormName`.
-In this case, the webform is rendered by Qodly web renderer engine. The renderer engine applies the REST resource restrictions defined in your 4D project's database. This means that only exposed datasources are rendered in the browser. The renderer engine applies as well the permission actions that might have been configured in your 4D project's database.
-
-You can also render the whole website using the Qodly web renderer engine by clicking on the **Preview** button of the toolbar (![preview-button-tab](../assets/en/WebServer/preview-main.png). The home page [defined in the Settings](https://docqodly.github.io/docs/studio/settings/#application) is then displayed. 
-
-:::note
-
-Renderer buttons are displayed only when the [configuration options](#enabling-rendering) are activated.
-
-::: 
 
 
 ## Using Qodly Studio
