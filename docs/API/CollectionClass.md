@@ -57,6 +57,7 @@ A collection is initialized with:
 |[<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
 |[<!-- INCLUDE #collection.max().Syntax -->](#max)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
 |[<!-- INCLUDE #collection.min().Syntax -->](#min)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
+|[<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.multiSort().Summary -->|
 |[<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
 |[<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
 |[<!-- INCLUDE #collection.pop().Syntax -->](#pop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
@@ -2144,6 +2145,59 @@ If the collection is empty, `.min()` returns *Undefined*.
 <!-- END REF -->
 
 
+<!-- REF collection.multiSort().Desc -->
+## .multiSort()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R3|Added|
+
+</details>
+
+<!-- REF #collection.multiSort().Syntax -->**.multiSort**( *formula* : 4D.Function ; *colsToSort* : Collection ) : Collection<br/>**.multiSort**( *colsToSort* : Collection ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.multiSort().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formula|4D.Function|->|Formula object|
+|colsToSort|Collection|->|Collection of collections to be sorted; can include an object with {`collection`:*colToSort*;`order`:`ck ascending` or `ck ascending`} properties|
+|Result|Collection |<-|Original collection sorted|<!-- END REF -->
+
+
+#### Description
+
+The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level sort on a set of scalar collections<!-- END REF -->.
+
+>This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+
+If `.multiSort()` is called with no parameters, the function has the same effect as the `.sort()` function: the collection is sorted (only scalar values) in ascending order by default, according to their type.
+
+
+If the collection contains different types of values, the `.min()` function will return the minimum value within the first element type in the type list order (see [`.sort()`](#sort) description).
+
+If the collection contains objects, pass the *propertyPath* parameter to indicate the object property whose minimum value you want to get.
+
+If the collection is empty, `.min()` returns *Undefined*.
+
+#### Example
+
+
+```4d
+ var $col : Collection
+ $col:=New collection(200;150;55)
+ $col.push(New object("name";"Smith";"salary";10000))
+ $col.push(New object("name";"Wesson";"salary";50000))
+ $col.push(New object("name";"Alabama";"salary";10500))
+ $min:=$col.min() //55
+ $minSal:=$col.min("salary") //10000
+ $minName:=$col.min("name") //"Alabama"
+```
+
+<!-- END REF -->
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -2770,6 +2824,7 @@ The callback sets the following parameter(s):
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+
 ```
 
 
