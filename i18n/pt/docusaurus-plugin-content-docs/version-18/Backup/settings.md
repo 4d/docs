@@ -81,11 +81,11 @@ Modificar as opções de cópia de segurança e restauração é opcional. Seus 
 ### Parâmetros gerais
 
 - **Conservar unicamente os últimos X arquivos de cópia de segurança**: este parâmetro ativa e configura o mecanismo utilizado para eliminar os arquivos de cópia de segurança mais antigos, o que evita o risco de saturar a unidade de disco. Esta funcionalidade opera da seguinte maneira: uma vez finalizado o backup atual, 4D elimina o arquivo mais antigo se for encontrado no mesmo local que o arquivo do qual se está fazendo o backup e tiver o mesmo nome (pode solicitar que o arquivo mais antigo se elimine antes do backup para poupar espaço). Se, por exemplo, o número de conjuntos se definir como 3, as três primeiras cópias de segurança criam os arquivos MyBase-0001, MyBase-0002 e MyBase-0003 respectivamente. Durante o quarto backup, o arquivo MyBase-0004 é criado e MyBase-0001 é apagado. Como padrão, o mecanismo de eliminação de conjuntos está ativado e 4D salva 3 conjuntos de cópias de segurança. Para desativar o mecanismo, simplesmente desmarque a opção.
-> This parameter concerns both database and log file backups.
+> Este parâmetro diz respeito às cópias de segurança do banco de dados e dos ficheiros de registo.
 
 - **Backup only if the data file has been modified**: When this option is checked, 4D starts scheduled backups only if data has been added, changed or deleted in the database since the last backup. Senão, o backup programado é cancelado e abandonado até o próximo backup programado. Nenhum erro é gerado, entretanto o diário de cópias de segurança assinala que a cópia de segurança foi adiada. This option also allows saving machine time for the backup of databases principally used for viewing purposes. Lembre que ao ativar esta opção não se levam em consideração as modificações realizadas nos arquivos de estrutura ou nos arquivos anexos.
 
-> This parameter concerns both database and log file backups.
+> Este parâmetro diz respeito às cópias de segurança do banco de dados e dos ficheiros de registo.
 
 - **Eliminar o arquivo de cópia de segurança mais antigo antes/depois da cópia de segurança**: esta opção só se utiliza se a opção "Conservar só os últimos X arquivos de cópia de segurança" estiver marcada. Especifica se 4D deve começar apagando o último arquivo antes de começar o backup (opção**antes**) ou se deve apagar depois que o backup tiver sido concluído (opção**depois**). Para que os mecanismos funcionem, o arquivo mais velho não deve ser renomeado nem movido.
 
