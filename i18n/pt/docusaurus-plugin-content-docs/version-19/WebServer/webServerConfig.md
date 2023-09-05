@@ -9,11 +9,11 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Localização do parâmetro                | Scope                                               | Servidor Web a ser usado                                       |
-| --------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
-| [objeto webServer](webServerObject.md)  | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
-| `WEB SET OPTION` or a `WEB XXX` command | Temporário (sessão atual)                           | Servidor principal                                             |
-| **Settings** dialog box (**Web** pages) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
+| Localização do parâmetro                 | Scope                                               | Servidor Web a ser usado                                       |
+| ---------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
+| [objeto webServer](webServerObject.md)   | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| `WEB SET OPTION` ou um comando `WEB XXX` | Temporário (sessão atual)                           | Servidor principal                                             |
+| **Settings** dialog box (**Web** pages)  | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
 > Some settings are not available from all locations.
 
@@ -235,7 +235,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 
 In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
-Passa o tamanho expresso em bytes como valor. By default, the compression threshold is set to 1024 bytes.
+Passa o tamanho expresso em bytes como valor. Por defeito, o limite de compressão é definido para 1024 bytes.
 
 ## Porta HTTP
 
@@ -577,7 +577,7 @@ IP address validation status for session cookies. For security reasons, by defau
 
 #### Reutilizar contextos temporários (em modo remoto)
 
-Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed. Once the request has been dealt with, this process is killed.
+Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed. Quando o pedido tiver sido tratado, este processo é encerrado.
 
 When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
 
@@ -604,4 +604,4 @@ Two options allow you to set how the keep-alive connections work:
 
 - **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers). The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.
 
-- **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection. If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o utilizador.
+- **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Uma vez terminado este período, o servidor fecha a ligação. If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. Esta operação não é visível para o utilizador.
