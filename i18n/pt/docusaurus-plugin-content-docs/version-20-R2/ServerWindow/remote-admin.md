@@ -12,7 +12,7 @@ To open a server administration window from a client machine, you must be connec
 Esta janela pode ser acedida de duas maneiras:
 
 - Choose the **Administration Window** command from the **Help** menu or click on the corresponding button in the 4D tool bar.
-- Execute the `OPEN ADMINISTRATION WINDOW` command.
+- Executar o comando `OPEN ADMINISTRATION WINDOW`.
 
 A [server administration window](monitor.md) then appears on the client machine.
 
