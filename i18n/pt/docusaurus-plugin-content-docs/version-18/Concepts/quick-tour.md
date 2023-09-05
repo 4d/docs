@@ -34,7 +34,7 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 
 ## Variáveis.
 
-A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. You create a typed variable using a `C_XXX` command. Por exemplo, para criar uma variável do tipo dados, pode escrever:
+A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Cria-se uma variável digitada utilizando um comando `C_XXX`. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
 C_DATE(MyDate) //Tipo de data para a variável MyDate
