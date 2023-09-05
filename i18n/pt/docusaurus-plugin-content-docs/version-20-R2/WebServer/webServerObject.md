@@ -49,7 +49,7 @@ webServer:=WEB Server(Web server database)
 
 Se a aplicação utilizar componentes e o usuário pretender chamar:
 - the host application's web server from a component or
-- the server that received the request (whatever the server),
+- o servidor que recebeu o pedido (qualquer que seja o servidor),
 
 também pode ser utilizado:
 
