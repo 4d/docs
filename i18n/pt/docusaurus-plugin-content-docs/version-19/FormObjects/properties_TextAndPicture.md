@@ -106,7 +106,7 @@ Cada estado é representado por uma imagem diferente. Na imagem de origem, os es
 
 Estão representados os seguintes estados:
 
-1. button not clicked / check box unchecked (variable value=0)
+1. botão não clicado / caixa de verificação desmarcada (valor da variável=0)
 2. button clicked / check box checked (variable value=1)
 3. roll over
 4. disabled
