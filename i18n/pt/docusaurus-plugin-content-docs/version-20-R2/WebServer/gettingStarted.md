@@ -59,7 +59,7 @@ O servidor Web processa o pedido e devolve-o:
 
 ## Obter dados da base de dados
 
-Now we'll see how simple it is to get data from the database. Primeiro, vamos criar uma tabela e preenchê-la com alguns dados.
+Agora vamos ver como é simples obter dados do banco de dados. Primeiro, vamos criar uma tabela e preenchê-la com alguns dados.
 
 Create a basic database with, for example, a single table containing some records:
 
@@ -220,7 +220,7 @@ $webUser.save()
 
 > To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
 
-1. Open the Explorer and create a project method named "login".
+1. Abra o Explorador e crie um método projeto chamado "login".
 
 3. Write the following code:
 

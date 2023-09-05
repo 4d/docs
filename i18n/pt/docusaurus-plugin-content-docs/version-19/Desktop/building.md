@@ -323,7 +323,7 @@ The contents of these folders vary depending on the current platform:
 
  > > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
+If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. Este ficheiro é utilizado durante a atualização automática das aplicações clientes.
 
 #### Localização de ficheiros Web
 
@@ -403,7 +403,7 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
-The page lists the elements loaded by the current 4D application:
+A página lista os elementos carregados pela aplicação 4D atual:
 
 ![](../assets/en/Project/buildapppluginsProj.png)
 
@@ -516,14 +516,14 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 
 ### Abertura do ficheiro de dados
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. A aplicação examina sucessivamente vários locais.
 
 A sequência para o lançamento de uma aplicação fusionada a seguinte:
 
 1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
 2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
 3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+4. Se não for encontrado, 4D mostra uma caixa de diálogo padrão "Abrir ficheiro de dados".
 
 ### Último ficheiro de dados aberto
 
@@ -573,7 +573,7 @@ Mais especificamente, são abrangidos os seguintes casos:
 
 Para definir e utilizar um ficheiro de dados padrão:
 
-* You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
+* You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. É sua responsabilidade fornecer um ficheiro de dados padrão válido. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 * Quando a aplicação é criada, a pasta de dados predefinida é integrada na aplicação fundida. Todos os ficheiros dentro desta pasta de dados predefinida também são incorporados.
 
 O gráfico seguinte ilustra esta funcionalidade:

@@ -80,7 +80,7 @@ Check box styles control a check box's general appearance as well as its availab
 
 Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos caixa de seleção são *estruturalmente* idênticos. A diferença é no processamento das variáveis associadas.
 
-4D provides check boxes in the following predefined styles:
+4D oferece caixas de seleção nos seguintes estilos predefinidos:
 
 ### Clássico
 

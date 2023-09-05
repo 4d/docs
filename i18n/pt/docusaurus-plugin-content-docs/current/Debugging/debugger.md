@@ -283,7 +283,7 @@ O Painel de controle personalizado é útil para avaliar expressões. It is simi
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. Isto não abrange os campos ou variáveis imagem e BLOB. Para visualizar o conteúdo do BLOB, pode utilizar comandos BLOB, tais como [BLOB para texto](https://doc.4d.com/4dv19/help/command/en/page555.html).
+É possível avaliar qualquer expressão que possa ser apresentada sob a forma de texto. Isto não abrange os campos ou variáveis imagem e BLOB. Para visualizar o conteúdo do BLOB, pode utilizar comandos BLOB, tais como [BLOB para texto](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Manuseamento de expressões
 

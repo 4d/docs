@@ -986,7 +986,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 
 #### No igual a en colecciones
 
-When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). For example, with the following entities:
+Al buscar dentro de atributos de objetos dataclass que contengan colecciones, el comparador "no igual a *valor*" (`#` o `!=`) encontrará elementos en los que TODAS las propiedades sean diferentes de *valor* (y no aquellos en los que AL MENOS una propiedad sea diferente de *valor*, que es como funcionan otros comparadores). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). Por ejemplo, con las siguientes entidades:
 
 ```
 Entity 1:
@@ -1014,36 +1014,36 @@ ds.Class.info:
             } ] }
 ```
 
-Consider the following results:
+Considere los siguientes resultados:
 
 ```4d
-ds.Class.query("info.coll[].val = :1";0) 
-// returns B and C
-// finds "entities with 0 in at least one val property"
+¡ds.Class.query("info.coll[].val = :1";0) 
+// devuelve B y C
+// encuentra "entidades con 0 en al menos una propiedad val"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to 
+// sólo devuelve A
+// encuentra "entidades en las que todas las propiedades val son distintas de 0"
+// lo que equivale a 
 ds.Class.query(not("info.coll[].val = :1";0)) 
 ```
 
-If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
+Si desea implementar una búsqueda que encuentre entidades en las que "al menos una propiedad sea diferente del valor **", deberá utilizar una notación especial utilizando una letra en el `[]`:
 
 ```4d
 ds.Class.query("info.coll[a].val != :1";0)  
-// returns A and B
-// finds "entities where at least one val property is different from 0"
+// devuelve A y B
+// encuentra "entidades donde al menos una propiedad val es diferente de 0"
 ```
 
-You can use any letter from the alphabet as the `[a]` notation.
+Puede utilizar cualquier letra del alfabeto como notación `[a]`.
 
 
-#### Linking collection attribute query arguments
+#### Vinculación de los argumentos de búsqueda y los atributos de colección
 
 :::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+Esta funcionalidad sólo está disponible en las búsquedas en clases de datos y en las [selecciones de entidades](EntitySelectionClass.md#query). No se puede utilizar en las búsquedas en [colecciones](CollectionClass.md#query).
 
 :::
 
@@ -1085,7 +1085,7 @@ If you want to only get entities where matching arguments are in the same collec
 * Añada una letra entre los \[] en la primera ruta a enlazar y repita la misma letra en todos los argumentos enlazados. Por ejemplo: `locations[a].city and locations[a].kind`. Puede utilizar cualquier letra del alfabeto latino (no diferencia entre mayúsculas y minúsculas).
 * Para añadir diferentes criterios vinculados en la misma consulta, utilice otra letra. Puede crear hasta 26 combinaciones de criterios en una sola consulta.
 
-With the above entities, if you write:
+Con las entidades anteriores, si escribe:
 
 ```4d
 ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
@@ -1132,14 +1132,14 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
 
-La fórmula debe haber sido creada utilizando los comandos [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string). In this case:
+La fórmula debe haber sido creada utilizando los comandos [`Formula`](FunctionClass.md#formula) o [`Formula from string`](FunctionClass.md#formula-from-string). En este caso:
 
 * *fórmula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 * dentro de la *fórmula*, la entidad está disponible a través del objeto `This`.
 * si el objeto `Formula` es **null**, se genera el error 1626 ("Esperando un texto o una fórmula"), que llama a interceptar utilizando un método instalado con `ON ERR CALL`.
 > Por razones de seguridad, las llamadas a fórmulas dentro de las funciones `query()` pueden ser desestimadas. Ver la descripción del parámetro *querySettings*.
 
-#### Passing parameters to formulas
+#### Pasar parámetros a fórmulas
 
 Any *formula* called by the `query()` class function can receive parameters:
 
@@ -1204,7 +1204,7 @@ queryPath:
 
 #### Ejemplo 1
 
-This section provides various examples of queries.
+Esta sección ofrece varios ejemplos de búsquedas.
 
 Query on a string:
 
@@ -1212,7 +1212,7 @@ Query on a string:
 $entitySelection:=ds.Customer.query("firstName = 'S@'")
 ```
 
-Query with a NOT statement:
+Búsqueda con una instrucción NOT:
 
 ```4d
 $entitySelection:=ds.Employee.query("not(firstName=Kim)")
@@ -1409,7 +1409,7 @@ The formula is given as text with `eval()` in the *queryString* parameter:
  $es:=ds.Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-The formula is given as a `Formula` object through a placeholder:
+La fórmula se da como un objeto `Formula` a través de un marcador de posición:
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1427,7 +1427,7 @@ Only a `Formula` object is given as criteria:
  $es:=ds.Students.query($formula)
 ```
 
-Several formulas can be applied:
+Se pueden aplicar varias fórmulas:
 
 ```4d
  var $formula1; $1; $formula2 ;$0 : Object
@@ -1480,7 +1480,7 @@ We want to disallow formulas, for example when the user enters their query:
 
 #### Ver también
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para selecciones de entidades
 <!-- END REF -->
 
 <!-- REF DataClassClass.setRemoteCacheSettings().Desc -->

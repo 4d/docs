@@ -10,7 +10,7 @@ title: On Load
 
 ## Descrição
 
-This event is triggered when the form is being loaded or printed.
+Este evento é acionado quando o formulário é carregado ou impresso.
 
 All the objects of the form (from any page) whose `On Load` object event property is selected will have their object method called. Then, if the `On Load` form event property is selected, the form will have its form method called.
 

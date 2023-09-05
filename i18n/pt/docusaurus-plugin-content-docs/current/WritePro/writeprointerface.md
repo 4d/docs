@@ -108,7 +108,7 @@ If your application is likely to be run on a 4D with language set to French, mak
 
 ##### Exemplo
 
-Here's a brief example of what your JSON file might look like:
+Eis um breve exemplo do aspeto do seu ficheiro JSON:
 
 ```json
 {
@@ -218,13 +218,13 @@ The translation file serves an additional role when a user selects a table in th
 
 A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
 
-The theme file in JSON format contains the following attributes:
+O ficheiro de tema em formato JSON contém os seguintes atributos:
 
 | Atributo | Tipo   | Obrigatório | Descrição                                                                                                                             |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
 | default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
 | tabela   | Object |             | Objeto que contém a definição de estilo aplicável à tabela.                                                                           |
-| rows     | Object |             | Object containing the style definition applicable to all rows.                                                                        |
+| rows     | Object |             | Objeto que contém a definição de estilo aplicável a todas as linhas.                                                                  |
 | cells    | Object |             | Objeto que contém a definição de estilo aplicável a todas as células.                                                                 |
 | header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |
 | header2  | Object |             | Object containing the style definition applicable to the second header row.                                                           |
