@@ -3,7 +3,13 @@ id: qodly-studio
 title: Qodly Studio
 ---
 
-**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the 4D Cloud.
+:::caution Developer Preview
+
+Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production. 
+
+:::
+
+**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the Qodly Cloud.
 
 As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**. 
 
