@@ -51,7 +51,7 @@ O estado da última cópia de segurança (correta ou com erro) é armazenada na 
 
 During a backup, access to the database is restricted by 4D according to the context. 4D bloqueia os processos relacionados com os tipos de arquivos incluídos na cópia de segurança: se só fizer uma cópia de segurança dos arquivos do projeto, não se poderá acessar à estrutura mas sim aos dados.
 
-Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. In this case, the database access possibilities are as follows:
+Pelo contrário, se só fizer uma cópia de segurança do arquivo de dados, o acesso à estrutura continua sendo permitido. Neste caso, as possibilidades de acesso o banco de dados são as seguintes:
 
 - With the 4D single-user version, the database is locked for both read and write; all processes are frozen. Nenhuma ação é realizada.
 - With 4D Server, the database is only write locked; client machines can view data. Se uma máquina cliente enviar uma petição de adição, eliminação ou mudança ao servidor, uma janela aparece pedindo ao usuário que espere até o final da cópia de segurança. Once the database is saved, the window disappears and the action is performed. Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Quando o banco de dados for salvo, a janela desaparece a ação é ralizada Para cancelar a petição em processo e não esperar a que finalize a cópia de segurança, basta dar um clique no botão **Cancelar a operação**. Entretanto, se a ação que espera ser executada vem de um método lançado antes da cópia de segurança, não deve cancelar a ação porque só são canceladas as operações restantes. Also, a partially executed method can cause logical inconsistencies in the database.
