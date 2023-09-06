@@ -24,7 +24,7 @@ WebAdmin 内部コンポーネントは、"WebAdmin" 権限を持つユーザー
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Web管理設定ダイアログボックスで、**Webサーバー管理自動スタートアップ** オプションをチェックします。
+Check the **Launch WebAdmin server at startup** option in the settings dialog box:
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
@@ -69,7 +69,7 @@ Web管理の設定ダイアログボックスを開くには、**ファイル �
 
 ![alt-text](../assets/en/Admin/waSettings2.png)
 
-#### Webサーバー管理自動スタートアップ
+#### Launch WebAdmin server at startup
 
 4D または 4D Server アプリケーションの起動時に `WebAdmin` Webサーバーを自動的に開始させるには、このオプションをチェックします ([前述参照](#自動スタートアップ)）。 デフォルトでは、このオプションはチェックされていません。
 
@@ -121,6 +121,16 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 - 新しいアクセスキーを定義するには、**定義** ボタンをクリックし、ダイアログボックスにアクセスキーの文字列を入力して **OK** をクリックします。 すると、ボタンラベルが **編集** に変わります。
 - アクセスキーを編集するには、**編集** ボタンをクリックし、ダイアログボックスに新しいアクセスキーの文字列を入力して **OK** をクリックします。
 - 新しいアクセスキーを削除するには、**編集** ボタンをクリックし、ダイアログボックスのアクセスキー欄を空にして **OK** をクリックします。
+
+#### Enable access to Qodly Studio
+
+:::note
+
+This option only appears if the Qodly Studio license is activated.
+
+:::
+
+This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) at the 4D application level. Note that you also need to [enable the access at every project level](../Settings/web.md#enable-access-to-qodly-studio).
 
 
 ## WebAdmin のヘッドレス設定
