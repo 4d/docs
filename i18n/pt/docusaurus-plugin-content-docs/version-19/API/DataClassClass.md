@@ -1081,7 +1081,7 @@ $es:=ds. Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name"
   //salesperson is a related entity
 ```
 
-Query with indexed placeholders for attributes and named placeholders for values:
+Pesquisa com marcadores de posição indexados para os atributos e marcadores de posição com nome para os valores:
 
 ```4d
 var $es : cs. EmployeeSelection
@@ -1092,7 +1092,7 @@ $es:=ds. Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";
   //salesperson is a related entity
 ```
 
-Query with indexed placeholders for attributes and values:
+Pesquisa com marcadores de posição indexados para os atributos e os valores:
 
 ```4d
 var $es : cs. EmployeeSelection
@@ -1102,11 +1102,11 @@ $es:=ds. Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smit
 
 #### Exemplo 2
 
-This section illustrates queries with named placeholders for attributes.
+Esta seção ilustra pesquisas com marcadores de posição com nomes para os atributos.
 
-Given an Employee dataclass with 2 entities:
+Dada uma dataclass Employee com 2 entidades:
 
-Entity 1:
+Entidade 1:
 
 ```4d
 name: "Marie"
@@ -1118,7 +1118,7 @@ softwares:{
 }
 ```
 
-Entity 2:
+Entidade 2:
 
 ```4d
 name: "Sophie"
@@ -1130,7 +1130,7 @@ softwares:{
 }
 ```
 
-Query with named placeholders for attributes:
+Pesquisa com marcadores de posição com nome para os atributos:
 
 ```4d
  var $querySettings : Object
@@ -1141,7 +1141,7 @@ Query with named placeholders for attributes:
   //$es.length=1 (Employee Marie)
 ```
 
-Query with named placeholders for attributes and values:
+Pesquisa com marcadores de posição com nome para os atributos e os valores:
 
 ```4d
  var $querySettings : Object
@@ -1161,16 +1161,16 @@ Query with named placeholders for attributes and values:
 
 #### Exemplo 3
 
-These examples illustrate the various ways to use formulas with or without parameters in your queries.
+Estes exemplos ilustram as distintas formas de utilizar fórmulas com ou sem parâmetros em suas pesquisas.
 
-The formula is given as text with `eval()` in the *queryString* parameter:
+A fórmula se da como texto com `eval()` no parâmetro *queryString*:
 
 ```4d
  var $es : cs. StudentsSelection
  $es:=ds. Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-The formula is given as a `Formula` object through a placeholder:
+A fórmula se dá como um objeto `Formula` através de um marcador de posição:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1179,7 +1179,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds. Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+Apenas um objeto `Formula` é dado como critério:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1188,7 +1188,7 @@ Only a `Formula` object is given as criteria:
  $es:=ds. Students.query($formula)
 ```
 
-Several formulas can be applied:
+Podem ser aplicadas várias fórmulas:
 
 ```4d
  var $formula1; $1; $formula2 ;$0 : Object
@@ -1197,7 +1197,7 @@ Several formulas can be applied:
  $0:=ds. Students.query(":1 and :2 and nationality='French'";$formula1;$formula2)
 ```
 
-A text formula in *queryString* receives a parameter:
+Uma fórmula texto em *queryString* recebe um parâmetro:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1213,7 +1213,7 @@ A text formula in *queryString* receives a parameter:
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
+Utilizando o mesmo método ***checkName***, um objeto `Formula` como marcador de posição recebe um parâmetro:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1226,7 +1226,7 @@ Using the same ***checkName*** method, a `Formula` object as placeholder receive
  $es:=ds. Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
-We want to disallow formulas, for example when the user enters their query:
+Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua consulta:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1241,5 +1241,5 @@ We want to disallow formulas, for example when the user enters their query:
 
 #### Veja também
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para seleções de entidades
 <!-- END REF -->
