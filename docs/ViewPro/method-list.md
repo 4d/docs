@@ -924,6 +924,7 @@ use the following code:
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -944,7 +945,7 @@ You can specify the exported file's format by including an extension after the d
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", or ".csv")
-* [SpreadJS file](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
+* [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
 
 If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
@@ -961,29 +962,35 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |sheet| number| PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only|
 |pdfOptions| object| PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>author</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>|
 |csvOptions|object| CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>|
-|sjsOptions| object| SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells when do save, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source when do save, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas when do save, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style when do save, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names when do save, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values when do save, default is false.</td></tr></table></p>|
+|sjsOptions| object| SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p>|
 |`\<customProperty>`| any| Any custom property that will be available through the $3 parameter in the callback method.|
 
 **Notes about Excel format**:
 
 * When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. For example, 4D methods and formulas are not supported by Excel. You can verify other settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about PDF format**:
 
 * When exporting a 4D View Pro document in PDF, the fonts used in the document are automatically embedded in the PDF file. Only OpenType fonts (.OTF or .TTF files) having a Unicode map can be embedded. If no valid font file is found for a font, a default font is used instead.
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about CSV format**:
 
 * When exporting a 4D View Pro document to CSV, some settings may be lost, as only the text and values are saved.
 * All the values are saved as double-quoted strings. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+
+**Notes about SpreadJS file format**:
+
+* [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files. 
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
 
 #### Passing a callback method (formula)  
 
-When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
 
 |Variable|  |Type| Description|
 |---|---|---|---|
@@ -2883,6 +2890,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 |Parameter|Type||Description|
+
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
@@ -2947,8 +2955,6 @@ In *filePath*, pass the path and name of the document to be imported. The follow
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
 
-> When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-
 An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
 
 The optional *paramObj* parameter allows you to define properties for the imported document:
@@ -2970,8 +2976,13 @@ The optional *paramObj* parameter allows you to define properties for the import
 ||includeUnusedStyles|boolean|Whether to include the unused name styles when converting excel xml to the json, default is true. |
 ||openMode|integer|<li>0 (normal): normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>|
 
+:::note Notes
 
-> For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+- Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
+- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+- For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+
+:::
 
 #### Example 1
 
@@ -2992,6 +3003,7 @@ You want to import a password protected Microsoft Excel document into a 4D View 
 ```4d
 $o:=New object
 $o.password:="excel123"
+$o.formula:=Formula(myImport)
  
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
@@ -3015,6 +3027,7 @@ Here's the result:
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
 
 ### VP IMPORT FROM OBJECT
 
@@ -4209,6 +4222,7 @@ Function onEvent()
         VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
  
      :(FORM Event.code=On URL Loading Error)
+
          CANCEL 
  End case
 ```
@@ -5925,6 +5939,7 @@ The `VP SET TEXT VALUE` command <!-- REF #_method_.VP SET TEXT VALUE.Summary -->
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. If *rangeObj* includes multiple cells, the value specified will be repeated in each cell.
 
 The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
+
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *textValue* parameter.
 
