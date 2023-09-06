@@ -297,8 +297,14 @@ RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/co
 
 この設定は、RESTリクエストを使って 4Dデータベースへのリンクを設立することのできる 4Dユーザーのグループを指定します。 [アクセス権の設定](../REST/configuration.md#アクセス権の設定) 参照。
 
-### Web Studio
+### Qodly Studio
 
-#### Web Studio へのアクセスを有効化する
+#### Enable access to Qodly Studio
 
-Web Studio へのアクセスを有効化します。 さらに、プロジェクトレベルごとの設定が必要です。
+:::note
+
+This option only appears if the Qodly Studio license is activated.
+
+:::
+
+This option enables user access to [Qodly Studio](XXX) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
