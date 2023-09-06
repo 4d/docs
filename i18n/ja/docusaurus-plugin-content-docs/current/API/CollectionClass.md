@@ -2829,6 +2829,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 です
+
 ```
 
 
@@ -3256,9 +3257,17 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 `.sort()` 関数は、 <!-- REF #collection.sort().Summary -->コレクションの要素を並べ替え、並べ替えられた元のコレクションを返します<!-- END REF --> 。
 > このコマンドは、元のコレクションを変更します。
 
-引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
+引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
-カスタマイズされた順番や、型に関係なくコレクション要素を並べ替えたい場合には、二つの値を比較して、最初の値が二つ目の値より低い場合に **true** を返す比較コールバックを *formula* ([Formula オブジェクト](FunctionClass.md)) または *methodName* (テキスト) に渡します。 必要に応じて、 追加の引数をコールバックに渡せます。
+1. null
+2. ブール
+3. 文字列
+4. 数値
+5. オブジェクト
+6. コレクション
+7. 日付
+
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. 必要に応じて、 追加の引数をコールバックに渡せます。
 
 コールバックは以下の引数を受け取ります:
 
@@ -3271,15 +3280,6 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 - *$1.result* (ブール): *$1.value < $1.value2* の場合は **true**、それ以外は **false**.
 
-コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
-
-1.  null
-2.  ブール
-3.  文字列
-4.  数値
-5.  オブジェクト
-6.  コレクション
-7.  日付
 
 #### 例題 1
 
