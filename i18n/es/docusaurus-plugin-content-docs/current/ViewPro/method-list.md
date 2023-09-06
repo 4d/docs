@@ -37,7 +37,7 @@ Pase la fórmula 4D View Pro que desea nombrar en *vpFormula*. Para obtener info
 
 Pase el nuevo nombre para la fórmula en *name*. Si el nombre ya se utiliza en el mismo alcance, la nueva fórmula nombrada sustituye la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Puede pasar un objeto con las propiedades adicionales para la fórmula nombrada en *options*. The following properties are supported:
+Puede pasar un objeto con las propiedades adicionales para la fórmula nombrada en *options*. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                  |
 | --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -77,7 +77,7 @@ El comando `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->c
 
 En *rangeObj*, pase el rango que quiere nombrar, y pase el nuevo nombre del rango en *name*. Si el nombre ya se utiliza en el mismo alcance, el nuevo rango nombrado sustituye al existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Puede pasar un objeto con las propiedades adicionales para el rango nombrado en *options*. The following properties are supported:
+Puede pasar un objeto con las propiedades adicionales para el rango nombrado en *options*. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                           |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1159,7 +1159,7 @@ En el parámetro *rangeObj*, pase un objeto que contenga un rango a buscar.
 
 El parámetro *searchValue* permite pasar el texto a buscar dentro del *rangeObj*.
 
-Puede pasar el parámetro opcional *searchCondition* para especificar el funcionamiento de la búsqueda. The following properties are supported:
+Puede pasar el parámetro opcional *searchCondition* para especificar el funcionamiento de la búsqueda. Se soportan las siguientes propiedades:
 
 | Propiedad   | Tipo    | Descripción                                                                                                                                                                                                          |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3484,7 +3484,7 @@ VP NEW DOCUMENT("myVPArea")
 
 El comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->devuelve una cadena de caracteres de *fontObj*<!-- END REF -->.
 
-En *fontObj*, pase un objeto que contenga las propiedades de fuente. The following properties are supported:
+En *fontObj*, pase un objeto que contenga las propiedades de fuente. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo | Descripción                                                                                                         | Valores posibles                                                                                                                                                                                                                                                                                                         | Obligatorio |
 | --------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
