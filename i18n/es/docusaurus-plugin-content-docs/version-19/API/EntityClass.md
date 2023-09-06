@@ -1625,7 +1625,7 @@ Si no se ha tocado ningún atributo de entidad, el método devuelve una colecci�
   //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
 ```
 
-In this case:
+En este caso:
 
 * firstName y lastName tienen un tipo `storage`
 * employer tiene un tipo `relatedEntity`

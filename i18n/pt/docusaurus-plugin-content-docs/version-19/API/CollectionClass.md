@@ -758,7 +758,7 @@ A função `.every()` <!-- REF #collection.every().Summary -->returns **true** i
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to true for every element fulfilling the test.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *methodName* recebe os parâmetros abaixo:
@@ -971,7 +971,7 @@ A função `.map()` <!-- REF #collection.filter().Summary -->returns a new colle
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * em *$1.value*: valor do elemento a ser filtrado
 * em *$2*: *param*
@@ -1062,7 +1062,7 @@ A função `.indexOf()` <!-- REF #collection.find().Summary -->returns the first
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * em *$1.value:* valor do elemento a ser avaliado
 * em *$2: param*
@@ -1081,7 +1081,7 @@ Como padrão, `.findIndex()` testa a coleção completa. Opcionalmente pode pass
 
 #### Exemplo 1
 
-You want to get the first element with a length smaller than 5:
+Se quiser obter o primeiro elemento com um tamanho menor que 5:
 
 ```4d
  var $col : Collection
@@ -1156,7 +1156,7 @@ A função `.fill()` <!-- REF #collection.findIndex().Summary -->returns the ind
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * em *$2: param*
@@ -1511,7 +1511,7 @@ A função `.some()` <!-- REF #collection.map().Summary -->creates a new collect
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * in *$1.value* (any type): element value to be mapped
 * em *$2* (qualquer tipo): *param*
@@ -2106,7 +2106,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$1.accumulator>* começa com *Undefined*.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * With the following *NumberGreaterThan0* method:
 * em *$2: param*
@@ -2420,7 +2420,7 @@ A função `.push()` <!-- REF #collection.some().Summary -->returns true if at l
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). Este método recebe um `Object` como primeiro parâmetro ($1) e tem de definir *$1.result* como **True** para cada elemento que cumpra o teste.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *methodName* recebe os parâmetros abaixo:
@@ -2456,7 +2456,7 @@ Como padrão, `.some()` testa toda a colecção. Opcionalmente pode passar o ín
  $b:=$c.some(1;"NumberGreaterThan0") //$b=false
 ```
 
-With the following *NumberGreaterThan0* method:
+Com o seguinte método *NumberGreaterThan0*:
 
 ```4d
 

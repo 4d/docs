@@ -11,6 +11,7 @@ title: リリースノート
 
 #### ハイライト
 
+- [`Formula from string`](../API/FunctionClass.md#formula-from-string) で *context* パラメーターをサポート。
 - [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew) の *connectionHandler* パラメーターで `headers` プロパティをサポート。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.ja.html) ページ。

@@ -43,7 +43,7 @@ The default value depends on the variable type and category, its execution conte
     - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
         - "a zero": a zero (ver acima),
         - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Note:** 4D recommends to use "to zero".
+        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Nota:** 4D recomenda a utilização de "em zero".
 
 The following table illustrates these default values:
 

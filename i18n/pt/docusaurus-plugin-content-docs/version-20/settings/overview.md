@@ -25,7 +25,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 
 ### Informações de bloqueio
 
-Locking can occur in both Project and Client/server modes when:
+O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
 -   The *settings.4DSettings* file is 'Read-only' (Projects only). Modifying a setting will display an alert to unlock it, if possible.
 -   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)

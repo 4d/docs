@@ -233,7 +233,7 @@ For more information on supported incoming parameter types, please refer to the 
 > If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
 > |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
 
-4D project methods can also return values in the 4D View Pro cell formula via $0. The following data types are supported for returned parameters:
+4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
 * [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
