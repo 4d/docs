@@ -2761,7 +2761,7 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 #### Descripción
 
-El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. El tema de una tabla puede definirse utilizando los comandos [`VP CREATE TABLE`](#vp-create-table) o [`VP SET TABLE THEME`](#vp-set-table-theme), o a través de la interfaz.
+El comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->devuelve los valores actuales del tema propertie del *tableName*<!-- END REF -->. El tema de una tabla puede definirse utilizando los comandos [`VP CREATE TABLE`](#vp-create-table) o [`VP SET TABLE THEME`](#vp-set-table-theme), o a través de la interfaz.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro y en *tableName*, el nombre de la tabla.
 
