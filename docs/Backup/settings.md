@@ -73,7 +73,7 @@ The **Use Log** option, when checked, indicates that the application uses a log 
 
 By default, any project created with 4D uses a log file (option **Use Log File** checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
 
-> Activating a new log file requires the data of the application to be backed up beforehand. When you check this option, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the application.
+> Activating a new log file requires the data of the application to be backed up beforehand. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. The creation of the log file is postponed and it will actually be created only after the next backup of the application.
 
 
 ## Backup & Restore

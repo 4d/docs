@@ -73,7 +73,7 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Security page](../settings/security.md) | N/a | N/a |
 | [Compatibility page](../settings/compatibility.md) | N/a | N/a |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
+When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below) or the *Backup.4DSettings* file (check the [Backup settings](../Backup/settings) page for more information).
 
 ## `SET DATABASE PARAMETER` and user settings  
 
