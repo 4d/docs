@@ -9,20 +9,20 @@ title: Qodly Studio
 
 :::
 
-**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the Qodly Cloud.
+**Qodly Studio** は、設計・テスト・公開がすべて Qodlyクラウドでおこなわれる Webビジネスアプリケーションの開発に特化した **Qodly プラットフォーム** の一部です。
 
-As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+4D v20 R2 では、 4D から直接 Qodly Studio を使用して、モダンで洗練された Webインターフェースをビルドし、既存の 4Dプロジェクトに簡単に統合して、**オンプレミス** で運用することができます。
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
+Qodly Studio では、全く新しい WebUI を使い、データソースの概念に慣れ、次の操作を学ぶことができます:
 
-- create webforms by placing components on a page
-- map components to data
-- trigger 4D code by configuring events
-- and much more.
+- ページ上にコンポーネントを配置して Webフォームを作成する
+- コンポーネントをデータにマッピングする
+- イベントを設定して 4Dコードをトリガーする
+- さらに沢山のことが可能です
 
 :::info
 
-The use of Qodly Studio in 4D requires a specific license. Qodly Studio options and menu items won't appear if the license is not activated.
+4D で Qodly Studio を使用するには、専用のライセンスが必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
 
 :::
 
@@ -30,37 +30,37 @@ The use of Qodly Studio in 4D requires a specific license. Qodly Studio options 
 
 ### 要件
 
-#### Browser
+#### ブラウザー
 
-Qodly Studio supports the following web browsers:
+Qodly Studio は、以下の Webブラウザーをサポートしています:
 
 - Chrome
 - Edge
 - FireFox
 
-The recommended resolution is 1920x1080.
+推奨解像度は 1920x1080 です。
 
-#### 4D application
+#### 4Dアプリケーション
 
-- Development: 4D v20 R2 or higher
-- Deployment: 4D Server v20 R2 or higher
-- Qodly Studio only works with 4D projects (binary databases are not supported).
+- 開発: 4D v20 R2 以上
+- 運用: 4D Server v20 R2 以上
+- Qodly Studio は 4Dプロジェクトでのみ動作します (バイナリデータベースはサポートされていません)。
 
 
-### Enabling access to Qodly Studio
+### Qodly Studio へのアクセスを有効化する
 
-By default, access to Qodly Studio is not granted.
+デフォルトでは、Qodly Studio へのアクセスは許可されていません。
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって提供され、表示される 4Dプロジェクトのデータは [4D Webサーバー](webServer.md) によって処理されます。
 
-To enable access to Qodly Studio, you must explicitly allow it at two levels:
+Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
-* at 4D level (4D or 4D Server)
-* at project level
+* 4Dレベルで (4D または 4D Server)
+* プロジェクトレベルで
 
-If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
+2つのレベルのいずれか (または両方) が有効でない場合、Qodly Studio　へのアクセスは拒否されます (403ページが返されます)。
 
-#### At 4D level
+#### 4Dレベルで
 
 As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
