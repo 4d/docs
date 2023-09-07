@@ -153,10 +153,6 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 
 
 
-
-
-
-
 ## Import et export de documents
 
 4D View Pro prend en charge l'import et l'export de plusieurs formats de documents :
@@ -164,6 +160,7 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 * .4vp
 * .xlsx
 * .txt et .csv
+* .sjs
 * .pdf (à des fins d'export uniquement)
 
 Pour plus de détails, consultez la description de [VP IMPORT DOCUMENT](method-list.md#vp-import-document) et [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
