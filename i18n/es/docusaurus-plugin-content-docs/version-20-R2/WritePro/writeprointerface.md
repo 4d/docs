@@ -244,18 +244,18 @@ The theme file in JSON format contains the following attributes:
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
-| WP attributes   | Corresponding WP constant |
-|:--------------- |:------------------------- |
-| textAlign       | wk text align             |
-| backgroundColor | wk background color       |
-| borderColor     | wk border color           |
-| borderStyle     | wk border style           |
-| borderWidth     | wk border width           |
-| font            | wk font                   |
-| color           | wk font color             |
-| fontFamily      | wk font family            |
-| fontSize        | wk font size              |
-| padding         | wk padding                |
+| Atributos WP    | Constante WP correspondiente |
+|:--------------- |:---------------------------- |
+| textAlign       | wk text align                |
+| backgroundColor | wk background color          |
+| borderColor     | wk border color              |
+| borderStyle     | wk border style              |
+| borderWidth     | wk border width              |
+| font            | wk font                      |
+| color           | wk font color                |
+| fontFamily      | wk font family               |
+| fontSize        | wk font size                 |
+| padding         | wk padding                   |
 
 ##### Ejemplo
 

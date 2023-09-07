@@ -1692,6 +1692,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
 * *pathObjects* : Collection. Puede añadir tantos objetos en la colección *pathObjects* como sea necesario. Por defecto, las propiedades se clasifican en orden ascendente ("descending" es false). Cada elemento de la colección contiene un objeto estructurado de la siguiente manera:
 
+
 ```4d
 {
     "propertyPath": string,
@@ -2281,6 +2282,7 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 ```
 
+
 <!-- END REF -->
 
 <!-- REF collection.reverse().Desc -->
@@ -2511,7 +2513,15 @@ Con el siguiente método *NumberGreaterThan0*:
 La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> y también devuelve la colección ordenada.
 > Esta función modifica la colección original.
 
-Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+
+1. null
+2. booleans
+3. cadenas
+4. numbers
+5. objects
+6. collections
+7. dates
 
 Si desea ordenar los elementos de la colección en otro orden o clasificar cualquier tipo de elemento, debe suministrar en *methodName*, un método de comparación que compare dos valores y devuelva **true** en *$1.result* si el primer valor es menor que el segundo. Puede suministrar parámetros adicionales a *methodName* si es necesario.
 
@@ -2524,16 +2534,6 @@ Si desea ordenar los elementos de la colección en otro orden o clasificar cualq
 *methodName* define el siguiente parámetro:
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** en caso contrario
-
-Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
-
-1. null
-2. booleans
-3. cadenas
-4. numbers
-5. objects
-6. collections
-7. dates
 
 #### Ejemplo 1
 

@@ -164,7 +164,7 @@ The translation file in JSON format contains the following attributes:
 
 | Atributo  | Tipo       | Obligatorio | Descripción                                                                           |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tablas    | Collection |             | Collection of translated table objects                                                |
+| tables    | Collection |             | Collection of translated table objects                                                |
 | fields    | Collection |             | Collection of translated field objects                                                |
 | formulas  | Collection |             | Collection of translated formula objects                                              |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
@@ -223,7 +223,7 @@ The theme file in JSON format contains the following attributes:
 | Atributo | Tipo   | Obligatorio | Descripción                                                                                                                           |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
 | default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
-| tabla    | Object |             | Object containing the style definition applicable to the table.                                                                       |
+| table    | Object |             | Object containing the style definition applicable to the table.                                                                       |
 | rows     | Object |             | Object containing the style definition applicable to all rows.                                                                        |
 | cells    | Object |             | Object containing the style definition applicable to all cells.                                                                       |
 | header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |
@@ -244,18 +244,18 @@ The theme file in JSON format contains the following attributes:
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
-| WP attributes   | Corresponding WP constant |
-|:--------------- |:------------------------- |
-| textAlign       | wk text align             |
-| backgroundColor | wk background color       |
-| borderColor     | wk border color           |
-| borderStyle     | wk border style           |
-| borderWidth     | wk border width           |
-| font            | wk font                   |
-| color           | wk font color             |
-| fontFamily      | wk font family            |
-| fontSize        | wk font size              |
-| padding         | wk padding                |
+| Atributos WP    | Constante WP correspondiente |
+|:--------------- |:---------------------------- |
+| textAlign       | wk text align                |
+| backgroundColor | wk background color          |
+| borderColor     | wk border color              |
+| borderStyle     | wk border style              |
+| borderWidth     | wk border width              |
+| font            | wk font                      |
+| color           | wk font color                |
+| fontFamily      | wk font family               |
+| fontSize        | wk font size                 |
+| padding         | wk padding                   |
 
 ##### Ejemplo
 

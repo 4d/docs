@@ -287,10 +287,10 @@ This command is similar to [`Formula`](#formula), except that it handles a text-
 
 If the formula is created in a component, you might consider using the *context* parameter. By default, since formulas are executed in the context in which they were created, it will not be able to call a variable, function, or a non-shared method of the host database. In this case, you can pass the `sk execute in host database` constant in the *context* parameter to execute the `4D.Function` object in the context of the host database. Las siguientes constantes están disponibles:
 
-| Constante                        | Tipo    | Descripción                                                          |
-| -------------------------------- | ------- | -------------------------------------------------------------------- |
-| `sk execute in current database` | Longint | (default) The formula will be executed in the context it was created |
-| `sk execute in host database`    | Longint | The formula will be executed in the host database context            |
+| Constante                        | Tipo    | Descripción                                                            |
+| -------------------------------- | ------- | ---------------------------------------------------------------------- |
+| `sk execute in current database` | Longint | (por defecto) La fórmula se ejecutará en el contexto en el que se creó |
+| `sk execute in host database`    | Longint | La fórmula se ejecutará en el contexto de la base de datos local       |
 
 
 #### Ejemplo

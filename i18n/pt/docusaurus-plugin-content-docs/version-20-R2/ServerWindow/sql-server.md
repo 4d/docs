@@ -38,4 +38,4 @@ Número de ligações SQL atualmente abertas no 4D Server.
 
 ### Ligações máximas
 
-Número máximo de ligações SQL simultâneas permitidas. This value depends on the license installed on the server machine.
+Número máximo de ligações SQL simultâneas permitidas. Este valor depende da licença instalada na máquina do servidor.

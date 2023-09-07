@@ -481,8 +481,6 @@ The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns
 If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
 
-
-
 | *mode*   | Beschreibung                                                                                                                                                                                                                     |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
@@ -500,7 +498,7 @@ If you use the *options* (object) parameter, you can pass more options for the f
 | `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
 | `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
 
-The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
+The function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter. The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
 | Break mode as text | Break mode as number (constant)   | Beschreibung                                                                                                                                                   |
 | ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

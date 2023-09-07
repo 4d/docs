@@ -29,19 +29,19 @@ The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D 
 
 From this interface, the user can select a template or a table from the first drop-down list and a theme from the second.
 
-##### In Columns:
+##### Em Colunas:
 
 ![](../assets/en/WritePro/columns2.PNG)
 
 Depending on the user's selection of a template or a table, the user can view the list of fields stored in the template (Blob and object types are automatically excluded). They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
 
-##### In Rows:
+##### Em linhas:
 
 ![](../assets/en/WritePro/rows.PNG)
 
 In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
 
-##### In Display:
+##### No ecrã:
 
 ![](../assets/en/WritePro/display2.PNG)
 
@@ -133,20 +133,20 @@ Eis um breve exemplo do aspeto do seu ficheiro JSON:
         }
     ],
     "breakFormulas": [{
-            "label": "Company",
-            "source": "This.item.toCompany.name"
+            "label": "Empresa",
+            "fonte": "This.item.toCompany.name"
     }, {
-            "label": "Sum of salaries",
+            "label": "Soma dos salários",
             "source": "String(This.breakItems.sum(\"salary\"); \"###,###.00\")"
         }
     ],
     "bcorFormulas": [{
-            "label": "Sum of salaries",
+            "label": "Soma dos salários",
             "source": "String(This.tableData.sum(\"salary\"); \"###,###.00\")"
         }
     ],
     "extraFormulas": [{
-            "label": "Sum of salaries",
+            "label": "Soma dos salários",
             "source": "String(This.tableData.sum(\"salary\"); \"###,###.00\")"
         }
     ]
@@ -164,7 +164,7 @@ The translation file in JSON format contains the following attributes:
 
 | Atributo  | Tipo       | Obrigatório | Descrição                                                                             |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tabelas   | Collection |             | Coleção de objetos de tabela traduzidos                                               |
+| tables    | Collection |             | Coleção de objetos de tabela traduzidos                                               |
 | fields    | Collection |             | Coleção de objetos de campo traduzidos                                                |
 | formulas  | Collection |             | Collection of translated formula objects                                              |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
@@ -244,18 +244,18 @@ O ficheiro de tema em formato JSON contém os seguintes atributos:
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):
 
-| WP attributes   | Corresponding WP constant |
-|:--------------- |:------------------------- |
-| textAlign       | wk text align             |
-| backgroundColor | wk background color       |
-| borderColor     | wk border color           |
-| borderStyle     | wk border style           |
-| borderWidth     | wk border width           |
-| font            | wk font                   |
-| color           | wk font color             |
-| fontFamily      | wk font family            |
-| fontSize        | wk font size              |
-| padding         | wk padding                |
+| Atributos WP    | Constante WP correspondente |
+|:--------------- |:--------------------------- |
+| textAlign       | wk text align               |
+| backgroundColor | wk background color         |
+| borderColor     | wk border color             |
+| borderStyle     | wk border style             |
+| borderWidth     | wk border width             |
+| font            | wk font                     |
+| color           | wk font color               |
+| fontFamily      | wk font family              |
+| fontSize        | wk font size                |
+| padding         | wk padding                  |
 
 ##### Exemplo
 

@@ -1713,6 +1713,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
 * *pathObjects* : Collection. Vous pouvez ajouter autant d'objets dans la collection *pathObjects* que nécessaire. Par défaut, les propriétés sont triées par ordre croissant ("descending" est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :
 
+
 ```4d
 {
     "propertyPath": string,
@@ -2541,7 +2542,15 @@ Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vou
 La fonction `.sort()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
 > Cette fonction modifie la collection d'origine.
 
-Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.
+Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
+
+1. Null
+2. booléens
+3. chaînes
+4. nombres
+5. objets
+6. collections
+7. dates
 
 Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans *methodName*, une méthode de comparaison qui compare deux valeurs et retourne **true** dans *$1.result* si la première valeur est inférieure à la deuxième valeur. Si nécessaire, vous pouvez passer des paramètres supplémentaires à la méthode via *extraParam*.
 
@@ -2554,16 +2563,6 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
 *methodName* doit fixer le paramètre suivant :
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
-
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
-
-1. Null
-2. booléens
-3. chaînes
-4. nombres
-5. objets
-6. collections
-7. dates
 
 #### Exemple 1
 

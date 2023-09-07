@@ -1311,7 +1311,7 @@ $es:=ds. Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name"
   //salesperson is a related entity
 ```
 
-Query with indexed placeholders for attributes and named placeholders for values:
+Pesquisa com marcadores de posição indexados para os atributos e marcadores de posição com nome para os valores:
 
 ```4d
 var $es : cs. EmployeeSelection
@@ -1322,7 +1322,7 @@ $es:=ds. Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";
   //salesperson is a related entity
 ```
 
-Query with indexed placeholders for attributes and values:
+Pesquisa com marcadores de posição indexados para os atributos e os valores:
 
 ```4d
 var $es : cs. EmployeeSelection
@@ -1332,11 +1332,11 @@ $es:=ds. Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smit
 
 #### Exemplo 2
 
-This section illustrates queries with named placeholders for attributes.
+Esta seção ilustra pesquisas com marcadores de posição com nomes para os atributos.
 
-Given an Employee dataclass with 2 entities:
+Dada uma dataclass Employee com 2 entidades:
 
-Entity 1:
+Entidade 1:
 
 ```4d
 name: "Marie"
@@ -1348,7 +1348,7 @@ softwares:{
 }
 ```
 
-Entity 2:
+Entidade 2:
 
 ```4d
 name: "Sophie"
@@ -1360,7 +1360,7 @@ softwares:{
 }
 ```
 
-Query with named placeholders for attributes:
+Pesquisa com marcadores de posição com nome para os atributos:
 
 ```4d
  var $querySettings : Object
@@ -1371,7 +1371,7 @@ Query with named placeholders for attributes:
   //$es.length=1 (Employee Marie)
 ```
 
-Query with named placeholders for attributes and values:
+Pesquisa com marcadores de posição com nome para os atributos e os valores:
 
 
 ```4d
@@ -1392,16 +1392,16 @@ Query with named placeholders for attributes and values:
 
 #### Exemplo 3
 
-These examples illustrate the various ways to use formulas with or without parameters in your queries.
+Estes exemplos ilustram as distintas formas de utilizar fórmulas com ou sem parâmetros em suas pesquisas.
 
-The formula is given as text with `eval()` in the *queryString* parameter:
+A fórmula se da como texto com `eval()` no parâmetro *queryString*:
 
 ```4d
  var $es : cs. StudentsSelection
  $es:=ds. Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-The formula is given as a `Formula` object through a placeholder:
+A fórmula se dá como um objeto `Formula` através de um marcador de posição:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1410,7 +1410,7 @@ The formula is given as a `Formula` object through a placeholder:
  $es:=ds. Students.query(":1 and nationality='French'";$formula)
 ```
 
-Only a `Formula` object is given as criteria:
+Apenas um objeto `Formula` é dado como critério:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1419,7 +1419,7 @@ Only a `Formula` object is given as criteria:
  $es:=ds. Students.query($formula)
 ```
 
-Several formulas can be applied:
+Podem ser aplicadas várias fórmulas:
 
 ```4d
  var $formula1; $1; $formula2 ;$0 : Object
@@ -1428,7 +1428,7 @@ Several formulas can be applied:
  $0:=ds. Students.query(":1 and :2 and nationality='French'";$formula1;$formula2)
 ```
 
-A text formula in *queryString* receives a parameter:
+Uma fórmula texto em *queryString* recebe um parâmetro:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1444,7 +1444,7 @@ A text formula in *queryString* receives a parameter:
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-Using the same ***checkName*** method, a `Formula` object as placeholder receives a parameter:
+Utilizando o mesmo método ***checkName***, um objeto `Formula` como marcador de posição recebe um parâmetro:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1457,7 +1457,7 @@ Using the same ***checkName*** method, a `Formula` object as placeholder receive
  $es:=ds. Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
-We want to disallow formulas, for example when the user enters their query:
+Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua consulta:
 
 ```4d
  var $es : cs. StudentsSelection
@@ -1472,7 +1472,7 @@ We want to disallow formulas, for example when the user enters their query:
 
 #### Veja também
 
-[`.query()`](EntitySelectionClass.md#query) for entity selections
+[`.query()`](EntitySelectionClass.md#query) para seleções de entidades
 <!-- END REF -->
 
 <!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
@@ -1490,9 +1490,9 @@ We want to disallow formulas, for example when the user enters their query:
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                                     |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
-| settings  | Object | -> | Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
+| Parâmetro | Tipo   |    | Descrição                                                                                                       |
+| --------- | ------ | -- | --------------------------------------------------------------------------------------------------------------- |
+| settings  | Object | -> | Objecto que define o tempo limite e o tamanho máximo da cache ORDA para a dataclass.|<!-- END REF -->
 
 |
 
@@ -1500,30 +1500,30 @@ We want to disallow formulas, for example when the user enters their query:
 
 #### Descrição
 
-The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
+A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->define o tempo limite e o tamanho máximo da cache ORDA para um dataclass.<!-- END REF -->.
 
-In the *settings* parameter, pass an object with the following properties:
+No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
 | Propriedade | Tipo    | Descrição                    |
 | ----------- | ------- | ---------------------------- |
 | timeout     | Integer | Tempo de espera em segundos. |
 | maxEntries  | Integer | Número máximo de entidades.  |
 
-`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. This means that:
+`timeout` define o timeout da cache ORDA para o dataclass (por defeito é de 30 segundos). Uma vez decorrido o tempo limite, as entidades da classe de dados na cache são consideradas como expiradas. Isto significa que:
 
 * os dados ainda estão lá
 * na próxima vez que os dados forem necessários, serão solicitados ao servidor
 * 4D remove automaticamente os dados expirados quando o número máximo de entidades é atingido
 
-Setting a `timeout` property sets a new timeout for the entities already present in the cache. It is useful when working with data that does not change very frequently, and thus when new requests to the server are not necessary.
+A definição de uma propriedade `timeout` define um novo tempo limite para as entidades já presentes na cache. É útil quando se trabalha com dados que não mudam com muita frequência, e, portanto, quando não são necessários novos pedidos ao servidor.
 
-`maxEntries` sets the max number of entities in the ORDA cache. Default is 30 000.
+`maxEntries` define o número máximo de entidades na cache ORDA. O padrão é de 30 000.
 
-The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. Otherwise it is ignored and the maximum number of entries is set to 300.
+O número mínimo de entradas é 300, pelo que o valor de `maxEntries` deve ser igual ou superior a 300. Caso contrário, é ignorado e o número máximo de entradas é fixado em 300.
 
-If no valid properties are passed as `timeout` and `maxEntries`, the cache remains unchanged, with its default or previously set values.
+Se nenhuma propriedade válida for passada como `timeout` e `maxEntries`, a cache permanece inalterada, com os seus valores por defeito ou previamente definidos.
 
-When an entity is saved, it is updated in the cache and expires once the timeout is reached.
+Quando uma entidade é guardada, é actualizada na cache e expira quando o tempo limite é atingido.
 
 #### Exemplo
 
