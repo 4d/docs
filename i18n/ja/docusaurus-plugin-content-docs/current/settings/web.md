@@ -299,12 +299,12 @@ RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/co
 
 ### Qodly Studio
 
-#### Enable access to Qodly Studio
+#### Qodly Studio へのアクセスを有効化する
 
 :::note
 
-This option only appears if the Qodly Studio license is activated.
+このオプションは、Qodly Studio ライセンスが有効な場合にのみ表示されます。
 
 :::
 
-This option enables user access to [Qodly Studio](XXX) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
+このオプションにより、ユーザーはカレントプロジェクト用の [Qodly Studio](XXX) にアクセスできるようになります。 [アプリケーションレベル](../Admin/webAdmin.md) でグローバルアクセスが許可されている必要があることに注意してください。
