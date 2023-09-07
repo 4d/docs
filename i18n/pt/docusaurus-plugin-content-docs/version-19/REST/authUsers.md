@@ -17,6 +17,14 @@ Quando [sessões escaláveis estão activadas](WebServer/sessions.md#enabling-se
 
 Se o método base `On REST Authentication` não tiver sido definido, é aberta uma sessão `guest`.
 
+
+## Modo preventivo
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+With 4D single-user, interpreted code is always run in cooperative mode.
+
+
 ## Exemplo
 
 Neste exemplo, o usuário introduz o seu e-mail e palavra-passe numa página html que solicita [`$directory/login`]($directory.md#directorylogin) num POST (recomenda-se a utilização de uma ligação HTTPS para enviar a página html). O método base `On REST Authentication` é chamado para validar as credenciais e definir a sessão.
@@ -42,6 +50,7 @@ Login
 <script>
 function sendData(data) {
   var XHR = new XMLHttpRequest();
+
 
   XHR.onreadystatechange = function() {
     if (this.status == 200) {      
