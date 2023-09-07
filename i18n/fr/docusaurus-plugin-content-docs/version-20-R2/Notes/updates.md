@@ -13,6 +13,7 @@ Lisez [**Les nouveautés de 4D v20 R2**](https://blog.4d.com/fr-whats-new-in-4d-
 
 - Nouvelle classe [WebSocket](../API/WebSocketClass.md) pour créer et gérer des connexions WebSocket clientes depuis 4D.
 - Nouveaux [réglages d'interface](../settings/client-server.md#network-layer) pour la couche réseau QUIC.
+- 4D View Pro: Support of the **.sjs** file format for the [import](../ViewPro/method-list.md#vp-import-document) and [export](../ViewPro/method-list.md#vp-export-document) of documents.
 - 4D Langage : [Liste des nouveautés](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) sur doc.4d.com.
 - 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv20R2/4D/20-R2/Liste-des-nouveautes.901-6390313.fe.html) sur doc.4d.com.
 - 4D Write Pro Interface : Nouvel [assistant de tableau](../WritePro/writeprointerface.md).
