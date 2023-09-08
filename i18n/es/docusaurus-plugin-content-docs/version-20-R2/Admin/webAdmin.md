@@ -69,7 +69,7 @@ Se muestra la siguiente caja de diálogo:
 
 ![alt-text](../assets/en/Admin/waSettings2.png)
 
-#### Launch WebAdmin server at startup
+#### Iniciar el servidor WebAdmin al inicio
 
 Marque esta opción para lanzar el servidor web `WebAdmin` automáticamente cuando se inicie la aplicación 4D o 4D Server (ver [arriba](#lanzamiento-al-inicio)). Por defecto, esta opción no está seleccionada.
 
@@ -122,7 +122,7 @@ Una llave de acceso es similar a una contraseña pero no está asociada a un ini
 - Para modificar la llave de acceso: haga clic en el botón **Modificar**, introduzca la nueva cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**.
 - Para eliminar la llave de acceso: haga clic en el botón **Modificar**, deje vacía el área de la llave de acceso y haga clic en **OK**.
 
-#### Enable access to Qodly Studio
+#### Activar el acceso a Qodly Studio
 
 :::note
 
