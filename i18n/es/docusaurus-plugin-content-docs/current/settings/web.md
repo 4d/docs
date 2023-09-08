@@ -299,7 +299,7 @@ Esta opción especifica un grupo de usuarios 4D que está autorizado a establece
 
 ### Qodly Studio
 
-#### Enable access to Qodly Studio
+#### Activar el acceso a Qodly Studio
 
 :::note
 
