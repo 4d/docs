@@ -2190,7 +2190,7 @@ To sort several collections synchronously, just pass in *colsToSort* a collectio
 
 :::note
 
-All collections must have the same number of elements, otherwise an error is returned.
+All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
 
 :::
 
@@ -2411,6 +2411,7 @@ Ordering a collection of objects using a collection of criteria objects:
 Ordering with a property path:
 
 ```4d
+
  var $crit; $c; $c2 : Collection
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
