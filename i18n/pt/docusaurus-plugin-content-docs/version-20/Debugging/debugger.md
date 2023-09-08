@@ -329,11 +329,14 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
-This area also allows you to add or remove [**break points**](breakpoints.md).
+Esta área também permite adicionar ou remover
+**pontos de ruptura</a>.</p> 
+
+
 
 ### Tips
 
-Hover your pointer over any expression to display a tool tip that indicates:
+Passe o ponteiro do rato sobre qualquer expressão para visualizar uma dica de ferramenta que indica:
 
 * o tipo declarado da expressão
 * o valor atual da expressão
@@ -344,21 +347,27 @@ Isto também funciona com as selecções:
 
 ![source-code-pane-tip](../assets/en/Debugging/sourcePaneTip.png)
 
+
+
 ### Adição de expressões ao painel de controle personalizado
 
 You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
 1. No painel de código fonte, selecione a expressão a avaliar
-2. Faça uma das seguintes opções:
-    * Drag and drop the selected text to the Expression area of the Custom Watch Pane
+2. Faça uma das seguintes opções: 
+       * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
     * Clique com o botão direito do rato no texto selecionado **>** **Copiar para o painel de expressões**
+
+
 
 ### Contador do programa
 
 The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca a linha seguinte a ser executada.
 
 Por padrão, a linha do contador de programas (também designada por linha de execução) é realçada no depurador. Pode personalizar a cor de realce na página [Métodos das Preferências](Preferences/methods.md).
+
+
 
 #### Movendo o contador do programa
 
@@ -367,6 +376,8 @@ Para efeitos de depuração, é possível deslocar o contador de programa para o
 Isto apenas diz ao depurador para prosseguir o rastreio ou a execução a partir de um ponto diferente. Não executa linhas nem anula a sua execução. Todos os parâmetros, campos, variáveis, etc. atuais não são afetados.
 
 Por exemplo:
+
+
 
 ```4d
   // ...
@@ -378,7 +389,10 @@ Por exemplo:
   // ...
 ```
 
+
 Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+
+
 
 ### Menu contextual
 
@@ -386,8 +400,8 @@ The contextual menu of the Source Code Pane provides access to several functions
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Ir para definição**: vai para onde o objeto selecionado está definido. Este comando está disponível para:
-  * *Métodos projeto:* apresenta o conteúdo do método numa nova janela do editor de código
+* **Ir para definição**: vai para onde o objeto selecionado está definido. Este comando está disponível para: 
+    * *Métodos projeto:* apresenta o conteúdo do método numa nova janela do editor de código
   * *Campos:* exibe as propriedades do campo no inspetor da janela de estrutura
   * *Tabelas:* apresenta as propriedades da tabela no inspetor da janela de estrutura
   * *Formulários:* apresenta o formulário no editor de formulários
@@ -400,6 +414,8 @@ The contextual menu of the Source Code Pane provides access to several functions
 * **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
 * **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Quaisquer alterações efetuadas modificam permanentemente o ponto de interrupção.
 
+
+
 ### Localizar seguinte/anterior
 
 Os atalhos específicos permitem-lhe encontrar cadeias de caracteres idênticas à que foi selecionada:
@@ -409,16 +425,24 @@ Os atalhos específicos permitem-lhe encontrar cadeias de caracteres idênticas 
 
 A pesquisa só é efetuada se selecionar pelo menos um carácter no painel Código fonte.
 
+
+
 ## Atalhos
 
 Esta secção lista todos os atalhos disponíveis na janela do depurador.
 
+
+
 > A barra de ferramentas também tem [atalhos](#tool-bar-buttons).
+
+
 
 #### Janela de avaliação e subjanela de avaliação
 
 * Um **clique duas vezes** em um elemento na janela de expressão para copiá-lo para a janela de avaliação
 * Um **clique duplo** na subjanela de avaliação cria uma nova expressão
+
+
 
 #### Panel de código fuente
 
@@ -429,6 +453,8 @@ Esta secção lista todos os atalhos disponíveis na janela do depurador.
 * As combinações de teclas **Ctrl+D** (Windows) ou **Cmd+D** (macOS) copiam o texto selecionado na janela de avaliação personalizado.
 * As combinações de teclas ** Ctrl+E** (Windows) ou **Cmd+E** (macOS) localizam as cadeias de caracteres seguintes idênticas à que foi selecionada.
 * As combinações de teclas **Ctrl+Shift+E** (Windows) ou **Cmd+Shift+E** (macOS) localizam as cadeias de caracteres anteriores idênticas à selecionada.
+
+
 
 #### Todas as janelas
 
