@@ -57,6 +57,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
 | [<!-- INCLUDE #collection.max().Syntax -->](#max)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
 | [<!-- INCLUDE #collection.min().Syntax -->](#min)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
+| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.multiSort().Summary -->|
 | [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
 | [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
 | [<!-- INCLUDE #collection.pop().Syntax -->](#pop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
@@ -2195,6 +2196,144 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 <!-- END REF -->
 
 
+<!-- REF collection.multiSort().Desc -->
+## .multiSort()
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v20 R3 | 追加 |
+
+</details>
+
+<!-- REF #collection.multiSort().Syntax -->**.multiSort**() : Collection<br/>**.multiSort**( *colsToSort* : Collection ) : Collection<br/>**.multiSort**( *formula* : 4D.Function ; *colsToSort* : Collection ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.multiSort().Params -->
+| 引数         | タイプ         |    | 説明                                                                                                                            |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                                                                  |
+| colsToSort | Collection  | -> | Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties |
+| 戻り値        | Collection  | <- | 並べ替えられた元のコレクション|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->。
+> This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+
+If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. 型は以下の順番で返されます:
+
+1. null
+2. ブール
+3. 文字列
+4. 数値
+5. オブジェクト
+6. コレクション
+7. 日付
+
+
+**Single-level synchronized sort**
+
+To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
+
+:::note
+
+All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
+
+:::
+
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](FunctionClass.md#formula) that defines the sort order. 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 You can provide additional parameters to the formula if necessary.
+
+The formula receives the following parameters:
+
+- $1 (オブジェクト):
+    - *$1.value* (任意の型): 比較する一つ目の要素の値
+    - *$1.value2* (任意の型): 比較する二つ目の要素の値
+- $2...$N (任意の型): 追加の引数
+
+**Multi-level synchronized sort**
+
+Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level.
+
+The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+
+:::note
+
+The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
+
+:::
+
+#### 例題 1
+
+A simple synchronized sort of collections with different value types:
+
+```4d
+var $col;$col2;$col3 : Collection
+$col:=["A"; "C"; "B"]
+$col2:=[1; 2; 3]
+$col3:=[["Jim"; "Philip"; "Maria"]; ["blue"; "green"]; ["11"; 22; "33"]]
+
+$col.multiSort([$col2; $col3])
+//$col=["A","B","C"]
+//$col2=[1,3,2]
+//$col3[0]=["Jim","Philip","Maria"]
+//$col3[1]=["11",22,"33"]
+//$col3[2]=["blue","green"]
+
+```
+
+#### 例題 2
+
+You want to sort three synchronized collections: city, country, and continent. You want an ascending sort of the first and the third collections, and synchronization for the second collection:
+
+```4d
+var $city : Collection
+var $country : Collection
+var $continent : Collection
+
+$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
+$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
+$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
+
+$continent.multiSort($country; {collection: $city; order: ck ascending})
+//$continent=["Africa", "America","Europe","Europe","Europe"]
+//$country=["Morocco", "US","Germany","France","France"]
+//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
+
+```
+
+#### 例題 3
+
+You can also synchronize collections of objects.
+
+```4d
+var $name : Collection
+var $address : Collection
+$name:=[]
+$name.push({firstname: "John"; lastname: "Smith"})
+$name.push({firstname: "Alain"; lastname: "Martin"})
+$name.push({firstname: "Jane"; lastname: "Doe"})
+$name.push({firstname: "John"; lastname: "Doe"})
+$address:=[]
+$address.push({city: "Paris"; country: "France"})
+$address.push({city: "Lyon"; country: "France"})
+$address.push({city: "Eching"; country: "Germany"})
+$address.push({city: "Berlin"; country: "Germany"})
+
+$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); $address)
+//["Alain Martin","Jane Doe","John Smith","John Doe"]
+//["Lyon France","Eching Germany","Paris France","Berlin Germany"]
+
+```
+
+
+<!-- END REF -->
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -2326,6 +2465,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 プロパティパスで並べ替えます:
 
 ```4d
+
  var $crit; $c; $c2 : Collection
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
@@ -3005,6 +3145,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.reverse().Params -->
+
 | 引数  | タイプ        |    | 説明                                             |
 | --- | ---------- |:--:| ---------------------------------------------- |
 | 戻り値 | Collection | <- | 逆順に要素を格納した新しいコレクション|<!-- END REF -->
@@ -3188,6 +3329,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 *   (メソッドを使用する場合は必須) *$1.result* (ブール): 要素の値の評価が成功した場合には **true** 、それ以外は **false**
 *   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
+
 
 `.some()` 関数は、true を返す最初のコレクション要素を発見すると、コールバックの呼び出しをやめて **true** を返します。
 
