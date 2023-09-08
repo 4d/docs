@@ -19,30 +19,30 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Ecriture ligne par ligne depuis le début
+//Writing line by line from the start
 $fhandle:=$f.open("write")
 $text:="Hello World"
-For ($line; 1 ; 4)
+For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Ecriture ligne par ligne depuis la fin
+//Writing line by line from the end
 $fhandle:=$f.open("append")
-$text:="Hello New World !"
-For ($line; 1 ; 4)
+$text:="Hello New World!"
+For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Lecture en utilisant un caractère d'arrêt et un paramètre objet
+//Reading using a stop character and an object parameter
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:=" !"
+$stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Lecture ligne par ligne
+//Reading line by line
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -267,12 +267,31 @@ Cette propriété est en **lecture seule**.
 
 La propriété `.offset` renvoie <!-- REF #FileHandleClass.offset.Summary -->l'offset courant du flux de données (position dans le document)<!-- END REF -->. La valeur de l'offset est automatiquement mise à jour après les opérations de lecture et d'écriture.
 
-Fixer la propriété `.offset` modifiera sa valeur courante.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - Si la valeur passée est négative, `.offset` est fixé au début du fichier (zéro).
 - Si la valeur passée est supérieure à la taille du fichier, `.offset` est fixé à la fin du fichier (taille du fichier).
 
 Cette propriété est en **lecture/écriture**.
+
+:::caution
+
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()](#readline)` it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Par exemple :
+
+```4d
+  // Open a european text file using utf-16 encoding (two bytes per character)
+  // We want to read the first 10 characters as bytes, then the remaining as text.
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // read the 20 first bytes (i.e. 10 characters)
+$b:=$fh.readBlob(20) // $fh.offset=20
+  // then read all text skipping the first 10 characters we just read in previous blob
+  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
+  // We need to translate it from bytes to characters.
+$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+$s:=$fh.readText()
+```
+
+:::
 
 
 <!-- END REF -->
@@ -483,6 +502,7 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
