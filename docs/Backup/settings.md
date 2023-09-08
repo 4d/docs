@@ -67,9 +67,9 @@ To view the location of the files, click in the area in order to display their p
 
 To modify the location where these files are stored, click the **...** button. A selection dialog box appears, which allows you to select a folder or disk where the backups will be placed. The "Used Space" and "Free Space" areas are updated automatically and indicate the remaining space on the disk of the selected folder.
 
-### Log management  
+### Log file management  
 
-The **Use Log** option, when checked, indicates that the application uses a log file. Its pathname is specified below the option. When this option is checked, it is not possible to open the application without a log file. 
+The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log life for the current data file is specified below the option. When this option is checked, it is not possible to open the application without a log file. For more information about the log file, pleaser refer to [log file](../log.mg)
 
 By default, any project created with 4D uses a log file (option **Use Log File** checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
 
