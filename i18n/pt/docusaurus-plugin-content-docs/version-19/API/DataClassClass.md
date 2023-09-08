@@ -769,9 +769,9 @@ You can mix all argument kinds in *queryString*. A *queryString* can contain, fo
  $result2:=$col.query("company.name = :1";"John's Pizzas")
  ```
 
-**Looking for null values**
+**Pesquisa de valores null**
 
-When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
+Quando pesquisar por valores null não pode usar a sintaxe do marcador de posição porque o motor de consulta considera o valor null como um valor de comparação inesperado. Por exemplo, se executar esta pesquisa:
 
 ```4d
 $vSingles:=ds. Person.query("spouse = :1";Null) // will NOT work
@@ -814,7 +814,7 @@ ds.Class.info:
             } ] }
 ```
 
-Consider the following results:
+Considere os seguintes resultados:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0) 
@@ -838,7 +838,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 
 You can use any letter from the alphabet as the `[a]` notation.
 
-**Linking collection attribute query arguments**
+**Linkar os argumentos de pesquisa com os atributos de coleção**
 
 :::info
 
@@ -848,7 +848,7 @@ This feature is only available in queries on dataclasses and [entity selections]
 
 When searching within dataclass object attributes containing collections using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
 
-For example, with the following two entities:
+Por exemplo, com as duas entidades abaixo:
 
 ```
 Entity 1:
@@ -877,12 +877,12 @@ ds. People.query("places.locations[].kind= :1 and places.locations[].city= :2";"
 
 ... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
 
-If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. To link query arguments:
+If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. Para linkar argumentos de pesquisa:
 
 * Adicionar uma letra entre os \[] na primeira rota a linkar e repita a mesma letra em todos os argumentos linkados. Por exemplo: `locations[a].city and locations[a].kind`. Pode usar qualquer letra do alfabeto latino (não diferencia maiúsculas e minúsculas).
 * Para adicionar critérios linkados na mesma pesquisa, use outra letra. Pode criar até 26 combinações de critérios em uma única pesquisa.
 
-With the above entities, if you write:
+Com as entidades acima, se escreve:
 
 ```4d
 ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
@@ -890,38 +890,38 @@ ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2"
 
 ... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
 
-**formula parameter**
+**Parâmetro formula**
 
-As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.
+Como alternativa à inserção de fórmulas dentro do parâmetro *queryString* (ver acima), pode passar diretamente um objeto fórmula como critério de pesquisa booleano. A utilizaçã de um objeto fórmula para as pesquisas é **recomendada** já que se beneficia da tokenização, e o código é mais fácil de pesquisar/ler.
 
-The formula must have been created using the `Formula` or `Formula from string` command. In this case:
+The formula must have been created using the `Formula` or `Formula from string` command. Nesse modo:
 
 * *fórmula* se avalia para cada entidade e deve devolver true ou false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 * dentro da *fórmula*, a entidade está disponível através do objeto `This`.
 * if the `Formula` object is **null**, the errror 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
 > For security reasons, formula calls within `query(`) member methods can be disallowed. Veja a descrição do parâmetro *querySettings*.
 
-**Passing parameters to formulas**
+**Passar parâmetros a fórmulas**
 
-Any *formula* called by the `query()` class function can receive parameters:
+Todo parâmetro *formula* chamado pela função `query()` pode receber parâmetros:
 
 * Parâmeters devem ser passados através da propriedade  **args**  (objeto) do parâmetro *querySettings*.
 * A fórmula recebe este objeto **args** como um parâmetro **$1**.
 
-This small code shows the principles of how parameter are passed to methods:
+Este pequeno código mostra os principios de como são passados os parâmetros aos métodos:
 
 ```4d
  $settings:=New object("args";New object("exclude";"-")) //args object to pass parameters
  $es:=ds. Students.query("eval(checkName($1.exclude))";$settings) //args is received in $1
 ```
 
-Additional examples are provided in example 3.
+No exemplo 3 são oferecidos mais exemplos.
 
-**4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
+**4D Server**: em cliente/servidor, as fórmulas são executadas no servidor. Neste contexto, só se envia às fórmulas o objeto `querySettings.args`.
 
-**querySettings parameter**
+**Parâmetro querySettings**
 
-In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
+No parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
 | Propriedade   | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -933,11 +933,11 @@ In the *querySettings* parameter, you can pass an object containing additional o
 | queryPlan     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                                                                                     |
 | queryPath     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa tal qual for realizada. A propriedade retornada é um objeto que contém a rota atual usada para a pesquisa (geralmente idêntica àquela do queryPlan, mas deve diferenciar se o motor consegue otimizar a pesquisa), assim como o tempo de processamento e o número de registros encontrado. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false. **Note**: This property is supported only by the `entitySelection.query( )` and `dataClass.query( )` functions.                                                                              |
 
-**About queryPlan and queryPath**
+**Sobre queryPlan e queryPath**
 
-The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+A informação registrada em `queryPlan`/`queryPath` inclui o tipo de pesquisa (indexada e sequencial) e cada subconsulta necessária junto com os operadores de conjunção. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. Geralmente a descrição do plano de pesquisa e sua rota são idênticas, mas podem diferir porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar desempenho. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.
 
-For example, if you execute the following query:
+Por exemplo, se executar esta pesquisa:
 
 ```4d
  $sel:=ds. Employee.query("salary < :1 and employer.name = :2 or employer.revenues > :3";\  
@@ -966,46 +966,46 @@ queryPath:
 
 #### Exemplo 1
 
-This section provides various examples of queries.
+Esta seção oferece vários exemplos de pesquisas.
 
-Query on a string:
+Consultas em uma string:
 
 ```4d
 $entitySelection:=ds. Customer.query("firstName = 'S@'")
 ```
 
-Query with a NOT statement:
+Pesquisa com uma instrução NOT:
 
 ```4d
 $entitySelection:=ds. Employee.query("not(firstName=Kim)")
 ```
 
-Queries with dates:
+Pesquisas com datas:
 
 ```4d
 $entitySelection:=ds. Employee.query("birthDate > :1";"1970-01-01")
 $entitySelection:=ds. Employee.query("birthDate <= :1";Current date-10950)
 ```
 
-Query with indexed placeholders for values:
+Pesquisa com marcadores de posição indexados para os valores:
 
 ```4d
 $entitySelection:=ds. Customer.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@")
 ```
 
-Query with indexed placeholders for values on a related dataclass:
+Pesquisa com marcadores de posição indexados para valores em uma dataclass relacionada:
 
 ```4d
 $entitySelection:=ds. Employee.query("lastName = :1 and manager.lastName = :2";"M@";"S@")
 ```
 
-Query with indexed placeholder including a descending order by statement:
+Pesquisa com marcador de posição indexado que inclui uma instrução de ordem descendente:
 
 ```4d
 $entitySelection:=ds. Student.query("nationality = :1 order by campus.name desc, lastname";"French")
 ```
 
-Query with named placeholders for values:
+Pesquisa com marcadores de posição com nome para os valores:
 
 ```4d
 var $querySettings : Object
@@ -1024,7 +1024,7 @@ $querySettings.parameters:=New object("userId";1234)
 $managedCustomers:=ds. Customer.query("salesperson.userId = :userId and name=:1";"Smith";$querySettings)
 ```
 
-Query with queryPlan and queryPath objects:
+Pesquisa com objetos queryPlan e queryPath:
 
 ```4d
 $entitySelection:=ds. Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
@@ -1035,19 +1035,19 @@ $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
 ```
 
-Query with an attribute path of Collection type:
+Pesquisa com uma rota de atributo de tipo Collection:
 
 ```4d
 $entitySelection:=ds. Employee.query("extraInfo.hobbies[].name = :1";"horsebackriding")
 ```
 
-Query with an attribute path of Collection type and linked attributes:
+Pesquisa com uma rota de atributos de tipo Collection e atributos vinculados:
 
 ```4d
 $entitySelection:=ds. Employee.query("extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2";"horsebackriding";2)
 ```
 
-Query with an attribute path of Collection type and multiple linked attributes:
+Pesquisa com uma rota de atributos de tipo Collection e múltiplos atributos vinculados:
 
 ```4d
 $entitySelection:=ds. Employee.query("extraInfo.hobbies[a].name = :1 and
@@ -1055,25 +1055,25 @@ $entitySelection:=ds. Employee.query("extraInfo.hobbies[a].name = :1 and
  extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 ```
 
-Query with an attribute path of Object type:
+Pesquisa com uma rota de atributo de tipo Objeto:
 
 ```4d
 $entitySelection:=ds. Employee.query("extra.eyeColor = :1";"blue")
 ```
 
-Query with an IN statement:
+Pesquisa com uma instrução IN:
 
 ```4d
 $entitySelection:=ds. Employee.query("firstName in :1";New collection("Kim";"Dixie"))
 ```
 
-Query with a NOT (IN) statement:
+Pesquisa com instrução NOT (IN):
 
 ```4d
 $entitySelection:=ds. Employee.query("not (firstName in :1)";New collection("John";"Jane"))
 ```
 
-Query with indexed placeholders for attributes:
+Pesquisa com marcadores de posição indexados para os atributos:
 
 ```4d
 var $es : cs. EmployeeSelection
