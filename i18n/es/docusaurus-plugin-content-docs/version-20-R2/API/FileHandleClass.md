@@ -48,25 +48,6 @@ $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
     $lines.push($fhandle.readLine())
 End while
-For ($line; 1; 4)
-    $fhandle.writeLine($text+String($line))
-End for
-
-//Lectura utilizando un carácter de parada y un parámetro objeto
-$o:=New object()
-$o.mode:="read"
-$o.charset:="UTF-8"
-$o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
-$text:=$fhandle.readText($stopChar)
-
-//Lectura línea a línea
-$lines:=New collection
-$fhandle:=$f.open("read")
-While (Not($fhandle.eof))
-    $lines.push($fhandle.readLine())
-End while
 
 ```
 
