@@ -2209,27 +2209,18 @@ Defining a multi-level synchronized sort requires that you pass an object contai
 
 The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
 
-For example, imagine you want to sort three collections: 
-- one containing countries, to sort in ascending order,
-- one containing cities of countries, to sort in ascending order,
-- one containing inhabitants of cities, to sort in **descending** order.
-
-You need to write:
-
-```4d
-$res:=$colCountries.multiSort($colCities;{collection:$colHabs, order:ck descending})
-```
-
 :::note
 
-The `.multiSort()` function generate [stable](https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/) sorts. 
+The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm. 
 
 :::
 
 #### Example 1
 
+A simple synchronized sort of collections with different value types:
+
 ```4d
-var $col;$col2; $col3;$result : Collection
+var $col;$col2;$col3 : Collection
 $col:=["A"; "C"; "B"]
 $col2:=[1; 2; 3]
 $col3:=[["Jim"; "Philip"; "Maria"]; ["blue"; "green"]; ["11"; 22; "33"]]
@@ -3089,6 +3080,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 
 <!-- REF #collection.reverse().Params -->
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Collection|<-|Inverted copy of the collection|<!-- END REF -->
