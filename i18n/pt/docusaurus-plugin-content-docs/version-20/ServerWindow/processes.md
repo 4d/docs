@@ -86,15 +86,15 @@ A página também tem cinco botões de controle que atuam nos processos selecion
 
 ![](../assets/en/Admin/server-process-actions.png)
 
-- **Abort Process**: can be used to abort the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation.
+- **Abortar processo**: pode ser utilizado para abortar os processos selecionados. Quando clicar neste botão, aparece uma caixa de diálogo de aviso para que se possa confirmar ou cancelar a operação.
 
-> You can also abort the selected process(es) directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button, or by using the [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) command.
+> Também pode abortar os processos selecionados diretamente sem apresentar a caixa de diálogo de confirmação, mantendo apertada a tecla **Alt** enquanto clica neste botão, ou utilizando o comando [`ABORT PROCESS BY ID`](https://doc.4d.com/4dv19/help/command/en/page1634.html) .
 
-- **Pause Process**: can be used to pause the selected process(es).
-- **Activate Process**: can be used to reactivate the selected process(es). The processes must have been paused previously (using the button above or by programming); otherwise, this button has no effect.
-- **Debug Process**: can be used to open on the server machine one or more debugger windows for the selected process(es). When you click on this button, a warning dialog box appears so that you can confirm or cancel the operation. Note that the debugger window is only displayed when the 4D code is actually executed on the server machine (for example in a trigger or the execution of a method having the "Execute on Server" attribute).
+- **Pausa do processo**: pode ser utilizado para fazer uma pausa nos processos selecionados.
+- **Ativar processo**: pode ser utilizado para reativar os processos selecionados. Os processos devem ter sido colocados em pausa anteriormente (utilizando o botão acima ou por programação); caso contrário, este botão não tem qualquer efeito.
+- **Processo de depuração**: pode ser utilizado para abrir na máquina do servidor uma ou mais janelas de depuração para os processos selecionados. Quando clicar neste botão, aparece uma caixa de diálogo de aviso para que se possa confirmar ou cancelar a operação. Note que a janela do depurador só é exibida quando o código 4D for realmente executado na máquina do servidor (por exemplo, em um gatilho ou na execução de um método com o atributo "Execute on Server").
 
-> You can also debug a process directly without displaying the confirmation dialog box by holding down the **Alt** key while clicking on this button.
+> Também pode depurar um processo diretamente sem apresentar a caixa de diálogo de confirmação, mantendo pressionada a tecla **Alt** enquanto clica neste botão.
 
-- **Watch users**: used to display, on the [Users page](users.md), all the processes of the selected user(s). Este botão está ativo quando pelo menos um processo usuário é selecionado.
+- **Observar usuários**: utilizado para mostrar, na página [Usuários](users.md), todos os processos dos usuários selecionados. Este botão está ativo quando pelo menos um processo do utilizador for selecionado.
 
