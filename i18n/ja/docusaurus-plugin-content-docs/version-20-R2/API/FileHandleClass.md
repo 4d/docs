@@ -19,21 +19,21 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-// 先頭から 1行ずつ書き込みます
+//Writing line by line from the start
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-// 終端から 1行ずつ追加で書き込みます
+//Writing line by line from the end
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-// オブジェクト引数を使い、読み取り停止文字を指定して読み取ります
+//Reading using a stop character and an object parameter
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -42,7 +42,7 @@ $stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-// 1行ずつ読み取ります
+//Reading line by line
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
