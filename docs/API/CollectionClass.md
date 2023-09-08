@@ -57,6 +57,7 @@ A collection is initialized with:
 |[<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
 |[<!-- INCLUDE #collection.max().Syntax -->](#max)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
 |[<!-- INCLUDE #collection.min().Syntax -->](#min)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
+|[<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.multiSort().Summary -->|
 |[<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
 |[<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
 |[<!-- INCLUDE #collection.pop().Syntax -->](#pop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
@@ -2144,6 +2145,142 @@ If the collection is empty, `.min()` returns *Undefined*.
 <!-- END REF -->
 
 
+<!-- REF collection.multiSort().Desc -->
+## .multiSort()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R3|Added|
+
+</details>
+
+<!-- REF #collection.multiSort().Syntax -->**.multiSort**() : Collection<br/>**.multiSort**( *colsToSort* : Collection ) : Collection<br/>**.multiSort**( *formula* : 4D.Function ; *colsToSort* : Collection ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.multiSort().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|formula|4D.Function|->|Formula object|
+|colsToSort|Collection|->|Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties|
+|Result|Collection |<-|Original collection sorted|<!-- END REF -->
+
+
+#### Description
+
+The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
+
+>This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+
+If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+
+1. null
+2. booleans
+3. strings
+4. numbers
+5. objects
+6. collections
+7. dates
+
+
+**Single-level synchronized sort**
+
+To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner. 
+
+:::note
+
+All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
+
+:::
+
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](FunctionClass.md#formula) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the formula if necessary.
+
+The formula receives the following parameters:
+
+- $1 (object), where:
+	- *$1.value* (any type): first element value to be compared
+	- *$1.value2* (any type): second element value to be compared
+- $2...$N (any type): extra parameters
+
+**Multi-level synchronized sort**
+
+Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level. 
+
+The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+
+:::note
+
+The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm. 
+
+:::
+
+#### Example 1
+
+A simple synchronized sort of collections with different value types:
+
+```4d
+var $col;$col2;$col3 : Collection
+$col:=["A"; "C"; "B"]
+$col2:=[1; 2; 3]
+$col3:=[["Jim"; "Philip"; "Maria"]; ["blue"; "green"]; ["11"; 22; "33"]]
+
+$col.multiSort([$col2; $col3])
+//$col=["A","B","C"]
+//$col2=[1,3,2]
+//$col3[0]=["Jim","Philip","Maria"]
+//$col3[1]=["11",22,"33"]
+//$col3[2]=["blue","green"]
+
+```
+
+#### Example 2
+
+You want to sort three synchronized collections: city, country, and continent. You want an ascending sort of the first and the third collections, and synchronization for the second collection:
+
+```4d
+var $city : Collection
+var $country : Collection
+var $continent : Collection
+
+$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
+$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
+$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
+
+$continent.multiSort($country; {collection: $city; order: ck ascending})
+//$continent=["Africa", "America","Europe","Europe","Europe"]
+//$country=["Morocco", "US","Germany","France","France"]
+//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
+
+```
+
+#### Example 3
+
+You can also synchronize collections of objects.
+
+```4d
+var $name : Collection
+var $address : Collection
+$name:=[]
+$name.push({firstname: "John"; lastname: "Smith"})
+$name.push({firstname: "Alain"; lastname: "Martin"})
+$name.push({firstname: "Jane"; lastname: "Doe"})
+$name.push({firstname: "John"; lastname: "Doe"})
+$address:=[]
+$address.push({city: "Paris"; country: "France"})
+$address.push({city: "Lyon"; country: "France"})
+$address.push({city: "Eching"; country: "Germany"})
+$address.push({city: "Berlin"; country: "Germany"})
+
+$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); $address)
+//["Alain Martin","Jane Doe","John Smith","John Doe"]
+//["Lyon France","Eching Germany","Paris France","Berlin Germany"]
+
+```
+
+
+<!-- END REF -->
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -2274,6 +2411,7 @@ Ordering a collection of objects using a collection of criteria objects:
 Ordering with a property path:
 
 ```4d
+
  var $crit; $c; $c2 : Collection
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
@@ -2943,6 +3081,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 
 <!-- REF #collection.reverse().Params -->
+
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |Result|Collection|<-|Inverted copy of the collection|<!-- END REF -->
@@ -3117,6 +3256,7 @@ It can set the following parameter(s):
 
 *	(mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 *	*$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
+
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
