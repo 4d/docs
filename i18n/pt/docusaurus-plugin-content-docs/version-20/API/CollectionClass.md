@@ -3235,9 +3235,9 @@ A chamada de retorno recebe os seguintes parâmetros:
     - em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
 - $2...$N (qualquer tipo): parâmetros adicionais
 
-If you used a method, you must set the following parameter:
+Se utilizou um método, deve definir o seguinte parâmetro:
 
-- *$1.result* (boolean): **True** if *$1.value < $1.value2*, **False** otherwise.
+- *$1.result* (boolean): **True** if *$1.value < $1.value2*, **False** do contrário.
 
 
 #### Exemplo 1
