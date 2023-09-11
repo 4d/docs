@@ -2177,10 +2177,10 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 
 <!-- REF #collection.multiSort().Params -->
-| Parâmetro  | Tipo         |    | Descrição                                                                                                                     |
-| ---------- | ------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
-| formula    | 4D. Function | -> | Objecto fórmula                                                                                                               |
-| colsToSort | Collection   | -> | Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties |
+| Parâmetro  | Tipo         |    | Descrição                                                                                                               |
+| ---------- | ------------ |:--:| ----------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                                                         |
+| colsToSort | Collection   | -> | Coleção de colecções e/ou objetos com propriedades {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} |
 | Resultados | Collection   | <- | Colecção original ordenada|<!-- END REF -->
 
 
@@ -2189,7 +2189,7 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 #### Descrição
 
-The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
+A função `.multiSort()` <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
 > This function modifies the original collection as well as all collections used in *colsToSort* parameter.
 
 If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
