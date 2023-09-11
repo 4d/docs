@@ -2223,10 +2223,10 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 #### 説明
 
-The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->。
-> This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+`.multiSort()` 関数は、 <!-- REF #collection.multiSort().Summary -->複数のコレクションに対して複数レベルの同期ソートを実行します<!-- END REF -->。
+> この関数は、元のコレクションを変更します。また、*colsToSort* パラメーターに使用されたコレクションも変更されます。
 
-If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. 型は以下の順番で返されます:
+`.multiSort()` が引数なしで呼び出された場合、この関数は [`.sort()`](#sort) 関数と同じ効果を持ちます: コレクション要素は、スカラー値のみがデータ型に応じてデフォルトで昇順に並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
 1. null
 2. ブール
@@ -2237,7 +2237,7 @@ If `.multiSort()` is called with no parameters, the function has the same effect
 7. 日付
 
 
-**Single-level synchronized sort**
+**単一レベルの同期ソート**
 
 To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
 
