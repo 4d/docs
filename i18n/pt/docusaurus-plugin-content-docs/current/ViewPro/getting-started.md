@@ -152,11 +152,6 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 |             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                               |
 
 
-
-
-
-
-
 ## Importação e exportação de documentos
 
 4D View Pro supports the import and export of several document formats:
@@ -164,6 +159,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 * .4vp
 * .xlsx
 * .txt e .csv
+* .sjs
 * .pdf (apenas para exportação)
 
 For more details, check out the description of [VP IMPORT DOCUMENT](method-list.md#vp-import-document) and [VP EXPORT DOCUMENT](method-list.md#vp-export-document).

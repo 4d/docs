@@ -480,8 +480,6 @@ La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un 
 Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 
 
-
-
 | *mode*   | Description                                                                                                                                                                                                                                                 |
 | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "read"   | (Par défaut) Crée un file handle pour lire les valeurs dans le fichier. Si le fichier n'existe pas sur disque, une erreur est renvoyée. Vous pouvez ouvrir autant de file handles que vous voulez en mode "read" sur le même objet File.                    |
@@ -499,7 +497,7 @@ Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres op
 | `.breakModeRead`  | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                       | "native" ou 1 |
 | `.breakModeWrite` | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                  | "native" ou 1 |
 
-Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
+The function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter. Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
 
 | Mode de rupture en texte | Break mode en numérique (constante) | Description                                                                                                                                                          |
 | ------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

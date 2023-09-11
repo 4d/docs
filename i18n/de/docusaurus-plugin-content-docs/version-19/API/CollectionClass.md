@@ -1687,6 +1687,7 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 * *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
 
+
 ```4d
 {
     "propertyPath": string,
@@ -2276,6 +2277,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 ```
 
+
 <!-- END REF -->
 
 <!-- REF collection.reverse().Desc -->
@@ -2506,7 +2508,15 @@ With the following *NumberGreaterThan0* method:
 The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
 > This function modifies the original collection.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type.
+If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type. If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+
+1. Null
+2. booleans
+3. strings
+4. numbers
+5. objekte
+6. collections
+7. dates
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
@@ -2519,16 +2529,6 @@ If you want to sort the collection elements in some other order or sort any type
 *methodName* sets the following parameter:
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
-
-If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
-
-1. Null
-2. booleans
-3. strings
-4. numbers
-5. objekte
-6. collections
-7. dates
 
 #### Beispiel 1
 

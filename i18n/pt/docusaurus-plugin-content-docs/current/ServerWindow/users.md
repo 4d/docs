@@ -11,7 +11,7 @@ The **Users** page lists the 4D users connected to the server.
 
 The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). A página também contém uma área de pesquisa dinâmica e botões de controlo. You can modify the order of the columns by dragging and dropping their header areas.
 
-You can also sort the list of column values by clicking on its header. Clique várias vezes para especificar sucessivamente uma ordem ascendente/descendente.
+Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçalho. Clique várias vezes para especificar sucessivamente uma ordem ascendente/descendente.
 
 ![](../assets/en/Admin/server-users-sort.png)
 

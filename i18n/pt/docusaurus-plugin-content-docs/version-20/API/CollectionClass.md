@@ -2503,7 +2503,7 @@ A função `.find()` <!-- REF #collection.push().Summary -->The `.indexOf()` fun
 
 #### Exemplo 2
 
-Se quiser ordenar a coleção resultante:
+You want to sort the resulting collection:
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2787,6 +2787,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 //numberOrder project method
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
+
 ```
 
 
@@ -3214,22 +3215,7 @@ Quer saber se pelo menos um valor de colecção é >0.
 A função `.shift()` <!-- REF #collection.sort().Summary -->remove o primeiro elemento da colecção e devolve-o como resultado da função<!-- END REF --> .
 > Essa função modifica a coleção original.
 
-Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
-
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
-
-A chamada de retorno recebe os seguintes parâmetros:
-
-- $1 (objeto), onde:
-    - em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
-    - em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
-- $2...$N (qualquer tipo): parâmetros adicionais
-
-Se utilizou um método, deve definir o parâmetro seguinte:
-
-- *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
-
-Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. If the collection contains scalar values of different types, they are first grouped by type and sorted afterwards. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
 1.  null
 2.  booleans
@@ -3238,6 +3224,21 @@ Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por
 5.  objetos
 6.  collections
 7.  datas
+
+
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
+
+A chamada de retorno recebe os seguintes parâmetros:
+
+- $1 (objeto), onde:
+    - em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
+    - em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
+- $2...$N (qualquer tipo): parâmetros adicionais
+
+If you used a method, you must set the following parameter:
+
+- *$1.result* (boolean): **True** if *$1.value < $1.value2*, **False** otherwise.
+
 
 #### Exemplo 1
 

@@ -13,6 +13,7 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 - New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
 - New QUIC network layer [interface setting](../settings/client-server.md#network-layer).
+- 4D View Pro: Support of the **.sjs** file format for the [import](../ViewPro/method-list.md#vp-import-document) and [export](../ViewPro/method-list.md#vp-export-document) of documents.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
 - 4D Write Pro Interface: New [Table Wizard](../WritePro/writeprointerface.md).

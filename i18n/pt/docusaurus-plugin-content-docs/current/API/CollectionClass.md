@@ -2787,6 +2787,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 //numberOrder project method
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
+
 ```
 
 
@@ -3214,9 +3215,17 @@ Quer saber se pelo menos um valor de colecção é >0.
 A função `.shift()` <!-- REF #collection.sort().Summary -->remove o primeiro elemento da colecção e devolve-o como resultado da função<!-- END REF --> .
 > Essa função modifica a coleção original.
 
-Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
+1. null
+2. booleans
+3. strings
+4. números
+5. objetos
+6. collections
+7. datas
+
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
 
 A chamada de retorno recebe os seguintes parâmetros:
 
@@ -3229,15 +3238,6 @@ Se utilizou um método, deve definir o parâmetro seguinte:
 
 - *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
 
-Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
-
-1.  null
-2.  booleans
-3.  strings
-4.  números
-5.  objetos
-6.  collections
-7.  datas
 
 #### Exemplo 1
 

@@ -24,7 +24,7 @@ You can configure the `WebAdmin` web server to be launched at 4D or 4D Server ap
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Check the **Web server administration automatic startup** option in the settings dialog box:
+Check the **Launch WebAdmin server at startup** option in the settings dialog box:
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
@@ -69,7 +69,7 @@ The following dialog box is displayed:
 
 ![alt-text](../assets/en/Admin/waSettings2.png)
 
-#### Web server administration automatic startup
+#### Launch WebAdmin server at startup
 
 Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launching-at-startup)). By default, this option is not checked.
 
@@ -121,6 +121,16 @@ An access key is similar to a password but not associated to a login.
 - To define a new access key: click the **Define** button, enter the access key string in the dialog box and click **OK**. The button label becomes **Modify**.
 - To modify the access key: click the **Modify** button, enter the new access key string in the dialog box and click **OK**.
 - To delete the access key: click the **Modify** button, let the access key area empty and click **OK**.
+
+#### Enable access to Qodly Studio
+
+:::note
+
+This option only appears if the Qodly Studio license is activated.
+
+:::
+
+This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) at the 4D application level. Note that you also need to [enable the access at every project level](../Settings/web.md#enable-access-to-qodly-studio).
 
 
 ## WebAdmin Headless Configuration

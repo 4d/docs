@@ -385,8 +385,6 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 A função `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devolve texto do arquivo, a partir da posição atual até à primeira *stopChar* string ser encontrada (se passada) ou o fim do arquivo ser alcançado<!-- END REF -->.
 
-Esta função substitui todos os delimitadores de fim de linha originais. Como padrão, é utilizado o delimitador nativo, mas pode definir outro delimitador quando [abrir o cabo do arquivo](FileClass.md#open) definindo a propriedade [`.breakModeRead`](#breakmoderead) .
-
 A string de caracteres *stopChar* não está incluída no texto devolvido. Se omitir o parâmetro *stopChar* , todo o texto do documento é devolvido.
 
 Quando esta função é executada, o ([.offset](#offset)) é colocado logo após a string *stopChar*.
@@ -532,7 +530,7 @@ Quando esta função for executada, a posição atual ([.offset](#offset)) é at
 
 #### Descrição
 
-A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais. Esta função substitui todos os delimitadores de fim de linha originais.
+A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais.
 
 Quando esta função for executada, a posição atual ([.offset](#offset)) é atualizada após o próximo delimitador de fim de linha.
 

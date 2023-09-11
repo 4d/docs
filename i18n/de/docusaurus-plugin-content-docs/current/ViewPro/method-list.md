@@ -923,10 +923,19 @@ use the following code:
 
 ### VP EXPORT DOCUMENT
 
+<details><summary>History</summary>
+
+| Version | Changes                   |
+| ------- | ------------------------- |
+| v20 R2  | Support of .sjs documents |
+</details>
+
+
 <!-- REF #_method_.VP EXPORT DOCUMENT.Syntax -->
 **VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )<!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
+
 
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
@@ -950,44 +959,52 @@ You can specify the exported file's format by including an extension after the d
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", or ".csv")
+* [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
 
 If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
 The optional *paramObj* parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
 
-| Property                   | Typ     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format                     | Text    | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
-| password                   | Text    | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| formula                    | object  | Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).                                                                                                                                                       |
-| valuesOnly                 | boolean | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| includeFormatInfo          | boolean | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                 |
-| includeBindingSource       | Boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                         |
-| sheet                      | Zahl    | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| pdfOptions                 | object  | PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr><tr><td>creator</td><td>Text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>Text</td><td>title of the document.</td></tr><tr><td>author</td><td>Text</td><td>name of the person who created that document.</td></tr><tr><td>schlüsselwörter</td><td>Text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>Text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| csvOptions                 | object  | CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>Text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>Text</td><td>Column delimiter. Default: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `\<customProperty>` | any     | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Property                   | Typ         | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| format                     | Text        | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", ".pdf", or ".sjs". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
+| password                   | Text        | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| formula                    | 4D.Function | Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                                 |
+| valuesOnly                 | boolean     | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| includeFormatInfo          | boolean     | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                                                    |
+| includeBindingSource       | boolean     | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                                            |
+| sheet                      | Zahl        | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| pdfOptions                 | object      | PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr><tr><td>creator</td><td>Text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>Text</td><td>title of the document.</td></tr><tr><td>author</td><td>Text</td><td>name of the person who created that document.</td></tr><tr><td>schlüsselwörter</td><td>Text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>Text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| csvOptions                 | object      | CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>Text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>Text</td><td>Column delimiter. Default: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| sjsOptions                 | object      | SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Typ</th><th>Beschreibung</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `\<customProperty>` | any         | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 **Notes about Excel format**:
 
 * When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. For example, 4D methods and formulas are not supported by Excel. You can verify other settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about PDF format**:
 
 * When exporting a 4D View Pro document in PDF, the fonts used in the document are automatically embedded in the PDF file. Only OpenType fonts (.OTF or .TTF files) having a Unicode map can be embedded. If no valid font file is found for a font, a default font is used instead.
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about CSV format**:
 
 * When exporting a 4D View Pro document to CSV, some settings may be lost, as only the text and values are saved.
 * All the values are saved as double-quoted strings. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+
+**Notes about SpreadJS file format**:
+
+* [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files.
+* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
 
 #### Passing a callback method (formula)
 
-When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` command allows you to use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
 
 | Variable |               | Typ      | Beschreibung                                           |
 | -------- | ------------- | -------- | ------------------------------------------------------ |
@@ -2910,6 +2927,7 @@ If the object returned includes a date or time, it is treated as a datetime and 
 If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. The command returns a null object if the cell is empty.
 
 
+
 #### Beispiel
 
 ```4d
@@ -2983,12 +3001,9 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-| Parameter  | Typ    |    | Beschreibung                                                      |
-| ---------- | ------ | -- | ----------------------------------------------------------------- |
-| vpAreaName | Text   | -> | 4D View Pro area form object name                                 |
-| Ergebnis   | Objekt | <- | Object containing the workbook options|<!-- END REF -->
+|Parameter|Type||Description|
 
-|
+|---|---|---|---| |vpAreaName  |Text|->|4D View Pro area form object name| |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
 
 #### Beschreibung
 
@@ -3017,6 +3032,13 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 ### VP IMPORT DOCUMENT
 
+<details><summary>History</summary>
+
+| Version | Changes                   |
+| ------- | ------------------------- |
+| v20 R2  | Support of .sjs documents |
+</details>
+
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
 **VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} ) <!-- END REF -->
 
@@ -3040,27 +3062,39 @@ In *filePath*, pass the path and name of the document to be imported. The follow
 
 * 4D View Pro documents (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
-
 * text documents (extension ".txt", ".csv", the document must be in utf-8)
+* [SpreadJS documents](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extension ".sjs")
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
-
-> When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
 
 An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
 
 The optional *paramObj* parameter allows you to define properties for the imported document:
 
-| Parameter  |                 | Typ    | Beschreibung                                                                                                                                                                                                                                             |
-| ---------- | --------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                 | object | A callback method name to be launched when the import has completed. The method must use the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
-| password   |                 | Text   | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                                      |
-| csvOptions |                 | object | options for csv import                                                                                                                                                                                                                                   |
-|            | range           | object | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                            |
-|            | rowDelimiter    | Text   | Row delimiter. If not present, the delimiter is automatically determined by 4D.                                                                                                                                                                          |
-|            | columnDelimiter | Text   | Column delimiter. Default: ","                                                                                                                                                                                                                           |
+| Parameter  |                     | Typ         | Beschreibung                                                                                                                                                                                                                                |
+| ---------- | ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula    |                     | 4D.Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
+| password   |                     | Text        | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                         |
+| csvOptions |                     | object      | options for csv import                                                                                                                                                                                                                      |
+|            | range               | object      | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                               |
+|            | rowDelimiter        | Text        | Row delimiter. If not present, the delimiter is automatically determined by 4D.                                                                                                                                                             |
+|            | columnDelimiter     | Text        | Column delimiter. Default: ","                                                                                                                                                                                                              |
+| sjsOptions |                     | object      | options for sjs import                                                                                                                                                                                                                      |
+|            | calcOnDemand        | boolean     | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                |
+|            | dynamicReferences   | boolean     | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                    |
+|            | fullRecalc          | boolean     | Whether to calculate after loading the json data, false by default.                                                                                                                                                                         |
+|            | includeFormulas     | boolean     | Whether to include the formulas when loading, default is true.                                                                                                                                                                              |
+|            | includeStyles       | boolean     | Whether to include the styles when loading, default is true.                                                                                                                                                                                |
+|            | includeUnusedStyles | boolean     | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                           |
+|            | openMode            | ganzzahl    | <li>0 (normal): normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                              |
 
-> For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+:::note Notes
+
+- Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
+- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+- For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+
+:::
 
 #### Beispiel 1
 
@@ -3081,6 +3115,7 @@ You want to import a password protected Microsoft Excel document into a 4D View 
 ```4d
 $o:=New object
 $o.password:="excel123"
+$o.formula:=Formula(myImport)
 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
@@ -3103,6 +3138,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
 
 ### VP IMPORT FROM OBJECT
 
@@ -4151,15 +4187,13 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 <!-- REF #_method_.VP Row.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                                      |
-| ---------- | -------- | -- | ------------------------------------------------- |
-| vpAreaName | Text     | -> | 4D View Pro area form object name                 |
-| row        | Ganzzahl | -> | Row index                                         |
-| rowCount   | Ganzzahl | -> | Number of rows                                    |
-| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)            |
-| Ergebnis   | Objekt   | <- | Range object of row(s)|<!-- END REF -->
+| Parameter  | Typ      |    | Beschreibung                      |
+| ---------- | -------- | -- | --------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name |
+| row        | Ganzzahl | -> | Row index                         |
+| rowCount   | Ganzzahl | -> | Number of rows                    |
 
-|
+|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### Beschreibung
 
@@ -4342,6 +4376,7 @@ Function onEvent()
         VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
+
          CANCEL 
  End case
 ```
@@ -4798,6 +4833,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . The current sheet is the selected sheet in the document.
 
+
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
 In *sheet*, pass the index of the sheet to be set as current sheet. If the index passed is inferior to 0 or exceeds the number of sheets, the command does nothing.
@@ -4848,16 +4884,16 @@ Pass the name of the 4D View Pro area in *vpAreaName*. If you pass a name that d
 
 In the *formulaObj* parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in *formulaObj* becomes the name of a function in the 4D View Pro area.
 
-| Property                 |            |            | Typ                   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------ | ---------- | ---------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<customFunction>` |            |            | Objekt                | Custom function definition. `<customFunction>` defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|                          | formula    |            | Objekt                | 4D formula object (mandatory). See the `Formula` command.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|                          | parameters |            | Collection of objects | Collection of parameters (in the order they are defined in the formula)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|                          |            | \[ ].name | Text                  | Name of parameter to display in 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Property                 |            |            | Typ                   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------ | ---------- | ---------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<customFunction>` |            |            | Objekt                | Custom function definition. `<customFunction>` defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|                          | formula    |            | Objekt                | 4D formula object (mandatory). See the `Formula` command.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                          | parameters |            | Collection of objects | Collection of parameters (in the order they are defined in the formula)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                          |            | \[ ].name | Text                  | Name of parameter to display in 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |                          |            | \[ ].type | Zahl                  | Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If *type* is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section).If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value). |
-|                          | summary    |            | Text                  | Formula description to display in 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|                          | minParams  |            | Zahl                  | Minimum number of parameters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|                          | maxParams  |            | Zahl                  | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                          | summary    |            | Text                  | Formula description to display in 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|                          | minParams  |            | Zahl                  | Minimum number of parameters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                          | maxParams  |            | Zahl                  | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                                            |
 > **WARNING**
 > * As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](#vp-set-allowed-methods) command (if any) are ignored in the 4D View Pro area.
 > * As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
@@ -4946,9 +4982,9 @@ To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object wit
 
 In *options*, you can pass an object that specifies additional options. Possible properties are:
 
-| Property            | Typ    | Beschreibung                                                                                                                                                                                                   |
-| ------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| reset               | Objekt | True to reset the sheet's contents before loading the new context, False (default) otherwise.                                                                                                                  |
+| Property            | Typ    | Beschreibung                                                                                                                                                                                                    |
+| ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reset               | Objekt | True to reset the sheet's contents before loading the new context, False (default) otherwise.                                                                                                                   |
 | autoGenerateColumns | Objekt | Only used when data is a collection. True (default) to specify that columns must be generated automatically when the data context is bound. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). The first subcollection determines how many columns are created.</li></ul> |
 
 In *sheet*, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
@@ -5363,6 +5399,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet wher
 * `vk current sheet`
 
 #### Beispiel
+
 
 You want to freeze the first three columns on the left, two columns on the right, and the first row:
 
@@ -5914,6 +5951,7 @@ With a page break:
 
 ### VP SET TABLE COLUMN ATTRIBUTES
 
+
 <details><summary>History</summary>
 
 | Version | Changes |
@@ -6129,6 +6167,7 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
 
+
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *textValue* parameter.
 
 #### Beispiel
@@ -6341,7 +6380,7 @@ The following table lists the available workbook options:
 | allowUserEditFormula                  | boolean                 | Formulas can be entered in cells                                                                                                                                                                                                                       |
 | allowUserResize                       | boolean                 | Columns and rows can be resized                                                                                                                                                                                                                        |
 | allowUserZoom                         | boolean                 | Zooming (ctrl + mouse wheel) is allowed                                                                                                                                                                                                                |
-| autoFitType                           | Zahl                    | Content is formatted to fit in cells, or cells and headers. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                                |
+| autoFitType                           | Zahl                    | Content is formatted to fit in cells, or cells and headers. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk auto fit type cell </td><td>0</td><td> The content autofits cells</td></tr><tr><td> vk auto fit type cell with header </td><td>1</td><td> The content autofits cells and headers</td></tr></table>                                                                                                                                               |
 | backColor                             | string                  | A color string used to represent the background color of the area, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5". The initial backgroundcolor is hidden when a backgroundImage is set.                                                          |
 | backgroundImage                       | string / picture / file | Background image for the area.                                                                                                                                                                                                                         |
 | backgroundImageLayout                 | Zahl                    | How the background image is displayed. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk image layout center </td><td>1</td><td> In the center of the area.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Fills the area.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Displayed with its original aspect ratio.</td></tr></table>                                                                                                                                                                    |

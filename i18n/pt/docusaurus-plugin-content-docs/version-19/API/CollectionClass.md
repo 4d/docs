@@ -1676,6 +1676,7 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
 * *pathObjects* : Collection. Pode adicionar tantos objetos na coleção *pathObjects* como seja necessário. Como padrão, as propriedades se classificam em ordem ascendente ("descending" é false). Cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
+
 ```4d
 {
     "propertyPath": string,
@@ -2261,6 +2262,7 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 
 ```
 
+
 <!-- END REF -->
 
 <!-- REF collection.reverse().Desc -->
@@ -2493,7 +2495,15 @@ Com o seguinte método *NumberGreaterThan0*:
 A função `.shift()` <!-- REF #collection.sort().Summary -->ordena os elementos da coleção original<!-- END REF --> e também devolve a coleção ordenada.
 > Essa função modifica a coleção original.
 
-Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+
+1. null
+2. booleans
+3. strings
+4. números
+5. objetos
+6. collections
+7. datas
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
@@ -2506,16 +2516,6 @@ If you want to sort the collection elements in some other order or sort any type
 *methodName* define o seguinte parâmetro:
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
-
-Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
-
-1. null
-2. booleans
-3. strings
-4. números
-5. objetos
-6. collections
-7. datas
 
 #### Exemplo 1
 

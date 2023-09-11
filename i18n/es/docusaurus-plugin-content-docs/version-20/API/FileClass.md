@@ -504,7 +504,7 @@ Si utiliza el parámetro *options* (object), puede pasar más opciones para el f
 | `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                           | "native" o 1 |
 | `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                    | "native" o 1 |
 
-`.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
+The function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter. `.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
 
 | Modo de ruptura en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                |
 | ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

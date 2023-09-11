@@ -297,8 +297,14 @@ Démarre et stoppe le serveur REST. Voir [Configuration du serveur REST](../REST
 
 Cette option vous permet de désigner un groupe d’utilisateurs 4D qui sera seul autorisé à établir la connexion à la base 4D à l'aide des requêtes REST. Voir [Configuration de l'accès REST](../REST/configuration.md#configuration-de-laccès-rest).
 
-### Web Studio
+### Qodly Studio
 
-#### Activer l'accès au studio web
+#### Enable access to Qodly Studio
 
-Active l'accès général au studio web. Vous devez également le configurer au niveau de chaque projet.
+:::note
+
+This option only appears if the Qodly Studio license is activated.
+
+:::
+
+This option enables user access to [Qodly Studio](XXX) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).

@@ -485,7 +485,7 @@ If you use the *options* (object) parameter, you can pass more options for the f
 |`.breakModeRead`|Text or Number|Processing mode for line breaks used when reading in the file (see below)|"native" or 1|
 |`.breakModeWrite`|Text or Number|Processing mode for line breaks used when writing to the file (see below)|"native" or 1|
 
-The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
+The function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter. The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
 |Break mode as text|Break mode as number (constant)|Description|
 |---|---|---|

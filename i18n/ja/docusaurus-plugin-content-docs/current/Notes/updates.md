@@ -32,6 +32,7 @@ title: リリースノート
 
 - 4D から WebSocketクライアント接続を作成および管理するための、新しい [WebSocket](../API/WebSocketClass.md) クラス。
 - 新しい QUICネットワークレイヤー [インタフェース設定](../settings/client-server.md#ネットワークレイヤー)。
+- 4D View Pro:ドキュメントの [インポート](../ViewPro/method-list.md#vp-import-document) および [エクスポート](../ViewPro/method-list.md#vp-export-document) で **.sjs** ファイル形式をサポート。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.ja.html) ページ。
 - 4D Write Pro インターフェース: 新しい [表ウィザード](../WritePro/writeprointerface.md)。

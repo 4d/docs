@@ -265,12 +265,31 @@ This property is **read-only**.
 
 The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
 
-Setting the `.offset` will change its current value.
+Setting the `.offset` will change its current value at the moment of the next read or write operation. 
 
 - If the passed value is negative, the `.offset` is set to the start of the file (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 This property is **read/write**.
+
+:::caution
+
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. For example:
+
+```4d
+  // Open a european text file using utf-16 encoding (two bytes per character)
+  // We want to read the first 10 characters as bytes, then the remaining as text.
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // read the 20 first bytes (i.e. 10 characters)
+$b:=$fh.readBlob(20) // $fh.offset=20
+  // then read all text skipping the first 10 characters we just read in previous blob
+  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
+  // We need to translate it from bytes to characters.
+$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+$s:=$fh.readText()
+```
+
+:::
 
 
 <!-- END REF -->
@@ -373,8 +392,6 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
-This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeRead`](#breakmoderead) property.  
-
 The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.  
 
 When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
@@ -468,6 +485,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -508,7 +526,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Description
 
-The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.  
+The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.  
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
 

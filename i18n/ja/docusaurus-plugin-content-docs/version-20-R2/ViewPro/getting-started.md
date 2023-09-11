@@ -153,10 +153,6 @@ $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 
 
 
-
-
-
-
 ## ドキュメントのインポートとエクスポート
 
 4D View Pro は、複数のドキュメント形式のインポートおよびエクスポートに対応しています:
@@ -164,6 +160,7 @@ $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 * .4vp
 * .xlsx
 * .txt と .csv
+* .sjs
 * .pdf (エクスポートのみ)
 
 詳細については [VP IMPORT DOCUMENT](method-list.md#vp-import-document) と [VP EXPORT DOCUMENT](method-list.md#vp-export-document) の説明を参照ください。

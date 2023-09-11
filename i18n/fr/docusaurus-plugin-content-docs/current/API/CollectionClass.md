@@ -2834,6 +2834,7 @@ Elle peut définir le(s) paramètre(s) suivant(s) :
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //retourne 86400
+
 ```
 
 
@@ -3261,9 +3262,17 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine et retourne également une référence vers cette collection triée<!-- END REF --> .
 > Cette fonction modifie la collection d'origine.
 
-Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.
+Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
-Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans *formula* ([objet Formula](FunctionClass.md)) ou *methodName* (texte), une callback de comparaison qui compare deux valeurs et retourne **true** si la première valeur est inférieure à la deuxième valeur. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+1. Null
+2. booléens
+3. chaînes
+4. nombres
+5. objets
+6. collections
+7. dates
+
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 
@@ -3276,15 +3285,6 @@ Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
 - *$1.result* (booléen) : **true** si *$1.value < $1.value2*, **false** sinon.
 
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
-
-1.  Null
-2.  booléens
-3.  chaînes
-4.  nombres
-5.  objets
-6.  collections
-7.  dates
 
 #### Exemple 1
 

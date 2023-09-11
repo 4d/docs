@@ -2552,7 +2552,7 @@ La función `.push()` <!-- REF #collection.push().Summary -->añade uno o más *
 
 #### Ejemplo 2
 
-Quiere ordenar la colección resultante:
+You want to sort the resulting collection:
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2839,6 +2839,7 @@ La retrollamada define los siguientes parámetros:
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
+
 ```
 
 
@@ -3266,9 +3267,18 @@ Quiere saber si al menos un valor de la colección es >0.
 La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original y también devuelve la colección ordenada<!-- END REF --> .
 > Esta función modifica la colección original.
 
-Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. If the collection contains scalar values of different types, they are first grouped by type and sorted afterwards. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
-Si quiere ordenar los elementos de la colección en otro orden u ordenar todo tipo de elemento, debe suministrar en *formula* ([objeto Formula](FunctionClass.md)) o *methodName* (Texto) una retro llamada de comparación que compare dos valores y devuelva **true** si el primer valor es menor que el segundo. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
+1.  null
+2.  booleans
+3.  cadenas
+4.  numbers
+5.  objects
+6.  collections
+7.  dates
+
+
+If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Puede ofrecer parámetros adicionales a la retrollamada si es necesario.
 
 La retrollamada recibe los siguientes parámetros:
 
@@ -3279,17 +3289,8 @@ La retrollamada recibe los siguientes parámetros:
 
 Si utilizó un método, debe definir el siguiente parámetro:
 
-- *$1.result* (boolean): **true** si *$1.value < $1.value2*, **false** de lo contrario.
+- *$1.result* (boolean): **True** if *$1.value < $1.value2*, **False** de lo contrario.
 
-Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
-
-1.  null
-2.  booleans
-3.  cadenas
-4.  numbers
-5.  objects
-6.  collections
-7.  dates
 
 #### Ejemplo 1
 
