@@ -19,30 +19,29 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+// 先頭から 1行ずつ書き込みます
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+// 終端から 1行ずつ追加で書き込みます
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+// オブジェクト引数を使い、読み取り停止文字を指定して読み取ります
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:="!" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+// 1行ずつ読み取ります
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -267,7 +266,7 @@ FileHandle オブジェクトは共有できません。
 
 `.offset` プロパティは、 <!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+`.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
 
 - 負の値が渡された場合、`.offset` はファイルの先頭 (ゼロ) に設定されます。
 - ファイルサイズより大きい値が渡された場合、`.offset` はファイルの終端 (ファイルサイズ) に設定されます。
@@ -276,18 +275,18 @@ Setting the `.offset` will change its current value at the moment of the next re
 
 :::caution
 
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()](#readline)` it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. 例:
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. ファイルの文字セットに応じて、1文字は 1バイトまたは複数バイトに対応します。 したがって、`readBlob()` で読み取りを開始してから `readText()` を呼び出すと、テキストの読み取りは一貫性のない位置から開始されます。 そのため、同じ FileHandle内で、BLOB の読み取り/書き込みからテキストの読み取り/書き込みに切り替える場合には、`.offset` プロパティを自分で設定することが不可欠です。 例:
 
 ```4d
-  // Open a european text file using utf-16 encoding (two bytes per character)
-  // We want to read the first 10 characters as bytes, then the remaining as text.
+  // utf-16エンコーディング (1文字につき 2バイト) を使用して、ヨーロッパのテキストファイルを開きます
+  // 最初の 10文字をバイトとして、残りをテキストとして読み込みます
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // read the 20 first bytes (i.e. 10 characters)
-$b:=$fh.readBlob(20) // $fh.offset=20
-  // then read all text skipping the first 10 characters we just read in previous blob
-  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
-  // We need to translate it from bytes to characters.
-$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+  // 最初の 20バイト (=10文字) を読み取ります
+$b:=$fh.readBlob(20) // 現在のオフセット: $fh.offset=20
+  // 次にすでに読み取った 10文字を飛ばして残りのテキストをすべて読み取ります
+  // バイトからテキストの読み取りへと切り替えるため、オフセットの単位が変わります
+  // そのため、オフセットをバイトから文字数に変換する必要があります
+$fh.offset:=10 // 最初の 10文字 (20バイト) の utf-16文字をスキップさせます
 $s:=$fh.readText()
 ```
 
