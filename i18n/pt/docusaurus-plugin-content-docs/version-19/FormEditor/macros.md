@@ -275,7 +275,7 @@ Function onInvoke($editor : Object)->$result : Object
   ALERT("Please select a form object.")
  End if 
 
- // Notify to 4D the modification
+ // Notificar a 4D a modificação
  $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
