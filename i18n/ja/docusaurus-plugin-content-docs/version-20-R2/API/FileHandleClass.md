@@ -19,30 +19,29 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+// 先頭から 1行ずつ書き込みます
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+// 終端から 1行ずつ追加で書き込みます
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+// オブジェクト引数を使い、読み取り停止文字を指定して読み取ります
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:="!" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+// 1行ずつ読み取ります
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -267,12 +266,38 @@ FileHandle オブジェクトは共有できません。
 
 `.offset` プロパティは、 <!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
 
-`.offset` を設定すると、その現在値が変更されます。
+`.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
 
 - 負の値が渡された場合、`.offset` はファイルの先頭 (ゼロ) に設定されます。
 - ファイルサイズより大きい値が渡された場合、`.offset` はファイルの終端 (ファイルサイズ) に設定されます。
 
 **読み書き可能** プロパティです。
+
+`.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
+
+- 負の値が渡された場合、`.offset` はファイルの先頭 (ゼロ) に設定されます。
+- ファイルサイズより大きい値が渡された場合、`.offset` はファイルの終端 (ファイルサイズ) に設定されます。
+
+**読み書き可能** プロパティです。
+
+:::caution
+
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. ファイルの文字セットに応じて、1文字は 1バイトまたは複数バイトに対応します。 したがって、`readBlob()` で読み取りを開始してから `readText()` を呼び出すと、テキストの読み取りは一貫性のない位置から開始されます。 そのため、同じ FileHandle内で、BLOB の読み取り/書き込みからテキストの読み取り/書き込みに切り替える場合には、`.offset` プロパティを自分で設定することが不可欠です。 例:
+
+```4d
+  // utf-16エンコーディング (1文字につき 2バイト) を使用して、ヨーロッパのテキストファイルを開きます
+  // 最初の 10文字をバイトとして、残りをテキストとして読み込みます
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // 最初の 20バイト (=10文字) を読み取ります
+$b:=$fh.readBlob(20) // 現在のオフセット: $fh.offset=20
+  // 次にすでに読み取った 10文字を飛ばして残りのテキストをすべて読み取ります
+  // バイトからテキストの読み取りへと切り替えるため、オフセットの単位が変わります
+  // そのため、オフセットをバイトから文字数に変換する必要があります
+$fh.offset:=10 // 最初の 10文字 (20バイト) の utf-16文字をスキップさせます
+$s:=$fh.readText()
+```
+
+:::
 
 
 <!-- END REF -->
@@ -483,6 +508,7 @@ FileHandle オブジェクトは共有できません。
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
