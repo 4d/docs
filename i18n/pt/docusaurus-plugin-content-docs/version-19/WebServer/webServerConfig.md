@@ -319,8 +319,8 @@ Valores possíveis: Cadeia de endereços IP. Both IPv6 string formats (e.g. "200
 - **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
- 2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
- 2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+ 2001:0DB8::85a3:0:ac1f:8001 // Endereço IPv6
+ 2001:0DB8::85a3:0:ac1f:8001:8081 // Endereço IPv6 com porta 8081
 ```
 
 To avoid this confusion, we recommend using the [ ] notation whenever you combine an IPv6 address with a port number, for instance:
@@ -337,7 +337,7 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 | `WEB SET OPTION`                   | `Web keep session`                                 |             |
 | Caixa de diálogos de configurações | Página Opções (I)/Gestão automática de sessões     |             |
 
-Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
+Estado do gerenciamento de sessões para o servidor web 4D. O mecanismo de sessão é descrito na secção [Gerenciamento de sessões](sessions.md).
 
 True por padrão (ativado).
 
