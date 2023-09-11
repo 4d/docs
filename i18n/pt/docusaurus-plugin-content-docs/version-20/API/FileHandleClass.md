@@ -273,26 +273,6 @@ Setting the `.offset` will change its current value at the moment of the next re
 
 Esta propriedade é **read/write**.
 
-:::caution
-
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
-
-```4d
-  // Open a european text file using utf-16 encoding (two bytes per character)
-  // We want to read the first 10 characters as bytes, then the remaining as text.
-$fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // lê os 20 primeiros bytes (i.e. 10 caracteres)
-$b:=$fh.readBlob(20) // $fh.offset=20
-  // depois lê todo o texto saltando os primeiros 10 caracteres que acabámos de ler no blob anterior
-  // porque agora estamos a ler texto em vez de bytes, o significado de 'offset' não é o mesmo.
-  // We need to translate it from bytes to characters.
-$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
-$s:=$fh.readText()
-```
-
-:::
-
-
 <!-- END REF -->
 
 
