@@ -272,13 +272,6 @@ Setting the `.offset` will change its current value at the moment of the next re
 
 This property is **read/write**.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation. 
-
-- If the passed value is negative, the `.offset` is set to the start of the file (zero).
-- If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
-
-This property is **read/write**.
-
 :::caution
 
 The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. For example:
