@@ -273,26 +273,6 @@ FileHandle オブジェクトは共有できません。
 
 **読み書き可能** プロパティです。
 
-:::caution
-
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. ファイルの文字セットに応じて、1文字は 1バイトまたは複数バイトに対応します。 したがって、`readBlob()` で読み取りを開始してから `readText()` を呼び出すと、テキストの読み取りは一貫性のない位置から開始されます。 そのため、同じ FileHandle内で、BLOB の読み取り/書き込みからテキストの読み取り/書き込みに切り替える場合には、`.offset` プロパティを自分で設定することが不可欠です。 例:
-
-```4d
-  // utf-16エンコーディング (1文字につき 2バイト) を使用して、ヨーロッパのテキストファイルを開きます
-  // 最初の 10文字をバイトとして、残りをテキストとして読み込みます
-$fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // 最初の 20バイト (=10文字) を読み取ります
-$b:=$fh.readBlob(20) // 現在のオフセット: $fh.offset=20
-  // 次にすでに読み取った 10文字を飛ばして残りのテキストをすべて読み取ります
-  // バイトからテキストの読み取りへと切り替えるため、オフセットの単位が変わります
-  // そのため、オフセットをバイトから文字数に変換する必要があります
-$fh.offset:=10 // 最初の 10文字 (20バイト) の utf-16文字をスキップさせます
-$s:=$fh.readText()
-```
-
-:::
-
-
 <!-- END REF -->
 
 
