@@ -2211,10 +2211,10 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 
 <!-- REF #collection.multiSort().Params -->
-| 引数         | タイプ         |    | 説明                                                                                                                            |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                                                                  |
-| colsToSort | Collection  | -> | Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties |
+| 引数         | タイプ         |    | 説明                                                                                                          |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                                                |
+| colsToSort | Collection  | -> | コレクションのコレクション、または {`collection`:*colToSort*;`order`:`ck ascending` / `ck descending`} プロパティを持つオブジェクトのコレクション |
 | 戻り値        | Collection  | <- | 並べ替えられた元のコレクション|<!-- END REF -->
 
 
@@ -2239,26 +2239,26 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 **単一レベルの同期ソート**
 
-To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
+複数のコレクションを同期的にソートするには、*colsToSort* にソートするコレクションのコレクションを渡します。 渡せるコレクションの数に制限はありません。 呼び出し元のコレクションは昇順にソートされ、すべての *colsToSort* コレクションが同期ソートされます。
 
 :::note
 
-All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
+*colsToSort* に渡すコレクションの要素数はすべて同じでなければなりません。そうでない場合はエラーが返されます。
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](FunctionClass.md#formula) that defines the sort order. 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 You can provide additional parameters to the formula if necessary.
+昇順以外の方法でコレクションをソートしたい場合には、ソート順を定義する *formula* ([Formula オブジェクト](FunctionClass.md#formula)) を指定する必要があります。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
 
-The formula receives the following parameters:
+フォーミュラは以下の引数を受け取ります:
 
 - $1 (オブジェクト):
     - *$1.value* (任意の型): 比較する一つ目の要素の値
     - *$1.value2* (任意の型): 比較する二つ目の要素の値
 - $2...$N (任意の型): 追加の引数
 
-**Multi-level synchronized sort**
+**複数レベルの同期ソート**
 
-Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level.
+複数レベルの同期ソートを定義するには、サブレベルとして使用するコレクション毎に、{`collection`:*colToSort*;`order`:`ck ascending` または `ck descending`} プロパティを含むオブジェクトを *colToSort* の代わりに渡す必要があります。
 
 The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
 
@@ -2309,7 +2309,7 @@ $continent.multiSort($country; {collection: $city; order: ck ascending})
 
 #### 例題 3
 
-You can also synchronize collections of objects.
+オブジェクトのコレクションを同期させることもできます。
 
 ```4d
 var $name : Collection
