@@ -3,11 +3,11 @@ id: remote-admin
 title: Administração a partir de máquinas remotas
 ---
 
-You can administer the 4D Server application from a remote 4D (client machine) by opening the 4D Server administration window on the client machine.
+Pode administrar a aplicação 4D Server a partir de um 4D remoto (máquina cliente) abrindo a janela de administração do 4D Server na máquina cliente.
 
-## Opening the administration window on a remote 4D machine
+## Abrir a janela de administração numa máquina 4D remota
 
-To open a server administration window from a client machine, you must be connected to the remote database as a Designer or Administrator. Otherwise, when you attempt to open the administration window, a privilege error (-9991) is generated.
+Para abrir uma janela de administração do servidor a partir de uma máquina cliente, é necessário estar ligado à banco de dados remoto como Desenhador ou Administrador. Caso contrário, quando tentar abrir a janela de administração, é gerado um erro de privilégio (-9991).
 
 Esta janela pode ser acedida de duas maneiras:
 

@@ -9,16 +9,20 @@ Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 
 :::
 
+
+
 ## 4D v19.7
 
-#### Lo más destacado
+#### Destacados
 
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.7): lista de todos los errores que se han corregido en 4D v19.7.
 
 
+
+
 ## 4D v19.6
 
-#### Lo más destacado
+#### Destacados
 
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.6): lista de todos los errores que se han corregido en 4D v19.6.
 

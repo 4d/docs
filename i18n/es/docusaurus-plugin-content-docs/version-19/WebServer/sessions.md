@@ -51,14 +51,6 @@ El objeto `Session` actual puede entonces ser accedido a través del comando [`S
 
 > Los procesos web no suelen terminar, sino que se reciclan en un fondo común para ser más eficientes. Cuando un proceso termina de ejecutar una petición, se devuelve al pool y queda disponible para la siguiente petición. Dado que un proceso web puede ser reutilizado por cualquier sesión, [las variables de proceso](Concepts/variables.md#process-variables) deben ser borradas por su código al final de su ejecución (utilizando [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) por ejemplo). Esta limpieza es necesaria para cualquier información relacionada con el proceso, como una referencia a un archivo abierto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
 
-### Modo apropiativo
-
-En 4D Server, las sesiones del servidor web se manejan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que el código de su web es [compatible con una ejecución apropiativa](preemptiveWeb.md#writing-thread-safe-web-server-code).
-
-> Para depurar código web en 4D Server (interpretado), es necesario lanzar y conectar [4D en la misma máquina que 4D Server](Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine) y abrir el entorno de desarrollo (por ejemplo, el Explorador) en la aplicación 4D. Con esta configuración, todos los procesos pasan a modo cooperativo y se puede depurar el código del servidor web.
-
-Con 4D monopuesto, el código interpretado se ejecuta siempre en modo cooperativo.
-
 ## Compartir información
 
 Cada objeto `Session` ofrece una propiedad [`.storage`](API/SessionClass.md#storage) que es un [objeto compartido](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.

@@ -1698,7 +1698,7 @@ Se nenhum atributo de entidade for tocado, o método retorna uma coleção vazia
   //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
 ```
 
-In this case:
+Nesse modo:
 
 * firstName and lastName tem um tipo `storage`
 * employer tem um tipo `relatedEntity`

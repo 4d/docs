@@ -36,7 +36,7 @@ To update any other client machines that are not connected, you just need to ent
 
 > Only databases published on the same port as the one set in 4D client are visible on the TCP/IP dynamic publication page.
 
-#### 4D Server and port numbers
+#### 4D Server e números de portas
 
 4D Server uses three TCP ports for communications between internal servers and clients:
 

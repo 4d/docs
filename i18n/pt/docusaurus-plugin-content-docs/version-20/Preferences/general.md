@@ -3,18 +3,18 @@ id: general
 title: Página Geral
 ---
 
-This page contains various options to configure the general operation of your 4D application.
+Esta página contém várias opções para configurar o funcionamento geral da sua aplicação 4D.
 
 ## Opções
 
 ### Na inicialização
 
-This option allows you to configure the default 4D display at startup, when the user launches only the application.
+Esta opção permite configurar o ecrã 4D por padrão no arranque, quando o usuário inicia apenas a aplicação.
 
-*   **Do nothing**: Only the application window appears, empty.
-*   **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-*   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box. To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
-*   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
+*   **Não fazer nada**: só aparece a janela da aplicação, vazia.
+*   **Diálogo Abrir Projeto Local**: 4D apresenta uma caixa de diálogo padrão para abrir um documento, permitindo-lhe selecionar um projeto local.
+*   **Abrir o último projeto utilizado**: 4D abre diretamente o último projeto utilizado; não aparece nenhuma caixa de diálogo de abertura. >Para forçar a apresentação da caixa de diálogo de abertura quando esta opção é selecionada, mantenha premida a tecla **Alt** (Windows) ou **Opção** (macOS) enquanto inicia o projeto.
+*   **Diálogo Abrir Projeto Remoto**: 4D mostra o diálogo de logon padrão do 4D Server, permitindo selecionar um projeto publicado na rede.
 *   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears.
 > > > **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
 
@@ -71,7 +71,7 @@ If this option is checked, when the user switches to the Application environment
 
 ### Ativar a criação de bases de dados binárias
 
-If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
+Se selecionar esta opção, são adicionados dois itens ao menu **Ficheiro > Novo** e ao botão **Novo** da barra de ferramentas:
 
 *   **Base de dados...**
 *   **Base de dados a partir da definição da estrutura...**
@@ -132,14 +132,14 @@ This parameter configures the default language used for character string process
 A 4D database can thus operate in a language different from that of the system. When a database is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the database engine or the language, are done in the same language.
 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
+> Pode modificar este parâmetro para a base de dados aberta utilizando os parâmetros da base de dados (ver [Comparação de texto](../settings/database.md#text-comparison)).
 
-## Documentation location
+## Localização da documentação
 
-This area configures access to the 4D HTML documentation displayed in the current browser:
+Esta área configura o acesso à documentação HTML 4D exibida no seu navegador atual:
 
-*   When the user clicks on a command name in the Method editor and hits the **F1** key.
-*   When the user double-clicks on a command on the **Commands Page** of the Explorer;
+*   Quando se pressiona a tecla **F1** enquanto o cursor está inserido numa função de classe 4D ou nome de comando no Editor de Código;
+*   Ao clicar duas vezes em um comando 4D na **página Comandos** do Explorer.
 
 
 ### Língua da documentação
@@ -148,17 +148,17 @@ Linguaje da documentação HTML a apresentar. You can modify it, for example if 
 
 ### Procurar primeiro na pasta local
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> Esta opção só é tida em conta para o acesso à documentação de comandos (excluindo as funções de classe).
 
-4D builds calls to the pages of the documentation based on this URL.
+Define onde 4D irá procurar por páginas de documentação.
 
-*   When it is checked, 4D first looks for the page in the local folder. Se for encontrado, 4D mostra a página no navegador atual. If it is found, 4D displays the page in the current browser. This makes it possible to access the documentation even when you are offline.
+*   Quando marcado (padrão), 4D primeiro procura a página na pasta local (veja abaixo). Se for encontrado, 4D mostra a página no navegador atual. If it is found, 4D displays the page in the current browser. Desta forma, é possível aceder à documentação mesmo quando se está offline.
 *   When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.
 
 ### Pasta local
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> Esta opção só é tida em conta para o acesso à documentação de comandos (excluindo as funções de classe).
 
-Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. You can view the location by clicking on the menu associated with the area. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
+Indica a localização da documentação HTML estática. Por padrão, esta é a subpasta \Help\Command\language. Pode ver a localização clicando no menu associado à zona. Se esta subpasta não estiver presente, a localização é apresentada a vermelho.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja). 

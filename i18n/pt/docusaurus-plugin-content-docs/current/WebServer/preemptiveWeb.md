@@ -15,8 +15,8 @@ The following table indicates whether the preemptive mode is used or is availabl
 | 4D Server             | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
 | --------------------- | ------------------------------------------------------------------- | ----------------------------------------- | --------------- |
 | Servidor REST         | cooperativo                                                         | preemptive                                | preemptive      |
-| Servidor Web          | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
+| Servidor Web          | cooperativo                                                         | cooperativo                               | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                         | cooperativo                               | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |
 | ----------------------- | ------------ | --------------- |

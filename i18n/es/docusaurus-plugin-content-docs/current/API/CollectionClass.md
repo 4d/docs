@@ -57,6 +57,7 @@ Una colección se inicializa con:
 | [<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
 | [<!-- INCLUDE #collection.max().Syntax -->](#max)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
 | [<!-- INCLUDE #collection.min().Syntax -->](#min)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
+| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.multiSort().Summary -->|
 | [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
 | [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
 | [<!-- INCLUDE #collection.pop().Syntax -->](#pop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
@@ -2200,6 +2201,144 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 <!-- END REF -->
 
 
+<!-- REF collection.multiSort().Desc -->
+## .multiSort()
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20 R3  | Añadidos       |
+
+</details>
+
+<!-- REF #collection.multiSort().Syntax -->**.multiSort**() : Collection<br/>**.multiSort**( *colsToSort* : Collection ) : Collection<br/>**.multiSort**( *formula* : 4D.Function ; *colsToSort* : Collection ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.multiSort().Params -->
+| Parámetros | Tipo        |    | Descripción                                                                                                                   |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objeto formula                                                                                                                |
+| colsToSort | Collection  | -> | Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties |
+| Result     | Collection  | <- | Colección original ordenada|<!-- END REF -->
+
+
+|
+
+
+#### Descripción
+
+La función `.multiSort()` <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
+> This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+
+If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+
+1. null
+2. booleans
+3. cadenas
+4. numbers
+5. objects
+6. collections
+7. dates
+
+
+**Single-level synchronized sort**
+
+To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
+
+:::note
+
+All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
+
+:::
+
+If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](FunctionClass.md#formula) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the formula if necessary.
+
+The formula receives the following parameters:
+
+- $1 (objeto), donde:
+    - *$1.value* (todo tipo): primer valor del elemento a comparar
+    - *$1.value2* (todo tipo): segundo valor del elemento a comparar
+- $2...$N (cualquier tipo): parámetros adicionales
+
+**Multi-level synchronized sort**
+
+Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level.
+
+The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+
+:::note
+
+The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
+
+:::
+
+#### Ejemplo 1
+
+A simple synchronized sort of collections with different value types:
+
+```4d
+var $col;$col2;$col3 : Collection
+$col:=["A"; "C"; "B"]
+$col2:=[1; 2; 3]
+$col3:=[["Jim"; "Philip"; "Maria"]; ["blue"; "green"]; ["11"; 22; "33"]]
+
+$col.multiSort([$col2; $col3])
+//$col=["A","B","C"]
+//$col2=[1,3,2]
+//$col3[0]=["Jim","Philip","Maria"]
+//$col3[1]=["11",22,"33"]
+//$col3[2]=["blue","green"]
+
+```
+
+#### Ejemplo 2
+
+You want to sort three synchronized collections: city, country, and continent. You want an ascending sort of the first and the third collections, and synchronization for the second collection:
+
+```4d
+var $city : Collection
+var $country : Collection
+var $continent : Collection
+
+$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
+$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
+$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
+
+$continent.multiSort($country; {collection: $city; order: ck ascending})
+//$continent=["Africa", "America","Europe","Europe","Europe"]
+//$country=["Morocco", "US","Germany","France","France"]
+//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
+
+```
+
+#### Ejemplo 3
+
+You can also synchronize collections of objects.
+
+```4d
+var $name : Collection
+var $address : Collection
+$name:=[]
+$name.push({firstname: "John"; lastname: "Smith"})
+$name.push({firstname: "Alain"; lastname: "Martin"})
+$name.push({firstname: "Jane"; lastname: "Doe"})
+$name.push({firstname: "John"; lastname: "Doe"})
+$address:=[]
+$address.push({city: "Paris"; country: "France"})
+$address.push({city: "Lyon"; country: "France"})
+$address.push({city: "Eching"; country: "Germany"})
+$address.push({city: "Berlin"; country: "Germany"})
+
+$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); $address)
+//["Alain Martin","Jane Doe","John Smith","John Doe"]
+//["Lyon France","Eching Germany","Paris France","Berlin Germany"]
+
+```
+
+
+<!-- END REF -->
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -2331,6 +2470,7 @@ Ordenar una colección de objetos utilizando una colección de objetos criterio:
 Ordenar con una ruta de propiedad:
 
 ```4d
+
  var $crit; $c; $c2 : Collection
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
@@ -3015,6 +3155,7 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 
 <!-- REF #collection.reverse().Params -->
+
 | Parámetros | Tipo       |    | Descripción                                                |
 | ---------- | ---------- |:--:| ---------------------------------------------------------- |
 | Result     | Collection | <- | Copia invertida de la colección|<!-- END REF -->
@@ -3198,6 +3339,7 @@ Puede definir los siguientes parámetros:
 
 *   (obligatorio si se ha utilizado un método) *$1.result* (booleano): **true** si la evaluación del valor del elemento es éxitoso, **false** en caso contrario.
 *   *$1.stop* (boolean, opcional): **true** para detener la retrollamada del método. El valor devuelto es el último calculado.
+
 
 En todo caso, en el momento en que la función `.some()` encuentra el primer elemento de la colección que devuelve true, deja de llamar a la llamada de retorno y devuelve **true**.
 

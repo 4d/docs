@@ -55,12 +55,12 @@ Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and di
 
 To enable access to Qodly Studio, you must explicitly allow it at two levels:
 
-* at 4D level (4D or 4D Server)
-* at project level
+* a nivel 4D (4D o 4D Server)
+* a nivel del proyecto
 
 If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
 
-#### At 4D level
+#### A nivel 4D
 
 As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
@@ -123,16 +123,10 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 ### Using project methods
 
-We recommend using class functions over methods, but you can still use your project methods as REST functions in the studio.
+We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
 
-To be used in Qodly Studio, project methods must be defined as Datastore, Dataclass, Entity or Entity selection class functions.
-
-To check if a method is available as REST function:
-1. In the Explorer of your 4D application, **right-click a project method** > **Edit Properties...** to open the Method Properties dialog.
-2. Check that the **REST Server** option is checked.
-
-Selecting **Scope** > **Catalog** designates the project method as a function of the Datastore class. No table (dataclass) is assigned in this case.
-
+- You can call your methods from class functions.
+- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
 ## Opening Qodly Studio
 
@@ -209,7 +203,7 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
-| QodlyScript | 4D Language                                                 | Comentario          |
+| QodlyScript | Lenguaje 4D                                                 | Comentario          |
 | ----------- | ----------------------------------------------------------- | ------------------- |
 | ,           | ;                                                           | argument separator  |
 | =           | :=                                                          | assignment operator |
@@ -233,7 +227,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 - Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - However, some command have been renamed for a better compliance. They are listed below:
 
-| QodlyScript            | 4D Language      |
+| QodlyScript            | Lenguaje 4D      |
 | ---------------------- | ---------------- |
 | `atan`                 | `Arctan`         |
 | `highestProcessNumber` | `Count tasks`    |
@@ -253,7 +247,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 #### Ejemplo
 
-- QodlyScript code:
+- Código QodlyScript:
 
 ```qs
  declare(entitySelection : 4D.EntitySelection)  
@@ -271,7 +265,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 
 
-- 4D Language equivalent code:
+- Código 4D equivalente:
 
 ```4d
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
@@ -288,11 +282,11 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 ```
 
-## About license usage
+## Sobre la licencia de uso
 
 To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.
 
-### URL Schemes
+### Esquemas URL
 
 Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
 
@@ -320,7 +314,7 @@ You can enable/disable the display of the renderer pop over using a Qodly Studio
 
 :::
 
-### SameSite attribute
+### Atributo SameSite
 
 The behavior previously described is due to the session cookie of the 4D web server. This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
 
@@ -328,7 +322,7 @@ If the `SameSite` attribute's value is `Strict` (default), the session cookie is
 
 For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-<code>SameSite</code>-and-secure-attributes-for-cookies/).
 
-### Recommendations
+### Recomendaciones
 
 To avoid using more licenses than necessary, we recommend doing one of the following:
 
@@ -343,4 +337,4 @@ To avoid using more licenses than necessary, we recommend doing one of the follo
 
 This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="Reproductor de vídeo YouTube" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>

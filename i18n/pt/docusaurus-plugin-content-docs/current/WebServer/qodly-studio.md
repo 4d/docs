@@ -16,9 +16,9 @@ As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and s
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
 - create webforms by placing components on a page
-- map components to data
+- mapear componentes para dados
 - trigger 4D code by configuring events
-- and much more.
+- e muito mais.
 
 :::info
 
@@ -40,9 +40,9 @@ Qodly Studio supports the following web browsers:
 
 The recommended resolution is 1920x1080.
 
-#### 4D application
+#### Aplicação 4D
 
-- Development: 4D v20 R2 or higher
+- Desenvolvimento: 4D v20 R2 ou superior
 - Deployment: 4D Server v20 R2 or higher
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
@@ -55,8 +55,8 @@ Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and di
 
 To enable access to Qodly Studio, you must explicitly allow it at two levels:
 
-* at 4D level (4D or 4D Server)
-* at project level
+* a nível 4D (4D ou 4D Server)
+* a nível do projeto
 
 If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
 
@@ -78,7 +78,7 @@ After any change to these settings, you must [restart the WebAdmin web server](.
 
 :::
 
-#### At project level
+#### A nível do projeto
 
 After you have enabled access to Qodly Studio at the 4D level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio).
 
@@ -123,16 +123,10 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 ### Using project methods
 
-We recommend using class functions over methods, but you can still use your project methods as REST functions in the studio.
+We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
 
-To be used in Qodly Studio, project methods must be defined as Datastore, Dataclass, Entity or Entity selection class functions.
-
-To check if a method is available as REST function:
-1. In the Explorer of your 4D application, **right-click a project method** > **Edit Properties...** to open the Method Properties dialog.
-2. Check that the **REST Server** option is checked.
-
-Selecting **Scope** > **Catalog** designates the project method as a function of the Datastore class. No table (dataclass) is assigned in this case.
-
+- You can call your methods from class functions.
+- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
 ## Opening Qodly Studio
 
@@ -146,7 +140,7 @@ There are two ways to access Qodly Studio:
 
 `IPaddress:HTTPPort/studio`
 
-ou :
+ou:
 
 `IPaddress:HTTPSPort/studio`
 
@@ -157,7 +151,7 @@ For example, after launching a local web server on port 7080, type this address 
 You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
 
 
-## Using Qodly Studio
+## Utilizar Qodly Studio
 
 The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio/overview.md).
 
@@ -209,7 +203,7 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
-| QodlyScript | 4D Language                                                 | Comentário          |
+| QodlyScript | Línguagem 4D                                                | Comentário          |
 | ----------- | ----------------------------------------------------------- | ------------------- |
 | ,           | ;                                                           | argument separator  |
 | =           | :=                                                          | assignment operator |
@@ -233,7 +227,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 - Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - However, some command have been renamed for a better compliance. They are listed below:
 
-| QodlyScript            | 4D Language      |
+| QodlyScript            | Línguagem 4D     |
 | ---------------------- | ---------------- |
 | `atan`                 | `Arctan`         |
 | `highestProcessNumber` | `Count tasks`    |
@@ -253,7 +247,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 #### Exemplo
 
-- QodlyScript code:
+- Código QodlyScript:
 
 ```qs
  declare(entitySelection : 4D.EntitySelection)  
@@ -271,7 +265,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 
 
-- 4D Language equivalent code:
+- Código 4D equivalente no linguajem:
 
 ```4d
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
@@ -292,7 +286,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.
 
-### URL Schemes
+### Esquemas URL
 
 Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
 
@@ -322,7 +316,7 @@ You can enable/disable the display of the renderer pop over using a Qodly Studio
 
 ### SameSite attribute
 
-The behavior previously described is due to the session cookie of the 4D web server. This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
+O comportamento descrito anteriormente é devido ao cookie de sessão do servidor web 4D. This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
 
 If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
 
@@ -343,4 +337,4 @@ To avoid using more licenses than necessary, we recommend doing one of the follo
 
 This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="Leitor de vídeo do YouTube" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>

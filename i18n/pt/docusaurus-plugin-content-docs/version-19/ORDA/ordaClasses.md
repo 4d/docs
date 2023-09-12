@@ -170,12 +170,12 @@ Cada tabela exposta com ORDA oferece uma classe EntitySelection no repositório 
 #### Exemplo
 
 ```4d
-// cs.EmployeeSelection class
+// Class cs.EmployeeSelection 
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+//Extrair os empregados com um salário superior à média desta seleção de entidades 
 
 Function withSalaryGreaterThanAverage
  C_OBJECT($0)
