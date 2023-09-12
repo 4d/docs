@@ -14,7 +14,7 @@ title: リリースノート
 
 #### ハイライト
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D v19.7.
+- [**修正リスト**](https://4d-jp.github.io//2023/161/release-note-version-19/): 4D v19.7 で修正されたバグのリストです。
 
 
 ## 4D v19.6

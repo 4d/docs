@@ -153,7 +153,7 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 ## Utilizar Qodly Studio
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio/overview.md).
+The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
 You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
 

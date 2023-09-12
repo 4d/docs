@@ -123,20 +123,20 @@ Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに�
 
 ### プロジェクトメソッドを使用する
 
-We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
+推奨される方法は、プロジェクトメソッドではなく、クラス関数を使用することです。 コンポーネントから呼び出すことが可能なのは、クラス関数のみです。 それでも、次の 2つの方法で、Qodly Studio でもプロジェクトメソッドを使用できます:
 
-- You can call your methods from class functions.
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- クラス関数からメソッドを呼び出すことができます。
+- Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
 
 ## Qodly Studio を開く
 
-The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
+Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](../Admin/webAdmin.md#開始と停止)、認証が有効化されている場合に使用できます (上述参照)。
 
-There are two ways to access Qodly Studio:
+Qodly Studio にアクセスするには 2つの方法があります:
 
-* from your 4D single-user application, go to **Design** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
+* 4Dシングルユーザーアプリケーションから、**デザイン** > **Qodly Studio...** を選択します。 WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
-* on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
+* 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:
 
 `IPaddress:HTTPPort/studio`
 
@@ -144,90 +144,90 @@ There are two ways to access Qodly Studio:
 
 `IPaddress:HTTPSPort/studio`
 
-For example, after launching a local web server on port 7080, type this address in your browser:
+たとえば、ポート7080 でローカルWebサーバーを起動した後、ブラウザーに次のアドレスを入力します:
 
 `localhost:7080/studio`
 
-You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
+すると、Qodly Studio にアクセスするための [アクセスキー](../Admin/webAdmin.md#アクセスキー) の入力を求められます。
 
 
-## Using Qodly Studio
+## Qodly Studio を使う
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](developer.qodly.com/docs/studio/overview.md).
+The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
+Webフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します。
 
 :::info
 
-There is no direct compatibility between apps implemented with 4D and apps implemented with Qodly.
+4D で実装されたアプリと Qodly で実装されたアプリの間に直接の互換性はありません。
 
 :::
 
-### Feature comparison
+### 機能の比較
 
-|                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio for Qodly developers       |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
-| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
-| Programming language                                         | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
-| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| デバッガー                                                        | 4D IDE debugger                                                                             | Qodly Studio debugger                   |
-| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
+|                                         | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                              | Qodlyデベロッパー向けの Qodly Studio |
+| --------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------- |
+| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor   |
+| Webフォーム                                 | Qodly Studio Webform Editor                                                        | Qodly Studio Webform Editor |
+| デスクトップフォーム                              | 4D IDE                                                                             | *サポートされていません*               |
+| プログラミング言語                               | 4Dランゲージ (ORDA を使用)                                                                 | QodlyScript (ORDA を使用)      |
+| コーディング IDE                              | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター       |
+| デバッガー                                   | 4D IDE デバッガー                                                                       | Qodly Studio デバッガー          |
+| REST/Web ロールとアクセス権                      | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                     | Qodly Studio ロールとアクセス権エディター |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
-
-
-### Project management
-
-In accordance with the management of 4D projects, only the following usages are supported:
-
-- development with Qodly Studio must be done using **4D** (single-user).
-- deployment of 4D applications powered with Qodly webforms must be done using **4D Server**.
+(1) Qodly Studio で **Model** ボタンをクリックしても、何も起こりません。 (2) Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 
-### Known issue
+### プロジェクト管理
 
-- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file.
+4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
-
-### From QodlyScript to 4D Language
-
-4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their webforms in Qodly Studio. Code examples are provided in QodlyScript, but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations:
-
-#### Variable names
-
-QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
-
-#### Symbols and keywords
-
-Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
-
-| QodlyScript | 4D Language                                                 | 説明                  |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| ,           | ;                                                           | argument separator  |
-| =           | :=                                                          | assignment operator |
-| ==          | =                                                           | comparison operator |
-| declare     | #Declare                                                    |                     |
-| switch      | Case of                                                     |                     |
-| constructor | Class constructor                                           |                     |
-| extends     | Class extends                                               |                     |
-| end         | End for, End For each, End if, End case, End use, End while |                     |
-| forEach     | For each                                                    |                     |
-| string      | Text                                                        | var type            |
-| number      | Real                                                        | var type            |
-
-Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
+- Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
+- Qodly Webフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 
-#### Command names
+### 既知の問題
 
-QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
+- 現在の実装では、Qodly Webフォームを使用する統合された 4Dアプリケーション (スタンドアロンおよびサーバー) をビルドするには、*.4dz* 圧縮されたアーキテクチャーを無効にする必要があります。そうでない場合、404エラーが返されます。 このような統合アプリケーションをビルドする場合は、buildApp.4DSettings ファイルで [` PackProject` XMLキー](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.ja.html) を `false` に設定してください。
 
-- Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
-- However, some command have been renamed for a better compliance. They are listed below:
 
-| QodlyScript            | 4D Language      |
+### QodlyScript から 4Dランゲージへ
+
+[Qodly Studio ドキュメント](developer.qodly.com/docs/studio) を使用して、4Dデベロッパーは、Qodly Studio で Webフォームを設計する方法を学ぶことができます。 コードの例は QodlyScript で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 QodlyScript コードを 4Dランゲージに変換するのは簡単で、いくつかの調整が必要なだけです:
+
+#### 変数名
+
+QodlyScript はローカル変数のみをサポートするため、QodlyScript の例題では、変数に `$` という接頭辞が付きません。 4Dコードでは、4D によってローカル変数として識別されるように、**変数名の前には必ず `$` を付けてください**。
+
+#### 記号とキーワード
+
+一部の基本的な記号、演算子、キーワードは QodlyScript では異なるため、4Dランゲージ用に変換する必要があります。 以下に一覧を示します:
+
+| QodlyScript | 4Dランゲージ                                                     | 説明       |
+| ----------- | ----------------------------------------------------------- | -------- |
+| ,           | ;                                                           | 引数の区切り文字 |
+| =           | :=                                                          | 代入演算子    |
+| ==          | =                                                           | 比較演算子    |
+| declare     | #Declare                                                    |          |
+| switch      | Case of                                                     |          |
+| constructor | Class constructor                                           |          |
+| extends     | Class extends                                               |          |
+| end         | End for, End For each, End if, End case, End use, End while |          |
+| forEach     | For each                                                    |          |
+| string      | Text                                                        | 変数の型     |
+| number      | Real                                                        | 変数の型     |
+
+他の一部の項目では文字の大小が異なりますが (例: `this` と `This`)、4Dコードに直接貼り付けることができます。
+
+
+#### コマンド名
+
+QodlyScript のコマンド名は、スペースを入れずにキャメルケースで記述されます。 これらのコマンドを 4Dランゲージに変換する必要がある場合があります。
+
+- 通常は、単に名前を変換するだけで十分です。 たとえば、QodlyScript の `newCollection` は 4Dランゲージの `New collection` です。
+- ただし、コンプライアンス向上のため、一部のコマンドでは名前が変更されました。 以下に一覧を示します:
+
+| QodlyScript            | 4Dランゲージ          |
 | ---------------------- | ---------------- |
 | `atan`                 | `Arctan`         |
 | `highestProcessNumber` | `Count tasks`    |
@@ -247,7 +247,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 #### 例題
 
-- QodlyScript code:
+- QodlyScript コード:
 
 ```qs
  declare(entitySelection : 4D.EntitySelection)  
@@ -265,7 +265,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 
 
-- 4D Language equivalent code:
+- 上に相当する 4Dランゲージのコード:
 
 ```4d
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
