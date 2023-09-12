@@ -41,7 +41,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 The Backup/Configuration page of the Structure Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each application opened by 4D or 4D Server.
 
-![](../assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup032.png)
 
 > **4D Server:** These parameters can only be set from the 4D Server machine.
 
@@ -67,7 +67,7 @@ To view the location of the files, click in the area in order to display their p
 
 To modify the location where these files are stored, click the **...** button. A selection dialog box appears, which allows you to select a folder or disk where the backups will be placed. The "Used Space" and "Free Space" areas are updated automatically and indicate the remaining space on the disk of the selected folder.
 
-### Log file management  
+### Log management
 
 The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log life for the current data file is specified below the option. When this option is checked, it is not possible to open the application without a log file. For more information about the log file, pleaser refer to [log file](../log.mg)
 
