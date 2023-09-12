@@ -123,16 +123,10 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 ### Using project methods
 
-We recommend using class functions over methods, but you can still use your project methods as REST functions in the studio.
+We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
 
-To be used in Qodly Studio, project methods must be defined as Datastore, Dataclass, Entity or Entity selection class functions. 
-
-To check if a method is available as REST function: 
-1. In the Explorer of your 4D application, **right-click a project method** > **Edit Properties...** to open the Method Properties dialog. 
-2. Check that the **REST Server** option is checked.
-
-Selecting **Scope** > **Catalog** designates the project method as a function of the Datastore class. No table (dataclass) is assigned in this case.
-
+- You can call your methods from class functions.
+- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
 ## Opening Qodly Studio
 
