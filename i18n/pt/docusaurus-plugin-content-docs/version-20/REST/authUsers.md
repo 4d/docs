@@ -18,6 +18,13 @@ Quando [sessões escaláveis estão activadas](WebServer/sessions.md#enabling-se
 
 Se o método base `On REST Authentication` não tiver sido definido, é aberta uma sessão `guest`.
 
+## Modo preventivo
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+
+With 4D single-user, interpreted code is always run in cooperative mode.
 
 ## Exemplo
 

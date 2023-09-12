@@ -17,6 +17,14 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 
+
+## Preemptive mode
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+With 4D single-user, interpreted code always runs in cooperative mode.
+
+
 ## Beispiel
 
 In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
@@ -42,6 +50,7 @@ Login
 <script>
 function sendData(data) {
   var XHR = new XMLHttpRequest();
+
 
   XHR.onreadystatechange = function() {
     if (this.status == 200) {      

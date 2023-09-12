@@ -48,25 +48,6 @@ $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
     $lines.push($fhandle.readLine())
 End while
-For ($line; 1; 4)
-    $fhandle.writeLine($text+String($line))
-End for
-
-//Lectura utilizando un carácter de parada y un parámetro objeto
-$o:=New object()
-$o.mode:="read"
-$o.charset:="UTF-8"
-$o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
-$text:=$fhandle.readText($stopChar)
-
-//Lectura línea a línea
-$lines:=New collection
-$fhandle:=$f.open("read")
-While (Not($fhandle.eof))
-    $lines.push($fhandle.readLine())
-End while
 
 ```
 
@@ -286,13 +267,12 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
-Definir el `.offset` cambiará su valor actual.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
 - Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).
 
 Esta propiedad es **lectura/escritura**.
-
 
 <!-- END REF -->
 
@@ -502,6 +482,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+
 
 
 <!--REF #FileHandleClass.writeLine().Params -->

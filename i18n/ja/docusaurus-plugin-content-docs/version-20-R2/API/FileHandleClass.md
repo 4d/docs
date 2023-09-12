@@ -38,8 +38,7 @@ $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:="!" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
 // 1行ずつ読み取ります
@@ -267,13 +266,12 @@ FileHandle オブジェクトは共有できません。
 
 `.offset` プロパティは、 <!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
 
-`.offset` を設定すると、その現在値が変更されます。
+`.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
 
 - 負の値が渡された場合、`.offset` はファイルの先頭 (ゼロ) に設定されます。
 - ファイルサイズより大きい値が渡された場合、`.offset` はファイルの終端 (ファイルサイズ) に設定されます。
 
 **読み書き可能** プロパティです。
-
 
 <!-- END REF -->
 
@@ -483,6 +481,7 @@ FileHandle オブジェクトは共有できません。
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+
 
 
 <!--REF #FileHandleClass.writeLine().Params -->

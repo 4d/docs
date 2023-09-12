@@ -301,4 +301,4 @@ This option specifies a group of 4D users that is authorized to establish the li
 
 #### Ativar o acesso ao estúdio Web
 
-Ativa o acesso geral ao Web studio. You still need to configure it at every project level.
+Ativa o acesso geral ao Web studio. Continua a ser necessário configurá-lo em cada nível de projeto.

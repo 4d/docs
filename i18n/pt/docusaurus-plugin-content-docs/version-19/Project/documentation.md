@@ -117,12 +117,12 @@ New documentation files are created with the following default contents:
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Linha                                               | Descrição                                                                                                                                              |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| "\<!-- Type your summary here -->"       | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
-| ## Description                                     | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Exemplo                                         | Heading level 2, you can use this area to show sample code                                                                                             |
-| \``` 4D <br/>Type your example here \` `` | Utilizado para formatar exemplos de código 4D (utiliza a biblioteca highlight.js)                                                                      |
+| Linha                                                   | Descrição                                                                                                                                              |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "\<!-- Type your summary here -->"           | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
+| ## Description                                         | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
+| ## Exemplo                                             | Heading level 2, you can use this area to show sample code                                                                                             |
+| \``` 4D <br/>Escreva aqui o seu exemplo \` `` | Utilizado para formatar exemplos de código 4D (utiliza a biblioteca highlight.js)                                                                      |
 
 ### Markdown suportado
 
@@ -211,7 +211,7 @@ This method returns a logo of a specific size, depending on the value of the *si
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+//Obter o maior logótipo
 $logo:=GetLogo(5)
 ```
 

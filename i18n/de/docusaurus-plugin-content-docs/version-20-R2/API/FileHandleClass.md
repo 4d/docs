@@ -267,13 +267,12 @@ This property is **read-only**.
 
 The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
 
-Setting the `.offset` will change its current value.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - If the passed value is negative, the `.offset` is set to the start of the file (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 This property is **read/write**.
-
 
 <!-- END REF -->
 
@@ -483,6 +482,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+
 
 
 <!--REF #FileHandleClass.writeLine().Params -->

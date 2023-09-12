@@ -11,6 +11,7 @@ Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-
 
 #### Points forts
 
+- New [`collection.multiSort`](../API/CollectionClass.md#multisort) function.
 - Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - 4D Langage : [Liste des nouveautés](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) sur doc.4d.com.
@@ -38,6 +39,10 @@ Lisez [**Les nouveautés de 4D v20 R2**](https://blog.4d.com/fr-whats-new-in-4d-
 - 4D Write Pro Interface : Nouvel [assistant de tableau](../WritePro/writeprointerface.md).
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R2): liste de tous les bugs corrigés dans 4D v20 R2.
 
+
+#### Changements de comportement
+
+- **Warning**: the starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been done and the value is now 0.
 
 
 ## 4D v20.x
@@ -89,6 +94,7 @@ Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20
 
 #### Changements de comportement
 
+- **Warning**: the starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been done and the value is now 0.
 - Pour des raisons de conformité avec la RFC HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) renvoie désormais tous les noms d'en-têtes **en minuscules**. Si vous souhaitez que votre code continue à fonctionner comme auparavant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) .
 - Les certificats TLS sont désormais automatiquement validés par 4D lors de l'envoi de requêtes HTTP avec [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), et rejetés avec une erreur s'ils ne sont pas valides. Une nouvelle propriété *option* vous permet de contrôler cette validation.
 - TLS v1.0 et TLS v1.1 sont obsolètes, ils ne sont plus pris en charge par `Min TLS version` sur 4D Server. La version 1.3 est désormais sélectionnée par défaut et est automatiquement utilisée si les constantes `_o_TLSv1_0` ou `_o_TLSv1_1` sont définies avec [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).

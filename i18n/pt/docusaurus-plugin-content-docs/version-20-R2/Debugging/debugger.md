@@ -329,11 +329,11 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
-This area also allows you to add or remove [**break points**](breakpoints.md).
+Esta área também permite adicionar ou remover [**pontos de ruptura**](breakpoints.md).
 
 ### Tips
 
-Hover your pointer over any expression to display a tool tip that indicates:
+Passe o ponteiro do rato sobre qualquer expressão para visualizar uma dica de ferramenta que indica:
 
 * o tipo declarado da expressão
 * o valor atual da expressão

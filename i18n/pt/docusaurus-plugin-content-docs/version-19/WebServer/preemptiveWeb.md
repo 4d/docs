@@ -15,8 +15,8 @@ The following table indicates whether the preemptive mode is used or is availabl
 | 4D Server             | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, projeto (nenhum cliente ligado localmente) ou binário | Compilado       |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------- |
 | Servidor REST         | cooperativo                                                                                                              | preemptive                                                          | preemptive      |
-| Servidor Web          | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
+| Servidor Web          | cooperativo                                                                                                              | cooperativo                                                         | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                                                                              | cooperativo                                                         | *parâmetro web* |
 | Legacy REST           | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |

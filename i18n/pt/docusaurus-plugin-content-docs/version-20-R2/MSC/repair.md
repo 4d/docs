@@ -61,11 +61,11 @@ If several groups of records could not be assigned to tables due to a damaged ad
 Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Também pode atribuir uma tabela utilizando a função arrastar e largar. The group of records is then associated with the table and it will be recovered in this table. Os nomes das tabelas atribuídas manualmente aparecem a preto. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
 
-## Abrir ficheiro de registo
+## Abrir arquivo de registo
 
-Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este ficheiro permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
+Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este arquivo permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
 - *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Quando clica no botão **Abrir arquivo de registo** , 4D mostra o arquivo de registo mais recente no navegador predefinido da máquina.

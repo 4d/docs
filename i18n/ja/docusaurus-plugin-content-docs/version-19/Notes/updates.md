@@ -9,6 +9,14 @@ title: リリースノート
 
 :::
 
+
+## 4D v19.7
+
+#### ハイライト
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D v19.7.
+
+
 ## 4D v19.6
 
 #### ハイライト

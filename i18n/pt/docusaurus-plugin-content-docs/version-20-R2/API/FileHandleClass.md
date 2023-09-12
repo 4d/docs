@@ -266,13 +266,12 @@ Essa propriedade é **apenas leitura**.
 
 A propriedade `.offset` devolve <!-- REF #FileHandleClass.offset.Summary -->o offset aual do fluxo de dados (posição no interior do documento)<!-- END REF -->. O valor do offset é automaticamente atualizado após as operações de leitura e escrita.
 
-A configuração do `.offset` irá alterar o seu valor atual.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - Se o valor passado for negativo, o arquivo `.offset` é definido para o início do arquivo (zero).
 - Se o valor passado for superior ao tamanho do arquivo, o arquivo `.offset` é definido para o fim do arquivo (tamanho do ficheiro).
 
 Esta propriedade é **read/write**.
-
 
 <!-- END REF -->
 
@@ -482,6 +481,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
