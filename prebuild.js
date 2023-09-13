@@ -26,10 +26,10 @@ function collect(mainFolder) {
                 const p = new Promise((resolve, reject)=> {
                     let localData = {}
                     content.then((content)=> {
-                        const regex = /<!--\s*REF\s+#_command_.([0-9a-zA-Z\s]+)/g
+                        const regex = /<!--\s*REF\s+#_command_.([0-9a-zA-Z\s-_]+)/g
                         const matches = [...content.matchAll(regex)].map(m=>m[1]).filter((value, index, self)=>self.indexOf(value) == index);
                         matches.forEach((value)=> {
-                            localData[value] = path.join(mainFolder, file.split('.').slice(0, -1).join('.')).replace(/\\/g, '/');
+                            localData[value.toLocaleLowerCase()] = path.join(mainFolder, file.split('.').slice(0, -1).join('.')).replace(/\\/g, '/');
                         })
                         resolve(localData)
                     })

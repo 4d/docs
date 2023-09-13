@@ -22,7 +22,7 @@ export default function RedirectAPI() {
               const classWanted = url.searchParams.get("class");
               const memberWanted = url.searchParams.get("member");
               const versionWanted = url.searchParams.get("v");
-              const commandWanted = url.searchParams.get("command");
+              const commandWanted = url.searchParams.get("command").replaceAll("%20", " ").toLowerCase();
 
               let versionToGo = ""
               //Match version
@@ -39,7 +39,7 @@ export default function RedirectAPI() {
               let finalUrl = ""
               if(!memberWanted)
               {
-                finalUrl = "${url}" + versionToGo + commandFile + "#" + commandWanted.toLowerCase();
+                finalUrl = "${url}" + versionToGo + commandFile + "#" + commandWanted.replaceAll(" ", "-");
               }
               else
               {
