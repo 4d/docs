@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const util = require('util');
 const path = require("path")
@@ -10,11 +11,14 @@ const readFile = util.promisify(fs.readFile);
 
 function collect(mainFolder) {
     return new Promise( async (resolve, reject)=>{
-
+        if(!fs.existsSync(mainFolder))
+        {
+            resolve({})
+            return;
+        }
         let data = {}
         let promises = []
         let files = await readdir(mainFolder)
-        let listFolders = []
 
         files.forEach((file)=> {
             if(file.endsWith(".md")) {
@@ -25,7 +29,7 @@ function collect(mainFolder) {
                         const regex = /<!--\s*REF\s+#_command_.([0-9a-zA-Z\s]+)/g
                         const matches = [...content.matchAll(regex)].map(m=>m[1]).filter((value, index, self)=>self.indexOf(value) == index);
                         matches.forEach((value)=> {
-                            localData[value] = path.join(mainFolder, file.split('.').slice(0, -1).join('.'));
+                            localData[value] = path.join(mainFolder, file.split('.').slice(0, -1).join('.')).replace(/\\/g, '/');
                         })
                         resolve(localData)
                     })
@@ -55,17 +59,55 @@ function collect(mainFolder) {
     });
 }
 
+let versions = JSON.parse(fs.readFileSync("versions.json")).map(v=>path.join("versioned_docs","version-" +v))
+versions.push("docs")
+let listVersions = []
+for(v of versions)
+{
+    const currentV = v.replace(/\\/g, '/')
+    listVersions.push(new Promise((resolve) => collect(path.join(v, mainFolder)).then(data =>resolve({version:currentV, data:data}))))
+}
+
+Promise.all(listVersions).then((localData)=> {
+
+    let commandList = {}
+    //console.log(localData[0])
+    for(l of localData)
+    {
+        const data = l.data;
+        const version = l.version
+        if(Object.keys(data).length !== 0) {
+            Object.keys(data).forEach(function(key, index) {
+                const content = data[key]
+                data[key] = content.replace(version + "/", "");
+              });
+        }
+        const cleanVersion=version.replace("versioned_docs/version-", "").replace("docs", "")
+        commandList[cleanVersion] = data
+    }
+    console.log(commandList)
+    fs.writeFileSync("commandList.json", JSON.stringify(commandList))
+
+})
+
+/*
 collect(mainFolder).then(data=>{
     if(Object.keys(data).length !== 0) {
         Object.keys(data).forEach(function(key, index) {
             const content = data[key]
-            data[key] = content.replace("docs/", "");
+            data[key] = content.replace("docs/api", "API");
           });
-          
-        fs.writeFileSync("commandList.json", JSON.stringify(data))
     }
 })
 
+Promise.all(listVersions).then((localData)=> {
+     
+    for(const d of localData)
+    {
+        data = Object.assign(data, d)
+    }
+    fs.writeFileSync("commandList.json", JSON.stringify(data))
 
+})*/
 
 
