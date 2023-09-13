@@ -1,34 +1,32 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import versions from '../../versions.json';
+import commandList from '../../commandList.json';
 
 
 export default function RedirectAPI() {
   const context = useDocusaurusContext();
-  const listVersions = JSON.stringify(versions)
+  const commandListString = JSON.stringify(commandList)
   const url = context.siteConfig.baseUrl
   return (
       <script
             dangerouslySetInnerHTML={{
               __html: `
               ( function() {
-              const versions = JSON.parse('${listVersions}')
+              const commands = JSON.parse('${commandListString}')
               const url = new URL(window.location.href);
-              const versionWanted = url.searchParams.get("v");
               const classWanted = url.searchParams.get("class");
-              const member = url.searchParams.get("member");
+              const memberWanted = url.searchParams.get("member");
+              const commandWanted = url.searchParams.get("command");
+              const commandFile = commands[commandWanted];
               let finalUrl = ""
-              let versionToGo = ""
-              //Match version
-              for (let i = 1; i < versions.length; ++i) {
-
-                const version = versions[i].replace('-','');
-                if(version === versionWanted) {
-                  versionToGo = versions[i] + "/"
-                }
-                i++;
+              if(!memberWanted)
+              {
+                finalUrl = "${url}" + commandFile + "#" + commandWanted.toLowerCase();
               }
-              finalUrl = "${url}" + versionToGo + "API/" + classWanted + "Class" + "#" + member
+              else
+              {
+                finalUrl = "${url}" + "API/" + classWanted + "Class" + "#" + memberWanted.toLowerCase();
+              }
               window.location.href = finalUrl
             })();
                 `,
@@ -36,4 +34,3 @@ export default function RedirectAPI() {
           />
   );
 }
-
