@@ -7,6 +7,8 @@ import versions from '../../versions.json';
 export default function RedirectAPI() {
   const context = useDocusaurusContext();
   const commandListString = JSON.stringify(commandList)
+  const listVersions = JSON.stringify(versions)
+
   const url = context.siteConfig.baseUrl
   return (
       <script
