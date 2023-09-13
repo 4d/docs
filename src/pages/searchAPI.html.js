@@ -22,7 +22,7 @@ export default function RedirectAPI() {
               const classWanted = url.searchParams.get("class");
               const memberWanted = url.searchParams.get("member");
               const versionWanted = url.searchParams.get("v");
-              const commandWanted = url.searchParams.get("command");
+              let commandWanted = url.searchParams.get("command");
               if(commandWanted !== null) {
                 commandWanted = commandWanted.replaceAll("%20", " ").toLowerCase();
               }
