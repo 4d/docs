@@ -153,7 +153,7 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 ## Qodly Studio を使う
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
 Webフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します。
 
@@ -282,59 +282,59 @@ QodlyScript のコマンド名は、スペースを入れずにキャメルケ�
 
 ```
 
-## About license usage
+## ライセンスの使用について
 
-To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.
+Webフォームをレンダリングするには、プロジェクトデータベースのメインの Webサーバーでセッションが開かれるため、使用可能なライセンスが必要です。
 
-### URL Schemes
+### URLスキーム
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
+Qodly Studio の URLスキーム設定 (HTTP および HTTPS) によって、Webフォームのレンダリング時に使用されるライセンスの数が決まります。 適切な設定により、不要なライセンスの使用を回避できます。
 
-As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. As such, it behaves like a conventional 4D Client.
+[設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 一方、[レンダラー](#レンダリングを有効化する) は RESTリクエストを使用してデータベースの 4D Webサーバーと通信します。 そのため、従来の 4Dクライアントと同じように動作します。
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Qodly Studio からレンダラーを実行する際、これら 2つの Webサーバーに同じ URLスキーム (HTTP または HTTPS) 経由でアクセスしていない場合には、ライセンスのカウントが正しくおこなわれない可能性があります。
 
 #### 例題
 
-1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
+1. Qodly Studio を HTTPS URLスキームで実行します (例: `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. データベースの Webサーバーは HTTPポート上でのみ起動します。
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **rendering** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. Qodly Studioで、**レンダリング** アイコンをクリックします。 2つの Webサーバーが異なるスキームで起動されていることを警告されますが、それにもかかわらず、**Confirm** ボタンをクリックします。
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
-As a result, two licenses are retained.
+結果、2つのライセンスが使用されます。
 
 :::note
 
-You can enable/disable the display of the renderer pop over using a Qodly Studio user setting.
+Qodly Studio のユーザー設定で、レンダラーのポップオーバーについて表示/非表示を切り替えることができます。
 
 :::
 
-### SameSite attribute
+### SameSite 属性
 
-The behavior previously described is due to the session cookie of the 4D web server. This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
+先に説明したふるまいは、4D Webサーバーのセッションcookie によるものです。 このセッションcookie には、`SameSite` 属性があり、セッションcookie が Webサーバーに送信されるかどうかを決定します。
 
-If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
+`SameSite` 属性の値が `Strict` (デフォルト) の場合、セッションcookie は Webサーバーに送信されないため、ページが表示されたり更新されたりするたびに新しいセッションが開かれます。
 
-For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-<code>SameSite</code>-and-secure-attributes-for-cookies/).
+`SameSite` 属性の詳細については、[このブログ記事](https://blog.4d.com/ja/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/) を参照ください。
 
-### Recommendations
+### 推奨事項
 
-To avoid using more licenses than necessary, we recommend doing one of the following:
+必要以上のライセンスを使用しないため、次のいずれかをお勧めします:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
-- Ensure the Qodly Studio and your database are reached on the same URL scheme.
-- Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
+- 別のブラウザータブでレンダラーを実行します (Webフォームがレンダリングされた URL `IP:port/$lib/renderer/?w=WebFormName` を入力します)。
+- Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
+- プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
 
 
 
 
 ## Hello, World
 
-This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
+この 5分間のビデオでは "Hello World" の例を説明します。まず、Qodly Studio へのアクセスを有効にし、基本的なインターフェースを作成して、ユーザー名を使って挨拶をするイベントを設定します。
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="YouTubeビデオプレーヤー" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
