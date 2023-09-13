@@ -22,7 +22,7 @@ Unless this option is checked, it is not possible to open a database when its da
 
 Os ficheiros bloqueados podem ser lidos, mas o seu conteúdo não pode ser modificado. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
 
-### Temporary Folder Location
+### Localização da pasta temporária
 
 This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
 
@@ -30,7 +30,7 @@ The current location of this folder is displayed in the "Current:" area. You can
 
 ![](../assets/en/settings/temporary-file-location.png)
 
-Three location options are provided:
+São oferecidos três opções de localização:
 
 -   **System**: When this option is selected, the 4D temporary files are created in a folder placed at the location specified by Windows and/or macOS. You can find out the current location defined by your system using the [`Temporary folder`](https://doc.4d.com/4dv19R/help/command/en/page486.html) 4D command. The files are put into a subfolder whose name consists of the database name and a unique identifier.
 -   **Data File Folder** (default option): When this option is selected, the 4D temporary files are created in a folder named "temporary files" located at the same level as the data file of the database.
@@ -88,9 +88,9 @@ You use the settings on this tab to configure the cache memory for the database.
     -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
     -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
       To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. You can set limits using the following two options:
-    -   **Minimum Size**: Minimum amount of memory that must be reserved for the cache. Este valor não pode ser inferior a 100 MB.
-    -   **Maximum Size**: Maximum amount of memory that can be used by the cache. This value is virtually unlimited.\  
-      Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. In this case, the limits set let you guarantee a minimum performance in all cases. O diagrama seguinte ilustra este comportamento:
+    -   **Tamanho mínimo**: quantidade mínima de memória a ser reservada para o cache. Este valor não pode ser inferior a 100 MB.
+    -   **Tamanho máximo**: quantidade máxima de memória que o cache pode usar. This value is virtually unlimited.\  
+      Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. Nesse caso, os limites definidos garantem um desempenho mínimo em todos os casos. O diagrama seguinte ilustra este comportamento:
 
     Example for calculating cache memory: *Physical memory to reserve = 256 MB Percentage of the available memory used for the cache = 50% Maximum size = 1 GB Minimum size = 128 MB*
 

@@ -7,25 +7,25 @@ A página Geral contém opções para configurar parâmetros genéricos do proje
 
 ## Desenho
 
-This area contains the **Display toolbar** option. When it is checked, the 4D toolbar is displayed in the Design environment.
+Essa área contém a opção **Mostrar barra de ferramentas**. Quando marcada, a barra de ferramentas 4D é exibida no ambiente de Desenho.
 
 ## Geral
 
-You use this area to set options concerning project startup and operation.
+Essa área permite que você personalize várias opções para iniciar e executar o projeto.
 
 ### Modo de arranque
 
-You use this menu to select the default startup mode for the database: **Design** or **Application**. Unless specified, 4D opens by default in the Design environment if a password access system is not activated.
+Esse menu permite que você selecione o modo em que deseja que o banco de dados seja aberta por padrão: **Desenho** ou **Aplicação**. A menos que especificado, 4D abre por padrão no ambiente Desenho se um sistema de acesso por senha não estiver ativado.
 
 
 ## Componente
 
-This area allows [component developers](../Extensions/develop-components.md) to configure how their component classes and functions will be exposed in the 4D Code Editor once the component is installed.
+Essa área permite que os [desenvolvedores de componentes](../Extensions/develop-components.md) configurem como as classes e funções de seus componentes serão expostas no 4D Code Editor depois que o componente for instalado.
 
 ### Namespace do componente na class store
 
-Use this area to declare a namespace for the component classes and functions in the code on host projects. See [Declaring the component namespace](../Extensions/develop-components.md#declaring-the-component-namespace).
+Use essa área para declarar um namespace para classes e funções de componentes no código de projetos locais. Consulte [Declarando o namespace do componente](../Extensions/develop-components.md#declaring-the-component-namespace).
 
-### Generate syntax file for code completion when compiled
+### Gerar arquivo de sintaxe para autocompletar código quando compilado
 
-When you check this option, a syntax file (JSON format) is automatically created during the compilation phase. See [Code completion for compiled components](../Extensions/develop-components.md#code-completion-for-compiled-components). 
+Ao marcar essa opção, um arquivo de sintaxe (formato JSON) é criado automaticamente durante a fase de compilação. Consulte [Código completo para componentes compilados](../Extensions/develop-components.md#code-completion-for-compiled-components). 

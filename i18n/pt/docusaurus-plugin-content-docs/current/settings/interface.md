@@ -4,7 +4,7 @@ title: Página Interface
 ---
 
  
-You use the Interface page to set various options related to the project interface.
+A página Interface é usada para definir várias opções relacionadas à interface do projeto.
 
 ## Geral
 
@@ -53,7 +53,7 @@ This menu lets you select the color scheme to use at the main application level.
 
 > Esta opção só funciona no macOS. No Windows, é sempre utilizado o esquema "Light".
 
-The following schemes are available:
+Os seguintes esquemas estão disponíveis:
 
 -   **Light**: the application will use the Default Light Theme ![](../assets/en/settings/light-appearance.png)
 -   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
