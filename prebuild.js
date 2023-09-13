@@ -71,7 +71,6 @@ for(v of versions)
 Promise.all(listVersions).then((localData)=> {
 
     let commandList = {}
-    //console.log(localData[0])
     for(l of localData)
     {
         const data = l.data;
@@ -85,29 +84,6 @@ Promise.all(listVersions).then((localData)=> {
         const cleanVersion=version.replace("versioned_docs/version-", "").replace("docs", "")
         commandList[cleanVersion] = data
     }
-    console.log(commandList)
     fs.writeFileSync("commandList.json", JSON.stringify(commandList))
 
 })
-
-/*
-collect(mainFolder).then(data=>{
-    if(Object.keys(data).length !== 0) {
-        Object.keys(data).forEach(function(key, index) {
-            const content = data[key]
-            data[key] = content.replace("docs/api", "API");
-          });
-    }
-})
-
-Promise.all(listVersions).then((localData)=> {
-     
-    for(const d of localData)
-    {
-        data = Object.assign(data, d)
-    }
-    fs.writeFileSync("commandList.json", JSON.stringify(data))
-
-})*/
-
-
