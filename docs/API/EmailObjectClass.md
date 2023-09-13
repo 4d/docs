@@ -10,7 +10,7 @@ Creating, sending or receiving emails in 4D is done by handling an `Email` objec
 - IMAP - [`.getMail()`](IMAPTransporterClass.md#getmail) and [`.getMails()`](IMAPTransporterClass.md#getmails) functions to get emails from an IMAP server
 - POP3 - [`.getMail()`](POP3TransporterClass.md#getmail) function to get an email from a POP3 server.
 
-> You can also create a new, blank `Email` object by calling the [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) 4D command, and then fill it with [Email object properties](#email-object).
+> You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
 
 You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send) function.
 
@@ -370,10 +370,10 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 </details>
 
-<!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
+<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
 
-<!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
+<!-- REF #_command_.MAIL Convert from MIME.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mime|Blob, Text|->|Email in MIME|
@@ -381,7 +381,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 #### Description
 
-The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
+The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL Convert from MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
 
 >4D follows the [JMAP specification](https://jmap.io/spec-mail.html) to format the returned email object.
 
@@ -455,10 +455,10 @@ $status:=$transporter.send($email)
 
 </details>
 
-<!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
+<!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 
-<!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
+<!-- REF #_command_.MAIL Convert to MIME.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mail|Object|->|Email object|
@@ -467,7 +467,7 @@ $status:=$transporter.send($email)
 
 #### Description
 
-The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->converts an email object into MIME text<!-- END REF -->. This command is called internally by [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) to format the email object before sending it. It can be used to analyze the MIME format of the object.
+The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL Convert to MIME.Summary -->converts an email object into MIME text<!-- END REF -->. This command is called internally by [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) to format the email object before sending it. It can be used to analyze the MIME format of the object.
 
 In *mail*, pass the content and the structure details of the email to convert. This includes information such as the email addresses (sender and recipient(s)), the message itself, and the type of display for the message.
 
