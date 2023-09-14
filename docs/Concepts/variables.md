@@ -30,7 +30,7 @@ You create variables by declaring them. The 4D language offers two ways to decla
  // and assigns the current date plus 30 days
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). 
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Additionally, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their data type and value all within one line.
 
 
 ### Using the `var` keyword
@@ -110,30 +110,34 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-### Using a C_ directive
+## Intialing Variables in  the declaratuon line
 
-> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
-
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
-
-For example, if you want to define a text variable, you write:
+When declaring variables, you have the flexibility to specify their data type and provide an initial value, all within one line. Here's some examples:
 
 ```4d
- C_TEXT(myText)
+var $a : Text:="hello"
+var $b : Date:=!2023-09-12!
+var $c : Object:=New object()
+var $d : cs.Customer
 ```
 
-The following are some basic variable declarations:
+Variables can also be declared and initialized without explicitly mentioning their data type.  Here's some examples:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
+var $text:="hello"  // Inferred as Text 
+var $number:=20  // Inferred as an Integer 
+var $obj:={}  // Inferred as an Object 
+var $mycol:=[]  // Inferred as Collection  
+
 ```
 
-**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
+it’s worthy to note that inferred types, while convenient, are most suitable for scalar values. In cases where the 4D environment cannot confidently deduce the appropriate data type from the context, it responds by generating an error.
 
+When declaring variables, it's important to avoid redundancy. Declaring a variable multiple times with the same data type triggers a warning.
+
+Furthermore, when [assigning data](#assigning-data), If an attempt is made to assign a different data type to a variable that already holds a value, an error will be triggered during code validation. Attempting multiple assignments within a single line will also result in an error appearing in the code editor.
+
+Similarly, initiating multiple variables simultaneously within a single line is met with an error. 
 
 ## Assigning Data
 
