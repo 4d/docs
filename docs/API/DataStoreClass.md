@@ -18,6 +18,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
@@ -25,6 +26,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |[<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 |[<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
@@ -527,6 +529,62 @@ $info:=$ds.getAllRemoteContexts()
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
+
+<!-- REF DataClassClass.getGlobalStamp().Desc -->
+## .getGlobalStamp()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R3|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp()** : Integer<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|Result|Integer|<-|The current value of global modification stamp|<!-- END REF -->
+
+This method allow us to track modification on data store since a stamp. It could help to backup, do some incremental synchronisation or more.
+
+#### Description
+
+The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->return the current global modification stamps of the datastore<!-- END REF -->.
+ 
+#### Examples
+
+The following code allow us to track modification since a stamp, a point in time for base data.
+
+```4d
+$current:=ds.getGlobalStamp()
+
+MethodWhichCoudModifyEmployees()
+
+$hasModificationHappen:=($current = ds.getGlobalStamp())
+```
+
+Then we could get the entities modifyed or created since this stamp.
+
+```4d
+$modifyedEmployees:=ds.Employees.query("__GlobalStamp > :1"; $current)
+```
+
+You could also get deleted records since the stamp.
+
+```4d
+$deletedEmployeesInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2"; $current; "Employees")
+```
+
+> Each element of this returned collection will contains the table (`__TableName` or `__TableNumber`), the stamp of deletion (`__Stamp`) and the primary key (`__PrimaryKey`)
+
+#### See also
+
+[.setGlobalStamp()](#setglobalstamp)
+
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
 
@@ -896,6 +954,44 @@ You create a *protectDataFile* project method to call before deployments for exa
 [`.isAdminProtected()`](#isadminprotected)
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.setGlobalStamp().Desc -->
+## .setGlobalStamp()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R3|Added|
+
+</details>
+
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp()** : Integer<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|$newStamp|Integer||The new value of global modification stamp|<!-- END REF -->
+
+#### Description
+
+The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->Allow us to change the current global modification stamps of datastore<!-- END REF -->.
+ 
+#### Example
+
+The following code allow us to track modification since a stamp
+
+```4d
+var $newValue: Integer
+$newValue:=ReadValueFrom()
+ds.setGlobalStamp($newValue)
+```
+
+#### See also
+
+[.getGlobalStamp()](#getglobalstamp)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 ## .setRemoteContextInfo()
