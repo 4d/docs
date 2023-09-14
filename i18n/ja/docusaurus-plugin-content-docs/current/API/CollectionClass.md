@@ -2289,7 +2289,7 @@ $col.multiSort([$col2; $col3])
 
 #### 例題 2
 
-city (都市)、country (国)、continent (大陸) の 3つのコレクションを同期ソートします。 continent のコレクションと city のコレクションを昇順にソートし、country のコレクションは同期ソートさせます:
+city (都市)、country (国)、continent (大陸) の 3つのコレクションを同期ソートします。 continent のコレクションを昇順にソートし、country のコレクションを同期ソートさせ、その次のレベルで city のコレクションを昇順にソートします:
 
 ```4d
 var $city : Collection
