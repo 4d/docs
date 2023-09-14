@@ -53,9 +53,9 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 - New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) dialog box.
 - Para simplificar o código, alguns operadores de comparação podem agora ser utilizados com [Valores indefinidos](../Concepts/dt_null_undefined.md#undefined-operators) sem gerar erros.
 - Support of *headerOnly* parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail).
-- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
 - Novo function [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths).
-- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
 - ORDA requests logs are now available [on the server](../Debugging/debugLogFiles.md#orda-requests), new parameter for [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) function.
 - Novas ferramentas para execução de código no CLI: [tool4d](../Admin/cli.md#tool4d) e [4D Server em modo utilitário](../Admin/cli.md#4d-server-in-utility-mode).
 - [Explorador da Data](../Admin/dataExplorer.md#opening-the-data-explorer): novo botão e visualização numa janela 4D.
