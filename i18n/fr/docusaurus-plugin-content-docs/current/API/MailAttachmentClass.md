@@ -31,10 +31,10 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 | v19 R2  | Accepte 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 
-<!-- REF #_command_.MAIL_New_attachment.Params -->
+<!-- REF #_command_.MAIL New attachment.Params -->
 
 | Paramètres  | Type              |    | Description                                                                        |
 | ----------- | ----------------- |:--:| ---------------------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 
 #### Description
 
-La commande `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->vous permet de créer un objet de type pièce jointe (attachment) que vous pouvez ajouter à un [objet Email](EmailObjectClass.md#objet-email)<!-- END REF -->.
+La commande `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->vous permet de créer un objet de type pièce jointe (attachment) que vous pouvez ajouter à un [objet Email](EmailObjectClass.md#objet-email)<!-- END REF -->.
 
 Pour définir l'objet attachment, vous pouvez utiliser :
 
