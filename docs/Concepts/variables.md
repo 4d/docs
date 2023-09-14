@@ -30,7 +30,7 @@ You create variables by declaring them. The 4D language offers two ways to decla
  // and assigns the current date plus 30 days
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Additionally, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their data type and value all within one line.
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
 
 
 ### Using the `var` keyword
@@ -110,9 +110,9 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-## Intialing Variables in  the declaratuon line
+## Initializing Variables in the Declaration Line
 
-When declaring variables, you have the flexibility to specify their data type and provide an initial value, all within one line. Here's some examples:
+When declaring variables, you have the flexibility to specify their data type and provide an initial value in one statement. Here are some examples:
 
 ```4d
 var $a : Text:="hello"
@@ -121,23 +121,53 @@ var $c : Object:=New object()
 var $d : cs.Customer
 ```
 
-Variables can also be declared and initialized without explicitly mentioning their data type.  Here's some examples:
+Variables can also be declared and initialized without explicitly mentioning their data type. Here are some examples:
 
 ```4d
 var $text:="hello"  // Inferred as Text 
 var $number:=20  // Inferred as an Integer 
 var $obj:={}  // Inferred as an Object 
-var $mycol:=[]  // Inferred as Collection  
+var $mycol:=[]  // Inferred as a Collection  
 
 ```
 
-it’s worthy to note that inferred types, while convenient, are most suitable for scalar values. In cases where the 4D environment cannot confidently deduce the appropriate data type from the context, it responds by generating an error.
+It’s worthy to note that inferred types, while convenient, are most suitable for scalar values. In cases where the 4D environment cannot confidently deduce the appropriate data type from the context, it responds by generating an error. For instance the following statement will generate an error:
 
-When declaring variables, it's important to avoid redundancy. Declaring a variable multiple times with the same data type triggers a warning.
+```4d
+var $var2:=$var1  //generates an error: Type cannot be inferred
 
-Furthermore, when [assigning data](#assigning-data), If an attempt is made to assign a different data type to a variable that already holds a value, an error will be triggered during code validation. Attempting multiple assignments within a single line will also result in an error appearing in the code editor.
+```
 
-Similarly, initiating multiple variables simultaneously within a single line is met with an error. 
+When declaring and initializing variables, pay attention to the following cases that can generate errors:
+
+```4d
+var $text: Integer
+var $text: Integer //generates an error: Redefinition of variable $text
+
+```
+
+```4d
+var $toto: cs.Table_2Entity
+var $titi: Text
+$titi:=$toto.integer //generates an error: Cannot make an assignment with those types
+//the type is different from the first declaration
+
+```
+
+```4d
+var $a; $b:=12, 15
+var $a; $b : Integer:=15 
+//both lines generate an error: Syntax error in the parameters declaration
+//multiple assignments in one line
+
+```
+
+```4d
+var $titi; $a; $b; $c:=0 //generates an error: Syntax error in the parameters declaration
+//Initializing multiple variables in one statement
+
+```
+ 
 
 ## Assigning Data
 
