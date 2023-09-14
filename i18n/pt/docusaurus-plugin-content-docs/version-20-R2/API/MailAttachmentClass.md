@@ -31,10 +31,10 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
+<!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br/>**MAIL New attachment**( *blob* : Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 
-<!-- REF #_command_.MAIL_New_attachment.Params -->
+<!-- REF #_command_.MAIL New attachment.Params -->
 
 | Parâmetro   | Tipo               |    | Descrição                                                             |
 | ----------- | ------------------ |:--:| --------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 
 #### Descrição
 
-Comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->permite criar um objeto anexo que adicione um objeto [Email](EmailObjectClass.md#email-object)<!-- END REF -->.
+Comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->permite criar um objeto anexo que adicione um objeto [Email](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir o anexo, pode utilizar:
 
