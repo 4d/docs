@@ -32,9 +32,9 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 </details>
 
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
-<!-- REF #_command_.MAIL_New_attachment.Params -->
+<!-- REF #_command_.MAIL New attachment.Params -->
 
 | Parámetros  | Tipo              |    | Descripción                                                                             |
 | ----------- | ----------------- |:--:| --------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 #### Descripción
 
-El comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->le permite crear un objeto adjunto que puede añadir a un [objeto correo electrónico](EmailObjectClass.md#email-object)<!-- END REF -->.
+El comando `MAIL New attachment` <!-- REF #_command_.MAIL New attachment.Summary -->le permite crear un objeto adjunto que puede añadir a un [objeto correo electrónico](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Para definir el adjunto, puede utilizar:
 
