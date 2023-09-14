@@ -59,7 +59,7 @@ Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar est
 Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legacy**, **ServerNet** y **QUIC** (sólo en modo proyecto), que se utilizan para manejar las comunicaciones entre 4D Server y las máquinas 4D remotas (clientes).
 -   **Legal**: esta antigua capa de red "Legal" sigue siendo soportada para garantizar la compatibilidad de las bases de datos creadas antes de la v15. Esta capa de red también puede habilitarse por programación utilizando el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
 -   **ServerNet** (por defecto): disponible desde 4D v15, ServerNet se basa en una API moderna y robusta, fácil de mantener y facilita la implementación de las últimas tecnologías de red a la vez que ofrece un alto nivel de rendimiento y seguridad.
--   **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor. Esta capa de red está disponible desde 4D v20 en versión beta. No se recomienda su uso en producción, pero puede habilitarse en sus aplicaciones cliente/servidor con fines de evaluación.
+-   **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor. This network layer is available in beta version. No se recomienda su uso en producción, pero puede habilitarse en sus aplicaciones cliente/servidor con fines de evaluación.
 
      **Notas**:
     - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html).
@@ -70,6 +70,7 @@ Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legac
         -   Cerca del selector aparece un mensaje beta y un icono de alerta.
         -   [los parámetros del tiempo de espera de las conexiones cliente-servidor](#Client-Server-Connections-Timeout) están ocultos
         -   La casilla de verificación [Encriptar comunicación Cliente-Servidor](#Encrypt-Client-Server-Communications) está oculta (las comunicaciones QUIC son siempre en TLS, sea cual sea su modo seguro).
+    - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note
 
