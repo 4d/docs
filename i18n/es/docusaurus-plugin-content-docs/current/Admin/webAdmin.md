@@ -126,7 +126,7 @@ Una llave de acceso es similar a una contraseña pero no está asociada a un ini
 
 :::note
 
-This option only appears if the Qodly Studio license is activated.
+Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 
 :::
 
