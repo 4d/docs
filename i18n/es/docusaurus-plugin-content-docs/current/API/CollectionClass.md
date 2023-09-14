@@ -2216,10 +2216,10 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 
 
 <!-- REF #collection.multiSort().Params -->
-| Parámetros | Tipo        |    | Descripción                                                                                                                   |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objeto formula                                                                                                                |
-| colsToSort | Collection  | -> | Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties |
+| Parámetros | Tipo        |    | Descripción                                                                                                              |
+| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------------------------------------------ |
+| formula    | 4D.Function | -> | Objeto formula                                                                                                           |
+| colsToSort | Collection  | -> | Colección de colecciones y/u objetos con propiedades {`collection`:*colToSort*;`order`:`ck ascending` o `ck descending`} |
 | Result     | Collection  | <- | Colección original ordenada|<!-- END REF -->
 
 
