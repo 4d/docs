@@ -549,23 +549,25 @@ $info:=$ds.getAllRemoteContexts()
 |---|---|---|---|
 |Result|Integer|<-|The current value of global modification stamp|<!-- END REF -->
 
-This method allow us to track modification on data store since a stamp. It could help to backup, do some incremental synchronisation or more.
+This method allow us to track modification on data store since a stamp. It could help to see activity, to backup, to do some incremental synchronisation or more.
 
 #### Description
 
 The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->return the current global modification stamps of the datastore<!-- END REF -->.
  
-#### Examples
+#### Example 1
 
 The following code allow us to track modification since a stamp, a point in time for base data.
 
 ```4d
 $current:=ds.getGlobalStamp()
 
-MethodWhichCoudModifyEmployees()
+doMethodWhichCouldModifyEmployees()
 
 $hasModificationHappen:=($current = ds.getGlobalStamp())
 ```
+
+#### Example 2
 
 Then we could get the entities modifyed or created since this stamp.
 
@@ -573,13 +575,33 @@ Then we could get the entities modifyed or created since this stamp.
 $modifyedEmployees:=ds.Employees.query("__GlobalStamp > :1"; $current)
 ```
 
-You could also get deleted records since the stamp.
+:::caution
+
+Data tracking work only on tables with an integer `__GlobalStamp` field, and at least one table must have it.
+
+:::
+
+#### Example 3
+
+You could also get deleted records since the stamp if the table `__DeletedRecords` has been created.
 
 ```4d
 $deletedEmployeesInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2"; $current; "Employees")
 ```
 
 > Each element of this returned collection will contains the table (`__TableName` or `__TableNumber`), the stamp of deletion (`__Stamp`) and the primary key (`__PrimaryKey`)
+
+:::caution
+
+Tracking of deleted entities work only if the `__DeletedRecords` table exists.
+
+::
+
+:::info
+
+In [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html), you could right click on table and select "Enable data change tracking", to create all needed fields and table. 
+
+:::
 
 #### See also
 
@@ -967,13 +989,15 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 </details>
 
-<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp()** : Integer<!-- END REF -->
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp(newStamp: Integer)** : <!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|$newStamp|Integer||The new value of global modification stamp|<!-- END REF -->
+|newStamp|Integer|->|The new value of global modification stamp|<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to fix the current global stamps value.
 
 #### Description
 
@@ -981,7 +1005,7 @@ The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summa
  
 #### Example
 
-The following code allow us to track modification since a stamp
+The following code allow us to set the modification global stamp
 
 ```4d
 var $newValue: Integer
