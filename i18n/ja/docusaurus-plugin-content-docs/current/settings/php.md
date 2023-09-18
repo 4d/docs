@@ -3,12 +3,12 @@ id: php
 title: PHP ページ
 ---
 
-You can [execute PHP scripts in 4D](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.en.html). This page allows you to configure the interpreter.
+4D では [PHP スクリプトを実行できます](https://doc.4d.com/4Dv20/4D/20.1/Executing-PHP-scripts-in-4D.300-6480814.ja.html)。 このページでは、そのインタープリターを設定します。
 
 
 :::note
 
-These settings are specified for all connected machines and all sessions. You can also modify and read them separately for each machine and each session using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) and [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) commands. The parameters modified by the `SET DATABASE PARAMETER` command have priority for the current session.
+これらの設定は、接続されているすべてのマシンとすべてのセッションに対して適用されます。 この設定は、[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) および [`Get database parameter`](https://doc.4d.com/4dv20/help/command/ja/page643.html) コマンドによって、特定のマシンやセッションについて個別に変更し、読み取ることもできます。 `SET DATABASE PARAMETER` コマンドで変更された値はカレントセッションにおいて優先されます。
 
 :::
 
@@ -17,14 +17,14 @@ These settings are specified for all connected machines and all sessions. You ca
 
 ### IPアドレス
 
-Address of the PHP interpreter where PHP execution requests must be adressed. By default, 4D uses the address 127.0.0.1.
+PHP 実行リクエストを受け付ける PHPインタープリターのアドレス。 4D はデフォルトでアドレス 127.0.0.1 を使用します。
 
-Note that the HTTP address must be on the same machine as 4D.
+HTTPアドレスが 4D と同じマシン上に存在する必要があることに注意してください。
 
-### Port number
+### ポート番号
 
-Port number of the PHP interpreter. By default, 4D uses the port 8002.
+PHPインタープリターのポート番号。 4D はデフォルトでポート 8002 を使用します。
 
-You can change the address and/or port if they are already used by another service or if you have several interpreters on the same machine. 
+このアドレスやポートが他のサービスですでに使用されている場合、あるいは同じマシン上で複数のインタープリターが動作する場合、設定を変更する必要があります。 
 
 
