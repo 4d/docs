@@ -1380,7 +1380,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 | Parámetros    | Tipo               |    | Descripción                                                |
 | ------------- | ------------------ |:--:| ---------------------------------------------------------- |
 | formulaString | Text               | -> | Cadena formula                                             |
-| formulaObj    | Object             | -> | Objeto formula                                             |
+| formulaObj    | Object             | -> | Objeto fórmula                                             |
 | sortOrder     | Integer            | -> | `dk ascending` (por defecto) o`dk descending`              |
 | settings      | Object             | -> | Parámetros de la fórmula                                   |
 | Result        | 4D.EntitySelection | <- | Nueva entity selection ordenada|<!-- END REF --> |
