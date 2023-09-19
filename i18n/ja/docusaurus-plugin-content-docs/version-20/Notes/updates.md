@@ -36,9 +36,9 @@ title: リリースノート
 - [**デザインモードを検索**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.ja.html#6337726) ダイアログボックスにおいて、"property" ランゲージ要素が新たに検索可能になりました。
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 - [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail) で *headerOnly* パラメーターをサポート。
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
+- [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
 - 新しい [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths) 関数を追加しました。
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
+- [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
 - ORDAリクエストログが [サーバー上 ](../Debugging/debugLogFiles.md#ordaリクエスト) で利用可能になり、[`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) 関数に引数が追加されました。
 - CLI でコードを実行するための新しいツール: [tool4d](../Admin/cli.md#tool4d) および [ユーティリティモードの 4D Server](../Admin/cli.md#ユーティリティモードの-4d-server)。
 - [データエクスプローラー](../Admin/dataExplorer.md#データエクスプローラーを開く) 用の新しいツールバーボタンと 4Dウィンドウでの表示。

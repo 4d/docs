@@ -77,10 +77,8 @@ Vous devez copier ces fichiers manuellement sur la machine distante.
 
 #### Avec le serveur d'applications (applications de bureau client-serveur)
 
-Pour être utilisés par le serveur d'applications de 4D, les fichiers **key.pem** et **cert.pem** doivent être placés :
+To be used by the 4D application server, the **key.pem** and **cert.pem** files must be placed in the [**Resources** folder](Project/architecture.md#resources) of the 4D Server application.
 
-- dans le dossier [**Resources**](Project/architecture.md#resources) de l'application 4D Server
-- et dans le dossier **Resources** de chaque application 4D distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
 
 #### Avec le serveur SQL
 
