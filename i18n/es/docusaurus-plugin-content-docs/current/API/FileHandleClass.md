@@ -19,21 +19,21 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+//Escribiendo línea a línea desde el principio
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+//Escribir línea a línea desde el final
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+//Lectura utilizando un caracter de parada y un parámetro objeto
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -42,7 +42,7 @@ $stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+//Lectura línea a línea
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -276,18 +276,18 @@ Esta propiedad es **lectura/escritura**.
 
 :::caution
 
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por ejemplo:
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
 
 ```4d
-  // Open a european text file using utf-16 encoding (two bytes per character)
-  // We want to read the first 10 characters as bytes, then the remaining as text.
+  // Abrir un fichero de texto europeo utilizando la codificación utf-16 (dos bytes por caracter)
+  // Queremos leer los 10 primeros caracteres como bytes y luego el resto como texto.
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // read the 20 first bytes (i.e. 10 characters)
+  // lee los 20 primeros bytes (es decir, 10 caracteres)
 $b:=$fh.readBlob(20) // $fh.offset=20
-  // then read all text skipping the first 10 characters we just read in previous blob
-  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
-  // We need to translate it from bytes to characters.
-$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+  // a continuación lee todo el texto saltándose los 10 primeros caracteres que acabamos de leer en el blob anterior
+  // como ahora estamos leyendo texto en lugar de bytes, el significado de 'offset' no es el mismo.
+  // Necesitamos traducirlo de bytes a caracteres.
+$fh.offset:=10 // pide que se omitan 10 caracteres utf-16 (20 bytes)
 $s:=$fh.readText()
 ```
 
