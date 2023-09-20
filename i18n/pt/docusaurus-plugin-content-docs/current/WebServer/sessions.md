@@ -25,7 +25,7 @@ Esta opção é selecionada por defeito nos novos projetos. It can however be di
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The `WEB SET OPTION` command can also set the session mode for the main Web server.
+> O comando `WEB SET OPTION` também pode definir o modo de sessão para o servidor Web principal.
 
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 

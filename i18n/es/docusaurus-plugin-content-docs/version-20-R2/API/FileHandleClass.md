@@ -19,21 +19,21 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+//Escribiendo línea a línea desde el principio
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+//Escribir línea a línea desde el final
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+//Lectura utilizando un caracter de parada y un parámetro objeto
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -42,7 +42,7 @@ $stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+//Lectura línea a línea
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))

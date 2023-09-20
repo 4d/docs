@@ -10,7 +10,7 @@ Objetos `Email` se crean cuando se reciben correos a través de una función de 
 - IMAP - funciones [`.getMail()`](IMAPTransporterClass.md#getmail) y [`.getMails()`](IMAPTransporterClass.md#getmails) para obtener los correos electrónicos de un servidor IMAP
 - POP3 - función [`.getMail()`](POP3TransporterClass.md#getmail) para obtener un correo electrónico de un servidor POP3.
 
-> You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
+> También puede crear un nuevo objeto `Email` en blanco y, a continuación, rellenarlo con las propiedades del objeto [Email](#email-object).
 
 Los objetos `Email` se envían utilizando la función SMTP [`.send()`](SMTPTransporterClass.md#send).
 
