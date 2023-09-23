@@ -4,49 +4,49 @@ title: Página de criptografia
 sidebar_label: Página de criptografia
 ---
 
-You can use this page to encrypt or *decrypt* (i.e. remove encryption from) the data file, according to the **Encryptable** attribute status defined for each table in the database.
+Pode utilizar esta página para encriptar ou *decriptar* (ou seja, remover a encriptação) o ficheiro de dados, conforme o estado do atributo **Cifrável** definido para cada tabela no banco de dados.
 
 :::info
 
-For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. Para informação detalhada sobre criptografia em 4D, veja a seção "Criptografia de dados".
+Para informação detalhada sobre encriptação de dados em 4D, por favor consulte a secção [Cifrar dados](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) no manual de *Desenho*. Também pode ler blog post [Um olhar mais profundo sobre a encriptação de dados 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
 
 :::
 
-A new folder is created each time you perform an encryption/decryption operation. It is named "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> or "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
-> Encryption is only available in [maintenance mode](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
+É criada uma pasta sempre que é efetuada uma operação de encriptação/desencriptação. Tem o nome "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> ou "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
+> A encriptação só está disponível no [modo de manutenção](overview.md#display-in-maintenance-mode). Se tentar realizar essa operação no modo padrão, um diálogo de aviso informará que o banco será fechado e se reiniciará no modo de manutenção
 
 **Aviso:**
-- A criptografia de um banco de dados é uma operação demorada. It displays a progress indicator (which could be interrupted by the user). Note também que a operação de criptografia de um banco de dados sempre inclui um passo de compactação.
-- Each encryption operation produces a copy of the data file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually moving or removing the copies of the original file inside the package can be useful in order to minimize the package size.
+- A criptografia de um banco de dados é uma operação demorada. Apresenta um indicador de progresso (que pode ser interrompido pelo usuário). Note também que a operação de criptografia de um banco de dados sempre inclui um passo de compactação.
+- Cada operação de encriptação produz uma cópia do ficheiro de dados, o que aumenta o tamanho da pasta da aplicação. É importante ter isto em conta (especialmente em macOS onde as aplicações 4D aparecem como pacotes) para que o tamanho da aplicação não aumente excessivamente. Mover ou remover manualmente as cópias do ficheiro original no pacote pode ser útil para minimizar o tamanho do pacote.
 
 ## Encriptar dados pela primeira vez
-Encrypting your data for the first time using the MSC requires the following steps:
+Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessários os seguintes passos:
 
-1. In the Structure editor, check the **Encryptable** attribute for each table whose data you want to encrypt. Ver a secção "Propriedades das tabelas".
-2. Abra a página Encriptar do CSM. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](../assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](../assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. ![](../assets/en/MSC/MSC_encrypt2.png)<p>
-This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-<strong x-id="1">Note:</strong>The same message is displayed when the <strong x-id="1">Encryptable</strong> status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
-3. Click on the Encrypt picture button.  
+1. No editor de estruture, marque o atributo **Cifrável** para cada tabela cujos dados pretende encriptar. Ver a secção "Propriedades das tabelas".
+2. Abra a página Encriptar do CSM. Se abrir a página sem definir nenhuma tabela como **Cifrável**, é apresentada a seguinte mensagem na página: ![](../assets/en/MSC/MSC_encrypt1.png) Caso contrário, é apresentada a seguinte mensagem: ![](../assets/en/MSC/MSC_encrypt2.png)<p>
+Isto significa que o estado **Cifrável** de pelo menos uma tabela foi modificado e que o ficheiro de dados ainda não foi encriptado.
+**Nota: **A mesma mensagem é apresentada quando o estado **Cifrável** tiver sido modificado num ficheiro de dados já encriptado ou após o ficheiro de dados ter sido descifrado (ver abaixo).</p>
+3. Clique no botão Encriptar imagem.  
    ![](../assets/en/MSC/MSC_encrypt3.png)  
-   You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. A passphrase is a more secure version of a password and can contain a large number of characters. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
+   Ser-lhe-á pedido que introduza uma frase-chave para o seu ficheiro de dados: ![](../assets/en/MSC/MSC_encrypt4.png) A frase-chave é utilizada para gerar a chave de encriptação de dados. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!" O indicador do nível de segurança pode ajudá-lo a avaliar a força da sua frase-passe: ![](../assets/en/MSC/MSC_encrypt5.png) (verde intenso é o nível mais elevado)
 4. Introduza para confirmar a sua frase-passe protegida.
 
 O processo de encriptação é então iniciado. Se o MSC foi aberto em modo padrão, o banco de dados é reaberto em modo manutenção.
 
-4D offers to save the encryption key (see [Saving the encryption key](#saving-the-encryption-key) below). Pode fazê-lo neste momento ou mais tarde. Também é possível abrir o ficheiro de registo da encriptação.
+4D oferece a possibilidade de guardar a chave de encriptação (veja [Guardar a chave de encriptação](#saving-the-encryption-key) abaixo). Pode fazê-lo agora ou mais tarde. Também é possível abrir o ficheiro de registo da encriptação.
 
-If the encryption process is successful, the Encrypt page displays Encryption maintenance operations buttons.
+Se o processo de encriptação for bem-sucedido, a página Encriptar apresenta botões de operações de manutenção de encriptação.
 
-**Warning:** During the encryption operation, 4D creates a new, empty data file and fills it with data from the original data file. Records belonging to "encryptable" tables are encrypted then copied, other records are only copied (a compacting operation is also executed). If the operation is successful, the original data file is moved to a "Replaced Files (Encrypting)" folder. Se tentar entregar um arquivo de dados criptografado, tenha certeza de antes mover/remover qualquer arquivo de dados não criptografado na pasta de banco de dados.
+**Atenção:** durante a operação de encriptação, 4D cria um ficheiro de dados vazio e preenche-o com dados do ficheiro de dados original. Os registos pertencentes a tabelas "encriptáveis" são encriptados e depois copiados, os outros registos são apenas copiados (é também executada uma operação de compactação). Se a operação for bem sucedida, o ficheiro de dados original é movido para uma pasta "Replaced Files (Encrypting)". Se tentar entregar um arquivo de dados criptografado, tenha certeza de antes mover/remover qualquer arquivo de dados não criptografado na pasta de banco de dados.
 
 ## Operações de manutenção da cifragem
 When a database is encrypted (see above), the Encrypt page provides several encryption maintenance operations, corresponding to standard scenarios. ![](../assets/en/MSC/MSC_encrypt6.png)
 
 
 ### Fornecimento da chave de encriptação de dados atual
-For security reasons, all encryption maintenance operations require that the current data encryption key be provided.
+Por razões de segurança, todas as operações de manutenção da cifragem exigem que seja fornecida a chave de cifragem de dado atual.
 
-- If the data encryption key is already loaded in the 4D keychain(1), it is automatically reused by 4D.
+- Se a chave de encriptação de dados já está carregada no enxoval 4D(1), é automaticamente reutilizada por 4D.
 - Se a chave de encriptação de dados não for encontrada, é necessário fornecê-la. O seguinte diálogo se mostra: ![](../assets/en/MSC/MSC_encrypt7.png)
 
 Nesta fase, tem duas opções:
@@ -67,7 +67,7 @@ This operation is useful when the **Encryptable** attribute has been modified fo
 The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Alterar a sua frase-chave e voltar a encriptar os dados
-This operation is useful when you need to change the current encryption data key. For example, you may need to do so to comply with security rules (such as requiring changing the passphrase every three months).
+Esta operação é útil quando é necessário alterar a chave de encriptação de data atual. Por exemplo, poderá ter de o fazer para cumprir regras de segurança (como a exigência de alterar a frase-chave a cada três meses).
 
 1. Click on **Change your passphrase and re-encrypt data**.
 2. Introduzir a chave de encriptação de dados atual.
