@@ -14,6 +14,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - New [`collection.multiSort`](../API/CollectionClass.md#multisort) function. 
 - Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
+- Support for [initializing the variable's value and data type in the declaration line](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R3): list of all bugs that have been fixed in 4D v20 R3.
