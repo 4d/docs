@@ -267,7 +267,7 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+Definiendo el `.offset` cambiará su valor actual en el momento de la siguiente operación de lectura o escritura.
 
 - Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
 - Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).

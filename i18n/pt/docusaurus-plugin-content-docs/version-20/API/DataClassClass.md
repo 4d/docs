@@ -978,9 +978,9 @@ You will not get the expected result because the null value will be evaluated by
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
 ```
 
-#### Not equal to in collections
+#### Não igual a em colecções
 
-When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). For example, with the following entities:
+When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). Por exemplo, com as seguintes entidades:
 
 ```
 Entity 1:
