@@ -82,7 +82,7 @@ Promise.all(listVersions).then((localData)=> {
               });
         }
         const cleanVersion=version.replace("versioned_docs/version-", "").replace("docs", "")
-        commandList[cleanVersion] = data
+        commandList[cleanVersion.replace("-","")] = data
     }
     fs.writeFileSync("commandList.json", JSON.stringify(commandList))
 

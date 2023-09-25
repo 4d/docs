@@ -37,7 +37,20 @@ export default function RedirectAPI() {
                 }
                 i++;
               }
-              const commandFile = commands[versionToGo][commandWanted];
+
+              let commandFile = ""
+              if(!memberWanted)
+              {
+                let commandsVersion = commands[versionWanted];
+                if(!commandsVersion) {
+                  commandsVersion = commands[""];
+                }
+
+                if(commandsVersion !== undefined) {
+                  commandFile = commandsVersion[commandWanted]
+                }
+
+              }
 
               let finalUrl = ""
               if(!memberWanted)
