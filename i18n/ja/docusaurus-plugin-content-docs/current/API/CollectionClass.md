@@ -2258,19 +2258,19 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 **複数レベルの同期ソート**
 
-複数レベルの同期ソートを定義するには、サブレベルとして使用するコレクション毎に、{`collection`:*colToSort*;`order`:`ck ascending` または `ck descending`} プロパティを含むオブジェクトを *colToSort* の代わりに渡す必要があります。
+複数レベルの同期ソートを定義するには、サブレベルとして使用するコレクションについては、{`collection`:*colToSort*;`order`:`ck ascending` または `ck descending`} プロパティを含むオブジェクトを *colToSort* に格納して渡す必要があります。
 
-The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+ソートレベルは、*colsToSort* に渡されるコレクションの順序によって決定されます。 `collection`/`order` オブジェクトの構文内の位置が、そのソートレベルを決定します。
 
 :::note
 
-The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
+`.multiSort()` 関数は、[安定性](https://ja.wikipedia.org/wiki/ソート#安定ソート) のあるソートアルゴリズムを使用します。
 
 :::
 
 #### 例題 1
 
-A simple synchronized sort of collections with different value types:
+異なる値の型を持つコレクションの単純な同期ソート:
 
 ```4d
 var $col;$col2;$col3 : Collection
@@ -2289,7 +2289,7 @@ $col.multiSort([$col2; $col3])
 
 #### 例題 2
 
-You want to sort three synchronized collections: city, country, and continent. You want an ascending sort of the first and the third collections, and synchronization for the second collection:
+city (都市)、country (国)、continent (大陸) の 3つのコレクションを同期ソートします。 continent のコレクションを昇順にソートし、country のコレクションを同期ソートさせ、その次のレベルで city のコレクションを昇順にソートします:
 
 ```4d
 var $city : Collection

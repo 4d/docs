@@ -77,10 +77,8 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 
 #### アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション) の場合
 
-4D アプリケーションサーバーで使用するには、**key.pem** と **cert.pem** を次の場所に保存します:
+4D アプリケーションサーバーで使用する場合、**key.pem** と **cert.pem** ファイルは、4D Serverアプリケーションの [**Resources** フォルダー](Project/architecture.md#resources) の中に配置する必要があります。
 
-- 4D Server アプリケーションの [**Resources**フォルダー](Project/architecture.md#resources)。
-- 各リモート4Dアプリケーションの **Resources** フォルダー (このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv19/help/command/ja/page485.html) コマンドの説明を参照ください)。
 
 #### SQLサーバーの場合
 

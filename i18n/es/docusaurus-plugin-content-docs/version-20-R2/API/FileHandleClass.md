@@ -19,21 +19,21 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+//Escribiendo línea a línea desde el principio
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+//Escribir línea a línea desde el final
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+//Lectura utilizando un caracter de parada y un parámetro objeto
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -42,7 +42,7 @@ $stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+//Lectura línea a línea
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -267,7 +267,7 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+Definiendo el `.offset` cambiará su valor actual en el momento de la siguiente operación de lectura o escritura.
 
 - Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
 - Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).

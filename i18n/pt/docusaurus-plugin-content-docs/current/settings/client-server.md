@@ -59,7 +59,7 @@ When Single Sign On (SSO) is enabled (see above), you must fill in this field if
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
 -   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
 -   **ServerNet** (by default): Available since 4D v15, ServerNet is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security.
--   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. Esta camada de rede está disponível a partir de 4D v20 em versão beta. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
+-   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
 
      **Notas**:
     - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
@@ -70,6 +70,7 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
         -   A beta message and an alert icon are displayed near the selector.
         -   [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
         -   The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+    - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note
 
