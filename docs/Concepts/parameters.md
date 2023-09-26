@@ -249,7 +249,7 @@ function myfunction ( ... : Text)
 ```
 
 
-When declaring multiple parameters with different types, variadic notation must be employed at last position, for example
+When declaring multiple parameters, variadic notation must be employed at last position, for example:
 
 ```4d
 #DECLARE ( param: Real ; ... : Text )
