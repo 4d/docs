@@ -50,18 +50,19 @@ Por razões de segurança, todas as operações de manutenção da cifragem exig
 - Se a chave de encriptação de dados não for encontrada, é necessário fornecê-la. O seguinte diálogo se mostra: ![](../assets/en/MSC/MSC_encrypt7.png)
 
 Nesta fase, tem duas opções:
-- enter the current passphrase(2) and click **OK**. OU
-- connect a device such as a USB key and click the **Scan devices** button.
+- introduza a frase-chave atual(2) e clique em **OK**. OU
+- conecte um aparelho como uma chave USB e clicar o botão **Scan devices**.
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session. (2) The current passphrase is the passphrase used to generate the current encryption key.
+(1) O 4D keychain armazena todas as chaves de encriptação de dados válidas introduzidas durante a sessão de aplicação.   
+(2) A frase secreta atual é a frase secreta usada para gerar a chave de criptografia atual.
 
-In all cases, if valid information is provided, 4D restarts in maintenance mode (if not already the case) and executes the operation.
+Em todos os casos, se uma informação válida for fornecida, 4D reinicia em modo de manutenção (se ainda não for o caso) e executa a operação.
 
 ### Volte a encriptar os dados com a chave de encriptação atual
 
-This operation is useful when the **Encryptable** attribute has been modified for one or more tables containing data. In this case, to prevent inconsistencies in the data file, 4D disallows any write access to the records of the tables in the application. Re-encrypting data is then necessary to restore a valid encryption status.
+Esta operação é útil quando o atributo **Encryptable** foi modificado para uma ou mais tabelas que contêm dados. Nesse caso, para prevenir inconsistências no arquivo de dados, 4D não permite nenhum acesso de escrita aos registros das tabelas na aplicação. É então necessário voltar a encriptar os dados para restaurar um estado de encriptação válido.
 
-1. Click on **Re-encrypt data with the current encryption key**.
+1. Clique em **Reencriptar dados com a chave de encriptação atual**.
 2. Introduzir a chave de encriptação de dados atual.
 
 The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
@@ -69,7 +70,7 @@ The data file is properly re-encrypted with the current key and a confirmation m
 ### Alterar a sua frase-chave e voltar a encriptar os dados
 Esta operação é útil quando é necessário alterar a chave de encriptação de data atual. Por exemplo, poderá ter de o fazer para cumprir regras de segurança (como a exigência de alterar a frase-chave a cada três meses).
 
-1. Click on **Change your passphrase and re-encrypt data**.
+1. Clique em **Altere a sua frase-passe e volte a encriptar os dados**.
 2. Introduzir a chave de encriptação de dados atual.
 3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](../assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](../assets/en/MSC/MSC_encrypt8.png)
 
@@ -77,16 +78,16 @@ Esta operação é útil quando é necessário alterar a chave de encriptação 
 Esta operação remove toda a encriptação do ficheiro de dados. Se já não pretender que os seus dados sejam encriptados:
 
 1. Clique em **Decodificar todos os dados**.
-2. Enter the current data encryption key (see Providing the current data encryption key).
+2. Introduzir a chave de encriptação de dados atual (ver Fornecer a chave de encriptação de dados atual).
 
-The data file is fully decrypted and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt10.png)
-> Once the data file is decrypted, the encryption status of tables do not match their Encryptable attributes. To restore a matching status, you must deselect all **Encryptable** attributes at the database structure level.
+O arquivo de dados é totalmente desencriptado e é apresentada uma mensagem de confirmação: ![](../assets/en/MSC/MSC_encrypt10.png)
+> Quando o arquivo de dados for desencriptado, o estado de encriptação das tabelas não corresponde aos seus atributos Encryptable. Para restaurar um estado correspondente, tem de desmarcar todos os atributos **Encryptable** ao nível da estrutura da base de dados.
 
 ## Guardar a chave de encriptação
 
-4D permite salvar a chave de encriptação de dados em um arquivo dedicado. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
+4D permite salvar a chave de encriptação de dados em um arquivo dedicado. O nome do arquivo deve ter a extensão `.4DKeyChain` , por exemplo "myKeys.4DKeyChain". Armazenar esse arquivo em um aparelho externo, como um pendrive USB, facilita o uso de um banco de ados criptografado, já que o usuário só precisa conectar o aparelho para fornecer a chave de criptografia antes de abrir o banco de dados para poder acessar os dados criptografados.
 
-You can save the encryption key each time a new passphrase has been provided:
+É possível guardar a chave de encriptação sempre que for fornecida uma nova frase-chave:
 
 - quando o banco de dados for criptografado pela primeira vez,
 - quando o banco de dados for re-criptografado com uma nova frase secreta.
@@ -95,13 +96,13 @@ Podem ser armazenadas chaves de encriptação sucessivas no mesmo dispositivo.
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+O armazenamento do arquivo da chave de encriptação de dados no primeiro nível do dispositivo é obrigatório quando se utiliza a funcionalidade  [Restauro automático e integração de registos](../Backup/settings.md#automatic-restore-and-log-integration). Quando a seqüência de restauração é acionada, 4D deve ter acesso ao arquivo de chave de encriptação, caso contrário ocorre um erro.
 
 :::
 
 ## Arquivo histórico
 Depois que a operação de criptografia tiver sido completada, 4D gera um arquivo na pasta Logs do banco de dados. É criado no formato XML e se chama "*DatabaseName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" ou "*DatabaseName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".
 
-An Open log file button is displayed on the MSC page each time a new log file has been generated.
+É apresentado um botão Open log file na página MSC sempre que é gerado um novo arquivo de registo.
 
-The log file lists all internal operations executed pertaining to the encryption/decryption process, as well as errors (if any).
+O arquivo de registo lista todas as operações internas executadas relativas ao processo de encriptação/desencriptação, bem como os erros (se existirem).
