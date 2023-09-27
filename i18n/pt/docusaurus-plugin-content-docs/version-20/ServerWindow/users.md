@@ -9,9 +9,9 @@ The **Users** page lists the 4D users connected to the server.
 
 ![](../assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). A página também contém uma área de pesquisa dinâmica e botões de controlo. You can modify the order of the columns by dragging and dropping their header areas.
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+Também pode ordenar a lista de valores da coluna clicando no respetivo cabeçalho. Clique várias vezes para especificar sucessivamente uma ordem ascendente/descendente.
 
 ![](../assets/en/Admin/server-users-sort.png)
 
@@ -19,7 +19,7 @@ You can also sort the list of column values by clicking on its header. Click sev
 
 For each user connected to the server, the list provides the following information:
 
-- System of the client machine (macOS or Windows) as an icon.
+- Sistema da máquina cliente (macOS ou Windows) como um ícone.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
 - **Machine name**: Name of the remote machine.
 - **Session name**: Name of the session opened on the remote machine.
@@ -45,20 +45,20 @@ The following scenario is supported: a remote user stops working for awhile, for
 
 This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
 
-The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. O operador do tipo `OR` é utilizado neste caso. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+A lista é atualizada em tempo real à medida que o texto é introduzido na área. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. O operador do tipo `OR` é utilizado neste caso. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
 
 
 ## Botões de administração
 
-Esta página inclui três botões de controlo. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Esta página inclui três botões de controlo. Esses botões estarão ativos se pelo menos uma linha estiver selecionada. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
 
 ### Enviar mensagem
 
-This button can be used to send a message to the 4D users selected in the window. If no user is selected, the button is not active. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
+This button can be used to send a message to the 4D users selected in the window. Se nenhum usuário estiver selecionado, o botão não está ativo. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
 
 ![](../assets/en/Admin/server-message.png)
 
-The message will be displayed as an alert on the remote machines.
+A mensagem será apresentada como um alerta nas máquinas remotas.
 
 > You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
 
@@ -69,7 +69,7 @@ This button can be used to directly show the processes of the user(s) selected o
 
 ### Drop user
 
-This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Este botão pode ser utilizado para forçar a desconexão do(s) usuário(s) selecionado(s). When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
 > You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
 

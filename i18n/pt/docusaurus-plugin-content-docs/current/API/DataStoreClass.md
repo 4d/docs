@@ -1066,10 +1066,10 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                     |
-| ------ | -------------------------------------------- |
-| v20    | Server side support, new `options` parameter |
-| v17 R6 | Adicionado                                   |
+| Versão | Mudanças                                              |
+| ------ | ----------------------------------------------------- |
+| v20    | Suporte do lado do servidor, novo parâmetro `options` |
+| v17 R6 | Adicionado                                            |
 
 </details>
 
@@ -1077,27 +1077,27 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parâmetro | Tipo     |    | Descrição                                                                     |
-| --------- | -------- | -- | ----------------------------------------------------------------------------- |
-| file      | 4D. File | -> | Objeto File                                                                   |
-| options   | Integer  | -> | Opção de registo de resposta (apenas servidor)                                |
-| reqNum    | Integer  | -> | Number of requests to keep in memory (client only)|<!-- END REF -->
+| Parâmetro | Tipo     |    | Descrição                                                                         |
+| --------- | -------- | -- | --------------------------------------------------------------------------------- |
+| file      | 4D. File | -> | Objeto File                                                                       |
+| options   | Integer  | -> | Opção de registo de resposta (apenas servidor)                                    |
+| reqNum    | Integer  | -> | Número de pedidos a manter na memória (apenas cliente)|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side or on the server side<!-- END REF -->. Foi criado para depuração em configurações de cliente/servidor.
+A função `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia o registo dos pedidos ORDA no lado do cliente ou no lado do servidor<!-- END REF -->. Foi criado para depuração em configurações de cliente/servidor.
 
 :::info
 
-For a description of the ORDA request log format, please refer to the [**ORDA requests**](../Debugging/debugLogFiles.md#orda-requests) section.
+Para uma descrição do formato do registo de petições ORDA, consulte a secção [**petições ORDA**](../Debugging/debugLogFiles.md#orda-requests).
 
 :::
 
 #### Do lado do cliente
 
-To create a client-side ORDA request log, call this function on a remote machine. The log can be sent to a file or to memory, depending on the parameter type:
+Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. The log can be sent to a file or to memory, depending on the parameter type:
 
 * Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON
@@ -1108,16 +1108,16 @@ To create a client-side ORDA request log, call this function on a remote machine
 
 #### Do lado do servidor
 
-To create a server-side ORDA request log, call this function on the server machine. The log data is written in a file in `.jsonl` format. Cada objeto representa um pedido. If the file does not already exist, it is created. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
+To create a server-side ORDA request log, call this function on the server machine. Os dados de registo são escritos num ficheiro no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
 - If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
-- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. The following constants can be used in this parameter:
+- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. As seguintes constantes podem ser utilizadas neste parâmetro:
 
-| Parâmetros                    | Descrição                                 |
-| ----------------------------- | ----------------------------------------- |
-| srl log all                   | Log the response entirely (default value) |
-| srl log no response           | Desativar o registo da resposta           |
-| srl log response without body | Registar a resposta sem o corpo           |
+| Parâmetros                    | Descrição                                          |
+| ----------------------------- | -------------------------------------------------- |
+| srl log all                   | Registar a resposta na íntegra (valor predefinido) |
+| srl log no response           | Desativar o registo da resposta                    |
+| srl log response without body | Registar a resposta sem o corpo                    |
 
 
 #### Exemplo 1
@@ -1265,11 +1265,11 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 #### Descrição
 
-A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
+A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->pára qualquer registo de pedidos ORDA na máquina a que é chamado (cliente ou servidor)<!-- END REF -->.
 
-Fecha efetivamente o documento aberto no disco. On the client side, if the log was started in memory, it is stopped.
+Fecha efetivamente o documento aberto no disco. No lado do cliente, se o registo tiver sido iniciado na memória, é interrompido.
 
-This function does nothing if logging of ORDA requests was not started on the machine.
+Esta função não faz nada se o registo dos pedidos ORDA não tiver sido iniciado na máquina.
 
 #### Exemplo
 

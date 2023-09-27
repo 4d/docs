@@ -273,7 +273,7 @@ El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior iz
 
 `Gramática JSON: "proportionalTopLeft" / "proportionalCenter"`
 
-When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. La opción **Escalado para ajustar centrado (proporcional)** hace lo mismo, pero centra la imagen en el área imagen.
+Si utiliza **Escala de ajuste (proporcional)**, la imagen se reduce proporcionalmente en todos sus lados para ajustarse al área creada para la imagen. La opción **Escalado para ajustar centrado (proporcional)** hace lo mismo, pero centra la imagen en el área imagen.
 
 Si la imagen es más pequeña que el área definida en el formulario, no se modificará. Si la imagen es mayor que el área definida en el formulario, se reduce proporcionalmente. Como se reduce proporcionalmente, la imagen no aparecerá distorsionada.
 

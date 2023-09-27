@@ -758,13 +758,13 @@ A função `.every()` <!-- REF #collection.every().Summary -->returns **true** i
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to true for every element fulfilling the test.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *methodName* recebe os parâmetros abaixo:
 * *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
 * *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
@@ -971,13 +971,13 @@ A função `.map()` <!-- REF #collection.filter().Summary -->returns a new colle
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in first parameter ($1) and must set *$1.result* to **true** for each element fulfilling the condition and thus, to push to the new collection.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
-* in *$1.value*: element value to be filtered
+* em *$1.value*: valor do elemento a ser filtrado
 * em *$2*: *param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the filter condition and must be kept.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1062,13 +1062,13 @@ A função `.indexOf()` <!-- REF #collection.find().Summary -->returns the first
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). This method receives an `Object` in the first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
-* in *$1.value:* element value to be evaluated
+* em *$1.value:* valor do elemento a ser avaliado
 * em *$2: param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the search condition.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1081,7 +1081,7 @@ Como padrão, `.findIndex()` testa a coleção completa. Opcionalmente pode pass
 
 #### Exemplo 1
 
-You want to get the first element with a length smaller than 5:
+Se quiser obter o primeiro elemento com um tamanho menor que 5:
 
 ```4d
  var $col : Collection
@@ -1156,13 +1156,13 @@ A função `.fill()` <!-- REF #collection.findIndex().Summary -->returns the ind
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, using or not the parameter(s). This method receives an `Object` as first parameter ($1) and must set *$1.result* to **true** for the first element fulfilling the condition.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * em *$2: param*
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value matches the search condition.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1511,13 +1511,13 @@ A função `.some()` <!-- REF #collection.map().Summary -->creates a new collect
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any operation, with or without the parameter(s).
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * in *$1.value* (any type): element value to be mapped
-* in *$2* (any type): *param*
+* em *$2* (qualquer tipo): *param*
 * in *$N...* (any type): *paramN...*
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (any type): new transformed value to add to the resulting collection
 * *$1.stop* (boolean): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -1676,6 +1676,7 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
 * *pathObjects* : Collection. Pode adicionar tantos objetos na coleção *pathObjects* como seja necessário. Como padrão, as propriedades se classificam em ordem ascendente ("descending" é false). Cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
+
 ```4d
 {
     "propertyPath": string,
@@ -1808,7 +1809,7 @@ Em *methodName*, passe um método de comparação que compare dois valores e dev
     * em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
   * $2...$N (qualquer tipo): parâmetros adicionais
-* *methodName* sets the following parameter:
+* *methodName* define o seguinte parâmetro:
   * *$1.result* (boolean): **true** se *$1.value < $1.value2*, **false** do contrário
 
 #### Exemplo 1
@@ -2090,7 +2091,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 <!-- REF #collection.reduce().Params -->
 | Parâmetro  | Tipo                                            |    | Descrição                                                            |
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
-| methodName | Text                                            | -> | Name of the function to call to process collection elements          |
+| methodName | Text                                            | -> | Nome da função a chamar para processar os elementos da coleção       |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
 | param      | expressão                                       | -> | Parameter(s) to pass to *methodName*                                 |
 | Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador|<!-- END REF -->
@@ -2106,13 +2107,13 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 Pode passar o valor para inicializar o acumulador em *initValue*. Se omitido, *$1.accumulator>* começa com *Undefined*.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * With the following *NumberGreaterThan0* method:
 * em *$2: param*
 * *methodName* estabelece os parâmetros abaixo:
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * $1.result:=$1.value&gt;0
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -2260,6 +2261,7 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
  $c.resize(2) //$c=[1,2]
 
 ```
+
 
 <!-- END REF -->
 
@@ -2420,13 +2422,13 @@ A função `.push()` <!-- REF #collection.some().Summary -->returns true if at l
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). Este método recebe um `Object` como primeiro parâmetro ($1) e tem de definir *$1.result* como **True** para cada elemento que cumpra o teste.
 
-*methodName* receives the following parameters:
+*methodName* recebe os seguintes parâmetros:
 
 * *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *methodName* recebe os parâmetros abaixo:
 * em *$N...*: param2...paramN
 
-*methodName* sets the following parameter(s):
+*methodName* define o(s) seguinte(s) parâmetro(s):
 
 * *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
@@ -2456,7 +2458,7 @@ Como padrão, `.some()` testa toda a colecção. Opcionalmente pode passar o ín
  $b:=$c.some(1;"NumberGreaterThan0") //$b=false
 ```
 
-With the following *NumberGreaterThan0* method:
+Com o seguinte método *NumberGreaterThan0*:
 
 ```4d
 
@@ -2493,7 +2495,15 @@ With the following *NumberGreaterThan0* method:
 A função `.shift()` <!-- REF #collection.sort().Summary -->ordena os elementos da coleção original<!-- END REF --> e também devolve a coleção ordenada.
 > Essa função modifica a coleção original.
 
-Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+
+1. null
+2. booleans
+3. strings
+4. números
+5. objetos
+6. collections
+7. datas
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
@@ -2503,19 +2513,9 @@ If you want to sort the collection elements in some other order or sort any type
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
   * $2...$N (qualquer tipo): parâmetros adicionais
 
-*methodName* sets the following parameter:
+*methodName* define o seguinte parâmetro:
 
 * *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
-
-Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
-
-1. null
-2. booleans
-3. strings
-4. números
-5. objetos
-6. collections
-7. datas
 
 #### Exemplo 1
 

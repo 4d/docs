@@ -44,7 +44,7 @@ The number of errors found during your first compilations may be daunting, but d
 
 Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
 
-When you switch from one mode to the other, 4D closes the current mode and opens the new one. This is equivalent to exiting and reopening the application. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
+When you switch from one mode to the other, 4D closes the current mode and opens the new one. Isto é equivalente a sair e reabrir a aplicação. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
 
 If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
 
@@ -88,7 +88,7 @@ When this option is checked, the warnings (if any) are displayed in the window, 
 
 ![](../assets/en/Project/compilerWin5.png)
 
-Double-clicking a warning opens the corresponding method.
+Um duplo clique num aviso abre o método correspondente.
 
 #### Desativar os avisos durante a compilação
 
@@ -150,8 +150,8 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
 
-- **Intel/AMD** processors (all machines),
-- **Apple Silicon** processors.
+- Os processadores **Intel/AMD** (todas as máquinas),
+- os processadores **Apple Silicon**.
 
 Duas opções de alvo estão disponíveis. The result depends on the processor of the machine on which 4D is running.
 
@@ -194,9 +194,9 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 
 Estas duas listas contêm quatro colunas:
 
-- Names of process and interprocess variables and arrays used in your project. These variables are listed in alphabetical order.
+- Names of process and interprocess variables and arrays used in your project. Estas variáveis são enumeradas por ordem alfabética.
 - Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
-- Number of dimensions if the variable is an array.
+- Número de dimensões se a variável for um array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
     - If the variable was found in a project method, the method is identified as it has been defined in 4D, preceded by (M).
@@ -205,7 +205,7 @@ Estas duas listas contêm quatro colunas:
     - If the variable was found in an object method, the object method’s name is given, preceded by the form name, table name, and by (OM).
     - If the variable is an object in a form and does not appear in any project, form, object method, or trigger, the name of the form in which it appears is given, preceded by (F). At the end of each list, you can find the sizes of the process and interprocess variables in bytes.
 
-> When compiling, the compiler cannot determine in which process a given process variable is used. A process variable can have a different value in each process. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
+> When compiling, the compiler cannot determine in which process a given process variable is used. Uma variável processo pode ter um valor diferente em cada processo. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
 
 #### Lista de variáveis locais
 
@@ -215,13 +215,13 @@ Esta lista está dividida em três colunas:
 
 - lista das variáveis locais utilizadas no método;
 - tipo da variável;
-- number of dimensions if the variable is an array.
+- número de dimensões se a variável for um array.
 
 #### Lista completa de métodos
 
-A complete list of your database and project methods is given at the end of the file with:
+Uma lista completa de seus métodos banco de dados e projeto é apresentada no final do ficheiro com:
 
-- their type (procedure or function returning a value)
+- o seu tipo (procedimento ou função que devolve um valor)
 - the data types of their parameters and the returned result
 - o número de chamadas
 - a propriedade Thread Safe ou Thread Unsafe.
@@ -245,7 +245,7 @@ A estrutura do ficheiro de erros é a seguinte:
 
 - At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
-    - line number in the method (0 indicates general errors)
+    - número da linha no método (0 indica erros gerais)
     - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
     - diagnóstico que descreve o erro
 
@@ -256,21 +256,21 @@ An error file may contain three types of messages:
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
 - In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. There are two cases in which the compiler reports a general error:
-    - The data type of a process variable could not be determined.
+    - Não foi possível determinar o tipo de dados de uma variável processo.
     - Two different kinds of objects have the same name.
 
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Avisos**: os avisos não são erros. They do not prevent the project from being compiled, but simply point out potential code errors. Na janela do compilador, os avisos aparecem em itálico. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
 
 
 
-### Range checking
+### Controlo de execução
 
-The code generated by the 4D compiler automatically checks that every access to an array element or a character reference is done within the actual range of array elements or string characters. Out of range accesses will provoke runtime execution errors.
+The code generated by the 4D compiler automatically checks that every access to an array element or a character reference is done within the actual range of array elements or string characters. Os acessos fora do intervalo provocarão erros de execução em tempo de execução.
 
-In some cases, you might prefer range checking not to apply to certain parts of the code that are considered to be reliable. More particularly, in the case of loops that are repeated a great number of times, and when running the compiled database on older machines, range checking can significantly slow down processing. If you are absolutely certain that the code concerned is reliable and cannot cause system errors, you can disable range checking locally.
+Em alguns casos, pode preferir que a verificação de intervalos não se aplique a certas partes do código consideradas fiáveis. More particularly, in the case of loops that are repeated a great number of times, and when running the compiled database on older machines, range checking can significantly slow down processing. If you are absolutely certain that the code concerned is reliable and cannot cause system errors, you can disable range checking locally.
 
 To do this, you must surround the code to be excluded from range checking with the special comments `//%R-` and `//%R+`. The `//%R-` comment disables range checking and `//%R+` enables it again:
 

@@ -324,7 +324,7 @@ La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 | roles      | Text o Collection | <li>Cadena que contiene un nombre de rol, o</li><li>Colección de cadenas que contienen nombres de roles</li>   |
 | userName   | Text              | Nombre de usuario para asociar a la sesión (opcional) |
 
-|
+:::info
 
 Los privilegios y los roles se definen en el archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file) del proyecto. Para más información, consulte la sección [**Privilegios**](../ORDA/privileges.md).
 

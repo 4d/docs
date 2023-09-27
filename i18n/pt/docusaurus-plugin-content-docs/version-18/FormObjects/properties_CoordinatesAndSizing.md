@@ -6,7 +6,7 @@ title: Coordenadas e dimensionamento
 
 ## Altura automática da linha
 
-`4D View Pro only: This feature requires a 4D View Pro license.`
+`Apenas 4D View Pro: esta funcionalidade requer uma licença 4D View Pro.`
 
 This property is only available for array-based, non-hierarchical list boxes. A propriedade não está selecionada por padrão.
 
@@ -216,7 +216,7 @@ Define a altura das linhas do list box (excluindo cabeçalhos e rodapés). By de
 
 ## Array estilo linha
 
-`4D View Pro only: This feature requires a 4D View Pro license.`
+`Apenas 4D View Pro: esta funcionalidade requer uma licença 4D View Pro.`
 
 This property is used to specify the name of a row height array that you want to associate with the list box. Um array de altura de linha deve ser do tipo numérico (longint por defeito).
 

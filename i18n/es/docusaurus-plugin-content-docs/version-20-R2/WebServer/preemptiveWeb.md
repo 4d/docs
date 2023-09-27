@@ -15,8 +15,8 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 | 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (no asociado al depurador) | Compilado       |
 | --------------------- | ------------------------------------------------------------------------ | --------------------------------------- | --------------- |
 | Servidor REST         | cooperativo                                                              | apropiativo                             | apropiativo     |
-| Servidor Web          | cooperativo                                                              | *parámetro web*                         | *parámetro web* |
-| Servidor Web Services | cooperativo                                                              | *parámetro web*                         | *parámetro web* |
+| Servidor Web          | cooperativo                                                              | cooperativo                             | *parámetro web* |
+| Servidor Web Services | cooperativo                                                              | cooperativo                             | *parámetro web* |
 
 | 4D remoto/monopuesto  | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |

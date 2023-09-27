@@ -499,7 +499,7 @@ Se utilizar o parâmetro *options* (objecto), pode passar mais opções para o f
 | `.breakModeRead`  | Text ou Number | Modo de tratamento das quebras de linha utilizadas na leitura do arquivo (veja abaixo)                                                     | "native" ou 1 |
 | `.breakModeWrite` | Text ou Number | Modo de processamento das quebras de linha utilizadas ao escrever no ficheiro (ver abaixo)                                                 | "native" ou 1 |
 
-`.breakModeRead` e `.breakModeWrite` indicam o processamento a aplicar aos caracteres de fim de linha no documento. Pode utilizar um dos seguintes valores (texto ou número):
+A função substitui todos os delimitadores de fim de linha originais. Por defeito, é utilizado o delimitador nativo, mas é possível definir outro delimitador. `.breakModeRead` e `.breakModeWrite` indicam o processamento a aplicar aos caracteres de fim de linha no documento. Pode utilizar um dos seguintes valores (texto ou número):
 
 | Modo de interrupção no texto | Break mode em numérico (constante) | Descrição                                                                                                                                                                    |
 | ---------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

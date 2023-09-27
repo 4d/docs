@@ -153,10 +153,6 @@ Los objetos rango 4D View Pro se componen de varias propiedades:
 
 
 
-
-
-
-
 ## Importar y exportar documentos
 
 4D View Pro soporta la importación y exportación de varios formatos de documentos:
@@ -164,6 +160,7 @@ Los objetos rango 4D View Pro se componen de varias propiedades:
 * .4vp
 * .xlsx
 * .txt y .csv
+* .sjs
 * .pdf (sólo para exportación)
 
 Para más detalles, consulte la descripción de [VP IMPORT DOCUMENT](method-list.md#vp-import-document) y [VP EXPORT DOCUMENT](method-list.md#vp-export-document).

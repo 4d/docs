@@ -53,14 +53,6 @@ L'objet `Session` courant est alors accessible via la commande [`Session`](API/S
 
 Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
 
-### Mode préemptif
-
-Sur 4D Server, les sessions du serveur Web sont automatiquement gérées par des process préemptifs, **y compris en mode interprété**. Vous devez vous assurer que le code de votre serveur web est [conforme à une exécution préemptive](preemptiveWeb.md#writing-thread-safe-web-server-code).
-
-> Pour déboguer le code web interprété sur la machine serveur, assurez-vous que le débogueur est [rattaché au serveur](Debugging/debugging-remote.md) ou [à une machine distante](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Les process Web passent alors en mode coopératif et le code du serveur Web peut être débogué.
-
-Avec 4D monoposte, le code interprété s'exécute toujours en mode coopératif.
-
 
 ## Partage d'informations
 

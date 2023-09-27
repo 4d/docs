@@ -15,8 +15,8 @@ The following table indicates whether the preemptive mode is used or is availabl
 |4D Server|Interpreted ([debugger attached](../Debugging/debugging-remote.md))|Interpreted (debugger detached)|Compiled|
 |---|---|---|---|
 |REST Server|cooperative|preemptive|preemptive|
-|Web Server|cooperative|*web setting*|*web setting*|
-|Web Services Server|cooperative|*web setting*|*web setting*|
+|Web Server|cooperative|cooperative|*web setting*|
+|Web Services Server|cooperative|cooperative|*web setting*|
 
 |4D remote/single-user|Interpreted|Compiled|
 |---|---|---|

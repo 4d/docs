@@ -4,11 +4,11 @@ title: Página Formulários
 ---
 
  
-This page lets you set the default operation and display of the 4D Form editor.
+Esta página permite-lhe definir a operação e o ecrã padrão do editor de formulários de 4D.
 
 ## Mover
 
-This group of options sets parameters for moving objects using the keyboard or the mouse in the Form editor.
+Este grupo de opções define parâmetros para mover objetos utilizando o teclado ou o rato no editor de formulários.
 
 ### Passo utilizando o teclado
 

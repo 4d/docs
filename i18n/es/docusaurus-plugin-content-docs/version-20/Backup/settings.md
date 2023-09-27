@@ -135,3 +135,9 @@ El usuario no ve ninguna caja de diálogo; la operación es completamente autom�
 > En el caso de una restauración automática, sólo se restauran los siguientes elementos: - archivo .4DD - archivo .4DIndx - archivo .4DSyncData - archivo .4DSyncHeader - Carpeta de datos externa
 > 
 > Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).
+
+:::caution
+
+Si el [archivo de datos está encriptado](../MSC/encrypt.md), asegúrese de que [ha guardado la llave de encriptación de datos](../MSC/encrypt#saving-the-encryption-key) en un archivo `.4DKeyChain` almacenado en el primer nivel de la unidad, para que 4D pueda acceder a él si se activa la función de restauración automática. De lo contrario, se devolverá un error durante la secuencia de restauración.
+
+:::

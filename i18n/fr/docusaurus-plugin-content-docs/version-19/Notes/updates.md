@@ -9,6 +9,14 @@ Lisez [**Les nouveautés de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19
 
 :::
 
+
+## 4D v19.7
+
+#### Points forts
+
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D v19.7.
+
+
 ## 4D v19.6
 
 #### Points forts

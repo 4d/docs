@@ -7,12 +7,12 @@ Número da versão da imagem
 
 ## Descrição
 
-`$version` is the image's version number returned by the server. The version number, which is sent by the server, works around the browser's cache so that you are sure to retrieve the correct image.
+`$version` é o número da versão da imagem devolvido pelo servidor. O número da versão, enviado pelo servidor, contorna a cache do navegador para que tenha a certeza de obter a imagem correta.
 
-The value of the image's version parameter is modified by the server.
+O valor do parâmetro de versão da imagem é modificado pelo servidor.
 
 ## Exemplo
 
-The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
+O exemplo seguinte define o formato de imagem como JPEG, independentemente do tipo da fotografia, e passa o número de versão real enviado pelo servidor:
 
  `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`

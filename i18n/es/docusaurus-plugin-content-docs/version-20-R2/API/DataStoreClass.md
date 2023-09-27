@@ -411,7 +411,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 La función `.flushAndLock()` <!-- REF #DataStoreClass.flushAndLock().Summary -->vacía la caché del datastore local e impide que los otros procesos realicen operaciones de escritura en la base de datos<!-- END REF -->. El datastore se pone en un estado consistente y congelado. Es necesario llamar a esta función antes de ejecutar una instantánea de la aplicación, por ejemplo.
 
-|
+:::info
 
 Esta función sólo puede llamarse:
 
@@ -1086,7 +1086,7 @@ End case
 
 La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia el registro de peticiones ORDA del lado del cliente o del lado del servidor<!-- END REF -->. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
-|
+:::info
 
 Para una descripción del formato del registro de peticiones ORDA, consulte la sección [**Peticiones ORDA**](../Debugging/debugLogFiles.md#orda-requests).
 

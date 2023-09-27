@@ -34,7 +34,7 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 
 ## Variáveis.
 
-A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. You create a typed variable using a `C_XXX` command. Por exemplo, para criar uma variável do tipo dados, pode escrever:
+A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Cria-se uma variável digitada utilizando um comando `C_XXX`. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
 C_DATE(MyDate) //Tipo de data para a variável MyDate
@@ -46,7 +46,7 @@ Even if it is usually not recommended, you can create variables simply by using 
 MyOtherDate:=Current date+30
 ```
 
-A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `C_XXX` cannot change the type. In compiled mode, the type can never be changed, regardless of how the variable was created.
+A linha de código lê “MyOtherDate gets the current date plus 30 days.” This line creates the variable, assigns it with both the (temporary) date type and a content. A variable created by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. Uma variável digitada com `C_XXX` não pode alterar o tipo. In compiled mode, the type can never be changed, regardless of how the variable was created.
 
 ## Comandos
 

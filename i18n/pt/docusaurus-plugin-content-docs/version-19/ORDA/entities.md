@@ -100,11 +100,11 @@ Por exemplo, para definir um atributo de armazenamento:
 ```
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
-Accessing a related attribute depends on the attribute kind. Por exemplo, com a seguinte estrutura:
+O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
-You can access data through the related object(s):
+É possível aceder aos dados através do(s) objeto(s) relacionado(s):
 
 ```4d
  $entity:=ds. Project.all().first().theClient //get the Company entity associated to the project
@@ -115,7 +115,7 @@ Note that both *theClient* and *companyProjects* in the above example are primar
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of the manager of an employee, you can simply write:
 
 ```4d
  $myEmp:=ds. Employee.get(50)
@@ -129,7 +129,7 @@ In the ORDA architecture, relation attributes directly contain data related to e
 * An N->1 type relation attribute (**relatedEntity** kind) contains an entity
 * A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
 
-Let's look at the following (simplified) structure:
+Vejamos a seguinte estrutura (simplificada):
 
 ![](../assets/en/ORDA/entityAttributes3.png)
 
@@ -232,7 +232,7 @@ $toModify:=ds. Company.all().copy() //$toModify is alterable
 A new entity selection **inherits** from the original entity selection nature in the following cases:
 
 * the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. .
-* the new entity selection is based upon a relation:
+* a nova entity selection é baseada numa relação:
   * [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
   * [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
   * [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
@@ -400,7 +400,7 @@ Para mais informações, consulte as descrições destas funções.
 
 > Os bloqueios pessimistas também podem ser tratados através da API [REST](../REST/$lock.md).
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### Utilização simultânea de bloqueios clássicos 4D e bloqueios pessimistas ORDA
 
 Using both classic and ORDA commands to lock records is based upon the following principles:
 
@@ -420,7 +420,7 @@ Estes princípios são apresentados no diagrama seguinte:
 
 4D provides an automatic optimization for ORDA requests that use entity selections or load entities in client/server configurations. This optimization speeds up the execution of your 4D application by reducing drastically the volume of information transmitted over the network.
 
-The following optimization mechanisms are implemented:
+São implementados os seguintes mecanismos de otimização:
 
 * When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
 
@@ -452,12 +452,12 @@ Thanks to the optimization, this request will only get data from used attributes
 
 ### Utilizar a propriedade context
 
-You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA methods that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
+You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. Pode ser passado como parâmetro para os métodos ORDA que devolvem novas selecções de entidades, de modo a que as selecções de entidades solicitem diretamente ao servidor os atributos utilizados e contornem a fase de aprendizagem.
 
 A same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA methods that handle entity selections support the **context** property (for example `dataClass.query( )` or `dataClass.all( )` method). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the `dataClass.get( )` method).
 
-**Example with `dataClass.query( )` method:**
+**Exemplo com o método `dataClass.query( )`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object

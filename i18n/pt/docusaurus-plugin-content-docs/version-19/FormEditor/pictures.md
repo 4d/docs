@@ -56,10 +56,10 @@ As imagens de alta resolução com a convenção @nx podem ser utilizadas nos se
 
 While 4D automatically prioritizes the highest resolution,  there are, however, some behavioral differences depending on screen and image dpi*(\*)*, and picture format:
 
-| Operação                                                                                                                                 | Comportamento                                                      |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Soltar o pegar                                                                                                                           | Se a imagem tiver:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul>                        |
-| [Automatic Size](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (Form Editor context menu) | Se o formato de apresentação da imagem é:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul> |
+| Operação                                                                                                                                                     | Comportamento                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Soltar o pegar                                                                                                                                               | Se a imagem tiver:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels * screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul>                        |
+| [Tamanho automático](https://doc.4d.com/4Dv18/4D/18/Setting-object-display-properties.300-4575725.en.html#148057) (menu contextual do Editor de formulários) | Se o formato de apresentação da imagem é:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels * screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul> |
 
 *(\*) Normalmente, macOS = 72 dpi, Windows = 96 dpi*
 
@@ -72,7 +72,7 @@ Uma imagem em modo escuro é definida da seguinte forma:
 * dark mode picture has the same name as the standard (light scheme) version with the suffix "`_dark`"
 * a imagem do modo escuro é guardada ao lado da versão padrão.
 
-At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](https://doc.4d.com/4dv19/help/command/en/1761.html).
+Em tempo de execução, 4D carregará automaticamente a imagem clara ou escura de acordo com o [esquema de cores do formulário atual](https://doc.4d.com/4dv19/help/command/en/1761.html).
 
 ![](../assets/en/FormEditor/darkicon.png)
 

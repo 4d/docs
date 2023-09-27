@@ -181,7 +181,7 @@ To display the web inspector, you can either execute the `WA OPEN WEB INSPECTOR`
 - **Execute the `WA OPEN WEB INSPECTOR` command**<br/> This command can be used directly with onscreen (form object) and offscreen web areas. In the case of an onscreen web area, you must have [selected the embedded web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) for the area (the web inspector is only available with this configuration).
 
 - **Use the web area context menu**<br/> This feature can only be used with onscreen web areas and requires that the following conditions are met:
-  - the embedded web rendering engine is selected for the area
+  - o motor de renderização Web incorporado é selecionado para a área
   - Deve ativar o [menu contextual](properties_Entry.md#context-menu) da área (este menu se utiliza para chamar ao inspetor)
   - Deve habilitar expressamente ao uso do inspetor na área mediante a instrução abaixo:
 

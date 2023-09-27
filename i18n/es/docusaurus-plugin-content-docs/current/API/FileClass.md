@@ -481,8 +481,6 @@ La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un n
 Si utiliza el parámetro *mode* (text), pase el modo de apertura para el file handle:
 
 
-
-
 | *mode*   | Descripción                                                                                                                                                                                                                                |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Por defecto) Crea un file handle para leer los valores en el archivo. Si el archivo no existe en el disco, se devuelve un error. Puede abrir tantos file handles como quiera en modo "read" en el mismo objeto File.                      |
@@ -500,7 +498,7 @@ Si utiliza el parámetro *options* (object), puede pasar más opciones para el f
 | `.breakModeRead`  | Texto o número | Modo de procesamiento de los saltos de línea utilizados al leer el archivo (ver abajo)                                                           | "native" o 1 |
 | `.breakModeWrite` | Texto o número | Modo de procesamiento de los saltos de línea utilizados al escribir en el archivo (ver abajo)                                                    | "native" o 1 |
 
-`.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
+La función reemplaza todos los delimitadores originales de final de línea. Por defecto, se utiliza el delimitador nativo, pero puede definir otro delimitador. `.breakModeRead` y `.breakModeWrite` indican el tratamiento a aplicar a los caracteres de fin de línea en el documento. Puede utilizar uno de los siguientes valores (texto o número):
 
 | Modo de ruptura en texto | Break mode en numérico (constante) | Descripción                                                                                                                                                                |
 | ------------------------ | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

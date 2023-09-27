@@ -3,67 +3,67 @@ id: entityset
 title: '$entityset'
 ---
 
-After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
+Após [criar um conjunto de entidades]($method.md#methodentityset) utilizando `$method=entityset`, pode utilizá-lo posteriormente.
 
 
 ## Sintaxe disponível
 
-| Sintaxe                                                                                                    | Exemplo                                                                            | Descrição                                                    |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera um conjunto de entidades existente                  |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
+| Sintaxe                                                                                                    | Exemplo                                                                            | Descrição                                                                                      |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Recupera um conjunto de entidades existente                                                    |
+| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Cria um novo conjunto de entidades a partir da comparação de conjuntos de entidades existentes |
 
 
 
 
 ## $entityset/{entitySetID}
 
-Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+Recupera um conjunto de entidades existente (*, por exemplo,*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 
 ### Descrição
 
-This syntax allows you to execute any operation on a defined entity set.
+Esta sintaxe permite-lhe executar qualquer operação num conjunto de entidades definido.
 
-Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
+Como los conjuntos de entidades tienen un límite de tiempo (ya sea por defecto o después de llamar a `$timeout` con su propio límite), puede llamar a `$savedfilter` y a `$savedorderby` para guardar el filtro y ordenar por instruções cuando cree un conjunto de entidades.
 
 When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter), [`$orderby`]($orderby), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
 
 ### Exemplo
 
-After you create an entity set, the entity set ID is returned along with the data. Este ID é chamado da seguinte forma:
+Após criar um conjunto de entidades, o ID do conjunto de entidades é devolvido com os dados. Este ID é chamado da seguinte forma:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
 
 ## $entityset/{entitySetID}?$operator...&$otherCollection
 
-Create another entity set based on previously created entity sets
+Criar outro conjunto de entidades com base em conjuntos de entidades criados anteriormente
 
-| Parâmetro        | Tipo   | Descrição                                                      |
-| ---------------- | ------ | -------------------------------------------------------------- |
-| $operator        | String | One of the logical operators to test with the other entity set |
-| $otherCollection | String | ID do conjunto de entidades                                    |
+| Parâmetro        | Tipo   | Descrição                                                            |
+| ---------------- | ------ | -------------------------------------------------------------------- |
+| $operator        | String | Um dos operadores lógicos a testar com o outro conjunto de entidades |
+| $otherCollection | String | ID do conjunto de entidades                                          |
 
 
 
 ### Descrição
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. Os dois conjuntos de entidades devem estar na mesma classe de dados.
+Depois de criar um conjunto de entidades (conjunto de entidades #1) utilizando `$method=entityset`, pode então criar outro conjunto de entidades utilizando a sintaxe `$entityset/{entitySetID}?$operator... &$otherCollection`, a propriedade `$operator` (cujos valores são mostrados abaixo), e outro conjunto de entidades (conjunto de entidades #2) definido pela propriedade `$otherCollection`. Os dois conjuntos de entidades devem estar na mesma classe de dados.
 
-You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
+Pode então criar outro conjunto de entidades que contenha os resultados desta chamada, utilizando `$method=entityset` no final do pedido REST.
 
 Eis os operadores lógicos:
 
-| Operador  | Descrição                                                                                                                                                  |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Returns the entities in common to both entity sets                                                                                                         |
-| OU        | Devolve as entidades em ambos os conjuntos de entidades                                                                                                    |
-| EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
-| INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
-> The logical operators are not case-sensitive, so you can write "AND" or "and".
+| Operador  | Descrição                                                                                                                                                                                  |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| AND       | Devolve as entidades em comum a ambos os conjuntos de entidades                                                                                                                            |
+| OU        | Devolve as entidades em ambos os conjuntos de entidades                                                                                                                                    |
+| EXCEPT    | Devolve as entidades do conjunto de entidades #1 menos as do conjunto de entidades #2                                                                                                      |
+| INTERSECT | Devolve true ou false se existir uma intersecção das entidades em ambos os conjuntos de entidades (o que significa que pelo menos uma entidade é comum em ambos os conjuntos de entidades) |
+> Os operadores lógicos não fazem distinção entre maiúsculas e minúsculas, pelo que pode escrever "AND" ou "and".
 
-Below is a representation of the logical operators based on two entity sets. A secção vermelha é o que é devolvido.
+Segue-se uma representação dos operadores lógicos com base em dois conjuntos de entidades. A secção vermelha é o que é devolvido.
 
 **AND**
 
@@ -83,16 +83,16 @@ A sintaxe é a seguinte:
  `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
 ### Exemplo
-In the example below, we return the entities that are in both entity sets since we are using the AND logical operator:
+No exemplo abaixo, devolvemos as entidades que estão em ambos os conjuntos de entidades, dado que utilizamos o operador lógico AND:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-If we want to know if the two entity sets intersect, we can write the following:
+Se quisermos saber se os dois conjuntos de entidades se intersectam, podemos escrever o seguinte:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-If there is an intersection, this query returns true. .
+Se houver uma intersecção, esta consulta devolve true. .
 
-In the following example we create a new entity set that combines all the entities in both entity sets:
+No exemplo seguinte, criamos um conjunto de entidades que combina todas as entidades de ambos os conjuntos de entidades:
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`

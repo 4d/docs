@@ -68,6 +68,14 @@ Os objetos WebSocket fornecem as seguintes propriedades e funções:
 
 ## 4D.WebSocket.new()
 
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças                                             |
+| ------ | ---------------------------------------------------- |
+| v20 R3 | Support of `headers` property in *connectionHandler* |
+
+</details>
+
 
 <!-- REF #4D.WebSocket.new().Syntax -->**4D.WebSocket.new**( *url* : Text { ; *connectionHandler* : Object } ) : 4D.WebSocket<!-- END REF -->
 
@@ -95,18 +103,20 @@ Se a ligação não for possível, é devolvido um objeto `null` sendo gerado um
 
 ### Parâmetro *connectionHandler*
 
-Em *connectionHandler*, pode passar um objeto que contenha funções de retorno de chamada a chamar conforme os eventos de ligação e o tipo de dados a tratar.
+In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
 
 - As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
-- O tempo de vida do WebSocket deve ser pelo menos igual ao tempo de vida do formulário ou do worker.
+- The WebSocket will be valid as long as the form or worker is not closed.
 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                                               |
 | ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onMessage   | [Function](FunctionClass.md) | Função de retorno de chamada para dados WebSocket. Chamado sempre que o WebSocket tiver recebido dados. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (text): sempre "message"</li><li>`$2.data` (texto, blob, ou objeto, ver `dataType`): Dados recebidos</li></ul> |
 | onError     | [Function](FunctionClass.md) | Função de retorno de chamada para erros de execução. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (text): sempre "error"</li><li>`$2.errors`: coleção de pilha de erros 4D em caso de erro de execução.<ul><li>`[].errCode` (number): Código de erro 4D</li><li>`[].message` (text): Descrição do erro 4D</li><li>`[].componentSignature` (text): Assinatura do componente interno que retornou o erro</li></ul></li></ul>                                                    |
-| onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.code` (number, só de leitura): curto sem sinal que contém o código de fecho enviado pelo servidor.</li><li>`$2.reason` (text, só de leitura): Motivo pelo qual o servidor fechou a conexão. Isto é específico do servidor e do subprotocolo em causa.</li><li>`$2.wasClean` (boolean, somente leitura): indica se a conexão foi ou não fechada de forma limpa.</li></ul>                                            |
+| onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.code` (number, só de leitura): curto sem sinal que contém o código de fecho enviado pelo servidor.</li><li>`$2.reason` (text, só de leitura): Motivo pelo qual o servidor fechou a conexão. Isto é específico do servidor e do subprotocolo em causa.</li><li>`$2.wasClean` (boolean, somente leitura): indica se a conexão foi ou não fechada de forma limpa.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Função de retorno de chamada quando o websocket está aberto. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (texto): sempre "open"</li></ul>                                         |
 | dataType    | Text                         | Tipo de dados recebidos ou enviados. Valores disponíveis: "text" (padrão), "blob", "object". "text" = utf-8                                                                                                                             |
+| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                                                                                                           |
+
 
 Aqui está a sequência de chamadas de retorno:
 
@@ -117,6 +127,21 @@ Aqui está a sequência de chamadas de retorno:
 
 
 #### Exemplo
+
+You want to set headers in the `WSConnectionHandler` user class:
+
+```4d
+// WSConnectionHandler class
+
+Class constructor($myToken:Text)
+
+// Creation of the headers sent to the server
+This.headers:=New object("x-authorization";$myToken)
+// We define two cookies
+This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
+...
+
+```
 
 
 <!-- REF #WebSocketClass.dataType.Desc -->
@@ -228,7 +253,7 @@ A função `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->fecha 
 In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
-- If specified, the value of this code parameter overrides the automatic setting. O valor deve ser um número inteiro. Either 1000, or a custom code in the range 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
+- If specified, the value of this code parameter overrides the automatic setting. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
 
 In *reason*, you can pass a string describing why the connection is being closed. 
 

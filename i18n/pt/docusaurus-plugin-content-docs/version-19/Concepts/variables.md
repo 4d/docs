@@ -29,7 +29,7 @@ Cria-se variáveis declarando-as. A linguagem 4D oferece duas maneiras de declar
  MyDate:=Current date+30 //MyDate é criada e obtém a data atual mais  30 días
 ```
 
-Quando as variáveis são declaradas, são inicializadas com o valor predefinido [**correspondente ao seu tipo**](data-types.md#default-values), que manterão durante a sessão, desde que não lhes tenha sido [atribuído](#assigning-data).
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
 
 
 ### Usando a palavra-chave `var`

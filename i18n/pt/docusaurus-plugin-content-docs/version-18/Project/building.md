@@ -29,7 +29,7 @@ A caixa de diálogo Criar aplicação inclui várias páginas que podem ser aced
 
 ![](../assets/en/Project/appbuilderProj.png)
 
-Building can only be carried out once the database is compiled. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.
+A geração só pode ser efetuada após a compilação do banco de dados. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.
 
 ### Build application settings
 
@@ -41,7 +41,7 @@ XML keys provide additional options besides those displayed in the Build Applica
 
 ### Arquivo histórico
 
-When an application is built, 4D generates a log file in the **Logs** folder. The log file stores the following information for each build:
+When an application is built, 4D generates a log file in the **Logs** folder. O ficheiro de historial armazena as seguintes informações para cada compilação:
 
 * O início e o fim da construção de objetivos,
 * O nome e o caminho de acesso completo dos ficheiros gerados,
@@ -66,7 +66,7 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 Constrói uma base de dados contendo apenas código compilado.
 
-This feature creates a *.4dz* file within a *Compiled Database* folder. If you have named your application “MyProject”, 4D will create:
+This feature creates a *.4dz* file within a *Compiled Database* folder. Se nomeou a sua aplicação como "MyProject", 4D irá criar:
 
 `\&#060;destination\&#062;/Compiled Database/\&#060;database name&#062;/\MyProject.4dz`
 
@@ -256,7 +256,7 @@ To trigger client application update notifications, simply replace the old versi
 Do lado do cliente, quando a aplicação cliente "antiga" tenta conectar-se à aplicação servidor atualizada, se mostra uma caixa de diálogo na máquina cliente, indicando que há uma nova versão disponível. O utilizador pode tanto actualizar a sua versão como cancelar a caixa de diálogo.
 
 * Se o utilizador clicar em **OK**, a nova versão é descarregada para a máquina cliente através da rede. Uma vez terminado o download, a antiga aplicação cliente é fechada e a nova versão é lançada e liga-se ao servidor. Once the download is complete, the old client application is closed and the new version is launched and connects to the server.
-* If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Otherwise (by default), the connection is established.
+* If the user clicks **Cancel**, the update is cancelled; if the old version of the client application is not in the range of versions accepted by the server (please refer to the following paragraph), the application is closed and connection is impossible. Caso contrário (por defeito), a ligação é estabelecida.
 
 #### Forçar atualizações automáticas
 
@@ -289,7 +289,7 @@ The contents of these folders vary depending on the current platform:
 
  > > The macOS packages built contain the same items as the Windows subfolders. You can display their contents (**Control+click** on the icon) in order to be able to modify them.
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This file is used during the automatic client application update.
+If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. Este ficheiro é utilizado durante a atualização automática das aplicações clientes.
 
 #### Personalização da pasta 4D Volume Desktop
 
@@ -320,7 +320,7 @@ Os elementos devem ser instalados:
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
-The page lists the elements loaded by the current 4D application:
+A página lista os elementos carregados pela aplicação 4D atual:
 
 ![](../assets/en/Project/buildapppluginsProj.png)
 
@@ -339,10 +339,10 @@ If there is a conflict between two different versions of the same plug-in (one l
 
 ## Página Licenças e certificados
 
-The Licences & Certificate page can be used to:
+A página Licences & Certificate pode ser utilizada para:
 
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
-* sign the application by means of a certificate in macOS.
+* assinar a aplicação através de um certificado no macOS.
 
 ![](../assets/en/Project/buildapplicenseProj.png)
 
@@ -363,9 +363,9 @@ Once you have selected a file, the list will indicate the characteristics of the
 * **Data de expiração** - Data de expiração da licença (se houver)
 * **Caminho** - Localização em disco
 
-If a license is not valid, a message will warn you.
+Se uma licença não for válida, será avisado por uma mensagem.
 
-You can designate as many valid files as you want. When building an executable application, 4D will use the most appropriate license available.
+Pode designar o número de ficheiros válidos que desejar. When building an executable application, 4D will use the most appropriate license available.
 > Dedicated "R" licenses are required to build applications based upon "R-release" versions (license numbers for "R" products start with "R-4DDP").
 
 After the application is built, a new deployment license file is automatically included in the Licenses folder next to the executable application (Windows) or in the package (macOS).
@@ -429,14 +429,14 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 
 ### Abertura do ficheiro de dados
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. A aplicação examina sucessivamente vários locais.
 
 A sequência para o lançamento de uma aplicação fusionada a seguinte:
 
 1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
 2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
 3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+4. Se não for encontrado, 4D mostra uma caixa de diálogo padrão "Abrir ficheiro de dados".
 
 ### Último ficheiro de dados aberto
 
@@ -454,7 +454,7 @@ The data file path is stored in a dedicated file, named *lastDataPath.xml*.
 
 Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+Este mecanismo é geralmente adequado para implantações padrão. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
 
 #### Configuração do modo de ligação de dados
 
@@ -486,7 +486,7 @@ Mais especificamente, são abrangidos os seguintes casos:
 
 Para definir e utilizar um ficheiro de dados padrão:
 
-* You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. It is your responsibility to provide a valid default data file. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
+* You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the database project folder. This file must be provided along with all other necessary files, depending on the database configuration: index (.4DIndx), external Blobs, journal, etc. É sua responsabilidade fornecer um ficheiro de dados padrão válido. Note however that since a default data file is opened in read-only mode, it is recommended to uncheck the "Use Log File" option in the original structure file before creating the data file.
 * Quando a aplicação é criada, a pasta de dados predefinida é integrada na aplicação fundida. Todos os ficheiros dentro desta pasta de dados predefinida também são incorporados.
 
 O gráfico seguinte ilustra esta funcionalidade:

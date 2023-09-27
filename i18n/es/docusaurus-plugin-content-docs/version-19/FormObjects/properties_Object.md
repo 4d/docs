@@ -86,7 +86,7 @@ Las variables o expresiones se pueden introducir o no y pueden recibir datos de 
 
 | Nombre     | Tipos de datos            | Valores posibles                                                            |
 | ---------- | ------------------------- | --------------------------------------------------------------------------- |
-| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D. </li><li>Empty string for [dynamic variables](#dynamic-variables). </li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| dataSource | cadena o array de cadenas | <li>Variable, nombre de campo o cualquier expresión 4D. </li><li>Cadena vacía para [variables dinámicas](#variables-dinámicas). </li><li>Array de cadenas (colección de nombres de array) para una columna [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expresiones
 
@@ -130,7 +130,7 @@ Para un list box array, la propiedad **Variable o Expresión** normalmente conti
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview) - [Área 4D Write Pro](writeProArea_overview) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de verificación](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Lista jerárquica](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Columna de list Box](listbox_overview.md#list-box-columns) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Menu Pop-up imagen](picturePopupMenu_overview.md) - [Área plug-in](pluginArea_overview.md#overview) - [Indicador de progreso](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Control de pestañas](tabControl.md) - [Subformulario](subform_overview.md#overview) - [Botón radio](radio_overview.md) - [Área web](webArea_overview.md)
 
 ---
 
@@ -237,7 +237,7 @@ Nombre del [área externa del plug-in](pluginArea_overview.md) asociada al objet
 
 ---
 
-## Radio Group
+## Grupo radio
 
 Permite utilizar los botones de radio en conjuntos coordinados: sólo se puede seleccionar un botón a la vez en el conjunto.
 
@@ -263,7 +263,7 @@ Puede forzar un retorno de carro en la etiqueta utilizando el caracter \ (barra 
 
 Para insertar un \ en la etiqueta, ingrese "&#92;&#92;".
 
-Por defecto, la etiqueta se coloca en el centro del objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+Por defecto, la etiqueta se coloca en el centro del objeto. Cuando el objeto también contiene un icono, puede modificar la ubicación relativa de estos dos elementos utilizando la propiedad [Posición Título/imagen](properties_TextAndPicture.md#title-picture-position).
 
 Para la traducción de la aplicación, puede introducir una referencia XLIFF en el área del título de un botón (ver [Apéndice B: arquitectura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
@@ -315,9 +315,9 @@ El uso de cálculos automáticos en pies de columnas basados en expresiones tien
 
 - es **soportado** con todos los tipos de list boxes cuando la expresión es "simple" (como `[table]field` o `this.attribute`),
 - se **soporta pero no se recomienda** por razones de rendimiento con list boxes colección/selección de entidades cuando la expresión es "compleja" (distinta de `this.attribute`) y el list box contiene un gran número de líneas,
-- it is **not supported** with current selection/named selection list boxes when the expression is "complex". Es necesario utilizar cálculos personalizados.
+- **no se soporta** con list boxes selección actual/selección temporal cuando la expresión es "compleja". Es necesario utilizar cálculos personalizados.
 
-When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
+Cuando está configurado **Personalizado** ("none" en JSON), 4D no realiza cálculos automáticos y debe asignar el valor de la variable en esta área por programación.
 
 #### Gramática JSON
 

@@ -106,6 +106,7 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
 - **Compression Rate** By default, 4D compresses backups to help save disk space. Sin embargo, la fase de compresión de archivos puede ralentizar notablemente las copias de seguridad cuando se trata de grandes volúmenes de datos. La opción **Tasa de compresión** permite ajustar la compresión de los archivos:
   - **Ninguna:** no se aplica ninguna compresión de archivos. La copia de seguridad es más rápida, pero los archivos son considerablemente más grandes.
+
   - **Rápido** (por defecto): esta opción es un compromiso entre la velocidad de la copia de seguridad y el tamaño del archivo.
   - **Compactado**: la tasa de compresión máxima se aplica a los archivos. Los ficheros de archivos ocupan el menor espacio posible en el disco, pero la copia de seguridad se ralentiza notablemente.
 
@@ -132,3 +133,9 @@ El usuario no ve ninguna caja de diálogo; la operación es completamente autom�
 > - Carpeta External Data
 > 
 > Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).
+
+:::caution
+
+Si el [archivo de datos está encriptado](../MSC/encrypt.md), asegúrese de que [ha guardado la llave de encriptación de datos](../MSC/encrypt#saving-the-encryption-key) en un archivo `.4DKeyChain` almacenado en el primer nivel de la unidad, para que 4D pueda acceder a él si se activa la función de restauración automática. De lo contrario, se devolverá un error durante la secuencia de restauración.
+
+:::

@@ -8,7 +8,7 @@ The 4D web server provides built-in features for managing **user sessions**. Cre
 As sessões de usuário do servidor Web permitem:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
-- share data between the processes of a web client,
+- partilhar dados entre os processos de um cliente Web,
 - associar privilégios a sessões de usuário,
 - handle access through a `Session` object and the [Session API](API/SessionClass.md).
 
@@ -17,15 +17,15 @@ As sessões de usuário do servidor Web permitem:
 
 ## Activação de sessões
 
-The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
+The session management feature can be enabled and disabled on your 4D web server. Existem diferentes formas de ativar a gestão de sessões:
 
 - Using the **Scalable sessions** option on the "Web/Options (I)" page of the Settings (permanent setting): ![alt-text](../assets/en/WebServer/settingsSession.png)
 
-This option is selected by default in new projects. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
+Esta opção é selecionada por defeito nos novos projetos. It can however be disabled by selecting the **No sessions** option, in which case the web session features are disabled (no `Session` object is available).
 
 - Using the [`.scalableSession`](API/WebServerClass.md#scalablesession) property of the Web Server object (to pass in the *settings* parameter of the [`.start()`](API/WebServerClass.md#start) function). In this case, this setting overrides the option defined in the Settings dialog box for the Web Server object (it is not stored on disk).
 
-> The `WEB SET OPTION` command can also set the session mode for the main Web server.
+> O comando `WEB SET OPTION` também pode definir o modo de sessão para o servidor Web principal.
 
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
@@ -53,14 +53,6 @@ The current `Session` object can then be accessed through the [`Session`](API/Se
 
 Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
-### Modo preventivo
-
-On 4D Server, Web server sessions are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your web code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
-
-> To debug web code on 4D Server (interpreted), you need to launch and connect [4D on the same machine as 4D Server](Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine) and open the development environment (e.g., the Explorer) on the 4D application. With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
-
-With 4D single-user, interpreted code is always run in cooperative mode.
-
 
 ## Partilhar informações
 
@@ -71,7 +63,7 @@ Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) prope
 Uma sessão Web escalável é encerrada quando:
 
 - the web server is stopped,
-- the timeout of the session cookie has been reached.
+- o tempo limite do cookie de sessão foi atingido.
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
 
@@ -81,7 +73,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 - the `Session` object does not contain privileges (it is a Guest session)
 - the [`.storage`](API/SessionClass.md#storage) property is empty
-- a new session cookie is associated to the session
+- um novo cookie de sessão é associado à sessão
 
 
 ## Privilégios

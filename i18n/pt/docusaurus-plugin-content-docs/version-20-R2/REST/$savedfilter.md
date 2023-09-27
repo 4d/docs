@@ -3,24 +3,24 @@ id: savedfilter
 title: '$savedfilter'
 ---
 
-Saves the filter defined by $filter when creating an entity set (*e.g.*, `$savedfilter="{filter}"`)
+Guarda o filtro definido por $filter aquando da criação de um conjunto de entidades (*e.g.*, `$savedfilter="{filter}"`)
 
 ## Descrição
 
-When you create an entity set, you can save the filter that you used to create it as a measure of security. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
+Ao criar um conjunto de entidades, você pode salvar o filtro usado para criá-lo por motivos de segurança. Se o conjunto de entidades que criou for removido da cache do 4D Server (devido ao tempo limite, à necessidade de espaço do servidor, ou ao facto de o remover chamando [`$method=release`]($method.md#methodrelease)).
 
-You use `$savedfilter` to save the filter you defined when creating your entity set and then pass `$savedfilter` along with your call to retrieve the entity set each time.
+Utiliza-se `$savedfilter` para guardar o filtro definido ao criar o conjunto de entidades e, em seguida, passa-se `$savedfilter` com a chamada para recuperar o conjunto de entidades de cada vez.
 
-If the entity set is no longer in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
+Se o conjunto de entidades não está mais no cache do 4D Server, ele será recriado com um novo timeout padrão de 10 minutos. O conjunto de entidades será renovado (certas entidades podem ser incluidas e outras podem ser removidas) já que desde a última vez que foi criada, não existe mais antes da recriação).
 
-If you have used both `$savedfilter` and [`$savedorderby`]($savedorderby.md) in your call when creating an entity set and then you omit one of them, the new entity set, which will have the same reference number, will reflect that.
+Se tiver utilizado tanto `$savedfilter` como [`$savedorderby`]($savedorderby.md) na sua chamada ao criar um conjunto de entidades e depois omitir um deles, o novo conjunto de entidades, que terá o mesmo número de referência, refletirá esse facto.
 
 ## Exemplo
 
-In our example, we first call ``$savedfilter` with the initial call to create an entity set as shown below:
+No nosso exemplo, chamamos primeiro ``$savedfilter` com a chamada inicial para criar um conjunto de entidades, como mostrado abaixo:
 
 `GET  /rest/People/?$filter="employer.name=Apple"&$savedfilter="employer.name=Apple"&$method=entityset`
 
-Then, when you access your entity set, you write the following to ensure that the entity set is always valid:
+Depois, ao aceder ao conjunto de entidades, escreve-se o seguinte para garantir que o conjunto de entidades é sempre válido:
 
 `GET  /rest/People/$entityset/AEA452C2668B4F6E98B6FD2A1ED4A5A8?$savedfilter="employer.name=Apple"`

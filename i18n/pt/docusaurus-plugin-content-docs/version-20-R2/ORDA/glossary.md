@@ -15,15 +15,15 @@ Todas as ações que podem ser realizadas num [recurso](#resource). As ações d
 
 ## Atributo
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Não confundir atributos de dataclass com atributos de entidades:
+Um atributo é a célula de armazenamento mais pequena num banco de dados relacional (ver também [Atributo relacional](#relation-attribute)). Não confundir atributos de dataclass com atributos de entidades:
 
-*   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
-*   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+*   Num objeto dataclass, cada propriedade é um atributo de dataclass que corresponde a um campo na tabela correspondente (mesmo nome e tipo).
+*   Num objeto entity, os atributos de entidades são propriedades que contêm os valores para os atributos do datastore correspondentes.
+> *Atributos* e *propriedades* são conceitos semelhantes. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
 
 ## AttributePath
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
+Um attributePath é o caminho de um atributo em uma determinada dataclass ou entidade. Ver também [PropertyPath](#propertyPath).
 
 
 ## Class code
@@ -33,15 +33,15 @@ Código da(s) função(ões) da classe usuário.
 
 ## Atributo calculado
 
-A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
+Um atributo calculado não armazena efetivamente informações. Em vez disso, determina o seu valor com base noutros valores da mesma entidade ou de outras entidades, atributos ou funções. Quando é referir-se a um atributo calculado, o "cálculo" subjacente é avaliado para determinar o valor. Os atributos calculados podem até ser atribuídos a valores em que o código definido pelo usuário determina o que fazer durante a atribuição.
 
 ## Data model class
 
-Extended class available for a data model object.
+Classe estendida disponível para um objeto modelo de dados.
 
 ## Data model object
 
-Database objects available through the ORDA concept, i.e. datastore, dataclasses, entities and entity selections.
+Objetos de banco de dados disponíveis através do conceito ORDA, ou seja, datastore, dataclasses, entities e entity selections.
 
 ## Data model function
 
@@ -49,50 +49,50 @@ Função de uma classe de modelo de dados ORDA.
 
 ## Dataclass
 
-A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
+Uma dataclass é um objeto que descreve os dados. As tabelas da banco de dados fornecidas pelo datastore são tratadas através das dataclasses. Cada tabela do banco de dados fornecida pelo datastore tem uma dataclass correspondente com o mesmo nome. Cada campo da tabela é um atributo da dataclass.
 
 Uma dataclass está relacionada com um único datastore.
 
 
 ## DataClass class
 
-Class for specific dataclass objects, in which you can add custom functions.
+Classe para objetos dataclass específicos, onde se podem adicionar funções personalizadas.
 
 ## Datastore
 
-A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
+Um datastore é o objeto de interface fornecido pela ORDA para referenciar uma estrutura e aceder aos seus dados. O banco de dados principal, devolvido pelo comando `ds`, está disponível como um datastore (o datastore principal).
 
 Um datastore fornece:
 
 *   uma ligação à base de dados 4D
 *   um conjunto de classes de dados para trabalhar com a base de dados
 
-The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
+O banco de dados pode ser um banco de dados local 4D (o datastore principal), ou um banco de dados 4D Server exposto como recurso REST (um datastore remote).
 
-Um datastore faz referência apenas a uma única base de dados. It is, however, possible to open several datastores to access several databases.
+Um datastore faz referência apenas a uma única base de dados. É, no entanto, possível abrir vários repositórios de dados para aceder a vários bancos de dados.
 
 ## DataStore class
 
-Class for datastore objects, in which you can add custom functions.
+Classe para objetos datastore, onde é possível adicionar funções personalizadas.
 
 
 ## DataStoreImplementation
 
-Internal name of the generic DataStore class in the `4D` class store.
+Nome interno da classe genérica DataStore no class store `4D`.
 
 ## Cópia profunda
 
-A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
+Uma cópia profunda (deep copy) duplica um objeto e todas as referências que contém. Após uma deep copy, uma coleção copiada contém os elementos duplicados e, por conseguinte, novas referências de todos os elementos originais. Ver também Cópia superficial.
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. Corresponde ao datastore disponível no banco de dados principal 4D.
+`ds` é o comando da linguagem 4D que devolve uma referência de objeto [datastore](dsMapping.md#datastore). Corresponde ao datastore disponível no banco de dados principal 4D.
 
 ## Entity
 
 Uma entidade é um objeto que corresponde a um modelo de dataclass. Uma entidade contém os mesmos atributos que a dataclass.
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. No entanto, uma entidade também contém dados relacionados. O objetivo da entidade é gerir dados (criar, atualizar, apagar).
+Uma entidade pode ser vista como uma instância da dataclass, como um registo da tabela que corresponde à dataclass no seu datastore associado. No entanto, uma entidade também contém dados relacionados. O objetivo da entidade é gerir dados (criar, atualizar, apagar).
 
 Para mais informações, consulte Entidades.
 
@@ -112,12 +112,12 @@ Uma seleção de entidade também pode estar vazia.
 
 ## Generic class
 
-Classe incorporada para objetos ORDA, tais como entidades ou dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+Classe incorporada para objetos ORDA, tais como entidades ou dataclasses. As funções e propriedades das classes genéricas estão automaticamente disponíveis nas classes usuário estendidas, por exemplo, `EmployeeEntity`.
 
 
 ## Lazy loading
 
-Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. Este princípio de otimização é chamado lazy loading.
+Uma vez que as entidades são geridas como referências, os dados só são carregados quando necessário, ou seja, quando se acede a eles no código ou através de widgets de interface. Este princípio de otimização é chamado lazy loading.
 
 ## Datastore principal
 
@@ -125,9 +125,9 @@ O objeto Datastore que corresponde ao banco de dados 4D aberto (autônomo ou cli
 
 ## Métodos
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. Fornecem métodos específicos para interagir diretamente com eles. Estes métodos são também designados por funções membro. Estes métodos são utilizados chamando-os a uma instância do objeto.
+Os objetos ORDA, tais como datastores, dataclasses, entity selections, e entities, definem as classes de objetos. Fornecem métodos específicos para interagir diretamente com eles. Estes métodos são também designados por funções membro. Estes métodos são utilizados chamando-os a uma instância do objeto.
 
-Por exemplo, o método `quer()` é uma "member function" de dataclass. If you have stored a dataclass object in the `$myClass` variable, you can write:
+Por exemplo, o método `quer()` é uma "member function" de dataclass. Se tiver armazenado um objeto dataclass na variável `$myClass`, pode escrever:
 
 ```code4d
 $myClass.query("name = smith")
@@ -135,7 +135,7 @@ $myClass.query("name = smith")
 
 ## Tipo de dados misto
 
-In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Inclui:
+Nesta documentação, o tipo de dados "Misto" é utilizado para designar os vários tipos de valores que podem ser armazenados nos atributos de uma dataclass. Inclui:
 
 *   number
 *   text
@@ -146,29 +146,29 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   collection
 *   imagem(\*)
 
-*(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
+*(\*) O tipo imagem não é suportado pelos métodos estatísticos como* `entitySelection.max( )`.
 
-## Fechadura optimista
+## Bloqueio optimista
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. Ver também "Bloqueio pessimista".
+No modo "bloqueio otimista", as entidades não são bloqueadas explicitamente antes de serem atualizadas. Cada entidade tem um marcador interno que é automaticamente incrementado sempre que a entidade é guardada no disco. Os métodos entity.save( ) ou entity.drop( ) retornarão um erro se o marcador da entidade carregada e o marcador da entidade no disco não coincidirem, ou se a entidade tiver sido excluída. O bloqueio otimista só está disponível na implementação ORDA. Ver também "Bloqueio pessimista".
 
 ## Bloqueio pessimista
 
-A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. Ver "Bloqueio optimista".
+Um "bloqueio pessimista" significa que uma entidade é bloqueada antes de ser acedida, utilizando o método entity.lock( ). Outros processos não podem atualizar nem eliminar a entidade até esta ser desbloqueada. A linguagem 4D clássica só permite bloqueios pessimistas. Ver "Bloqueio optimista".
 
 
 ## Privilégio
 
-The ability to run one or more [actions](#actions) on [resources](#resource). Several privileges can be gathered in a [role](#role) according to the business logic.
+A capacidade de executar uma ou mais [ações ](#actions) em [recursos ](#resource). Vários privilégios podem ser reunidos num [role](#role) conforme a lógica empresarial.
 
 ## Propriedade
 
 Ver [Atributo](#attribute).
-> > Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> > Attributes and properties are similar concepts. "Atributo" é utilizado para designar as propriedades da dataclass que armazenam os dados, enquanto "propriedade" é mais genérico e define um dado armazenado num objeto.
 
 ## PropertyPath
 
-A propertyPath is the path to a property in a given object. If the property is nested in several levels, each level separated is by a dot (".").
+Um propertyPath é o caminho para uma propriedade num objeto dado. Se a propriedade estiver aninhada em vários níveis, cada nível é separado por um ponto (".").
 
 ## Regular class
 
@@ -176,56 +176,56 @@ Classe usuário não relacionada com um objeto ORDA.
 
 ## Related dataclass
 
-These are dataclasses linked by relation attributes.
+Estas são dataclasses ligadas pelos atributos de relação.
 
-## Relation attribute
+## Atributo relacional
 
-Relation attributes are used to conceptualize relations between dataclasses (many-to-one and one-to-many).
+Os atributos de relação são utilizados para conceitualizar relações entre as dataclasses (N a 1 e 1 a N).
 
-*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   Relação N a 1 (a dataclassA referir-se a uma ocorrência da dataclassB): um atributo da relação está disponível na dataclassA e referir-se a uma instância da dataclassB.
+*   Relação 1 a N (uma ocorrência de dataclassB referencia várias ocorrências de dataclassA): um atributo de relação está disponível na dataclassB e referencia várias instâncias de dataclassA.
 
-A dataclass can have recursive relation attributes.
+Um dataclass pode ter atributos de relação recursivos.
 
-In an entity, the value of a relation attribute can be an entity or an entity selection.
+Numa entidade, o valor de um atributo de relação pode ser uma entidade ou uma seleção de entidade.
 
 ## Entidades relacionadas
 
-A related entity can be seen as the instance of a relation attribute in a dataclass.
+Uma entidade relacionada pode ser vista como a instância de um atributo de relação numa dataclass.
 
-Entity selections may refer to related entities according to the relation attributes defined in the corresponding dataclasses.
+As selecções de entidades podem referir-se a entidades relacionadas conforme os atributos de relação definidos nas dataclasses correspondentes.
 
 ## Remote datastore
 
-A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). Esta utilização é submetida a um sistema de licenciamento.
+Um banco de dados 4D aberto em 4D ou 4D Server (disponível através de HTTP) e exposto como um recurso REST. Este banco de dados pode ser referenciada localmente como um Datastore a partir de outras estações de trabalho, onde lhe é atribuído um locaID. O datastore remoto pode ser utilizado através de conceitos ORDA (datastore, dataclass, seleção de entidades...). Esta utilização é submetida a um sistema de licenciamento.
 
 
 ## Recurso
 
-An ORDA element on which any [action](#action) can be allowed or not according to a [privilege](#privilege). Available resources are: the datastore, a dataclass, a dataclass attribute, an ORDA Data model function, or a project method.
+Um elemento ORDA em que qualquer [ação ](#action) pode ser permitida ou não de acordo com um [privilégio](#privilege). Os recursos disponíveis são: o datastore, a dataclass, um atributo dataclass, uma função do modelo de dados ORDA ou um método projeto.
 
 
 ## Role
 
-A role is a published [privilege](#privilege) intended to be used by an administrator. Pode conter um ou mais privilégios.
+Um role é um [privilégio](#privilege) publicado destinado a ser utilizado por um administrador. Pode conter um ou mais privilégios.
 
 
 ## Session
 
-When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
+Quando a aplicação 4D se conecta a um datastore remoto, uma sessão é criada no 4D Server (HTTP). É gerado um cookie de sessão que é associado ao Id do datastore local.
 
-Each time a new session is opened, a license is used. Each time a session is closed, the license is freed.
+Cada vez que uma nova sessão é aberta, é utilizada uma licença. Sempre que uma sessão é encerrada, a licença é libertada.
 
-Inactive sessions are automatically closed after a timeout. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
+As sessões inativas são automaticamente encerradas após um tempo limite. O timeout padrão é de 48 horas, podendo ser definido pelo programador (deve ser >= 60 minutos).
 
 ## Cópia superficial (Shallow copy)
 
-A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. Ver também Deep copy.
+Uma cópia superficial apenas duplica a estrutura dos elementos e mantém as mesmas referências internas. Após uma cópia superficial, duas coleções partilharão os elementos individuais. Ver também Deep copy.
 
 ## Stamp
 
-Utilizado na tecnologia de bloqueio "otimista". All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+Utilizado na tecnologia de bloqueio "otimista". Todas as entidades têm um contador interno, o marcador, incrementado sempre que a entidade é salva. Ao comparar automaticamente os marcadores entre uma entidade salva e sua versão armazenada no disco, 4D pode evitar modificações simultâneas nas mesmas entidades.
 
 ## Atributo de armazenamento
 
-A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.
+Um atributo de armazenamento (às vezes chamado atributo escalar) é o tipo mais básico de atributo em uma classe de datastore e corresponde mais diretamente a um campo em um banco de dados relacional. Um atributo de armazenamento contém um único valor para cada entidade da classe.

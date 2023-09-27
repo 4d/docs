@@ -42,7 +42,7 @@ var $text : Text
 //$text = "" 
 ```
 
-|
+:::info
 
 Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no se admiten con valores Null y devuelven un error.
 
@@ -66,7 +66,7 @@ Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Mayor o i
 
 *otros valores* son expresiones de todo tipo con un valor ni Undefined ni Null.
 
-|
+:::info
 
 Las comparaciones de valores Undefined con valores Pointer, Picture, Blob, Object, Collection, Undefined o Null mediante los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no son compatibles y devuelven un error.
 

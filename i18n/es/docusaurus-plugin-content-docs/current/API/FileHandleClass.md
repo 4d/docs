@@ -19,40 +19,21 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+//Escribiendo línea a línea desde el principio
 $fhandle:=$f.open("write")
 $text:="Hello World"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+//Escribir línea a línea desde el final
 $fhandle:=$f.open("append")
 $text:="Hello New World!"
 For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
-$o:=New object()
-$o.mode:="read"
-$o.charset:="UTF-8"
-$o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
-$text:=$fhandle.readText($stopChar)
-
-//Reading line by line
-$lines:=New collection
-$fhandle:=$f.open("read")
-While (Not($fhandle.eof))
-    $lines.push($fhandle.readLine())
-End while
-For ($line; 1; 4)
-    $fhandle.writeLine($text+String($line))
-End for
-
-//Lectura utilizando un carácter de parada y un parámetro objeto
+//Lectura utilizando un caracter de parada y un parámetro objeto
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -286,13 +267,31 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
-Definir el `.offset` cambiará su valor actual.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
 - Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).
 
 Esta propiedad es **lectura/escritura**.
 
+:::caution
+
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+
+```4d
+  // Abrir un fichero de texto europeo utilizando la codificación utf-16 (dos bytes por caracter)
+  // Queremos leer los 10 primeros caracteres como bytes y luego el resto como texto.
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // lee los 20 primeros bytes (es decir, 10 caracteres)
+$b:=$fh.readBlob(20) // $fh.offset=20
+  // a continuación lee todo el texto saltándose los 10 primeros caracteres que acabamos de leer en el blob anterior
+  // como ahora estamos leyendo texto en lugar de bytes, el significado de 'offset' no es el mismo.
+  // Necesitamos traducirlo de bytes a caracteres.
+$fh.offset:=10 // pide que se omitan 10 caracteres utf-16 (20 bytes)
+$s:=$fh.readText()
+```
+
+:::
 
 <!-- END REF -->
 
@@ -328,6 +327,8 @@ Esta propiedad es **lectura/escritura**.
 La función `.readBlob()` <!-- REF #FileHandleClass.readBlob().Summary -->devuelve un blob de un tamaño de *bytes* del archivo, empezando por la posición actual <!-- END REF -->.
 
 Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último byte leído.
+
+
 
 #### Ver también
 
@@ -404,8 +405,6 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 #### Descripción
 
 La función `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devuelve el texto del archivo, empezando por la posición actual hasta que se encuentre la primera cadena *stopChar* (si se ha pasado) o se llegue al final del archivo<!-- END REF -->.
-
-Esta función reemplaza todos los delimitadores originales de final de línea. Por defecto, se utiliza el delimitador nativo, pero se puede definir otro delimitador al [abrir el manejador del archivo](FileClass.md#open) definiendo la propiedad [`.breakModeRead`](#breakmoderead).
 
 La cadena de caracteres *stopChar* no se incluye en el texto devuelto. Si se omite el parámetro *stopChar*, se devuelve todo el texto del documento.
 
@@ -506,6 +505,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | Parámetros   | Tipo |    | Descripción                                 |
 | ------------ | ---- | -- | ------------------------------------------- |
@@ -552,7 +552,7 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 #### Descripción
 
-La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe *textToWrite* contenido en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). Esta función reemplaza todos los delimitadores originales de final de línea. This function replaces all original end-of-line delimiters.
+La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe *textToWrite* contenido en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). This function replaces all original end-of-line delimiters.
 
 Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del siguiente delimitador de fin de línea.
 

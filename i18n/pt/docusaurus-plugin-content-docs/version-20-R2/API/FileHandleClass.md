@@ -266,13 +266,12 @@ Essa propriedade é **apenas leitura**.
 
 A propriedade `.offset` devolve <!-- REF #FileHandleClass.offset.Summary -->o offset aual do fluxo de dados (posição no interior do documento)<!-- END REF -->. O valor do offset é automaticamente atualizado após as operações de leitura e escrita.
 
-A configuração do `.offset` irá alterar o seu valor atual.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - Se o valor passado for negativo, o arquivo `.offset` é definido para o início do arquivo (zero).
 - Se o valor passado for superior ao tamanho do arquivo, o arquivo `.offset` é definido para o fim do arquivo (tamanho do ficheiro).
 
 Esta propriedade é **read/write**.
-
 
 <!-- END REF -->
 
@@ -385,8 +384,6 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 A função `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devolve texto do arquivo, a partir da posição atual até à primeira *stopChar* string ser encontrada (se passada) ou o fim do arquivo ser alcançado<!-- END REF -->.
 
-Esta função substitui todos os delimitadores de fim de linha originais. Como padrão, é utilizado o delimitador nativo, mas pode definir outro delimitador quando [abrir o cabo do arquivo](FileClass.md#open) definindo a propriedade [`.breakModeRead`](#breakmoderead) .
-
 A string de caracteres *stopChar* não está incluída no texto devolvido. Se omitir o parâmetro *stopChar* , todo o texto do documento é devolvido.
 
 Quando esta função é executada, o ([.offset](#offset)) é colocado logo após a string *stopChar*.
@@ -486,6 +483,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | Parâmetro    | Tipo |    | Descrição                                    |
 | ------------ | ---- | -- | -------------------------------------------- |
@@ -532,7 +530,7 @@ Quando esta função for executada, a posição atual ([.offset](#offset)) é at
 
 #### Descrição
 
-A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais. Esta função substitui todos os delimitadores de fim de linha originais.
+A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais.
 
 Quando esta função for executada, a posição atual ([.offset](#offset)) é atualizada após o próximo delimitador de fim de linha.
 

@@ -20,7 +20,7 @@ This option lets you indicate whether or not the 4D Server database will appear 
 
 #### Nome da publicação
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). By default, 4D Server uses the name of the project file. Pode introduzir qualquer nome personalizado que pretenda.
+This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). Por padrão, 4D Server usa o nome do arquivo de projeto. Pode introduzir qualquer nome personalizado que pretenda.
 
 > This parameter is not taken into account in custom client-server applications. In theory, the client application connects directly to the server application, without passing by the connection dialog box. However, in the event of an error, this dialog box can appear; in this case, the publication name of the server application is the name of the compiled project.
 
@@ -36,7 +36,7 @@ To update any other client machines that are not connected, you just need to ent
 
 > Only databases published on the same port as the one set in 4D client are visible on the TCP/IP dynamic publication page.
 
-#### 4D Server and port numbers
+#### 4D Server e números de portas
 
 4D Server uses three TCP ports for communications between internal servers and clients:
 
@@ -59,7 +59,7 @@ When Single Sign On (SSO) is enabled (see above), you must fill in this field if
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
 -   **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. This network layer can also be enabled by programming using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
 -   **ServerNet** (by default): Available since 4D v15, ServerNet is based on a modern and robust API, easy to maintain and facilitates the implementation of the latest network technologies while providing a high level of performance and security.
--   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available from 4D v20 in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
+-   **QUIC** (available only in project mode): Enables the QUIC network layer on the server. This network layer is available in beta version. It is not recommended to use it in production, however it can be enabled in your client/server applications for evaluation purposes.
 
      **Notas**:
     - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](https://doc.4d.com/4Dv20/help/command/page642.html) command.
@@ -70,6 +70,7 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
         -   A beta message and an alert icon are displayed near the selector.
         -   [Client-server Connections Timeout settings](#Client-Server-Connections-Timeout) are hidden
         -   The [Encrypt Client-Server communication checkbox](#Encrypt-Client-Server-Communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+    - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note
 
@@ -109,7 +110,7 @@ This setting can be used to globally set the updating mode for the local instanc
 
 This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
 
-> This configuration table does not control Web connections.
+> Esta tabela de configuração não controla as ligações Web.
 
 The behavior of the configuration table is as follows:
 
@@ -117,7 +118,7 @@ The behavior of the configuration table is as follows:
 - The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
 - The application of rules is based on the display order of the table. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). Também pode mover linhas utilizando a função arrastar e largar.
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. Por exemplo:
-    - Deny 192.168.* (deny all addresses beginning with 192.168)
+    - Negar 192.168.* (negar todos os endereços que comecem por 192.168)
     - Autorizar * (e autorizar outros)
 
 By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.

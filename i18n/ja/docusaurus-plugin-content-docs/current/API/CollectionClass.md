@@ -57,6 +57,7 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 | [<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
 | [<!-- INCLUDE #collection.max().Syntax -->](#max)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
 | [<!-- INCLUDE #collection.min().Syntax -->](#min)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
+| [<!-- INCLUDE #collection.multiSort().Syntax -->](#multisort)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.multiSort().Summary -->|
 | [<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
 | [<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
 | [<!-- INCLUDE #collection.pop().Syntax -->](#pop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
@@ -2195,6 +2196,144 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 <!-- END REF -->
 
 
+<!-- REF collection.multiSort().Desc -->
+## .multiSort()
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v20 R3 | 追加 |
+
+</details>
+
+<!-- REF #collection.multiSort().Syntax -->**.multiSort**() : Collection<br/>**.multiSort**( *colsToSort* : Collection ) : Collection<br/>**.multiSort**( *formula* : 4D.Function ; *colsToSort* : Collection ) : Collection<!-- END REF -->
+
+
+<!-- REF #collection.multiSort().Params -->
+| 引数         | タイプ         |    | 説明                                                                                                          |
+| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | フォーミュラオブジェクト                                                                                                |
+| colsToSort | Collection  | -> | コレクションのコレクション、または {`collection`:*colToSort*;`order`:`ck ascending` / `ck descending`} プロパティを持つオブジェクトのコレクション |
+| 戻り値        | Collection  | <- | 並べ替えられた元のコレクション|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.multiSort()` 関数は、 <!-- REF #collection.multiSort().Summary -->複数のコレクションに対して複数レベルの同期ソートを実行します<!-- END REF -->。
+> この関数は、元のコレクションを変更します。また、*colsToSort* パラメーターに使用されたコレクションも変更されます。
+
+`.multiSort()` が引数なしで呼び出された場合、この関数は [`.sort()`](#sort) 関数と同じ効果を持ちます: コレクション要素は、スカラー値のみがデータ型に応じてデフォルトで昇順に並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
+
+1. null
+2. ブール
+3. 文字列
+4. 数値
+5. オブジェクト
+6. コレクション
+7. 日付
+
+
+**単一レベルの同期ソート**
+
+複数のコレクションを同期的にソートするには、*colsToSort* にソートするコレクションのコレクションを渡します。 渡せるコレクションの数に制限はありません。 呼び出し元のコレクションは昇順にソートされ、すべての *colsToSort* コレクションが同期ソートされます。
+
+:::note
+
+*colsToSort* に渡すコレクションの要素数はすべて同じでなければなりません。そうでない場合はエラーが返されます。
+
+:::
+
+昇順以外の方法でコレクションをソートしたい場合には、ソート順を定義する *formula* ([Formula オブジェクト](FunctionClass.md#formula)) を指定する必要があります。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をフォーミュラに渡せます。
+
+フォーミュラは以下の引数を受け取ります:
+
+- $1 (オブジェクト):
+    - *$1.value* (任意の型): 比較する一つ目の要素の値
+    - *$1.value2* (任意の型): 比較する二つ目の要素の値
+- $2...$N (任意の型): 追加の引数
+
+**複数レベルの同期ソート**
+
+複数レベルの同期ソートを定義するには、サブレベルとして使用するコレクションについては、{`collection`:*colToSort*;`order`:`ck ascending` または `ck descending`} プロパティを含むオブジェクトを *colToSort* に格納して渡す必要があります。
+
+ソートレベルは、*colsToSort* に渡されるコレクションの順序によって決定されます。 `collection`/`order` オブジェクトの構文内の位置が、そのソートレベルを決定します。
+
+:::note
+
+`.multiSort()` 関数は、[安定性](https://ja.wikipedia.org/wiki/ソート#安定ソート) のあるソートアルゴリズムを使用します。
+
+:::
+
+#### 例題 1
+
+異なる値の型を持つコレクションの単純な同期ソート:
+
+```4d
+var $col;$col2;$col3 : Collection
+$col:=["A"; "C"; "B"]
+$col2:=[1; 2; 3]
+$col3:=[["Jim"; "Philip"; "Maria"]; ["blue"; "green"]; ["11"; 22; "33"]]
+
+$col.multiSort([$col2; $col3])
+//$col=["A","B","C"]
+//$col2=[1,3,2]
+//$col3[0]=["Jim","Philip","Maria"]
+//$col3[1]=["11",22,"33"]
+//$col3[2]=["blue","green"]
+
+```
+
+#### 例題 2
+
+city (都市)、country (国)、continent (大陸) の 3つのコレクションを同期ソートします。 continent のコレクションを昇順にソートし、country のコレクションを同期ソートさせ、その次のレベルで city のコレクションを昇順にソートします:
+
+```4d
+var $city : Collection
+var $country : Collection
+var $continent : Collection
+
+$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
+$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
+$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
+
+$continent.multiSort($country; {collection: $city; order: ck ascending})
+//$continent=["Africa", "America","Europe","Europe","Europe"]
+//$country=["Morocco", "US","Germany","France","France"]
+//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
+
+```
+
+#### 例題 3
+
+オブジェクトのコレクションを同期させることもできます。
+
+```4d
+var $name : Collection
+var $address : Collection
+$name:=[]
+$name.push({firstname: "John"; lastname: "Smith"})
+$name.push({firstname: "Alain"; lastname: "Martin"})
+$name.push({firstname: "Jane"; lastname: "Doe"})
+$name.push({firstname: "John"; lastname: "Doe"})
+$address:=[]
+$address.push({city: "Paris"; country: "France"})
+$address.push({city: "Lyon"; country: "France"})
+$address.push({city: "Eching"; country: "Germany"})
+$address.push({city: "Berlin"; country: "Germany"})
+
+$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); $address)
+//["Alain Martin","Jane Doe","John Smith","John Doe"]
+//["Lyon France","Eching Germany","Paris France","Berlin Germany"]
+
+```
+
+
+<!-- END REF -->
+
 
 
 <!-- REF collection.orderBy().Desc -->
@@ -2326,6 +2465,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 プロパティパスで並べ替えます:
 
 ```4d
+
  var $crit; $c; $c2 : Collection
  $c:=New collection
  $c.push(New object("name";"Cleveland";"phones";New object("p1";"01";"p2";"02")))
@@ -2829,6 +2969,7 @@ $r:=$c.reduce(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 で�
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 です
+
 ```
 
 
@@ -3004,6 +3145,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 
 <!-- REF #collection.reverse().Params -->
+
 | 引数  | タイプ        |    | 説明                                             |
 | --- | ---------- |:--:| ---------------------------------------------- |
 | 戻り値 | Collection | <- | 逆順に要素を格納した新しいコレクション|<!-- END REF -->
@@ -3188,6 +3330,7 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 *   (メソッドを使用する場合は必須) *$1.result* (ブール): 要素の値の評価が成功した場合には **true** 、それ以外は **false**
 *   *$1.stop* (ブール、任意): メソッドコールバックを止める場合には **true**。 返された値は最後に計算されたものです。
 
+
 `.some()` 関数は、true を返す最初のコレクション要素を発見すると、コールバックの呼び出しをやめて **true** を返します。
 
 デフォルトでは、`.some()` はコレクション全体をテストします。 オプションとして、*startFrom* 引数を渡すことで、テストを開始するコレクション要素のインデックスを指定することができます。
@@ -3256,9 +3399,17 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 `.sort()` 関数は、 <!-- REF #collection.sort().Summary -->コレクションの要素を並べ替え、並べ替えられた元のコレクションを返します<!-- END REF --> 。
 > このコマンドは、元のコレクションを変更します。
 
-引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
+引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
-カスタマイズされた順番や、型に関係なくコレクション要素を並べ替えたい場合には、二つの値を比較して、最初の値が二つ目の値より低い場合に **true** を返す比較コールバックを *formula* ([Formula オブジェクト](FunctionClass.md)) または *methodName* (テキスト) に渡します。 必要に応じて、 追加の引数をコールバックに渡せます。
+1. null
+2. ブール
+3. 文字列
+4. 数値
+5. オブジェクト
+6. コレクション
+7. 日付
+
+カスタマイズされた順番や、型に関係なくコレクション要素を並べ替えたい場合には、並べ替え順を定義するコールバックを *formula* ([Formula オブジェクト](FunctionClass.md)) または *methodName* (テキスト) に渡します。 戻り値は、二つの要素の相対的な順番を示すブール値です。*$1.value* が *$1.value2* より小さい場合に **true** を、*$1.value* が *$1.value2* より大きい場合に **false** を返します。 必要に応じて、 追加の引数をコールバックに渡せます。
 
 コールバックは以下の引数を受け取ります:
 
@@ -3271,15 +3422,6 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 - *$1.result* (ブール): *$1.value < $1.value2* の場合は **true**、それ以外は **false**.
 
-コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
-
-1.  null
-2.  ブール
-3.  文字列
-4.  数値
-5.  オブジェクト
-6.  コレクション
-7.  日付
 
 #### 例題 1
 

@@ -20,7 +20,7 @@ When it is used, this event is generated after each change made to the contents 
 - Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
 - Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
 
-Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.
+No evento `On After Edit`, os dados texto introduzidos são devolvidos pelo comando [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html).
 
 ### 4D View Pro
 
@@ -53,12 +53,12 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 
 #### action = DragDropBlock
 
-| Propriedade | Tipo    | Descrição                                           |
-| ----------- | ------- | --------------------------------------------------- |
-| fromRange   | object  | Range of source cell range (being dragged)          |
-| toRange     | object  | Range of the destination cell range (drop location) |
-| copy        | boolean | Specifies if the source range is copied or not      |
-| insert      | boolean | Specifies if the source range is inserted or not    |
+| Propriedade | Tipo    | Descrição                                          |
+| ----------- | ------- | -------------------------------------------------- |
+| fromRange   | object  | Intervalo do células de origem (a ser arrastado)   |
+| toRange     | object  | Intervalo de células de destino (local de largada) |
+| copy        | boolean | Especifica se o intervalo fonte é copiado ou não   |
+| insert      | boolean | Especifica se o intervalo fonte é inserido ou não  |
 
 #### action = DragFillBlock
 
@@ -84,7 +84,7 @@ Dependendo do valor da propriedade `action`, o [objeto de evento](overview.md#ev
 
 #### Exemplo
 
-Here is an example handling an `On After Edit` event:
+Eis um exemplo de tratamento de um evento `On After Edit`:
 
 ```4d
  If(FORM Event.code=On After Edit)
@@ -100,7 +100,7 @@ Here is an example handling an `On After Edit` event:
  End if
 ```
 
-The above example could generate an event object like this:
+O exemplo acima poderia gerar um objeto evento como este:
 
 ```
 {

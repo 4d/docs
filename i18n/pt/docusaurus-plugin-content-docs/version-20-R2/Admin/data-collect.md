@@ -134,8 +134,8 @@ Uma vez por semana, o ficheiro é automaticamente enviado através da rede para 
 O ficheiro é enviado para o seguinte endereço de servidor: `https://dcollector.4d.com` (ip: 195.68.52.83).
 
 
-## como desativar a coleção de dados automática em aplicações cliente/servidor
+## Desativar a coleção de dados em aplicações cliente/servidor geradas
 
 Pode desactivar a recolha automática de dados em [aplicações construídas cliente/servidor](../Desktop/building.md#clientserver-page).
 
-Para desativar a coleção, passar o valor **Falso** para a chave [`ServerDataCollection`](https://doc.4d.com/4Dv19R6/4D/19-R6/ServerDataCollection.300-6011712.en.html) no arquivo `buildApp.4DSettings` , utilizado para construir a aplicação cliente/servidor.
+Para desativar a coleção, passar o valor **False** para a chave [`ServerDataCollection`](https://doc.4d.com/4Dv20/4D/20/ServerDataCollection.300-6335775.en.html) no arquivo `buildApp.4DSettings`, utilizado para construir a aplicação cliente/servidor.

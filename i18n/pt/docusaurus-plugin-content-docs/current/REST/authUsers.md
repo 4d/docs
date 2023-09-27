@@ -3,25 +3,34 @@ id: authUsers
 title: Usuários e sessões
 ---
 
-REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
+Os pedidos REST podem beneficiar das [sessões usuário Web](WebServer/sessions.md), fornecendo funcionalidades adicionais, como o tratamento de vários pedidos, a partilha de dados entre os processos do cliente Web e os privilégios do usuário.
 
 Como primeiro passo para abrir uma sessão REST no servidor 4D, o usuário que envia a solicitude deve estar autenticado.
 
 
 ## Autenticação de usuários
 
-Pode iniciar a sessão de um usuário em sua aplicação passando o nome e a senhar de usuário em  [`$directory/login`]($directory.md#directorylogin). This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
+Pode iniciar a sessão de um usuário em sua aplicação passando o nome e a senhar de usuário em  [`$directory/login`]($directory.md#directorylogin). Este pedido chama o método base `On REST Authentication` (se existir), onde pode verificar as credenciais do usuário (ver exemplo abaixo).
 
 ## Abertura de sessões
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
+Quando [sessões escaláveis estão activadas](WebServer/sessions.md#enabling-sessions) (recomendado), se o método base `On REST Authentication` devolver `true`, é automaticamente aberta uma sessão usuario, que pode ser tratada através do objeto `Session` e da [API Session](API/SessionClass.md). Os pedidos REST subsequentes reutilizarão o mesmo cookie de sessão.
 
-If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
+Se o método base `On REST Authentication` não tiver sido definido, é aberta uma sessão `guest`.
+
+
+## Modo preventivo
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). With this configuration, all processes switch to cooperative mode and the web server code can be debugged.
+
+With 4D single-user, interpreted code is always run in cooperative mode.
 
 
 ## Exemplo
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
+Neste exemplo, o usuário introduz o seu e-mail e palavra-passe numa página html que solicita [`$directory/login`]($directory.md#directorylogin) num POST (recomenda-se a utilização de uma ligação HTTPS para enviar a página html). O método base `On REST Authentication` é chamado para validar as credenciais e definir a sessão.
 
 A página de início de sessão em HTML:
 
@@ -68,7 +77,7 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 
 ```
 
-When the login page is sent to the server, the `On REST Authentication` database method is called:
+Quando a página de início de sessão é enviada para o servidor, o método base `On REST Authentication` é chamado:
 
 ```4d
     //On REST Authentication
@@ -88,9 +97,9 @@ $Accepted:=False
     End if End if 
 ```
 
-> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+> Assim que tiver sido chamado e devolvido `True`, o método base `On REST Authentication` deixa de ser chamado na sessão.
 
-The `fillSession` project method initializes the user session, for example:
+O método projeto `fillSession` inicializa a sessão usuário, por exemplo:
 
 ```4d
 #DECLARE($sales : cs. SalesPersonsEntity)

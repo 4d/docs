@@ -14,7 +14,7 @@ Os seguintes elementos do projeto aceitam documentação:
 - Formulários
 - Tabela
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
+Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. São armazenados como ficheiros independentes na pasta do seu projeto.
 
 Documentation is displayed in the preview area (right-side panel) of the Explorer:
 
@@ -72,14 +72,14 @@ The `Documentation` folder architecture is the following:
 Para visualizar a documentação na janela do Explorer:
 
 1. Certifique-se de que a área de pré-visualização é mostrada.
-2. Select the documented element in the Explorer list.
+2. Selecione o elemento documentado na lista do Explorador.
 3. Click the **Documentation** button located below the preview area.
 
 ![](../assets/en/Project/comments-explo2.png)
 
 - If no documentation file was found for the selected element, a **Create** button is displayed (see below).
 
-- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
+- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. Os conteúdos não são diretamente editáveis no painel.
 
 ### Editar o ficheiro de documentação
 
@@ -120,7 +120,7 @@ Otherwise, the code editor displays [the block comment at the top of the method 
 
 ## Definição do ficheiro de documentação
 
-4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
+4D usa um modelo básico para criar ficheiros de documentação. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
 
 However, you can use any [supported Markdown tags](#supported-markdown).
 
@@ -133,7 +133,7 @@ New documentation files are created with the following default contents:
 | `<!-- Escreva aqui o seu resumo -->` | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
 | ## Description                            | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
 | ## Exemplo                                | Heading level 2, you can use this area to show sample code                                                                                             |
-| ` ```4d Type here your example``` `        | Used to format 4D code examples (uses highlight.js library)                                                                                            |
+| ` ```4d Type here your example``` `        | Utilizado para formatar exemplos de código 4D (utiliza a biblioteca highlight.js)                                                                      |
 
 
 ### Markdown suportado
@@ -145,7 +145,7 @@ New documentation files are created with the following default contents:
 ### Title 3
 ```
 
-- The style tags (italic, bold, strikethrough) are supported:
+- As etiquetas de estilo (itálico, negrito, riscado) são suportadas:
 
 ```md
 _italic_
@@ -155,7 +155,7 @@ _italic_
 ```
 
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- A etiqueta de bloco de código (\```4d ... ```) é suportada com realce do código 4D:
 
 ````md
 ```4d
@@ -166,10 +166,10 @@ _italic_
 - A etiqueta de tabela é suportada:
 
 ```md
-| Parameter | Type   | Description  |
+| Parâmetro | Tipo | Descrição |
 | --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
+| wpArea | String |Área de escrita profissional|
+| toolbar | String |Nome da barra de ferramentas |
 ```
 
 

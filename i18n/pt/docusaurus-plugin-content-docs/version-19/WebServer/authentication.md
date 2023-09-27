@@ -46,12 +46,12 @@ If no custom authentication is provided, 4D calls the [`On Web Authentication`](
 
 When a user connects to the server, a standard dialog box appears on their browser in order for them to enter their user name and password.
 
-> O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. This mode typically requires HTTPS to provide confidentiality.
+> O nome e a palavra-passe introduzidos pelo utilizador são enviados sem encriptação no cabeçalho do pedido HTTP. Este modo requer normalmente HTTPS para garantir a confidencialidade.
 
 Os valores introduzidos são então avaliados:
 
 - If the **Include 4D passwords** option is checked, user credentials will be first evaluated against the [internal 4D users table](Users/overview.md).
-  - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. If the password is incorrect, the connection is refused.
+  - If the user name sent by the browser exists in the table of 4D users and the password is correct, the connection is accepted. Se a palavra-passe estiver incorreta, a ligação é recusada.
   - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
 
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
@@ -96,7 +96,7 @@ The `On Web Authentication` database method is NOT called:
 | $4         | Text       | <- | Endereço IP do servidor                               |
 | $5         | Text       | <- | Nome de usuario                                       |
 | $6         | Text       | <- | Senha                                                 |
-| $0         | Parâmetros | -> | True = request accepted, False = request rejected     |
+| $0         | Parâmetros | -> | True = pedido aceite, False = pedido rejeitado        |
 
 Estes parâmetros devem ser declarados da seguinte forma:
 
@@ -125,9 +125,9 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
 
-Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+Vejamos o exemplo de uma ligação Intranet. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 
-| URL entered in web browser           | Valor do parâmetro $1    |
+| URL introduzido no navegador Web     | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |
 | 123.45.67.89                         | /                        |
 | <http://123.45.67.89>                | /                        |
@@ -140,7 +140,7 @@ Let’s take the example of an Intranet connection. Suppose that the IP address 
 The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
 
 If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 #### $3 - Endereço IP do cliente Web
 

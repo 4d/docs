@@ -266,13 +266,31 @@ Essa propriedade é **apenas leitura**.
 
 A propriedade `.offset` devolve <!-- REF #FileHandleClass.offset.Summary -->o offset aual do fluxo de dados (posição no interior do documento)<!-- END REF -->. O valor do offset é automaticamente atualizado após as operações de leitura e escrita.
 
-A configuração do `.offset` irá alterar o seu valor atual.
+Setting the `.offset` will change its current value at the moment of the next read or write operation.
 
 - Se o valor passado for negativo, o arquivo `.offset` é definido para o início do arquivo (zero).
 - Se o valor passado for superior ao tamanho do arquivo, o arquivo `.offset` é definido para o fim do arquivo (tamanho do ficheiro).
 
 Esta propriedade é **read/write**.
 
+:::caution
+
+The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
+
+```4d
+  // Open a european text file using utf-16 encoding (two bytes per character)
+  // We want to read the first 10 characters as bytes, then the remaining as text.
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // lê os 20 primeiros bytes (i.e. 10 caracteres)
+$b:=$fh.readBlob(20) // $fh.offset=20
+  // depois lê todo o texto saltando os primeiros 10 caracteres que acabámos de ler no blob anterior
+  // porque agora estamos a ler texto em vez de bytes, o significado de 'offset' não é o mesmo.
+  // We need to translate it from bytes to characters.
+$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+$s:=$fh.readText()
+```
+
+:::
 
 <!-- END REF -->
 
@@ -308,6 +326,8 @@ Esta propriedade é **read/write**.
 A função `.readBlob()` <!-- REF #FileHandleClass.readBlob().Summary -->devolve um blob a *bytes* tamanho do arquivo, a partir da posição atual <!-- END REF -->.
 
 Quando esta função é executada, a posição atual ([.offset](#offset)) é atualizada após a leitura do último byte.
+
+
 
 #### Veja também
 
@@ -384,8 +404,6 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 #### Descrição
 
 A função `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devolve texto do arquivo, a partir da posição atual até à primeira *stopChar* string ser encontrada (se passada) ou o fim do arquivo ser alcançado<!-- END REF -->.
-
-Esta função substitui todos os delimitadores de fim de linha originais. Como padrão, é utilizado o delimitador nativo, mas pode definir outro delimitador quando [abrir o cabo do arquivo](FileClass.md#open) definindo a propriedade [`.breakModeRead`](#breakmoderead) .
 
 A string de caracteres *stopChar* não está incluída no texto devolvido. Se omitir o parâmetro *stopChar* , todo o texto do documento é devolvido.
 
@@ -486,6 +504,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | Parâmetro    | Tipo |    | Descrição                                    |
 | ------------ | ---- | -- | -------------------------------------------- |
@@ -532,7 +551,7 @@ Quando esta função for executada, a posição atual ([.offset](#offset)) é at
 
 #### Descrição
 
-A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais. Esta função substitui todos os delimitadores de fim de linha originais.
+A função `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escreve *textToWrite* conteúdo na posição atual e não insere um delimitador final de fim de linha<!-- END REF --> (ao contrário da função [.writeLine()](#writeline)). Esta função substitui todos os delimitadores de fim de linha originais.
 
 Quando esta função for executada, a posição atual ([.offset](#offset)) é atualizada após o próximo delimitador de fim de linha.
 

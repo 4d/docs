@@ -98,7 +98,7 @@ Se a ligação não for possível, é devolvido um objeto `null` sendo gerado um
 Em *connectionHandler*, pode passar um objeto que contenha funções de retorno de chamada a chamar conforme os eventos de ligação e o tipo de dados a tratar.
 
 - As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
-- O tempo de vida do WebSocket deve ser pelo menos igual ao tempo de vida do formulário ou do worker.
+- The WebSocket will be valid as long as the form or worker is not closed.
 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                                               |
 | ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -228,7 +228,7 @@ A função `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->fecha 
 In *code*, you can pass a status code explaining why the connection is being closed (see also [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 
 - If unspecified, a close code for the connection is automatically set to 1000 for a normal closure, or otherwise to another standard value in the range 1001-1015 that indicates the actual reason the connection was closed.
-- If specified, the value of this code parameter overrides the automatic setting. O valor deve ser um número inteiro. Either 1000, or a custom code in the range 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
+- If specified, the value of this code parameter overrides the automatic setting. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. If you specify a *code* value, you should also specify a *reason* value.
 
 In *reason*, you can pass a string describing why the connection is being closed. 
 

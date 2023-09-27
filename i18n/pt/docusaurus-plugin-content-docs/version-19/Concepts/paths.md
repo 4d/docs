@@ -58,7 +58,7 @@ A sintaxe específica da plataforma depende do sistema operativo em que o comand
 São suportados os seguintes padrões:
 
 - os separadores de pasta são "\"
-- the text contains ':' and '\' as the second and third character,
+- o texto contém ':' e '\' como segundo e terceiro carácter,
 - o texto começa por "\\".
 
 Exemplos com [`Folder`](../API/FolderClass.md#folder):
@@ -68,15 +68,15 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Introduzir caminhos Windows e sequências de escape
 
-The 4D code editor allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. Por exemplo, `\t` é a sequência de escape para o carácter `Tab` .
+O editor de código 4D permite o uso de sequências de escape. Uma sequência de escape é um conjunto de caracteres utilizados para substituir um carácter "especial". A sequência começa com uma barra invertida `\`, seguida de um carácter. Por exemplo, `\t` é a sequência de escape para o carácter `Tab` .
 
-The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the code editor by replacing single backslashes `\` with double backslashes ``\\`. For example,``C:\Folder`will become`C:\\Folder`.
+O carácter `\` também é utilizado como separador em nomes de caminhos no Windows. Em geral, 4D interpretará corretamente os nomes de caminho do Windows introduzidos no editor de código substituindo as barras invertidas simples `\` por barras invertidas duplas ``\\`. Por exemplo,``C:\Folder`tornar-se-á`C:\\Folder`.
 
-However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). You must therefore enter a double `\\` when you want to insert a backslash before a character that is used in one of the escape sequences recognized by 4D.
+No entanto, se escrever `C:\MyDocuments\New`, 4D mostrará `C:\MyDocuments\New`. Neste caso, o segundo `\` é incorretamente interpretado como `\N` (uma sequência de escape existente). Você deve então digitar um duplo `\\` quando quiser inserir uma barra invertida antes de um caractere usado em uma das sequências de escape reconhecidas por 4D.
 
-The following escape sequences are recognized by 4D:
+As seguintes sequências de escape são reconhecidas por 4D:
 
 | Escape sequence              | Carácter substituído      |
 | ---------------------------- | ------------------------- |
@@ -118,7 +118,7 @@ $okFolder:=Folder("/PACKAGE/myFolder").create() //pasta criada ao nível da estr
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //ficheiro criado na pasta de dados
 ```
 
-### `.file()` and `.folder()` folder methods
+### `.file()` e `.folder()`
 
 As funções dos objetos pasta, tais como [`folder.file()`](../API/FolderClass.md#file) e [`folder.folder()`](../API/FolderClass.md#folder-1) esperam nomes de caminho POSIX relativos. Por exemplo:
 

@@ -3,7 +3,7 @@ id: updates
 title: Release Notes
 ---
 
-## 4D v20
+## 4D v20.x
 
 Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D v20.
 
@@ -12,8 +12,19 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 
 4D v20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
 
+:::caution 4D v20.1 index rebuild and client/server versions
+
+4D v20.1 also includes an ICU library update, which has the following consequences:
+
+- It will force an automatic rebuild of indexes of type alpha, text, and object.
+- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
+
+:::
+
+
 #### Highlights
 
+- (4D v20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
 - New [WebSocketServer](../API/WebSocketServerClass.md) and [WebSocketConnection](../API/WebSocketConnectionClass.md) classes to create and manage WebSocket connections from 4D.
@@ -36,7 +47,7 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20): list of all bugs that have been fixed in 4D v20.
+- Fixed bug lists: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
 
 
@@ -258,7 +269,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 | Library   | Current version | Updated in 4D | Kommentar                                                                                                                                                          |
 | --------- | --------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ICU       | 72.1            | 20            | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                                           |
+| ICU       | 73.2            | 20.1          | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                                           |
 | CEF       | 109             | 20            | Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
 | Hunspell  | 1.7.2           | 20            | Used for spell checking in 4D forms and 4D Write Pro                                                                                                               |
 | PDFWriter | 4.3             | 20            | FreeType dependency in 12.2.1                                                                                                                                      |

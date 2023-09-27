@@ -49,7 +49,7 @@ La instanciación de la colección puede realizarse de una de las siguientes man
 - utilizando el comando [`New collection`](../API/CollectionClass.md#new-collection),
 - utilizando el operador `[]`.
 
-|
+:::info
 
 Varios comandos y funciones de 4D devuelven colecciones, por ejemplo [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
 

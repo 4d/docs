@@ -82,7 +82,7 @@ Con 4D Server, el nombre del método se cambia en el servidor cuando se termina 
 
 :::
 
-|
+:::info
 
 Los métodos base no pueden ser renombrados. Lo mismo ocurre con los triggers, los métodos formulario y los métodos objeto, que están vinculados a los objetos y toman sus nombre del objeto en cuestión.
 

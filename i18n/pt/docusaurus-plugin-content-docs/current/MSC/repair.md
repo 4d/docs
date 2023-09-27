@@ -6,7 +6,7 @@ sidebar_label: Página de reparação
 
 Esta página é utilizada para reparar o ficheiro de dados quando este foi danificado. Geralmente só se usa essas funções sob a supervisão de times técnicos 4D, quando anomalias forem detectadas quando abrir a aplicação ou após uma [verificação](verify.md).
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
+**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. É importante ter isto em conta (especialmente em macOS onde as aplicações 4D aparecem como pacotes) para que o tamanho da aplicação não aumente excessivamente. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
 > Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). Se tentar fazer essa operação em modo padrão, um aviso informará que o banco de dados será fechado e reiniciado em modo manutenção.
 > Quando o banco de dados está encriptado, a reparação dos dados inclui passos de desencriptação e encriptação e, por isso, requer a chave de encriptação de dados atual. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
 
@@ -66,6 +66,6 @@ Next select the table you want to assign to the group in the "Unassigned tables"
 Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este ficheiro permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
 - *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Quando clica no botão **Abrir arquivo de registo** , 4D mostra o arquivo de registo mais recente no navegador predefinido da máquina.

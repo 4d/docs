@@ -8,21 +8,21 @@ Devolve um ID do ficheiro carregado para o servidor
 
 ## Descrição
 
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+Publique essa petição quando quiser fazer upload de um ficheiro para o servidor. Se tiver uma imagem, passe `$rawPict=true`. Para todos os outros ficheiros, deve passar `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
+Pode modificar o tempo limite, que por defeito é de 120 segundos, passando um valor para o parâmetro `$timeout`.
 
 ## Cenário de carregamento
 
-Imagine you want to upload an image to update the picture attribute of an entity.
+Imagine que pretende carregar uma imagem para atualizar o atributo imagem de uma entidade.
 
-To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. **Resultadoi**:
+Para carregar uma imagem (ou qualquer ficheiro binário), deve primeiro selecionar o ficheiro a partir da aplicação cliente. O ficheiro em si deve ser passado no **corpo ** do pedido.
 
-Then, we upload the selected image to 4D Server:
+Depois, carrega a imagem selecionada para 4D Server usando uma petição como:
 
  `POST  /rest/$upload?$rawPict=true`
 
-As a result, the server returns an ID that identifies the file:
+Como resultado, o servidor devolve um ID que identifica o ficheiro:
 
 **Resposta**:
 

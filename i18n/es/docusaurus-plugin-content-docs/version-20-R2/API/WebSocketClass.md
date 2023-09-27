@@ -98,7 +98,7 @@ Si la conexión no es posible, se devuelve un objeto `null` y se genera un error
 En *connectionHandler*, puede pasar un objeto que contenga funciones de retrollamada a ser llamadas según los eventos de conexión y tipo de datos a manejar.
 
 - Las retrollamadas se llaman automáticamente en el contexto del formulario o worker que inicia la conexión.
-- El tiempo de vida del WebSocket debe ser al menos el mismo que el tiempo de vida del formulario o worker.
+- The WebSocket will be valid as long as the form or worker is not closed.
 
 | Propiedad   | Tipo                         | Descripción                                                                                                                                                                                                                     |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -38,8 +38,7 @@ $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:="!" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
 // 1行ずつ読み取ります
@@ -267,13 +266,31 @@ FileHandle オブジェクトは共有できません。
 
 `.offset` プロパティは、 <!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
 
-`.offset` を設定すると、その現在値が変更されます。
+`.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
 
 - 負の値が渡された場合、`.offset` はファイルの先頭 (ゼロ) に設定されます。
 - ファイルサイズより大きい値が渡された場合、`.offset` はファイルの終端 (ファイルサイズ) に設定されます。
 
 **読み書き可能** プロパティです。
 
+:::caution
+
+オフセットの単位は読み取り関数によって異なります。[`readBlob()`](#readblob) の場合、`.offset` はバイト数ですが、[`readText()`](#readtext)/[`readLine()`](#readline) の場合は文字数になります。 ファイルの文字セットに応じて、1文字は 1バイトまたは複数バイトに対応します。 したがって、`readBlob()` で読み取りを開始してから `readText()` を呼び出すと、テキストの読み取りは一貫性のない位置から開始されます。 そのため、同じ FileHandle内で、BLOB の読み取り/書き込みからテキストの読み取り/書き込みに切り替える場合には、`.offset` プロパティを自分で設定することが不可欠です。 例:
+
+```4d
+  // utf-16エンコーディング (1文字につき 2バイト) を使用して、ヨーロッパのテキストファイルを開きます
+  // 最初の 10文字をバイトとして、残りをテキストとして読み込みます
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // 最初の 20バイト (=10文字) を読み取ります
+$b:=$fh.readBlob(20) // 現在のオフセット: $fh.offset=20
+  // 次にすでに読み取った 10文字を飛ばして残りのテキストをすべて読み取ります
+  // バイトからテキストの読み取りへと切り替えるため、オフセットの単位が変わります
+  // そのため、オフセットをバイトから文字数に変換する必要があります
+$fh.offset:=10 // 最初の 10文字 (20バイト) の utf-16文字をスキップさせます
+$s:=$fh.readText()
+```
+
+:::
 
 <!-- END REF -->
 
@@ -309,6 +326,8 @@ FileHandle オブジェクトは共有できません。
 `.readBlob()` 関数は、 <!-- REF #FileHandleClass.readBlob().Summary -->ファイルの現在の位置から *bytes* サイズの Blob を返します <!-- END REF -->。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) が、最後に読み取ったバイトの後に更新されます。
+
+
 
 #### 参照
 
@@ -385,8 +404,6 @@ FileHandle オブジェクトは共有できません。
 #### 説明
 
 `.readText()` 関数は、 <!-- REF #FileHandleClass.readText().Summary -->現在の位置から、最初の *stopChar* 文字列まで (渡された場合)、あるいはファイルの終端に達するまでのテキストを返します<!-- END REF -->。
-
-この関数は、元の改行文字をすべて置き換えます。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeRead`](#breakmoderead) プロパティを設定することで、別の改行文字を定義することができます。
 
 *stopChar* の文字列は、返されるテキストに含まれません。 *stopChar* を省略した場合、ドキュメント全体のテキストが返されます。
 
@@ -487,6 +504,7 @@ FileHandle オブジェクトは共有できません。
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | 引数           | タイプ  |    | 説明                                  |
 | ------------ | ---- | -- | ----------------------------------- |
@@ -533,7 +551,7 @@ FileHandle オブジェクトは共有できません。
 
 #### 説明
 
-`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 この関数は、元の改行文字をすべて置き換えます。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
+`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) は、次の改行文字の後に更新されます。
 

@@ -265,13 +265,12 @@ This property is **read-only**.
 
 The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
 
-Setting the `.offset` will change its current value.
+Setting the `.offset` will change its current value at the moment of the next read or write operation. 
 
 - If the passed value is negative, the `.offset` is set to the start of the file (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
 This property is **read/write**.
-
 
 <!-- END REF -->
 
@@ -373,8 +372,6 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
-This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeRead`](#breakmoderead) property.  
-
 The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.  
 
 When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
@@ -468,6 +465,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -508,7 +506,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Description
 
-The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.  
+The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.  
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
 

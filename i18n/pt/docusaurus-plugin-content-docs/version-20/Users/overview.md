@@ -7,7 +7,7 @@ If more than one person uses an application, which is usually the case in client
 
 4D access control strategy depends on your deployment configuration:
 
-- in multi-user applications, you can rely on 4D users and groups,
+- em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
 - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).
 
 > Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
@@ -17,7 +17,7 @@ If more than one person uses an application, which is usually the case in client
 
 ## Controlo de acesso em aplicações multi-usuário
 
-Multi-user applications are deployed with 4D Server. They include client-server, Web, or REST applications.
+Aplicações multi-usuário são implementadas com 4D Server. Incluem aplicações cliente-servidor, Web ou REST.
 
 In multi-user applications, access control is done through [4D users and groups](handling_users_groups.md). You create users, assign passwords, create access groups that have different levels of privileges in the application.
 
@@ -36,7 +36,7 @@ Single-user applications are desktop applications, deployed with 4D or merged wi
 
 ### Identificação de usuário
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Thus user authentication is delegated to the OS level.
+To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html) command, which returns the user who opened the system session. Assim, a autenticação do usuário é delegada ao nível do SO.
 
 You can then allow or deny access within your application by using code such as:
 

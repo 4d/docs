@@ -8,15 +8,15 @@ The 4D Web Server allows you to take full advantage of multi-core computers by u
 
 For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
 
-## Availability of preemptive mode for web processes
+## Disponibilidade do modo preemptivo para os processos web
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
 | 4D Server             | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
 | --------------------- | ------------------------------------------------------------------- | ----------------------------------------- | --------------- |
 | Servidor REST         | cooperativo                                                         | preemptive                                | preemptive      |
-| Servidor Web          | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                         | *parâmetro web*                           | *parâmetro web* |
+| Servidor Web          | cooperativo                                                         | cooperativo                               | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                         | cooperativo                               | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |
 | ----------------------- | ------------ | --------------- |
@@ -51,7 +51,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 *   Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
 
-*   Triggers for tables with "Expose as REST resource" attribute
+*   Triggers para as tabelas com o atributo "Expor como recurso REST"
 
 *   [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
 
@@ -65,8 +65,8 @@ Most of the web-related 4D commands and functions, database methods and URLs are
 
 All 4D web-related commands are thread-safe, *i.e.*:
 
-*   all commands from the *Web Server* theme,
-*   all commands from the *HTTP Client* theme.
+*   todos os comandos do tema *Servidor Web*,
+*   todos os comandos do tema *Cliente HTTP*.
 
 The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 

@@ -106,20 +106,20 @@ A **janela de expressão** é apresentado no canto superior esquerdo da janela d
 
 A **janela de expressão** exibe informações gerais úteis sobre o sistema, o ambiente 4D e o ambiente de execução.
 
-A coluna **Expression** apresenta os nomes dos objetos e das expressões. A coluna **Value** apresenta os valores correspondentes actuais. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
+A coluna **Expression** apresenta os nomes dos objetos e das expressões. A coluna **Value** apresenta os valores correspondentes actuais. Clicar em qualquer valor no lado direito do painel permite-lhe modificar o valor do objeto, se tal for permitido para esse objeto.
 
-At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
+Em qualquer momento, pode arrastar e largar temas, sublistas de temas (se existirem) e itens de temas para a [Janela de expressão](#custom-watch-pane).
 
 ### Lista de expressões
 
 #### Objetos linha
 
-This theme lets you keep track of the values of the objects or expressions:
+Este tema permite-lhe acompanhar os valores dos objetos ou expressões:
 
-* used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
+* usado na linha de código a ser executada (aquela marcada com o contador de programa - a seta amarela no [painel de código-fonte](#source-code-pane)),
 * utilizado na linha de código anterior
 
-Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Digamos que executa o seguinte método:
+Como a linha de código anterior é a que acabou de ser executada antes, este tema mostra os objetos ou expressões da linha atual antes e depois da execução da linha.  Digamos que executa o seguinte método:
 
 ```4d
 TRACE
@@ -128,7 +128,7 @@ $b:=a+1
 $c:=a+b
 ```
 
-1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
+1. Uma janela Depurador é aberta com o contador do programa definido para a linha com `a:=1`. Nesta altura, é apresentado o tema **Objetos Linha**:
 
     | $a | Indefinido |
     | -- | ---------- |
@@ -175,7 +175,7 @@ Aqui está o resultado:
 
 ![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
-#### Current Form Values
+#### Valores actuais do formulário
 
 Este tema contém o nome de cada objeto dinâmico incluído no formulário atual, bem como o valor da sua variável associada:
 
@@ -271,7 +271,7 @@ Também pode utilizar o comando [Get call chain](https://doc.4d.com/4dv19/help/c
 
 ## Custom Watch Pane
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Qualquer tipo de expressão pode ser avaliado:
+O Painel de controle personalizado é útil para avaliar expressões. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Qualquer tipo de expressão pode ser avaliado:
 
 * campo
 * variável
@@ -283,7 +283,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+É possível avaliar qualquer expressão que possa ser apresentada sob a forma de texto. Isto não abrange os campos ou variáveis imagem e BLOB. Para visualizar o conteúdo do BLOB, pode utilizar comandos BLOB, tais como [BLOB para texto](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Manuseamento de expressões
 
@@ -329,11 +329,11 @@ For more information on the Formula Editor, see the <a href="https://doc.4d.com/
 
 The Source Code Pane shows the source code of the method or function currently being traced.
 
-This area also allows you to add or remove [**break points**](breakpoints.md).
+Esta área também permite adicionar ou remover [**pontos de ruptura**](breakpoints.md).
 
 ### Tips
 
-Hover your pointer over any expression to display a tool tip that indicates:
+Passe o ponteiro do rato sobre qualquer expressão para visualizar uma dica de ferramenta que indica:
 
 * o tipo declarado da expressão
 * o valor atual da expressão
@@ -352,7 +352,7 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 2. Faça uma das seguintes opções:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
-    * Right-click the selected text **>** **Copy to Expression Pane**
+    * Clique com o botão direito do rato no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 

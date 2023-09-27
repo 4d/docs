@@ -6,7 +6,11 @@ sidebar_label: Página de cifrado
 
 Puede utilizar esta página para cifrar o *descifrar* (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.
 
-> Para obtener información detallada sobre el cifrado de datos en 4D, consulte la sección "Cifrado de datos" en el manual de *Diseño*. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+:::info
+
+For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. También puede leer la entrada del blog [Una mirada más profunda al cifrado de datos en 4D](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+
+:::
 
 Se crea una nueva carpeta cada vez que se realiza una operación de cifrado/descifrado. Se denomina "Replaced Files (Encrypting) *yyyy-mm-dd hh-mm-ss*> o "Replaced Files (Decrypting) *yyyy-mm-dd hh-mm-ss*".
 > El cifrado sólo está disponible en [modo mantenimiento](overview.md#display-in-maintenance-mode). Si intenta realizar esta operación en modo estándar, un diálogo de advertencia le informará de que la aplicación se cerrará y se reiniciará en modo de mantenimiento
@@ -81,7 +85,7 @@ The data file is fully decrypted and a confirmation message is displayed: ![](..
 
 ## Guardar la llave de encriptación
 
-4D le permite guardar la llave de encriptación de datos en un archivo dedicado. El almacenamiento de este archivo en un dispositivo externo, como una llave USB, facilitará el uso de una aplicación cifrada, ya que el usuario sólo tendría que conectar el dispositivo para entregar la llave antes de abrir la aplicación para acceder a los datos cifrados.
+4D le permite guardar la llave de encriptación de datos en un archivo dedicado. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". El almacenamiento de este archivo en un dispositivo externo, como una llave USB, facilitará el uso de una aplicación cifrada, ya que el usuario sólo tendría que conectar el dispositivo para entregar la llave antes de abrir la aplicación para acceder a los datos cifrados.
 
 Puede guardar la llave de encriptación cada vez que se proporcione una nueva frase secreta:
 
@@ -89,6 +93,12 @@ Puede guardar la llave de encriptación cada vez que se proporcione una nueva fr
 - cuando la aplicación se vuelve a encriptar con una nueva frase secreta.
 
 Las llaves de encriptación sucesivas pueden ser almacenadas en el mismo dispositivo.
+
+:::caution
+
+Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+
+:::
 
 ## Archivo de historial
 Una vez finalizada una operación de encriptación, 4D genera un archivo en la carpeta Logs de la aplicación. Se crea en formato XML y se llama "*ApplicationName_Encrypt_Log_yyyy-mm-dd hh-mm-ss.xml*" o "*ApplicationName_Decrypt_Log_yyyy-mm-dd hh-mm-ss.xml*".

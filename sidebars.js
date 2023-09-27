@@ -142,6 +142,8 @@ module.exports =
 						"API/SignalClass",
 						"API/SMTPTransporterClass",
 						"API/SystemWorkerClass",
+						"API/WebFormClass",
+						"API/WebFormItemClass",
 						"API/WebServerClass",
 						"API/WebSocketClass",
 						"API/WebSocketConnectionClass",
@@ -437,7 +439,8 @@ module.exports =
 						"WebServer/errorPages",
 						"WebServer/authentication",
 						"WebServer/sessions",
-						"WebServer/preemptiveWeb"
+						"WebServer/preemptiveWeb",
+						"WebServer/qodly-studio"
 					],
 				},
 				{

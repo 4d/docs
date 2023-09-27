@@ -4,19 +4,19 @@ title: '$lock'
 ---
 
 
-Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
+Bloqueia e desbloqueia uma entidade utilizando o [mecanismo pessimista](../ORDA/entities.md#pessimistic-lock).
 
 
 ## Sintaxe
 
-To lock an entity for other sessions and 4D processes:
+Para bloquear uma entidade para outras sessões e processos 4D:
 
 ```
 /?$lock=true
 ```
 
 
-To unlock the entity for other sessions and 4D processes:
+Para desbloquear a entidade para outras sessões e processos 4D:
 
 ```
 /?$lock=false
@@ -28,33 +28,33 @@ A propriedade [`lockKindText`](../API/EntityClass.md#lock) é "Locked by session
 
 ### Descrição
 
-The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
+Os bloqueios accionados pela API REST são colocados ao nível da  [sessão](authUsers.md#opening-sessions).
 
-A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
+Uma entidade bloqueada é vista como *bloqueada* (ou seja, as acções de bloquear/desbloquear/atualizar/eliminar não são possíveis) por:
 
 - outras sessões REST
-- 4D processes (client/server, remote datastore, standalone) running on the REST server.
+- Processos 4D (cliente/servidor, datastore remoto, autónomo) em execução no servidor REST.
 
-An entity locked by the REST API can only be unlocked:
+Uma entidade bloqueada pela API REST só pode ser desbloqueada:
 
-- by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
-- or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
+- pelo seu locker, ou seja, um `/?$lock=false` na sessão REST que define `/?$lock=true`
+- ou se o tempo limite de inatividade da sessão []($directory.md) for atingido (a sessão é encerrada).
 
 ### Resposta
 
-A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
+Um pedido `?$lock` devolve um objeto JSON com `"result"=true` se a operação de bloqueio for bem sucedida e `"result"=false` se falhar.
 
-The returned "__STATUS" object has the following properties:
+O objeto "__STATUS" devolvido tem as seguintes propriedades:
 
 | Propriedade  |                | Tipo    | Descrição                                                                                                                                                   |
 | ------------ | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |                |         | ***Disponível apenas em caso de sucesso:***                                                                                                                 |
-| success      |                | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).             |
+| success      |                | boolean | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada na sessão atual), false caso contrário (não devolvido neste caso).       |
 |              |                |         | ***Disponível apenas em caso de erro:***                                                                                                                    |
 | status       |                | number  | Código de erro, ver abaixo                                                                                                                                  |
 | statusText   |                | text    | Descrição do erro, ver abaixo                                                                                                                               |
 | lockKind     |                | number  | Código de bloqueio                                                                                                                                          |
-| lockKindText |                | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
+| lockKindText |                | text    | "Bloqueado por sessão" se bloqueado por uma sessão REST, "Bloqueado por registo" se bloqueado por um processo 4D                                            |
 | lockInfo     |                | object  | Informações sobre a origem do bloqueio. Retorna propriedades dependendo da origem da trava (processo 4D ou sessão REST)                                     |
 |              |                |         | ***Disponível só para um processo trava 4D:***                                                                                                              |
 |              | task_id        | number  | Process ID                                                                                                                                                  |

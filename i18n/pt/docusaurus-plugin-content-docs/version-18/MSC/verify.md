@@ -16,14 +16,14 @@ A página contém botões de ação que fornecem acesso direto às funções de 
 - **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
 > > > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
-## Abrir ficheiro de registo
+## Abrir arquivo de registo
 
 Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
 - *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Quando clica no botão **Abrir arquivo de registo** , 4D mostra o arquivo de registo mais recente no navegador predefinido da máquina.
 
 ## Detalhes
 

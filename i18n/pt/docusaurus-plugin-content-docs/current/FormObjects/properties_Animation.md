@@ -21,7 +21,7 @@ As imagens são apresentadas num ciclo contínuo. When the user reaches the last
 
 ## Switch back when released
 
-Displays the first picture all the time except when the user clicks the button. Displays the second picture until the mouse button is released. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
+Displays the first picture all the time except when the user clicks the button. Apresenta a segunda imagem até que o botão do rato seja libertado. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
 
 #### Gramática JSON
 

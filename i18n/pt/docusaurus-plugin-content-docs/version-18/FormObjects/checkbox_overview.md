@@ -5,7 +5,7 @@ title: Caixa de selecção
 
 ## Visão Geral
 
-Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basically, it is either checked or unchecked, but a third state can be defined (see below).
+Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basicamente, está marcada ou desmarcada, mas pode ser definido um terceiro estado (ver abaixo).
 
 ![](../assets/en/FormObjects/checkbox.png)
 
@@ -24,7 +24,7 @@ Uma parte ou todas as caixas de seleção de um formulário podem estar marcadas
 
 ### Caixas de seleção de três estados
 
-Check box objects with style [Regular](checkbox_overview.md#regular) and [Flat](checkbox_overview.md#flat) accept a third state. Este terceiro estado é um estado intermediário, que geralmente se usa para fins de visualização. Por exemplo, permite indicar que uma propriedade é presentada em uma seleção de objetos,
+Os objetos de caixa de verificação com o estilo [Clássico](checkbox_overview.md#regular) e [Plano](checkbox_overview.md#flat) aceitam um terceiro estado. Este terceiro estado é um estado intermediário, que geralmente se usa para fins de visualização. Por exemplo, permite indicar que uma propriedade é presentada em uma seleção de objetos,
 
 ![](../assets/en/FormObjects/checkbox_3states.png)
 
@@ -72,19 +72,19 @@ Só as ações que podem representar um estado verdadeiro/falso (ações "marcá
 | visibleReferences                   |                              |
 | widowAndOrphanControlEnabled        | Apenas áreas 4D Write Pro    |
 
-For detailed information on these actions, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+Para informações detalhas dessas ações, veja a seção [Ações padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
 
 ## Estilos de botão caixas de seleção
 
-Check box styles control a check box's general appearance as well as its available properties. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
+Os estilos de caixa de verificação controlam o aspeto geral de uma caixa de verificação, bem como as suas propriedades disponíveis. É possível aplicar diferentes estilos pré-definidos para caixas de seleção. Um grande número de variações podem ser obtidas combinando essas propriedades/comportamentos.
 
 Com exceção das [propriedades disponíveis](#supported-properties), muitos objetos caixa de seleção são *estruturalmente* idênticos. A diferença é no processamento das variáveis associadas.
 
-4D provides check boxes in the following predefined styles:
+4D oferece caixas de seleção nos seguintes estilos predefinidos:
 
 ### Clássico
 
-The Regular check box style is a standard system check box (*i.e.*, a rectangle with a descriptive title):
+O estilo de caixa de verificação Regular é uma caixa de verificação padrão do sistema (*ou seja*, um retângulo com um título descritivo):
 
 ![](../assets/en/FormObjects/checkbox_regular.png)
 
@@ -106,7 +106,7 @@ The Regular check box style is a standard system check box (*i.e.*, a rectangle 
 
 ### Plano
 
-The Flat check box style is a minimalist appearance. A natureza gráfica do estilo Flat é especialmente útil para os formulários que vão ser impressos.
+O estilo de caixa de verificação Plano tem um aspeto minimalista. A natureza gráfica do estilo Flat é especialmente útil para os formulários que vão ser impressos.
 
 ![](../assets/en/FormObjects/checkbox_flat.png)
 
@@ -127,9 +127,9 @@ The Flat check box style is a minimalist appearance. A natureza gráfica do esti
 
 ### Botão barra de ferramentas
 
-The Toolbar button check box style is primarily intended for integration in a toolbar.
+O estilo da caixa de verificação do botão da barra de ferramentas destina-se principalmente à integração numa barra de ferramentas.
 
-The Toolbar style has a transparent background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo da barra de ferramentas tem um fundo transparente com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 

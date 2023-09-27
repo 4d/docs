@@ -122,7 +122,7 @@ $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
-|
+:::info
 
 El namespace de un componente [compilado](#protection-of-components-compilation) se añadirá entre paréntesis después del nombre del componente en la [página Métodos Componente](../Concepts/components.md#using-components) de los proyectos locales:
 

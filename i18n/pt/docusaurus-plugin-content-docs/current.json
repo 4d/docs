@@ -256,7 +256,7 @@
     "description": "The generated-index page title for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.Web Administration.link.generated-index.description": {
-    "message": "4D web tools for administrating and monitoring your applications.",
+    "message": "Ferramentas web 4D para administrar e monitorar suas aplicações.",
     "description": "The generated-index page description for category Web Administration in sidebar docs"
   },
   "sidebar.docs.category.4D View Pro.link.generated-index.title": {
@@ -276,7 +276,7 @@
     "description": "The generated-index page title for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.REST Server.link.generated-index.description": {
-    "message": "Configuring the 4D REST Server and using the REST API.",
+    "message": "Configurando o Servidor 4D REST e usando a API REST.",
     "description": "The generated-index page description for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.API (general).link.generated-index.title": {
@@ -300,7 +300,7 @@
     "description": "The generated-index page title for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
-    "message": "Guides for developing Desktop applications with 4D",
+    "message": "Guias para desenvolver aplicações Desktop com 4D",
     "description": "The generated-index page description for category Desktop Applications in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.title": {
@@ -308,7 +308,7 @@
     "description": "The generated-index page title for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.Access Rights.link.generated-index.description": {
-    "message": "Access control and user privileges for desktop applications.",
+    "message": "Controlo de acesso e privilégios de usuário para aplicações Desktop.",
     "description": "The generated-index page description for category Access Rights in sidebar docs"
   },
   "sidebar.docs.doc.Command Line Interface": {

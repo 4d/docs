@@ -70,7 +70,7 @@ Define o tamanho da cache. Ver [Cache](../WebServer/webServerConfig.md#cache).
 
 #### Limpar cache
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). The cache is then immediately cleared.
+At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). A cache é então imediatamente limpa.
 
 > Também pode utilizar o URL especial [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
 
@@ -89,7 +89,7 @@ When you select this option (recommended), a user session is managed through a *
 
 When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
 
-In this mode, you can configure additional web server setttings:
+Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 -   [Processos Web em simultâneo máximo](#maximum-concurrent-web-processes)
 -   [Reutilização dos contextos temporários (4D em modo remoto)](#reuse-temporary-contexts)
@@ -120,7 +120,7 @@ Allows you to optimize the operation of the 4D Web server in remote mode. See [R
 
 Não disponível com [sessões expansíveis](../WebServer/sessions.md).
 
-Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
+Permite processos web preemptivos nas suas aplicações compiladas. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
 
 > This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client).  See [Enabling the preemptive mode for the web server](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
 
@@ -152,7 +152,7 @@ Ver [Propriedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings
 
 #### Standard Set
 
-Define the set of characters to be used by the 4D Web server. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
+Defina o conjunto de caracteres a serem usados pelo servidor Web 4D. Ver [Conjunto de caracteres](../WebServer/webServerConfig.md#character-set).
 
 ### Ligações Keep-Alive
 
@@ -197,7 +197,7 @@ The log format menu provides the following options:
 
 -   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
 -   estado: resposta dada pelo servidor.
--   length: size of the data returned (except the HTTP header) or 0.
+-   length: tamanho dos dados devolvidos (exceto o cabeçalho HTTP) ou 0.
 
 > **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
 
@@ -208,9 +208,9 @@ The log format menu provides the following options:
 
 > O formato DLF não pode ser personalizado.
 
--   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+-   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. O formato ELF está muito difundido no mundo dos navegadores HTTP. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Tal como o formato ELF, pode ser personalizado.
+-   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. O formato WLF foi desenvolvido especificamente para o servidor 4D WebSTAR. It is similar to the ELF format, with only a few additional fields. Tal como o formato ELF, pode ser personalizado.
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. You will need to select each field to be included in the log. To do so, check the desired fields.
 
@@ -218,30 +218,30 @@ The log format menu provides the following options:
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                                                      |
-| -------------- | --- | --- | -------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                    |
-| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                          |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
-| CONNECTION_ID  |     | X   | Número de identificação da ligação                                         |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
-| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                  |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
-| CS_SIP         | X   | X   | Endereço IP do servidor                                                    |
-| CS_URI         | X   | X   | URI onde o pedido é efectuado                                              |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                   |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Resposta fornecida pelo servidor                                           |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                        |
-| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                       |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
-|                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| URL            |     | X   | URL solicitado pelo cliente                                                |
+| Campo          | ELF | WLF | Valor                                                                       |
+| -------------- | --- | --- | --------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                     |
+| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                           |
+| C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                      |
+| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                        |
+| CONNECTION_ID  |     | X   | Número de identificação da ligação                                          |
+| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                     |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                   |
+| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                        |
+| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client           |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                     |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                               |
+| CS_URI_QUERY | X   | X   | Request query parameters                                                    |
+| CS_URI_STEM  | X   | X   | Part of request without query parameters                                    |
+| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year  |
+| METHOD         | X   | X   | HTTP method used for the request sent to the server                         |
+| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                      |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                            |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                         |
+| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                        |
+| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). |
+|                |     |     | If the user name contains spaces, they are replaced by _ (underlines)       |
+| URL            |     | X   | URL solicitado pelo cliente                                                 |
 
 > As datas e horas são indicadas em GMT.
 
@@ -272,7 +272,7 @@ This area contains various options related to the use of 4D as a Web Services "s
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
 -   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
--   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
+-   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
 
@@ -301,4 +301,4 @@ This option specifies a group of 4D users that is authorized to establish the li
 
 #### Ativar o acesso ao estúdio Web
 
-Ativa o acesso geral ao Web studio. You still need to configure it at every project level.
+Ativa o acesso geral ao Web studio. Continua a ser necessário configurá-lo em cada nível de projeto.

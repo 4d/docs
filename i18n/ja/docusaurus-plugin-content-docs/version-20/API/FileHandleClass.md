@@ -38,8 +38,7 @@ $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:="!" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
 // 1行ずつ読み取ります
@@ -267,13 +266,12 @@ FileHandle オブジェクトは共有できません。
 
 `.offset` プロパティは、 <!-- REF #FileHandleClass.offset.Summary -->データストリームの現在のオフセット (ドキュメント内の位置) を返します<!-- END REF -->。 オフセット値は、読み取りおよび書き込み操作の後に自動的に更新されます。
 
-`.offset` を設定すると、その現在値が変更されます。
+`.offset` を設定すると、次の読み取り・書き取り操作の際に、その現在値が変更されます。
 
 - 負の値が渡された場合、`.offset` はファイルの先頭 (ゼロ) に設定されます。
 - ファイルサイズより大きい値が渡された場合、`.offset` はファイルの終端 (ファイルサイズ) に設定されます。
 
 **読み書き可能** プロパティです。
-
 
 <!-- END REF -->
 
@@ -386,8 +384,6 @@ FileHandle オブジェクトは共有できません。
 
 `.readText()` 関数は、 <!-- REF #FileHandleClass.readText().Summary -->現在の位置から、最初の *stopChar* 文字列まで (渡された場合)、あるいはファイルの終端に達するまでのテキストを返します<!-- END REF -->。
 
-この関数は、元の改行文字をすべて置き換えます。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeRead`](#breakmoderead) プロパティを設定することで、別の改行文字を定義することができます。
-
 *stopChar* の文字列は、返されるテキストに含まれません。 *stopChar* を省略した場合、ドキュメント全体のテキストが返されます。
 
 この関数を実行すると、[.offset](#offset) が *stopChar* 文字列の直後に移動します。
@@ -487,6 +483,7 @@ FileHandle オブジェクトは共有できません。
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | 引数           | タイプ  |    | 説明                                  |
 | ------------ | ---- | -- | ----------------------------------- |
@@ -533,7 +530,7 @@ FileHandle オブジェクトは共有できません。
 
 #### 説明
 
-`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 この関数は、元の改行文字をすべて置き換えます。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
+`.writeText()` 関数は、 <!-- REF #FileHandleClass.writeText().Summary -->現在の位置に *textToWrite* の内容を書き込み、改行文字は挿入しません<!-- END REF --> ([.writeLine()](#writeline) 関数とは異なります)。 デフォルトではネイティブの改行文字が使用されますが、[FileHandle](FileClass.md#open) を開く際に、[`.breakModeWrite`](#breakmodewrite) プロパティを設定することで、別の改行文字を定義することができます。
 
 この関数を実行すると、現在の位置 ([.offset](#offset)) は、次の改行文字の後に更新されます。
 

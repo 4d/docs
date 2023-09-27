@@ -7,7 +7,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
 - Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
-- 4D for iOS queries for updating iOS applications. These accesses are handled by the **HTTP server**.
+- As petições 4D for iOS para atualizar aplicações iOS. These accesses are handled by the **HTTP server**.
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
@@ -21,7 +21,7 @@ The `localID` is local to the machine that connects to the remote datastore, whi
 - If another process of the same application opens the same remote datastore but with another `localID`, it will create a new session on the remote datastore.
 - If another machine connects to the same remote datastore with the same `localID`, it will create another session with another cookie.
 
-These principles are illustrated in the following graphics:
+Estes princípios são ilustrados nos gráficos seguintes:
 
 ![](../assets/en/ORDA/sessions.png)
 
@@ -46,7 +46,7 @@ ORDA features related to entity locking and transaction are managed at process l
 - If a process locks an entity from a remote datastore, the entity is locked for all other processes, even when these processes share the same session (see [Entity locking](entities.md#entity-locking)). If several entities pointing to a same record have been locked in a process, they must be all unlocked in the process to remove the lock. If a lock has been put on an entity, the lock is removed when there is no more reference to this entity in memory.
 - Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. Não têm impacto noutros datastores.
 - Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
-- Locks on entities are removed and transactions are rollbacked:
+- Os bloqueios nas entidades são removidos e as transações são anuladas:
   - quando o processo é eliminado.
   - quando a sessão é encerrada no servidor
   - when the session is killed from the server administration window.

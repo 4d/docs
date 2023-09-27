@@ -7,7 +7,7 @@ title: "$upload"
 Devolve um ID do ficheiro carregado para o servidor
 
 ## Descrição
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+Publique essa petição quando quiser fazer upload de um ficheiro para o servidor. Se tiver uma imagem, passe `$rawPict=true`. Para todos os outros ficheiros, deve passar `$binary=true`.
 
 You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
 

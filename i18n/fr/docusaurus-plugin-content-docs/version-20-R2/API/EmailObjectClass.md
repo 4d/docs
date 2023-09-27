@@ -10,7 +10,7 @@ Des objets `Email` sont créés lorsque vous recevez des emails via une fonction
 - IMAP - fonctions [`.getMail()`](IMAPTransporterClass.md#getmail) et [`.getMails()`](IMAPTransporterClass.md#getmails) pour récupérer des emails depuis un serveur IMAP
 - POP3 - fonction [`.getMail()`](POP3TransporterClass.md#getmail) pour récupérer un email depuis un serveur POP3.
 
-> Vous pouvez également créer un nouvel objet `Email` vide en appelant la commande 4D [`New object`](https://doc.4d.com/4dv18/help/command/en/page1471.html) puis le remplir avec des [propriétés d'objet Email](#email-object).
+> You can also create a new, blank `Email` object and then fill it with [Email object properties](#email-object).
 
 Vous envoyez des objets `Email` à l'aide de la fonction SMTP [`.send()`](SMTPTransporterClass.md#send).
 
@@ -370,10 +370,10 @@ La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary --
 
 </details>
 
-<!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
+<!-- REF #_command_.MAIL Convert from MIME.Syntax -->**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
 
-<!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
+<!-- REF #_command_.MAIL Convert from MIME.Params -->
 | Paramètres | Type       |    | Description                            |
 | ---------- | ---------- |:--:| -------------------------------------- |
 | mime       | Blob, Text | -> | Email en MIME                          |
@@ -383,7 +383,7 @@ La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary --
 
 #### Description
 
-La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->convertit un document MIME en un objet email valide<!-- END REF -->.
+La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL Convert from MIME.Summary -->convertit un document MIME en un objet email valide<!-- END REF -->.
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
 Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Vous pouvez passer un BLOB ou un texte dans le paramètre *mime*. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
@@ -456,10 +456,10 @@ $status:=$transporter.send($email)
 
 </details>
 
-<!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
+<!-- REF #_command_.MAIL Convert to MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 
-<!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
+<!-- REF #_command_.MAIL Convert to MIME.Params -->
 | Paramètres | Type   |    | Description                                             |
 | ---------- | ------ |:--:| ------------------------------------------------------- |
 | mail       | Object | -> | Objet email                                             |
@@ -470,7 +470,7 @@ $status:=$transporter.send($email)
 
 #### Description
 
-La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
+La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL Convert to MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
 Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).

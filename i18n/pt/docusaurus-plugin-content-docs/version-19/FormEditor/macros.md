@@ -6,7 +6,7 @@ title: Macros do editor de formulários
 
 O editor de formulários 4D suporta macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
+For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. É possível criar macros para o editor de 4D Form que podem:
 
 * Criar e executar código 4D
 * Exibir diálogos
@@ -275,7 +275,7 @@ Function onInvoke($editor : Object)->$result : Object
   ALERT("Please select a form object.")
  End if 
 
- // Notify to 4D the modification
+ // Notificar a 4D a modificação
  $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 

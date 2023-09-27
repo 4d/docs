@@ -244,7 +244,7 @@ Cada opción precisa la relación entre el botón y el menú emergente asociado:
 - Cuando el menú emergente está **separado**, al hacer clic en la parte izquierda del botón se ejecuta directamente la acción actual del botón; esta acción puede modificarse mediante el menú emergente accesible en la parte derecha del botón.
 - Cuando el menú emergente está **vinculado**, un simple clic en el botón sólo muestra el menú emergente. Sólo la selección de la acción en el menú emergente provoca su ejecución.
 
-|
+:::info
 
 Consulte la descripción del evento [`On Alternative Click`](../Events/onAlternativeClick.md) para más información sobre el manejo de eventos en este caso.
 

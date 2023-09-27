@@ -31,7 +31,7 @@ You can tap into the SpreadJS library of Javascript methods and call them direct
 
 #### Exemplo
 
-The following code undoes the last action in the spreadsheet:
+O código seguinte anula a última ação na folha de cálculo:
 
 ```4d
 WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
@@ -39,4 +39,4 @@ WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 
 ## Repositório 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Feel free to clone it and experiment with the project. 
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Sinta-se à vontade para o clonar e experimentar com o projeto. 

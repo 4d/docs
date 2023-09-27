@@ -15,7 +15,7 @@ The Settings configure how the current project functions. These parameters may b
 Pode aceder à caixa de diálogo Parâmetros:
 
 -   using the **Design > Settings...** menu option
--   by clicking **Settings** on the 4D toolbar
+-   clicando em **Parâmetros** na barra de ferramentas 4D
 -   on 4D Server, using the **Edit > Settings...** menu option
 
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
@@ -25,7 +25,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 
 ### Informações de bloqueio
 
-Locking can occur in both Project and Client/server modes when:
+O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
 -   The *settings.4DSettings* file is 'Read-only' (Projects only). Modifying a setting will display an alert to unlock it, if possible.
 -   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
@@ -42,7 +42,7 @@ In the Settings dialog boxes, parameters whose values have been modified appear 
 
 Parameters indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted project.
 
-A parameter still appears in bold even when its value is replaced manually with its default values. This way it is always possible to visually identify any parameters that have been customized.
+Um parâmetro continua a aparecer a negrito mesmo quando o seu valor é substituído manualmente pelos seus valores por defeito. Desta forma, é sempre possível identificar visualmente quaisquer parâmetros que tenham sido personalizados.
 
 A maioria dos parâmetros é aplicada imediatamente. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
 
@@ -51,4 +51,4 @@ A maioria dos parâmetros é aplicada imediatamente. However, a few of them (suc
 
 To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
 
-This button resets all the parameters of the current page. It becomes active when at least one parameter has been modified on the current page.
+Este botão repõe todos os parâmetros da página atual. Fica ativo quando pelo menos um parâmetro tiver sido modificado na página atual.

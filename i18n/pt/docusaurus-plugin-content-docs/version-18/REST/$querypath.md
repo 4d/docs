@@ -3,22 +3,22 @@ id: querypath
 title: "$querypath"
 ---
    	
-Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
+Retorna a consulta como foi executada pelo 4D Server (*por exemplo*, `$querypath=true`)
 
 ## Descrição
 
-`$querypath` returns the query as it was executed by 4D Server. If, for example, a part of the query passed returns no entities, the rest of the query is not executed. The query requested is optimized as you can see in this `$querypath`.
+`$querypath` retorna a consulta como foi executada pelo 4D Server. Se, por exemplo, uma parte da consulta passada não devolver nenhuma entidade, o resto da consulta não é executada. A consulta solicitada é optimizada, como se pode ver em `$querypath`.
 
-For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Para mais informações sobre os caminhos de consulta, consultar [queryPlan e queryPath](genInfo.md#querypath-and-queryplan).
 
-In the steps collection, there is an object with the following properties defining the query executed:
+Na coleção de etapas, existe um objeto com as seguintes propriedades que definem a consulta executada:
 
-| Propriedade   | Tipo       | Descrição                                                                   |
-| ------------- | ---------- | --------------------------------------------------------------------------- |
-| description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Número de registos encontrados                                              |
-| steps         | Collection | An collection with an object defining the subsequent step of the query path |
+| Propriedade   | Tipo       | Descrição                                                                       |
+| ------------- | ---------- | ------------------------------------------------------------------------------- |
+| description   | String     | Consulta executada ou "AND" quando existem várias etapas                        |
+| time          | Number     | Número de milissegundos necessários para executar a consulta                    |
+| recordsfounds | Number     | Número de registos encontrados                                                  |
+| steps         | Collection | Uma coleção com um objeto que define a etapa subsequente do caminho da consulta |
 
 ## Exemplo
 
@@ -26,7 +26,7 @@ Se passou a seguinte consulta:
 
  `GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
 
-And no entities were found, the following query path would be returned, if you write the following:
+E não foram encontradas entidades, seria devolvido o seguinte caminho de consulta, se escrever o seguinte:
 
 `GET  /rest/$querypath`
 
@@ -64,11 +64,11 @@ __queryPath: {
 }
 ```
 
-If, on the other hand, the first query returns more than one entity, the second one will be executed. Se executarmos a seguinte consulta:
+Se, por outro lado, a primeira consulta devolver mais do que uma entidade, será executada a segunda. Se executarmos a seguinte consulta:
 
  `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 
-If at least one entity was found, the following query path would be returned, if you write the following:
+Se pelo menos uma entidade for encontrada, será devolvido o seguinte caminho de consulta, se escrever o seguinte:
 
  `GET  /rest/$querypath`
 

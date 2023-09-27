@@ -10,11 +10,11 @@ title: On Selection Change
 
 ## Descrição
 
-This event can be generated in different contexts.
+Este evento pode ser gerado em diferentes contextos.
 
 
 ### 4D View Pro
-The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+A seleção atual de linhas ou de colunas é modificada. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
 | Propriedade   | Tipo          | Descrição                               |
 | ------------- | ------------- | --------------------------------------- |

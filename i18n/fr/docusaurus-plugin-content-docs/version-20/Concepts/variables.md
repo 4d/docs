@@ -30,7 +30,7 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
  // et affecte la date courante + 30 jours
 ```
 
-Lorsque les variables sont déclarées, elles sont initialisées à la [**valeur par défaut**](data-types.md#valeurs-par-defaut) correspondant à leur type, qu'elles conserveront pendant la session tant qu'on ne leur aura pas [affecté une valeur](#assigning-data).
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
 
 
 ### Utilisation du mot-clé `var`
