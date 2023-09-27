@@ -234,7 +234,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
 
 ### Declaring variadic parameters 
 
-As with other local variables, it is not mandatory to declare generic parameters. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
+As with other local variables, it is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
 
 However, to avoid any ambiguity, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
 
@@ -244,7 +244,7 @@ However, to avoid any ambiguity, you can declare a variable number of parameters
 ```
 
 ```4d
-function myfunction ( ... : Text)
+Function myfunction ( ... : Text)
 
 ```
 
@@ -257,19 +257,10 @@ When declaring multiple parameters, variadic notation must be employed at last p
 ```
 
 ```4d
-function myfunction (var1:type; ... : type)
+Function myfunction (var1:Integer; ... : Text)
 ```
 
 
-:::note 
-
-In case the type when using the "..." notation is omitted the parameters are considered as variants. 
-
-```4d
-#DECLARE ( ... ) //  Parameters are considered variants
-
-```
-:::
 
 #### Example
  
@@ -280,7 +271,7 @@ Here we have a method called `SumNumbers` that returns the calculated total for 
 #DECLARE( ... : Real) : Real 
 var $number; $total : Real 
 
-For each ($number; Copy parameters()) // Copy parameters() returns a collection with all the parameters 
+For each ($number; Copy parameters) // Copy parameters returns a collection with all the parameters 
 	$total+=$number 
 End for each 
 
