@@ -28,7 +28,7 @@ Especifica el formulario que se utilizará para modificar o mostrar los registro
 
 Se muestra el formulario especificado:
 
-*   cuando se utilizan las acciones estándar `Add Subrecord` y `Edit Subrecord` aplicadas al list box (ver [Utilización de las acciones estándar](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
+*   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
 *   cuando se hace doble clic en una línea y la propiedad [Doble clic en la línea ](#double-click-on-row)está definida en "Editar registro" o "Mostrar registro".
 
 #### Gramática JSON
@@ -104,7 +104,7 @@ Las columnas bloqueadas y las columnas estáticas son dos funcionalidades distin
 
 *   Las columnas bloqueadas siempre se muestran a la izquierda del list box; no se desplazan horizontalmente.
 *   Las columnas estáticas no pueden moverse arrastrándolas y soltándolas dentro del list box.
-> > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+> You can set static and locked columns by programming, refer to "List Box" section in the *4D Language Reference* manual.
 
 Estas propiedades interactúan de la siguiente manera:
 
@@ -158,7 +158,7 @@ Número de columnas que no se pueden mover durante la ejecución.
 ## Número de columnas
 
 Define el número de columnas del list box.
-> Puede añadir o eliminar columnas de forma dinámica por programación, utilizando comandos como [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) o [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) or [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
 #### Gramática JSON
 
