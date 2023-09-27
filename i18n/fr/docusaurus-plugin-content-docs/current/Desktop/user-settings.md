@@ -73,7 +73,7 @@ Le tableau suivant répertorie les pages de paramètres que l'on trouve dans les
 | [Page sécurité](../settings/security.md)                                              | N/a                                             | N/a                                                         |
 | [Page de compatibilité](../settings/compatibility.md)                                 | N/a                                             | N/a                                                         |
 
-Lorsque vous modifiez des paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier *settings.4DSettings* correspondant (voir ci-dessous).
+When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below) or the *Backup.4DSettings* file (check the [Backup settings](../Backup/settings.md) page for more information).
 
 ## `SET DATABASE PARAMETER` et propriétés utilisateur
 
