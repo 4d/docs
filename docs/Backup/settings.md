@@ -69,7 +69,7 @@ To modify the location where these files are stored, click the **...** button. A
 
 ### Log management
 
-The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log life for the current data file is specified below the option. When this option is checked, it is not possible to open the application without a log file. For more information about the log file, pleaser refer to [log file](../log.mg)
+The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. When this option is checked, it is not possible to open the application without a log file. For more information about the log file, please refer to [log file](../log.md)
 
 By default, any project created with 4D uses a log file (option **Use Log File** checked in the **General Page** of the **Preferences**). The log file is named *data.journal* and is placed in the Data folder.
 
