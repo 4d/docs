@@ -234,12 +234,12 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
 
 ### Declaring variadic parameters 
 
-As with other local variables, it is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
+It is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
 
-However, to avoid any ambiguity, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
+However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
 
 ```4d
-#DECLARE ( ... : Text ) // Undefined number of 'text' parameters
+#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
 
 ```
 
@@ -257,7 +257,7 @@ When declaring multiple parameters, variadic notation must be employed at last p
 ```
 
 ```4d
-Function myfunction (var1:Integer; ... : Text)
+Function myfunction (var1: Integer ; ... : Text)
 ```
 
 
@@ -271,26 +271,27 @@ Here we have a method called `SumNumbers` that returns the calculated total for 
 #DECLARE( ... : Real) : Real 
 var $number; $total : Real 
 
-For each ($number; Copy parameters) // Copy parameters returns a collection with all the parameters 
-	$total+=$number 
+For each ($number; 1; Count parameters)
+	$total+=${$number}
 End for each 
 
 return $total
 
 ```
 
-This method can now be called with a variable number of parameters:
+This method can be called with a variable number of Real parameters. In case of wrong parameter type, an error will be returned before the method is executed :
 
 ```4d
 
 $total1:=SumNumbers // returns 0 
 $total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
 
 ```
 
 :::note Compatibility Note
 
-The previous syntax for declaring generic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred. 
+The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred. 
 
 :::
 
