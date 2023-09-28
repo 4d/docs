@@ -43,11 +43,11 @@ title: ログファイル (.journal)
 
 ログファイルを作成するには、次の手順に従ってください:
 
-1. データベース設定の **バックアップ/設定** ページで、**ログを使用** オプションを選択します。 The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. データベース設定の **バックアップ/設定** ページで、**ログを使用** オプションを選択します。 標準の "ファイルを開く/新規作成" ダイアログボックスが表示されます。 ログファイルにはデフォルトで *data.journal* という名前が付けられます。
 
-2. Keep the default name or rename it, and then select the file location. 2つ以上のハードドライブが存在する場合は、データベースが保管されているディスク以外の場所にログファイルを保存することをお勧めします。 これにより、データベースが保管されているハードドライブが破損した場合でも、ログファイルを呼び出すことができます。
+2. デフォルトの名前を使用するか、またはその名前を変更し、次にファイルの保管場所を選択します。 2つ以上のハードドライブが存在する場合は、データベースが保管されているディスク以外の場所にログファイルを保存することをお勧めします。 これにより、データベースが保管されているハードドライブが破損した場合でも、ログファイルを呼び出すことができます。
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. **保存** をクリックします。 開いたログファイルのアクセスパスと名前がダイアログボックスの **ログを使用** エリアに表示されます。 このエリアをクリックすると、ポップアップメニューが表示され、ディスク上のフォルダーを確認できます。
 
 4. データベース設定ダイアログボックスを確定します。
 
