@@ -12,12 +12,12 @@ title: WebForm
 </details>
 
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+`WebForm` クラスには、Qodly の Webフォームコンポーネント (Webフォームの構成要素) を処理するための関数とプロパティが含まれています。 このクラスについては、[Qodly ドキュメンテーション](https://developer.qodly.com/docs/language/WebFormClass) (英語) で詳しく説明されています。
 
 
 
 
-### Commands and functions
+### コマンドと関数
 
 |                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,9 +36,9 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### 説明
 
-The components of webforms are <!-- REF #WebFormClass.componentName.Summary -->データクラスのプロパティとして直接利用可能なオブジェクトです<!-- END REF --> of these webforms.
+Webフォームのコンポーネント (構成要素) とは、これらの Webフォームの <!-- REF #WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF --> 。
 
-For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
+詳細については、[Qodly ドキュメンテーションの `.componentName` の説明](https://developer.qodly.com/docs/language/WebFormClass#componentname) を参照ください。
 
 
 
@@ -48,16 +48,16 @@ For more information, please refer to the [`.componentName` description in the Q
 **.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
-| 引数  | タイプ    |    | 説明                                       |
-| --- | ------ |:--:| ---------------------------------------- |
-| msg | string | -> | Error message to display in the web form |
+| 引数  | タイプ    |    | 説明                   |
+| --- | ------ |:--:| -------------------- |
+| msg | string | -> | Webフォームに表示するエラーメッセージ |
 <!-- END REF -->
 
 #### 説明
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->。
+`.setError()` 関数は、 <!-- REF #WebFormClass.setError().Summary -->*msg* をエラーメッセージとして Webフォームに送信します<!-- END REF -->。
 
-For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
+詳細については、[Qodly ドキュメンテーションの `.setError()` の説明](https://developer.qodly.com/docs/language/WebFormClass#seterror) を参照ください。
 
 
 
@@ -67,16 +67,16 @@ For more information, please refer to the [`.setError()` description in the Qodl
 **.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
-| 引数  | タイプ    |    | 説明                                             |
-| --- | ------ |:--:| ---------------------------------------------- |
-| msg | string | -> | Information message to display in the web form |
+| 引数  | タイプ    |    | 説明                  |
+| --- | ------ |:--:| ------------------- |
+| msg | string | -> | Webフォームに表示する情報メッセージ |
 <!-- END REF -->
 
 #### 説明
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->。
+`.setMessage()` 関数は、 <!-- REF #WebFormClass.setMessage().Summary -->*msg* を情報メッセージとして Webフォームに送信します<!-- END REF -->。
 
-For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
+詳細については、[Qodly ドキュメンテーションの `.setMessage()` の説明](https://developer.qodly.com/docs/language/WebFormClass#setmessage) を参照ください。
 
 
 ### .setWarning()
@@ -85,16 +85,16 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 **.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
-| 引数  | タイプ    |    | 説明                                         |
-| --- | ------ |:--:| ------------------------------------------ |
-| msg | string | -> | Warning message to display in the web form |
+| 引数  | タイプ    |    | 説明                  |
+| --- | ------ |:--:| ------------------- |
+| msg | string | -> | Webフォームに表示する警告メッセージ |
 <!-- END REF -->
 
 #### 説明
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->。
+`.setWarning()` 関数は、  <!-- REF #WebFormClass.setWarning().Summary -->*msg* を警告メッセージとして Webフォームに送信します<!-- END REF -->。
 
-For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
+詳細については、[Qodly ドキュメンテーションの `.setWarning()` の説明](https://developer.qodly.com/docs/language/WebFormClass#setwarning) を参照ください。
 
 
 ## Web Form
@@ -102,16 +102,16 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 <!-- REF #_command_.Web Form.Syntax -->**Web Form** : 4D.WebForm<!-- END REF -->
 
 <!-- REF #_command_.Web Form.Params -->
-| 引数  | タイプ        |    | 説明                         |
-| --- | ---------- |:--:| -------------------------- |
-| 戻り値 | 4D.WebForm | <- | New `WebForm` proxy object |
+| 引数  | タイプ        |    | 説明                       |
+| --- | ---------- |:--:| ------------------------ |
+| 戻り値 | 4D.WebForm | <- | 新しい `WebForm` プロキシオブジェクト |
 <!-- END REF -->
 
 #### 説明
 
-The `Web Form` command <!-- REF #_command_.webForm.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->。
+`Web Form` コマンドは、 <!-- REF #_command_.webForm.Summary --> Webフォームとの対話を可能にする `4D.WebForm` プロキシオブジェクトを返します<!-- END REF -->。
 
-For more information, please refer to the [`webForm` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webform).
+詳細については、[Qodly ドキュメンテーションの `webForm` コマンドの説明](https://developer.qodly.com/docs/language/WebFormClass#webform) を参照ください。
 
 
 ## Web Event
@@ -126,6 +126,6 @@ For more information, please refer to the [`webForm` command description in the 
 
 #### 説明
 
-The `Web Event` command <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a webform component<!-- END REF -->。
+`Web Event` コマンドは、 <!-- REF #_command_.Web Event.Summary -->Webフォームコンポーネントにリンクして発生したイベントの情報を持つオブジェクトを返します<!-- END REF -->。
 
-For more information, please refer to the [`webEvent` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webevent). 
+詳細については、[Qodly ドキュメンテーションの `webEvent` コマンドの説明](https://developer.qodly.com/docs/language/WebFormClass#webevent) を参照ください。 
