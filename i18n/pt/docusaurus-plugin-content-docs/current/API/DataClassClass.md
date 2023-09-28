@@ -1088,7 +1088,7 @@ ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2"
 
 #### Consultas em relações Muitos para Muitos
 
-ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. For example, take a look at the following structure:
+ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. Por exemplo, veja a seguinte estrutura:
 
 ![alt-text](../assets/en/API/manytomany.png)
 
