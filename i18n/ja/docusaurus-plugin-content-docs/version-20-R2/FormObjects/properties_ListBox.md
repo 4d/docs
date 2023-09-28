@@ -28,7 +28,7 @@ title: リストボックス
 
 指定されたフォームは以下のタイミングで表示されます:
 
-*   リストボックスに関連付けられている `addSubrecord` (サブレコード追加)、または `editSubrecord` (サブレコード編集) の標準アクションを使用したとき ([標準アクションの使用](https://doc.4d.com/4Dv18/4D/18/Using-standard-actions.300-4575640.ja.html) を参照してください)。
+*   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
 *   [行をダブルクリック](#行をダブルクリック) プロパティが「レコード編集」か「レコード表示」に設定されている場合に行をダブルクリックしたとき。
 
 #### JSON 文法
@@ -104,7 +104,7 @@ title: リストボックス
 
 *   スクロールしない列は常にリストボックスの左側に表示され、横スクロールされません。
 *   ドラッグしない列は、リストボックス中でドラッグ＆ドロップによる列の移動ができません。
-> これらのプロパティはプログラミングによって設定することも可能です。詳細は [4Dランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.ja.html) マニュアルの [リストボックス](https://doc.4d.com/4Dv18/4D/18/List-Box.201-4504332.ja.html) を参照ください。
+> You can set static and locked columns by programming, refer to "List Box" section in the *4D Language Reference* manual.
 
 これらのプロパティは以下のように相互作用します:
 
@@ -158,7 +158,7 @@ title: リストボックス
 ## 列数
 
 リストボックスに表示される列の数を指定します。
-> [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.ja.html) や [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.ja.html) などのコマンドを使うことで、プログラミングによって列数を動的に変更 (列の追加・削除) することができます。
+> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) or [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
 #### JSON 文法
 

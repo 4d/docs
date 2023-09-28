@@ -41,7 +41,7 @@ Les options regroupées dans cet onglet permettent de définir et de paramétrer
 
 La Page Sauvegarde/Configuration des Propriétés permet de désigner les fichiers à sauvegarder, l’emplacement des fichiers de sauvegarde et le fichier d’historique. Ces paramères sont spécifiques à chaque application ouverte par 4D ou 4D Server.
 
-![](../assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup032.png)
 
 > **4D Server** : Ces paramètres peuvent être définis depuis le poste 4D Server uniquement.
 
@@ -69,11 +69,11 @@ Pour modifier l’emplacement auquel ces fichiers devront être enregistrés, cl
 
 ### Gestion du fichier d'historique
 
-L’option **Utiliser le fichier d’historique** indique, lorsqu’elle est cochée, que l'application exploite un fichier d’historique. Son chemin d’accès est précisé au-dessous de l’option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir l'application sans fichier d’historique.
+The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir l'application sans fichier d’historique. For more information about the log file, please refer to [log file](../log.md)
 
 Par défaut, tout projet créé avec 4D utilise un fichier d’historique (option cochée dans la **Page Général** des **Préférences** de 4D). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
 
-> L’activation d’un nouveau fichier d’historique nécessite que les données de l'application soient préalablement sauvegardées. Lorsque vous cochez cette option, un message vous informe qu’une sauvegarde est nécessaire. La création du fichier d’historique est différée et ne sera effective qu’après la prochaine sauvegarde de l'application.
+> L’activation d’un nouveau fichier d’historique nécessite que les données de l'application soient préalablement sauvegardées. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. La création du fichier d’historique est différée et ne sera effective qu’après la prochaine sauvegarde de l'application.
 
 
 ## Sauvegarde et restitution

@@ -41,7 +41,7 @@ Las opciones que se encuentran en esta pestaña le permiten establecer y configu
 
 La página Copia de seguridad/Configuración de las Propiedades permite designar los archivos de copia de seguridad y su ubicación, así como la del archivo de historial. Estos parámetros son específicos de cada aplicación abierta por 4D o 4D Server.
 
-![](../assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup032.png)
 
 > **4D Server:** estos parámetros sólo se pueden configurar desde la máquina 4D Server.
 
@@ -69,11 +69,11 @@ Para modificar la ubicación donde se almacenan estos archivos, haga clic en el 
 
 ### Gestión del archivo de historial
 
-La opción **Utilizar el archivo de historial**, cuando está marcada, indica que la aplicación utiliza un archivo de historial. Su ruta de acceso se especifica debajo de la opción. Cuando esta opción está marcada, no es posible abrir la aplicación sin un archivo de historial.
+The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. Cuando esta opción está marcada, no es posible abrir la aplicación sin un archivo de historial. For more information about the log file, please refer to [log file](../log.md)
 
 Por defecto, todo proyecto creado con 4D utiliza un archivo de historial (opción **Utilizar archivo de historial**seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
-> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. Al marcar esta opción, un mensaje de advertencia le informa de que es necesario realizar una copia de seguridad. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
 
 
 ## Copia de seguridad y restitución

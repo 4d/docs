@@ -43,11 +43,11 @@ You can find out if your database uses a log file at any time: just check whethe
 
 Para criar um arquivo de histórico:
 
-1. On the **Backup/Configuration** page of the Database Settings, check the **Use Log** option. O programa exibe um caixa de diálogo abrir/novo arquivo. Como padrão, o nome arquivo é chamado *data.journal*.
+1. On the **Backup/Configuration** page of the Database Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
 
-2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. If the database hard drive is lost, you can still recall your log file.
+2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. If the database hard drive is lost, you can still recall your log file.
 
-3. Clique **Salvar**. O disco e o nome do arquivo de histórico aberto agora estão exibidos na área **Use Log** da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
+3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
 
 4. Validar a caixa de diálogo Propriedades da base de dados.
 

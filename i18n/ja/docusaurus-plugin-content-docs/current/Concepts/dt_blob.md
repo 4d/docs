@@ -34,7 +34,7 @@ BLOB に演算子を適用することはできません。
 
 ## 変数がスカラーBLOB と `4D.Blob` のどちらを格納しているかの確認
 
-値が BLOB型またはオブジェクト型であるかどうかを確認するには、[Value type](https://doc.4d.com/4Dv19/4D/19/Value-type.301-5392983.ja.html) コマンドを使用します。 特定のオブジェクトが BLOBオブジェクト (`4D.Blob`) であることを確認するには、[OB instance of](https://doc.4d.com/4dv19R/help/command/ja/page1731.html) を使用します。
+Use the [Value type](https://doc.4d.com/4dv20/help/command/en/page1509.html) command to determine if a value is of type Blob or Object. To check that an object is a blob object (`4D.Blob`), use [OB instance of](https://doc.4d.com/4dv20/help/command/en/page1731.html):
 
 ```4d
 var $myBlob: Blob

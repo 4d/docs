@@ -41,7 +41,7 @@ title: バックアップ設定
 
 ストラクチャー設定のバックアップ/設定ページではバックアップやログファイルの有効化/無効化、および保存先を設定できます。 これらのパラメーターは、4D や 4D Server で開かれる各アプリケーションごとに設定されます。
 
-![](../assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup032.png)
 
 > **4D Server**: これらのパラメーターは 4D Server マシン上でのみ設定できます。
 
@@ -69,11 +69,11 @@ title: バックアップ設定
 
 ### ログ管理
 
-**ログを使用** オプションが選択されていると、アプリケーションはログファイルを使用します。 ログファイルの場所はオプションの下に表示されます。 このオプションが選択されている場合、ログファイルなしでアプリケーションを開くことはできません。
+The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. このオプションが選択されている場合、ログファイルなしでアプリケーションを開くことはできません。 For more information about the log file, please refer to [log file](../log.md)
 
 デフォルトでは、4D で作成されたすべてのプロジェクトでログファイルが使用されます (**環境設定** の **一般ページ** 内でチェックされている **ログを使用** オプションです)。 ログファイルには *data.journal* のように名前が付けられ、Data フォルダー内に置かれます。
 
-> 新しいログファイルを有効にするには、その前にアプリケーションのデータをバックアップしなければなりません。 このオプションをチェックすると、バックアップが必要である旨の警告メッセージが表示されます: ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。
+> 新しいログファイルを有効にするには、その前にアプリケーションのデータをバックアップしなければなりません。 When you check this option for the currently used data file, a warning message informs you that a backup is necessary. ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。
 
 
 ## バックアップ＆復旧
