@@ -145,20 +145,19 @@ To assign a value directly to the "employer" attribute, you must pass an existin
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. Por exemplo:
+You can also directly get the "one" related entity through its primary key value (Number or Text). Por exemplo:
 
 ```4d
- $emp:=ds. Employee.new()
+ $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // assign a primary key to the relation attribute
-  //4D looks for the company whose primary key (in this case, its ID) is 2
-  //and assigns it to the employee
+ $emp.employer:=ds.Company.get(2)
+  //gets the Company entity with primary key value 2
+  //assigns it to the employee
  $emp.save()
 ```
 
 This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an "ID" column, which references a primary key that you can then assign directly to a relation attribute.
 
-This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this "1" entity is created.
 
 You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
 
