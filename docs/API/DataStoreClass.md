@@ -541,19 +541,21 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp()** : Integer<!-- END REF -->
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Integer<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Integer|<-|The current value of global modification stamp|<!-- END REF -->
+|Result|Integer|<-|Current value of the global modification stamp|<!-- END REF -->
 
-This method allow us to track modification on data store since a stamp. It could help to see activity, to backup, to do some incremental synchronisation or more.
 
 #### Description
 
-The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->return the current global modification stamps of the datastore<!-- END REF -->.
+The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->returns the current value of the global modification stamp of the datastore<!-- END REF -->.
+
+This method allow us to track modification on datastore since a stamp. It could help to see activity, to backup, to do some incremental synchronisation or more.
+
  
 #### Example 1
 
@@ -1425,5 +1427,6 @@ You can nest several transactions (sub-transactions). If the main transaction is
 #### Example
 
 See example for [`.startTransaction()`](#starttransaction).
+
 
 <!-- END REF -->
