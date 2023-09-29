@@ -19,12 +19,16 @@ export default function RedirectAPI() {
               const versions = JSON.parse('${listVersions}')
 
               const url = new URL(window.location.href);
-              const classWanted = url.searchParams.get("class");
               const memberWanted = url.searchParams.get("member");
               const versionWanted = url.searchParams.get("v");
               let commandWanted = url.searchParams.get("command");
               if(commandWanted !== null) {
                 commandWanted = commandWanted.replaceAll("%20", " ").toLowerCase();
+              }
+
+              let classWanted = url.searchParams.get("class");
+              if(classWanted !== null) {
+                classWanted = classWanted.replaceAll("%20", " ").toLowerCase();
               }
 
               let versionToGo = ""
@@ -39,28 +43,29 @@ export default function RedirectAPI() {
               }
 
               let commandFile = ""
-              if(!memberWanted)
-              {
-                let commandsVersion = commands[versionWanted];
-                if(!commandsVersion) {
-                  commandsVersion = commands[""];
+
+              let commandsVersion = commands[versionWanted];
+              if(!commandsVersion) {
+                commandsVersion = commands[""];
+              }
+
+              let valueWanted = ""
+              if(commandsVersion !== undefined) {
+                if(memberWanted)
+                {
+                  valueWanted = memberWanted
+                  commandFile = commandsVersion["classes"][classWanted]
                 }
-
-                if(commandsVersion !== undefined) {
-                  commandFile = commandsVersion[commandWanted]
+                else
+                {
+                  valueWanted = commandWanted
+                  commandFile = commandsVersion["commands"][commandWanted]
                 }
-
               }
 
-              let finalUrl = ""
-              if(!memberWanted)
-              {
-                finalUrl = "${url}" + versionToGo + commandFile + "#" + commandWanted.replaceAll(" ", "-");
-              }
-              else
-              {
-                finalUrl = "${url}" + versionToGo + "API/" + classWanted + "Class" + "#" + memberWanted.toLowerCase();
-              }
+              const finalUrl = "${url}" + versionToGo + commandFile + "#" + valueWanted.toLowerCase().replaceAll(" ", "-");
+              console.log(finalUrl)
+
               window.location.href = finalUrl
             })();
                 `,

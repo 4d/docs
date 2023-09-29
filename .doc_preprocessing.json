@@ -16,17 +16,19 @@
         "languages":["de", "es", "fr", "ja", "pt"]
     },
     "build_syntax": {
-        "path":"./docs/API/",
+        "path":"./docs/",
+        "exclude_list":["ViewPro"],
         "syntax_output":"./syntax/en.lproj/syntaxEN.json",
-        "config":"../preprocessing.conf",
+        "config":"preprocessing.conf",
         "syntax_only":true,
         "syntax_pretty":true
     },
     "build_syntax_translated": {
-        "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/API/",
+        "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/",
         "languages":["de", "es", "fr", "ja", "pt"],
+        "exclude_list":["ViewPro"],
         "syntax_output":"./syntax/%language%.lproj/syntax%LANGUAGE%.json",
-        "config":"../../../../../docs/preprocessing.conf",
+        "config":"../../../../docs/preprocessing.conf",
         "syntax_only":true,
         "syntax_pretty":true
     },
