@@ -25,7 +25,7 @@
     "highlightjs-4d": "^1.0.0"
   },
   "dependencies": {
-    "@4dsas/doc_preprocessing": "1.1.0",
+    "@4dsas/doc_preprocessing": "1.1.1",
     "@docusaurus/core": "^2.3.1",
     "@docusaurus/plugin-client-redirects": "^2.3.1",
     "@docusaurus/preset-classic": "^2.3.1",
