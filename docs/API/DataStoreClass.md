@@ -425,7 +425,7 @@ An error is triggered if the `.flushAndLock()` function cannot be executed (e.g.
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction. 
+Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction. 
 
 :::
 
@@ -554,56 +554,19 @@ $info:=$ds.getAllRemoteContexts()
 
 The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->returns the current value of the global modification stamp of the datastore<!-- END REF -->.
 
-This method allow us to track modification on datastore since a stamp. It could help to see activity, to backup, to do some incremental synchronisation or more.
+For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
 
  
-#### Example 1
-
-The following code allow us to track modification since a stamp, a point in time for base data.
+#### Example
 
 ```4d
-$current:=ds.getGlobalStamp()
+var $currentStamp : Integer
+var $hasModifications : Boolean
 
-doMethodWhichCouldModifyEmployees()
-
-$hasModificationHappen:=($current = ds.getGlobalStamp())
+$currentStamp:=ds.getGlobalStamp()
+methodWhichCouldModifyEmployees //call some code 
+$hasModifications:=($currentStamp # ds.getGlobalStamp())
 ```
-
-#### Example 2
-
-Then we could get the entities modifyed or created since this stamp.
-
-```4d
-$modifyedEmployees:=ds.Employees.query("__GlobalStamp > :1"; $current)
-```
-
-:::caution
-
-Data tracking work only on tables with an integer `__GlobalStamp` field, and at least one table must have it.
-
-:::
-
-#### Example 3
-
-You could also get deleted records since the stamp if the table `__DeletedRecords` has been created.
-
-```4d
-$deletedEmployeesInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2"; $current; "Employees")
-```
-
-> Each element of this returned collection will contains the table (`__TableName` or `__TableNumber`), the stamp of deletion (`__Stamp`) and the primary key (`__PrimaryKey`)
-
-:::caution
-
-Tracking of deleted entities work only if the `__DeletedRecords` table exists.
-
-::
-
-:::info
-
-In [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html), you could right click on table and select "Enable data change tracking", to create all needed fields and table. 
-
-:::
 
 #### See also
 
@@ -835,6 +798,7 @@ The function will also return `True` if the datastore was locked by another admi
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
 
+
 <details><summary>History</summary>
 
 |Version|Changes|
@@ -991,27 +955,35 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 </details>
 
-<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp(newStamp: Integer)** : <!-- END REF -->
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|newStamp|Integer|->|The new value of global modification stamp|<!-- END REF -->
+|newStamp|Integer|->|New value of global modification stamp|<!-- END REF -->
 
-> **Advanced mode:** This function is intended for developers who need to fix the current global stamps value.
+
+:::info Advanced mode
+
+This function is intended for developers who need to modify the current global stamp value. It should be used with care.  
+
+:::
 
 #### Description
 
-The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->Allow us to change the current global modification stamps of datastore<!-- END REF -->.
- 
+The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets *newStamp* as new value for the current global modification stamp for the datastore<!-- END REF -->.
+
+For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
+
+
 #### Example
 
-The following code allow us to set the modification global stamp
+The following code sets the modification global stamp:
 
 ```4d
 var $newValue: Integer
-$newValue:=ReadValueFrom()
+$newValue:=ReadValueFrom //get a new value
 ds.setGlobalStamp($newValue)
 ```
 
