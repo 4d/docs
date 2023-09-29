@@ -69,11 +69,11 @@ title: バックアップ設定
 
 ### ログ管理
 
-The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. このオプションが選択されている場合、ログファイルなしでアプリケーションを開くことはできません。 For more information about the log file, please refer to [log file](../log.md)
+**ログを使用** オプションが選択されていると、アプリケーションはログファイルを使用します。 カレントデータファイル用のログファイルのパス名は、オプションの下にて指定します。 このオプションが選択されている場合、ログファイルなしでアプリケーションを開くことはできません。 ログファイルの詳細については、[ログファイル](../log.md) を参照ください。
 
 デフォルトでは、4D で作成されたすべてのプロジェクトでログファイルが使用されます (**環境設定** の **一般ページ** 内でチェックされている **ログを使用** オプションです)。 ログファイルには *data.journal* のように名前が付けられ、Data フォルダー内に置かれます。
 
-> 新しいログファイルを有効にするには、その前にアプリケーションのデータをバックアップしなければなりません。 When you check this option for the currently used data file, a warning message informs you that a backup is necessary. ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。
+> 新しいログファイルを有効にするには、その前にアプリケーションのデータをバックアップしなければなりません。 現在使用しているデータファイルについてこのオプションをチェックすると、バックアップが必要である旨の警告メッセージが表示されます: ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。 ログファイルの作成は延期され、実際には次のバックアップの後にログファイルが作成されます。
 
 
 ## バックアップ＆復旧

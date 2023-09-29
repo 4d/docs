@@ -12,12 +12,12 @@ title: WebFormItem
 </details>
 
 
-`4D.WebFormItem` objects are properties of the [`4D.WebForm`](WebFormItemClass.md) object returned by the [`Web Form`](WebFormClass.md#web-form) command.
+`4D.WebFormItem` オブジェクトは、[`Web Form`](WebFormClass.md#web-form) コマンドによって返される [`4D.WebForm`](WebFormItemClass.md) オブジェクトのプロパティです。
 
-The `WebFormItem` class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass).
+`WebFormItem` クラスについては、[Qodly ドキュメンテーション](https://developer.qodly.com/docs/language/WebFormItemClass) (英語) で詳しく説明しています。
 
 
-### WebFormItem object
+### WebFormItem オブジェクト
 
 |                                                                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,18 +33,18 @@ The `WebFormItem` class is detailed in the [Qodly documentation](https://develop
 **.hide**()<!-- END REF -->
 
 <!-- REF #WebFormItemClass.hide().Params -->
-| 引数 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.hide()` function <!-- REF #WebFormItemClass.hide().Summary -->hides the component<!-- END REF -->。
+`.hide()` 関数は、 <!-- REF #WebFormItemClass.hide().Summary -->コンポーネントを非表示にします<!-- END REF -->。
 
 
-For more information, please refer to the [`.hide()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
+詳細については、[Qodly ドキュメンテーションの `.hide()` の説明](https://developer.qodly.com/docs/language/WebFormItemClass#hide) を参照ください。
 
 
 ### .show()
@@ -54,17 +54,17 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 
 <!-- REF #WebFormItemClass.show().Params -->
-| 引数 | タイプ |  | 説明                              |
-| -- | --- |::| ------------------------------- |
-|    |     |  | Does not require any parameters |
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
 <!-- END REF -->
 
 
 #### 説明
 
-The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->。
+`.show()` 関数は、 <!-- REF #WebFormItemClass.show().Summary -->コンポーネントを表示状態にします<!-- END REF -->。
 
-For more information, please refer to the [`.show()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#show).
+詳細については、[Qodly ドキュメンテーションの `.show()` の説明](https://developer.qodly.com/docs/language/WebFormItemClass#show) を参照ください。
 
 
 ### .addCSSClass()
@@ -73,16 +73,16 @@ For more information, please refer to the [`.show()` description in the Qodly do
 **.addCSSClass**(*className* : string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
-| 引数        | タイプ    |    | 説明                                            |
-| --------- | ------ |:--:| --------------------------------------------- |
-| className | string | -> | Name of the CSS class to add to the component |
+| 引数        | タイプ    |    | 説明                      |
+| --------- | ------ |:--:| ----------------------- |
+| className | string | -> | コンポーネントに追加する CSSクラスの名前。 |
 <!-- END REF -->
 
 #### 説明
 
-The `.addCSSClass` function <!-- REF #WebFormItemClass.addCSSClass().Summary -->adds the class specified in *className* to the component<!-- END REF -->。
+`.addCSSClass` 関数は、 <!-- REF #WebFormItemClass.addCSSClass().Summary -->*className* で指定されたクラスをコンポーネントに追加します<!-- END REF -->。
 
-For more information, please refer to the [`.addCSSClass` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
+詳細については、[Qodly ドキュメンテーションの `.addCSSClass()` の説明](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass) を参照ください。
 
 
 ### .removeCSSClass()
@@ -92,16 +92,16 @@ For more information, please refer to the [`.addCSSClass` description in the Qod
 **.removeCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
-| 引数        | タイプ    |    | 説明                                                 |
-| --------- | ------ |:--:| -------------------------------------------------- |
-| className | string | -> | Name of the CSS class to remove from the component |
+| 引数        | タイプ    |    | 説明                       |
+| --------- | ------ |:--:| ------------------------ |
+| className | string | -> | コンポーネントから削除する CSSクラスの名前。 |
 <!-- END REF -->
 
 #### 説明
 
-The `.removeCSSClass()` function <!-- REF #WebFormItemClass.removeCSSClass().Summary -->removes the class specified in *className* from the component<!-- END REF -->。
+`.removeCSSClass()` 関数は、 <!-- REF #WebFormItemClass.removeCSSClass().Summary -->*className* で指定されたクラスをコンポーネントから削除します<!-- END REF -->。
 
-For more information, please refer to the [`.removeCSSClass()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass). 
+詳細については、[Qodly ドキュメンテーションの `.removeCSSClass()` の説明](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass) を参照ください。 
 
 
 

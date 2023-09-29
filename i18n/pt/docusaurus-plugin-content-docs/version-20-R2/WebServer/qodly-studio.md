@@ -123,7 +123,7 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 ### Using project methods
 
-We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
+We recommend using class functions over project methods. Apenas as funções de classe podem ser chamadas a partir de componentes. However, you can still use your project methods in Qodly Studio in two ways:
 
 - You can call your methods from class functions.
 - You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.

@@ -285,7 +285,7 @@ $fh:=File("/RESOURCES/sample_utf_16.txt").open()
 $b:=$fh.readBlob(20) // $fh.offset=20
   // depois lê todo o texto saltando os primeiros 10 caracteres que acabámos de ler no blob anterior
   // porque agora estamos a ler texto em vez de bytes, o significado de 'offset' não é o mesmo.
-  // We need to translate it from bytes to characters.
+  // Precisamos de o traduzir de bytes para caracteres.
 $fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
 $s:=$fh.readText()
 ```

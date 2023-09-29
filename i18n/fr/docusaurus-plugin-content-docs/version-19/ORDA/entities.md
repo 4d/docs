@@ -145,20 +145,19 @@ Pour attribuer une valeur directement à l'attribut "employer", vous devez passe
  $emp.save()
 ```
 
-4D fournit une fonctionnalité supplémentaire pour saisir un attribut de relation pour une entité N liée à une entité "1": vous passez directement la clé primaire de l'entité "1" lors de l'attribution d'une valeur à l'attribut de relation. Pour que cela fonctionne, passez des données de type Numérique ou Texte (la valeur de la clé primaire) à l'attribut de relation. 4D se charge alors automatiquement de rechercher l'entité correspondante dans la dataclass. Par exemple :
+You can also directly get the "one" related entity through its primary key value (Number or Text). Par exemple :
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // attribuer une clé primaire à l'attribut relation
-  //4D recherche l'entreprise dont la clé primaire (dans ce cas, son ID) est 2
-  //et l'attribue à l'employé
+ $emp.employer:=ds.Company.get(2)
+  //gets the Company entity with primary key value 2
+  //assigns it to the employee
  $emp.save()
 ```
 
 Ceci est particulièrement utile lorsque vous importez un grand nombre de données à partir d'une base de données relationnelle. Ce type d'import contient généralement une colonne "ID", qui référence une clé primaire que vous pouvez ensuite affecter directement à un attribut de relation.
 
-Cela signifie également que vous pouvez attribuer des clés primaires dans les N entités sans que les entités correspondantes aient déjà été créées dans la 1e classe de datastore. Si vous affectez une clé primaire qui n'existe pas dans la classe de datastore associée, elle est néanmoins stockée et affectée par 4D dès que cette entité "1" est créée.
 
 Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1" à partir de la dataclass "N" directement via l'attribut associé. Par exemple, si vous souhaitez modifier l'attribut de nom d'une entité "Company" associée d'une entité "Employee", vous pouvez écrire :
 
