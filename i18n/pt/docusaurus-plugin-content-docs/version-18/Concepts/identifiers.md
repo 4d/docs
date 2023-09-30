@@ -116,7 +116,7 @@ ARRAY INTEGER(<>aiBigArray;10000)
 
 ### Arrays proceso
 
-Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). A process array name can contain up to 31 characters.
+Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). Um nome de array processo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -208,7 +208,7 @@ DIALOG([Storage];"Note box"+String($vlStage))
 
 ## Objectos de formulário
 
-You designate a form object by passing its name as a string, preceded by the * parameter. A form object name can contain up to 255 characters.
+You designate a form object by passing its name as a string, preceded by the * parameter. O nome de um objeto de formulário pode conter até 255 caracteres.
 
 Exemplo:
 
@@ -370,7 +370,7 @@ $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 
 ## Resumo das convenções de escrita em 4D
 
-The following table summarizes 4D naming conventions.
+A tabela seguinte resume as convenções de nomeação 4D.
 
 | Identificador                  | Max. Largura     | Exemplo                            |
 | ------------------------------ | ---------------- | ---------------------------------- |
