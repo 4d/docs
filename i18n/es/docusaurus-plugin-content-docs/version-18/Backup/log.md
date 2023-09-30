@@ -43,11 +43,11 @@ Puede averiguar si su base utiliza un archivo de historial en cualquier momento:
 
 Para crear un archivo de historial:
 
-1. En la página **Copia de seguridad/Configuración** de las Propiedades de la base, marque la opción **Utilizar el archivo de historial**. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. En la página **Copia de seguridad/Configuración** de las Propiedades de la base, marque la opción **Utilizar el archivo de historial**. El programa muestra una caja de diálogo estándar de abrir/nuevo archivo. Por defecto, el archivo de historial se llama *data.journal*.
 
-2. Keep the default name or rename it, and then select the file location. Si tiene al menos dos discos duros, se recomienda colocar el archivo de historial en un disco distinto al que contiene la base. Si se pierde el disco duro de la base de datos, aún puede recuperar su archivo de historial.
+2. Mantenga el nombre por defecto o cambie el nombre, y luego seleccione la ubicación del archivo. Si tiene al menos dos discos duros, se recomienda colocar el archivo de historial en un disco distinto al que contiene la base. Si se pierde el disco duro de la base de datos, aún puede recuperar su archivo de historial.
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. Haga clic en **Guardar**. El disco y el nombre del archivo de historial abierto se muestran ahora en el área **Utilizar historial** de la caja de diálogo. Puede hacer clic en esta área para que aparezca un menú emergente con la ruta del historial en el disco.
 
 4. Valide la caja de diálogo de las Propiedades de la base.
 
