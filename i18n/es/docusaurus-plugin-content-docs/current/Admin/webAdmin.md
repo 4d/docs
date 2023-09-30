@@ -24,7 +24,7 @@ Puede configurar el servidor web `WebAdmin` para que se lance al inicio de la ap
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Check the **Launch WebAdmin server at startup** option in the settings dialog box:
+Marque la opción **Lanzar el servidor WebAdmin al inicio** en la caja de diálogo de configuración:
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
