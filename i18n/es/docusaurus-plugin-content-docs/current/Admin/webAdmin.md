@@ -130,7 +130,7 @@ Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 
 :::
 
-Esta opción permite al usuario acceder a [Qodly Studio](../WebServer/qodly-studio.md) a nivel de la aplicación 4D. Tenga en cuenta que también debe habilitar el acceso a [en cada nivel de proyecto](../Settings/web.md#enable-access-to-qodly-studio).
+Esta opción permite al usuario acceder a [Qodly Studio](../WebServer/qodly-studio.md) a nivel de la aplicación 4D. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
 
 
 ## Configuración de WebAdmin sin interfaz
