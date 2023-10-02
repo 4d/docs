@@ -16,7 +16,7 @@ Les entity selections peuvent être créées à partir de sélections existantes
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->|
-| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->|
+| [<!-- INCLUDE #EntitySelectionClass.at().Syntax -->](#at)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.at().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->|
@@ -828,6 +828,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 
@@ -1675,11 +1676,11 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
 
 ```4d
-// tri avec formule
+// order by formula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // tri avec collection avec ou sans ordres de tri
+  // order by collection with or without sort orders
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1687,6 +1688,7 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
+
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
@@ -2136,7 +2138,8 @@ Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity
 ```4d
 var $slice : cs.EmployeeSelection
 
-$slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'index 9 à 8, mais comme 9 > 8, retourne une lentity selection vide
+
+$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
 
 ```
 
