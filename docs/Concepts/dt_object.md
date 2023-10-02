@@ -122,13 +122,10 @@ You can create two types of objects:
 For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
-## Syntax basics
 
-Object notation can be used to access object property values through a chain of tokens.
+## Properties
 
-### Object properties
-
-With object notation, object properties can be accessed in two ways:
+Object notation can be used to access object property values through a chain of tokens. With object notation, object properties can be accessed in two ways:
 
 - using a "dot" symbol:
     > object.propertyName
@@ -194,28 +191,6 @@ Object notation is available on any language element that can contains or return
      myColl.length //size of the collection
 ```
 
-### Pointers
-
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers. 
-
-Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
-
-- Direct access:
-> pointerOnObject->propertyName
-
-- Access by name:
-> pointerOnObject->["propertyName"]
-
-Example:
-
-```4d
- var vObj : Object
- var vPtr : Pointer
- vObj:=New object
- vObj.a:=10
- vPtr:=->vObj
- x:=vPtr->a //x=10
-```
 
 ### Null value
 
@@ -271,7 +246,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
      End case
 ```
 
-- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
+Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
  - Object, collection, pointer: Null
  - Picture: Empty picture
  - Boolean: False
@@ -287,7 +262,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
      $o.a:=$o.b //$o.a=0
 ```
 
-- Assigning an undefined value to a non existing object property does nothing.
+-Assigning an undefined value to a non existing object property does nothing.
 
 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
@@ -298,6 +273,46 @@ When expressions of a given type are expected in your 4D code, you can make sure
 ```
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
+
+
+### Pointers
+
+**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers. 
+
+Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
+
+- Direct access:
+> pointerOnObject->propertyName
+
+- Access by name:
+> pointerOnObject->["propertyName"]
+
+Example:
+
+```4d
+ var vObj : Object
+ var vPtr : Pointer
+ vObj:=New object
+ vObj.a:=10
+ vPtr:=->vObj
+ x:=vPtr->a //x=10
+```
+
+
+## Resource garbage collector
+
+To optimize memory usage, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced. Thanks to this "garbage collector" mechanism, you do not have to worry about resource clean up.
+
+For example, when you release all references to an entity on which you have set a lock with [`$entity.lock()`](../EntityClass.md#lock), it will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../EntityClass.md#unlock) is useless.
+
+
+
+
+
+
+Consequently, a good practice to m
+
+
 
 ## Examples
 
