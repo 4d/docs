@@ -47,7 +47,7 @@ You install plug-ins in the 4D environment by copying their files into the appro
 
 Pode colocar a pasta Plugins em dois locais diferentes:
 
-- At the level of the 4D executable application, i.e.:
+- Ao nível da aplicação 4D executável, ou seja:
   - No Windows: junto ao ficheiro .exe
   - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
 - Ao mesmo nível que a pasta Project. In this case, plug-ins are only available in this particular project.

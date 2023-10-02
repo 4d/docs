@@ -145,14 +145,14 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
  $emp.save()
 ```
 
-You can also directly get the "one" related entity through its primary key value (Number or Text). 例:
+また、主キー値 (Number または Text) を通して "1"側のリレートエンティティを直接取得することもできます。 例:
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
  $emp.employer:=ds.Company.get(2)
-  //gets the Company entity with primary key value 2
-  //assigns it to the employee
+  // 主キーの値が 2 の Company エンティティを取得し
+  // employer 属性に代入します
  $emp.save()
 ```
 
