@@ -9,7 +9,7 @@ title: Using the Global Stamp
 
 4D automatically manages an internal **global modification stamp**, useful to handle data change tracking implementations, for example to monitor activity, backup, run incremental synchronization, etc.  
 
-The global modification stamp is an number, always maintained by 4D, even in case of database restoration, import, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
+The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
 
 Once the [data change tracking is configured and enabled](#configuring-data-change-tracking) in the datastore, the following actions are automatically executed by 4D at each record modification (add, modify, delete):
 
