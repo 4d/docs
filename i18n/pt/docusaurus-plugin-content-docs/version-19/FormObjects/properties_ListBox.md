@@ -4,7 +4,6 @@ title: List Box
 ---
 
 ---
-
 ## Colunas
 
 Coleção de colunas do list box.
@@ -22,17 +21,15 @@ For a list of properties supported by column objects, please refer to the [Colum
 [List Box](listbox_overview.md)
 
 ---
-
 ## Nome formulário detalhe
-
 `List box do tipo selecção`
 
 Specifies the form to use for modifying or displaying individual records of the list box.
 
 O formulário especificado é apresentado:
 
-* when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
-* when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
+*   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
+*   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
 
 #### Gramática JSON
 
@@ -44,17 +41,20 @@ O formulário especificado é apresentado:
 
 [List Box](listbox_overview.md)
 
+
+
+
+
+
 ---
-
 ## Duplo clique em linha
-
 `List box do tipo selecção`
 
 Sets the action to be performed when a user double-clicks on a row in the list box. As opções disponíveis são:
 
-* **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-* **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). O registo é aberto em modo de leitura-escrita para poder ser modificado.
-* **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
+*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
+*   **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). O registo é aberto em modo de leitura-escrita para poder ser modificado.
+*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
 > > > Double-clicking an empty row is ignored in list boxes.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
@@ -71,8 +71,10 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 [List Box](listbox_overview.md)
 
----
 
+
+
+---
 ## Ressaltar conjunto
 
 `List box do tipo selecção`
@@ -93,29 +95,30 @@ This property is used to specify the set to be used to manage highlighted record
 
 [List Box](listbox_overview.md)
 
----
 
+
+---
 ## Colunas bloqueadas e colunas estáticas
 
 Locked columns and static columns are two separate and independent functionalities in list boxes:
 
-* Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
-* As colunas estáticas não podem ser movidas por arrastar e largar dentro do list box.
-> > > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+*   Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
+*   As colunas estáticas não podem ser movidas por arrastar e largar dentro do list box.
+> You can set static and locked columns by programming, refer to "List Box" section in the *4D Language Reference* manual.
 
 Estas propriedades interagem da seguinte forma:
 
-* Se definir colunas que são apenas estáticas, estas não podem ser deslocadas.
+*   Se definir colunas que são apenas estáticas, estas não podem ser deslocadas.
 
-* Se definir colunas bloqueadas, mas não estáticas, pode ainda alterar a sua posição livremente na área bloqueada. However, a locked column cannot be moved outside of this locked area.
+*   Se definir colunas bloqueadas, mas não estáticas, pode ainda alterar a sua posição livremente na área bloqueada. However, a locked column cannot be moved outside of this locked area.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 
-* If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
+*   If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns2.png)
 
-* You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
+*   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
 ### Número de colunas estáticas
 
@@ -131,6 +134,7 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 [List Box](listbox_overview.md)
 
+
 ### Número de colunas
 
 Número de colunas que não podem ser movidas durante a execução.
@@ -145,12 +149,16 @@ Número de colunas que não podem ser movidas durante a execução.
 
 [List Box](listbox_overview.md)
 
----
 
+
+
+
+
+---
 ## Número de colunas trancadas
 
 Define o número de colunas do list box.
-> You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) or [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
 #### Gramática JSON
 
@@ -162,8 +170,10 @@ Define o número de colunas do list box.
 
 [List Box](listbox_overview.md)
 
----
 
+
+
+---
 ## Array controle linha
 
 `List box do tipo array`
@@ -205,6 +215,7 @@ Note that setting properties for an element overrides any other values for this 
  //define a linha 6 como desativada mas selecionável novamente
 ```
 
+
 #### Gramática JSON
 
 | Nome             | Tipo de dados | Valores possíveis                  |
@@ -215,16 +226,17 @@ Note that setting properties for an element overrides any other values for this 
 
 [List Box](listbox_overview.md)
 
----
 
+
+---
 ## Modo seleção
 
 Designa a opção que permite aos utilizadores selecionar linhas:
-
-* **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-* **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
+- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
+- **Single**: One row at a time can be selected in this mode. Ao clicar em uma linha, ela será selecionada. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
   The Up and Down arrow keys select the previous/next row in the list. As outras teclas de navegação percorrem a lista. The `On Selection Change` form event is generated every time the current row is changed.
-* **Multiple**: Several rows can be selected simultaneously in this mode.
+- **Multiple**: Several rows can be selected simultaneously in this mode.
+
 
 #### Gramática JSON
 

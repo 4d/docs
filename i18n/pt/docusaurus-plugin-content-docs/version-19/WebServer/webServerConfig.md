@@ -15,7 +15,7 @@ There are different ways to configure the 4D web server settings, depending on t
 | `WEB SET OPTION` ou um comando `WEB XXX` | Temporário (sessão atual)                           | Servidor principal                                             |
 | **Settings** dialog box (**Web** pages)  | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
-> Some settings are not available from all locations.
+> Alguns parâmetros não estão disponíveis em todos os locais.
 
 ## Cache
 
@@ -147,15 +147,15 @@ You can designate another default home page by entering its pathname.
 
 For example, if you want the default home page to be "MyHome.htm", and it is located in the "Web" folder (itself located in the default HTML root folder), use "Web/MyHome.htm".
 
-If you do not specify any default home page, the `On Web Connection` database method is called. It is up to you to process the request procedurally.
+If you do not specify any default home page, the `On Web Connection` database method is called. Cabe-lhe a si processar o pedido de forma processual.
 
 ## Activar CORS
 
-| Pode ser definido com              | Nome                                               | Comentários                                         |
-| ---------------------------------- | -------------------------------------------------- | --------------------------------------------------- |
-| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Boolean, true to enable the CORS (false by default) |
-| `WEB SET OPTION`                   | `Web CORS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)               |
-| Caixa de diálogos de configurações | Página Options (II)/Activar CORS                   | Não seleccionado por defeito                        |
+| Pode ser definido com              | Nome                                               | Comentários                                           |
+| ---------------------------------- | -------------------------------------------------- | ----------------------------------------------------- |
+| objeto webServer                   | [`CORSEnabled`](API/WebServerClass.md#corsenabled) | Booleano, true para ativar o CORS (false por defeito) |
+| `WEB SET OPTION`                   | `Web CORS enabled`                                 | 0 (desativado, padrão) ou 1 (ativado)                 |
+| Caixa de diálogos de configurações | Página Options (II)/Activar CORS                   | Não seleccionado por defeito                          |
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 

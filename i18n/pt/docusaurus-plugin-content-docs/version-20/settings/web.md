@@ -162,7 +162,7 @@ Ver [Propriedades obsoletas](../WebServer/webServerConfig.md#keep-alive-connecti
 
 #### Ativar CORS
 
-Enables Cross-origin resource sharing (CORS) service. Ver [Ativar CORS](../WebServer/webServerConfig.md#enable-cors-service).
+Ativa o serviço Cross-origin resource sharing (CORS). Ver [Ativar CORS](../WebServer/webServerConfig.md#enable-cors-service).
 
 #### Nomes de domínio/Métodos HTTP permitidos
 

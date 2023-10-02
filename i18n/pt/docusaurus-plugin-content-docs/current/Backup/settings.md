@@ -41,7 +41,7 @@ As opções encontradas nessa aba permitem estabelecer e  configurar as cópias 
 
 A página Cópia de segurança| Configuração das propriedades do banco de dados permite determinar os arquivos de cópia de segurança e sua localização, assim como a do arquivo de histórico. Esses parâmetros são específicos para cada banco de dados abertos pela aplicação 4D.
 
-![](../assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup032.png)
 
 > **4D Server:** estes parâmetros só podem ser configurados desde a máquina 4D Server.
 
@@ -69,11 +69,11 @@ Para modificar o local onde se armazenam esses arquivos, clique no botão **...*
 
 ### Gestão do arquivo de histórico
 
-A opção **Utilizar o arquivo de histórico**, quando estiver marcada, indica que o banco de dados utiliza um arquivo de histórico. Sua rota de acesso é especificada debaixo da opção. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico.
+The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico. For more information about the log file, please refer to [log file](../log.md)
 
 Como padrão, todo banco de dados criado com 4D usando um arquivo de histórico (opção marcada na página **Geral** das **Preferências**). O arquivo de histórico é chamado *data.journal* e está na pasta Data.
 
-> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Quando você marcar esta opção, uma mensagem de aviso informa que um backup é necessário. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
+> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
 
 
 ## Cópia de segurança e restauração

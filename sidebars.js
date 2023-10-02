@@ -142,6 +142,8 @@ module.exports =
 						"API/SignalClass",
 						"API/SMTPTransporterClass",
 						"API/SystemWorkerClass",
+						"API/WebFormClass",
+						"API/WebFormItemClass",
 						"API/WebServerClass",
 						"API/WebSocketClass",
 						"API/WebSocketConnectionClass",

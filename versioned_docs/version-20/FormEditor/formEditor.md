@@ -70,6 +70,8 @@ The toolbar contains the following elements:
 |![](../assets/en/FormEditor/shields2.png)| [Displaying shields](#shields)| Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display. |
 |![](../assets/en/FormEditor/library.png)| [Preconfigured object library](objectLibrary.html)| This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined. |
 |![](../assets/en/FormEditor/listBoxBuilder1.png)|[List Box Builder](#list-box-builder)|This button creates new entity selection list boxes. |
+|![](../assets/en/FormEditor/insertFields.png)|[Insert fields](#insert-fields)|This button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards.|
+
 
 ### Object bar  
 
@@ -511,6 +513,26 @@ The List box builder lets you create and fill entity selection list boxes in a f
 The final list box:
 
 ![](../assets/en/FormEditor/listboxBuilderListbox.png)
+
+
+## Insert fields
+
+The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms. 
+
+The **Insert fields** button is only available with table forms. 
+
+The design of the resulting form depends on the form type:
+
+- **Detail form**: clicking on the **Insert fields** button generates a form with a page design:
+
+![](../assets/en/FormEditor/insertFields2.png)
+
+- **List form**: clicking on the **Insert fields** button generates a list form design with fields organized on a single line and area markers:
+
+![](../assets/en/FormEditor/insertFields3.png)
+
+
+
 
 ## Shields
 
