@@ -1,9 +1,9 @@
 ---
 id: develop-plug-ins
-title: Plug-ins de développement
+title: Développement de Plug-ins
 ---
 
-## Pourquoi un plugin ?
+## Pourquoi un plug-in ?
 
 Bien que 4D propose des centaines de méthodes intégrées permettant de manipuler des objets et des enregistrements, et d'implémenter une interface utilisateur, une utilisation ou des fonctionnalités spéciales (parfois dépendantes de la plate-forme) peuvent être nécessaires : l'une peut nécessiter ODBC sous Windows, une autre peut nécessiter des services Apple sous macOS, et un autre peut souhaiter implémenter des outils statistiques spécifiques, une connexion à un réseau social, une plateforme de paiement, un accès à un fichier sur le réseau, une interface utilisateur spéciale ou une structure d'image privée.
 

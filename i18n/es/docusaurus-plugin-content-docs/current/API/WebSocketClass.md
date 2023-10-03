@@ -268,7 +268,7 @@ En *reason*, puede pasar una cadena que describa por qué se está cerrando la c
 
 #### Descripción
 
-La propiedad `.url` contiene <!-- REF #WebSocketClass.connections.Summary -->la URL a la que se ha conectado el WebSocket<!-- END REF -->. Es la URL que ha pasado a la función [`new()`](#4dwebsocketnew).
+La propiedad `.url` contiene <!-- REF #WebSocketClass.url.Summary -->la URL a la que se ha conectado el WebSocket<!-- END REF -->. Es la URL que ha pasado a la función [`new()`](#4dwebsocketnew).
 
 Esta propiedad es de sólo lectura.
 

@@ -268,7 +268,7 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 #### 説明
 
-`.url` プロパティは、 <!-- REF #WebSocketClass.connections.Summary -->WebSocket が接続した URL を格納します<!-- END REF -->。 これは、[`new()`](#4dwebsocketnew) 関数に渡した URL と同じです。
+`.url` プロパティは、 <!-- REF #WebSocketClass.url.Summary -->WebSocket が接続した URL を格納します<!-- END REF -->。 これは、[`new()`](#4dwebsocketnew) 関数に渡した URL と同じです。
 
 このプロパティは 読み取り専用 です。
 

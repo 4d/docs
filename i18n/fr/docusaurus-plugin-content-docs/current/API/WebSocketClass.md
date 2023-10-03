@@ -268,7 +268,7 @@ In *reason*, you can pass a string describing why the connection is being closed
 
 #### Description
 
-La propriété `.url` contient <!-- REF #WebSocketClass.connections.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
+La propriété `.url` contient <!-- REF #WebSocketClass.url.Summary -->the URL to which the WebSocket has connected<!-- END REF -->. It is the URL you passed to the [`new()`](#4dwebsocketnew) function.
 
 This property is read-only.
 

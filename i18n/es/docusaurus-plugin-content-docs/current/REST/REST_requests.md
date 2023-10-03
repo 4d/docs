@@ -6,12 +6,12 @@ title: Acerca de las peticiones REST
 
 Se soportan las siguientes estructuras para las peticiones REST:
 
-| URI                              | Resource (Input)                                                                                    | /? /? or &{filter} (Output)                                                                           |
-| -------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                                 | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
-|                                  | [{dataClass}](%7BdataClass%7D.html)/[$entityset/{entitySetID}](entityset.html#entitysetentitysetid) | [$method=...]($method.md)                                                                             |
-|                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)                                             | [$attributes]($attributes.md)                                                                         |
-|                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                      |                                                                                                       |
+| URI                              | Resource (Input)                                                                           | /? /? or &{filter} (Output)                                                                           |
+| -------------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| http://{servername}:{port}/rest/ | [{dataClass}](dataClass.md)                                                                | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
+|                                  | [{dataClass}](dataClass.md)/[$entityset/{entitySetID}]($entityset.md#entitysetentitysetid) | [$method=...]($method.md)                                                                             |
+|                                  | [{dataClass}({key})](dataClass.md#dataclasskey)                                            | [$attributes]($attributes.md)                                                                         |
+|                                  | [{dataClass}:{attribute}(value)](dataClass.md#dataclassattributevalue)                     |                                                                                                       |
 
 Mientras que todas las solicitudes REST deben contener los parámetros URI y Resource, los filtros de salida (que filtran los datos devueltos) son opcionales.
 
