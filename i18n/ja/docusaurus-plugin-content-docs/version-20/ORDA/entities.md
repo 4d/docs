@@ -282,12 +282,11 @@ $alterable:=$result.isAlterable() // True
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//We get entity selections for paid and unpaid invoices
+// 支払済および未払いの請求書のエンティティセレクションをそれぞれ取得します
+$paid:=ds.Invoices.query("status=:1"; "支払済")
+$unpaid:=ds.Invoices.query("status=:1"; "未払い")
 
-$paid:=ds.Invoices.query("status=:1"; "Paid")
-$unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
-
-//We pass entity selection references as parameters to the worker
+// これらのエンティティセレクションの参照をワーカーに引数として渡します
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```
