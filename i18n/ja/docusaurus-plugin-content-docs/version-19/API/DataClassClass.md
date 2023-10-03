@@ -35,7 +35,7 @@ title: DataClass
 
 #### 説明
 
-データクラスの属性は、 <!-- REF DataClassClass.attributeName.Summary -->データクラスのプロパティとして直接利用可能なオブジェクトです<!-- END REF --> 。
+データクラスの属性は、 <!-- REF DataClassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF --> 。
 
 戻り値は [`DataClassAttribute`](DataClassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
