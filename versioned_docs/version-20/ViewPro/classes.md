@@ -123,11 +123,11 @@ The `.tableColumns` property <!-- REF #TableOptions.tableColumns.Summary -->is a
 
 ### .theme
 
-<!-- REF #TableTheme.theme.Syntax -->
+<!-- REF #TableOptions.theme.Syntax -->
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<!-- END REF -->
 
 
-The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table theme. Can also be a text (name of a native SpreadJS theme)<!-- END REF -->.
+The `.theme` property <!-- REF #TableOptions.theme.Summary -->defines a table theme. Can also be a text (name of a native SpreadJS theme)<!-- END REF -->.
 
 See the [native SpreadJS themes](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 

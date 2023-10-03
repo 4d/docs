@@ -45,13 +45,13 @@ title: ログファイル (.journal)
 
 ログファイルを作成するには、次の手順に従ってください:
 
-1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. ストラクチャー設定の **バックアップ/設定** ページで、**ログを使用** オプションを選択します。 標準の "ファイルを開く/新規作成" ダイアログボックスが表示されます。 ログファイルにはデフォルトで *data.journal* という名前が付けられます。
 
-2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
+2. デフォルトの名前を使用するか、またはその名前を変更し、次にファイルの保管場所を選択します。 2つ以上のハードドライブが存在する場合は、アプリケーションプロジェクトが保管されているディスク以外の場所にログファイルを保存することをお勧めします。 これにより、アプリケーションが保管されているハードドライブが破損した場合でも、ログファイルを呼び出すことができます。
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. **保存** をクリックします。 開いたログファイルのアクセスパスと名前がダイアログボックスの **ログを使用** エリアに表示されます。 このエリアをクリックすると、ポップアップメニューが表示され、ディスク上のフォルダーを確認できます。
 
-4. Validate the Settings dialog box.
+4. ストラクチャー設定ダイアログボックスを確定します。
 
 ログファイルを作成するには、データが次の条件のいずれかを満たしていなくてはなりません:
 
@@ -64,13 +64,13 @@ title: ログファイル (.journal)
 
 新規データファイルを作成したら、別のログファイルを作成しなくてはなりません。 また、ログファイルに関連付けられていない (あるいはログファイルが見つからない) 別のデータファイルを開いた場合、他のログファイルを設定するか、作成しなくてはなりません。
 
-## Log file settings
+## ログファイル設定
 
-The [log file settings](settings.md#log-file-management) are based on two pieces of information: a boolean value and a path.
+[ログファイル設定](settings.md#ログ管理) は、ブール値とパスという 2つの情報に基づいています。
 
-1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. By default, the boolean value is stored in *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
+1. **ブール値**: アプリケーション内で "ログを使用" 機能が有効か無効かを示します。 デフォルトで、このブール値は *catalog.4DCatalog* に格納されます。 ただし、[ユーザー設定](../Desktop/user-settings.md) が有効化されると、*catalog.4DCatalog* ファイルの構成がオーバーライドされます。その場合、[データファイルの隣](../Project/architecture.md#settings-ユーザーデータ) にある *Backup.4DSettings* ファイル、または、[プロジェクトのフォルダー＞Settingsフォルダー](../Project/architecture.md#settings-user) 内の *Backup.4DSettings* ファイルにて、このブール値を設定できるようになります ([doc.4d.com](https://doc.4d.com) の `JournalFileEnabled` xmlバックアップキーのドキュメントも参照ください)。
 
-2. **Path**: a string pointing to where the log file is located. The log file path is always stored in the linked data file.
+2. **パス**: ログファイルの場所を指し示す文字列。 ログファイルのパスは、リンクされたデータファイル内に保存されます。
 
 
 ## ログファイルを中止する

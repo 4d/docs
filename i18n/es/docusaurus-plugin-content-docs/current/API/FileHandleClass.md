@@ -267,7 +267,7 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+Definiendo el `.offset` cambiará su valor actual en el momento de la siguiente operación de lectura o escritura.
 
 - Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
 - Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).
@@ -276,7 +276,7 @@ Esta propiedad es **lectura/escritura**.
 
 :::caution
 
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+La unidad de medida del offset difiere según la función de lectura: con [`readBlob()`](#readblob), `.offset` es un número de bytes, mientras que con [`readText()`](#readtext)/[`readLine()`](#readline) es un número de caracteres. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
 
 ```4d
   // Abrir un fichero de texto europeo utilizando la codificación utf-16 (dos bytes por caracter)
