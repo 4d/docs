@@ -155,6 +155,7 @@ Since an object property value can be an object or a collection, object notation
 
 Object notation is available on any language element that can contains or returns an object, i.e:
 
+
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
     Examples:
     
@@ -299,20 +300,22 @@ Example:
 ```
 
 
-## Resource garbage collector
+## Resources
 
-To optimize memory usage, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced. Thanks to this "garbage collector" mechanism, you do not have to worry about resource clean up.
+Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object. 
 
-For example, when you release all references to an entity on which you have set a lock with [`$entity.lock()`](../EntityClass.md#lock), it will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../EntityClass.md#unlock) is useless.
+For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../EntityClass.md#unlock) is useless.
 
+If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. For example:
 
+```4d
 
+$doc:=WP Import document("large_novel.4wp")
+	... // do something with $doc
+$doc:=Null  // free resources occupied by $doc
+	... // continue execution with more free memory
 
-
-
-Consequently, a good practice to m
-
-
+```
 
 ## Examples
 
@@ -355,7 +358,8 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-- You can access properties as strings using the [ ] operator 
+
+- You can access properties as strings using the `[]` operator 
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property
