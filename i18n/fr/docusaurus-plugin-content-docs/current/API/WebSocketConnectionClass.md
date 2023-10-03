@@ -60,7 +60,7 @@ The `.handler` property contains <!-- REF #WebSocketConnectionClass.handler.Summ
 
 The `.id` property contains <!-- REF #WebSocketConnectionClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
 
-This property is read-only.
+Cette propriété est en lecture seule.
 <!-- END REF -->
 
 
@@ -101,9 +101,9 @@ The following contents are sent depending on the *message* type:
 
 #### Description
 
-The `.status` property contains <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
+La propriété `.status` contient <!-- REF #WebSocketConnectionClass.status.Summary -->the connection status (can be "Closing", "Closed" or  "Connected")<!-- END REF -->.
 
-This property is read-only.
+Cette propriété est en lecture seule.
 <!-- END REF -->
 
 
@@ -141,6 +141,6 @@ A *code* and *message* can be sent to the client during the closure to indicate 
 
 The `.wss` property contains <!-- REF #WebSocketConnectionClass.wss.Summary -->the [`WebSocketServer`](WebSocketServerClass.md#4dwebsocketservernew) parent object of the connection<!-- END REF -->.
 
-This property is read-only.
+Cette propriété est en lecture seule.
 <!-- END REF -->
 
