@@ -65,6 +65,6 @@ ex: `<!-- REF #_command_.IMAP New transporter.Syntax -->` and `<!-- REF #_comman
 
 * variadic parameter syntax : `...paramName : type ` -> . Ex: "( name : Text ; ... value : Integer )"
 * no specific type: `any`
-* optional : { paramName1 : type }{; paramName2 : type }
-* optional but only if previous param is passed: { paramName1 : type {; paramName2 : type }}
+* optional : `{ paramName1 : type }{; paramName2 : type }`
+* optional but only if previous param is passed: `{ paramName1 : type {; paramName2 : type }}`
 
