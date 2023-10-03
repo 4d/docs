@@ -109,7 +109,7 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 <!-- REF #4D.WebSocketServer.new().Syntax -->**4D.WebSocketServer.new**( *WSSHandler* : Object { ; *options* : Object } ) : 4D.WebSocketServer<!-- END REF -->
 
 
-<!-- REF #4D.HTTPRequest.new().Params -->
+<!-- REF #4D.WebSocketServer.new().Params -->
 | 引数                           | タイプ                |    | 説明                                                      |
 | ---------------------------- | ------------------ |:--:| ------------------------------------------------------- |
 | [WSSHandler](#wsshandler-引数) | Object             | -> | WebSocketサーバー用コールバックを宣言しているユーザークラスのオブジェクト               |
