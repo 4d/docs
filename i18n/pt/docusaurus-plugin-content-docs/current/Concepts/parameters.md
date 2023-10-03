@@ -185,11 +185,10 @@ Function getValue
 
 ## Indireção dos parâmetros
 
-Os métodos projeto 4D aceitam um número variável de parametros do mesmo tipo, começando pela direita. Este princípio se chama **la indireção de parâmetros**. Using the `Count parameters` command you can then address those parameters with a `For... End for` loop and the parameter indirection syntax. Dentro do método, um endereço de indireçao é formatado: ${$i}, onde $i for uma variável numérica. ${$i} se denomina **parâmetro genérico**.
+4D methods and functions accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command and the **parameter indirection syntax**. Dentro do método, um endereço de indireçao é formatado: ${$i}, onde $i for uma variável numérica.
 
 
-
-### Utilização de parâmetros
+### Using variadic parameters
 
 Por exemplo, considere uma função que some os valores e devolva a soma formatada segundo um formato que se passa como parâmetro. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
@@ -210,7 +209,7 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;18;4;23;17)
 ```
 
-Note que mesmo se declarar 0, 1 ou mais parâmetros no metodo, pode sempre passar o número de parâmetros que quiser. Os parâmetros todos disponiveisss dentro do metodo de chamada atraves da sintaxe `${N}` e tipo parâmetro extra [Variant](dt_variant.md) como padrão (pode declarar usando [compiler directive](#declaring-generic-parameters)). Basta ter a certeza de que os parâmetros existem, graças ao comando [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) . Por exemplo:
+Note that even if you declared 0, 1, or more parameters, you can always pass the number of parameters that you want. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
 
 ```4d
 // Método projeto OneMethodAmongOthers
@@ -231,24 +230,68 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) foo("hello";"world";!01/01/2021!
 > A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
 
 
-### Declaração de parâmetros genéricos
+### Declaring variadic parameters
 
-Da mesma forma que com outras variáveis locais, não é obrigatório declarar os parâmetros genéricos mediante uma diretiva de compilador. Entretanto é recomendado que se evite qualquer ambiguidade. Para declarar estes parâmetros, se utiliza uma diretriz do  compilador à qual se passa ${N} como parâmetro, onde N especifica o primeiro parâmetro genérico.
+It is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
 
-Para declarar parâmetros genéricos, se utiliza uma diretriz do compilador à qual se passa ${N} como parâmetro, onde N especifica o primeiro parâmetro genérico.
+However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
 
 ```4d
- C_LONGINT(${4})
+#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+
+```
+
+```4d
+Function myfunction ( ... : Text)
+
 ```
 
 
-Esse comando significa que a partir do quarto parâmetro (incluído), o método pode receber um número variável de parâmetros de tipo longint. Os três primeiros parâmetros podem ser de qualquer tipo de dados. Entretanto, se usar $2 por indireção, o tipo de dados usados será do tipo genérico. $1, $2 and $3 can be of any data type.
+When declaring multiple parameters, variadic notation must be employed at last position, for example:
 
-> **Nota:** O número na declaração tem que ser uma constante e não uma variável.
+```4d
+#DECLARE ( param: Real ; ... : Text )
+
+```
+
+```4d
+Function myfunction (var1: Integer ; ... : Text)
+```
 
 
 
+#### Exemplo
 
+Here we have a method called `SumNumbers` that returns the calculated total for all the numbers passed as parameters:
+
+```4d
+
+#DECLARE( ... : Real) : Real 
+var $number; $total : Real 
+
+For each ($number; 1; Count parameters)
+    $total+=${$number}
+End for each 
+
+return $total
+
+```
+
+This method can be called with a variable number of Real parameters. In case of wrong parameter type, an error will be returned before the method is executed :
+
+```4d
+
+$total1:=SumNumbers // returns 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+
+```
+
+:::note Compatibility Note
+
+The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred.
+
+:::
 
 ## `Compilador` método
 
