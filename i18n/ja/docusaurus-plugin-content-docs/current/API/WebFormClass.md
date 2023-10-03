@@ -109,7 +109,7 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 #### 説明
 
-`Web Form` コマンドは、 <!-- REF #_command_.webForm.Summary --> Webフォームとの対話を可能にする `4D.WebForm` プロキシオブジェクトを返します<!-- END REF -->。
+`Web Form` コマンドは、 <!-- REF #_command_.Web Form.Summary --> Webフォームとの対話を可能にする `4D.WebForm` プロキシオブジェクトを返します<!-- END REF -->。
 
 詳細については、[Qodly ドキュメンテーションの `webForm` コマンドの説明](https://developer.qodly.com/docs/language/WebFormClass#webform) を参照ください。
 
