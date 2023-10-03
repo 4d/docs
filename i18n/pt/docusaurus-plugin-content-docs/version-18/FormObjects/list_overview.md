@@ -3,30 +3,30 @@ id: listOverview
 title: Lista hierárquica
 ---
 
-## Visão Geral
+## Visão geral
 
-Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
+As listas hierárquicas são objetos de formulário que podem ser utilizados para apresentar dados como listas com um ou mais níveis que podem ser expandidos ou recolhidos.
 
 ![](../assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. As listas hierárquicas suportam um número ilimitado de subníveis.
+Quando apropriado, o ícone de expansão/colapso é automaticamente apresentado à esquerda do item. As listas hierárquicas suportam um número ilimitado de subníveis.
 
 ## Fonte de dados de lista hierárquica
 
-The contents of a hierarchical list form object can be initialized in one of the following ways:
+O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de uma das seguintes formas:
 
-- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode.
-- Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
+- Associar uma [lista de opções](properties_DataSource.md#choice-list) existente ao objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
+- Atribuir diretamente uma referência de lista hierárquica à [variável ou à expressão](properties_Object.md#variable-or-expression) associada ao objeto formulário.
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
+Em ambos os casos, gere uma lista hierárquica em tempo de execução através da sua referência *ListRef*, utilizando os comandos [Lista jerárquica](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) na linguagem 4D.
 
 ## RefList e nome de objeto
 
-A hierarchical list is both a **language object** existing in memory and a **form object**.
+Uma lista hierárquica é simultaneamente um **objeto de linguagem** existente na memória e um **objeto de formulário**.
 
-The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: `New list`, `Copy list`, `Load list`, `BLOB to list`. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
+O **objeto de linguagem ** é referenciado por um ID interno único do tipo Longint, designado por *ListRef* na manual da Linguagem 4D. Este ID é devolvido pelos comandos que podem ser utilizados para criar listas: `New list`, `Copy list`, `Load list`, `BLOB to list`. Existe apenas uma instância do objeto língua na memória e qualquer modificação efetuada neste objeto é imediatamente transferida para todos os locais onde é utilizado.
 
-The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
+O **objeto de formulário** não é necessariamente único: podem existir várias representações da mesma lista hierárquica na mesma forma ou em formas diferentes. Tal como acontece com outros objetos de formulário, especifica-se o objeto na linguagem utilizando a sintaxe (*; "ListName", etc.).
 
 You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. Por exemplo, se tiver associado a $mylist [variável](properties_Object.md#variable-or-expression) ao objeto formulário, pode escrever:
 
