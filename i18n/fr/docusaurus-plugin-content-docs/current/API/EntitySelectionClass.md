@@ -1676,11 +1676,11 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
 
 ```4d
-// order by formula
+// tri par formule
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // order by collection with or without sort orders
+  // tri par collection avec ou dans ordre de tri
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -2139,7 +2139,7 @@ Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity
 var $slice : cs.EmployeeSelection
 
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'index 9 à 8, mais comme 9 > 8, retourne une entity selection vide
 
 ```
 

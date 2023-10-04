@@ -3272,7 +3272,7 @@ Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numériq
 6.  collections
 7.  dates
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans *formula * ([objet Formula](FunctionClass.md)) ou *methodName* (Text) un rappel qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 

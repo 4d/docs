@@ -2211,10 +2211,10 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 
 
 <!-- REF #collection.multiSort().Params -->
-| Paramètres | Type        |    | Description                                                                                                                   |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------------------- |
-| formula    | 4D.Function | -> | Objet formule                                                                                                                 |
-| colsToSort | Collection  | -> | Collection of collections and/or objects with {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties |
+| Paramètres | Type        |    | Description                                                                                                                        |
+| ---------- | ----------- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
+| formula    | 4D.Function | -> | Objet formule                                                                                                                      |
+| colsToSort | Collection  | -> | Collection de collections et/ou d'objets ayant des propriétés {`collection`:*colToSort*;`order`:`ck ascendant` ou `ck descendant`} |
 | Résultat   | Collection  | <- | Collection d'origine triée|<!-- END REF -->
 
 
@@ -2223,10 +2223,10 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 
 #### Description
 
-The `.multiSort()` function <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
-> This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+La fonction `.multiSort()` <!-- REF #collection.multiSort().Summary -->vous permet d'effectuer un tri synchronisé à plusieurs niveaux sur un ensemble de collections<!-- END REF -->.
+> Cette fonction modifie la collection d'origine ainsi que toutes les collections utilisées dans le paramètre *colsToSort* .
 
-If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Les types sont renvoyés dans l'ordre suivant :
+Si `.multiSort()` est appelée sans paramètres, la fonction a le même effet que la fonction [`.sort()`](#sort) : la collection est triée (uniquement les valeurs scalaires) par défaut dans l'ordre croissant, en fonction de leur type. Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1. Null
 2. booléens
@@ -2237,40 +2237,40 @@ If `.multiSort()` is called with no parameters, the function has the same effect
 7. dates
 
 
-**Single-level synchronized sort**
+**Tri synchronisé à un niveau**
 
-To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
+Pour trier plusieurs collections de manière synchronisée, il suffit de passer dans *colsToSort* une collection de collections à trier. Vous pouvez passer un nombre illimité de collections. La collection originale sera triée par ordre croissant et toutes les collections *colsToSort* seront triées de manière synchronisée.
 
 :::note
 
-All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
+Toutes les collections *colsToSort* doivent avoir le même nombre d'éléments, sinon une erreur est renvoyée.
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](FunctionClass.md#formula) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the formula if necessary.
+Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](FunctionClass.md#formula)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
-The formula receives the following parameters:
+La formule reçoit les paramètres suivants :
 
 - $1 (object), où :
     - *$1.value* (tout type) : valeur du premier élément à comparer
     - *$1.value2* (tout type) : valeur du second élément à comparer
 - $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
-**Multi-level synchronized sort**
+**Tri synchronisé à plusieurs niveaux**
 
-Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level.
+Pour définir un tri synchronisé à plusieurs niveaux, vous devez transmettre un objet contenant les propriétés {`collection`:*colToSort*;`order`:`ck ascending` ou `ck descending`} au lieu d'une collection *colToSort* pour chaque collection à utiliser en tant que sous-niveau.
 
-The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+Les niveaux de tri sont déterminés par l'ordre dans lequel les collections sont passées dans le paramètre *colsToSort* : la position d'un objet `collection`/`order` dans la syntaxe détermine son niveau de tri.
 
 :::note
 
-The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
+La fonction `.multiSort()` utilise un algorithme de tri [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) .
 
 :::
 
 #### Exemple 1
 
-A simple synchronized sort of collections with different value types:
+Un simple tri synchronisé de collections avec différents types de valeurs :
 
 ```4d
 var $col;$col2;$col3 : Collection
@@ -2289,7 +2289,7 @@ $col.multiSort([$col2; $col3])
 
 #### Exemple 2
 
-You want to sort three synchronized collections: city, country, and continent. You want an ascending sort of the first and the third collections, and synchronization for the second collection:
+Vous souhaitez trier trois collections synchronisées : ville, pays et continent. Vous souhaitez un tri croissant des première et troisième collections, et une synchronisation pour la deuxième collection :
 
 ```4d
 var $city : Collection
@@ -2309,7 +2309,7 @@ $continent.multiSort($country; {collection: $city; order: ck ascending})
 
 #### Exemple 3
 
-You can also synchronize collections of objects.
+Vous pouvez également synchroniser des collections d'objets.
 
 ```4d
 var $name : Collection
@@ -3414,7 +3414,7 @@ Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numériq
 6. collections
 7. dates
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans *formula * ([objet Formula](FunctionClass.md)) ou *methodName* (Text) un rappel qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 

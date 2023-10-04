@@ -115,7 +115,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 | onTerminate | [Function](FunctionClass.md) | Função de retorno de chamada quando o WebSocket é terminado. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.code` (number, só de leitura): curto sem sinal que contém o código de fecho enviado pelo servidor.</li><li>`$2.reason` (text, só de leitura): Motivo pelo qual o servidor fechou a conexão. Isto é específico do servidor e do subprotocolo em causa.</li><li>`$2.wasClean` (boolean, somente leitura): indica se a conexão foi ou não fechada de forma limpa.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Função de retorno de chamada quando o websocket está aberto. A chamada de retorno recebe os seguintes parâmetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Object</li><ul><li>`$2.type` (texto): sempre "open"</li></ul>                                         |
 | dataType    | Text                         | Tipo de dados recebidos ou enviados. Valores disponíveis: "text" (padrão), "blob", "object". "text" = utf-8                                                                                                                             |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                                                                                                           |
+| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                           |
 
 
 Aqui está a sequência de chamadas de retorno:
@@ -203,11 +203,11 @@ A função `.send()` <!-- REF #WebSocketClass.send().Summary -->envia *message* 
 
 Os conteúdos seguintes são enviados em função do tipo de *mensagem*:
 
-| Tipo   | Conteúdo                                                                                                                    |
-| ------ | --------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texto em UTF-8                                                                                                              |
-| Blob   | Dados binários                                                                                                              |
-| Object | Texto em JSON UTF-8 (o mesmo resultado que com [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Tipo   | Conteúdo                                                                                                            |
+| ------ | ------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texto em UTF-8                                                                                                      |
+| Blob   | Dados binários                                                                                                      |
+| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 
 <!-- END REF -->

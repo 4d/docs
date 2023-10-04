@@ -68,7 +68,7 @@ Debe crear otro archivo de historial si crea un nuevo archivo de datos. Debe est
 
 Los [parámetros del archivo de historial](settings.md#log-file-management) se basa en dos datos: un valor booleano y una ruta.
 
-1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. By default, the boolean value is stored in *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
+1. **Valor booleano**: indica si la funcionalidad "Utilizar archivo de registro" está activada o desactivada en la aplicación. Por defecto, el valor booleano se almacena en *catalog.4DCatalog*. Sin embargo, cuando se activa la configuración de usuario [](../Desktop/user-settings.md), se anula la configuración del archivo *catalog.4DCatalog*, y el valor booleano puede definirse en el archivo *Backup.4DSettings* [junto al archivo de datos](../Project/architecture.md#settings-user-data) o en el archivo *Backup.4DSettings* [de la carpeta del proyecto](../Project/architecture.md#settings-user) (ver también la documentación xml backup key en `JournalFileEnabled` [doc.4d.com](https://doc.4d.com)).
 
 2. **Path**: a string pointing to where the log file is located. The log file path is always stored in the linked data file.
 
