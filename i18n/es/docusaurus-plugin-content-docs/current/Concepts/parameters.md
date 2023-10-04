@@ -290,7 +290,7 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
 
 ```
 
-:::note Compatibility Note
+:::note Nota de compatibilidad
 
 The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred.
 
