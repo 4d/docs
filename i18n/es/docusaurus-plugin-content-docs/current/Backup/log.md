@@ -70,7 +70,7 @@ Los [parámetros del archivo de historial](settings.md#log-file-management) se b
 
 1. **Valor booleano**: indica si la funcionalidad "Utilizar archivo de registro" está activada o desactivada en la aplicación. Por defecto, el valor booleano se almacena en *catalog.4DCatalog*. Sin embargo, cuando se activa la configuración de usuario [](../Desktop/user-settings.md), se anula la configuración del archivo *catalog.4DCatalog*, y el valor booleano puede definirse en el archivo *Backup.4DSettings* [junto al archivo de datos](../Project/architecture.md#settings-user-data) o en el archivo *Backup.4DSettings* [de la carpeta del proyecto](../Project/architecture.md#settings-user) (ver también la documentación xml backup key en `JournalFileEnabled` [doc.4d.com](https://doc.4d.com)).
 
-2. **Path**: a string pointing to where the log file is located. The log file path is always stored in the linked data file.
+2. **Ruta**: una cadena que indica dónde se encuentra el archivo de registro. La ruta del archivo de registro siempre se almacena en el archivo de datos vinculados.
 
 
 ## Cerrar el historial

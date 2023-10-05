@@ -142,9 +142,9 @@ var $a:=$class.test
 
 :::
 
-4D tries to deduce the most general type. For instance, it uses the Real type rather than the Integer type when a variable is initialized with an integer value (e.g., `var $a:=10 //Real type is inferred`). In such cases, or when initializing a variable with a complex type such as class instantiation, it is recommended to pass the type explicitly.
+4D intenta deducir el tipo más general. For instance, it uses the Real type rather than the Integer type when a variable is initialized with an integer value (e.g., `var $a:=10 //Real type is inferred`). In such cases, or when initializing a variable with a complex type such as class instantiation, it is recommended to pass the type explicitly.
 
-In most cases, all variable types are automatically determined. The exception is when you assign a value to a process or interprocess variable, which then triggers a warning message.
+En la mayoría de los casos, todos los tipos de variables se determinan automáticamente. The exception is when you assign a value to a process or interprocess variable, which then triggers a warning message.
 
 :::note
 
