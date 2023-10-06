@@ -69,11 +69,11 @@ Para modificar la ubicación donde se almacenan estos archivos, haga clic en el 
 
 ### Gestión del archivo de historial
 
-The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. Cuando esta opción está marcada, no es posible abrir la aplicación sin un archivo de historial. For more information about the log file, please refer to [log file](log.md)
+La opción **Utilizar el archivo de historial**, cuando está marcada, indica que la aplicación utiliza un archivo de historial. La ruta del archivo de historial para el archivo de datos actual se especifica debajo de la opción. Cuando esta opción está marcada, no es posible abrir la aplicación sin un archivo de historial. Para más información sobre el archivo de historial, consulte [archivo de historial](log.md)
 
 Por defecto, todo proyecto creado con 4D utiliza un archivo de historial (opción **Utilizar archivo de historial**seleccionada en la **página General** de las **Preferencias**). El archivo de historial se llama *data.journal* y se coloca en la carpeta Data.
 
-> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
+> La activación de un nuevo archivo de historial requiere una copia de seguridad previa de los datos de la aplicación. Si marca esta opción para el archivo de datos utilizado actualmente, un mensaje de advertencia le informará de que es necesario realizar una copia de seguridad. La creación del archivo de historial se pospone y se creará realmente sólo después de la siguiente copia de seguridad de la aplicación.
 
 
 ## Copia de seguridad y restitución
