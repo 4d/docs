@@ -138,7 +138,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.handler` property contains <!-- REF #WebSocketClass.handler.Summary -->the accessor that gets the `connectionHandler` object used to initiate the connection<!-- END REF -->.
+La propriété `.handler` contient <!-- REF #WebSocketClass.handler.Summary -->l'accesseur qui obtient l'objet `connectionHandler` utilisé pour initier la connexion<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -151,7 +151,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.id` property contains <!-- REF #WebSocketClass.id.Summary -->the unique identifier of the connection<!-- END REF -->.
+La propriété `.id` contient <!-- REF #WebSocketClass.id.Summary -->l'identifiant unique de la connexion<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 <!-- END REF -->
@@ -176,13 +176,13 @@ Cette propriété est en lecture seule.
 
 La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie *message * au serveur WebSocket avec le type de données défini (Text, Blob ou Object)<!-- END REF -->.
 
-The following contents are sent depending on the *message* type:
+Les contenus suivants sont envoyés en fonction du type de *message * :
 
-| Type   | Contenu                                                                                                              |
-| ------ | -------------------------------------------------------------------------------------------------------------------- |
-| Text   | Text in UTF-8                                                                                                        |
-| Blob   | Binary data                                                                                                          |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Type   | Contenu                                                                                                                 |
+| ------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texte en UTF-8                                                                                                          |
+| Blob   | Données binaires                                                                                                        |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
 
 
 <!-- END REF -->
