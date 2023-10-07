@@ -39,7 +39,7 @@ Uma [DataClass](ORDA/dsMapping.md#dataclass) oferece uma interface de objeto a u
 
 #### Descrição
 
-Os atributos dos dataclasses são <!-- REF DataClassClass.attributeName.Summary -->objectos que estão disponíveis directamente como propriedades<!-- END REF --> destas classes.
+Os atributos dos dataclasses são <!-- REF DataClassClass.attributeName.Summary -->objetos que estão disponíveis diretamente como propriedades<!-- END REF --> destas classes.
 
 Os objetos retornados são do tipo class [`DataClassAttribute`](DataClassAttributeClass.md). Esses objetos têm propriedades que podem ser lidas para obter informação sobre seus atributos dataclass.
 > Os objetos do atributo Dataclass podem ser modificados, mas a estrutura subjacente do banco de dados não será alterada.
@@ -491,7 +491,7 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 A função `.new( )` <!-- REF #DataClassClass.getCount().Summary --> cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
-Se esta função for utilizada dentro de uma transacção, as entidades criadas durante a transacção serão tidas em conta.
+Se esta função for utilizada dentro de uma transacção, as entidades criadas durante a transação serão levadas em consideração.
 
 #### Exemplo
 
@@ -529,7 +529,7 @@ $number:=$ds. Persons.getCount()
 
 #### Descrição
 
-The `.newSelection( )` function <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
+A função `.newSelection( )` <!-- REF #DataClassClass.getDataStore().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -864,7 +864,7 @@ onde:
 
   * **Text**: A string de fórmula deve ser precidida da declaração `eval( )`,para que o parser da pesquisa avalie a expressão corretamente. Por exemplo: *"eval(length(This.lastname) >=30)"*
   * **Object**: o objeto [formula](FunctionClass.md) é passado como um **placeholder** (ver abaixo). A fórmula deve ter sido criada usando  [`Formula`](FunctionClass.md#formula) ou o comando[`Formula from string`](FunctionClass.md#formula-from-string) command.
-> * > * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * Lembre que fórmulas 4D são compatíveis apenas com os símbolos `&` and `|` para operadores lógicos.
 > * Se a fórmula não for o único critério de pesquisa, o otimizador de motor debusca poderia processar outros critérios previamente (por exemplo atributos indexados) e assim, a fórmula poderia ser avaliada apenas para um subconjunto de entidades.
 
  Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto é detalhado no parágrafo **Parâmetro fórmula** mais abaixo.
@@ -873,19 +873,19 @@ onde:
 
 * **comparator**: symbol que compara *attributePath* e *valor*. Os simbolos abaixo são compatíveis:
 
- | Comparação                               | Símbolos    | Comentário                                                                                                                                                            |
- | ---------------------------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
- | Igual a                                  | =, ==       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                    |
- |                                          | ===, IS     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                        |
- | Diferente de                             | #, !=       | Suporta o coringa (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).                                              |
- |                                          | !==, IS NOT | Considera  @ como um caractere normal                                                                                                                                 |
- | Não se aplica à condição de uma sentença | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)). |
- | Menor que                                | <           |                                                                                                                                                                       |
- | Maior que                                | >           |                                                                                                                                                                       |
- | Menor que ou igual a                     | <=          |                                                                                                                                                                       |
- | Maior ou igual a                         | >=          |                                                                                                                                                                       |
- | Incluído em                              | IN          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                      |
- | Contém palavra chave                     | %           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                  |
+ | Comparação                               | Símbolos    | Comentário                                                                                                                                                                     |
+ | ---------------------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+ | Igual a                                  | =, ==       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                             |
+ |                                          | ===, IS     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                 |
+ | Diferente de                             | #, !=       | Suporta o coringa (@). Equivalente a "Not condition applied on a statement" ([veja abaixo](#not-equal-to-in-collections)).                                                     |
+ |                                          | !==, IS NOT | Considera  @ como um caractere normal                                                                                                                                          |
+ | Não se aplica à condição de uma sentença | NOT         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
+ | Menor que                                | <           |                                                                                                                                                                                |
+ | Maior que                                | >           |                                                                                                                                                                                |
+ | Menor que ou igual a                     | <=          |                                                                                                                                                                                |
+ | Maior ou igual a                         | >=          |                                                                                                                                                                                |
+ | Incluído em                              | IN          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                               |
+ | Contém palavra chave                     | %           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                           |
 
 * **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade ou elemento na coleção. Pode ser um **marcador** (ver **Uso de marcadores** mais adiante) ou qualquer expressão que coincida com a propriedad de tipo de dados. Quando usar um valor constante, as regras abaixo devem ser respeitadas:
   * A constante de tipo **texto** pode ser passada com ou sem aspas simples (ver **Uso de aspas** mais abaixo). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
@@ -901,11 +901,11 @@ onde:
  | AND       | &, &&, and              |
  | OU        | &#124;,&#124;&#124;, or |
 
-* **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente. > > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+* **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente. >Se você usar essa instrução, a seleção de entidade retornada será ordenada (para obter mais informações, consulte [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 #### Usar aspas
 
-When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. Por exemplo:
+Ao usar aspas dentro das consultas, você deve usar aspas simples ' ' dentro da consulta e aspas duplas " " para envolver toda a consulta, caso contrário, será retornado um erro. Por exemplo:
 
 ```4d
 "employee.name = 'smith' AND employee.firstname = 'john'"
@@ -914,29 +914,29 @@ When you use quotes within queries, you must use single quotes ' ' inside the qu
 
 #### Usando parêntesis
 
-You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
+Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exemplo, pode organizar uma pesquisa da seguinte maneira:
 
 ```4d
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
 
-#### Using placeholders
+#### Uso de placeholders
 
-4D allows you to use placeholders for *attributePath*, *formula* and *value* arguments within the *queryString* parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.
+4D permite que você use espaços reservados para *attributePath*, *formula* e *value* argumentos dentro do parâmetro *queryString* . Um placeholder é um parâmetro que você insere em cadeias de consulta e que é substituído por outro valor quando a cadeia de consulta é avaliada. O valor dos placeholders é avaliado uma vez no início da consulta; ele não é avaliado para cada elemento.
 
-Two types of placeholders can be used: **indexed placeholders** and **named placeholders**:
+Dois tipos de placeholders podem ser usados: **placeholders indexados** e **placeholders nomeados**:
 
 |           | Marcadores de posição indexados                                                                                                                                                                              | Placeholders nomeados                                                                                                                                               |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Definição | Os parâmetros são inseridos como :paramIndex (por exemplo :1, :2...) em queryString e seus valores correspondentes são fornecidos pela sequência de parâmetros value. Pode usara até 128 parâmetros de valor | Os parâmetros são inseridos como: paramName (por exemplo :myparam) e seus valores se proporcionam nos atributos ou objetos de parâmetros no parámetro querySettings |
 | Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                  | $o.attributes:=New object("att";"city")<br/> $o.parameters:=New object("name";"Chicago")<br/> $r:=class.query(":att=:name";$o)                          |
 
-You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters:
+É possível misturar todos os tipos de argumentos em *queryString*. Uma *queryString* pode conter, para *attributePath*, *formula* e *value* parâmetros:
 
-* valores diretos (sem marcadores),
-* marcadores indexados ou com nome.
+* valores diretos (sem placeholders),
+* placeholders indexados ou com nome.
 
-Using placeholders in queries **is recommended** for the following reasons:
+A utilização de placeholders em consultas **é recomendada** pelas seguintes razões:
 
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
@@ -945,15 +945,15 @@ Using placeholders in queries **is recommended** for the following reasons:
   $result:=$col.query($vquery)
  ```
 
- This query seems secured since non-public data are filtered. However, if the user enters in the *myname* area something like *"smith OR status='private'*, the query string would be modified at the interpretation step and could return private data.
+ Essa consulta parece segura, pois os dados não públicos são filtrados. Entretanto, se o usuário introduzr na área *myname* algo como *"smith OR status='private'*, a string de pesquisa se modificaría na etapa da interpretação e poderia devolver dados privados.
 
- When using placeholders, overriding security conditions is not possible:
+ Ao usar placeholders, não é possível substituir as condições de segurança:
 
  ```4d
   $result:=$col.query("status='public' & name=:1";myname)
  ```
 
- In this case if the user enters *smith OR status='private'* in the *myname* area, it will not be interpreted in the query string, but only passed as a value. Looking for a person named "smith OR status='private'" will just fail.
+ Neste caso, se o usuário introduz *smith OR status='private'* na área *myname*, não se interpretará na string de pesquisa, só será passada como um valor. A busca por uma pessoa chamada "smith OR status='private'" simplesmente falhará.
 
 2. Evita ter que se preocupar por questões de formato ou caracteres, especialmente quando se manejam os parâmetros *attributePath* o *value* que podem conter não alfanuméricos como ".", "['...
 
@@ -972,7 +972,7 @@ Quando pesquisar por valores null não pode usar a sintaxe do marcador de posiç
 $vSingles:=ds. Person.query("spouse = :1";Null) // will NOT work
 ```
 
-You will not get the expected result because the null value will be evaluated by 4D as an error resulting from the parameter evaluation (for example, an attribute coming from another query). Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta:
+Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como um erro resultante da avaliação do parâmetro (por exemplo, um atributo vindo de outra consulta). Para este tipo de pesquisa, deve usar a sintaxe de pesquisa direta:
 
 ```4d
  $vSingles:=ds. Person.query("spouse = null") //correct syntax
@@ -980,7 +980,7 @@ You will not get the expected result because the null value will be evaluated by
 
 #### Não igual a em colecções
 
-When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). Por exemplo, com as seguintes entidades:
+Ao pesquisar nos atributos de objectos de classe de dados que contêm colecções, o comparador "não igual a *valor*" (`#` ou `!=`) encontrará elementos em que TODAS as propriedades são diferentes de *valor* (e não aqueles em que PELO MENOS uma propriedade é diferente de *valor*, que é como funcionam outros comparadores). Basicamente, é equivalente a procurar "Not(find collection elements where property equals *value*"). Por exemplo, com as seguintes entidades:
 
 ```
 Entity 1:
@@ -1012,36 +1012,36 @@ Considere os seguintes resultados:
 
 ```4d
 ds.Class.query("info.coll[].val = :1";0) 
-// returns B and C
-// finds "entities with 0 in at least one val property"
+// retorna B e C
+// encontra "entities with 0 in at least one val property"
 
 ds.Class.query("info.coll[].val != :1";0)
-// returns A only
-// finds "entities where all val properties are different from 0"
-// which is the equivalent to 
+// retorna apenas A
+// encontra "entities where all val properties are different from 0"
+// que é equivalente a  
 ds.Class.query(not("info.coll[].val = :1";0)) 
 ```
 
-If you want to implement a query that finds entities where "at least one property is different from *value*", you need to use a special notation using a letter in the `[]`:
+Se você quiser implementar uma consulta que encontre entidades em que "pelo menos uma propriedade seja diferente do valor **", você precisará usar uma notação especial usando uma letra no `[]`:
 
 ```4d
-ds.Class.query("info.coll[a].val != :1";0)  
-// returns A and B
-// finds "entities where at least one val property is different from 0"
+ds.Class.query("info.coll[a].val := :1";0)  
+// devolve A e B
+// encontra "entidades em que pelo menos uma propriedade val é diferente de 0"
 ```
 
-You can use any letter from the alphabet as the `[a]` notation.
+Pode utilizar qualquer letra do alfabeto como notação `[a]` .
 
 
 #### Linkar os argumentos de pesquisa com os atributos de coleção
 
 :::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+Esse recurso só está disponível em consultas sobre classes de dados e seleções de entidades [](EntitySelectionClass.md#query). Ele não pode ser usado em consultas em coleções [](CollectionClass.md#query).
 
 :::
 
-When searching within dataclass object attributes containing collections using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
+Ao pesquisar nos atributos de objetos de classe de dados que contêm coleções usando vários argumentos de consulta unidos pelo operador AND, você pode querer garantir que somente as entidades que contêm elementos que correspondem a todos os argumentos sejam retornadas, e não as entidades em que os argumentos podem ser encontrados em elementos diferentes. Para tal, é necessário ligar argumentos de consulta a elementos de coleção, de modo a que apenas sejam encontrados elementos individuais que contenham argumentos ligados.
 
 Por exemplo, com as duas entidades abaixo:
 
@@ -1064,15 +1064,15 @@ ds. People.places:
             } ] }
 ```
 
-You want to find people with a "home" location kind in the city "paris". Se escrever:
+Você deseja encontrar pessoas com um tipo de local de "residência" na cidade "paris". Se escrever:
 
 ```4d
 ds. People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
 ```
 
-... the query will return "martin" **and** "smith" because "smith" has a "locations" element whose "kind" is "home" and a "locations" element whose "city" is "paris", even though they are different elements.
+... a consulta retornará "martin" **e** "smith" porque "smith" tem um elemento "locations" cujo "kind" é "home" e um elemento "locations" cuja "city" é "paris", embora sejam elementos diferentes.
 
-If you want to only get entities where matching arguments are in the same collection element, you need to **link arguments**. Para linkar argumentos de pesquisa:
+Se pretender obter apenas entidades em que os argumentos correspondentes estão no mesmo elemento de coleção, é necessário **ligar argumentos**. Para linkar argumentos de pesquisa:
 
 * Adicionar uma letra entre os \[] na primeira rota a linkar e repita a mesma letra em todos os argumentos linkados. Por exemplo: `locations[a].city and locations[a].kind`. Pode usar qualquer letra do alfabeto latino (não diferencia maiúsculas e minúsculas).
 * Para adicionar critérios linkados na mesma pesquisa, use outra letra. Pode criar até 26 combinações de critérios em uma única pesquisa.
@@ -1083,16 +1083,16 @@ Com as entidades acima, se escreve:
 ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
 
-... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
+... a consulta só devolverá "martin" porque tem um elemento "locations" cujo "kind" é "home" e cuja "city" é "paris". A consulta não devolverá "smith" porque os valores "home" e "paris" não estão no mesmo elemento de coleção.
 
 
 #### Consultas em relações Muitos para Muitos
 
-ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. Por exemplo, veja a seguinte estrutura:
+O ORDA oferece uma sintaxe especial para facilitar as consultas em relações muitos-para-muitos. Neste contexto, pode ser necessário procurar valores diferentes com um operador `AND` mas no mesmo atributo. Por exemplo, veja a seguinte estrutura:
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imagine that you want to search all movies in which *both* actor A and actor B have a role. If you write a simple query using an `AND` operator, it will not work:
+Imagine que você queira pesquisar todos os filmes em que *ambos* o ator A e o ator B tenham um papel. If you write a simple query using an `AND` operator, it will not work:
 
 ```4d
 // invalid code
