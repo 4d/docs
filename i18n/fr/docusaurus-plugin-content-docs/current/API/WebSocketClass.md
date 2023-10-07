@@ -115,7 +115,7 @@ Dans *connectionHandler*, vous pouvez transmettre un objet contenant des fonctio
 | onTerminate | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est terminée. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.code` (numérique, en lecture seule) : unsigned short contenant le code de fermeture envoyé par le serveur.</li><li>`$2.reason` (texte, en lecture seule) : Raison pour laquelle le serveur a fermé la connexion. Elle est spécifique au serveur et au sous-protocole.</li><li>`$2.wasClean` (booléen, en lecture seule) : Indique si la connexion a été fermée proprement ou non.</li></ul>                                                    |
 | onOpen      | [Function](FunctionClass.md) | Fonction de callback lorsque la WebSocket est ouverte. La callback reçoit les paramètres suivants :<li>`$1` : Objet WebSocket</li><li>`$2` : Objet</li><ul><li>`$2.type` (texte) : toujours "open"</li></ul>                                                   |
 | dataType    | Text                         | Type de données reçues ou envoyées. Valeurs disponibles : "text" (par défaut), "blob", "object". "text" = utf-8                                                                                                                     |
-| headers     | Object                       | En-têtes de la WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                       |
+| headers     | Object                       | En-têtes de la WebSocket.<li>Syntaxe pour l'affectation standard des clés : `headers.*key*:=*value*` (*value* peut être une collection si la même clé apparaît plusieurs fois)</li><li>Syntaxe pour l'affectation des cookies (cas particulier) : `headers.Cookie:="*nom*=*valeur* { ; *nom2*=*valeur2*{ ; ... } }"`</li>                                                                                                                                                       |
 
 
 Voici la séquence des appels de callbacks :
@@ -203,11 +203,11 @@ La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie *message
 
 Les contenus suivants sont envoyés en fonction du type de *message * :
 
-| Type   | Contenu                                                                                                             |
-| ------ | ------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texte en UTF-8                                                                                                      |
-| Blob   | Données binaires                                                                                                    |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
+| Type   | Contenu                                                                                                                |
+| ------ | ---------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texte en UTF-8                                                                                                         |
+| Blob   | Données binaires                                                                                                       |
+| Object | Texte en JSON UTF-8 (même résultat qu'avec [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 
 <!-- END REF -->
