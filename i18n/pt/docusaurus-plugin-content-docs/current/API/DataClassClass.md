@@ -1108,7 +1108,7 @@ Para possibilitar a realização dessas consultas, o ORDA permite uma sintaxe es
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
 
-**{x}** tells ORDA to create another reference for the relation attribute. It will then perform all the necessary bitmap operations internally. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
+**{x}** informa ao ORDA para criar outra referência para o atributo de relação. Em seguida, ele executará internamente todas as operações de bitmap necessárias. Observe que **x** pode ser qualquer número **exceto 0**: {1}, ou {2}, ou {1540}... O ORDA só precisa de uma referência exclusiva na consulta para cada índice de classe.
 
 No nosso exemplo, seria:
 
