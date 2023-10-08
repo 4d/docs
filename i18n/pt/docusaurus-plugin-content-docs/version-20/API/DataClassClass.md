@@ -1092,7 +1092,7 @@ O ORDA oferece uma sintaxe especial para facilitar as consultas em relações mu
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imagine que você queira pesquisar todos os filmes em que *ambos* o ator A e o ator B tenham um papel. If you write a simple query using an `AND` operator, it will not work:
+Imagine que você queira pesquisar todos os filmes em que *ambos* o ator A e o ator B tenham um papel. Se você escrever uma consulta simples usando um operador `AND` , ela não funcionará:
 
 ```4d
 // invalid code
@@ -1100,9 +1100,9 @@ $es:=ds. Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"
 // $es is empty
 ```
 
-Basically, the issue is related to the internal logic of the query: you cannot search for an attribute whose value would be both "A" and "B".
+Basicamente, o problema está relacionado à lógica interna da consulta: você não pode pesquisar um atributo cujo valor seja "A" e "B".
 
-To make it possible to perform such queries, ORDA allows a special syntax: you just need to add a *class index* between **{}** in all additional relation attributes used in the string:
+Para possibilitar a realização dessas consultas, o ORDA permite uma sintaxe especial: basta adicionar um  *indice de classe* entre **{}** em todos os atributos de relação adicionais usados na string:
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
