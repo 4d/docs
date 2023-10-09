@@ -249,7 +249,7 @@ As a result of the `WSHandler.onConnection` callback, pass a `connectionHandler`
 | ws         |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Current WebSocket connection object |
 | evénement  |      | Object                                                  | <- | Paramètres                          |
 |            | type | Text                                                    |    | "message"                           |
-|            | data | Text / Blob / Object                                    |    | data sent by the client             |
+|            | data | Texte / Blob / Objet                                    |    | data sent by the client             |
 
 This Callback for WebSocket data. Called each time the WebSocket receives data.
 
@@ -367,7 +367,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-The `.handler` property contains <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
+La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
 
 <!-- END REF -->
 

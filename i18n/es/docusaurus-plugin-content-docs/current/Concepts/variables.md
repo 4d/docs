@@ -109,7 +109,7 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-## Initializing Variables in the Declaration Line
+## Inicialización de variables en la línea de declaración
 
 When declaring variables, you have the flexibility to specify their data type and provide an initial value in one statement. He aquí algunos ejemplos:
 
@@ -123,10 +123,10 @@ var $d : cs.Customer:=cs.Customer.new()
 Variables can also be declared and initialized without explicitly mentioning their data type, in which case their type will be inferred by 4D. He aquí algunos ejemplos:
 
 ```4d
-var $text:="hello"  // Inferred as Text 
-var $number:=20  // Inferred as Real 
-var $obj:={}  // Inferred as an Object 
-var $mycol:=[]  // Inferred as a Collection  
+var $text:="hello" // Inferido como Texto 
+var $number:=20 // Inferido como Real 
+var $obj:={}  // Inferido como Objeto 
+var $mycol:=[] // Inferido como Colección  
 
 ```
 
@@ -148,7 +148,7 @@ En la mayoría de los casos, todos los tipos de variables se determinan automát
 
 :::note
 
-Multiple assignments in one line are not supported:
+No se admiten asignaciones múltiples en una línea:
 
 ```4d
 var $a; $b : Integer:=15 //error
