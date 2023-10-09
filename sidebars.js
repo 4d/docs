@@ -105,6 +105,7 @@ module.exports =
 						"ORDA/dsmapping",
 						"ORDA/ordaClasses",
 						"ORDA/entities",
+						"ORDA/global-stamp",
 						"ORDA/datastores",
 						"ORDA/privileges",
 						"ORDA/glossary"
