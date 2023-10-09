@@ -203,7 +203,7 @@ A petição abaixo retorna todos os dados públicos do funcionário chamado "Jon
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method} and {dataClass}({key})/{method}
+## {dataClass}/{method} e {dataClass}({key})/{method}
 
 Retorna um objeto ou uma coleção baseada em um método projeto.
 

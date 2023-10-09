@@ -188,11 +188,10 @@ Function getValue -> $v : Integer
 
 ## Parameter indirection (${N})
 
-4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.  
+4D methods and functions accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression.
 
 
-
-### Using generic parameters
+### Using variadic parameters
 
 For example, consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
 
@@ -214,7 +213,7 @@ The method's parameters must be passed in the correct order, first the format an
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. For example:
+Note that even if you declared 0, 1, or more parameters, you can always pass the number of parameters that you want. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. For example:
 
 ```4d
 //foo method
@@ -233,24 +232,68 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
 > Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others. 
 
 
-### Declaring generic parameters
+### Declaring variadic parameters 
 
-As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
+It is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
 
-To declare generic parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
 
 ```4d
- C_TEXT(${4})
+#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+
+```
+
+```4d
+Function myfunction ( ... : Text)
+
 ```
 
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. The first three parameters can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
+When declaring multiple parameters, variadic notation must be employed at last position, for example:
 
-> The number in the declaration has to be a constant and not a variable.
+```4d
+#DECLARE ( param: Real ; ... : Text )
+
+```
+
+```4d
+Function myfunction (var1: Integer ; ... : Text)
+```
 
 
 
+#### Example
+ 
+Here we have a method called `SumNumbers` that returns the calculated total for all the numbers passed as parameters:
 
+```4d
+
+#DECLARE( ... : Real) : Real 
+var $number; $total : Real 
+
+For each ($number; 1; Count parameters)
+	$total+=${$number}
+End for each 
+
+return $total
+
+```
+
+This method can be called with a variable number of Real parameters. In case of wrong parameter type, an error will be returned before the method is executed :
+
+```4d
+
+$total1:=SumNumbers // returns 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+
+```
+
+:::note Compatibility Note
+
+The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred. 
+
+:::
 
 ## `Compiler` method
 

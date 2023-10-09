@@ -45,7 +45,7 @@ The default value depends on the variable type and category, its execution conte
         - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
         - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Nota:** 4D recomenda a utilização de "em zero".
 
-The following table illustrates these default values:
+A tabela seguinte ilustra estes valores por defeito:
 
 | Tipo         | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compilado "aleatório" | Local compilado "não"       |
 | ------------ | ----------------------------------------------------------------------------------- | --------------------------- | --------------------------- |

@@ -482,7 +482,6 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 > Si deselecciona MeCab para una aplicación en idioma japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarla tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#build-client-application) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
 
-* **PHP**: Necesario para utilizar las funcionalidades y comandos PHP en 4D (ver este [párrafo de propiedades](../settings/php.md)).
 * **SpellChecker**: Se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
 * **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single-user-applications).
 

@@ -268,10 +268,10 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 
 <!-- REF #_command_.Formula from string.Params -->
-| Parámetros    | Tipo        |    | Descripción                                                                 |
-| ------------- | ----------- |:--:| --------------------------------------------------------------------------- |
-| formulaString | Text        | -> | Fórmula texto a devolver como objeto                                        |
-| context       | Number      | -> | `sk execute in current database` (default) or `sk execute in host database` |
+| Parámetros    | Tipo        |    | Descripción                                                                    |
+| ------------- | ----------- |:--:| ------------------------------------------------------------------------------ |
+| formulaString | Text        | -> | Fórmula texto a devolver como objeto                                           |
+| context       | Number      | -> | `sk execute in current database` (por defecto) o `sk execute in host database` |
 | Result        | 4D.Function | <- | Objeto nativo que encapsula la fórmula|<!-- END REF -->
 
 
@@ -280,12 +280,12 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 #### Descripción
 
-El comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->creates a `4D.Function` object based upon the *formulaString* and, optionnally, a *context*<!-- END REF -->.  .
+El comando `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crea un objeto `4D.Function` basado en la fórmula *formulaString* y opcionalmente un *context*<!-- END REF -->.  .
 
-This command is similar to [`Formula`](#formula), except that it handles a text-based formula and allows to define an execution context. It is usually recommended to use the `Formula` command, except if the original formula was expressed as text (e.g., stored externally in a JSON file), or if you want to create a formula in a host database while calling `Formula from string` from a component. Se recomienda especialmente utilizar sintaxis con tokens con este comando.
+Este comando es similar a [`Formula`](#formula), excepto que maneja una fórmula basada en texto y permite definir un contexto de ejecución. Normalmente se recomienda utilizar el comando `Formula`, excepto si la fórmula original se expresó como texto (por ejemplo, almacenada externamente en un archivo JSON), o si desea crear una fórmula en una base de datos local mientras llama a `Formula from string` desde un componente. Se recomienda especialmente utilizar sintaxis con tokens con este comando.
 > Dado que no se puede acceder al contenido de las variables locales por su nombre en el modo compilado, no se pueden utilizar en *formulaString*. Un intento de acceder a una variable local con `Formula from string` dará lugar a un error (-10737).
 
-If the formula is created in a component, you might consider using the *context* parameter. By default, since formulas are executed in the context in which they were created, it will not be able to call a variable, function, or a non-shared method of the host database. En este caso, puede pasar la constante `sk execute in host database` en el parámetro *context* para ejecutar el objeto `4D.Function` en el contexto de la base de datos local. Las siguientes constantes están disponibles:
+Si la fórmula se crea en un componente, puede considerar utilizar el parámetro *context*. Por defecto, dado que las fórmulas se ejecutan en el contexto en el que fueron creadas, no podrá llamar a una variable, función o método no compartido de la base de datos local. En este caso, puede pasar la constante `sk execute in host database` en el parámetro *context* para ejecutar el objeto `4D.Function` en el contexto de la base de datos local. Las siguientes constantes están disponibles:
 
 | Constante                        | Tipo    | Descripción                                                            |
 | -------------------------------- | ------- | ---------------------------------------------------------------------- |

@@ -4,7 +4,6 @@ title: List Box
 ---
 
 ---
-
 ## Columnas
 
 Colección de columnas del list box.
@@ -15,24 +14,22 @@ Colección de columnas del list box.
 | ------- | ---------------------------- | ---------------------------------------------------- |
 | columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
-Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview#column-specific-properties).
+Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview.md#column-specific-properties).
 
 #### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 ---
-
 ## Nombre formulario detallado
-
 `List box del tipo selección`
 
 Especifica el formulario que se utilizará para modificar o mostrar los registros individuales del list box.
 
 Se muestra el formulario especificado:
 
-* cuando se utilizan las acciones estándar `Add Subrecord` y `Edit Subrecord` aplicadas al list box (ver [Utilización de las acciones estándar](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
-* cuando se hace doble clic en una línea y la propiedad [Doble clic en la línea ](#double-click-on-row)está definida en "Editar registro" o "Mostrar registro".
+*   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv20/4D/20/Using-standard-actions.300-6263819.en.html)),
+*   cuando se hace doble clic en una línea y la propiedad [Doble clic en la línea ](#double-click-on-row)está definida en "Editar registro" o "Mostrar registro".
 
 #### Gramática JSON
 
@@ -44,17 +41,20 @@ Se muestra el formulario especificado:
 
 [List Box](listbox_overview.md)
 
+
+
+
+
+
 ---
-
 ## Doble clic en línea
-
 `List box del tipo selección`
 
 Define la acción a realizar cuando un usuario haga doble clic en una línea en el list box. Las opciones disponibles son:
 
-* **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
-* **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido [ para el list box](#detail-form-name). El registro se abre en modo de lectura-escritura para que pueda ser modificado.
-* **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
+*   **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
+*   **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido [ para el list box](#detail-form-name). El registro se abre en modo de lectura-escritura para que pueda ser modificado.
+*   **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
 > > Double-clicking an empty row is ignored in list boxes.
 
 Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
@@ -71,8 +71,10 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 [List Box](listbox_overview.md)
 
----
 
+
+
+---
 ## Conjunto resaltado
 
 `List box del tipo selección`
@@ -93,29 +95,30 @@ Esta propiedad se utiliza para especificar el conjunto a utilizar para gestionar
 
 [List Box](listbox_overview.md)
 
----
 
+
+---
 ## Columnas bloqueadas y columnas estáticas
 
 Las columnas bloqueadas y las columnas estáticas son dos funcionalidades distintas e independientes en los list boxes:
 
-* Las columnas bloqueadas siempre se muestran a la izquierda del list box; no se desplazan horizontalmente.
-* Las columnas estáticas no pueden moverse arrastrándolas y soltándolas dentro del list box.
-> > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+*   Las columnas bloqueadas siempre se muestran a la izquierda del list box; no se desplazan horizontalmente.
+*   Las columnas estáticas no pueden moverse arrastrándolas y soltándolas dentro del list box.
+> You can set static and locked columns by programming, refer to "List Box" section in the *4D Language Reference* manual.
 
 Estas propiedades interactúan de la siguiente manera:
 
-* Si define columnas que sólo son estáticas, no se pueden mover.
+*   Si define columnas que sólo son estáticas, no se pueden mover.
 
-* Si define columnas bloqueadas pero no estáticas, puede seguir cambiando su posición libremente dentro del área bloqueada. Sin embargo, una columna bloqueada no puede moverse fuera de esta área bloqueada.
+*   Si define columnas bloqueadas pero no estáticas, puede seguir cambiando su posición libremente dentro del área bloqueada. Sin embargo, una columna bloqueada no puede moverse fuera de esta área bloqueada.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 
-* Si define todas las columnas del área bloqueada como estáticas, no podrá mover estas columnas dentro del área bloqueada.
+*   Si define todas las columnas del área bloqueada como estáticas, no podrá mover estas columnas dentro del área bloqueada.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns2.png)
 
-* Puede definir una combinación de columnas bloqueadas y estáticas según sus necesidades. Por ejemplo, si define tres columnas bloqueadas y una columna estática, el usuario puede intercambiar las dos columnas situadas más a la derecha dentro del área bloqueada (ya que sólo la primera columna es estática).
+*   Puede definir una combinación de columnas bloqueadas y estáticas según sus necesidades. Por ejemplo, si define tres columnas bloqueadas y una columna estática, el usuario puede intercambiar las dos columnas situadas más a la derecha dentro del área bloqueada (ya que sólo la primera columna es estática).
 
 ### Número de columnas bloqueadas
 
@@ -131,6 +134,7 @@ Número de columnas que deben permanecer visualizadas permanentemente en la part
 
 [List Box](listbox_overview.md)
 
+
 ### Número de columnas estáticas
 
 Número de columnas que no se pueden mover durante la ejecución.
@@ -145,12 +149,16 @@ Número de columnas que no se pueden mover durante la ejecución.
 
 [List Box](listbox_overview.md)
 
----
 
+
+
+
+
+---
 ## Número de columnas
 
 Define el número de columnas del list box.
-> Puede añadir o eliminar columnas de forma dinámica por programación, utilizando comandos como [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) o [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+> You can add or remove columns dynamically by programming, using commands such as [`LISTBOX INSERT COLUMN`](https://doc.4d.com/4dv20/help/command/en/page829.html) or [`LISTBOX DELETE COLUMN`](https://doc.4d.com/4dv20/help/command/en/page830.html).
 
 #### Gramática JSON
 
@@ -162,8 +170,10 @@ Define el número de columnas del list box.
 
 [List Box](listbox_overview.md)
 
----
 
+
+
+---
 ## Array de control de líneas
 
 `List box de tipo array`
@@ -205,6 +215,7 @@ Tenga en cuenta que la configuración de las propiedades de un elemento anula cu
  //define la línea 6 como desactivada pero seleccionable nuevamente
 ```
 
+
 #### Gramática JSON
 
 | Nombre           | Tipos de datos | Valores posibles                      |
@@ -215,16 +226,17 @@ Tenga en cuenta que la configuración de las propiedades de un elemento anula cu
 
 [List Box](listbox_overview.md)
 
----
 
+
+---
 ## Modo de selección
 
 Designa la opción para permitir a los usuarios seleccionar líneas:
-
-* **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Edición con un solo clic](properties_Entry.md#single-click-edit) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
-* **Simple**: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en una línea cambia su estado (entre seleccionada o no).  
+- **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Edición con un solo clic](properties_Entry.md#single-click-edit) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
+- **Simple**: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en una línea cambia su estado (entre seleccionada o no).  
   Las teclas de flecha arriba y abajo seleccionan la línea anterior/siguiente de la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
-* **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
+- **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
+
 
 #### Gramática JSON
 

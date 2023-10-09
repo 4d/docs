@@ -73,7 +73,7 @@ title: ユーザー設定
 | [セキュリティページ](../settings/security.md)                                       | N/a                  | N/a                     |
 | [互換性ページ](../settings/compatibility.md)                                     | N/a                  | N/a                     |
 
-このダイアログボックスでの設定を編集した場合、それらの変更は対応する *settings.4DSettings* ファイルに自動的に保存されます (後述参照)。
+このダイアログボックスの設定を編集した場合、それらの変更は対応する *settings.4DSettings* ファイル (後述参照) または、*Backup.4DSettings* ファイル (詳細は [バックアップ設定](../Backup/settings.md) ページ参照) に自動的に保存されます。
 
 ## `SET DATABASE PARAMETER` とユーザー設定
 

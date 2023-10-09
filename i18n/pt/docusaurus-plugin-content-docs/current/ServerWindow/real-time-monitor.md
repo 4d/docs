@@ -11,7 +11,7 @@ The Real Time Monitor page monitors the progress of "long" operations performed 
 
 É acrescentada uma linha para cada operação longa efetuada nos dados. This line automatically disappears when the operation is complete (you can check the **Display operations at least 5 seconds** option to keep quick operations on screen for 5 seconds, see below).
 
-The following information is provided for each line:
+As informações seguintes são fornecidas para cada linha:
 
 - **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
 - **Duração** (ms): duração em milissegundos da operação em curso

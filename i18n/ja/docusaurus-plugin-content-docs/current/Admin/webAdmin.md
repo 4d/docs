@@ -130,7 +130,7 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 
 :::
 
-このオプションにより、4Dアプリケーションレベルでの [Qodly Studio](../WebServer/qodly-studio.md) へのユーザーアクセスができるようになります。 また、[各プロジェクトレベルでもアクセスを有効](../Settings/web.md#qodly-studio-へのアクセスを有効化する) にする必要があることに注意してください。
+このオプションにより、4Dアプリケーションレベルでの [Qodly Studio](../WebServer/qodly-studio.md) へのユーザーアクセスができるようになります。 また、[各プロジェクトレベルでもアクセスを有効](../settings/web.md#qodly-studio-へのアクセスを有効化する) にする必要があることに注意してください。
 
 
 ## WebAdmin のヘッドレス設定

@@ -73,7 +73,7 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página seguridad](../settings/security.md)                                               | N/a                                                | N/a                                                     |
 | [Página de compatibilidad](../settings/compatibility.md)                                  | N/a                                                | N/a                                                     |
 
-Cuando se editan los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más adelante).
+When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below) or the *Backup.4DSettings* file (check the [Backup settings](../Backup/settings.md) page for more information).
 
 ## `SET PARAMETER DE LA BASE DE DATOS` y propiedades usuario
 

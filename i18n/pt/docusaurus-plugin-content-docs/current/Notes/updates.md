@@ -14,6 +14,8 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - New [`collection.multiSort`](../API/CollectionClass.md#multisort) function.
 - Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
+- Support for [initializing the variable's value and data type in the declaration line](../Concepts/variables/#initializing-variables-in-the-declaration-line).
+- Log file settings are now [saved with the current data file](../Backup/settings.md#log-file-management)
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
 - [**Lista de bugs corrigidos**](https://falhas.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D v20 R3.
@@ -22,6 +24,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Mudanças de comportamento
 
 - Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*.
+- 4D no longer includes an internal PHP interpreter. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
 
 
 ## 4D v20 R2
@@ -78,9 +81,9 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 - New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) dialog box.
 - Para simplificar o código, alguns operadores de comparação podem agora ser utilizados com [Valores indefinidos](../Concepts/dt_null_undefined.md#undefined-operators) sem gerar erros.
 - Support of *headerOnly* parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail).
-- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
 - Novo function [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths).
-- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
 - ORDA requests logs are now available [on the server](../Debugging/debugLogFiles.md#orda-requests), new parameter for [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) function.
 - Novas ferramentas para execução de código no CLI: [tool4d](../Admin/cli.md#tool4d) e [4D Server em modo utilitário](../Admin/cli.md#4d-server-in-utility-mode).
 - [Explorador da Data](../Admin/dataExplorer.md#opening-the-data-explorer): novo botão e visualização numa janela 4D.
@@ -279,9 +282,9 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ### 4D v19
 
-- [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- [Classe IMAPTransporter](../API/IMAPTransporterClass.md): novas funções `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` e `.unsubscribe()`.
+- [Classe File](../API/FileClass.md): novas funções `setAppInfo()` e `getAppInfo()`.
+- Nova etiqueta de transformação [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
@@ -295,7 +298,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 - [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
+- [IMAP Mail](../API/IMAPTransporterClass.md): novas funções `.expunge()` e `.append()`
 - Novo componente [WebAdmin](../Admin/webAdmin.md) do servidor Web
 - Nova interface [DataExplorer](../Admin/dataExplorer.md)
 - Novas [sessões de usuário](../WebServer/sessions.md) Web e [sua API](../API/SessionClass.md).
@@ -308,19 +311,19 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 
 
-| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                               |
-| ---------- | ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
-| ICU        | 73.2         | 20.1             | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| CEF        | 113          | 20 R2            | Chromium 5672                                                                            |
-| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                      |
-| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                           |
-| SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                        |
-| OpenSSL    | 3.1.1        | 20               |                                                                                          |
-| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                     |
-| LZMA       | 5.4.1        | 20               |                                                                                          |
-| Zlib       | 14.1.6       | 20               |                                                                                          |
-| webKit     | WKWebView    | 19               |                                                                                          |
-| PHP        | 8.2.4        | 20               |                                                                                          |
-| libldap    | 2.6.4        | 20 R3            |                                                                                          |
-| libsasl    | 2.1.28       | 20               |                                                                                          |
+| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                  |
+| ---------- | ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| ICU        | 73.2         | 20.1             | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
+| CEF        | 113          | 20 R2            | Chromium 5672                                                                                               |
+| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                         |
+| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                              |
+| SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                           |
+| OpenSSL    | 3.1.1        | 20               |                                                                                                             |
+| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                        |
+| LZMA       | 5.4.1        | 20               |                                                                                                             |
+| Zlib       | 14.1.6       | 20               |                                                                                                             |
+| webKit     | WKWebView    | 19               |                                                                                                             |
+| PHP        | 8.2.4        | 20               |                                                                                                             |
+| libldap    | 2.6.4        | 20 R3            |                                                                                                             |
+| libsasl    | 2.1.28       | 20               |                                                                                                             |
 

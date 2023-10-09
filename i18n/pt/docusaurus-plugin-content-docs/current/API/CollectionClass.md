@@ -2189,8 +2189,8 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 #### Descrição
 
-A função `.multiSort()` <!-- REF #collection.multiSort().Summary -->enables you to carry out a multi-level synchronized sort on a set of collections<!-- END REF -->.
-> This function modifies the original collection as well as all collections used in *colsToSort* parameter.
+A função `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite-lhe efetuar uma ordenação sincronizada a vários níveis num conjunto de coleções<!-- END REF -->.
+> Esta função modifica a coleção original, bem como todas as coleções utilizadas no parâmetro *colsToSort*.
 
 If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
@@ -3367,7 +3367,7 @@ Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, tex
 6. collections
 7. datas
 
-If you want to sort the collection elements in some other order or sort any type of element, you must supply in *formula* ([Formula object](FunctionClass.md)) or *methodName* (Text) a callback that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
+Se pretender ordenar os elementos da coleção por outra ordem ou ordenar qualquer tipo de elemento, deve fornecer em *formula* ([object Formula](FunctionClass.md)) ou *methodName* (Text) uma chamada de retorno que defina a ordem de ordenação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
 
 A chamada de retorno recebe os seguintes parâmetros:
 

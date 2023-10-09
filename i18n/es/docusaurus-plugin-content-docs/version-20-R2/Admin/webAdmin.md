@@ -24,7 +24,7 @@ Puede configurar el servidor web `WebAdmin` para que se lance al inicio de la ap
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Check the **Launch WebAdmin server at startup** option in the settings dialog box:
+Marque la opción **Lanzar el servidor WebAdmin al inicio** en la caja de diálogo de configuración:
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
@@ -130,7 +130,7 @@ Esta opción sólo aparece si la licencia de Qodly Studio está activa.
 
 :::
 
-Esta opción permite al usuario acceder a [Qodly Studio](../WebServer/qodly-studio.md) a nivel de la aplicación 4D. Tenga en cuenta que también debe habilitar el acceso a [en cada nivel de proyecto](../Settings/web.md#enable-access-to-qodly-studio).
+Esta opción permite al usuario acceder a [Qodly Studio](../WebServer/qodly-studio.md) a nivel de la aplicación 4D. Tenga en cuenta que también debe habilitar el acceso a [en cada nivel de proyecto](../settings/web.md#enable-access-to-qodly-studio).
 
 
 ## Configuración de WebAdmin sin interfaz

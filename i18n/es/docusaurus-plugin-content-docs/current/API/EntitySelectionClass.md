@@ -16,7 +16,7 @@ Las selecciones de entidades pueden crearse a partir de selecciones existentes u
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
 | [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
-| [<!-- INCLUDE EntitySelectionClass.at().Syntax -->](#attributename)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.at().Summary -->                                                       |
+| [<!-- INCLUDE #EntitySelectionClass.at().Syntax -->](#at)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.at().Summary -->                                                                |
 | [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
 | [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
 | [<!-- INCLUDE #EntitySelectionClass.copy().Syntax -->](#contains)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.copy().Summary -->                                                      |
@@ -814,6 +814,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 
@@ -1651,11 +1652,11 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
 
 ```4d
-// orden con fórmula
+// ordenar por fórmula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // orden con collection con o sin órdenes de clasificación
+  // ordenar por colección con o sin órdenes de clasificación
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1663,6 +1664,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
+
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
@@ -1690,7 +1692,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 | Parámetros    | Tipo               |    | Descripción                                                |
 | ------------- | ------------------ |:--:| ---------------------------------------------------------- |
 | formulaString | Text               | -> | Cadena formula                                             |
-| formulaObj    | Object             | -> | Objeto formula                                             |
+| formulaObj    | Object             | -> | Objeto fórmula                                             |
 | sortOrder     | Integer            | -> | `dk ascending` (por defecto) o`dk descending`              |
 | settings      | Object             | -> | Parámetros de la fórmula                                   |
 | Result        | 4D.EntitySelection | <- | Nueva entity selection ordenada|<!-- END REF --> |
@@ -2097,6 +2099,7 @@ Assuming we have ds. Employee.all().length = 10
 
 ```4d
 var $slice : cs.EmployeeSelection
+
 
 $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 9 al 8, pero como 9 > 8, devuelve una entity selection vacía
 

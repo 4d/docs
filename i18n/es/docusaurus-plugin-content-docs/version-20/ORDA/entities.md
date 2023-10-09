@@ -149,20 +149,19 @@ Para asignar un valor directamente al atributo "employer", debe pasar una entida
  $emp.save()
 ```
 
-4D ofrece una facilidad adicional para introducir un atributo de relación para una entidad N relacionada con una entidad "1": se pasa directamente la llave primaria de la entidad "1" al asignar un valor al atributo de relación. Para que esto funcione, hay que pasar datos de tipo Número o Texto (el valor de la llave primaria) al atributo de relación. 4D se encarga automáticamente de buscar la entidad correspondiente en la dataclass. Por ejemplo:
+You can also directly get the "one" related entity through its primary key value (Number or Text). Por ejemplo:
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // asigna una llave primaria al atributo relación
-  //4D busca la empresa cuya llave primaria (en este caso, su ID) es 2
-  //y se la asigna al empleado
+ $emp.employer:=ds.Company.get(2)
+  //gets the Company entity with primary key value 2
+  //assigns it to the employee
  $emp.save()
 ```
 
 Esto resulta especialmente útil cuando se importan grandes cantidades de datos de una base de datos relacional. Este tipo de importación suele contener una columna "ID", que hace referencia a una llave primaria que puede asignarse directamente a un atributo de relación.
 
-Esto también significa que puede asignar llaves primarias en las N entidades sin que las entidades correspondientes ya se hayan creado en la primera clase del datastore. Si asigna una llave primaria que no existe en la clase del datastore relacionado, 4D la almacenará y asignará en cuanto se cree esta entidad "1".
 
 Puede asignar o modificar el valor de un atributo de entidad asociado "1" a partir de la dataclass "N" directamente vía el atributo relacionado. Por ejemplo, si desea modificar el atributo de nombre de una entidad Company asociada de una entidad Employee, puede escribir:
 
@@ -283,11 +282,12 @@ Se trabaja con dos selecciones de entidades que se quieren pasar a un proceso wo
 ```4d
 
 var $paid; $unpaid : cs.InvoicesSelection
-//Obtenemos selecciones de entidades para facturas pagadas y no pagadas
+//We get entity selections for paid and unpaid invoices
+
 $paid:=ds.Invoices.query("status=:1"; "Paid")
 $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
-//Pasamos referencias de selección de entidades como parámetros al worker
+//We pass entity selection references as parameters to the worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 ```

@@ -104,7 +104,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 | MethodName | Text | -> | Nome do método de projeto 4D a ser executado        |
 | Param      | Text | -> | Parâmetro texto a ser passado para o método projeto |
 
-**Usage:** URL or Form action.
+**Utilização:** URL ou ação de formulário.
 
 This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. O método receberá este parâmetro em *$1*.
 
@@ -164,7 +164,7 @@ Exemplo para definir a ação de um formulário:
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. Esta página chama-se "search.htm". The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 
-Here is the HTML code that corresponds to this page:
+Aqui está o código HTML que corresponde a esta página:
 
 ```html
 <form action="/4daction/processForm" method=POST>

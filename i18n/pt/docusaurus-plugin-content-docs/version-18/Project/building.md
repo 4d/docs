@@ -7,7 +7,7 @@ title: Building a project package
 
 O construtor de aplicações permite-lhe:
 
-* Build a compiled database, without interpreted code,
+* Construir uma base de dados compilada, sem código interpretado,
 * Construir uma aplicação autônoma, de duplo clique, *i.e.*, fundida com 4D Volume Desktop, o motor de banco de dados 4D,
 * Build different applications from the same compiled database via an XML project,
 * Criar aplicações cliente-servidor homogêneas,

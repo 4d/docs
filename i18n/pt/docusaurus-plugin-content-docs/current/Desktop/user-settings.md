@@ -71,7 +71,7 @@ A tabela seguinte lista as páginas das definições encontradas nas caixas de d
 | [Página segurança](../settings/security.md)                                              | N/a                                          | N/a                                                       |
 | [Página de compatibilidade](../settings/compatibility.md)                                | N/a                                          | N/a                                                       |
 
-Quando editar definições nesta caixa de diálogo, estas são automaticamente armazenadas no arquivo *settings.4DSettings* correspondente (ver abaixo).
+When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below) or the *Backup.4DSettings* file (check the [Backup settings](../Backup/settings.md) page for more information).
 
 ## `SET DATABASE PARAMETER` e definições do utilizador
 

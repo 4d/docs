@@ -19,30 +19,29 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+//Ecriture ligne par ligne depuis le début
 $fhandle:=$f.open("write")
 $text:="Hello World"
-For ($line; 1; 4)
+For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+//Ecriture ligne par ligne depuis la fin
 $fhandle:=$f.open("append")
-$text:="Hello New World!"
-For ($line; 1; 4)
+$text:="Hello New World !"
+For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+//Lecture en utilisant un caractère d'arrêt et un paramètre objet
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:=" !" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+//Lecture ligne par ligne
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -185,7 +184,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.file` property returns <!-- REF #FileHandleClass.file.Summary -->the [4D.File](FileClass.md) object on which the handle has been created<!-- END REF -->.
+La propriété `.file` renvoie <!-- REF #FileHandleClass.file.Summary -->l'objet [4D.File](FileClass.md) sur lequel le handle a été créé<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -267,7 +266,7 @@ Cette propriété est en **lecture seule**.
 
 La propriété `.offset` renvoie <!-- REF #FileHandleClass.offset.Summary -->l'offset courant du flux de données (position dans le document)<!-- END REF -->. La valeur de l'offset est automatiquement mise à jour après les opérations de lecture et d'écriture.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+Le fait de modifier `.offset` changera sa valeur courante au moment de la prochaine opération de lecture ou d'écriture.
 
 - Si la valeur passée est négative, `.offset` est fixé au début du fichier (zéro).
 - Si la valeur passée est supérieure à la taille du fichier, `.offset` est fixé à la fin du fichier (taille du fichier).
@@ -276,18 +275,18 @@ Cette propriété est en **lecture/écriture**.
 
 :::caution
 
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Par exemple :
+L'unité de mesure de l'offset diffère selon la fonction de lecture : avec [`readBlob()`](#readblob), `.offset` est un nombre d'octets, tandis qu'avec [`readText()`](#readtext)/[`readLine()`](#readline) il s'agit d'un nombre de caractères. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Ainsi, si vous commencez la lecture avec `readBlob()` et que vous appelez ensuite `readText()`, la lecture du texte commencera à une position incohérente. Il est donc essentiel de définir vous-même la propriété `.offset` si vous passez de la lecture/écriture de blob à la lecture/écriture de texte dans le même filehandle. Par exemple :
 
 ```4d
-  // Open a european text file using utf-16 encoding (two bytes per character)
-  // We want to read the first 10 characters as bytes, then the remaining as text.
+  // Ouvrir un fichier texte européen en utilisant le codage utf-16 (deux octets par caractère)
+  // Nous voulons lire les 10 premiers caractères sous forme d'octets, puis les autres sous forme de texte.
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
-  // read the 20 first bytes (i.e. 10 characters)
+  // lire les 20 premiers octets (soit 10 caractères)
 $b:=$fh.readBlob(20) // $fh.offset=20
-  // then read all text skipping the first 10 characters we just read in previous blob
-  // because we are now reading text instead of bytes, the meaning of 'offset' is not the same.
-  // We need to translate it from bytes to characters.
-$fh.offset:=10 // ask to skip 10 utf-16 characters (20 bytes)
+  // puis lire tout le texte en sautant les 10 premiers caractères que nous venons de lire dans le blob précédent
+  // parce que nous lisons maintenant du texte au lieu d'octets, la signification de 'offset' n'est pas la même.
+  // Nous devons le traduire d'octets en caractères.
+$fh.offset:=10 // demande de sauter 10 caractères utf-16 (20 octets)
 $s:=$fh.readText()
 ```
 

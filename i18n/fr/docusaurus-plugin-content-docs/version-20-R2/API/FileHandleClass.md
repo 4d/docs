@@ -19,30 +19,29 @@ var $f : 4D.File
 var $fhandle : 4D.FileHandle
 $f:=Folder(Database folder).file("example.txt")
 
-//Writing line by line from the start
+//Ecriture ligne par ligne depuis le début
 $fhandle:=$f.open("write")
 $text:="Hello World"
-For ($line; 1; 4)
+For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Writing line by line from the end
+//Ecriture ligne par ligne depuis la fin
 $fhandle:=$f.open("append")
-$text:="Hello New World!"
-For ($line; 1; 4)
+$text:="Hello New World !"
+For ($line; 1 ; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+//Lecture en utilisant un caractère d'arrêt et un paramètre objet
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
 $o.breakModeRead:=Document with CRLF
-$stopChar:="!"
-$fhandle:=$f.open($o)
+$stopChar:=" !" $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+//Lecture ligne par ligne
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))
@@ -185,7 +184,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.file` property returns <!-- REF #FileHandleClass.file.Summary -->the [4D.File](FileClass.md) object on which the handle has been created<!-- END REF -->.
+La propriété `.file` renvoie <!-- REF #FileHandleClass.file.Summary -->l'objet [4D.File](FileClass.md) sur lequel le handle a été créé<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -267,7 +266,7 @@ Cette propriété est en **lecture seule**.
 
 La propriété `.offset` renvoie <!-- REF #FileHandleClass.offset.Summary -->l'offset courant du flux de données (position dans le document)<!-- END REF -->. La valeur de l'offset est automatiquement mise à jour après les opérations de lecture et d'écriture.
 
-Setting the `.offset` will change its current value at the moment of the next read or write operation.
+Le fait de modifier `.offset` changera sa valeur courante au moment de la prochaine opération de lecture ou d'écriture.
 
 - Si la valeur passée est négative, `.offset` est fixé au début du fichier (zéro).
 - Si la valeur passée est supérieure à la taille du fichier, `.offset` est fixé à la fin du fichier (taille du fichier).

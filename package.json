@@ -4,10 +4,11 @@
     "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
-    "prebuild":"node prebuild.js API/",
-    "prestart":"node prebuild.js API/",
-    "prestart_watch":"node prebuild.js API/",
+    "prebuild":"node prebuild.js",
+    "prestart":"node prebuild.js",
+    "prestart_watch":"node prebuild.js",
     "start": "docusaurus start",
+    "doc_preprocess": "doc_preprocess",
     "start_watch": "doc_preprocess --settings_type='start_watch'",
     "syntaxViewPro": "doc_preprocess --settings_type='build_syntax_viewPro' && doc_preprocess --settings_type='build_syntax_viewPro_translated'",
     "syntax": "doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
@@ -24,7 +25,7 @@
     "highlightjs-4d": "^1.0.0"
   },
   "dependencies": {
-    "@4dsas/doc_preprocessing": "1.1.0",
+    "@4dsas/doc_preprocessing": "1.1.1",
     "@docusaurus/core": "^2.3.1",
     "@docusaurus/plugin-client-redirects": "^2.3.1",
     "@docusaurus/preset-classic": "^2.3.1",

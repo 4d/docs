@@ -43,13 +43,13 @@ Vous pouvez à tout moment savoir si votre application utilise un fichier d’hi
 
 Pour créer un fichier d’historique :
 
-1. Dans la Page **Sauvegarde/Configuration** des Propriétés de structure, cochez l’option **Utiliser le fichier d’historique**. Le programme affiche une boîte de dialogue standard de création de fichier. Par défaut, le fichier d’historique est baptisé *data.journal*.
+1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
 
-2. Conservez le nom du fichier par défaut ou choisissez-en un autre et déterminez l’emplacement du fichier. Si vous disposez d’au moins deux disques durs, il est recommandé de placer le fichier d'historique sur un autre disque que celui contenant le projet d'application. Si le disque dur de l'application est perdu, vous pouvez toujours rappeler votre fichier d'historique.
+2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
 
-3. Cliquez sur le bouton **Enregistrer**. Le disque et le nom du fichier d’historique ouvert s’affichent alors dans la zone **“Utiliser le fichier d’historique”** de la boîte de dialogue. Vous pouvez cliquer dans cette zone afin d’afficher un pop up menu contenant l’enchaînement des dossiers à partir du disque.
+3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
 
-4. Validez la boîte de dialogue des Propriétés.
+4. Validate the Settings dialog box.
 
 Pour que vous puissiez directement créer un fichier d’historique, les données doivent se trouver dans une des situations suivantes :
 

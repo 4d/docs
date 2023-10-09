@@ -115,7 +115,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 | onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, solo lectura): corto sin firmar que contiene el código de cierre enviado por el servidor.</li><li>`$2.reason` (text, sólo lectura): razón por la que el servidor cerró la conexión. Esto es específico de cada servidor y subprotocolo.</li><li>`$2.wasClean` (boolean, sólo lectura): indica si la conexión se cerró limpiamente o no.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Función de retrollamada cuando el webSocket está abierto. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (texto): siempre "open"</li></ul>                                       |
 | dataType    | Text                         | Tipo de datos recibidos o enviados. Valores disponibles: "text" (por defecto), "blob", "object". "text" = utf-8                                                                                                                 |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.<key>:=<value>` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="<name>=<value> {; <name2>=<value2>{; ... } }"`</li>                                                                                                                                                   |
+| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                   |
 
 
 Esta es la secuencia de llamadas de retorno:
@@ -203,11 +203,11 @@ La función `.send()` <!-- REF #WebSocketClass.send().Summary -->envía *message
 
 Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
-| Tipo   | Contenido                                                                                                                 |
-| ------ | ------------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texto en UTF-8                                                                                                            |
-| Blob   | Datos binarios                                                                                                            |
-| Object | Texto en JSON UTF-8 (mismo resultado que con [`JSON Stringify`](https://doc.4d.com/4dv19R/help/command/en/page1217.html)) |
+| Tipo   | Contenido                                                                                                           |
+| ------ | ------------------------------------------------------------------------------------------------------------------- |
+| Text   | Texto en UTF-8                                                                                                      |
+| Blob   | Datos binarios                                                                                                      |
+| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 
 <!-- END REF -->
@@ -268,7 +268,7 @@ En *reason*, puede pasar una cadena que describa por qué se está cerrando la c
 
 #### Descripción
 
-La propiedad `.url` contiene <!-- REF #WebSocketClass.connections.Summary -->la URL a la que se ha conectado el WebSocket<!-- END REF -->. Es la URL que ha pasado a la función [`new()`](#4dwebsocketnew).
+La propiedad `.url` contiene <!-- REF #WebSocketClass.url.Summary -->la URL a la que se ha conectado el WebSocket<!-- END REF -->. Es la URL que ha pasado a la función [`new()`](#4dwebsocketnew).
 
 Esta propiedad es de sólo lectura.
 

@@ -64,6 +64,13 @@ Sin tener que hacer nada más, todas las operaciones realizadas sobre los datos 
 
 Debe crear otro archivo de historial si crea un nuevo archivo de datos. Debe establecer o crear otro archivo de historial si abre otro archivo de datos que no está asociado a un archivo de historial (o si falta el archivo de historial).
 
+## Parámetros del archivo de historial
+
+Los [parámetros del archivo de historial](settings.md#log-file-management) se basa en dos datos: un valor booleano y una ruta.
+
+1. **Valor booleano**: indica si la funcionalidad "Utilizar archivo de registro" está activada o desactivada en la aplicación. Por defecto, el valor booleano se almacena en *catalog.4DCatalog*. Sin embargo, cuando se activa la configuración de usuario [](../Desktop/user-settings.md), se anula la configuración del archivo *catalog.4DCatalog*, y el valor booleano puede definirse en el archivo *Backup.4DSettings* [junto al archivo de datos](../Project/architecture.md#settings-user-data) o en el archivo *Backup.4DSettings* [de la carpeta del proyecto](../Project/architecture.md#settings-user) (ver también la documentación xml backup key en `JournalFileEnabled` [doc.4d.com](https://doc.4d.com)).
+
+2. **Ruta**: una cadena que indica dónde se encuentra el archivo de registro. La ruta del archivo de registro siempre se almacena en el archivo de datos vinculados.
 
 
 ## Cerrar el historial
