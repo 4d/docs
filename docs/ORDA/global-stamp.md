@@ -11,7 +11,7 @@ title: Using the Global Stamp
 
 The global modification stamp is a number, always maintained by 4D, even in case of database restoration, import, etc. Note however that the stamp can be modified using the [`.setGlobalStamp()`](../API/DataStoreClass.md#setglobalstamp) function.
 
-Once the [data change tracking is configured and enabled](#configuring-data-change-tracking) in the datastore, the following actions are automatically executed by 4D at each record modification (add, modify, delete):
+Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
 
 1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity. 
 In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
@@ -34,19 +34,27 @@ By default, the global modification stamp is not created (the [`.getGlobalStamp(
 
 ### Structure requirements
 
-To enable data change tracking, the application structure must contain the following elements:
+To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
 
-- at least one table with a `__GlobalStamp` field. It must of type *Integer 64 bits*, with *automatic index* and *Expose as REST resource* properties selected.
-- a `__DeletedRecords` table with the following fields:
+In addition, to ensure proper operation of the feature, the following conditions are required:
+
+- The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
+- A `__DeletedRecords` table must be added, with the following fields:
 
 |Field|Type|Description|
 |---|---|---|
 |__PrimaryKey|Text|Primary key of the deleted entity|
-|__Stamp|Real|Global stamp just before the deletion|
+|__Stamp|Integer 64 bits|Global stamp just before the deletion|
 |__TableName|Text|Name of the deleted entity table|
 |__TableNumber|Long Integer|Number of the deleted entity table|
 
 You can only track changes for data in tables having the `__GlobalStamp` field.
+
+:::note
+
+In the 4D language, the `__GlobalStamp` field value should be handled through a `Real` type variable.  
+
+:::
 
 ### Using the Structure Editor
 
@@ -60,7 +68,7 @@ To enable data change tracking:
 
 4D then makes the following changes:
 
-- A `__GlobalStamp` field is added to the table(s).
+- A preconfigured `__GlobalStamp` field is added to the table(s).
 - If not already existing, a `__DeletedRecords` table is added to the structure.
 
 
@@ -77,17 +85,19 @@ To disable data change tracking:
 ## Example
 
 ```4d
-var $oldStamp : Integer
+var $oldStamp : Real
+var $tableName : Text
 var $modifiedEmps : cs.EmployeeSelection
 var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
+$tableName:="Employee"
 $oldStamp:=... //load the previous stamp value  
 	//from which you want to compare the current stamp
 
 If ($oldStamp # ds.getGlobalStamp())
 		//get all new or modified entities
-	$modifiedEmps:=ds.Employee.query("__GlobalStamp > :1"; $oldStamp)
+	$modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
 		//get all deleted entities
 	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-	$oldStamp; "Employees")
+	$oldStamp; $tableName)
 End if

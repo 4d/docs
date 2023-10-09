@@ -541,18 +541,24 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Integer<!-- END REF -->
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Real<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Integer|<-|Current value of the global modification stamp|<!-- END REF -->
+|Result|Real|<-|Current value of the global modification stamp|<!-- END REF -->
 
 
 #### Description
 
 The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->returns the current value of the global modification stamp of the datastore<!-- END REF -->.
+
+:::info
+
+This function can only be used with a local datastore, on 4D Server or 4D single-user.
+
+:::
 
 For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
 
@@ -560,7 +566,7 @@ For more information on global stamp and data change tracking, please refer to t
 #### Example
 
 ```4d
-var $currentStamp : Integer
+var $currentStamp : Real
 var $hasModifications : Boolean
 
 $currentStamp:=ds.getGlobalStamp()
@@ -961,7 +967,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|newStamp|Integer|->|New value of global modification stamp|<!-- END REF -->
+|newStamp|Real|->|New value of global modification stamp|<!-- END REF -->
 
 
 :::info Advanced mode
@@ -974,6 +980,13 @@ This function is intended for developers who need to modify the current global s
 
 The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets *newStamp* as new value for the current global modification stamp for the datastore<!-- END REF -->.
 
+:::info
+
+This function can only be used with a local datastore, on 4D Server or 4D single-user.
+
+:::
+
+
 For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
 
 
@@ -982,7 +995,7 @@ For more information on global stamp and data change tracking, please refer to t
 The following code sets the modification global stamp:
 
 ```4d
-var $newValue: Integer
+var $newValue: Real
 $newValue:=ReadValueFrom //get a new value
 ds.setGlobalStamp($newValue)
 ```
