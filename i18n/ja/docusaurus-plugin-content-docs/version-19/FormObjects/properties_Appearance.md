@@ -10,13 +10,13 @@ title: アピアランス
 
 デフォルトボタンは、フォームページごとに一つのみ設定できます。
 
-macOS上では、デフォルトボタンプロパティによってボタンの見た目が変更され、推奨されている選択肢であることをユーザーに対して示します。 デフォルトボタンとフォーカスされているボタンは同一である必要はありません。 macOSにおけるデフォルトボタンは特徴的な青い外観を持ちます:
+In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. デフォルトボタンとフォーカスされているボタンは同一である必要はありません。 macOSにおけるデフォルトボタンは特徴的な青い外観を持ちます:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > このデフォルトボタンとしての外観を得るには、ボタンの高さが 22以下に設定されている必要があります。
 
-Windows上では "推奨選択肢" の概念はサポートされていないため、ランタイムにおいて異なる外観を持つのはフォーカスされているボタンのみですが、 4D フォームエディター上ではデフォルトボタンは青い枠線で表されます:
+On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. 4D フォームエディター上ではデフォルトボタンは青い枠線で表されます:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -295,6 +295,7 @@ HTML WYSIWYG ビューを有効/無効にします。このビューでは、�
  showVerticalRuler|boolean|true (デフォルト), false|
 
 #### 対象オブジェクト
+
 
 [4D Write Pro エリア](writeProArea_overview.md)
 
