@@ -24,7 +24,7 @@ Vous pouvez configurer le server web `WebAdmin` pour qu'il se lance au démarrag
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Check the **Launch WebAdmin server at startup** option in the settings dialog box:
+Cochez l'option **Lancer le serveur WebAdmin au démarrage** dans la boîte de dialogue des paramètres :
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
@@ -69,7 +69,7 @@ La fenêtre suivante s'affiche :
 
 ![alt-text](../assets/en/Admin/waSettings2.png)
 
-#### Launch WebAdmin server at startup
+#### Lancer le serveur WebAdmin au démarrage
 
 Cochez cette option pour lancer le serveur web `WebAdmin` automatiquement au démarrage de 4D ou 4D Server (voir [ci-dessus](#launching-at-startup)). Cette option n'est pas cochée par défaut.
 
@@ -122,15 +122,15 @@ Une clé d'accès est similaire à un mot de passe, mais sans login associé.
 - Pour modifier la clé d'accès, cliquez sur **Modifier**, entrez la nouvelle clé d'accès et cliquez sur **OK**.
 - Pour supprimer la clé d'accès, cliquez sur **Modifier**, laissez le champ d'entrée vide et cliquez sur **OK**.
 
-#### Enable access to Qodly Studio
+#### Activer l'accès à Qodly Studio
 
 :::note
 
-This option only appears if the Qodly Studio license is activated.
+Cette option n'apparaît que si la licence Qodly Studio est activée.
 
 :::
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) at the 4D application level. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
+Cette option permet l'accès utilisateur à [Qodly Studio](../WebServer/qodly-studio.md) au niveau de l'application 4D. Notez que vous devez également [activer l'accès au niveau de chaque projet](../settings/web.md#enable-access-to-qodly-studio).
 
 
 ## Configuration de WebAdmin sans interface
