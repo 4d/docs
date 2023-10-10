@@ -13,7 +13,7 @@ title: On VP Range Changed
 
 This event is generated when a change occurs within a cell range in the 4D View Pro document.
 
-The object returned by the FORM Event command contains:
+O objeto devolvido pelo comando FORM Event contém:
 
 | Propriedade  | Tipo          | Descrição                                                                                                                                                                                                            |
 | ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
