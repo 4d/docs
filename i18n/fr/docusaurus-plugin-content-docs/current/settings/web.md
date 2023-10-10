@@ -299,11 +299,11 @@ Cette option vous permet de désigner un groupe d’utilisateurs 4D qui sera seu
 
 ### Qodly Studio
 
-#### Enable access to Qodly Studio
+#### Activer l'accès à Qodly Studio
 
 :::note
 
-This option only appears if the Qodly Studio license is activated.
+Cette option n'apparaît que si la licence Qodly Studio est activée.
 
 :::
 
