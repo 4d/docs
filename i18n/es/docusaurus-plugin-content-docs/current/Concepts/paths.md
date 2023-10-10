@@ -25,10 +25,10 @@ Se soportan los siguientes nombres de rutas de filesystem:
 | ------------ | ------------------------------------------------------ |
 | "/DATA"      | Carpeta de datos actual                                |
 | "/LOGS"      | Carpeta Logs                                           |
-| "/PACKAGE"   | Project root folder (with or without 4dbase extension) |
+| "/PACKAGE"   | Carpeta raíz del proyecto (con o sin extensión 4dbase) |
 | "/PROJECT"   | Carpeta Project                                        |
 | "/RESOURCES" | Carpeta de recursos actual del proyecto                |
-| "/SOURCES"   | Current project sources folder                         |
+| "/SOURCES"   | Carpeta de fuentes del proyecto actual                 |
 
 ## Sintaxis POSIX
 
