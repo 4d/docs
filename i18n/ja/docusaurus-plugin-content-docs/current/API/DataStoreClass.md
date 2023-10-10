@@ -572,7 +572,10 @@ $info:=$ds.getAllRemoteContexts()
 
 :::info
 
-この機能は、4D Server または 4Dシングルユーザーのローカルデータストアでのみ使用できます。
+この関数は次の場合にのみ使えます:
+
+- ローカルデータストア ([`ds`](#ds)) を対象に。
+- クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
 
@@ -992,7 +995,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 </details>
 
-<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**( *newStamp* : Real)<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
@@ -1016,10 +1019,12 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 :::info
 
-この機能は、4D Server または 4Dシングルユーザーのローカルデータストアでのみ使用できます。
+この関数は次の場合にのみ使えます:
+
+- ローカルデータストア ([`ds`](#ds)) を対象に。
+- クライアント/サーバー環境では、サーバーマシン上にて。
 
 :::
-
 
 グローバルスタンプとデータ変更追跡の詳細については、[**グローバルスタンプの使い方**](../ORDA/global-stamp.md) を参照ください。
 
@@ -1030,7 +1035,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom // 新しい値を取得します
+$newValue:=ReadValueFrom //get a new value to assign
 ds.setGlobalStamp($newValue)
 ```
 
