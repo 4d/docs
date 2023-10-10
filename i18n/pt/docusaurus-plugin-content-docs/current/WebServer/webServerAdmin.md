@@ -175,7 +175,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | rfc931               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                          |
 | user                 | user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).                      |
 | DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
-| request              | request sent by the client (ex. GET /index.htm HTTP/1.0                                                                                                              |
+| request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
 | state                | reply given by the server                                                                                                                                            |
 | length               | size of the data returned (except the HTTP header) or 0                                                                                                              |
 | Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                           |

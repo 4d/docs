@@ -158,9 +158,9 @@ For example, consider the following partial database structure and the relation 
 
 ![](../assets/en/ORDA/relationProperties.png)
 
-All storage attributes will be automatically available:
+Todos os atributos de armazenamento estarão automaticamente disponíveis:
 
-*   in the Project dataclass: "ID", "name", and "companyID"
+*   na dataclass Project: "ID", "name" e "companyID"
 *   na dataclass Company: "ID", "name" e "discount"
 
 In addition, the following relation attributes will also be automatically available:

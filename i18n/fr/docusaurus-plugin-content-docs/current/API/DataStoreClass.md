@@ -18,6 +18,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
@@ -25,6 +26,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
@@ -437,7 +439,7 @@ Une erreur est déclenchée si la fonction `.flushAndLock()` ne peut pas être e
 
 :::caution
 
-D'autres fonctions et services 4D, notamment [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), et [MSC](../MSC/overview.md) peuvent également verrouiller le datastore. Avant d'appeler `.flushAndLock()`, assurez-vous qu'aucune autre action de verrouillage n'est en cours d'utilisation, afin d'éviter toute interaction inattendue.
+Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Avant d'appeler `.flushAndLock()`, assurez-vous qu'aucune autre action de verrouillage n'est en cours d'utilisation, afin d'éviter toute interaction inattendue.
 
 :::
 
@@ -543,6 +545,58 @@ $info:=$ds.getAllRemoteContexts()
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
+
+<!-- REF DataClassClass.getGlobalStamp().Desc -->
+## .getGlobalStamp()
+
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v20 R3  | Ajout         |
+
+</details>
+
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Real<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+| Paramètres | Type |    | Description                                                               |
+| ---------- | ---- | -- | ------------------------------------------------------------------------- |
+| Résultat   | Real | <- | Current value of the global modification stamp|<!-- END REF -->
+
+
+|
+
+
+#### Description
+
+The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->returns the current value of the global modification stamp of the datastore<!-- END REF -->.
+
+:::info
+
+This function can only be used with a local datastore, on 4D Server or 4D single-user.
+
+:::
+
+For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
+
+
+#### Exemple
+
+```4d
+var $currentStamp : Real
+var $hasModifications : Boolean
+
+$currentStamp:=ds.getGlobalStamp()
+methodWhichCouldModifyEmployees //call some code 
+$hasModifications:=($currentStamp # ds.getGlobalStamp())
+```
+
+#### Voir également
+
+[.setGlobalStamp()](#setglobalstamp)
+
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
 
@@ -572,7 +626,7 @@ La fonction `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->retourne 
 
 | Propriété  | Type    | Description                                                                                                                                                     |
 | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D" : datastore principal, disponible via ds </li><li>"4D Server" : datastore distant ouvert avec Open datastore</li>                                                                                                             |
+| type       | string  | <li>"4D" : datastore principal, disponible via ds </li><li>"4D Server" : datastore distant ouvert avec Open datastore</li>                                                                                                            |
 | networked  | boolean | <li>Vrai : le datastore est accessible via une connexion réseau.</li><li>Faux : le datastore n'est pas accessible via une connexion réseau (base locale)</li>                                                                                                            |
 | localID    | text    | Identifiant du datastore sur la machine. Correspond à la chaîne localID donnée avec la commande `Open datastore`. Chaîne vide ("") pour le datastore principal. |
 | connection | object  | Objet décrivant la connexion au datastore distant (non retourné pour le datastore principal). Propriétés disponibles :<table><tr><th>Propriété</th><th>Type</th><th>Description</th></tr><tr><td>hostname</td><td>text</td><td>Adresse IP ou nom du datastore distant + ":" + numéro de port</td></tr><tr><td>tls</td><td>boolean</td><td>Vrai si une connexion sécurisée est utilisée avec le datastore distant</td></tr><tr><td>idleTimeout</td><td>number</td><td>Delai d'inactivité autorisé de la session (en minutes)</td></tr><tr><td>user</td><td>text</td><td>Utilisateur authentifié sur le datastore distant</td></tr></table>                |
@@ -780,6 +834,7 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
 
+
 <details><summary>Historique</summary>
 
 | Version | Modifications |
@@ -927,6 +982,64 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 [`.isAdminProtected()`](#isadminprotected)
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.setGlobalStamp().Desc -->
+## .setGlobalStamp()
+
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v20 R3  | Ajout         |
+
+</details>
+
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+| Paramètres | Type |    | Description                                                       |
+| ---------- | ---- | -- | ----------------------------------------------------------------- |
+| newStamp   | Real | -> | New value of global modification stamp|<!-- END REF -->
+
+
+|
+
+
+:::info Advanced mode
+
+This function is intended for developers who need to modify the current global stamp value. It should be used with care.
+
+:::
+
+#### Description
+
+The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets *newStamp* as new value for the current global modification stamp for the datastore<!-- END REF -->.
+
+:::info
+
+This function can only be used with a local datastore, on 4D Server or 4D single-user.
+
+:::
+
+
+For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
+
+
+#### Exemple
+
+The following code sets the modification global stamp:
+
+```4d
+var $newValue: Real
+$newValue:=ReadValueFrom //get a new value
+ds.setGlobalStamp($newValue)
+```
+
+#### Voir également
+
+[.getGlobalStamp()](#getglobalstamp)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 ## .setRemoteContextInfo()
@@ -1347,5 +1460,6 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Si la transact
 #### Exemple
 
 Voir l'exemple de [`.startTransaction()`](#starttransaction).
+
 
 <!-- END REF -->

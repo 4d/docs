@@ -70,6 +70,8 @@ La barre d’outils comporte les éléments suivants :
 | ![](../assets/en/FormEditor/shields2.png)        | [Affichage des badges](#shields)                          | Chaque clic sur ce bouton provoque l’affichage successif de tous les types de badges de formulaire. Le bouton est également associé à un menu permettant de sélectionner directement le type de badge à afficher.                                                                                                                                                                                           |
 | ![](../assets/en/FormEditor/library.png)         | [Bibliothèque d'objets préconfigurés](objectLibrary.html) | Ce bouton affiche la fenêtre de la bibiliothèque d'objets préconfigurée, proposant de nombreux objets auxquels des propriétés par défaut ont déjà été appliquées.                                                                                                                                                                                                                                           |
 | ![](../assets/en/FormEditor/listBoxBuilder1.png) | [Création de list box](#list-box-builder)                 | Ce bouton crée de nouvelles list box de type entity selection.                                                                                                                                                                                                                                                                                                                                              |
+| ![](../assets/en/FormEditor/insertFields.png)    | [Insert fields](#insert-fields)                           | This button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards.                                                                                                                                                                                                                                         |
+
 
 ### Object bar
 
@@ -496,6 +498,26 @@ Le générateur de list box vous permet de créer et de remplir des list box de 
 La list box finale :
 
 ![](../assets/en/FormEditor/listboxBuilderListbox.png)
+
+
+## Insert fields
+
+The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms.
+
+The **Insert fields** button is only available with table forms.
+
+The design of the resulting form depends on the form type:
+
+- **Detail form**: clicking on the **Insert fields** button generates a form with a page design:
+
+![](../assets/en/FormEditor/insertFields2.png)
+
+- **List form**: clicking on the **Insert fields** button generates a list form design with fields organized on a single line and area markers:
+
+![](../assets/en/FormEditor/insertFields3.png)
+
+
+
 
 ## Badges
 

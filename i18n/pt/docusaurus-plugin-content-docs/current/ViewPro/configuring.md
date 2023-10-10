@@ -237,7 +237,7 @@ In addition to the special characters and codes described in the previous sectio
 
 ## Atributos de impressão
 
-4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. These attributes are handled by the following commands:
+4D View Pro print attributes allow you to control all aspects of printing 4D View Pro areas. Esses atributos são tratados pelos seguintes comandos:
 
 * [VP SET PRINT INFO](method-list.md#vp-set-print-info)
 * [VP Get print info](method-list.md#vp-get-print-info)
@@ -470,10 +470,10 @@ Exemplo:
 
 #### Informações sobre o estilo
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                         |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | text | Define o nome do estilo                                                                                                                                                                                                                                                                           |
-| parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Apenas disponível quando se utiliza uma folha de estilos. |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                      |
+| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | text | Define o nome do estilo                                                                                                                                                                                                                                                                        |
+| parentName  | text | Especifica o estilo em que o estilo atual se baseia. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Apenas disponível quando se utiliza uma folha de estilos. |
 
 ## Objeto 4D View Pro
 
