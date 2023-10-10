@@ -575,7 +575,10 @@ The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summa
 
 :::info
 
-This function can only be used with a local datastore, on 4D Server or 4D single-user.
+Esta función sólo puede llamarse:
+
+- en el datastore ([`ds`](#ds)).
+- en entorno cliente/servidor, en la máquina servidor.
 
 :::
 
@@ -995,7 +998,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 </details>
 
-<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**( *newStamp* : Real)<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
@@ -1019,10 +1022,12 @@ The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summa
 
 :::info
 
-This function can only be used with a local datastore, on 4D Server or 4D single-user.
+Esta función sólo puede llamarse:
+
+- en el datastore ([`ds`](#ds)).
+- en entorno cliente/servidor, en la máquina servidor.
 
 :::
-
 
 For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
 
@@ -1033,7 +1038,7 @@ The following code sets the modification global stamp:
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value
+$newValue:=ReadValueFrom //get a new value to assign
 ds.setGlobalStamp($newValue)
 ```
 
