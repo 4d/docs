@@ -15,12 +15,12 @@ title: ポインター
 
 | タイプ    | 参照時                     | 使用時                      | 代入時                      |
 | ------ | ----------------------- | ------------------------ | ------------------------ |
-| テーブル   | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Table  | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | フィールド  | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
 | 変数     | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
 | 配列     | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
 | 配列要素   | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| オブジェクト | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Object | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
 ## ポインターの基本
