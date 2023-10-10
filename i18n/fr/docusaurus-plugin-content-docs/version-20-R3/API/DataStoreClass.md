@@ -439,7 +439,7 @@ Une erreur est déclenchée si la fonction `.flushAndLock()` ne peut pas être e
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Avant d'appeler `.flushAndLock()`, assurez-vous qu'aucune autre action de verrouillage n'est en cours d'utilisation, afin d'éviter toute interaction inattendue.
+D'autres fonctions et services 4D, notamment le [backup](../Backup/backup.md), le [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html) et le [MSC](../MSC/overview.md) , peuvent également verrouiller le datastore. Avant d'appeler `.flushAndLock()`, assurez-vous qu'aucune autre action de verrouillage n'est en cours d'utilisation, afin d'éviter toute interaction inattendue.
 
 :::
 
@@ -557,13 +557,13 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Real<!-- END REF -->
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Réel<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
-| Paramètres | Type |    | Description                                                               |
-| ---------- | ---- | -- | ------------------------------------------------------------------------- |
-| Résultat   | Real | <- | Current value of the global modification stamp|<!-- END REF -->
+| Paramètres | Type |    | Description                                                                  |
+| ---------- | ---- | -- | ---------------------------------------------------------------------------- |
+| Résultat   | Real | <- | Valeur courante du marqueur de modification global<!-- END REF -->
 
 
 |
@@ -571,15 +571,15 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Description
 
-The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summary -->returns the current value of the global modification stamp of the datastore<!-- END REF -->.
+La fonction `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summary -->renvoie la valeur courante du marqueur de modification globale du datastore<!-- END REF -->.
 
 :::info
 
-This function can only be used with a local datastore, on 4D Server or 4D single-user.
+Cette fonction ne peut être utilisée qu'avec un datastore local, sur 4D Server ou 4D monoposte.
 
 :::
 
-For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
+Pour plus d'informations sur le marqueur global et le suivi des modifications de données, veuillez consulter la page [**Utiliser le marqueur global**](../ORDA/global-stamp.md) .
 
 
 #### Exemple
@@ -589,7 +589,7 @@ var $currentStamp : Real
 var $hasModifications : Boolean
 
 $currentStamp:=ds.getGlobalStamp()
-methodWhichCouldModifyEmployees //call some code 
+methodWhichCouldModifyEmployees //exécuter du code 
 $hasModifications:=($currentStamp # ds.getGlobalStamp())
 ```
 
@@ -999,41 +999,41 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
-| Paramètres | Type |    | Description                                                       |
-| ---------- | ---- | -- | ----------------------------------------------------------------- |
-| newStamp   | Real | -> | New value of global modification stamp|<!-- END REF -->
+| Paramètres | Type |    | Description                                                                   |
+| ---------- | ---- | -- | ----------------------------------------------------------------------------- |
+| newStamp   | Real | -> | Nouvelle valeur du marqueur de modification global|<!-- END REF -->
 
 
 |
 
 
-:::info Advanced mode
+:::info Mode avancé
 
-This function is intended for developers who need to modify the current global stamp value. It should be used with care.
+Cette fonction est destinée aux développeurs qui ont besoin de modifier la valeur courante du marqueur global. Elle doit être utilisée avec précaution.
 
 :::
 
 #### Description
 
-The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets *newStamp* as new value for the current global modification stamp for the datastore<!-- END REF -->.
+La fonction `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->définit *newStamp* comme nouvelle valeur du marqueur de modification global courant pour le datastore<!-- END REF -->.
 
 :::info
 
-This function can only be used with a local datastore, on 4D Server or 4D single-user.
+Cette fonction ne peut être utilisée qu'avec un datastore local, sur 4D Server ou 4D monoposte.
 
 :::
 
 
-For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
+Pour plus d'informations sur le marqueur global et le suivi des modifications de données, veuillez consulter la page [**Utiliser le marqueur global**](../ORDA/global-stamp.md) .
 
 
 #### Exemple
 
-The following code sets the modification global stamp:
+Le code suivant définit le marqueur de modification global:
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value
+$newValue:=ReadValueFrom //on obtient une nouvelle valeur
 ds.setGlobalStamp($newValue)
 ```
 
