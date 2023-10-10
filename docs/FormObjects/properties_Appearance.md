@@ -9,13 +9,13 @@ The default button property designates the button that gets the initial focus at
 
 There can only be one default button per form page.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
+In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. The default button can be different from the focused button. Default buttons have a specific blue appearance on macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > Button must have a standard height to get the default button appearance.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime. However, in the 4D form editor, the default button is represented with a blue outline:
+On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. However, in the 4D form editor, the default button is represented with a blue outline:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
