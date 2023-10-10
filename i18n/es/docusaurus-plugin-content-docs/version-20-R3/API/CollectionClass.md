@@ -1252,7 +1252,7 @@ La función `.distinct()` <!-- REF #collection.find().Summary -->devuelve el pri
 
 Se designa la retrollamada a ejecutar para evaluar los elementos de la colección utilizando:
 
-- *fórmula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
+- *formula* (sintaxis recomendada), un [objeto fórmula](FunctionClass.md) que puede encapsular toda expresión ejecutable, incluyendo funciones y métodos proyecto;
 - o en *methodName*, el nombre de un método proyecto (texto).
 
 La retrollamada se llama con los parámetros pasados en *param* (opcional). The callback is called with the parameter(s) passed in *param* (optional). Recibe un objeto `` en el primer parámetro ($1).
