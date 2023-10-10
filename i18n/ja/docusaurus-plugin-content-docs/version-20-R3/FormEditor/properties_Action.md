@@ -1,6 +1,6 @@
 ---
 id: action
-title: アクション
+title: 動作
 ---
 
 
