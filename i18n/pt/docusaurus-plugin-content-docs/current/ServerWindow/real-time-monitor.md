@@ -26,7 +26,7 @@ As informações seguintes são fornecidas para cada linha:
 
 The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
-- clicking on the **Pause** button,
+- clicando no botão **Pause**,
 - clicando na lista,
 - premindo a barra de espaços.
 
