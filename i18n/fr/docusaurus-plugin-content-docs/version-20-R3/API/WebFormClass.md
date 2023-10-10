@@ -36,7 +36,7 @@ La classe `WebForm` contient des fonctions et des propriétés permettant de gé
 
 #### Description
 
-Les composants des webforms sont <!-- REF #WebFormClass.componentName.Summary -->des objets disponibles directement en tant que propriétés<!-- END REF --> de ces webforms.
+Les composants des webforms sont <!-- REF #WebFormClass.componentName.Summary -->objets disponibles directement en tant que propriétés<!-- END REF --> de ces webforms.
 
 Pour plus d'informations, veuillez vous référer à la description de [`.componentName` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormClass#componentname).
 
