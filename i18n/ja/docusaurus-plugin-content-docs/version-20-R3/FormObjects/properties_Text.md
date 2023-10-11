@@ -1,6 +1,6 @@
 ---
 id: propertiesText
-title: Text
+title: テキスト
 ---
 
 ---
