@@ -1081,6 +1081,72 @@ Here's the result:
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
 
+### VP EXPORT TO BLOB
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
+**VP EXPORT TO BLOB** ( *areaName* : Text ; *option* : Object ) <!-- END REF -->
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Params -->
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|areaName   |Text|->|4D View Pro area form object name|
+|option   |Object|->|4D View Pro object|<!-- END REF -->
+
+#### Description
+
+The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the 4D View Pro document in Blob format<!-- END REF -->.
+
+In *option*, you can pass several properties:
+
+|Property|Type|Description|
+|---------|--- |------|
+|formula|Object|(mandatory) Callback method to be launched when the export has completed.|
+|includeAutoMergedCells|Boolean|Whether to include the automatically merged cells when saving, default=false.|
+|includeBindingSource|Boolean|Whether to include the binding source when saving, default=true.|
+|includeCalcModelCache|Boolean|Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.|
+|includeEmptyRegionCells|Boolean|Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true|
+|includeFormulas|Boolean|Whether to include the formula when saving, default=true.|
+|includeStyles|Boolean|Whether to include the style when saving, default=true.|
+|includeUnusedNames|Boolean|Whether to include the unused custom name when saving, default=true.|
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+
+
+The following parameters can be used in the callback method:
+
+|Variable| |Type|Description|
+|:----|:----|:----|:----|
+|$1| |text|The name of the 4D View Pro object|
+|$2| |4D.blob|exported document|
+|$3| |object|A reference to the command's options|
+|$4| |object|An object returned by the method with a status message|
+| |.success|boolean|True if export with success, False otherwise.|
+| |.errorCode|integer|Error code. May be returned by 4D or JavaScript.|
+| |.errorMessage|text|Error message. May be returned by 4D or JavaScript.|
+
+
+#### Example
+
+```4d
+VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
+```
+
+The command `VP EXPORT TO BLOB` is asynchronous. You need to create *VPBlobCallback* method to use the export result: 
+
+```4d
+#DECLARE($area : Text; $data : 4D.Blob)
+var $myTable : ds.Table
+
+$myTable:=ds.Table.new()
+$myTable.blob:=$data
+$myTable.save()
+
+```
+
+#### See also
+
+[VP IMPORT FROM BLOB](#vp-import-from-blob)
+
 ### VP Export to object
 
 <!-- REF #_method_.VP Export to object.Syntax -->
@@ -2919,6 +2985,61 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *areaName* : Text ; *VPblob* : 4D.blob { ; *option* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|areaName   |Text|->|4D View Pro area form object name|
+|VPblob   |4D.blob|->|4D View Pro blob|
+|option   |Object|->|4D View Pro object|<!-- END REF -->
+
+#### Description
+
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the 4D View Pro document in Blob format<!-- END REF -->. 
+
+In *option*, you can pass several properties:
+
+|Property|Type|Description|
+|---------|--- |------|
+|formula|Object|Callback method to be launched when the import has completed.|
+|calcOnDemand|Boolean|Whether to calculate formulas only when they are demanded, default=false.|
+|dynamicReferences|Boolean|Whether to calculate functions with dynamic reference, default=true.|
+|fullRecalc|Boolean|Whether to calculate after loading the json data, false by default.|
+|includeFormulas|Boolean|Whether to include the formula when loading, default=true.|
+|includeStyles|Boolean|Whether to include the style when loading, default=true.|
+|includeUnusedStyles|Boolean|Whether to include the unused name style when converting excel xml to the json, default=true.|
+|openMode|Integer|can be: <br>0: normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points. <br>1: lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br>2: incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.|
+
+The following parameters can be used in the callback method:
+
+|Variable| |Type|Description|
+|:----|:----|:----|:----|
+|$1| |text|The name of the 4D View Pro object|
+|$2| |4D.blob|imported document|
+|$3| |object|A reference to the command's options|
+|$4| |object|An object returned by the method with a status message|
+| |.success|boolean|True if import with success, False otherwise.|
+| |.errorCode|integer|Error code. May be returned by 4D or JavaScript.|
+| |.errorMessage|text|Error message. May be returned by 4D or JavaScript.|
+
+
+#### Example
+
+```4d
+var $myBlobDocument:4D.Blob:=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### See also
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
