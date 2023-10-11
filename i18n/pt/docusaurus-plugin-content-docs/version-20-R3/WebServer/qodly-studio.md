@@ -140,7 +140,7 @@ There are two ways to access Qodly Studio:
 
 `IPaddress:HTTPPort/studio`
 
-ou:
+ou :
 
 `IPaddress:HTTPSPort/studio`
 

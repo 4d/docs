@@ -164,7 +164,7 @@ The translation file in JSON format contains the following attributes:
 
 | Atributo  | Tipo       | Obrigatório | Descrição                                                                             |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Coleção de objetos de tabela traduzidos                                               |
+| tabelas   | Collection |             | Coleção de objetos de tabela traduzidos                                               |
 | fields    | Collection |             | Coleção de objetos de campo traduzidos                                                |
 | formulas  | Collection |             | Collection of translated formula objects                                              |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |

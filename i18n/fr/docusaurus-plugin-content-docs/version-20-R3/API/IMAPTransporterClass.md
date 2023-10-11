@@ -1679,7 +1679,7 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 | ---------- | ------- |:--:| ----------------------------------------- |
 | name       | Text    | -> | Nom de la boîte de réception              |
 | state      | Integer | -> | Statut de l'accès à la boite de réception |
-| Résultat   | Object  | <- | objet boxInfo|<!-- END REF -->
+| Résultat   | Object  | <- | Objet boxInfo|<!-- END REF -->
 
 |
 

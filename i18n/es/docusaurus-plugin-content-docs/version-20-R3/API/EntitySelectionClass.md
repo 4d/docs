@@ -822,7 +822,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 *length* se añade automáticamente como ruta para las propiedades de colección anidadas.
 
-:::
+:::  
 
 <!-- END REF -->
 

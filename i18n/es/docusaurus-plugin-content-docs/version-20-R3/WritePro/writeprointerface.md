@@ -164,7 +164,7 @@ The translation file in JSON format contains the following attributes:
 
 | Atributo  | Tipo       | Obligatorio | Descripción                                                                           |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Collection of translated table objects                                                |
+| tablas    | Collection |             | Collection of translated table objects                                                |
 | fields    | Collection |             | Collection of translated field objects                                                |
 | formulas  | Collection |             | Collection of translated formula objects                                              |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
@@ -223,7 +223,7 @@ The theme file in JSON format contains the following attributes:
 | Atributo | Tipo   | Obligatorio | Descripción                                                                                                                           |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
 | default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
-| table    | Object |             | Object containing the style definition applicable to the table.                                                                       |
+| tabla    | Object |             | Object containing the style definition applicable to the table.                                                                       |
 | rows     | Object |             | Object containing the style definition applicable to all rows.                                                                        |
 | cells    | Object |             | Object containing the style definition applicable to all cells.                                                                       |
 | header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |

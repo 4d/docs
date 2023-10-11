@@ -1,6 +1,6 @@
 ---
 id: write-class-method
-title: Editor de código
+title: Editor de método
 ---
 
 4D tem um poderoso editor de código embutido que oferece um amplo conjunto de funcionalidades para edição de código altamente produtiva, como preenchimento inteligente de código, navegação de código, depuração, busca, e mais.
@@ -673,5 +673,5 @@ The current item is either the one selected or the one where the cursor is locat
 
 ![find-dialog](../assets/en/code-editor/search-references.png)
 
-Este comando apresenta os seus resultados numa nova janela.
+This command displays its results in a new window.
 

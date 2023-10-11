@@ -17,7 +17,7 @@ title: データタイプの概要
 | [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | `Integer`                               | `ARRAY INTEGER`                                 |
 | [倍長整数](Concepts/dt_number.md)         | ◯       | ◯       | `Integer`                               | `C_LONGINT`, `ARRAY LONGINT`                    |
 | [64ビット整数](Concepts/dt_number.md)      | ◯ (SQL) | 実数に変換   | -                                       | -                                               |
-| [実数](Concepts/dt_number.md)           | ◯       | ◯       | `Real`                                  | `C_REAL`, `ARRAY REAL`                          |
+| [Real](Concepts/dt_number.md)         | ◯       | ◯       | `Real`                                  | `C_REAL`, `ARRAY REAL`                          |
 | [未定義](Concepts/dt_null_undefined.md)  | -       | ◯       | -                                       | -                                               |
 | [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                       | -                                               |
 | [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | `Pointer`                               | `C_POINTER`, `ARRAY POINTER`                    |

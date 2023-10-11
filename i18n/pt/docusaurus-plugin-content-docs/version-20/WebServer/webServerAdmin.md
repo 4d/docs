@@ -177,7 +177,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
 | request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
 | state                | reply given by the server                                                                                                                                            |
-| length               | size of the data returned (except the HTTP header) or 0                                                                                                              |
+| length               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                               |
 | Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                           |
 | User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                        |
 
@@ -201,7 +201,7 @@ The following table lists the fields available for each format (in alphabetical 
 | C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                                                                                            |
 | C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                                                                                              |
 | CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                                                |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                                           |
+| CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                                                                                             |
 | CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                         |
 | CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                              |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                                                 |

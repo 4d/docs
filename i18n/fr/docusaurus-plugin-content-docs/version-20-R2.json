@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "v20 R2 BETA",
+    "message": "v20 R2",
     "description": "The label for version 20-R2"
   },
   "sidebar.docs.category.Getting Started": {
@@ -306,5 +306,9 @@
   "sidebar.docs.doc.Build Application": {
     "message": "Générateur d'application",
     "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
+  },
+  "sidebar.docs.doc.4D Write Pro Interface": {
+    "message": "4D Write Pro Interface",
+    "description": "The label for the doc item 4D Write Pro Interface in sidebar docs, linking to the doc WritePro/writeprointerface"
   }
 }

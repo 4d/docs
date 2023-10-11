@@ -12,8 +12,8 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 | Syntaxe                                                                    | Exemple                     | Description                                                                                             |
 | -------------------------------------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass                       |
-| [**{dataClass}({clé})**](#dataclasskey)                                    | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass                  |
-| [**{dataClass}:{attribut}(valeur)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                      |
+| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass                  |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie                      |
 | [**{dataClass}/{méthode}**](#dataclassmethod-and-dataclasskeymethod)       | `/Employee/getHighSalaries` | Exécute une méthode projet et retourne un objet ou une collection (la méthode projet doit être exposée) |
 | [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Renvoie une valeur basée sur une méthode d'entité                                                       |
 
@@ -132,7 +132,7 @@ Retourne toutes les données d'une dataclass spécifique.
 }
 ````
 
-## {dataClass}({clé})
+## {dataClass}({key})
 
 Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass, par exemple, `Company (22) ou Company ("IT0911AB2200")`
 
@@ -179,7 +179,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
 }
 ````
 
-## {dataClass}:{attribut}(valeur)
+## {dataClass}:{attribute}(value)
 
 Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie
 

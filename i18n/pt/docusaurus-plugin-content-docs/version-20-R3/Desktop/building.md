@@ -16,7 +16,7 @@ O construtor de aplicações permite-lhe:
 
 > As aplicações compiladas baseiam-se em ficheiros [.4dz](#build-compiled-structure) que são **só de leitura**. Tenha em atenção que a utilização de comandos ou funções que modificam os ficheiros de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, pode criar aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
-## Visão geral
+## Visão Geral
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
@@ -291,7 +291,7 @@ Pode selecionar esta opção:
 
 Designa a localização no seu disco da aplicação 4D Volume Desktop a ser usada para construir a parte cliente da sua aplicação.
 
-> O número da versão do 4D Volume Desktop deve coincidir com o número da versão de 4D Developer Edition. The 4D Volume Desktop version number must match the 4D Developer Edition version number.
+> The 4D Volume Desktop version number must match the 4D Developer Edition version number. The 4D Volume Desktop version number must match the 4D Developer Edition version number.
 
 This 4D Volume Desktop must correspond to the current platform (which will also be the platform of the client application). If you want to build a client application for a “concurrent” platform, you must carry out an additional build operation using a 4D application running on that platform.
 

@@ -126,7 +126,8 @@ Estas opciones se aplican a los archivos de copia de seguridad principales y a l
 
     Esta funcionalidad implica que el programa analiza todos los archivos de registro de la carpeta de archivos de registro actual al iniciarse. Por lo tanto, por razones de rendimiento, asegúrese de que no hay archivos de registro inútiles almacenados en la carpeta.
 
-    :::
+
+:::
 
 
 El usuario no ve ninguna caja de diálogo; la operación es completamente automática. El objetivo es facilitar al máximo su uso. La operación se registra en el diario de copias de seguridad.
