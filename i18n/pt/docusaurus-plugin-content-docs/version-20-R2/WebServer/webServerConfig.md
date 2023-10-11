@@ -78,7 +78,7 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 | `WEB SET OPTION`                   | `Web CORS settings`                                                                                             | Collection of objects (List of allowed hosts and methods for the CORS service) |
 | Caixa de diálogos de configurações | [Options (II) page/Domain names and HTTP methods allowed](../settings/web.md#domain-names-HTTP-methods-allowed) | Click on the [+] button to add an allowed domain name and its method(s)        |
 
-List of allowed hosts and methods for the CORS service.
+Lista de hosts e métodos permitidos para o serviço CORS.
 
 #### Nomes de domínio
 
@@ -295,7 +295,7 @@ Web HTTPS port ID
 
 |Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
 
-Listening IP port number for HTTPS connections via TLS. Por defeito, o valor é 443 (valor padrão). See also [HTTP Port](#http-port) for information on port numbers.
+Número da porta IP de escuta para conexões HTTPS via TLS. Por defeito, o valor é 443 (valor padrão). See also [HTTP Port](#http-port) for information on port numbers.
 
 
 ## Tempo limite do processo inativo
@@ -501,7 +501,7 @@ In return, you must make sure in this case to systematically initialize the vari
 
 Certain robots (query engines, spiders...) scroll through web servers and static pages. If you do not want robots to be able to access your entire site, you can define which URLs they are not allowed to access.
 
-To do so, put the ROBOTS.TXT file at the server's root. Este ficheiro deve ser estruturado da seguinte forma:
+Para isso, coloque o arquivo ROBOTS.TXT na raiz do servidor. Este ficheiro deve ser estruturado da seguinte forma:
 
 ```4d
    User-Agent: <name>
