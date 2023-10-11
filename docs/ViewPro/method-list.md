@@ -1084,24 +1084,24 @@ Here's the result:
 ### VP EXPORT TO BLOB
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
-**VP EXPORT TO BLOB** ( *areaName* : Text ; *option* : Object ) <!-- END REF -->
+**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
 
 <!-- REF #_method_.VP EXPORT TO BLOB.Params -->
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|areaName   |Text|->|4D View Pro area form object name|
-|option   |Object|->|4D View Pro object|<!-- END REF -->
+|vpAreaName   |Text|->|4D View Pro area form object name|
+|paramObj   |Object|->|Export options|<!-- END REF -->
 
 #### Description
 
-The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the 4D View Pro document in Blob format<!-- END REF -->.
+The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
 
-In *option*, you can pass several properties:
+In *paramObj*, you can pass several properties:
 
 |Property|Type|Description|
 |---------|--- |------|
-|formula|Object|(mandatory) Callback method to be launched when the export has completed.|
+|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed.|
 |includeAutoMergedCells|Boolean|Whether to include the automatically merged cells when saving, default=false.|
 |includeBindingSource|Boolean|Whether to include the binding source when saving, default=true.|
 |includeCalcModelCache|Boolean|Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.|
@@ -1117,8 +1117,8 @@ The following parameters can be used in the callback method:
 |Variable| |Type|Description|
 |:----|:----|:----|:----|
 |$1| |text|The name of the 4D View Pro object|
-|$2| |4D.blob|exported document|
-|$3| |object|A reference to the command's options|
+|$2| |4D.blob|The exported blob|
+|$3| |object|A reference to the command's *paramObj* parameter|
 |$4| |object|An object returned by the method with a status message|
 | |.success|boolean|True if export with success, False otherwise.|
 | |.errorCode|integer|Error code. May be returned by 4D or JavaScript.|
@@ -1127,13 +1127,15 @@ The following parameters can be used in the callback method:
 
 #### Example
 
+The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named VPBlobCallback in our example) to use the export results.
+
 ```4d
+//Export the VP document
 VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
 ```
 
-The command `VP EXPORT TO BLOB` is asynchronous. You need to create *VPBlobCallback* method to use the export result: 
-
 ```4d
+//VPBlobCallback method
 #DECLARE($area : Text; $data : 4D.Blob)
 var $myTable : ds.Table
 
@@ -2989,25 +2991,25 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 ### VP IMPORT FROM BLOB
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *areaName* : Text ; *VPblob* : 4D.blob { ; *option* : Object} ) <!-- END REF -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|areaName   |Text|->|4D View Pro area form object name|
-|VPblob   |4D.blob|->|4D View Pro blob|
-|option   |Object|->|4D View Pro object|<!-- END REF -->
+|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpBlob   |4D.blob|->|Blob containing a 4D View Pro document|
+|paramObj   |Object|->|Import options|<!-- END REF -->
 
 #### Description
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the 4D View Pro document in Blob format<!-- END REF -->. 
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports and displays *vpBlob* in the 4D View Pro area *vpAreaName*. *vpBlob* must contain a 4D View Pro document previously saved as Blob using the [VP EXPORT TO BLOB](#vp-export-to-blob) command.<!-- END REF -->. 
 
-In *option*, you can pass several properties:
+In *paramObj*, you can pass several properties:
 
 |Property|Type|Description|
 |---------|--- |------|
-|formula|Object|Callback method to be launched when the import has completed.|
+|formula|4D.Function|Callback method to be launched when the import has completed.|
 |calcOnDemand|Boolean|Whether to calculate formulas only when they are demanded, default=false.|
 |dynamicReferences|Boolean|Whether to calculate functions with dynamic reference, default=true.|
 |fullRecalc|Boolean|Whether to calculate after loading the json data, false by default.|
@@ -3021,8 +3023,8 @@ The following parameters can be used in the callback method:
 |Variable| |Type|Description|
 |:----|:----|:----|:----|
 |$1| |text|The name of the 4D View Pro object|
-|$2| |4D.blob|imported document|
-|$3| |object|A reference to the command's options|
+|$2| |4D.blob|The imported blob|
+|$3| |object|A reference to the command's *paramObj* parameter|
 |$4| |object|An object returned by the method with a status message|
 | |.success|boolean|True if import with success, False otherwise.|
 | |.errorCode|integer|Error code. May be returned by 4D or JavaScript.|
@@ -3032,7 +3034,7 @@ The following parameters can be used in the callback method:
 #### Example
 
 ```4d
-var $myBlobDocument:4D.Blob:=ds.Table.all().first().blob
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
 VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 ```
