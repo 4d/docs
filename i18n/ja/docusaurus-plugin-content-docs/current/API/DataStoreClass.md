@@ -1035,7 +1035,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value to assign
+$newValue:=ReadValueFrom // 代入するための新しい値を取得します
 ds.setGlobalStamp($newValue)
 ```
 
