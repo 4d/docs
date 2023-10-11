@@ -114,7 +114,7 @@ As petições abaixo retornar apenas o primeiro nome e o último nome da classe 
  `GET  /rest/People/firstName,lastName/`
 
 
-**Resultado**:
+**Resultadoi**:
 
 ````
 {
@@ -195,7 +195,7 @@ As petições abaixo retornar apenas os atributos primeiro nome e último sobren
 
  `GET  /rest/People(3)/`
 
-**Resultado**:
+**Resultadoi**:
 
 ````
 {
