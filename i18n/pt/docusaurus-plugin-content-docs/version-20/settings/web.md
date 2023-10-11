@@ -166,7 +166,7 @@ Ativa o serviço Cross-origin resource sharing (CORS). Ver [Ativar CORS](../WebS
 
 #### Nomes de domínio/Métodos HTTP permitidos
 
-List of allowed hosts and methods for the CORS service. Ver [Parâmetros CORS](../WebServer/webServerConfig.md#cors-settings).
+Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parâmetros CORS](../WebServer/webServerConfig.md#cors-settings).
 
 
 
@@ -225,7 +225,7 @@ The following table lists the fields available for each format (in alphabetical 
 | C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                      |
 | C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                        |
 | CONNECTION_ID  |     | X   | Número de identificação da ligação                                          |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                     |
+| CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                       |
 | CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                   |
 | CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                        |
 | CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client           |
