@@ -159,7 +159,7 @@ Cette propriété est en lecture seule.
 <!-- REF #WebSocketClass.handler.Desc -->
 ## .handler
 
-<!-- REF #WebSocketClass.handler.Syntax -->**.handler** : Objet<!-- END REF -->
+<!-- REF #WebSocketClass.handler.Syntax -->**.handler** : Object<!-- END REF -->
 
 #### Description
 
