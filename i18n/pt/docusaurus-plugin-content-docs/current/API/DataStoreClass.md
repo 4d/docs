@@ -1025,7 +1025,7 @@ Essa função é destinada a desenvolvedores que precisam modificar o valor atua
 
 #### Descrição
 
-A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->sets *newStamp* as new value for the current global modification stamp for the datastore<!-- END REF -->.
+A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->define *newStamp* como o novo valor para o marcador de modificação global atual for o datastore<!-- END REF -->.
 
 :::info
 
@@ -1041,11 +1041,11 @@ Para obter mais informações sobre o marcador global e o rastreamento de altera
 
 #### Exemplo
 
-The following code sets the modification global stamp:
+O código a seguir define o carimbo global de modificação:
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value to assign
+$newValue:=ReadValueFrom //obtém um novo valor para atribuir
 ds.setGlobalStamp($newValue)
 ```
 
