@@ -1687,7 +1687,6 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 * *pathObjects* : Collection。 *pathObjects* コレクションには必要な数だけオブジェクトを追加することができます。 デフォルトでは、プロパティは昇順に並べ替えられます ("descending" は false)。 コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
-
 ```4d
 {
     "propertyPath": string,
@@ -2274,6 +2273,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 ```
 
 
+
 <!-- END REF -->
 
 <!-- REF collection.reverse().Desc -->
@@ -2487,7 +2487,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->
