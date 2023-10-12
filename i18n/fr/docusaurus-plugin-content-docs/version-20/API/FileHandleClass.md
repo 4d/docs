@@ -273,6 +273,25 @@ Le fait de modifier `.offset` changera sa valeur courante au moment de la procha
 
 Cette propriété est en **lecture/écriture**.
 
+:::caution
+
+When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Selon le jeu de caractères du fichier, un caractère correspond à un ou plusieurs octets. Ainsi, si vous commencez la lecture avec `readBlob()` et que vous appelez ensuite `readText()`, la lecture du texte commencera à une position incohérente. Il est donc essentiel de définir vous-même la propriété `.offset` si vous passez de la lecture/écriture de blob à la lecture/écriture de texte dans le même filehandle. Par exemple :
+
+```4d
+  // Ouvrir un fichier texte européen en utilisant le codage utf-16 (deux octets par caractère)
+  // Nous voulons lire les 10 premiers caractères sous forme d'octets, puis les autres sous forme de texte.
+$fh:=File("/RESOURCES/sample_utf_16.txt").open()
+  // lire les 20 premiers octets (soit 10 caractères)
+$b:=$fh.readBlob(20) // $fh.offset=20
+  // puis lire tout le texte en sautant les 10 premiers caractères que nous venons de lire dans le blob précédent
+  // parce que nous lisons maintenant du texte au lieu d'octets, la signification de 'offset' n'est pas la même.
+  // Nous devons le traduire d'octets en caractères.
+$fh.offset:=10 // demande de sauter 10 caractères utf-16 (20 octets)
+$s:=$fh.readText()
+```
+
+:::
+
 <!-- END REF -->
 
 
@@ -347,6 +366,12 @@ La fonction `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->renvoi
 
 Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour.
 
+:::caution Avertissement
+
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+
+:::
+
 > Lorsque cette fonction est exécutée pour la première fois sur un file handle, le contenu entier du document est chargé dans un buffer.
 
 
@@ -387,6 +412,12 @@ La fonction `.readText()` <!-- REF #FileHandleClass.readText().Summary -->renvoi
 La chaîne de caractères *stopChar* n'est pas incluse dans le texte retourné. Si vous omettez le paramètre *stopChar*, le texte du document entier est renvoyé.
 
 Lorsque cette fonction est exécutée, le ([.offset](#offset)) est placé juste après la chaîne *stopChar*.
+
+:::caution Avertissement
+
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+
+:::
 
 Si le paramètre *stopChar* est passé et non trouvé, `.readText()` renvoie une chaîne vide et le [.offset](#offset) n'est pas modifié.
 
