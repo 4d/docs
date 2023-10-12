@@ -1,6 +1,6 @@
 ---
 id: writeprointerface
-title: 4D WritePro Interface
+title: 4D WritePro インターフェース
 ---
 
 4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。
