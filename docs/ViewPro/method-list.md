@@ -990,17 +990,17 @@ Once the export operation is finished, `VP EXPORT DOCUMENT` automatically trigge
 
 #### Passing a callback method (formula)  
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local parameters:
 
-|Variable|  |Type| Description|
+|Parameter|  |Type| Description|
 |---|---|---|---|
-|$1|  |text| The name of the 4D View Pro object|
-|$2|  |text| The filepath of the exported 4D View Pro object|
-|$3|  |object| A reference to the command's *paramObj*|
-|$4|  |object| An object returned by the method with a status message|
+|param1|  |text| The name of the 4D View Pro object|
+|param2|  |text| The filepath of the exported 4D View Pro object|
+|param3|  |object| A reference to the command's *paramObj*|
+|param4|  |object| An object returned by the method with a status message|
 ||.success |boolean| True if export with success, False otherwise.|
-||.errorCode |integer| Error code. May be returned by 4D or JavaScript.|
-||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
+||.errorCode |integer| Error code.|
+||.errorMessage |text| Error message.|
 
 #### Example 1
 
@@ -1114,15 +1114,15 @@ In *paramObj*, you can pass several properties:
 
 The following parameters can be used in the callback method:
 
-|Variable| |Type|Description|
+|Parameter| |Type|Description|
 |:----|:----|:----|:----|
-|$1| |text|The name of the 4D View Pro object|
-|$2| |4D.blob|The exported blob|
-|$3| |object|A reference to the command's *paramObj* parameter|
-|$4| |object|An object returned by the method with a status message|
+|param1| |text|The name of the 4D View Pro object|
+|param2| |4D.blob|The exported blob|
+|param3| |object|A reference to the command's *paramObj* parameter|
+|param4| |object|An object returned by the method with a status message|
 | |.success|boolean|True if export with success, False otherwise.|
-| |.errorCode|integer|Error code. May be returned by 4D or JavaScript.|
-| |.errorMessage|text|Error message. May be returned by 4D or JavaScript.|
+| |.errorCode|integer|Error code.|
+| |.errorMessage|text|Error message.
 
 
 #### Example
@@ -1136,12 +1136,15 @@ VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
 
 ```4d
 //VPBlobCallback method
-#DECLARE($area : Text; $data : 4D.Blob)
-var $myTable : ds.Table
+#DECLARE($area : Text; $data : 4D.Blob; $paramters : Object; $status : object)
+var $myEntity : cs.myTableEntity
 
-$myTable:=ds.Table.new()
-$myTable.blob:=$data
-$myTable.save()
+if ($status.success)
+   // Save the document in a table
+   $myEntity:=ds.myTable.new()
+   $myEntity.blob:=$data
+   $myEntity.save()
+end if
 
 ```
 
@@ -3003,7 +3006,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Description
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports and displays *vpBlob* in the 4D View Pro area *vpAreaName*. *vpBlob* must contain a 4D View Pro document previously saved as Blob using the [VP EXPORT TO BLOB](#vp-export-to-blob) command.<!-- END REF -->. 
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports and replaces the content in the 4D View Pro area *vpAreaName* with the imported *vpBlob*. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the interface<!-- END REF -->. 
 
 In *paramObj*, you can pass several properties:
 
@@ -3020,18 +3023,20 @@ In *paramObj*, you can pass several properties:
 
 The following parameters can be used in the callback method:
 
-|Variable| |Type|Description|
+|Parameter| |Type|Description|
 |:----|:----|:----|:----|
-|$1| |text|The name of the 4D View Pro object|
-|$2| |4D.blob|The imported blob|
-|$3| |object|A reference to the command's *paramObj* parameter|
-|$4| |object|An object returned by the method with a status message|
+|param1| |text|The name of the 4D View Pro object|
+|param2| |4D.blob|The imported blob|
+|param3| |object|A reference to the command's *paramObj* parameter|
+|param4| |object|An object returned by the method with a status message|
 | |.success|boolean|True if import with success, False otherwise.|
-| |.errorCode|integer|Error code. May be returned by 4D or JavaScript.|
-| |.errorMessage|text|Error message. May be returned by 4D or JavaScript.|
+| |.errorCode|integer|Error code.|
+| |.errorMessage|text|Error message.|
 
 
 #### Example
+
+Import a Blob document from the table's first entity into the 'ViewProArea'.
 
 ```4d
 var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
