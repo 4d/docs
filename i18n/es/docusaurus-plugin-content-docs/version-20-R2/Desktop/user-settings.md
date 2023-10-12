@@ -75,7 +75,7 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 
 Cuando se editan los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más adelante).
 
-## `SET PARAMETER DE LA BASE DE DATOS` y propiedades usuario
+## `SET DATABASE PARAMETER` y parámetros de usuario
 
 Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 
