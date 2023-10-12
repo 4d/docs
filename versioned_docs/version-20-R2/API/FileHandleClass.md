@@ -274,7 +274,7 @@ This property is **read/write**.
 
 :::caution
 
-The unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. For example:
+When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Depending on the file's character set, a character corresponds to one or more bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. For example:
 
 ```4d
   // Open a european text file using utf-16 encoding (two bytes per character)
@@ -322,6 +322,8 @@ The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->retur
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
 
+
+
 #### See also
 
 [.writeBlob()](#writeblob)
@@ -355,7 +357,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
-When this function is executed, the current position ([.offset](#offset)) is updated.
+When this function is executed, the current position ([`.offset`](#offset)) is updated. 
+
+:::caution Warning
+
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+
+:::
 
 > When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer.
 
@@ -394,6 +402,12 @@ The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->retur
 The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.  
 
 When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
+
+:::caution Warning
+
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+
+:::
 
 If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
 
