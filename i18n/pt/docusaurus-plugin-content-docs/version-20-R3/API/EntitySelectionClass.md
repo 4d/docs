@@ -1649,11 +1649,11 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
 
 ```4d
-// order by formula
+// ordenar por fórmula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // order by collection with or without sort orders
+  // ordenar por colecção com ou sem ordenação
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1661,7 +1661,6 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
-
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
@@ -2112,7 +2111,7 @@ Assuming we have ds. Employee.all().length = 10
 var $slice : cs.EmployeeSelection
 
 
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a 8, mas como 9 > 8, devolve uma seleção de entidades vazia
 
 ```
 
