@@ -1022,7 +1022,7 @@ Essa função é destinada a desenvolvedores que precisam modificar o valor atua
 
 #### Descrição
 
-A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->Define *newStamp* como o novo valor para o carimbo de modificação global atual do armazenamento de dados.<!-- END REF -->.
+A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->define *newStamp* como o novo valor para o marcador de modificação global atual for o datastore<!-- END REF -->.
 
 :::info
 
