@@ -1043,12 +1043,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 ***AfterExport*** method:
 
 ```4d
- C_TEXT($1;$2)
- C_OBJECT($3;$4)
- $areaName:=$1
- $filePath:=$2
- $params:=$3
- $status:=$4
+ #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
  
  If($status.success=False)
     ALERT($status.errorMessage)
@@ -1127,7 +1122,7 @@ The following parameters can be used in the callback method:
 
 #### Example
 
-The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named VPBlobCallback in our example) to use the export results.
+The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
 
 ```4d
 //Export the VP document
@@ -1136,15 +1131,15 @@ VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
 
 ```4d
 //VPBlobCallback method
-#DECLARE($area : Text; $data : 4D.Blob; $paramters : Object; $status : object)
+#DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
 var $myEntity : cs.myTableEntity
 
-if ($status.success)
+If ($status.success)
    // Save the document in a table
    $myEntity:=ds.myTable.new()
    $myEntity.blob:=$data
    $myEntity.save()
-end if
+End if
 
 ```
 
@@ -3001,12 +2996,12 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
-|vpBlob   |4D.blob|->|Blob containing a 4D View Pro document|
+|vpBlob   |4D.Blob|->|Blob containing a 4D View Pro document|
 |paramObj   |Object|->|Import options|<!-- END REF -->
 
 #### Description
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports and replaces the content in the 4D View Pro area *vpAreaName* with the imported *vpBlob*. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the interface<!-- END REF -->. 
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->. 
 
 In *paramObj*, you can pass several properties:
 
@@ -3019,14 +3014,14 @@ In *paramObj*, you can pass several properties:
 |includeFormulas|Boolean|Whether to include the formula when loading, default=true.|
 |includeStyles|Boolean|Whether to include the style when loading, default=true.|
 |includeUnusedStyles|Boolean|Whether to include the unused name style when converting excel xml to the json, default=true.|
-|openMode|Integer|can be: <br>0: normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points. <br>1: lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br>2: incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.|
+|openMode|Integer|can be: <br>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly.|
 
 The following parameters can be used in the callback method:
 
 |Parameter| |Type|Description|
 |:----|:----|:----|:----|
 |param1| |text|The name of the 4D View Pro object|
-|param2| |4D.blob|The imported blob|
+|param2| |4D.Blob|The imported blob|
 |param3| |object|A reference to the command's *paramObj* parameter|
 |param4| |object|An object returned by the method with a status message|
 | |.success|boolean|True if import with success, False otherwise.|
@@ -3036,7 +3031,7 @@ The following parameters can be used in the callback method:
 
 #### Example
 
-Import a Blob document from the table's first entity into the 'ViewProArea'.
+You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
 
 ```4d
 var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
