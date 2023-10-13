@@ -19,7 +19,7 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 - Los parámetros del archivo de historial se guardan ahora en [con el archivo de datos actual](../Backup/settings.md#log-file-management)
 - New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
 
-- Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) en doc.4d.com.
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) on doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R3): lista de todos los errores que se han corregido en 4D v20 R3.
 
@@ -119,9 +119,9 @@ Lea las [**Novedades de 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - ORDA: soporte del archivo *roles.json* para definir [privilegios](../ORDA/privileges.md) asignados a la sesión con [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Soporte del [modo SDI en el modo de aplicación de prueba](../Menus/sdi.md#sdi-mode-availability) en Windows.
 - 4D View Pro:
-    - soporte de temas en tablas: nuevos comandos [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) y [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme), soporte de opciones de tema en [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
+    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
 
-    - nuevo comando [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
+    - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - Comandos del lenguaje 4D: [Página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19_R8): lista de todos los errores que se han corregido en 4D v18.
