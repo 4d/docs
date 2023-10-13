@@ -20,7 +20,7 @@ Si no se ha definido el método base `On REST Authentication`, se abre una sesi�
 
 ## Modo apropiativo
 
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.
 

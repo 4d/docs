@@ -91,6 +91,7 @@ Essa propriedade é **apenas leitura**.
 <!-- END REF -->
 
 
+
 ---
 
 <!-- REF directory.fullName.Desc -->
@@ -430,8 +431,8 @@ O objeto `Folder` copiado.
 Se quiser copiar uma *pasta* Imágens da pasta de documentos do usuário a pasta da Database:
 
 ```4d
-var $userImages; $copiedImages : 4D. Folder
-$userImages:=Folder(fk documents folder+"/Pictures/")
+var $userImages; $copiedImages : 4D.Folder
+$userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
 

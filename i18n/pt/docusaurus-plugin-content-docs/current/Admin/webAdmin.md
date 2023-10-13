@@ -69,7 +69,7 @@ A caixa de diálogo abaixo é mostrada:
 
 ![alt-text](../assets/en/Admin/waSettings2.png)
 
-#### Launch WebAdmin server at startup
+#### Iniciar o servidor WebAdmin na inicialização
 
 Marque esta opção para lançar o servidor web `WebAdmin` automaticamente quando iniciar a aplicação 4D ou 4D Server (ver ([acima](#launching-at-startup)). Como padrão essa opção não é marcada.
 
@@ -122,15 +122,15 @@ Uma chave de acesso é parecida a uma senha, mas não está associada com um log
 - Para modificar a chave de acesso: clique no botão **Modificar**, introduza a nova string da chave de acesso na caixa de diálogo e clique em **OK**.
 - Para eliminar a chave de acesso: clique no botão**Modificar**, deixe vazia a área daa chave de acesso e clique em **OK**.
 
-#### Enable access to Qodly Studio
+#### Ativar o acesso a Qodly Studio
 
 :::note
 
-This option only appears if the Qodly Studio license is activated.
+Essa opção só aparece se a licença do Qodly Studio estiver ativada.
 
 :::
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) at the 4D application level. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
+Essa opção permite o acesso do usuário a [Qodly Studio](../WebServer/qodly-studio.md) no nível da aplicação 4D. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
 
 
 ## Configuração de WebAdmin sem interface

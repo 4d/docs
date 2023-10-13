@@ -281,13 +281,13 @@ This method can be called with a variable number of Real parameters. In case of 
 
 ```4d
 
-$total1:=SumNumbers // returns 0 
-$total2:=SumNumbers(1; 2; 3; 4; 5) // returns 15
-$total3:=SumNumbers(1; 2; "hello"; 4; 5) // error
+$total1:=SumNumbers // retorna 0 
+$total2:=SumNumbers(1; 2; 3; 4; 5) // retorna 15
+$total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 ```
 
-:::note Compatibility Note
+:::note Nota de compatibilidade
 
 The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred.
 

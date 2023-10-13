@@ -351,12 +351,12 @@ You can copy any selected expression from the Source Code Pane to the [Custom Wa
 1. No painel de código fonte, selecione a expressão a avaliar
 2. Faça uma das seguintes opções:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
-    * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
+    * Pressione **Ctrl+D** (Windows) ou **Cmd+D** (macOS)
     * Clique com o botão direito do rato no texto selecionado **>** **Copiar para o painel de expressões**
 
 ### Contador do programa
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca a linha seguinte a ser executada.
+A seta amarela na margem esquerda do painel Código-fonte é chamada contador de programa. Marca a linha seguinte a ser executada.
 
 Por padrão, a linha do contador de programas (também designada por linha de execução) é realçada no depurador. Pode personalizar a cor de realce na página [Métodos das Preferências](Preferences/methods.md).
 
@@ -378,7 +378,7 @@ Por exemplo:
   // ...
 ```
 
-Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+Digamos que o contador de programas esteja definido na linha `If (This condition)`. Quando você clica no botão **Step over**, o contador do programa passa diretamente para a linha `DO_SOMETHING_ELSE`. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
 
 ### Menu contextual
 

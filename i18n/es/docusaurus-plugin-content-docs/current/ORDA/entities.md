@@ -149,14 +149,14 @@ Para asignar un valor directamente al atributo "employer", debe pasar una entida
  $emp.save()
 ```
 
-You can also directly get the "one" related entity through its primary key value (Number or Text). Por ejemplo:
+También puede obtener directamente la entidad relacionada "uno" a través de su valor de llave primaria (Number o Text). Por ejemplo:
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
  $emp.employer:=ds.Company.get(2)
-  //gets the Company entity with primary key value 2
-  //assigns it to the employee
+  //obtiene la entidad Company con valor de llave primaria 2
+  //se la asigna al empleado
  $emp.save()
 ```
 

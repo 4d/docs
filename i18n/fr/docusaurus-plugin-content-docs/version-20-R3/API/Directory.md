@@ -91,6 +91,7 @@ Cette propriété est en **lecture seule**.
 <!-- END REF -->
 
 
+
 ---
 
 <!-- REF directory.fullName.Desc -->
@@ -431,7 +432,7 @@ Vous souhaitez copier un *dossier* Pictures, à partir du dossier Document de l'
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
-$userImages:=Folder(fk documents folder+"/Pictures/")
+$userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
 

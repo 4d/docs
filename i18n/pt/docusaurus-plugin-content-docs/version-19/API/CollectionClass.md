@@ -1676,7 +1676,6 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
 * *pathObjects* : Collection. Pode adicionar tantos objetos na coleção *pathObjects* como seja necessário. Como padrão, as propriedades se classificam em ordem ascendente ("descending" é false). Cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
-
 ```4d
 {
     "propertyPath": string,
@@ -2263,6 +2262,7 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 ```
 
 
+
 <!-- END REF -->
 
 <!-- REF collection.reverse().Desc -->
@@ -2478,7 +2478,7 @@ Com o seguinte método *NumberGreaterThan0*:
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->

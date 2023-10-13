@@ -1713,7 +1713,6 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
 * *pathObjects* : Collection. Vous pouvez ajouter autant d'objets dans la collection *pathObjects* que nécessaire. Par défaut, les propriétés sont triées par ordre croissant ("descending" est faux). Chaque élément de la collection contient un objet structuré de la manière suivante :
 
-
 ```4d
 {
     "propertyPath": string,
@@ -2526,7 +2525,7 @@ Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vou
 </details>
 
 
-<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 
