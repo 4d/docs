@@ -73,9 +73,9 @@ La siguiente tabla lista las páginas de parámetros que se encuentran en las ca
 | [Página seguridad](../settings/security.md)                                               | N/a                                                | N/a                                                     |
 | [Página de compatibilidad](../settings/compatibility.md)                                  | N/a                                                | N/a                                                     |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below) or the *Backup.4DSettings* file (check the [Backup settings](../Backup/settings.md) page for more information).
+Al editar los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más abajo) o en el archivo *Backup.4DSettings* (consulte la página [Parámetros de backup](../Backup/settings.md) para obtener más información).
 
-## `SET PARAMETER DE LA BASE DE DATOS` y propiedades usuario
+## `SET DATABASE PARAMETER` y parámetros de usuario
 
 Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 

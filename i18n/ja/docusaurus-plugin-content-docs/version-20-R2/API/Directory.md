@@ -91,6 +91,7 @@ title: Directory クラス
 <!-- END REF -->
 
 
+
 ---
 
 <!-- REF directory.fullName.Desc -->
@@ -431,7 +432,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
-$userImages:=Folder(fk documents folder+"/Pictures/")
+$userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
 

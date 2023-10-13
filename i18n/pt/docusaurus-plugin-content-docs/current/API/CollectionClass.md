@@ -2192,7 +2192,7 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 A função `.multiSort()` <!-- REF #collection.multiSort().Summary -->permite-lhe efetuar uma ordenação sincronizada a vários níveis num conjunto de coleções<!-- END REF -->.
 > Esta função modifica a coleção original, bem como todas as coleções utilizadas no parâmetro *colsToSort*.
 
-If `.multiSort()` is called with no parameters, the function has the same effect as the [`.sort()`](#sort) function: the collection is sorted (only scalar values) in ascending order by default, according to their type. If the collection contains values of different types, they are first grouped by type and sorted afterwards. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+Se `.multiSort()` for chamada sem parâmetros, a função terá o mesmo efeito que a função [`.sort()`](#sort): a coleção será classificada (somente valores escalares) em ordem crescente por padrão, de acordo com seu tipo. Se a coleção contiver valores de tipos diferentes, eles serão primeiro agrupados por tipo e, em seguida, classificados. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
 1. null
 2. booleans
@@ -2203,40 +2203,40 @@ If `.multiSort()` is called with no parameters, the function has the same effect
 7. datas
 
 
-**Single-level synchronized sort**
+**Classificação sincronizada de nível único**
 
-To sort several collections synchronously, just pass in *colsToSort* a collection of collections to sort. You can pass an unlimited number of collections. The original collection will be sorted in ascending order and all *colsToSort* collections will be sorted in a synchronized manner.
+Para classificar várias coleções de forma síncrona, basta passar em *colsToSort* uma coleção de coleções para classificar. Você pode passar um número ilimitado de coleções. A coleção original será classificada em ordem crescente e todas as coleções *colsToSort* serão classificadas de forma sincronizada.
 
 :::note
 
-All *colsToSort* collections must have the same number of elements, otherwise an error is returned.
+Todas as coleções *colsToSort* devem ter o mesmo número de elementos, caso contrário, será retornado um erro.
 
 :::
 
-If you want to sort the collections in some other order than ascending, you must supply a *formula* ([Formula object](FunctionClass.md#formula) that defines the sort order. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. You can provide additional parameters to the formula if necessary.
+Se quiser classificar as coleções em outra ordem que não seja a ascendente, você deverá fornecer uma *formula* ([objeto Formula](FunctionClass.md#formula) que define a ordem de classificação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Você pode fornecer parâmetros adicionais à fórmula, se necessário.
 
-The formula receives the following parameters:
+A fórmula recebe os seguintes parâmetros:
 
 - $1 (objeto), onde:
     - em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
     - em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
 - $2...$N (qualquer tipo): parâmetros adicionais
 
-**Multi-level synchronized sort**
+**Classificação sincronizada em vários níveis**
 
-Defining a multi-level synchronized sort requires that you pass an object containing {`collection`:*colToSort*;`order`:`ck ascending` or `ck descending`} properties instead of the *colToSort* itself for every collection to use as sub-level.
+A definição de uma classificação sincronizada em vários níveis exige que você passe um objeto contendo as propriedades {`collection`:*colToSort*;`order`:`ck ascending` ou `ck descending`} em vez da própria *colToSort* para cada coleção a ser usada como subnível.
 
-The sort levels are determined by the order in which the collections are passed in the *colsToSort* parameter: the position of a `collection`/`order` object in the syntax determines its sort level.
+Os níveis de classificação são determinados pela ordem em que as coleções são passadas no parâmetro *colsToSort*: a posição de um objeto `collection`/`order` na sintaxe determina seu nível de classificação.
 
 :::note
 
-The `.multiSort()` function uses a [stable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability) sort algorithm.
+A função `.multiSort()` usa um algoritmo de classificação [estável](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability).
 
 :::
 
 #### Exemplo 1
 
-A simple synchronized sort of collections with different value types:
+Uma simple classificação sincronizada de coleções com diferentes tipos de valores:
 
 ```4d
 var $col;$col2;$col3 : Collection
@@ -2255,7 +2255,7 @@ $col.multiSort([$col2; $col3])
 
 #### Exemplo 2
 
-You want to sort three synchronized collections: city, country, and continent. You want an ascending sort of the first and the third collections, and synchronization for the second collection:
+Você deseja classificar três coleções sincronizadas: cidade, país e continente. Você deseja uma classificação ascendente da primeira e da terceira coleções e a sincronização da segunda coleção:
 
 ```4d
 var $city : Collection
@@ -2275,7 +2275,7 @@ $continent.multiSort($country; {collection: $city; order: ck ascending})
 
 #### Exemplo 3
 
-You can also synchronize collections of objects.
+Você também pode sincronizar coleções de objetos.
 
 ```4d
 var $name : Collection
@@ -3337,7 +3337,7 @@ Quer saber se pelo menos um valor de colecção é >0.
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->

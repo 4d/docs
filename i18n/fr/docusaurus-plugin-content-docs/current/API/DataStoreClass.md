@@ -1038,7 +1038,7 @@ Le code suivant définit le marqueur de modification global:
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value to assign
+$newValue:=ReadValueFrom //on obtient une valeur à assigner
 ds.setGlobalStamp($newValue)
 ```
 

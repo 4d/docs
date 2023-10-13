@@ -271,7 +271,7 @@ Cela signifie que `a || b && c` est évalué comme `(a || b) && c`.
 | v19 R4  | Ajout         |
 </details>
 
-L'opérateur conditionnel ternaire vous permet d'écrire des expressions conditionnelles sur une seule ligne. For example, it can replace a full sequence of [If…Else](flow-control.md#ifelseend-if) statements.
+L'opérateur conditionnel ternaire vous permet d'écrire des expressions conditionnelles sur une seule ligne. Par exemple, il peut remplacer une séquence complète d'instructions [If…Else](flow-control.md#ifelseend-if) .
 
 Il prend trois opérandes dans l'ordre suivant :
 
@@ -343,7 +343,7 @@ Toutes les autres valeurs sont considérées comme **truthy**, notamment :
 
 * 0 - zéro numérique (Entier ou autre)
 
-Dans 4D, l'évaluation à **truthy** et **falsy** reflète la **possibilité d'utilisation** d'une valeur, ce qui signifie qu'une valeur truthy existe et peut être traitée par le code sans générer d'erreurs ou de résultats inattendus. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](flow-control.md#ifelseend-if) statements are necessary to avoid runtime errors.
+Dans 4D, l'évaluation à **truthy** et **falsy** reflète la **possibilité d'utilisation** d'une valeur, ce qui signifie qu'une valeur truthy existe et peut être traitée par le code sans générer d'erreurs ou de résultats inattendus. L'objectif est de fournir un moyen pratique de gérer les valeurs *undefined* et *null* dans les objets et les collections, de sorte qu'un nombre réduit d'instructions [If…Else](flow-control.md#ifelseend-if) soit nécessaire pour éviter les erreurs d'exécution.
 
 Par exemple, lorsque vous utilisez un opérateur en [court-circuit OR](#short-circuit-or-operator-) :
 

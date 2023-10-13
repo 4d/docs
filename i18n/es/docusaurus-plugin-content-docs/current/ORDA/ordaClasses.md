@@ -681,7 +681,7 @@ Un atributo alias hereda su propiedad [`type`](../API/DataClassAttributeClass.md
 - si el atributo de destino [`kind`](../API/DataClassAttributeClass.md#kind) es "storage", el tipo de datos del alias es del mismo tipo,
 - si el atributo de destino [`kind`](../API/DataClassAttributeClass.md#kind) es "relatedEntity" o "relatedEntities", el tipo de datos del alias es del tipo `4D.Entity` o `4D.EntitySelection` ("*classname*Entity" o "*classname*Selection").
 
-Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassAttributeClass.md#path), que contiene la ruta de sus atributos de destino. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
+Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassAttributeClass.md#path), que contiene la ruta de sus atributos de destino. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
 
 
 ### Ejemplos

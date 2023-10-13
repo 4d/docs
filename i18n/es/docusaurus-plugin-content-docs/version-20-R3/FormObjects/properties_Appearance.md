@@ -9,13 +9,13 @@ La propiedad del botón por defecto designa el botón que obtiene el foco inicia
 
 Sólo puede haber un botón por defecto por página de formulario.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. El botón por defecto puede ser diferente del botón enfocado. Los botones por defecto tienen un aspecto azul específico en macOS:
+Además, en macOS, la propiedad del botón por defecto modifica la apariencia del botón para indicar una "opción recomendada" al usuario y se vincula automáticamente a la tecla **Intro**, aunque no tenga el foco. El botón por defecto puede ser diferente del botón enfocado. Los botones por defecto tienen un aspecto azul específico en macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > El botón debe tener una altura estándar para obtener la apariencia de botón por defecto.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. Sin embargo, en el editor de formularios de 4D, el botón por defecto se representa con un contorno azul:
+En Windows, el concepto de "opción recomendada" no está soportado: sólo el botón enfocado tiene una apariencia diferente en tiempo de ejecución y la tecla **Intro** está vinculada al botón enfocado. Sin embargo, en el editor de formularios de 4D, el botón por defecto se representa con un contorno azul:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 

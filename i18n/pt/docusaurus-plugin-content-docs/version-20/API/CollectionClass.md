@@ -2788,6 +2788,7 @@ A chamada de retorno recebe os seguintes parâmetros:
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
 
+
 ```
 
 
@@ -3195,7 +3196,7 @@ Quer saber se pelo menos um valor de colecção é >0.
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->
@@ -3226,7 +3227,7 @@ Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, tex
 7.  datas
 
 
-Se pretender ordenar os elementos da coleção por outra ordem ou ordenar qualquer tipo de elemento, deve fornecer em *formula* ([object Formula](FunctionClass.md)) ou *methodName* (Text) uma chamada de retorno que defina a ordem de ordenação. The return value should be a boolean that indicates the relative order of the two elements: **True** if *$1.value* is less than *$1.value2*, **False** if *$1.value* is greater than *$1.value2*. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
+Se pretender ordenar os elementos da coleção por outra ordem ou ordenar qualquer tipo de elemento, deve fornecer em *formula* ([object Formula](FunctionClass.md)) ou *methodName* (Text) uma chamada de retorno que defina a ordem de ordenação. O valor de retorno deve ser um booleano que indica a ordem relativa dos dois elementos: **True** se *$1.value* for menor que *$1.value2*, **False** se *$1.value* for maior que *$1.value2*. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
 
 A chamada de retorno recebe os seguintes parâmetros:
 

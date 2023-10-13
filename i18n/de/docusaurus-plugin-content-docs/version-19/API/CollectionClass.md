@@ -1687,7 +1687,6 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 * *pathObjects* : Collection. You can add as many objects in the *pathObjects* collection as necessary. By default, properties are sorted in ascending order ("descending" is false). Each element of the collection contains an object structured in the following way:
 
-
 ```4d
 {
     "propertyPath": string,
@@ -2278,6 +2277,7 @@ By default, new elements are filled will **null** values. You can specify the va
 ```
 
 
+
 <!-- END REF -->
 
 <!-- REF collection.reverse().Desc -->
@@ -2491,7 +2491,7 @@ With the following *NumberGreaterThan0* method:
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->

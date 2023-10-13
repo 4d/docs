@@ -91,6 +91,7 @@ This property is **read-only**.
 <!-- END REF -->
 
 
+
 ---
 
 <!-- REF directory.fullName.Desc -->
@@ -431,7 +432,7 @@ You want to copy a Pictures *folder* from the user's Document folder to the Data
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
-$userImages:=Folder(fk documents folder+"/Pictures/")
+$userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
 
