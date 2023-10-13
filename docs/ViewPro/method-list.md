@@ -3014,7 +3014,7 @@ In *paramObj*, you can pass several properties:
 |includeFormulas|Boolean|Whether to include the formula when loading, default=true.|
 |includeStyles|Boolean|Whether to include the style when loading, default=true.|
 |includeUnusedStyles|Boolean|Whether to include the unused name style when converting excel xml to the json, default=true.|
-|openMode|Integer|can be: <br>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly.|
+|openMode|Integer|can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly.|
 
 The following parameters can be used in the callback method:
 
