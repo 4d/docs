@@ -504,15 +504,15 @@ El list box final:
 
 El botón **Insertar campos** inserta en el formulario todos los campos (excepto los de tipo objeto y blob) de la tabla del formulario, junto con sus etiquetas y respetando las normas de la interfaz. Este asistente es un atajo para diseñar formularios de entrada básicos o formularios listados.
 
-The **Insert fields** button is only available with table forms.
+El botón **Insertar campos** sólo está disponible con formularios tabla.
 
-The design of the resulting form depends on the form type:
+El diseño del formulario resultante depende del tipo de formulario:
 
-- **Detail form**: clicking on the **Insert fields** button generates a form with a page design:
+- **Formulario detallado**: al hacer clic en el botón **Insertar campos** se genera un formulario con un diseño de página:
 
 ![](../assets/en/FormEditor/insertFields2.png)
 
-- **List form**: clicking on the **Insert fields** button generates a list form design with fields organized on a single line and area markers:
+- **Formulario listado**: al hacer clic en el botón **Insertar campos** se genera un diseño de formulario listado con campos organizados en una sola línea y marcadores de área:
 
 ![](../assets/en/FormEditor/insertFields3.png)
 
