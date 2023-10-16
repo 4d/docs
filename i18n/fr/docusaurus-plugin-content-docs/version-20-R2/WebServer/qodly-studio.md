@@ -320,7 +320,7 @@ The behavior previously described is due to the session cookie of the 4D web ser
 
 If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
 
-For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-<code>SameSite</code>-and-secure-attributes-for-cookies/).
+For more information on the `SameSite` attribute, check out [SameSite</code>-and-secure-attributes-for-cookies/">this blog post](https://blog.4d.com/get-ready-for-the-new-<code mark=).
 
 ### Recommendations
 
