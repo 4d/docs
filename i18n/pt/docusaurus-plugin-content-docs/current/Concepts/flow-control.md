@@ -660,9 +660,9 @@ Se quiser trocar os nomes para maiúsculas no objeto a seguir:
 Você pode escrever:
 
 ```4d
- For each(property;vObject)
-    If(Value type(vObject[property])=Is text)
-       vObject[property]:=Uppercase(vObject[property])
+ For each($property;$vObject)
+    If(Value type($vObject[$property])=Is text)
+       $vObject[$property]:=Uppercase($vObject[$property])
     End if
  End for each
 ```
