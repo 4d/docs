@@ -1006,15 +1006,15 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 コマンドに任意の *paramObj* 引数を渡す場合、[`Formula`](../API/FunctionClass.md#formula) コマンドを使って、書き出し完了時に実行される 4Dメソッドを呼び出すことができます。 コールバックメソッドは、以下の値をローカル変数として受け取ります:
 
-| 変数 |               | タイプ     | 説明                                    |
-| -- | ------------- | ------- | ------------------------------------- |
-| $1 |               | text    | 4D View Pro オブジェクト名                   |
-| $2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス      |
-| $3 |               | object  | コマンドの *paramObj* 引数への参照               |
-| $4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト       |
-|    | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false     |
-|    | .errorCode    | integer | エラーコード。 4D あるいは JavaScript から返されます。   |
-|    | .errorMessage | text    | エラーメッセージ。 4D あるいは JavaScript から返されます。 |
+| 変数 |               | タイプ     | 説明                                      |
+| -- | ------------- | ------- | --------------------------------------- |
+| $1 |               | text    | 4D View Pro オブジェクト名                     |
+| $2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス        |
+| $3 |               | object  | コマンドの *paramObj* 引数への参照                 |
+| $4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト         |
+|    | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false       |
+|    | .errorCode    | integer | Error code. 4D あるいは JavaScript から返されます。 |
+|    | .errorMessage | text    | エラーメッセージ。 4D あるいは JavaScript から返されます。   |
 
 #### 例題 1
 
