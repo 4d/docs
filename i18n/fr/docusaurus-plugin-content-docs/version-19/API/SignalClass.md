@@ -194,7 +194,7 @@ Cette propriété est en **lecture-écriture**.
 
 #### Description
 
-La propriété `.signaled` <!-- REF #SignalClass.signaled.Summary -->contient l'état courant de l'objet `Signal`<!-- END REF -->. Lorsque le signal est créé, `.signaled` est **False**. Elle devient **True** lorsque la fonction `.trigger()` est appelée sur l'objet.
+La propriété `.signaled` <!-- REF #SignalClass.signaled.Summary -->contient l'état courant de l'objet `Signal`<!-- END REF -->. . Lorsque le signal est créé, `.signaled` est **False**.
 
 Cette propriété est en **lecture seule**.
 
