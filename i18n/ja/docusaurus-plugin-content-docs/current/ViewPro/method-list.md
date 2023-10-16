@@ -937,6 +937,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | 引数         | タイプ    |    | 説明                                    |
 | ---------- | ------ | -- | ------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
@@ -1813,7 +1814,9 @@ $defaultStyle:=VP Get default style("myDoc")
 | rangeObj | Object | -> | レンジオブジェクト                         |
 | 戻り値      | Text   | <- | フォーミュラ|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -2805,10 +2808,11 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 *onlyData* 引数に次のいずれかの定数を渡すことで、データ部のみを対象とするかを指定できます:
 
-| 定数                    | 値 | 説明                                                |
-| --------------------- | - | ------------------------------------------------- |
-| `vk table full range` | 0 | フッターとヘッダーを含む表組みの全エリアを含むセルレンジを取得します (省略した場合のデフォルト) |
-| `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                        |
+| 定数                    | 値 | 説明                                                                                |
+| --------------------- | - | --------------------------------------------------------------------------------- |
+| `vk table full range` | 0 | Get the cell range for the table area with footer and header (default if omitted) |
+
+|`vk table data range`|1|Get the cell range for the table data area only|
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
@@ -4538,7 +4542,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |
 > **互換性**
-> 
+>
 > より高い柔軟性のため、4D View Pro エリアから呼び出せる 4Dフォーミュラを指定できる [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) コマンドの使用が推奨されます。 `VP SET CUSTOM FUNCTIONS` が呼び出された場合、`VP SET ALLOWED METHODS` の呼び出しは無視されます。 `VP SET CUSTOM FUNCTIONS` と `VP SET ALLOWED METHODS` のどちらも呼び出されていない場合、4D View Pro は 4D の汎用コマンド `SET ALLOWED METHODS` もサポートしますが、汎用コマンドの使用は推奨されません。
 
 
@@ -5227,9 +5231,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|引数|タイプ||説明|
+| 引数            | タイプ    |    | 説明                                  |
+| ------------- | ------ | -- | ----------------------------------- |
+| rangeObj      | Object | -> | レンジオブジェクト                           |
+| dateValue     | 日付     | -> | 設定する日付値                             |
+| formatPattern | Text   | -> | 値のフォーマット|<!-- END REF -->
 
-|---||---|| |rangeObj |Object|->|レンジオブジェクト| |dateValue |Date|->|設定する日付値| |formatPattern |Text|->|値のフォーマット|<!-- END REF -->
+|
 
 #### 説明
 
@@ -5351,11 +5359,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| 引数 | タイプ |  | 説明 |
-| -- | --- |  | -- |
-|    |     |  |    |
+| 引数            | タイプ    |    | 説明                                      |
+| ------------- | ------ | -- | --------------------------------------- |
+| rangeObj      | Object | -> | レンジオブジェクト                               |
+| formula       | Text   | -> | Formula or 4D method                    |
+| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
 
-|rangeObj |Object|->|レンジオブジェクト| |formula |Text|->|フォーミュラまたは 4Dメソッド| |formatPattern |Text|->|フィールドのフォーマット|<!-- END REF -->
+|
 
 #### 説明
 
@@ -5483,11 +5493,12 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 
 *paneObj* には、固定化するカラムと行を定義するオブジェクトを渡します。 以下のカラムまたは行のプロパティの値にゼロを設定すると、そのプロパティをリセット (固定解除) します。 プロパティが 0以下の値に設定された場合、コマンドは何もしません。 以下のものを渡すことができます:
 
-| プロパティ | タイプ | 説明 |
-| ----- | --- | -- |
-|       |     |    |
-
-|columnCount | Integer | シートの左側にある固定化されたカラム| |trailingColumnCount |Integer | シートの右側にある固定化されたカラム| |rowCount | Integer |  シートの上側にある固定化された行 | |trailingRowCount | Integer |  シートの下側にある固定化された行|
+| プロパティ               | タイプ     | 説明                 |
+| ------------------- | ------- | ------------------ |
+| columnCount         | Integer | シートの左側にある固定化されたカラム |
+| trailingColumnCount | Integer | シートの右側にある固定化されたカラム |
+| rowCount            | Integer | シートの上側にある固定化された行   |
+| trailingRowCount    | Integer | シートの下側にある固定化された行   |
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
@@ -5726,11 +5737,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| 引数 | タイプ |  | 説明 |
-| -- | --- |  | -- |
-|    |     |  |    |
+| 引数       | タイプ    |    | 説明                                        |
+| -------- | ------ | -- | ----------------------------------------- |
+| rangeObj | Object | -> | 複数セルのレンジオブジェクト|<!-- END REF -->
 
-|rangeObj |Object|->|複数セルのレンジオブジェクト|<!-- END REF -->
+|
 
 #### 説明
 
@@ -5797,12 +5808,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| 引数         | タイプ  |    | 説明                      |
-| ---------- | ---- | -- | ----------------------- |
-| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 |
-| name       | Text | -> | シートの新しい名称               |
+| 引数         | タイプ     |    | 説明                                                          |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                     |
+| name       | Text    | -> | シートの新しい名称                                                   |
+| sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
 
-|sheet|Integer|->|名称変更するシートのインデックス|<!-- END REF -->
+|
 
 #### 説明
 
@@ -5816,7 +5828,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 > インデックスは 0 起点です。
 
-*index* が省略された場合、コマンドはカレントシートを名称変更します。
+If no *sheet* is passed, the command renames the current sheet.
 
 新しい名前には、次の文字を含めることはできません: `*, :, [, ], ?,\,/`
 
@@ -5825,7 +5837,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 * 新しい名前に禁止文字が含まれている
 * 新しい名前が空の文字列である
 * 新しい名前が既に存在している
-* *index* に渡したインデックスが存在しない
+* the passed *sheet* index does not exist
 
 #### 例題
 
@@ -6506,11 +6518,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| 引数       | タイプ    |    | 説明        |
-| -------- | ------ | -- | --------- |
-| rangeObj | Object | -> | レンジオブジェクト |
+| 引数       | タイプ     |    | 説明                                                                 |
+| -------- | ------- | -- | ------------------------------------------------------------------ |
+| rangeObj | Object  | -> | レンジオブジェクト                                                          |
+| vPos     | Integer | -> | Vertical view position of cell or row                              |
+| hPos     | Integer | -> | Horizontal view position of cell or row|<!-- END REF -->
 
-|vPos  |Integer|->|セルあるいは行の縦方向の表示位置| |hPos  |Integer|->|セルあるいはカラムの横方向の表示位置|<!-- END REF -->
+|
 
 #### 説明
 
@@ -6610,6 +6624,6 @@ End if
 
 #### 参照
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
