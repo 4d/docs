@@ -989,7 +989,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 | $3       |               | object  | Uma referência ao *paramObj* do comando                      |
 | $4       |               | object  | Um objeto devolvido pelo método com uma mensagem de estado   |
 |          | .success      | boolean | True se a exportação for bem sucedida, False caso contrário. |
-|          | .errorCode    | integer | Código de erro. Pode ser devolvido por 4D ou JavaScript.     |
+|          | .errorCode    | integer | Error code. Pode ser devolvido por 4D ou JavaScript.         |
 |          | .errorMessage | text    | Mensagem de erro. Pode ser devolvido por 4D ou JavaScript.   |
 
 #### Exemplo 1
