@@ -80,7 +80,7 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 
 #### Description
 
-La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et renvoie un nouvel objet du type `4D.Folder`<!-- END REF -->. La commande accepte deux syntaxes :
+crée et renvoie un nouvel objet du type `4D.Folder` <!-- REF #_command_.Folder.Summary -->La commande `Folder`<!-- END REF -->. La commande accepte deux syntaxes :
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -134,7 +134,7 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 #### Description
 
-La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et renvoie un nouvel objet du type `4D.Folder`<!-- END REF -->. Elle est identique à la commande [`Folder`](#folder) (raccourci).
+La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->La commande `Folder`<!-- END REF -->. Elle est identique à la commande [`Folder`](#folder) (raccourci).
 
 > Il est recommandé d'utiliser la commande raccourci [`Folder`](#folder) au lieu de `4D.Folder.new()`.
 
