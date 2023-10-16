@@ -1004,17 +1004,17 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 #### コールバックメソッド (フォーミュラ) の渡し方
 
-コマンドに任意の *paramObj* 引数を渡す場合、[`Formula`](../API/FunctionClass.md#formula) コマンドを使って、書き出し完了時に実行される 4Dメソッドを呼び出すことができます。 コールバックメソッドは、以下の値をローカル変数として受け取ります:
+コマンドに任意の *paramObj* 引数を渡す場合、[`Formula`](../API/FunctionClass.md#formula) コマンドを使って、書き出し完了時に実行される 4Dメソッドを呼び出すことができます。 The callback method will receive the following values in local parameters:
 
-| 変数 |               | タイプ     | 説明                                    |
-| -- | ------------- | ------- | ------------------------------------- |
-| $1 |               | text    | 4D View Pro オブジェクト名                   |
-| $2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス      |
-| $3 |               | object  | コマンドの *paramObj* 引数への参照               |
-| $4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト       |
-|    | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false     |
-|    | .errorCode    | integer | エラーコード。 4D あるいは JavaScript から返されます。   |
-|    | .errorMessage | text    | エラーメッセージ。 4D あるいは JavaScript から返されます。 |
+| 引数     |               | タイプ     | 説明                                |
+| ------ | ------------- | ------- | --------------------------------- |
+| param1 |               | text    | 4D View Pro オブジェクト名               |
+| param2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス  |
+| param3 |               | object  | コマンドの *paramObj* 引数への参照           |
+| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
+|        | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false |
+|        | .errorCode    | integer | Error code.                       |
+|        | .errorMessage | text    | エラーメッセージ。                         |
 
 #### 例題 1
 
@@ -1057,12 +1057,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 ***AfterExport*** メソッド:
 
 ```4d
- C_TEXT($1;$2)
- C_OBJECT($3;$4)
- $areaName:=$1
- $filePath:=$2
- $params:=$3
- $status:=$4
+ #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
 
  If($status.success=False)
     ALERT($status.errorMessage)
@@ -1094,6 +1089,79 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
+
+### VP EXPORT TO BLOB
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
+**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Params -->
+
+| 引数         | タイプ    |    | 説明                                    |
+| ---------- | ------ | -- | ------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
+| paramObj   | Object | -> | 書き出しのオプション|<!-- END REF -->
+
+|
+
+#### 説明
+
+The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
+
+In *paramObj*, you can pass several properties:
+
+| プロパティ                   | タイプ         | 説明                                                                                                             |
+| ----------------------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed.                                      |
+| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                  |
+| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                               |
+| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.     |
+| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true |
+| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                      |
+| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                        |
+| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                           |
+| saveAsView              | Boolean     | Whether to apply the format string to exporting value when saving, default=false.                              |
+
+
+The following parameters can be used in the callback method:
+
+| 引数     |               | タイプ     | 説明                                                |
+|:------ |:------------- |:------- |:------------------------------------------------- |
+| param1 |               | text    | 4D View Pro オブジェクト名                               |
+| param2 |               | 4D.blob | The exported blob                                 |
+| param3 |               | object  | A reference to the command's *paramObj* parameter |
+| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト                   |
+|        | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false                 |
+|        | .errorCode    | integer | Error code.                                       |
+|        | .errorMessage | text    | エラーメッセージ。                                         |
+
+
+#### 例題
+
+The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
+
+```4d
+//Export the VP document
+VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
+```
+
+```4d
+//VPBlobCallback method
+#DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
+var $myEntity : cs.myTableEntity
+
+If ($status.success)
+   // Save the document in a table
+   $myEntity:=ds.myTable.new()
+   $myEntity.blob:=$data
+   $myEntity.save()
+End if
+
+```
+
+#### 参照
+
+[VP IMPORT FROM BLOB](#vp-import-from-blob)
 
 ### VP Export to object
 
@@ -2998,6 +3066,65 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| 引数         | タイプ     |    | 説明                                     |
+| ---------- | ------- | -- | -------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                |
+| vpBlob     | 4D.Blob | -> | Blob containing a 4D View Pro document |
+| paramObj   | Object  | -> | 読み込みのオプション|<!-- END REF -->
+
+|
+
+#### 説明
+
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->。
+
+In *paramObj*, you can pass several properties:
+
+| プロパティ               | タイプ         | 説明                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | Callback method to be launched when the import has completed.                                                                                                                                                                                                                                                                                                                                                                |
+| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                    |
+| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                         |
+| fullRecalc          | Boolean     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                                                                                                                                                        |
+| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                   |
+| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                     |
+| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                |
+| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. 他のシートは使用された場合にのみ読み込まれます。 <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
+
+The following parameters can be used in the callback method:
+
+| 引数     |               | タイプ     | 説明                                                |
+|:------ |:------------- |:------- |:------------------------------------------------- |
+| param1 |               | text    | 4D View Pro オブジェクト名                               |
+| param2 |               | 4D.Blob | The imported blob                                 |
+| param3 |               | object  | A reference to the command's *paramObj* parameter |
+| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト                   |
+|        | .success      | boolean | True if import with success, False otherwise.     |
+|        | .errorCode    | integer | Error code.                                       |
+|        | .errorMessage | text    | エラーメッセージ。                                         |
+
+
+#### 例題
+
+You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### 参照
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
