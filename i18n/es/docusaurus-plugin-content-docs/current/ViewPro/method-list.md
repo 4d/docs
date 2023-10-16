@@ -936,6 +936,7 @@ utilice el siguiente código:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1812,7 +1813,9 @@ devolverá esta información en el objeto *$defaultStyle*:
 | rangeObj   | Object | -> | Objeto rango                       |
 | Result     | Text   | <- | Formula|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -2804,10 +2807,11 @@ En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 En el parámetro *onlyData*, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
 
-| Constante             | Valor | Descripción                                                                                                  |
-| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
-| `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
-| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                            |
+| Constante             | Valor | Descripción                                                                       |
+| --------------------- | ----- | --------------------------------------------------------------------------------- |
+| `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
+
+|`vk table data range`|1|Get the cell range for the table data area only|
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -4537,7 +4541,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |
 > **Compatibilidad**
-> 
+>
 > Para una mayor flexibilidad, se recomienda utilizar el comando [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) que permite designar fórmulas 4D que pueden ser llamadas desde las áreas 4D View Pro. En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, se ignoran las llamadas a `VP SET ALLOWED METHODS`. 4D View Pro también soporta el comando genérico de 4D `SET ALLOWED METHODS` si no se llama a `VP SET CUSTOM FUNCTIONS` ni a `VP SET ALLOWED METHODS`, sin embargo no se recomienda usar el comando genérico.
 
 
@@ -5228,9 +5232,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parámetro|Tipo||Descripción|
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| dateValue     | Fecha  | -> | Valor date a definir                         |
+| formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5352,11 +5360,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| formula       | Text   | -> | Formula or 4D method                         |
+| formatPattern | Text   | -> | Formato del campo|<!-- END REF -->
 
-|rangeObj |Object|->|Objeto de rango| |formula |Text|->|Formula o método 4D| |formatPattern |Text|->|Formato de campo|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5484,11 +5494,12 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro *paneObj*. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
 
-| Propiedad | Tipo | Descripción |
-| --------- | ---- | ----------- |
-|           |      |             |
-
-|columnCount | Integer | El número de columnas congeladas a la izquierda de la hoja| |trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja |rowCount | Integer | El número de filas congeladas en la parte superior de la hoja | |trailingRowCount | Integer | El número de filas congeladas en la parte inferior de la hoja|
+| Propiedad           | Tipo    | Descripción                                                    |
+| ------------------- | ------- | -------------------------------------------------------------- |
+| columnCount         | Integer | El número de columnas congeladas a la izquierda de la hoja     |
+| trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja       |
+| rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
+| trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5727,11 +5738,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros | Tipo   |    | Descripción                                       |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| rangeObj   | Object | -> | Objeto rango de celdas|<!-- END REF -->
 
-|rangeObj |Object|->|Rango objeto de celdas|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5798,12 +5809,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
-| name       | Text | -> | Nuevo nombre para la hoja                    |
+| Parámetros | Tipo    |    | Descripción                                                 |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                |
+| name       | Text    | -> | Nuevo nombre para la hoja                                   |
+| sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
 
-|sheet|Integer|->|Índice de la hoja a renombrar|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5817,7 +5829,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-Si no se pasa el *index*, el comando renombra la hoja actual.
+If no *sheet* is passed, the command renames the current sheet.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5826,7 +5838,7 @@ El comando no hace nada si:
 * el nuevo nombre contiene caracteres prohibidos
 * el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
-* el *índice* pasado no existe
+* the passed *sheet* index does not exist
 
 #### Ejemplo
 
@@ -6508,11 +6520,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |
-| ---------- | ------ | -- | ------------ |
-| rangeObj   | Object | -> | Objeto rango |
+| Parámetros | Tipo    |    | Descripción                                                        |
+| ---------- | ------- | -- | ------------------------------------------------------------------ |
+| rangeObj   | Object  | -> | Objeto rango                                                       |
+| vPos       | Integer | -> | Vertical view position of cell or row                              |
+| hPos       | Integer | -> | Horizontal view position of cell or row|<!-- END REF -->
 
-|vPos |Integer|->|Posición de vista vertical de la celda o línea| |hPos |Integer|->|Posición de vista horizontal de la celda o línea|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -6611,6 +6625,6 @@ End if
 
 #### Ver también
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
