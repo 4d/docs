@@ -85,9 +85,9 @@ Décrit le type de ligne en pointillé comme une séquence de points noirs et bl
 
 #### Grammaire JSON
 
-| Nom             | Type de données        | Valeurs possibles                                                                               |
-| --------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
-| strokeDashArray | number array or string | Ex : Ex : Ex : Ex : Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
+| Nom             | Type de données        | Valeurs possibles                                                                                    |
+| --------------- | ---------------------- | ---------------------------------------------------------------------------------------------------- |
+| strokeDashArray | number array or string | Ex : Ex : Ex : Ex : Ex : Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
 
 #### Objets pris en charge
 
@@ -163,7 +163,7 @@ Désigne l'épaisseur d'une ligne.
 
 Le nom d'un tableau pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne ou colonne de la list box.
 
-Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html) theme. Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant. You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html) theme.
 
 Par exemple, considérons une list box où les lignes ont une couleur alternée gris/gris clair, définie dans les propriétés de la list box. Un tableau de couleurs d'arrière-plan a également été défini pour la list box afin de changer en orange clair la couleur des lignes où au moins une valeur est négative :
 
