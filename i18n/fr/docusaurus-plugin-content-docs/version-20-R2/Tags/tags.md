@@ -191,7 +191,7 @@ La collection ne doit contenir que des **éléments de même type**, sinon une e
 Le nombre de boucles est basé sur le nombre d'éléments de la collection. À chaque itération, la variable de l'élément correspond automatiquement à l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
 - The *item* variable gets the same type as the first collection element. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the *item* variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- If the *item* variable is of the object type or collection type (i.e. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
 - Si la collection contient des éléments de valeur Null, une erreur sera générée si le type de la variable ne prend pas en charge la valeur *Null* (comme par exemple les variables entier long).
 
 #### Exemple avec une collection de valeurs scalaires
@@ -686,7 +686,7 @@ au lieu de :
 <!--#4DEVAL(UserName)-->
 ```
 
-Le principal avantage de cette syntaxe est qu'elle vous permet d'écrire des modèles conformes à XML. Certains développeurs 4D ont besoin de créer et de valider des modèles basés sur XML à l'aide d'outils d'analyse syntaxique XML standard. Le caractère "<" n'étant pas valide dans une valeur d'attribut XML, il n'était pas possible d'utiliser la syntaxe "<!-- -->" des balises 4D sans rompre la syntaxe du document. D'autre part, ne pas mentionner le caractère "<" empêche 4D d'interpréter correctement les balises.
+Le principal avantage de cette syntaxe est qu'elle vous permet d'écrire des modèles conformes à XML. Certains développeurs 4D ont besoin de créer et de valider des modèles basés sur XML à l'aide d'outils d'analyse syntaxique XML standard. Le caractère "<" n'étant pas valide dans une valeur d'attribut XML, il n'était pas possible d'utiliser la syntaxe " " des balises 4D sans rompre la syntaxe du document. D'autre part, ne pas mentionner le caractère "<" empêche 4D d'interpréter correctement les balises.
 
 Par exemple, le code suivant provoquerait une erreur d'analyse XML en raison du premier caractère "<" dans la valeur de l'attribut :
 
