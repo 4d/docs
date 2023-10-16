@@ -937,6 +937,7 @@ use the following code:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name         |
@@ -1813,7 +1814,9 @@ will return this information in the *$defaultStyle* object:
 | rangeObj  | Objekt | -> | Range object                       |
 | Ergebnis  | Text   | <- | Formula|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 
@@ -2839,7 +2842,8 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | Constant              | Wert | Beschreibung                                                                      |
 | --------------------- | ---- | --------------------------------------------------------------------------------- |
 | `vk table full range` | 0    | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1    | Get the cell range for the table data area only                                   |
+
+|`vk table data range`|1|Get the cell range for the table data area only|
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 > Indexing starts at 0.
@@ -4570,7 +4574,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |
 > **Compatibility**
-> 
+>
 > For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
 
@@ -5259,9 +5263,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parameter|Type||Description|
+| Parameter     | Typ    |    | Beschreibung                               |
+| ------------- | ------ | -- | ------------------------------------------ |
+| rangeObj      | Objekt | -> | Range object                               |
+| dateValue     | Datum  | -> | Date value to set                          |
+| formatPattern | Text   | -> | Format of value|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5383,11 +5391,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter     | Typ    |    | Beschreibung                               |
+| ------------- | ------ | -- | ------------------------------------------ |
+| rangeObj      | Objekt | -> | Range object                               |
+| formula       | Text   | -> | Formula or 4D method                       |
+| formatPattern | Text   | -> | Format of field|<!-- END REF -->
 
-|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5515,11 +5525,12 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. If a property is set to less than zero, the command does nothing. You can pass:
 
-| Property | Typ | Beschreibung |
-| -------- | --- | ------------ |
-|          |     |              |
-
-|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
+| Property            | Typ      | Beschreibung                                           |
+| ------------------- | -------- | ------------------------------------------------------ |
+| columnCount         | Ganzzahl | The number of frozen columns on the left of the sheet  |
+| trailingColumnCount | Ganzzahl | The number of frozen columns on the right of the sheet |
+| rowCount            | Ganzzahl | The number of frozen rows on the top of the sheet      |
+| trailingRowCount    | Ganzzahl | The number of frozen rows on the bottom of the sheet   |
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 
@@ -5795,11 +5806,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter | Typ    |    | Beschreibung                                     |
+| --------- | ------ | -- | ------------------------------------------------ |
+| rangeObj  | Objekt | -> | Range object of cells|<!-- END REF -->
 
-|rangeObj |Object|->|Range object of cells|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5866,12 +5877,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parameter  | Typ  |    | Beschreibung                      |
-| ---------- | ---- | -- | --------------------------------- |
-| vpAreaName | Text | -> | 4D View Pro area form object name |
-| name       | Text | -> | New name for the sheet            |
+| Parameter  | Typ      |    | Beschreibung                                                |
+| ---------- | -------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name                           |
+| name       | Text     | -> | New name for the sheet                                      |
+| sheet      | Ganzzahl | -> | Index of the sheet to be renamed|<!-- END REF -->
 
-|sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5885,7 +5897,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > Indexing starts at 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -5894,7 +5906,7 @@ The command does nothing if:
 * the new name contains forbidden characters
 * the new name's value is blank
 * the new name already exists
-* the passed *index* does not exist
+* the passed *sheet* index does not exist
 
 #### Beispiel
 
@@ -6576,11 +6588,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parameter | Typ    |    | Beschreibung |
-| --------- | ------ | -- | ------------ |
-| rangeObj  | Objekt | -> | Range object |
+| Parameter | Typ      |    | Beschreibung                                                       |
+| --------- | -------- | -- | ------------------------------------------------------------------ |
+| rangeObj  | Objekt   | -> | Range object                                                       |
+| vPos      | Ganzzahl | -> | Vertical view position of cell or row                              |
+| hPos      | Ganzzahl | -> | Horizontal view position of cell or row|<!-- END REF -->
 
-|vPos  |Integer|->|Vertical view position of cell or row| |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -6679,6 +6693,6 @@ End if
 
 #### See also
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
