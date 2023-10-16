@@ -199,7 +199,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->envoie *message * au serveur WebSocket avec le type de données défini (Text, Blob ou Object)<!-- END REF -->.
+La fonction `.send()` <!-- REF #WebSocketClass.send().Summary -->La fonction `.send()`<!-- END REF -->.
 
 Les contenus suivants sont envoyés en fonction du type de *message * :
 
@@ -221,7 +221,7 @@ Les contenus suivants sont envoyés en fonction du type de *message * :
 
 #### Description
 
-La propriété `.status` contient <!-- REF #WebSocketClass.status.Summary -->le statut actuel de la connexion (peut être "Connecting", "Closing", "Closed", ou "Connected")<!-- END REF -->.
+La propriété `.status` contient <!-- REF #WebSocketClass.status.Summary -->La propriété `.status` contient<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 
@@ -248,7 +248,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La fonction `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->ferme la connexion WebSocket, avec les paramètres optionnels *code* et *reason*<!-- END REF -->.
+La fonction `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->La fonction `.terminate()`<!-- END REF -->.
 
 Dans *code*, vous pouvez passer un code d'état expliquant pourquoi la connexion est fermée (voir aussi [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)) :
 
