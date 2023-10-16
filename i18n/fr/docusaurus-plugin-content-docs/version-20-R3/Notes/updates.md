@@ -18,7 +18,7 @@ Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-
 - Support for [initializing the variable's value and data type in the declaration line](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Log file settings are now [saved with the current data file](../Backup/settings.md#log-file-management)
 - New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
-
+- 4D View Pro: Support for the [import](../ViewPro/method-list.md#vp-import-from-blob) and [export](../ViewPro/method-list.md#vp-export-to-blob) of 4D View Pro documents in Blob format.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) on doc.4d.com.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R3): Liste de tous les bugs corrigés dans 4D v20 R3.
@@ -120,7 +120,6 @@ Lisez [**Les nouveautés de 4D v19 R8**](https://blog.4d.com/fr-whats-new-in-4d-
 - Prise en charge du [mode SDI dans le mode test application](../Menus/sdi.md#sdi-mode-availability) sous Windows.
 - 4D View Pro:
     - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
-
     - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - Commandes du langage 4D : [Liste des nouveautés](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) sur doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
@@ -277,7 +276,7 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 
 - Un [fichier .gitignore par défaut](../Preferences/general#create-gitignore-file) peut être créé avec les nouveaux projets
 - Nouvelle classe [Blob API](../API/BlobClass.md) pour gérer les nouveaux objets [`4D.Blob`](Concepts/dt_blob.md#blob-types)
-- Prise en charge de `no-bom ` et nouveaux caractères de fin de ligne par défaut dans [`.setText()`](../API/FileClass.md#settext)
+- Prise en charge de `no-bom` et nouveaux caractères de fin de ligne par défaut dans [`.setText()`](../API/FileClass.md#settext)
 
 
 ## Versions précédentes
