@@ -229,7 +229,7 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 
 - Un [fichier .gitignore par défaut](../Preferences/general#create-gitignore-file) peut être créé avec les nouveaux projets
 - Nouvelle classe [Blob API](../API/BlobClass.md) pour gérer les nouveaux objets [`4D.Blob`](Concepts/dt_blob.md#blob-types)
-- Prise en charge de `no-bom ` et nouveaux caractères de fin de ligne par défaut dans [`.setText()`](../API/FileClass.md#settext)
+- Prise en charge de `no-bom` et nouveaux caractères de fin de ligne par défaut dans [`.setText()`](../API/FileClass.md#settext)
 
 
 ## Versions précédentes
