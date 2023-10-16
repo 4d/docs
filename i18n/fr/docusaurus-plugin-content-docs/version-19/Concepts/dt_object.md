@@ -24,7 +24,7 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 **Attention :** N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.
 
-Vous gérez les variables, les champs ou les expressions de type Objet à l'aide de la [notation objet](dt_object.md#syntax-basics) ou des commandes classiques du thème **Objets (langage)**. A noter que des commandes spécifiques du thème **Requêtes**, telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
+Vous gérez les variables, les champs ou les expressions de type Objet à l'aide de la [notation objet](dt_object.md#syntax-basics) ou des commandes classiques du thème **Objets (langage)**. You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the commands available in the **Objects (Language)** theme.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
@@ -98,7 +98,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $measures:=Lire mesures base.DB.tables
 ```
 
-- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
+- avec les **collections**. Voici un exemple :
 
 ```4d
       // MyMethod1
@@ -109,7 +109,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- avec les **collections**. Exemple:
+- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
 
 ```4d
      myColl.length //taille de la collection
