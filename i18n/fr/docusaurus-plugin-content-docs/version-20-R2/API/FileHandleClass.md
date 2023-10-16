@@ -413,7 +413,7 @@ La fonction `.readText()` <!-- REF #FileHandleClass.readText().Summary -->renvoi
 
 La chaîne de caractères *stopChar* n'est pas incluse dans le texte retourné. Si vous omettez le paramètre *stopChar*, le texte du document entier est renvoyé.
 
-Lorsque cette fonction est exécutée, le ([.offset](#offset)) est placé juste après la chaîne *stopChar*.
+Si le paramètre *stopChar* est passé et non trouvé, `.readText()` renvoie une chaîne vide et le [.offset](#offset) n'est pas modifié.
 
 :::caution Avertissement
 
@@ -421,7 +421,7 @@ This function assumes that the [`.offset`](#offset) property is a number of char
 
 :::
 
-Si le paramètre *stopChar* est passé et non trouvé, `.readText()` renvoie une chaîne vide et le [.offset](#offset) n'est pas modifié.
+Lorsque cette fonction est exécutée, le ([.offset](#offset)) est placé juste après la chaîne *stopChar*.
 
 > Lorsque cette fonction est exécutée pour la première fois sur un file handle, le contenu entier du document est chargé dans un buffer.
 
@@ -493,7 +493,7 @@ Si la valeur de *size* est inférieure à la taille courante du document, le con
 
 La fonction `.writeBlob()` <!-- REF #FileHandleClass.writeBlob().Summary -->écrit le *blob* dans le fichier, à partir de la position courante <!-- END REF -->.
 
-Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le dernier octet écrit.
+Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le délimiteur de fin de ligne.
 
 #### Voir également
 
@@ -530,7 +530,7 @@ Lorsque cette fonction est exécutée, la position courante ([.offset](#offset))
 
 La fonction `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->écrit le contenu de *lineOfText* à la position courante et insère un délimiteur de fin de ligne<!-- END REF --> (contrairement à la fonction [.writeText()](#writetext)). Par défaut, un délimiteur de fin de ligne natif est utilisé, mais vous pouvez définir un autre délimiteur lors de la [création du file handle](FileClass.md#open) en définissant la propriété [`.breakModeWrite`](#breakmodewrite).
 
-Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le délimiteur de fin de ligne.
+Lorsque cette fonction est exécutée, la position courante ([.offset](#offset)) est mise à jour après le dernier octet écrit.
 
 #### Voir également
 
