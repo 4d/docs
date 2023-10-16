@@ -147,6 +147,10 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
        ALERT("Error: "+$status.statusText)
     End if
  End if
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
 ```
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
@@ -211,9 +215,9 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| Paramètres | Type   |    | Description                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| Résultat   | Object | <- | Objet boxInfo|<!-- END REF -->
+| Paramètres | Type   |    | Description                                            |
+| ---------- | ------ |:--:| ------------------------------------------------------ |
+| Résultat   | Object | <- | Collection d'objets mailbox|<!-- END REF -->
 
 |
 
@@ -271,7 +275,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 La fonction `.getMail()` <!-- REF #POP3TransporterClass.getMail().Summary -->renvoie l'objet `Email ` correspondant au *msgNumber * dans la boîte aux lettres désignée par le [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->. Cette fonction vous permet de gérer localement le contenu de l'email.
 
-Passez dans *msgNumber* le numéro du message à récupérer. Ce numéro est retourné dans la propriété number par la fonction [`.getMailInfoList()`](#getmailinfolist).
+Passez dans *msgNumber* le numéro du message à récupérer. Dans le paramètre *msgNumber*, passez le numéro de l'email à récupérer.
 
 La fonction retourne Null si :
 
@@ -360,6 +364,7 @@ La fonction retourne **Null** si :
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
  End if
 ```
