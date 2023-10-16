@@ -3,7 +3,7 @@ id: overview
 title: A propos des fonctions de classes
 ---
 
-Cette section décrit les fonctions de classe intégrées de 4D ainsi que les commandes des constructeurs associés. Les propriétés et fonctions des classes 4D sont disponibles via les objets d'instance de classe.
+Les propriétés et fonctions des classes 4D sont disponibles via les objets d'instance de classe. Cette section décrit les fonctions de classe intégrées de 4D ainsi que les commandes des constructeurs associés.
 
 - les fonctions doivent être appelées sur des instances avec l'opérateur `()`. Par exemple, `collection.sort()`.
 - les propriétés sont appelées sans parenthèses, par exemple `file.creationTime`. Vous pouvez également utiliser la syntaxe \[], par exemple `file["creationTime"]`.
