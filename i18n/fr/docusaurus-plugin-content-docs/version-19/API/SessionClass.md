@@ -283,7 +283,7 @@ End if
 
 #### Description
 
-La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associe le(s) privilège(s) défini(s) dans le paramètre à la session<!-- END REF -->.
+La fonction `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->La fonction `.setPrivileges()`<!-- END REF -->.
 
 - Dans le paramètre *privilege*, passez une chaîne contenant un nom de privilège (ou plusieurs noms de privilèges séparés par des virgules).
 
