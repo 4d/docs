@@ -30,7 +30,7 @@ Les informations affichées permettent d’identifier la source et le contexte d
 
 - **Table** : table à laquelle appartient l’enregistrement ajouté/supprimé/modifié ou le BLOB.
 - **Clé primaire/BLOB** : contenu de la clé primaire de l'enregistrement (lorsque la clé primaire est composée de plusieurs champs, les valeurs sont séparées par des points-virgules), ou numéro de séquence du BLOB impliqué dans l’opération.
-- **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération. Taille : taille en octets des données traitées par l’opération.
+- **Process** : numéro interne du process dans lequel l’opération a été effectuée. Ce numéro interne correspond au contexte de l’opération.
 - **Taille** : taille (en octets) des données traitées par l’opération.
 - **Date et Heure** : date et heure à laquelle l’opération a été effectuée.
 - **4D User**: 4D user name of the user that performed the operation. Si un alias est défini pour l'utilisateur, l'alias s'affiche à la place du nom d'utilisateur 4D.
