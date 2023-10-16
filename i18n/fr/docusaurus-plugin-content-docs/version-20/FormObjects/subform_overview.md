@@ -111,7 +111,7 @@ Modifying the bound variable or expression triggers form events which let you sy
 
 Scénario 2 : Le contenu du sous-formulaire est modifié et cette modification doit être répercutée dans le formulaire parent.
 
-Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object. This triggers the [On Data Change](../Events/onDataChange.md) form event inside the clock object (this event must be selected for the object), which updates the `Form.parisTime` value in the main form.
+This triggers the [On Data Change](../Events/onDataChange.md) form event inside the clock object (this event must be selected for the object), which updates the `Form.parisTime` value in the main form. Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object.
 
 The following code is executed:
 
