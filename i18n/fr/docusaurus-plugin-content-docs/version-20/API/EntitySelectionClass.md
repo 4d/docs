@@ -387,7 +387,7 @@ $sellist2:=$sellist2.add($sellist1)
 La fonction `and()` <!-- REF #EntitySelectionClass.and().Summary -->combine l'entity selection avec le paramètre *entity* ou *entitySelection* à l'aide de l'opérateur logique ET<!-- END REF -->; elle retourne une nouvelle entity selection non ordonnée qui ne contient que les entités qui sont référencées à la fois dans l'entity selection et le paramètre.
 
 *   Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle entity selection contenant uniquement l'entité est retournée. Sinon, une entity selection vide est retournée.
-*   Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
+*   Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
 > > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
 Si l'entity selection initiale ou celle du paramètre *entitySelection* est vide, ou si *entity* est Null, une entity selection vide est retournée.
@@ -498,7 +498,7 @@ $emp2:=$employees.at(-3) //en partant de la fin, 3e entité
 
 #### Description
 
-La fonction `.average()` <!-- REF #EntitySelectionClass.average().Summary -->La fonction `.average()`<!-- END REF -->.
+La fonction `.average()` <!-- REF #EntitySelectionClass.average().Summary -->retourne la moyenne arithmétique de toutes les valeurs non nulles de *attributePath* dans l'entity selection<!-- END REF -->.
 
 Passez dans le paramètre *attributePath* le chemin de l'attribut à utiliser pour le calcul.
 
@@ -602,7 +602,7 @@ Si *entity* et l'entity selection n'appartiennent pas à la même dataclass, une
 
 #### Description
 
-La fonction `.count()` <!-- REF #EntitySelectionClass.count().Summary -->La fonction `.count()`<!-- END REF -->.
+La fonction `.count()` <!-- REF #EntitySelectionClass.count().Summary -->retourne le nombre d'entités dans l'entity selection pour lesquelles la valeur de *attributePath* n'est pas null<!-- END REF -->.
 > Seules les valeurs scalaires sont prises en compte. Les valeurs de type objet ou collection sont considérées comme des valeurs null.
 
 Une erreur est retournée si :
@@ -716,7 +716,7 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 #### Description
 
-La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->La fonction `.distinct()`<!-- END REF -->.
+La fonction `.distinct()` <!-- REF #EntitySelectionClass.distinct().Summary -->renvoie une collection contenant uniquement les valeurs distinctes (différentes) de *attributePath* dans l'entity selection<!-- END REF -->.
 
 La collection retournée est automatiquement triée. Les valeurs **Null** ne sont pas renvoyées.
 
@@ -937,7 +937,7 @@ Exemple avec l'option `dk stop dropping on first error` :
 
 #### Description
 
-La fonction `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->La fonction `.extract()`<!-- END REF -->.
+La fonction `.extract()` <!-- REF #EntitySelectionClass.extract().Summary -->retourne une collection contenant les valeurs *attributePath* extraites de l'entity selection<!-- END REF -->.
 
 *attributePath* peut désigner :
 
@@ -1097,7 +1097,7 @@ Il existe cependant une différence entre les deux instructions lorsque la séle
 
 #### Description
 
-La fonction `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->La fonction `.getDataClass()`<!-- END REF -->.
+La fonction `.getDataClass()` <!-- REF #EntitySelectionClass.getDataClass().Summary -->retourne la dataclass de l'entity selection<!-- END REF -->.
 
 Cette fonction est utile principalement dans le contexte de code générique.
 
@@ -1630,11 +1630,11 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| Paramètres  | Type               |    | Description                                                                                                     |
-| ----------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
-| pathString  | Text               | -> | Chemin(s) d'attribut(s) et mode(s) de tri pour l'entity selection                                               |
-| pathObjects | Collection         | -> | Collection d'objets critère                                                                                     |
-| Résultat    | 4D.EntitySelection | <- | Nouvelle entity selection ou une nouvelle référence sur l'entity selection existante|<!-- END REF -->
+| Paramètres  | Type               |    | Description                                                                |
+| ----------- | ------------------ |:--:| -------------------------------------------------------------------------- |
+| pathString  | Text               | -> | Chemin(s) d'attribut(s) et mode(s) de tri pour l'entity selection          |
+| pathObjects | Collection         | -> | Collection d'objets critère                                                |
+| Résultat    | 4D.EntitySelection | <- | Nouvelle entity selection dans l'ordre spécifié|<!-- END REF -->
 
 |
 
@@ -2172,7 +2172,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'i
 #### Description
 
 
-La fonction `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->La fonction `.sum()`<!-- END REF -->.
+La fonction `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->renvoie la somme de toutes les valeurs de *attributePath* dans l'entity selection<!-- END REF -->.
 
 `.sum()` retourne 0 si l'entity selection est vide.
 
