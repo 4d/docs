@@ -516,7 +516,7 @@ Valeur heure à fixer
 
 #### Exemple
 
-(obligatoire) Nom de la méthode projet 4D existante à autoriser
+Les colonnes suivantes sont toutes de la même taille et n'affichent pas certaines parties du texte :
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit1.PNG)
 
@@ -597,7 +597,7 @@ Dans le paramètre *4DViewDocument*, passez une variable ou un champ BLOB conten
 
 #### Exemple
 
-Nombre de feuilles|
+Vous souhaitez obtenir un objet 4D View Pro à partir d'une zone 4D View stockée dans un BLOB :
 
 ```4d
 C_OBJECT($vpObj)
@@ -651,7 +651,7 @@ Collection d'objets
 
 #### Exemple
 
-Nom de table|
+Vous souhaitez convertir une zone 4D View Pro en SVG, prévisualiser le résultat et l'envoyer dans une variable image :
 
 ```4d
 C_OBJECT($vpAreaObj)
@@ -1173,7 +1173,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 La commande `VP Find` <!-- REF #_method_.VP Find.Summary -->recherche dans *rangeObj* la *searchValue*<!-- END REF -->. Des paramètres facultatifs peuvent être utilisés pour affiner la recherche et/ou remplacer les résultats trouvés.
 
-Modifications
+Dans le paramètre *rangeObj*, passez un objet contenant une plage à rechercher.
 
 Style de la ligne de bordure appliqué à la bordure supérieure.
 
@@ -1372,11 +1372,11 @@ Les sélecteurs suivants sont disponibles :
 
 <!-- REF #_method_.VP Get active cell.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                                       |
-| ---------- | ------- | -- | --------------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                           |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                                          |
-| Résultat   | Object  | <- | Une fois ce code exécuté, les fonctions définies peuvent être utilisées dans des formules 4D View Pro :<!-- END REF -->
+| Paramètres | Type    |    | Description                                                |
+| ---------- | ------- | -- | ---------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                    |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)   |
+| Résultat   | Object  | <- | Objet plage d'une seule cellule|<!-- END REF -->
 
 |
 
@@ -1392,7 +1392,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 ![](../assets/en/ViewPro/cmd_vpGetActiveCell.PNG)
 
-Exemple
+Le code suivant récupèrera les coordonnées de la cellule active :
 
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
@@ -1888,16 +1888,16 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 La commande retourne un objet décrivant les lignes et colonnes figées. Cet objet peut avoir les propriétés suivantes :
 
-| Propriété           | Type    | Description |
-| ------------------- | ------- | ----------- |
-| columnCount         | Integer | |           |
-| trailingColumnCount | Integer | |           |
-| rowCount            | Integer | |           |
-| trailingRowCount    | Integer | |           |
+| Propriété           | Type    | Description                                      |
+| ------------------- | ------- | ------------------------------------------------ |
+| columnCount         | Integer | |                                                |
+| trailingColumnCount | Integer | |                                                |
+| rowCount            | Integer | Le nombre de lignes figées en haut de la feuille |
+| trailingRowCount    | Integer | Le nombre de lignes figées en bas de la feuille  |
 
 #### Exemple
 
-|
+Vous souhaitez récupérer des informations sur le nombre de colonnes et de lignes figées :
 
 ```4d
 var $panesObj : Object
@@ -1949,7 +1949,7 @@ La collection retournée contient un objet par nom. Les propriétés d'objets su
 | result\[ ].formula | Text | formula                                                    |
 | result\[ ].comment | Text | Cette commande est utile, par exemple :                    |
 
-Résultat:
+Les propriétés disponibles dépendent du type d'élément nommé (cellule nommée, plage nommée ou formule nommée).
 
 #### Exemple
 
@@ -2093,11 +2093,11 @@ $attr:=VP Get row attributes($range)
 
 <!-- REF #_method_.VP Get row count.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                                   |
-| ---------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                       |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                                      |
-| Résultat   | Integer | <- | Vous souhaitez exporter le contenu de la zone "VPArea" vers un document 4D View Pro sur le disque :<!-- END REF -->
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Integer | <- | Nombre total de lignes|<!-- END REF -->
 
 |
 
@@ -2111,7 +2111,7 @@ Vous pouvez définir l'emplacement du nombre de colonnes dans le paramère optio
 
 #### Exemple
 
-Modifications
+Le code suivant retourne le nombre de lignes dans la zone 4D View Pro :
 
 ```4d
 var $rowCount : Integer
@@ -2291,11 +2291,11 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
-| Paramètres | Type    |    | Description                                                                                       |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                           |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                          |
-| Résultat   | Object  | <- | Le code suivant retourne le nombre de lignes dans la zone 4D View Pro :<!-- END REF -->
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Objet options de la feuille|<!-- END REF -->
 
 |
 
@@ -2587,7 +2587,7 @@ End if
 | tableName  | Text    | -> | Nom de table                                                                                                                         |
 | columnName | Text    | -> | |---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value| |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                                             |
-| Résultat   | Integer | <- | Entier long, Réel, Booléen, Texte, Date<!-- END REF -->
+| Résultat   | Integer | <- | Numéro d'indice de *columnName*|<!-- END REF -->
 
 
 |
@@ -5012,7 +5012,7 @@ Le paramètre optionnel *formatPattern* définit un modèle pour le paramètre *
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | `vk pattern long date`  | var $options : Object $options:=New object // Personnaliser la couleur de l'onglet de la feuille 1 $options.sheetTabColor:="Black" $options.gridline:=New object("color";"Purple") $options.selectionBackColor:="rgb(255,128,0,0.4)" $options.selectionBorderColor:="Yellow" $options.frozenlineColor:="Gold" VP SET SHEET OPTIONS("ViewProArea";$options;0) // Personnaliser la couleur de l'onglet de la feuille 2 $options.sheetTabColor:="red" VP SET SHEET OPTIONS("ViewProArea";$options;1) // Personnaliser la couleur de l'onglet de la feuille 3 $options.sheetTabColor:="blue" VP SET SHEET OPTIONS("ViewProArea";$options;2) | "dddd, dd MMMM yyyy"                                     |
 | `vk pattern month day`  | Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | "MMMM dd"                                                |
-| `vk pattern short date` | Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | "MM/dd/yyyy"                                             |
+| `vk pattern short date` | Format ISO 8601 court pour la date                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | "MM/dd/yyyy"                                             |
 | `vk pattern year month` | Dans le paramètre *methodObj*, passez un objet dans lequel chaque propriété porte le nom d'une fonction à définir dans les zones 4D View Pro :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | "yyyy MMMM"                                              |
 
 Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format date et heure](configuring.md#formats-date-et-heure).
