@@ -43,13 +43,13 @@ Read [**What’s new in 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), 
 ## Tabela da biblioteca
 
 
-| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                               |
-| ---------- | ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
-| OpenSSL    | 1.1.1s       | 19.6             |                                                                                          |
-| SpreadJS   | 14.1.6       | 19.5             | Motor 4D View Pro                                                                        |
-| CEF        | 4324         | 19               | Chromium v88. Permite a compilação nativa nas plataformas Apple Silicon.                 |
-| webKit     | WKWebView    | 19               |                                                                                          |
-| ICU        | 68.1         | 18 R6            | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| PHP        | 7.3.27       | 18 R6            |                                                                                          |
-| libldap    | 2.4.48       | 18 R2            |                                                                                          |
+| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                  |
+| ---------- | ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| OpenSSL    | 1.1.1s       | 19.6             |                                                                                                             |
+| SpreadJS   | 14.1.6       | 19.5             | Motor 4D View Pro                                                                                           |
+| CEF        | 4324         | 19               | Chromium v88. Permite a compilação nativa nas plataformas Apple Silicon.                                    |
+| webKit     | WKWebView    | 19               |                                                                                                             |
+| ICU        | 68.1         | 18 R6            | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
+| PHP        | 7.3.27       | 18 R6            |                                                                                                             |
+| libldap    | 2.4.48       | 18 R2            |                                                                                                             |
 

@@ -18,6 +18,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
@@ -25,6 +26,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
@@ -440,7 +442,7 @@ Um erro é accionado se a função `.flushAndLock()` não puder ser executada (p
 
 :::caution
 
-Outras características e serviços 4D incluindo [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.en.html), e [MSC](../MSC/overview.md) podem também bloquear a datastore. Antes de ligar para `.flushAndLock()`, certifique-se de que nenhuma outra acção de bloqueio está a ser utilizada, a fim de evitar qualquer interacção inesperada.
+Outras características e serviços 4D incluindo [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), e [MSC](../MSC/overview.md) podem também bloquear a datastore. Antes de ligar para `.flushAndLock()`, certifique-se de que nenhuma outra acção de bloqueio está a ser utilizada, a fim de evitar qualquer interacção inesperada.
 
 :::
 
@@ -542,6 +544,61 @@ $info:=$ds.getAllRemoteContexts()
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
+
+<!-- REF DataClassClass.getGlobalStamp().Desc -->
+## .getGlobalStamp()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20 R3 | Adicionado |
+
+</details>
+
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Real<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+| Parâmetro  | Tipo |    | Descrição                                                                |
+| ---------- | ---- | -- | ------------------------------------------------------------------------ |
+| Resultados | Real | <- | Valor atual do marcador de modificação global|<!-- END REF -->
+
+
+|
+
+
+#### Descrição
+
+A função `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summary -->retorna o valor atual do marcador de modificação global do datastore<!-- END REF -->.
+
+:::info
+
+Esta função só pode ser chamada:
+
+- sobre a datastore local ([`ds`](#ds)).
+- no ambiente cliente/servidor, na máquina do servidor.
+
+:::
+
+Para obter mais informações sobre o marcador global e o rastreamento de alterações de dados, consulte a página [**Uso do marcador global**](../ORDA/global-stamp.md).
+
+
+#### Exemplo
+
+```4d
+var $currentStamp : Real
+var $hasModifications : Boolean
+
+$currentStamp:=ds.getGlobalStamp()
+methodWhichCouldModifyEmployees //chamar algum código 
+$hasModifications:=($currentStamp # ds.getGlobalStamp())
+```
+
+#### Veja também
+
+[.setGlobalStamp()](#setglobalstamp)
+
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
 
@@ -571,7 +628,7 @@ A função `.getInfo( )` <!-- REF #DataStoreClass.getInfo().Summary -->devolve u
 
 | Propriedade | Tipo    | Descrição                                                                                                                                                                                         |
 | ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type        | string  | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                                                               |
+| type        | string  | <li>"4D": armazém de dados principal, disponível através de ds </li><li>"4D Server": datastore remoto, aberto com Open datastore</li>                                                                                                                                              |
 | networked   | boolean | <li>True: a datastore se alcança através de uma conexão de rede.</li><li>False: não se alcança a datastore através de uma conexão de rede (base de dados local)</li>                                                                                                                                              |
 | localID     | text    | ID do armazém de dados na máquina. Corresponde à string localId dada com o comando `Open datastore`. String vazia ("") para o datastore principal.                                                |
 | connection  | object  | Objeto descrevendo a conexão remota da datastore (não retornado para datastore principal) Propriedades disponiveis: Propriedades disponiveis: Propriedades disponiveis:<table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>hostname</td><td>text</td><td>Endereço IP ou nome da datastore remota + ":" + número porta</td></tr><tr><td>tls</td><td>boolean</td><td>True se conexão segura for usada com a datastore remota</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tempo de inatividade da sessão (em minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado no datastore remoto</td></tr></table> |
@@ -787,6 +844,7 @@ A função também retornará `True` se a datastore foi bloqueada por outra func
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
 
+
 <details><summary>Histórico</summary>
 
 | Versão | Mudanças   |
@@ -934,6 +992,66 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 [`.isAdminProtected()`](#isadminprotected)
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.setGlobalStamp().Desc -->
+## .setGlobalStamp()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20 R3 | Adicionado |
+
+</details>
+
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**( *newStamp*: Real)<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+| Parâmetro | Tipo |    | Descrição                                                               |
+| --------- | ---- | -- | ----------------------------------------------------------------------- |
+| newStamp  | Real | -> | Novo valor do marcador de modificação global|<!-- END REF -->
+
+
+|
+
+
+:::info Modo avançado
+
+Essa função é destinada a desenvolvedores que precisam modificar o valor atual do marcador global. Ele deve ser usado com cuidado.
+
+:::
+
+#### Descrição
+
+A função `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summary -->define *newStamp* como o novo valor para o marcador de modificação global atual for o datastore<!-- END REF -->.
+
+:::info
+
+Esta função só pode ser chamada:
+
+- sobre a datastore local ([`ds`](#ds)).
+- no ambiente cliente/servidor, na máquina do servidor.
+
+:::
+
+Para obter mais informações sobre o marcador global e o rastreamento de alterações de dados, consulte a página [**Uso do marcador global**](../ORDA/global-stamp.md).
+
+
+#### Exemplo
+
+O código a seguir define o carimbo global de modificação:
+
+```4d
+var $newValue: Real
+$newValue:=ReadValueFrom //obtém um novo valor para atribuir
+ds.setGlobalStamp($newValue)
+```
+
+#### Veja também
+
+[.getGlobalStamp()](#getglobalstamp)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 ## .setRemoteContextInfo()
@@ -1097,9 +1215,9 @@ Para uma descrição do formato do registo de petições ORDA, consulte a secç�
 
 #### Do lado do cliente
 
-Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. The log can be sent to a file or to memory, depending on the parameter type:
+Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. O registro pode ser enviado para um arquivo ou para a memória, dependendo do parâmetro:
 
-* Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+* Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. Se `.startRequestLog()` for chamado com um arquivo enquanto o registro em log tiver sido iniciado anteriormente na memória, o registro em memória será interrompido e esvaziado.
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON
 
 * Se passar um inteiro *reqNum*, se esvazia o registro em memória (se houver) e se inicializa um novo registro. Vai manter *reqNum* petições em memória até que se alcance o número, em cujo caso se esvaziam as entradas mais antigas (pilha FIFO).<br/>Se chamar a `.startRequestLog()` com um *reqNum* enquanto tiver iniciado previamente um registro em um arquivo, se para o registro do arquivo.
@@ -1108,10 +1226,10 @@ Para criar um registo de pedidos ORDA do lado do cliente, chame esta função nu
 
 #### Do lado do servidor
 
-To create a server-side ORDA request log, call this function on the server machine. Os dados de registo são escritos num ficheiro no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
+Para criar um registro de pedidos ORDA no lado do servidor, chame essa função no máquina servidor. Os dados de registo são escritos num ficheiro no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
-- If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
-- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. As seguintes constantes podem ser utilizadas neste parâmetro:
+- Se você passou o parâmetro *file*, os dados de registro serão gravados nesse arquivo, no local solicitado. - Se você omitir o parâmetro *file* ou se ele for null, os dados de registro serão gravados em um arquivo chamado *ordaRequests.jsonl* e armazenados na pasta "/LOGS".
+- O parâmetro *options* pode ser usado para especificar se a resposta do servidor deve ser registrada e se deve incluir o corpo. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:
 
 | Parâmetros                    | Descrição                                          |
 | ----------------------------- | -------------------------------------------------- |
@@ -1157,7 +1275,7 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 #### Exemplo 3
 
-You want to log ORDA server requests in a specific file and enable the log sequence number and duration:
+Você deseja registrar as peticiones do servidor ORDA em um arquivo específico e ativar o número de sequência do registro e a duração:
 
 ```4d
 SET DATABASE PARAMETER(4D Server Log Recording;1)
@@ -1349,5 +1467,6 @@ Pode aninhar várias transações (subtransações). Se a transação principal 
 #### Exemplo
 
 Ver exemplos [`.startTransaction()`](#starttransaction).
+
 
 <!-- END REF -->

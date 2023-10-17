@@ -275,18 +275,18 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 #### Description
 
-La fonction `delete()` <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
 
 Si le fichier n'existe pas sur le disque, la fonction ne fait rien (aucune erreur n'est générée).
 
-If the file is currently open, the result depends on the OS:
+Si le fichier est actuellement ouvert, le résultat dépend du système d'exploitation :
 
-- on Windows, an error is generated,
-- on macOS, no error is generated and the file is deleted.
+- sous Windows, une erreur est générée,
+- sous macOS, aucune erreur n'est générée et le fichier est supprimé.
 
 :::caution
 
-`.delete()` can delete any file on a disk. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
+`.delete()` peut supprimer n'importe quel fichier sur un disque. Cela inclut les documents créés avec d'autres applications, ainsi que les applications elles-mêmes. `.delete()` doit être utilisé avec prudence. La suppression d'un fichier est une opération permanente et irréversible.
 
 :::
 
@@ -499,7 +499,7 @@ Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres op
 | `.breakModeRead`  | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                       | "native" ou 1 |
 | `.breakModeWrite` | Text ou numérique | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                  | "native" ou 1 |
 
-The function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter. Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
+La fonction remplace tous les délimiteurs de fin de ligne d'origine. Par défaut, le délimiteur natif est utilisé, mais vous pouvez définir un autre délimiteur. Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
 
 | Mode de rupture en texte | Break mode en numérique (constante) | Description                                                                                                                                                          |
 | ------------------------ | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -580,10 +580,10 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications      |
-| ------- | ------------------ |
-| v20     | Support of WinIcon |
-| v19     | Ajout              |
+| Version | Modifications              |
+| ------- | -------------------------- |
+| v20     | Prise en charge de WinIcon |
+| v19     | Ajout                      |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -703,10 +703,10 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                           |
-| ------- | ------------------------------------------------------- |
-| v19 R3  | Default for new projects: no BOM and (macOS) LF for EOL |
-| v17 R5  | Ajout                                                   |
+| Version | Modifications                                                                       |
+| ------- | ----------------------------------------------------------------------------------- |
+| v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
+| v17 R5  | Ajout                                                                               |
 
 </details>
 

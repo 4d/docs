@@ -12,12 +12,12 @@ title: WebFormItem
 </details>
 
 
-`4D.WebFormItem` objects are properties of the [`4D.WebForm`](WebFormItemClass.md) object returned by the [`Web Form`](WebFormClass.md#web-form) command.
+Les objets `4D.WebFormItem` sont des propriétés de l'objet [`4D.WebForm`](WebFormItemClass.md) renvoyé par la commande [`Web Form`](WebFormClass.md#web-form).
 
-The `WebFormItem` class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass).
+La classe `WebFormItem` est décrite en détail dans la [documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass).
 
 
-### WebFormItem object
+### Objet WebFormItem
 
 |                                                                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,18 +33,18 @@ The `WebFormItem` class is detailed in the [Qodly documentation](https://develop
 **.hide**()<!-- END REF -->
 
 <!-- REF #WebFormItemClass.hide().Params -->
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 <!-- END REF -->
 
 
 #### Description
 
-The `.hide()` function <!-- REF #WebFormItemClass.hide().Summary -->hides the component<!-- END REF -->.
+La fonction `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->masque le composant<!-- END REF -->.
 
 
-For more information, please refer to the [`.hide()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
+Pour plus d'informations, veuillez vous référer à la description de [`.hide()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
 
 
 ### .show()
@@ -54,17 +54,17 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 
 <!-- REF #WebFormItemClass.show().Params -->
-| Paramètres | Type |  | Description                     |
-| ---------- | ---- |::| ------------------------------- |
-|            |      |  | Does not require any parameters |
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
 <!-- END REF -->
 
 
 #### Description
 
-The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.
+La fonction `.show()` <!-- REF #WebFormItemClass.show().Summary -->rend le composant visible<!-- END REF -->.
 
-For more information, please refer to the [`.show()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#show).
+Pour plus d'informations, veuillez vous référer à la description de [`.show()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#show).
 
 
 ### .addCSSClass()
@@ -73,16 +73,16 @@ For more information, please refer to the [`.show()` description in the Qodly do
 **.addCSSClass**(*className* : string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
-| Paramètres | Type   |    | Description                                   |
-| ---------- | ------ |:--:| --------------------------------------------- |
-| className  | string | -> | Name of the CSS class to add to the component |
+| Paramètres | Type   |    | Description                                 |
+| ---------- | ------ |:--:| ------------------------------------------- |
+| className  | string | -> | Nom de la classe CSS à ajouter au composant |
 <!-- END REF -->
 
 #### Description
 
-The `.addCSSClass` function <!-- REF #WebFormItemClass.addCSSClass().Summary -->adds the class specified in *className* to the component<!-- END REF -->.
+La fonction `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->ajoute la classe spécifiée dans *className* au composant<!-- END REF -->.
 
-For more information, please refer to the [`.addCSSClass` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
+Pour plus d'informations, veuillez vous référer à la description de [`.addCSSClass` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
 
 
 ### .removeCSSClass()
@@ -92,16 +92,16 @@ For more information, please refer to the [`.addCSSClass` description in the Qod
 **.removeCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
-| Paramètres | Type   |    | Description                                        |
-| ---------- | ------ |:--:| -------------------------------------------------- |
-| className  | string | -> | Name of the CSS class to remove from the component |
+| Paramètres | Type   |    | Description                                   |
+| ---------- | ------ |:--:| --------------------------------------------- |
+| className  | string | -> | Nom de la classe CSS à supprimer du composant |
 <!-- END REF -->
 
 #### Description
 
-The `.removeCSSClass()` function <!-- REF #WebFormItemClass.removeCSSClass().Summary -->removes the class specified in *className* from the component<!-- END REF -->.
+La fonction `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->supprime la classe spécifiée dans *className* du composant<!-- END REF -->.
 
-For more information, please refer to the [`.removeCSSClass()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass). 
+Pour plus d'informations, veuillez vous référer à la description de [`.removeCSSClass()` dans la documentation de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass). 
 
 
 

@@ -70,6 +70,8 @@ La barra de herramientas contiene los siguientes elementos:
 | ![](../assets/en/FormEditor/shields2.png)        | [Visualización de marcas](#shields)                         | Cada clic en este botón provoca la visualización sucesiva de todos los tipos de escudos de formulario. El botón también está vinculado a un menú que permite seleccionar directamente el tipo de escudo a mostrar.                                                                                                                                                        |
 | ![](../assets/en/FormEditor/library.png)         | [Librería de objetos preconfigurada](objectLibrary.html)    | Este botón muestra la librería de objetos preconfigurada que ofrece numerosos objetos con ciertas propiedades que han sido predefinidas.                                                                                                                                                                                                                                  |
 | ![](../assets/en/FormEditor/listBoxBuilder1.png) | [Creación de list box](#list-box-builder)                   | Este botón crea nuevos list box de tipo selección de entidades.                                                                                                                                                                                                                                                                                                           |
+| ![](../assets/en/FormEditor/insertFields.png)    | [Insertar campos](#insert-fields)                           | Este botón inserta en el formulario todos los campos (excepto los de tipo objeto y blob) de la tabla del formulario, junto con sus etiquetas y respetando las normas de la interfaz.                                                                                                                                                                                      |
+
 
 ### Barra de objetos
 
@@ -496,6 +498,26 @@ El generador de list box le permite crear y llenar los list box de tipo selecci�
 El list box final:
 
 ![](../assets/en/FormEditor/listboxBuilderListbox.png)
+
+
+## Insertar campos
+
+El botón **Insertar campos** inserta en el formulario todos los campos (excepto los de tipo objeto y blob) de la tabla del formulario, junto con sus etiquetas y respetando las normas de la interfaz. Este asistente es un atajo para diseñar formularios de entrada básicos o formularios listados.
+
+El botón **Insertar campos** sólo está disponible con formularios tabla.
+
+El diseño del formulario resultante depende del tipo de formulario:
+
+- **Formulario detallado**: al hacer clic en el botón **Insertar campos** se genera un formulario con un diseño de página:
+
+![](../assets/en/FormEditor/insertFields2.png)
+
+- **Formulario listado**: al hacer clic en el botón **Insertar campos** se genera un diseño de formulario listado con campos organizados en una sola línea y marcadores de área:
+
+![](../assets/en/FormEditor/insertFields3.png)
+
+
+
 
 ## Marcas
 

@@ -1625,7 +1625,7 @@ Si aucun attribut de l'entité n'a été touché, la fonction retourne une colle
   //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
 ```
 
-In this case:
+Dans ce cas :
 
 * firstName et lastName ont un type `storage`
 * employer a un type `relatedEntity`

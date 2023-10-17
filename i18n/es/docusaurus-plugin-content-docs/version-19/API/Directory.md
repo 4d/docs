@@ -91,6 +91,7 @@ Esta propiedad es **de sólo lectura**.
 ---
 
 
+
 <!-- REF directory.fullName.Desc -->
 ## .fullName
 
@@ -430,7 +431,7 @@ Desea copiar una *carpeta* Imágenes de la carpeta de documentos del usuario a l
 
 ```4d
 var $userImages; $copiedImages : 4D.Folder
-$userImages:=Folder(fk documents folder+"/Pictures/")
+$userImages:=Folder(fk documents folder).folder("Pictures")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
 

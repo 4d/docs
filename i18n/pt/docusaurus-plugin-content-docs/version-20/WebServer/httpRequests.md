@@ -6,7 +6,7 @@ title: Processamento de pedidos HTTP
 The 4D web server provides several features to handle HTTP requests:
 
 - the `On Web Connection` database method, a router for your web application,
-- the `/4DACTION` URL to call server-side code
+- o URL `/4DACTION` para chamar o código do lado do servidor
 - `WEB GET VARIABLES` to get values from HTML objects sent to the server
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
 - the *COMPILER_WEB* project method, to declare your variables.
@@ -381,7 +381,7 @@ The 4D web server provides several low-level web commands allowing you to develo
 - the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
 - the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
-These commands are summarized in the following graphic:
+Esses comandos estão resumidos no gráfico a seguir:
 
 ![](../assets/en/WebServer/httpCommands.png)
 

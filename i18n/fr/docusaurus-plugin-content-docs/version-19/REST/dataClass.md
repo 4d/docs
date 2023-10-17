@@ -13,7 +13,7 @@ Les noms de dataclass peuvent être utilisés directement dans les requêtes RES
 | ---------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Renvoie toutes les données (par défaut les 100 premières entités) de la dataclass      |
 | [**{dataClass}[{key}]**](#dataclasskey)                                            | `/Employee[22]`                          | Renvoie les données de l'entité spécifique définie par la clé primaire de la dataclass |
-| [**{dataClass}:{attribut}(valeur)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie     |
 | [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Exécute une fonction de classe d'une dataclass                                         |
 | [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Exécute une fonction de classe d'une sélection d'entité                                |
 | [**{dataClass}[{key}]/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City[2]/getPopulation`                  | Exécute une fonction de classe d'une entité                                            |
@@ -182,7 +182,7 @@ La requête suivante retourne toutes les données publiques de la dataclass Comp
 }
 ```
 
-## {dataClass}:{attribut}(valeur)
+## {dataClass}:{attribute}(value)
 
 Renvoie les données d'une entité dans laquelle la valeur de l'attribut est définie
 

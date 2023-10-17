@@ -306,5 +306,9 @@
   "sidebar.docs.doc.Build Application": {
     "message": "Build Application",
     "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
+  },
+  "sidebar.docs.doc.4D Write Pro Interface": {
+    "message": "4D Write Pro Interface",
+    "description": "The label for the doc item 4D Write Pro Interface in sidebar docs, linking to the doc WritePro/writeprointerface"
   }
 }

@@ -71,11 +71,10 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
 - ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
--
-:::
+- 4D View Pro:
     - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
 
-    - novo comando [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
+    - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - Comandos de linguagem 4D: [O que é a nova página](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) em doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
 - [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos os bugs que foram corrigidos em 4D v19.5.
@@ -238,9 +237,9 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ### 4D v19
 
-- [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- [Classe IMAPTransporter](../API/IMAPTransporterClass.md): novas funções `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` e `.unsubscribe()`.
+- [Classe File](../API/FileClass.md): novas funções `setAppInfo()` e `getAppInfo()`.
+- Nova etiqueta de transformação [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
@@ -254,7 +253,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 - [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
+- [IMAP Mail](../API/IMAPTransporterClass.md): novas funções `.expunge()` e `.append()`
 - Novo componente [WebAdmin](../Admin/webAdmin.md) do servidor Web
 - Nova interface [DataExplorer](../Admin/dataExplorer.md)
 - Novas [sessões de usuário](../WebServer/sessions.md) Web e [sua API](../API/SessionClass.md).
@@ -269,7 +268,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 | Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                                                                         |
 | ---------- | ------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ICU        | 73.2         | 20.1             | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                                           |
+| ICU        | 73.2         | 20.1             | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.                                                        |
 | CEF        | 109          | 20               | Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
 | Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                                                |
 | PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                                                                                     |

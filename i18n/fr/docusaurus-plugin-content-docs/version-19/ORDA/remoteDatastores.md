@@ -27,11 +27,11 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 > Pour les sessions ouvertes par des requêtes REST, veuillez consulter la page [Utilisateurs et sessions](REST/authUsers.md).
 
-## Visionnage des sessions
+## Visualiser les sessions
 
 Les process qui gèrent les sessions d'accès aux datastore apparaissent dans la fenêtre d'administration de 4D Server :
 
-- name: "REST Handler: \<process name\>"
+- nom : "REST Handler : \<nom du process\>"
 - type : type Worker Server HTTP
 - session : le nom de session est le nom d'utilisateur passé à la commande Open datastore.
 
@@ -47,7 +47,7 @@ Les fonctionnalités ORDA relatives au verrouillage d'entité et aux transaction
 - Les transactions peuvent être lancées, validées ou annulées séparément sur chaque datastore distant à l'aide des méthodes `dataStore.startTransaction( )`, `dataStore.cancelTransaction( )`, et `dataStore.validateTransaction( )`. Elles n’ont pas d’incidences sur les autres datastore.
 - Les commandes classiques du langage 4D (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) s'appliquent uniquement au datastore principal (renvoyé par `ds`). Si une entité d'un datastore distant est verrouillée par une transaction dans un process, les autres process ne peuvent pas la mettre à jour, même si ces process partagent la même session.
 - Les verrous sur les entités sont supprimés et les transactions sont annulées :
-  - quand le processus est tué.
+  - lorsque le process est tué.
   - quand la session est fermée sur le serveur
   - lorsque la session est arrêtée à partir de la fenêtre d’administration du serveur.
 

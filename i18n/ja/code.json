@@ -90,7 +90,7 @@
     "message": "4D Widgets"
   },
   "4D Write Pro Interface": {
-    "message": "4D WritePro Interface"
+    "message": "4D WritePro インターフェース"
   },
   "Developing Components": {
     "message": "コンポーネントの開発"
@@ -585,5 +585,21 @@
   },
   "Transformation Tags": {
     "message": "変換タグ"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docsサイドバー",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "ナビゲーションバーを閉じる",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "ナビゲーションバーの切り替え",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
   }
 }

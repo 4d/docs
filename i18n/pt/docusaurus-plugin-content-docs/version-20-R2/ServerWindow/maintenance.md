@@ -4,7 +4,7 @@ title: Página Manutenção
 ---
 
 
-The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
+The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. Ele também fornece acesso às funções básicas de manutenção:
 
 ![](../assets/en/Admin/server-maintenance.png)
 

@@ -29,11 +29,11 @@ Ces principes sont illustrés dans les graphiques suivants :
 
 > Pour les sessions ouvertes par des requêtes REST, veuillez consulter la page [Utilisateurs et sessions](REST/authUsers.md).
 
-### Visionnage des sessions
+### Visualiser les sessions
 
 Les process qui gèrent les sessions d'accès aux datastore apparaissent dans la fenêtre d'administration de 4D Server :
 
-*   name: "REST Handler: \<process name\>"
+*   nom : "REST Handler : \<nom du process\>"
 *   type : type Worker Server HTTP
 *   session : le nom de session est le nom d'utilisateur passé à la commande `Open datastore`.
 
@@ -49,7 +49,7 @@ Les fonctionnalités ORDA relatives au verrouillage d'entité et aux transaction
 *   Les transactions peuvent être lancées, validées ou annulées séparément sur chaque datastore distant à l'aide des méthodes `dataStore.startTransaction( )`, `dataStore.cancelTransaction( )`, et `dataStore.validateTransaction( )`. Elles n’ont pas d’incidences sur les autres datastore.
 *   Les commandes classiques du langage 4D (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) s'appliquent uniquement au datastore principal (renvoyé par `ds`). Si une entité d'un datastore distant est verrouillée par une transaction dans un process, les autres process ne peuvent pas la mettre à jour, même si ces process partagent la même session.
 *   Les verrous sur les entités sont supprimés et les transactions sont annulées :
-    *   quand le processus est tué.
+    *   lorsque le process est tué.
     *   quand la session est fermée sur le serveur
     *   lorsque la session est arrêtée à partir de la fenêtre d’administration du serveur.
 
@@ -104,7 +104,7 @@ Considérons le code suivant :
  End for each
 ```
 
-Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (prénom, nom, employeur, employeur.name) dans *$sel* à partir de la deuxième itération de la boucle.
+Grâce à l'optimisation, cette requête récupérera uniquement les données des attributs utilisés (firstname, lastname, employer, employer.name) dans *$sel* à partir de la deuxième itération de la boucle.
 
 #### Réutiliser la propriété context
 
@@ -112,47 +112,47 @@ Vous pouvez tirer un meilleur parti de l'optimisation en utilisant la propriét�
 > Vous pouvez également créer des contextes à l'aide de la fonction [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
 All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
-> A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
+> Un mécanisme similaire est mis en œuvre pour les entités chargées, de sorte que seuls les attributs utilisés sont demandés (voir la fonction [`dataClass.get()`](../API/DataClassClass.md#get)).
 
 **Exemple avec `dataClass.query()`:**
 
 ```4d
  var $sel1; $sel2; $sel3; $sel4; $querysettings; $querysettings2 : Object
  var $data : Collection
- $querysettings:=New object("context";"shortList")
- $querysettings2:=New object("context";"longList")
+ $querysettings:=New object("context" ; "shortList")
+ $querysettings2:=New object("context" ; "longList")
 
- $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered   
- // and associated to context "shortList"
+ $sel1:=ds.Employee.query("lastname = S@" ;$querysettings)
+ $data:=extractData($sel1) // Dans la méthode extractData, une optimisation est 
+ // déclenchée et associée au contexte "shortList"
 
- $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated   
- // to context "shortList" is applied
+ $sel2:=ds.Employee.query("lastname = Sm@" ;$querysettings)
+ $data:=extractData($sel2) // Dans la méthode extractData l'optimisation associée   
+ // au contexte "shortList" est appliquée
 
- $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
- // is triggered and associated to context "longList"
+ $sel3:=ds.Employee.query("lastname = Smith" ;$querysettings2)
+ $data:=extractDetailedData($sel3) // Dans la méthode extractDetailedData une 
+ // optimisation est déclenchée et associée au contexte "longList"
 
- $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
- // associated to context "longList" is applied
+ $sel4:=ds.Employee.query("lastname = Brown" ;$querysettings2)
+ $data:=extractDetailedData($sel4) // Dans la méthode extractDetailedData l'optimisation  
+ // associée au contexte "longList" est appliquée
 ```
 
-#### Listbox basée sur une sélection d'entités
+#### List box de type entity selection
 
-L'optimisation d'une sélection d'entités s'applique automatiquement aux listbox basées sur une sélection d'entités dans les configurations client/serveur, au moment d'afficher et de dérouler le contenu d'une listbox : seuls les attributs affichés dans la listbox sont demandés depuis le serveur.
+L'optimisation d'entity selection s'applique automatiquement aux listbox basées sur une entity selection dans les configurations client/serveur, au moment d'afficher et de dérouler le contenu d'une listbox : seuls les attributs affichés dans la listbox sont demandés depuis le serveur.
 
-Un contexte spécifique nommé "mode page" est également proposé lorsque l'entité courante de la sélection est chargée à l'aide de l'expression **élément courant** de la listbox (voir [List box de type collection ou entity selection](FormObjects/listbox_overview.md#list-box-types)). Cette fonctionnalité vous permet de ne pas surcharger le contexte initial de la listbox dans ce cas précis, notamment si la "page" requiert des attributs supplémentaires. A noter que seule l'utilisation de l'expression **Élément courant** permettra de créer/utiliser le contexte de la page (l'accès via `entitySelection[index]` modifiera le contexte de la sélection d'entité).
+Un contexte spécifique nommé "mode page" est également proposé lorsque l'entité courante de la sélection est chargée à l'aide de l'expression **élément courant** de la listbox (voir [List box de type collection ou entity selection](FormObjects/listbox_overview.md#list-box-types)). Cette fonctionnalité vous permet de ne pas surcharger le contexte initial de la listbox dans ce cas précis, notamment si la "page" requiert des attributs supplémentaires. A noter que seule l'utilisation de l'expression **Current item** permettra de créer/utiliser le contexte de la page (l'accès via `entitySelection[index]` modifiera le contexte de l'entity selection).
 
-Subsequent requests to server sent by entity browsing functions will also support this optimization. The following functions automatically associate the optimization context of the source entity to the returned entity:
+Les requêtes ultérieures adressées au serveur par les fonctions de navigation parmi les entités prendront également en charge cette optimisation. Les fonctions suivantes associent automatiquement le contexte d'optimisation de l'entité source à l'entité retournée :
 
 *   [`entity.next()`](../API/EntityClass.md#next)
 *   [`entity.first()`](../API/EntityClass.md#first)
 *   [`entity.last()`](../API/EntityClass.md#last)
 *   [`entity.previous()`](../API/EntityClass.md#previous)
 
-Par exemple, le code suivant charge l'entité sélectionnée et permet de naviguer dans la sélection d'entités. Les entités sont chargées dans un contexte séparé et le contexte initial de la listbox demeure inchangé :
+Par exemple, le code suivant charge l'entité sélectionnée et permet de naviguer dans l'entity selection. Les entités sont chargées dans un contexte séparé et le contexte initial de la listbox demeure inchangé :
 
 ```4d
  $myEntity:=Form.currentElement //expression de l'élément courant 
@@ -160,25 +160,25 @@ Par exemple, le code suivant charge l'entité sélectionnée et permet de navigu
  $myEntity:=$myEntity.next() //charge la prochaine entité à l'aide du même contexte
 ```
 
-#### Preconfiguring contexts
+#### Préconfiguration des contextes
 
-An optimization context should be defined for every feature or algorithm of your application, in order to have the best performances. For example, a context can be used for queries on customers, another context for queries on products, etc.
+Un contexte d'optimisation doit être défini pour chaque fonctionnalité ou algorithme de votre application, afin d'obtenir les meilleures performances. Par exemple, un contexte peut être utilisé pour les requêtes sur les clients, un autre contexte pour les requêtes sur les produits, etc.
 
-If you want to deliver final applications with the highest level of optimization, you can preconfigure your contexts and thus save learning phases by following these steps:
+Si vous souhaitez livrer des applications finales avec le plus haut niveau d'optimisation, vous pouvez préconfigurer vos contextes et ainsi économiser des phases d'apprentissage en suivant ces étapes :
 
-1. Design your algorithms.
-2. Run your application and let the automatic learning mechanism fill the optimization contexts.
-3. Call the [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) or [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) function to collect  contexts. You can use the [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) and [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) functions to analyse how your algorithms use attributes.
-4. In the final step, call the [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function to build contexts at application startup and [use them](#reusing-the-context-property) in your algorithms.
+1. Concevez vos algorithmes.
+2. Exécutez votre application et laissez le mécanisme d'apprentissage automatique remplir les contextes d'optimisation.
+3. Appelez la fonction [`dataStore.getRemoteContextInfo()`](../API/DataStoreClass.md#getremotecontextinfo) ou [`dataStore.getAllRemoteContexts()`](../API/DataStoreClass.md#getallremotecontexts) pour collecter les contextes. Vous pouvez utiliser les fonctions [`entitySelection.getRemoteContextAttributes()`](../API/EntitySelectionClass.md#getremotecontextattributes) et [`entity.getRemoteContextAttributes()`](../API/EntityClass.md#getremotecontextattributes) pour analyser la manière dont vos algorithmes utilisent les attributs.
+4. Dans la dernière étape, appelez la fonction [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) pour créer des contextes au démarrage de l'application et [les utiliser](#reusing-the-context-property) dans vos algorithmes.
 
 
-### ORDA cache
+### Cache ORDA
 
-For optimization reasons, data requested from the server via ORDA is loaded in the ORDA remote cache (which is different from the 4D cache). The ORDA cache is organized by dataclass, and expires after 30 seconds.
+Pour des raisons d'optimisation, les données demandées au serveur via ORDA sont chargées dans le cache distant ORDA (qui est différent du cache 4D). Le cache ORDA est organisé par dataclass et expire au bout de 30 secondes.
 
-The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Expired data remains in the cache until space is needed.
+Les données contenues dans le cache sont considérées comme expirées lorsque le délai d'attente est atteint. Tout accès à des données périmées provoquera l'envoi d'une requête au serveur. Les données périmées restent dans le cache jusqu'à ce que l'on ait besoin d'espace.
 
-By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions:
+Par défaut, le cache ORDA est géré de manière transparente par 4D. Cependant, vous pouvez contrôler son contenu en utilisant les fonctions ORDA suivantes :
 
 * [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 * [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)

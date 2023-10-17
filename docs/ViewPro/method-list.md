@@ -925,6 +925,7 @@ use the following code:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -990,17 +991,17 @@ Once the export operation is finished, `VP EXPORT DOCUMENT` automatically trigge
 
 #### Passing a callback method (formula)  
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local parameters:
 
-|Variable|  |Type| Description|
+|Parameter|  |Type| Description|
 |---|---|---|---|
-|$1|  |text| The name of the 4D View Pro object|
-|$2|  |text| The filepath of the exported 4D View Pro object|
-|$3|  |object| A reference to the command's *paramObj*|
-|$4|  |object| An object returned by the method with a status message|
+|param1|  |text| The name of the 4D View Pro object|
+|param2|  |text| The filepath of the exported 4D View Pro object|
+|param3|  |object| A reference to the command's *paramObj*|
+|param4|  |object| An object returned by the method with a status message|
 ||.success |boolean| True if export with success, False otherwise.|
-||.errorCode |integer| Error code. May be returned by 4D or JavaScript.|
-||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
+||.errorCode |integer| Error code.|
+||.errorMessage |text| Error message.|
 
 #### Example 1
 
@@ -1043,12 +1044,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 ***AfterExport*** method:
 
 ```4d
- C_TEXT($1;$2)
- C_OBJECT($3;$4)
- $areaName:=$1
- $filePath:=$2
- $params:=$3
- $status:=$4
+ #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
  
  If($status.success=False)
     ALERT($status.errorMessage)
@@ -1080,6 +1076,77 @@ Here's the result:
 
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
+
+### VP EXPORT TO BLOB
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
+**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Params -->
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|vpAreaName   |Text|->|4D View Pro area form object name|
+|paramObj   |Object|->|Export options|<!-- END REF -->
+
+#### Description
+
+The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
+
+In *paramObj*, you can pass several properties:
+
+|Property|Type|Description|
+|---------|--- |------|
+|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed.|
+|includeAutoMergedCells|Boolean|Whether to include the automatically merged cells when saving, default=false.|
+|includeBindingSource|Boolean|Whether to include the binding source when saving, default=true.|
+|includeCalcModelCache|Boolean|Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.|
+|includeEmptyRegionCells|Boolean|Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true|
+|includeFormulas|Boolean|Whether to include the formula when saving, default=true.|
+|includeStyles|Boolean|Whether to include the style when saving, default=true.|
+|includeUnusedNames|Boolean|Whether to include the unused custom name when saving, default=true.|
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+
+
+The following parameters can be used in the callback method:
+
+|Parameter| |Type|Description|
+|:----|:----|:----|:----|
+|param1| |text|The name of the 4D View Pro object|
+|param2| |4D.blob|The exported blob|
+|param3| |object|A reference to the command's *paramObj* parameter|
+|param4| |object|An object returned by the method with a status message|
+| |.success|boolean|True if export with success, False otherwise.|
+| |.errorCode|integer|Error code.|
+| |.errorMessage|text|Error message.
+
+
+#### Example
+
+The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
+
+```4d
+//Export the VP document
+VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
+```
+
+```4d
+//VPBlobCallback method
+#DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
+var $myEntity : cs.myTableEntity
+
+If ($status.success)
+   // Save the document in a table
+   $myEntity:=ds.myTable.new()
+   $myEntity.blob:=$data
+   $myEntity.save()
+End if
+
+```
+
+#### See also
+
+[VP IMPORT FROM BLOB](#vp-import-from-blob)
 
 ### VP Export to object
 
@@ -1706,6 +1773,7 @@ will return this information in the *$defaultStyle* object:
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
 |Result  |Text|<-|Formula|<!-- END REF -->
+
 
 #### Description
 
@@ -2665,6 +2733,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 |Constant|Value|Description|
 |---|---|---|
 |`vk table full range`|0|Get the cell range for the table area with footer and header (default if omitted)|
+
 |`vk table data range`|1|Get the cell range for the table data area only|
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
@@ -2919,6 +2988,63 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+|Parameter|Type||Description|
+|---|---|---|---|
+|vpAreaName   |Text|->|4D View Pro area form object name|
+|vpBlob   |4D.Blob|->|Blob containing a 4D View Pro document|
+|paramObj   |Object|->|Import options|<!-- END REF -->
+
+#### Description
+
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->. 
+
+In *paramObj*, you can pass several properties:
+
+|Property|Type|Description|
+|---------|--- |------|
+|formula|4D.Function|Callback method to be launched when the import has completed.|
+|calcOnDemand|Boolean|Whether to calculate formulas only when they are demanded, default=false.|
+|dynamicReferences|Boolean|Whether to calculate functions with dynamic reference, default=true.|
+|fullRecalc|Boolean|Whether to calculate after loading the json data, false by default.|
+|includeFormulas|Boolean|Whether to include the formula when loading, default=true.|
+|includeStyles|Boolean|Whether to include the style when loading, default=true.|
+|includeUnusedStyles|Boolean|Whether to include the unused name style when converting excel xml to the json, default=true.|
+|openMode|Integer|can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly.|
+
+The following parameters can be used in the callback method:
+
+|Parameter| |Type|Description|
+|:----|:----|:----|:----|
+|param1| |text|The name of the 4D View Pro object|
+|param2| |4D.Blob|The imported blob|
+|param3| |object|A reference to the command's *paramObj* parameter|
+|param4| |object|An object returned by the method with a status message|
+| |.success|boolean|True if import with success, False otherwise.|
+| |.errorCode|integer|Error code.|
+| |.errorMessage|text|Error message.|
+
+
+#### Example
+
+You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### See also
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -4286,6 +4412,7 @@ VP SET ACTIVE CELL($activeCell)
 |methodObj   |Object|->|Allowed methods in the 4D View Pro areas|<!-- END REF -->
 
 >**Compatibility**  
+
 >
 >For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
@@ -4960,7 +5087,6 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
 |Parameter|Type||Description|
-
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
@@ -5084,7 +5210,6 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object|
 |formula |Text|->|Formula or 4D method|
 |formatPattern |Text|->|Format of field|<!-- END REF -->
@@ -5217,7 +5342,6 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 
 |Property | Type|  Description|
 |---|---|---|
-
 |columnCount | Integer | The number of frozen columns on the left of the sheet|
 |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet
 |rowCount | Integer |  The number of frozen rows on the top of the sheet |
@@ -5454,7 +5578,6 @@ VP SET ROW COUNT("ViewProArea";5)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Description
@@ -5525,7 +5648,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |name|Text|->|New name for the sheet|
-
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
 #### Description
@@ -5540,7 +5662,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > Indexing starts at 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -5549,7 +5671,7 @@ The command does nothing if:
 * the new name contains forbidden characters
 * the new name's value is blank
 * the new name already exists
-* the passed *index* does not exist
+* the passed *sheet* index does not exist
 
 #### Example
 
@@ -6216,7 +6338,6 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-
 |vPos  |Integer|->|Vertical view position of cell or row|
 |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
 
@@ -6317,6 +6438,6 @@ End if
 
 #### See also
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 

@@ -18,6 +18,7 @@ title: DataStore
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.flushAndLock().Syntax -->](#flushAndLock)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.flushAndLock().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getGlobalStamp().Syntax -->](#getglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getGlobalStamp().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
@@ -25,6 +26,7 @@ title: DataStore
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.setGlobalStamp().Syntax -->](#setglobalstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setGlobalStamp().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
@@ -434,7 +436,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 :::caution
 
-[バックアップ](../Backup/backup.md) や [VSS](https://doc.4d.com/4Dv19R7/4D/19-R7/Using-Volume-Shadow-Copy-Service-on-Windows.300-6078959.ja.html) 、[MSC](../MSC/overview.md) を含む他の 4D機能およびサービスもデータストアをロックすることがあります。 予期せぬ相互作用を避けるため、`.flushAndLock()` を呼び出す前に、データストアをロックするような他の操作がおこなわれていないことを確認してください。
+[バックアップ](../Backup/backup.md) や [VSS](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.ja.html) 、[MSC](../MSC/overview.md) を含む他の 4D機能およびサービスもデータストアをロックすることがあります。 予期せぬ相互作用を避けるため、`.flushAndLock()` を呼び出す前に、データストアをロックするような他の操作がおこなわれていないことを確認してください。
 
 :::
 
@@ -540,6 +542,61 @@ $info:=$ds.getAllRemoteContexts()
 
 [.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
+
+<!-- REF DataClassClass.getGlobalStamp().Desc -->
+## .getGlobalStamp()
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v20 R3 | 追加 |
+
+</details>
+
+<!-- REF #DataStoreClass.getGlobalStamp().Syntax -->**.getGlobalStamp**() : Real<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+| 引数  | タイプ  |    | 説明                                           |
+| --- | ---- | -- | -------------------------------------------- |
+| 戻り値 | Real | <- | グローバル変更スタンプのカレント値|<!-- END REF -->
+
+
+|
+
+
+#### 説明
+
+`.getGlobalStamp()` 関数は、 <!-- REF #DataStoreClass.getGlobalStamp().Summary -->データストアのグローバル変更スタンプのカレント値を返します<!-- END REF -->。
+
+:::info
+
+この関数は次の場合にのみ使えます:
+
+- ローカルデータストア ([`ds`](#ds)) を対象に。
+- クライアント/サーバー環境では、サーバーマシン上にて。
+
+:::
+
+グローバルスタンプとデータ変更追跡の詳細については、[**グローバルスタンプの使い方**](../ORDA/global-stamp.md) を参照ください。
+
+
+#### 例題
+
+```4d
+var $currentStamp : Real
+var $hasModifications : Boolean
+
+$currentStamp:=ds.getGlobalStamp()
+methodWhichCouldModifyEmployees // なんらかのコード
+$hasModifications:=($currentStamp # ds.getGlobalStamp())
+```
+
+#### 参照
+
+[.setGlobalStamp()](#setglobalstamp)
+
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
 
@@ -569,7 +626,7 @@ $info:=$ds.getAllRemoteContexts()
 
 | プロパティ      | タイプ     | 説明                                                                                        |
 | ---------- | ------- | ----------------------------------------------------------------------------------------- |
-| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                       |
+| type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                      |
 | networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                      |
 | localID    | text    | マシン上のデータストアID。 これは、`Open datastore` コマンドで返される localId 文字列です。 メインデータストアの場合は空の文字列 ("") です。  |
 | connection | object  | リモートデータストア接続の情報を格納したオブジェクト (メインデータストアの場合は返されません)。 次のプロパティを含みます:<table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>hostname</td><td>text</td><td>リモートデータストアの IPアドレスまたは名称 + ":" + ポート番号</td></tr><tr><td>tls</td><td>boolean</td><td>リモートデータストアとセキュア接続を利用している場合は true</td></tr><tr><td>idleTimeout</td><td>number</td><td>セッション非アクティブタイムアウト (分単位)。</td></tr><tr><td>user</td><td>text</td><td>リモートデータストアにて認証されたユーザー</td></tr></table> |
@@ -777,6 +834,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- REF DataStoreClass.makeSelectionsAlterable().Desc -->
 ## .makeSelectionsAlterable()
 
+
 <details><summary>履歴</summary>
 
 | バージョン  | 内容 |
@@ -924,6 +982,66 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 [`.isAdminProtected()`](#isadminprotected)
 
 <!-- END REF -->
+
+
+<!-- REF DataClassClass.setGlobalStamp().Desc -->
+## .setGlobalStamp()
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v20 R3 | 追加 |
+
+</details>
+
+<!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**( *newStamp* : Real)<!-- END REF -->
+
+
+<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+| 引数       | タイプ  |    | 説明                                          |
+| -------- | ---- | -- | ------------------------------------------- |
+| newStamp | Real | -> | グローバル変更スタンプの新しい値|<!-- END REF -->
+
+
+|
+
+
+:::info 上級者向け
+
+これは、グローバルスタンプのカレント値を変更する必要があるデベロッパー用の関数です。 十分な注意を払って使用してください。
+
+:::
+
+#### 説明
+
+`.setDataStore()` 関数は、 <!-- REF #DataStoreClass.setGlobalStamp().Summary -->データストアのグローバル変更スタンプの新しい値として *newStamp* を設定します<!-- END REF -->。
+
+:::info
+
+この関数は次の場合にのみ使えます:
+
+- ローカルデータストア ([`ds`](#ds)) を対象に。
+- クライアント/サーバー環境では、サーバーマシン上にて。
+
+:::
+
+グローバルスタンプとデータ変更追跡の詳細については、[**グローバルスタンプの使い方**](../ORDA/global-stamp.md) を参照ください。
+
+
+#### 例題
+
+次のコードは、グローバル変更スタンプを設定します:
+
+```4d
+var $newValue: Real
+$newValue:=ReadValueFrom // 代入するための新しい値を取得します
+ds.setGlobalStamp($newValue)
+```
+
+#### 参照
+
+[.getGlobalStamp()](#getglobalstamp)
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
 ## .setRemoteContextInfo()
@@ -1343,5 +1461,6 @@ ORDAリクエストログがマシン上で開始されていない場合、こ�
 #### 例題
 
 [`.startTransaction()`](#starttransaction) の例題を参照ください。
+
 
 <!-- END REF -->

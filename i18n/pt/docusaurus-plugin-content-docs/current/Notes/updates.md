@@ -14,10 +14,12 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - New [`collection.multiSort`](../API/CollectionClass.md#multisort) function.
 - Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
+- [Global modification stamp](../ORDA/global-stamp.md) to help implementing data synchronization modules. New functions: [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp).
 - Support for [initializing the variable's value and data type in the declaration line](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Log file settings are now [saved with the current data file](../Backup/settings.md#log-file-management)
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
-- 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
+- New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
+- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) on doc.4d.com.
+- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) on doc.4d.com.
 - [**Lista de bugs corrigidos**](https://falhas.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D v20 R3.
 
 
@@ -97,7 +99,6 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 #### Mudanças de comportamento
 
-- **Warning**: the starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been done and the value is now 0.
 - For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. Uma nova propriedade *option* permite-lhe controlar esta validação.
 - TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
@@ -116,10 +117,9 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
 - ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
-- :::
+- 4D View Pro:
     - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
-
-    - novo comando [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
+    - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - Comandos de linguagem 4D: [O que é a nova página](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) em doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
 - [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos os bugs que foram corrigidos em 4D v19.5.
@@ -203,6 +203,7 @@ Leia [**O que há de novo em 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v1
 
 ```4d
 WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
+
 ```
 
 
@@ -282,9 +283,9 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ### 4D v19
 
-- [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- [Classe IMAPTransporter](../API/IMAPTransporterClass.md): novas funções `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` e `.unsubscribe()`.
+- [Classe File](../API/FileClass.md): novas funções `setAppInfo()` e `getAppInfo()`.
+- Nova etiqueta de transformação [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
 - Dark and light color scheme support for [forms](../FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
@@ -298,7 +299,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 - [Entity Selection Class](../API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](../API/IMAPTransporterClass.md), [POP3 Mail](../API/POP3TransporterClass.md) and [SMTP Mail](../API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](../API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
+- [IMAP Mail](../API/IMAPTransporterClass.md): novas funções `.expunge()` e `.append()`
 - Novo componente [WebAdmin](../Admin/webAdmin.md) do servidor Web
 - Nova interface [DataExplorer](../Admin/dataExplorer.md)
 - Novas [sessões de usuário](../WebServer/sessions.md) Web e [sua API](../API/SessionClass.md).
@@ -311,19 +312,19 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 
 
-| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                               |
-| ---------- | ------------ | ---------------- | ---------------------------------------------------------------------------------------- |
-| ICU        | 73.2         | 20.1             | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| CEF        | 113          | 20 R2            | Chromium 5672                                                                            |
-| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                      |
-| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                           |
-| SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                        |
-| OpenSSL    | 3.1.1        | 20               |                                                                                          |
-| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                     |
-| LZMA       | 5.4.1        | 20               |                                                                                          |
-| Zlib       | 14.1.6       | 20               |                                                                                          |
-| webKit     | WKWebView    | 19               |                                                                                          |
-| PHP        | 8.2.4        | 20               |                                                                                          |
-| libldap    | 2.6.4        | 20 R3            |                                                                                          |
-| libsasl    | 2.1.28       | 20               |                                                                                          |
+| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                  |
+| ---------- | ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| ICU        | 73.2         | 20.1             | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
+| CEF        | 113          | 20 R2            | Chromium 5672                                                                                               |
+| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                         |
+| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                              |
+| SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                           |
+| OpenSSL    | 3.1.1        | 20               |                                                                                                             |
+| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                        |
+| LZMA       | 5.4.1        | 20               |                                                                                                             |
+| Zlib       | 14.1.6       | 20               |                                                                                                             |
+| webKit     | WKWebView    | 19               |                                                                                                             |
+| PHP        | 8.2.4        | 20               |                                                                                                             |
+| libldap    | 2.6.4        | 20 R3            |                                                                                                             |
+| libsasl    | 2.1.28       | 20               |                                                                                                             |
 
