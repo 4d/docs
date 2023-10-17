@@ -1624,7 +1624,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 *   la valeur null,
 *   une référence d'objet ou de collection.
 
-Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
+*toSearch* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
 
@@ -1692,7 +1692,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 *   la valeur null,
 *   une référence d'objet ou de collection.
 
-Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
+*toSearch* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
 
