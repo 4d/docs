@@ -127,7 +127,7 @@ When TLS is enabled on the server, PFS is automatically enabled. If the *dhparam
 If you use a [custom cipher list](WebServer/webServerConfig.md##cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
 
 
-## How to get a RSA certificate (tutorial)?  
+## How to get a RSA certificate? (tutorial)  
 
 A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
 
