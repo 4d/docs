@@ -66,6 +66,7 @@ TLS certificates managed by 4D must be in the **PEM format**. If your certificat
 :::info Compatibility
 
 The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
+
 ::: 
 
 
