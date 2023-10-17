@@ -162,18 +162,18 @@ La commande `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->insère un
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Si l'*index* passé est inférieur ou égal à 0, la commande insère la nouvelle feuille au début. If the passed *index* is inferior to or equal to 0, the command inserts the new sheet at the beginning. Si l'*index* est supérieur au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
+Dans *sheet*, vous pouvez passer le numéro de la nouvelle feuille. Si la valeur *sheet* est inférieure ou égale à 0, la commande insère la nouvelle feuille au début. Si la valeur *sheet* est supérieure au nombre de feuilles, la commande insère la nouvelle feuille après les feuilles existantes.
 > La numérotation démarre à 0.
 
 Dans *name*, vous pouvez passer un nom pour la nouvelle feuille. Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
 
 #### Exemple
 
-//mettre les calculs sur pause pendant que les utilisateurs saisissent les informations If(FORM Event.code=On Clicked) VP SUSPEND COMPUTING("ViewProArea") End if
+Le document comporte actuellement 3 feuilles :
 
 ![vp-document-with-3-sheets](../assets/en/ViewPro/vp-sheet-3.png)
 
-|
+Pour insérer une feuille à la troisième position (index 2) et la nommer "March" :
 
 ```4d
 VP ADD SHEET("ViewProArea";2;"March")
@@ -200,7 +200,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 #### Description
 
-Paramètres
+La commande `VP ADD SPAN` combine les cellules de *rangeObj* en une seule cellule fusionnée.
 
 Dans *rangeObj*, passez une plage de cellules. Les cellules de la plage sont jointes, afin de créer une cellule plus large qui s'étend sur plusieurs colonnes et/ou lignes. Vous pouvez passer plusieurs plages de cellules pour créer plusieurs fusions de cellules en même temps. A noter que si les plages de cellules se chevauchent, seule la première plage est utilisée.
 
@@ -209,7 +209,7 @@ Dans *rangeObj*, passez une plage de cellules. Les cellules de la plage sont joi
 
 #### Exemple
 
-Exemple
+Pour fusionner les cellules First quarter et Second quarter avec les deux cellules côte à côte, et de fusionner la cellule South area avec les deux lignes en-dessous :
 
 ![initial-document](../assets/en/ViewPro/vp-add-span.png)
 
@@ -260,14 +260,14 @@ Le paramètre *styleName* vous permet de nommer la feuille de style. Si le nom e
 
 Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). Pour consulter la liste complète des propriétés, reportez-vous à la section [Propriétés des objets de style](configuring.md#style-objects-properties).
 
-La commande retourne un objet qui contient les données copiées.
+Vous pouvez désigner l'emplacement dans lequel vous souhaitez définir la feuille de style dans le paramètre optionnel *sheet*, à l'aide de l'indice de la feuille (la numérotation commence à zéro) ou à l'aide des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
 
-Vous souhaitez tracer l'exécution des commandes et vider le buffer :
+Si une feuille de style *styleName* est définie au niveau du workbook et de la feuille lors de son paramétrage, le niveau de la feuille est prioritaire par rapport à celui du workbook.
 
-Objet contenant les informations d'impression|
+Vous pouvez appliquer la feuille de style à l'aide des commandes [VP SET DEFAULT STYLE](#vp-set-default-style) ou [VP SET CELL STYLE](#vp-set-cell-style).
 
 #### Exemple
 
@@ -291,7 +291,7 @@ VP ADD STYLESHEET("ViewProArea";"GreenDashDotStyle";$styles)
 VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDotStyle"))
 ```
 
-Options supplémentaires
+créera et appliquera l'objet style *GreenDashDotStyle* suivant :
 
 ```
 {
@@ -332,7 +332,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 #### Exemple
 
-Voir également
+Vous souhaitez définir une plage pour toutes les cellules de la feuille courante :
 
 ```4d
 $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
@@ -357,12 +357,12 @@ $all:=VP All("ViewProArea") // toutes les cellules de la feuille courante
 | column     | Longint | -> | Indice de la colonne                                     |
 | row        | Longint | -> | Indice de la ligne                                       |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Range object of a single cell                            |
+| Résultat   | Object  | <- | Objet plage d'une seule cellule                          |
 <!-- END REF -->
 
 #### Description
 
-La commande `VP Cells` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant des cellules spécifiques<!-- END REF -->.
+La commande `VP Cells` <!-- REF #_method_.VP Cell.Summary -->retourne une nouvelle plage référençant une cellule<!-- END REF -->.
 
 > Cette commande s'applique aux plages d'une seule cellule. Pour créer une plage de plusieurs cellules, utilisez la commande [VP Cells](#vp-cells).
 
@@ -378,11 +378,11 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner l'indice de la feuil
 
 #### Exemple
 
-Exemple 2
+Vous souhaitez définir une plage pour la cellule de la feuille courante (sur la feuille courante) :
 
 ![vp-cell](../assets/en/ViewPro/cmd_vpCell.png)
 
-Commentaire correspondant à la formule nommée ou à la plage nommée
+Le code est le suivant :
 
 ```4d
 $cell:=VP Cell("ViewProArea";2;4) // C5
@@ -406,21 +406,21 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <!-- REF #_method_.VP Cells.Params -->
 
-| Paramètres  | Type    |    | Description                                                   |
-| ----------- | ------- | -- | ------------------------------------------------------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                       |
-| column      | Integer | -> | Indice de la colonne                                          |
-| row         | Integer | -> | Indice de la ligne                                            |
-| columnCount | Integer | -> | Nombre de colonnes                                            |
-| rowCount    | Integer | -> | Nombre de lignes                                              |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| Résultat    | Object  | <- | Objet plage de toutes les cellules|<!-- END REF -->
+| Paramètres  | Type    |    | Description                                              |
+| ----------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| column      | Integer | -> | Indice de la colonne                                     |
+| row         | Integer | -> | Indice de la ligne                                       |
+| columnCount | Integer | -> | Nombre de colonnes                                       |
+| rowCount    | Integer | -> | Nombre de lignes                                         |
+| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat    | Object  | <- | Objet de plage de cellules|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP Row` command <!-- REF #_method_.VP Cells.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+La commande `VP Cells` <!-- REF #_method_.VP Cells.Summary -->retourne une nouvelle plage référençant des cellules spécifiques<!-- END REF -->.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -436,11 +436,11 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 #### Exemple
 
-Exemple 2
+Vous souhaitez définir un objet plage pour les cellules suivantes (de la feuille courante) :
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-Commentaire correspondant à la formule nommée ou à la plage nommée
+Le code est le suivant :
 
 ```4d
 $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 à D7
@@ -457,13 +457,13 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // de C5 à D7
 
 <!-- REF #_method_.VP Column.Params -->
 
-| Paramètres  | Type    |    | Description                                                   |
-| ----------- | ------- | -- | ------------------------------------------------------------- |
-| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                       |
-| column      | Integer | -> | Indice de la colonne                                          |
-| columnCount | Integer | -> | Nombre de colonnes                                            |
-| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| Résultat    | Object  | <- | Objet plage de toutes les cellules|<!-- END REF -->
+| Paramètres  | Type    |    | Description                                              |
+| ----------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| column      | Integer | -> | Indice de la colonne                                     |
+| columnCount | Integer | -> | Nombre de colonnes                                       |
+| sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat    | Object  | <- | Objet de plage de cellules|<!-- END REF -->
 
 |
 
@@ -485,7 +485,7 @@ $2
 
 ![](../assets/en/ViewPro/cmd_vpColumn.PNG)
 
-Commentaire correspondant à la formule nommée ou à la plage nommée
+Le code est le suivant :
 
 ```4d
  $column:=VP Column("ViewProArea";3) // colonne D
@@ -2129,11 +2129,11 @@ $rowCount:=VP Get row count("ViewProarea")
 
 <!-- REF #_method_.VP Get selection.Params -->
 
-| Paramètres | Type    |    | Description                                                   |
-| ---------- | ------- | -- | ------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                       |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)      |
-| Résultat   | Object  | <- | Objet plage de toutes les cellules|<!-- END REF -->
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Objet de plage de cellules|<!-- END REF -->
 
 |
 
