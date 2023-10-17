@@ -167,7 +167,7 @@ Si vous ne spécifiez aucune page d'accueil par défaut, la méthode base `On We
 | `WEB SET OPTION`         | `Web CORS enabled`                                                 | 0 (désactivé, par défaut) ou 1 (activé)    |
 | Fenêtre de configuration | [Page Options (II) > Activer CORS](../settings/web.md#enable-cors) | Décoché par défaut                         |
 
-Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous).
+Le serveur Web 4D implémente le cross-origin resource sharing (CORS) pour permettre à des pages Web spécifiques servies à partir d'un autre domaine d'accéder aux ressources de l'application Web actuelle via des appels XHR, par exemple via REST. Pour des raisons de sécurité, les requêtes "cross-domain" sont interdites par défaut au niveau du navigateur. Lorsqu'elle l'option est activée, les appels XHR (par exemple, les requêtes REST) provenant de pages Web situées en dehors du domaine peuvent être autorisés dans votre application (vous devez définir la liste des adresses autorisées dans la liste de domaines CORS, voir Paramètres CORS ci-dessous). Dans ce cas, si un domaine ou une méthode non autorisé(e) envoie une demande intersite, celle-ci est rejetée avec une réponse d'erreur "403 - interdit".
 
 Lorsqu'elle est désactivée (par défaut), toutes les demandes intersites envoyées avec CORS sont ignorées.
 
@@ -402,7 +402,7 @@ Ce paramètre vous permet de sélectionner le format de ce fichier. Valeurs poss
 | `WEB SET OPTION`         | `Web max concurrent processes`                                                                   |              |
 | Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#maximum-concurrent-web-processes) |              |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server when **no sessions** or **legacy sessions** are used (**scalable sessions** support an [unlimited number](sessions.md) of preemptive processes). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
+Limite haute du nombre de process web pouvant être ouverts simultanément sur le serveur lorsque **Pas de sessions** ou **sessions legacy** sont utilisées (les **sessions extensibles** supportent [un nombre illimité](sessions.md) de process préemptifs). Ce paramètre permet d'éviter une saturation du serveur lorsqu'il reçoit un nombre important de requêtes Lorsque le nombre maximal de processus Web simultanés (moins un) est atteint, 4D ne crée plus de nouveaux process et envoie le statut HTTP `503 - Service indisponible` à toutes les nouvelles requêtes.
 
 La valeur par défaut est 100. Vous pouvez la fixer entre 10 et 32000.
 
@@ -552,7 +552,7 @@ Vous pouvez désigner un autre dossier HTML racine comme page d'accueil par déf
 
 - Le chemin est relatif au [dossier du projet](Project/architecture.md#project-folder) (4D local et 4D Server) ou au dossier contenant l'application 4D ou le package logiciel (4D en mode distant).
 - Le chemin ext exprimé avec la syntaxe POSIX (les dossiers sont séparés par un slash (/)),
-- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (deux points) avant le nom de dossier (deux points) avant le nom de dossier
+- Pour "remonter" d'un niveau dans la hiérarchie des dossiers, saisissez ".." (deux points) avant le nom de dossier
 - Le chemin ne doit pas commencer par un slash (sauf si vous souhaitez que le dossier racine HTML soit le dossier distant du projet ou de 4D, mais pour interdire l'accès aux dossiers ci-dessus, auquel cas vous pouvez passer "/" comme dossier racine).
 
 Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web" du dossier "MyWebApp", entrez "MyWebApp/Web".
@@ -560,7 +560,7 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 > Lorsque le dossier racine HTML est modifié, le cache est effacé afin que les fichiers dont l'accès est restreint ne soient pas stockés.
 
 
-## Scalable Sessions
+## Sessions extensibles
 
 | Peut être configuré via  | Nom                                                                                                                        | Commentaires |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------ |
