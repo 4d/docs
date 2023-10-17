@@ -110,5 +110,5 @@ Accès URL à la documentation en ligne de la version sur 4D Doc Center. 4D cré
 
 Cette option (cochée par défaut) définit là où 4D recherchera la page de documentation qui a été appelée via l'Explorateur ou la touche F1.
 
-* Lorsqu'elle est cochée, 4D recherche d'abord la page dans le dossier local. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
+* Lorsqu'elle est cochée, 4D recherche d'abord la page dans le dossier local. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si elle n'est pas trouvée, 4D ira automatiquement la chercher sur le site Web de documentation en ligne. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
 * Lorsqu'elle n'est pas cochée, 4D recherche la page souhaitée directement dans la documentation en ligne du site Web et l'affiche dans le navigateur en cours. Si elle n'est pas trouvée, 4D affiche un message d'erreur dans le navigateur.
