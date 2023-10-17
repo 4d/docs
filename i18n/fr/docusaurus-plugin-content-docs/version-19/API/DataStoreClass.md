@@ -663,7 +663,7 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 #### Description
 
-La fonction `startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->La fonction `startRequestLog()`<!-- END REF -->.
+La fonction `startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->lance l'enregistrement des requêtes ORDA sur le poste client<!-- END REF -->.
 
 Cette fonction doit être appelée sur un 4D distant, sinon elle ne fait rien. Elle est conçue à des fins de débogage dans les configurations client/serveur.
 
