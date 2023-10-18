@@ -1013,7 +1013,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utili
 | param3     |               | object  | Referencia al *paramObj* del comando                      |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
 |            | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
-|            | .errorCode    | integer | Error code.                                               |
+|            | .errorCode    | integer | Código de error.                                          |
 |            | .errorMessage | text    | Mensaje de error.                                         |
 
 #### Ejemplo 1
@@ -1106,15 +1106,15 @@ Aquí está el resultado:
 
 #### Descripción
 
-The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
+El comando `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exporta el documento *vpAreaName* 4D View Pro en un 4D.Blob según las opciones *paramObj*.<!-- END REF --> El blob exportado está disponible a través de la retrollamada de exportación. Exportar e importar áreas de 4D View Pro como blogs es rápido y eficiente en memoria.
 
-In *paramObj*, you can pass several properties:
+En *paramObj*, puede pasar varias propiedades:
 
 | Propiedad               | Tipo        | Descripción                                                                                                    |
 | ----------------------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed.                                      |
-| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                  |
-| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                               |
+| formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado.                     |
+| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                            |
+| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                              |
 | includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.     |
 | includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true |
 | includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                      |
@@ -1123,22 +1123,22 @@ In *paramObj*, you can pass several properties:
 | saveAsView              | Boolean     | Whether to apply the format string to exporting value when saving, default=false.                              |
 
 
-The following parameters can be used in the callback method:
+Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 | Parámetros |               | Tipo    | Descripción                                               |
 |:---------- |:------------- |:------- |:--------------------------------------------------------- |
 | param1     |               | text    | El nombre del objeto 4D View Pro                          |
-| param2     |               | 4D.blob | The exported blob                                         |
+| param2     |               | 4D.blob | El blob exportado                                         |
 | param3     |               | object  | A reference to the command's *paramObj* parameter         |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
 |            | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
-|            | .errorCode    | integer | Error code.                                               |
+|            | .errorCode    | integer | Código de error.                                          |
 |            | .errorMessage | text    | Mensaje de error.                                         |
 
 
 #### Ejemplo
 
-The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
+El comando `VP EXPORT TO BLOB` es asíncrono. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
 
 ```4d
 //Export the VP document
@@ -3089,7 +3089,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
 
-In *paramObj*, you can pass several properties:
+En *paramObj*, puede pasar varias propiedades:
 
 | Propiedad           | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3102,7 +3102,7 @@ In *paramObj*, you can pass several properties:
 | includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                                    |
 | openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Las demás hojas sólo se cargarán cuando se vayan a utilizar. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
 
-The following parameters can be used in the callback method:
+Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 | Parámetros |               | Tipo    | Descripción                                               |
 |:---------- |:------------- |:------- |:--------------------------------------------------------- |
@@ -3111,7 +3111,7 @@ The following parameters can be used in the callback method:
 | param3     |               | object  | A reference to the command's *paramObj* parameter         |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
 |            | .success      | boolean | True if import with success, False otherwise.             |
-|            | .errorCode    | integer | Error code.                                               |
+|            | .errorCode    | integer | Código de error.                                          |
 |            | .errorMessage | text    | Mensaje de error.                                         |
 
 
