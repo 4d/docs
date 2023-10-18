@@ -237,12 +237,12 @@ It is not mandatory to declare variadic parameters. Non-declared variadic parame
 However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
 
 ```4d
-#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+#DECLARE ( ... : Text ) // Número indefinido de parâmetros 'Text'
 
 ```
 
 ```4d
-Function myfunction ( ... : Text)
+Fonction myfunction ( ... : Text)
 
 ```
 
