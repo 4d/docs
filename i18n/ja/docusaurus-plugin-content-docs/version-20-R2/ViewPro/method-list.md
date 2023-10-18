@@ -1006,15 +1006,15 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 コマンドに任意の *paramObj* 引数を渡す場合、[`Formula`](../API/FunctionClass.md#formula) コマンドを使って、書き出し完了時に実行される 4Dメソッドを呼び出すことができます。 コールバックメソッドは、以下の値をローカル変数として受け取ります:
 
-| 変数 |               | タイプ     | 説明                                      |
-| -- | ------------- | ------- | --------------------------------------- |
-| $1 |               | text    | 4D View Pro オブジェクト名                     |
-| $2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス        |
-| $3 |               | object  | コマンドの *paramObj* 引数への参照                 |
-| $4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト         |
-|    | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false       |
-|    | .errorCode    | integer | Error code. 4D あるいは JavaScript から返されます。 |
-|    | .errorMessage | text    | エラーメッセージ。 4D あるいは JavaScript から返されます。   |
+| 変数 |               | タイプ     | 説明                                    |
+| -- | ------------- | ------- | ------------------------------------- |
+| $1 |               | text    | 4D View Pro オブジェクト名                   |
+| $2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス      |
+| $3 |               | object  | コマンドの *paramObj* 引数への参照               |
+| $4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト       |
+|    | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false     |
+|    | .errorCode    | integer | エラーコード。 4D あるいは JavaScript から返されます。   |
+|    | .errorMessage | text    | エラーメッセージ。 4D あるいは JavaScript から返されます。 |
 
 #### 例題 1
 
@@ -2737,10 +2737,10 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 *onlyData* 引数に次のいずれかの定数を渡すことで、データ部のみを対象とするかを指定できます:
 
-| 定数                    | 値 | 説明                                                                                |
-| --------------------- | - | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0 | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                                                        |
+| 定数                    | 値 | 説明                                                |
+| --------------------- | - | ------------------------------------------------- |
+| `vk table full range` | 0 | フッターとヘッダーを含む表組みの全エリアを含むセルレンジを取得します (省略した場合のデフォルト) |
+| `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                        |
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
