@@ -1012,7 +1012,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utili
 | $3       |               | object  | Referencia al *paramObj* del comando                      |
 | $4       |               | object  | Un objeto devuelto por el método con un mensaje de estado |
 |          | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
-|          | .errorCode    | integer | Error code. Puede ser devuelto por 4D o JavaScript.       |
+|          | .errorCode    | integer | Código de error. Puede ser devuelto por 4D o JavaScript.  |
 |          | .errorMessage | text    | Mensaje de error. Puede ser devuelto por 4D o JavaScript. |
 
 #### Ejemplo 1
