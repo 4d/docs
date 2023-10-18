@@ -69,7 +69,7 @@ Para ligar o depurador de novo ao servidor:
 
 4D allows you to automatically attach the debugger to a remote 4D client or the server at startup:
 
-* On the server (if not headless), this option is named **Attach Debugger At Startup**. When the server is started, it automatically attaches the debugger (default).
+* On the server (if not headless), this option is named **Attach Debugger At Startup**. Quando o servidor é iniciado, ele anexa automaticamente o depurador (padrão).
 
 > **Warning**: If this option is selected for a server which is subsequently launched in headless mode, the debugger won't be available for this server.
 
