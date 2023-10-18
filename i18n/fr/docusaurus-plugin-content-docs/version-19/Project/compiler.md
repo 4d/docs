@@ -5,7 +5,7 @@ title: Compilation
 
 Vous pouvez compiler vos projets, c'est-à-dire traduire toutes vos méthodes en langage machine. La compilation d'un projet permet de vérifier la cohérence du code et d'accélérer son exécution, mais aussi de masquer le code dans son intégralité. La compilation est une étape indispensable, entre le développement de projets avec 4D et leur déploiement en tant qu'applications autonomes.
 
-## Compilation incrémentale
+## Compilation
 
 La compilation est gérée depuis votre application 4D et est entièrement automatique.
 
@@ -289,19 +289,19 @@ Les deux compilateurs sont intégrés dans 4D. Le compilateur adéquat est autom
 
 Le compilateur classique génère du code compilé natif pour les processeurs Intel/AMD sur n'importe quelle machine. Il ne nécessite aucune configuration particulière.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [DerivedData](architecture.md#deriveddata) du projet.
 
 ### Compilateur Silicon
 
 Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [Libraries](architecture.md#libraries) du projet.
 
 #### Conditions requises
 
 - **Ordinateur Apple** : Le compilateur Silicon peut uniquement être lancé sur une machine Apple.
 - **Architecture projet de 4D** : Le compilateur Silicon est uniquement disponible pour les développements 4D utilisant l'[architecture projet](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation.
+- **Xcode ou Developer Tools**: Le compilateur Silicon fait appel au compilateur macOS open-source **Clang** pour compiler le projet à partir du code C++ à la [deuxième étape](#compilation-incrementale) de la compilation. *clang* nécessite des bibliothèques natives Apple, qui sont fournies soit par **Xcode** soit par **Developer Tools**.
   - **Si vous avez déjà installé** Xcode ou Developer Tools sur votre ordinateur, vous devez juste vous assurer que sa version est conforme aux spécifications de 4D.
   - **Si vous n'avez pas déjà installé** l'un de ces outils sur votre machine, il vous sera nécessaire d'en télécharger un depuis le site web Apple Developer.
 
