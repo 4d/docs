@@ -117,7 +117,7 @@ VP ADD RANGE NAME($range;"Total1")
 
 La commande `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary -->ajoute les cellules spécifiées aux cellules sélectionnées<!-- END REF -->.
 
-Le code du bouton Suspend Computing :
+Dans *rangeObj*, passez un objet plage de plusieurs cellules à ajouter à la sélection courante.
 > La cellule active n'est pas modifiée.
 
 #### Exemple
@@ -126,7 +126,7 @@ Style de la ligne de bordure appliqué uniquemet aux bordures extérieures.
 
 ![](../assets/en/ViewPro/cmd_vpAddSelection1.PNG)
 
-|
+Le code suivant ajoutera des cellules à votre sélection :
 
 ```4d
 $currentSelection:=VP Cells("myVPArea";3;4;2;3)
@@ -526,9 +526,9 @@ $4
  VP COLUMN AUTOFIT(VP Get selection("ViewProarea"))
 ```
 
-Voir également
+... redimensionne les colonnes en fonction de la taille du contenu :
 
-![](../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
+![](../assets/fr/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
 #### Voir également
 
@@ -553,14 +553,14 @@ Voir également
 
 La commande `VP Combine Ranges` <!-- REF #_method_.VP Combine ranges.Summary -->retourne une nouvelle plage qui comprend au moins deux plages existantes<!-- END REF -->. Toutes les plages doivent provenir de la même zone 4D View Pro.
 
-Obligatoire
+Dans *rangeObj*, passez la première plage.
 
-Historique
+Dans *otherRangeObj*, passez une ou plusieurs autres plages à combiner avec *rangeObj*.
 > La commande incorpore *rangeObj* et *otherRangeObj* par référence.
 
 #### Exemple
 
-Exemple
+Vous souhaitez combiner des plages de type cellule, colonne et ligne dans une nouvelle plage distincte :
 
 ```4d
  $cell:=VP Cell("ViewProArea";2;4) // C5
@@ -643,7 +643,7 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 * Hauteur de lignes
 * Largeur de colonnes
 * Visibilité : colonnes / lignes cachées.
-> > La visibilité du quadrillage dépend de l'attribut de document défini avec [VP SET PRINT INFO](#vp-set-print-info).
+> La visibilité du quadrillage dépend de l'attribut de document défini avec [VP SET PRINT INFO](#vp-set-print-info).
 
 #### Résultat
 
@@ -861,7 +861,7 @@ Dans *rangeObj*, passez un objet contenant les colonnes à supprimer. Si la plag
 
 * des lignes et des colonnes, seules les colonnes sont supprimées.
 * uniquement des lignes, la commande ne fait rien.
-> > Les colonnes sont supprimées de droite à gauche.
+> Les colonnes sont supprimées de droite à gauche.
 
 #### Exemple
 
@@ -900,7 +900,7 @@ Dans *rangeObj*, passez un objet contenant les lignes à supprimer. Si la plage 
 
 * des lignes et des colonnes, seules les lignes sont supprimées.
 * uniquement des colonnes, la commande ne fait rien.
-> > Les lignes sont supprimées du bas vers le haut.
+> Les lignes sont supprimées du bas vers le haut.
 
 #### Exemple
 
@@ -961,7 +961,7 @@ Indice de la ligne
 * CSV (".txt", or ".csv")
 * [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
 
-Style de la ligne de bordure appliqué à la bordure inférieure.
+Si l'extension n'est pas incluse mais que le format est spécifié dans *paramObj*, le fichier exporté aura l'extension qui correspond au format, à l'exception du format CSV (aucune extension n'est ajoutée dans ce cas).
 
 saisissez le code suivant :
 
@@ -1030,7 +1030,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 
 #### Exemple 2
 
-|
+Vous souhaitez exporter la feuille courante au format PDF :
 
 ```4d
 var $params: Object
@@ -1102,11 +1102,11 @@ Voici le résultat :
 
 <!-- REF #_method_.VP Export to object.Params -->
 
-| Paramètres | Type   |    | Description                                                                                                                           |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                                                                               |
-| options    | Object | -> | Lire l'index de la feuille appelée "Total premier trimester" :                                                                        |
-| Résultat   | Object | <- | Vous avez ajouté deux boutons au formulaire afin que l'utilisateur puisse suspendre/reprendre les calculs :<!-- END REF -->
+| Paramètres | Type   |    | Description                                                    |
+| ---------- | ------ | -- | -------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                        |
+| options    | Object | -> | Lire l'index de la feuille appelée "Total premier trimester" : |
+| Résultat   | Object | <- | Objet 4D View Pro|<!-- END REF -->
 
 |
 
@@ -1184,7 +1184,7 @@ Vous pouvez passer le paramètre optionnel *searchCondition* pour préciser le f
 | afterColumn | Integer | Le numéro de la colonne située juste avant la colonne de départ de la recherche. Si *rangeObj* est une plage combinée, le numéro de colonne indiqué doit provenir de la première plage. Valeur par défaut : -1 (début de *rangeObj*) |
 | afterRow    | Integer | Le numéro de la colonne située juste avant la colonne de départ de la recherche. Si *rangeObj* est une plage combinée, le numéro de ligne indiqué doit provenir de la première plage. Valeur par défaut : -1 (début de *rangeObj*)   |
 | all         | Boolean | <li>Exemple 2</li><li>Exemple</li>                                                                                                                                                                                 |
-| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>Style de police.</td></tr><tr><td>`vk find flag ignore case`</td><td>Les majuscules et les minuscules sont considérées comme identiques. Ex : "a" est considérée comme identique à "A".</td></tr><tr><td>`vk find flag none`</td><td>Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :</td></tr><tr><td>`vk find flag use wild cards`</td><td>Les caractères génériques (\*,?) peuvent être utilisés dans la chaîne de recherche. Les caractères joker peuvent être utilisés dans n'importe quelle comparaison de chaînes pour correspondre à n'importe quel nombre de caractères :<li>La collection retournée est bidemensionnelle :</li><li>? pour un seul caractère (par exemple, rechercher "h?t" peut donner comme résultat "hot", "hat", et "hit"</li></td></tr></table>Ces marqueurs peuvent être combinés. Par exemple: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                                                |
+| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>Style de police.</td></tr><tr><td>`vk find flag ignore case`</td><td>Les majuscules et les minuscules sont considérées comme identiques. Ex : "a" est considérée comme identique à "A".</td></tr><tr><td>`vk find flag none`</td><td>Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :</td></tr><tr><td>`vk find flag use wild cards`</td><td>Les caractères génériques (\*,?) peuvent être utilisés dans la chaîne de recherche. Les caractères joker peuvent être utilisés dans n'importe quelle comparaison de chaînes pour correspondre à n'importe quel nombre de caractères :<li>\*  - Pour le caractère zéro ou plusieurs caractères (par exemple, rechercher "bl*" peut donner comme résultat "bl", "black", "blue", et "blob")</li><li>? pour un seul caractère (par exemple, rechercher "h?t" peut donner comme résultat "hot", "hat", et "hit"</li></td></tr></table>Ces marqueurs peuvent être combinés. Par exemple: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                                                |
 | order       | Integer | <table><tr><td>`vk find order by columns`</td><td>La recherche est effectuée par colonnes. Chaque ligne d'une colonne est recherchée avant que la recherche ne passe à la colonne suivante.</td></tr><tr><td>`vk find order by rows`</td><td>La recherche est effectuée par lignes. Chaque colonne d'une ligne est recherchée avant que la recherche ne passe à la colonne suivante (par défaut)</td></tr></table>                                                                                                                                                                                                           |
 | target      | Integer | <table><tr><td>`vk find target formula`</td><td>La recherche est effectuée dans la formule de la cellule</td></tr><tr><td>`vk find target tag`</td><td>La recherche est effectuée dans la balise de la cellule</td></tr><tr><td>`vk find target text`</td><td>La recherche est effectuée dans le texte de la cellule (par défaut)</td></tr></table><p>Ces marqueurs peuvent être combinés. Par exemple :<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                 |
 
@@ -1699,7 +1699,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### Description
 
-La commande `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->retourne un objet style par défaut pour une feuille<!-- END REF -->. . . . Pour plus d'informations sur les propriétés de style, consultez [Objets style et feuilles de style](configuring.md#style-objects--style-sheets).
+La commande `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->retourne un objet style par défaut pour une feuille<!-- END REF -->. . Pour plus d'informations sur les propriétés de style, consultez [Objets style et feuilles de style](configuring.md#style-objects--style-sheets).
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -2867,10 +2867,10 @@ Voir également
 
 Style de la ligne de bordure appliqué à toutes les bordures.
 
-| Propriété | Type          | Description                |
-| --------- | ------------- | -------------------------- |
-| value     | Plage nommée| | Oui                        |
-| time      | Real          | Dans le document suivant : |
+| Propriété | Type                                    | Description                |
+| --------- | --------------------------------------- | -------------------------- |
+| value     | Entier long, Réel, Booléen, Texte, Date | Oui                        |
+| time      | Real                                    | Dans le document suivant : |
 
 Définit l'épaisseur de la police.
 
@@ -2956,7 +2956,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 <!-- REF #_method_.VP Get workbook options.Params -->
 |Paramètre|Type||Description|
 
-Ajout<-|Object containing the workbook options|<!-- END REF -->
+|---|---|---|---| |vpAreaName  |Text|->|4D View Pro area form object name| |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
 
 #### Description
 
@@ -3051,7 +3051,7 @@ True si les lignes d'impression sont visibles, sinon False|
 
 #### Exemple 1
 
-Nombre total de lignes|
+Vous souhaitez importer un document 4D View Pro stocké sur le disque, à l'ouverture du formulaire :
 
 ```4d
 Ajout
@@ -3096,10 +3096,10 @@ Collection de paramètres (dans l'ordre dans lequel ils sont définis dans la m�
 
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
-| Paramètres | Type   |    | Description                                                                                                                           |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                                                                               |
-| viewPro    | Object | -> | Vous avez ajouté deux boutons au formulaire afin que l'utilisateur puisse suspendre/reprendre les calculs :<!-- END REF -->
+| Paramètres | Type   |    | Description                                  |
+| ---------- | ------ | -- | -------------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro      |
+| viewPro    | Object | -> | Objet 4D View Pro|<!-- END REF -->
 
 |
 
@@ -3115,7 +3115,7 @@ Vous souhaitez personnaliser la couleur des onglets, des lignes figées, du quad
 
 #### Exemple
 
-|
+Vous souhaitez importer une feuille de calcul précédemment stockée dans un champ objet :
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
@@ -4202,10 +4202,10 @@ Résultat:
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Paramètres | Type   |    | Description                                                                           |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------- |
-| parameters | Object | -> | Object containing the offscreen area's attributes                                     |
-| Résultat   | Mixed  | <- | Vous souhaitez exporter la feuille courante au format PDF :<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                                                  |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------ |
+| parameters | Object | -> | Object containing the offscreen area's attributes                                                            |
+| Résultat   | Mixed  | <- | Propriété `.result` de l'objet `.onEvent`, ou Null s'il ne retourne pas de valeur|<!-- END REF -->
 
 |
 
@@ -4215,14 +4215,14 @@ The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Sum
 
 Dans l'objet *parameters*, passez l'une des propriétés optionnelles suivantes. Ces propriétés seront disponibles grâce à la commande `This` dans la méthode `onEvent` et référencent l'instance :
 
-| Propriété                | Type                                                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                     | text                                                                                                                                                                    | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| onEvent                  | Pour fusionner les cellules First quarter et Second quarter avec les deux cellules côte à côte, et de fusionner la cellule South area avec les deux lignes en-dessous : | Une méthode callback qui sera lancée lorsque la zone hors écran sera prête. Elle peut être soit :<li>Les lignes suivantes n'affichent pas correctement le texte :</li><li>Le code suivant définit cinq lignes dans la zone 4D View Pro :</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. La méthode callback peut être utilisée pour accéder à [l'objet 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
-| autoQuit                 | boolean                                                                                                                                                                 | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                     |
-| timeout                  | number                                                                                                                                                                  | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| result                   | mixte                                                                                                                                                                   | Vous souhaitez protéger votre document pendant que vos utilisateurs redimensionnent les lignes et colonnes :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `<customProperty>` | mixte                                                                                                                                                                   | Texte de l'en-tête de la colonne                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Propriété                | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ------------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| area                     | text            | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| onEvent                  | objet (formula) | Une méthode callback qui sera lancée lorsque la zone hors écran sera prête. Elle peut être soit :<li>Les lignes suivantes n'affichent pas correctement le texte :</li><li>Le code suivant définit cinq lignes dans la zone 4D View Pro :</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. La méthode callback peut être utilisée pour accéder à [l'objet 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
+| autoQuit                 | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                     |
+| timeout                  | number          | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| result                   | mixte           | Résultat du traitement (le cas échéant)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `<customProperty>` | mixte           | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 
 Valeur de remplacement
@@ -4538,17 +4538,17 @@ Le paramètre *borderStyleObj* vous permet de définir le style des lignes de la
 
 Modifications
 
-| Propriété       | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| all             | boolean | L'objet retourné contiendra la propriété `value`, et la propriété `time` dans le cas d'une valeur date :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| left            | boolean | Case of :(FORM Event.code=On Load) var $o : Object $o:=New object // Définir la fonction "addnum" d'une méthode nommée "addnum" $o.addnum:=New object $o.addnum.formula:=Formula(addnum) $o.addnum.parameters:=New collection $o.addnum.parameters.push(New object("name";"num1";"type";Is Integer)) $o.addnum.parameters.push(New object("name";"num2";"type";Is Integer)) // Définir la fonction "ClientLastName" d'un champ de base de données $o.ClientLastName:=New object $o.ClientLastName.formula:=Formula([Customers]lastname) $o.ClientLastName.summary:="Nom de famille du client courant" // Définir la fonction "label" d'une expression 4D avec un paramètre $o.label:=New object $o.label.formula:=Formula(ds.Customers.get($1).label) $o.label.parameters:=New collection $o.label.parameters.push(New object("name";"ID";"type";Is Integer)) // Définir la fonction "Title" d'une variable nommée "Title" $o.Title:=New object $o.Title.formula:=Formula(Title) VP SET CUSTOM FUNCTIONS("ViewProArea";$o) End case |
-| top             | boolean | ou l'une des constantes suivantes :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| right           | boolean | Dans le document suivant :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| bottom          | boolean | Ajout                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| outline         | boolean | L'objet retourné contient les propriétés suivantes :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| inside          | boolean | Voir également                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| innerHorizontal | boolean | Le document comporte actuellement 3 feuilles :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| innerVertical   | boolean | un chiffre avec l'une des unités suivantes :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Propriété       | Type    | Description                                                                                              |
+| --------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| all             | boolean | L'objet retourné contiendra la propriété `value`, et la propriété `time` dans le cas d'une valeur date : |
+| left            | boolean | Style de la ligne de bordure appliqué à la bordure de gauche.                                            |
+| top             | boolean | ou l'une des constantes suivantes :                                                                      |
+| right           | boolean | Dans le document suivant :                                                                               |
+| bottom          | boolean | Ajout                                                                                                    |
+| outline         | boolean | L'objet retourné contient les propriétés suivantes :                                                     |
+| inside          | boolean | Voir également                                                                                           |
+| innerHorizontal | boolean | Le document comporte actuellement 3 feuilles :                                                           |
+| innerVertical   | boolean | un chiffre avec l'une des unités suivantes :                                                             |
 
 #### Exemple 1
 
@@ -4642,13 +4642,13 @@ Dans *rangeObj*, passez un objet contenant une plage. Si la plage contient des c
 
 Le paramètre *propertyObj* vous permet de renseigner les attributs à appliquer aux colonnes de *rangeObj*. Ces attributs sont :
 
-| Propriété | Type    | Description                                                                                |
-| --------- | ------- | ------------------------------------------------------------------------------------------ |
-| width     | number  | Les commandes suivantes peuvent être utilisées dans la méthode callback (de rétro-appel) : |
-| pageBreak | boolean | |                                                                                          |
-| visible   | boolean | |                                                                                          |
-| resizable | boolean | |                                                                                          |
-| header    | text    | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.         |
+| Propriété | Type    | Description                                                                         |
+| --------- | ------- | ----------------------------------------------------------------------------------- |
+| width     | number  | Largeur de colonne exprimée en pixels                                               |
+| pageBreak | boolean | Vrai pour insérer un saut de page avant la première colonne de la plage, sinon faux |
+| visible   | boolean | Vrai si la colonne est visible, sinon faux                                          |
+| resizable | boolean | Vrai si la colonne peut être redimensionnée, sinon faux                             |
+| header    | text    | Texte de l'en-tête de la colonne                                                    |
 
 #### Exemple
 
@@ -4937,7 +4937,7 @@ $options:=New object("autoGenerateColumns"; True)
 VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 ```
 
-Here's the result once the columns are generated:
+Voici le résultat une fois les colonnes générées :
 
 ![](../assets/en/ViewPro/vp-set-data-context-date-time.png)
 
@@ -4952,11 +4952,11 @@ Here's the result once the columns are generated:
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
-| Paramètres    | Type   |    | Description                                                                                          |
-| ------------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
-| rangeObj      | Object | -> | Objet plage                                                                                          |
-| dateValue     | Date   | -> | Les colonnes suivantes sont toutes de la même taille et n'affichent pas certaines parties du texte : |
-| timeValue     | Time   | -> | Valeur heure à fixer                                                                                 |
+| Paramètres    | Type   |    | Description                                    |
+| ------------- | ------ | -- | ---------------------------------------------- |
+| rangeObj      | Object | -> | Objet plage                                    |
+| dateValue     | Date   | -> | Valeur date à fixer                            |
+| timeValue     | Time   | -> | Valeur heure à fixer                           |
 | formatPattern | Text   | -> | Format de la valeur|<!-- END REF -->
 
 |
@@ -5011,7 +5011,7 @@ Le paramètre optionnel *formatPattern* définit un modèle pour le paramètre *
 | Constante               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Dans *vpAreaName*, passez le nom de la zone 4D View Pro. |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
 | `vk pattern long date`  | var $options : Object $options:=New object // Personnaliser la couleur de l'onglet de la feuille 1 $options.sheetTabColor:="Black" $options.gridline:=New object("color";"Purple") $options.selectionBackColor:="rgb(255,128,0,0.4)" $options.selectionBorderColor:="Yellow" $options.frozenlineColor:="Gold" VP SET SHEET OPTIONS("ViewProArea";$options;0) // Personnaliser la couleur de l'onglet de la feuille 2 $options.sheetTabColor:="red" VP SET SHEET OPTIONS("ViewProArea";$options;1) // Personnaliser la couleur de l'onglet de la feuille 3 $options.sheetTabColor:="blue" VP SET SHEET OPTIONS("ViewProArea";$options;2) | "dddd, dd MMMM yyyy"                                     |
-| `vk pattern month day`  | Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | "MMMM dd"                                                |
+| `vk pattern month day`  | Format ISO 8601 pour le mois et le jour                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | "MMMM dd"                                                |
 | `vk pattern short date` | Format ISO 8601 court pour la date                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | "MM/dd/yyyy"                                             |
 | `vk pattern year month` | Dans le paramètre *methodObj*, passez un objet dans lequel chaque propriété porte le nom d'une fonction à définir dans les zones 4D View Pro :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | "yyyy MMMM"                                              |
 
