@@ -2719,10 +2719,10 @@ En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 En el parámetro *onlyData*, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
 
-| Constante             | Valor | Descripción                                                                       |
-| --------------------- | ----- | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                 |
+| Constante             | Valor | Descripción                                                                                                  |
+| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
+| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                            |
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -2749,11 +2749,11 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parámetros | Tipo                                           |    | Descripción                                                    |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text                                           | -> | Nombre de la tabla                                             |
-| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF -->
+| Parámetros | Tipo                                           |    | Descripción                                                                 |
+| ---------- | ---------------------------------------------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                                |
+| tableName  | Text                                           | -> | Nombre de la tabla                                                          |
+| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual|<!-- END REF -->
 
 
 |
