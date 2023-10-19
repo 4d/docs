@@ -132,7 +132,7 @@ New documentation files are created with the following default contents:
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `<!-- Escreva aqui o seu resumo -->` | Comentário HTML. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                       |
 | ## Description                            | Título de nível 2 em Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Exemplo                                | Heading level 2, you can use this area to show sample code                                                                                             |
+| ## Exemplo                                | No nível 2 do cabeçalho, você pode usar essa área para mostrar um código de amostra                                                                    |
 | ` ```4d Type here your example``` `        | Utilizado para formatar exemplos de código 4D (utiliza a biblioteca highlight.js)                                                                      |
 
 
