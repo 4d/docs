@@ -87,7 +87,7 @@ O arquivo de dados é totalmente desencriptado e é apresentada uma mensagem de 
 É possível guardar a chave de encriptação sempre que for fornecida uma nova frase-chave:
 
 - when the database is encrypted for the first time,
-- when the database is re-encrypted with a new passphrase.
+- quando o banco de dados é criptografado novamente com uma nova senha.
 
 Podem ser armazenadas chaves de encriptação sucessivas no mesmo dispositivo.
 
