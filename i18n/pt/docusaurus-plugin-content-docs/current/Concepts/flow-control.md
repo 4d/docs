@@ -168,7 +168,7 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
 For comparison, here is the `If... Else... End if` version of the same method:
 
 ```4d
- If(vResult=1) //Test if the number is 1
+ If(vResult=1) //Teste se o número é 1
     ALERT("One.") If(vResult=1) //Test if the number is 1
     ALERT("One.") //If it is 1, display an alert
  Else
