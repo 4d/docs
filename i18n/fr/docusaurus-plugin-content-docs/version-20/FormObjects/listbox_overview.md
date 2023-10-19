@@ -56,7 +56,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 - **Tableaux**: chaque colonne est liée à un tableau 4D. Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques).
 - **Sélection** (**Sélection courante** ou **Sélection temporaire**) : chaque colonne est liée à une expression (par exemple un champ) qui est évaluée pour chaque enregistrement de la sélection.
 - **Collection ou Entity selection** : chaque colonne est liée à une expression qui est évaluée pour chaque élément de la collection ou chaque entité de l'entity selection.
-> > Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
+> Il n'est pas possible de combiner différents types de list box dans le même objet list box. La source de données est définie lors de la création de la list box. Il n'est alors plus possible de la modifier par programmation.
 
 
 ### Gestion des list box
@@ -277,7 +277,7 @@ Vous pouvez définir pour chaque colonne de List box des propriétés standard (
 > Vous pouvez définir le [Type d'expression](properties_Object.md#expression-type) pour les colonnes de list box de type tableau (Alpha, Texte, Numérique, Date, Heure, Image, Booléen ou Objet).
 
 
-### Propriétés spécifiques des list box
+### Propriétés spécifiques des colonnes
 
 [Alpha Format](properties_Display.md#alpha-format) - [Couleur de fond alternée](properties_BackgroundAndBorder.md#alternate-background-color) - [Hauteur de ligne automatique](properties_CoordinatesAndSizing.md#automatic-row-height) - [Tableau couleurs de fond](properties_Text.md#background-color) - [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) - [Gras](properties_Text.md#bold) - [Enumération](properties_DataSource.md#choice-list) - [Classe](properties_Object.md#css-class) - [Data Type (expression type) ](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Valeurs par défaut](properties_DataSource.md#default-values) - [Type d'affichage](properties_Display.md#display-type) - [Saisissable](properties_Entry.md#enterable) - [Filtres de saisie](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (colonne de list box tableau)](properties_Object.md#expression-type) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Alignement horizontal](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
@@ -337,7 +337,7 @@ Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle es
 
 
 ## Pieds de list box
-> Pour pouvoir accéder aux propriétés des en-têtes d'une list box, vous devez avoir coché l'option [Afficher en-têtes](properties_Headers.md#display-headers) dans la Liste des propriétés de la list box.
+> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
 
 Les List box peuvent contenir des zones de "pied de page" non saisissables, affichant des informations supplémentaires. Dans les données présentées sous forme de tableaux, les pieds sont généralement utilisés pour afficher des calculs, tels que des sommes ou des moyennes.
 
@@ -697,7 +697,7 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 *   Configurer manuellement les éléments hiérarchiques via la liste des propriétés dans l’éditeur de formulaires (ou éditer le formulaire JSON).
 *   Générer visuellement la hiérarchie à l’aide du pop up menu de gestion des list box, dans l’éditeur de formulaires.
-*   Utiliser les commandes [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) et [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html).
+*   Utiliser les commandes [LISTBOX SET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-SET-HIERARCHY.301-4127969.en.html) et [LISTBOX GET HIERARCHY](https://doc.4d.com/4Dv17R5/4D/17-R5/LISTBOX-GET-HIERARCHY.301-4127970.en.html). Ces commandes sont décrites dans le *manuel Langage de 4D*.
 
 
 #### Propriété List box hiérarchique
@@ -753,7 +753,7 @@ Si cette list box est affichée sous forme hiérarchique (les trois premiers tab
 
 Les tableaux ne sont pas triés avant la construction de la hiérarchie. Si par exemple un tableau contient les données AAABBAACC, la hiérarchie obtenue sera :
 
-    > &gt; > A B A C
+    > A B A C
 
 Pour déployer ou contracter un "nœud" hiérarchique, cliquez dessus. Si vous effectuez **Alt+clic** (Windows) ou **Option+clic** (macOS) sur le nœud, tous ses sous-éléments seront déployés ou contractés. Ces opérations peuvent également être effectuées par programmation à l'aide des commandes `LISTBOX EXPAND` et `LISTBOX COLLAPSE`.
 
@@ -796,10 +796,10 @@ Quelle que soit la manière dont les données sont affichées dans la list box (
 Ce principe est mis en oeuvre pour les tableaux internes permettant de gérer :
 
 - les couleurs
-- background colors
+- les couleurs de fond
 
 
-- styles
+- les styles
 - les lignes masquées
 - les sélections
 
@@ -891,11 +891,10 @@ Toutefois, le thème Source de données n'est pas disponible pour les colonnes o
 le type de valeur (obligatoire) : texte, couleur, événement, etc. la valeur elle-même (optionnel) : utilisé aussi bien pour la saisie que pour l'affichage. le mode d'affichage du contenu de la cellule (optionnel) : bouton, liste, etc. des paramètres supplémentaires (optionnel) : dépend du type de valeur Pour définir ces propriétés, vous devez placer les attributs adéquats dans l'objet (la liste des attributs disponibles est fournie ci-dessous). Par exemple, vous pouvez écrire "Hello World!" dans une colonne objet à l'aide de ce simple code :
 
 ```4d  
-C_OBJECT($ob1)
-$entry:="Hello world!" ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
+ARRAY OBJECT(obColumn;0) //tableau de la colonne
+ C_OBJECT($ob) //premier élément
+ OB SET($ob;"valueType";"text") //définit le type de valeur (obligatoire)
+ OB SET($ob;"value";"Hello World!") //définit la valeur
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -973,11 +972,21 @@ L'unique attribut obligatoire est "valueType" et ses valeurs acceptées sont "te
 La valeur des cellules est stockée dans l'attribut "value". Cet attribut est utilisé pour la saisie (entrée) et pour l'affichage (sortie). Il peut également être utilisé pour définir des valeurs par défaut lors de l'utilisation des listes (voir ci-dessous).
 
 ````4d
+ ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
-$entry:="Hello world!"
- OB SET($ob;"valueType";"text")
-OB SET($ob;"alternateButton";True)
-OB SET($ob;"value";$entry)
+ $entry:="Hello world!"
+ OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)
 ````
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
@@ -1140,7 +1149,7 @@ Quel que soit son mode de définition, la liste d'unités peut être associée �
 
 *   "unitReference" : une valeur simple contenant l'indice (de 1 à x) de l'élément sélectionné dans la liste de valeurs "unitList", "unitsListReference" ou "unitsListName".
 
-L'unité courante est affichée sous forme de bouton affichant successivement les valeurs de "unitList", "unitsListReference" ou "unitsListName" à chaque clic (par exemple "pixels" -> "lignes" -> "cm" -> "pixels" -> etc.)
+L'unité courante est affichée sous la forme d'un bouton qui fait défiler les valeurs "unitList", "unitsListReference" ou "unitsListName" chaque fois qu'il est cliqué (par exemple, "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
 Voici un exemple :
 
@@ -1170,11 +1179,9 @@ Voici un exemple :
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
-ARRAY OBJECT(obColumn;0) //tableau de la colonne
- C_OBJECT($ob) //premier élément
- OB SET($ob;"valueType";"text") //définit le type de valeur (obligatoire)
- OB SET($ob;"value";"Hello World!") //définit la valeur
- APPEND TO ARRAY(obColumn;$ob)
+OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
@@ -1215,7 +1222,7 @@ OB SET($ob;"label";"Edit...")
 
 
 ### Gestion des événements
-Plusieurs événements peuvent être gérés dans les colonnes de list box de type tableau d'objets.
+Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox tableau d'objets :
 
 *   **Sur données modifiées** : L'événement `On Data Change` est généré en cas de modification d'une valeur de la colonne, quel que soit le widget :
     *   zone de saisie de texte
