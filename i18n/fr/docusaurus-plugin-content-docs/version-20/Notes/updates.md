@@ -28,7 +28,7 @@ Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20
 - 4D Server intègre automatiquement plusieurs journaux : [Restauration automatique](../Backup/settings.md#automatic-restore).
 - [Classe IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) renvoie *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) renvoie *id*, *flags* et *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) et [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) supportent les mots-clés personnalisés.
 - Nouvelles classes [WebSocketServer](../API/WebSocketServerClass.md) et [WebSocketConnection](../API/WebSocketConnectionClass.md) pour créer et gérer des connexions WebSocket à partir de 4D.
-- Prise en charge du mot-clé [property``](../Concepts/classes.md#property) dans les définitions des classes d'utilisateurs.
+- Prise en charge du mot-clé [`property`](../Concepts/classes.md#property) dans les définitions des classes d'utilisateurs.
 - Nouvelles fonctions pour verrouiller/déverrouiller le datastore : [`.flushAndLock()`](../API/DataStoreClass.md#flushandlock), [`.locked()`](../API/DataStoreClass.md#locked), [`.unlock()`](../API/DataStoreClass.md#unlock).
 - Nouvelle fonction [`.at()`](../API/EntitySelectionClass.md#at) dans la classe Entity selection.
 - Nouvelles fonctions dans la classe Collection : [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap),[`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright).
@@ -36,9 +36,9 @@ Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20
 - Nouvel élément de langage "property" cherchable dans la boîte de dialogue [**Recherche dans le développement...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) .
 - Pour simplifier le code, certains opérateurs de comparaison peuvent désormais être utilisés avec des [valeurs Undefined](../Concepts/dt_null_undefined.md#undefined-operators) sans générer d'erreurs.
 - Prise en charge du paramètre *headerOnly* dans [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail).
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
+- Prise en charge de l'option `count values` dans les fonctions [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) et [`collection.distinct()`](../API/CollectionClass.md#distinct) .
 - Nouvelle fonction [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths) .
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
+- Prise en charge de l'option `count values` dans les fonctions [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) et [`collection.distinct()`](../API/CollectionClass.md#distinct) .
 - Les logs des requêtes ORDA sont maintenant disponibles [sur le serveur](../Debugging/debugLogFiles.md#orda-requests), nouveau paramètre pour la fonction [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog).
 - Nouveaux outils pour l'exécution de code en CLI : [tool4d](../Admin/cli.md#tool4d) et [4D Server en mode utilitaire](../Admin/cli.md#4d-server-in-utility-mode).
 - [Data Explorer](../Admin/dataExplorer.md#opening-the-data-explorer): nouveau bouton et affichage dans une fenêtre 4D.
@@ -53,6 +53,7 @@ Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20
 
 #### Changements de comportement
 
+- **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
 - Pour des raisons de conformité avec la RFC HTTP, la propriété [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) renvoie désormais tous les noms d'en-têtes **en minuscules**. Si vous souhaitez que votre code continue à fonctionner comme auparavant, utilisez la nouvelle propriété [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) .
 - Les certificats TLS sont désormais automatiquement validés par 4D lors de l'envoi de requêtes HTTP avec [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), et rejetés avec une erreur s'ils ne sont pas valides. Une nouvelle propriété *option* vous permet de contrôler cette validation.
 - TLS v1.0 et TLS v1.1 sont obsolètes, ils ne sont plus pris en charge par `Min TLS version` sur 4D Server. La version 1.3 est désormais sélectionnée par défaut et est automatiquement utilisée si les constantes `_o_TLSv1_0` ou `_o_TLSv1_1` sont définies avec [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
@@ -71,10 +72,10 @@ Lisez [**Les nouveautés de 4D v19 R8**](https://blog.4d.com/fr-whats-new-in-4d-
 - Les listboxes avec des sources de données collections ou entity selection prennent en charge désormais la propriété de colonne [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) .
 - ORDA : Prise en charge du fichier *roles.json* pour définir les [privilèges](../ORDA/privileges.md) attribués à la session avec [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Prise en charge du [mode SDI dans le mode test application](../Menus/sdi.md#sdi-mode-availability) sous Windows.
-- 4D View Pro:
-    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
+- 4D View Pro :
+    - prise en charge des thèmes dans les tables : nouvelles commandes [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) et [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) , prise en charge des options de thème dans [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
 
-    - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
+    - nouvelle commande [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
 - Commandes du langage 4D : [Liste des nouveautés](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) sur doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19_R8): liste de tous les bugs qui ont été corrigés dans 4D v19 R8.
