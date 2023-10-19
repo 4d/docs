@@ -937,6 +937,7 @@ use the following code:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name         |
@@ -1813,7 +1814,9 @@ will return this information in the *$defaultStyle* object:
 | rangeObj  | Objekt | -> | Range object                       |
 | Ergebnis  | Text   | <- | Formula|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 
@@ -2839,7 +2842,8 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | Constant              | Wert | Beschreibung                                                                      |
 | --------------------- | ---- | --------------------------------------------------------------------------------- |
 | `vk table full range` | 0    | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1    | Get the cell range for the table data area only                                   |
+
+|`vk table data range`|1|Get the cell range for the table data area only|
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 > Indexing starts at 0.
@@ -3069,9 +3073,12 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Parameter|Type||Description|
+| Parameter  | Typ    |    | Beschreibung                                                      |
+| ---------- | ------ | -- | ----------------------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro area form object name                                 |
+| Ergebnis   | Objekt | <- | Object containing the workbook options|<!-- END REF -->
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro area form object name| |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -4570,7 +4577,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |
 > **Compatibility**
-> 
+>
 > For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
 
@@ -5383,11 +5390,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter     | Typ    |    | Beschreibung                               |
+| ------------- | ------ | -- | ------------------------------------------ |
+| rangeObj      | Objekt | -> | Range object                               |
+| formula       | Text   | -> | Formula or 4D method                       |
+| formatPattern | Text   | -> | Format of field|<!-- END REF -->
 
-|rangeObj |Object|->|Range object| |formula |Text|->|Formula or 4D method| |formatPattern |Text|->|Format of field|<!-- END REF -->
+|
 
 #### Beschreibung
 
