@@ -370,7 +370,7 @@ The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondC
 <!-- REF #TableThemeOptions.secondColumnStripStyle.Syntax -->
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo da segunda coluna alternada<!-- END REF -->.
+A propriedade `.secondColumnStripStyle` é o <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo da segunda coluna alternada<!-- END REF -->.
 
 ### .secondRowStripSize
 
