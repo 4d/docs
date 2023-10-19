@@ -4,7 +4,7 @@ title: Página Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. In the 4D Language, there are two categories of methods:
+A method is basically a piece of code that executes one or several actions. Na linguagem 4D, há duas categorias de métodos:
 
 - **built-in methods**, which are provided by 4D or third-party developers and can be only called in your code. Os métodos incorporados incluem:
     - Commands and functions of the 4D API, such as `ALERT` or `Current date`.
@@ -40,7 +40,7 @@ Utiliza sub-rotinas para:
 - Facilitar mudanças nos seus métodos
 - Modularize o seu código
 
-For example, let’s say you have a database of customers. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. O código para fazer isso  parece-se com o seguinte:
+Por exemplo, digamos que você tenha um banco de dados de clientes. As you customize the database, you find that there are some tasks that you perform repeatedly, such as finding a customer and modifying his or her record. O código para fazer isso  parece-se com o seguinte:
 
 ```4d
   // Procure um cliente
