@@ -286,14 +286,11 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 
 ## Port HTTPS
 
-| Peut être configuré via | Nom                                            | Commentaires |
-| ----------------------- | ---------------------------------------------- | ------------ |
-| objet webServer         | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number       |
-
-
-|`WEB SET OPTION`|`Web HTTPS port ID`||
-
-|Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
+| Peut être configuré via  | Nom                                                        | Commentaires |
+| ------------------------ | ---------------------------------------------------------- | ------------ |
+| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport)             | number       |
+| `WEB SET OPTION`         | `Web HTTPS port ID`                                        |              |
+| Fenêtre de configuration | [Configuration > Port HTTP](../settings/web.md#https-port) |              |
 
 Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par défaut est 443 (valeur standard). Voir aussi [HTTP Port](#http-port) pour plus d'informations sur les numéros de port.
 
@@ -486,7 +483,7 @@ Vrai si le PFS est disponible sur le serveur web (voir la section [TLS](Admin/tl
 | ------------------------ | ---------------------------------------------------------------------------------------- | ------------ |
 | Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#reuse-temporary-contexts) |              |
 
-> This option is only available when **No sessions** option is checked.
+> Cette option n'est disponible que lorsque l'option **No sessions** est cochée.
 
 Permet d'optimiser le fonctionnement du 4D Web Server en mode distant en réutilisant les process web créés pour le traitement des demandes web précédentes. En fait, le serveur web de 4D nécessite un process web spécifique pour le traitement de chaque requête web; en mode distant, lorsque nécessaire, ce processus se connecte à la machine du 4D Server afin d'accéder au moteur de données et de base de données. Il génère ainsi un contexte temporaire en utilisant ses propres variables, sélections, etc. Une fois la demande traitée, ce process est arrêté.
 
@@ -534,11 +531,11 @@ Dans ce cas, les robots n'auront accès à aucune partie du site.
 
 ## Dossier racine
 
-| Peut être configuré via  | Nom                                                                            | Commentaires                                                                                                                                                 |
-| ------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| objet webServer          | [`rootFolder`](API/WebServerClass.md#rootfolder)                               | Propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
-| `WEB SET ROOT FOLDER`    |                                                                                |                                                                                                                                                              |
-| Fenêtre de configuration | [Configuration > Racine HTML par défaut](../settings/web.md#default-html-root) |                                                                                                                                                              |
+| Peut être configuré via      | Nom                                                                            | Commentaires                                                                                                                                                 |
+| ---------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| objet webServer              | [`rootFolder`](API/WebServerClass.md#rootfolder)                               | Propriété Text, mais il peut s'agir d'un objet [`4D.Folder`](API/FolderClass.md) lorsqu'il est utilisé avec le paramètre *settings* de la fonction `start()` |
+| `WEB SET ROOT FOLDER`        |                                                                                |                                                                                                                                                              |
+| Boîte de dialogue Paramètres | [Configuration > Racine HTML par défaut](../settings/web.md#default-html-root) |                                                                                                                                                              |
 
 Chemin du dossier racine du serveur web, i.e le dossier dans lequel 4D va chercher les pages HTML statiques et semi-dynamiques, les images, etc. à envoyer aux navigateurs. Le chemin d'accès est au format POSIX (chemin entier). Le serveur web doit être redémarré pour que le nouveau dossier racine soit pris en compte.
 
@@ -562,24 +559,24 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 
 ## Sessions extensibles
 
-| Peut être configuré via  | Nom                                                                                                                        | Commentaires |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| objet webServer          | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                 |              |
-| `WEB SET OPTION`         | `Web scalable session`                                                                                                     |              |
-| Fenêtre de configuration | [Options (I) page/Scalable sessions (multi-process sessions)](../settings/web.md#scalable-sessions-multi-process-sessions) |              |
+| Peut être configuré via  | Nom                                                                                                                          | Commentaires |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| objet webServer          | [`scalableSession`](API/WebServerClass.md#scalablesession)                                                                   |              |
+| `WEB SET OPTION`         | `Web scalable session`                                                                                                       |              |
+| Fenêtre de configuration | [Options (I) page/Sessions extensibles (sessions multiprocess)](../settings/web.md#scalable-sessions-multi-process-sessions) |              |
 
-Scalable session management enabling status for the 4D web server. Web server sessions are detailed in the [User sessions](sessions.md) page.
+Statut de l'activation des sessions extensibles le serveur web 4D. Les sessions du serveur web sont détaillées dans la page [Sessions utilisateur](sessions.md).
 
 
 
-## Session Cookie Domain
+## Domaine du cookie de session
 
 | Peut être configuré via | Nom                                                                | Commentaires |
 | ----------------------- | ------------------------------------------------------------------ | ------------ |
 | objet webServer         | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |              |
 | `WEB SET OPTION`        | `Web session cookie domain`                                        |              |
 
-Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
+Valeur du champ "domain" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
 
 
 ## Nom du cookie de session
@@ -599,7 +596,7 @@ Nom du cookie utilisé pour stocker l'ID de session. Par défaut = "4DSID".
 | objet webServer         | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |              |
 | `WEB SET OPTION`        | `Web session cookie path`                                      |              |
 
-Valeur du champ "domaine" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+Valeur du champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
 
 ## Session Cookie SameSite
 
@@ -614,8 +611,8 @@ Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet d
 Trois valeurs sont disponibles :
 
 - "Strict" (valeur par défaut de l'attribut`SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
-- "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
-- "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
+- "Lax" : Les cookies ne sont pas envoyés lors de sous-requêtes intersites (par exemple pour charger des images ou des cadres dans un site tiers), mais sont envoyés lorsqu'un utilisateur navigue vers le site d'origine (c'est-à-dire lorsqu'il suit un lien).
+- "None" : Les cookies sont envoyés dans tous les contextes, c'est-à-dire dans les réponses aux demandes primaires et cross-origin. Lorsque la valeur "None" est utilisée, l'attribut du cookie `Secure` doit également être défini (sinon le cookie sera bloqué).
 
 La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`).
 
@@ -629,7 +626,7 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 | ------------------------ | ---------------------------------------------------------------------------------------- | ------------ |
 | Fenêtre de configuration | [Options (I) > Process Web simultanés maxi](../settings/web.md#use-preemptive-processes) |              |
 
-This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+Cette option active le mode préemptif pour le code du serveur web de votre application lorsque l'option **No sessions** est sélectionnée (le mode préemptif est toujours activé avec les **sessions extensibles**). Lorsque cette option est cochée dans ce contexte, le compilateur 4D évalue automatiquement la propriété thread-safety de chaque élément du code [lié au web](preemptiveWeb.md#thread-safety-of-4d-web-code) et renvoie des erreurs en cas d'incompatibilité.
 
 
 
