@@ -245,7 +245,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
 - [Native compilation](../Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](../FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](../Admin/cli.md) page.
+- Nova página [CLI](../Admin/cli.md) completa.
 
 
 
