@@ -937,6 +937,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | 引数         | タイプ    |    | 説明                                    |
 | ---------- | ------ | -- | ------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
@@ -1006,15 +1007,11 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 コマンドに任意の *paramObj* 引数を渡す場合、[`Formula`](../API/FunctionClass.md#formula) コマンドを使って、書き出し完了時に実行される 4Dメソッドを呼び出すことができます。 コールバックメソッドは、以下の値をローカル変数として受け取ります:
 
-| 変数 |               | タイプ     | 説明                                    |
-| -- | ------------- | ------- | ------------------------------------- |
-| $1 |               | text    | 4D View Pro オブジェクト名                   |
-| $2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス      |
-| $3 |               | object  | コマンドの *paramObj* 引数への参照               |
-| $4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト       |
-|    | .success      | boolean | 書き出しに成功した場合は true 、それ以外の場合は false     |
-|    | .errorCode    | integer | エラーコード。 4D あるいは JavaScript から返されます。   |
-|    | .errorMessage | text    | エラーメッセージ。 4D あるいは JavaScript から返されます。 |
+| 変数 |  | タイプ | 説明 |
+| -- |  | --- | -- |
+|    |  |     |    |
+
+|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
 
 #### 例題 1
 
@@ -2133,13 +2130,11 @@ $rowCount:=VP Get row count("ViewProarea")
 
 <!-- REF #_method_.VP Get selection.Params -->
 
-| 引数         | タイプ     |    | 説明                                        |
-| ---------- | ------- | -- | ----------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名                |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)               |
-| 戻り値        | Object  | <- | 複数セルのレンジオブジェクト|<!-- END REF -->
+| 引数         | タイプ  |    | 説明                         |
+| ---------- | ---- | -- | -------------------------- |
+| vpAreaName | Text | -> | 4D View Pro エリアフォームオブジェクト名 |
 
-|
+|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
 
 #### 説明
 
@@ -2970,9 +2965,12 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|引数|タイプ||説明|
+| 引数         | タイプ    |    | 説明                                                |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                           |
+| 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト|<!-- END REF -->
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名| |戻り値 |Object|<-|Object containing the workbook options|<!-- END REF -->
+|
 
 #### 説明
 
@@ -5224,11 +5222,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| 引数 | タイプ |  | 説明 |
-| -- | --- |  | -- |
-|    |     |  |    |
+| 引数            | タイプ    |    | 説明                                      |
+| ------------- | ------ | -- | --------------------------------------- |
+| rangeObj      | Object | -> | レンジオブジェクト                               |
+| formula       | Text   | -> | フォーミュラまたは 4Dメソッド                        |
+| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
 
-|rangeObj |Object|->|レンジオブジェクト| |formula |Text|->|フォーミュラまたは 4Dメソッド| |formatPattern |Text|->|フィールドのフォーマット|<!-- END REF -->
+|
 
 #### 説明
 
@@ -5895,15 +5895,12 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
-| 引数         | タイプ     |    | 説明                                                     |
-| ---------- | ------- | -- | ------------------------------------------------------ |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
-| tableName  | Text    | -> | 表組みの名称                                                 |
-| column     | Integer | -> | 表の列のインデックス                                             |
-| attributes | Object  | -> | *column* の列に適用する属性                                     |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
+| 引数         | タイプ  |    | 説明                      |
+| ---------- | ---- | -- | ----------------------- |
+| vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 |
+| tableName  | Text | -> | 表組みの名称                  |
 
-|
+|column|Integer|->|Index of the column in the table| |attributes |Object|->|Attribute(s) to apply to the *column*| |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### 説明
 
