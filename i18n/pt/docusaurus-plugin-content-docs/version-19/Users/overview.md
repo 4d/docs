@@ -9,7 +9,7 @@ If more than one person uses an application, which is usually the case in client
 
 ## Atribuir grupos de acesso
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
+O sistema de acesso por senha de 4D é baseado em usuários e grupos. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
 
 Groups can then be assigned access privileges to specific parts or features of the application (Design access, HTTP server, SQL server, etc.), or any custom part.
 
