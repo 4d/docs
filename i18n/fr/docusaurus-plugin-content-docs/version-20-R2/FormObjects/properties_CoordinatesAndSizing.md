@@ -5,12 +5,12 @@ title: Coordonnées & dimensions
 
 ## Hauteur de ligne automatique
 
-This property is only available for list boxes with the following [data sources](properties_Object.md#data-source):
+Cette propriété n'est disponible que pour les listbox avec les [sources de données](properties_Object.md#data-source) suivantes :
 
-- collection or entity selection,
-- array (non-hierarchical).
+- collection ou entity selection,
+- tableau (non hiérarchique).
 
-Par défaut, cette option n'est pas sélectionnée. A noter que seules les colonnes avec l'option sélectionnée seront prises en compte pour calculer la hauteur de ligne. When used for at least one column, the height of every row in the column will automatically be calculated by 4D, and the column contents will be taken into account.
+Par défaut, cette option n'est pas sélectionnée. Lorsqu'elle est utilisée pour au moins une colonne, la hauteur de chaque ligne de la colonne est automatiquement calculée par 4D et le contenu de la colonne est pris en compte. A noter que seules les colonnes avec l'option sélectionnée seront prises en compte pour calculer la hauteur de ligne.
 
 :::note
 
