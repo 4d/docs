@@ -137,7 +137,7 @@ It is possible to automate the update of merged single-user applications by mean
 
 In order to build a stand-alone application, you must first designate the folder containing the 4D Volume Desktop file:
 
-* *Windows* - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, as well as various files and folders required for its operation. These items must be placed at the same level as the selected folder.
+* *Windows* - the folder contains the 4D Volume Desktop.4DE, 4D Volume Desktop.RSR, as well as various files and folders required for its operation. Esses itens devem ser colocados no mesmo nível da pasta selecionada.
 * *macOS* - 4D Volume Desktop is provided in the form of a structured software package containing various generic files and folders.
 
 To select the 4D Volume Desktop folder, click on the **[...]** button. A dialog box appears allowing you to designate the 4D Volume Desktop folder (Windows) or package (macOS).
@@ -163,7 +163,7 @@ When you click on the **Build** button, 4D automatically creates a **Final Appli
 If you have specified "MyProject" as the name of the application, you will find the following files in this subfolder (aka MyProject):
 
 * *Windows*
-  * MyProject.exe  - Your executable and a MyProject.rsr (the application resources)
+  * MyProject.exe - Seu executável e um MyProject.rsr (os recursos da aplicação)
   * 4D Extensions folder, Resources folder, various libraries (DLL), Native Components folder, SASL Plugins folder - Files necessary for the operation of the application
   * Uma pasta Database - Inclui uma pasta Resources e um ficheiro MyProject.4DZ. Database folder  - Includes a Resources folder and  MyProject.4DZ file. **Note**: This folder also contains the *Default Data* folder, if it has been defined (see [Data file management in final applications](#data-file-management-in-final-applicatons).
   * (Optional) Components folder and/or Plugins folder - Contains any components and/or plug-in files included in the database. For more information about this, refer to the [Plugins and components](#plugins-and-components) section.
