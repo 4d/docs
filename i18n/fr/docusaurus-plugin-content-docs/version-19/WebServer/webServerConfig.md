@@ -506,14 +506,14 @@ Par exemple, si vous voulez que le dossier racine HTML soit le sous-dossier "Web
 
 > Lorsque le dossier racine HTML est modifié, le cache est effacé afin que les fichiers dont l'accès est restreint ne soient pas stockés.
 
-## Session Cookie Domain
+## Domaine du cookie de session
 
 | Peut être configuré via | Nom                                                                | Commentaires |
 | ----------------------- | ------------------------------------------------------------------ | ------------ |
 | objet webServer         | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |              |
 | `WEB SET OPTION`        | `Web session cookie domain`                                        |              |
 
-Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
+Valeur du champ "domain" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
 
 ## Nom du cookie de session
 
@@ -531,7 +531,7 @@ Nom du cookie utilisé pour stocker l'ID de session. Par défaut = "4DSID".
 | objet webServer         | [`sessionCookiePath`](API/WebServerClass.md#sessioncookiepath) |              |
 | `WEB SET OPTION`        | `Web session cookie path`                                      |              |
 
-Valeur du champ "domaine" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+Valeur du champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
 
 ## Session Cookie SameSite
 
@@ -546,8 +546,8 @@ Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet d
 Trois valeurs sont disponibles :
 
 - "Strict" (valeur par défaut de l'attribut`SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
-- "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
-- "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
+- "Lax" : Les cookies ne sont pas envoyés lors de sous-requêtes intersites (par exemple pour charger des images ou des cadres dans un site tiers), mais sont envoyés lorsqu'un utilisateur navigue vers le site d'origine (c'est-à-dire lorsqu'il suit un lien).
+- "None" : Les cookies sont envoyés dans tous les contextes, c'est-à-dire dans les réponses aux demandes primaires et cross-origin. Lorsque la valeur "None" est utilisée, l'attribut du cookie `Secure` doit également être défini (sinon le cookie sera bloqué).
 
 La valeur de l'attribut `Secure` du cookie de session est automatiquement définie sur "True" si la connexion est HTTPS (quelle que soit la valeur de l'attribut `SameSite`).
 
@@ -559,7 +559,7 @@ La valeur de l'attribut `Secure` du cookie de session est automatiquement défin
 | ------------------------ | ----------------------------------------- | ------------ |
 | Fenêtre de configuration | Options (I) > Process Web simultanés maxi |              |
 
-This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
+Cette option active le mode préemptif pour le code du serveur web de votre application lorsque l'option **No sessions** est sélectionnée (le mode préemptif est toujours activé avec les **sessions extensibles**). Lorsque cette option est cochée dans ce contexte, le compilateur 4D évalue automatiquement la propriété thread-safety de chaque élément du code [lié au web](preemptiveWeb.md#thread-safety-of-4d-web-code) et renvoie des erreurs en cas d'incompatibilité.
 
 ## Propriétés obsolètes
 
