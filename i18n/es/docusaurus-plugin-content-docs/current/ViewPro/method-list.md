@@ -1110,17 +1110,17 @@ El comando `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->e
 
 En *paramObj*, puede pasar varias propiedades:
 
-| Propiedad               | Tipo        | Descripción                                                                                                    |
-| ----------------------- | ----------- | -------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado.                     |
-| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                            |
-| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                              |
-| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.     |
-| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true |
-| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                      |
-| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                        |
-| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                           |
-| saveAsView              | Boolean     | Whether to apply the format string to exporting value when saving, default=false.                              |
+| Propiedad               | Tipo        | Descripción                                                                                                                 |
+| ----------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado.                                  |
+| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                                         |
+| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                                           |
+| includeCalcModelCache   | Boolean     | Si desea incluir los datos adicionales de cálculo. Puede afectar a la velocidad de apertura del archivo, por defecto=false. |
+| includeEmptyRegionCells | Boolean     | Si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto=true      |
+| includeFormulas         | Boolean     | Si se incluye la fórmula al guardar, por defecto=true.                                                                      |
+| includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                       |
+| includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                            |
+| saveAsView              | Boolean     | Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.                                           |
 
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
@@ -1129,7 +1129,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 |:---------- |:------------- |:------- |:--------------------------------------------------------- |
 | param1     |               | text    | El nombre del objeto 4D View Pro                          |
 | param2     |               | 4D.blob | El blob exportado                                         |
-| param3     |               | object  | A reference to the command's *paramObj* parameter         |
+| param3     |               | object  | Referencia al parámetro *paramObj* del comando            |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
 |            | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
 |            | .errorCode    | integer | Código de error.                                          |
@@ -1138,7 +1138,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 #### Ejemplo
 
-El comando `VP EXPORT TO BLOB` es asíncrono. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
+El comando `VP EXPORT TO BLOB` es asíncrono. Debe crear un método de retrollamada (llamado *VPBlobCallback* en nuestro ejemplo) para utilizar los resultados de la exportación.
 
 ```4d
 //Export the VP document
@@ -3108,7 +3108,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 |:---------- |:------------- |:------- |:--------------------------------------------------------- |
 | param1     |               | text    | El nombre del objeto 4D View Pro                          |
 | param2     |               | 4D.Blob | The imported blob                                         |
-| param3     |               | object  | A reference to the command's *paramObj* parameter         |
+| param3     |               | object  | Referencia al parámetro *paramObj* del comando            |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
 |            | .success      | boolean | True if import with success, False otherwise.             |
 |            | .errorCode    | integer | Código de error.                                          |
