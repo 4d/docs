@@ -937,6 +937,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | 引数         | タイプ    |    | 説明                                    |
 | ---------- | ------ | -- | ------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
@@ -1813,7 +1814,9 @@ $defaultStyle:=VP Get default style("myDoc")
 | rangeObj | Object | -> | レンジオブジェクト                         |
 | 戻り値      | Text   | <- | フォーミュラ|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -2808,7 +2811,8 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | 定数                    | 値 | 説明                                                |
 | --------------------- | - | ------------------------------------------------- |
 | `vk table full range` | 0 | フッターとヘッダーを含む表組みの全エリアを含むセルレンジを取得します (省略した場合のデフォルト) |
-| `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                        |
+
+|`vk table data range`|1|表組みのデータエリアのみを含むセルレンジを取得します|
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
@@ -3038,9 +3042,12 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|引数|タイプ||説明|
+| 引数         | タイプ    |    | 説明                                                |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                           |
+| 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト|<!-- END REF -->
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名| |戻り値 |Object|<-|Object containing the workbook options|<!-- END REF -->
+|
 
 #### 説明
 
@@ -4538,7 +4545,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |
 > **互換性**
-> 
+>
 > より高い柔軟性のため、4D View Pro エリアから呼び出せる 4Dフォーミュラを指定できる [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) コマンドの使用が推奨されます。 `VP SET CUSTOM FUNCTIONS` が呼び出された場合、`VP SET ALLOWED METHODS` の呼び出しは無視されます。 `VP SET CUSTOM FUNCTIONS` と `VP SET ALLOWED METHODS` のどちらも呼び出されていない場合、4D View Pro は 4D の汎用コマンド `SET ALLOWED METHODS` もサポートしますが、汎用コマンドの使用は推奨されません。
 
 
@@ -5351,11 +5358,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| 引数 | タイプ |  | 説明 |
-| -- | --- |  | -- |
-|    |     |  |    |
+| 引数            | タイプ    |    | 説明                                      |
+| ------------- | ------ | -- | --------------------------------------- |
+| rangeObj      | Object | -> | レンジオブジェクト                               |
+| formula       | Text   | -> | フォーミュラまたは 4Dメソッド                        |
+| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
 
-|rangeObj |Object|->|レンジオブジェクト| |formula |Text|->|フォーミュラまたは 4Dメソッド| |formatPattern |Text|->|フィールドのフォーマット|<!-- END REF -->
+|
 
 #### 説明
 
