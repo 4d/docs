@@ -953,7 +953,7 @@ You can specify the exported file's format by including an extension after the d
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", ou ".csv")
-* [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
+* [Documento SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
 
 If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
@@ -989,7 +989,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 * Todos os valores são guardados como cadeias de caracteres entre aspas duplas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
-**Notes about SpreadJS file format**:
+**Notas sobre o formato de arquivo SpreadJS**:
 
 * [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files.
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
@@ -1007,7 +1007,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 | param3    |               | object  | Uma referência ao *paramObj* do comando                      |
 | param4    |               | object  | Um objeto devolvido pelo método com uma mensagem de estado   |
 |           | .success      | boolean | True se a exportação for bem sucedida, False caso contrário. |
-|           | .errorCode    | integer | Error code.                                                  |
+|           | .errorCode    | integer | Código de erro.                                              |
 |           | .errorMessage | text    | Mensagem de erro.                                            |
 
 #### Exemplo 1
@@ -1104,7 +1104,7 @@ In *paramObj*, you can pass several properties:
 
 | Propriedade             | Tipo         | Descrição                                                                                                        |
 | ----------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D. Function | (mandatory) Callback method to be launched when the export has completed.                                        |
+| formula                 | 4D. Function | (obrigatório) Método de retorno de chamada a ser lançado quando a exportação estiver concluída.                  |
 | includeAutoMergedCells  | Parâmetros   | Whether to include the automatically merged cells when saving, default=false.                                    |
 | includeBindingSource    | Parâmetros   | Whether to include the binding source when saving, default=true.                                                 |
 | includeCalcModelCache   | Parâmetros   | Whether to include the extra data of calculation. Pode afetar a velocidade de abertura do arquivo; padrão=false. |
@@ -1120,11 +1120,11 @@ The following parameters can be used in the callback method:
 | Parâmetro |               | Tipo    | Descrição                                                    |
 |:--------- |:------------- |:------- |:------------------------------------------------------------ |
 | param1    |               | text    | O nome do objeto 4D View Pro                                 |
-| param2    |               | 4D.blob | The exported blob                                            |
-| param3    |               | object  | A reference to the command's *paramObj* parameter            |
+| param2    |               | 4D.blob | O blob exportado                                             |
+| param3    |               | object  | Uma referência ao parâmetro *paramObj* do comando            |
 | param4    |               | object  | Um objeto devolvido pelo método com uma mensagem de estado   |
 |           | .success      | boolean | True se a exportação for bem sucedida, False caso contrário. |
-|           | .errorCode    | integer | Error code.                                                  |
+|           | .errorCode    | integer | Código de erro.                                              |
 |           | .errorMessage | text    | Mensagem de erro.                                            |
 
 
@@ -1138,7 +1138,7 @@ VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
 ```
 
 ```4d
-//VPBlobCallback method
+//Método VPBlobCallback
 #DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
 var $myEntity : cs.myTableEntity
 
@@ -1355,7 +1355,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 
 #### Descrição
 
-O comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.
+O comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->executa imediatamente os comandos armazenados e limpa o buffer de comandos<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -2042,9 +2042,9 @@ $list:=VP Get names("ViewProArea";2) //nomes na 3ª folha
 
 #### Descrição
 
-O comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
+O comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->retorna um objeto que contém os atributos de impressão do *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
@@ -3063,7 +3063,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 | Parâmetro  | Tipo     |    | Descrição                                       |
 | ---------- | -------- | -- | ----------------------------------------------- |
 | vpAreaName | Text     | -> | Nome de objeto formulário área 4D View Pro      |
-| vpBlob     | 4D. Blob | -> | Blob containing a 4D View Pro document          |
+| vpBlob     | 4D. Blob | -> | Blob contendo um documento 4D View Pro          |
 | paramObj   | Object   | -> | Opções de importação|<!-- END REF -->
 
 |
@@ -3090,11 +3090,11 @@ The following parameters can be used in the callback method:
 | Parâmetro |               | Tipo     | Descrição                                                  |
 |:--------- |:------------- |:-------- |:---------------------------------------------------------- |
 | param1    |               | text     | O nome do objeto 4D View Pro                               |
-| param2    |               | 4D. Blob | The imported blob                                          |
-| param3    |               | object   | A reference to the command's *paramObj* parameter          |
+| param2    |               | 4D. Blob | O blob importado                                           |
+| param3    |               | object   | Uma referência ao parâmetro *paramObj* do comando          |
 | param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado |
 |           | .success      | boolean  | True if import with success, False otherwise.              |
-|           | .errorCode    | integer  | Error code.                                                |
+|           | .errorCode    | integer  | Código de erro.                                            |
 |           | .errorMessage | text     | Mensagem de erro.                                          |
 
 
