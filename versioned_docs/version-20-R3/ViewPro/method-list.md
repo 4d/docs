@@ -925,6 +925,7 @@ use the following code:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -1772,6 +1773,7 @@ will return this information in the *$defaultStyle* object:
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
 |Result  |Text|<-|Formula|<!-- END REF -->
+
 
 #### Description
 
@@ -2731,6 +2733,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 |Constant|Value|Description|
 |---|---|---|
 |`vk table full range`|0|Get the cell range for the table area with footer and header (default if omitted)|
+
 |`vk table data range`|1|Get the cell range for the table data area only|
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
@@ -2956,7 +2959,6 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 |Parameter|Type||Description|
-
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
@@ -4409,6 +4411,7 @@ VP SET ACTIVE CELL($activeCell)
 |methodObj   |Object|->|Allowed methods in the 4D View Pro areas|<!-- END REF -->
 
 >**Compatibility**  
+
 >
 >For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
@@ -5207,7 +5210,6 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object|
 |formula |Text|->|Formula or 4D method|
 |formatPattern |Text|->|Format of field|<!-- END REF -->
