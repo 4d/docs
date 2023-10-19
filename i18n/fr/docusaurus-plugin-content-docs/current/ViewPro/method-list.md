@@ -998,7 +998,7 @@ Options supplémentaires
 
 **Notes about SpreadJS file format**:
 
-* [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files.
+* [Les fichiers SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) sont des fichiers zippés.
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Une fois que l'export est terminé, `VP EXPORT DOCUMENT` exécute automatiquement la méthode définie dans la propriété *formula* de *paramObj*, le cas échéant.
@@ -1431,7 +1431,7 @@ size:16pt
 
 #### Exemple 2
 
-Les sélecteurs suivants sont disponibles :
+Voir l'exemple de [`VP Object to font`](#vp-object-to-font).
 
 #### Voir également
 
@@ -1845,12 +1845,12 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
-| Paramètres | Type   |    | Description                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                                |
-| name       | Text   | -> | Nom de la plage nommée                                                                 |
-| scope      | Number | -> | $1                                                                                     |
-| Résultat   | Text   | <- | Voir l'exemple de [`VP Object to font`](#vp-object-to-font).<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
+| name       | Text   | -> | Nom de la plage nommée                                                           |
+| scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
+| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
 |
 
@@ -1924,7 +1924,7 @@ Vous souhaitez récupérer les formules des colonnes Sum et Average de ce docume
 
 ![](../assets/en/ViewPro/cmd_vpGetFormulas.PNG)
 
-La collection retournée contient les propriétés des lignes, qu'elles aient été définies ou non par la méthode [VP SET ROW ATTRIBUTES](#vp-set-row-attributes).
+Vous pouvez utiliser ce code :
 
 ```4d
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
@@ -1948,7 +1948,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 | ---------- | ------- | -- | --------------------------------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                       |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                      |
-| Résultat   | Object  | <- | Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :<!-- END REF -->
+| Résultat   | Object  | <- | Objet contenant des informations sur les colonnes et lignes figées|<!-- END REF -->
 
 |
 
@@ -1996,11 +1996,11 @@ Style de la ligne de bordure appliqué uniquemet aux bordures intérieures.
 
 <!-- REF #_method_.VP Get names.Params -->
 
-| Paramètres | Type       |    | Description                             |
-| ---------- | ---------- | -- | --------------------------------------- |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro |
-| scope      | Number     | -> | |                                       |
-| Résultat   | Collection | <- | Résultat:<!-- END REF -->
+| Paramètres | Type       |    | Description                                                   |
+| ---------- | ---------- | -- | ------------------------------------------------------------- |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                       |
+| scope      | Number     | -> | "Scope" cible (par défaut=feuille courante)                   |
+| Résultat   | Collection | <- | Noms existant dans la zone définie|<!-- END REF -->
 
 |
 
@@ -2752,7 +2752,7 @@ If *tableName* is not found or if it does not contain a modified column, the com
 
 #### Exemple
 
-You want to count the number of edited rows:
+Vous souhaitez compter le nombre de lignes éditées :
 
 ```4d
 var $dirty : Collection
@@ -2781,13 +2781,13 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                                                                                                                                        |
-| ---------- | ------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                                                                                                                            |
-| tableName  | Text    | -> | Nom de table                                                                                                                                                                                                                       |
-| onlyData   | Integer | -> | Objet retourné                                                                                                                                                                                                                     |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                                                                                                                                           |
-| Résultat   | Object  | <- | Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriétés de l'objet 4D View Pro exporté et de lancer une méthode callback (ou méthode de rétro-appel) lorsque l'export est terminé.<!-- END REF -->
+| Paramètres | Type    |    | Description                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| tableName  | Text    | -> | Nom de table                                             |
+| onlyData   | Integer | -> | Objet retourné                                           |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Plage contenant la table|<!-- END REF -->
 
 |
 
@@ -2905,11 +2905,12 @@ Dans *sheet*, passez le numéro de la page cible. If no index is specified, the 
 
 #### Exemple
 
-Exemple
+Le code suivant retournera une collection de tous les noms de tables de la feuille courante :
 
 
 ```4d
-Modifications
+$tables:=VP Get tables("ViewProArea")
+//$tables contient par exemple ["contextTable","emailTable"]
 
 ```
 
@@ -3640,13 +3641,13 @@ The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->
 
 Dans *fontObj*, passez un objet contenant les propriétés de police. Les propriétés suivantes sont prises en charge :
 
-| Propriété | Type | Description                                                                                                                                                                                                                          | Possible values                                                                                                                                                                                                                                                                                                                                            | Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit : |
-| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| family    | text | Définit la police.                                                                                                                                                                                                                   | tout type de famille de police standard ou générique. Ex : Ex : Ex : "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                     | Oui                                                                                                               |
-| size      | text | Defines the size of the font.The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt"                                                                                                                   | Dans *vpAreaName*, passez le nom de la zone 4D View Pro. <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>Dans *vpAreaName*, passez le nom de la zone 4D View Pro.<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li> | Oui                                                                                                               |
-| style     | text | Ajouté avec la valeur vrai si le timeout a été dépassé                                                                                                                                                                               | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                                                       | Non                                                                                                               |
-| variant   | text | $formulas:=New collection $formulas.push(New collection("";"")) // première collection $formulas.push(New collection("";"")) // deuxième collection VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assigner à des cellules | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                 | Non                                                                                                               |
-| weight    | text | Voici le résultat :                                                                                                                                                                                                                  | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                   | Non                                                                                                               |
+| Propriété | Type | Description                                                                                                             | Possible values                                                                                                                                                                                                                                                                                                                                            | Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit : |
+| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| family    | text | Définit la police.                                                                                                      | tout type de famille de police standard ou générique. Ex : Ex : Ex : "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                     | Oui                                                                                                               |
+| size      | text | Définit la taille de la police. Le line-height peut être ajouté au font-size : font-size/line-height : Ex : "15pt/20pt" | Dans *vpAreaName*, passez le nom de la zone 4D View Pro. <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>Dans *vpAreaName*, passez le nom de la zone 4D View Pro.<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li> | Oui                                                                                                               |
+| style     | text | Style de police.                                                                                                        | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                                                       | Non                                                                                                               |
+| variant   | text | Police en petites majuscules.                                                                                           | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                 | Non                                                                                                               |
+| weight    | text | Définit l'épaisseur de la police.                                                                                       | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                   | Non                                                                                                               |
 
 Nombre minimum de paramètres
 
@@ -3809,7 +3810,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 | Paramètres | Type    |    | Description                                                            |
 | ---------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                |
-| name       | Text    | -> | Résultat:                                                              |
+| name       | Text    | -> | Nom de la plage nommée ou de la formule nommée à supprimer             |
 | scope      | Integer | -> | "Scope" cible (par défaut=feuille courante)|<!-- END REF -->
 
 |
