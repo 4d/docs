@@ -155,7 +155,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 The Bevel check box style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive title) style with the [Toolbar](#toolbar) style's behavior.
 
-The Bevel style has a light gray background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Bevel tem um fundo cinza-claro com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
