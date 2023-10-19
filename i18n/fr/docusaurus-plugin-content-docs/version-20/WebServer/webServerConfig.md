@@ -286,14 +286,11 @@ Activation de la méthode HTTP TRACE dans le serveur web 4D. Pour des raisons de
 
 ## Port HTTPS
 
-| Peut être configuré via | Nom                                            | Commentaires |
-| ----------------------- | ---------------------------------------------- | ------------ |
-| objet webServer         | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number       |
-
-
-|`WEB SET OPTION`|`Web HTTPS port ID`||
-
-|Settings dialog box|[Configuration page/HTTPS Port](../settings/web.md#https-port)||
+| Peut être configuré via  | Nom                                                        | Commentaires |
+| ------------------------ | ---------------------------------------------------------- | ------------ |
+| objet webServer          | [`HTTPSPort`](API/WebServerClass.md#httpsport)             | number       |
+| `WEB SET OPTION`         | `Web HTTPS port ID`                                        |              |
+| Fenêtre de configuration | [Configuration > Port HTTP](../settings/web.md#https-port) |              |
 
 Numéro de port IP d'écoute pour les connections HTTP via TLS. La valeur par défaut est 443 (valeur standard). Voir aussi [HTTP Port](#http-port) pour plus d'informations sur les numéros de port.
 
