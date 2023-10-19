@@ -301,7 +301,7 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 ## Tab Control Direction
 
-You can set the direction of tab controls in your forms. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
+É possível definir a direção dos controles de tabulação nos formulários. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
 
 When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
 
