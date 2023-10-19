@@ -330,25 +330,25 @@ The `sendMails` method:
 Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires. Par exemple :
 
 ```4d
- $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
- $localEmails:=$locals.emailAddress //collection of email addresses (strings)
+ $locals:=ds.Person.query("city = :1" ; "San Jose") //entity selection de personnes
+ $localEmails:=$locals.emailAddress //collection d'adresses électroniques (chaînes de caractères)
 ```
 
-This code returns in *$localEmails* a collection of email addresses as strings.
+Ce code retourne dans *$localEmails* une collection d'adresses e-mail sous forme de chaînes.
 
-### Sélections d'entités et attributs de relation
+### Entity selections et attributs de relation
 
 Outre la variété de méthodes de recherche, vous pouvez également utiliser des attributs de relation comme propriétés des sélections d'entités pour retourner de nouvelles sélections d'entités. Par exemple, considérons la structure suivante :
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+ $myParts:=ds.Part.query("ID < 100") //Retourner les pièces dont l'ID est inférieur à 100
  $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  //Toutes les factures dont au moins une ligne est liée à une pièce dans $myParts
 ```
 
-La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée.
+La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection et qu'aucune entité n'est retournée, le résultat est une entity selection vide, et non nulle.
 
 
 ## Verrouillage d'une entité
@@ -391,9 +391,9 @@ Cela peut également être illustré par le code suivant :
 
 Dans cet exemple, nous attribuons à $person1 une référence à l'entité "person" avec une clé de 1. Nous attribuons ensuite une autre référence de la même entité à la variable $person2. Avec $person1, nous modifions le prénom de la personne et sauvegardons l'entité. Lorsque nous essayons de faire de même avec $person2, 4D vérifie que l'entité sur le disque est la même que lors de la première attribution de la référence dans $person1. Puisqu'elles ne sont pas identiques, 4D retourne "faux" dans la propriété "success" et ne sauvegarde pas la deuxième modification.
 
-When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
+Lorsque cette situation se produit, vous pouvez, par exemple, recharger l'entité à partir du disque à l'aide de la fonction `entity.reload()` afin d'essayer à nouveau d'effectuer la modification. La fonction `entity.save()` propose également une option "automerge" pour sauvegarder l'entité dans le cas où des process modifient des attributs qui ne sont pas les mêmes.
 
-> Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
+> Les marqueurs d'enregistrements ne sont pas utilisés dans les **transactions ** car il n'existe qu'une seule copie d'un enregistrement dans ce contexte. Quel que soit le nombre d'entités qui référencent un enregistrement, c'est la même copie qui est modifiée. Ainsi, les opérations `entity.save()` ne génèrent jamais d'erreurs de marqueur.
 
 ### Verrouillage pessimiste
 
@@ -406,7 +406,7 @@ This feature is based upon two methods of the `Entity` class:
 
 Pour plus d'informations, reportez-vous aux descriptions de ces méthodes.
 
-> Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
+> Les verrous pessimistes peuvent également être gérés par l'intermédiaire de l'[API REST](../REST/$lock.md).
 
 
 
