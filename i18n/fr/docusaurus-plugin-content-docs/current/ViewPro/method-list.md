@@ -528,7 +528,7 @@ La sélection des colonnes et l'exécution du code suivant :
 
 redimensionne les colonnes pour correspondre à la taille du contenu :
 
-![](../assets/fr/ViewPro/cmd_vpColumnAutoFit2.PNG)
+![](../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
 #### Voir également
 
