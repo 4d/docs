@@ -27,8 +27,8 @@ Les règles suivantes s'appliquent à toutes les conversions :
     *   Tables avec clés primaires composites.
 *   Les champs BLOB sont automatiquement disponibles comme attributs de type [objet Blob](Concepts/dt_blob.md#blob-types).
 
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
+> Le mapping ORDA ne prend pas en compte  
+> - l'option "Invisible" pour les tables ou les champs, - la structure virtuelle définie par `SET TABLE TITLES` ou `SET FIELD TITLES`, - la propriété "Manuel" ou "Automatique" des relations.
 
 
 ### Règles de contrôle d'accès à distance
@@ -142,7 +142,7 @@ Les propriétés de dataclass sont des objets attribut décrivant les champs ou 
  $revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
-Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes.
+Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. Pour gérer les valeurs, vous devez passer par les [Entités](#entite).
 
 Tous les fichiers éligibles d'une table sont disponibles en tant qu'attributs de leur [dataclass](#dataclass) parente. Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque champ que vous souhaitez exposer en tant qu'attribut de dataclass.
 
@@ -167,7 +167,7 @@ En outre, les attributs relationnels suivant seront également disponibles autom
 
 *   dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 *   dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
-> > > The Manual or Automatic property of a database relation has no effect in ORDA.
+> La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
 
 Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 
@@ -180,7 +180,7 @@ Gardez à l'esprit que ces objets décrivent des attributs, mais ne donnent pas 
 dans la [définition de la classe Entity](ordaClasses.md#entity-class). Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
 
 
-### Entity
+### Entité
 
 Une entité est l'équivalent d'un enregistrement. Il s'agit d'un objet qui fait référence à un enregistrement de la base de données. Elle peut être perçue comme une instance de la [dataclass](#dataclass), comme un enregistrement de la table correspondante à la dataclass. Toutefois, une entité contient également des données corrélées à la base de données liée au datastore.
 
@@ -246,9 +246,9 @@ Les sélections d'entités non-triées sont créées dans les cas suivants :
 *   résultat d'un `query()` standard sur une sélection (de n'importe quel type) ou un `query()` sur une dataclass,
 *   résultat de la méthode `newSelection()` sans option,
 *   résultat de l'une des méthodes de comparaison, quel que soit le type de sélection saisi : `or()`, `and()`, `minus()`.
-> > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> Les entity selections suivantes sont toujours **triées** :
 > 
-> * > > * sélections d'entités retournées par 4D Server vers un client distant > * sélections d'entités fondées sur des datastores distants.
-> * sélections d'entités fondées sur des datastores distants.
+> * entity selections retournées par 4D Server vers un client distant
+> * entity selections basées sur des datastores distants.
 
 Notez que lorsqu'une sélection d'entités ordonnée devient une sélection non-ordonnée, toute référence d'entité répétée est supprimée.
