@@ -506,7 +506,7 @@ The **Insert fields** button inserts all fields (except object and blob type fie
 
 The **Insert fields** button is only available with table forms.
 
-The design of the resulting form depends on the form type:
+O desenho do formulário resultante depende do formulário:
 
 - **Detail form**: clicking on the **Insert fields** button generates a form with a page design:
 
