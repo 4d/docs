@@ -414,7 +414,7 @@ Por padrão, o valor é 100. Pode definir o número entre 10 e 32000.
 | objeto webServer      | [`maxRequestSize`](API/WebServerClass.md#maxrequestsize) |             |
 | `WEB SET OPTION`      | `Web maximum requests size`                              |             |
 
-Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
+Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. Por padrão, o valor é 2 000 000, ou seja, um pouco menos de 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
 
 Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes. Este limite é utilizado para evitar a saturação do servidor web devido a pedidos recebidos demasiado grandes.
 
