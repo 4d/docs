@@ -1004,7 +1004,7 @@ Una vez finalizada la exportación, `VP EXPORT DOCUMENTO` desencadena automátic
 
 #### Pasar un método retrollamada (fórmula)
 
-Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utilizar el comando [`Formula`](../API/FunctionClass.md#formula) para llamar a un método 4D que se ejecutará una vez finalizada la exportación. The callback method will receive the following values in local parameters:
+Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utilizar el comando [`Formula`](../API/FunctionClass.md#formula) para llamar a un método 4D que se ejecutará una vez finalizada la exportación. El método de retrollamada recibirá los siguientes valores en parámetros locales:
 
 | Parámetros |               | Tipo    | Descripción                                               |
 | ---------- | ------------- | ------- | --------------------------------------------------------- |
@@ -1141,12 +1141,12 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 El comando `VP EXPORT TO BLOB` es asíncrono. Debe crear un método de retrollamada (llamado *VPBlobCallback* en nuestro ejemplo) para utilizar los resultados de la exportación.
 
 ```4d
-//Export the VP document
+//Exportar el documento VP
 VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
 ```
 
 ```4d
-//VPBlobCallback method
+//Método VPBlobCallback
 #DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
 var $myEntity : cs.myTableEntity
 
@@ -2807,11 +2807,11 @@ En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 En el parámetro *onlyData*, puede pasar una de las siguientes constantes para indicar si desea obtener sólo los datos:
 
-| Constante             | Valor | Descripción                                                                       |
-| --------------------- | ----- | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
+| Constante             | Valor | Descripción                                                                                                  |
+| --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
+| `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
 
-|`vk table data range`|1|Get the cell range for the table data area only|
+|`vk table data range`|1|Obtener el rango de celdas sólo para el área de datos de la tabla|
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -2838,11 +2838,11 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parámetros | Tipo                                           |    | Descripción                                                    |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text                                           | -> | Nombre de la tabla                                             |
-| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF -->
+| Parámetros | Tipo                                           |    | Descripción                                                                 |
+| ---------- | ---------------------------------------------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                                |
+| tableName  | Text                                           | -> | Nombre de la tabla                                                          |
+| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual|<!-- END REF -->
 
 
 |
@@ -3080,44 +3080,44 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 | Parámetros | Tipo    |    | Descripción                                        |
 | ---------- | ------- | -- | -------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro       |
-| vpBlob     | 4D.Blob | -> | Blob containing a 4D View Pro document             |
+| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro      |
 | paramObj   | Object  | -> | Opciones de importación|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
+El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* en el área de 4D View Pro *vpAreaName* y reemplaza su contenido. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
 
 En *paramObj*, puede pasar varias propiedades:
 
 | Propiedad           | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | Callback method to be launched when the import has completed.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                                        |
-| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                             |
+| formula             | 4D.Function | Método de retrollamada que se lanzará cuando la importación haya finalizado.                                                                                                                                                                                                                                                                                                                                                                                     |
+| calcOnDemand        | Boolean     | Si se calculan las fórmulas sólo cuando se solicitan, por defecto=false.                                                                                                                                                                                                                                                                                                                                                                                         |
+| dynamicReferences   | Boolean     | Si calcular funciones con referencia dinámica, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                 |
 | fullRecalc          | Boolean     | Si calcular después de cargar los datos json, false por defecto.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                         |
-| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                                    |
+| includeFormulas     | Boolean     | Si se incluye la fórmula al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                            |
+| includeStyles       | Boolean     | Si se incluye el estilo al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                             |
+| includeUnusedStyles | Boolean     | Si incluir el estilo de nombre no utilizado al convertir excel xml al json, default=true.                                                                                                                                                                                                                                                                                                                                                                        |
 | openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Las demás hojas sólo se cargarán cuando se vayan a utilizar. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
-| Parámetros |               | Tipo    | Descripción                                               |
-|:---------- |:------------- |:------- |:--------------------------------------------------------- |
-| param1     |               | text    | El nombre del objeto 4D View Pro                          |
-| param2     |               | 4D.Blob | The imported blob                                         |
-| param3     |               | object  | Referencia al parámetro *paramObj* del comando            |
-| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
-|            | .success      | boolean | True if import with success, False otherwise.             |
-|            | .errorCode    | integer | Código de error.                                          |
-|            | .errorMessage | text    | Mensaje de error.                                         |
+| Parámetros |               | Tipo    | Descripción                                                               |
+|:---------- |:------------- |:------- |:------------------------------------------------------------------------- |
+| param1     |               | text    | El nombre del objeto 4D View Pro                                          |
+| param2     |               | 4D.Blob | El blob importado                                                         |
+| param3     |               | object  | Referencia al parámetro *paramObj* del comando                            |
+| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado                 |
+|            | .success      | boolean | True si la importación se realiza correctamente, False en caso contrario. |
+|            | .errorCode    | integer | Código de error.                                                          |
+|            | .errorMessage | text    | Mensaje de error.                                                         |
 
 
 #### Ejemplo
 
-You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
+Desea importar al "ViewProArea" un documento 4D View Pro previamente guardado como Blob en la primera entidad de la dataclass Table.
 
 ```4d
 var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
@@ -5809,11 +5809,11 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                 |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                |
-| name       | Text    | -> | Nuevo nombre para la hoja                                   |
-| sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro             |
+| name       | Text    | -> | Nuevo nombre para la hoja                                |
+| sheet      | Integer | -> | Índice de la hoja a renombrar|<!-- END REF -->
 
 |
 
@@ -5829,7 +5829,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-If no *sheet* is passed, the command renames the current sheet.
+Si no se pasa el *sheet*, el comando renombra la hoja actual.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5838,7 +5838,7 @@ El comando no hace nada si:
 * el nuevo nombre contiene caracteres prohibidos
 * el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
-* the passed *sheet* index does not exist
+* el índice de *sheet* pasado no existe
 
 #### Ejemplo
 
@@ -6520,11 +6520,11 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                        |
-| ---------- | ------- | -- | ------------------------------------------------------------------ |
-| rangeObj   | Object  | -> | Objeto rango                                                       |
-| vPos       | Integer | -> | Vertical view position of cell or row                              |
-| hPos       | Integer | -> | Horizontal view position of cell or row|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                                          |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
+| rangeObj   | Object  | -> | Objeto rango                                                                         |
+| vPos       | Integer | -> | Posición vertical de la vista de la celda o de la línea                              |
+| hPos       | Integer | -> | Posición horizontal de la vista de la celda o de la línea|<!-- END REF -->
 
 |
 
