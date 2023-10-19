@@ -61,7 +61,7 @@ L'expression n'est TRUE que si les deux méthodes sont mises à TRUE. Or, même 
 
 Le résultat est équivalent et _MethodB_ n'est évaluée que si nécessaire.
 
-> **Note** : L'[opérateur ternaire](../dt_boolean.md#ternary-operator) permet d'écrire des expressions conditionnelles d'une ligne et peut remplacer une séquence complète d'instructions [If... Else](../cf_branching.md#ifelseend-if).
+> **Note :** L'[opérateur ternaire](operators.md#ternary-operator) permet d'écrire des expressions conditionnelles sur une seule ligne et peut remplacer une séquence complète d'instructions If...Else.
 
 #### Exemple
 
