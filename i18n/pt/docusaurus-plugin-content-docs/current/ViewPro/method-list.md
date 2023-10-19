@@ -1102,17 +1102,17 @@ The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->
 
 In *paramObj*, you can pass several properties:
 
-| Propriedade             | Tipo         | Descrição                                                                                                      |
-| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D. Function | (mandatory) Callback method to be launched when the export has completed.                                      |
-| includeAutoMergedCells  | Parâmetros   | Whether to include the automatically merged cells when saving, default=false.                                  |
-| includeBindingSource    | Parâmetros   | Whether to include the binding source when saving, default=true.                                               |
-| includeCalcModelCache   | Parâmetros   | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.     |
-| includeEmptyRegionCells | Parâmetros   | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true |
-| includeFormulas         | Parâmetros   | Whether to include the formula when saving, default=true.                                                      |
-| includeStyles           | Parâmetros   | Whether to include the style when saving, default=true.                                                        |
-| includeUnusedNames      | Parâmetros   | Whether to include the unused custom name when saving, default=true.                                           |
-| saveAsView              | Parâmetros   | Whether to apply the format string to exporting value when saving, default=false.                              |
+| Propriedade             | Tipo         | Descrição                                                                                                        |
+| ----------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D. Function | (mandatory) Callback method to be launched when the export has completed.                                        |
+| includeAutoMergedCells  | Parâmetros   | Whether to include the automatically merged cells when saving, default=false.                                    |
+| includeBindingSource    | Parâmetros   | Whether to include the binding source when saving, default=true.                                                 |
+| includeCalcModelCache   | Parâmetros   | Whether to include the extra data of calculation. Pode afetar a velocidade de abertura do arquivo; padrão=false. |
+| includeEmptyRegionCells | Parâmetros   | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true   |
+| includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                         |
+| includeStyles           | Parâmetros   | Whether to include the style when saving, default=true.                                                          |
+| includeUnusedNames      | Parâmetros   | Whether to include the unused custom name when saving, default=true.                                             |
+| saveAsView              | Parâmetros   | Whether to apply the format string to exporting value when saving, default=false.                                |
 
 
 The following parameters can be used in the callback method:
@@ -3081,7 +3081,7 @@ In *paramObj*, you can pass several properties:
 | dynamicReferences   | Parâmetros   | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                                      |
 | fullRecalc          | Parâmetros   | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                                                                                                                                                                                                                       |
 | includeFormulas     | Parâmetros   | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| includeStyles       | Parâmetros   | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | includeUnusedStyles | Parâmetros   | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                                             |
 | openMode            | Integer      | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
 
