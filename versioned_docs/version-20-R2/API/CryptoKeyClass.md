@@ -186,7 +186,7 @@ The returned value is an encrypted message.
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
-**.getPrivateKey()** : Text<!-- END REF -->
+**.getPrivateKey**() : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
@@ -197,6 +197,7 @@ The returned value is an encrypted message.
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
 #### *Result*
+
 
 
 The returned value is the private key.
@@ -256,7 +257,7 @@ PEM definition of an encryption key to load. If the key is a private key, the RS
 |v18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
