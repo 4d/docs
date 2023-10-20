@@ -192,7 +192,7 @@ O valor devolvido é uma mensagem encriptada.
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
-**.getPrivateKey()** : Text<!-- END REF -->
+**.getPrivateKey**() : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
@@ -205,6 +205,7 @@ O valor devolvido é uma mensagem encriptada.
 A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devolve a chave privada do objecto `CryptoKey`<!-- END REF --> em formato PEM, ou uma string vazia se nenhum estiver disponível.
 
 #### *Resultados*
+
 
 
 O valor devolvido é a chave privada.
@@ -266,7 +267,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 | v18 R4 | Adicionado |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
