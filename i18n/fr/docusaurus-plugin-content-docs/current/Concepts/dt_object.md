@@ -3,7 +3,7 @@ id: object
 title: Object
 ---
 
-Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. The structure of native 4D objects is based on the classic principle of "property/value" pairs. La syntaxe de ces objets s’inspire du JSON :
+Les variables, champs ou expressions de type objet peuvent contenir des données de divers types. La structure des objets 4D natifs est basée sur le principe classique des paires "propriété/valeur". La syntaxe de ces objets s’inspire du JSON :
 
 - Un nom de propriété est toujours un texte, par exemple "Nom". Il doit suivre des [règles spécifiques](identifiers.md#object-properties).
 
@@ -24,12 +24,12 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
 
 :::caution
 
-Keep in mind that property names differentiate between upper and lower case.
+N'oubliez pas que les noms de propriétés font la différence entre les majuscules et les minuscules.
 
 :::
 
 
-A noter que des commandes spécifiques du thème **Requêtes**, telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets. You manage Object type variables, fields or expressions using the [object notation](dt_object.md#syntax-basics) or the commands available in the **Objects (Language)** theme.
+Vous gérez les variables, les champs ou les expressions de type Objet en utilisant la [notation objet](dt_object.md#syntax-basics) ou les commandes disponibles dans le thème **Objets (langage)**. A noter que des commandes spécifiques du thème **Recherches**, telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
@@ -37,53 +37,53 @@ Chaque valeur de propriété accessible par la notation objet est considérée c
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
 - Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 
-## Instantiation
+## Instanciation
 
-Objects must have been instantiated, otherwise trying to read or modify their properties will generate a syntax error.
+Les objets doivent avoir été instanciés, sinon toute tentative de lecture ou de modification de leurs propriétés génère une erreur de syntaxe.
 
-Object instantiation can be done in one of the following ways:
+L'instanciation d'un objet peut se faire de l'une des manières suivantes :
 
-- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- using the `{}` operator.
+- à l'aide de la commande [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html),
+- en utilisant l'opérateur `{}` .
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). In this case, it is not necessary to instantiate explicitely the object, the 4D language does it for you.
+Plusieurs commandes et fonctions 4D renvoient des objets, par exemple [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) ou [`File`](../API/FileClass.md#file). Dans ce cas, il n'est pas nécessaire d'instancier explicitement l'objet, le langage 4D le fait pour vous.
 
 :::
 
 
 
-### `New object` command
+### Commande `New object`
 
-The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
+La commande [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) crée un nouvel objet vide ou pré-rempli et renvoie sa référence.
 
 Exemples :
 
 ```4d
- var $obVar : Object //declaration of an object type 4D variable
- $obVar:=New object //instantiation of an object and assignment to the 4D variable
+ var $obVar : Object //déclaration d'une variable 4D de type objet
+ $obVar:=New object //instantiation d'un objet et assignation à la vairable 4D
 
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
+ $obFilled:=New object("name";"Smith";"age";42) //instantiation et assignation d'un objet pré-rempli
 ```
 
 
-### `{}` operator
+### Opérateur `{}`
 
-The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). The object literal syntax creates empty or filled objects.
+L'opérateur `{}` permet de créer un **objet littéral**. Un objet littéral est une liste de zéro ou plusieurs paires de noms de propriétés et de valeurs associées d'un objet, entre accolades et séparées par des points-virgules (`{}`). La syntaxe d'objet littérale permet de créer des objets vides ou remplis.
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
+Toute valeur de propriété étant considérée comme une expression, vous pouvez créer des sous-objets en utilisant `{}` dans les valeurs de propriété.  Vous pouvez également créer et référencer des **collections littérales**.
 
 Exemples :
 
 ```4d
- var $o ; $o2 ; $o3 : Object //declaration of object variables
- $o := {} // instantiation of an empty object 
- $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
-        // with properties {"a":"foo","b":42,"c":{},"d":false})
+ var $o ; $o2 ; $o3 : Object //déclaration des variables objet
+ $o := {} // instanciation d'un objet vide 
+ $o2 := {a : "foo" ; b : 42 ; c : {} ; d : ($toto) ? true : false } // instantiation d'un objet
+        // avec les propriétés {"a":"foo","b":42,"c":{},"d":false})
 
-    // same properties using variables
+    // les mêmes propriétés en utilisant des variables
  var $a : Text
  var $b : Number
  var $c : Object
@@ -94,7 +94,7 @@ Exemples :
 
 ```
 
-You can mix the `New object` and literal syntaxes:
+Vous pouvez mélanger les syntaxes `New object` et littérale :
 
 ```4d
 $o:={\
@@ -106,7 +106,7 @@ $o:={\
     }
 
 $o.form1()  //52
-$o.form2($o.ob2.message)  // displays Hello
+$o.form2($o.ob2.message)  // Hello
 $col:=$o.col[5] //6
 ```
 
@@ -117,8 +117,8 @@ $col:=$o.col[5] //6
 
 Vous pouvez créer deux types d'objets :
 
-- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
-- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. For more information, refer to the [Shared objects and collections](shared.md) section.
+- des objets standard (non partagés), à l'aide de la commande [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) ou de la syntaxe littérale des objets (`{}`). Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- des objets partagés, en utilisant la commande [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 
 ## Principes de syntaxe
@@ -170,18 +170,18 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $measures:=Lire mesures base.DB.tables
 ```
 
-- avec les **collections**. Voici un exemple :
+- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
 
 ```4d
       // MyMethod1
      #DECLARE -> $o : Object
-     $o:=New object("a";10;"b";20)
+     $o:=New object("a";10 ; "b";20)
 
       //myMethod2
      $result:=MyMethod1.a //10
 ```
 
-- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
+- avec les **collections** Exemple :
 
 ```4d
      myColl.length //taille de la collection
