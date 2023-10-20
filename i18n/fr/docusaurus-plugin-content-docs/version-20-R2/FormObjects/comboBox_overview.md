@@ -13,48 +13,48 @@ Fondamentalement, vous devez considérer l’objet combo box comme une zone sais
 
 Utilisez l’événement formulaire [`On Data Change`](Events/onDataChange.md) pour gérer les valeurs saisies, comme pour toute zone de saisie.
 
-You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
+L'initialisation d'une combo box se fait exactement de la même manière que celle d'une [liste déroulante](dropdownList_Overview.md#overview) : en utilisant un objet, un tableau ou une liste de choix.
 
 ### Utilisation d'un objet
 
 > Cette fonctionnalité n'est disponible que dans les projets 4D.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) can be used as the data source of a combo box. Cet objet doit avoir les propriétés suivantes :
+Un [objet ](Concepts/dt_object.md) encapsulant une [collection ](../Concepts/dt_collection.md) peut être utilisé comme source de données d'une combo box. Cet objet doit avoir les propriétés suivantes :
 
-| Propriété      | Type                   | Description                                                                                                                                                                                                                                             |
-| -------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection             | Obligatoire - Collection de valeurs scalaires. All values must be of the same type. Supported types:<li>chaînes</li><li>nombres</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
-| `currentValue` | identique à Collection | Text entered by the user                                                                                                                                                                                                                                |
+| Propriété      | Type                   | Description                                                                                                                                                                                                                                                                   |
+| -------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection             | Obligatoire - Collection de valeurs scalaires. Toutes les valeurs doivent être du même type. Types pris en charge :<li>chaînes</li><li>nombres</li><li>dates</li><li>heures</li>Si elle est vide ou non définie, la combo box est vide |
+| `currentValue` | identique à Collection | Texte saisi par l'utilisateur                                                                                                                                                                                                                                                 |
 
-If the object contains other properties, they are ignored.
+Si l'objet contient d'autres propriétés, elles sont ignorées.
 
-When the user enters text into the combo box, the `currentValue` property of the object gets the entered text.
+Lorsque l'utilisateur saisit du texte dans la combo box, la propriété `currentValue` de l'objet reçoit le texte saisi.
+
+### Utiliser un tableau
+
+Veuillez vous référer à **Utiliser un tableau** dans la [page liste déroulante](dropdownList_Overview.md#using-an-array) pour obtenir des informations sur l'initialisation du tableau.
+
+Lorsque l'utilisateur saisit du texte dans la combo box, l'élément 0 du tableau reçoit le texte saisi.
 
 ### Utiliser une énumération
 
-Please refer to **Using an array** in the [drop-down list page](dropdownList_Overview.md#using-an-array) for information about how to initialize the array.
-
-When the user enters text into the combo box, the 0th element of the array gets the entered text.
-
-### Utiliser une énumération
-
-If you want to use a combo box to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the form object's data source. Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
+Si vous souhaitez utiliser une combo box pour gérer les valeurs d'une zone de saisie (champ ou variable énuméré(e)), 4D vous permet de référencer directement le champ ou la variable en tant que source de données de l'objet formulaire. Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
 > Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
 
-To associate a combo box with a field or variable, you can just enter the name of the field or variable directly in the [Variable or Expression](properties_Object.md#variable-or-expression) of the form object in the Property List.
+Pour associer une combo box à un champ ou à une variable, il suffit de saisir le nom du champ ou de la variable directement dans le champ [Variable ou Expression](properties_Object.md#variable-or-expression) de l'objet formulaire dans la liste des propriétés.
 
-When the form is executed, 4D automatically manages the combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the combo box when the form is displayed:
+Lorsque le formulaire est exécuté, 4D gère automatiquement la combo box lors de la saisie ou de l'affichage : lorsque l'utilisateur choisit une valeur, celle-ci est enregistrée dans le champ ; cette valeur de champ est affichée dans la combo box lors de l'affichage du formulaire :
 
-Please refer to **Using a choice** in the [drop-down list page](dropdownList_Overview.md#using-a-choice-list) for more information.
+Pour plus d'informations, veuillez consulter **Utiliser une énumération** dans la page [liste déroulante](dropdownList_Overview.md#using-a-choice-list).
 
 
 ## Options
 
-Combo box type objects accept two specific options:
+Les objets de type combo box acceptent deux options spécifiques :
 
-- [Automatic insertion](properties_DataSource.md#automatic-insertion): enables automatically adding a value to the data source when a user enters a value that is not found in the list associated with the combo box.
+- [Insertion automatique](properties_DataSource.md#automatic-insertion) : permet d'ajouter automatiquement une valeur à la source de données lorsque l'utilisateur saisit une valeur qui ne se trouve pas dans la liste associée à la combo box.
 - [Exclusion ](properties_RangeOfValues.md#excluded-list) (liste de valeurs exclues) : permet d'établir une liste dont les valeurs ne peuvent pas être saisies dans la combo box. Si une valeur exclue est saisie, elle n'est pas acceptée et un message d'erreur s'affiche.
-> > > Associating a [list of required values](properties_RangeOfValues.md#required-list) is not available for combo boxes. In an interface, if an object must propose a finite list of required values, then you must use a [drop-down list](dropdownList_Overview.md#overview) object.
+> La possibilité d’associer [une liste de valeurs obligatoires](properties_RangeOfValues.md#required-list) n’est pas disponible pour les combo box. Dans une interface, si un objet doit proposer une liste finie de valeurs obligatoires, il faut utiliser un objet de type [liste déroulante](dropdownList_Overview.md#overview).
 
 ## Propriétés prises en charge
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[Format Alpha](properties_Display.md#alpha-format) - [Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Liste de choix](properties_DataSource.md#choice-list) - [Classe](properties_Object.md#css-class) - [Format de date](properties_Display.md#date-format) - [Type d'expression](properties_Object.md#expression-type) - [Police](properties_Text.md#font) - [Couleur de police](properties_Text.md#font-color) - [Taille de police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Conseil d'aide](properties_Help.md#help-tip) - [Dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom d'objet](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Format de l'heure](properties_Display.md#time-format) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dimensionnement vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)  
