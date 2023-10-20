@@ -235,7 +235,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                    |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year  |
 | METHOD         | X   | X   | HTTP method used for the request sent to the server                         |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                      |
+| PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o caractere "$"        |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                            |
 | TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                         |
 | TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                        |
@@ -270,7 +270,7 @@ For more information about the support of Web Services in 4D, refer to the [Publ
 
 This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
 
--   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
+-   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. Quando essa opção está marcada, 4D cria o arquivo WSDL.
 -   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
 -   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
 
