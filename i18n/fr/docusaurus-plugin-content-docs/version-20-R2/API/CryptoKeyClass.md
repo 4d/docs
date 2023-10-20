@@ -192,7 +192,7 @@ La valeur retournée est un message chiffré.
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
-**.getPrivateKey()** : Text<!-- END REF -->
+**.getPrivateKey**() : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
@@ -205,6 +205,7 @@ La valeur retournée est un message chiffré.
 La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->retourne la clé privée de l'objet `CryptoKey`<!-- END REF --> au format PEM, ou une chaîne vide si aucune n'est disponible.
 
 #### *Résultat*
+
 
 
 La valeur retournée est la clé privée.
@@ -266,7 +267,7 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 | v18 R4  | Ajout         |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
