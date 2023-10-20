@@ -36,7 +36,7 @@ Vous devez impérativement distinguer l'opérateur d'affectation := des autres o
 
 ## Variables
 
-Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire :
+Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide du mot-clé `var`. Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
 ```4d
 var MyDate : Date 
@@ -129,14 +129,14 @@ For($vlChar;1;Length(vtSomeText))
 End for
 ```
 
-Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). A method can return a single value in a parameter, which have to be declared. Lorsque vous appelez une méthode, vous saisissez simplement son nom : The parameters are directly available within the called method if they have been declared.
+Une méthode projet peut en appeler une autre avec ou sans les paramètres (arguments). Les paramètres sont passés à la méthode entre parenthèses, à la suite du nom de la méthode. Chaque paramètre est séparé par des points virgule (;). Les paramètres sont directement disponibles dans la méthode appelée s'ils ont été déclarés. Une méthode peut renvoyer une seule valeur dans un paramètre, qui doit être déclaré. Lorsque vous appelez une méthode, vous saisissez simplement son nom :
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) //Appelle la méthode Do_Something
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something  
+  /Voici le code de la méthode Do_Something  
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
 ```
@@ -150,7 +150,7 @@ A noter que les données de type chaîne et numérique peuvent être associées 
 
 Cependant, il est important, lorsque vous utilisez le langage, de ne pas mélanger les différents types de données. Tout comme il est absurde de stocker la valeur “ABC” dans un champ de type Date, il est absurde de donner la valeur “ABC” à une variable utilisée pour des dates. Dans la plupart des cas, 4D est très tolérant et tentera d’utiliser de manière logique ce que vous faites. Par exemple, si vous additionnez un nombre x et une date, 4D déduira que vous voulez ajouter x jours à la date, mais si vous tentez d’ajouter une chaîne à une date, 4D vous préviendra que cette opération est impossible.
 
-Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données en d’autres types. Par exemple, si vous voulez créer un numéro de matricule commençant par des chiffres et se terminant par des lettres, telles que "abc", vous pouvez écrire : vous pouvez écrire : vous pouvez écrire :
+Certains cas nécessitent que vous stockiez des données dans un type et que vous les utilisiez dans un autre. Le langage contient un ensemble complet de commandes vous permettant de convertir des types de données en d’autres types. Par exemple, vous pouvez avoir besoin de créer un numéro de pièce qui commence par un chiffre et se termine par des caractères tels que "abc". Dans ce cas, vous pouvez écrire :
 
 ```4d
 [Produits]Matricule:=String(Numéro)+"abc"
@@ -184,8 +184,7 @@ A noter que si la valeur de la propriété de l'objet est un objet qui encapsule
 
 ```
 $f:=New object
-$f.message:=Formula(ALERT("Hello world!"))
-$f.message() //affiche "Hello world!"
+$f.message:=Formula(ALERT("Hello world !"))
 $f.message() //affiche "Hello world!"
 ```
 
@@ -193,8 +192,8 @@ Pour accéder à un élément de collection, vous devez passer le numéro de l'�
 
 ```4d
 var myColl : Collection
-myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl:=New("A" ; "B";1;2;Current time)
+myColl[3]  //accès au 4ème élément de la collection
 ```
 
 ## Classes
@@ -288,7 +287,7 @@ Les expressions sont rarement «autonomes». Expressions rarely “stand alone.�
 
 
 ### Types d’expressions
-Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Il existe plusieurs types d’expressions : Le tableau suivant fournit des exemples de chaque type d'expression.
+Vous vous référez à une expression via le type de données qu’elle retourne. Il existe plusieurs types d’expressions : Le tableau suivant donne des exemples de chaque type d'expression.
 
 | Expression              | Type                  | Description                                                                                                                                                                          |
 | ----------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
