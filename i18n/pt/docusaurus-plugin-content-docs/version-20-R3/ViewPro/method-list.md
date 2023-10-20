@@ -1110,7 +1110,7 @@ In *paramObj*, you can pass several properties:
 | includeCalcModelCache   | Parâmetros   | Whether to include the extra data of calculation. Pode afetar a velocidade de abertura do arquivo; padrão=false. |
 | includeEmptyRegionCells | Parâmetros   | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true   |
 | includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                         |
-| includeStyles           | Parâmetros   | Whether to include the style when saving, default=true.                                                          |
+| includeStyles           | Parâmetros   | Se deve incluir o estilo ao salvar, padrão=true.                                                                 |
 | includeUnusedNames      | Parâmetros   | Whether to include the unused custom name when saving, default=true.                                             |
 | saveAsView              | Parâmetros   | Whether to apply the format string to exporting value when saving, default=false.                                |
 
