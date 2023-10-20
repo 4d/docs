@@ -111,7 +111,7 @@ This table allows you to set access control rules for the database depending on 
 
 > Esta tabela de configuração não controla as ligações Web.
 
-The behavior of the configuration table is as follows:
+O comportamento da tabela de configuração é o seguinte:
 
 - The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. Para adicionar uma regra, clique no botão Adicionar. Aparece uma nova linha na tabela. The **Delete** button lets you remove the current row.
 - The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
