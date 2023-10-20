@@ -1913,10 +1913,10 @@ La commande `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->réc
 
 Dans *rangeObj*, passez une plage dont vous souhaitez récupérer les formules. Si *rangeObj* désigne plusieurs plages, la formule de la première plage est retournée. Si *rangeObj* ne contient pas de formules, la commande retourne une chaîne vide.
 
-Voir l'exemple dans [VP SUSPEND COMPUTING](#vp-suspend-computing).
+La collection retournée est bidemensionnelle :
 
 * La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection représente une ligne.
-* Chaque sous-collection définit les valeurs des cellules de la ligne. La collection de premier niveau contient des sous-collections de formules.
+* Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs sont des éléments textuels contenant les formules des cellules.
 
 #### Exemple
 
@@ -2994,7 +2994,7 @@ La commande `VP Get values` <!-- REF #_method_.VP Get values.Summary --> récup�
 
 Dans *rangeObj*, passez une plage dont vous souhaitez récupérer les valeurs. Si *rangeObj* comprend plusieurs plages, seule la première plage est utilisée.
 
-Nom de la feuille
+La collection retournée par `VP Get values` contient une collection bidimensionnelle :
 
 * Chaque élément de la collection de premier niveau représente une ligne et contient une sous-collection de valeurs
 * Chaque sous-collection contient des valeurs des cellule de la ligne. Les valeurs peuvent être de type entier, réel, booléen, texte, null. Si une valeur est de type date ou heure, elle est retournée en un objet dont les propriétés sont les suivantes :
@@ -5334,7 +5334,7 @@ La commande `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->assi
 
 Dans *rangeObj*, passez la plage de la cellule (créée avec [VP Cell](#vp-cell)) dont vous souhaitez indiquer la formule. Si *rangeObj* comprend plusieurs plages, seule la première plage est utilisée.
 
-Modifications
+Le paramètre *formulasCol* est une collection bidimensionnelle :
 
 * La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection définit une ligne.
 * Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs doivent être des éléments textuels contenant les formules à associer aux cellules.
