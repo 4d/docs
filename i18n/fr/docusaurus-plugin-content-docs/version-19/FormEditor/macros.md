@@ -1,6 +1,6 @@
 ---
 id: macros
-title: Form Editor Macros
+title: Macros de l'éditeur de formulaires
 ---
 
 
@@ -75,7 +75,7 @@ Lorsque des macros sont définies dans votre projet 4D, vous pouvez appeler une 
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Macro items are sorted in alphabetical order.
+Ce menu est crée selon le(s) [fichier(s) de définition de macro](#location-of-macros) `formMacros.json`. Les macros sont classées par ordre alphabétique.
 
 Ce menu peut être appelé dans une zone vide ou une sélection dans le formulaire. Les objets sélectionnés sont passés à `$editor.currentSelection` ou `$editor.target` dans la fonction [`onInvoke`](#oninvoke) de la macro.
 
@@ -258,7 +258,7 @@ La propriété `$4dId` définit un ID unique pour chaque objet de la page couran
 
 #### Exemple
 
-You want to define a macro function that will apply the red color and italic font style to any selected object(s).
+Vous souhaitez définir une fonction macro qui appliquera la couleur rouge et le style de police italique à tous les objets sélectionnés.
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
