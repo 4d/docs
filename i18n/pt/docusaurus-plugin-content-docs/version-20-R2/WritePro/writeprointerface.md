@@ -90,13 +90,13 @@ The template file in JSON format contains the following attributes:
 | breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
 | breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
 | breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
+| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                              |
 | breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 | bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
 | bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
+| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                 |
 | extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 
