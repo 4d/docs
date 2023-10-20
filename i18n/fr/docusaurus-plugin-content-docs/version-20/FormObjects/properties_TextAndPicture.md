@@ -252,7 +252,7 @@ Reportez-vous à la description de l'événement [`On Alternative Click`](../Eve
 
 ### Gestion du pop up menu
 
-Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the [`Dynamic pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page1006.html) and [`Pop up menu`](https://doc.4d.com/4dv19R7/help/command/en/page542.html) commands.
+Il est important de noter que la propriété “Avec pop up menu” gère uniquement l’aspect graphique du bouton. L'affichage du menu contextuel et de ses valeurs doit être entièrement géré par le développeur, plus particulièrement à l'aide des `événements formulaire` et des commandes [`Dynamic pop up menu`](https://doc.4d.com/4dv20/help/command/en/page1006.html) et [`Pop up menu`](https://doc.4d.com/4dv20/help/command/en/page542.html) .
 
 #### Grammaire JSON
 
