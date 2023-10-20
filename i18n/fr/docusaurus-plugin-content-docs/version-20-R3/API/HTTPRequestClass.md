@@ -239,7 +239,7 @@ Voici le contenu de la propriété `.errors` :
 
 #### Description
 
-La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary -->les `headers` passés dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. . S'il a été omis, contient un objet vide.
+La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary -->les `headers` passés dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, contient un objet vide.
 
 <!-- END REF -->
 
@@ -250,7 +250,7 @@ La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary --
 
 #### Description
 
-La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->la `method` passée dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, elle contient "GET".
 
 <!-- END REF -->
 
@@ -262,7 +262,7 @@ La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->l
 #### Description
 
 
-La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. . S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
+La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
 
 
 <!-- END REF -->
@@ -303,7 +303,7 @@ Un objet `response` est un objet non partageable. Il contient les propriétés s
 
 #### Description
 
-le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew) <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->La propriété `.returnResponseBody` contient<!-- END REF -->. .
+La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, il contient True.
 
 <!-- END REF -->
 
@@ -324,7 +324,7 @@ le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors
 
 > Cette fonction est thread-safe.
 
-La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->met fin à la requête HTTP<!-- END REF -->. .
+La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->met fin à la requête HTTP<!-- END REF -->. Elle déclenche l'événement `onTerminate` .
 
 <!-- END REF -->
 
@@ -346,7 +346,7 @@ La propriété `.terminated` contient <!-- REF #HTTPRequestClass.terminated.Summ
 
 #### Description
 
-La propriété `.timeout` contient <!-- REF #HTTPRequestClass.timeout.Summary -->le `timeout` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propriété `.timeout` contient <!-- REF #HTTPRequestClass.timeout.Summary -->le `timeout` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, il contient Undefined.
 
 <!-- END REF -->
 
