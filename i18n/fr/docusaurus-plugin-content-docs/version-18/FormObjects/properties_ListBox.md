@@ -55,7 +55,7 @@ Sets the action to be performed when a user double-clicks on a row in the list b
 * **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
 * **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
 * **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> > > Double-clicking an empty row is ignored in list boxes.
+> Le double-clic sur une ligne vide est ignoré dans les listbox.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
 
