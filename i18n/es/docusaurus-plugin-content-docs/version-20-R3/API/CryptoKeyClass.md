@@ -204,6 +204,7 @@ La función `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->d
 #### *Result*
 
 
+
 El valor devuelto es la llave privada.
 <!-- END REF -->
 
@@ -218,7 +219,7 @@ El valor devuelto es la llave privada.
 </details>
 
 
-<!-- REF #CryptoKey.getPublicKey().Syntax --> **.getPublicKey( )** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax --> **.getPublicKey()** : Text<!-- END REF -->
 
 
 
@@ -262,7 +263,7 @@ El valor devuelto es la llave pública.
 </details>
 
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 
