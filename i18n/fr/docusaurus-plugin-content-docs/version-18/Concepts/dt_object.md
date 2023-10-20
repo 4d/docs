@@ -95,7 +95,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $measures:=Lire mesures base.DB.tables
 ```
 
-- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
+- avec les **collections**. Voici un exemple :
 
 ```4d
       // MyMethod1
@@ -106,7 +106,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- avec les **collections**. Exemple:
+- avec les **méthodes projet** qui retournent des objets. Voici un exemple :
 
 ```4d
      myColl.length //taille de la collection

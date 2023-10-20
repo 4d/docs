@@ -222,7 +222,7 @@ OBJECT SET FONT(*;"Binfo";"Times")
 
 You designate a project method (procedure or function) by using its name. O nome de um método pode conter até 31 caracteres.
 
-**Note:** A project method that does not return a result is also called a procedure. A project method that returns a result is also called a function.
+**Note:** A project method that does not return a result is also called a procedure. Um método projeto que retorna um resultado também é chamado uma função.
 
 Exemplos:
 

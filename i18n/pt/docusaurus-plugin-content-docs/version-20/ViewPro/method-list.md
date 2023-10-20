@@ -1269,7 +1269,7 @@ If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
 
 #### Descrição
 
-O comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->immediately executes stored commands and clears the command buffer<!-- END REF -->.
+O comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->executa imediatamente os comandos armazenados e limpa o buffer de comandos<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -1954,9 +1954,9 @@ $list:=VP Get names("ViewProArea";2) //nomes na 3ª folha
 
 #### Descrição
 
-O comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the *vpAreaName*<!-- END REF -->.
+O comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->retorna um objeto que contém os atributos de impressão do *vpAreaName*<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
@@ -3533,7 +3533,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 | `vk clipboard options all`                     | Cola todos os objectos de dados, incluindo valores, formatação e fórmulas. |
 | `vk clipboard options formatting`              | Cola apenas a formatação.                                                  |
 | `vk clipboard options formulas`                | Cola apenas as fórmulas.                                                   |
-| `vk clipboard options formulas and formatting` | Pastes formulas and formatting.                                            |
+| `vk clipboard options formulas and formatting` | Cola fórmulas e formatação.                                                |
 | `vk clipboard options values`                  | Cola apenas valores.                                                       |
 | `vk clipboard options value and formatting`    | Cola valores e formatação.                                                 |
 
@@ -6090,7 +6090,7 @@ O parâmetro *valuesCol* é bidimensional:
 
 
 * A coleção de primeiro nível contém subcoleções de valores. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha.
-* Cada subcoleção define os valores das células para a linha. Values can be Integer, Real, Boolean, Text, Date, Null, or Object. Se o valor for um objeto, pode ter as seguintes propriedades:
+* Cada subcoleção define os valores das células para a linha. Os valores podem ser Integer, Real, Boolean, Text, Date, Null ou Object. Se o valor for um objeto, pode ter as seguintes propriedades:
 
  | Propriedade | Tipo                                     | Descrição                       |
  | ----------- | ---------------------------------------- | ------------------------------- |
@@ -6163,7 +6163,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | backgroundImage                       | string / picture / file | Imagem de fundo para a área.                                                                                                                                                                                                                               |
 | backgroundImageLayout                 | number                  | Como é apresentada a imagem de fundo. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk image layout center </td><td>1</td><td> No centro da zona.</td></tr><tr><td> vk image layout none </td><td>3</td><td> In the upper left corner of the area with its original size.</td></tr><tr><td> vk image layout stretch </td><td>0</td><td> Preenche a área.</td></tr><tr><td> vk image layout zoom </td><td>2</td><td> Mostrado com o seu rácio de aspeto original.</td></tr></table>                                                                                                                                                                      |
 | calcOnDemand                          | boolean                 | As fórmulas só são calculadas quando são solicitadas.                                                                                                                                                                                                      |
-| columnResizeMode                      | number                  | Resize mode for columns. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Utilizar o modo de redimensionamento normal (ou seja, as restantes colunas são afetadas)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Usar o modo split (ou seja, as colunas restantes não são afetadas)</td></tr></table>                                                                                                                                                                                   |
+| columnResizeMode                      | number                  | Modo de redimensionamento de colunas. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Utilizar o modo de redimensionamento normal (ou seja, as restantes colunas são afetadas)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Usar o modo split (ou seja, as colunas restantes não são afetadas)</td></tr></table>                                                                                                                                                                      |
 | copyPasteHeaderOptions                | number                  | Cabeçalhos a incluir quando os dados são copiados ou colados. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                              |
 | customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Cada item da coleção é um conjunto de cadeias de caracteres. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b). |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                       |

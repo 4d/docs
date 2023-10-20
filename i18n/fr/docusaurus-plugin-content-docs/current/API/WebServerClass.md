@@ -569,7 +569,7 @@ La <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèqu
 
 *Propriété en lecture seulement.*
 
-La <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité de PFS sur le serveur<!-- END REF -->.
+La <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->La disponibilité de PFS sur le serveur<!-- END REF -->.
 
 <!-- END REF -->
 

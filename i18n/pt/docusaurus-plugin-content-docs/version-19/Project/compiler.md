@@ -214,7 +214,7 @@ Esta lista está dividida em três colunas:
 Uma lista completa de seus métodos banco de dados e projeto é apresentada no final do ficheiro com:
 
 - o seu tipo (procedimento ou função que devolve um valor)
-- the data types of their parameters and the returned result
+- os tipos de dados de seus parâmetros e o resultado retornado
 - o número de chamadas
 - a propriedade Thread Safe ou Thread Unsafe.
 

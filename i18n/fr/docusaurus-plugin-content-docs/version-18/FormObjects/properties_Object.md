@@ -9,7 +9,7 @@ title: Objets
 
  `PARAMETRAGE OBLIGATOIRE`
 
-This property designates the type of the [active or inactive form object](formObjects_overview.md).
+Cette propriété désigne le type [objet de formulaire actif ou inactif](formObjects_overview.md).
 
 #### Grammaire JSON
 

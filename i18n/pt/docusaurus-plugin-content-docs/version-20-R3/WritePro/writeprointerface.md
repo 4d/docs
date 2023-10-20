@@ -90,13 +90,13 @@ The template file in JSON format contains the following attributes:
 | breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
 | breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
 | breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
+| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                              |
 | breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 | bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
 | bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
+| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                 |
 | extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 
@@ -180,7 +180,7 @@ Defining these attributes within the translation object ensures proper organizat
 
 If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
 
-The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+The translation file serves an additional role when a user selects a table in the interface. Ele pode filtrar as tabelas e os campos propostos ao usuário. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
 
 ##### Exemplo
 

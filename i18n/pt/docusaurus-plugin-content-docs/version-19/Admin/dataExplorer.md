@@ -26,7 +26,7 @@ Para ligar à página Web do Explorador de dados:
 
 - if you use a 4D application with interface, select **Data Explorer...** command from:
   - o menu **Registros** (em 4D monousuário)
-  - the **Window** menu (in 4D Server)
+  - o menu **Window** (no 4D Server)
 
 - whether you use a headless 4D application or not, you can open your web browser and enter the following address:
 

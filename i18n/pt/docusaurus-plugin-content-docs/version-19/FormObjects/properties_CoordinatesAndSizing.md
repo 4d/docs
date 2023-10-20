@@ -102,7 +102,7 @@ Coordenada superior do objecto no formulário.
 
 ## Retângulo
 
-Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. Por padrão, o valor do raio dos retângulos é 0 píxeis. You can change this property to draw rounded rectangles with custom shapes:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 

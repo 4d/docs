@@ -19,7 +19,7 @@ To know what is exposed as the datastore, create a new project method, write the
 TRACE
 ```
 
-Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Executar o método: ele chama simplesmente a janela do depurador. In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
 
 ![](../assets/en/ORDA/debug1.png)
 
@@ -90,7 +90,7 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 4D adiciona um novo usuário para a lista, chamado "Novo usuárioX" como padrão.
 
-3. Digite o nome de usuário. This name will be used by the user to open the database. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
+3. Digite o nome de usuário. Esse nome será usado pelo usuário para abrir o banco de dados. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
 4. Para digitar uma senha para o usuário, clique o botão **Edit...** na área de propriedades de usuário e digite a senha daus vezes na caixa de diálogo. Pode usar até 15 caracteres alfanuméricos para a senha. O editor de senhas é sensível a maiúsculas ou minúsculas.
 

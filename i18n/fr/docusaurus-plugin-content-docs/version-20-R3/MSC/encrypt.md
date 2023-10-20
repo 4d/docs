@@ -8,7 +8,7 @@ Vous pouvez vous aider de cette page pour chiffrer ou *déchiffrer* (i.e. enleve
 
 :::info
 
-For detailed information about data encryption in 4D, please refer to the [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) section in the *Design Reference* manual. Vous pouvez également lire l'article de blog intitulé [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
+Pour des informations détaillées sur le cryptage des données dans 4D, veuillez vous référer à la section [Encrypting data](https://doc.4d.com/4Dv20/4D/20/Encrypting-data.300-6263735.en.html) dans le manuel *Design Reference*. Vous pouvez également lire l'article de blog intitulé [A deeper look into 4D data encryption](https://blog.4d.com/a-deeper-look-into-4d-data-encryption/).
 
 :::
 
@@ -24,11 +24,11 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
 
 1. Dans l'éditeur de structure, cochez l'attribut **Chiffrable** pour chaque table dont vous souhaitez chiffrer les données. Consultez la section "Propriétés des tables".
 2. Ouvrez la page Chiffrement du CSM. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](../assets/en/MSC/MSC_encrypt2.png)<p>
-This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-**Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
-3. Click on the Encrypt picture button.  
+Cela signifie que le statut **Encryptable** d'au moins une table a été modifié et que le fichier de données n'a toujours pas été crypté.
+**Note : **Le même message s'affiche lorsque le statut **Encryptable** a été modifié dans un fichier de données déjà crypté ou après que le fichier de données a été décrypté (voir ci-dessous).</p>
+3. Cliquez sur le bouton Crypter l'image.  
    ![](../assets/en/MSC/MSC_encrypt3.png)  
-   You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
+   Vous serez invité à saisir une phrase secrète pour votre fichier de données : ![](../assets/en/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de cryptage des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. Par exemple, vous pouvez saisir une phrase secrète telle que "Nous sommes tous venus à Montreux" ou "Ma première phrase de passe géniale !!". L'indicateur de niveau de sécurité peut vous aider à évaluer la force de votre phrase secrète : ![](../assets/en/MSC/MSC_encrypt5.png) (le vert foncé est le niveau le plus élevé)
 4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
 Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, l'application est rouverte en mode maintenance.
@@ -65,14 +65,14 @@ Cette opération est utile lorsque l'attribut **Chiffrable** a été modifié po
 1. Cliquez sur **Re-chiffrer les données à l'aide de la clé actuelle**.
 2. Saisissez la clé de chiffrement des données actuelle.
 
-The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
+Le fichier de données est correctement re-chiffré à l'aide de la clé actuelle et un message de confirmation s'affiche : ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Changer votre phrase secrète et re-chiffrer les données
 Cette opération est utile en cas de modification de la clé de chiffrement des données actuelle. Par exemple, il se peut que vous la modifiiez pour vous conformer aux règles de sécurité (telles que la nécessité de modifier la phrase secrète tous les trois mois).
 
 1. Cliquez sur **Changer votre phrase secrète et re-chiffrer les données**.
 2. Saisissez la clé de chiffrement des données actuelle.
-3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](../assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](../assets/en/MSC/MSC_encrypt8.png)
+3. Saisissez la nouvelle phrase secrète (pour plus de sécurité, il vous est demandé de la saisir deux fois) : ![](../assets/en/MSC/MSC_encrypt9.png) Le fichier de données est chiffré avec la nouvelle clé et un message de confirmation s'affiche. ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Enlever le chiffrement de toutes les données
 Cette opération supprime tout le chiffrement du fichier de données. Si vous ne souhaitez plus que vos données soient chiffrées :
@@ -85,7 +85,7 @@ The data file is fully decrypted and a confirmation message is displayed: ![](..
 
 ## Sauvegarder la clé de chiffrement
 
-4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une application chiffrée, étant donné que l'utilisateur connecterait cet appareil uniquement pour fournir la clé avant d'ouvrir l'application et accéder aux données chiffrées.
+4D vous permet de sauvegarder la clé de chiffrement des données dans un fichier créé à cet effet. Le nom du fichier doit porter l'extension `.4DKeyChain` , par exemple "myKeys.4DKeyChain". La sauvegarde de ce fichier sur un appareil externe tel qu'une clé USB facilitera l'utilisation d'une application chiffrée, étant donné que l'utilisateur n'aurait plus qu'à connecter cet appareil pour fournir la clé avant d'ouvrir l'application et accéder aux données chiffrées.
 
 Vous pouvez sauvegarder la clé de chiffrement chaque fois qu'une nouvelle phrase secrète est fournie :
 
@@ -96,7 +96,7 @@ Les clés de chiffrement successives peuvent être sauvegardées sur le même ap
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+Le stockage du fichier de clé de cryptage des données au premier niveau du lecteur est obligatoire lorsque vous utilisez la fonction de [restauration automatique et d'intégration des journaux](../Backup/settings.md#automatic-restore-and-log-integration). Lorsque la séquence de restauration est déclenchée, 4D doit avoir accès au fichier de la clé de cryptage, sinon une erreur se produit.
 
 :::
 

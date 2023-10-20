@@ -239,7 +239,7 @@ Voici le contenu de la propriété `.errors` :
 
 #### Description
 
-La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary -->les `headers` passés dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis, contient un objet vide.
+La propriété `.headers` contient <!-- REF #HTTPRequestClass.headers.Summary -->les `headers` passés dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. . S'il a été omis, contient un objet vide.
 
 <!-- END REF -->
 
@@ -262,7 +262,7 @@ La propriété `.method` contient <!-- REF #HTTPRequestClass.method.Summary -->l
 #### Description
 
 
-La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
+La propriété `.protocol` contient <!-- REF #HTTPRequestClass.protocol.Summary -->le `protocol` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. . S'il a été omis ou si "auto" a été utilisé, contient la version du protocole utilisé.
 
 
 <!-- END REF -->
@@ -303,7 +303,7 @@ Un objet `response` est un objet non partageable. Il contient les propriétés s
 
 #### Description
 
-La propriété `.returnResponseBody` contient <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew)<!-- END REF -->. .
+le `returnResponseBody` passé dans l'objet [`options`](#options-parameter) lors de l'appel à [new()](#4dhttprequestnew) <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->La propriété `.returnResponseBody` contient<!-- END REF -->. .
 
 <!-- END REF -->
 

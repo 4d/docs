@@ -317,6 +317,22 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
         If ($client.id#$ws.id)
             $client.send($message)
         End if 
+    End for each    
+    // Send "New client connected" message to all other chat clients
+    This.broadcast($ws;"New client connected")
+
+Function onTerminate($ws : 4D.WebSocketConnection; $message : Object)
+    // Send "Client disconnected" message to all other chat clients
+    This.broadcast($ws;"Client disconnected")
+
+Function broadcast($ws : 4D.WebSocketConnection; $message:text)
+    var $client:4D.WebSocketConnection
+    // Resend the message to all chat clients
+    For each ($client; $ws.wss.connections)
+        // Check that the id is not the current connection
+        If ($client.id#$ws.id)
+            $client.send($message)
+        End if 
     End for each 
 
 ```
@@ -339,7 +355,7 @@ In the optional *options* parameter, pass an object that contains the following 
 
 #### Description
 
-The `.connections` property contains <!-- REF #WebSocketServerClass.connections.Summary -->all current connections handled by the WebSocket server<!-- END REF -->. Each element of the collection is a [`WebSocketConnection` object](WebSocketConnectionClass.md).
+The `.connections` property contains <!-- REF #WebSocketServerClass.connections.Summary -->all current connections handled by the WebSocket server<!-- END REF -->. .
 
 When a connection is terminated, its [`status`](WebSocketConnectionClass.md#status) changes to "Closed" and it is removed from this collection.
 
@@ -354,7 +370,7 @@ When a connection is terminated, its [`status`](WebSocketConnectionClass.md#stat
 
 #### Description
 
-La propriété `.dataType` contient <!-- REF #WebSocketServerClass.dataType.Summary -->the type of the data received or sent<!-- END REF -->.
+La propriété `.dataType` contient <!-- REF #WebSocketServerClass.dataType.Summary -->La propriété `.dataType` contient<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 <!-- END REF -->
@@ -367,7 +383,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
+La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summary -->La propriété `.handler` contient<!-- END REF -->.
 
 <!-- END REF -->
 

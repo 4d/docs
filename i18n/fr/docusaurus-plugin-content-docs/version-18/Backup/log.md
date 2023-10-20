@@ -13,7 +13,7 @@ Enfin, 4D dispose d'une fonction d'analyse du contenu du fichier d'historique, p
 
 L’historique généré par 4D se présente sous la forme d’un fichier dans lequel toutes les opérations effectuées sur les données des tables journalisées de la base viennent s’inscrire séquentiellement. Par défaut, toutes les tables sont journalisées, c'est-à-dire incluses dans l'historique, mais vous pouvez en désélectionner certaines via la propriété **Inclure dans le fichier d'historique**.
 
-Ainsi, chaque opération effectuée par un utilisateur provoque deux actions simultanées : une première sur les données de la base (l’instruction est exécutée normalement) et une seconde dans le fichier d’historique (la description de l’opération y est enregistrée). Le fichier d’historique se construit de manière indépendante, sans gêner ni ralentir le travail de l’utilisateur. The log file is created independently without disturbing or slowing down the work of the user. Le fichier d’historique enregistre les types d’opérations suivants :
+Ainsi, chaque opération effectuée par un utilisateur provoque deux actions simultanées : une première sur les données de la base (l’instruction est exécutée normalement) et une seconde dans le fichier d’historique (la description de l’opération y est enregistrée). Le fichier d’historique se construit de manière indépendante, sans gêner ni ralentir le travail de l’utilisateur. Le fichier d’historique se construit de manière indépendante, sans gêner ni ralentir le travail de l’utilisateur. Le fichier d’historique enregistre les types d’opérations suivants :
 
 - Ouvertures et fermetures du fichier de données,
 - Ouvertures et fermetures de process (contextes),
@@ -56,7 +56,7 @@ Pour que vous puissiez directement créer un fichier d’historique, la base de 
 - Le fichier de données est vierge,
 - Vous venez d’effectuer une sauvegarde de la base et aucune modification sur les données n’a encore été effectuée.
 
-Dans tous les autres cas, au moment où vous validez la fenêtre des Propriétés de la base, une boîte de dialogue d’alerte vous informe qu’une sauvegarde est nécessaire. Si vous cliquez sur **OK**, la sauvegarde démarre immédiatement puis l’historique est activé. If you click **OK**, the backup begins immediately, then the log file is activated. If you click **Cancel**, the request is saved but the creation of the log file is postponed and it will actually be created only after the next backup of the database.
+Dans tous les autres cas, au moment où vous validez la fenêtre des Propriétés de la base, une boîte de dialogue d’alerte vous informe qu’une sauvegarde est nécessaire. Si vous cliquez sur **OK**, la sauvegarde démarre immédiatement puis l’historique est activé. Si vous cliquez sur **OK**, la sauvegarde démarre immédiatement puis l’historique est activé. If you click **OK**, the backup begins immediately, then the log file is activated.
 
 Sans autre manipulation de votre part, toutes les opérations effectuées sur les données s’inscriront dans ce fichier, et il sera utilisé également lors des ouvertures ultérieures de la base.
 

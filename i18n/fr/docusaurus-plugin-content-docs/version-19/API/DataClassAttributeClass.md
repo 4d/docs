@@ -227,7 +227,7 @@ Considérons les tables et relations suivantes :
 La propriété `.mandatory` <!-- REF DataClassAttributeClass.mandatory.Summary -->contient Vrai si la saisie de la valeur Null pour l'attribut est rejetée<!-- END REF -->.
 
 Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
-> Pour la programmation générique, vous pouvez utiliser **Bool** (dataClassAttribute.mandatory) pour obtenir une valeur valide (false) même si `.mandatory` n'est pas retourné.
+> Sommaire
 > **Attention** : Cette propriété correspond à la propriété du champ "Reject NULL value input" au niveau de la base de données 4D. Elle n'est pas liée à la propriété "Mandatory" existante qui est une option de contrôle de la saisie de données pour une table.
 
 <!-- END REF -->
@@ -247,7 +247,7 @@ Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou 
 
 #### Description
 
-La propriété `.name` <!-- REF DataClassAttributeClass.name.Summary -->renvoie le nom de l'objet `dataClassAttribute`<!-- END REF -->.
+La propriété `.name` <!-- REF DataClassAttributeClass.name.Summary -->La propriété `.name`<!-- END REF -->.
 
 #### Exemple
 

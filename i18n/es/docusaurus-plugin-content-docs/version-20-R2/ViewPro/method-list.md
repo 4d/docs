@@ -936,6 +936,7 @@ utilice el siguiente código:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1005,15 +1006,11 @@ Una vez finalizada la exportación, `VP EXPORT DOCUMENTO` desencadena automátic
 
 Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utilizar el comando [`Formula`](../API/FunctionClass.md#formula) para llamar a un método 4D que se ejecutará una vez finalizada la exportación. El método callback recibirá los siguientes valores en las variables locales:
 
-| Variable |               | Tipo    | Descripción                                               |
-| -------- | ------------- | ------- | --------------------------------------------------------- |
-| $1       |               | text    | El nombre del objeto 4D View Pro                          |
-| $2       |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
-| $3       |               | object  | Referencia al *paramObj* del comando                      |
-| $4       |               | object  | Un objeto devuelto por el método con un mensaje de estado |
-|          | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
-|          | .errorCode    | integer | Código de error. Puede ser devuelto por 4D o JavaScript.  |
-|          | .errorMessage | text    | Mensaje de error. Puede ser devuelto por 4D o JavaScript. |
+| Variable |  | Tipo | Descripción |
+| -------- |  | ---- | ----------- |
+|          |  |      |             |
+
+|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
 
 #### Ejemplo 1
 
@@ -2132,13 +2129,11 @@ $rowCount:=VP Get row count("ViewProarea")
 
 <!-- REF #_method_.VP Get selection.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                       |
-| ---------- | ------- | -- | ------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario      |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
-| Result     | Object  | <- | Objeto rango de celdas|<!-- END REF -->
+| Parámetros | Tipo |    | Descripción                                  |
+| ---------- | ---- | -- | -------------------------------------------- |
+| vpAreaName | Text | -> | Nombre del área 4D View Pro en el formulario |
 
-|
+|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
 
 #### Descripción
 
@@ -2766,11 +2761,11 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parámetros | Tipo                                           |    | Descripción                                                    |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text                                           | -> | Nombre de la tabla                                             |
-| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF -->
+| Parámetros | Tipo                                           |    | Descripción                                                                 |
+| ---------- | ---------------------------------------------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                                |
+| tableName  | Text                                           | -> | Nombre de la tabla                                                          |
+| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual|<!-- END REF -->
 
 
 |
@@ -2969,9 +2964,12 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Parámetro|Tipo||Descripción|
+| Parámetros | Tipo   |    | Descripción                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
+| Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo|<!-- END REF -->
 
-|---|---|---|---| |vpAreaName  |Text|->|Nombre del objeto del formulario de área de 4D View Pro| |Resultado |Object|<-|Object containing the workbook options|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5225,11 +5223,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| formula       | Text   | -> | Formula or 4D method                         |
+| formatPattern | Text   | -> | Formato del campo|<!-- END REF -->
 
-|rangeObj |Object|->|Objeto de rango| |formula |Text|->|Formula o método 4D| |formatPattern |Text|->|Formato de campo|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5896,15 +5896,12 @@ Con un salto de página:
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                            |
-| ---------- | ------- | -- | ---------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
-| tableName  | Text    | -> | Nombre de la tabla                                                     |
-| column     | Integer | -> | Índice de la columna en la tabla                                       |
-| attributes | Object  | -> | Atributo(s) a aplicar a la *column*                                    |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF -->
+| Parámetros | Tipo |    | Descripción                                  |
+| ---------- | ---- | -- | -------------------------------------------- |
+| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
+| tableName  | Text | -> | Nombre de la tabla                           |
 
-|
+|column|Integer|->|Index of the column in the table| |attributes |Object|->|Attribute(s) to apply to the *column*| |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Descripción
 

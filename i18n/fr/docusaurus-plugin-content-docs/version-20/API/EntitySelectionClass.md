@@ -200,7 +200,7 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 #### Description
 
-Tout attribut de dataclass peut être utilisé en tant que propriété d'une entity selection afin de retourner <!-- REF EntitySelectionClass.attributeName.Summary -->une "projection" des valeurs de l'attribut dans l'entity selection<!-- END REF -->. Les valeurs projetées peuvent être une collection ou une nouvelle entity selection, selon le [kind](DataClassAttributeClass.md#kind) (`storage` ou `relation`) de l'attribut.
+Tout attribut de dataclass peut être utilisé en tant que propriété d'une entity selection afin de retourner <!-- REF EntitySelectionClass.attributeName.Summary -->Tout attribut de dataclass peut être utilisé en tant que propriété d'une entity selection afin de retourner<!-- END REF -->. Les valeurs projetées peuvent être une collection ou une nouvelle entity selection, selon le [kind](DataClassAttributeClass.md#kind) (`storage` ou `relation`) de l'attribut.
 
 *   Si le "kind" de *attributeName* est `storage` : `.attributeName` retourne une collection de valeurs du même type que *attributeName*.
 *   Si le "kind" de *attributeName* est `relatedEntity` : `.attributeName` retourne une nouvelle entity selection de valeurs liées du même type que *attributeName*. Les doublons sont supprimés (une entity selection non ordonnée est retournée).
@@ -239,7 +239,7 @@ Le résultat est une collection de chaînes, par exemple :
 
 #### Exemple 2
 
-Projection d'entité liée :
+Projection d'entités liées :
 
 ```4d
  var $es; $entitySelection : cs.EmployeeSelection
@@ -247,18 +247,18 @@ Projection d'entité liée :
  $es:=$entitySelection.employer // employer est lié à la dataclass Company
 ```
 
-L'objet résultant est une entity selection de la dataclass Company sans doublons (s'il y en a).
+L'objet résultant est une entity selection de la dataclass Employee sans doublons (s'il y en a).
 
 #### Exemple 3
 
-Projection d'entités liées :
+Projection d'entité liée :
 
 ```4d
  var $es : cs.EmployeeSelection
  $es:=ds.Employee.all().directReports // directReports est récursif et lié à la dataclass Employee
 ```
 
-L'objet résultant est une entity selection de la dataclass Employee sans doublons (s'il y en a).
+L'objet résultant est une entity selection de la dataclass Company sans doublons (s'il y en a).
 
 <!-- END REF -->
 
@@ -311,9 +311,9 @@ L'entity selection doit être *altérable*, c'est-à-dire qu'elle a été créé
 
 **Ajouter une entity selection**
 
-*   Si l'entity selection est ordonnée, son ordre est conservé et *entitySelection* est ajoutée à la fin de la sélection. Si des références aux mêmes entités de *entitySelection* appartiennent déjà à l'entity selection, elles sont dupliquées et de nouvelles références sont ajoutées.
+*   Si l'entity selection est ordonnée, son ordre est conservé et *entitySelection* est ajoutée à la fin de la sélection. Si vous passez *entitySelection* comme paramètre, vous combinez les deux entity selections. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée.
 *   Si l'entity selection n'est pas ordonnée, elle devient ordonnée.
-> Pour plus d'informations, reportez-vous au paragraphe [Entity selections triées ou non triées](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+> Pour plus d'informations sur les sélections triées ou non, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
 
 L'entity selection modifiée est retournée par la fonction, afin que les appels vers la fonction puissent être chaînés.
 
@@ -387,8 +387,8 @@ $sellist2:=$sellist2.add($sellist1)
 La fonction `and()` <!-- REF #EntitySelectionClass.and().Summary -->combine l'entity selection avec le paramètre *entity* ou *entitySelection* à l'aide de l'opérateur logique ET<!-- END REF -->; elle retourne une nouvelle entity selection non ordonnée qui ne contient que les entités qui sont référencées à la fois dans l'entity selection et le paramètre.
 
 *   Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle entity selection contenant uniquement l'entité est retournée. Sinon, une entity selection vide est retournée.
-*   Si vous passez *entitySelection* comme paramètre, vous combinez les deux entity selections. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
-> Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
+*   Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Une nouvelle entity selection contenant uniquement les entités référencées dans les deux sélections est retournée. S'il n'y a pas d'intersection d'entité, une entity selection vide est retournée.
+> > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
 Si l'entity selection initiale ou celle du paramètre *entitySelection* est vide, ou si *entity* est Null, une entity selection vide est retournée.
 
@@ -1498,7 +1498,7 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 La fonction `minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclut de l'entity selection à laquelle elle est appliquée l'*entity* ou les entités de l'*entitySelection* et retourne l'entity selection résultante<!-- END REF -->.
 
 *   Si vous passez *entity* en paramètre, la fonction crée une nouvelle entity selection sans *entity* (si *entity* appartient à l'entity selection). Si *entity* n'était pas incluse dans l'entity selection d'origine, une nouvelle référence à l'entity selection est renvoyée.
-*   Si vous passez *entitySelection* en paramètre, la fonction retourne une entity selection contenant les entités appartenant à l"entity selection d'origine, sans les entités appartenant à *entitySelection*. Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es).
+*   Si vous passez *entitySelection* en paramètre, la fonction retourne une entity selection contenant les entités appartenant à l"entity selection d'origine, sans les entités appartenant à *entitySelection*. > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es).
 
 Par défaut, si vous omettez le paramètre *keepOrder*, l'entity selection résultante n'est pas triée. Si vous souhaitez conserver l'ordre de l'entity selection originale (par exemple si vous voulez réutiliser l'entity selection dans une interface utilisateur), passez la constante `dk keep ordered` dans *keepOrder*. Dans ce cas, le résultat est une entity selection ordonnée et l'ordre de l'entity selection initiale est conservé.
 
@@ -1508,7 +1508,7 @@ Si vous passez `dk keep ordered` dans *keepOrder* et que l'*entitySelection* sup
 
 :::
 
-Si l'entity selection initiale ou l'entity selection initiale et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée.
+Si l'entity selection contient des entités qui ont été supprimées entre-temps, elles sont également retournées.
 
 Si *entitySelection* est vide ou si *entity* est Null, une nouvelle référence à l'entity selection d'origine est renvoyée.
 
@@ -1581,10 +1581,10 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 La fonction `.or()` <!-- REF #EntitySelectionClass.or().Summary -->combine l'entity selection avec le paramètre *entity* ou *entitySelection* à l'aide de l'opérateur OU logique (non exclusif)<!-- END REF -->; elle retourne une nouvelle entity selection non triée contenant toutes les entités de l'entity selection et du paramètre.
 
 *   Si vous passez *entity* comme paramètre, vous combinez cette entité avec l'entity selection. Si l'entité appartient à l'entity selection, une nouvelle référence à l'entity selection est retournée. Sinon, une nouvelle entity selection contenant l'entity selection d'origine et l'entité est retournée.
-*   Si vous passez *entitySelection* comme paramètre, vous comparez les deux entity selections. Une nouvelle entity selection contenant les entités appartenant à la sélection d'entités d'origine ou à *entitySelection* est renvoyée (ou n'est pas exclusif, les entités référencées dans les deux sélections ne sont pas dupliquées dans la sélection résultante).
-> Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
+*   Si l'entity selection d'origine et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée. Une nouvelle entity selection contenant les entités appartenant à la sélection d'entités d'origine ou à *entitySelection* est renvoyée (ou n'est pas exclusif, les entités référencées dans les deux sélections ne sont pas dupliquées dans la sélection résultante).
+> > Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es). La sélection résultante est toujours non ordonnée.
 
-Si l'entity selection d'origine et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée. Si l'entity selection d'origine est vide, une référence à *entitySelection* ou une entity selection contenant uniquement *entity* est retournée.
+L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, l'entity selection retournée contient toutes les entités entre *startFrom* et la dernière entité de l'entity selection d'origine.
 
 Si *entitySelection* est vide ou si *entity* est Null, une nouvelle référence à l'entity selection d'origine est renvoyée.
 
@@ -1642,7 +1642,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 La fonction `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->renvoie une nouvelle entity selection triée contenant toutes les entités de l'entity selection dans l'ordre spécifié par le paramètre *pathString* ou *pathObjects*<!-- END REF -->.
 > * Cette fonction ne modifie pas l'entity selection d'origine.
-> * Pour plus d'informations sur les sélections triées ou non, voir [Entity selections triées vs Entity selections non-triées](ORDA/dsMapping.md#entity-selections-triees-vs-entity-selections-non-triees).
+> * Sommaire
 
 Vous devez utiliser un paramètre de critère pour définir la manière dont les entités doivent être triées. Deux paramètres différents sont pris en charge :
 
@@ -1666,9 +1666,9 @@ L'ordre dans lequel les attributs sont passés détermine la priorité de tri de
 Par défaut, les attributs sont triés par ordre croissant ("descending" est false).
 
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
-> Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
+> nombres
 
-Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
+Si l'entity selection initiale ou l'entity selection initiale et celle du paramètre *entitySelection* sont vides, une entity selection vide est retournée.
 
 
 #### Exemple
@@ -1847,7 +1847,7 @@ Dans cet exemple, le champ objet "marks" de la dataclass **Students** contient l
 
 #### Description
 
-La fonction `.query()` <!-- REF #EntitySelectionClass.query().Summary -->recherche les entités répondant aux critères de recherche spécifiés dans *queryString* ou *formula* et (optionnellement) dans *value*(s) parmi toutes les entités de l'entity selection<!-- END REF -->, et renvoie un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
+La fonction `.query()` <!-- REF #EntitySelectionClass.query().Summary -->La fonction `.query()`<!-- END REF -->, et renvoie un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
 > Cette fonction ne modifie pas l'entity selection d'origine.
 
 Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est retournée.
@@ -2109,7 +2109,7 @@ $result2:=$invoices.selected($creditSel)
 La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une entity selection dans une nouvelle entity selection<!-- END REF -->, sélectionnée depuis l'indice *startFrom* jusqu'à l'indice *end* (*end* non inclus) ou jusqu'à la dernière entité de l'entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
 > Cette fonction ne modifie pas l'entity selection d'origine.
 
-L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, l'entity selection retournée contient toutes les entités entre *startFrom* et la dernière entité de l'entity selection d'origine.
+Si l'entity selection est ordonnée, son ordre est conservé et *entitySelection* est ajoutée à la fin de la sélection. Si des références aux mêmes entités de *entitySelection* appartiennent déjà à l'entity selection, elles sont dupliquées et de nouvelles références sont ajoutées.
 
 *   Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
 *   Si *startFrom >= length*, la fonction retourne une entity selection vide.
@@ -2120,7 +2120,7 @@ Si l'entity selection contient des entités qui ont été supprimées entre-temp
 
 #### Exemple 1
 
-Si l'entity selection contient des entités qui ont été supprimées entre-temps, elles sont également retournées.
+Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity selection :
 
 ```4d
 var $sel; $sliced : cs.EmployeeSelection
@@ -2251,7 +2251,7 @@ Si un filtre est spécifié pour un attribut de type `relatedEntity` :
 
 
 
-Si un filtre est spécifié pour un attribut de type`relatedEntities` :
+Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
 
 :::caution Avertissement
 
@@ -2431,7 +2431,7 @@ Retourne :
 
 #### Exemple 4
 
-Retourne :
+Exemple avec le type `relatedEntity` avec une forme simple :
 
 ```4d
 var $employeesCollection : Collection
@@ -2439,7 +2439,7 @@ $employeesCollection:=New collection
 $employeesCollection:=$employees.toCollection("firstName,lastName,employer")
 ```
 
-Exemple avec le type `relatedEntity` avec une forme simple :
+Retourne :
 
 ```4d
 [
@@ -2469,7 +2469,7 @@ Exemple avec le type `relatedEntity` avec une forme simple :
 
 #### Exemple 5
 
-retourne :
+|
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2495,7 +2495,7 @@ Retourne :
 
 #### Exemple 6
 
-Retourne :
+Dans cet exemple, les langages classiques et ORDA modifient simultanément les mêmes données :
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2549,7 +2549,7 @@ Retourne :
 
 #### Exemple 7
 
-Retourne :
+Exemple avec extraction de quelques propriétés de relatedEntity :
 
 ```4d
 var $employeesCollection : Collection
@@ -2585,7 +2585,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
 
 #### Exemple 8
 
-Exemple avec extraction de quelques propriétés de relatedEntity :
+Si un filtre est spécifié pour un attribut de type`relatedEntities` :
 
 ```4d
  var $employeesCollection : Collection
@@ -2637,7 +2637,7 @@ Retourne :
 
 #### Exemple 9
 
-Retourne :
+Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
 
 ```4d
 var $employeesCollection : Collection

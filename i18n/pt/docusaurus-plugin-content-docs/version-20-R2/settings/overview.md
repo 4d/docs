@@ -3,7 +3,7 @@ id: overview
 title: Settings
 ---
 
-The Settings configure how the current project functions. These parameters may be different for each project. They include the listening ports, backup configurations, security options, Web parameters, etc.
+Os parâmetros configuram o funcionamento do projeto atual. These parameters may be different for each project. They include the listening ports, backup configurations, security options, Web parameters, etc.
 
 ![](../assets/en/settings/main.png)
 

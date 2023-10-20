@@ -205,7 +205,7 @@ Available media features:
 Expressões de funcionalidades multimédia disponíveis:
 
 * **light**<br/>Para utilizar um esquema de luz
-* **dark**<br/>For using a dark scheme
+* **dark**<br/>Para usar um esquema escuro
 
 > Os esquemas de cores são suportados apenas no macOS.
 

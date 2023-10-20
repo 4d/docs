@@ -335,7 +335,7 @@ A propriedade `.highlightFirstColumnStyle` é o <!-- REF #TableThemeOptions.high
 <!-- REF #TableThemeOptions.highlightLastColumnStyle.Syntax -->
 **.highlightLastColumnStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.highlightLastColumnStyle` property is the <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->estilo de la última columna<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
+A propriedade `.highlightLastColumnStyle` é a <!-- REF #TableThemeOptions.highlightLastColumnStyle.Summary -->estilo de la última columna<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
 ### .lastFooterCellStyle
 
@@ -370,7 +370,7 @@ The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondC
 <!-- REF #TableThemeOptions.secondColumnStripStyle.Syntax -->
 **.secondColumnStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo da segunda coluna alternada<!-- END REF -->.
+A propriedade `.secondColumnStripStyle` é o <!-- REF #TableThemeOptions.secondColumnStripStyle.Summary -->estilo da segunda coluna alternada<!-- END REF -->.
 
 ### .secondRowStripSize
 

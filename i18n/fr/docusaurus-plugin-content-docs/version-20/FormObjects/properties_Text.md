@@ -21,7 +21,7 @@ Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https:/
 
 ---
 
-## Gras
+## Souligné
 
 Le texte sélectionné est plus foncé et plus épais.
 

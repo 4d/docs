@@ -166,7 +166,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ## Valeurs ou références
 
-Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2 etc. dans la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Cette portée étant locale, si la valeur d'un paramètre est modifiée dans la sous-routine, elle ne modifie pas la valeur dans la méthode appelée. Par exemple :
+Lorsque vous passez un paramètre, 4D évalue toujours l'expression du paramètre dans le contexte de la méthode appelée et définit la **valeur résultante** sur les variables locales $1, $2 etc. dans la sous-routine (voir [Utilisation des paramètres](#using-parameters)). Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Les variables/paramètres locaux ne correspondent pas aux véritables champs, variables ou expressions passés par la méthode appelée; ils contiennent uniquement les valeurs qui n'ont pas été passées. Par exemple :
 
 ```4d
     //Voici du code extrait de la méthode MY_METHOD

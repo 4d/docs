@@ -22,7 +22,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 :::info
 
-The use of Qodly Studio in 4D requires a specific license. Qodly Studio options and menu items won't appear if the license is not activated.
+O uso do Qodly Studio no 4D requer uma licença específica. Qodly Studio options and menu items won't appear if the license is not activated.
 
 :::
 
@@ -222,7 +222,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 #### Command names
 
-QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
+QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
 
 - Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - However, some command have been renamed for a better compliance. They are listed below:
@@ -320,7 +320,7 @@ O comportamento descrito anteriormente é devido ao cookie de sessão do servido
 
 If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
 
-For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-<code>SameSite</code>-and-secure-attributes-for-cookies/).
+For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
 
 ### Recommendations
 

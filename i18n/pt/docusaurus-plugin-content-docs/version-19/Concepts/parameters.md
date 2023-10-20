@@ -436,7 +436,7 @@ No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opci
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. Uma boa prática é atribuir valores padrão a parâmetros não utilizados.
 
 > Quando os parâmetros opcionais forem necessários em seus métodos, também pode considerar o uso de [parâmetros com nome](#named-parameters) que oferecem uma forma flexível de manejar um número variável de parâmetros.
 

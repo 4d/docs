@@ -67,7 +67,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 
 Toutes les méthodes projet d’un projet utilisé comme matrice sont par définition incluses dans le composant (le projet est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées par le composant.
 
-En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project. Ces méthodes constituent les **points d’entrée** dans le composant.
+En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelables par le projet hôte. Vous devez explicitement désigner, dans le projet utilisé comme matrice, les méthodes que vous souhaitez partager avec le projet hôte. Ces méthodes projet peuvent être appelées dans le code de le projet hôte (mais elles ne pourront pas être modifiées dans l’éditeur de méthodes de le projet hôte). Ces méthodes constituent les **points d’entrée** dans le composant.
 
 A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. In certain cases, you may need to allow a component to access the project methods of your host project.
 
@@ -86,7 +86,7 @@ component_method("host_method_name")
  EXECUTE METHOD($1)
 ```
 
-> Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Otherwise, a warning dialog box appears when you attempt to launch the compilation or a syntax check and it will not be possible to carry out the operation. Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+> Une base hôte interprétée qui contient des composants interprétés peut être compilée ou soumise à un contrôle syntaxique si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il n'est pas possible d'effectuer l'opération. N'oubliez pas qu'une méthode interprétée peut appeler une méthode compilée, mais pas l'inverse, sauf en utilisant les commandes `EXECUTE METHOD` et `EXECUTE FORMULA` .
 
 ## Passage de variables
 
@@ -274,7 +274,7 @@ Les composants peuvent utiliser des ressources situées dans le dossier Ressourc
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
+Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
 
 ## Exécution du code d'initialisation
 
@@ -282,7 +282,7 @@ Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de
 
 L'exécution du code d'initialisation ou de fermeture se fait au moyen de la méthode base `On Host Database Event`.
 
-> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base`On Host Database Event` dans la base hôte afin de pouvoir l'appeler. For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it.
+> Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base`On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'option **Exécuter la méthode "Sur événement base hôte" des composants** dans la page Sécurité des Paramètres.
 
 ## Protection des composants : la compilation
 

@@ -80,25 +80,25 @@ The template file must be stored in a "[`Resources`](../Project/architecture.md#
 
 The template file in JSON format contains the following attributes:
 
-| Attribut             | Type       | Obligatoire | Description                                                                                                                                              |
-|:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
-| colonnes             | Collection | x           | Collection of table columns                                                                                                                              |
-| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
-| columns.header       | Text       | x           | Label shown to the user                                                                                                                                  |
-| columns.source       | Text       | x           | Formula                                                                                                                                                  |
-| breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
-| breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
-| bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
-| extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
+| Attribut             | Type       | Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit : | Description                                                                                                                                              |
+|:-------------------- |:---------- |:----------------------------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x                                                                                                                 | Formula of table data source                                                                                                                             |
+| colonnes             | Collection | x                                                                                                                 | Collection of table columns                                                                                                                              |
+| columns.check        | Text       | x                                                                                                                 | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
+| columns.header       | Text       | x                                                                                                                 | Label shown to the user                                                                                                                                  |
+| columns.source       | Text       | x                                                                                                                 | Formula                                                                                                                                                  |
+| breaks               | Collection |                                                                                                                   | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x                                                                                                                 | Label shown to the user                                                                                                                                  |
+| breaks.source        | Text       | x                                                                                                                 | Formula                                                                                                                                                  |
+| breakFormulas        | Collection |                                                                                                                   | Collection of formula objects applicable to break rows                                                                                                   |
+| breakFormulas.label  | Text       | x                                                                                                                 | Label shown to the user                                                                                                                                  |
+| breakFormulas.source | Text       | x                                                                                                                 | Formula                                                                                                                                                  |
+| bcorFormulas         | Collection |                                                                                                                   | Collection of formula objects applicable to bottom carry over rows                                                                                       |
+| bcorFormulas.label   | Text       | x                                                                                                                 | Label shown to the user                                                                                                                                  |
+| bcorFormulas.source  | Text       | x                                                                                                                 | Formula                                                                                                                                                  |
+| extraFormulas        | Collection |                                                                                                                   | Collection of formula objects applicable to extra rows                                                                                                   |
+| extraFormulas.label  | Text       | x                                                                                                                 | Label shown to the user                                                                                                                                  |
+| extraFormulas.source | Text       | x                                                                                                                 | Formula                                                                                                                                                  |
 
 :::note French language
 
@@ -162,19 +162,19 @@ Each translation file must be named with the corresponding language code (for ex
 
 The translation file in JSON format contains the following attributes:
 
-| Attribut  | Type       | Obligatoire | Description                                                                           |
-|:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Collection of translated table objects                                                |
-| fields    | Collection |             | Collection of translated field objects                                                |
-| formulas  | Collection |             | Collection of translated formula objects                                              |
-| fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
+| Attribut  | Type       | Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit : | Description                                                                           |
+|:--------- |:---------- |:----------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------- |
+| tables    | Collection |                                                                                                                   | Collection of translated table objects                                                |
+| fields    | Collection |                                                                                                                   | Collection of translated field objects                                                |
+| formulas  | Collection |                                                                                                                   | Collection of translated formula objects                                              |
+| fileNames | Collection |                                                                                                                   | Collection of translated fileName objects (applicable to the theme and template name) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
-| Attribut    | Type | Obligatoire | Description                             |
-|:----------- |:---- |:----------- |:--------------------------------------- |
-| original    | Text | x           | Original text intended for translation  |
-| translation | Text | x           | Translated version of the original text |
+| Attribut    | Type | Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit : | Description                             |
+|:----------- |:---- |:----------------------------------------------------------------------------------------------------------------- |:--------------------------------------- |
+| original    | Text | x                                                                                                                 | Original text intended for translation  |
+| translation | Text | x                                                                                                                 | Translated version of the original text |
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 
@@ -220,26 +220,26 @@ A list of themes is provided by default in the 4D Write Pro Interface component,
 
 The theme file in JSON format contains the following attributes:
 
-| Attribut | Type   | Obligatoire | Description                                                                                                                           |
-|:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
-| default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
-| table    | Object |             | Object containing the style definition applicable to the table.                                                                       |
-| rows     | Object |             | Object containing the style definition applicable to all rows.                                                                        |
-| cells    | Object |             | Object containing the style definition applicable to all cells.                                                                       |
-| header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |
-| header2  | Object |             | Object containing the style definition applicable to the second header row.                                                           |
-| header3  | Object |             | Object containing the style definition applicable to the third header row.                                                            |
-| header4  | Object |             | Object containing the style definition applicable to the fourth header row.                                                           |
-| header5  | Object |             | Object containing the style definition applicable to the fifth header row.                                                            |
-| headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
-| data     | Object |             | Object containing the style definition applicable to the repeated data row.                                                           |
-| break1   | Object |             | Object containing the style definition applicable to the first break row.                                                             |
-| break2   | Object |             | Object containing the style definition applicable to the second break row.                                                            |
-| break3   | Object |             | Object containing the style definition applicable to the third break row.                                                             |
-| break4   | Object |             | Object containing the style definition applicable to the fourth break row.                                                            |
-| break5   | Object |             | Object containing the style definition applicable to the fifth break row.                                                             |
-| breaks   | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
-| bcor     | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                       |
+| Attribut | Type   | Si l'objet retourné inclut une date ou une heure, il est traité en tant que datetime et est complété comme suit : | Description                                                                                                                           |
+|:-------- |:------ |:----------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------- |
+| default  | Object |                                                                                                                   | Object containing the default style applicable to all rows.                                                                           |
+| table    | Object |                                                                                                                   | Object containing the style definition applicable to the table.                                                                       |
+| rows     | Object |                                                                                                                   | Object containing the style definition applicable to all rows.                                                                        |
+| cells    | Object |                                                                                                                   | Object containing the style definition applicable to all cells.                                                                       |
+| header1  | Object |                                                                                                                   | Object containing the style definition applicable to the first header row.                                                            |
+| header2  | Object |                                                                                                                   | Object containing the style definition applicable to the second header row.                                                           |
+| header3  | Object |                                                                                                                   | Object containing the style definition applicable to the third header row.                                                            |
+| header4  | Object |                                                                                                                   | Object containing the style definition applicable to the fourth header row.                                                           |
+| header5  | Object |                                                                                                                   | Object containing the style definition applicable to the fifth header row.                                                            |
+| headers  | Object |                                                                                                                   | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
+| data     | Object |                                                                                                                   | Object containing the style definition applicable to the repeated data row.                                                           |
+| break1   | Object |                                                                                                                   | Object containing the style definition applicable to the first break row.                                                             |
+| break2   | Object |                                                                                                                   | Object containing the style definition applicable to the second break row.                                                            |
+| break3   | Object |                                                                                                                   | Object containing the style definition applicable to the third break row.                                                             |
+| break4   | Object |                                                                                                                   | Object containing the style definition applicable to the fourth break row.                                                            |
+| break5   | Object |                                                                                                                   | Object containing the style definition applicable to the fifth break row.                                                             |
+| breaks   | Object |                                                                                                                   | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
+| bcor     | Object |                                                                                                                   | Object containing the style definition applicable to the bottom carry-over row.                                                       |
 
 
 For every attribute used in your JSON file (header, data, carry-over, summary, and extra rows), you can define the following WP attributes, mentionned with their [corresponding WP constant](https://doc.4d.com/4Dv20/4D/20/4D-Write-Pro-Attributes.300-6229528.en.html):

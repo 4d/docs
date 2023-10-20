@@ -24,7 +24,7 @@ Para conectarse a la página web del Explorador de datos:
 
 - De una aplicación 4D (con interfaz):
   - Para abrir una nueva ventana 4D con la página Explorador de datos mostrada en un área web, seleccione **Explorador de datos** en el menú **Registros** o haga clic en el botón **Datos** de la barra de herramientas principal.
-  - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu or press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
+  - Para abrir el Explorador de datos en una pestaña externa del navegador, seleccione **Explorador de datos en el navegador** en el menú **Registros** o presione la tecla **Alt** (Windows)/**Opción** (macOS) y haga clic en el botón **Datos** de la barra de herramientas principal.
 - Desde 4D Server, seleccione **Explorador de datos en el navegador** en el menú **Ventana** (el Explorador de Datos sólo puede abrirse en un navegador externo).
 
 - Tanto si utiliza una aplicación 4D sin interfaz como si no, puede abrir su navegador web e introducir la siguiente dirección:

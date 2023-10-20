@@ -50,11 +50,11 @@ There are several ways to supply the labels for a tab control:
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. O objeto deve conter as seguintes propriedades:
 
-| Propriedade    | Tipo       | Descrição                                                                                                                                |
-| -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Obrigatório - Coleção de valores escalares. Só são suportados valores cadeia. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                      |
-| `currentValue` | Text       | Valor atual selecionado                                                                                                                  |
+| Propriedade    | Tipo       | Descrição                                                                                                                                                  |
+| -------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection | Obrigatório - Coleção de valores escalares. Só são suportados valores cadeia. Se for inválido, vazio ou não definido, o controle de tabulação estará vazio |
+| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                        |
+| `currentValue` | Text       | Valor atual selecionado                                                                                                                                    |
 
 The initialization code must be executed before the form is presented to the user.
 

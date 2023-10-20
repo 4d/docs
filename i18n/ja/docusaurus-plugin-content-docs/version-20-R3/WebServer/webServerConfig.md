@@ -286,14 +286,11 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D
 
 ## HTTPS ポート
 
-| 設定できる場所          | 名称                                             | コメント |
-| ---------------- | ---------------------------------------------- | ---- |
-| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | 数値   |
-
-
-|`WEB SET OPTION`|`Web HTTPS port ID`||
-
-|設定ダイアログボックス|[設定ページ / HTTPS ポート](../settings/web.md#https-ポート)||
+| 設定できる場所          | 名称                                                | コメント   |
+| ---------------- | ------------------------------------------------- | ------ |
+| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport)    | number |
+| `WEB SET OPTION` | `Web HTTPS port ID`                               |        |
+| 設定ダイアログボックス      | [設定ページ / HTTPSポート](../settings/web.md#https-port) |        |
 
 TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォルトで HTTPSポート番号は 443です。 ポート番号に関する詳細については、[HTTP ポート](#http-ポート) を参照ください。
 

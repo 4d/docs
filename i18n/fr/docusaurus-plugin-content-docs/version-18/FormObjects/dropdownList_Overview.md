@@ -11,7 +11,7 @@ Sous macOS, les listes déroulantes sont aussi parfois appelées "pop-up menu". 
 
 ![](../assets/en/FormObjects/popupDropdown_appearance.png)
 
-## Utiliser un tableau
+## Utiliser une énumération
 
 Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Un pop-up/liste déroulante affiche le tableau sous la forme d’une liste de valeurs qui apparaît lorsqu’on clique dessus.
 

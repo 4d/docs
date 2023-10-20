@@ -452,7 +452,7 @@ Hit the **Enter** key to select closest occurrence to the cursor. Também pode c
 
 #### Opções
 
-- **Sensível a maiúsculas e minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tem em conta as maiúsculas e minúsculas dos caracteres tal como foram introduzidos na área de pesquisa. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
+- **Sensível a maiúsculas e minúsculas** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): tem em conta as maiúsculas e minúsculas dos caracteres tal como foram introduzidos na área de pesquisa. Essa opção também considera os caracteres diacríticos. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
 - **Palavra inteira** ![full-word](../assets/en/code-editor/full-word.png): limita a pesquisa a ocorrências exatas da palavra pesquisada. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient."
 
 
@@ -491,7 +491,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
+When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Se a linha estiver correta, 4D removerá o símbolo de erro. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
 
 Quando o método, classe ou função é validado, 4D verifica:
 

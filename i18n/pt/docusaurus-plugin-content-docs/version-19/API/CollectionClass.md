@@ -1498,7 +1498,7 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 <!-- REF #collection.map().Params -->
 | Parâmetro  | Tipo       |    | Descrição                                                      |
 | ---------- | ---------- |:--:| -------------------------------------------------------------- |
-| methodName | Text       | -> | Name of method used to transform the collection elements       |
+| methodName | Text       | -> | Nome do método usado para transformar os elementos da coleção  |
 | param      | any        | -> | Parâmetros para o método                                       |
 | Resultados | Collection | <- | Collection de valores transformados|<!-- END REF -->
 

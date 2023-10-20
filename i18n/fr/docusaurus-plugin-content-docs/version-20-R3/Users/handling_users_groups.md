@@ -68,7 +68,7 @@ Pour ajouter un utilisateur depuis la boite à outils :
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
-2. Cliquez sur le bouton d’ajout ![](../assets/en/Users/PlussNew.png) situé au-dessous de la Liste des utilisateurs. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Cliquez sur le bouton d’ajout ![](../assets/en/Users/PlussNew.png) situé au-dessous de la Liste des utilisateurs. OU Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande **Dupliquer** permet de créer rapidement plusieurs utilisateurs ayant des caractéristiques communes.
 
@@ -161,11 +161,11 @@ Dans cet exemple, un utilisateur appartient à l’un des trois groupes définis
 
 Les groupes sont hiérarchisés afin que les privilèges soient correctement affectés aux utilisateurs de chacun des groupes.
 
-- The General Management group contains only “high-level” users. ![](../assets/en/Users/schema1.png)
+- Le groupe Direction générale ne contient que les utilisateurs de “haut niveau”. ![](../assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](../assets/en/Users/schema2.png)
+- Le groupe Dir. finance contient des utilisateurs de la maintenance des données ainsi que ceux de la direction générale. Les utilisateurs de la direction générale disposent donc également des privilèges du groupe Finances. ![](../assets/en/Users/schema2.png)
 
-- The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](../assets/en/Users/schema3.png)
+- Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale. ![](../assets/en/Users/schema3.png)
 
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
 
@@ -196,5 +196,5 @@ Ce fichier peut être stocké aux emplacements suivants, en fonction de vos beso
 - Si vous souhaitez utiliser le même répertoire pour tous les fichiers de données (ou si vous utilisez un seul fichier de données), stockez le fichier **directory.json** dans le dossier des paramètres utilisateur, c'est-à-dire dans le dossier "Settings" [au même niveau que le dossier "Project"](Project/architecture.md#project-folder) (emplacement par défaut).
 - Si vous souhaitez utiliser un fichier répertoire spécifique par fichier de données, stockez le fichier **directory.json** dans le dossier des paramètres des données, c'est-à-dire dans le dossier ["Settings" du dossier "Data"](Project/architecture.md#settings). Si un fichier **directory.json** se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings utilisateur. Cette configuration personnalisée/locale des utilisateurs et des groupes ne sera pas modifiée par une mise à niveau de l'application.
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> Pour permettre des changements sûrs de mots de passe et d'appartenance à des groupes dans un environnement déployé, vous pouvez inclure votre fichier **directory.json** dans l'application serveur pendant le build, en utilisant [l'option correspondante du build application](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
 

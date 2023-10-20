@@ -24,7 +24,7 @@ title: データエクスプローラー
 
 - 4Dアプリケーションから (インターフェースあり):
   - Webエリアにデータエクスプローラーを表示した新しい 4Dウィンドウを開くには、**レコード** メニューから **データエクスプローラー** を選択するか、メインツールバーの **データ** ボタンをクリックします。
-  - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu or press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
+  - データエクスプローラーを外部ブラウザーで開くには、**レコード** メニューから "**データエクスプローラーをブラウザーで開く**" を選択するか、メインツールバーの **データ** ボタンを **Alt** キー (Windows) または **Option** キー (macOS) を押しながらクリックします。
 - 4D Server からは、**ウインドウ** メニューの **データエクスプローラーをブラウザーで開く** を選択します (データエクスプローラーは、外部ブラウザーでのみ開くことができます)。
 
 - ヘッドレス4Dアプリケーションを使用しているかどうかに関わらず、Webブラウザーを開いて次のアドレスを入力します:

@@ -110,7 +110,7 @@ Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affect
  myCol[10]:="My new element"
 ```
 
-Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont attribués une valeur **null**.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
 
 Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 
@@ -201,7 +201,7 @@ Vous devez affecter la référence retournée à une variable 4D de type Collect
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
-Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont attribués une valeur **null**.
 
 Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 
@@ -418,7 +418,7 @@ $vSize:=$col.length //$vSize=0
 
 #### Description
 
-La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les éléments de *col2* à la fin ou à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->. A la différence de la fonction `.insert()`, `.combine()` ajoute chaque valeur de *col2* dans la collection d'origine, et non en tant qu'élément unique de collection.
+La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les éléments de *col2* à la fin ou à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->. . A la différence de la fonction `.insert()`, `.combine()` ajoute chaque valeur de *col2* dans la collection d'origine, et non en tant qu'élément unique de collection.
 > Cette fonction modifie la collection d'origine.
 
 Par défaut, les éléments de *col2* sont ajoutés à la fin de la collection d'origine. Vous pouvez passer dans *index* le numéro de l'élément après lequel vous souhaitez que les éléments de *col2* soient insérés dans la collection.
@@ -470,7 +470,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 #### Description
 
-La fonction `.concat()` <!-- REF #collection.concat().Summary -->retourne une nouvelle collection avec le contenu du paramètre *value* ajouté à la fin de la collection d'origine<!-- END REF -->.
+La fonction `.fill()` <!-- REF #collection.concat().Summary -->remplit les éléments de la collection avec *value*, optionnellement depuis l'élément *startFrom* et jusqu'à l'élément *end* (non inclus), et retourne la collection résultante<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Si *value* est une collection, tous ses éléments sont ajoutés comme nouveaux éléments à la fin de la collection d'origine. Si *value* n'est pas une collection, son contenu est ajouté comme nouvel élément.
@@ -521,7 +521,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 #### Description
 
-La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie profonde (deep copy) de la collection<!-- END REF -->. ***Deep copy*** signifie que les objets ou les collections présents dans la collection d'origine sont dupliqués et ne partagent pas leur référence avec la collection qui est retournée.
+La fonction `.copy()` <!-- REF #collection.copy().Summary --> retourne une copie profonde (deep copy) de la collection<!-- END REF -->***Deep copy*** signifie que les objets ou les collections présents dans la collection d'origine sont dupliqués et ne partagent pas leur référence avec la collection qui est retournée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 S'il est passé, le paramètre *option* peut contenir l'une des constantes suivantes (ou les deux) :
@@ -706,7 +706,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 La fonction `.countValues()` <!-- REF #collection.countValues().Summary -->retourne le nombre d'occurrences de value dans la collection<!-- END REF -->.
 
-Vous pouvez passer dans *value* :
+Paramètre(s) à passer à *methodName*
 
 *   une valeur scalaire (texte, numérique, booléen, date),
 *   une référence d'objet ou de collection.
@@ -995,7 +995,7 @@ $b:=$c.every($f;Is real) //$b=false
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->Voici le code de la méthode ***WordLength*** :<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -1091,7 +1091,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### Description
 
-La fonction `.fill()` <!-- REF #collection.fill().Summary -->remplit les éléments de la collection avec *value*, optionnellement depuis l'élément *startFrom* et jusqu'à l'élément *end* (non inclus), et retourne la collection résultante<!-- END REF -->.
+La fonction `.insert()` <!-- REF #collection.fill().Summary -->insère les éléments de *element* à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->.
 > Cette fonction modifie la collection d'origine.
 
 *   Si *startFrom* est omis, *value* est appliquée à tous les éléments de la collection (*startFrom*=0).
@@ -1159,7 +1159,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour filtrer les �
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif) et un objet en premier paramètre (*$1*). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant la condition et donc, devant être ajouté à la nouvelle collection.
+Vous pouvez fournir des paramètres *extraParam* à la callback si nécessaire. Dans la callback, passez votre code qui compare deux valeurs et retourne **true** si la première valeur est inférieure à la seconde valeur.
 
 La callback reçoit les paramètres suivants :
 
@@ -1250,7 +1250,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour le premier élément remplissant le test. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1343,7 +1343,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour le premier élément remplissant le test. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1457,7 +1457,7 @@ $first:=$emptyCol.first() // retourne Undefined
 
 #### Description
 
-La fonction `.flat()` <!-- REF #collection.flat().Summary -->crée une nouvelle collection dans laquelle tous les éléments de sous-collections sont concaténés de manière récursive jusqu'à la profondeur *depth* spécifiée<!-- END REF -->.
+La fonction `.includes()` <!-- REF #collection.flat().Summary -->renvoie True si l'expression *toSearch* est trouvée parmi les éléments de la collection, sinon False<!-- END REF -->.
 
 Par défaut, si le paramètre *depth* est omis, seul le premier niveau de la structure de la collection imbriquée sera mis à plat.
 > Cette fonction ne modifie pas la collection d'origine.
@@ -1513,7 +1513,7 @@ $col.flat(MAXLONG)
 
 #### Description
 
-La fonction `.flatMap()` <!-- REF #collection.flatMap().Summary -->crée une nouvelle collection basée sur le résultat de l'appel de la fonction 4D *formula* ou de la méthode *methodName* sur chaque élément de la collection originale et mise à plat sur une profondeur de 1<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*.
+La fonction `.flatMap()` <!-- REF #collection.flatMap().Summary -->crée une nouvelle collection basée sur le résultat de l'appel de la fonction 4D *formula* ou de la méthode *methodName* sur chaque élément de la collection originale et mise à plat sur une profondeur de 1 .<!-- END REF -->. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à *formula* ou *methodName* via le paramètre *param*.
 
 Cette fonction est identique à un appel à [`map()`](#map) suivi d'un appel à [`flat()`](#flat) de profondeur 1.
 > Cette fonction ne modifie pas la collection d'origine.
@@ -1524,7 +1524,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `Objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -1557,8 +1557,14 @@ $result:=$col.flatMap(Formula(New collection($1.value*2))
 var $col; $result : Collection
 $col:=New collection("Hello how"; ""; "are you ?")
 
+var $col; $result : Collection
+$col:=New collection("Hello how"; ""; "are you ?")
+
 $result:=$col.map(Formula(Split string($1.value; " ")))
 // [["Hello", "how"], [], ["are", "you", "?"]]
+
+$result:=$col.flatMap(Formula(Split string($1.value; " ")))
+// ["Hello", "how", "are", "you", "?"]
 
 $result:=$col.flatMap(Formula(Split string($1.value; " ")))
 // ["Hello", "how", "are", "you", "?"]
@@ -1609,7 +1615,7 @@ $c2:=$c.flatMap($f; $c.sum())
 
 #### Description
 
-La fonction `.includes()` <!-- REF #collection.includes().Summary -->renvoie True si l'expression *toSearch* est trouvée parmi les éléments de la collection, sinon False<!-- END REF -->.
+La fonction `.reduceRight()` <!-- REF #collection.includes().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de droite à gauche) pour la réduire à une seule valeur<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouvez passer :
@@ -1623,7 +1629,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche dans *startFrom*.
 
 *   Si *startFrom* >= la longueur de la collection, False est retourné, ce qui signifie que la collection n'est pas testée.
-*   Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). Notez que même si *startFrom* est négatif, la recherche est effectuée de la gauche vers la droite.
+*   Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*). **Attention :** N'oubliez pas que la numérotation des éléments de collection débute à 0.
 *   Si *startFrom* = 0, l'ensemble de la collection est évalué (défaut).
 
 #### Exemple
@@ -1796,7 +1802,7 @@ Pour une description détaillée de la construction de recherches à l'aide des 
 
 #### Description
 
-La fonction `.insert()` <!-- REF #collection.insert().Summary --> insère les éléments de *element* à la position *index* de la collection et retourne la collection modifiée<!-- END REF -->.
+La fonction `.push()` <!-- REF #collection.insert().Summary --> ajoute un ou plusieurs *element*(s) à la fin de la collection et retourne la collection modifiée<!-- END REF -->.
 > Cette fonction modifie la collection d'origine.
 
 Dans *index*, passez le numéro de l'élément après lequel vous souhaitez que le paramètre element soit inséré.
@@ -1851,7 +1857,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en textes et les concatène en utilisant comme séparateur la chaîne *delimiter* spécifiée<!-- END REF -->. La fonction retourne la chaîne résultante.
+La fonction `.concat()` <!-- REF #collection.join().Summary -->retourne une nouvelle collection avec le contenu du paramètre *value* ajouté à la fin de la collection d'origine<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1959,7 +1965,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 *   la valeur null,
 *   une référence d'objet ou de collection.
 
-Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
+*toSearch* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
 
@@ -2060,7 +2066,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -2247,7 +2253,7 @@ Toutes les collections *colsToSort* doivent avoir le même nombre d'éléments, 
 
 :::
 
-Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](FunctionClass.md#formula)) qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
+La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](FunctionClass.md#formula)) qui définit l'ordre de tri. Vous pouvez passer des paramètres supplémentaires à la formule si nécessaire.
 
 La formule reçoit les paramètres suivants :
 
@@ -2421,7 +2427,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
 
 #### Exemple 2
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -2434,7 +2440,7 @@ Tri d'une collection d'objets sur des propriétés :
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets via une collection d'objets critères :
+Tri d'une collection d'objets sur des propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -2448,7 +2454,7 @@ Tri d'une collection d'objets via une collection d'objets critères :
 
 #### Exemple 3
 
-Tri avec un chemin de propriété :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $crit; $c; $c2 : COllection
@@ -2523,7 +2529,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 
 - *methodName*, le nom d'une méthode projet (texte).
 
-Dans la callback, passez votre code qui compare deux valeurs et retourne **true** si la première valeur est inférieure à la seconde valeur. Vous pouvez fournir des paramètres *extraParam* à la callback si nécessaire.
+Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous pouvez indiquer la valeur à remplir dans les éléments ajoutés à l'aide du paramètre *defaultValue*.
 
 La callback reçoit les paramètres suivants :
 
@@ -2538,7 +2544,7 @@ Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
 #### Exemple 1
 
-Voici le code de la méthode ***NumAscending*** :
+Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -2550,7 +2556,7 @@ Voici le code de la méthode ***NumAscending*** :
 
 #### Exemple 2
 
-Voici le code de la méthode ***WordLength*** :
+Dans le paramètre *options* , vous pouvez passer une ou une combinaison des constantes suivantes :
 
 ```4d
  var $fruits; $c2 : Collection
@@ -2576,7 +2582,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-Paramètre(s) à passer à *methodName*
+Voici le code de la méthode ***NumAscending*** :
 
 ```4d
 var $1 : Object
@@ -2669,7 +2675,7 @@ Lorsqu'elle est appliquée à une collection vide, .`pop()` retourne ***undefine
 
 #### Description
 
-La fonction `.push()` <!-- REF #collection.push().Summary -->ajoute un ou plusieurs *element*(s) à la fin de la collection et retourne la collection modifiée<!-- END REF -->.
+La fonction `.flat()` <!-- REF #collection.push().Summary -->crée une nouvelle collection dans laquelle tous les éléments de sous-collections sont concaténés de manière récursive jusqu'à la profondeur *depth* spécifiée<!-- END REF -->.
 > Cette fonction modifie la collection d'origine.
 
 
@@ -2687,7 +2693,7 @@ La fonction `.push()` <!-- REF #collection.push().Summary -->ajoute un ou plusie
 
 #### Exemple 2
 
-Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
+Cette fonction ne modifie pas la collection d'origine.
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2779,14 +2785,14 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
+nombres
 
 ```4d
  $col:=$c.query("name = :1";"@in@")
   //$col=[{name:Winch...},{name:Sterling...}]
 ```
 
-Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
+Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
 
 ```4d
  $col:=$c.query("name # :1";$aString+"@")
@@ -2794,18 +2800,18 @@ Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété déf
   //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}]
 ```
 
-Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
+Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
 
 ```4d
  $col:=$c.query("age=null") //placeholders not allowed with "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
-Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
+Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 si la date du jour est 01/10/2018 si la date du jour est 01/10/2018
 ```
 
 
@@ -2943,7 +2949,7 @@ Avec la méthode ***Flatten*** suivante :
 #### Description
 
 
-La fonction `.reduceRight()` <!-- REF #collection.reduceRight().Summary -->applique la callback *formula* ou *methodName* à un accumulateur et à chaque élément de la collection (de droite à gauche) pour la réduire à une seule valeur<!-- END REF -->.
+La fonction `.first()` <!-- REF #collection.reduceRight().Summary -->renvoie le premier élément de la collection<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :
@@ -3414,7 +3420,7 @@ Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numériq
 6. collections
 7. dates
 
-Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans *formula * ([objet Formula](FunctionClass.md)) ou *methodName* (Text) un rappel qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans *formula * ([objet Formula](FunctionClass.md)) ou *methodName* (Text) un rappel qui définit l'ordre de tri. Si vous souhaitez trier les collections dans un ordre autre que croissant, vous devez fournir *formula* ([objet Formula](FunctionClass.md#formula)) qui définit l'ordre de tri. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 

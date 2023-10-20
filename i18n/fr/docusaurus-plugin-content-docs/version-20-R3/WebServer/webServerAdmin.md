@@ -227,7 +227,7 @@ Comme la taille d'un *logweb.txt* fichier évoluer considérablement, il est pos
 
 Lorsque la sauvegarde du fichier d'historique web est déclenchée, le fichier d'historique est archivé dans un dossier nommé "Archives Logweb", qui est créé au même niveau que le fichier *logweb.txt*.
 
-Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. et 7 secondes : “D2020_09_04_T15_50_07.txt.”
+Le fichier archivé est renommé sur le modèle suivant : "DYYYY_MM_DD_Thh_mm_ss.txt". Par exemple, pour un fichier archivé le 4 septembre 2020 à 15h50  et 7 secondes : “D2020_09_04_T15_50_07.txt.”
 
 #### Paramètres de backup
 
@@ -246,6 +246,6 @@ Vous devez d'abord choisir la fréquence (jours, semaines, etc.) ou le critère 
 
 *   **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 
-*   **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Enter 1 if you want to perform a monthly backup.
+*   **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 
 *   **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Un backup se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.

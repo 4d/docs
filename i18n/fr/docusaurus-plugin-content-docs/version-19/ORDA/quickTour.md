@@ -84,13 +84,13 @@ Pour ajouter un utilisateur depuis la boite à outils :
 
 La liste des utilisateurs affiche tous les utilisateurs, y compris [le Super_Utilisateur et l'l’Administrateur](#designer-and-administrator).
 
-2. Cliquez sur le bouton d’ajout ![](../assets/en/Users/PlussNew.png) situé au-dessous de la Liste des utilisateurs. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Cliquez sur le bouton d’ajout ![](../assets/en/Users/PlussNew.png) situé au-dessous de la Liste des utilisateurs. OU Cliquez avec le bouton droit de la souris dans la Liste des utilisateurs et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 
 > La commande **Dupliquer** permet de créer rapidement plusieurs utilisateurs ayant des caractéristiques communes.
 
 4D ajoute un nouvel utilisateur à la liste, nommé par défaut "Nouvel utilisateurN".
 
-3. Saisissez le nom du nouvel utilisateur. Enter the user name. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
+3. Saisissez le nom du nouvel utilisateur. Ce nom sera utilisé par l’utilisateur pour ouvrir la base. Vous pouvez renommer un utilisateur à tout moment en utilisant la commande **Renommer** du menu contextuel, ou en utilisant la combinaison Alt+clic (Windows) ou Option+clic (macOS) ou en cliquant deux fois sur un nom.
 
 4. Pour saisir le mot de passe de l’utilisateur, cliquez sur le bouton **Modifier...** dans la zone des propriétés de l’utilisateur et saisissez deux fois le mot de passe dans la boite de dialogue. Vous pouvez saisir jusqu’à 15 caractères alphanumériques. L’éditeur de mots de passe tient compte de la casse des caractères (majuscules ou minuscules).
 
@@ -172,11 +172,11 @@ Dans cet exemple, un utilisateur appartient à l’un des trois groupes définis
 
 Les groupes sont hiérarchisés afin que les privilèges soient correctement affectés aux utilisateurs de chacun des groupes.
 
-- The General Management group contains only “high-level” users. ![](../assets/en/Users/schema1.png)
+- Le groupe Direction générale ne contient que les utilisateurs de “haut niveau”. ![](../assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](../assets/en/Users/schema2.png)
+- Le groupe Dir. finance contient des utilisateurs de la maintenance des données ainsi que ceux de la direction générale. Les utilisateurs de la direction générale disposent donc également des privilèges du groupe Finances. ![](../assets/en/Users/schema2.png)
 
-- The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](../assets/en/Users/schema3.png)
+- Le groupe Comptabilité contient des opérateurs de saisie mais aussi les utilisateurs des groupes Dir. finance et donc Direction générale. ![](../assets/en/Users/schema3.png)
 
 Vous pouvez ensuite décider des privilèges affectés à chaque groupe suivant le niveau de responsabilité des utilisateurs qu’il contient.
 

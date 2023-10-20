@@ -19,7 +19,7 @@ To know what is exposed as the datastore, create a new project method, write the
 TRACE
 ```
 
-Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Executar o método: ele chama simplesmente a janela do depurador. In the Expression area, double-click to insert an expression and enter `ds`. Devolve o objeto do datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
 
 ![](../assets/en/ORDA/debug1.png)
 

@@ -311,11 +311,11 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 
 **Valores possíveis:**
 
-| dataClassAttribute.kind | type                                                     | Comentário                                                                                                                      |
-| ----------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "number", "date", "object", "bool", "image", or "string" | "number" se devolve para qualquer tipo numérico, incluindo a duração. "string" is returned for uuid, alpha and text field types |
-| relatedEntity           | related dataClass name                                   | Ex: "Companies"                                                                                                                 |
-| relatedEntities         | related dataClass name + "Selection" suffix              | Ex: "EmployeeSelection"                                                                                                         |
+| dataClassAttribute.kind | type                                                    | Comentário                                                                                                                          |
+| ----------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "number", "date", "object", "bool", "image" ou "string" | "number" se devolve para qualquer tipo numérico, incluindo a duração. "string" se devolve para os tipos de campo uuid, alfa e texto |
+| relatedEntity           | related dataClass name                                  | Ex: "Companies"                                                                                                                     |
+| relatedEntities         | related dataClass name + "Selection" suffix             | Ex: "EmployeeSelection"                                                                                                             |
 
 <!-- END REF -->
 

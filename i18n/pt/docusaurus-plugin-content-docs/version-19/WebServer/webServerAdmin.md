@@ -51,7 +51,7 @@ This command lets you verify that the web server, home page display, etc. work c
 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache).
 
 Para o fazer, basta clicar no botão **Clear Cache** na página Web/Opções (I) da caixa de diálogo Parâmetros. A cache é então imediatamente limpa.
-> You can also use the [/4DCACHECLEAR](#cacheclear) URL.
+> Você também pode usar o URL [/4DCACHECLEAR](#cacheclear).
 
 ## Explorador de execução
 
