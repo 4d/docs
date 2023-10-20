@@ -1011,7 +1011,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 | -- |  | --- | -- |
 |    |  |     |    |
 
-|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
+|$1| |text| 4D View Pro オブジェクトの名前| |$2| |text| 書き出された 4D View Pro オブジェクトのファイルパス| |$3| |object| コマンドの *paramObj* への参照| |$4| |object| メソッドによってステータスメッセージと共に返されるオブジェクト| ||.success |boolean| 書き出しに成功した場合は true、そうでない場合は false。｜ ||.errorCode |integer| エラーコード。 4D または JavaScript により返されます。| ||.errorMessage |text| エラーメッセージ。 4D あるいは JavaScript により返されます。|
 
 #### 例題 1
 
@@ -2134,7 +2134,7 @@ $rowCount:=VP Get row count("ViewProarea")
 | ---------- | ---- | -- | -------------------------- |
 | vpAreaName | Text | -> | 4D View Pro エリアフォームオブジェクト名 |
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
+|sheet  |Integer|->|シートのインデックス (省略した場合はカレントシート)| |Result |Object|<-|Range object of cells|<!-- END REF -->
 
 #### 説明
 
@@ -5900,7 +5900,7 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 | vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名 |
 | tableName  | Text | -> | 表組みの名称                  |
 
-|column|Integer|->|Index of the column in the table| |attributes |Object|->|Attribute(s) to apply to the *column*| |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|column|Integer|->|表組みの列のインデックス| |attributes |Object|->|*column* に適用する属性 (複数可)| |sheet   |Integer|->|シートインデックス (省略時はカレントシート)|<!-- END REF -->
 
 #### 説明
 
