@@ -79,15 +79,15 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 ---
 
-## Dotted Line Type
+## Type de ligne pointillée
 
 Décrit le type de ligne en pointillé comme une séquence de points noirs et blancs.
 
 #### Grammaire JSON
 
-| Nom             | Type de données        | Valeurs possibles                                                                                    |
-| --------------- | ---------------------- | ---------------------------------------------------------------------------------------------------- |
-| strokeDashArray | number array or string | Ex : Ex : Ex : Ex : Ex : Ex : "6 1" ou \[6,1\] pour une séquence de points noirs et un point blanc |
+| Nom             | Type de données            | Valeurs possibles                                                            |
+| --------------- | -------------------------- | ---------------------------------------------------------------------------- |
+| strokeDashArray | tableau numérique ou texte | Ex : "6 1" ou \[6,1\] pour une séquence de 6 points noirs et 1 point blanc |
 
 #### Objets pris en charge
 
@@ -163,7 +163,7 @@ Désigne l'épaisseur d'une ligne.
 
 Le nom d'un tableau pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne ou colonne de la list box.
 
-Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). You can use the constants of the [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html) theme.
+Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes du thème [SET RGB COLORS](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-RGB-COLORS.302-4310385.en.html). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 
 Par exemple, considérons une list box où les lignes ont une couleur alternée gris/gris clair, définie dans les propriétés de la list box. Un tableau de couleurs d'arrière-plan a également été défini pour la list box afin de changer en orange clair la couleur des lignes où au moins une valeur est négative :
 
@@ -174,7 +174,7 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, vous définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple `<>_BgndColor_1`, `<>_BgndColor_2` et `<>_BgndColor_3`. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // orange foncé
