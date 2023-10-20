@@ -5,14 +5,14 @@ title: Propriétés des formulaires
 
 ---
 
-## Color Scheme
-> Color scheme property is only applied on macOS.
+## Schéma de couleurs
+> La propriété de schéma de couleurs n'est appliquée que sur macOS.
 
-This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
+Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](https://doc.4d.com/4dv19/help/command/en/page1762.html)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
-*   dark - light text on a dark background
-*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
-> light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
+*   dark - texte clair sur fond foncé
+*   light - texte foncé sur fond clair
+> Une palette de couleurs définie ne peut pas être remplacée par un CSS.
 
 #### Grammaire JSON
 
@@ -158,7 +158,7 @@ Lorsque cette option est cochée, si la fenêtre est ouverte via la commande `Cr
 
 *   la page courante,
 *   la position, la taille et la visibilité de chaque objet du formulaire (y compris la taille et la visibilité des colonnes de list box).
-> > > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
+> Cette option ne prend pas en compte les objets générés via la commande `OBJECT DUPLICATE`. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
 
 Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/properties_Object.md#save-value) est en outre disponible pour certains objets.
 
@@ -181,8 +181,8 @@ Le nom de la fenêtre est utilisé lorsque le formulaire est ouvert à l'aide de
 Vous pouvez utiliser des références dynamiques pour définir les noms de fenêtre des formulaires, c'est-à-dire :
 
 *   Une référence XLIFF standard stockée dans le dossier Resources.
-*   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
+*   Un libellé de table ou de champ : La syntaxe à appliquer est la suivante : `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
+*   Une variable ou un champ : La syntaxe à appliquer est la suivante : `\N-&#060;VariableName&#062 ;` ou `&#060 ;[TableName]FieldName&#062 ;`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
 
 > Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
