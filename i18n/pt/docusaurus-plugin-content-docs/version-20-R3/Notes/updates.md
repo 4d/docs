@@ -6,49 +6,49 @@ title: Notas de Lançamento
 
 ## 4D v20 R3
 
-Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), the blog post that lists all new features and enhancements in 4D v20 R3.
+Leia [**O que há de novo no 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-R3/), a postagem do blog que lista todos os novos recursos e aprimoramentos no 4D v20 R3.
 
 
 #### Destaques
 
-- New [`collection.multiSort`](../API/CollectionClass.md#multisort) function.
-- Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
-- Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
-- [Global modification stamp](../ORDA/global-stamp.md) to help implementing data synchronization modules. New functions: [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp).
-- Support for [initializing the variable's value and data type in the declaration line](../Concepts/variables/#initializing-variables-in-the-declaration-line).
-- Log file settings are now [saved with the current data file](../Backup/settings.md#log-file-management)
-- New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
-- 4D View Pro: Support for the [import](../ViewPro/method-list.md#vp-import-from-blob) and [export](../ViewPro/method-list.md#vp-export-to-blob) of 4D View Pro documents in Blob format.
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) on doc.4d.com.
+- Nova função [`collection.multiSort`](../API/CollectionClass.md#multisort).
+- Suporte do parâmetro *context* em [`Formula from string`](../API/FunctionClass.md#formula-from-string).
+- Compatibilidade com a propriedade  `cabeçalhos` no parâmetro *connectionHandler*  de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
+- [Carimbo de modificação global](../ORDA/global-stamp.md) para ajudar a implementar módulos de sincronização de dados. Novas funções: [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) e [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp).
+- Suporte para [inicialização do valor da variável e do tipo de dados na linha de declaração](../Concepts/variables/#initializing-variables-in-the-declaration-line).
+- Os parâmetros do arquivo de historial agora são [salvos com o arquivo de dados atual](../Backup/settings.md#log-file-management)
+- Nova sintaxe para [declaração de parâmetros variáveis](../Concepts/parameters.md#declaring-variadic-parameters)
+- 4D View Pro: Suporte para a [importação ](../ViewPro/method-list.md#vp-import-from-blob) e [exportação ](../ViewPro/method-list.md#vp-export-to-blob) de documentos do 4D View Pro no formato Blob.
+- Comandos de linguagem 4D: [O que é a nova página](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) em doc.4d.com.
+- 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) em doc.4d.com.
 - [**Lista de bugs corrigidos**](https://falhas.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D v20 R3.
 
 
 #### Mudanças de comportamento
 
-- Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*.
-- 4D no longer includes an internal PHP interpreter. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
+- Alguns erros eram "capturáveis" pelo seu  [método de tratamento de erros](../Concepts/error-handling.md) somente no modo interpretado. Foi feita uma correção para que os erros abaixo, a partir de agora sejam detectados também no modo compilado: *Indice out of range*, *Type incompatible*, e *Dereferencing a Null pointer*.
+- 4D não inclui mais um interpretador PHP interno. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
 
 
 ## 4D v20 R2
 
-Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
+Leia [**O que há de novo no 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), a postagem do blog que lista todos os novos recursos e aprimoramentos no 4D v20 R2.
 
 
 #### Destaques
 
-- New [WebSocket class](../API/WebSocketClass.md) to create and manage client WebSocket connections from 4D.
-- New QUIC network layer [interface setting](../settings/client-server.md#network-layer).
-- 4D View Pro: Support of the **.sjs** file format for the [import](../ViewPro/method-list.md#vp-import-document) and [export](../ViewPro/method-list.md#vp-export-document) of documents.
+- Nova classe [WebSocket](../API/WebSocketClass.md) para criar e gerenciar conexões WebSocket cliente a partir de 4D.
+- Nova camada de rede QUIC [configuração de interface](../settings/client-server.md#network-layer).
+- 4D View Pro: Suporte ao formato de arquivo **.sjs** para a importação [](../ViewPro/method-list.md#vp-import-document) e exportação [](../ViewPro/method-list.md#vp-export-document) de documentos.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) on doc.4d.com.
 - 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) em doc.4d.com.
-- 4D Write Pro Interface: New [Table Wizard](../WritePro/writeprointerface.md).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R2): list of all bugs that have been fixed in 4D v20 R2.
+- Interface do 4D Write Pro: Novo assistente de tabela [](../WritePro/writeprointerface.md).
+- [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=20_R2): lista de todos os bugs corrigidos em 4D v20 R2.
 
 
 #### Mudanças de comportamento
 
-- **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
+- **Aviso**: O valor inicial do  [`offset/deslocamento`](../API/FileHandleClass.md#offset) dos objetos [4D.FileHandle](../API/FileHandleClass.md) foi incorretamente definido como 1 em vez de 0. Foi feita uma correção no 4D a partir das versões **20.1 HF1** e **20 R2** e o valor agora é 0.
 
 ## 4D v20.x
 
@@ -61,50 +61,50 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 :::caution 4D v20.1 reconstrução do índice e versões cliente/servidor
 
-4D v20.1 also includes an ICU library update, which has the following consequences:
+4D v20.1 também inclui uma atualização da biblioteca ICU, que tem as seguintes consequências:
 
-- It will force an automatic rebuild of indexes of type alpha, text, and object.
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
+- Isso forçará uma reconstrução automática dos índices do tipo alfa, texto e objeto.
+- Por causa da consistência de ordenação, é necessário que os clientes remotos 4D e o 4D Server usem a mesma versão: somente o 4D v20.1 remoto pode se conectar ao 4D Server v20.1 e vice-versa.
 
 :::
 
 
 #### Destaques
 
-- (4D v20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
+- (4D v20.1) Nova propriedade `plugins` no parâmetro *options* para o comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore).
-- [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
+- [Classe de transportador IMAP](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) retorna *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) retorna *id*, *flags* e *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) e [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) suportam palavras-chave personalizadas.
 - Novo [WebSocketServer](../API/WebSocketServerClass.md) e [WebSocketConnection](../API/WebSocketConnectionClass.md) classes para criar e gerir ligações WebSocket a partir de 4D.
 - Apoio da propriedade [``](../Concepts/classes.md#property) palavra-chave em definições de classe de utilizador.
-- New functions to lock/unlock the datastore: [`.flushAndLock()`](../API/DataStoreClass.md#flushandlock), [`.locked()`](../API/DataStoreClass.md#locked), [`.unlock()`](../API/DataStoreClass.md#unlock).
-- New [`.at()`](../API/EntitySelectionClass.md#at) function in the Entity selection class.
-- New functions in the Collection class: [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap),[`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright).
+- Novas funções para bloquear/desbloquear o datastore: [`.flushAndLock()`](../API/DataStoreClass.md#flushandlock), [`.locked()`](../API/DataStoreClass.md#locked), [`.unlock()`](../API/DataStoreClass.md#unlock).
+- Novo [`.at()`](../API/EntitySelectionClass.md#at) função na classe de seleção da Entidade.
+- Novas funções na classe Collection: [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap),[`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright).
 - Editor de código: melhorado [Encontrar e substituir características](../code-editor/write-class-method.md#find-and-replace).
-- New searchable "property" Language element in the [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) dialog box.
+- Novo elemento de linguagem "propriedade" pesquisável na caixa de diálogo [**Find in design...**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.en.html#6337726) .
 - Para simplificar o código, alguns operadores de comparação podem agora ser utilizados com [Valores indefinidos](../Concepts/dt_null_undefined.md#undefined-operators) sem gerar erros.
-- Support of *headerOnly* parameter in [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail).
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
+- Suporte de *headerOnly* parâmetro em [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail).
+- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
 - Novo function [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths).
-- Support of `count values` option in [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) and [`collection.distinct()`](../API/CollectionClass.md#distinct) functions.
-- ORDA requests logs are now available [on the server](../Debugging/debugLogFiles.md#orda-requests), new parameter for [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) function.
+- Suporte de `valores de contagem` opção em as funções [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) e [`collection.distinct()`](../API/CollectionClass.md#distinct).
+- Os registros de solicitações ORDA agora estão disponíveis [no servidor](../Debugging/debugLogFiles.md#orda-requests), novo parâmetro para a função [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) .
 - Novas ferramentas para execução de código no CLI: [tool4d](../Admin/cli.md#tool4d) e [4D Server em modo utilitário](../Admin/cli.md#4d-server-in-utility-mode).
 - [Explorador da Data](../Admin/dataExplorer.md#opening-the-data-explorer): novo botão e visualização numa janela 4D.
 - Novas propriedades para botões, caixas de selecção e botões de rádio: [Abraços de imagem título](../FormObjects/properties_TextAndPicture.md#image-hugs-title) e [Alinhamento horizontal](../FormObjects/properties_Text.md#horizontal-alignment).
-- Support of `WinIcon` in [`file.setAppInfo()`](../API/FileClass.md#setappinfo) function.
-- New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
-- Fixed bug lists: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
+- Suporte do `WinIcon` na função [`file.setAppInfo()`](../API/FileClass.md#setappinfo).
+- Nova opção `validateTLSCertificate` para [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) que permite controlar a validação automática do certificado.
+- Comandos de linguagem 4D: [O que é a nova página](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
+- 4D Write Pro: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) em doc.4d.com.
+- Listas de erros corrigidas: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
 
 #### Mudanças de comportamento
 
-- **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
-- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
-- TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. Uma nova propriedade *option* permite-lhe controlar esta validação.
-- TLS v1.0 and TLS v1.1 are deprecated, they are no longer supported as `Min TLS version` on 4D Server. Version 1.3 is now selected by default and is automatically used if `_o_TLSv1_0` or `_o_TLSv1_1` constants are set with [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
-- For consistency, all buttons, checkboxes, and radio buttons are now rendered with a "3D" type at runtime: respectively `Object type 3D button`, `Object type 3D checkbox`, and `Object type 3D radio button` are returned by [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/en/page642.html) for these objects.
-- As of 4D v20, [4D for Mobile](https://developer.4d.com/go-mobile/) is no longer installed by default in the 4D environment. To benefit from the 4D for Mobile development features in 4D, you need to [install the 4D Mobile App component](https://developer.4d.com/go-mobile/docs/getting-started/installation) in the ["Components"](../Project/architecture.md#components) folder of your projects. If a converted project uses features from the [4D Mobile App Server component](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), make sure you also install it in the "Components" folder of the project.
+- **Aviso**: O valor inicial do  [`offset/deslocamento`](../API/FileHandleClass.md#offset) dos objetos [4D.FileHandle](../API/FileHandleClass.md) foi incorretamente definido como 1 em vez de 0. Foi feita uma correção no 4D a partir das versões **20.1 HF1** e **20 R2** e o valor agora é 0.
+- Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
+- Os certificados TLS agora são validados automaticamente por 4D ao enviar solicitações HTTP com [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) e rejeitados com um erro se forem inválidos. Uma nova propriedade *option* permite-lhe controlar esta validação.
+- TLS v1.0 e TLS v1.1 são obsoletos, não são mais suportados como `Min TLS versão` no 4D Server. A versão 1.3 agora é selecionada por padrão e é usada automaticamente se as constantes `_o_TLSv1_0` ou `_o_TLSv1_1` forem definidas com [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html).
+- Para fins de consistência, todos os botões, caixas de seleção e botões de rádio agora são renderizados com um tipo "3D" em tempo de execução: respectivamente `Object type 3D button`, `Object type 3D checkbox`e `Object type 3D radio button` são retornados por [`OBJECT Get type`](https://doc.4d.com/4dv20/help/command/en/page642.html) para esses objetos.
+- A partir do 4D v20, o [4D for Mobile](https://developer.4d.com/go-mobile/) não é mais instalado por padrão no ambiente 4D. Para se beneficiar dos recursos de desenvolvimento 4D for Mobile em 4D, você precisa [instalar o componente 4D Mobile App](https://developer.4d.com/go-mobile/docs/getting-started/installation) na pasta ["Components"](../Project/architecture.md#components) de seus projetos. Se um projeto convertido usar recursos do componente [4D Mobile App Server](https://github.com/4d/4D-Mobile-App-Server#4d-mobile-app-server), certifique-se de instalá-lo também na pasta "Components" do projeto.
 
 
 ## 4D v19.5
@@ -114,13 +114,13 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 #### Destaques
 
-- Error management methods can be installed for [global and component execution contexts](../Concepts/error-handling.md#scope-and-components).
-- Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
-- ORDA: Support of the *roles.json* file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
-- Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
+- Os métodos de gerenciamento de erros podem ser instalados para [contextos de execução global e de componentes](../Concepts/error-handling.md#scope-and-components).
+- As caixas de listagem com fontes de dados de seleção de coleção ou entidade agora são compatíveis com a propriedade de coluna [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) .
+- ORDA: Suporte do arquivo *roles.json* para definir os privilégios [](../ORDA/privileges.md) atribuídos à sessão com [`setPrivileges()`](../API/SessionClass.md#setprivileges).
+- Suporte do modo [SDI no modo de aplicativo de teste](../Menus/sdi.md#sdi-mode-availability) no Windows.
 - 4D View Pro:
-    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
-    - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
+    - Suporte de temas em tabelas: novos comandos [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) e [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) , suporte de opções de tema em [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
+    - new [VP Obter linhas sujas da tabela](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - Comandos de linguagem 4D: [O que é a nova página](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) em doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
 - [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos os bugs que foram corrigidos em 4D v19.5.
@@ -128,9 +128,9 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 #### Mudanças de comportamento
 
-- For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
-- When a [bevel button with linked pop-up menu](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) is assigned a standard action, the standard action is no longer generated if a pop-up menu option is selected.
-- In Web areas using blink (CEF), dialogs displayed from external scripts are now blocking if not called from a `setTimeout()` JS function. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
+- Para conformidade com HTTP RFC, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) propriedade devolve agora todos os nomes de cabeçalho **em minúsculas**. Se quiser que o seu código continue a funcionar como antes, utilize a nova propriedade [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response).
+- Quando um botão chanfrado [com menu pop-up vinculado](../FormObjects/properties_TextAndPicture.md/#with-pop-up-menu) é atribuído a uma ação padrão, a ação padrão não é mais gerada se uma opção de menu pop-up for selecionada.
+- Nas áreas da Web que usam blink (CEF), as caixas de diálogo exibidas a partir de scripts externos agora estão bloqueando se não forem chamadas a partir de uma função `setTimeout()` JS. This is due to the current CEF updates, in which dialogs displayed by functions such as `alert()` or `print()` are no longer handled by the OS but by the Web area. See [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) and [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/en/page1043.html).
 
 
 
@@ -232,8 +232,8 @@ $value:=($size>1000)? a:b // Aqui 'a:b' é visto como um operador ternário.
 
 ## 4D v19 R3
 
-- [Computed properties](../Concepts/classes.md#function-get-and-function-set) are available in classes.
-- [Computed attributes](../ORDA/ordaClasses.md#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](../ORDA/ordaClasses.md#function-query-attributename) and [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) functions.
+- As [propriedades computadas](../Concepts/classes.md#function-get-and-function-set) estão disponíveis em classes.
+- [Atributos computados](../ORDA/ordaClasses.md#computed-attributes) estão disponíveis nas classes ORDA. They are similar to computed properties but also support [query](../ORDA/ordaClasses.md#function-query-attributename) and [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) functions.
 - New ORDA dataclass attributes: [`exposed`](../API/DataClassAttributeClass.md#exposed) and [`readOnly`](../API/DataClassAttributeClass.md#readonly).
 - [ZIP archives](../API/ZipArchiveClass.md#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
 - A [new build option](../Desktop/building.md#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
@@ -273,8 +273,8 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ## 4D v19 R2
 
-- A [default .gitignore file](../Preferences/general#create-gitignore-file) can be created with new projects
-- New [Blob class API](../API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
+- Um [arquivo .gitignore padrão](../Preferences/general#create-gitignore-file) pode ser criado com os novos projetos
+- New [Blob class API](../API/BlobClass.md) to handle new [`4D. Blob` objects](Concepts/dt_blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass.md#settext)
 
 
