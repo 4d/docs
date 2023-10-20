@@ -112,7 +112,7 @@ Os seguintes parâmetros são armazenados no modelo:
 - Localização e conteúdo de cada lista
 - Largura relativa de cada lista
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
+To save a Code Editor window as a template, choose **Method** > **Save As Template**. O modelo é guardado imediatamente (não aparece nenhuma caixa de diálogo). It is stored in the **Preferences** of the 4D application. Se já existir um modelo anterior, ele será substituído.
 
 ### Área de pontos de paragem
 
@@ -235,7 +235,7 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[left arrow]                                              | Mover o ponto de inserção, palavra a palavra, da direita para a esquerda                                                                   |
 | [Alt]+[seta para baixo]                                          | Move the line(s) where the cursor is to the bottom                                                                                         |
 | [Alt]+[seta para cima]                                           | Mover a(s) linha(s) onde se encontra o cursor para o topo                                                                                  |
-| [Home]                                                           | Place the insertion point at the beginning of the line                                                                                     |
+| [Home]                                                           | Posicione o ponto de inserção no início da linha                                                                                           |
 | [End]                                                            | Colocar o ponto de inserção no fim da linha                                                                                                |
 | [Ctrl]+[Home]                                                    | Colocar o ponto de inserção no início do método                                                                                            |
 | [Ctrl]+[End]                                                     | Place the insertion point at the end of the method                                                                                         |
