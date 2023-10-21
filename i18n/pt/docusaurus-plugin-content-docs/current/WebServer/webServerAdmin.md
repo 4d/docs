@@ -95,7 +95,7 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 | ----------------------- | ------------------------------------------------------------ |
 | Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)            |
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                           |
-| Cached Object Max Size  | Maximum size of each object in the cache (in bytes)          |
+| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)            |
 | Cache Use               | Percentage of cache used                                     |
 | Cached Objects          | Number of objects found in the cache, **including pictures** |
 
@@ -110,7 +110,7 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 | ----------------------- | ---------------------------------------------------------------------- |
 | Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                      |
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                     |
-| Cached Object Max Size  | Maximum size of each object in the cache (in bytes)                    |
+| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                      |
 | Cache Use               | Percentage of cache used                                               |
 | Cached Objects          | Number of objects found in the cache, **without pictures**             |
 | Objectos filtrados      | Number of objects in cache not counted by URL, in particular, pictures |
@@ -134,7 +134,7 @@ The */4DWEBTEST* URL is designed to check the web server status. When this URL i
 
 ## Logs
 
-4D allows you to generate two logs of web requests:
+4D permite gerar dois logs de pedidos web:
 
 - a debug log, useful in the web server development phase (*HTTPDebugLog.txt*),
 - a standardized web request log, rather used for statistic purposes (*logweb.txt*).
@@ -210,7 +210,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS_URI_QUERY | X   | X   | Request query parameters                                                                                                                          |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                                          |
 | DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                                        |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                                               |
+| METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                           |
 | PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                               |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                  |
 | TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                               |
@@ -248,4 +248,4 @@ Configure the automatic backup parameters for the request log. First you must ch
 
 *   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
 
-*   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
+*   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
