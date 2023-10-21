@@ -61,22 +61,22 @@ Se `varType` for omitido, é criada uma variável do tipo **variante** .
 
 A tabela seguinte enumera todos os valores `varType` suportados:
 
-| varType                | Conteúdos                               |
-| ---------------------- | --------------------------------------- |
-| `Text`                 | Valor texto                             |
-| `Date`                 | Valor data                              |
-| `Hora`                 | Valor Hora                              |
-| `Parâmetros`           | Valor booleano                          |
-| `Integer`              | Valor inteiro longo                     |
-| `Real`                 | Valor real                              |
-| `Ponteiro`             | Valor ponteiro                          |
-| `Imagem`               | Valor imagem                            |
-| `Blob`                 | Valor BLOB                              |
-| `Collection`           | Valor colecção                          |
-| `Diferente de`         | Valor variant                           |
-| `Object`               | Object with default class (`4D.Object`) |
-| `4D.<className>` | Objecto do nome da classe 4D            |
-| `cs.<className>` | Objeto do nome da classe usuário        |
+| varType                | Conteúdos                              |
+| ---------------------- | -------------------------------------- |
+| `Text`                 | Valor texto                            |
+| `Date`                 | Valor data                             |
+| `Hora`                 | Valor Hora                             |
+| `Parâmetros`           | Valor booleano                         |
+| `Integer`              | Valor inteiro longo                    |
+| `Real`                 | Valor real                             |
+| `Ponteiro`             | Valor ponteiro                         |
+| `Imagem`               | Valor imagem                           |
+| `Blob`                 | Valor BLOB                             |
+| `Collection`           | Valor colecção                         |
+| `Diferente de`         | Valor variant                          |
+| `Object`               | Objeto com classe padrão (`4D.Object`) |
+| `4D.<className>` | Objecto do nome da classe 4D           |
+| `cs.<className>` | Objeto do nome da classe usuário       |
 
 #### Exemplos
 
