@@ -91,7 +91,7 @@ Neste caso é preciso usar a comparação de ponteiros:
      If(myptr1=myptr2) //Este teste retorna False
 ```
 
-## Access to tables of the host database
+## Acesso a tabelas do banco de dados local
 
 Although components cannot use tables, pointers can permit host databases and components to communicate with each other. Por exemplo, aqui está um método que pode ser chamado a partir de um componente:
 
