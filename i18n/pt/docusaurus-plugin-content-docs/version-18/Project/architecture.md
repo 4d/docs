@@ -184,7 +184,7 @@ This folder contains **user settings files** used for database administration. O
 | Backup.4DSettings   | Definições de cópia de segurança da base de dados, utilizadas para definir as opções de  [backup](Backup/settings.md)) quando cada cópia de segurança é iniciada. Este ficheiro também pode ser utilizado para ler ou definir opções adicionais, tais como a quantidade de informações armazenadas no  *diário de cópia de segurança*. As teclas relativas à configuração da cópia de segurança são descritas no manual *4D XML Keys Backup* . | XML     |
 | BuildApp.4DSettings | arquivos de definições de construção, criado automaticamente quando se utiliza a caixa de diálogo do construtor de aplicações ou o comando `BUILD APPLICATION`                                                                                                                                                                                                                                                                                 | XML     |
 
-## userPreferences.*userName* folder
+## Pasta userPreferences.*userName*
 
 Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. Pode simplesmente ignorar esta pasta. Contém, por exemplo:
 
