@@ -548,7 +548,7 @@ In list boxes, any text that is too long is truncated and displayed with an elli
 
 Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
 
-![](../assets/en/FormObjects/property_wordwrap2.png)
+![](../assets/en/FormObjects/property_wordwrap1.png)
 
 #### Automático para entrada (opção padrão)
 
