@@ -26,7 +26,7 @@ There are different ways to configure the 4D web server settings, depending on t
 
 Ativa e configura a cache da página Web.
 
-The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. The cache is shared between all the web processes.
+The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. A cache é partilhada entre todos os processos Web.
 
 You can modify the size of the cache in the **Pages Cache Size** area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.
 > While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it. The [/4DSTATS] and [/4DHTMLSTATS] URLs allow you to also obtain information about the cache’s state.
@@ -133,7 +133,7 @@ Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stor
 | `WEB SET HOME PAGE`                |                                                            | Pode ser diferente para cada processo web |
 | Caixa de diálogos de configurações | Página configuração/Página inicial padrão                  |                                           |
 
-Designate a default home page for the web server. Esta página pode ser estática ou [semi-dynamic].
+Designar uma página inicial padrão para o servidor Web. Esta página pode ser estática ou [semi-dynamic].
 
 By default, when the web server is launched for the first time, 4D creates a home page named "index.html" and puts it in the HTML root folder. If you do not modify this configuration, any browser connecting to the web server will obtain the following page:
 
@@ -261,7 +261,7 @@ Se especificar 0, 4D usará o número de porta HTTP 80 por padrão.
 | objeto webServer      | [`HTTPTrace`](API/WebServerClass.md#httptrace) | Boolean, padrão = false            |
 | `WEB SET OPTION`      | `Web HTTP TRACE`                               | Integer, 0 por padrão (desativado) |
 
-HTTP TRACE method activation in the 4D web server. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
+Ativação do método HTTP TRACE no servidor web 4D. For security reasons, by default the 4D web server rejects HTTP TRACE requests with an error 405. If necessary, you can enable the HTTP TRACE method, in which case the 4D Web server replies to HTTP TRACE requests with the request line, header, and body.
 
 ## Porta HTTPS
 
@@ -371,7 +371,7 @@ Este parâmetro permite-lhe selecionar o formato deste ficheiro. Os valores disp
 | ---------------------------------- | ------------------------------------------------------------------------ | ----------- |
 | objeto webServer                   | [`maxConcurrentProcesses`](API/WebServerClass.md#maxconcurrentprocesses) |             |
 | `WEB SET OPTION`                   | `Web max concurrent processes`                                           |             |
-| Caixa de diálogos de configurações | Options (I) page/Maximum Concurrent Web Processes                        |             |
+| Caixa de diálogos de configurações | Página opções (I)/Processos Web simultâneos máximos                      |             |
 
 Strictly high limit of concurrent web processes that can be simultaneously open on the server. This parameter allows prevention of server saturation as the result of massive number of requests. When the maximum number of concurrent Web processes (minus one) is reached, 4D no longer creates new processes and sends the HTTP status `503 - Service Unavailable` to all new requests.
 
@@ -513,7 +513,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 | objeto webServer      | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`      | `Web session cookie domain`                                        |             |
 
-Value of the "domain" field of the session cookie. Útil para controlar o âmbito dos cookies de sessão. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
+Valor do campo "domain" do cookie de sessão. Útil para controlar o âmbito dos cookies de sessão. Se definir, por exemplo, o valor "/*.4d.fr" para este selector, o cliente só enviará um cookie quando o pedido for dirigido ao domínio ".4d.fr", o que exclui os servidores que hospedam dados estáticos externos.
 
 ## Nome do cookie de sessão
 
@@ -522,7 +522,7 @@ Value of the "domain" field of the session cookie. Útil para controlar o âmbit
 | objeto webServer      | [`sessionCookieName`](API/WebServerClass.md#sessioncookiename) |             |
 | `WEB SET OPTION`      | `Web session cookie name`                                      |             |
 
-Name of the cookie used for saving the session ID. Predefinição = "4DSID".
+Nome do cookie utilizado para guardar o ID da sessão. Predefinição = "4DSID".
 
 ## Caminho do cookie de sessão
 
@@ -555,15 +555,15 @@ The `Secure` attribute value of the session cookie is automatically set to "True
 
 ## Utilizar processos preemptivos
 
-| Pode ser definido com              | Nome                                              | Comentários |
-| ---------------------------------- | ------------------------------------------------- | ----------- |
-| Caixa de diálogos de configurações | Options (I) page/Maximum Concurrent Web Processes |             |
+| Pode ser definido com              | Nome                                                | Comentários |
+| ---------------------------------- | --------------------------------------------------- | ----------- |
+| Caixa de diálogos de configurações | Página opções (I)/Processos Web simultâneos máximos |             |
 
 This option enables the preemptive mode for your application's web server code when **No sessions** option is selected (the preemptive mode is always enabled with **scalable sessions**). When this option is checked in this context, the 4D compiler will automatically evaluate the thread-safety property of each piece of [web-related code](preemptiveWeb.md#thread-safety-of-4d-web-code) and return errors in case of incompatibility.
 
 ## Parâmetros obsoletos
 
-The following settings are still supported but rely on deprecated features or technologies. It is usually recommended to keep default values.
+The following settings are still supported but rely on deprecated features or technologies. Em geral, é recomendável manter os valores padrão.
 
 #### Permitir o acesso à base de dados através de URLs 4DSYNC
 
@@ -573,7 +573,7 @@ This option controls the support of HTTP synchronization requests containing dep
 
 > This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
 
-IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
+Estado de validação de endereço IP para cookies de sessão. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
 #### Reutilizar contextos temporários (em modo remoto)
 
@@ -592,7 +592,7 @@ When this option is checked, the web server sends extended characters “as is�
 
 #### Ligações Keep-Alive
 
-The 4D Web Server can use keep-alive connections. The keep-alive option allows you to maintain a single open TCP connection for the set of exchanges between the web browser and the server to save system resources and to optimize transfers.
+O servidor web 4D pode usar conexões persistentes. The keep-alive option allows you to maintain a single open TCP connection for the set of exchanges between the web browser and the server to save system resources and to optimize transfers.
 
 The **Use Keep-Alive Connections** option enables or disables keep-alive TCP connections for the web server. Esta opção está activada por padrão. In most cases, it is advisable to keep this option check since it accelerates the exchanges. If the web browser does not support connection keep alive, the 4D Web Server automatically switches to HTTP/1.0.
 
