@@ -166,15 +166,15 @@ The translation file in JSON format contains the following attributes:
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
 | tabelas   | Collection |             | Coleção de objetos de tabela traduzidos                                               |
 | fields    | Collection |             | Coleção de objetos de campo traduzidos                                                |
-| formulas  | Collection |             | Collection of translated formula objects                                              |
+| formulas  | Collection |             | Coleção de objetos fórmula traduzidos                                                 |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
-| Atributo    | Tipo | Obrigatório | Descrição                               |
-|:----------- |:---- |:----------- |:--------------------------------------- |
-| original    | Text | x           | Texto original destinado à tradução     |
-| translation | Text | x           | Translated version of the original text |
+| Atributo    | Tipo | Obrigatório | Descrição                           |
+|:----------- |:---- |:----------- |:----------------------------------- |
+| original    | Text | x           | Texto original destinado à tradução |
+| translation | Text | x           | Versão traduzida do texto original  |
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 
