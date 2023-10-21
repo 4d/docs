@@ -88,7 +88,7 @@ Vous pouvez passer un objet avec des propriétés supplémentaires pour la plage
 
 #### Exemple
 
-|
+Vous souhaitez créer une plage nommée à partir d'une plage contenant une cellule :
 
 ```4d
 $range:=VP Cell("ViewProArea";2;10)
@@ -694,20 +694,20 @@ La commande `VP Copy to object` <!-- REF #_method_.VP Copy to object.Summary -->
 
 Dans *rangeObj*, passez la plage de cellules contenant les valeurs, formatages et formules à copier. Si *rangeObj* est une plage combinée, seule la première est utilisée.
 
-Blog post : End of document loading
+Vous pouvez passer un paramètre facultatif *options* contenant les propriétés suivantes :
 
 | Propriété   | Type    | Description                                                                                                                       |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | copy        | Boolean | *Vrai* (par défaut) pour conserver les valeurs, formatages et formules après exécution de la commande. *Faux* pour les supprimer. |
 | copyOptions | Longint | Spécifie ce qui est copié ou déplacé. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Copie tous les objets de données, y compris les valeurs, formats et formules.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copie uniquement les formats.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copie uniquement les formules.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copie les formules et les formats.</td></tr><tr><td>`vk clipboard options values`</td><td>Copie uniquement les valeurs.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copie les valeurs et les formats.</td></tr></table></p>                                                |
 
-Format ISO 8601 long pour la date
+Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
-Paramètres
+La commande retourne un objet qui contient les données copiées.
 
 #### Exemple
 
-Commentaire associé au nom
+Cet exemple de code copie d'abord le contenu, valeurs, formats et formules d'une plage dans un objet puis les colle dans une autre plage :
 
 ```4d
 var $originRange; $targetRange; $dataObject; $options : Object
@@ -1773,7 +1773,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### Description
 
-La commande `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->retourne un objet style par défaut pour une feuille<!-- END REF -->. . Pour plus d'informations sur les propriétés de style, consultez [Objets style et feuilles de style](configuring.md#style-objects--style-sheets).
+La commande `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->retourne un objet style par défaut pour une feuille<!-- END REF -->. L'objet retourné contient des propriétés basiques de rendu d'un document ainsi que les propriétés du style par défaut (le cas échéant) définies préalablement à l'aide de la méthode [VP SET DEFAULT STYLE](#vp-set-default-style). Pour plus d'informations sur les propriétés de style, consultez [Objets style et feuilles de style](configuring.md#style-objects--style-sheets).
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -1781,7 +1781,7 @@ Vous pouvez définir où compter les colonnes à l'aide du paramètre optionnel 
 
 #### Exemple
 
-|
+Pour lire les détails du style par défaut de ce document :
 
 ![](../assets/en/ViewPro/cmd_vpGetDefaultStyle.PNG)
 
@@ -1791,7 +1791,7 @@ Le code suivant :
 $defaultStyle:=VP Get default style("myDoc")
 ```
 
-Oui
+retournera les informations suivantes dans l'objet *$defaultStyle* :
 
 ```4d
 {
@@ -3516,7 +3516,7 @@ The *options* parameter has several properties:
 | pasteOptions | Longint | Specifies what is pasted. Valeurs possibles : <p><table><tr><th>Valeur</th><th>Description</th></tr><tr><td>`vk clipboard options all` (par défaut)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>                                                                           |
 
 
-Format ISO 8601 long pour la date
+Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
 #### Exemple
 
@@ -3707,7 +3707,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 | `vk clipboard options values`                  | Pastes only values.                                                  |
 | `vk clipboard options value and formatting`    | Pastes values and formatting.                                        |
 
-Format ISO 8601 long pour la date
+Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
 If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 
@@ -4523,36 +4523,53 @@ VP SET ACTIVE CELL($activeCell)
 
 #### Description
 
-The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. Cette commande s'applique à toutes les zones 4D View Pro qui ont été crées après l'appel de la commande durant la session. Elle peut être appelée à plusieurs reprises dans la même session pour créer différentes configurations.
+La commande `VP SET ALLOWED METHODS` <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->désigne les méthodes de projet qui peuvent être appelées dans les formules de 4D View Pro<!-- END REF -->. Cette commande s'applique à toutes les zones 4D View Pro qui ont été crées après l'appel de la commande durant la session. Elle peut être appelée à plusieurs reprises dans la même session pour créer différentes configurations.
 
 Par défaut, à des fins de sécurité, si vous n'exécutez pas la commande `VP SET ALLOWED METHODS`, aucun appel à une méthode n'est autorisé dans les zones 4D View Pro -- sauf si la commande générique de 4D, `SET ALLOWED METHODS`, a été utilisée (voir la note de compatibilité). L'utilisation d'une méthode non autorisée dans une formule affiche une erreur #NAME? dans la zone 4D View Pro.
 
-Modifications
+Dans le paramètre *methodObj*, passez un objet dans lequel chaque propriété porte le nom d'une fonction à définir dans les zones 4D View Pro :
 
 | Propriété              |            |            | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ---------------------- | ---------- | ---------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `<functionName>` |            |            | Object              | Description de la fonction personnalisée. The `<functionName>` property name defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                                                              |
-|                        | method     |            | Text                | Le résultat est le suivant :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|                        | parameters |            | Collection d'objets | Exemple 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|                        |            | \[ ].name | Text                | Name of a parameter to display for the `<functionName>`.**Note**: Parameter names must not contain space characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `<functionName>` |            |            | Object              | Description de la fonction personnalisée. Le nom de la propriété `<functionName>` définit le nom de la fonction personnalisée à afficher dans les formules de 4D View Pro (aucun espace n'est autorisé)                                                                                                                                                                                                                                                                                                                                                                  |
+|                        | method     |            | Text                | (obligatoire) Nom de la méthode projet 4D existante à autoriser                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                        | parameters |            | Collection d'objets | Collection de paramètres (dans l'ordre dans lequel ils sont définis dans la méthode).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|                        |            | \[ ].name | Text                | Nom d'un paramètre à afficher pour `<functionName>`.**Note**: Les noms des paramètres ne doivent pas contenir d'espace.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                        |            | \[ ].type | Number              | Type de paramètre. Types pris en charge :<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>S'il est omis, par défaut la valeur est automatiquement envoyée avec son type, exceptées les valeurs date ou heure qui sont envoyées sous forme d'objet (voir la section [Paramètres](formulas.md#parameters)). Si type est défini sur `Is object`, l'objet possède la même structure que l'objet retourné par [`VP Get value`](#vp-get-value). |
-|                        | summary    |            | Text                | |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                        | minParams  |            | Number              | Dans ce cas, la feuille courante utilise deux objets style :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|                        | summary    |            | Text                | Description de la fonction à afficher dans 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|                        | minParams  |            | Number              | Nombre minimum de paramètres                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |                        | maxParams  |            | Number              | Nombre maximum de paramètres. Si vous passez un nombre supérieur à la largeur de parameters, il est possible de déclarer des paramètres "optionnels" avec leur type par défaut                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 #### Exemple
 
-Nom de la feuille|
+Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :
 
 ```4d
-Le nombre de colonnes figées sur la gauche de la feuille
+C_OBJECT($allowed)
+ $allowed:=New object //paramètre pour la commande
+
+ $allowed.Hello:=New object //crée une première fonction simple nommée "Hello"
+ $allowed.Hello.method:="My_Hello_Method" //définit la méthode 4D
+ $allowed.Hello.summary:="Hello prints hello world" 
+
+ $allowed.Byebye:=New object //crée une deuxième fonction avec des paramètres nommée "Byebye" 
+ $allowed.Byebye.method:="My_ByeBye_Method"
+ $allowed.Byebye.parameters:=New collection
+ $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))
+ $allowed.Byebye.parameters.push(New object("name";"Date";"type";Is date))
+ $allowed.Byebye.parameters.push(New object("name";"Time";"type";Is time))
+ $allowed.Byebye.summary:="Byebye prints a custom timestamp" 
+ $allowed.Byebye.minParams:=3
+ $allowed.Byebye.maxParams:=3
+
+ VP SET ALLOWED METHODS($allowed)
 ```
 
-Modifications
+Une fois ce code exécuté, les fonctions définies peuvent être utilisées dans des formules 4D View Pro :
 
 ![](../assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG)
 
-> La numérotation démarre à 0.
+> Dans les formules de 4D View Pro, les noms des fonctions sont automatiquement affichés en majuscules.
 
 #### Voir également
 
@@ -4833,7 +4850,7 @@ Résultat
 
 #### Description
 
-The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->defines the total number of columns in *vpAreaName*<!-- END REF -->.
+La commande `VP SET COLUMN COUNT` <!-- REF #_method_.VP SET COLUMN COUNT.Summary -->définit le nombre total de colonnes dans *vpAreaName*<!-- END REF -->.
 
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
@@ -4908,16 +4925,16 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
 
-| Paramètres | Type   |    | Description                               |
-| ---------- | ------ | -- | ----------------------------------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro   |
-| formulaObj | Object | -> | Formula object|<!-- END REF -->
+| Paramètres | Type   |    | Description                              |
+| ---------- | ------ | -- | ---------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro  |
+| formulaObj | Object | -> | Objet formule|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP SET CUSTOM FUNCTIONS` command <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. .
+La commande `VP SET CUSTOM FUNCTIONS` <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->désigne les formules 4D qui peuvent être appelées directement depuis des formules 4D View Pro<!-- END REF -->. .
 
 Les formules spécifiées par `VP SET CUSTOM FUNCTIONS` apparaissent dans un menu pop-up lorsque la première lettre de leur nom est saisie. Voir la page [Formules et Fonctions](formulas.md).
 
@@ -4935,7 +4952,7 @@ Dans le paramètre *formulaObj*, passez un objet contenant les formules 4D pouva
 |                          |            | \[ ].name | Text                | |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |                          |            | \[ ].type | Number              | Type de paramètre. Types pris en charge :<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If *type* is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section).If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value). |
 |                          | summary    |            | Text                | Collection de valeurs|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|                          | minParams  |            | Number              | Dans ce cas, la feuille courante utilise deux objets style :                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|                          | minParams  |            | Number              | Nombre minimum de paramètres                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                          | maxParams  |            | Number              | Nombre maximum de paramètres. Passer un nombre supérieur à la longueur de *parameters* permet de déclarer les paramètres "optionnels" avec un type par défaut                                                                                                                                                                                                                                                                                                                                                                                                               |
 > **ATTENTION**
 > * Format ISO 8601 pour le mois et l'année
@@ -5194,11 +5211,11 @@ Pour plus d'informations sur les modèles et les caractères de formatage, veuil
 
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
 
-| Paramètres | Type    |    | Description                             |
-| ---------- | ------- | -- | --------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
-| styleObj   | Object  | -> | Objet style                             |
-| sheet      | Integer | -> | Exemple 2<!-- END REF -->
+| Paramètres | Type    |    | Description                                                                     |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                         |
+| styleObj   | Object  | -> | Objet style                                                                     |
+| sheet      | Integer | -> | Indice de la feuille (par défaut = feuille courante)|<!-- END REF -->
 
 |
 
@@ -5217,7 +5234,12 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 #### Exemple
 
 ```4d
-Nom de la plage nommée
+$style:=New object
+$style.hAlign:=vk horizontal align left
+$style.font:="12pt papyrus"
+$style.backColor:="#E6E6FA" //couleur light purple
+
+VP SET DEFAULT STYLE("myDoc";$style)
 ```
 
 ![](../assets/en/ViewPro/cmd_vpSetDefaultStyle.PNG)
@@ -5233,10 +5255,10 @@ Nom de la plage nommée
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| Paramètres    | Type    |    | Description                                |
-| ------------- | ------- | -- | ------------------------------------------ |
-| rangeObj      | Object  | -> | Objet plage                                |
-| champ         | Pointer | -> | |                                          |
+| Paramètres    | Type    |    | Description                                    |
+| ------------- | ------- | -- | ---------------------------------------------- |
+| rangeObj      | Object  | -> | Objet plage                                    |
+| champ         | Pointer | -> | Référence au champ dans la structure virtuelle |
 | formatPattern | Text    | -> | Format du champ|<!-- END REF -->
 
 |
