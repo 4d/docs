@@ -12,7 +12,7 @@ Esta área permite-lhe definir várias opções relativas ao ecrã.
 
 ![](../assets/en/settings/interface-page.png)
 
-### Font to use with the MESSAGE command
+### Fonte a ser usada com o comando MESSAGE
 
 Click **Select...** to set the font and size for the characters used by the `MESSAGE` command.
 
@@ -68,11 +68,11 @@ O esquema de aplicação principal será aplicado aos formulários por defeito. 
 
 ## Atalhos
 
-You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Os ícones das teclas indicam as teclas correspondentes para Windows e macOS.
+You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. Esses atalhos são idênticos em ambas as plataformas. Os ícones das teclas indicam as teclas correspondentes para Windows e macOS.
 
 Os atalhos predefinidos são os seguintes:
 
--   Accept input form: **Enter**
+-   Aceitar de formulário de entrada: **Enter**
 -   Cancelamento de entrada: **Esc**
 -   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
 
