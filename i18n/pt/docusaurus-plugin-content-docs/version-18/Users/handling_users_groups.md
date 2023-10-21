@@ -7,7 +7,7 @@ title: Gestão de usuários e grupos 4D
 
 4D provides users with certain standard access privileges and certain powers. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
 
-O usuário mais poderoso é chamado **Designer**. No aspect of the database is closed to the Designer. O Designer pode:
+O usuário mais poderoso é chamado **Designer**. Nenhum aspecto do banco de dados está fechado para o Desenhador. O Designer pode:
 
 - aceder a todos os servidores de bases de dados sem restrições,
 - criar usuários e grupos,
