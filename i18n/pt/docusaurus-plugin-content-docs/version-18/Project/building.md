@@ -234,7 +234,7 @@ You must designate the location on your disk of the 4D Volume Desktop applicatio
 
 If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. For more information about this file, refer to the description of the `BUILD APPLICATION` command. You can also implement specific mechanisms in the event of a connection failure. You can also implement specific mechanisms in the event of a connection failure.
 
-#### Copy of client applications in the server application
+#### Cópia de aplicações clientes na aplicação do servidor
 
 The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
 
