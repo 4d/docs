@@ -222,7 +222,7 @@ O valor devolvido é a chave privada.
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
-**.getPublicKey()** : Text<!-- END REF -->
+**.getPublicKey()**: Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
