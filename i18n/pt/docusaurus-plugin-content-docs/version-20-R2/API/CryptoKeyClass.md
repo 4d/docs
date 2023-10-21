@@ -192,7 +192,7 @@ O valor devolvido é uma mensagem encriptada.
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
-**.getPrivateKey**() : Text<!-- END REF -->
+**.getPrivateKey**(): Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
