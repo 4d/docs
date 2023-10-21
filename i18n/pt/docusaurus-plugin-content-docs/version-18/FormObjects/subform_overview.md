@@ -116,7 +116,7 @@ Communication between the parent form and the instances of the subform may requi
 
 In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
 
-For example, the following statement:
+Por exemplo, a seguinte instrução:
 
 ```4d
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
