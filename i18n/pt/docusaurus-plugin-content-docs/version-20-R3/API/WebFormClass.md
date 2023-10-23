@@ -17,7 +17,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 
 
-### Commands and functions
+### Comandos e funções
 
 |                                                                                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -36,7 +36,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### Descrição
 
-The components of webforms are <!-- REF #WebFormClass.componentName.Summary -->objetos que estão disponíveis diretamente como propriedades<!-- END REF --> of these webforms.
+Os componentes dos webforms são <!-- REF #WebFormClass.componentName.Summary -->objetos que estão disponíveis diretamente como propriedades<!-- END REF --> desses webforms.
 
 For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
 
@@ -109,7 +109,7 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 #### Descrição
 
-The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
+O comando `Web Form` <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
 
 For more information, please refer to the [`webForm` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webform).
 
