@@ -2692,7 +2692,7 @@ La función `.push()` <!-- REF #collection.push().Summary -->añade uno o más *
 
 #### Ejemplo 2
 
-Quiere ordenar la colección resultante:
+Desea ordenar la colección resultante:
 
 ```4d
  var $col; $sortedCol : Collection
