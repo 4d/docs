@@ -2552,7 +2552,7 @@ La función `.push()` <!-- REF #collection.push().Summary -->añade uno o más *
 
 #### Ejemplo 2
 
-Quiere ordenar la colección resultante:
+Desea ordenar la colección resultante:
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2839,6 +2839,7 @@ La retrollamada define los siguientes parámetros:
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //devuelve 86400
+
 
 
 ```
