@@ -7,7 +7,7 @@ title: Gestão de usuários e grupos 4D
 
 4D provides users with certain standard access privileges and certain powers. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
 
-O usuário mais poderoso é chamado **Designer**. No aspect of the database is closed to the Designer. O Designer pode:
+O usuário mais poderoso é chamado **Designer**. Nenhum aspecto do banco de dados está fechado para o Desenhador. O Designer pode:
 
 - aceder a todos os servidores de bases de dados sem restrições,
 - criar usuários e grupos,
@@ -25,7 +25,7 @@ O Administrador não pode:
 O administrador pode:
 
 - editar o usuário Designer
-- by default, access to protected parts of the database. O Administrador não pode acessar o modo Design se for restringido. The Administrator must be part of one or more groups to have access privileges in the database. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
+- por padrão, acesso a partes protegidas do banco de dados. O Administrador não pode acessar o modo Design se for restringido. The Administrator must be part of one or more groups to have access privileges in the database. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
 Both the Designer and Administrator are available by default in all databases. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
 

@@ -50,9 +50,9 @@ The editors for users and groups are located in the toolbox of 4D. These editors
 
 Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
 
-This file can be stored at the following locations:
+Esse arquivo pode ser armazenado nos seguintes locais:
 
-- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the database.
+- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. Essas propriedades são usadas por padrão no banco de dados.
 - in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
 
 > If users and groups management is not active, the directory.json is not created.

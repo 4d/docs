@@ -3,7 +3,7 @@ id: overview
 title: Visão Geral
 ---
 
-4D includes a full database backup and restore module.
+4D inclui um módulo completo de backup e restauração de banco de dados.
 
 This module allows backing up a database currently in use without having to exit it. Cada cópia de segurança ou backup inclui a pasta de projeto, o arquivo de dados e qualquer arquivo ou pastas adicionais. Estes parâmetros são definidos primeiro nas definições da base de dados.
 

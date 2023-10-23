@@ -17,7 +17,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 - Do not use reserved names, i.e. 4D command names (`Date`, `Time`, etc), keywords (If, For, etc.), and constants.
 - Os espaços finais são ignorados.
 
-### Additional rules for object property and ORDA names
+### Regras adicionais para propriedades de objetos e nomes ORDA
 
 - Não são permitidos caracteres de espaço.
 - Pontos (".") e parênteses ("[ ]") não são permitidos.
@@ -44,7 +44,7 @@ ADD RECORD([Letters])
 
 ## Campos
 
-You designate a field by first specifying the table to which it belongs. The field name immediately follows the table name. Um nome de campo pode conter até 31 caracteres.
+You designate a field by first specifying the table to which it belongs. O nome do campo segue imediatamente o nome da tabela. Um nome de campo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -243,7 +243,7 @@ Exemplos:
  //Mas este comando espera um nome de método ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Project methods can accept parameters (arguments). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro.
+Os métodos projeto podem aceitar parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Além disso, podem ser endereçados múltiplos parâmetros consecutivos (e últimos) com a sintaxe ${n}onde n, expressão numérica, é o número do parâmetro.
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 

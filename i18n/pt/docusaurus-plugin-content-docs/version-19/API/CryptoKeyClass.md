@@ -207,6 +207,7 @@ A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->de
 #### *Resultados*
 
 
+
 O valor devolvido é a chave privada.
 <!-- END REF -->
 
@@ -266,7 +267,7 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 | v18 R4 | Adicionado |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->

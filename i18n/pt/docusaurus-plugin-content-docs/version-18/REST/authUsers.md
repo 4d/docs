@@ -10,7 +10,7 @@ Como primeiro passo para abrir uma sessão REST no servidor 4D, o usuário que e
 
 You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
 
-Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+Quando um usuário é registrado com sucesso, uma sessão é aberta. See below to know how to handle the session cookie in subsequent client requests, if necessary.
 
 The session will automatically be closed once the timeout is reached.
 

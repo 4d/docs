@@ -279,7 +279,7 @@ A propriedade `.firstColumnStripSize` é o <!-- REF #TableThemeOptions.firstColu
 <!-- REF #TableThemeOptions.firstColumnStripStyle.Syntax -->
 **.firstColumnStripStyle**: [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.firstColumnStripStyle` property is the <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->estilo da primeira coluna alternada<!-- END REF -->.
+A propriedade `.firstColumnStripStyle` é o <!-- REF #TableThemeOptions.firstColumnStripStyle.Summary -->estilo da primeira coluna alternada<!-- END REF -->.
 
 ### .firstFooterCellStyle
 
@@ -342,14 +342,14 @@ A propriedade `.highlightLastColumnStyle` é a <!-- REF #TableThemeOptions.highl
 <!-- REF #TableThemeOptions.lastFooterCellStyle.Syntax -->
 **.lastFooterCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastFooterCellStyle` property is the <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->estilo da última célula do rodapé<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
+A propriedade `.lastFooterCellStyle` é o <!-- REF #TableThemeOptions.lastFooterCellStyle.Summary -->estilo da última célula do rodapé<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
 ### .lastHeaderCellStyle
 
 <!-- REF #TableThemeOptions.lastHeaderCellStyle.Syntax -->
 **.lastHeaderCellStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.lastHeaderCellStyle` property is the <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->estilo da última célula de cabeçalho<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
+A propriedade `.lastHeaderCellStyle` é o <!-- REF #TableThemeOptions.lastHeaderCellStyle.Summary -->estilo da última célula de cabeçalho<!-- END REF -->. "highlightLastColumn" tem de ser verdadeiro.
 
 ### .name
 
@@ -363,7 +363,7 @@ A propriedade `.name` é o <!-- REF #TableThemeOptions.name.Summary -->name of a
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->tamanho da segunda coluna alternada<!-- END REF -->. O padrão=1
+A propriedade `.secondColumnStripSize` é a <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->tamanho da segunda coluna alternada<!-- END REF -->. O padrão=1
 
 ### .secondColumnStripStyle
 
@@ -384,7 +384,7 @@ A propriedade `.secondRowStripSize` é o <!-- REF #TableThemeOptions.secondRowSt
 <!-- REF #TableThemeOptions.secondRowStripStyle.Syntax -->
 **.secondRowStripStyle** : [cs.ViewPro.TableStyle](#tablestyle)<!-- END REF -->
 
-The `.secondRowStripStyle` property is the <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->segundo estilo de linha alternada<!-- END REF -->.
+A propriedade `.secondRowStripStyle` é o <!-- REF #TableThemeOptions.secondRowStripStyle.Summary -->segundo estilo de linha alternada<!-- END REF -->.
 
 ### .wholeTableStyle
 

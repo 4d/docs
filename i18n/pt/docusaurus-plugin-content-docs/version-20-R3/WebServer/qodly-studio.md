@@ -5,7 +5,7 @@ title: Qodly Studio
 
 :::caution Developer Preview
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production.
+Qodly Studio in 4D is currently in the **Developer Preview** phase. Não deve ser usado na produção.
 
 :::
 
@@ -32,13 +32,13 @@ O uso do Qodly Studio no 4D requer uma licença específica. Qodly Studio option
 
 #### Browser
 
-Qodly Studio supports the following web browsers:
+Qodly Studio suporta os seguintes navegadores Web:
 
 - Chrome
 - Edge
 - FireFox
 
-The recommended resolution is 1920x1080.
+A resolução recomendada é 1920x1080.
 
 #### Aplicação 4D
 
@@ -49,7 +49,7 @@ The recommended resolution is 1920x1080.
 
 ### Enabling access to Qodly Studio
 
-By default, access to Qodly Studio is not granted.
+Por padrão, o acesso a Qodly Studio não é concedido.
 
 Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
 
@@ -132,7 +132,7 @@ We recommend using class functions over project methods. Apenas as funções de 
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
 
-There are two ways to access Qodly Studio:
+Há duas maneiras de acessar Qodly Studio:
 
 * from your 4D single-user application, go to **Design** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
@@ -165,7 +165,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-|                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio for Qodly developers       |
+|                                                              | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio for Qodly developers       |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
@@ -224,7 +224,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
 
-- Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- Normalmente, você só precisará converter os nomes. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - However, some command have been renamed for a better compliance. They are listed below:
 
 | QodlyScript            | Línguagem 4D     |
@@ -290,7 +290,7 @@ To render webforms, you must have an available license, as rendering a webform o
 
 Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
 
-As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. As such, it behaves like a conventional 4D Client.
+As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
 If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
 
@@ -306,7 +306,7 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
-As a result, two licenses are retained.
+Como resultado, duas licenças são mantidas.
 
 :::note
 

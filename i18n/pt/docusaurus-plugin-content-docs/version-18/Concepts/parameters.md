@@ -14,12 +14,12 @@ title: Parâmetros
 ALERT("Hello")
 ```
 
-Parameters are passed to methods in the same way. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
+Os parâmetros são passados da mesma forma aos métodos. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
 
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
-Os parâmetros são separados por ponto e vírgula (;). Their value is evaluated at the moment of the call.
+Os parâmetros são separados por ponto e vírgula (;). Seu valor é avaliado no momento da chamada.
 
 In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. A numeração das variáveis locais representam a ordem dos parâmetros.
 
@@ -58,7 +58,7 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 ## Funções
 
-Os dados podem ser devolvidos pelos métodos. A method that returns a value is called a function.
+Os dados podem ser devolvidos pelos métodos. Um método que retorna um valor é chamado uma função.
 
 4D or 4D Plug-in commands that return a value are also called functions.
 

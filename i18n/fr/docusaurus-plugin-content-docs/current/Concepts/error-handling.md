@@ -123,14 +123,10 @@ ON ERR CALL("errorMethod")
 Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
 ```4d
-ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
+ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
-End if
-ON ERR CALL("")
-End if
-ON ERR CALL.("")
 End if
 ON ERR CALL.("")
 ```

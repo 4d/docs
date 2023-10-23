@@ -8,9 +8,9 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
 
-- one web server for the host application,
+- um servidor web para a aplicação local,
 - um servidor Web para o componente #1,
-- one web server for the component #2.
+- um servidor Web para o componente #2.
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
 

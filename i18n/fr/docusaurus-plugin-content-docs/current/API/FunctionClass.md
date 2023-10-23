@@ -191,7 +191,7 @@ Une formule utilisant des variables locales :
 
 #### Exemple 3
 
-Une formule utilisant des variables locales :
+Une formule simple utilisant des paramètres :
 
 ```4d
  $o:=New object("f";Formula($1+$2))
@@ -272,7 +272,7 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Description
 
-La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->.<!-- END REF -->.  crée un objet `4D.Function` sur la base de *formulaString* et, éventuellement, d'un *contexte *
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet `4D.Function` sur la base de *formulaString* et, éventuellement, d'un *contexte *<!-- END REF -->.  crée un objet `4D.Function` sur la base de *formulaString* et, éventuellement, d'un *contexte *
 
 Cette commande est similaire à [`Formula`](#formula), à la différence qu'elle traite une formule textuelle et permet de définir un contexte d'exécution. Il est généralement recommandé d'utiliser la commande `Formula` , sauf si la formule originale a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON), ou si vous souhaitez créer une formule dans une base de données hôte tout en appelant `Formula from string` à partir d'un composant. L'utilisation de la syntaxe avec tokens est fortement conseillée avec cette commande.
 > Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la *formulaString*. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).

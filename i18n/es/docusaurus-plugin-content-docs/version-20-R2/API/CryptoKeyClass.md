@@ -190,7 +190,7 @@ El valor devuelto es un mensaje encriptado.
 </details>
 
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax --> **.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax --> **.getPrivateKey**() : Text<!-- END REF -->
 
 
 
@@ -202,6 +202,7 @@ El valor devuelto es un mensaje encriptado.
 La función `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devuelve la llave privada del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
 #### *Result*
+
 
 
 El valor devuelto es la llave privada.
@@ -262,7 +263,7 @@ El valor devuelto es la llave pública.
 </details>
 
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 
