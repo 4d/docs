@@ -77,7 +77,7 @@ A barra de ferramentas contém os seguintes elementos:
 
 The object bar contains all the active and inactive objects that can be used in 4D forms. Alguns objectos estão agrupados por temas. Cada tema inclui várias alternativas que pode escolher entre elas. Quando a barra de objectos tem o foco, é possível seleccionar os botões usando as teclas do teclado. The following table describes the object groups available and their associated shortcut key.
 
-| Botão                                      | Group                                                                                                                                                                                                                                                     | Chave |
+| Botão                                      | Agrupar                                                                                                                                                                                                                                                   | Chave |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:-----:|
 | ![](../assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                        |   T   |
 | ![](../assets/en/FormEditor/input.png)     | [Entrada](FormObjects/input_overview.md)                                                                                                                                                                                                                  |   F   |
@@ -500,7 +500,7 @@ O list box final:
 ![](../assets/en/FormEditor/listboxBuilderListbox.png)
 
 
-## Insert fields
+## Inserir campos
 
 The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms.
 
