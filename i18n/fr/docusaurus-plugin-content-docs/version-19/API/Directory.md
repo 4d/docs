@@ -529,8 +529,6 @@ Vous souhaitez savoir s'il y a des fichiers invisibles dans le dossier de la bas
  If($all.length#$noInvisible.length)
     ALERT("Database folder contains hidden files.")
  End if
- End if
- End if
 ```
 
 #### Exemple 2
