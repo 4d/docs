@@ -68,7 +68,7 @@ Pour modifier l’emplacement auquel ces fichiers devront être enregistrés, cl
 
 ### Gestion du fichier d'historique
 
-L’option **Utiliser le fichier d’historique** indique, lorsqu’elle est cochée, que l'application exploite un fichier d’historique. Son chemin d’accès est précisé au-dessous de l’option. The **Use Log File** option, when checked, indicates that the application uses a log file.
+L’option **Utiliser le fichier d’historique** indique, lorsqu’elle est cochée, que l'application exploite un fichier d’historique. Son chemin d’accès est précisé au-dessous de l’option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir l'application sans fichier d’historique.
 
 Par défaut, tout projet créé avec 4D utilise un fichier d’historique (option cochée dans la **Page Général** des **Préférences** de 4D). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
 
