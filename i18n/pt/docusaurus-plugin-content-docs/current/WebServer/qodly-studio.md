@@ -30,7 +30,7 @@ O uso do Qodly Studio no 4D requer uma licença específica. Qodly Studio option
 
 ### Requisitos
 
-#### Browser
+#### Navegador
 
 Qodly Studio suporta os seguintes navegadores Web:
 
@@ -89,7 +89,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
-### Enabling rendering
+### Ativação da renderização
 
 To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
 
@@ -165,14 +165,14 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-|                                                              | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio for Qodly developers       |
+|                                                              | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
 | Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
-| Programming language                                         | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
+| Linguagem de programação                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
 | Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| Depurador                                                    | 4D IDE debugger                                                                             | Qodly Studio debugger                   |
+| Depurador                                                    | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
 | REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
@@ -199,7 +199,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
 
-#### Symbols and keywords
+#### Símbolos e palavras-chave
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
@@ -314,7 +314,7 @@ You can enable/disable the display of the renderer pop over using a Qodly Studio
 
 :::
 
-### SameSite attribute
+### Atributo SameSite
 
 O comportamento descrito anteriormente é devido ao cookie de sessão do servidor web 4D. This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
 
@@ -322,7 +322,7 @@ If the `SameSite` attribute's value is `Strict` (default), the session cookie is
 
 For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
 
-### Recommendations
+### Recomendações
 
 To avoid using more licenses than necessary, we recommend doing one of the following:
 
