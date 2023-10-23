@@ -2627,7 +2627,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 #### Example 2
 
-You want to sort the resutling collection:
+You want to sort the resulting collection:
 
 ```4d
  var $col; $sortedCol : Collection

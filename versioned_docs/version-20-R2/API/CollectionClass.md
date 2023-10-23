@@ -2489,7 +2489,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 #### Example 2
 
-You want to sort the resutling collection:
+You want to sort the resulting collection:
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2770,6 +2770,7 @@ The callback sets the following parameter(s):
 var $c : Collection
 $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  //returns 86400
+
 
 
 ```
