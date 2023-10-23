@@ -2503,7 +2503,7 @@ A função `.find()` <!-- REF #collection.push().Summary -->The `.indexOf()` fun
 
 #### Exemplo 2
 
-Se quiser ordenar a coleção resultante:
+Você deseja ordenar a coleção resultante:
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2787,6 +2787,7 @@ A chamada de retorno recebe os seguintes parâmetros:
 //numberOrder project method
  var $1 : Object
  $1.result:=String($1.value)<String($1.value2)
+
 
 
 ```
