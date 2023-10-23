@@ -357,11 +357,11 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 
 ## Keep Session
 
-| Pode ser definido com              | Nome                                                                                                                                                                                             | Comentários                |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- |
-| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                                                               |                            |
-| `WEB SET OPTION`                   | `Web keep session`                                                                                                                                                                               |                            |
-| Caixa de diálogos de configurações | [To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name](../settings/web.md#legacy-sessions-single-process-sessions) | only in converted projects |
+| Pode ser definido com              | Nome                                                                                                                                                                                             | Comentários                      |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| objeto webServer                   | [`keepSession`](API/WebServerClass.md#keepsession)                                                                                                                                               |                                  |
+| `WEB SET OPTION`                   | `Web keep session`                                                                                                                                                                               |                                  |
+| Caixa de diálogos de configurações | [To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name](../settings/web.md#legacy-sessions-single-process-sessions) | somente nos projetos convertidos |
 
 Legacy session management enabling status for the 4D web server (deprecated).
 
