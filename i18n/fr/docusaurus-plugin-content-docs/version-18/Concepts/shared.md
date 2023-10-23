@@ -56,7 +56,7 @@ Cependant, lorsque plusieurs valeurs sont interdépendantes et doivent être lue
 Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés sont des objets partagés) est possible, mais dans ce cas un objet standard (non partagé) est retourné.
 
 ### Storage
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. **Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) command.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. **Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
