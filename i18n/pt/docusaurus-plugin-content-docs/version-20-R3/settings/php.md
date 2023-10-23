@@ -21,7 +21,7 @@ Address of the PHP interpreter where PHP execution requests must be adressed. Po
 
 Note that the HTTP address must be on the same machine as 4D.
 
-### Port number
+### Número da porta
 
 Número da porta do interpretador PHP. Por padrão, 4D usa a porta 8002.
 
