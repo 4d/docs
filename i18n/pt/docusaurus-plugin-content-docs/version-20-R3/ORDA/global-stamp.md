@@ -42,7 +42,7 @@ In addition, to ensure proper operation of the feature, the following conditions
 
 | Campo         | Tipo            | Descrição                             |
 | ------------- | --------------- | ------------------------------------- |
-| __PrimaryKey  | Text            | Primary key of the deleted entity     |
+| __PrimaryKey  | Text            | Chave primária da entidade excluída   |
 | __Stamp       | Integer 64 bits | Global stamp just before the deletion |
 | __TableName   | Text            | Name of the deleted entity table      |
 | __TableNumber | Long Integer    | Número da tabela da entidade excluída |
