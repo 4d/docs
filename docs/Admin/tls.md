@@ -41,7 +41,7 @@ Web browsers authorize only the certificates issued by a certification authority
 
 ## Minimum version
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.2. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER command`.
+By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
 
 :::note
 
@@ -57,15 +57,20 @@ TLS certificates managed by 4D must be in the **PEM format**. If your certificat
 
 ### Encryption
 
-4D supports certificates in the following encryption formats:
+4D supports certificates in the following standard encryption formats:
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem), widely used but old. 4D proposes two commands to help you requesting a RSA certificate ([see the tutorial below](#how-to-get-a-rsa-certificate-tutorial)). 
-
-- [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) (recommended), providing a higher level of security.
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+- [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibility
 
 The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
+
+::: 
+
+:::note
+
+4D proposes two commands to help you requesting a RSA certificate, [see the tutorial below](#how-to-get-a-rsa-certificate-tutorial). 
 
 ::: 
 
