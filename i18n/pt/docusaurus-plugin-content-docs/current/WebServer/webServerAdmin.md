@@ -6,7 +6,7 @@ title: Administração
 4D provides several integrated tools to start, stop, or monitor the integrated web server.
 
 
-## Starting the 4D Web Server
+## Iniciando o servidor Web 4D
 
 > To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. For more information, please refer to the [4D Web site](https://www.4d.com).
 
@@ -37,7 +37,7 @@ O servidor web principal de 4D pode ser parado de diferentes maneiras:
 The web server of any component can be stopped by calling the `webServer.stop()` function on the component's web server object.
 
 
-## Testing the 4D Web Server
+## Teste do Servidor Web 4D
 
 The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
 
@@ -96,7 +96,7 @@ The **/4DSTATS** URL returns several items of information in an HTML table (disp
 | Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)            |
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                           |
 | Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)            |
-| Cache Use               | Percentage of cache used                                     |
+| Cache Use               | Porcentagem do cache usado                                   |
 | Cached Objects          | Number of objects found in the cache, **including pictures** |
 
 This information can allow you to check the functioning of your server and eventually adapt the corresponding parameters.
@@ -111,7 +111,7 @@ The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as t
 | Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                      |
 | Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                     |
 | Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                      |
-| Cache Use               | Percentage of cache used                                               |
+| Cache Use               | Porcentagem do cache usado                                             |
 | Cached Objects          | Number of objects found in the cache, **without pictures**             |
 | Objectos filtrados      | Number of objects in cache not counted by URL, in particular, pictures |
 
@@ -176,7 +176,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | user                 | user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).                      |
 | DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
 | request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
-| state                | reply given by the server                                                                                                                                            |
+| state                | resposta dada pelo servidor                                                                                                                                          |
 | length               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                               |
 | Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                           |
 | User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                        |
