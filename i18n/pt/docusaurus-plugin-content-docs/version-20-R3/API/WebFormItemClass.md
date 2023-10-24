@@ -17,7 +17,7 @@ title: WebFormItem
 The `WebFormItem` class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass).
 
 
-### WebFormItem object
+### Objeto WebFormItem
 
 |                                                                                                                                                                                   |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
