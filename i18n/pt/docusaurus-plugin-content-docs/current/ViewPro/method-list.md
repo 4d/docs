@@ -767,10 +767,10 @@ Em *tableName*, introduza um nome para a tabela. O nome deve:
 * incluir pelo menos 5 caracteres
 * não incluir espaços ou começar com um número
 
-Na  *fonte*, você pode passar um nome de propriedade de  [um contexto de dados](#vp-set-data-context) para exibir seus dados na tabela. Isto liga a tabela ao contexto de dados. Quando o contexto de dados é atualizado, os dados exibidos na tabela são atualizados de acordo. The *source* property must contain a collection of objects and each element represents a row.
+Na  *fonte*, você pode passar um nome de propriedade de  [um contexto de dados](#vp-set-data-context) para exibir seus dados na tabela. Isto liga a tabela ao contexto de dados. Quando o contexto de dados é atualizado, os dados exibidos na tabela são atualizados de acordo. A propriedade *source* deve conter uma coleção de objetos e cada elemento representa uma linha.
 
-  * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
-  * If the specified *source* cannot be fully displayed in the document, no table is created.
+  * Se você não especificar uma  *fonte*, o comando criará uma tabela vazia com o tamanho definido em *rangeObj*.
+  * Se a  *fonte especificada* não puder ser totalmente exibida no documento, nenhuma tabela será criada.
 
 In the *options* parameter, pass an object of the [`cs. ViewPro. TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
 
@@ -918,9 +918,9 @@ utilizar o seguinte código:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                  |
-| ------ | ------------------------- |
-| v20 R2 | Support of .sjs documents |
+| Versão | Mudanças                   |
+| ------ | -------------------------- |
+| v20 R2 | Suporte de documentos .sjs |
 </details>
 
 
@@ -3087,15 +3087,15 @@ Em *paramObj*, você pode passar várias propriedades:
 
 The following parameters can be used in the callback method:
 
-| Parâmetro |               | Tipo     | Descrição                                                  |
-|:--------- |:------------- |:-------- |:---------------------------------------------------------- |
-| param1    |               | text     | O nome do objeto 4D View Pro                               |
-| param2    |               | 4D. Blob | O blob importado                                           |
-| param3    |               | object   | Uma referência ao parâmetro *paramObj* do comando          |
-| param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado |
-|           | .success      | boolean  | True if import with success, False otherwise.              |
-|           | .errorCode    | integer  | Código de erro.                                            |
-|           | .errorMessage | text     | Mensagem de erro.                                          |
+| Parâmetro |               | Tipo     | Descrição                                                    |
+|:--------- |:------------- |:-------- |:------------------------------------------------------------ |
+| param1    |               | text     | O nome do objeto 4D View Pro                                 |
+| param2    |               | 4D. Blob | O blob importado                                             |
+| param3    |               | object   | Uma referência ao parâmetro *paramObj* do comando            |
+| param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado   |
+|           | .success      | boolean  | True se a importação for bem-sucedida, False caso contrário. |
+|           | .errorCode    | integer  | Código de erro.                                              |
+|           | .errorMessage | text     | Mensagem de erro.                                            |
 
 
 #### Exemplo
@@ -3116,9 +3116,9 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                  |
-| ------ | ------------------------- |
-| v20 R2 | Support of .sjs documents |
+| Versão | Mudanças                   |
+| ------ | -------------------------- |
+| v20 R2 | Suporte de documentos .sjs |
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -6329,7 +6329,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | allowDynamicArray                     | boolean                 | Permite arrays dinâmicos em folhas de trabalho                                                                                                                                                                                                             |
 | allowExtendPasteRange                 | boolean                 | Extends the pasted range if the pasted range is not enough for the pasted data                                                                                                                                                                             |
 | allowSheetReorder                     | boolean                 | É permitida a reordenação de folhas                                                                                                                                                                                                                        |
-| allowUndo                             | boolean                 | Undoing edits is allowed.                                                                                                                                                                                                                                  |
+| allowUndo                             | boolean                 | É permitido desfazer as edições.                                                                                                                                                                                                                           |
 | allowUserDeselect                     | boolean                 | É permitido desmarcar células específicas de uma seleção.                                                                                                                                                                                                  |
 | allowUserDragDrop                     | boolean                 | É permitido arrastar e largar dados de intervalo                                                                                                                                                                                                           |
 | allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                               |
@@ -6359,7 +6359,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.          |
 | referenceStyle                        | number                  | Estilo para referências de células e intervalos em fórmulas de células. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                    |
 | resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                   |
-| rowResizeMode                         | number                  | The way rows are resized. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                                        |
+| rowResizeMode                         | number                  | A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                      |
 | scrollbarAppearance                   | number                  | Aspeto da barra de deslocação. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>                                                                                                                                                                             |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                    |
 | scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                                 |
