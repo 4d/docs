@@ -2831,6 +2831,7 @@ $c:=New collection(5;3;5;1;3;4;4;6;2;2)
 $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 です
 
 
+
 ```
 
 

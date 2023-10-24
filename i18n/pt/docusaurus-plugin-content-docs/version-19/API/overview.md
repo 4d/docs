@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Class functions and commands
+title: Funções de classe e comandos
 ---
 
 This section describes the built-in 4D class API as well as the associated constructor commands. Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados.

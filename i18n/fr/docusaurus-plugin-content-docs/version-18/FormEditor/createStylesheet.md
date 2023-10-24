@@ -290,7 +290,7 @@ Vous créez des feuilles de styles à partir d'un éditeur de feuilles de styles
 
 La Boîte à Outils fournit une page **Feuilles de style** sous forme de raccourci pour créer et modifier l'une des trois feuilles de style nommées en fonction de la plate-forme.
 
-1. Ouvrez la page **Styles** en choisissant la **Boîte à outils > Styles ** dans le menu Développement ou en cliquant sur l'icône **Boîte à outils** dans la barre d'outils de l'éditeur de formulaire.
+1. Ouvrez la page **Style Sheets** en choisissant **Tool Box > Style Sheet** dans le menu Développement ou en cliquant sur l'icône **Tool Box** dans la barre d'outils de l'éditeur de formulaires.
 
  ![](../assets/en/FormEditor/stylesheets.png)
 

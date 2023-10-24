@@ -26,7 +26,7 @@ Estão disponíveis as seguintes etiquetas 4D:
 - 4DSCRIPT, para executar um método 4D,
 - 4DINCLUDE, para incluir uma página dentro de outra,
 - 4DBASE, para modificar a pasta predefinida utilizada pela etiqueta 4DINCLUDE,
-- 4DCODE, to insert 4D code,
+- 4DCODE, para inserir o código 4D,
 - 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
 - 4DLOOP e 4DENDLOOP, para criar loops no código HTML,
 - 4DEACH and 4DENDEACH, to loop in collections, entity selections, or object properties.
@@ -78,7 +78,7 @@ Internally, the parser works with UTF-16 strings, but the data to parse may have
 | `WEB SEND TEXT`                                  | X                                                     | -                                                     | Não é necessária qualquer conversão                                                                                                                                                                                                   |
 | `WEB SEND BLOB`                                  | X, se o BLOB for do tipo "text/html                   | -                                                     | Utilização do conjunto de caracteres definido no cabeçalho "Content-Type" da resposta. Caso contrário, utilização do conjunto de caracteres predefinido para o servidor HTTP                                                          |
 | Inclusão pela etiqueta `<!--#4DINCLUDE-->` | X                                                     | X                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Caso contrário, utilização do conjunto de caracteres predefinido para o servidor HTTP |
-| `PROCESS 4D TAGS`                                | X                                                     | X                                                     | Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                                          |
+| `PROCESS 4D TAGS`                                | X                                                     | X                                                     | Dados de texto: sem conversão. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                                     |
 
 (*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
 

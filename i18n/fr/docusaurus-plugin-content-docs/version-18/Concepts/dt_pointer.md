@@ -30,7 +30,7 @@ Il est plus facile d’expliquer l’utilisation des pointeurs au travers d’un
 ```4d
 $MyVar:="Hello"
 ```
-Vous pouvez également utiliser $MyPointer pour modifier la valeur de $MyVar. Par exemple, l’instruction suivante stocke la chaîne "Goodbye" dans la variable $MyVar :
+$MyVar est désormais une variable contenant la chaîne "Hello". Nous pouvons alors créer un pointeur vers $MyVar :
 
 ```4d
 C_POINTER($MyPointer)  
@@ -50,7 +50,7 @@ Il est important de comprendre que vous pouvez utiliser un pointeur suivi du sym
 ALERT($MyPointer->)
 ```
 
-Si vous examinez les deux utilisations de l’expression $MyPointer-> ci-dessus, vous constatez que cette expression se comporte exactement comme si vous aviez utilisé $MyVar à sa place. En résumé : les deux lignes suivantes effectuent la même opération — elles affichent une boîte de dialogue d’alerte contenant la valeur courante de la variable $MyVar :
+Vous pouvez également utiliser $MyPointer pour modifier la valeur de $MyVar. Par exemple, l’instruction suivante stocke la chaîne "Goodbye" dans la variable $MyVar :
 ```4d
 $MyPointer->:="Goodbye"
 ```

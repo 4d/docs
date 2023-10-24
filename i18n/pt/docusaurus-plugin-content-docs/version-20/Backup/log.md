@@ -51,7 +51,7 @@ Para criar um arquivo de histórico:
 
 3. Clique **Salvar**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
 
-4. Validate the Settings dialog box.
+4. Valide a caixa de diálogo das Propriedades.
 
 Para poder criar um arquivo de histórico diretamente, o banco de dados deve estar em uma das situações abaixo:
 

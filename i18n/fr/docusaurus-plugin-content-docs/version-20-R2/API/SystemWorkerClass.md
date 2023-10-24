@@ -337,7 +337,7 @@ La propriété `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.
 
 #### Description
 
-La propriété `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contient le type du contenu du corps de la réponse<!-- END REF -->. .
+La propriété `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contient le type du contenu du corps de la réponse<!-- END REF -->. Valeurs possibles : "text" ou "blob".
 
 Cette propriété est en **lecture seule**.
 

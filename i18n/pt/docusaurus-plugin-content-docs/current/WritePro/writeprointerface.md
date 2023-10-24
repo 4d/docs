@@ -11,7 +11,7 @@ The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/E
 
 You will find below the Table Wizard configuration documentation.
 
-## Table Wizard
+## Assistente de tabelas
 
 The Table Wizard is here to further simplify table creation based on database data using contexts, data sources, and formulas.
 
@@ -70,7 +70,7 @@ O ficheiro modelo permite-lhe definir o seguinte:
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
-:::info Limitation
+:::info Limitação
 
 In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. Esta limitação será eliminada na próxima versão.
 
@@ -297,4 +297,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### Veja também
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Assistente de tabelas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)

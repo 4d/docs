@@ -2643,7 +2643,7 @@ A função `.find()` <!-- REF #collection.push().Summary -->The `.indexOf()` fun
 
 #### Exemplo 2
 
-Se quiser ordenar a coleção resultante:
+Você deseja ordenar a coleção resultante:
 
 ```4d
  var $col; $sortedCol : Collection

@@ -192,7 +192,7 @@ Une formule utilisant des variables locales :
 
 #### Exemple 3
 
-Une formule utilisant des variables locales :
+Une formule simple utilisant des paramètres :
 
 ```4d
  $o:=New object("f";Formula($1+$2))

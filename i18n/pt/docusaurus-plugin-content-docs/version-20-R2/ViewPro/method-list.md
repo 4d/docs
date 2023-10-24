@@ -202,14 +202,14 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 O comando `VP ADD SPAN` combina as células em *rangeObj* como um único intervalo de células.
 
-Em *rangeObj*, passe um intervalo de células. The cells in the range are joined to create a larger cell extending across multiple columns and/or rows. You can pass multiple cell ranges to create several spans at the same time. Note que se os intervalos de células se sobrepuserem, apenas o primeiro intervalo de células é utilizado.
+Em *rangeObj*, passe um intervalo de células. As células do intervalo são unidas para criar uma célula maior que se estende por várias colunas ou linhas. Você pode passar vários intervalos de células para criar vários intervalos ao mesmo tempo. Note que se os intervalos de células se sobrepuserem, apenas o primeiro intervalo de células é utilizado.
 
-> * Só são apresentados os dados da célula superior esquerda. Data in the other combined cells is hidden until the span is removed.
-> * Hidden data in spanned cells is accessible via formulas (beginning with the upper-left cell).
+> * Só são apresentados os dados da célula superior esquerda. Os dados nas outras células combinadas ficam ocultos até que a extensão seja removida.
+> * Os dados ocultos em células estendidas podem ser acessados por meio de fórmulas (começando com a célula superior esquerda).
 
 #### Exemplo
 
-To span the First quarter and Second quarter cells across the two cells beside them, and the South area cell across the two rows below it:
+Para abranger as células do primeiro trimestre e do segundo trimestre nas duas células ao lado delas, e a célula da área sul nas duas linhas abaixo dela:
 
 ![initial-document](../assets/en/ViewPro/vp-add-span.png)
 
@@ -250,22 +250,22 @@ To span the First quarter and Second quarter cells across the two cells beside t
 
 #### Descrição
 
-O comando `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->creates or modifies the *styleName* style sheet based upon the combination of the properties specified in *styleObj* in the open document<!-- END REF -->. .
+O comando `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->cria ou modifica a folha de estilo *styleName* com base na combinação das propriedades especificadas em *styleObj* no documento aberto<!-- END REF -->. .
 
-> Style sheets created by this command are saved with the document.
+> As folhas de estilo criadas por esse comando são salvas com o documento.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *styleName* parameter lets you assign a name to the style sheet. If the name is already used within the same scope, the new style sheet replaces the existing one. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
+O parâmetro *styleName* permite que você atribua um nome à folha de estilos. Se o nome já estiver sendo usado no mesmo escopo, a nova folha de estilo substituirá a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-objects-properties).
+Em *styleObj*, designe as configurações da folha de estilos (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). Para obter a lista completa de propriedades de estilo, consulte [Propriedades do objeto de estilo](configuring.md#style-objects-properties).
 
-You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
+Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
 
-If a *styleName* style sheet is defined at the workbook level and at a sheet level, the sheet level has priority over the workbook level when the style sheet is set.
+Se uma folha de estilo *styleName* for definida no nível da pasta de trabalho e no nível da planilha, o nível da planilha terá prioridade sobre o nível da pasta de trabalho quando a folha de estilo for definida.
 
 Para aplicar a folha de estilos, utilize os comandos [VP SET DEFAULT STYLE](#vp-set-default-style) ou [VP SET CELL STYLE](#vp-set-cell-style).
 
@@ -361,21 +361,21 @@ $all:=VP All("ViewProArea") // todas as células da folha atual
 
 O comando `VP Cell` <!-- REF #_method_.VP Cell.Summary -->devolve um novo objeto intervalo que referir-se a uma célula específica<!-- END REF -->.
 
-> Este comando destina-se a intervalos de uma única célula. To create a range object for multiple cells, use the [VP Cells](#vp-cells) command.
+> Este comando destina-se a intervalos de uma única célula. Para criar um objeto de intervalo para várias células, use o comando [VP Cells](#vp-cells) .
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *column* parameter defines the column of the cell range's position. Passe o índice da coluna neste parâmetro.
+O parâmetro *column* define a coluna da posição do intervalo de células. Passe o índice da coluna neste parâmetro.
 
-The *row* parameter defines the row of the cell range's position. Passar o índice da linha neste parâmetro.
+O parâmetro *row* define a linha da posição do intervalo de células. Passar o índice da linha neste parâmetro.
 
-In the optional *sheet* parameter, you can indicate the index of the sheet where the range will be defined. If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+No parâmetro opcional *sheet* , você pode indicar o índice da planilha em que o intervalo será definido. Se for omitido ou se você passar `vk current sheet`, a planilha atual será usada por padrão.
 
 > a indexação começa em 0.
 
 #### Exemplo
 
-You want to define a range object for the cell shown below (on the current spreadsheet):
+Se quiser definir um objeto de intervalo para a célula mostrada abaixo (na planilha atual):
 
 ![vp-cell](../assets/en/ViewPro/cmd_vpCell.png)
 
@@ -421,19 +421,19 @@ O comando `VP Cells` <!-- REF #_method_.VP Cells.Summary -->devolve um novo obje
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *column* parameter defines the first column of the cell range. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. If the range is within multiple columns, you should also use the *columnCount* parameter.
+O parâmetro *column* define a primeira coluna do intervalo de células. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Se o intervalo estiver em várias colunas, você também deverá usar o parâmetro *columnCount* .
 
-In the *row* parameter, you can define the row(s) of the cell range's position. Passar o índice da linha (a contagem começa em 0) neste parâmetro. If the range is within multiple rows, you should also use the *rowCount* parameter.
+No parâmetro *row* , você pode definir a(s) linha(s) da posição do intervalo de células. Passar o índice da linha (a contagem começa em 0) neste parâmetro. Se o intervalo estiver dentro de várias linhas, você também deverá usar o parâmetro *rowCount* .
 
-The *columnCount* parameter allows you to define the total number of columns the range is within. *columnCount* deve ser superior a 0.
+O parâmetro *columnCount* permite que você defina o número total de colunas em que o intervalo se encontra. *columnCount* deve ser superior a 0.
 
-The *rowCount* parameter allows you to define the total number of rows the range is within. *rowCount* tem de ser superior a 0.
+O parâmetro *rowCount* permite que você defina o número total de linhas em que o intervalo se encontra. *rowCount* tem de ser superior a 0.
 
-No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se for omitido ou se você passar `vk current sheet`, a planilha atual será usada por padrão.
 
 #### Exemplo
 
-You want to define a range object for the following cells (on the current sheet):
+Você deseja definir um objeto de intervalo para as seguintes células (na planilha atual):
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
@@ -472,13 +472,13 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 O parâmetro *column* define a primeira coluna do intervalo de colunas. Passar o índice da coluna (a contagem começa em 0) neste parâmetro. Se o intervalo contiver várias colunas, deve também utilizar o parâmetro opcional *columnCount*.
 
-O parâmetro opcional *columnCount* permite-lhe definir o número total de colunas do intervalo. *columnCount* deve ser superior a 0. If omitted, the value will be set to 1 by default and a column type range is created.
+O parâmetro opcional *columnCount* permite-lhe definir o número total de colunas do intervalo. *columnCount* deve ser superior a 0. Se for omitido, o valor será definido como 1 por padrão e um intervalo de tipo de coluna será criado.
 
-No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
+No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se for omitido ou se você passar `vk current sheet`, a planilha atual será usada por padrão.
 
 #### Exemplo
 
-You want to define a range object for the column shown below (on the current spreadsheet):
+Se quiser definir um objeto de intervalo para a coluna mostrada abaixo (na planilha atual):
 
 ![](../assets/en/ViewPro/cmd_vpColumn.PNG)
 
@@ -509,11 +509,11 @@ O código seria:
 
 O comando `VP COLUMN AUTOFIT` <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->dimensiona automaticamente a(s) coluna(s) em *rangeObj* conforme o seu conteúdo<!-- END REF -->.
 
-In *rangeObj*, pass a range object containing a range of the columns whose size will be automatically handled.
+Em *rangeObj*, passe um objeto de intervalo que contenha um intervalo de colunas cujo tamanho será tratado automaticamente.
 
 #### Exemplo
 
-The following columns are all the same size and don't display some of the text:
+As colunas a seguir são todas do mesmo tamanho e não exibem parte do texto:
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit1.PNG)
 
@@ -557,7 +557,7 @@ Em *otherRangeObj*, passe um ou vários intervalos para combinar com *rangeObj*.
 
 #### Exemplo
 
-You want to combine cell, column, and row range objects in a new, distinct range object:
+Se quiser combinar objetos de intervalo de células, colunas e linhas em um novo e diferente objeto de intervalo:
 
 ```4d
  $cell:=VP Cell("ViewProArea";2;4) // C5
@@ -587,14 +587,14 @@ You want to combine cell, column, and row range objects in a new, distinct range
 
 #### Descrição
 
-O comando `VP Convert from 4D View` <!-- REF #_method_.VP Convert from 4D View.Summary -->allows you to convert a legacy 4D View document into a 4D View Pro object<!-- END REF -->.
-> This command does not require that the legacy 4D View plug-in be installed in your environment.
+O comando `VP Convert from 4D View` <!-- REF #_method_.VP Convert from 4D View.Summary -->permite que você converta um documento antigo do 4D View em um objeto do 4D View Pro<!-- END REF -->.
+> Esse comando não exige que o plug-in legado do 4D View esteja instalado em seu ambiente.
 
-In the *4DViewDocument* parameter, pass a BLOB variable or field containing the 4D View document to convert. The command returns a 4D View Pro object into which all the information originally stored within the 4D View document is converted to 4D View Pro attributes.
+No parâmetro *4DViewDocument* , passe uma variável ou campo BLOB que contenha o documento 4D View a ser convertido. O comando retorna um objeto 4D View Pro no qual todas as informações originalmente armazenadas no documento 4D View são convertidas em atributos 4D View Pro.
 
 #### Exemplo
 
-You want to get a 4D View Pro object from a 4D View area stored in a BLOB:
+Se quiser obter um objeto 4D View Pro de uma área 4D View armazenada em um BLOB:
 
 ```4d
 C_OBJECT($vpObj)
@@ -618,21 +618,21 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 #### Descrição
 
-O comando `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->converts the *vpObject* 4D View Pro object (or the *rangeObj* range within *vpObject*) to a SVG picture<!-- END REF -->.
+O comando `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->converte o objeto *vpObject* 4D View Pro (ou o intervalo *rangeObj* dentro de *vpObject*) em uma imagem SVG<!-- END REF -->.
 
 Este comando é útil, por exemplo:
 
-* to embed a 4D View Pro document in an other document such as a 4D Write Pro document
-* to print a 4D View Pro document without having to load it into a 4D View Pro area.
+* para incorporar um documento 4D View Pro em outro documento, como um documento 4D Write Pro
+* para imprimir um documento do 4D View Pro sem ter que carregá-lo em uma área do 4D View Pro.
 
-Em *vpObject*, passe o objecto 4D View Pro que pretende converter. This object must have been previously parsed using [VP Export to object](#vp-export-to-object) or saved using [VP EXPORT DOCUMENT](#vp-export-document).
-> SVG conversion process requires that expressions and formats (cf. [Cell Format](configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. If you convert a document that was not evaluated beforehand, expressions or formats may be rendered in an unexpected way.
+Em *vpObject*, passe o objecto 4D View Pro que pretende converter. Esse objeto deve ter sido analisado anteriormente usando [VP Export to object](#vp-export-to-object) ou salvo usando [VP EXPORT DOCUMENT](#vp-export-document).
+> O processo de conversão de SVG exige que as expressões e os formatos (cf. [Cell Format](configuring.md#cell-format)) incluídos na área do 4D View Pro sejam avaliados pelo menos uma vez, para que possam ser exportados corretamente. Se você converter um documento que não foi avaliado anteriormente, as expressões ou os formatos poderão ser renderizados de forma inesperada.
 
-Em *rangeObj*, passe um intervalo de células a converter. By default, if this parameter is omitted, the whole document contents are converted.
+Em *rangeObj*, passe um intervalo de células a ser convertido. Por padrão, se esse parâmetro for omitido, todo o conteúdo do documento será convertido.
 
-Document contents are converted with respect to their viewing attributes, including formats (see note above), visibility of headers, columns and rows. A conversão dos seguintes elementos é suportada:
+O conteúdo do documento é convertido com relação aos seus atributos de visualização, incluindo formatos (veja a observação acima), visibilidade de cabeçalhos, colunas e linhas. Há suporte para a conversão dos seguintes elementos:
 
-* Texto: estilo / tipo de letra / tamanho / alinhamento / orientação / rotação / formato
+* Texto: estilo / fonte / tamanho / alinhamento / orientação / rotação / formato
 * Fundo da célula: cor / imagem
 * Borda das células: espessura / cor / estilo
 * Fusão de células
@@ -689,22 +689,22 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
 
 O comando `VP Copy to object` <!-- REF #_method_.VP Copy to object.Summary -->copia o conteúdo, o estilo e as fórmulas de *rangeObj* para um objeto<!-- END REF -->.
 
-In *rangeObj*, pass the cell range with the values, formatting, and formulas to copy. If *rangeObj* is a combined range, only the first one is used.
+Em *rangeObj*, passe o intervalo de células com os valores, a formatação e as fórmulas a serem copiadas. Se *rangeObj* for um intervalo combinado, somente o primeiro será usado.
 
-You can pass an optional *options* parameter with the following properties:
+Você pode passar um parâmetro opcional *options* com as seguintes propriedades:
 
-| Propriedade | Tipo       | Descrição                                                                                                                |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------ |
-| copy        | Parâmetros | *True* (default) to keep the copied values, formatting and formulas after the command executes. *False* para os remover. |
-| copyOptions | Longint    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copia todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                        |
+| Propriedade | Tipo       | Descrição                                                                                                                        |
+| ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| copy        | Parâmetros | *True* (padrão) para manter os valores copiados, a formatação e as fórmulas após a execução do comando. *False* para os remover. |
+| copyOptions | Longint    | Especifica o que é copiado ou movido. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Copia todos os objetos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copia apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copia apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copia as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Copia apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copia os valores e a formatação.</td></tr></table></p>                                                |
 
-The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
+As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
 
-The command returns an object that contains the copied data.
+O comando retorna um objeto que contém os dados copiados.
 
 #### Exemplo
 
-This code sample first stores the contents, values, formatting and formulas from a range to an object, and then pastes them in another range:
+Esse exemplo de código primeiro armazena o conteúdo, os valores, a formatação e as fórmulas de um intervalo em um objeto e, em seguida, cola-os em outro intervalo:
 
 ```4d
 var $originRange; $targetRange; $dataObject; $options : Object
@@ -755,11 +755,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### Descrição
 
-O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
+O comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cria uma tabela no intervalo especificado<!-- END REF -->. É possível criar uma tabela em um intervalo de células para facilitar o gerenciamento e a análise de um grupo de dados relacionados. Em geral, uma tabela contém dados relacionados em linhas e colunas e aproveita o contexto de dados [](#vp-set-data-context).
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
-In *rangeObj*, pass the cell range where the table will be created.
+Em *rangeObj*, passe o intervalo de células em que a tabela será criada.
 
 Em *tableName*, introduza um nome para a tabela. O nome deve:
 
@@ -767,10 +767,10 @@ Em *tableName*, introduza um nome para a tabela. O nome deve:
 * incluir pelo menos 5 caracteres
 * não incluir espaços ou começar com um número
 
-In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. Isto liga a tabela ao contexto de dados. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
+Na  *fonte*, você pode passar um nome de propriedade de  [um contexto de dados](#vp-set-data-context) para exibir seus dados na tabela. Isto liga a tabela ao contexto de dados. Quando o contexto de dados é atualizado, os dados exibidos na tabela são atualizados de acordo. A propriedade *source* deve conter uma coleção de objetos e cada elemento representa uma linha.
 
-  * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*.
-  * If the specified *source* cannot be fully displayed in the document, no table is created.
+  * Se você não especificar uma  *fonte*, o comando criará uma tabela vazia com o tamanho definido em *rangeObj*.
+  * Se a  *fonte especificada* não puder ser totalmente exibida no documento, nenhuma tabela será criada.
 
 In the *options* parameter, pass an object of the [`cs. ViewPro. TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
 
@@ -897,7 +897,7 @@ Em *rangeObj*, passe um objeto que contenha um intervalo de linhas a remover. Se
 
 #### Exemplo
 
-To delete rows selected by the user (in the image below rows 1, 2, and 3):
+Para eliminar as linhas selecionadas pelo usuário (na imagem abaixo, as linhas 1, 2 e 3):
 
 ![](../assets/en/ViewPro/cmd_vpDeleteRows.PNG)
 
@@ -918,9 +918,9 @@ utilizar o seguinte código:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                  |
-| ------ | ------------------------- |
-| v20 R2 | Support of .sjs documents |
+| Versão | Mudanças                   |
+| ------ | -------------------------- |
+| v20 R2 | Suporte de documentos .sjs |
 </details>
 
 
@@ -1004,7 +1004,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 | -------- |  | ---- | --------- |
 |          |  |      |           |
 
-|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
+|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. Pode ser devolvido por 4D ou JavaScript.|
 
 #### Exemplo 1
 
@@ -1571,7 +1571,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 
 #### Exemplo
 
-The following code returns the number of columns in the 4D View Pro area:
+O código seguinte retorna o número de colunas na área 4D View Pro:
 
 ```4d
 C_Integer($colCount)
@@ -1598,7 +1598,7 @@ $colCount:=VP Get column count("ViewProarea")
 
 #### Descrição
 
-O comando `VP Get current sheet` <!-- REF #_method_.VP Get current sheet.Summary -->returns the index of the current sheet in *vpAreaName*. A folha atual é a folha selecionada no documento.<!-- END REF -->
+O comando `VP Get current sheet` <!-- REF #_method_.VP Get current sheet.Summary -->retorna o índice da planilha atual em *vpAreaName*. A folha atual é a folha selecionada no documento.<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
@@ -1645,7 +1645,7 @@ $index:=VP Get current sheet("ViewProArea")
 
 #### Descrição
 
-O comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->devolve o data context atual de uma folha de cálculo<!-- END REF -->. The returned context includes any modifications made to the contents of the data context.
+O comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->devolve o data context atual de uma folha de cálculo<!-- END REF -->. O contexto retornado inclui todas as modificações feitas no conteúdo do contexto de dados.
 
 In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
 
@@ -1831,7 +1831,7 @@ A coleção devolvida é bidimensional:
 
 #### Exemplo
 
-You want to retrieve the formulas in the Sum and Average columns from this document:
+Você deseja recuperar as fórmulas nas colunas Sum e Average desse documento:
 
 ![](../assets/en/ViewPro/cmd_vpGetFormulas.PNG)
 
@@ -1982,7 +1982,7 @@ Este código:
 $pinfo:=VP Get print info("ViewProArea")
 ```
 
-... returns the print attributes of the 4D View Pro area set in the [VP SET PRINT INFO](#vp-set-print-info) command:
+... retorna os atributos de impressão da área 4D View Pro definida no comando [VP SET PRINT INFO](#vp-set-print-info):
 
 ```4d
 {
@@ -2057,7 +2057,7 @@ The returned collection contains any properties for the rows, whether or not the
 
 #### Exemplo
 
-The following code returns a collection of the attributes within the given range:
+O código seguinte retorna uma coleção de atributos no intervalo fornecido:
 
 ```4d
 var $range : Object
@@ -2098,7 +2098,7 @@ You can define where to get the row count in the optional *sheet* parameter usin
 
 #### Exemplo
 
-The following code returns the number of rows in the 4D View Pro area:
+O código seguinte retorna o número de linhas na área 4D View Pro:
 
 ```4d
 var $rowCount : Integer
@@ -2134,7 +2134,7 @@ No parâmetro opcional *sheet*, pode designar uma folha específica onde o inter
 
 ![](../assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
-The following code will retrieve the coordinates of all the cells in the current selection:
+O código seguinte recuperará as coordenadas de todas as células na seleção atual:
 
 ```4d
 $currentSelection:=VP Get selection("myVPArea")
@@ -2599,7 +2599,7 @@ In *columnName*, pass the name of the table column for which you want to get the
 Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
 > A indexação começa em 0.
 
-If *tableName* or *columnName* is not found, the command returns -1.
+Se *tableName* ou *columnName* não for encontrado, o comando retornará -1.
 
 #### Exemplo
 
@@ -2983,9 +2983,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                  |
-| ------ | ------------------------- |
-| v20 R2 | Support of .sjs documents |
+| Versão | Mudanças                   |
+| ------ | -------------------------- |
+| v20 R2 | Suporte de documentos .sjs |
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3374,7 +3374,7 @@ O parâmetro *options* tem várias propriedades:
 | pasteOptions | Longint    | Especifica o que é colado. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Cola apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                           |
 
 
-The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
+As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
 
 #### Exemplo
 
@@ -3572,7 +3572,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 | `vk clipboard options values`                  | Cola apenas valores.                                                       |
 | `vk clipboard options value and formatting`    | Cola valores e formatação.                                                 |
 
-The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
+As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
 
 If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
 
@@ -4543,10 +4543,10 @@ In *rangeObj*, pass a range of cells where the border style will be applied. If 
 
 The *borderStyleObj* parameter allows you to define the style for the lines of the border. The *borderStyleObj* supports the following properties:
 
-| Propriedade | Tipo    | Descrição                                              | Valores possíveis                                                                                                                                                                                                                                                                                                                                                            |
-| ----------- | ------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color       | text    | Define a cor da margem. Predefinição = black.          | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                           |
-| style       | Integer | Defines the style of the border. Predefinição = vazio. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
+| Propriedade | Tipo    | Descrição                                       | Valores possíveis                                                                                                                                                                                                                                                                                                                                                            |
+| ----------- | ------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| color       | text    | Define a cor da margem. Predefinição = black.   | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                           |
+| style       | Integer | Define o estilo da borda. Predefinição = vazio. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 You can define the position of the *borderStyleObj* (i.e., where the line is applied) with the *borderPosObj*:
 
@@ -6187,7 +6187,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | allowDynamicArray                     | boolean                 | Permite arrays dinâmicos em folhas de trabalho                                                                                                                                                                                                             |
 | allowExtendPasteRange                 | boolean                 | Extends the pasted range if the pasted range is not enough for the pasted data                                                                                                                                                                             |
 | allowSheetReorder                     | boolean                 | É permitida a reordenação de folhas                                                                                                                                                                                                                        |
-| allowUndo                             | boolean                 | Undoing edits is allowed.                                                                                                                                                                                                                                  |
+| allowUndo                             | boolean                 | É permitido desfazer as edições.                                                                                                                                                                                                                           |
 | allowUserDeselect                     | boolean                 | É permitido desmarcar células específicas de uma seleção.                                                                                                                                                                                                  |
 | allowUserDragDrop                     | boolean                 | É permitido arrastar e largar dados de intervalo                                                                                                                                                                                                           |
 | allowUserDragFill                     | boolean                 | É permitido o preenchimento por arrastamento                                                                                                                                                                                                               |
@@ -6217,7 +6217,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.          |
 | referenceStyle                        | number                  | Estilo para referências de células e intervalos em fórmulas de células. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                    |
 | resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                   |
-| rowResizeMode                         | number                  | The way rows are resized. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                                        |
+| rowResizeMode                         | number                  | A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                      |
 | scrollbarAppearance                   | number                  | Aspeto da barra de deslocação. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>                                                                                                                                                                             |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                    |
 | scrollbarShowMax                      | boolean                 | The displayed scroll bars are based on the entire number of columns and rows in the sheet.                                                                                                                                                                 |

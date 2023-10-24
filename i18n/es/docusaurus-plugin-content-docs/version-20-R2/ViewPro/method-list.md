@@ -1010,7 +1010,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utili
 | -------- |  | ---- | ----------- |
 |          |  |      |             |
 
-|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
+|$1| |text| El nombre del objeto 4D View Pro| |$2| |text| La ruta del archivo del objeto 4D View Pro exportado| |$3| |object| Una referencia al comando *paramObj*| |$4| |object| Un objeto devuelto por el método con un mensaje de estado| ||.success |boolean| True si se exporta con éxito, False en caso contrario.| ||.errorCode |integer| Código de error. Puede ser devuelto por 4D o JavaScript.| ||.errorMessage |text| Mensaje de error. Puede ser devuelto por 4D o JavaScript.|
 
 #### Ejemplo 1
 
@@ -2133,7 +2133,7 @@ $rowCount:=VP Get row count("ViewProarea")
 | ---------- | ---- | -- | -------------------------------------------- |
 | vpAreaName | Text | -> | Nombre del área 4D View Pro en el formulario |
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
+|sheet  |Integer|->|Índice de hoja (hoja actual si se omite)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
 
 #### Descripción
 
@@ -5901,7 +5901,7 @@ Con un salto de página:
 | vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
 | tableName  | Text | -> | Nombre de la tabla                           |
 
-|column|Integer|->|Index of the column in the table| |attributes |Object|->|Attribute(s) to apply to the *column*| |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+|column|Integer|->|Índice de la columna en la tabla| |attributes |Object|->|Atributo(s) a aplicar a *column*| |sheet |Integer|->|Índice de la hoja (hoja actual si se omite)||<!-- END REF -->
 
 #### Descripción
 

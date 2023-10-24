@@ -138,7 +138,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 | result    | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
-La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
+Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` renvoyé contient une collection d'erreurs dans `status.errors`.
 <!-- END REF -->
 
 <!-- REF CryptoKey.encrypt().Desc -->
@@ -294,7 +294,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentat
 
 #### *Résultat*
 
-`CryptoKey` doit contenir une clé **privée** valide.
+La représentation utf8 de la chaîne *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -311,7 +311,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentat
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. .
+Défini uniquement pour les clés RSA : <!-- REF #CryptoKey.size.Summary -->la taille de la clé en octets<!-- END REF -->. Habituellement 2048 (par défaut).
 
 <!-- REF CryptoKey.type -->
 ## .type
