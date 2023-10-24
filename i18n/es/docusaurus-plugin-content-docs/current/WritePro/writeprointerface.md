@@ -5,15 +5,15 @@ title: Interfaz 4D Write Pro
 
 4D WritePro Interface ofrece un conjunto de paletas, que permiten a los usuarios finales personalizar fácilmente un documento 4D Write Pro.
 
-A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
+Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicación. Así, los usuarios finales pueden gestionar todas las propiedades de 4D Write Pro, como las fuentes, la alineación del texto, los marcadores, la disposición de las tablas y los marcos.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*.
 
-You will find below the Table Wizard configuration documentation.
+A continuación encontrará la documentación de configuración del Asistente para tablas.
 
-## Table Wizard
+## Asistente de tablas
 
-The Table Wizard is here to further simplify table creation based on database data using contexts, data sources, and formulas.
+El asistente de tablas está aquí para simplificar aún más la creación de tablas basadas en datos de bases d utilizando contextos, fuentes de datos y fórmulas.
 
 The Table Wizard, accessible to end-users, loads templates provided and configured by 4D developers. This enables developers to customize the template according to the specific use cases and business requirements of the users.
 
@@ -21,7 +21,7 @@ The Table Wizard comes with default templates and themes, which developers can c
 
 To implement the Table Wizard in your application, the developers are able to create and configure template files.
 
-### WP Table Wizard interface
+### Interfaz del Asistente de tablas WP
 
 The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
 
@@ -29,19 +29,19 @@ The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D 
 
 From this interface, the user can select a template or a table from the first drop-down list and a theme from the second.
 
-##### In Columns:
+##### En Columnas:
 
 ![](../assets/en/WritePro/columns2.PNG)
 
 Depending on the user's selection of a template or a table, the user can view the list of fields stored in the template (Blob and object types are automatically excluded). They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
 
-##### In Rows:
+##### En líneas:
 
 ![](../assets/en/WritePro/rows.PNG)
 
 In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
 
-##### In Display:
+##### En pantalla:
 
 ![](../assets/en/WritePro/display2.PNG)
 
@@ -61,7 +61,7 @@ The templates configuration includes:
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
-#### Template files
+#### Archivos de plantillas
 
 The template file allows you to define the following:
 
@@ -100,7 +100,7 @@ The template file in JSON format contains the following attributes:
 | extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 
-:::note French language
+:::note Francés
 
 If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
 
@@ -108,7 +108,7 @@ If your application is likely to be run on a 4D with language set to French, mak
 
 ##### Ejemplo
 
-Here's a brief example of what your JSON file might look like:
+He aquí un breve ejemplo del aspecto que podría tener su archivo JSON:
 
 ```json
 {
@@ -154,7 +154,7 @@ Here's a brief example of what your JSON file might look like:
 
 ```
 
-#### Translation files
+#### Archivos de traducción
 
 Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
 
@@ -222,15 +222,15 @@ The theme file in JSON format contains the following attributes:
 
 | Atributo | Tipo   | Obligatorio | Descripción                                                                                                                           |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
-| default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
-| table    | Object |             | Object containing the style definition applicable to the table.                                                                       |
-| rows     | Object |             | Object containing the style definition applicable to all rows.                                                                        |
-| cells    | Object |             | Object containing the style definition applicable to all cells.                                                                       |
-| header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |
-| header2  | Object |             | Object containing the style definition applicable to the second header row.                                                           |
-| header3  | Object |             | Object containing the style definition applicable to the third header row.                                                            |
-| header4  | Object |             | Object containing the style definition applicable to the fourth header row.                                                           |
-| header5  | Object |             | Object containing the style definition applicable to the fifth header row.                                                            |
+| default  | Object |             | Objeto que contiene el estilo por defecto aplicable a todas las líneas.                                                               |
+| table    | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                     |
+| rows     | Object |             | Objeto que contiene la definición de estilo aplicable a todas las líneas.                                                             |
+| cells    | Object |             | Objeto que contiene la definición de estilo aplicable a todas las celdas.                                                             |
+| header1  | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea del encabezado.                                              |
+| header2  | Object |             | Objeto que contiene la definición de estilo aplicable a la segunda línea del encabezado.                                              |
+| header3  | Object |             | Objeto que contiene la definición de estilo aplicable a la tercera línea del encabezado.                                              |
+| header4  | Object |             | Objeto que contiene la definición de estilo aplicable a la cuarta línea del encabezado.                                               |
+| header5  | Object |             | Objeto que contiene la definición de estilo aplicable a la quinta línea del encabezado.                                               |
 | headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
 | data     | Object |             | Object containing the style definition applicable to the repeated data row.                                                           |
 | break1   | Object |             | Object containing the style definition applicable to the first break row.                                                             |

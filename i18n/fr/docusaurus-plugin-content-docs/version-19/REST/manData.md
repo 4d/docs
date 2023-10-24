@@ -14,7 +14,7 @@ Pour rechercher directement des données, vous pouvez utiliser la fonction [`$fi
 
 
 
-## Adding, modifying, and deleting entities
+## Ajouter, modifier et supprimer des entités
 
 Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souhaitées dans 4D.
 
@@ -25,15 +25,15 @@ Outre la récupération d'un attribut dans une dataclass à l'aide de [{dataClas
 Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
 
-## Navigating data
+## Parcourir les données
 
 Ajoutez le [`$skip`]($skip.md) (pour définir avec quelle entité commencer) et [`$top/$limit`]($top_$limit.md) (pour définir le nombre d'entités à retourner) des requêtes REST à vos requêtes ou entity selections pour parcourir la collection d'entités.
 
 
 
-## Creating and managing entity set
+## Créer et gérer un entity set
 
-Un ensemble d'entités (également appelé *entity set* ou <0>entity selection</0>) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
+Un entity set (également appelé *entity selection*) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
 Pour créer un entity set, appelez [`$method=entityset`]($method.md#methodentityset) dans votre requête REST. Par mesure de sécurité, vous pouvez également utiliser [`$savedfilter`]($savedfilter.md) et/ou [`$savedorderby`]($savedorderby.md) lorsque vous appelez [`$filter`]($filter.md) et/ou [`$orderby`]($orderby.md) afin que l'entité définie puisse être rapidement récupérée avec le même ID que précédemment, dans le cas où elle expireait ou serait supprimée du serveur.
 
@@ -48,15 +48,15 @@ Si vous souhaitez supprimer un entity set du cache de 4D Server, vous pouvez uti
 
 Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs seront mises à jour. Toutefois, si vous modifiez une valeur qui faisait partie de la requête exécutée pour créer l'entity set, elle ne sera pas supprimée de l'entity set même si elle ne correspond plus aux critères de recherche. Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity set.
 
-Si l'ensemble d'entités ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
+Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
-Using [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), you can combine two entity sets that you previously created. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
+En utilisant [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), vous pouvez combiner deux entity sets que vous avez précédemment créés. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
 
-Une nouvelle sélection d'entités est renvoyée; vous pouvez néanmoins créer un nouvel ensemble d'entités en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
+Une nouvelle entity selection est renvoyée; vous pouvez néanmoins créer un nouvel entity set en appelant [`$method=entityset`]($method.md#methodentityset) à la fin de la requête REST.
 
 
 
-## Calculating data
+## Calcul des données
 
 En utilisant [`$compute`]($compute.md), vous pouvez calculer la **moyenne**, le **nombre**, le **min**, le **max** ou la **somme** pour un attribut spécifique d'une dataclass. Vous pouvez également calculer toutes les valeurs avec le mot clé $all.
 

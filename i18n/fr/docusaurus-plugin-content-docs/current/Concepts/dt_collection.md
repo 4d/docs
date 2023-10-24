@@ -40,7 +40,7 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
   //myCol[4]=null
 ```
 
-## Instantiation
+## Instanciation
 
 Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
 
@@ -110,7 +110,7 @@ Vous pouvez créer deux types de collections :
 - regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). Ces collections peuvent être modifiées sans contrôle d'accès spécifique mais ne peuvent pas être partagées entre les process.
 - collections partagées, à l'aide de la commande [`New shared collection`](API/CollectionClass.md#new-shared-collection). Le contenu de ces collections peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces collections doit être contrôlé via des structures [`Use...End use`](Concepts/shared.md#useend-use).
 
-For more information, refer to the [Shared objects and collections](shared.md) section.
+Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
 ## Fonctions de collection
 

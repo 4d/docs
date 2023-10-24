@@ -177,7 +177,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La propriété `.isFolder` retourne <!-- REF #document.isFolder.Summary -->toujours faux pour un fichier<!-- END REF -->.
+La propriété `.isFolder` retourne <!-- REF #document.isFolder.Summary -->toujours vrai pour un fichier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 
@@ -453,7 +453,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Description
 
-La fonction `.getContent()`  <!-- REF #document.getContent().Summary -->The `.getContent()` function<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
+La fonction `.getContent()`  <!-- REF #document.getContent().Summary -->renvoie un `BLOB` contenant l'intégralité du contenu d'un fichier<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 **Valeur retournée**
 

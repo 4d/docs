@@ -194,20 +194,20 @@ Met à jour et/ou crée une ou plusieurs entités
 
 `$method=update` vous permet de mettre à jour et/ou de créer une ou plusieurs entités dans un seul **POST**. Si vous mettez à jour et/ou créez une entité, cela s'effectue dans un objet avec, pour chaque propriété, un attribut et sa valeur, par exemple `{lastName: "Smith"}`. Si vous mettez à jour et/ou créez plusieurs entités, vous devez créer une collection d'objets.
 
-In any cases, you must set the **POST** data in the **body** of the request.
+Dans tous les cas, vous devez définir les données **POST** dans le **body** de la requête.
 
 Pour mettre à jour une entité, vous devez passer les paramètres `__KEY` et `__STAMP` dans l'objet avec tous les attributs modifiés. Si ces deux paramètres sont manquants, une entité sera ajoutée avec les valeurs de l'objet que vous envoyez dans le corps de votre **POST**.
 
-Triggers are executed immediately when saving the entity to the server. La réponse contient toutes les données telles qu'elles existent sur le serveur.
+Les triggers sont exécutés immédiatement lors de l'enregistrement de l'entité sur le serveur. La réponse contient toutes les données telles qu'elles existent sur le serveur.
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. Si des erreurs se produisent lors de la validation des données, aucune des entités n'est sauvegardée. You can also use `$method=validate` to validate the entities before creating or updating them.
+Vous pouvez également placer ces requêtes de création ou de mise à jour d'entités dans une transaction en appelant `$atomic/$atOnce`. Si des erreurs se produisent lors de la validation des données, aucune des entités n'est sauvegardée. Vous pouvez également utiliser `$method=validate` pour valider les entités avant de les créer ou de les mettre à jour.
 
 Si un problème survient lors de l'ajout ou de la modification d'une entité, une erreur vous sera retournée avec ces informations.
 
 :::note
 *   **Les dates** doivent être exprimées au format JS : YYYY-MM-DDTHH:MM:SSZ (par exemple, "2010-10-05T23:00:00Z"). Si vous avez sélectionné la propriété Date uniquement pour votre attribut Date, le fuseau horaire et l'heure (heure, minutes et secondes) seront supprimés. Dans ce cas, vous pouvez également envoyer la date au format qui vous est retourné dd!mm!yyyy (par exemple, 05!10!2013).
 *   Les valeurs des **booléens** sont vrai ou faux.
-*   Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+*   Les fichiers téléchargés à l'aide de `$upload` peuvent être appliqués à un attribut de type Image ou BLOB en transmettant l'objet renvoyé dans le format suivant `{ "ID" : "D507BC03E613487E9B4C2F6A0512FE50"}`
 :::
 
 
@@ -278,7 +278,7 @@ Lorsque vous ajoutez ou modifiez une entité, elle vous est retournée avec les 
 }
 ```
 
-Si, par exemple, le tampon n'est pas correct, l'erreur suivante est retournée :
+Si, par exemple, le stamp n'est pas correct, l'erreur suivante est retournée :
 
 ```json
 {

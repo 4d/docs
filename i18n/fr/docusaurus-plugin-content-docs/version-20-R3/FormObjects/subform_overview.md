@@ -58,7 +58,7 @@ Binding the same variable or expression to your subform container and other obje
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-In the parent form, both objects (input area and subform container) ***have the same value as ***Variable or Expression******. It can be a variable (e.g. `parisTime`), or an expression (e.g. `Form.parisTime`).
+Dans le formulaire parent, les deux objets (zone de saisie et conteneur de sous-formulaire) ***ont la même valeur que ***Variable ou expression******. It can be a variable (e.g. `parisTime`), or an expression (e.g. `Form.parisTime`).
 
 :::info
 
@@ -111,7 +111,7 @@ Modifying the bound variable or expression triggers form events which let you sy
 
 Scénario 2 : Le contenu du sous-formulaire est modifié et cette modification doit être répercutée dans le formulaire parent.
 
-Inside the subform, the button changes the value of the `Form.clockValue` expression of type Text attached to the clock object. This triggers the [On Data Change](../Events/onDataChange.md) form event inside the clock object (this event must be selected for the object), which updates the `Form.parisTime` value in the main form.
+Dans le sous-formulaire, le bouton modifie la valeur de l'expression `Form.clockValue` de type Texte attachée à l'objet horloge. Cela déclenche l'événement formulaire [On Data Change](../Events/onDataChange.md) dans l'objet horloge (cet événement doit être sélectionné pour l'objet), qui met à jour la valeur `Form.parisTime` dans le formulaire principal.
 
 The following code is executed:
 

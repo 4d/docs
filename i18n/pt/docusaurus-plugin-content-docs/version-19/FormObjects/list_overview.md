@@ -37,7 +37,7 @@ Each representation of the list has its own specific characteristics and shares 
 
 - A selecção,
 - O estado expandido/recolhido dos seus itens,
-- The position of the scrolling cursor.
+- A posição do cursor de rolagem.
 
 The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately. Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
 

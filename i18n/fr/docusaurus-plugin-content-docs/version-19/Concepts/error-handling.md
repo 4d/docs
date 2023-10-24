@@ -9,7 +9,7 @@ La gestion des erreurs répond à deux besoins principaux :
 
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
 - détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
-> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
+> > > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
 
 ## Erreur ou statut
@@ -93,12 +93,10 @@ ON ERR CALL("errorMethod")
 Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
 ```4d
-ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
+ON ERR CALL("emptyMethod") //emptyMethod existe mais est vide
 $doc:=Open document( "myFile.txt")
 If (Error=-43)
     ALERT("File not found.")
-End if
-ON ERR CALL("")
 End if
 ON ERR CALL.("")
 ```

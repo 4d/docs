@@ -37,13 +37,13 @@ This is where you write and edit your code. The editor automatically indents cod
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                 | Description                                                                                                                                                                                                 | Set in...                                                                                                                                                                                                  |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                      |
-| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                           |
-| **thèmes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
-| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
+| Option                                 | Description                                                                                                                                                                                                 | Set in...                                                                                                                                                                       |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                           |
+| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Clic avec le bouton droit de la souris sur un élément de langage (variable, mot-clé, etc.) > Sous-menu **Style**. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                |
+| **thèmes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                      |
+| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                      |
 
 #### Change bars
 
@@ -220,46 +220,46 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 
 :::
 
-| **Shortcut**                                                | **Action**                                                                                                                                 |
-| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Selection and navigation**                                |                                                                                                                                            |
-| Double-click                                                | Select a language element name                                                                                                             |
-| [Alt]+Double-click                                          | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
-| [Shift]+[right arrow]                                       | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
-| [Shift]+[left arrow]                                        | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
-| [Shift]+[down arrow]                                        | Create and enlarge a selection, line by line, from the top to the bottom                                                                   |
-| [Shift]+[up arrow]                                          | Create and enlarge a selection, line by line, from the bottom to the top                                                                   |
-| [Ctrl]+[Shift]+[right arrow]                                | Create and enlarge the selection, word by word, from the right                                                                             |
-| [Ctrl]+[Shift]+[left arrow]                                 | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                      |
-| [Ctrl]+[right arrow]                                        | Move the insertion point, word by word, from left to right                                                                                 |
-| [Ctrl]+[left arrow]                                         | Move the insertion point, word by word, from right to left                                                                                 |
-| [Alt]+[down arrow]                                          | Move the line(s) where the cursor is to the bottom                                                                                         |
-| [Alt]+[up arrow]                                            | Move the line(s) where the cursor is to the top                                                                                            |
-| [Home]                                                      | Place the insertion point at the beginning of the line                                                                                     |
-| [End]                                                       | Place the insertion point at the end of the line                                                                                           |
-| [Ctrl]+[Home]                                               | Place the insertion point at the beginning of the method                                                                                   |
-| [Ctrl]+[End]                                                | Place the insertion point at the end of the method                                                                                         |
-| [Shift]+[Home]                                              | Select all the characters in the line that are to the left of the cursor                                                                   |
-| [Shift]+[End]                                               | Select all the characters in the line that are to the right of the cursor                                                                  |
-| [PgUp]                                                      | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                           |
-| [PgDn]                                                      | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                           |
-| [**Introspection**](#goto-definition)                       |                                                                                                                                            |
-| [Ctrl]+K or [Alt]+double-click                              | Same as [**Goto definition**](#goto-definition) command                                                                                    |
+| **Shortcut**                                                    | **Action**                                                                                                                                 |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Selection and navigation**                                    |                                                                                                                                            |
+| Double-click                                                    | Select a language element name                                                                                                             |
+| [Alt]+Double-click                                              | Select a language element name contaning spaces (constant, method, etc.)                                                                   |
+| [Shift]+[right arrow]                                           | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left     |
+| [Shift]+[left arrow]                                            | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left      |
+| [Shift]+[down arrow]                                            | Create and enlarge a selection, line by line, from the top to the bottom                                                                   |
+| [Shift]+[up arrow]                                              | Create and enlarge a selection, line by line, from the bottom to the top                                                                   |
+| [Ctrl]+[Shift]+[right arrow]                                    | Create and enlarge the selection, word by word, from the right                                                                             |
+| [Ctrl]+[Shift]+[left arrow]                                     | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                      |
+| [Ctrl]+[right arrow]                                            | Move the insertion point, word by word, from left to right                                                                                 |
+| [Ctrl]+[left arrow]                                             | Move the insertion point, word by word, from right to left                                                                                 |
+| [Alt]+[down arrow]                                              | Move the line(s) where the cursor is to the bottom                                                                                         |
+| [Alt]+[up arrow]                                                | Move the line(s) where the cursor is to the top                                                                                            |
+| [Home]                                                          | Place the insertion point at the beginning of the line                                                                                     |
+| [End]                                                           | Place the insertion point at the end of the line                                                                                           |
+| [Ctrl]+[Home]                                                   | Place the insertion point at the beginning of the method                                                                                   |
+| [Ctrl]+[End]                                                    | Place the insertion point at the end of the method                                                                                         |
+| [Shift]+[Home]                                                  | Select all the characters in the line that are to the left of the cursor                                                                   |
+| [Shift]+[End]                                                   | Select all the characters in the line that are to the right of the cursor                                                                  |
+| [PgUp]                                                          | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                           |
+| [PgDn]                                                          | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                           |
+| [**Introspection**](#goto-definition)                           |                                                                                                                                            |
+| [Ctrl]+K or [Alt]+double-click                                  | Same as [**Goto definition**](#goto-definition) command                                                                                    |
 | \[Ctrl\] (Windows) or \[Alt\] (macOS)+hovering over a token | Underline the token (identified language element). Click on the underlined token = same as [**Goto definition**](#goto-definition) command |
-| [**Chercher et remplacer**](#find-and-replace)              |                                                                                                                                            |
-| [Ctrl]+F                                                    | Chercher                                                                                                                                   |
-| [Ctrl]+G                                                    | Find Next                                                                                                                                  |
-| [Ctrl]+[Shift]+G                                            | Find Previous                                                                                                                              |
-| [Ctrl]+E                                                    | Find Same Next                                                                                                                             |
-| [Ctrl]+[Shift]+E                                            | Find Same Previous                                                                                                                         |
-| [Ctrl]+[Alt]+F                                              | Replace                                                                                                                                    |
-| [Ctrl]+[Alt]+G                                              | Replace Next                                                                                                                               |
-| [Ctrl]+[Alt]+[Shift]+G                                      | Replace Previous                                                                                                                           |
-| [**Clipboards**](#clipboards)                               |                                                                                                                                            |
-| [Shift]+click or [Alt]+click on clipboard icon              | Copy selected text to a clipboard                                                                                                          |
-| [Ctrl]+[Shift]+number key                                   | Copy selected text to the number clipboard                                                                                                 |
-| [Ctrl]+click on clipboard icon                              | Paste contents of a clipboard at cursor location                                                                                           |
-| [Ctrl]+number key                                           | Paste contents of the number clipboard at cursor location                                                                                  |
+| [**Chercher et remplacer**](#find-and-replace)                  |                                                                                                                                            |
+| [Ctrl]+F                                                        | Chercher                                                                                                                                   |
+| [Ctrl]+G                                                        | Find Next                                                                                                                                  |
+| [Ctrl]+[Shift]+G                                                | Find Previous                                                                                                                              |
+| [Ctrl]+E                                                        | Find Same Next                                                                                                                             |
+| [Ctrl]+[Shift]+E                                                | Find Same Previous                                                                                                                         |
+| [Ctrl]+[Alt]+F                                                  | Replace                                                                                                                                    |
+| [Ctrl]+[Alt]+G                                                  | Replace Next                                                                                                                               |
+| [Ctrl]+[Alt]+[Shift]+G                                          | Replace Previous                                                                                                                           |
+| [**Clipboards**](#clipboards)                                   |                                                                                                                                            |
+| [Shift]+click or [Alt]+click on clipboard icon                  | Copy selected text to a clipboard                                                                                                          |
+| [Ctrl]+[Shift]+number key                                       | Copy selected text to the number clipboard                                                                                                 |
+| [Ctrl]+click on clipboard icon                                  | Paste contents of a clipboard at cursor location                                                                                           |
+| [Ctrl]+number key                                               | Paste contents of the number clipboard at cursor location                                                                                  |
 
 :::tip
 
@@ -304,7 +304,7 @@ From the Explorer, you can drag and drop tables, fields, forms, project methods,
 When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. You can then use a syntax that better suits your usage.
 
 
-You can also drag-and-drop within a method, class, function or between two different ones. In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. By default, the drag-and-drop mechanism **moves** the selected text. In order to **copy** it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
+Vous pouvez également effectuer un glisser-déposer à l'intérieur d'une méthode, d'une classe ou d'une fonction, ou entre deux méthodes, classes ou fonctions différentes. Dans l'éditeur de code, le mécanisme de glisser-déposer est activé dès qu'une portion de texte est sélectionnée. By default, the drag-and-drop mechanism **moves** the selected text. In order to **copy** it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
 
 
 
@@ -395,7 +395,7 @@ If the characters typed correspond to different types of objects, the list displ
 - SQL keywords
 - Macros (displayed between < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option.
+> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. Ces options se trouvent dans **Préférences** > **Méthodes** > **Options**
 
 #### Object property names
 
@@ -453,7 +453,7 @@ Hit the **Enter** key to select closest occurrence to the cursor. You can also c
 #### Options
 
 - **Case Sensitive** ![case-sensitive](../assets/en/code-editor/case-sensitive.png): Take the case of characters as they were entered in the find area into account. This option also takes into account diacritic characters. For instance, a search for "MyVar" will not find "myVar"; a search for "dej" will not find "déjà".
-- **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc.
+- **Whole Word** ![full-word](../assets/en/code-editor/full-word.png): Limit the search to exact occurrences of the word being searched for. Lorsque cette option est cochée, par exemple, une recherche sur "client" ne trouvera ni "clients" ni "myclient". Par défaut, cette option n'est pas cochée ; par conséquent, une recherche de "var" donnera "Myvar", "variation", etc.
 
 
 
@@ -533,15 +533,15 @@ The [status bar](#status-bar) also provides contextual information.
 
 ## Comment / Uncomment
 
-The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
+Le langage 4D supporte les [commentaires](../Concepts/quick-tour.md#comments), qui sont des lignes de code inactives. L'éditeur de code n'applique pas de style particulier dans les commentaires. The length of comments is limited to the maximum size of 32,000 characters per line. Le nombre de lignes n'est pas limité.
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
-Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
+Des commentaires peuvent être créés en tapant les caractères `/`. Ou encore, la commande **Comment/Uncomment** , présente dans le menu **Method** ainsi que dans le menu contextuel de l'éditeur de code, permet de marquer un groupe de lignes de code sélectionnées en tant que commentaires d'une seule ligne ou, au contraire, de supprimer les caractères de commentaires d'une seule ligne d'une sélection. Pour utiliser cette commande, sélectionnez le code à marquer comme commenté, puis sélectionnez la commande **Comment/Uncomment** :
 
 ![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
-When the selection contains only active code, the **Comment** command is applied. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently "uncommented." When the selection contains only commented lines, the **Uncomment** command is applied.
+Lorsque la sélection ne contient que du code actif, la commande **Comment** est appliquée. Lorsque la sélection comprend à la fois du code actif et des lignes commentées, une paire supplémentaire de caractères de commentaire ( // ) est ajoutée à ces dernières ; de cette façon, elles conserveront leur statut de commentaire initial si la ligne est ensuite "décommentée". Lorsque la sélection ne contient que des lignes commentées, la commande **Uncomment** est appliquée.
 
 > The **Comment/Uncomment** command only operates with full lines --- it cannot be used to comment only part of a line.
 

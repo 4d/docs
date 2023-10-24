@@ -218,7 +218,7 @@ Création d'un fichier de préférences dans le dossier principal :
 
 #### Description
 
-La fonction `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> nommé *aliasName* pour le fichier dans le dossier désigné par l'objet *destinationFolder *.
+La fonction `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> pour le fichier nommé *aliasName* dans le dossier désigné par l'objet *destinationFolder *.
 
 Passez le nom de l'alias ou du raccourci à créer dans le paramètre *aliasName*.
 

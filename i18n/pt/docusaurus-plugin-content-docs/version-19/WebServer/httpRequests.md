@@ -361,7 +361,7 @@ As funcionalidades deste método são:
 
 Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
 
-## Other Web Server Commands
+## Outros comandos do servidor Web
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 

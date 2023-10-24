@@ -20,9 +20,9 @@ Trois étapes sont nécessaires pour effectuer le tout premier chiffrement de vo
 
 1. Dans l'éditeur de structure, cochez l'attribut **Chiffrable** pour chaque table dont vous souhaitez chiffrer les données. Consultez la section "Propriétés des tables".
 2. Ouvrez la page Chiffrement du CSM. If you open the page without setting any tables as **Encryptable**, the following message is displayed in the page: ![](../assets/en/MSC/MSC_encrypt1.png) Otherwise, the following message is displayed: ![](../assets/en/MSC/MSC_encrypt2.png) This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted. **Note:**The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
-3. Click on the Encrypt picture button.  
+3. Cliquez sur le bouton Crypter l'image.  
    ![](../assets/en/MSC/MSC_encrypt3.png)  
-   You will be prompted to enter a passphrase for your data file: ![](../assets/en/MSC/MSC_encrypt4.png) The passphrase is used to generate the data encryption key. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. For example, you could enter a passphrases such as "We all came out to Montreux" or "My 1st Great Passphrase!!" The security level indicator can help you evaluate the strength of your passphrase: ![](../assets/en/MSC/MSC_encrypt5.png) (deep green is the highest level)
+   Vous serez invité à saisir une phrase secrète pour votre fichier de données : ![](../assets/en/MSC/MSC_encrypt4.png) La phrase secrète est utilisée pour générer la clé de cryptage des données. Une phrase secrète est une version plus sécurisée d'un mot de passe et peut contenir un grand nombre de caractères. Par exemple, vous pouvez saisir une phrase secrète telle que "Nous sommes tous venus à Montreux" ou "Ma première phrase de passe géniale !!". L'indicateur de niveau de sécurité peut vous aider à évaluer la force de votre phrase secrète : ![](../assets/en/MSC/MSC_encrypt5.png) (le vert foncé est le niveau le plus élevé)
 4. Tapez sur Entrée pour confirmer votre phrase secrète sécurisée.
 
 Le processus de chiffrement est alors lancé. Si le CSM est ouvert en mode standard, la base de données est rouverte en mode maintenance.
@@ -60,7 +60,7 @@ Cette opération est utile lorsque l'attribut **Chiffrable** a été modifié po
 1. Cliquez sur **Re-chiffrer les données à l'aide de la clé actuelle**.
 2. Saisissez la clé de chiffrement des données actuelle.
 
-The data file is properly re-encrypted with the current key and a confirmation message is displayed: ![](../assets/en/MSC/MSC_encrypt8.png)
+Le fichier de données est correctement re-chiffré à l'aide de la clé actuelle et un message de confirmation s'affiche : ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Changer votre phrase secrète et re-chiffrer les données
 
@@ -68,7 +68,7 @@ Cette opération est utile en cas de modification de la clé de chiffrement des 
 
 1. Cliquez sur **Changer votre phrase secrète et re-chiffrer les données**.
 2. Saisissez la clé de chiffrement des données actuelle.
-3. Enter the new passphrase (for added security, you are prompted to enter it twice): ![](../assets/en/MSC/MSC_encrypt9.png) The data file is encrypted with the new key and the confirmation message is displayed. ![](../assets/en/MSC/MSC_encrypt8.png)
+3. Saisissez la nouvelle phrase secrète (pour plus de sécurité, il vous est demandé de la saisir deux fois) : ![](../assets/en/MSC/MSC_encrypt9.png) Le fichier de données est chiffré avec la nouvelle clé et un message de confirmation s'affiche. ![](../assets/en/MSC/MSC_encrypt8.png)
 
 ### Enlever le chiffrement de toutes les données
 

@@ -192,7 +192,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
-**.getPrivateKey()** : Text<!-- END REF -->
+**.getPrivateKey**() : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
@@ -205,6 +205,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 `.getPrivateKey()` 関数は、  <!-- REF #CryptoKey.getPrivateKey().Summary -->`CryptoKey` オブジェクトの秘密鍵を返します (PEM形式)<!-- END REF --> 。無い場合は空の文字列を返します。
 
 #### *戻り値*
+
 
 
 戻り値は秘密鍵です。
@@ -266,7 +267,7 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 | v18 R4 | 追加 |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->

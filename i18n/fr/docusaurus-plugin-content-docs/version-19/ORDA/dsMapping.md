@@ -135,7 +135,7 @@ Les propriétés de dataclass sont des objets attribut décrivant les champs ou 
  $revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
-Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes.
+Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. Pour gérer les valeurs, vous devez passer par les [Entités](#entite).
 
 Tous les fichiers éligibles d'une table sont disponibles en tant qu'attributs de leur [dataclass](#dataclass) parente. Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque champ que vous souhaitez exposer en tant qu'attribut de dataclass.
 
@@ -159,7 +159,7 @@ En outre, les attributs relationnels suivant seront également disponibles autom
 
 * dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 * dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
-> > The Manual or Automatic property of a database relation has no effect in ORDA.
+> La propriété manuelle ou automatique d'une relation de base de données n'a aucun effet dans ORDA.
 
 Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 
@@ -200,7 +200,7 @@ $e:=ds.Employee.all() //assigne la référence de la sélection d'entité résul
 
 Les entity selections peuvent être "triées" ou "non triées" ([voir ci-dessous](#ordered-or-unordered-entity-selection)).
 
-> > Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
+> Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
 
 L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
 
@@ -231,9 +231,9 @@ Les sélections d'entités non-triées sont créées dans les cas suivants :
 * résultat d'un `query()` standard sur une sélection (de n'importe quel type) ou un `query()` sur une dataclass,
 * résultat de la méthode `newSelection()` sans option,
 * résultat de l'une des méthodes de comparaison, quel que soit le type de sélection saisi : `or()`, `and()`, `minus()`.
-> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> Les entity selections suivantes sont toujours **triées** :
 > 
-> * sélections d'entités retournées par 4D Server vers un client distant
-> * sélections d'entités fondées sur des datastores distants.
+> * entity selections retournées par 4D Server vers un client distant
+> * entity selections basées sur des datastores distants.
 
 Notez que lorsqu'une sélection d'entités ordonnée devient une sélection non-ordonnée, toute référence d'entité répétée est supprimée.

@@ -339,7 +339,7 @@ In the optional *options* parameter, pass an object that contains the following 
 
 #### Description
 
-The `.connections` property contains <!-- REF #WebSocketServerClass.connections.Summary -->all current connections handled by the WebSocket server<!-- END REF -->. Each element of the collection is a [`WebSocketConnection` object](WebSocketConnectionClass.md).
+La propriété `.connections` contient <!-- REF #WebSocketServerClass.connections.Summary -->toutes les connexions courantes gérées par le serveur WebSocket<!-- END REF -->. Chaque élément de la collection est un objet [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 When a connection is terminated, its [`status`](WebSocketConnectionClass.md#status) changes to "Closed" and it is removed from this collection.
 
@@ -354,7 +354,7 @@ When a connection is terminated, its [`status`](WebSocketConnectionClass.md#stat
 
 #### Description
 
-La propriété `.dataType` contient <!-- REF #WebSocketServerClass.dataType.Summary -->the type of the data received or sent<!-- END REF -->.
+La propriété `.dataType` contient <!-- REF #WebSocketServerClass.dataType.Summary -->le type de données reçues ou envoyées<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 <!-- END REF -->
@@ -367,7 +367,7 @@ Cette propriété est en lecture seule.
 
 #### Description
 
-La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
+La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summary -->l'accesseur qui récupère l'objet `WSSHandler` utilisé pour initier le serveur WebSocket<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -379,7 +379,7 @@ La propriété `.handler` contient <!-- REF #WebSocketServerClass.handler.Summar
 
 #### Description
 
-La propriété `.path` contient <!-- REF #WebSocketServerClass.path.Summary -->the pattern of the path to access the WebSocket server<!-- END REF -->. If no path was defined, the WebSocket server manages all connections.
+La propriété `.path` contient <!-- REF #WebSocketServerClass.path.Summary -->le modèle du chemin d'accès au serveur WebSocket<!-- END REF -->. Si aucun chemin n'a été défini, le serveur WebSocket gère toutes les connexions.
 
 Cette propriété est en lecture seule.
 <!-- END REF -->
@@ -413,7 +413,7 @@ La fonction `.terminate()` <!-- REF #WebSocketServerClass.terminate().Summary --
 
 #### Description
 
-La propriété `.terminated` contient <!-- REF #WebSocketServerClass.terminated.Summary -->True if the WebSocket server is closed<!-- END REF -->.
+La propriété `.terminated` contient <!-- REF #WebSocketServerClass.terminated.Summary -->True si le serveur WebSocket est fermé<!-- END REF -->.
 
 Cette propriété est en lecture seule.
 <!-- END REF -->

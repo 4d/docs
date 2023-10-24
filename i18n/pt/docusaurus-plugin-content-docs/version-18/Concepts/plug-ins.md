@@ -51,7 +51,7 @@ You can put the PlugIns folder in two different places:
   - No Windows: junto ao ficheiro .exe
   - Under macOS: at the first level of the Contents folder inside the application package.   
     In this case, plug-ins are available in every database opened by this application.
-- At the same level as the database structure file. In this case,  plug-ins are only available in this particular database.
+- No mesmo nível do arquivo de estrutura do banco de dados. In this case,  plug-ins are only available in this particular database.
 
 The choice of location depends on how you want to use the plug-in.
 

@@ -62,7 +62,7 @@ Pour ouvrir une bibliothèque d’objets personnalisée, sélectionnez la comman
 Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Seules les parties suivantes d'un projet sont exposées lorsqu'il est ouvert en tant que bibliothèque :
 
 - formulaires projet
-- form pages 1
+- pages 1 des formulaires
 
 ### Construire une bibliothèque d’objets
 
@@ -74,7 +74,7 @@ Les principales opérations sont accessibles via le menu contextuel ou le menu d
 
 ![](../assets/en/FormEditor/library5.png)
 
-- **Couper ** ou **Copier** vers le conteneur de données
+- **Couper** ou **Copier** vers le conteneur de données
 - **Coller** un objet à partir du conteneur de données
 - **Effacer** - supprime l'objet de la bibliothèque
 - **Renommer** - une boite de dialogue apparait pour vous permettre de renommer l'élément. A noter que les noms d'objets doivent être uniques dans une bibliothèque.

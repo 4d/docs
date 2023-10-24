@@ -126,7 +126,7 @@ Les propriétés prises en charge dépendent du type de list box.
 | ------------------------------------------------------------------------------------------- | ---------------- | ------------------- | --------------------------------------- |
 | [Couleur de fond alternée](properties_BackgroundAndBorder.md#alternate-background-color)    | X                | X                   | X                                       |
 | [Couleur de fond](properties_BackgroundAndBorder.md#background-color)                       | X                | X                   | X                                       |
-| [Gras](properties_Text.md#bold)                                                             | X                | X                   | X                                       |
+| [Souligné](properties_Text.md#bold)                                                         | X                | X                   | X                                       |
 | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) |                  | X                   | X                                       |
 | [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style)                  | X                | X                   | X                                       |
 | [Bas](properties_CoordinatesAndSizing.md#bottom)                                            | X                | X                   | X                                       |
@@ -277,7 +277,7 @@ Vous pouvez définir pour chaque colonne de List box des propriétés standard (
 > Vous pouvez définir le [Type d'expression](properties_Object.md#expression-type) pour les colonnes de list box de type tableau (Alpha, Texte, Numérique, Date, Heure, Image, Booléen ou Objet).
 
 
-### Propriétés spécifiques des list box
+### Propriétés spécifiques des colonnes
 
 [Alpha Format](properties_Display.md#alpha-format) - [Couleur de fond alternée](properties_BackgroundAndBorder.md#alternate-background-color) - [Hauteur de ligne automatique](properties_CoordinatesAndSizing.md#automatic-row-height) - [Tableau couleurs de fond](properties_Text.md#background-color) - [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) - [Gras](properties_Text.md#bold) - [Enumération](properties_DataSource.md#choice-list) - [Classe](properties_Object.md#css-class) - [Data Type (expression type) ](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Valeurs par défaut](properties_DataSource.md#default-values) - [Type d'affichage](properties_Display.md#display-type) - [Saisissable](properties_Entry.md#enterable) - [Filtres de saisie](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (colonne de list box tableau)](properties_Object.md#expression-type) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Alignement horizontal](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
@@ -311,7 +311,7 @@ Vous pouvez définir pour chaque colonne de List box des propriétés standard (
 
 ## En-têtes de list box
 
-> Pour pouvoir accéder aux propriétés des en-têtes d'une list box, vous devez avoir coché l'option [Afficher en-têtes](properties_Headers.md#display-headers) dans la Liste des propriétés de la list box.
+> Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
 
 Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans l'éditeur de formulaires en cliquant dessus lorsque l'objet List box est sélectionné :
 
@@ -444,7 +444,7 @@ La gestion des sélections s'effectue différemment selon que la list box de typ
 Lorsque l'option [Cacher surlignage sélection](properties_Appearance.md#cacher-surlignage-selection) est sélectionnée, vous devez gérer la représentation visuelle des sélections dans la list box à l'aide des options d'interface disponibles. Comme les sélections elles-mêmes sont gérées par 4D, cela signifie que :
 
 - Pour les list box de type tableau, vous devez parcourir le tableau booléen associé à la list box afin de déterminer quelles lignes sont sélectionnées.
-- Pour les list box de type sélection, vous devez vérifier si l'enregistrement courant (c.-à-d. la ligne courante) appartient à l'ensemble spécifié dans la propriété [Ensemble surlignage](properties_ListBox.md#ensemble-surlignage) de la list box.
+- Propriétés spécifiques des list box
 
 Vous pouvez alors définir par programmation des couleurs d'arrière-plan, des couleurs ou des styles de polices spécifiques permettant de visualiser l'apparence des lignes sélectionnées. Pour cela, vous pouvez utiliser des tableaux ou des expressions en fonction du type de list box affiché (cf. sections suivantes).
 
@@ -538,8 +538,8 @@ La prise en charge du tri standard dépend du type de list box :
 | Type de list box                | Prise en charge du tri standard | Commentaires                                                                                                 |
 | ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Collection d'objets             | Oui                             | <li>Les colonnes "This.a" ou "This.a.b" sont triables.</li><li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection de valeurs scalaires | Non                             | Use custom sort with [`orderBy()`](../API/CollectionClass.md#orderby) function                               |
-| Entity selection                | Oui                             | <li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Pris en charge : tris sur les propriétés d'attributs d'objets (par exemple "This.data.city" lorsque "data" est un attribut d'objet)</li><li>Pris en charge : tris sur les attributs liés (par exemple "This.company.name")</li><li>Non pris en charge : tris sur les propriétés d'attributs d'objets par le biais d'attributs liés (par exemple, "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Collection de valeurs scalaires | Non                             | Utiliser un tri personnalisé avec la fonction [`orderBy()`](../API/CollectionClass.md#orderby)               |
+| Entity selection                | Oui                             | <li>La [propriété source de la list box](properties_Object.md#variable-or-expression) doit être une [expression assignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Pris en charge : tris sur les propriétés d'attributs d'objets (par exemple "This.data.city" lorsque "data" est un attribut d'objet)</li><li>Pris en charge : tris sur les attributs liés (par exemple "This.company.name")</li><li>Non pris en charge : tris sur les propriétés d'attributs d'objets par le biais d'attributs liés (par exemple, "This.company.data.city"). Pour cela, vous devez utiliser le tri personnalisé avec la fonction [`orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) (voir l'exemple ci-dessous)</li> |
 | Sélection courante              | Oui                             | Seules les expressions simples sont triables (par exemple `[Table_1]Champ_2`)                                |
 | Sélection temporaire            | Non                             |                                                                                                              |
 | Tableaux                        | Oui                             | Les colonnes liées à des tableaux d'images et de pointeurs ne sont pas triables                              |
@@ -554,7 +554,7 @@ Le développeur peut mettre en place des tris personnalisés à l'aide de la com
 Les tris personnalisés vous permettent de :
 
 - effectuer des tris multi-niveaux sur plusieurs colonnes, grâce à la commande [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
-- use functions such as [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+- utilisez des fonctions telles que [`collection.orderByFormula()`](../API/CollectionClass.md#orderbyformula) ou [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) pour trier les colonnes sur la base de critères complexes.
 
 #### Exemple
 
@@ -654,7 +654,7 @@ Selon le type de list box, vous pouvez utiliser différentes propriétés pour p
 | -------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Couleur de fond      | [Tableau couleurs de fond](properties_BackgroundAndBorder.md#row-background-color-array) | [Expression couleur de fond](properties_BackgroundAndBorder.md#background-color-expression) | [Expression couleur de fond](properties_BackgroundAndBorder.md#expression-couleur-de-fond) ou [Meta info expression](properties_Text.md#meta-info-expression) |
 | Couleur de la police | [Tableau couleurs de police](properties_Text.md#row-font-color-array)                    | [Expression couleur police](properties_Text.md#font-color-expression)                       | [Expression couleur police](properties_Text.md#expression-couleur-police) or [Meta info expression](properties_Text.md#meta-info-expression)                  |
-| Font style           | [Tableau de styles](properties_Text.md#row-style-array)                                  | [Expression style](properties_Text.md#style-expression)                                     | [Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                                    |
+| Style de police      | [Tableau de styles](properties_Text.md#row-style-array)                                  | [Expression style](properties_Text.md#style-expression)                                     | [Expression style](properties_Text.md#expression-style) ou [Meta info expression](properties_Text.md#meta-info-expression)                                    |
 | Affichage            | [Tableau de contrôle des lignes](properties_ListBox.md#row-control-array)                | -                                                                                           | -                                                                                                                                                             |
 
 
@@ -753,7 +753,7 @@ Si cette list box est affichée sous forme hiérarchique (les trois premiers tab
 
 Les tableaux ne sont pas triés avant la construction de la hiérarchie. Si par exemple un tableau contient les données AAABBAACC, la hiérarchie obtenue sera :
 
-    > &gt; A B A C
+    > A B A C
 
 Pour déployer ou contracter un "nœud" hiérarchique, cliquez dessus. Si vous effectuez **Alt+clic** (Windows) ou **Option+clic** (macOS) sur le nœud, tous ses sous-éléments seront déployés ou contractés. Ces opérations peuvent également être effectuées par programmation à l'aide des commandes `LISTBOX EXPAND` et `LISTBOX COLLAPSE`.
 
@@ -796,10 +796,10 @@ Quelle que soit la manière dont les données sont affichées dans la list box (
 Ce principe est mis en oeuvre pour les tableaux internes permettant de gérer :
 
 - les couleurs
-- background colors
+- les couleurs de fond
 
 
-- styles
+- les styles
 - les lignes masquées
 - les sélections
 
@@ -823,7 +823,7 @@ Lorsque toutes les lignes d’une sous-hiérarchie sont masquées, la ligne de r
 
 #### Lignes de rupture
 
-Si l’utilisateur sélectionne une ligne de rupture, `LISTBOX GET CELL POSITION` retourne la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant . Dans le cas suivant :
+Si l’utilisateur sélectionne une ligne de rupture, `LISTBOX GET CELL POSITION` retourne la première occurrence de la ligne dans le tableau correspondant. Dans le cas suivant :
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
@@ -972,11 +972,21 @@ L'unique attribut obligatoire est "valueType" et ses valeurs acceptées sont "te
 La valeur des cellules est stockée dans l'attribut "value". Cet attribut est utilisé pour la saisie (entrée) et pour l'affichage (sortie). Il peut également être utilisé pour définir des valeurs par défaut lors de l'utilisation des listes (voir ci-dessous).
 
 ````4d
+ ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
-$entry:="Hello world!"
- OB SET($ob;"valueType";"text")
-OB SET($ob;"alternateButton";True)
-OB SET($ob;"value";$entry)
+ $entry:="Hello world!"
+ OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)
 ````
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
@@ -1139,7 +1149,7 @@ Quel que soit son mode de définition, la liste d'unités peut être associée �
 
 *   "unitReference" : une valeur simple contenant l'indice (de 1 à x) de l'élément sélectionné dans la liste de valeurs "unitList", "unitsListReference" ou "unitsListName".
 
-L'unité courante est affichée sous forme de bouton affichant successivement les valeurs de "unitList", "unitsListReference" ou "unitsListName" à chaque clic (par exemple "pixels" -> "lignes" -> "cm" -> "pixels" -> etc.)
+L'unité courante est affichée sous la forme d'un bouton qui fait défiler les valeurs "unitList", "unitsListReference" ou "unitsListName" chaque fois qu'il est cliqué (par exemple, "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
 Voici un exemple :
 
@@ -1169,11 +1179,9 @@ Voici un exemple :
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
- APPEND TO ARRAY(obColumn;$ob)
+OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
@@ -1214,7 +1222,7 @@ OB SET($ob;"label";"Edit...")
 
 
 ### Gestion des événements
-Plusieurs événements peuvent être gérés dans les colonnes de list box de type tableau d'objets. Voici une synthèse des événements spécifiques :
+Plusieurs événements peuvent être gérés lors de l'utilisation d'une listbox tableau d'objets :
 
 *   **Sur données modifiées** : L'événement `On Data Change` est généré en cas de modification d'une valeur de la colonne, quel que soit le widget :
     *   zone de saisie de texte

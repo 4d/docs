@@ -178,7 +178,7 @@ For optimization reasons, data requested from the server via ORDA is loaded in t
 
 The data contained in the cache is considered as expired when the timeout is reached. Qualquer acesso a dados expirados enviará um pedido ao servidor. Os dados expirados permanecem na cache até que seja necessário espaço.
 
-By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions:
+Por padrão, o cache ORDA é tratado de forma transparente pelo 4D. However, you can control its contents using the following ORDA class functions:
 
 * [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 * [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)

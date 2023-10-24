@@ -5,7 +5,7 @@ title: Restaurar um backup
 
 4D allows you to restore entire sets of database data in case of any incidents, regardless of the cause of the incident. Podem ocorrer dois tipos principais de incidentes:
 
-- The unexpected stoppage of a database while in use. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
+- A interrupção inesperada de um banco de dados durante o uso. Esse incidente pode ocorrer por causa de uma falha de energia, erro em um elemento do sistema, etc. In this case, depending on the current state of the data cache at the moment of the incident, the restore of the database can require different operations:
   - Se a cache estiver vazia, a base de dados abre-se normalmente. Todas as alterações efectuadas na base de dados foram registadas. Este caso não exige nenhuma operação particular
   - Se a cache conter operações, o arquivo de dados está intacto mas exige integrar o arquivo de histórico atual.
   - Se a cache estiver no processo de ser escrita, o arquivo de dados está provavelmente danificado. When restoring a backup and integrating the current log file in a encrypted database:
@@ -21,7 +21,7 @@ Pode restaurar manualmente os conteúdos de um arquivo gerado pelo módulo de c�
 
 The manual restore of backups can be carried out either via the standard Open document dialog box, or via the [Restore](MSC/restore) page of the MSC. A restauração através do MSC oferece mais opções e permite pré-visualizar os conteúdos dos arquivos. On the other hand, only archives associated with the open database can be restored.
 
-To restore a database manually via a standard dialog box:
+Para restaurar um banco de dados manualmente via uma caixa de diálogo padrão:
 
 1. **Content**: Contents of the backup file. Não é obrigatório que uma base de dados esteja aberta. OR Execute the `RESTORE` command from a 4D method. Uma caixa de diálogo de abertura de arquivos vai aparecer.
 2. Selecione um arquivo de backup (.4bk) ou um arquivo de backup de histórico (.4bl) para ser restaurado e clique **Abrir**. Aparece um diálogo que permite especificar o local onde os arquivos serão restaurados. Como padrão 4D restaura os arquivos em uma pasta chamada *Archivename* (sem extensão) que fica do lado do arquivo. Pode exibir a rota:

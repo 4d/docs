@@ -9,7 +9,7 @@ If more than one person uses a database, which is usually the case in client-ser
 
 ## Atribuir grupos de acesso
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
+O sistema de acesso por senha de 4D é baseado em usuários e grupos. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
 
 Groups can then be assigned access privileges to specific parts or features of the database (Design access, HTTP server, SQL server, etc.), or any custom part.
 
@@ -50,9 +50,9 @@ The editors for users and groups are located in the toolbox of 4D. These editors
 
 Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
 
-This file can be stored at the following locations:
+Esse arquivo pode ser armazenado nos seguintes locais:
 
-- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the database.
+- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. Essas propriedades são usadas por padrão no banco de dados.
 - in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
 
 > If users and groups management is not active, the directory.json is not created.

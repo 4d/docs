@@ -925,6 +925,7 @@ use the following code:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -994,6 +995,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 
 |Variable|  |Type| Description|
 |---|---|---|---|
+
 |$1|  |text| The name of the 4D View Pro object|
 |$2|  |text| The filepath of the exported 4D View Pro object|
 |$3|  |object| A reference to the command's *paramObj*|
@@ -2082,6 +2084,7 @@ $rowCount:=VP Get row count("ViewProarea")
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area from object name|
+
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
 |Result  |Object|<-|Range object of cells|<!-- END REF -->
 
@@ -2890,7 +2893,6 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 |Parameter|Type||Description|
-
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
@@ -5084,7 +5086,6 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object|
 |formula |Text|->|Formula or 4D method|
 |formatPattern |Text|->|Format of field|<!-- END REF -->
@@ -5746,6 +5747,7 @@ With a page break:
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
+
 |column|Integer|->|Index of the column in the table|
 |attributes |Object|->|Attribute(s) to apply to the *column*|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->

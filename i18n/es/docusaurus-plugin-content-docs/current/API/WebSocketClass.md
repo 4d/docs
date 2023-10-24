@@ -115,7 +115,7 @@ In *connectionHandler*, you can pass an object containing callback functions to 
 | onTerminate | [Function](FunctionClass.md) | Función de retrollamada cuando el WebSocket se termina. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.code` (number, solo lectura): corto sin firmar que contiene el código de cierre enviado por el servidor.</li><li>`$2.reason` (text, sólo lectura): razón por la que el servidor cerró la conexión. Esto es específico de cada servidor y subprotocolo.</li><li>`$2.wasClean` (boolean, sólo lectura): indica si la conexión se cerró limpiamente o no.</li></ul>                                           |
 | onOpen      | [Function](FunctionClass.md) | Función de retrollamada cuando el webSocket está abierto. La retrollamada recibe los siguientes parámetros:<li>`$1`: Objeto WebSocket</li><li>`$2`: Objeto</li><ul><li>`$2.type` (texto): siempre "open"</li></ul>                                       |
 | dataType    | Text                         | Tipo de datos recibidos o enviados. Valores disponibles: "text" (por defecto), "blob", "object". "text" = utf-8                                                                                                                 |
-| headers     | Object                       | Headers of the WebSocket.<li>Syntax for standard key assignment: `headers.*key*:=*value*` (*value* can be a Collection if the same key appears multiple times)</li><li>Syntax for Cookie assignment (particular case): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                   |
+| headers     | Object                       | Encabezados del WebSocket.<li>Sintaxis para la asignación estándar de las llaves: `headers.*key*:=*value*` (*value* puede ser una colección si la misma llave aparece varias veces)</li><li>Sintaxis para asignación de cookies (caso particular): `headers.Cookie:="*name*=*value* {; *name2*=*value2*{; ... } }"`</li>                                                                                                                                                  |
 
 
 Esta es la secuencia de llamadas de retorno:
@@ -131,14 +131,14 @@ Esta es la secuencia de llamadas de retorno:
 You want to set headers in the `WSConnectionHandler` user class:
 
 ```4d
-// WSConnectionHandler class
+// Clase WSConnectionHandler
 
 Class constructor($myToken:Text)
 
-// Creation of the headers sent to the server
+// Creación de los encabezados enviados al servidor
 This.headers:=New object("x-authorization";$myToken)
-// We define two cookies
-This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
+// Definimos dos cookies
+This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=fresa"
 ...
 
 ```

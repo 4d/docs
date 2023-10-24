@@ -94,7 +94,7 @@ Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affect
  myCol[10]:="My new element"
 ```
 
-Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont attribués une valeur **null**.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
 
 Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 
@@ -172,7 +172,7 @@ Vous devez affecter la référence retournée à une variable 4D de type Collect
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
-Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection partagée, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
 
 Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 
@@ -715,7 +715,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **true** si elles sont identiques (deep comparison).
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre option.
-> Cette fonction ne modifie pas la collection d'origine.
+> Les éléments ayant la valeur **Null** ne sont pas égaux aux éléments Undefined.
 
 #### Exemple
 
@@ -769,7 +769,7 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 #### Description
 
-La fonction `.every()` <!-- REF #collection.every().Summary -->The `.every()` function<!-- END REF -->.
+La fonction `.every()` <!-- REF #collection.every().Summary -->renvoie **true** si tous les éléments de la collection ont passé avec succès un test mis en œuvre dans la méthode *methodName* fournie<!-- END REF -->.
 
 Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. La méthode reçoit un paramètre de type `Object` dans $1 et doit passer true dans *$1.result* pour chaque élément ayant satisfait aux conditions du test.
 
@@ -1076,7 +1076,7 @@ Le code de ***TypeLookUp*** est :
 
 #### Description
 
-La fonction `find()` <!-- REF #collection.find().Summary -->The `.indexOf()` function<!-- END REF -->.
+La fonction `find()` <!-- REF #collection.find().Summary -->renvoie la première valeur de la collection pour laquelle *methodName*, appliquée à chaque élément, renvoie **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
@@ -1171,10 +1171,10 @@ Le code de la méthode ***FindCity*** est :
 
 #### Description
 
-La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->The `.findIndex()` function<!-- END REF -->.
+La fonction `.findIndex()` <!-- REF #collection.findIndex().Summary -->renvoie l'index, dans la collection, de la première valeur pour laquelle *methodName*, appliquée à chaque élément, renvoie **true**<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
-Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s).
+Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer n'importe quel test, en utilisant ou non le(s) paramètre(s). Cette méthode reçoit un `objet` comme premier paramètre ($1) et doit définir *$1.result* à **true** pour le premier élément remplissant la condition.
 
 *methodName* reçoit les paramètres suivants :
 
@@ -1407,7 +1407,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en textes et les concatène en utilisant comme séparateur la chaîne *delimiter* spécifiée<!-- END REF -->. La fonction retourne la chaîne résultante.
+La fonction `.concat()` <!-- REF #collection.join().Summary -->retourne une nouvelle collection avec le contenu du paramètre *value* ajouté à la fin de la collection d'origine<!-- END REF -->. La fonction retourne la chaîne résultante.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1459,7 +1459,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 * la valeur null,
 * une référence d'objet ou de collection.
 
-Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
+*toSearch* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
 
@@ -1565,7 +1565,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
   //$c2=[2.27,9.09,20.45,22.73,45.45]
 ```
 
-Avec la méthode *NumberGreaterThan0* suivante :
+Voici la méthode ***Percentage*** :
 
 ```4d
  var $1 : Object
@@ -1741,7 +1741,7 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 
 #### Exemple 1
 
-Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
+Tri d'une collection de nombres par ordre croissant ou décroissant :
 
 ```4d
  var $c; $c2; $3 : Collection
@@ -1755,7 +1755,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
 
 #### Exemple 2
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -1768,7 +1768,7 @@ Tri d'une collection d'objets sur des propriétés :
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets via une collection d'objets critères :
+Tri d'une collection d'objets sur des propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -1781,7 +1781,7 @@ Tri d'une collection d'objets via une collection d'objets critères :
 
 #### Exemple 3
 
-Tri avec un chemin de propriété :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $crit; $c; $c2 : COllection
@@ -1834,7 +1834,7 @@ Tri avec un chemin de propriété :
 
 #### Description
 
-La fonction `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary -->The `.orderByMethod()` function<!-- END REF -->.
+La fonction `.orderByMethod()` <!-- REF #collection.orderByMethod().Summary -->renvoie une nouvelle collection contenant tous les éléments de la collection dans l'ordre défini par la méthode *methodName*<!-- END REF -->.
 
 Cette fonction retourne une*shallow copy* (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
@@ -1851,7 +1851,7 @@ Dans *methodName*, passez le nom d'une méthode qui compare deux valeurs et reto
 
 #### Exemple 1
 
-Voici le code de la méthode ***NumAscending*** :
+Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -1861,7 +1861,7 @@ Voici le code de la méthode ***NumAscending*** :
  $c3:=$c.orderByMethod("NumAscending") // $c3=["4","33","222","1111"]
 ```
 
- Vous souhaitez trier une collection de chaînes selon leur longueur :
+ Voici le code de la méthode ***NumAscending*** :
 
 ```4d
  $1.result:=Num($1.value)<Num($1.value2)
@@ -1869,7 +1869,7 @@ Voici le code de la méthode ***NumAscending*** :
 
 #### Exemple 2
 
-Voici le code de la méthode ***WordLength*** :
+Vous souhaitez trier une collection de chaînes de caractères en fonction de leur longueur :
 
 ```4d
  var $fruits; $c2 : Collection
@@ -1901,7 +1901,7 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-Paramètre(s) à passer à *methodName*
+La méthode ***sortCollection*** :
 
 ```4d
 var$1Object
@@ -1997,7 +1997,7 @@ La fonction `.push()` <!-- REF #collection.push().Summary -->ajoute un ou plusie
 
 #### Exemple 2
 
-Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
+Vous souhaitez trier la collection résultante :
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2075,20 +2075,16 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
- $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
-
- $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
- $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
+Cet exemple renvoie les personnes dont le nom contient "in" :
 
 ```4d
  $col:=$c.query("name = :1";"@in@")
   //$col=[{name:Winch...},{name:Sterling...}]
 ```
 
-Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
+Cet exemple retourne des personnes dont le nom ne commence pas par une chaine dont la valeur provient d'une variable (saisie par l'utilisateur, par exemple) :
 
 ```4d
  $col:=$c.query("name # :1";$aString+"@")
@@ -2096,18 +2092,18 @@ Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété déf
   //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}]
 ```
 
-Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
+Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
 
 ```4d
  $col:=$c.query("age=null") //placeholders not allowed with "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
-Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
+Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018
 ```
 
 #### Exemple 3
@@ -2142,7 +2138,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 #### Description
 
-La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->The `.reduce()` function<!-- END REF -->.
+La fonction `.reduce()` <!-- REF #collection.reduce().Summary -->applique la méthode callback *methodName* à un accumulateur et à chaque élément de la collection (de gauche à droite) pour les réduire à une seule valeur<!-- END REF -->.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètres dans param (facultatif). *methodName* prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans *$1.accumulator*, qui est retourné dans *$1.value*.
@@ -2503,7 +2499,7 @@ Par défaut, `.some()` évalue l'ensemble de la collection. Optionnellement, vou
  $b:=$c.some(1;"NumberGreaterThan0") //$b=false
 ```
 
-*methodName* doit fixer le paramètre suivant :
+Avec la méthode *NumberGreaterThan0* suivante :
 
 ```4d
 

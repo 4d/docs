@@ -958,8 +958,8 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 <!-- REF #collection.filter().Params -->
 | Parâmetro  | Tipo       |    | Descrição                                                                                |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
-| methodName | Text       | -> | Name of the function to call to filter the collection                                    |
-| param      | Mixed      | -> | Parameter(s) to pass to *methodName*                                                     |
+| methodName | Text       | -> | Nome da função a chamar para filtrar a coleção                                           |
+| param      | Mixed      | -> | Parâmetro(s) a ser(em) passado(s) para *methodName*                                      |
 | Resultados | Collection | <- | Nova coleção contendo elementos filtrados (cópia superficial)|<!-- END REF -->
 
 |
@@ -1050,7 +1050,7 @@ The code for ***TypeLookUp*** is:
 | ---------- | ------- |:--:| ----------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice onde inicia a pesquisa                                                       |
 | methodName | Text    | -> | Nome da função a chamar para a procura                                              |
-| param      | any     | -> | Parameter(s) to pass to *methodName*                                                |
+| param      | any     | -> | Parâmetro(s) a ser(em) passado(s) para *methodName*                                 |
 | Resultados | any     | <- | Primeiro valor encontrado ou Undefined se não encontrado|<!-- END REF -->
 
 |
@@ -1144,7 +1144,7 @@ The code for ***FindCity*** is:
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------- |
 | startFrom  | Integer | -> | Índice onde inicia a pesquisa                                                          |
 | methodName | Text    | -> | Nome da função a chamar para a procura                                                 |
-| param      | any     | -> | Parameter(s) to pass to *methodName*                                                   |
+| param      | any     | -> | Parâmetro(s) a ser(em) passado(s) para *methodName*                                    |
 | Resultados | Integer | <- | Indice do primeiro valor encontrado ou -1 se não encontrado|<!-- END REF -->
 
 |
@@ -1498,7 +1498,7 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 <!-- REF #collection.map().Params -->
 | Parâmetro  | Tipo       |    | Descrição                                                      |
 | ---------- | ---------- |:--:| -------------------------------------------------------------- |
-| methodName | Text       | -> | Name of method used to transform the collection elements       |
+| methodName | Text       | -> | Nome do método usado para transformar os elementos da coleção  |
 | param      | any        | -> | Parâmetros para o método                                       |
 | Resultados | Collection | <- | Collection de valores transformados|<!-- END REF -->
 
@@ -2092,7 +2092,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 | ---------- | ----------------------------------------------- |:--:| -------------------------------------------------------------------- |
 | methodName | Text                                            | -> | Nome da função a chamar para processar os elementos da coleção       |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *methodName* |
-| param      | expressão                                       | -> | Parameter(s) to pass to *methodName*                                 |
+| param      | expressão                                       | -> | Parâmetro(s) a ser(em) passado(s) para *methodName*                  |
 | Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador|<!-- END REF -->
 
 |
@@ -2411,7 +2411,7 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer    | -> | Índice para início do teste em                                                     |
 | methodName | Text       | -> | Nome do método a chamar para o teste                                               |
-| param      | Mixed      | -> | Parameter(s) to pass to *methodName*                                               |
+| param      | Mixed      | -> | Parâmetro(s) a ser(em) passado(s) para *methodName*                                |
 | Resultados | Parâmetros | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF -->
 
 |

@@ -17,7 +17,7 @@ Esta janela pode ser acedida de duas maneiras:
 A [server administration window](monitor.md) then appears on the client machine.
 
 
-## Specificities of administration via a remote 4D machine
+## Especificidades da administração via uma máquina 4D remota
 
 A client machine displaying the server administration window has access to all the available information and can act upon the processes and the starting/stopping of servers. When the server administration window is displayed on a remote machine, there are nevertheless certain restrictions and specific features concerning its operation:
 

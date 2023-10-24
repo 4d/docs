@@ -1,6 +1,6 @@
 ---
 id: propertiesReference
-title: Form object JSON property list
+title: Liste des propriétés JSON
 ---
 
 Vous trouverez dans cette page une liste complète de toutes les propriétés d'objets triées selon leur nom JSON. Cliquez sur un nom de propriété pour accéder à sa description détaillée.

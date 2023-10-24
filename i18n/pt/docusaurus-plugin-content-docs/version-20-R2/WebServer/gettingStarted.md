@@ -33,7 +33,7 @@ The 4D web server creates automatically a default `index.html` page in the defau
 
 1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
 
-2. Enter the following code:
+2. Digite o seguinte código:
 
 ```4d
 Case of 
@@ -65,7 +65,7 @@ Create a basic database with, for example, a single table containing some record
 
 ![](../assets/en/WebServer/hello2.png) ![](../assets/en/WebServer/hello3.png)
 
-### Displaying data in a page
+### Exibição de dados em uma página
 
 The most simple solution to display data is to call a [template page](templates.md) containing tags.
 
@@ -189,7 +189,7 @@ This very simple example shows how the web server interacts transparently with t
 
 In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
 
-### Creating a table of users
+### Criação de uma tabela de usuários
 
 The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
 
@@ -222,7 +222,7 @@ $webUser.save()
 
 1. Abra o Explorador e crie um método projeto chamado "login".
 
-3. Write the following code:
+3. Escreva o seguinte código:
 
 ```4d
 var $indexUserId; $indexPassword : Integer

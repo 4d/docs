@@ -2296,11 +2296,12 @@ var $city : Collection
 var $country : Collection
 var $continent : Collection
 
-$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
-$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
-$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
+$city:=["Eching"; "Rabat"; "Paris"; "Lyon"; "San Diego"]
+$country:=["Germany"; "Morocco"; "France"; "France"; "US"]
+$continent:=["Europe"; "Africa"; "Europe"; "Europe"; "America"]
 
-$continent.multiSort($country; {collection: $city; order: ck ascending})
+$continent.multiSort([$country; {collection: $city; order: ck ascending}])
+
 //$continent=["Africa", "America","Europe","Europe","Europe"]
 //$country=["Morocco", "US","Germany","France","France"]
 //$city=["Rabat","San Diego","Eching","Lyon","Paris"]
@@ -2325,7 +2326,7 @@ $address.push({city: "Lyon"; country: "France"})
 $address.push({city: "Eching"; country: "Germany"})
 $address.push({city: "Berlin"; country: "Germany"})
 
-$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); $address)
+$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 //["Alain Martin","Jane Doe","John Smith","John Doe"]
 //["Lyon France","Eching Germany","Paris France","Berlin Germany"]
 

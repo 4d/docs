@@ -48,7 +48,7 @@ The Backup/Configuration page of the Database Settings lets you set the backup f
 
 Essa área lhe permite determinar quais os arquivos ou pastas que devem ser copiados durante o backup.
 
-- **Data**: Database data file. When this option is checked, the current log file of the database, if it exists, is backed up at the same time as the data.
+- **Dados**: Arquivo de dados do banco de dados. When this option is checked, the current log file of the database, if it exists, is backed up at the same time as the data.
 - **Structure**: Database project folders and files. In cases where databases are compiled, this option allows you to backup the .4dz file.
 - **Arquivo de estrutura usuário (só para bancos binários)**: *funcionalidade obsoleta*
 - **Attachments**: This area allows you to specify a set of files and/or folders to be backed up at the same time as the database. Esses arquivos podem ser de qualquer tipo (documentos ou modelos de plug-ins, etiquetas, relatórios, imagens, etc). Pode estabelecer arquivos ou pastas individuais cujos conteúdos serão respaldados completamente. Cada elemento anexado é listado com sua rota de acesso completa na área "Anexos".

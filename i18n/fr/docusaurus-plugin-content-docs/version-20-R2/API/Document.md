@@ -180,7 +180,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-La propriété `.isFolder` retourne <!-- REF #document.isFolder.Summary -->toujours faux pour un fichier<!-- END REF -->.
+La propriété `.isFolder` retourne <!-- REF #document.isFolder.Summary -->toujours vrai pour un fichier<!-- END REF -->.
 
 Cette propriété est en **lecture seule**.
 

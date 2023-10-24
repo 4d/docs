@@ -417,7 +417,7 @@ Lorsque cette fonction est exécutée, le ([.offset](#offset)) est placé juste 
 
 :::caution Avertissement
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+Cette fonction suppose que la propriété [`.offset`](#offset) est un nombre de caractères et non un nombre d'octets. Pour plus d'informations, voir la description de [.offset](#offset).
 
 :::
 

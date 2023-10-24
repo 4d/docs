@@ -936,6 +936,7 @@ utilice el siguiente código:
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1003,17 +1004,17 @@ Una vez finalizada la exportación, `VP EXPORT DOCUMENTO` desencadena automátic
 
 #### Pasar un método retrollamada (fórmula)
 
-Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utilizar el comando [`Formula`](../API/FunctionClass.md#formula) para llamar a un método 4D que se ejecutará una vez finalizada la exportación. El método callback recibirá los siguientes valores en las variables locales:
+Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utilizar el comando [`Formula`](../API/FunctionClass.md#formula) para llamar a un método 4D que se ejecutará una vez finalizada la exportación. El método de retrollamada recibirá los siguientes valores en parámetros locales:
 
-| Variable |               | Tipo    | Descripción                                               |
-| -------- | ------------- | ------- | --------------------------------------------------------- |
-| $1       |               | text    | El nombre del objeto 4D View Pro                          |
-| $2       |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
-| $3       |               | object  | Referencia al *paramObj* del comando                      |
-| $4       |               | object  | Un objeto devuelto por el método con un mensaje de estado |
-|          | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
-|          | .errorCode    | integer | Código de error. Puede ser devuelto por 4D o JavaScript.  |
-|          | .errorMessage | text    | Mensaje de error. Puede ser devuelto por 4D o JavaScript. |
+| Parámetros |               | Tipo    | Descripción                                               |
+| ---------- | ------------- | ------- | --------------------------------------------------------- |
+| param1     |               | text    | El nombre del objeto 4D View Pro                          |
+| param2     |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
+| param3     |               | object  | Referencia al *paramObj* del comando                      |
+| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
+|            | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
+|            | .errorCode    | integer | Código de error.                                          |
+|            | .errorMessage | text    | Mensaje de error.                                         |
 
 #### Ejemplo 1
 
@@ -1056,12 +1057,7 @@ Desea exportar un documento 4D View Pro en formato ".xlsx" y llamar a un método
 Método ***AfterExport***:
 
 ```4d
- C_TEXT($1;$2)
- C_OBJECT($3;$4)
- $areaName:=$1
- $filePath:=$2
- $params:=$3
- $status:=$4
+ #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
 
  If($status.success=False)
     ALERT($status.errorMessage)
@@ -1093,6 +1089,79 @@ Aquí está el resultado:
 
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
+
+### VP EXPORT TO BLOB
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
+**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
+
+<!-- REF #_method_.VP EXPORT TO BLOB.Params -->
+
+| Parámetros | Tipo   |    | Descripción                                        |
+| ---------- | ------ | -- | -------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
+| paramObj   | Object | -> | Opciones de exportación|<!-- END REF -->
+
+|
+
+#### Descripción
+
+El comando `VP EXPORT TO BLOB` <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exporta el documento *vpAreaName* 4D View Pro en un 4D.Blob según las opciones *paramObj*.<!-- END REF --> El blob exportado está disponible a través de la retrollamada de exportación. Exportar e importar áreas de 4D View Pro como blogs es rápido y eficiente en memoria.
+
+En *paramObj*, puede pasar varias propiedades:
+
+| Propiedad               | Tipo        | Descripción                                                                                                                 |
+| ----------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (obligatorio) Método de retrollamada que se lanzará cuando la exportación haya finalizado.                                  |
+| includeAutoMergedCells  | Boolean     | Si se incluyen las celdas combinadas automáticamente al guardar, por defecto=false.                                         |
+| includeBindingSource    | Boolean     | Si incluir la fuente de vinculación al guardar, por defecto=true.                                                           |
+| includeCalcModelCache   | Boolean     | Si desea incluir los datos adicionales de cálculo. Puede afectar a la velocidad de apertura del archivo, por defecto=false. |
+| includeEmptyRegionCells | Boolean     | Si se incluyen celdas vacías (celdas sin datos o sólo con estilo) fuera del rango de datos utilizado, por defecto=true      |
+| includeFormulas         | Boolean     | Si se incluye la fórmula al guardar, por defecto=true.                                                                      |
+| includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                       |
+| includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                            |
+| saveAsView              | Boolean     | Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.                                           |
+
+
+Los siguientes parámetros se pueden utilizar en el método de retrollamada:
+
+| Parámetros |               | Tipo    | Descripción                                               |
+|:---------- |:------------- |:------- |:--------------------------------------------------------- |
+| param1     |               | text    | El nombre del objeto 4D View Pro                          |
+| param2     |               | 4D.blob | El blob exportado                                         |
+| param3     |               | object  | Referencia al parámetro *paramObj* del comando            |
+| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
+|            | .success      | boolean | True si exporta con éxito, de lo contrario False.         |
+|            | .errorCode    | integer | Código de error.                                          |
+|            | .errorMessage | text    | Mensaje de error.                                         |
+
+
+#### Ejemplo
+
+El comando `VP EXPORT TO BLOB` es asíncrono. Debe crear un método de retrollamada (llamado *VPBlobCallback* en nuestro ejemplo) para utilizar los resultados de la exportación.
+
+```4d
+//Exportar el documento VP
+VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
+```
+
+```4d
+//Método VPBlobCallback
+#DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
+var $myEntity : cs.myTableEntity
+
+If ($status.success)
+   // Save the document in a table
+   $myEntity:=ds.myTable.new()
+   $myEntity.blob:=$data
+   $myEntity.save()
+End if
+
+```
+
+#### Ver también
+
+[VP IMPORT FROM BLOB](#vp-import-from-blob)
 
 ### VP Export to object
 
@@ -1744,7 +1813,9 @@ devolverá esta información en el objeto *$defaultStyle*:
 | rangeObj   | Object | -> | Objeto rango                       |
 | Result     | Text   | <- | Formula|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -2739,7 +2810,8 @@ En el parámetro *onlyData*, puede pasar una de las siguientes constantes para i
 | Constante             | Valor | Descripción                                                                                                  |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
 | `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
-| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                            |
+
+|`vk table data range`|1|Obtener el rango de celdas sólo para el área de datos de la tabla|
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -2766,11 +2838,11 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parámetros | Tipo                                           |    | Descripción                                                    |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                   |
-| tableName  | Text                                           | -> | Nombre de la tabla                                             |
-| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF -->
+| Parámetros | Tipo                                           |    | Descripción                                                                 |
+| ---------- | ---------------------------------------------- | -- | --------------------------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro                                |
+| tableName  | Text                                           | -> | Nombre de la tabla                                                          |
+| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual|<!-- END REF -->
 
 
 |
@@ -2969,9 +3041,12 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|Parámetro|Tipo||Descripción|
+| Parámetros | Tipo   |    | Descripción                                                                      |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
+| Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo|<!-- END REF -->
 
-|---|---|---|---| |vpAreaName  |Text|->|Nombre del objeto del formulario de área de 4D View Pro| |Resultado |Object|<-|Object containing the workbook options|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -2997,6 +3072,65 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| Parámetros | Tipo    |    | Descripción                                        |
+| ---------- | ------- | -- | -------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro       |
+| vpBlob     | 4D.Blob | -> | Blob que contiene un documento de 4D View Pro      |
+| paramObj   | Object  | -> | Opciones de importación|<!-- END REF -->
+
+|
+
+#### Descripción
+
+El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* en el área de 4D View Pro *vpAreaName* y reemplaza su contenido. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
+
+En *paramObj*, puede pasar varias propiedades:
+
+| Propiedad           | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| formula             | 4D.Function | Método de retrollamada que se lanzará cuando la importación haya finalizado.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| calcOnDemand        | Boolean     | Si se calculan las fórmulas sólo cuando se solicitan, por defecto=false.                                                                                                                                                                                                                                                                                                                                                                                                       |
+| dynamicReferences   | Boolean     | Si calcular funciones con referencia dinámica, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                               |
+| fullRecalc          | Boolean     | Si calcular después de cargar los datos json, false por defecto.                                                                                                                                                                                                                                                                                                                                                                                                               |
+| includeFormulas     | Boolean     | Si se incluye la fórmula al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| includeStyles       | Boolean     | Si se incluye el estilo al cargar, por defecto=true.                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| includeUnusedStyles | Boolean     | Si incluir el estilo de nombre no utilizado al convertir excel xml al json, default=true.                                                                                                                                                                                                                                                                                                                                                                                      |
+| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: modo abierto perezoso (lazy). When opening document, only the active sheet will be loaded directly. Las demás hojas sólo se cargarán cuando se vayan a utilizar. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
+
+Los siguientes parámetros se pueden utilizar en el método de retrollamada:
+
+| Parámetros |               | Tipo    | Descripción                                                               |
+|:---------- |:------------- |:------- |:------------------------------------------------------------------------- |
+| param1     |               | text    | El nombre del objeto 4D View Pro                                          |
+| param2     |               | 4D.Blob | El blob importado                                                         |
+| param3     |               | object  | Referencia al parámetro *paramObj* del comando                            |
+| param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado                 |
+|            | .success      | boolean | True si la importación se realiza correctamente, False en caso contrario. |
+|            | .errorCode    | integer | Código de error.                                                          |
+|            | .errorMessage | text    | Mensaje de error.                                                         |
+
+
+#### Ejemplo
+
+Desea importar al "ViewProArea" un documento 4D View Pro previamente guardado como Blob en la primera entidad de la dataclass Table.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### Ver también
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -4410,7 +4544,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |
 > **Compatibilidad**
-> 
+>
 > Para una mayor flexibilidad, se recomienda utilizar el comando [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) que permite designar fórmulas 4D que pueden ser llamadas desde las áreas 4D View Pro. En cuanto se llama a `VP SET CUSTOM FUNCTIONS`, se ignoran las llamadas a `VP SET ALLOWED METHODS`. 4D View Pro también soporta el comando genérico de 4D `SET ALLOWED METHODS` si no se llama a `VP SET CUSTOM FUNCTIONS` ni a `VP SET ALLOWED METHODS`, sin embargo no se recomienda usar el comando genérico.
 
 
@@ -5225,11 +5359,13 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| formula       | Text   | -> | Formula or 4D method                         |
+| formatPattern | Text   | -> | Formato del campo|<!-- END REF -->
 
-|rangeObj |Object|->|Objeto de rango| |formula |Text|->|Formula o método 4D| |formatPattern |Text|->|Formato de campo|<!-- END REF -->
+|
 
 #### Descripción
 

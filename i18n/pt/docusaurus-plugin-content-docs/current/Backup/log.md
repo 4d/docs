@@ -51,7 +51,7 @@ Para criar um arquivo de histórico:
 
 3. Clique **Salvar**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
 
-4. Validate the Settings dialog box.
+4. Valide a caixa de diálogo das Propriedades.
 
 Para poder criar um arquivo de histórico diretamente, o banco de dados deve estar em uma das situações abaixo:
 
@@ -68,9 +68,9 @@ Precisa criar outro arquivo de histórico se criar um novo arquivo de dados. Pre
 
 The [log file settings](settings.md#log-file-management) are based on two pieces of information: a boolean value and a path.
 
-1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. By default, the boolean value is stored in *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
+1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. Por padrão, o valor booleano é armazenado em *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
 
-2. **Path**: a string pointing to where the log file is located. The log file path is always stored in the linked data file.
+2. **Path**: a string pointing to where the log file is located. O caminho do arquivo de registro é sempre armazenado no arquivo de dados vinculados.
 
 
 ## Stopping a log file

@@ -671,7 +671,7 @@ où :
 
   * **Text** : la chaine de formule doit être précédée de la déclaration `eval()`, afin que l'analyseur de requêtes évalue l'expression correctement. Par exemple : *"eval(length(This.lastname) >=30)"*
   * **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide des commandes [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string).
-> * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * N'oubliez pas que les formules de 4D prennent uniquement en charge les symboles `&` et `|` comme opérateurs logiques.
 > * Si la formule n'est pas le seul critère de recherche, le système d'optimisation des requêtes pourra prioriser le traitement d'autres critères (ex : attributs indexés) et ainsi, la formule sera évaluée uniquement pour un sous-ensemble d'entités.
 
  Les formules contenues dans les requêtes peuvent recevoir des paramètres via $1. Ce point est détaillé dans le paragraphe **Paramètre formula** ci-dessous.
@@ -708,7 +708,7 @@ où :
  | OU          | &#124;,&#124;&#124;, or |
 
 * **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
-> > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> > > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Utilisation de guillemets**
 
@@ -903,7 +903,7 @@ La formule doit avoir été créée à l'aide de la commande `Formula` ou `Formu
 * *formula* est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
 * dans *formula*, l'entité est disponible via l'objet `This`.
 * si l'objet `Formula` est **null**, l'erreur 1626 ("Attente d'un texte ou d'une formule") est générée, que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`.
-> > For security reasons, formula calls within `query(`) member methods can be disallowed. Voir la description du paramètre *querySettings*.
+> > > For security reasons, formula calls within `query(`) member methods can be disallowed. Voir la description du paramètre *querySettings*.
 
 **Passer des paramètres aux formules**
 

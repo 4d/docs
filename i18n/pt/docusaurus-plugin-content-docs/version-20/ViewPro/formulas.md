@@ -47,7 +47,7 @@ Todas as fórmulas têm operandos e operadores:
 | [Number](Concepts/dt_number.md)      | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
 | [Date](Concepts/dt_date.md)          | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
 | [Hora](Concepts/dt_time.md)          | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
+| [String](Concepts/dt_string.md)      | 'Sophie' ou "Sophie"                                  | & (concatenação)                                                                                                                                                                                                                                       |
 | [Parâmetros](Concepts/dt_boolean.md) | TRUE ou FALSE                                         | -                                                                                                                                                                                                                                                      |
 
 
@@ -349,7 +349,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 > A tabela \[Employee] tem de ter um registo atual.
 
 
-### Declaring allowed methods
+### Declaração dos métodos permitidos
 
 You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 

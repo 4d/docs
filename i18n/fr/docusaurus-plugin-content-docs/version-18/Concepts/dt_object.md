@@ -106,7 +106,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- avec les **collections**. Exemple:
+- avec les **collections** Exemple :
 
 ```4d
      myColl.length //taille de la collection

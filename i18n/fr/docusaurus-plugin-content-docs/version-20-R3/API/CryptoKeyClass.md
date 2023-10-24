@@ -130,7 +130,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 
 #### *Résultat*
 
-La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
+La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
 
 | Propriété | Type       | Description                                                                 |
 | --------- | ---------- | --------------------------------------------------------------------------- |
@@ -138,7 +138,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | result    | text       | Message déchiffré et décodé à l'aide de `options.encodingDecrypted`         |
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
-La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
+Si le *message* n'a pas pu être déchiffré parce qu'il n'a pas été chiffré avec la même clé ou le même algorithme, l'objet `status` renvoyé contient une collection d'erreurs dans `status.errors`.
 <!-- END REF -->
 
 <!-- REF CryptoKey.encrypt().Desc -->
@@ -207,6 +207,7 @@ La fonction `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->r
 #### *Résultat*
 
 
+
 La valeur retournée est la clé privée.
 <!-- END REF -->
 
@@ -221,7 +222,7 @@ La valeur retournée est la clé privée.
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
-**.getPublicKey( )** : Text<!-- END REF -->
+**.getPublicKey()** : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
@@ -266,7 +267,7 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 | v18 R4  | Ajout         |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
@@ -280,7 +281,7 @@ Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé pr
 
 La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentation utf8 de la chaîne *message*<!-- END REF --> à l'aide des clés objet `CryptoKey` et des *options* fournies. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
-**.type** : Texte
+`CryptoKey` doit contenir une clé **privée** valide.
 
 #### *options*
 
@@ -293,7 +294,7 @@ La fonction `sign()` <!-- REF #CryptoKey.sign().Summary -->signe la représentat
 
 #### *Résultat*
 
-`CryptoKey` doit contenir une clé **privée** valide.
+La représentation utf8 de la chaîne *message*.
 <!-- END REF -->
 
 <!-- REF CryptoKey.size -->
@@ -375,7 +376,7 @@ La `CryptoKey` doit contenir une clé **publique** valide.
 
 #### *Résultat*
 
-`CryptoKey` doit contenir une clé **publique** valide.
+La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 
 La fonction retourne un objet status avec la propriété `success` définie sur `true` si le `message` a pu être déchiffré avec succès (c'est-à-dire si la signature est correspondante).
 

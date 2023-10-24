@@ -206,7 +206,6 @@ The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->
 
 #### *Ergebnis*
 
-
 The returned value is the private key.
 <!-- END REF -->
 
@@ -221,7 +220,7 @@ The returned value is the private key.
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
-**.getPublicKey( )** : Text<!-- END REF -->
+**.getPublicKey**() : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
@@ -266,7 +265,7 @@ PEM definition of an encryption key to load. If the key is a private key, the RS
 | v18 R4  | Added   |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->

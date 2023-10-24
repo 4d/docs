@@ -345,7 +345,7 @@ La fonction *getter* définit le type de données du champ calculé grâce au pa
 - Image
 - BLOB
 - Entity (i.e. cs.EmployeeEntity)
-- Entity selection (i.e. cs.EmployeeSelection)
+- **Exemple ** : cs.EmployeeSelection
 
 Les propriétés du paramètre *$event* sont les suivantes :
 

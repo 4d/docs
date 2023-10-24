@@ -17,14 +17,14 @@ These settings are specified for all connected machines and all sessions. You ca
 
 ### Dirección IP
 
-Address of the PHP interpreter where PHP execution requests must be adressed. By default, 4D uses the address 127.0.0.1.
+Address of the PHP interpreter where PHP execution requests must be adressed. Por defecto, 4D utiliza la dirección 127.0.0.1.
 
 Note that the HTTP address must be on the same machine as 4D.
 
-### Port number
+### Número de puerto
 
-Port number of the PHP interpreter. By default, 4D uses the port 8002.
+Port number of the PHP interpreter. Por defecto, 4D utiliza el puerto 8002.
 
-You can change the address and/or port if they are already used by another service or if you have several interpreters on the same machine. 
+Puede cambiar la dirección y/o el puerto si ya están siendo utilizados por otro servicio o si tiene varios intérpretes en la misma máquina. 
 
 

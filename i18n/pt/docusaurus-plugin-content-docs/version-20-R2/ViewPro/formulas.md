@@ -349,7 +349,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 > A tabela \[Employee] tem de ter um registo atual.
 
 
-### Declaring allowed methods
+### Declaração dos métodos permitidos
 
 You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 

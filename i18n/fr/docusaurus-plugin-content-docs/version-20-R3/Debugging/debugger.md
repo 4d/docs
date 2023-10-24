@@ -349,7 +349,7 @@ Cela fonctionne également avec les sélections :
 Vous pouvez copier n'importe quelle expression sélectionnée de la palette de code source dans le [Custom Watch Pane](#custom-watch-pane).
 
 1. In the Source code pane, select the expression to evaluate
-2. Do one of the following:
+2. Effectuez l'une des opérations suivantes :
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
     * Right-click the selected text **>** **Copy to Expression Pane**

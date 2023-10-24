@@ -42,10 +42,10 @@ In addition, to ensure proper operation of the feature, the following conditions
 
 | Campo         | Tipo            | Descrição                             |
 | ------------- | --------------- | ------------------------------------- |
-| __PrimaryKey  | Text            | Primary key of the deleted entity     |
+| __PrimaryKey  | Text            | Chave primária da entidade excluída   |
 | __Stamp       | Integer 64 bits | Global stamp just before the deletion |
 | __TableName   | Text            | Name of the deleted entity table      |
-| __TableNumber | Long Integer    | Number of the deleted entity table    |
+| __TableNumber | Long Integer    | Número da tabela da entidade excluída |
 
 You can only track changes for data in tables having the `__GlobalStamp` field.
 
@@ -63,9 +63,9 @@ To enable data change tracking:
 
 1. Select the table(s) for which you want to enable data change tracking.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
-3. A confirmation dialog box is displayed. **Date and Time**: Date and time of backup.
+3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
 
-4D then makes the following changes:
+Em seguida, 4D faz as seguintes alterações:
 
 - A preconfigured `__GlobalStamp` field is added to the table(s).
 - If not already existing, a `__DeletedRecords` table is added to the structure.
@@ -75,7 +75,7 @@ To disable data change tracking:
 
 1. Select the table(s) for which you want to remove data change tracking.
 2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
-3. A confirmation dialog box is displayed. **Date and Time**: Date and time of backup.
+3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
 
 4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
 

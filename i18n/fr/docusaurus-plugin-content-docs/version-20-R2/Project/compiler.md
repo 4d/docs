@@ -32,7 +32,7 @@ Si des erreurs sont détectées, le process est stoppé et le message "Compilati
 
 ![](../assets/en/Project/compilerWin2.png)
 
-Double-click on each error detected to open the method or class concerned directly in the 4D Code Editor. La ligne contenant l'erreur est mise en évidence et le type d'erreur est affiché dans la zone syntaxique de la fenêtre.
+Double-cliquez sur chaque erreur détectée pour ouvrir la méthode ou la classe concernée directement dans l'éditeur de code 4D. La ligne contenant l'erreur est mise en évidence et le type d'erreur est affiché dans la zone syntaxique de la fenêtre.
 
 Utilisez les commandes **Erreur précédente** / **Erreur suivante** du menu **Méthode** pour naviguer d'une erreur à l'autre.
 
@@ -68,7 +68,7 @@ Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le 
 
 Seules les méthodes de compilation nécessaires (c'est-à-dire celles pour lesquelles des éléments existent déjà dans le projet) sont générées.
 
-La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. Double-clicking on an error line causes the method and line concerned to be displayed in the Code Editor.
+La zone d'information indique toute erreur trouvée lors de la création ou de la mise à jour de la méthode. Un double-clic sur une ligne d'erreur entraîne l'affichage de la méthode et de la ligne concernées dans l'éditeur de code.
 
 
 ### Effacer le code compilé
@@ -179,7 +179,7 @@ Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de 
 - **Variables interprocess** : Regroupe les déclarations de variables interprocess ;
 - **Tableaux** : Regroupe les déclarations de tableaux de process ;
 - **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$a;$b)`). For more information, see [`Compiler` method](../Concepts/parameters.md#compiler-method)
+- **Méthodes**: regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod ;$a;$b)`). Pour plus d'informations, voir [méthode`Compiler`](../Concepts/parameters.md#compiler-method)
 
 Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
 
@@ -253,7 +253,7 @@ Si votre projet ne présente aucune erreur générale, le fichier ne comporte pa
 
 Un fichier d’erreurs peut donc comporter trois types de messages :
 
-- **Erreurs attachées à une ligne précise** : Ces erreurs vous sont indiquées accompagnées de leur contexte (la ligne où elles ont été détectées) et d’un commentaire.  Elles apparaissent lorsque le compilateur rencontre une expression qui lui pose un problème, que ce soit de typage ou de syntaxe. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Code Editor, with the line containing the error highlighted.
+- **Erreurs attachées à une ligne précise** : Ces erreurs vous sont indiquées accompagnées de leur contexte (la ligne où elles ont été détectées) et d’un commentaire.  Elles apparaissent lorsque le compilateur rencontre une expression qui lui pose un problème, que ce soit de typage ou de syntaxe. Dans la fenêtre du compilateur, double-cliquez sur chaque erreur détectée afin d'ouvrir la méthode concernée directement dans l'éditeur de code 4D, la ligne contenant l'erreur étant mise en évidence.
 
 - **Erreurs générales** : Il s’agit d’erreurs qui ne permettent pas le passage en passe de compilation. Le compilateur délivre une erreur générale dans deux cas :
     - Si le type d’une variable process ou interprocess n’a pas pu être déterminé.
@@ -261,7 +261,7 @@ Un fichier d’erreurs peut donc comporter trois types de messages :
 
 Ces erreurs sont dites générales parce qu’elles ne peuvent être rattachées à aucune méthode en particulier. En effet, le compilateur n’a pu procéder au typage nulle part dans la base pour le premier cas. Dans le second, il ne peut choisir d’associer un nom à un objet plutôt qu’à un autre.
 
-- **Warnings** : Les warnings ne sont pas des erreurs. Ils n’empêchent pas la compilation de la base, il s’agit simplement de points sur lesquels le compilateur souhaite attirer votre attention parce qu’il y a un risque d’erreur. Dans la fenêtre de compilation, les warnings apparaissent en caractères italiques. Double-click on each warning to open the method concerned directly in the 4D Code Editor, with the line containing the warning highlighted.
+- **Warnings** : Les warnings ne sont pas des erreurs. Ils n’empêchent pas la compilation de la base, il s’agit simplement de points sur lesquels le compilateur souhaite attirer votre attention parce qu’il y a un risque d’erreur. Dans la fenêtre de compilation, les warnings apparaissent en caractères italiques. Il vous suffit de double-cliquer sur le libellé d’un warning pour ouvrir la méthode concernée dans l'éditeur de code 4D à la ligne correspondante.
 
 
 
@@ -306,21 +306,21 @@ Les deux compilateurs sont intégrés dans 4D. Le compilateur adéquat est autom
 
 Le compilateur classique génère du code compilé natif pour les processeurs Intel/AMD sur n'importe quelle machine. Il ne nécessite aucune configuration particulière.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [DerivedData](architecture.md#deriveddata) du projet.
 
 
 ### Compilateur Silicon
 
 Le compilateur Silicon génère du code compilé natif pour les processeurs Apple Silicon tels que le *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+Le code compilé qui en résulte est stocké dans le dossier [Libraries](architecture.md#libraries) du projet.
 
 
 #### Conditions requises
 
 - **Ordinateur Apple** : Le compilateur Silicon peut uniquement être lancé sur une machine Apple.
 - **Architecture projet de 4D** : Le compilateur Silicon est uniquement disponible pour les développements 4D utilisant l'[architecture projet](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation.
+- **Xcode ou Developer Tools**: Le compilateur Silicon fait appel au compilateur macOS open-source **Clang** pour compiler le projet à partir du code C++ à la [deuxième étape](#compilation-incrementale) de la compilation. *clang* nécessite des bibliothèques natives Apple, qui sont fournies soit par **Xcode** soit par **Developer Tools**.
     - **Si vous avez déjà installé** Xcode ou Developer Tools sur votre ordinateur, vous devez juste vous assurer que sa version est conforme aux spécifications de 4D.
     - **Si vous n'avez pas déjà installé** l'un de ces outils sur votre machine, il vous sera nécessaire d'en télécharger un depuis le site web Apple Developer.
 

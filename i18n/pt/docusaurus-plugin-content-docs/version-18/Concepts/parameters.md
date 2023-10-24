@@ -14,12 +14,12 @@ title: Parâmetros
 ALERT("Hello")
 ```
 
-Parameters are passed to methods in the same way. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
+Os parâmetros são passados da mesma forma aos métodos. For example, if a project method named DO SOMETHING accepted three parameters, a call to the method might look like this:
 
 ```4d
 DO SOMETHING(WithThis;AndThat;ThisWay)
 ```
-Os parâmetros são separados por ponto e vírgula (;). Their value is evaluated at the moment of the call.
+Os parâmetros são separados por ponto e vírgula (;). Seu valor é avaliado no momento da chamada.
 
 In the subroutine (the method that is called), the value of each parameter is automatically copied into sequentially numbered local variables: $1, $2, $3, and so on. A numeração das variáveis locais representam a ordem dos parâmetros.
 
@@ -58,7 +58,7 @@ Tables or array expressions can only be passed [as reference using a pointer](Co
 
 ## Funções
 
-Os dados podem ser devolvidos pelos métodos. A method that returns a value is called a function.
+Os dados podem ser devolvidos pelos métodos. Um método que retorna um valor é chamado uma função.
 
 4D or 4D Plug-in commands that return a value are also called functions.
 
@@ -303,7 +303,7 @@ No manual *Linguagem de 4D*, os caracteres { } (chaves) indicam parâmetros opci
 ALERT("Are you sure?";"Yes I am") //2 parameters ALERT("Time is over") //1 parameter
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. Uma boa prática é atribuir valores padrão a parâmetros não utilizados.
 
 > When optional parameters are needed in your methods, you might also consider using [Named parameters](#named-parameters) which provide a flexible way to handle variable numbers of parameters.
 

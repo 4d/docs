@@ -17,14 +17,14 @@ The following table indicates whether the preemptive mode is used or is availabl
 | Servidor REST         | cooperativo                                                                                                              | preemptive                                                          | preemptive      |
 | Servidor Web          | cooperativo                                                                                                              | cooperativo                                                         | *parâmetro web* |
 | Servidor Web Services | cooperativo                                                                                                              | cooperativo                                                         | *parâmetro web* |
-| Legacy REST           | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
+| Legado REST           | cooperativo                                                                                                              | *parâmetro web*                                                     | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |
 | ----------------------- | ------------ | --------------- |
 | Servidor REST           | cooperativo  | preemptive      |
 | Servidor Web            | cooperativo  | *parâmetro web* |
 | Servidor Web Services   | cooperativo  | *parâmetro web* |
-| Legacy REST             | cooperativo  | *parâmetro web* |
+| Legado REST             | cooperativo  | *parâmetro web* |
 
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
 - Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)

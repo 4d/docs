@@ -490,7 +490,7 @@ La propriété `.responseError` <!-- REF #SystemWorkerClass.responseError.Summar
 
 #### Description
 
-La fonction `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->force le `SystemWorker ` à mettre fin à son exécution<!-- END REF -->.
+La fonction `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->force le `SystemWorker` à mettre fin à son exécution<!-- END REF -->.
 
 Cette fonction envoie l'instruction de terminer et de redonner le contrôle au script en cours d'exécution.
 

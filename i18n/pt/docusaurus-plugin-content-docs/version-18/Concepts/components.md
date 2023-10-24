@@ -91,7 +91,7 @@ Neste caso é preciso usar a comparação de ponteiros:
      If(myptr1=myptr2) //Este teste retorna False
 ```
 
-## Access to tables of the host database
+## Acesso a tabelas do banco de dados local
 
 Although components cannot use tables, pointers can permit host databases and components to communicate with each other. Por exemplo, aqui está um método que pode ser chamado a partir de um componente:
 
@@ -161,7 +161,7 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 ## Uso de formulários
 
 - Só os "formulários projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Any project forms present in the matrix database can be used by the component.
-- A component can call table forms of the host database. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
+- Um componente pode chamar formulários tabela do banco de dados local. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
 

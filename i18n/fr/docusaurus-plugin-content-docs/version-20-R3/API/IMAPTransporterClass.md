@@ -155,7 +155,7 @@ La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 #### Description
 
-La fonction `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->ajoute des flags (drapeaux) aux `msgIDs ` pour les `keywords` spécifiés<!-- END REF -->.
+La fonction `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->ajoute des flags (drapeaux) aux `msgIDs` pour les `keywords` spécifiés<!-- END REF -->.
 
 Dans le paramètre `msgIDs`, vous pouvez passer soit :
 
@@ -485,29 +485,27 @@ La fonction retourne un objet décrivant le statut IMAP :
 Pour créer une nouvelle boîte “Invoices” :
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:")
+If(OK=1)
+$options.host:="imap.gmail.com"
+$options.user:="test@gmail.com"
+$options.password:=$pw
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+$transporter:=IMAP New transporter($options)
 
-  If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-     New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-    // ...
-End for each
- End if
+$status:=$transporter.createBox("Invoices")
+
+If ($status.success)
+ALERT("Mailbox creation successful!")
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
 ```
 
 <!-- END REF -->
@@ -1132,7 +1130,7 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 
 #### Description
 
-La fonction `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->renvoie un BLOB contenant le contenu MIME du message correspondant au *msgNumber* ou au *msgID* dans la mailbox désignée par le `IMAP_transporter`<!-- END REF -->.
+La fonction `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->copie les messages définis par *msgsIDs* ou *allMsgs* dans la *destinationBox* sur le serveur IMAP<!-- END REF -->.
 
 Dans le premier paramètre, vous pouvez passer soit :
 
@@ -1142,10 +1140,10 @@ Dans le premier paramètre, vous pouvez passer soit :
 Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est marqué comme "seen" (lu) dans la boîte de réception. Vous pouvez passer :
 
 * **Vrai** - pour marquer le message comme "seen" (indiquant que le message a été lu)
-* **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
+* **Faux** - pour ne pas modifier le statut "seen" du message
 > * La fonction retourne un BLOB vide si *msgNumber* ou msgID désigne un message inexistant,
-> * Si aucune boite de réception n'est sélectionnée avec la fonction [`.selectBox()`](#selectbox), une erreur est générée,
-> * S'il n'y a pas de connexion ouverte,`.getMIMEAsBlob()` ouvrira une connexion avec la dernière boite de réception spécifiée à l'aide de `.selectBox()`.
+> * var $pw : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) // rename mailbox $status:=$transporter.renameBox("Invoices"; "Bills") If ($status.success) ALERT("Mailbox renaming successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
+> * var $pw; $name : text var $options; $transporter; $status : object $options:=New object $pw:=Request("Please enter your password:") If(OK=1) $options.host:="imap.gmail.com" $options.user:="test@gmail.com" $options.password:=$pw $transporter:=IMAP New transporter($options) $name:="Bills"+$transporter.getDelimiter()+"Atlas Corp" $status:=$transporter.unsubscribe($name) If ($status.success) ALERT("Mailbox unsubscription successful!") Else ALERT("Error: "+$status.statusText) End if End if Else ALERT("Error: "+$status.statusText) End if End if
 
 #### Résultat
 
@@ -1457,7 +1455,7 @@ End if
 | Paramètres  | Type   |    | Description                                                   |
 | ----------- | ------ |:--:| ------------------------------------------------------------- |
 | currentName | Text   | -> | Nom actuel de la boîte de réception                           |
-| nouveauNom  | Text   | -> | Nouveau nom de la boîte de réception                          |
+| nouveauNom  | Text   | -> | Nom de la nouvelle mailbox                                    |
 | Résultat    | Object | <- | Statut de l'opération de renommage|<!-- END REF -->
 
 |
@@ -1816,6 +1814,10 @@ $status:=$transporter.subscribe($name)
 
 If ($status.success)
    ALERT("Mailbox subscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

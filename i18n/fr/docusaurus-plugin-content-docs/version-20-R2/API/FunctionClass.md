@@ -201,7 +201,7 @@ Une formule simple utilisant des paramètres :
 
 #### Exemple 4
 
-Une formule utilisant une méthode projet avec des paramètres :
+Une formule simple utilisant des paramètres :
 
 ```4d
  $o:=New object("f";Formula(myMethod))
@@ -270,7 +270,7 @@ Appeler une formule à l'aide de la notation objet :
 
 #### Description
 
-La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet 4D.Function basé sur la formule *formulaString*<!-- END REF -->.  .
+La commande `Formula from string` <!-- REF #_command_.Formula from string.Summary -->crée un objet 4D.Function basé sur la formule *formulaString*<!-- END REF -->.  crée un objet `4D.Function` sur la base de *formulaString* et, éventuellement, d'un *contexte *
 
 Cette commande est similaire à [`Formula`](#formula), sauf qu'elle traite une formule de type texte. Dans la plupart des cas, il est recommandé d'utiliser la commande `Formula`. `Formula from string` ne doit être utilisée que lorsque la formule d'origine a été exprimée sous forme de texte (par exemple, stockée en externe dans un fichier JSON). Dans ce contexte, l'utilisation de la syntaxe avec des tokens est fortement conseillée.
 > Le contenu des variables locales n'étant pas accessible par nom en mode compilé, il ne peut pas être utilisé dans la *formulaString*. Si vous tentez d'accéder à une variable locale avec `Formula from string`, cela génèrera une erreur (-10737).

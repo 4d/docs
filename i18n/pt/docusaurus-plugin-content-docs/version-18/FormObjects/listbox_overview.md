@@ -405,7 +405,7 @@ Pode escrever no método *UI_SetColor*:
 
 ## Gestão de ordenações
 
-By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. All columns are always synchronized automatically.
+By default, a list box automatically handles standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of column values, alternately ascending/descending with each successive click. Todas as colunas são sempre sincronizadas automaticamente.
 
 You can prevent standard user sorts by deselecting the [Sortable](properties_Action.md#sortable) property of the list box.
 
@@ -689,7 +689,7 @@ As colunas da caixa de listagem podem tratar de arrays de objectos. Uma vez que 
 A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray.png)
-> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. For more information, please refer to the 4D Web site.
+> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. Para obter mais informações, consulte o site de 4D.
 
 ### Configuração de uma coluna de matriz de objectos
 

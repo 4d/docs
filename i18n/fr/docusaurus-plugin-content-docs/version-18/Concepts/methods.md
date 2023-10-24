@@ -51,7 +51,7 @@ Imaginons par exemple que vous travaillez avec une base de clients. A mesure que
  MODIFY RECORD([Clients])
 ```
 
-Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
+Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
 
 Si le code ci-dessus était une méthode projet appelée `MODIFIER CLIENT`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
 
@@ -60,7 +60,7 @@ Si le code ci-dessus était une méthode projet appelée `MODIFIER CLIENT`, vous
  PRINT SELECTION([Clients])
 ```
 
-Cette possibilité simplifie énormément vos méthodes. This capability simplifies your methods dramatically. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.
+Cette possibilité simplifie énormément vos méthodes. Cette possibilité simplifie énormément vos méthodes. C’est le deuxième avantage que vous pouvez tirer de l’utilisation de sous-routines : la clarification de votre code. Ainsi, ces méthodes deviennent en quelque sorte des extensions du langage de 4D.
 
 Si vous devez modifier votre mode de recherche des clients, comme dans notre exemple, il vous suffit de modifier une seule méthode, et non dix. C’est un autre avantage des sous-routines : faciliter les modifications de votre code.
 
@@ -166,7 +166,7 @@ Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 Cela s'appelle la récursivité. Le langage de 4D supporte pleinement la récursivité.
 
-Examinons l'exemple suivant : Examinons l'exemple suivant : vous disposez d'une table `[Amis et relations]` composée de l'ensemble de champs suivant (très simplifié) :
+Examinons l'exemple suivant : Supposons que vous disposiez d'une table `[Friends and Relatives]` composée de cet ensemble de champs extrêmement simplifié :
 - `[Amis et parents]Nom`
 - `[Amis et parents]Enfant'Nom`
 
@@ -175,17 +175,17 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 1. Vous pouvez procéder de la manière suivante :
 
 ```4d
- $vsName:=Request("Saisissez le nom :";"Pierre")
+ $vsName:=Request("Saisissez le nom :";"John")
  Si(OK=1)
     QUERY([Amis et parents];[Amis et parents]Nom=$vsNom)
     If(Records in selection([Amis et parents])>0)
-       $vtHistoireComplète:="Un de mes amis, "+$vsNom
+       $vtHistoireComplète:="Un de mes amis, "+$vsName
        Repeat
-          QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$vsNom)
+          QUERY([Amis et parents];[Amis et parents]Enfant'Nom=$vsName)
           $vlResultRecherche:=Records in selection([Amis et parents])
           If($vlResultRecherche>0)
              $vtHistoireComplète:=$vtHistoireComplète+" qui est le rejeton de "+[Amis et parents]Nom
-             $vsNom:=[Amis et parents]Nom
+             $vsName:=[Amis et parents]Nom
           End if
        Until($vlResultRecherche=0)
        $vtHistoireComplète:=$vtHistoireComplète+", fait cela pour gagner sa vie !"
@@ -197,13 +197,11 @@ Pour cet exemple, nous supposons que les valeurs des champs sont uniques (il n'e
 2. Vous pouvez également procéder ainsi :
 
 ```4d
- $vsName:=Request("Enter the name:";"John")
- If(OK=1)
-    QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
-    If(Records in selection([Friends and Relatives])>0)
-       ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
-    End if
- End if
+ $vsName:=Request("Saisissez le nom :";"John")
+  If(OK=1)
+    QUERY([Amis et parents];[Amis et parents]Nom=$vsName)
+    If(Records in selection([Amis et parents])>0)
+       ALERT("Un de mes amis, "+Généalogie de($vsName)+", fait cela pour gagner sa vie !")
     End if
  End if
 ```

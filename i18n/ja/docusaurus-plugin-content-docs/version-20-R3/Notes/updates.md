@@ -17,9 +17,9 @@ title: リリースノート
 - データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 新しい [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) と [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp) 関数が追加されました。
 - [宣言と同時に変数のデータ型と値を初期化](../Concepts/variables/#宣言と同時に変数を初期化する) できるようになりました。
 - ログファイルの設定は、[カレントデータファイル](../Backup/settings.md#ログ管理) とともに保存されるようになりました。
-- New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
-
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) on doc.4d.com.
+- [可変長引数を宣言するための新しいシンタックス](../Concepts/parameters.md#可変長引数の宣言)
+- 4D View Pro:ドキュメントの [インポート](../ViewPro/method-list.md#vp-export-to-blob) および [エクスポート](../ViewPro/method-list.md#vp-export-to-blob) で Blob形式をサポート。
+- 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R3): 4D v20 R3 で修正されたバグのリストです。
 
@@ -48,8 +48,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 修正後、この開始値は 0 になりました。
-
+- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 
 ## 4D v20.x
 
@@ -100,6 +99,7 @@ title: リリースノート
 
 #### 動作の変更
 
+- **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
 - TLS v1.0 および TLS v1.1 は廃止され、4D Server において `Min TLS version` としてサポートされなくなりました。 現在はバージョン 1.3 がデフォルトで選択されています。`_o_TLSv1_0` または `_o_TLSv1_1` 定数が [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/ja/page642.html) で設定されている場合には、バージョン 1.3 が自動的に使用されます。
@@ -119,9 +119,8 @@ title: リリースノート
 - ORDA: [`setPrivileges()`](../API/SessionClass.md#setprivileges) を使ってセッションに割り当てる [権限](../ORDA/privileges.md) を定義するための *roles.json* ファイルをサポート。
 - Windows で [SDIモードでのアプリケーションのテスト](../Menus/sdi.md#sdiモード利用条件) をサポート。
 - 4D View Pro:
-    - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
-
-    - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
+    - 表組みにおけるテーマのサポート: 新しい [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) および [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) コマンドの追加、[VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) コマンドにテーマオプションを追加
+    - 新しい [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) コマンドの追加
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=19_R8): 4D v19 R8 で修正されたバグのリストです。

@@ -222,7 +222,7 @@ Esta lista está dividida em três colunas:
 Uma lista completa de seus métodos banco de dados e projeto é apresentada no final do ficheiro com:
 
 - o seu tipo (procedimento ou função que devolve um valor)
-- the data types of their parameters and the returned result
+- os tipos de dados de seus parâmetros e o resultado retornado
 - o número de chamadas
 - a propriedade Thread Safe ou Thread Unsafe.
 
@@ -251,13 +251,13 @@ A estrutura do ficheiro de erros é a seguinte:
 
 If your project does not have any general errors, the file will not have a *General errors* section.
 
-An error file may contain three types of messages:
+Um ficheiro de erros pode conter três tipos de mensagens:
 
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
 - In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. There are two cases in which the compiler reports a general error:
     - Não foi possível determinar o tipo de dados de uma variável processo.
-    - Two different kinds of objects have the same name.
+    - Dois tipos diferentes de objetos têm o mesmo nome.
 
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 

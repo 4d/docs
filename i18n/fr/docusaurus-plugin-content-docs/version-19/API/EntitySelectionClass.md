@@ -108,7 +108,7 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 * Si *index* est en-dehors de ces limites, une erreur est retournée.
 * Si *index* correspond à une entité supprimée, une valeur Null est retournée.
-> **Attention** : `EntitySelection[index]` est une expression non assignable, ce qui signifie qu'elle ne peut pas être utilisée comme référence modifiable d'entité avec des fonctions telles que [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Pour travailler avec l'entité correspondante, vous devez assigner l'expression retournée à une expression assignable, comme une variable. Exemples :
+> > **Attention** : `EntitySelection[index]` est une expression non assignable, ce qui signifie qu'elle ne peut pas être utilisée comme référence modifiable d'entité avec des fonctions telles que [`.lock()`](EntityClass.md#lock) ou [`.save()`](EntityClass.md#save). Pour travailler avec l'entité correspondante, vous devez assigner l'expression retournée à une expression assignable, comme une variable. Exemples :
 
 ```4d
  $sel:=ds.Employee.all() //creation de l'entity selection
@@ -1311,7 +1311,7 @@ L'ordre dans lequel les attributs sont passés détermine la priorité de tri de
 Par défaut, les attributs sont triés par ordre croissant ("descending" est false).
 
 Vous pouvez ajouter autant d'objets que nécessaire dans la collection de critères.
-> Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
+> Les valeurs nulles sont évaluées comme étant inférieures aux autres valeurs.
 
 Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*, la fonction renvoie une entity selection vide.
 
@@ -1611,7 +1611,7 @@ Dans cet exemple, les langages classiques et ORDA modifient simultanément les m
 
 #### Exemple 2
 
-Dans cet exemple, les langages classiques et ORDA modifient simultanément les mêmes données :
+Une list box affiche l'entity selection Form.students, sur laquelle plusieurs clients travaillent.
 
 ```4d
 // Methode formulaire:
@@ -1660,7 +1660,7 @@ Dans cet exemple, les langages classiques et ORDA modifient simultanément les m
 La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->retourne une partie d'une entity selection dans une nouvelle entity selection<!-- END REF -->, sélectionnée depuis l'indice *startFrom* jusqu'à l'indice *end* (*end* non inclus) ou jusqu'à la dernière entité de l'entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
 > Cette fonction ne modifie pas l'entity selection d'origine.
 
-L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, l'entity selection retournée contient toutes les entités entre *startFrom* et la dernière entité de l'entity selection d'origine.
+L'entity selection retournée contient les entités comprises entre l'entité désignée par *startFrom* et, sans la contenir, celle désignée par *end*. Si seul le paramètre *startFrom* est spécifié, la sélection d'entités renvoyée contient toutes les entités à partir de *startFrom* jusqu'à la dernière entité de la sélection d'entités originale.
 
 * Si *startFrom* < 0, il est recalculé comme *startFrom:=startFrom+length* (il est considéré comme partant de la fin de l'entity selection). Si la valeur calculée est négative, *startFrom* prend la valeur 0.
 * Si *startFrom >= length*, la fonction retourne une entity selection vide.
@@ -1671,7 +1671,7 @@ Si l'entity selection contient des entités qui ont été supprimées entre-temp
 
 #### Exemple 1
 
-Si l'entity selection contient des entités qui ont été supprimées entre-temps, elles sont également retournées.
+Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity selection :
 
 ```4d
 var $sel; $sliced : cs.EmployeeSelection
@@ -1681,7 +1681,7 @@ $sliced:=$sel.slice(0;9)
 
 #### Exemple 2
 
-Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity selection :
+En supposant que ds.Employee.all().length = 10
 
 ```4d
 var $slice : cs.EmployeeSelection
@@ -1787,7 +1787,7 @@ Si un filtre est spécifié pour un attribut de type `relatedEntity` :
 * propertyPath = "relatedEntities.*" -> toutes les propriétés sont extraites
 * propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> seules ces propriétés sont extraites
 
-Si un filtre est spécifié pour un attribut de type`relatedEntities` :
+Dans le paramètre *options* , vous pouvez passer le(s) sélecteur(s) `dk with primary key` et/ou `dk with stamp` pour ajouter les clés primaires et/ou les marqueurs de l'entité dans les objets extraits.
 
 Le paramètre *begin* vous permet d'indiquer la position de départ des entités à extraire. Vous pouvez passer toute valeur comprise entre 0 et la longueur de l'entity selection -1.
 
@@ -1954,7 +1954,7 @@ Retourne :
 
 #### Exemple 4
 
-Retourne :
+Exemple avec le type `relatedEntity` avec une forme simple :
 
 ```4d
 var $employeesCollection : Collection
@@ -1962,7 +1962,7 @@ $employeesCollection:=New collection
 $employeesCollection:=$employees.toCollection("firstName,lastName,employer")
 ```
 
-Exemple avec le type `relatedEntity` avec une forme simple :
+Retourne :
 
 ```4d
 [
@@ -1992,7 +1992,7 @@ Exemple avec le type `relatedEntity` avec une forme simple :
 
 #### Exemple 5
 
-retourne :
+Exemple avec le paramètre *filterCol* :
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2018,7 +2018,7 @@ Retourne :
 
 #### Exemple 6
 
-Retourne :
+Dans cet exemple, les langages classiques et ORDA modifient simultanément les mêmes données :
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2072,7 +2072,7 @@ Retourne :
 
 #### Exemple 7
 
-Retourne :
+Exemple avec extraction de quelques propriétés de relatedEntity :
 
 ```4d
 var $employeesCollection : Collection
@@ -2108,7 +2108,7 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
 
 #### Exemple 8
 
-Exemple avec extraction de quelques propriétés de relatedEntity :
+Exemple avec extraction de certaines propriétés de `relatedEntities`:
 
 ```4d
  var $employeesCollection : Collection
@@ -2160,7 +2160,7 @@ Retourne :
 
 #### Exemple 9
 
-Retourne :
+Exemple avec extraction de toutes les propriétés de `relatedEntities` :
 
 ```4d
 var $employeesCollection : Collection

@@ -11,7 +11,7 @@ The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/E
 
 You will find below the Table Wizard configuration documentation.
 
-## Table Wizard
+## Assistente de tabelas
 
 The Table Wizard is here to further simplify table creation based on database data using contexts, data sources, and formulas.
 
@@ -70,7 +70,7 @@ O ficheiro modelo permite-lhe definir o seguinte:
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
-:::info Limitation
+:::info Limitação
 
 In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. Esta limitação será eliminada na próxima versão.
 
@@ -90,13 +90,13 @@ The template file in JSON format contains the following attributes:
 | breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
 | breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
 | breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
+| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                              |
 | breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 | bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
 | bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
+| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                 |
 | extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 
@@ -166,21 +166,21 @@ The translation file in JSON format contains the following attributes:
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
 | tabelas   | Collection |             | Coleção de objetos de tabela traduzidos                                               |
 | fields    | Collection |             | Coleção de objetos de campo traduzidos                                                |
-| formulas  | Collection |             | Collection of translated formula objects                                              |
+| formulas  | Collection |             | Coleção de objetos fórmula traduzidos                                                 |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
-| Atributo    | Tipo | Obrigatório | Descrição                               |
-|:----------- |:---- |:----------- |:--------------------------------------- |
-| original    | Text | x           | Texto original destinado à tradução     |
-| translation | Text | x           | Translated version of the original text |
+| Atributo    | Tipo | Obrigatório | Descrição                           |
+|:----------- |:---- |:----------- |:----------------------------------- |
+| original    | Text | x           | Texto original destinado à tradução |
+| translation | Text | x           | Versão traduzida do texto original  |
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 
 If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
 
-The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+The translation file serves an additional role when a user selects a table in the interface. Ele pode filtrar as tabelas e os campos propostos ao usuário. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
 
 ##### Exemplo
 
@@ -297,4 +297,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### Veja também
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Assistente de tabelas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)

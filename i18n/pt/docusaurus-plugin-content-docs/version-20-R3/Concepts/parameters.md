@@ -185,10 +185,10 @@ Function getValue
 
 ## Indireção dos parâmetros
 
-4D methods and functions accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command and the **parameter indirection syntax**. Dentro do método, um endereço de indireçao é formatado: ${$i}, onde $i for uma variável numérica.
+Os métodos e funções 4D aceitam um número variável de parâmetros. Você pode abordar esses parâmetros com um loop `For...End for`, o comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) e a **sintaxe de indireção dos parâmetros **. Dentro do método, um endereço de indireçao é formatado: ${$i}, onde $i for uma variável numérica.
 
 
-### Using variadic parameters
+### Uso de parâmetros variáveis
 
 Por exemplo, considere uma função que some os valores e devolva a soma formatada segundo um formato que se passa como parâmetro. Cada vez que chamar a esse método, o número de valores a somar pode variar. Devemos passar os valores como parâmetros ao método e o formato em forma de string dos caracteres. O número de valores pode variar de chamada a chamada.
 
@@ -209,7 +209,7 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;18;4;23;17)
 ```
 
-Note that even if you declared 0, 1, or more parameters, you can always pass the number of parameters that you want. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
 
 ```4d
 // Método projeto OneMethodAmongOthers
@@ -230,19 +230,19 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) foo("hello";"world";!01/01/2021!
 > A indireção de parâmetros se gerencia melhor se respeitar a convenção abaixo: se só alguns dos parâmetros forem endereçados por indireção, devem ser passados depois dos outros.
 
 
-### Declaring variadic parameters
+### Declaração de parâmetros variáveis
 
-It is not mandatory to declare variadic parameters. Non-declared variadic parameters automatically get the [Variant](dt_variant.md) type.
+Não é obrigatório declarar parâmetros variáveis. Os parâmetros variáveis não declarados recebem automaticamente o tipo [Variant](dt_variant.md).
 
 However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
 
 ```4d
-#DECLARE ( ... : Text ) // Undefined number of 'Text' parameters
+#DECLARE ( ... : Text ) // Número indefinido de parâmetros 'Text'
 
 ```
 
 ```4d
-Function myfunction ( ... : Text)
+Fonction myfunction ( ... : Text)
 
 ```
 

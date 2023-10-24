@@ -31,16 +31,16 @@ Não precisa ativar nada para os usos abaixo:
 
 ### Ativação de 4D
 
-1. Launch the 4D application.
+1. Lançar a aplicação 4D.
 2. Select the **License Manager...** command from the **Help** menu.
 
 ![](../assets/en/getStart/helpMenu.png)
 
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). See the following section.
+The **License Manager** dialog box is displayed (Instant Activation page is selected by default). Consulte a seção a seguir.
 
 > When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
 
-### Activate 4D Server
+### Ativar 4D Server
 
 1. Lançar a aplicação 4D Server. Aparece a caixa de diálogo para escolher o [modo de ativação](#activation-mode).
 

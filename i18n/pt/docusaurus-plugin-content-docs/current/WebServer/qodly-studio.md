@@ -5,7 +5,7 @@ title: Qodly Studio
 
 :::caution Developer Preview
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production.
+Qodly Studio in 4D is currently in the **Developer Preview** phase. Não deve ser usado na produção.
 
 :::
 
@@ -15,14 +15,14 @@ As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and s
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
-- create webforms by placing components on a page
+- criar formulários Web colocando componentes em uma página
 - mapear componentes para dados
 - trigger 4D code by configuring events
 - e muito mais.
 
 :::info
 
-The use of Qodly Studio in 4D requires a specific license. Qodly Studio options and menu items won't appear if the license is not activated.
+O uso do Qodly Studio no 4D requer uma licença específica. Qodly Studio options and menu items won't appear if the license is not activated.
 
 :::
 
@@ -30,15 +30,15 @@ The use of Qodly Studio in 4D requires a specific license. Qodly Studio options 
 
 ### Requisitos
 
-#### Browser
+#### Navegador
 
-Qodly Studio supports the following web browsers:
+Qodly Studio suporta os seguintes navegadores Web:
 
 - Chrome
 - Edge
 - FireFox
 
-The recommended resolution is 1920x1080.
+A resolução recomendada é 1920x1080.
 
 #### Aplicação 4D
 
@@ -49,7 +49,7 @@ The recommended resolution is 1920x1080.
 
 ### Enabling access to Qodly Studio
 
-By default, access to Qodly Studio is not granted.
+Por padrão, o acesso a Qodly Studio não é concedido.
 
 Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
 
@@ -89,7 +89,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
-### Enabling rendering
+### Ativação da renderização
 
 To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
 
@@ -132,7 +132,7 @@ We recommend using class functions over project methods. Apenas as funções de 
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
 
-There are two ways to access Qodly Studio:
+Há duas maneiras de acessar Qodly Studio:
 
 * from your 4D single-user application, go to **Design** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
@@ -165,14 +165,14 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-|                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio for Qodly developers       |
+|                                                              | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
 | Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
-| Programming language                                         | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
+| Linguagem de programação                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
 | Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| Depurador                                                    | 4D IDE debugger                                                                             | Qodly Studio debugger                   |
+| Depurador                                                    | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
 | REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
@@ -199,7 +199,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
 
-#### Symbols and keywords
+#### Símbolos e palavras-chave
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
@@ -222,9 +222,9 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 #### Command names
 
-QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
+QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
 
-- Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- Normalmente, você só precisará converter os nomes. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - However, some command have been renamed for a better compliance. They are listed below:
 
 | QodlyScript            | Línguagem 4D     |
@@ -290,7 +290,7 @@ To render webforms, you must have an available license, as rendering a webform o
 
 Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
 
-As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. As such, it behaves like a conventional 4D Client.
+As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
 If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
 
@@ -306,7 +306,7 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
-As a result, two licenses are retained.
+Como resultado, duas licenças são mantidas.
 
 :::note
 
@@ -314,15 +314,15 @@ You can enable/disable the display of the renderer pop over using a Qodly Studio
 
 :::
 
-### SameSite attribute
+### Atributo SameSite
 
 O comportamento descrito anteriormente é devido ao cookie de sessão do servidor web 4D. This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
 
 If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
 
-For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-<code>SameSite</code>-and-secure-attributes-for-cookies/).
+For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
 
-### Recommendations
+### Recomendações
 
 To avoid using more licenses than necessary, we recommend doing one of the following:
 

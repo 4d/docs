@@ -151,7 +151,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 Pour faciliter l'utilisation de votre composant par les développeurs, vous pouvez cocher l'option [**Generate syntax file for code completion when compiled** dans la page Général](../settings/general.md#component-namespace-in-the-class-store) des Proriétés du projet utilisé comme matrice.
 
-A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D utilise le contenu de ce fichier syntaxique pour générer une aide contextuelle dans l'éditeur de code, telle que la complétion de code et la syntaxe des fonctions :
+Un fichier de syntaxe (format JSON) est alors automatiquement créé lors de la phase de compilation, rempli avec la syntaxe des classes, fonctions et [méthodes exposées](#sharing-of-project-methods), et placé dans le dossier `\Resources\en.lproj` du projet de composant. 4D utilise le contenu de ce fichier syntaxique pour générer une aide contextuelle dans l'éditeur de code, telle que la complétion de code et la syntaxe des fonctions :
 
 ![](../assets/en/settings/syntax-code-completion-2.png) ![](../assets/en/settings/syntax-code-completion-1.png)
 
@@ -348,7 +348,7 @@ Les composants peuvent utiliser des ressources situées dans le dossier Ressourc
 
 Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents dans le dossier Resources d’un composant seront chargés par ce composant.
 
-Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» In a host project containing one or more components, each component as well as the host projects has its own “resources string.” Resources are partitioned between the different projects: it is not possible to access the resources of component A from component B or the host project.
+Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
 
 
 ## Exécution du code d'initialisation
@@ -364,7 +364,7 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 Par défaut, tout le code d’un projet utilisé comme matrice installé comme composant est virtuellement visible depuis le projet hôte. En particulier :
 
-- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes du projet hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. However, it's not possible to open them in the Code Editor or modify them.
+- Les méthodes projet partagées sont accessibles dans la Page Méthodes de l’Explorateur et peuvent être appelées dans les méthodes du projet hôte. Leur contenu peut être sélectionné et copié dans la zone de prévisualisation de l’Explorateur. Elles peuvent également être visualisées dans le débogueur. Cependant, il n'est pas possible de les ouvrir dans l'éditeur de code ou de les modifier.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent pas dans l’Explorateur mais peuvent également être visualisées dans le débogueur du projet hôte.
 - Les classes et fonctions non cachées peuvent être visualisées dans le débogueur [si un namespace est déclaré](#declaring-the-component-namespace).
 

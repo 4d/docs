@@ -110,7 +110,7 @@ Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement par affect
  myCol[10]:="My new element"
 ```
 
-Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires sont attribués une valeur **null**.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
 
 Vous pouvez passer n'importe quel nombre de valeurs de n'importe quel type pris en charge (number, text, date, picture, pointer, object, collection...). Contrairement aux tableaux, les collections peuvent mélanger des données de différents types.
 
@@ -201,7 +201,7 @@ Vous devez affecter la référence retournée à une variable 4D de type Collect
 
 En option, vous pouvez préremplir la nouvelle collection en utilisant une ou plusieurs valeur(s) (*value*(s)) en tant que paramètre(s). Sinon, vous pouvez ajouter ou modifier des éléments ultérieurement via l'assignation en notation objet (cf. exemple).
 
-Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
+Si le nouvel indice de l'élément est au-delà du dernier élément existant de la collection partagée, la collection est automatiquement redimensionnée et tous les nouveaux éléments intermédiaires prennent la valeur **null**.
 
 Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 
@@ -856,7 +856,7 @@ Dans le paramètre *options* , vous pouvez passer une ou une combinaison des con
 La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **true** si elles sont identiques (deep comparison).
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre option.
-> Cette fonction ne modifie pas la collection d'origine.
+> Les éléments ayant la valeur **Null** ne sont pas égaux aux éléments Undefined.
 
 #### Exemple
 
@@ -1159,7 +1159,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour filtrer les �
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passé(s) dans *param* (facultatif) et un objet en premier paramètre (*$1*). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner **true** pour chaque élément remplissant la condition et donc, devant être ajouté à la nouvelle collection.
+Vous pouvez fournir des paramètres *extraParam* à la callback si nécessaire. Dans la callback, passez votre code qui compare deux valeurs et retourne **true** si la première valeur est inférieure à la seconde valeur.
 
 La callback reçoit les paramètres suivants :
 
@@ -1851,7 +1851,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 #### Description
 
-La fonction `.join()` <!-- REF #collection.join().Summary -->convertit tous les éléments de la collection en textes et les concatène en utilisant comme séparateur la chaîne *delimiter* spécifiée<!-- END REF -->. La fonction retourne la chaîne résultante.
+La fonction `.concat()` <!-- REF #collection.join().Summary -->retourne une nouvelle collection avec le contenu du paramètre *value* ajouté à la fin de la collection d'origine<!-- END REF -->. La fonction retourne la chaîne résultante.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Par défaut, les éléments null ou vides de la collection sont inclus dans la chaîne résultante. Passez la constante `ck ignore null or empty` dans le paramètre *option* si vous souhaitez les exclure de la chaîne résultante.
@@ -1959,7 +1959,7 @@ Dans *toSearch*, passez l'expression à rechercher dans la collection. Vous pouv
 *   la valeur null,
 *   une référence d'objet ou de collection.
 
-Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
+*toSearch* doit correspondre exactement à l'élément recherché (les mêmes règles que pour l'opérateur d'égalité sont appliquées).
 
 Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer la recherche inversée dans *startFrom*.
 
@@ -2406,7 +2406,7 @@ Si la collection contient des éléments de différents types, ils sont d'abord 
 
 #### Exemple 1
 
-Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
+Tri d'une collection de nombres par ordre croissant ou décroissant :
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -2421,7 +2421,7 @@ Tri d'une collection d'objets basé sur une formule de texte avec noms de propri
 
 #### Exemple 2
 
-Tri d'une collection d'objets sur des propriétés :
+Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -2434,7 +2434,7 @@ Tri d'une collection d'objets sur des propriétés :
  $c2:=$c.orderBy("value desc, id asc")
 ```
 
-Tri d'une collection d'objets via une collection d'objets critères :
+Tri d'une collection d'objets sur des propriétés :
 
 ```4d
  var $c; $c2 : Collection
@@ -2448,7 +2448,7 @@ Tri d'une collection d'objets via une collection d'objets critères :
 
 #### Exemple 3
 
-Tri avec un chemin de propriété :
+Tri d'une collection d'objets via une collection d'objets critères :
 
 ```4d
  var $crit; $c; $c2 : COllection
@@ -2538,7 +2538,7 @@ Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
 #### Exemple 1
 
-Voici le code de la méthode ***NumAscending*** :
+Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -2550,7 +2550,7 @@ Voici le code de la méthode ***NumAscending*** :
 
 #### Exemple 2
 
-Voici le code de la méthode ***WordLength*** :
+Vous souhaitez trier une collection de chaînes de caractères en fonction de leur longueur :
 
 ```4d
  var $fruits; $c2 : Collection
@@ -2576,7 +2576,7 @@ $strings2:=$strings1.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
 
-Paramètre(s) à passer à *methodName*
+La méthode ***sortCollection*** :
 
 ```4d
 var $1 : Object
@@ -2687,7 +2687,7 @@ La fonction `.push()` <!-- REF #collection.push().Summary -->ajoute un ou plusie
 
 #### Exemple 2
 
-Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :
+Vous souhaitez trier la collection obtenue :
 
 ```4d
  var $col; $sortedCol : Collection
@@ -2773,20 +2773,16 @@ Pour plus d'informations sur la génération d'une requête à l'aide des param�
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
  $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
- $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
-
- $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
- $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
 ```
 
-Cet exemple retourne des personnes dont le nom ne commence pas par une chaîne d'une variable (saisie par l'utilisateur, par exemple) :
+Cet exemple renvoie les personnes dont le nom contient "in" :
 
 ```4d
  $col:=$c.query("name = :1";"@in@")
   //$col=[{name:Winch...},{name:Sterling...}]
 ```
 
-Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
+Cet exemple retourne des personnes dont le nom ne commence pas par une chaine dont la valeur provient d'une variable (saisie par l'utilisateur, par exemple) :
 
 ```4d
  $col:=$c.query("name # :1";$aString+"@")
@@ -2794,18 +2790,18 @@ Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété déf
   //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}]
 ```
 
-Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
+Cet exemple retourne des personnes dont l'âge n'est pas connu (propriété définie sur null ou indéfinie) :
 
 ```4d
  $col:=$c.query("age=null") //placeholders not allowed with "null"
   //$col=[{name:Wesson...},{name:Sterling...},{name:Mark...}]
 ```
 
-Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
+Cet exemple retourne des personnes embauchées il y a plus de 90 jours :
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018
 ```
 
 
@@ -3414,7 +3410,7 @@ Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numériq
 6. collections
 7. dates
 
-Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans *formula * ([objet Formula](FunctionClass.md)) ou *methodName* (Text) un rappel qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
+Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir dans *formula * ([objet Formula](FunctionClass.md)) ou *methodName* (Text) un callback qui définit l'ordre de tri. La valeur de retour doit être un booléen qui indique l'ordre relatif des deux éléments : **True** si *$1.value* est inférieur à *$1.value2*, **False** si *$1.value* est supérieur à *$1.value2*. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.
 
 La callback reçoit les paramètres suivants :
 

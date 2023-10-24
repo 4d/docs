@@ -870,7 +870,7 @@ où :
 
   * **Text** : la chaine de formule doit être précédée de la déclaration `eval()`, afin que l'analyseur de requêtes évalue l'expression correctement. Par exemple : *"eval(length(This.lastname) >=30)"*
   * **Object**: l'[objet formule](FunctionClass.md) est passé en tant que **placeholder** (voir ci-dessous). La formule doit avoir été créée à l'aide des commandes [`Formula`](FunctionClass.md#formula) ou [`Formula from string`](FunctionClass.md#formula-from-string).
-> * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * N'oubliez pas que les formules de 4D prennent uniquement en charge les symboles `&` et `|` comme opérateurs logiques.
 > * Si la formule n'est pas le seul critère de recherche, le système d'optimisation des requêtes pourra prioriser le traitement d'autres critères (ex : attributs indexés) et ainsi, la formule sera évaluée uniquement pour un sous-ensemble d'entités.
 
  Les formules contenues dans les requêtes peuvent recevoir des paramètres via $1. Ce point est détaillé dans le paragraphe **Paramètre formula** ci-dessous.

@@ -69,11 +69,11 @@ Pour modifier l’emplacement auquel ces fichiers devront être enregistrés, cl
 
 ### Gestion du fichier d'historique
 
-The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir l'application sans fichier d’historique. For more information about the log file, please refer to [log file](log.md)
+L'option **Utiliser fichier d 'historique**, lorsqu'elle est cochée, indique que l'application utilise un fichier journal. Le chemin d'accès au fichier journal pour le fichier de données courant est spécifié sous l'option. Lorsque cette option est cochée, il n’est pas possible d’ouvrir l'application sans fichier d’historique. Pour plus d'informations sur le fichier journal, veuillez consulter [fichier d'historique](log.md)
 
 Par défaut, tout projet créé avec 4D utilise un fichier d’historique (option cochée dans la **Page Général** des **Préférences** de 4D). Le fichier d’historique est nommé par défaut *data.journal* et est placé dans le dossier Data.
 
-> L’activation d’un nouveau fichier d’historique nécessite que les données de l'application soient préalablement sauvegardées. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. La création du fichier d’historique est différée et ne sera effective qu’après la prochaine sauvegarde de l'application.
+> L’activation d’un nouveau fichier d’historique nécessite que les données de l'application soient préalablement sauvegardées. Lorsque vous cochez cette option pour le fichier de données en cours d'utilisation, un message d'avertissement vous informe qu'une sauvegarde est nécessaire. La création du fichier d’historique est différée et ne sera effective qu’après la prochaine sauvegarde de l'application.
 
 
 ## Sauvegarde et restitution

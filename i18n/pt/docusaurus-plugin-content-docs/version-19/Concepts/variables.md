@@ -29,7 +29,7 @@ Cria-se variáveis declarando-as. A linguagem 4D oferece duas maneiras de declar
  MyDate:=Current date+30 //MyDate é criada e obtém a data atual mais  30 días
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+Quando as variáveis são declaradas, são inicializadas com o valor predefinido [**correspondente ao seu tipo**](data-types.md#default-values), que manterão durante a sessão, desde que não lhes tenha sido [atribuído](#assigning-data).
 
 
 ### Usando a palavra-chave `var`
@@ -61,22 +61,22 @@ Se `varType` for omitido, é criada uma variável do tipo **variante** .
 
 A tabela seguinte enumera todos os valores `varType` suportados:
 
-| varType                | Conteúdos                               |
-| ---------------------- | --------------------------------------- |
-| `Text`                 | Valor texto                             |
-| `Date`                 | Valor data                              |
-| `Hora`                 | Valor Hora                              |
-| `Parâmetros`           | Valor booleano                          |
-| `Integer`              | Valor inteiro longo                     |
-| `Real`                 | Valor real                              |
-| `Ponteiro`             | Valor ponteiro                          |
-| `Imagem`               | Valor imagem                            |
-| `Blob`                 | Valor BLOB                              |
-| `Collection`           | Valor colecção                          |
-| `Diferente de`         | Valor variant                           |
-| `Object`               | Object with default class (`4D.Object`) |
-| `4D.<className>` | Objecto do nome da classe 4D            |
-| `cs.<className>` | Objeto do nome da classe usuário        |
+| varType                | Conteúdos                              |
+| ---------------------- | -------------------------------------- |
+| `Text`                 | Valor texto                            |
+| `Date`                 | Valor data                             |
+| `Hora`                 | Valor Hora                             |
+| `Parâmetros`           | Valor booleano                         |
+| `Integer`              | Valor inteiro longo                    |
+| `Real`                 | Valor real                             |
+| `Ponteiro`             | Valor ponteiro                         |
+| `Imagem`               | Valor imagem                           |
+| `Blob`                 | Valor BLOB                             |
+| `Collection`           | Valor colecção                         |
+| `Diferente de`         | Valor variant                          |
+| `Object`               | Objeto com classe padrão (`4D.Object`) |
+| `4D.<className>` | Objecto do nome da classe 4D           |
+| `cs.<className>` | Objeto do nome da classe usuário       |
 
 #### Exemplos
 
