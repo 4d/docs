@@ -1004,7 +1004,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 | -------- |  | ---- | --------- |
 |          |  |      |           |
 
-|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. May be returned by 4D or JavaScript.|
+|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. Pode ser devolvido por 4D ou JavaScript.|
 
 #### Exemplo 1
 
