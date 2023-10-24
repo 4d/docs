@@ -15,7 +15,7 @@ As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and s
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
-- create webforms by placing components on a page
+- criar formulários Web colocando componentes em uma página
 - mapear componentes para dados
 - trigger 4D code by configuring events
 - e muito mais.
