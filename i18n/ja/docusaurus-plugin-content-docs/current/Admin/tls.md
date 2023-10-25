@@ -5,11 +5,11 @@ title: TLSプロトコル (HTTPS)
 
 すべての 4Dサーバーは、TLS (Transport Layer Security) プロトコルを通じて、保護モードで通信する事ができます:
 
-- the HTTP server
+- HTTPサーバー
 - アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション)
 - SQLサーバー
 
-In addition, the 4D HTTP client (`HTTP get` command for example) also supports the TLS protocol.
+さらに、4D HTTPクライアント (`HTTP get` コマンドなど) も TLSプロトコルもサポートしています。
 
 ## 概要
 
@@ -29,7 +29,7 @@ TLSプロトコルは、送信者と受信者を認証するために設計さ�
 
 TLS は公開鍵暗号化技術を用います。これは、暗号化と復号化の非対称鍵のペアである公開鍵と秘密鍵に基づいています。 秘密鍵はデータを暗号化するために使用されます。 送信者 (Webサイト) は、それを誰にも渡しません。
 
-The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a certification authority, such as Verisign®. Webサイトは証明書を認証機関 から購入します。この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
+公開鍵は情報を復号化するために使用され、**証明書** を通して受信者 (Webブラウザー) へ送信されます。 証明書は Verisign® などの認証機関を通して発行されます。 Webサイトは証明書を認証機関 から購入します。この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
 
 :::note
 
@@ -41,36 +41,36 @@ The public key is used to decrypt the information and is sent to the receivers (
 
 ## 最低バージョン
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
+デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.3 となります。 この値は `SET DATABASE PARAMETER` コマンドで `Min TLS version` セレクターを使用することで変更可能です。
 
 :::note
 
-You can control the level of security of your **web server** by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+接続時に受け入れる [最低TLSバージョン](WebServer/webServerConfig.md#最低tlsバージョン) を定義することで、**Webサーバー** のセキュリティレベルを制御することができます。
 
 :::
 
-## Certificates
+## 証明書
 
 ### 形式
 
-TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
+4D が管理する TLS証明書は **PEM形式** でなければなりません。 証明書プロバイダー (たとえば [WoTrus](https://store.wotrus.com/)) ら .crt、.pfx、.p12 などのバイナリー形式の証明書が送られてきた場合、それらを使うためには PEM形式に変換する必要があります。 [sslshopper](https://www.sslshopper.com/) のような Webサイトでは、この変換をオンラインですることができます。
 
-### Encryption
+### 暗号化
 
-4D supports certificates in the following standard encryption formats:
+4D は以下の標準的な暗号化形式の証明書をサポートしています:
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem)
-- [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
+- [**RSA**](https://ja.wikipedia.org/wiki/RSA%E6%9A%97%E5%8F%B7)
+- [**ECDSA**](https://ja.wikipedia.org/wiki/%E6%A5%95%E5%86%86%E6%9B%B2%E7%B7%9ADSA)
 
 :::info 互換性
 
-The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
+ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) ではサポートされていません。
 
 :::
 
 :::note
 
-4D proposes two commands to help you requesting a RSA certificate, [see the tutorial below](#how-to-get-a-rsa-certificate-tutorial).
+4D では、RSA証明書のリクエストに役立つ 2つのコマンドを用意しています ([後述のチュートリアル参照](#rsa証明書の取得方法-チュートリアル))。
 
 :::
 
@@ -80,7 +80,7 @@ The ECDSA encryption format is not supported by the 4D [legacy network layer](..
 
 ### `key.pem` と `cert.pem` ファイルのインストール
 
-To be able to use the TLS protocol with 4D, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server or client on which you want to use TLS.
+4D で TLSプロトコルを使用するには、**key.pem** (秘密の暗号鍵を含むドキュメント) と **cert.pem** (証明書を含むドキュメント) が所定の場所にインストールされていなければなりません。 TLS を使用するサーバーまたはクライアントによって、インストールする場所が異なります。
 
 :::caution
 
@@ -89,20 +89,20 @@ To be able to use the TLS protocol with 4D, you must install the **key.pem** (do
 :::
 
 
-#### With the HTTP server
+#### HTTPサーバーの場合
 
-To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
+4D HTTPサーバーで使用するには、**key.pem** と **cert.pem** を次の場所に保存します:
 
 - 4D (ローカル) および 4D Server では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
 - 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv19/help/command/ja/page485.html) コマンドの説明を参照ください。
 
 これらのファイルをリモートマシンに手動でコピーする必要があります。
 
-#### With the HTTP client
+#### HTTPクライアントの場合
 
-To be used by the 4D HTTP client, the **key.pem** and **cert.pem** files must be placed by default in the "ClientCertificatesFolder" that is created next to the next to the [project folder](Project/architecture.md#project-folder).
+4D HTTPクライアントで使用するには、**key.pem** と **cert.pem** ファイルは [Project フォルダー](Project/architecture.md#project-フォルダー) の隣に作成された "ClientCertificatesFolder" の中に置く必要があります (デフォルトの場合)。
 
-This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html) command).
+この場所は [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/ja/page1306.html) コマンドでカスタマイズすることができます。
 
 
 #### アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション) の場合
@@ -133,7 +133,7 @@ This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https
 [カスタムの暗号リスト](WebServer/webServerConfig.md#暗号リスト) を使用していて、PFS を有効化したい場合、DH あるいは ECDH (Elliptic-curve Diffie–Hellman) アルゴリズムのエントリーがそのリストに含まれている必要があります。
 
 
-## How to get a RSA certificate? (tutorial)
+## RSA証明書の取得方法 (チュートリアル)
 
 サーバーを保護モードで起動させるには、認証機関の電子証明書が必要です。 この証明書には、サイトID や、サーバーとの通信に使用する公開鍵など、様々な情報が格納されます。 そのサーバーに接続した際に、証明書がクライアント (例: Webブラウザー) へ送られます。 証明書が識別され受け入れられると、保護モードで通信が開始されます。
 > ブラウザーは、ルート証明書がインストールされた認証機関によって発行された証明書のみを許可します。ルート証明書がインストールされていない場合、通常警告が表示されます。
