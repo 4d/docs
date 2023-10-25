@@ -159,7 +159,7 @@ When the form is executed, standard browser interface functions are available to
 For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
 
 - O subformulário não deve poder deslocar-se
-- The limits of the Web area must not exceed the size of the subform
+- Os limites da área Web não devem ultrapassar o tamanho do subformulário
 
 > Superimposing a Web area on top of or beneath other form objects is not supported.
 
