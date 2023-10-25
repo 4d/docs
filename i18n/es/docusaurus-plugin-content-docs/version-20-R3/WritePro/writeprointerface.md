@@ -65,7 +65,7 @@ Estos tres tipos de archivos contribuyen a la configuración del Asistente para 
 
 El archivo de plantilla permite definir lo siguiente:
 
-- the formula that returns an entity selection used as the table's data source,
+- la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
 - the break formulas (if any break row can be inserted)
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
@@ -171,10 +171,10 @@ The translation file in JSON format contains the following attributes:
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
-| Atributo    | Tipo | Obligatorio | Descripción                             |
-|:----------- |:---- |:----------- |:--------------------------------------- |
-| original    | Text | x           | Original text intended for translation  |
-| translation | Text | x           | Translated version of the original text |
+| Atributo    | Tipo | Obligatorio | Descripción                           |
+|:----------- |:---- |:----------- |:------------------------------------- |
+| original    | Text | x           | Texto original destinado a traducción |
+| translation | Text | x           | Versión traducida del texto original  |
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 
