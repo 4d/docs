@@ -104,7 +104,7 @@ Método(s) HTTP aceite(s) para o host CORS correspondente. São suportados os se
 - TRACE
 - PATCH
 
-Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, null, or undefined, all methods are enabled.
+Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver vazio, null ou indefinido, todos os métodos serão ativados.
 
 #### Veja também
 
@@ -360,7 +360,7 @@ Este parâmetro permite-lhe selecionar o formato deste ficheiro. Os valores disp
 | 0     | Sem ficheiro de registo | Por padrão                                                                                                                                                                                                               |
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
-| 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
+| 3     | Registo em formato ELF  | Extended Log Format - A ser personalizado na caixa de diálogo das Propriedades                                                                                                                                           |
 | 4     | Registo em formato WLF  | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                             |
 
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
@@ -598,9 +598,9 @@ The **Use Keep-Alive Connections** option enables or disables keep-alive TCP con
 
 The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.
 
-In some cases, other optimized internal functions may be invoked. As ligações persistentes são úteis principalmente para páginas estáticas.
+Em alguns casos, outras funções internas otimizadas podem ser invocadas. As ligações persistentes são úteis principalmente para páginas estáticas.
 
-Two options allow you to set how the keep-alive connections work:
+Duas opções permitem que você defina como funcionam as conexões persistentes:
 
 - **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers). The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.
 
