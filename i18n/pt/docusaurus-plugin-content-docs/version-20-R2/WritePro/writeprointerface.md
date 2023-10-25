@@ -9,7 +9,7 @@ A 4D developer can easily implement these palettes in their application. Thus, e
 
 The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
 
-You will find below the Table Wizard configuration documentation.
+Você encontrará abaixo a documentação de configuração do Assistente de tabelas.
 
 ## Assistente de tabelas
 
@@ -67,7 +67,7 @@ O ficheiro modelo permite-lhe definir o seguinte:
 
 - the formula that returns an entity selection used as the table's data source,
 - as fórmulas de interrupção (se for possível inserir uma linha de interrupção)
-- the dataclass attributes that can be used as table columns,
+- os atributos dataclass que podem ser usados como colunas da tabela,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
 :::info Limitação
@@ -222,7 +222,7 @@ O ficheiro de tema em formato JSON contém os seguintes atributos:
 
 | Atributo | Tipo   | Obrigatório | Descrição                                                                                                                             |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------- |
-| default  | Object |             | Object containing the default style applicable to all rows.                                                                           |
+| default  | Object |             | Objeto que contém o estilo padrão aplicável a todas as linhas.                                                                        |
 | tabela   | Object |             | Objeto que contém a definição de estilo aplicável à tabela.                                                                           |
 | rows     | Object |             | Objeto que contém a definição de estilo aplicável a todas as linhas.                                                                  |
 | cells    | Object |             | Objeto que contém a definição de estilo aplicável a todas as células.                                                                 |

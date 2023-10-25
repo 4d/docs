@@ -19,7 +19,7 @@ These settings are specified for all connected machines and all sessions. You ca
 
 Address of the PHP interpreter where PHP execution requests must be adressed. Por padrão, 4D usa o endereço 127.0.0.1.
 
-Note that the HTTP address must be on the same machine as 4D.
+Observe que o endereço HTTP deve estar na mesma máquina que o 4D.
 
 ### Número da porta
 

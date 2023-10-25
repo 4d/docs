@@ -70,7 +70,7 @@ When handled through the code, the datastore is an object whose properties are a
 * the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
 * one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
 
-A datastore references only a single local or remote database.
+Um datastore faz referência apenas a um único banco de dados local ou remoto.
 
 O próprio objeto datastore não pode ser copiado como um objeto:
 

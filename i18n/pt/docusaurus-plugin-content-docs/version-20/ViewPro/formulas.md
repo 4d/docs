@@ -287,7 +287,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
 *   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
-*   The field type must be supported by 4D View Pro (see above).
+*   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
 

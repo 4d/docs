@@ -68,7 +68,7 @@ This setting applies to the 4D application (4D or 4D Server) on the host machine
 
 Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application.
 
-Check this option to make it possible to access Qodly Studio. However, you still need to enable it at every project level.
+Check this option to make it possible to access Qodly Studio. No entanto, você ainda precisa habilitá-lo em todos os níveis do projeto.
 
 Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
@@ -165,15 +165,15 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-|                                                              | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
-| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
-| Linguagem de programação                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
-| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| Depurador                                                    | Depurador 4D IDE                                                                            | Depurador Qodly Studio                  |
-| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
+|                                                                      | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Visualizar e editar tabelas (classes de dados), atributos e relações | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
+| Webforms                                                             | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
+| Desktop forms                                                        | 4D IDE                                                                                      | *not supported*                         |
+| Linguagem de programação                                             | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
+| Coding IDE                                                           | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
+| Depurador                                                            | Depurador 4D IDE                                                                            | Depurador Qodly Studio                  |
+| REST/Web roles and privileges                                        | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
@@ -225,7 +225,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
 
 - Normalmente, você só precisará converter os nomes. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
-- However, some command have been renamed for a better compliance. They are listed below:
+- No entanto, alguns comandos foram renomeados para uma melhor conformidade. They are listed below:
 
 | QodlyScript            | Línguagem 4D     |
 | ---------------------- | ---------------- |
@@ -298,7 +298,7 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. O servidor da Web do seu banco de dados é iniciado somente em uma porta HTTP.
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 

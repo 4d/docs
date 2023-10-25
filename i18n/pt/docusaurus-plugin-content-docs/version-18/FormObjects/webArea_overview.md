@@ -137,7 +137,7 @@ Specific form events are intended for programmed management of Web areas, more p
 - `On Open External Link`
 - `On Window Opening Denied`
 
-In addition, Web areas support the following generic form events:
+Além disso, as áreas da Web são compatíveis com os seguintes eventos de formulário genéricos:
 
 - `On Load`
 - `On Unload`

@@ -161,7 +161,7 @@ Pode querer realizar a mesma operação em mais de um objecto de forma - por exe
 - Right-click on the object and choose the **Select Similar Objects** command in the context menu.
 - Hold down the **Shift** key and click the objects you want to select.
 - Start at a location outside the group of objects you want to select and drag a marquee (sometimes called a selection rectangle) around the objects. When you release the mouse button, if any part of an object lies within or touches the boundaries of the selection rectangle, that object is selected.
-- Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Any object that is completely enclosed by the marquee is selected.
+- Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Os objetos que estiverem completamente no retângulo serão selecionados.
 
 The figure below shows a marquee being drawn to select two objects:
 
@@ -370,7 +370,7 @@ Para ver ou alterar a ordem de entrada:
 
 4. When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu.4D returns to normal operation of the Form editor.
 
-> Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+> Somente a ordem de entrada da página atual do formulário é exibida. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
 
 #### Utilização de um grupo de introdução de dados
 

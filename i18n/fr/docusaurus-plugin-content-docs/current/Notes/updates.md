@@ -4,6 +4,17 @@ title: Release Notes
 ---
 
 
+## 4D v20 R4
+
+Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D v20 R4.
+
+
+#### Points forts
+
+- Support of `[ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+
+
+
 ## 4D v20 R3
 
 Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20 R3.

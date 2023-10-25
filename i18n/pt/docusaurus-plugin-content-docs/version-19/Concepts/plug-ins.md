@@ -52,7 +52,7 @@ Pode colocar a pasta Plugins em dois locais diferentes:
   - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
 - Ao mesmo nível que a pasta Project. In this case, plug-ins are only available in this particular project.
 
-The choice of location depends on how you want to use the plug-in.
+A escolha do ubicação depende de como você deseja usar o plug-in.
 
 If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
 

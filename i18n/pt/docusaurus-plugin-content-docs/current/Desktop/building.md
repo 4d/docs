@@ -655,7 +655,7 @@ The management of connections by client applications covers the mechanisms by wh
 
 ### Cenário de ligação
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
+The connection procedure for merged client applications supports cases where the dedicated server is not available. O cenário de inicialização de um aplicação cliente 4D é o seguinte:
 
 1. The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
    OR  
