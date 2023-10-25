@@ -204,7 +204,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                                                                                             |
 | CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                         |
 | CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                              |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                                                 |
+| CS(USER_AGENT) | X   | X   | Informações sobre o software e o sistema operacional do cliente                                                                                   |
 | CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                           |
 | CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                     |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                                                                                          |
