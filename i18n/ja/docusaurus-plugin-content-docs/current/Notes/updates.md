@@ -6,12 +6,12 @@ title: リリースノート
 
 ## 4D v20 R4
 
-Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D v20 R4.
+[**4D v20 R4 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R4/): 4D v20 R4 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 
 #### ハイライト
 
-- Support of `[ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- TLS証明書の [`ECDSA` 暗号化形式](../Admin/tls.md#暗号化) をサポート。
 
 
 
