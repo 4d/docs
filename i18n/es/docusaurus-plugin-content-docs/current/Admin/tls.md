@@ -49,7 +49,7 @@ You can control the level of security of your **web server** by defining the [mi
 
 :::
 
-## Certificates
+## Certificados
 
 ### Formato
 
