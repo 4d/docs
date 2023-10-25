@@ -32,7 +32,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 
 ## Tabelas
 
-You designate a table by placing its name between brackets: [...]. O nome de uma tabela pode conter até 31 caracteres.
+Uma tabela se designa colocando seu nome entre parênteses: [...]. O nome de uma tabela pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -269,7 +269,7 @@ vtClone:=Dump("is";"the";"it")
 
 ## Comandos de plug-in
 
-You designate a plug-in command by using its name as defined by the plug-in. A plug-in command name can contain up to 31 characters.
+You designate a plug-in command by using its name as defined by the plug-in. O nome de um comando de plug-in pode conter até 31 caracteres.
 
 Exemplos:
 
