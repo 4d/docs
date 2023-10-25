@@ -960,7 +960,7 @@ Vous pouvez préciser le format du document en incluant une extension après son
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", or ".csv")
-* [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
+* [Document SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
 
 Si l'extension n'est pas incluse mais que le format est spécifié dans *paramObj*, le fichier exporté aura l'extension qui correspond au format, à l'exception du format CSV (aucune extension n'est ajoutée dans ce cas).
 
@@ -983,23 +983,23 @@ saisissez le code suivant :
 Sélecteur
 
 * Lors de l'export d'un document 4D View Pro en un fichier au format Microsoft Excel, certains paramètres peuvent être perdus. Par exemple, les méthodes et formules 4D ne sont pas prises en charge par Excel. Vous pouvez vérifier les autres paramètres avec [cette liste proposée par GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* L'exportation dans ce format est exécutée de manière asynchrone, utilisez la propriété `formula` de *paramObj* pour le code à exécuter après l'exportation.
 
-Collection d'objets
+**Notes sur le format PDF** :
 
 * Lors de l'export d'un document 4D View Pro en un fichier au format PDF, les polices utilisées dans le document sont automatiquement intégrées dans le fichier PDF. Seules les polices OpenType (fichiers .OTF ou .TTF) ayant une table Unicode peuvent être intégrées. Si aucun fichier de polices valide n'est trouvé pour une police, une police par défaut est utilisée à sa place.
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* L'exportation dans ce format est exécutée de manière asynchrone, utilisez la propriété `formula` de *paramObj* pour le code à exécuter après l'exportation.
 
-Options supplémentaires
+**Notes sur le format CSV** :
 
 * Lors de l'export d'un document 4D View Pro en un fichier au format PDF, certains paramètres peuvent être perdus, car seuls le texte et les valeurs sont sauvegardés.
 * Toutes les valeurs sont enregistrées sous la forme de chaînes entre guillemets. Pour plus d'informations sur les valeurs séparées par des délimiteurs, consultez [cet article de Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* L'exportation dans ce format est exécutée de manière asynchrone, utilisez la propriété `formula` de *paramObj* pour le code à exécuter après l'exportation.
 
-**Notes about SpreadJS file format**:
+**Notes sur le format de fichier SpreadJS**:
 
 * [Les fichiers SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) sont des fichiers zippés.
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* L'exportation dans ce format est exécutée de manière asynchrone, utilisez la propriété `formula` de *paramObj* pour le code à exécuter après l'exportation.
 
 Une fois que l'export est terminé, `VP EXPORT DOCUMENT` exécute automatiquement la méthode définie dans la propriété *formula* de *paramObj*, le cas échéant.
 
@@ -1419,7 +1419,7 @@ Le code suivant :
 $font:=VP Font to object("16pt arial")
 ```
 
-mixte
+retournera l'objet $font suivant :
 
 ```4d
 {
@@ -1831,7 +1831,10 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 #### Exemple
 
 ```4d
-  Options d'import|
+  //fixer une formule
+ VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
+
+ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 ```
 
 #### Voir également
@@ -2010,7 +2013,7 @@ La commande `VP Get names` <!-- REF #_method_.VP Get names.Summary -->retourne u
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Style de la ligne de bordure appliqué à la bordure de droite.
+Le paramètre *scope* vous permet de définir l'espace de la zone dans lequel lire la formule, en passant l'indice de la feuille (la numérotation débute à 0) ou l'une des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
@@ -2033,7 +2036,7 @@ Les propriétés disponibles dépendent du type d'élément nommé (cellule nomm
 var $list : Collection
 
 
-$list:=VP Get names("ViewProArea";2) //names in 3rd sheet
+$list:=VP Get names("ViewProArea";2) //noms de la 3e feuille
 ```
 
 #### Voir également
@@ -2288,11 +2291,11 @@ Pour obtenir le nombre de feuilles et définir la feuille courante comme étant 
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                                          |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                              |
-| name       | Text    | -> | La collection retournée par `VP Get values` contient une collection bidimensionnelle :                                               |
-| Résultat   | Integer | <- | Vous souhaitez déselectionner toutes les cellules (la cellule active et toute autre cellule sélectionée) :<!-- END REF -->
+| Paramètres | Type    |    | Description                                                                            |
+| ---------- | ------- | -- | -------------------------------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                |
+| name       | Text    | -> | La collection retournée par `VP Get values` contient une collection bidimensionnelle : |
+| Résultat   | Integer | <- | Numéro d'indice de la feuille|<!-- END REF -->
 
 |
 
@@ -2501,9 +2504,9 @@ La commande `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Aucun indicateur de recherche n'est pris en compte (par défaut)
+Dans *styleName*, passez le nom de la feuille de style que vous souhaitez lire.
 
-Police en petites majuscules.
+Vous pouvez définir où lire la feuille de style via le paramètre *sheet* en passant le numéro d'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
@@ -2516,7 +2519,7 @@ Le code suivant :
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-Voir également
+... retournera l'objet style *GreenDashDotStyle* de la feuille courante :
 
 ```4d
 {
@@ -2553,20 +2556,20 @@ La commande `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Objet retourné
+Vous pouvez définir où lire les feuilles de style via le paramètre *sheet* en passant le numéro d'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 * `vk current sheet`
 * `vk workbook`
 
 #### Exemple
 
-Voir également
+Le code suivant retournera une collection de tous les objets style de la feuille courante :
 
 ```4d
 $styles:=VP Get stylesheets("ViewProArea")
 ```
 
-Nombre minimum de paramètres
+Dans ce cas, la feuille courante utilise deux objets style :
 
 ```4d
 [
@@ -3019,7 +3022,7 @@ Objet 4D View Pro|
 
 #### Exemple
 
-Historique
+Vous souhaitez lire les valeurs allant de C4 à G6 :
 
 ![](../assets/en/ViewPro/cmd_vpGetValues.PNG)
 
@@ -3301,7 +3304,7 @@ Exemple
 VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
 ```
 
-Nom de la zone 4D View Pro dans le formulaire
+Le résultat est le suivant :
 
 ![](../assets/en/ViewPro/cmd_vpInsertColumns.PNG)
 
@@ -3328,17 +3331,17 @@ La commande `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->insèr
 
 Dans *rangeObj*, passez un objet plage indiquant la ligne de début (la ligne qui définit l'emplacement de la nouvelle ligne à insérer) et le nombre de lignes à insérer. Si le nombre de lignes à insérer est omis (non défini), une seule ligne est insérée.
 
-Constante
+De nouvelles lignes sont insérées directement avant la première ligne de *rangeObj*.
 
 #### Exemple
 
-|
+Pour insérer 3 lignes avant la première ligne :
 
 ```4d
 VP INSERT ROWS(VP Row("ViewProArea";0;3))
 ```
 
-Nom de la zone 4D View Pro dans le formulaire
+Le résultat est le suivant :
 
 ![](../assets/en/ViewPro/cmd_vpInsertRows.PNG)
 
@@ -3557,12 +3560,12 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 <!-- REF #_method_.VP Name.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                                                |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                                    |
-| rangeName  | Text    | -> | Cet exemple de code copie d'abord le contenu, valeurs, formats et formules d'une plage dans un objet puis les colle dans une autre plage : |
-| sheet      | Integer | -> | Résultat:                                                                                                                                  |
-| Résultat   | Object  | <- | Pour actualiser toutes les forumules du workbook, saisissez le code suivant :<!-- END REF -->
+| Paramètres | Type    |    | Description                                         |
+| ---------- | ------- | -- | --------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro             |
+| rangeName  | Text    | -> | Nom de plage existante                              |
+| sheet      | Integer | -> | Emplacement de la plage (si omis, feuille courante) |
+| Résultat   | Object  | <- | Plage nommée|<!-- END REF -->
 
 |
 
@@ -3572,7 +3575,7 @@ The `VP SET SHEET NAME` command <!-- REF #_method_.VP Name.Summary -->renames a 
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Voir également
+Le paramètre *rangeName* indique une plage de cellule nommée existante.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
 
@@ -3636,16 +3639,16 @@ VP NEW DOCUMENT("myVPArea")
 
 <!-- REF #_method_.VP Object to font.Params -->
 
-| Paramètres                                                       | Type   |    | Description                               |
-| ---------------------------------------------------------------- | ------ | -- | ----------------------------------------- |
-| Vous souhaitez protéger toutes les cellules de la plage C5:D10 : | Object | -> | Objet police                              |
-| Résultat                                                         | Text   | <- | Font shorthand|<!-- END REF -->
+| Paramètres | Type   |    | Description                                              |
+| ---------- | ------ | -- | -------------------------------------------------------- |
+| fontObj    | Object | -> | Objet police                                             |
+| Résultat   | Text   | <- | Police raccourcie (shorthand)|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
+La commande `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
 
 Dans *fontObj*, passez un objet contenant les propriétés de police. Les propriétés suivantes sont prises en charge :
 
@@ -3729,7 +3732,7 @@ If *options* refers to a paste option not present in the copied object (e.g. for
 
 #### Exemple
 
-See example the example from [VP Copy to object](#vp-copy-to-object)
+Voir l'exemple de [VP Copy to object](#vp-copy-to-object)
 
 #### Voir également
 
@@ -3773,7 +3776,7 @@ Le code suivant :
  VP PRINT("myVPArea")
 ```
 
-La collection retournée contient les propriétés des colonnes, qu'elles aient ou non été définies par la commande [VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes).
+Ouvrira une fenêtre de dialogue d'impression :
 
 ![](../assets/en/ViewPro/cmd_vpPrint.PNG)
 
@@ -3798,15 +3801,15 @@ La collection retournée contient les propriétés des colonnes, qu'elles aient 
 
 #### Description
 
-The `VP RECOMPUTE FORMULAS` command <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->immediately evaluates all formulas in *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (ex : si les formules sont modifiées ou si les formules contiennent des appels vers la base). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](#vp-flush-commands) pour exécuter les commandes stockées et vider le tampon de commandes, puis calcule toutes les formules dans le workbook.
+La commande `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->évalue immédiatement toutes les formules dans *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (ex : si les formules sont modifiées ou si les formules contiennent des appels vers la base). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](#vp-flush-commands) pour exécuter les commandes stockées et vider le tampon de commandes, puis calcule toutes les formules dans le workbook.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
-> Paramètres
+> Assurez-vous que la commande n'a pas été exécutée auparavant à l'aide de `VP RECOMPUTE FORMULAS`, sinon la commande ne fait rien.
 
 
 #### Exemple
 
-|
+Pour actualiser toutes les forumules du workbook, saisissez le code suivant :
 
 ```4d
 VP RECOMPUTE FORMULAS("ViewProArea")
@@ -3889,11 +3892,11 @@ In *sheet*, pass the index of the sheet to be set as current sheet. If the index
 
 #### Exemple
 
-The document currently has three sheets:
+Le document comporte actuellement 3 feuilles :
 
 ![](../assets/en/ViewPro/vp-sheet-3.png)
 
-Remove the third sheet:
+Supprimer la troisième feuille :
 
 ```4d
 VP REMOVE SHEET("ViewProArea";2)
@@ -3914,18 +3917,22 @@ VP REMOVE SHEET("ViewProArea";2)
 |
 #### Description
 
-The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
+La commande `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
 
 Dans *rangeObj*, passez un objet plage de la fusion. Les cellules fusionnées de la plage sont divisées en cellules individuelles.
 
 #### Exemple
 
-|
+Pour retirer toutes les fusions de cellules de ce document :
 
 ![](../assets/en/ViewPro/cmd_vpRemoveSpan1.PNG)
 
 ```4d
- Constante
+ //identifier toutes les cellules fusionnées 
+ $span:=VP Get spans(VP All("ViewProArea"))
+
+  //retirer les fusions
+ VP REMOVE SPAN($span)
 ```
 
 Résultat:
@@ -4144,9 +4151,9 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Description
 
-The `VP RESET SELECTION` command <!-- REF #_method_.VP RESET SELECTION.Summary -->deselects all cells, resulting in no current selection or visible active cell<!-- END REF -->.
+La commande `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->désélectionne toutes les cellules, ce qui fait qu'il n'y a pas de sélection courante ou de cellule active visible<!-- END REF -->.
 
-> retournera l'objet $font suivant :
+> Une cellule active par défaut (cellule A1) reste définie pour les commandes 4D View Pro.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -4156,7 +4163,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 #### Exemple
 
-|
+Vous souhaitez déselectionner toutes les cellules (la cellule active et toute autre cellule sélectionée) :
 
 ```4d
 VP RESET SELECTION("myVPArea")
@@ -4181,16 +4188,16 @@ VP RESET SELECTION("myVPArea")
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
-| Paramètres | Type   |    | Description                                                                                                                                  |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| rangeObj   | Object | -> | New range for the table                                                                                                                      |
-| tableName  | Text   | -> | Attribuez la valeur NULL pour supprimer un style et rétablir les paramètres de style par défaut (le cas échéant) :<!-- END REF -->
+| Paramètres | Type   |    | Description                                |
+| ---------- | ------ | -- | ------------------------------------------ |
+| rangeObj   | Object | -> | Nouvelle plage de la table                 |
+| tableName  | Text   | -> | Nom de la table|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the *tableName* size with regards to the *rangeObj*<!-- END REF -->.
+La commande `VP RESIZE TABLE` <!-- REF #_method_.VP RESIZE TABLE.Summary -->modifie la taille du *tableName* par rapport au *rangeObj*<!-- END REF -->.
 
 Les règles suivantes s'appliquent :
 
@@ -4254,7 +4261,7 @@ VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
 
 #### Description
 
-The `VP RESUME COMPUTING` command <!-- REF #_method_.VP RESUME COMPUTING.Summary --> restarts the calculation of formulas in *vpAreaName*<!-- END REF -->.
+La commande `VP RESUME COMPUTING` <!-- REF #_method_.VP RESUME COMPUTING.Summary --> recommence le calcul des formules dans *vpAreaName*<!-- END REF -->.
 
 La commande réactive le service de calcul de 4D View Pro. Les formules impactées par des modifications apportées durant la suspension des calculs sont mises à jour, et les formules ajoutées après l'exécution de `VP RESUME COMPUTING` sont calculées.
 
@@ -4330,7 +4337,7 @@ $row:=VP Row("ViewProArea";9) // row 10
 
 #### Description
 
-The `VP ROW AUTOFIT` command <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automatically sizes the row(s) in *rangeObj* according to their contents<!-- END REF -->.
+La commande `VP ROW AUTOFIT` <!-- REF #_method_.VP ROW AUTOFIT.Summary -->dimensionne automatiquement la ou les ligne(s) dans *rangeObj* en fonction de leur contenu<!-- END REF -->.
 
 Dans *rangeObj*, passez un objet plage contenant une plage de lignes dont la taille est gérée automatiquement.
 
@@ -4372,14 +4379,14 @@ La commande `VP Run offscreen area` <!-- REF #_method_.VP Run offscreen area.Sum
 
 Dans l'objet *parameters*, passez l'une des propriétés optionnelles suivantes. Ces propriétés seront disponibles grâce à la commande `This` dans la méthode `onEvent` et référencent l'instance :
 
-| Propriété                | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| area                     | text            | The name of the offscreen area. If omitted or null, a generic name is assigned (e.g., "OffscreenArea1").                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| onEvent                  | objet (formula) | Une méthode callback qui sera lancée lorsque la zone hors écran sera prête. Elle peut être soit :<li>Les lignes suivantes n'affichent pas correctement le texte :</li><li>Le code suivant définit cinq lignes dans la zone 4D View Pro :</li>By default, the callback method is called on the [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), or [`On Timer`](../Events/onTimer.md) events. La méthode callback peut être utilisée pour accéder à [l'objet 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
-| autoQuit                 | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                     |
-| timeout                  | number          | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| result                   | mixte           | Résultat du traitement (le cas échéant)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| `<customProperty>` | mixte           | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Propriété                | Type            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| area                     | text            | Le nom de la zone hors écran. S'il est omis ou null, un nom générique est assigné (ex : OffscreenArea1).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| onEvent                  | objet (formula) | Une méthode callback qui sera lancée lorsque la zone hors écran sera prête. Elle peut être soit :<li>une fonction `onEvent` d'une classe, soit</li><li>un objet `Formula`</li>Par défaut, la méthode callback est appelée sur les événements [`On VP Ready`](../Events/onVpReady.md), [`On Load`](../Events/onLoad.md), [`On Unload`](../Events/onUnload.md), [`On End URL Loading`](../Events/onEndUrlLoading.md), [`On URL Loading Error`](../Events/onUrlLoadingError.md), [`On VP Range Changed`](../Events/onVpRangeChanged.md), ou [`On Timer`](../Events/onTimer.md). La méthode callback peut être utilisée pour accéder à [l'objet 4D View Pro](configuring.md#4d-view-pro-form-object-variable). |
+| autoQuit                 | boolean         | Vrai (valeur par défaut) si la commande doit stopper l'exécution de la formule lorsque les événements [`On End URL Loading`](../Events/onEndUrlLoading.md) ou [`On URL Loading Error`](../Events/onUrlLoadingError.md) se produisent. Si faux, vous devez utiliser les commandes `CANCEL` ou `ACCEPT` dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                         |
+| timeout                  | number          | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| result                   | mixte           | Résultat du traitement (le cas échéant)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `<customProperty>` | mixte           | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 
 La propriété suivante est automatiquement ajoutée par la commande, si nécessaire :
@@ -4418,7 +4425,7 @@ Function onEvent()
  End case
 ```
 
-Constante
+La méthode callback (de rétro-appel) *OffscreenArea* :
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4427,7 +4434,7 @@ $result:=VP Run offscreen area($o)
 
 #### Exemple 2
 
-Noms existant dans la zone définie|
+Vous souhaitez charger un grand document hors écran, attendre que tous les calculs soient terminés et l'exporter au format PDF :
 
 
 ```4d
@@ -4471,7 +4478,7 @@ Function onEvent()
  End case
 ```
 
-Constante
+La méthode callback (de rétro-appel) *OffscreenArea* :
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4481,7 +4488,7 @@ $result:=VP Run offscreen area($o)
 
 #### Voir également
 
-[Dans *vpAreaName*, passez le nom de la zone 4D View Pro.](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
+[Article de blog : Fin du chargement des documents](https://blog.4d.com/4d-view-pro-end-of-document-loading/)
 
 ## S
 
@@ -4500,13 +4507,13 @@ $result:=VP Run offscreen area($o)
 
 #### Description
 
-The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->defines a specified cell as active<!-- END REF -->.
+La commande `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->définit une cellule spécifiée comme active<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage contenant une seule cellule en tant qu'objet (reportez-vous à [VP Cell](#vp-cell)). Si *rangeObj* n'est pas une plage de cellule ou contient plusieurs plages, seule la première cellule de la première plage est utilisée.
 
 #### Exemple
 
-|
+Le code suivant déterminera comme active la cellule de la colonne D, ligne 5 :
 
 ```4d
 $activeCell:=VP Cell("myVPArea";3;4)
@@ -5045,13 +5052,13 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Paramètres | Type       |    | Description                                                                                                                          |
-| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                                                                                              |
-| dataObj    | Object     | -> | Data object to load in the data context                                                                                              |
-| dataColl   | Collection | -> | Data collection to load in the data context                                                                                          |
-| options    | Object     | -> | Options supplémentaires                                                                                                              |
-| sheet      | Integer    | -> | Vous souhaitez déselectionner toutes les cellules (la cellule active et toute autre cellule sélectionée) :<!-- END REF -->
+| Paramètres | Type       |    | Description                                              |
+| ---------- | ---------- | -- | -------------------------------------------------------- |
+| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                  |
+| dataObj    | Object     | -> | Data object to load in the data context                  |
+| dataColl   | Collection | -> | Data collection to load in the data context              |
+| options    | Object     | -> | Options supplémentaires                                  |
+| sheet      | Integer    | -> | Numéro d'indice de la feuille|<!-- END REF -->
 
 |
 
