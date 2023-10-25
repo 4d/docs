@@ -1809,7 +1809,7 @@ devolverá esta informação no objeto *$defaultStyle*:
 
 O comando `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->recupera a fórmula de um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
+Em *rangeObj*, passe um intervalo cuja fórmula você deseja recuperar. Se *rangeObj* designar várias células ou vários intervalos, uma fórmula é devolvida da primeira célula. Se *rangeObj* for uma célula sem fórmula, o método devolve uma string vazia.
 
 #### Exemplo
 
@@ -1841,13 +1841,13 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 
 #### Descrição
 
-O comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
+O comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> retorna a fórmula e comentários correspondentes ao intervalo nomeado ou formula nomeada passada no parâmetro *name* ou **null** se não existir no escopo definido<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the named range or named formula that you want to get in *name*. Note that named ranges are returned as formulas containing absolute cell references.
+Passe o intervalo com nome ou a fórmula com nome que quiser obter em  *name*. Note que os intervalos com nome são devolvidos como fórmulas que contém referências absolutas de células.
 
-You can define where to get the formula in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Pode definir onde obter a fórmula em *scope* utilizando o índice da folha (a numeração começa em 0) ou uma das constantes abaixo:
 
 * `vk current sheet`
 * `vk workbook`
@@ -1856,10 +1856,10 @@ You can define where to get the formula in *scope* using either the sheet index 
 
 O objeto retornado contém as propriedades abaixo:
 
-| Propriedade | Tipo | Descrição                                                                                                                                   |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula     | Text | Text of the formula corresponding to the named formula or named range. For named ranges, the formula is a sequence of absolute coordinates. |
-| comment     | Text | Comentário correspondente à fórmula nomeada ou ao intervalo nomeado                                                                         |
+| Propriedade | Tipo | Descrição                                                                                                                                                |
+| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula     | Text | Texto da fórmula correspondente à fórmula nomeada ou intervalo nomeado. Para os intervalos nomeados, a fórmula é uma sequência de coordenadas absolutas. |
+| comment     | Text | Comentário correspondente à fórmula nomeada ou ao intervalo nomeado                                                                                      |
 
 #### Exemplo
 
@@ -1896,7 +1896,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 O comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera as fórmulas de um *rangeObj* designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* designates multiple ranges, the formula of the first range is returned. If *rangeObj* does not contain any formulas, the command returns an empty string.
+Em *rangeObj*, passe um intervalo cuja fórmula você deseja recuperar. Se *rangeObj* designar vários intervalos, a fórmula do primeiro intervalo é devolvida If *rangeObj* does not contain any formulas, the command returns an empty string.
 
 A coleção devolvida é bidimensional:
 
