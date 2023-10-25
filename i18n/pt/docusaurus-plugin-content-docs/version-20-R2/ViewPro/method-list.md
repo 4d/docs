@@ -772,29 +772,29 @@ Na  *fonte*, você pode passar um nome de propriedade de  [um contexto de dados]
   * Se você não especificar uma  *fonte*, o comando criará uma tabela vazia com o tamanho definido em *rangeObj*.
   * Se a  *fonte especificada* não puder ser totalmente exibida no documento, nenhuma tabela será criada.
 
-In the *options* parameter, pass an object of the [`cs. ViewPro. TableOptions` class](classes.md#tableoptions) that contains the table properties to set.
+No parâmetro *options* , passe um objeto da classe [`cs.ViewPro.TableOptions`](classes.md#tableoptions) que contém as propriedades da tabela a serem definidas.
 
-The length of the *tableColumns* collection must be equal to the range column count: Within the *options* object, the *tableColumns* collection determines the structure of the table's columns.
+No objeto *options* , a coleção *tableColumns* determina a estrutura das colunas da tabela. O comprimento da coleção *tableColumns* deve ser igual à contagem de colunas do intervalo:
 
-  * When the column count in *rangeObj* exceeds the number of columns in *tableColumns*, the table is filled with additional empty columns.
-  * When the column count in *rangeObj* is inferior to the number of *tableColumns*, the table displays a number of columns that match the range's column count.
+  * Quando a contagem de colunas em *rangeObj* excede o número de colunas em *tableColumns*, a tabela é preenchida com colunas vazias adicionais.
+  * Quando a contagem de colunas em *rangeObj* é inferior ao número de *tableColumns*, a tabela exibe um número de colunas que corresponde à contagem de colunas do intervalo.
 
-If you pass a *source* but no *tableColumn* option, the command generates columns automatically. Neste caso, *rangeObj* tem de ser um intervalo de células. Caso contrário, é utilizada a primeira célula do intervalo. When generating columns automatically, the following rules apply:
+Se você passar uma fonte ** , mas não passar a opção *tableColumn* , o comando gerará colunas automaticamente. Neste caso, *rangeObj* tem de ser um intervalo de células. Caso contrário, é utilizada a primeira célula do intervalo. Ao gerar colunas automaticamente, as seguintes regras se aplicam:
 
-* If the data passed to the command is a collection of objects, the property names are used as column titles. Por exemplo:
+* Se os dados passados para o comando forem uma coleção de objetos, os nomes das propriedades serão usados como títulos de coluna. Por exemplo:
 
 ```4d
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
 ```
-Here the titles of the columns would be `LastName` and `FirstName`.
+Aqui, os títulos das colunas seriam `LastName` e `FirstName`.
 
-* If the data passed to the command is a collection of scalar values, it must contain a collection of subcollections:
+* Se os dados passados para o comando forem uma coleção de valores escalares, eles deverão conter uma coleção de subcoleções:
 
-  * A coleção de primeiro nível contém subcoleções de valores. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha. The number of values in the first subcollection determines how many columns are created.
+  * A coleção de primeiro nível contém subcoleções de valores. Cada subcolecção define uma linha. Passa uma coleção vazia para saltar uma linha. O número de valores na primeira subcoleção determina quantas colunas são criadas.
   * Os índices das subcoleções são utilizados como títulos das colunas.
-  * Cada subcoleção define os valores das células para a linha. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value).
+  * Cada subcoleção define os valores das células para a linha. Os valores podem ser `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` ou `Picture`. Um valor `Time` deve ser um objeto que contenha um atributo de tempo, conforme descrito em [VP SET VALUE](#vp-set-value).
 
-> Isto só funciona quando se geram colunas automaticamente. You cannot use a collection of scalar data with the *tableColumns* option.
+> Isto só funciona quando se geram colunas automaticamente. Não é possível usar uma coleção de dados escalares com a opção *tableColumns* .
 
 
 #### Exemplo
@@ -941,13 +941,13 @@ utilizar o seguinte código:
 
 #### Descrição
 
-O comando `VP EXPORT DOCUMENT` <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->exports the 4D View Pro object attached to the 4D View Pro area *vpAreaName* to a document on disk according to the *filePath* and *paramObj* parameters<!-- END REF -->.
+O comando `VP EXPORT DOCUMENT` <!-- REF #_method_.VP EXPORT DOCUMENT.Summary -->Exporta o objeto do 4D View Pro anexado à área do 4D View Pro *vpAreaName* para um documento no disco de acordo com os parâmetros *filePath* e *paramObj*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *filePath*, pass the destination path and name of the document to be exported. If you don't specify a path, the document will be saved at the same level as the Project folder.
+Em *filePath*, passe o caminho de destino e o nome do documento a ser exportado. Se você não especificar um caminho, o documento será salvo no mesmo nível da pasta Project.
 
-You can specify the exported file's format by including an extension after the document's name:
+Você pode especificar o formato do arquivo exportado incluindo uma extensão após o nome do documento:
 
 * 4D View Pro (".4vp")
 * Microsoft Excel (".xlsx")
@@ -955,50 +955,50 @@ You can specify the exported file's format by including an extension after the d
 * CSV (".txt", ou ".csv")
 * [Documento SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
 
-If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
+Se a extensão não for incluída, mas o formato for especificado em *paramObj*, o arquivo exportado terá a extensão que corresponde ao formato, exceto para o formato CSV (nenhuma extensão é adicionada nesse caso).
 
-The optional *paramObj* parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
+O parâmetro opcional *paramObj* permite definir várias propriedades para o objeto 4D View Pro exportado, bem como iniciar um método de retorno de chamada quando a exportação for concluída.
 
-| Propriedade                | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| format                     | text         | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", ".pdf", or ".sjs". É possível utilizar as seguintes constantes:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adiciona a extensão apropriada ao nome do arquivo se necessário. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
-| senha                      | text         | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| formula                    | 4D. Function | Método de retorno de chamada a ser lançado quando a exportação estiver concluída. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                           |
-| valuesOnly                 | boolean      | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| includeFormatInfo          | boolean      | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                                                                  |
-| includeBindingSource       | boolean      | 4DVP e Microsoft Excel apenas. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). Caso contrário, false. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                                                    |
-| sheet                      | number       | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| pdfOptions                 | object       | Apenas PDF (opcional) - Opções para exportação de PDF <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>nome da pessoa que criou o documento.</td></tr><tr><td>keywords</td><td>text</td><td>palavras-chave associadas ao documento.</td></tr><tr><td>subject</td><td>text</td><td>assunto do documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| csvOptions                 | object       | Apenas CSV (opcional) - Opções para exportação csv <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Objeto intervalo de células</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Padrão: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| sjsOptions                 | object       | Somente SJS (opcional) - Opções para exportação sjs <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>se deve incluir a fonte de vinculação; o padrão é true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>se deve incluir os dados extras de cálculo. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>se as fórmulas devem ser incluídas; o padrão é true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>se o estilo deve ser incluído; por padrão é true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `\<customProperty>` | any          | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Propriedade                | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| format                     | text         | (opcional) Quando presente, designa o formato de arquivo exportado: ".4vp" (padrão), ".csv", ".xlsx", ".pdf" ou ".sjs". É possível utilizar as seguintes constantes:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adiciona a extensão apropriada ao nome do arquivo se necessário. Se o formato especificado não corresponder à extensão em *filePath*, ele será adicionado ao final de *filePath*. Se um formato não for especificado e nenhuma extensão for fornecida em *filePath*, o formato de arquivo padrão será usado. |
+| senha                      | text         | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| formula                    | 4D. Function | Método de retorno de chamada a ser lançado quando a exportação estiver concluída. O uso de um método de retorno de chamada é necessário quando a exportação é assíncrona (que é o caso dos formatos PDF e Excel) se você precisar que algum código seja executado após a exportação. O método de retorno de chamada deve ser passado com o comando [`Formula`](../API/FunctionClass.md#formula) . Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula).                                                                                                                 |
+| valuesOnly                 | boolean      | Especifica que somente os valores das fórmulas (se houver) serão exportados.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| includeFormatInfo          | boolean      | Verdadeiro para incluir informações de formatação; caso contrário, falso (o padrão é verdadeiro). As informações de formatação são úteis em alguns casos, por exemplo, para exportação para SVG. Por outro lado, definir essa propriedade como **false** permite reduzir o tempo de exportação.                                                                                                                                                                                                                                                                                                                      |
+| includeBindingSource       | boolean      | 4DVP e Microsoft Excel apenas. True (padrão) para exportar os valores do contexto de dados atual como valores de célula no documento exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada. Para o gerenciamento do contexto de dados e da vinculação de células, consulte [VP SET DATA CONTEXT](#vp-set-data-context) e [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                   |
+| sheet                      | number       | Somente PDF (opcional) - Índice da planilha a ser exportada (a partir de 0). -2=todas as planilhas visíveis (**default**), -1=apenas a planilha atual                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| pdfOptions                 | object       | Apenas PDF (opcional) - Opções para exportação de PDF <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>creator</td><td>text</td><td>nome do aplicativo que criou o documento original a partir do qual ele foi convertido.</td></tr><tr><td>title</td><td>text</td><td>título do documento.</td></tr><tr><td>autor</td><td>text</td><td>nome da pessoa que criou o documento.</td></tr><tr><td>keywords</td><td>text</td><td>palavras-chave associadas ao documento.</td></tr><tr><td>subject</td><td>text</td><td>assunto do documento.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| csvOptions                 | object       | Apenas CSV (opcional) - Opções para exportação csv <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Objeto intervalo de células</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Delimitador de linha. Padrão: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Delimitador de coluna. O padrão: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| sjsOptions                 | object       | Somente SJS (opcional) - Opções para exportação sjs <p><table><tr><th>Propriedade</th><th>Tipo</th><th>Descrição</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>se as células mescladas automaticamente devem ser incluídas; o padrão é false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>se deve incluir a fonte de vinculação; o padrão é true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>se deve incluir os dados extras de cálculo. Pode ser mais rápido ao abrir o arquivo com esses dados; o padrão é false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>se devem ser incluídas células vazias (células sem dados ou apenas com estilo) fora do intervalo de dados usado; o padrão é true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>se as fórmulas devem ser incluídas; o padrão é true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>se o estilo deve ser incluído; por padrão é true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>se os nomes personalizados não utilizados devem ser incluídos; o padrão é true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>se a string de formato deve ser aplicada à exportação de valores; o padrão é false.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `\<customProperty>` | any          | Qualquer propriedade personalizada que estará disponível por meio do parâmetro $3 no método de retorno de chamada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 **Notas sobre o formato Excel**:
 
-* When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. Por exemplo, os métodos e fórmulas 4D não são suportados pelo Excel. You can verify other settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* Ao exportar um documento do 4D View Pro para um arquivo no formato Microsoft Excel, algumas configurações podem ser perdidas. Por exemplo, os métodos e fórmulas 4D não são suportados pelo Excel. Você pode verificar outras configurações com [essa lista do GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+* A exportação nesse formato é executada de forma assíncrona; use a fórmula `` propriedade do paramObj ** para o código a ser executado após a exportação.
 
 **Notas sobre o formato PDF**:
 
-* When exporting a 4D View Pro document in PDF, the fonts used in the document are automatically embedded in the PDF file. Only OpenType fonts (.OTF or .TTF files) having a Unicode map can be embedded. If no valid font file is found for a font, a default font is used instead.
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* Ao exportar um documento do 4D View Pro em PDF, as fontes usadas no documento são automaticamente incorporadas ao arquivo PDF. Somente fontes OpenType (arquivos .OTF ou .TTF) com um mapa Unicode podem ser incorporadas. Se não for encontrado nenhum arquivo de fonte válido para uma fonte, será usada uma fonte padrão.
+* A exportação nesse formato é executada de forma assíncrona; use a fórmula `` propriedade do paramObj ** para o código a ser executado após a exportação.
 
 **Notas sobre o formato CSV**:
 
-* When exporting a 4D View Pro document to CSV, some settings may be lost, as only the text and values are saved.
-* Todos os valores são guardados como cadeias de caracteres entre aspas duplas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* Ao exportar um documento do 4D View Pro para CSV, algumas configurações podem ser perdidas, pois somente o texto e os valores são salvos.
+* Todos os valores são guardados como cadeias de caracteres entre aspas duplas. Para obter mais informações sobre valores separados por delimitadores, consulte [este artigo na Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
+* A exportação nesse formato é executada de forma assíncrona; use a fórmula `` propriedade do paramObj ** para o código a ser executado após a exportação.
 
 **Notas sobre o formato de arquivo SpreadJS**:
 
-* [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files.
-* Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
+* [Arquivos do SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) são arquivos compactados.
+* A exportação nesse formato é executada de forma assíncrona; use a fórmula `` propriedade do paramObj ** para o código a ser executado após a exportação.
 
-Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
+Após a conclusão da operação de exportação, o `VP EXPORT DOCUMENT` aciona automaticamente a execução do método definido na propriedade *formula* do *paramObj*, se usado.
 
-#### Passing a callback method (formula)
+#### Passagem de um método de retorno de chamada (fórmula)
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local variables:
+Ao incluir o parâmetro opcional *paramObj* , o comando permite que você use o comando [`Formula`](../API/FunctionClass.md#formula) para chamar um método 4D que será executado após a conclusão da exportação. The callback method will receive the following values in local variables:
 
 | Variável |  | Tipo | Descrição |
 | -------- |  | ---- | --------- |
@@ -1032,7 +1032,7 @@ VP EXPORT DOCUMENT("VPArea";"report.pdf";$params)
 
 #### Exemplo 3
 
-You want to export a 4D View Pro document in ".xlsx" format and call a method that will launch Microsoft Excel with the document open once the export has completed:
+Você deseja exportar um documento do 4D View Pro no formato ".xlsx" e chamar um método que iniciará o Microsoft Excel com o documento aberto após a conclusão da exportação:
 
 ```4d
  $params:=New object
@@ -1100,22 +1100,22 @@ Aqui está o resultado:
 
 #### Descrição
 
-O comando `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. You can use this command for example to store the 4D View Pro area in a 4D database object field.
+O comando `VP Export to object` <!-- REF #_method_.VP Export to object.Summary --> Retorna o objeto do 4D View Pro anexado à área do 4D View Pro *vpAreaName*<!-- END REF -->. Você pode usar esse comando, por exemplo, para armazenar a área do 4D View Pro em um campo de objeto do banco de dados 4D.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In the *options* parameter, you can pass the following export options, if required:
+No parâmetro *options* , você pode passar as seguintes opções de exportação, se necessário:
 
-| Propriedade          | Tipo       | Descrição                                                                                                                                                                                                                 |
-| -------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| includeFormatInfo    | Parâmetros | True (default) to include formatting information, false otherwise. Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to False allows reducing export time. |
-| includeBindingSource | Parâmetros | True (default) to export the current data context values as cell values in the exported object (data contexts themselves are not exported). Caso contrário, false. Cell binding is always exported.                       |
+| Propriedade          | Tipo       | Descrição                                                                                                                                                                                                                                                                         |
+| -------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| includeFormatInfo    | Parâmetros | Verdadeiro (padrão) para incluir informações de formatação; caso contrário, falso. As informações de formatação são úteis em alguns casos, por exemplo, para exportação para SVG. Por outro lado, a definição dessa propriedade como False permite reduzir o tempo de exportação. |
+| includeBindingSource | Parâmetros | True (padrão) para exportar os valores do contexto de dados atual como valores de célula no objeto exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada.                                                            |
 
 Para mais informações sobre os objectos 4D View Pro, consulte o parágrafo [objeto 4D View Pro](configuring.md#4d-view-pro-object).
 
 #### Exemplo 1
 
-You want to get the "version" property of the current 4D View Pro area:
+Você deseja obter a propriedade "version" da área atual do 4D View Pro:
 
 ```4d
 var $vpAreaObj : Object
@@ -1161,26 +1161,26 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 O comando `VP Find` <!-- REF #_method_.VP Find.Summary -->pesquisa o *rangeObj* para o *searchValue*<!-- END REF -->. Podem ser utilizados parâmetros opcionais para refinar a pesquisa e/ou substituir quaisquer resultados encontrados.
 
-In the *rangeObj* parameter, pass an object containing a range to search.
+No parâmetro *rangeObj* , passe um objeto que contenha um intervalo a ser pesquisado.
 
-The *searchValue* parameter lets you pass the text to search for within the *rangeObj*.
+O parâmetro *searchValue* permite que você passe o texto a ser pesquisado dentro do *rangeObj*.
 
-You can pass the optional *searchCondition* parameter to specify how the search is performed. As propriedades abaixo são compatíveis:
+Você pode passar o parâmetro opcional *searchCondition* para especificar como a pesquisa é realizada. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                        |
-| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| afterColumn | Integer    | The number of the column just before the starting column of the search. If the *rangeObj* is a combined range, the column number given must be from the first range. Valor por padrão: -1 (início do *rangeObj*) |
-| afterRow    | Integer    | The number of the row just before the starting row of the search. If the *rangeObj* is a combined range, the row number given must be from the first range. Valor por padrão: -1 (início do *rangeObj*)          |
-| all         | Parâmetros | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                             |
-| flags       | Integer    | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>As letras maiúsculas e minúsculas são consideradas iguais. Ex: "a" é o mesmo que "A".</td></tr><tr><td>`vk find flag none`</td><td>nenhum sinalizador de pesquisa é considerado (padrão)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>Esses marcadores podem ser combinados. Por exemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                          |
-| order       | Integer    | <table><tr><td>`vk find order by columns`</td><td>A pesquisa é efectuada por colunas. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>A pesquisa é efectuada por linhas. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                       |
-| target      | Integer    | <table><tr><td>`vk find target formula`</td><td>A pesquisa é efectuada na fórmula da célula</td></tr><tr><td>`vk find target tag`</td><td>A pesquisa é efetuada na etiqueta da célula</td></tr><tr><td>`vk find target text`</td><td>A pesquisa é efetuada no texto da célula (padrão)</td></tr></table><p>Esses marcadores podem ser combinados. Por exemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                             |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                            |
+| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| afterColumn | Integer    | O número da coluna imediatamente anterior à coluna inicial da pesquisa. Se o *rangeObj* for um intervalo combinado, o número da coluna fornecido deverá ser do primeiro intervalo. Valor padrão: -1 (início do intervalo *rangeObj*) |
+| afterRow    | Integer    | O número da linha imediatamente anterior à linha inicial da pesquisa. Se o *rangeObj* for um intervalo combinado, o número da linha fornecido deverá ser do primeiro intervalo. Valor padrão: -1 (início do intervalo *rangeObj*)    |
+| all         | Parâmetros | <li>True - Todas as células em *rangeObj* correspondentes a *searchValue* são retornadas</li><li>False - (valor padrão) Somente a primeira célula em *rangeObj* correspondente a *searchValue* é retornada</li>                                                                                                                                                                                 |
+| flags       | Integer    | <table><tr><td>`vk find flag exact match`</td><td>Todo o conteúdo da célula deve corresponder completamente ao valor da pesquisa</td></tr><tr><td>`vk find flag ignore case`</td><td>As letras maiúsculas e minúsculas são consideradas iguais. Ex: "a" é o mesmo que "A".</td></tr><tr><td>`vk find flag none`</td><td>nenhum sinalizador de pesquisa é considerado (padrão)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Caracteres curinga (\*,?) podem ser usados na cadeia de pesquisa. Os caracteres curinga podem ser usados em qualquer comparação de cadeia de caracteres para corresponder a qualquer número de caracteres:<li>\* para zero ou vários caracteres (por exemplo, a busca por "bl*" pode encontrar "bl", "black" ou "blob")</li><li>? para um único caractere (por exemplo, a busca por "h?t" pode encontrar "hot" ou "hit")</li></td></tr></table>Esses marcadores podem ser combinados. Por exemplo: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code>                                                                                                                              |
+| order       | Integer    | <table><tr><td>`vk find order by columns`</td><td>A pesquisa é efectuada por colunas. Cada linha de uma coluna é pesquisada antes que a pesquisa continue para a próxima coluna.</td></tr><tr><td>`vk find order by rows`</td><td>A pesquisa é efectuada por linhas. Cada coluna de uma linha é pesquisada antes de a pesquisa continuar para a próxima linha (padrão)</td></tr></table>                                                                                                                                                                                                           |
+| target      | Integer    | <table><tr><td>`vk find target formula`</td><td>A pesquisa é efectuada na fórmula da célula</td></tr><tr><td>`vk find target tag`</td><td>A pesquisa é efetuada na etiqueta da célula</td></tr><tr><td>`vk find target text`</td><td>A pesquisa é efetuada no texto da célula (padrão)</td></tr></table><p>Esses marcadores podem ser combinados. Por exemplo:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                 |
 
-In the optional *replaceValue* parameter, you can pass text to take the place of any instance of the text in *searchValue* found in the *rangeObj*.
+No parâmetro opcional *replaceValue* , você pode passar o texto para substituir qualquer instância do texto em *searchValue* encontrado no *rangeObj*.
 
 #### Objecto devolvido
 
-The function returns a range object describing each search value that was found or replaced. É devolvido um objeto de intervalo vazio se não forem encontrados resultados.
+A função retorna um objeto de intervalo que descreve cada valor de pesquisa que foi encontrado ou substituído. É devolvido um objeto de intervalo vazio se não forem encontrados resultados.
 
 #### Exemplo 1
 
@@ -1245,9 +1245,9 @@ End if
 
 O comando `VP Find table` <!-- REF #_method_.VP Find table.Summary -->devolve o nome da tabela à qual pertence à célula *rangeObj*<!-- END REF -->.
 
-Em *rangeObj*, passar um objeto de intervalo de células. If the designated cells do not belong to a table, the command returns an empty string.
+Em *rangeObj*, passar um objeto de intervalo de células. Se as células designadas não pertencerem a uma tabela, o comando retornará uma string vazia.
 
-If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Se *rangeObj* não for um intervalo de células ou contiver vários intervalos, será usada a primeira célula do primeiro intervalo.
 
 #### Exemplo
 
@@ -1287,11 +1287,11 @@ O comando `VP FLUSH COMMANDS` <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->ex
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In order to increase performance and reduce the number of requests sent, the 4D View Pro commands called by the developer are stored in a command buffer. When called, `VP FLUSH COMMANDS` executes the commands as a batch when leaving the method and empties the contents of the command buffer.
+Para aumentar o desempenho e reduzir o número de solicitações enviadas, os comandos do 4D View Pro chamados pelo desenvolvedor são armazenados em um buffer de comando. Quando chamado, `VP FLUSH COMMANDS` executa os comandos como um lote ao sair do método e esvazia o conteúdo do buffer de comandos.
 
 #### Exemplo
 
-You want to trace the execution of the commands and empty the command buffer:
+Você deseja rastrear a execução dos comandos e esvaziar o buffer de comandos:
 
 ```4d
 
@@ -1311,20 +1311,20 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição             |
-| ---------- | ------ | -- | --------------------- |
-| font       | Text   | -> | Font shorthand string |
-| Resultados | Object | <- | Objecto letra         |
+| Parâmetro  | Tipo   |    | Descrição                               |
+| ---------- | ------ | -- | --------------------------------------- |
+| font       | Text   | -> | Cadeia de caracteres abreviada da fonte |
+| Resultados | Object | <- | Objecto letra                           |
 <!-- END REF -->
 
 
 #### Descrição
 
-O comando utilitário `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->devolve um objeto a partir de uma cadeia de caracteres abreviada<!-- END REF -->. This object can then be used to set or get font property settings via object notation.
+O comando utilitário `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->devolve um objeto a partir de uma cadeia de caracteres abreviada<!-- END REF -->. Esse objeto pode ser usado para definir ou obter configurações de propriedade de fonte por meio de notação de objeto.
 
-In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
+No parâmetro *font* , passe uma cadeia de caracteres abreviada de fonte para especificar as diferentes propriedades de uma fonte (por exemplo, "12 pt Arial"). Você pode saber mais sobre as cadeias de caracteres abreviadas de fontes [nesta página](https://www.w3schools.com/cssref/pr_font_font.asp) , por exemplo.
 
-The returned object contains defined font attributes as properties. For more information about the available properties, see the [VP Object to font](#vp-object-to-font) command.
+O objeto retornado contém atributos de fonte definidos como propriedades. Para obter mais informações sobre as propriedades disponíveis, consulte o comando [VP Object to font](#vp-object-to-font) .
 
 #### Exemplo 1
 
@@ -1371,7 +1371,7 @@ Ver exemplo para [`VP Object to font`](#vp-object-to-font).
 
 #### Descrição
 
-O comando `VP Get active cell` <!-- REF #_method_.VP Get active cell.Summary -->returns a new range object referencing the cell which has the focus and where new data will be entered (the active cell)<!-- END REF -->.
+O comando `VP Get active cell` <!-- REF #_method_.VP Get active cell.Summary -->retorna um novo objeto de intervalo referenciando a célula que tem o foco e onde os novos dados serão inseridos (a célula ativa)<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -1422,10 +1422,10 @@ $activeCell:=VP Get active cell("myVPArea")
 
 O comando `VP Get binding path` <!-- REF #_method_.VP Get binding path.Summary -->devolve o nome do atributo ligado à célula especificada em *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note que:
+Em *rangeObj*, passe um objeto que seja um intervalo de células ou um intervalo combinado de células. Note que:
 
-* If *rangeObj* is a range with several cells, the command returns the attribute name linked to the first cell in the range.
-* If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
+* Se *rangeObj* for um intervalo com várias células, o comando retornará o nome do atributo vinculado à primeira célula do intervalo.
+* Se *rangeObj* contiver vários intervalos de células, o comando retornará o nome do atributo vinculado à primeira célula do primeiro intervalo.
 
 #### Exemplo
 
@@ -1464,11 +1464,11 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 
 O comando `VP Get cell style` <!-- REF #_method_.VP Get cell style.Summary -->devolve um [objeto estilo](configuring.md#style-objects) para a primeira célula de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range containing the style to retrieve.
+Em *rangeObj*, passe um intervalo que contenha o estilo a ser recuperado.
 
-* If *rangeObj* contains a cell range, the cell style is returned.
-* If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
-* If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
+* Se *rangeObj* contiver um intervalo de células, o estilo da célula será retornado.
+* Se *rangeObj* contiver um intervalo que não seja um intervalo de células, o estilo da primeira célula do intervalo será retornado.
+* Se *rangeObj* contiver vários intervalos, somente o estilo da primeira célula do primeiro intervalo será retornado.
 
 #### Exemplo
 
@@ -1522,9 +1522,9 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 O comando `VP Get column attributes` <!-- REF #_method_.VP Get column attributes.Summary -->devolve um conjunto de propriedades para as colunas de *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the columns whose attributes will be retrieved.
+Em *rangeObj*, passe um objeto que contenha um intervalo das colunas cujos atributos serão recuperados.
 
-The returned collection contains any properties for the columns, whether or not they have been set by the [VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes) command.
+A coleção retornada contém todas as propriedades das colunas, independentemente de terem sido definidas ou não pelo comando [VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes) .
 
 #### Exemplo
 
@@ -1567,7 +1567,7 @@ O comando `VP Get column count` <!-- REF #_method_.VP Get column count.Summary -
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+Você pode definir onde obter a contagem de colunas no parâmetro opcional *sheet* usando o índice da planilha (a contagem começa em 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Exemplo
 
@@ -1647,9 +1647,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 O comando `VP Get data context` <!-- REF #_method_.VP Get data context.Summary -->devolve o data context atual de uma folha de cálculo<!-- END REF -->. O contexto retornado inclui todas as modificações feitas no conteúdo do contexto de dados.
 
-In *sheet*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
+Em *sheet*, passe o índice da planilha para obter o contexto de dados. Se nenhum índice for passado, o comando retornará o contexto de dados da planilha atual. Se não houver contexto para a planilha, o comando retornará `Null`.
 
-The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](#vp-set-data-context).
+A função retorna um objeto ou uma coleção, dependendo do tipo de contexto de dados definido com [VP SET DATA CONTEXT](#vp-set-data-context).
 
 #### Exemplo
 
@@ -1684,11 +1684,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### Descrição
 
-O comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devolve um objeto style por padrão para uma folha<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method. For more information about style properties, see [Style Objects & Style Sheets](configuring.md#style-objects--style-sheets).
+O comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->devolve um objeto style por padrão para uma folha<!-- END REF -->. O objeto retornado contém propriedades básicas de renderização de documentos, bem como as configurações de estilo padrão (se houver) previamente definidas pelo método [VP SET DEFAULT STYLE](#vp-set-default-style) . Para obter mais informações sobre propriedades de estilo, consulte [Style Objects & Style Sheets](configuring.md#style-objects--style-sheets).
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the column count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+Você pode definir onde obter a contagem de colunas no parâmetro opcional *sheet* usando o índice da planilha (a contagem começa em 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Exemplo
 
@@ -3020,22 +3020,22 @@ An error is returned if the `filePath` parameter is invalid, or if the file is m
 
 The optional *paramObj* parameter allows you to define properties for the imported document:
 
-| Parâmetro  |                     | Tipo         | Descrição                                                                                                                                                                                                                                   |
-| ---------- | ------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                     | 4D. Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
-| senha      |                     | text         | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                         |
-| csvOptions |                     | object       | opções para importação csv                                                                                                                                                                                                                  |
-|            | range               | object       | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                               |
-|            | rowDelimiter        | text         | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                          |
-|            | columnDelimiter     | text         | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                        |
-| sjsOptions |                     | object       | options for sjs import                                                                                                                                                                                                                      |
-|            | calcOnDemand        | boolean      | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                |
-|            | dynamicReferences   | boolean      | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                    |
-|            | fullRecalc          | boolean      | Whether to calculate after loading the json data, false by default.                                                                                                                                                                         |
-|            | includeFormulas     | boolean      | Whether to include the formulas when loading, default is true.                                                                                                                                                                              |
-|            | includeStyles       | boolean      | Whether to include the styles when loading, default is true.                                                                                                                                                                                |
-|            | includeUnusedStyles | boolean      | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                           |
-|            | openMode            | integer      | <li>0 (normal): modo aberto normal, sem lazy e incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                              |
+| Parâmetro  |                     | Tipo         | Descrição                                                                                                                                                                                                                                                                         |
+| ---------- | ------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula    |                     | 4D. Function | Um método de retorno de chamada a ser iniciado quando a importação for concluída. You must use a formula returned by the [`Formula`](../API/FunctionClass.md#formula) command. Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
+| senha      |                     | text         | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                                                               |
+| csvOptions |                     | object       | opções para importação csv                                                                                                                                                                                                                                                        |
+|            | range               | object       | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                                     |
+|            | rowDelimiter        | text         | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                                                                |
+|            | columnDelimiter     | text         | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                                                              |
+| sjsOptions |                     | object       | options for sjs import                                                                                                                                                                                                                                                            |
+|            | calcOnDemand        | boolean      | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                                      |
+|            | dynamicReferences   | boolean      | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                                          |
+|            | fullRecalc          | boolean      | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                               |
+|            | includeFormulas     | boolean      | Se deve incluir as fórmulas ao carregar; o padrão é true.                                                                                                                                                                                                                         |
+|            | includeStyles       | boolean      | Se os estilos devem ser incluídos no carregamento; o padrão é true.                                                                                                                                                                                                               |
+|            | includeUnusedStyles | boolean      | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                                                 |
+|            | openMode            | integer      | <li>0 (normal): modo aberto normal, sem lazy e incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                                                                    |
 
 :::note Notas
 
@@ -4236,7 +4236,7 @@ The following property is automatically added by the command if necessary:
 | -------------- | ------- | --------------------------------------------------------------- |
 | timeoutReached | boolean | Adicionado com valor true se o tempo limite tiver sido excedido |
 
-> The offscreen area is only available during the execution of the `VP Run offscreen area` command. It will automatically be destroyed once execution has ended.
+> The offscreen area is only available during the execution of the `VP Run offscreen area` command. Ele será destruído automaticamente após o término da execução.
 
 Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 
@@ -4346,7 +4346,7 @@ $result:=VP Run offscreen area($o)
 
 O comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define uma célula específica como ativa<!-- END REF -->.
 
-Em *rangeObj*, passe um intervalo que contenha uma única célula como um objeto (ver [VP Cell](#vp-cell)). If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Em *rangeObj*, passe um intervalo que contenha uma única célula como um objeto (ver [VP Cell](#vp-cell)). Se *rangeObj* não for um intervalo de células ou contiver vários intervalos, será usada a primeira célula do primeiro intervalo.
 
 #### Exemplo
 
@@ -4459,7 +4459,7 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 O comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->liga um atributo do contexto de dados de uma folha a *rangeObj*<!-- END REF -->. Depois de definir um contexto de dados utilizando o método [SET DATA CONTEXT](#vp-set-data-context). When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
-In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
+Em *rangeObj*, passe um objeto que seja um intervalo de células ou um intervalo combinado de células.
 
 * If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 * If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
@@ -4910,7 +4910,7 @@ In *options*, you can pass an object that specifies additional options. As propr
 
 In *sheet*, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
 
-If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. For more details, refer to the description of those methods.
+If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. Para obter mais detalhes, consulte a descrição desses métodos.
 
 #### Exemplo
 
@@ -5338,7 +5338,7 @@ $panes.rowCount:=1 VP SET FROZEN PANES("ViewProArea";$panes)
 
 #### Descrição
 
-O comando `VP SET NUM VALUE` <!-- REF #_method_.VP SET NUM VALUE.Summary -->assigns a specified numeric value to a designated cell range<!-- END REF -->.
+O comando `VP SET NUM VALUE` <!-- REF #_method_.VP SET NUM VALUE.Summary -->atribui um valor numérico especificado a um intervalo de células designado<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
