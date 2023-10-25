@@ -18,7 +18,7 @@ Macros code supports [class functions](Concepts/classes.md) and [form object pro
 
 Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development.
 
-When called, a macro overrides any previously specified behaviors.
+Quando chamada, uma macro substitui qualquer comportamento especificado anteriormente.
 
 ## Exemplo prático
 
