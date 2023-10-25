@@ -1515,7 +1515,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 * in *$1.value* (any type): element value to be mapped
 * em *$2* (qualquer tipo): *param*
-* in *$N...* (any type): *paramN...*
+* em *$N...* (todos os tipos): *paramN...*
 
 *methodName* define o(s) seguinte(s) parâmetro(s):
 
@@ -2418,7 +2418,7 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 
 #### Descrição
 
-A função `.push()` <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
+A função `.push()` <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implementado no método *methodName* fornecido.
 
 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s). Este método recebe um `Object` como primeiro parâmetro ($1) e tem de definir *$1.result* como **True** para cada elemento que cumpra o teste.
 
