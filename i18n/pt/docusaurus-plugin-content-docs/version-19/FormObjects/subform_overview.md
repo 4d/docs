@@ -55,7 +55,7 @@ In this case, you must use the On Bound Variable Change form event. This event m
 
 ![](../assets/en/FormObjects/subforms2.png)
 
-The `On Bound Variable Change` form event is generated:
+O evento de formulário `On Bound Variable Change` é gerado:
 
 * as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
 * se o subformulário pertence à página formulário atual ou à página 0.
