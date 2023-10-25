@@ -540,7 +540,7 @@ Se quisermos obter uma lista de funcionários cujo salário for superior ao sal�
 
 #### Descrição
 
-A função `.contains()` <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->e false de outra forma.
+A função `.contains()` <!-- REF #EntitySelectionClass.contains().Summary -->retorna true se a referência de entidade pertencer à seleção de entidade<!-- END REF -->e false de outra forma.
 
 Em *entity*, especifique a entidade a buscar na entity selection. Se a entidade for Null, a função devolverá false.
 
