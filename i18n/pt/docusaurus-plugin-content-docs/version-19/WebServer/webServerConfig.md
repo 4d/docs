@@ -9,7 +9,7 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Localização do parâmetro                 | Scope                                               | Servidor Web a ser usado                                       |
+| Localização do parâmetro                 | Âmbito                                              | Servidor Web a ser usado                                       |
 | ---------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
 | [objeto webServer](webServerObject.md)   | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
 | `WEB SET OPTION` ou um comando `WEB XXX` | Temporário (sessão atual)                           | Servidor principal                                             |
@@ -200,7 +200,7 @@ When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabl
 
 HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
 
-> HSTS requires that HTTPS is [enabled](enable-https) on the server. [HTTP](enable-http) must also be enabled to allow client initial connections.
+> A ativação do HSTS exige que o HTTPS esteja [ativado](enable-https) no servidor. [HTTP](enable-http) must also be enabled to allow client initial connections.
 
 > You can get the current connection mode using the `WEB Is secured connection` command.
 
