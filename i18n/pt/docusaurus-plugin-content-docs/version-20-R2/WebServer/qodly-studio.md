@@ -53,7 +53,7 @@ Por padrão, o acesso a Qodly Studio não é concedido.
 
 Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
 
-To enable access to Qodly Studio, you must explicitly allow it at two levels:
+Para permitir o acesso ao Qodly Studio, você deve permiti-lo explicitamente em dois níveis:
 
 * a nível 4D (4D ou 4D Server)
 * a nível do projeto
@@ -327,7 +327,7 @@ For more information on the `SameSite` attribute, check out [this blog post](htt
 To avoid using more licenses than necessary, we recommend doing one of the following:
 
 - Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
-- Ensure the Qodly Studio and your database are reached on the same URL scheme.
+- Assegure-se de que o Qodly Studio e seu banco de dados sejam acessados no mesmo esquema de URL.
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
 
 
