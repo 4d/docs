@@ -70,7 +70,7 @@ For more information, please refer to the [`.show()` description in the Qodly do
 ### .addCSSClass()
 
 <!-- REF #WebFormItemClass.addCSSClass().Syntax -->
-**.addCSSClass**(*className* : string)<!-- END REF -->
+**.addCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 | Parâmetro | Tipo   |    | Descrição                                         |
