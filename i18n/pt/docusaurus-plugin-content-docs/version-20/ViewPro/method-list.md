@@ -1958,7 +1958,7 @@ O comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->re
 
 Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+No parâmetro opcional *sheet* , você pode designar uma planilha específica (a contagem começa em 0) cujos atributos de impressão você deseja retornar.  Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Exemplo
 
@@ -2037,9 +2037,9 @@ zoomFactor:1
 
 O comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary -->devolve um conjunto de propriedades para as linhas no *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the rows whose attributes will be retrieved.
+En *rangeObj*, passe um objeto que contenha um intervalo de linhas cujos atributos serão recuperados.
 
-The returned collection contains any properties for the rows, whether or not they have been set by the [VP SET ROW ATTRIBUTES](#vp-set-row-attributes) method.
+A coleção devolvida contém as propriedades das linhas, tenham ou não sido definidas pelo método [VP SET ROW ATTRIBUTES](#vp-set-row-attributes).
 
 #### Exemplo
 
@@ -2080,7 +2080,7 @@ O comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->devo
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the row count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+Pode definir onde obter o número de linhas no parâmetro opcional *sheet* utilizando o índice da folha (a numeração começa em 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Exemplo
 
@@ -2276,17 +2276,17 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 #### Descrição
 
-O comando `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
+O comando `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summary -->retorna um objeto que contém os atributos atuais da área *vpAreaName*<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Objeto devolvido
 
-The method returns an object containing the current values for all available sheet options. An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](#vp-set-sheet-options) method.
+O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis Um valor de uma opção pode ter sido modificado pelo usuário ou pelo  método [VP SET SHEET OPTIONS](#vp-set-sheet-options).
 
-To view the full list of the options, see [Sheet Options](configuring.md#sheet-options).
+Para ver a lista completa das opções, consulte [Folha opções](configuring.md#sheet-options).
 
 #### Exemplo
 
@@ -2327,7 +2327,7 @@ Em *sheet*, passe o índice da folha de destino. If no index is specified, the c
 
 #### Exemplo
 
-The following code checks if preview lines are displayed or hidden in the document:
+O código abaixo comprova se as linhas de visualização prévia são mostradas ou ocultadas no documento:
 
 ```4d
  var $result : Boolean
@@ -2354,22 +2354,22 @@ The following code checks if preview lines are displayed or hidden in the docume
 
 #### Descrição
 
-O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
+O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no *rangeObj*designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
+Em *rangeObj*, passe um intervalo de células fusionadas que queira recuperar. Se *rangeObj* não contiver um intervalo de células, um intervalo vazio será retornado.
 
 #### Exemplo
 
-You want to center the text for the spanned cells in this document:
+Se quiser centrar o texto das células fusionadas neste documento:
 
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans 
+// Pesquisar todos os intervalos de células 
 $range:=VP Get spans(VP All("ViewProArea"))
 
-//center text
-$style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
+//centralizar o texto
+$style:=New object("vAlign";vk vertical align center; "hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```
 
@@ -2394,13 +2394,13 @@ VP SET CELL STYLE($range;$style)
 
 #### Descrição
 
-O comando `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->returns the *styleName* style sheet object containing the property values which have been defined<!-- END REF -->.
+O comando `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->retorna o objeto de folha de estilo *styleName* que contém os valores da propriedade que foi definida<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 Em *styleName*, passe o nome da folha de estilo a obter.
 
-You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
@@ -2413,7 +2413,7 @@ O seguinte código:
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the *GreenDashDotStyle* style object from the current sheet:
+... retorna o objeto estilo *GreenDashDotStyle* da folha atual:
 
 ```4d
 {
@@ -2446,18 +2446,18 @@ borderTop:{color:green,style:10}
 
 #### Descrição
 
-O comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *sheet*<!-- END REF -->.
+O comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->retorna a coleção de objetos de folha de etilo definidos  na folha designada *sheet*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the style sheets in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
 
 #### Exemplo
 
-The following code will return a collection of all the style objects in the current sheet:
+O código abaixo retorna a coleção de todos os objetos de estilo na folha atual:
 
 ```4d
 $styles:=VP Get stylesheets("ViewProArea")
@@ -2516,14 +2516,14 @@ Nesse caso, a planilha atual usa dois objetos estilo:
 
 #### Descrição
 
-O comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
+O comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->devolve os atributos atuais da coluna especificada *column*em *tableName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
 
-The command returns an object describing the current attributes of the *column*:
+O comando retorna um objeto descrevendo os atributos atuais da  *column*:
 
 | Propriedade         | Tipo    | Descrição                                                                                                               |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -2531,9 +2531,9 @@ The command returns an object describing the current attributes of the *column*:
 | name                | text    | Nome da coluna da tabela.                                                                                               |
 | footerText          | text    | Valor do rodapé da coluna.                                                                                              |
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                                 |
+| filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                  |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Se *tableName* não for encontrado ou se o índice *column* for maior que o número de colunas, o comando retorna **null**.
 
 #### Exemplo
 
@@ -2582,9 +2582,9 @@ O comando `VP Get table column index` <!-- REF #_method_.VP Get table column ind
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *columnName*, pass the name of the table column for which you want to get the index.
+Em *columnName*, passe o nome da tabela coluna para o qual deseja o indice.
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
 
 Se *tableName* ou *columnName* não for encontrado, o comando retornará -1.
@@ -2619,13 +2619,13 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                                                         |
-| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                        |
-| tableName  | Text       | -> | Nome da tabela                                                                                    |
-| reset      | Parâmetros | -> | True to clear the dirty status from the current table, False to keep it untouched. Padrão=True    |
-| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                                          |
-| Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                                       |
+| ---------- | ---------- | -- | --------------------------------------------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                                      |
+| tableName  | Text       | -> | Nome da tabela                                                                                                  |
+| reset      | Parâmetros | -> | True para apagar o estado "dirty" da tabela atual, False para mantê-lo igual. Padrão=True                       |
+| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                                                        |
+| Resultados | Collection | <- | Coleção de objetos com todos os elementos  que foram modificados desde o último reset<!-- END REF -->
 
 
 |
@@ -2633,19 +2633,19 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 
 #### Descrição
 
-O comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+O comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->retorna uma coleção de objetos *dirty row*, contendo itens que foram modificados desde o último reset na *tableName* especificada.<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+Em *tableName*, passe o nome da tabela para a qual deseja as dirty rows. Só colunas modificadas vinculadas a um [data context](#vp-set-data-context) são levadas em consideração.
 
-By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
+Como padrão, chamar o comando vai apagar o status *dirty* da tabela atual. Para manter este estado intacto, passe `False` no parâmetro *reset*.
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
-Each *dirty row* object in the returned collection contains the following properties:
+Cada objeto *dirty row* na coleção retornada contém as propriedades abaixo:
 
 | Propriedade  | Tipo    | Descrição                             |
 | ------------ | ------- | ------------------------------------- |
@@ -2653,7 +2653,7 @@ Each *dirty row* object in the returned collection contains the following proper
 | originalItem | object  | Objeto antes da modificação           |
 | row          | integer | Índice da linha modificada            |
 
-If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+Se *tableName* não for encontrada ou se não contiver uma coluna modificada, o comando retorna uma coleção vazia.
 
 #### Exemplo
 
@@ -2702,17 +2702,17 @@ O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+No parâmetro *onlyData* pode passar uma das constantes abaixo se deseja obter apenas os dados:
 
-| Parâmetros            | Valor | Descrição                                                                         |
-| --------------------- | ----- | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
-| `vk table data range` | 1     | Obter o intervalo de células apenas para a área de dados da tabela                |
+| Parâmetros            | Valor | Descrição                                                                                     |
+| --------------------- | ----- | --------------------------------------------------------------------------------------------- |
+| `vk table full range` | 0     | Obtém o intervalo de células para a área da tabela com rodapé e cabeçalho (padrão se omitido) |
+| `vk table data range` | 1     | Obter o intervalo de células apenas para a área de dados da tabela                            |
 
 Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` command
 > A indexação começa em 0.
 
-If *tableName* is not found, the command returns **null**.
+Se*tableName* não for encontrado, o comando retorna **null**.
 
 #### Veja também
 
@@ -4096,7 +4096,7 @@ Ver exemplo em [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | row        | Integer | -> | Índice de linha                            |
 | rowCount   | Integer | -> | Número de linhas                           |
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|sheet  |Integer|->|Sheet index (folha atual, se omitida)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### Descrição
 
@@ -4767,7 +4767,7 @@ The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when
 
 > Se `VP SET CUSTOM FUNCTIONS` for chamado várias vezes para a mesma área, na mesma sessão, apenas a última chamada é tida em conta.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 In the *formulaObj* parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in *formulaObj* becomes the name of a function in the 4D View Pro area.
 
@@ -5621,11 +5621,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5802,7 +5802,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                        |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                           |
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
 
 If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
