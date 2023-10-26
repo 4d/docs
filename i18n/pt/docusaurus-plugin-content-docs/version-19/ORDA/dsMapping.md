@@ -23,7 +23,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 * Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
   * Tabelas sem chave primária
   * Tabelas com chaves primárias compostas.
-* [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
+* [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. Os atributos BLOB são retornados como Null nas entidades e não podem ser atribuídos.
 
 > ORDA mapping does not take into account:  
 > 
