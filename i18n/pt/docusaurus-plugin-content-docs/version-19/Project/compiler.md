@@ -170,7 +170,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 
 - **Variables**: Groups together process variable declarations;
 - **Interprocess Variables**: Groups together interprocess variable declarations;
-- **Arrays**: Groups together process array declarations;
+- **Arrays**: Agrupa as declarações de arrays de processos;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
 - **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`).
 
