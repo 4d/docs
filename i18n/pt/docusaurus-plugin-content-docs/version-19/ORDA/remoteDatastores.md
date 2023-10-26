@@ -33,7 +33,7 @@ Processes that manage sessions for datastore access are shown in the 4D Server a
 
 - nome: "REST Handler: \<process name\>"
 - type: type Worker Server HTTP
-- session: session name is the user name passed to the Open datastore command.
+- session: o nome da sessão é o nome de usuário passado para o comando Open datastore.
 
 In the following example, two processes are running for the same session:
 
