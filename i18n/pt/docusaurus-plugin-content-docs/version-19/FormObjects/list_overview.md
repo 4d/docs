@@ -52,7 +52,7 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 ### Suporte da @
 
-As with other object property management commands, it is possible to use the “@” character in the `ListName` parameter. Regra geral, esta sintaxe é utilizada para designar um conjunto de objetos no formulário. However, in the context of hierarchical list commands, this does not apply in every case. This syntax will have two different effects depending on the type of command:
+As with other object property management commands, it is possible to use the “@” character in the `ListName` parameter. Regra geral, esta sintaxe é utilizada para designar um conjunto de objetos no formulário. However, in the context of hierarchical list commands, this does not apply in every case. Essa sintaxe tem dois efeitos diferentes, dependendo do comando:
 
 - For commands that set properties, this syntax designates all the objects whose name corresponds (standard behavior). For example, the parameter "LH@" designates all objects of the hierarchical list type whose name begins with “LH.”
   - `DELETE FROM LIST`
