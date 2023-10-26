@@ -272,7 +272,7 @@ If 4D cannot carry out the update of the client application, the client machine 
 
 Existem muitas causas possíveis para este erro. When you get this message, it is advisable to check the following parameters first off:
 
-* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
+* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
 * **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 ### Ficheiros gerados
@@ -507,7 +507,7 @@ The connection procedure for merged client applications supports cases where the
   OR  
   If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
 * If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-* If this fails, the client application displays a connection error dialog box.
+* En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
   * If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
   * If the user clicks on the **Quit** button, the client application quits.
 * If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.
