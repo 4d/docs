@@ -169,7 +169,7 @@ If you do not specify any default home page, the `On Web Connection` database me
 
 The 4D web server implements cross-origin resource sharing (CORS) to allow specific Web pages served from another domain to access the current Web application's resources via XHR calls, e.g., using REST. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. When enabled, XHR calls (e.g. REST requests) from Web pages outside the domain can be allowed in your application (you need to define the list of allowed addresses in the CORS domain list, see CORS Settings below). In this case, if a non-allowed domain or method sends a cross site request, it is rejected with a "403 - forbidden" error response.
 
-When disabled (default), all cross site requests sent with CORS are ignored.
+Quando desativado (padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas.
 
 Para obter mais informações sobre o CORS, consulte a [página de compartilhamento de recursos entre origens](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipédia.
 
