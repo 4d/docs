@@ -5,7 +5,7 @@ title: Protocolo TLS (HTTPS)
 
 Todos los servidores 4D pueden comunicarse en modo seguro a través del protocolo TLS (Transport Layer Security):
 
-- the HTTP server
+- el servidor HTTP
 - el servidor de aplicaciones (aplicaciones de escritorio cliente-servidor)
 - el servidor SQL
 
@@ -133,7 +133,7 @@ Cuando se habilita TLS en el servidor, PFS se habilita automáticamente. Si el a
 Si utiliza una [lista de cifrado personalizada](WebServer/webServerConfig.md##cipher-list) y desea habilitar el PFS, debe comprobar que contiene entradas con algoritmos DH o ECDH (Elliptic-curve Diffie-Hellman).
 
 
-## How to get a RSA certificate? (tutorial)
+## ¿Cómo obtener un certificado RSA? (tutorial)
 
 Un servidor que funciona en modo seguro significa que necesita un certificado digital de una autoridad de certificación. Este certificado contiene diversa información, como el ID del sitio, así como la llave pública utilizada para comunicarse con el servidor. Este certificado se transmite a los clientes (por ejemplo, los navegadores web) que se conectan a este servidor. Una vez identificado y aceptado el certificado, la comunicación se realiza en modo seguro.
 > Los navegadores web sólo autorizan los certificados emitidos por una autoridad de certificación referenciada en sus propiedades.
