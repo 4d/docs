@@ -1004,7 +1004,7 @@ Ao incluir o parâmetro opcional *paramObj* , o comando permite que você use o 
 | -------- |  | ---- | --------- |
 |          |  |      |           |
 
-|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. May be returned by 4D or JavaScript.| ||.errorMessage |text| Error message. Pode ser devolvido por 4D ou JavaScript.|
+|$1|  |text| The name of the 4D View Pro object| |$2|  |text| The filepath of the exported 4D View Pro object| |$3|  |object| A reference to the command's *paramObj*| |$4|  |object| An object returned by the method with a status message| ||.success |boolean| True if export with success, False otherwise.| ||.errorCode |integer| Error code. Pode ser retornado por 4D ou JavaScript.| ||.errorMessage |text| Error message. Pode ser devolvido por 4D ou JavaScript.|
 
 #### Exemplo 1
 
@@ -1822,7 +1822,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 O comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera as fórmulas de um *rangeObj* designado<!-- END REF -->.
 
-Em *rangeObj*, passe um intervalo cuja fórmula você deseja recuperar. Se *rangeObj* designar vários intervalos, a fórmula do primeiro intervalo é devolvida If *rangeObj* does not contain any formulas, the command returns an empty string.
+Em *rangeObj*, passe um intervalo cuja fórmula você deseja recuperar. Se *rangeObj* designar vários intervalos, a fórmula do primeiro intervalo é devolvida Se *rangeObj* não contiver fórmulas, o comando retorna uma string vazia.
 
 A coleção devolvida é bidimensional:
 
@@ -1910,18 +1910,18 @@ O objeto devolvido contém, por exemplo:
 | Parâmetro  | Tipo       |    | Descrição                                                      |
 | ---------- | ---------- | -- | -------------------------------------------------------------- |
 | vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                     |
-| scope      | Number     | -> | Target scope (default= current sheet)                          |
+| scope      | Number     | -> | Escopo de destino (padrão = planilha atual)                    |
 | Resultados | Collection | <- | Nomes existentes no âmbito definido|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
+O comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->retorna uma coleção de todos  "names" definidos na planilha atual ou no escopo escolhido pelo parâmetro *scope*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the names in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Pode definir onde obter os nomes em *scope* usando o indice da planilha (contagem começa no 0) ou as constantes abaixo:
 
 * `vk current sheet`
 * `vk workbook`
@@ -1936,7 +1936,7 @@ A coleção devolvida contém um objeto por nome. As seguintes propriedades do o
 | result\[ ].formula | Text | formula                        |
 | result\[ ].comment | Text | Comentário associado ao nome   |
 
-Available properties depend on the type of the named element (named cell, named range, or named formula).
+Propriedades disponíveis dependendo do tipo de elemento nomeado (célula com nome, intervalo com nome ou fórmula com nome)
 
 #### Exemplo
 
@@ -2120,7 +2120,7 @@ $rowCount:=VP Get row count("ViewProarea")
 | ---------- | ---- | -- | -------------------------------------- |
 | vpAreaName | Text | -> | Nome da área 4D View Pro no formulário |
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
+|sheet  |Integer|->|Sheet index (folha atual, se omitida)| |Result  |Object|<-|Range object of cells|<!-- END REF -->
 
 #### Descrição
 
