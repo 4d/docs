@@ -283,7 +283,7 @@ Executing initialization or closing code is done by means of the `On Host Databa
 
 By default, all the project methods of a matrix project installed as a component are potentially visible from the host project. Em particular:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. However, it's not possible to open them in the Method editor or modify them.
+- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. No entanto, eles não podem ser abertos ou modificados no editor de métodos.
 - The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
 
 To protect the project methods of a component effectively, simply compile the matrix project and provide it in the form of a .4dz file. Quando um projeto compilado usado como uma matriz é instalado como um componente:
