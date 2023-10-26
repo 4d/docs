@@ -64,7 +64,7 @@ If one of the two levels (or both) are not enabled, access to Qodly Studio is de
 
 As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
-This setting applies to the 4D application (4D or 4D Server) on the host machine. All projects opened with that 4D application take this setting into account.
+This setting applies to the 4D application (4D or 4D Server) on the host machine. Todos os projetos abertos com essa aplicação 4D consideram essa configuração.
 
 Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application.
 
@@ -123,7 +123,7 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 ### Using project methods
 
-We recommend using class functions over project methods. Apenas as funções de classe podem ser chamadas a partir de componentes. However, you can still use your project methods in Qodly Studio in two ways:
+We recommend using class functions over project methods. Apenas as funções de classe podem ser chamadas a partir de componentes. No entanto, você ainda pode usar seus métodos projeto no Qodly Studio de duas maneiras:
 
 - You can call your methods from class functions.
 - You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
