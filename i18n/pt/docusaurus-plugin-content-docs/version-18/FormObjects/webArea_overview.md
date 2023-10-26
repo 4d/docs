@@ -177,7 +177,7 @@ The URLs handled by programming in Web areas under macOS must begin with the pro
 
 ## Acesso ao inspetor Web
 
-You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
+You can view and use a Web inspector within Web areas of your forms. O inspetor Web é um depurador fornecido pelo motor Web integrado. It allows to parse the code and the flow of information of the Web pages.
 
 ### Exibir o inspector Web
 
