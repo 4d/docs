@@ -435,7 +435,7 @@ Esta propriedade está disponível para uma coluna list box se:
 * the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
 * the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
 
-In that cases, the title of the check box can be entered using this property.
+Nesse caso, o título da caixa de seleção pode ser inserido usando essa propriedade.
 
 #### Gramática JSON
 
