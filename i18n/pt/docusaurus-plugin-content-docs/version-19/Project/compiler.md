@@ -273,7 +273,7 @@ To do this, you must surround the code to be excluded from range checking with t
 4D contém dois compiladores:
 
 - a "classic" compiler, used to compile native code for Intel/AMD processors;
-- a Silicon compiler, used to compile native code for Apple Silicon processors.
+- um compilador Silicon, para compilar código nativo para processadores Apple Silicon.
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 
