@@ -287,7 +287,7 @@ This area contains various options related to the use of 4D as a Web Services "c
 
 This page contains the options used to enable and control advanced Web features such as the REST server.
 
-### Publishing
+### Publicação
 
 #### Expor como servidor REST
 
