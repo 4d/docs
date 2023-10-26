@@ -11,7 +11,7 @@ No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das 
 Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 *   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-*   You can also create an entity using the `dataClass.new( )` method.
+*   Você também pode criar uma entidade usando o método `dataClass.new()`.
 
 Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the `entity.save( )` method.
 
