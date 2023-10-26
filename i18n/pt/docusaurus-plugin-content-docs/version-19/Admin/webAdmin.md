@@ -46,7 +46,7 @@ O item de menu vira **Stop Server** quando o servidor for lançado; selecione **
 
 ## Propriedades WebAdmin
 
-A configuração do componente `WebAdmin` é obrigatória, em particular para definir a[** chave de acesso**](#access-key). By default when the access key is not set, access via an url is not allowed.
+A configuração do componente `WebAdmin` é obrigatória, em particular para definir a[** chave de acesso**](#access-key). Por padrão, quando a chave de acesso não for estabelecida, o acesso via uma url não é permitido.
 
 Pode configurar o componente `WebAdmin` usando [Web Administration a caixa de diálogo de configurações](#settings-dialog-box) (ver abaixo).
 
