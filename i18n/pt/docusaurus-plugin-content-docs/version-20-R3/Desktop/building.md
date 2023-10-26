@@ -88,7 +88,7 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 Um ficheiro .4dz é essencialmente uma versão zipada (embalada) da pasta do projecto. A .4dz file is essentially a zipped (packed) version of the project folder. The compact and optimized size of .4dz files makes project packages easy to deploy.
 
-> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> When generating .4dz files, 4D uses a **standard** zip format by default. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
 #### Incluir pastas relacionadas
 
@@ -353,7 +353,7 @@ If 4D cannot carry out the update of the client application, the client machine 
 
 Existem muitas causas possíveis para este erro. When you get this message, it is advisable to check the following parameters first off:
 
-* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
+* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
 * **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 ### Ficheiros gerados
@@ -471,7 +471,7 @@ If there is a conflict between two different versions of the same plug-in (one l
 
 ### Anular a selecção de módulos
 
-A module is a built-in code library used by 4D to control specific features. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
+Um módulo é uma biblioteca de código integrada usada por 4D para controlar funções específicas. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
 
 > **Warning:** Deselecting a module could prevent your built application from working as expected. If you are not 100% certain that a module is never called by your application, it is recommended to keep it selected.
 
@@ -662,7 +662,7 @@ The connection procedure for merged client applications supports cases where the
    If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
 
 2. If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-3. If this fails, the client application displays a connection error dialog box.
+3. En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
 
 * If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
 * If the user clicks on the **Quit** button, the client application quits.
@@ -703,7 +703,7 @@ Pode automatizar este procedimento em grande medida utilizando os seguintes coma
 
 > You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
-Here is the scenario for updating a server or merged single-user application:
+Este é o cenário para atualizar um servidor ou aplicação mesclada usuário único:
 
 1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
 2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).
