@@ -73,7 +73,7 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 Gera um banco de dados que contém apenas código compilado.
 
-This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. For example, if you have named your application “MyProject”, 4D will create:
+This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. Por exemplo, se nomeou a sua aplicação como "MyProject", 4D irá criar:
 
 *<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
