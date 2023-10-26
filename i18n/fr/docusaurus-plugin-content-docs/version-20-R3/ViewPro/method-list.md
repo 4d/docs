@@ -250,7 +250,7 @@ Pour fusionner les cellules First quarter et Second quarter avec les deux cellul
 
 #### Description
 
-La commande `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->crée ou modifie la feuille de style *styleName* basée sur la combinaison de propriétés indiquées dans *styleObj* dans le document courant<!-- END REF -->. .
+La commande `VP ADD STYLESHEET` <!-- REF #_method_.VP ADD STYLESHEET.Summary -->crée ou modifie la feuille de style *styleName* basée sur la combinaison de propriétés indiquées dans *styleObj* dans le document courant<!-- END REF -->. Si une feuille de style ayant le même nom et le même index existe déjà dans le document, cette commande l'écrasera et le remplacera avec les nouvelles valeurs.
 
 > Les feuilles de style créées par cette commande sont sauvegardées avec le document.
 
@@ -481,7 +481,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 #### Exemple
 
-$2
+Vous souhaitez définir une plage pour la colonne ci-dessous (dans la feuille courante) :
 
 ![](../assets/en/ViewPro/cmd_vpColumn.PNG)
 
@@ -647,7 +647,7 @@ Les contenus de document sont convertis en tenant compte de leurs attributs d'af
 
 #### Résultat
 
-Collection d'objets
+La commande retourne une image au format SVG.
 
 #### Exemple
 
@@ -1201,7 +1201,7 @@ Pour plus d'informations sur les objets 4D View Pro, veuillez vous référer au 
 
 #### Exemple 1
 
-Collection de textes avec tous les noms des tables|
+Vous souhaitez lire la propriété "version" de la zone 4D View Pro courante :
 
 ```4d
 var $vpAreaObj : Object
@@ -1213,7 +1213,7 @@ $vpVersion:=$vpAreaObj.version
 
 #### Exemple 2
 
-|
+Vous souhaitez exporter la zone, en excluant les informations de formatage :
 
 ```4d
 var $vpObj : Object
@@ -2819,7 +2819,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
 > La numérotation démarre à 0.
 
-If *tableName* is not found, the command returns **null**.
+Si *tableName* n'est pas trouvé, la commande renvoie **null**.
 
 #### Voir également
 
@@ -2853,11 +2853,11 @@ If *tableName* is not found, the command returns **null**.
 
 #### Description
 
-The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+La commande `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->renvoie les valeurs des propriétés du thème actuel de la *tableName*<!-- END REF -->. Un thème de table peut être défini à l'aide de la commande [`VP CREATE TABLE`](#vp-create-table) ou [`VP SET TABLE THEME`](#vp-set-table-theme), ou via l'interface.
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
+Dans *vpAreaName*, passez le nom de la zone 4D View Pro et dans *tableName*, le nom de la table.
 
-The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme.
+La commande renvoie un objet de la classe [cs.ViewPro.TableTheme](classes.md#tabletheme) avec des propriétés et des valeurs qui décrivent le thème de table actuel.
 
 
 #### Exemple
@@ -2867,11 +2867,11 @@ The command returns a full `theme` object even if a [native SpreadJS theme](http
 ```4d
 var $param : cs.ViewPro.TableTheme
 $param:=cs.ViewPro.TableTheme.new()
-$param.theme:="dark10" //use of a native theme name
+$param.theme:="dark10" //utilisation d'un nom de thème natif
 
 VP SET TABLE THEME("ViewProArea"; "ContextTable"; $param)
 $vTheme:=VP Get table theme("ViewProArea"; "ContextTable")
-$result:=Asserted(Value type($vTheme.theme)=Is object) //true
+$result:=Asserted(Value type($vTheme.theme)=Is object) //vrai
 ```
 
 
@@ -3015,7 +3015,7 @@ La collection retournée par `VP Get values` contient une collection bidimension
  | value     | Date | Valeur dans la cellule (sauf heure)                    |
  | time      | Real | Valeur heure (en secondes) si la valeur est du type js |
 
-Objet 4D View Pro|
+Les dates ou les heures sont considérées comme un datetime et sont complétées comme suit :
 
 * valeur de type heure - la partie date est complétée comme étant le 30 décembre 1899
 * valeur de type date - la partie heure est complétée comme étant minuit (00:00:00:000)
@@ -3083,11 +3083,11 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                |
-| ---------- | ------- | -- | ---------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                    |
-| vpBlob     | 4D.Blob | -> | Blob containing a 4D View Pro document                                                                     |
-| paramObj   | Object  | -> | $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2<!-- END REF -->
+| Paramètres | Type    |    | Description                                 |
+| ---------- | ------- | -- | ------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro     |
+| vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro      |
+| paramObj   | Object  | -> | Options d'import|<!-- END REF -->
 
 |
 
@@ -3116,7 +3116,7 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 | param2     |               | 4D.Blob | The imported blob                                       |
 | param3     |               | object  | Référence au *paramObj* de la commande                  |
 | param4     |               | object  | Objet retourné par la méthode avec un message de statut |
-|            | .success      | boolean | True if import with success, False otherwise.           |
+|            | .success      | boolean | Vrai si l'import est réussi, Faux sinon.                |
 |            | .errorCode    | entier  | Code d'erreur.                                          |
 |            | .errorMessage | text    | Message d'erreur.                                       |
 
@@ -3149,11 +3149,11 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
-| Paramètres | Type   |    | Description                                                                                                |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                                                    |
-| filePath   | Text   | -> | Chemin d'accès du document                                                                                 |
-| paramObj   | Object | -> | $index:=VP Get sheet index("ViewProArea";"Total premier trimestre") //retourne 2<!-- END REF -->
+| Paramètres | Type   |    | Description                                 |
+| ---------- | ------ | -- | ------------------------------------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro     |
+| filePath   | Text   | -> | Chemin d'accès du document                  |
+| paramObj   | Object | -> | Options d'import|<!-- END REF -->
 
 |
 
@@ -3168,30 +3168,30 @@ Dans *filePath*, passez le chemin et le nom du document à importer. Les formats
 * Les documents 4D View Pro (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
 * documents texte (extension ".txt", ".csv", le document doit être en utf-8)
-* [SpreadJS documents](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extension ".sjs")
+* [Documents SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extension ".sjs")
 
 Si l'extension du document n'est pas une extension reconnue, telle que `.4vp` ou `.xslx`, le document est considéré comme un document texte. Vous devez passer un chemin d'accès complet, sauf si le document est situé au même niveau que le dossier Project, auquel cas vous pouvez simplement passer son nom.
 
-Vous souhaitez définir une plage pour toutes les cellules de la feuille courante :
+Une erreur est retournée si le paramètre `filePath` est invalide, ou si le fichier est manquant ou mal-formé.
 
-True si les lignes d'impression sont visibles, sinon False|
+Le paramètre optionnel *paramObj* vous permet de définir les propriétés du document importé :
 
-| Paramètres |                     | Type        | Description                                                                                                                                                                                                                                                    |
-| ---------- | ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                     | 4D.Function | A callback method to be launched when the import has completed. You must use a formula returned by the [`Formula`](../API/FunctionClass.md#formula) command. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. |
-| password   |                     | text        | Nom de plage existante                                                                                                                                                                                                                                         |
-| csvOptions |                     | object      | Le résultat est le suivant :                                                                                                                                                                                                                                   |
-|            | range               | object      | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                           |
-|            | rowDelimiter        | text        | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                |
-|            | columnDelimiter     | text        | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                        |
-| sjsOptions |                     | object      | options for sjs import                                                                                                                                                                                                                                         |
-|            | calcOnDemand        | boolean     | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                   |
-|            | dynamicReferences   | boolean     | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                       |
-|            | fullRecalc          | boolean     | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                            |
-|            | includeFormulas     | boolean     | Whether to include the formulas when loading, default is true.                                                                                                                                                                                                 |
-|            | includeStyles       | boolean     | Whether to include the styles when loading, default is true.                                                                                                                                                                                                   |
-|            | includeUnusedStyles | boolean     | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                              |
-|            | openMode            | entier      | <li>0 (normal): normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                                                 |
+| Paramètres |                     | Type        | Description                                                                                                                                                                                                                                                           |
+| ---------- | ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula    |                     | 4D.Function | Une méthode callback à lancer lorsque l'import est terminé. Vous devez utiliser une formule retournée par la commande [`Formula`](../API/FunctionClass.md#formula). The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. |
+| password   |                     | text        | Microsoft Excel uniquement (optionnel) - Mot de passe utilisé pour protéger un document Microsoft Excel.                                                                                                                                                              |
+| csvOptions |                     | object      | options d'import csv                                                                                                                                                                                                                                                  |
+|            | range               | object      | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                  |
+|            | rowDelimiter        | text        | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                       |
+|            | columnDelimiter     | text        | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                               |
+| sjsOptions |                     | object      | options for sjs import                                                                                                                                                                                                                                                |
+|            | calcOnDemand        | boolean     | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                          |
+|            | dynamicReferences   | boolean     | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                              |
+|            | fullRecalc          | boolean     | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                   |
+|            | includeFormulas     | boolean     | Whether to include the formulas when loading, default is true.                                                                                                                                                                                                        |
+|            | includeStyles       | boolean     | Whether to include the styles when loading, default is true.                                                                                                                                                                                                          |
+|            | includeUnusedStyles | boolean     | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                                     |
+|            | openMode            | entier      | <li>0 (normal): normal open mode, without lazy and incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                                                        |
 
 :::note Notes
 
@@ -3206,7 +3206,11 @@ True si les lignes d'impression sont visibles, sinon False|
 Vous souhaitez importer un document 4D View Pro stocké sur le disque, à l'ouverture du formulaire :
 
 ```4d
-Ajout
+C_TEXT($docPath)
+If(Form event code=On VP Ready) //La zone 4D View Pro est chargée et prête
+    $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
+    VP IMPORT DOCUMENT("VPArea";$docPath)
+End if
 ```
 
 #### Exemple 2
@@ -3223,7 +3227,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 
 #### Exemple 3
 
-Description de la fonction à afficher dans 4D View Pro
+Vous souhaitez importer un fichier `.txt` qui utilise une virgule (",") comme délimiteur :
 
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv.png)
 
@@ -3233,7 +3237,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-Collection de paramètres (dans l'ordre dans lequel ils sont définis dans la méthode).![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
+Here's the result: ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Voir également
 
@@ -3297,11 +3301,11 @@ La commande `VP INSERT COLUMNS` <!-- REF #_method_.VP INSERT COLUMNS.Summary -->
 
 Dans *rangeObj*, passez un objet plage indiquant la colonne de début (la colonne qui définit l'emplacement de la nouvelle colonne à insérer) et le nombre de colonnes à insérer. Si le nombre de colonnes à insérer est omis (non défini), une seule colonne est insérée.
 
-Définit la police.
+De nouvelles colonnes sont insérées sur la gauche, directement avant la première colonne de *rangeObj*.
 
 #### Exemple
 
-Exemple
+Pour insérer 3 colonnes avant la deuxième colonne :
 
 ```4d
 VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
@@ -4922,16 +4926,16 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| Paramètres | Type    |    | Description                                               |
-| ---------- | ------- | -- | --------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                   |
-| sheet      | Integer | <- | Index of the new current sheet|<!-- END REF -->
+| Paramètres | Type    |    | Description                                                      |
+| ---------- | ------- | -- | ---------------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                          |
+| sheet      | Integer | <- | Index de la nouvelle feuille courante|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
+La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
