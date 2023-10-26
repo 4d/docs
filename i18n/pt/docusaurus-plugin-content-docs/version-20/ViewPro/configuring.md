@@ -99,23 +99,23 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 To lock the whole sheet, you only need to set the *isProtected* property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
 
-| Propriedade       |                          | Tipo    | Descrição                                                                                                                       |
-| ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                            |
-| protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. Se null: o parâmetro protectionOptions é reposto. |
-|                   | allowSelectLockedCells   | boolean | Especifica se o usuário pode selecionar células bloqueadas, opcional. True por defeito.                                         |
-|                   | allowSelectUnlockedCells | boolean | Especifica se o usuário pode selecionar células desbloqueadas, opcional. True por defeito.                                      |
-|                   | allowSort                | boolean | Especifica se o usuário pode ordenar intervalos, opcional. Padrão é falso.                                                      |
-|                   | allowFilter              | boolean | Especifica se o usuário pode filtrar intervalos, opcional. Padrão é falso.                                                      |
-|                   | allowEditObjects         | boolean | Especifica se o usuário pode editar objetos flutuantes, opcional. Padrão é falso.                                               |
-|                   | allowResizeRows          | boolean | Especifica se o usuário pode redimensionar as linhas, opcional. Padrão é falso.                                                 |
-|                   | allowResizeColumns       | boolean | Especifica se o usuário pode redimensionar colunas, opcional. Padrão é falso.                                                   |
-|                   | allowDragInsertRows      | boolean | Specifies whether the user can perform the drag operation to insert rows, optional. Padrão é falso.                             |
-|                   | allowDragInsertColumns   | boolean | Specifies whether the user can perform the drag operation to insert columns, optional. Padrão é falso.                          |
-|                   | allowInsertRows          | boolean | Especifica se o usuário pode inserir linhas, opcional. Padrão é falso.                                                          |
-|                   | allowInsertColumns       | boolean | Especifica se o usuário pode inserir colunas, opcional. Padrão é falso.                                                         |
-|                   | allowDeleteRows          | boolean | Especifica se o usuário pode eliminar linhas, opcional. Padrão é falso.                                                         |
-|                   | allowDeleteColumns       | boolean | Especifica se o usuário pode eliminar colunas, opcional. Padrão é falso.                                                        |
+| Propriedade       |                          | Tipo    | Descrição                                                                                                           |
+| ----------------- | ------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                |
+| protectionOptions |                          | object  | Um valor que indica os elementos que os usuários podem modificar. Se null: o parâmetro protectionOptions é reposto. |
+|                   | allowSelectLockedCells   | boolean | Especifica se o usuário pode selecionar células bloqueadas, opcional. True por defeito.                             |
+|                   | allowSelectUnlockedCells | boolean | Especifica se o usuário pode selecionar células desbloqueadas, opcional. True por defeito.                          |
+|                   | allowSort                | boolean | Especifica se o usuário pode ordenar intervalos, opcional. Padrão é falso.                                          |
+|                   | allowFilter              | boolean | Especifica se o usuário pode filtrar intervalos, opcional. Padrão é falso.                                          |
+|                   | allowEditObjects         | boolean | Especifica se o usuário pode editar objetos flutuantes, opcional. Padrão é falso.                                   |
+|                   | allowResizeRows          | boolean | Especifica se o usuário pode redimensionar as linhas, opcional. Padrão é falso.                                     |
+|                   | allowResizeColumns       | boolean | Especifica se o usuário pode redimensionar colunas, opcional. Padrão é falso.                                       |
+|                   | allowDragInsertRows      | boolean | Specifies whether the user can perform the drag operation to insert rows, optional. Padrão é falso.                 |
+|                   | allowDragInsertColumns   | boolean | Specifies whether the user can perform the drag operation to insert columns, optional. Padrão é falso.              |
+|                   | allowInsertRows          | boolean | Especifica se o usuário pode inserir linhas, opcional. Padrão é falso.                                              |
+|                   | allowInsertColumns       | boolean | Especifica se o usuário pode inserir colunas, opcional. Padrão é falso.                                             |
+|                   | allowDeleteRows          | boolean | Especifica se o usuário pode eliminar linhas, opcional. Padrão é falso.                                             |
+|                   | allowDeleteColumns       | boolean | Especifica se o usuário pode eliminar colunas, opcional. Padrão é falso.                                            |
 > Todas as propriedades são opcionais.
 
 ## Formato das células
@@ -276,7 +276,7 @@ Header and footer attributes are used to specify text or images in the left, rig
 | headerRight       | text                 | O texto e o formato do cabeçalho direito nas páginas impressas.  |
 | headerRightImage  | picture &#124; text* | A imagem para a secção direita do cabeçalho.                     |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 
 ### Caracteres especiais
 
@@ -393,7 +393,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 |               | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                             |
 |               | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                                                               |
 
-\* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
+\* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 
 ## Style Objects
 
@@ -470,10 +470,10 @@ Exemplo:
 
 #### Informações sobre o estilo
 
-| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                      |
-| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | text | Define o nome do estilo                                                                                                                                                                                                                                                                        |
-| parentName  | text | Especifica o estilo em que o estilo atual se baseia. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Apenas disponível quando se utiliza uma folha de estilos. |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                                            |
+| ----------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | text | Define o nome do estilo                                                                                                                                                                                                                                                                              |
+| parentName  | text | Especifica o estilo em que o estilo atual se baseia. Values from the parent style will be applied, then any values from the current style are applied. Los cambios realizados en el estilo actual no se reflejarán en el estilo principal. Apenas disponível quando se utiliza uma folha de estilos. |
 
 ## Objeto 4D View Pro
 
@@ -496,12 +496,12 @@ The 4D View Pro form object variable is the [object](Concepts/dt_object.md) vari
 
 Contém as seguintes propriedades:
 
-| Propriedade            | Tipo de valor | Descrição                                                                                                                                                                                                                                                                                                                    |
-| ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ViewPro.area           | Text          | Nome da área 4D View Pro                                                                                                                                                                                                                                                                                                     |
-| ViewPro.callbacks      | Object        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
-| ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
-| ViewPro.events         | Object        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
-| ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                               |
-| ViewPro.inited         | Parâmetros    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
-| ViewPro.interface      | Text          | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |
+| Propriedade            | Tipo de valor | Descrição                                                                                                                                                                                                                                                                                                                   |
+| ---------------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ViewPro.area           | Text          | Nome da área 4D View Pro                                                                                                                                                                                                                                                                                                    |
+| ViewPro.callbacks      | Object        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                    |
+| ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. Esse mecanismo aumenta o desempenho ao reduzir o número de pedidos enviados. |
+| ViewPro.events         | Object        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                 |
+| ViewPro.formulaBar     | Parâmetros    | Indica se a barra de fórmulas é ou não apresentada. Disponível apenas para a interface "barra de ferramentas".                                                                                                                                                                                                              |
+| ViewPro.inited         | Parâmetros    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                          |
+| ViewPro.interface      | Text          | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                           |
