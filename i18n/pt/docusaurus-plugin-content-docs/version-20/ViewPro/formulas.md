@@ -218,7 +218,7 @@ Parameters can be passed to 4D functions that call project methods using the fol
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-These parameters are received in *methodName* in $1, $2...$N.
+Esses parâmetros são recebidos em *methodName* em $1, $2...$N.
 
 Note that the ( ) are mandatory, even if no parameters are passed:
 
@@ -235,7 +235,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
-* [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
+* [text](Concepts/dt_string.md) (convertido em uma cadeia de caracteres em 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
 * [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
 * [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
