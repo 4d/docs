@@ -2746,7 +2746,7 @@ Se*tableName* não for encontrado, o comando retorna **null**.
 
 #### Descrição
 
-O comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+O comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->retorna os valores de propriedade do tema atual na *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
 
 In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
 
@@ -2842,7 +2842,7 @@ $tables:=VP Get tables("ViewProArea")
 
 O comando `VP Get value` <!-- REF #_method_.VP Get value.Summary -->recupera um valor de célula de um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose value you want to retrieve.
+Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar.
 
 #### Objeto devolvido
 
@@ -3575,7 +3575,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 * `vk current sheet`
 * `vk workbook`
 
-> * 4D View Pro areas can only be printed with the `VP PRINT` command.
+> * As áreas do 4D View Pro só podem ser impressas com o comando `VP PRINT`.
 > * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
 > * This command is intended for individual printing by the final end user. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
 
@@ -3961,7 +3961,7 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Descrição
 
-O comando `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->deselects all cells, resulting in no current selection or visible active cell<!-- END REF -->.
+O comando `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->desmarca todas as células, de modo que não haja seleção atual ou célula ativa visível<!-- END REF -->.
 
 > A default active cell (cell A1) remains defined for 4D View Pro commands.
 
@@ -4213,7 +4213,7 @@ Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 
 #### Exemplo 1
 
-You want to create an offscreen 4D View Pro area and get the value of a cell:
+Você deseja criar uma zona fora da área da tela do 4D View Pro e ler o valor de uma célula:
 
 ```4d
 // cs. OffscreenArea class declaration Class constructor ($path : Text)
@@ -5494,7 +5494,7 @@ VP SET ROW COUNT("ViewProArea";5)
 | --------- | ---- |  | --------- |
 |           |      |  |           |
 
-|rangeObj |Object|->|Range object of cells|<!-- END REF -->
+|rangeObj |Object|->|Objeto de intervalo de células|<!-- END REF -->
 
 #### Descrição
 
