@@ -19,7 +19,7 @@ O construtor de aplicações permite-lhe:
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command,
-* or the [Build Application window](#application-builder).
+* ou a [Janela do criador de aplicações](#application-builder).
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
 
@@ -193,7 +193,7 @@ Uma aplicação cliente/servidor provém da combinação de três itens:
 
 Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).
 
-Also, the client/server application is customized and its handling simplified:
+Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 
 * To launch the server portion, the user simply double-clicks on the server application. Não é necessário selecionar a base de dados.
 * To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. Não é necessário escolher um banco de dados em uma caixa de diálogo de conexão. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
