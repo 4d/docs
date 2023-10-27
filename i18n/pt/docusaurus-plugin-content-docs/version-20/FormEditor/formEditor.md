@@ -697,7 +697,7 @@ A seleção é então colocada na nova vista:
 You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
 
 ![](../assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> A [vista atual](#before-you-begin) é mostrado em negrito.
 
 #### Seleccionar todos os objectos de uma vista
 
