@@ -214,7 +214,7 @@ Once built, a client/server application is composed of two customized parts: the
 
 > If you want to deploy a client/server application in an heterogeneous environment (client applications running on Intel/AMD and Apple Silicon machines), it is recommended to [compile the project for all processors](Project/compiler.md#compilation-target) on a macOS machine, so that all client applications will run natively.
 
-Also, the client/server application is customized and its handling simplified:
+Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 
 * To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 * To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
@@ -256,7 +256,7 @@ Embedding the project directory file allows you to deploy a client/server applic
 
 #### Permitir a ligação de clientes Silicon Mac
 
-When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. Em seguida, você pode especificar um caminho para a estrutura compilada para Apple Silicon/Intel.
 
 To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
 
