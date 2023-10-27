@@ -114,9 +114,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                        |
-| ----------- | ------------- | ------------------------------------------------------------------------ |
-| entryFilter | string        | Entry filter code or Entry filter name (filter names start with &#124; ) |
+| Nome        | Tipo de dados | Valores possíveis                                                                                  |
+| ----------- | ------------- | -------------------------------------------------------------------------------------------------- |
+| entryFilter | string        | Código do filtro de entrada ou Nome do filtro de entrada (os nomes dos filtros começam com &#124;) |
 
 #### Objectos suportados
 
