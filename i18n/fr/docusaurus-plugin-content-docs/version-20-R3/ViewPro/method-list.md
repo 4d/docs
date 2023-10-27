@@ -623,7 +623,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 La commande `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->convertit l'objet 4D View Pro *vpObject* (ou la plage *rangeObj* dans *vpObject*) en une image SVG<!-- END REF -->.
 
-entier
+Cette commande est utile, par exemple :
 
 * pour intégrer un document 4D View Pro dans un autre document, tel qu'un document 4D Write Pro
 * pour imprimer un document 4D View Pro sans le charger dans une zone 4D View Pro.
@@ -964,7 +964,7 @@ Vous pouvez préciser le format du document en incluant une extension après son
 
 Si l'extension n'est pas incluse mais que le format est spécifié dans *paramObj*, le fichier exporté aura l'extension qui correspond au format, à l'exception du format CSV (aucune extension n'est ajoutée dans ce cas).
 
-saisissez le code suivant :
+Le paramètre optionnel *paramObj* vous permet de définir plusieurs propriétés de l'objet 4D View Pro exporté et de lancer une méthode callback (ou méthode de rétro-appel) lorsque l'export est terminé.
 
 | Propriété                  | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | -------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -2413,11 +2413,11 @@ $options:=VP Get sheet options("ViewProArea")
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| Paramètres | Type    |    | Description                                                                           |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                               |
-| sheet      | Integer | <- | La commande retourne une image au format SVG.                                         |
-| Résultat   | Boolean | <- | True si les lignes d'impression sont visibles, sinon False|<!-- END REF -->
+| Paramètres | Type    |    | Description                                                                          |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                              |
+| sheet      | Integer | <- | La commande retourne une image au format SVG.                                        |
+| Résultat   | Boolean | <- | Vrai si les lignes d'impression sont visibles, sinon Faux|<!-- END REF -->
 
 |
 
@@ -2451,10 +2451,10 @@ Le code suivant permet de vérifier si les lignes d'aperçu sont visibles ou mas
 
 <!-- REF #_method_.VP Get spans.Params -->
 
-| Paramètres | Type   |    | Description                         |
-| ---------- | ------ | -- | ----------------------------------- |
-| rangeObj   | Object | -> | Objet plage                         |
-| Résultat   | Object | <- | Résultat:<!-- END REF -->
+| Paramètres | Type   |    | Description                                                                                |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------ |
+| rangeObj   | Object | -> | Objet plage                                                                                |
+| Résultat   | Object | <- | Objet de cellules fusionnées (cell spans) dans la plage définie|<!-- END REF -->
 
 |
 
@@ -2753,13 +2753,13 @@ Dans *sheet*, passez le numéro de la page cible. If no index is specified or if
 
 Each *dirty row* object in the returned collection contains the following properties:
 
-| Propriété    | Type   | Description                         |
-| ------------ | ------ | ----------------------------------- |
-| item         | object | Modified object of the modified row |
-| originalItem | object | Object before modification          |
-| row          | entier | Index of the modified row           |
+| Propriété    | Type   | Description                        |
+| ------------ | ------ | ---------------------------------- |
+| item         | object | Objet modifié de la ligne modifiée |
+| originalItem | object | Objet avant modification           |
+| row          | entier | Index de la ligne modifiée         |
 
-If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+Si *tableName* n'est pas trouvé ou s'il ne contient pas de colonne modifiée, la commande renvoie une collection vide.
 
 #### Exemple
 
@@ -2792,12 +2792,12 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Paramètres | Type    |    | Description                                              |
-| ---------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| tableName  | Text    | -> | Nom de table                                             |
-| onlyData   | Integer | -> | Objet retourné                                           |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Paramètres | Type    |    | Description                                                 |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                     |
+| tableName  | Text    | -> | Nom de table                                                |
+| onlyData   | Integer | -> | `vk table full range` (par défaut) ou `vk table data range` |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)    |
 | Résultat   | Object  | <- | Plage contenant la table|<!-- END REF -->
 
 |
@@ -2841,11 +2841,11 @@ Si *tableName* n'est pas trouvé, la commande renvoie **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Paramètres | Type                                           |    | Description                                                    |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------------------------- |
-| vpAreaName | Text                                           | -> | Nom d'objet formulaire zone 4D View Pro                        |
-| tableName  | Text                                           | -> | Nom de table                                                   |
-| Résultat   | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values|<!-- END REF -->
+| Paramètres | Type                                           |    | Description                                                                     |
+| ---------- | ---------------------------------------------- | -- | ------------------------------------------------------------------------------- |
+| vpAreaName | Text                                           | -> | Nom d'objet formulaire zone 4D View Pro                                         |
+| tableName  | Text                                           | -> | Nom de table                                                                    |
+| Résultat   | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valeurs des propriétés du thème de la table actuelle|<!-- END REF -->
 
 
 |
@@ -2862,7 +2862,7 @@ La commande renvoie un objet de la classe [cs.ViewPro.TableTheme](classes.md#tab
 
 #### Exemple
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+La commande renvoie un objet `theme` complet même si un un nom de [thème SpreadJS natif](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) a été utilisé pour définir le thème.
 
 ```4d
 var $param : cs.ViewPro.TableTheme
@@ -2895,11 +2895,11 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //vrai
 
 <!-- REF #_method_.VP Get tables.Params -->
 
-| Paramètres | Type       |    | Description                                                        |
-| ---------- | ---------- | -- | ------------------------------------------------------------------ |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                            |
-| sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)           |
-| Résultat   | Collection | <- | Vrai si la ligne est visible, sinon faux<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                   |
+| ---------- | ---------- | -- | ----------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                       |
+| sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)                      |
+| Résultat   | Collection | <- | Collection de textes avec tous les noms des tables|<!-- END REF -->
 
 |
 
@@ -2940,10 +2940,10 @@ $tables:=VP Get tables("ViewProArea")
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Paramètres | Type   |    | Description                                        |
-| ---------- | ------ | -- | -------------------------------------------------- |
-| rangeObj   | Object | -> | Objet plage                                        |
-| Résultat   | Object | <- | La commande retourne 2 :<!-- END REF -->
+| Paramètres | Type   |    | Description                                                      |
+| ---------- | ------ | -- | ---------------------------------------------------------------- |
+| rangeObj   | Object | -> | Objet plage                                                      |
+| Résultat   | Object | <- | Objet contenant une valeur de cellule|<!-- END REF -->
 
 |
 
@@ -2951,7 +2951,7 @@ $tables:=VP Get tables("ViewProArea")
 
 The `VP SET VALUE` command <!-- REF #_method_.VP Get value.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
 
-Voir également
+Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la valeur.
 
 #### Objet retourné
 
@@ -5059,39 +5059,39 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
-| Paramètres | Type       |    | Description                                              |
-| ---------- | ---------- | -- | -------------------------------------------------------- |
-| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                  |
-| dataObj    | Object     | -> | Data object to load in the data context                  |
-| dataColl   | Collection | -> | Data collection to load in the data context              |
-| options    | Object     | -> | Options supplémentaires                                  |
+| Paramètres | Type       |    | Description                                                 |
+| ---------- | ---------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Object     | -> | Nom d'objet formulaire zone 4D View Pro                     |
+| dataObj    | Object     | -> | Objet de données à charger dans le contexte de données      |
+| dataColl   | Collection | -> | Collection de données à charger dans le contexte de données |
+| options    | Object     | -> | Options supplémentaires                                     |
 | sheet      | Integer    | -> | Numéro d'indice de la feuille|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
+La commande `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->définit le contexte de données d'une feuille<!-- END REF -->. Un contexte de données est un objet ou une collection lié à une feuille de calcul et dont le contenu peut être utilisé pour remplir automatiquement les cellules de la feuille, soit en utilisant une option de génération automatique, soit la méthode [VP SET BINDING PATH](#vp-set-binding-path). En revanche, la commande [VP Get data context](#vp-get-data-context) peut renvoyer un contexte contenant des modifications apportées par l'utilisateur.
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. Images are converted to data URI schemes.
+Dans *dataObj* ou *dataColl*, transmettez un objet ou une collection contenant les données à charger dans le contexte de données. Les images sont converties en schémas URI de données.
 
-To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
+Pour passer une valeur heure dans *dataObj* ou *dataColl*, encapsulez-la dans un objet possédant les propriétés suivantes (voir [example 4](#example-4---date-and-time-syntax)):
 
 | Propriété | Type                                     | Description                                          |
 | --------- | ---------------------------------------- | ---------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Value to put in the context                          |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valeur à placer dans le contexte                     |
 | time      | Real                                     | Valeur heure (en secondes) à placer dans le contexte |
 
 Le paramètre *valueObj* est un objet qui définit la valeur et le [format](configuring.md#cell-format) à assigner à *rangeObj*. Il peut contenir les propriétés suivantes :
 
-| Propriété           | Type   | Description                                                                                                                                                                                                     |
-| ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| reset               | Object | True to reset the sheet's contents before loading the new context, False (default) otherwise.                                                                                                                   |
-| autoGenerateColumns | Object | Only used when data is a collection. True (default) to specify that columns must be generated automatically when the data context is bound. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). The first subcollection determines how many columns are created.</li></ul> |
+| Propriété           | Type   | Description                                                                                                                                                                                                                                                             |
+| ------------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reset               | Object | Vrai pour réinitialiser le contenu de la feuille avant de charger le nouveau contexte, Faux (par défaut) dans le cas contraire.                                                                                                                                         |
+| autoGenerateColumns | Object | Utilisé uniquement lorsque les données sont une collection. Vrai (par défaut) pour spécifier que les colonnes doivent être générées automatiquement lorsque le contexte de données est lié. Dans ce cas, les règles suivantes s'appliquent : <ul><li>Si *dataColl* est une collection d'objets, les noms d'attributs sont utilisés comme titres de colonnes (voir exemple 2).</li><li>Si *dataColl* contient des sous-collections de valeurs scalaires, chaque sous-collection définit les valeurs d'une ligne (voir exemple 3). La première sous-collection détermine le nombre de colonnes créées.</li></ul> |
 
-In *sheet*, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
+Dans *sheet*,, transmettez l'index de la feuille qui recevra le contexte de données. If no index is passed, the context is applied to the current sheet.
 
 If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. For more details, refer to the description of those methods.
 
