@@ -368,7 +368,7 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 :::caution Alerta
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para saber mais, veja a [descrição de .offset](#offset).
 
 :::
 
@@ -415,7 +415,7 @@ Quando esta função é executada, o ([.offset](#offset)) é colocado logo após
 
 :::caution Alerta
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. Para saber mais, veja a [descrição de .offset](#offset).
 
 :::
 
