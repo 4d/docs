@@ -14,7 +14,7 @@ Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros po
 
 Pode aceder à caixa de diálogo Parâmetros:
 
--   using the **Design > Settings...** menu option
+-   usando a opção de menu **Desenho > Parâmetros...**
 -   clicando em **Parâmetros** na barra de ferramentas 4D
 -   on 4D Server, using the **Edit > Settings...** menu option
 
