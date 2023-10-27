@@ -112,7 +112,7 @@ The `roles.json` file describes the whole security settings for the project.
 
 :::note
 
-In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. See [Architecture](../Project/architecture.md#sources) section.
+In a context other than *Qodly* (cloud), you have to create this file at the following location: `<project folder>/Project/Sources/`. Ver a seção [Arquitetura](../Project/architecture.md#sources).
 
 :::
 
