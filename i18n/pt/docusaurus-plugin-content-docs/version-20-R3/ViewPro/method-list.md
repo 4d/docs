@@ -2945,9 +2945,9 @@ O objeto devolvido conterá a propriedade `value` e em caso de um valor data js,
 Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e completado como abaixo:
 
 * valor hora - a porção da data se completa como dezembro, 30, 1899 em formato dd/MM/yyyy
-* date value - the time portion is completed as midnight in HH:mm:ss format (00:00:00)
+* valor data - a parte da hora se completa como meia noite no formato HH:mm:ss (00:00:00)
 
-If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. O comando retorna um objeto null se a célula estiver vazia.
+Se *rangeObj* contiver várias células ou vários intervalos, o valor da primeira célula é retornado. O comando retorna um objeto null se a célula estiver vazia.
 
 
 
@@ -2983,22 +2983,22 @@ End if
 
 O comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> obtém os valores do *rangeObj* designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* includes multiple ranges, only the first range is used.
+Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+A coleção retornada por `VP Get values` contém uma coleção bidimensional:
 
-* Each element of the first-level collection represents a row and contains a subcollection of values
-* Cada subcoleção contém valores de células para a linha. Os valores podem ser Inteiros, Reais, Booleanos, Texto, Null. If a value is a date or time, it is returned in an object with the following properties:
+* Cada elemento da coleção de primeiro nível representa uma linha e contém uma subcoleção de valores.
+* Cada subcoleção contém valores de células para a linha. Os valores podem ser Inteiros, Reais, Booleanos, Texto, Null. Se um valor for uma data ou hora, é retornado em um objeto com as propriedades abaixo:
 
  | Propriedade | Tipo | Descrição                                               |
  | ----------- | ---- | ------------------------------------------------------- |
  | value       | Date | Valor da célula (exceto - time)                         |
  | time        | Real | Valor hora (em segundos) se o valor for do tipo data js |
 
-Dates or times are treated as a datetime and completed as follows:
+Datas ou horas são tratadas como um datetime e são completadas da forma abaixo:
 
 * valor hora - a parte da data é preenchida como 30 de dezembro de 1899
-* date value - the time portion is completed as midnight (00:00:00:000)
+* valor data - a porção hora é completa como meia noite (00:00:00:000)
 
 #### Exemplo
 
@@ -3034,13 +3034,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 #### Descrição
 
 `VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
+retorna um objeto contendo todas as opções de workbook em *vpAreaName*<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-The returned object contains all the workbook options (default and modified ones), in the workbook.
+O objeto devolvido contém todas as opções de workbook (padrão e modificadas) no workbook.
 
-The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](#vp-set-workbook-options).
+A lista de opções de workbook está referenciada na descrição de [`VP SET WORKBOOK OPTIONS`](#vp-set-workbook-options).
 
 #### Exemplo
 
@@ -3073,7 +3073,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descrição
 
-O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
+O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa  *vpBlob* na área de 4D View Pro *vpAreaName* e substitui seu conteúdo. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
 
 Em *paramObj*, você pode passar várias propriedades:
 
@@ -5361,7 +5361,7 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 
 O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. If *rangeObj* includes multiple ranges, only the first range is used.
+In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
 The *formulasCol* is a two-dimensional collection:
 
