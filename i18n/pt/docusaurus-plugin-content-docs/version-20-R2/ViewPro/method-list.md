@@ -2758,16 +2758,16 @@ Se*tableName* não for encontrado, o comando retorna **null**.
 
 #### Descrição
 
-O comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->retorna os valores de propriedade do tema atual na *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+O comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->retorna os valores de propriedade do tema atual na *tableName*<!-- END REF -->. Um tema de uma tabela pode ser definido usando os comando [`VP CREATE TABLE`](#vp-create-table) ou [`VP SET TABLE THEME`](#vp-set-table-theme), ou através da interface.
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
+Em *vpAreaName*, passe o nome da área 4D View Pro e em *tableName*, o nome da tabela.
 
-The command returns an object of the [cs. ViewPro. TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme.
+O comando devolve um objeto da classe [cs.ViewPro.TableTheme](classes.md#tabletheme) com propriedades e valores que descrevem o tema atual da tabela.
 
 
 #### Exemplo
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+O comando devolve um objeto `tema` completo mesmo se for usado um nome de [tema SpreadJS nativo](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) para definir o tema.
 
 ```4d
 var $param : cs. ViewPro. TableTheme
@@ -2819,7 +2819,7 @@ Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` comman
 
 #### Exemplo
 
-The following code will return a collection of all the table names in the current sheet:
+O código abaixo devolverá uma coleção de todos os nomes de tabelas da folha atual:
 
 
 ```4d
@@ -2858,16 +2858,16 @@ Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar.
 
 #### Objeto devolvido
 
-The object returned will contain the `value` property, and, in case of a js date value, a `time` property:
+O objeto devolvido conterá a propriedade `value` e em caso de um valor data js, uma propriedade `time`:
 
 | Propriedade | Tipo                               | Descrição                                               |
 | ----------- | ---------------------------------- | ------------------------------------------------------- |
 | value       | Integer, Real, Boolean, Text, Date | Valor de *rangeObj* (exceto - time)                     |
 | time        | Real                               | Valor hora (em segundos) se o valor for do tipo data js |
 
-If the object returned includes a date or time, it is treated as a datetime and completed as follows:
+Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e completado como abaixo:
 
-* time value - the date portion is completed as December 30, 1899 in dd/MM/yyyy format (30/12/1899)
+* valor hora - a porção da data se completa como dezembro, 30, 1899 em formato dd/MM/yyyy
 * date value - the time portion is completed as midnight in HH:mm:ss format (00:00:00)
 
 If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. O comando retorna um objeto null se a célula estiver vazia.
