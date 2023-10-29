@@ -1984,7 +1984,7 @@ var $panesObj : Object
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
 
-Style de la ligne de bordure appliqué uniquemet aux bordures intérieures.
+L'objet retourné contient, par exemple :
 
 ![](../assets/en/ViewPro/cmd_vpGetFrozenpanes.PNG)
 
@@ -2022,11 +2022,11 @@ Le paramètre *scope* vous permet de définir l'espace de la zone dans lequel li
 
 La collection retournée contient un objet par nom. Les propriétés d'objets suivantes peuvent être retournées :
 
-| Propriété           | Type | Description                                                |
-| ------------------- | ---- | ---------------------------------------------------------- |
-| result\[ ].name    | Text | Pour lire les détails du style par défaut de ce document : |
-| result\[ ].formula | Text | formula                                                    |
-| result\[ ].comment | Text | Cette commande est utile, par exemple :                    |
+| Propriété           | Type | Description                |
+| ------------------- | ---- | -------------------------- |
+| result\[ ].name    | Text | nom de cellule ou de plage |
+| result\[ ].formula | Text | formula                    |
+| result\[ ].comment | Text | Commentaire associé au nom |
 
 Les propriétés disponibles dépendent du type d'élément nommé (cellule nommée, plage nommée ou formule nommée).
 
@@ -2050,11 +2050,11 @@ $list:=VP Get names("ViewProArea";2) //noms de la 3e feuille
 
 <!-- REF #_method_.VP Get print info.Params -->
 
-| Paramètres | Type    |    | Description                                                                                                                                                                       |
-| ---------- | ------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                                                                                                                           |
-| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                                                                                                                          |
-| Résultat   | Object  | <- | Le même code ainsi que les sélecteurs verticaux et horizontaux ont été modifiés pour afficher la même cellule en haut à droite de la zone 4D View Pro :<!-- END REF -->
+| Paramètres | Type    |    | Description                                                              |
+| ---------- | ------- | -- | ------------------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                  |
+| sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis)                 |
+| Résultat   | Object  | <- | Objet contenant les informations d'impression|<!-- END REF -->
 
 |
 
@@ -2132,10 +2132,10 @@ zoomFactor:1
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| Paramètres | Type       |    | Description                                                                                                                                                                                              |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| rangeObj   | Object     | -> | Objet plage                                                                                                                                                                                              |
-| Résultat   | Collection | <- | Vous souhaitez exporter un document 4D View Pro au format ".xlsx" et appeler une méthode qui lance Microsoft Excel avec le document ouvert une fois que l'export est terminé :<!-- END REF -->
+| Paramètres | Type       |    | Description                                                   |
+| ---------- | ---------- | -- | ------------------------------------------------------------- |
+| rangeObj   | Object     | -> | Objet plage                                                   |
+| Résultat   | Collection | <- | Collection de propriétés de lignes|<!-- END REF -->
 
 |
 
@@ -2228,7 +2228,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 ![](../assets/en/ViewPro/cmd_vpGetSelection.PNG)
 
-Exemple 2
+Le code suivant récupèrera les coordonnées de la cellule active :
 
 ```4d
 $currentSelection:=VP Get selection("myVPArea")
@@ -4676,7 +4676,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 #### Description
 
-The `VP SET BOOLEAN VALUE` command <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
+La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la valeur indiquée sera répétée dans chaque cellule.
 
