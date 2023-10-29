@@ -2984,29 +2984,29 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descrição
 
-O comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. The imported document replaces any data already inserted in the area.
+O comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa e mostra o documento designado por *filePath* na área 4D View Pro *vpAreaName*<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *filePath*, pass the path and name of the document to be imported. São suportados os seguintes formatos:
+Em *filePath*, passe o caminho de destino e o nome do documento a ser importado. São suportados os seguintes formatos:
 
 * Os documentos 4D View Pro (extensão ".4vp")
 * Microsoft Excel (extensão ".xlsx")
 
-* text documents (extension ".txt", ".csv", the document must be in utf-8)
+* documentos textos (extensão ".txt", ".csv", o documento deve ser em utf-8)
 
-If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
+Se a extensão do documento não for uma extensão conhecida, como `.4vp` ou `.xlsx`, o documento é considerado como sendo um documento texto. Deve passar uma rota completa, a não ser que o documento esteja localizado no mesmo nível que a pasta Project, em cujo caso pode passar apenas seu nome.
 
 > When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
 
-An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
+Um erro é retornado se o parâmetro `filePath` for inválido ou se o arquivo estiver faltando ou for malformado
 
-The optional *paramObj* parameter allows you to define properties for the imported document:
+O parâmetro opcional *paramObj* permite definir as propriedades do documento importado
 
 | Parâmetro  |                 | Tipo   | Descrição                                                                                                                                                                                                                                                                     |
 | ---------- | --------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | formula    |                 | object | A callback method name to be launched when the import has completed. O método deve utilizar o comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html). Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
-| senha      |                 | text   | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                                                           |
+| senha      |                 | text   | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel.                                                                                                                                                                                       |
 | csvOptions |                 | object | opções para importação csv                                                                                                                                                                                                                                                    |
 |            | range           | object | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                                 |
 |            | rowDelimiter    | text   | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                                                            |
