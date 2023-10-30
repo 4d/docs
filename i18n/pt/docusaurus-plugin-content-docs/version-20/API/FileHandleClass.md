@@ -11,6 +11,11 @@ Os objectos de manipulação de arquivos são criados com a função [`file.open
 
 Graças ao objecto padrão 4D *refcounting*, um handle de arquivo é automaticamente apagado quando deixa de ser referenciado e, por conseguinte, o objeto solicitado [`arquivo`](FileClass) é automaticamente fechado. Consequentemente, com os handles dos arquivos não precisa de se preocupar com o encerramento de documentos.
 
+:::note
+
+Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+
+:::
 
 ### Exemplo
 
