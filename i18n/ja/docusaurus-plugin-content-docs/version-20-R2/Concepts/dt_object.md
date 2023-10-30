@@ -121,13 +121,10 @@ $col:=$o.col[5] // 6
 - [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.ja.html) コマンドを使用して作成する共有オブジェクト。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。 詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 
-## オブジェクト記法の使用
 
-オブジェクト記法を使うと、トークンのチェーンを通してオブジェクトのプロパティ値にアクセスすることができます。
+## プロパティ
 
-### オブジェクトプロパティ
-
-オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
+Object notation can be used to access object property values through a chain of tokens. オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
 - "ドット" 記号を使用する方法: > object.propertyName
 
@@ -154,6 +151,8 @@ $col:=$o.col[5] // 6
 ```
 
 オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
+
+
 
 - **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの) 例:
 
@@ -187,28 +186,6 @@ $col:=$o.col[5] // 6
      myColl.length // コレクションの長さ
 ```
 
-### ポインター
-
-**注:** オブジェクトは常に参照として渡されるため、通常はポインターを使用する必要はありません。 オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
-
-ポインターを使ってオブジェクトプロパティにアクセスするには、直接オブジェクトを使用する場合と方法が似ていますが、"ドット" 記号は省略する必要があります。
-
-- オブジェクト記法によるアクセス:
-> pointerOnObject->propertyName
-
-- 大カッコを使用する方法:
-> pointerOnObject->["propertyName"]
-
-例:
-
-```4d
- var vObj : Object
- var vPtr : Pointer
- vObj:=New object
- vObj.a:=10
- vPtr:=->vObj
- x:=vPtr->a //x=10
-```
 
 ### Null 値
 
@@ -264,7 +241,7 @@ $col:=$o.col[5] // 6
      End case
 ```
 
-- 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます:
+未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます:
  - オブジェクト、コレクション、ポインター: Null
  - ピクチャー: 空のピクチャー
  - ブール: False
@@ -291,6 +268,48 @@ $col:=$o.col[5] // 6
 ```
 
 詳細については [Null と 未定義](dt_null_undefined.md) を参照ください。
+
+
+### ポインター
+
+**注:** オブジェクトは常に参照として渡されるため、通常はポインターを使用する必要はありません。 オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
+
+ポインターを使ってオブジェクトプロパティにアクセスするには、直接オブジェクトを使用する場合と方法が似ていますが、"ドット" 記号は省略する必要があります。
+
+- オブジェクト記法によるアクセス:
+> pointerOnObject->propertyName
+
+- 大カッコを使用する方法:
+> pointerOnObject->["propertyName"]
+
+例:
+
+```4d
+ var vObj : Object
+ var vPtr : Pointer
+ vObj:=New object
+ vObj.a:=10
+ vPtr:=->vObj
+ x:=vPtr->a //x=10
+```
+
+
+## Resources
+
+Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object.
+
+For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../EntityClass.md#unlock) is useless.
+
+If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. 例:
+
+```4d
+
+$doc:=WP Import document("large_novel.4wp")
+    ... // do something with $doc
+$doc:=Null  // free resources occupied by $doc
+    ... // continue execution with more free memory
+
+```
 
 ## 例題
 
@@ -333,7 +352,8 @@ $col:=$o.col[5] // 6
  $vCity:=$Emp.city // "Paris"
  $vPhone:=$Emp.phone.home // "0011223344"
 ```
-- 大カッコ [ ] を使用すると文字列を使ってプロパティにアクセスできます:
+
+- You can access properties as strings using the `[]` operator
 
 ```4d
  $Emp["city"]:="Berlin" // city プロパティを変更
