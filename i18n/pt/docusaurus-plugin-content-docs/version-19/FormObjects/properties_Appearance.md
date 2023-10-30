@@ -381,7 +381,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Há tr�
 - **Draft**: draft mode with basic document properties
 - **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
-> A propriedade Mode vista só é utilizada para a renderização no ecrã. Regarding printing settings, specific rendering rules are automatically used.
+> A propriedade Mode vista só é utilizada para a renderização no ecrã. Para os parâmetros de impressão, são usadas automaticamente regras de renderização específicas.
 
 #### Gramática JSON
 

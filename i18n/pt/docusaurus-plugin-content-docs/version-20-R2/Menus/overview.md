@@ -31,4 +31,4 @@ The Menu editor is accessed using the **Menus** button of the Toolbox.
 
 Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Cada menu pode ser anexado a uma barra de menus ou a outro menu. No segundo caso, o menu torna-se um sub-menu.
 
-4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. É possível mudar o nome das barras de menu, mas não é possível alterar os seus números. Estes números são utilizados pelos comandos da linguaje.
+4D atribui números de barra de menu sequencialmente - a barra de menu #1 aparece primeiro. É possível mudar o nome das barras de menu, mas não é possível alterar os seus números. Estes números são utilizados pelos comandos da linguaje.

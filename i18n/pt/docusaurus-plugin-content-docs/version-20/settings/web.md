@@ -34,7 +34,7 @@ Indicates whether or not the Web server will accept secure connections. See [Ena
 
 #### Porta HTTPS
 
-Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). See [HTTPS Port](../WebServer/webServerConfig.md#https-port).
+Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
 
 #### Allow database Access through 4DSYNC URLs
 
@@ -45,7 +45,7 @@ Allows you to modify the TCP/IP port number used by the Web server for secured H
 
 #### Raiz HTML predefinida
 
-Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. See [Root Folder](../WebServer/webServerConfig.md#root-folder).
+Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. Ver [Carpeta raiz](../WebServer/webServerConfig.md#root-folder).
 
 #### Página inicial predefinida
 
@@ -287,7 +287,7 @@ This area contains various options related to the use of 4D as a Web Services "c
 
 This page contains the options used to enable and control advanced Web features such as the REST server.
 
-### Publishing
+### Publicação
 
 #### Expor como servidor REST
 

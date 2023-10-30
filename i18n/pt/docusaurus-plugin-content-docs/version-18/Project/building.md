@@ -19,7 +19,7 @@ O construtor de aplicações permite-lhe:
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * either the [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html) command,
-* or the [Build Application window](#application-builder).
+* ou a [Janela do criador de aplicações](#application-builder).
 
 To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
 
@@ -193,7 +193,7 @@ Uma aplicação cliente/servidor provém da combinação de três itens:
 
 Once built, a client/server application is composed of two customized parts: the Server portion (unique) and the Client portion (to install on each client machine).
 
-Also, the client/server application is customized and its handling simplified:
+Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 
 * To launch the server portion, the user simply double-clicks on the server application. Não é necessário selecionar a base de dados.
 * To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. Não é necessário escolher um banco de dados em uma caixa de diálogo de conexão. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
@@ -272,7 +272,7 @@ If 4D cannot carry out the update of the client application, the client machine 
 
 Existem muitas causas possíveis para este erro. When you get this message, it is advisable to check the following parameters first off:
 
-* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
+* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
 * **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 ### Ficheiros gerados
@@ -466,7 +466,7 @@ This may be unsuitable if you want to duplicate a merged application intended to
 
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
-*Duplication when data linked by application name:* ![](../assets/en/Project/datalinking1.png)
+*Duplicação quando os dados são vinculados pelo nome da aplicação:* ![](../assets/en/Project/datalinking1.png)
 
 *Duplication when data linked by application path:* ![](../assets/en/Project/datalinking2.png)
 
@@ -507,7 +507,7 @@ The connection procedure for merged client applications supports cases where the
   OR  
   If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
 * If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-* If this fails, the client application displays a connection error dialog box.
+* En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
   * If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
   * If the user clicks on the **Quit** button, the client application quits.
 * If the connection is successful, the client application saves this connection information in the application's user preferences folder for future use.

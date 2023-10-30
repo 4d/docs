@@ -65,7 +65,7 @@ These three types of files contribute to the configuration of the Table Wizard, 
 
 O ficheiro modelo permite-lhe definir o seguinte:
 
-- the formula that returns an entity selection used as the table's data source,
+- a fórmula que retorna uma seleção de entidades usadas como fonte de dados para a tabela,
 - as fórmulas de interrupção (se for possível inserir uma linha de interrupção)
 - os atributos dataclass que podem ser usados como colunas da tabela,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.

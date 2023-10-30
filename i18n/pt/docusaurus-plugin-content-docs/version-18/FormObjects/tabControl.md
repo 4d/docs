@@ -63,7 +63,7 @@ You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-P
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+The command is executed when the `On Clicked` event occurs. Em seguida, você deve excluir o array quando ocorrer o evento `On Unload`.
 
 Eis um exemplo de método objeto:
 

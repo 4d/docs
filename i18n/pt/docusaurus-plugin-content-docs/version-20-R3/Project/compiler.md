@@ -177,7 +177,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 
 - **Variables**: Groups together process variable declarations;
 - **Interprocess Variables**: Groups together interprocess variable declarations;
-- **Arrays**: Groups together process array declarations;
+- **Arrays**: Agrupa as declarações de arrays de processos;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
 - **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$a;$b)`). For more information, see [`Compiler` method](../Concepts/parameters.md#compiler-method)
 
@@ -287,7 +287,7 @@ To do this, you must surround the code to be excluded from range checking with t
 4D contém dois compiladores:
 
 - a "classic" compiler, used to compile native code for Intel/AMD processors;
-- a Silicon compiler, used to compile native code for Apple Silicon processors.
+- um compilador Silicon, para compilar código nativo para processadores Apple Silicon.
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 

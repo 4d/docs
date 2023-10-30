@@ -114,9 +114,9 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados | Valores possíveis                                                        |
-| ----------- | ------------- | ------------------------------------------------------------------------ |
-| entryFilter | string        | Entry filter code or Entry filter name (filter names start with &#124; ) |
+| Nome        | Tipo de dados | Valores possíveis                                                                                  |
+| ----------- | ------------- | -------------------------------------------------------------------------------------------------- |
+| entryFilter | string        | Código do filtro de entrada ou Nome do filtro de entrada (os nomes dos filtros começam com &#124;) |
 
 #### Objectos suportados
 
@@ -261,7 +261,7 @@ This property allows setting special meaning keys (keyboard shortcuts) for [butt
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> Também é possível atribuir um atalho a um comando de menu personalizado. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 

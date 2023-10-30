@@ -225,11 +225,11 @@ Para mover um objeto em passos:
 
 When you resize a group, all the objects in the group are resized proportionally (except text areas, which are resized in steps according to their font sizes.
 
-You can ungroup a group of objects to treat them as individual objects again.
+Você pode desagrupar um grupo de objetos a qualquer momento e tratá-los novamente como objetos independentes.
 
 Um objecto activo que tenha sido agrupado deve ser desarticulado antes de se poder aceder às suas propriedades ou método. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand).
 
-O agrupamento só afeta os objetos no editor de formulários. When the form is executed, all grouped objects act as if they were ungrouped.
+O agrupamento só afeta os objetos no editor de formulários. Quando o formulário é executado, todos os objetos agrupados agem como se não estivessem agrupados.
 > It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
 
 Para agrupar objectos:
@@ -697,7 +697,7 @@ A seleção é então colocada na nova vista:
 You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
 
 ![](../assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> A [vista atual](#before-you-begin) é mostrado em negrito.
 
 #### Seleccionar todos os objectos de uma vista
 
@@ -713,7 +713,7 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 #### Mostrar ou esconder objectos de uma vista
 
-You can show or hide objects belonging to a view at any time in the form's current page. This way you can focus on certain objects when editing the form, for example.
+You can show or hide objects belonging to a view at any time in the form's current page. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
 By default, all views are shown, as indicated by the *Show/Hide* icon:
 

@@ -616,7 +616,7 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 
 :::info
 
-You can use bookmarks as markers for lines that contain an [item found by a search](#find). Neste caso, 4D adiciona automaticamente os marcadores. For more information, refer to [Bookmark all](#bookmark-all).
+You can use bookmarks as markers for lines that contain an [item found by a search](#find). Neste caso, 4D adiciona automaticamente os marcadores. Para mais informações, consulte [Marcar tudo](#bookmark-all).
 
 :::
 

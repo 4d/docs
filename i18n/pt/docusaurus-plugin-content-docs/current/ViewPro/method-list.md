@@ -1809,7 +1809,7 @@ devolverá esta informação no objeto *$defaultStyle*:
 
 O comando `VP Get formula` <!-- REF #_method_.VP Get formula.Summary -->recupera a fórmula de um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose formula you want to retrieve. If *rangeObj* designates multiple cells or multiple ranges, the formula of the first cell is returned. If *rangeObj* is a cell that does not contain a formula, the method returns an empty string.
+Em *rangeObj*, passe um intervalo cuja fórmula você deseja recuperar. Se *rangeObj* designar várias células ou vários intervalos, uma fórmula é devolvida da primeira célula. Se *rangeObj* for uma célula sem fórmula, o método devolve uma string vazia.
 
 #### Exemplo
 
@@ -1841,13 +1841,13 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 
 #### Descrição
 
-O comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
+O comando `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> retorna a fórmula e comentários correspondentes ao intervalo nomeado ou formula nomeada passada no parâmetro *name* ou **null** se não existir no escopo definido<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the named range or named formula that you want to get in *name*. Note that named ranges are returned as formulas containing absolute cell references.
+Passe o intervalo com nome ou a fórmula com nome que quiser obter em  *name*. Note que os intervalos com nome são devolvidos como fórmulas que contém referências absolutas de células.
 
-You can define where to get the formula in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Pode definir onde obter a fórmula em *scope* utilizando o índice da folha (a numeração começa em 0) ou uma das constantes abaixo:
 
 * `vk current sheet`
 * `vk workbook`
@@ -1856,10 +1856,10 @@ You can define where to get the formula in *scope* using either the sheet index 
 
 O objeto retornado contém as propriedades abaixo:
 
-| Propriedade | Tipo | Descrição                                                                                                                                   |
-| ----------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula     | Text | Text of the formula corresponding to the named formula or named range. For named ranges, the formula is a sequence of absolute coordinates. |
-| comment     | Text | Comentário correspondente à fórmula nomeada ou ao intervalo nomeado                                                                         |
+| Propriedade | Tipo | Descrição                                                                                                                                                |
+| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula     | Text | Texto da fórmula correspondente à fórmula nomeada ou intervalo nomeado. Para os intervalos nomeados, a fórmula é uma sequência de coordenadas absolutas. |
+| comment     | Text | Comentário correspondente à fórmula nomeada ou ao intervalo nomeado                                                                                      |
 
 #### Exemplo
 
@@ -1896,7 +1896,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 O comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera as fórmulas de um *rangeObj* designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* designates multiple ranges, the formula of the first range is returned. If *rangeObj* does not contain any formulas, the command returns an empty string.
+Em *rangeObj*, passe um intervalo cuja fórmula você deseja recuperar. Se *rangeObj* designar vários intervalos, a fórmula do primeiro intervalo é devolvida Se *rangeObj* não contiver fórmulas, o comando retorna uma string vazia.
 
 A coleção devolvida é bidimensional:
 
@@ -1984,18 +1984,18 @@ O objeto devolvido contém, por exemplo:
 | Parâmetro  | Tipo       |    | Descrição                                                      |
 | ---------- | ---------- | -- | -------------------------------------------------------------- |
 | vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                     |
-| scope      | Number     | -> | Target scope (default= current sheet)                          |
+| scope      | Number     | -> | Escopo de destino (padrão = planilha atual)                    |
 | Resultados | Collection | <- | Nomes existentes no âmbito definido|<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
+O comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->retorna uma coleção de todos  "names" definidos na planilha atual ou no escopo escolhido pelo parâmetro *scope*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the names in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Pode definir onde obter os nomes em *scope* usando o indice da planilha (contagem começa no 0) ou as constantes abaixo:
 
 * `vk current sheet`
 * `vk workbook`
@@ -2010,7 +2010,7 @@ A coleção devolvida contém um objeto por nome. As seguintes propriedades do o
 | result\[ ].formula | Text | formula                        |
 | result\[ ].comment | Text | Comentário associado ao nome   |
 
-Available properties depend on the type of the named element (named cell, named range, or named formula).
+Propriedades disponíveis dependendo do tipo de elemento nomeado (célula com nome, intervalo com nome ou fórmula com nome)
 
 #### Exemplo
 
@@ -2046,7 +2046,7 @@ O comando `VP Get print info` <!-- REF #_method_.VP Get print info.Summary -->re
 
 Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+No parâmetro opcional *sheet* , você pode designar uma planilha específica (a contagem começa em 0) cujos atributos de impressão você deseja retornar.  Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Exemplo
 
@@ -2125,9 +2125,9 @@ zoomFactor:1
 
 O comando `VP Get row attributes` <!-- REF #_method_.VP Get row attributes.Summary -->devolve um conjunto de propriedades para as linhas no *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the rows whose attributes will be retrieved.
+En *rangeObj*, passe um objeto que contenha um intervalo de linhas cujos atributos serão recuperados.
 
-The returned collection contains any properties for the rows, whether or not they have been set by the [VP SET ROW ATTRIBUTES](#vp-set-row-attributes) method.
+A coleção devolvida contém as propriedades das linhas, tenham ou não sido definidas pelo método [VP SET ROW ATTRIBUTES](#vp-set-row-attributes).
 
 #### Exemplo
 
@@ -2168,7 +2168,7 @@ O comando `VP Get row count` <!-- REF #_method_.VP Get row count.Summary -->devo
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the row count in the optional *sheet* parameter using the sheet index (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+Pode definir onde obter o número de linhas no parâmetro opcional *sheet* utilizando o índice da folha (a numeração começa em 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Exemplo
 
@@ -2364,17 +2364,17 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 #### Descrição
 
-O comando `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the *vpAreaName* area<!-- END REF -->.
+O comando `VP Get sheet options` <!-- REF #_method_.VP Get sheet options.Summary -->retorna um objeto que contém os atributos atuais da área *vpAreaName*<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Se for omisso ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se for omitido ou se passar `vk current sheet`, é utilizada a folha de cálculo atual.
 
 #### Objeto devolvido
 
-The method returns an object containing the current values for all available sheet options. An option value may have been modified by the user or by the [VP SET SHEET OPTIONS](#vp-set-sheet-options) method.
+O método devolve um objeto que contém os valores atuais de todas as opções de folha disponíveis Um valor de uma opção pode ter sido modificado pelo usuário ou pelo  método [VP SET SHEET OPTIONS](#vp-set-sheet-options).
 
-To view the full list of the options, see [Sheet Options](configuring.md#sheet-options).
+Para ver a lista completa das opções, consulte [Folha opções](configuring.md#sheet-options).
 
 #### Exemplo
 
@@ -2415,7 +2415,7 @@ Em *sheet*, passe o índice da folha de destino. If no index is specified, the c
 
 #### Exemplo
 
-The following code checks if preview lines are displayed or hidden in the document:
+O código abaixo comprova se as linhas de visualização prévia são mostradas ou ocultadas no documento:
 
 ```4d
  var $result : Boolean
@@ -2442,22 +2442,22 @@ The following code checks if preview lines are displayed or hidden in the docume
 
 #### Descrição
 
-O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
+O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no *rangeObj*designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
+Em *rangeObj*, passe um intervalo de células fusionadas que queira recuperar. Se *rangeObj* não contiver um intervalo de células, um intervalo vazio será retornado.
 
 #### Exemplo
 
-You want to center the text for the spanned cells in this document:
+Se quiser centrar o texto das células fusionadas neste documento:
 
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans 
+// Pesquisar todos os intervalos de células 
 $range:=VP Get spans(VP All("ViewProArea"))
 
-//center text
-$style:=New object("vAlign";vk vertical align center;"hAlign";vk horizontal align center)
+//centralizar o texto
+$style:=New object("vAlign";vk vertical align center; "hAlign";vk horizontal align center)
 VP SET CELL STYLE($range;$style)
 ```
 
@@ -2482,13 +2482,13 @@ VP SET CELL STYLE($range;$style)
 
 #### Descrição
 
-O comando `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->returns the *styleName* style sheet object containing the property values which have been defined<!-- END REF -->.
+O comando `VP Get stylesheet` <!-- REF #_method_.VP Get stylesheet.Summary -->retorna o objeto de folha de estilo *styleName* que contém os valores da propriedade que foi definida<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 Em *styleName*, passe o nome da folha de estilo a obter.
 
-You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
@@ -2501,7 +2501,7 @@ O seguinte código:
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the *GreenDashDotStyle* style object from the current sheet:
+... retorna o objeto estilo *GreenDashDotStyle* da folha atual:
 
 ```4d
 {
@@ -2534,18 +2534,18 @@ borderTop:{color:green,style:10}
 
 #### Descrição
 
-O comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *sheet*<!-- END REF -->.
+O comando `VP Get stylesheets` <!-- REF #_method_.VP Get stylesheets.Summary -->retorna a coleção de objetos de folha de etilo definidos  na folha designada *sheet*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-You can define where to get the style sheets in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
+Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
 
 #### Exemplo
 
-The following code will return a collection of all the style objects in the current sheet:
+O código abaixo retorna a coleção de todos os objetos de estilo na folha atual:
 
 ```4d
 $styles:=VP Get stylesheets("ViewProArea")
@@ -2604,14 +2604,14 @@ Nesse caso, a planilha atual usa dois objetos estilo:
 
 #### Descrição
 
-O comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
+O comando `VP Get table column attributes` <!-- REF #_method_.VP Get table column attributes.Summary -->devolve os atributos atuais da coluna especificada *column*em *tableName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
 
-The command returns an object describing the current attributes of the *column*:
+O comando retorna um objeto descrevendo os atributos atuais da  *column*:
 
 | Propriedade         | Tipo    | Descrição                                                                                                               |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -2619,9 +2619,9 @@ The command returns an object describing the current attributes of the *column*:
 | name                | text    | Nome da coluna da tabela.                                                                                               |
 | footerText          | text    | Valor do rodapé da coluna.                                                                                              |
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                            |
-| filterButtonVisible | boolean | True if the table column's filter button is displayed, False otherwise.                                                 |
+| filterButtonVisible | boolean | True se o botão de filtro da coluna da tabela for exibido, senão False                                                  |
 
-If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**.
+Se *tableName* não for encontrado ou se o índice *column* for maior que o número de colunas, o comando retorna **null**.
 
 #### Exemplo
 
@@ -2670,9 +2670,9 @@ O comando `VP Get table column index` <!-- REF #_method_.VP Get table column ind
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *columnName*, pass the name of the table column for which you want to get the index.
+Em *columnName*, passe o nome da tabela coluna para o qual deseja o indice.
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
 
 Se *tableName* ou *columnName* não for encontrado, o comando retornará -1.
@@ -2707,13 +2707,13 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                                                                                         |
-| ---------- | ---------- | -- | ------------------------------------------------------------------------------------------------- |
-| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                        |
-| tableName  | Text       | -> | Nome da tabela                                                                                    |
-| reset      | Parâmetros | -> | True to clear the dirty status from the current table, False to keep it untouched. Padrão=True    |
-| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                                          |
-| Resultados | Collection | <- | Collection of objects with all the items modified since the last reset|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                                       |
+| ---------- | ---------- | -- | --------------------------------------------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                                                                      |
+| tableName  | Text       | -> | Nome da tabela                                                                                                  |
+| reset      | Parâmetros | -> | True para apagar o estado "dirty" da tabela atual, False para mantê-lo igual. Padrão=True                       |
+| sheet      | Integer    | -> | Índice da folha (folha atual se omitida)                                                                        |
+| Resultados | Collection | <- | Coleção de objetos com todos os elementos  que foram modificados desde o último reset<!-- END REF -->
 
 
 |
@@ -2721,19 +2721,19 @@ $id:=VP Get table column index($area; $tableName; "Weight price")
 
 #### Descrição
 
-O comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->returns a collection of *dirty row* objects, containing items that were modified since the last reset in the specified *tableName*<!-- END REF -->.
+O comando `VP Get table dirty rows` <!-- REF #_method_.VP Get table dirty rows.Summary -->retorna uma coleção de objetos *dirty row*, contendo itens que foram modificados desde o último reset na *tableName* especificada.<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *tableName*, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+Em *tableName*, passe o nome da tabela para a qual deseja as dirty rows. Só colunas modificadas vinculadas a um [data context](#vp-set-data-context) são levadas em consideração.
 
-By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
+Como padrão, chamar o comando vai apagar o status *dirty* da tabela atual. Para manter este estado intacto, passe `False` no parâmetro *reset*.
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 
 > A indexação começa em 0.
 
-Each *dirty row* object in the returned collection contains the following properties:
+Cada objeto *dirty row* na coleção retornada contém as propriedades abaixo:
 
 | Propriedade  | Tipo    | Descrição                             |
 | ------------ | ------- | ------------------------------------- |
@@ -2741,7 +2741,7 @@ Each *dirty row* object in the returned collection contains the following proper
 | originalItem | object  | Objeto antes da modificação           |
 | row          | integer | Índice da linha modificada            |
 
-If *tableName* is not found or if it does not contain a modified column, the command returns an empty collection.
+Se *tableName* não for encontrada ou se não contiver uma coluna modificada, o comando retorna uma coleção vazia.
 
 #### Exemplo
 
@@ -2790,18 +2790,18 @@ O comando `VP Get table range` <!-- REF #_method_.VP Get table range.Summary -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+No parâmetro *onlyData* pode passar uma das constantes abaixo se deseja obter apenas os dados:
 
-| Parâmetros            | Valor | Descrição                                                                         |
-| --------------------- | ----- | --------------------------------------------------------------------------------- |
-| `vk table full range` | 0     | Get the cell range for the table area with footer and header (default if omitted) |
+| Parâmetros            | Valor | Descrição                                                                                     |
+| --------------------- | ----- | --------------------------------------------------------------------------------------------- |
+| `vk table full range` | 0     | Obtém o intervalo de células para a área da tabela com rodapé e cabeçalho (padrão se omitido) |
 
-|`vk table data range`|1|Get the cell range for the table data area only|
+|`vk table data range`|1|Obter o intervalo de células somente para a área de dados da tabela|
 
 Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` command
 > A indexação começa em 0.
 
-If *tableName* is not found, the command returns **null**.
+Se*tableName* não for encontrado, o comando retorna **null**.
 
 #### Veja também
 
@@ -2835,16 +2835,16 @@ If *tableName* is not found, the command returns **null**.
 
 #### Descrição
 
-O comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the *tableName*<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
+O comando `VP Get table theme` <!-- REF #_method_.VP Get table theme.Summary -->retorna os valores de propriedade do tema atual na *tableName*<!-- END REF -->. Um tema de uma tabela pode ser definido usando os comando [`VP CREATE TABLE`](#vp-create-table) ou [`VP SET TABLE THEME`](#vp-set-table-theme), ou através da interface.
 
-In *vpAreaName*, pass the name of the 4D View Pro area and in *tableName*, the name of the table.
+Em *vpAreaName*, passe o nome da área 4D View Pro e em *tableName*, o nome da tabela.
 
-The command returns an object of the [cs. ViewPro. TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme.
+O comando devolve um objeto da classe [cs.ViewPro.TableTheme](classes.md#tabletheme) com propriedades e valores que descrevem o tema atual da tabela.
 
 
 #### Exemplo
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+O comando devolve um objeto `tema` completo mesmo se for usado um nome de [tema SpreadJS nativo](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) para definir o tema.
 
 ```4d
 var $param : cs. ViewPro. TableTheme
@@ -2896,7 +2896,7 @@ Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` comman
 
 #### Exemplo
 
-The following code will return a collection of all the table names in the current sheet:
+O código abaixo devolverá uma coleção de todos os nomes de tabelas da folha atual:
 
 
 ```4d
@@ -2931,23 +2931,23 @@ $tables:=VP Get tables("ViewProArea")
 
 O comando `VP Get value` <!-- REF #_method_.VP Get value.Summary -->recupera um valor de célula de um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose value you want to retrieve.
+Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar.
 
 #### Objeto devolvido
 
-The object returned will contain the `value` property, and, in case of a js date value, a `time` property:
+O objeto devolvido conterá a propriedade `value` e em caso de um valor data js, uma propriedade `time`:
 
 | Propriedade | Tipo                               | Descrição                                               |
 | ----------- | ---------------------------------- | ------------------------------------------------------- |
 | value       | Integer, Real, Boolean, Text, Date | Valor de *rangeObj* (exceto - time)                     |
-| time        | Real                               | Valor hora (em segundos) se o valor for do tipo data js |
+| time        | Real                               | Valor hora (em segundos) se o valor for do tipo date js |
 
-If the object returned includes a date or time, it is treated as a datetime and completed as follows:
+Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e completado como abaixo:
 
-* time value - the date portion is completed as December 30, 1899 in dd/MM/yyyy format (30/12/1899)
-* date value - the time portion is completed as midnight in HH:mm:ss format (00:00:00)
+* valor hora - a porção da data se completa como dezembro, 30, 1899 em formato dd/MM/yyyy
+* valor data - a parte da hora se completa como meia noite no formato HH:mm:ss (00:00:00)
 
-If *rangeObj* contains multiple cells or multiple ranges, the value of the first cell is returned. O comando retorna um objeto null se a célula estiver vazia.
+Se *rangeObj* contiver várias células ou vários intervalos, o valor da primeira célula é retornado. O comando retorna um objeto null se a célula estiver vazia.
 
 
 
@@ -2983,22 +2983,22 @@ End if
 
 O comando `VP Get values` <!-- REF #_method_.VP Get values.Summary --> obtém os valores do *rangeObj* designado<!-- END REF -->.
 
-In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* includes multiple ranges, only the first range is used.
+Em *rangeObj*, passe um intervalo cujo valor você deseja recuperar. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+A coleção retornada por `VP Get values` contém uma coleção bidimensional:
 
-* Each element of the first-level collection represents a row and contains a subcollection of values
-* Cada subcoleção contém valores de células para a linha. Os valores podem ser Inteiros, Reais, Booleanos, Texto, Null. If a value is a date or time, it is returned in an object with the following properties:
+* Cada elemento da coleção de primeiro nível representa uma linha e contém uma subcoleção de valores.
+* Cada subcoleção contém valores de células para a linha. Os valores podem ser Inteiros, Reais, Booleanos, Texto, Null. Se um valor for uma data ou hora, é retornado em um objeto com as propriedades abaixo:
 
  | Propriedade | Tipo | Descrição                                               |
  | ----------- | ---- | ------------------------------------------------------- |
  | value       | Date | Valor da célula (exceto - time)                         |
  | time        | Real | Valor hora (em segundos) se o valor for do tipo data js |
 
-Dates or times are treated as a datetime and completed as follows:
+Datas ou horas são tratadas como um datetime e são completadas da forma abaixo:
 
 * valor hora - a parte da data é preenchida como 30 de dezembro de 1899
-* date value - the time portion is completed as midnight (00:00:00:000)
+* valor data - a porção hora é completa como meia noite (00:00:00:000)
 
 #### Exemplo
 
@@ -3031,13 +3031,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 #### Descrição
 
 `VP Get workbook options` <!-- REF #_method_.Get workbook options.Summary -->
-returns an object containing all the workbook options in *vpAreaName*<!-- END REF -->
+retorna um objeto contendo todas as opções de workbook em *vpAreaName*<!-- END REF -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-The returned object contains all the workbook options (default and modified ones), in the workbook.
+O objeto devolvido contém todas as opções de workbook (padrão e modificadas) no workbook.
 
-The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](#vp-set-workbook-options).
+A lista de opções de workbook está referenciada na descrição de [`VP SET WORKBOOK OPTIONS`](#vp-set-workbook-options).
 
 #### Exemplo
 
@@ -3070,20 +3070,20 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descrição
 
-O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
+O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa  *vpBlob* na área de 4D View Pro *vpAreaName* e substitui seu conteúdo. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
 
 Em *paramObj*, você pode passar várias propriedades:
 
-| Propriedade         | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D. Function | Callback method to be launched when the import has completed.                                                                                                                                                                                                                                                                                                                                                                                                             |
-| calcOnDemand        | Parâmetros   | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| dynamicReferences   | Parâmetros   | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                                      |
-| fullRecalc          | Parâmetros   | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| includeFormulas     | Parâmetros   | Se deve incluir a fórmula ao carregar, padrão=true.                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| includeUnusedStyles | Parâmetros   | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                                             |
-| openMode            | Integer      | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
+| Propriedade         | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D. Function | Método de retorno de chamada a ser iniciado quando a importação for concluída.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| calcOnDemand        | Parâmetros   | Se as fórmulas devem ser calculadas somente quando forem exigidas; padrão=falso.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| dynamicReferences   | Parâmetros   | Se deve calcular funções com referência dinâmica; padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| fullRecalc          | Parâmetros   | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| includeFormulas     | Parâmetros   | Se deve incluir a fórmula ao carregar, padrão=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| includeUnusedStyles | Parâmetros   | Se deve incluir o estilo de nome não utilizado ao converter o xml do Excel para o json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| openMode            | Integer      | pode ser: <br/>0: modo aberto normal, sem lazy e incremental. Ao abrir o documento, a interface do usuário e o evento da interface do usuário podem ser atualizados e responsivos em momentos específicos. <br/>1: modo aberto preguiçoso. Quando abrir o documento, só a folha ativa será carregada diretamente. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. Quando abrir o documento, UI e evento UI poderiam ser recarregados e diretamente responsivos. |
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
@@ -3100,7 +3100,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
 #### Exemplo
 
-You want to import into the "ViewProArea" a 4D View Pro document previously saved as Blob in the first entity of the Table dataclass.
+Você deseja importar para a "ViewProArea" um documento 4D View Pro salvo anteriormente como Blob na primeira entidade da classe de dados Table.
 
 ```4d
 var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
@@ -3136,39 +3136,39 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 
 #### Descrição
 
-O comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->imports and displays the document designated by *filePath* in the 4D View Pro area *vpAreaName*<!-- END REF -->. The imported document replaces any data already inserted in the area.
+O comando `VP IMPORT DOCUMENT` <!-- REF #_method_.VP IMPORT DOCUMENT.Summary -->importa e mostra o documento designado por *filePath* na área 4D View Pro *vpAreaName*<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In *filePath*, pass the path and name of the document to be imported. São suportados os seguintes formatos:
+Em *filePath*, passe o caminho de destino e o nome do documento a ser importado. São suportados os seguintes formatos:
 
 * Os documentos 4D View Pro (extensão ".4vp")
 * Microsoft Excel (extensão ".xlsx")
-* text documents (extension ".txt", ".csv", the document must be in utf-8)
-* [SpreadJS documents](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extension ".sjs")
+* documentos textos (extensão ".txt", ".csv", o documento deve ser em utf-8)
+* [Documentos SpreadJS](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extensión ".sjs")
 
-If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
+Se a extensão do documento não for uma extensão conhecida, como `.4vp` ou `.xlsx`, o documento é considerado como sendo um documento texto. Deve passar uma rota completa, a não ser que o documento esteja localizado no mesmo nível que a pasta Project, em cujo caso pode passar apenas seu nome.
 
-An error is returned if the `filePath` parameter is invalid, or if the file is missing or malformed.
+Um erro é retornado se o parâmetro `filePath` for inválido ou se o arquivo estiver faltando ou for malformado
 
-The optional *paramObj* parameter allows you to define properties for the imported document:
+O parâmetro opcional *paramObj* permite definir as propriedades do documento importado
 
-| Parâmetro  |                     | Tipo         | Descrição                                                                                                                                                                                                                                                                         |
-| ---------- | ------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                     | 4D. Function | Um método de retorno de chamada a ser iniciado quando a importação for concluída. You must use a formula returned by the [`Formula`](../API/FunctionClass.md#formula) command. Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
-| senha      |                     | text         | Microsoft Excel only (optional) - The password used to protect a MS Excel document.                                                                                                                                                                                               |
-| csvOptions |                     | object       | opções para importação csv                                                                                                                                                                                                                                                        |
-|            | range               | object       | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                                     |
-|            | rowDelimiter        | text         | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                                                                |
-|            | columnDelimiter     | text         | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                                                              |
-| sjsOptions |                     | object       | options for sjs import                                                                                                                                                                                                                                                            |
-|            | calcOnDemand        | boolean      | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                                      |
-|            | dynamicReferences   | boolean      | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                                          |
-|            | fullRecalc          | boolean      | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                               |
-|            | includeFormulas     | boolean      | Se deve incluir as fórmulas ao carregar; o padrão é true.                                                                                                                                                                                                                         |
-|            | includeStyles       | boolean      | Se os estilos devem ser incluídos no carregamento; o padrão é true.                                                                                                                                                                                                               |
-|            | includeUnusedStyles | boolean      | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                                                 |
-|            | openMode            | integer      | <li>0 (normal): modo aberto normal, sem lazy e incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                                                                    |
+| Parâmetro  |                     | Tipo         | Descrição                                                                                                                                                                                                                                                                               |
+| ---------- | ------------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula    |                     | 4D. Function | Um método de retorno de chamada a ser iniciado quando a importação for concluída. Deve usar uma fórmula retornado pelo comando [`Formula`](../API/FunctionClass.md#formula) command. Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
+| senha      |                     | text         | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel.                                                                                                                                                                                                 |
+| csvOptions |                     | object       | opções para importação csv                                                                                                                                                                                                                                                              |
+|            | range               | object       | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                                           |
+|            | rowDelimiter        | text         | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                                                                      |
+|            | columnDelimiter     | text         | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                                                                    |
+| sjsOptions |                     | object       | options for sjs import                                                                                                                                                                                                                                                                  |
+|            | calcOnDemand        | boolean      | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                                            |
+|            | dynamicReferences   | boolean      | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                                                |
+|            | fullRecalc          | boolean      | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                           |
+|            | includeFormulas     | boolean      | Se deve incluir as fórmulas ao carregar; o padrão é true.                                                                                                                                                                                                                               |
+|            | includeStyles       | boolean      | Se os estilos devem ser incluídos no carregamento; o padrão é true.                                                                                                                                                                                                                     |
+|            | includeUnusedStyles | boolean      | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                                                       |
+|            | openMode            | integer      | <li>0 (normal): modo aberto normal, sem lazy e incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                                                                          |
 
 :::note Notas
 
@@ -3743,7 +3743,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 * `vk current sheet`
 * `vk workbook`
 
-> * 4D View Pro areas can only be printed with the `VP PRINT` command.
+> * As áreas do 4D View Pro só podem ser impressas com o comando `VP PRINT`.
 > * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
 > * This command is intended for individual printing by the final end user. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
 
@@ -4129,7 +4129,7 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Descrição
 
-O comando `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->deselects all cells, resulting in no current selection or visible active cell<!-- END REF -->.
+O comando `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->desmarca todas as células, de modo que não haja seleção atual ou célula ativa visível<!-- END REF -->.
 
 > A default active cell (cell A1) remains defined for 4D View Pro commands.
 
@@ -4264,7 +4264,7 @@ Ver exemplo em [VP SUSPEND COMPUTING](#vp-suspend-computing).
 | row        | Integer | -> | Índice de linha                            |
 | rowCount   | Integer | -> | Número de linhas                           |
 
-|sheet  |Integer|->|Sheet index (current sheet if omitted)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
+|sheet  |Integer|->|Sheet index (folha atual, se omitida)| |Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### Descrição
 
@@ -4381,7 +4381,7 @@ Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 
 #### Exemplo 1
 
-You want to create an offscreen 4D View Pro area and get the value of a cell:
+Você deseja criar uma zona fora da área da tela do 4D View Pro e ler o valor de uma célula:
 
 ```4d
 // cs. OffscreenArea class declaration Class constructor ($path : Text)
@@ -4936,7 +4936,7 @@ The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when
 
 > Se `VP SET CUSTOM FUNCTIONS` for chamado várias vezes para a mesma área, na mesma sessão, apenas a última chamada é tida em conta.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 In the *formulaObj* parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in *formulaObj* becomes the name of a function in the 4D View Pro area.
 
@@ -5362,7 +5362,7 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 
 O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. If *rangeObj* includes multiple ranges, only the first range is used.
+In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
 The *formulasCol* is a two-dimensional collection:
 
@@ -5797,11 +5797,11 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 O comando `VP SET SHEET OPTIONS` <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
 Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5979,7 +5979,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Fórmula do rodapé da coluna.                                                                                                                                                        |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                           |
 
-Em *sheet*, passe o índice da folha de destino. If no index is specified or if you pass -1, the command applies to the current sheet.
+Em *sheet*, passe o índice da folha de destino. Se nenhum indice for especcificado ou se passar -1, o comando se aplica a folha atual.
 > A indexação começa em 0.
 
 If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.

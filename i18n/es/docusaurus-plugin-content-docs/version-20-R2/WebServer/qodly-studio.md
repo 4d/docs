@@ -30,7 +30,7 @@ The use of Qodly Studio in 4D requires a specific license. Qodly Studio options 
 
 ### Requisitos
 
-#### Browser
+#### Navegador
 
 Qodly Studio supports the following web browsers:
 

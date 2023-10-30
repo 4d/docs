@@ -1097,7 +1097,7 @@ Para uma descrição do formato do registo de petições ORDA, consulte a secç�
 
 #### Do lado do cliente
 
-Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. The log can be sent to a file or to memory, depending on the parameter type:
+Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. O registro pode ser enviado para um arquivo ou para a memória, dependendo do parâmetro:
 
 * Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON

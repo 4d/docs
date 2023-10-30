@@ -204,7 +204,7 @@ Aqui é o parâmetro não for o campo, mas sim um ponteiro ao mesmo. Portanto, d
  ALERT($0)
 ```
 
-Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). This is described in the [Functions](#functions) paragraph.
+Esta segunda técnica de retornar um valor por uma subrotina se chama " utilizar uma função" É descrita no parágrafo [Funções](#functions). Isso é descrito no parágrafo [Funções](#functions).
 
 
 ### Casos particulares: objetos e coleções

@@ -10,7 +10,7 @@ title: On URL Loading Error
 
 ## Descrição
 
-This event is generated when an error is detected during the loading of a URL.
+Esse evento é gerado quando um erro é detectado durante o carregamento de um URL.
 
 You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
 
