@@ -11,6 +11,12 @@ Los objetos manejadores de archivos se crean con la función [`file.open()`](Fil
 
 Gracias al objeto estándar 4D *refcounting*, un manejador de archivo se elimina automáticamente cuando deja de ser referenciado y, por tanto, el objeto [`File`](FileClass) solicitado se cierra automáticamente. Por lo tanto, con los gestores de archivos no hay que preocuparse por el cierre de los documentos.
 
+:::note
+
+Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+
+:::
+
 
 ### Ejemplo
 
