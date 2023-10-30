@@ -11,6 +11,11 @@ title: FileHandle
 
 標準的な 4Dオブジェクトの *参照カウント* により、FileHandle は参照されなくなると自動的に削除され、要求された [`File`](FileClass) オブジェクトも自動的に閉じられます。 つまり、FileHandle を使えば、ドキュメントを閉じる必要がなくなります。
 
+:::note
+
+Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+
+:::
 
 ### 例題
 
