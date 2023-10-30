@@ -13,7 +13,7 @@ Thanks to the standard 4D object *refcounting*, a file handle is automatically d
 
 :::note
 
-Object resources are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you have to [nullify its references](../Concepts/dt_object.md#resources). 
+Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources). 
 
 :::
 

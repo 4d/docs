@@ -156,6 +156,7 @@ Since an object property value can be an object or a collection, object notation
 Object notation is available on any language element that can contains or returns an object, i.e:
 
 
+
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
     Examples:
     
@@ -263,7 +264,7 @@ Assigning an undefined value to an existing object property reinitializes or cle
      $o.a:=$o.b //$o.a=0
 ```
 
--Assigning an undefined value to a non existing object property does nothing.
+- Assigning an undefined value to a non existing object property does nothing.
 
 
 When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
