@@ -913,6 +913,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 <!-- REF DataStoreClass.setAdminProtection().Desc -->
 ## .setAdminProtection()
 
+
 <details><summary>History</summary>
 
 |Version|Changes|
@@ -967,7 +968,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**( *newStamp* : Real)<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+<!-- REF #DataStoreClass.setGlobalStamp().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |newStamp|Real|->|New value of global modification stamp|<!-- END REF -->
