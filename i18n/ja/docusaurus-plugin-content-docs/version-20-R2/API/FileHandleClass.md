@@ -13,7 +13,7 @@ title: FileHandle
 
 :::note
 
-Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+ドキュメントなどのオブジェクトリソースは、メモリ上で参照がなくなると解放されます。これはたとえば、メソッド実行終了時のローカル変数などで起こります。 任意の時点でオブジェクトリソースを "強制的に" 解放したい場合は、[その参照を無効化](../Concepts/dt_object.md#リソース) することができます。
 
 :::
 
