@@ -52,7 +52,7 @@ Sie können zwei Arten von Objekten erstellen:
 
 ## Grundlagen der Syntax
 
-Mit Objektnotation können Sie auf Werte von Objekteigenschaften über eine Kette von Tokens zugreifen.
+Object notation can be used to access object property values through a chain of tokens.
 
 ### Objekteigenschaften
 

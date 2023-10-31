@@ -2997,7 +2997,7 @@ Em *filePath*, passe o caminho de destino e o nome do documento a ser importado.
 
 Se a extensão do documento não for uma extensão conhecida, como `.4vp` ou `.xlsx`, o documento é considerado como sendo um documento texto. Deve passar uma rota completa, a não ser que o documento esteja localizado no mesmo nível que a pasta Project, em cujo caso pode passar apenas seu nome.
 
-> When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+> Quando importar um arquivo formatado em Excel em um documento 4D View Pro, algumas configurações podem ser perdidas. Você pode verificar outras configurações com [essa lista do GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
 
 Um erro é retornado se o parâmetro `filePath` for inválido ou se o arquivo estiver faltando ou for malformado
 
@@ -3008,15 +3008,15 @@ O parâmetro opcional *paramObj* permite definir as propriedades do documento im
 | formula    |                 | object | A callback method name to be launched when the import has completed. O método deve utilizar o comando [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html). Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
 | senha      |                 | text   | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel.                                                                                                                                                                                       |
 | csvOptions |                 | object | opções para importação csv                                                                                                                                                                                                                                                    |
-|            | range           | object | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                                 |
+|            | range           | object | O intervalo  de células que contém a primeira célula onde os dados serão escritos. Se o intervalo especificado não é um intervalo de células, só a primeira célula do intervalo é usada.                                                                                      |
 |            | rowDelimiter    | text   | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                                                            |
 |            | columnDelimiter | text   | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                                                          |
 
-> For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+> Para obter mais informações sobre CSV e valores separados por delimitadores, consulte [este artigo na Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 #### Exemplo 1
 
-You want to import a default 4D View Pro document stored on the disk when the form is open:
+Se quiser importar um documento 4D View Pro armazenado no disco quando o formulário for aberto:
 
 ```4d
 C_TEXT($docPath)
@@ -3028,7 +3028,7 @@ End if
 
 #### Exemplo 2
 
-You want to import a password protected Microsoft Excel document into a 4D View Pro area:
+Você deseja importar um documento do Microsoft Excel protegido por senha para uma área do 4D View Pro:
 
 ```4d
 $o:=New object
@@ -3037,7 +3037,7 @@ $o.password:="excel123" VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile
 
 #### Exemplo 3
 
-You want to import a `.txt` file that uses a comma (",") as delimiter:
+Você deseja importar um arquivo `.txt` que usa uma vírgula (",") como delimitador:
 
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv.png)
 

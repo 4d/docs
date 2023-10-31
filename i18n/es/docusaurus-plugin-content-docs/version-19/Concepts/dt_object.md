@@ -52,7 +52,7 @@ Puede crear dos tipos de objetos:
 
 ## Principios de la sintaxis
 
-La notación de objetos puede utilizarse para acceder a los valores de las propiedades de objetos a través de una cadena de tokens.
+Object notation can be used to access object property values through a chain of tokens.
 
 ### Propiedades de los objetos
 

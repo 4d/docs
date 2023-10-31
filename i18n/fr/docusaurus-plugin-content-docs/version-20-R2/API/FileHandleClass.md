@@ -11,6 +11,11 @@ Les objets de type File handle sont créés avec la fonction [`file.open()`](Fil
 
 Grâce au *refcounting* standard d'objets de 4D, un handle de fichier est automatiquement supprimé lorsqu'il n'est plus référencé et ainsi, l'objet [`File`](FileClass) demandé est automatiquement fermé. Par conséquent, avec les file handles, vous n'avez pas à vous soucier de la fermeture des documents.
 
+:::note
+
+Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+
+:::
 
 ### Exemple
 

@@ -3158,29 +3158,29 @@ O parâmetro opcional *paramObj* permite definir as propriedades do documento im
 | formula    |                     | 4D. Function | Um método de retorno de chamada a ser iniciado quando a importação for concluída. Deve usar uma fórmula retornado pelo comando [`Formula`](../API/FunctionClass.md#formula) command. Consulte [Passando um método de retorno de chamada (fórmula)](#passing-a-callback-method-formula). |
 | senha      |                     | text         | Somente Microsoft Excel (opcional) - Senha usada para proteger o documento do MS Excel.                                                                                                                                                                                                 |
 | csvOptions |                     | object       | opções para importação csv                                                                                                                                                                                                                                                              |
-|            | range               | object       | Cell range that contains the first cell where the data will be written. If the specified range is not a cell range, only the first cell of the range is used.                                                                                                                           |
+|            | range               | object       | O intervalo  de células que contém a primeira célula onde os dados serão escritos. Se o intervalo especificado não é um intervalo de células, só a primeira célula do intervalo é usada.                                                                                                |
 |            | rowDelimiter        | text         | Delimitador de linha. Se não estiver presente, o delimitador é automaticamente determinado por 4D.                                                                                                                                                                                      |
 |            | columnDelimiter     | text         | Delimitador de coluna. O padrão: ","                                                                                                                                                                                                                                                    |
-| sjsOptions |                     | object       | options for sjs import                                                                                                                                                                                                                                                                  |
-|            | calcOnDemand        | boolean      | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                                            |
-|            | dynamicReferences   | boolean      | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                                                |
+| sjsOptions |                     | object       | opções para importação de sjs                                                                                                                                                                                                                                                           |
+|            | calcOnDemand        | boolean      | Se as fórmulas devem ser calculadas somente quando forem exigidas; padrão=falso.                                                                                                                                                                                                        |
+|            | dynamicReferences   | boolean      | Se deve calcular funções com referências dinâmicas; o padrão é true.                                                                                                                                                                                                                    |
 |            | fullRecalc          | boolean      | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                           |
 |            | includeFormulas     | boolean      | Se deve incluir as fórmulas ao carregar; o padrão é true.                                                                                                                                                                                                                               |
 |            | includeStyles       | boolean      | Se os estilos devem ser incluídos no carregamento; o padrão é true.                                                                                                                                                                                                                     |
-|            | includeUnusedStyles | boolean      | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                                                       |
-|            | openMode            | integer      | <li>0 (normal): modo aberto normal, sem lazy e incremental. When opening file, UI and UI event could be refreshed and responsive at specific time points.</li><li>1 (lazy): lazy open mode. When opening file, only the active sheet will be loaded directly. Outras folhas serão carregadas somente quando estiverem sendo usadas.</li><li>2 (incremental): incremental open mode. When opening file, UI and UI event could be refreshed and responsive directly.</li>                                                                                                                                                                                                          |
+|            | includeUnusedStyles | boolean      | Se deve incluir os estilos de nome não utilizados ao converter o xml do Excel em json; o padrão é true.                                                                                                                                                                                 |
+|            | openMode            | integer      | <li>0 (normal): modo aberto normal, sem lazy e incremental. Ao abrir o documento, a interface do usuário e o evento da interface do usuário podem ser atualizados e responsivos em momentos específicos.</li><li>1 (lazy): modo de abertura lazy. Quando abrir o documento, só a folha ativa será carregada diretamente. Outras folhas serão carregadas somente quando estiverem sendo usadas.</li><li>2 (incremental): modo open incremental. Quando abrir o documento, UI e evento UI poderiam ser recarregados e diretamente responsivos.</li>                                                                                                                                                                                                          |
 
 :::note Notas
 
-- Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
-- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-- For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
+- Importar arquivos em formatos .xslx, .csv, e .sjs é **asynchronous**. Com estes formatos, deve usar o atributo `formula` se quiser iniciar uma ação ao final do processamento de documento
+- Quando importar um arquivo formatado em Excel em um documento 4D View Pro, algumas configurações podem ser perdidas. Você pode verificar outras configurações com [essa lista do GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+- Para obter mais informações sobre CSV e valores separados por delimitadores, consulte [este artigo na Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 :::
 
 #### Exemplo 1
 
-You want to import a default 4D View Pro document stored on the disk when the form is open:
+Se quiser importar um documento 4D View Pro armazenado no disco quando o formulário for aberto:
 
 ```4d
 C_TEXT($docPath)
@@ -3192,7 +3192,7 @@ End if
 
 #### Exemplo 2
 
-You want to import a password protected Microsoft Excel document into a 4D View Pro area:
+Você deseja importar um documento do Microsoft Excel protegido por senha para uma área do 4D View Pro:
 
 ```4d
 $o:=New object
@@ -3204,7 +3204,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 
 #### Exemplo 3
 
-You want to import a `.txt` file that uses a comma (",") as delimiter:
+Você deseja importar um arquivo `.txt` que usa uma vírgula (",") como delimitador:
 
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv.png)
 
