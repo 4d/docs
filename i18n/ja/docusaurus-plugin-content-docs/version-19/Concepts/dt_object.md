@@ -52,7 +52,7 @@ title: オブジェクト
 
 ## オブジェクト記法の使用
 
-Object notation can be used to access object property values through a chain of tokens.
+オブジェクト記法を使うと、トークンのチェーンを通してオブジェクトのプロパティ値にアクセスすることができます。
 
 ### オブジェクトプロパティ
 
