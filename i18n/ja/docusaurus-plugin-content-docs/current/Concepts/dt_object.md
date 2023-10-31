@@ -124,7 +124,7 @@ $col:=$o.col[5] // 6
 
 ## プロパティ
 
-Object notation can be used to access object property values through a chain of tokens. オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
+オブジェクト記法を使うと、トークンのチェーンを通してオブジェクトのプロパティ値にアクセスすることができます。 オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
 - "ドット" 記号を使用する方法: > object.propertyName
 
@@ -294,20 +294,20 @@ Object notation can be used to access object property values through a chain of 
 ```
 
 
-## Resources
+## リソース
 
-Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object.
+オブジェクトは、ドキュメント、エンティティロック、そしてメモリなどの *リソース* を使用します。 オブジェクトが必要とする限り、これらのリソースは保持されます。 変数や他のオブジェクトから参照されなくなったことを検知すると、4D はその参照されなくなったオブジェクトが使用していたリソースをすべて自動的に解放するため、通常はこの処理を意識することはありません。
 
-For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../EntityClass.md#unlock) is useless.
+たとえば、[`$entity.lock()`](../EntityClass.md#lock) でロックしたエンティティへの参照がなくなると、4D はメモリを解放すると同時に、関連するロックも自動で解放するため、[`$entity.unlock()`](../EntityClass.md#unlock) の呼び出しは不要です。
 
-If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. 例:
+オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例:
 
 ```4d
 
 $doc:=WP Import document("large_novel.4wp")
-    ... // do something with $doc
-$doc:=Null  // free resources occupied by $doc
-    ... // continue execution with more free memory
+    ... // $doc に対する処理
+$doc:=Null  //  $docが占有するリソースを解放します
+    ... // 増えた空きメモリで実行を継続します
 
 ```
 
@@ -353,7 +353,7 @@ $doc:=Null  // free resources occupied by $doc
  $vPhone:=$Emp.phone.home // "0011223344"
 ```
 
-- You can access properties as strings using the `[]` operator
+- 大カッコ `[ ]` を使用すると文字列を使ってプロパティにアクセスできます:
 
 ```4d
  $Emp["city"]:="Berlin" // city プロパティを変更
