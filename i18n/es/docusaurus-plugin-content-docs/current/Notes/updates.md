@@ -11,7 +11,8 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Destacados
 
-- Support of `[ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- Support of [`ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
 
 
 
@@ -25,7 +26,7 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Soporte del parámetro *context* en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Soporte de la propiedad `headers` en el parámetro *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
-- [Marcador de modificación global](../ORDA/global-stamp.md) para ayudar a implantar módulos de sincronización de datos. Nuevas funciones: [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) y [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp).
+- [Marcador de modificación global](../ORDA/global-stamp.md) para ayudar a implantar módulos de sincronización de datos. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
 - Soporte para [inicializar el valor de la variable y el tipo de datos en la línea de declaración](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Los parámetros del archivo de historial se guardan ahora en [con el archivo de datos actual](../Backup/settings.md#log-file-management)
 - Nueva sintaxis para [declarando parámetros variables](../Concepts/parameters.md#declaring-variadic-parameters)
@@ -33,6 +34,7 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) en doc.4d.com.
 - 4D Write Pro: [página Novedades](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) en doc.4d.com.
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R3): lista de todos los errores que se han corregido en 4D v20 R3.
+
 
 
 #### Cambios de comportamiento
@@ -188,6 +190,7 @@ Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/)
 
 
 ## 4D v19 R5
+
 
 - El [archivo directory.json](Users/editing#directoryjson-file) del proyecto ahora puede ser [integrado al servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) al momento de la generación, lo que le permite desplegar una aplicación cliente/servidor con una configuración básica de la seguridad de los usuarios y de los grupos.
 - Ahora puede [deseleccionar los módulos inútiles](../Desktop/building.md#deselecting-modules) en sus aplicaciones generadas.
