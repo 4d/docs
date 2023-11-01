@@ -3070,17 +3070,17 @@ Aqui está o resultado: ![example-import-csv](../assets/en/ViewPro/vp-import-doc
 
 #### Descrição
 
-O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->imports and displays the *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. The imported object contents replaces any data already inserted in the area.
+O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->importa e exibe o objeto *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Em *viewPro*, passe um objeto 4D View Pro válido. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](languageOverview.html#4d-view-pro-object) section.
+Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. Para mais informações sobre os objectos 4D View Pro, consulte a seção [objeto 4D View Pro](languageOverview.html#4d-view-pro-object).
 
-An error is returned if the *viewPro* object is invalid.
+Um erro é retornado se o objeto *viewPro* for inválido.
 
 #### Exemplo
 
-You want to import a spreadsheet that was previously saved in an object field:
+Se quiser importar uma folha de cálculo que foi salva previamente em um campo objeto:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
@@ -3108,9 +3108,9 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 
 O comando `VP INSERT COLUMNS` <!-- REF #_method_.VP INSERT COLUMNS.Summary -->insere colunas no *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. If the number of column to insert is omitted (not defined), a single column is inserted.
+Em *rangeObj*, passe um objeto  contendo um intervalo de coluna início ( a coluna que designa onde a nova coluna será inserida) e o número de colunas a inserir. Se o número de colunas a inseriri for omitido (não definido), uma única coluna é inserida.
 
-New columns are inserted on the left, directly before the starting column in the *rangeObj*.
+Novas colunas são inseridas na esquerda, diretamente na coluna inicio em *rangeObj*.
 
 #### Exemplo
 
@@ -3145,9 +3145,9 @@ O resultado é:
 
 O comando `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->insere linhas definidas pelo *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. If the number of rows to insert is omitted (not defined), a single row is inserted.
+Em *rangeObj*, passe um objeto  contendo um intervalo de linha início ( a linhaa que designa onde a nova linha será inserida) e o número de linhas a inserir. Se o número de linhas a inserir for omitido (não definido), uma única linha é inserida.
 
-New rows are inserted directly before the first row in the *rangeObj*.
+Novas linhas são inseridas imediatamente antes da primeira linha do  *rangeObj*.
 
 #### Exemplo
 
@@ -3192,7 +3192,7 @@ O resultado é:
 
 #### Descrição
 
-O comando `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+O comando `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->insere uma ou  um número *count*de colunas vazias na tabela especificada *tableName* no índice determinado *column*<!-- END REF -->.
 
 When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command.
 
