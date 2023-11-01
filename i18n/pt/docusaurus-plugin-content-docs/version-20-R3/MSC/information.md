@@ -30,7 +30,7 @@ The page lists all the tables of the database (including invisible tables) as we
 - **Tabelas**: nome da tabela. Names of deleted tables are displayed with parenthesis (if they are still in the trash).
 - **Records**: Total number of records in the table. If a record is damaged or cannot be read, *Error* is displayed instead of the number. Neste caso, pode considerar a utilização das ferramentas de verificação e reparação.
 - **Campos**: número de campos na tabela. Os campos invisíveis são contados, mas os campos apagados não são contados.
-- **Indexes**: Number of indexes of any kind in the table
+- **Índices**: número de Índices na tabela
 - **Criptografável**: se marcado, é selecionado o atributo **Encriptable** para a tabela ao nível da estrutura (ver o parágrafo Encriptable no Manual de Design).
 - **Encrypted**: If checked, the records of the table are encrypted in the data file. **Encrypted**: If checked, the records of the table are encrypted in the data file.
 - **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. Na verdade, associa os registos ao seu endereço físico. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
