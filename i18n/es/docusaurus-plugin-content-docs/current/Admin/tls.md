@@ -59,7 +59,7 @@ TLS certificates managed by 4D must be in the **PEM format**. If your certificat
 
 4D supports certificates in the following standard encryption formats:
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilidad
