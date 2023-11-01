@@ -995,7 +995,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+<!-- REF #DataStoreClass.setGlobalStamp().Params -->
 | 引数       | タイプ  |    | 説明                                          |
 | -------- | ---- | -- | ------------------------------------------- |
 | newStamp | Real | -> | グローバル変更スタンプの新しい値|<!-- END REF -->
