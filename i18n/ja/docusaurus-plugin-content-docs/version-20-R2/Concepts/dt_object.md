@@ -299,7 +299,7 @@ $col:=$o.col[5] // 6
 
 オブジェクトは、ドキュメント、エンティティロック、そしてメモリなどの *リソース* を使用します。 オブジェクトが必要とする限り、これらのリソースは保持されます。 変数や他のオブジェクトから参照されなくなったことを検知すると、4D はその参照されなくなったオブジェクトが使用していたリソースをすべて自動的に解放するため、通常はこの処理を意識することはありません。
 
-For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
+たとえば、[`$entity.lock()`](../API/EntityClass.md#lock) でロックしたエンティティへの参照がなくなると、4D はメモリを解放すると同時に、関連するロックも自動で解放するため、[`$entity.unlock()`](../API/EntityClass.md#unlock) の呼び出しは不要です。
 
 オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例:
 
