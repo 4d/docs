@@ -5,7 +5,7 @@ title: Protocolo TLS (HTTPS)
 
 Todos os servidores 4D podem se comunicar em modo seguro através do protocolo TLS (Transport Layer Security):
 
-- the HTTP server
+- o servidor HTTP
 - o servidor de aplicação (aplicações desktop cliente-servidor)
 - o servidor SQL
 
@@ -49,7 +49,7 @@ You can control the level of security of your **web server** by defining the [mi
 
 :::
 
-## Certificates
+## Certificados
 
 ### Formato
 
@@ -89,7 +89,7 @@ Arquivos padrão *key.pem* e *cert.pem* são oferecidos com 4D. Para um maior n�
 :::
 
 
-#### With the HTTP server
+#### Com o servidor HTTP
 
 To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
 
@@ -98,7 +98,7 @@ To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be
 
 Deve copiar esses arquivos manualmente na máquina remota.
 
-#### With the HTTP client
+#### Com o cliente HTTP
 
 To be used by the 4D HTTP client, the **key.pem** and **cert.pem** files must be placed by default in the "ClientCertificatesFolder" that is created next to the next to the [project folder](Project/architecture.md#project-folder).
 
