@@ -3358,11 +3358,11 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 #### Descrição
 
-O comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->moves ou copia os valores, estilo e fórmulas de *originRange* a *targetRange*<!-- END REF -->.
+O comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->move ou copia os valores, estilo e fórmulas de *originRange* a *targetRange*<!-- END REF -->.
 
-*originRange* and *targetRange* can refer to different View Pro areas.
+*originRange* e *targetRange* podem se referir a áreas View Pro diferentes.
 
-In *originRange*, pass a range object containing the values, style, and formula cells to copy or move. If *originRange* is a combined range, only the first one is used.
+Em *originRange*, passe um objeto intervalo que contenha os valores, o estilo e as células da fórmula a copiar ou mover. Se *originRange* for um intervalo combinado, somente o primeiro será usado.
 
 In *targetRange*, pass the range of cells where the cell values, style, and formulas will be copied or moved.
 
