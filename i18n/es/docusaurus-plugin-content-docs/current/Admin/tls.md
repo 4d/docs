@@ -55,7 +55,7 @@ You can control the level of security of your **web server** by defining the [mi
 
 TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
 
-### Encryption
+### Encripción
 
 4D supports certificates in the following standard encryption formats:
 
@@ -89,7 +89,7 @@ Los archivos *key.pem* y*cert.pem* por defecto se entregan con 4D. Para un mayor
 :::
 
 
-#### With the HTTP server
+#### Con el servidor HTTP
 
 To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
 
@@ -98,7 +98,7 @@ To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be
 
 Debe copiar estos archivos manualmente en la máquina remota.
 
-#### With the HTTP client
+#### Con el cliente HTTP
 
 To be used by the 4D HTTP client, the **key.pem** and **cert.pem** files must be placed by default in the "ClientCertificatesFolder" that is created next to the next to the [project folder](Project/architecture.md#project-folder).
 
