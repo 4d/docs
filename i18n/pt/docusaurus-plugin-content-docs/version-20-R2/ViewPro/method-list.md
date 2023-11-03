@@ -998,7 +998,7 @@ Após a conclusão da operação de exportação, o `VP EXPORT DOCUMENT` aciona 
 
 #### Passagem de um método de retorno de chamada (fórmula)
 
-Ao incluir o parâmetro opcional *paramObj* , o comando permite que você use o comando [`Formula`](../API/FunctionClass.md#formula) para chamar um método 4D que será executado após a conclusão da exportação. The callback method will receive the following values in local variables:
+Ao incluir o parâmetro opcional *paramObj* , o comando permite que você use o comando [`Formula`](../API/FunctionClass.md#formula) para chamar um método 4D que será executado após a conclusão da exportação. O método de retorno de chamada receberá os seguintes valores em variáveis locais:
 
 | Variável |  | Tipo | Descrição |
 | -------- |  | ---- | --------- |
