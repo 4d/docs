@@ -233,11 +233,11 @@ O ficheiro de tema em formato JSON contém os seguintes atributos:
 | header5  | Object |             | Object containing the style definition applicable to the fifth header row.                                                            |
 | headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
 | data     | Object |             | Object containing the style definition applicable to the repeated data row.                                                           |
-| break1   | Object |             | Object containing the style definition applicable to the first break row.                                                             |
+| break1   | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de quebra.                                                         |
 | break2   | Object |             | Object containing the style definition applicable to the second break row.                                                            |
-| break3   | Object |             | Object containing the style definition applicable to the third break row.                                                             |
+| break3   | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de quebra.                                                         |
 | break4   | Object |             | Object containing the style definition applicable to the fourth break row.                                                            |
-| break5   | Object |             | Object containing the style definition applicable to the fifth break row.                                                             |
+| break5   | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de quebra.                                                           |
 | breaks   | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
 | bcor     | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                       |
 
