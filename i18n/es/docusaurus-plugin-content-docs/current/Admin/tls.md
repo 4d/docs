@@ -53,11 +53,11 @@ Puede controlar el nivel de seguridad de su **servidor web** definiendo la [vers
 
 ### Formato
 
-TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
+Los certificados TLS gestionados por 4D deben estar en formato **PEM**. Si su proveedor de certificados (por ejemplo, [WoTrus](https://store.wotrus.com/)) le envía un certificado que está en un formato binario como . rt, .pfx o .p12, tienes que convertirlo a formato PEM para poder utilizarlo. Hay sitios web como [sslshopper](https://www.sslshopper.com/) donde puede hacer esta conversión en línea.
 
 ### Encripción
 
-4D supports certificates in the following standard encryption formats:
+4D soporta certificados en los siguientes formatos estándar de cifrado:
 
 - [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
