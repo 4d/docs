@@ -29,7 +29,7 @@ O protocolo TLS foi criado para autenticar o emissor e o recipiente e assim gara
 
 TLS usa uma técnica de criptografia de chave pública baseado em duas chaves assimétricas para criptografia e descriptografia: uma chave pública e outra privada. A chave privada é usada para criptografar os dados. O emissor (o website) não dá essa chave para ninguém.
 
-The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a certification authority, such as Verisign®. O website paga a Autoridade de Certificação para entregar um certificado que garante a autenticação do servidor e contém a chave pública que permite a troca de dados em um modo seguro.
+A chave pública é usada para decriptografar a informação e enviá-la para os recipientes (navegadores web) através de um **certificado**. O certificado é entregue através de uma autoridade de certificação, como Verisign®. O website paga a Autoridade de Certificação para entregar um certificado que garante a autenticação do servidor e contém a chave pública que permite a troca de dados em um modo seguro.
 
 :::note
 
@@ -41,11 +41,11 @@ Navegadores web autorizam apenas os certificados emitidos por autoridades de cer
 
 ## Versão mínima
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
+Como padrão, a versão mínima de um protocolo de segurança aceito pelo servidor é TLS 1.3. Pode modificar esse valor usando o seletor `Min TLS version` com o comando `SET DATABASE PARAMETER`.
 
 :::note
 
-You can control the level of security of your **web server** by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+Pode controlar o nível de segurança de seu **servidor web** definindo a versão [TLS mínima](WebServer/webServerConfig.md#minimum-tls-version) aceita para conexões.
 
 :::
 
@@ -91,7 +91,7 @@ Arquivos padrão *key.pem* e *cert.pem* são oferecidos com 4D. Para um maior n�
 
 #### Com o servidor HTTP
 
-To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
+Para serem utilizados pelo servidor HTTP 4D, os arquivos **key.pem** e **cert.pem** devem ser colocados:
 
 - com 4D em modo local em Servidor 4D, esses arquivos devem ser colocados ao lado da [pasta projeto](Project/architecture.md#project-folder)
 - com 4D em modo remoto, esses arquivos devem estar na pasta de banco de dados cliente na máquina remota (para saber mais sobre a localização dessa pasta, veja o comando `Get 4D folder`).
@@ -107,7 +107,7 @@ This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https
 
 #### Com o servidor de aplicações (aplicações de desktop cliente-servidor)
 
-To be used by the 4D application server, the **key.pem** and **cert.pem** files must be placed in the [**Resources** folder](Project/architecture.md#resources) of the 4D Server application.
+Para ser usado pelo servidor da aplicação 4D, os arquivos **key.pem** e **cert.pem** devem ser colocados na pasta [**Resources**](Project/architecture.md#resources) da aplicação 4D Server.
 
 
 #### Com o servidor SQL
@@ -133,7 +133,7 @@ Quando TLS estiver ativado no servidor, PFS é ativado automaticamente. Se o arq
 Se utilizar uma [lista de cifrado personalizada](WebServer/webServerConfig.md##cipher-list) e quiser habilitar o PFS, deve comprovar que contenha entradas com algoritmos DH ou ECDH (Elliptic-curve Diffie-Hellman).
 
 
-## How to get a RSA certificate? (tutorial)
+## Como obter o certificado RSA? (tutorial)
 
 Um servidor trabalhando em modo seguro significa que precisa de um certificado digital de uma autoridade de certificações. Esse certificado contém várias informações tais como a ID do site assim como a chave pública usada para comunicar com o servidor. Esse certificado é transmitido aos clientes (por exemplo os navegadores Web) conectando a esse servidor. Quando o certificado tiver sido identificado e aceito, a comunicação é feita em modo seguro.
 > Navegadores web autorizam apenas os certificados emitidos por autoridades de certificação referenciados em suas propriedades.
