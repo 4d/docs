@@ -77,7 +77,7 @@ On the other hand, by default these project methods will not be visible, and the
 
 ![](../assets/en/Concepts/shared-methods.png)
 
-Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). These methods are **entry points** of the component.
+Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). Esses métodos são os **pontos de entrada** do componente.
 
 Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
@@ -359,7 +359,7 @@ Executing initialization or closing code is done by means of the `On Host Databa
 
 By default, all the code of a matrix project installed as a component is potentially visible from the host project. Em particular:
 
-- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. However, it's not possible to open them in the Code Editor or modify them.
+- The shared project methods are found on the Methods Page of the Explorer and can be called in the methods of the host project. Seu conteúdo pode ser selecionado e copiado na área de vista prévia do Explorador. Também podem ser vistos no depurador. No entanto, eles não podem ser abertos ou modificados no editor de código.
 - The other project methods of the matrix project do not appear in the Explorer but they too can be viewed in the debugger of the host project.
 - The non-hidden classes and functions can be viewed in the debugger [if a namespace is declared](#declaring-the-component-namespace).
 

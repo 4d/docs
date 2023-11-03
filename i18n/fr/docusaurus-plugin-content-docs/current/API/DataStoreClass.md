@@ -942,6 +942,7 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 <!-- REF DataStoreClass.setAdminProtection().Desc -->
 ## .setAdminProtection()
 
+
 <details><summary>Historique</summary>
 
 | Version | Modifications |
@@ -998,7 +999,7 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 <!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**( *newStamp* : Real)<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+<!-- REF #DataStoreClass.setGlobalStamp().Params -->
 | Paramètres | Type |    | Description                                                                   |
 | ---------- | ---- | -- | ----------------------------------------------------------------------------- |
 | newStamp   | Real | -> | Nouvelle valeur du marqueur de modification global|<!-- END REF -->

@@ -3238,17 +3238,17 @@ Aqui está o resultado: ![example-import-csv](../assets/en/ViewPro/vp-import-doc
 
 #### Descrição
 
-O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->imports and displays the *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. The imported object contents replaces any data already inserted in the area.
+O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summary -->importa e exibe o objeto *viewPro* 4D View Pro object in the *vpAreaName* 4D View Pro area<!-- END REF -->. O documento importado substitui qualquer dado já inserido na área
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Em *viewPro*, passe um objeto 4D View Pro válido. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](languageOverview.html#4d-view-pro-object) section.
+Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. Para mais informações sobre os objectos 4D View Pro, consulte a seção [objeto 4D View Pro](languageOverview.html#4d-view-pro-object).
 
-An error is returned if the *viewPro* object is invalid.
+Um erro é retornado se o objeto *viewPro* for inválido.
 
 #### Exemplo
 
-You want to import a spreadsheet that was previously saved in an object field:
+Se quiser importar uma folha de cálculo que foi salva previamente em um campo objeto:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
@@ -3276,9 +3276,9 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 
 O comando `VP INSERT COLUMNS` <!-- REF #_method_.VP INSERT COLUMNS.Summary -->insere colunas no *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the starting column (the column which designates where the new column will be inserted) and the number of columns to insert. If the number of column to insert is omitted (not defined), a single column is inserted.
+Em *rangeObj*, passe um objeto  contendo um intervalo de coluna início ( a coluna que designa onde a nova coluna será inserida) e o número de colunas a inserir. Se o número de colunas a inseriri for omitido (não definido), uma única coluna é inserida.
 
-New columns are inserted on the left, directly before the starting column in the *rangeObj*.
+Novas colunas são inseridas na esquerda, diretamente na coluna inicio em *rangeObj*.
 
 #### Exemplo
 
@@ -3313,9 +3313,9 @@ O resultado é:
 
 O comando `VP INSERT ROWS` <!-- REF #_method_.VP INSERT ROWS.Summary -->insere linhas definidas pelo *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. If the number of rows to insert is omitted (not defined), a single row is inserted.
+Em *rangeObj*, passe um objeto  contendo um intervalo de linha início ( a linhaa que designa onde a nova linha será inserida) e o número de linhas a inserir. Se o número de linhas a inserir for omitido (não definido), uma única linha é inserida.
 
-New rows are inserted directly before the first row in the *rangeObj*.
+Novas linhas são inseridas imediatamente antes da primeira linha do  *rangeObj*.
 
 #### Exemplo
 
@@ -3360,20 +3360,20 @@ O resultado é:
 
 #### Descrição
 
-O comando `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+O comando `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->insere uma ou  um número *count*de colunas vazias na tabela especificada *tableName* no índice determinado *column*<!-- END REF -->.
 
-When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command.
+Quando uma coluna foi inserida com este comando, pode geralmente modificar seu conteúdo  usando o comando [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
+No parâmetro *insertAfter* pode passar uma das constantes abaixo para indicar se as colunas devem sr inseridas antes ou depois do índice *column*:
 
-| Parâmetros               | Valor | Descrição                                                 |
-| ------------------------ | ----- | --------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert column(s) before the *column* (default if omitted) |
-| `vk table insert after`  | 1     | Inserir coluna(s) após a *coluna *                        |
+| Parâmetros               | Valor | Descrição                                                       |
+| ------------------------ | ----- | --------------------------------------------------------------- |
+| `vk table insert before` | 0     | Insere colunas antes de *column* (padrão se omitir o parâmetro) |
+| `vk table insert after`  | 1     | Inserir coluna(s) após a *coluna *                              |
 
-This command inserts some columns in the *tableName* table, NOT in the sheet. The total number of columns of the sheet is not impacted by the command. Data present at the right of the table (if any) are automatically moved right according to the number of added columns.
+Este comando insere algumas colunas na tabela *tableName* , NÂO na folha. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+se *tableName* não existir ou se não houver espaço suficiente na folha, nada acontece.
 
 
 #### Exemplo
@@ -3414,20 +3414,20 @@ Ver exemplos para [VP INSERT TABLE ROWS](#vp-insert-table-rows) e [VP SET TABLE 
 
 #### Descrição
 
-O comando `VP INSERT TABLE ROWS` <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->.
+O comando `VP INSERT TABLE ROWS` <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->insere uma ou  um número *count*de linhas vazias na tabela especificada *tableName* no índice determinado *row*<!-- END REF -->.
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the *row* index:
+No parâmetro *insertAfter* pode passar uma das constantes abaixo para indicar se as linhas devem ser inseridas antes ou depois do índice *row*:
 
 | Parâmetros               | Valor | Descrição                                                 |
 | ------------------------ | ----- | --------------------------------------------------------- |
 | `vk table insert before` | 0     | Inserir linha(s) antes da *row* (predefinição se omitido) |
 | `vk table insert after`  | 1     | Inserir linha(s) após a *row*                             |
 
-This command inserts some rows in the *tableName* table, NOT in the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved down according to the number of added rows.
+Este comando insere algumas linhas na tabela *tableName* , NÂO na folha. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos para baixo automaticamente de acordo com o número de linhas adicionadas.
 
-If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
+Se a tabela *tableName*estiver vinculada a[data context](#vp-set-data-context), o comando insere novos elementos vazios na coleção.
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+se *tableName* não existir ou se não houver espaço suficiente na folha, nada acontece.
 
 
 #### Exemplo
@@ -3491,13 +3491,13 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 #### Descrição
 
-O comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->moves or copies the values, style and formulas from *originRange* to *targetRange*<!-- END REF -->.
+O comando `VP MOVE CELLS` <!-- REF #_method_.VP MOVE CELLS.Summary -->move ou copia os valores, estilo e fórmulas de *originRange* a *targetRange*<!-- END REF -->.
 
-*originRange* and *targetRange* can refer to different View Pro areas.
+*originRange* e *targetRange* podem se referir a áreas View Pro diferentes.
 
-In *originRange*, pass a range object containing the values, style, and formula cells to copy or move. If *originRange* is a combined range, only the first one is used.
+Em *originRange*, passe um objeto intervalo que contenha os valores, o estilo e as células da fórmula a copiar ou mover. Se *originRange* for um intervalo combinado, somente o primeiro será usado.
 
-In *targetRange*, pass the range of cells where the cell values, style, and formulas will be copied or moved.
+Em *targetRange*, passe o intervalo de células onde os valores de célula, estilo e fórmulas serão copiados ou movidos.
 
 O parâmetro *options* tem várias propriedades:
 
@@ -4043,7 +4043,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 O comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. O comando remove valores e estilos.
 
-The command removes columns from the *tableName* table, NOT from the sheet. The total number of columns of the sheet is not impacted by the command. The total number of columns of the sheet is not impacted by the command.
+The command removes columns from the *tableName* table, NOT from the sheet. O número total de colunas da folha não é impactado pelo  comando. The total number of columns of the sheet is not impacted by the command.
 
 Se *tableName* não existir, não acontece nada.
 
@@ -4091,7 +4091,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 removes one or *count* row(s) from the specified *tableName* at the specified *row* index <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->O comando `VP REMOVE TABLE ROWS`<!-- END REF -->. O comando remove valores e estilos.
 
-This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
+This command removes rows from the *tableName* table, NOT from the sheet. O número total de linhas da folha não é impactado pelo  comando. The total number of rows of the sheet is not impacted by the command.
 
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
 

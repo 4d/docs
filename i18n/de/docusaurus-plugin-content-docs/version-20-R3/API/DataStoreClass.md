@@ -998,7 +998,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 <!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+<!-- REF #DataStoreClass.setGlobalStamp().Params -->
 | Parameter | Typ  |    | Beschreibung                                                      |
 | --------- | ---- | -- | ----------------------------------------------------------------- |
 | newStamp  | Zahl | -> | New value of global modification stamp|<!-- END REF -->

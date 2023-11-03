@@ -13,7 +13,7 @@ Gracias al objeto estándar 4D *refcounting*, un manejador de archivo se elimina
 
 :::note
 
-Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+Los recursos de los objetos, como los documentos, se liberan cuando ya no existen referencias en la memoria, lo que ocurre, por ejemplo, al final de la ejecución del método para las variables locales. Si desea "forzar" la liberación de los recursos del objeto en cualquier momento, puede [anular sus referencias](../Concepts/dt_object.md#resources).
 
 :::
 
@@ -373,11 +373,11 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 La función `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->devuelve una línea de texto desde la posición actual hasta que se encuentre un delimitador de fin de línea o se llegue al final del documento<!-- END REF -->.
 
-When this function is executed, the current position ([`.offset`](#offset)) is updated.
+Cuando se ejecuta esta función, la posición actual ([`.offset`](#offset)) se actualiza.
 
 :::caution Advertencia
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la descripción de [.offset](#offset).
 
 :::
 
@@ -424,7 +424,7 @@ Cuando se ejecuta esta función, el ([.offset](#offset)) se coloca justo despué
 
 :::caution Advertencia
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la descripción de [.offset](#offset).
 
 :::
 

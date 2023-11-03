@@ -9,7 +9,7 @@ Todos los servidores 4D pueden comunicarse en modo seguro a través del protocol
 - el servidor de aplicaciones (aplicaciones de escritorio cliente-servidor)
 - el servidor SQL
 
-In addition, the 4D HTTP client (`HTTP get` command for example) also supports the TLS protocol.
+Además, el cliente HTTP de 4D (comando `HTTP get` por ejemplo) también soporta el protocolo TLS.
 
 ## Generalidades
 
@@ -29,7 +29,7 @@ El protocolo TLS está diseñado para autenticar al emisor y al receptor y para 
 
 TLS utiliza una técnica de cifrado de llave pública basada en un par de llaves asimétricas para el cifrado y el descifrado: una llave pública y una llave privada. La llave privada se utiliza para encriptar los datos. El remitente (el sitio web) no se la da a nadie.
 
-The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a certification authority, such as Verisign®. El sitio web paga a la Autoridad de Certificación para que le entregue un certificado que garantice la autentificación del servidor y que contenga la llave pública que permita el intercambio de datos de forma segura.
+La llave pública se utiliza para descifrar la información y se envía a los receptores (navegadores web) a través de un **certificado**. El certificado se entrega a través de una autoridad de certificación, como Verisign®. El sitio web paga a la Autoridad de Certificación para que le entregue un certificado que garantice la autentificación del servidor y que contenga la llave pública que permita el intercambio de datos de forma segura.
 
 :::note
 
@@ -41,11 +41,11 @@ Los navegadores web sólo autorizan los certificados emitidos por una autoridad 
 
 ## Versión mínima
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
+Por defecto, la versión mínima del protocolo seguro que acepta el servidor es TLS 1.3. Puede modificar este valor utilizando el selector `Min TLS version` con el comando `SET DATABASE PARAMETER`.
 
 :::note
 
-You can control the level of security of your **web server** by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+Puede controlar el nivel de seguridad de su **servidor web** definiendo la [versión TLS mínima ](WebServer/webServerConfig.md#minimum-tls-version) aceptada para las conexiones.
 
 :::
 
@@ -55,11 +55,11 @@ You can control the level of security of your **web server** by defining the [mi
 
 TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
 
-### Encryption
+### Encripción
 
 4D supports certificates in the following standard encryption formats:
 
-- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+- [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilidad
@@ -89,7 +89,7 @@ Los archivos *key.pem* y*cert.pem* por defecto se entregan con 4D. Para un mayor
 :::
 
 
-#### With the HTTP server
+#### Con el servidor HTTP
 
 To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
 
@@ -98,9 +98,9 @@ To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be
 
 Debe copiar estos archivos manualmente en la máquina remota.
 
-#### With the HTTP client
+#### Con el cliente HTTP
 
-To be used by the 4D HTTP client, the **key.pem** and **cert.pem** files must be placed by default in the "ClientCertificatesFolder" that is created next to the next to the [project folder](Project/architecture.md#project-folder).
+Para ser utilizado por el cliente HTTP 4D, los archivos **key.pem** y **cert.pem** deben ubicarse por defecto en "ClientCertificatesFolder" que es creada junto a la [carpeta del proyecto](Project/architecture.md#project-folder).
 
 This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html) command).
 
