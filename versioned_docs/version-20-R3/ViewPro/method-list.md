@@ -926,6 +926,7 @@ use the following code:
 
 
 
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -1625,7 +1626,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 The following code returns the number of columns in the 4D View Pro area:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1716,6 +1717,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1773,6 +1775,7 @@ will return this information in the *$defaultStyle* object:
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
 |Result  |Text|<-|Formula|<!-- END REF -->
+
 
 
 #### Description
@@ -2423,7 +2426,6 @@ VP SET CELL STYLE($range;$style)
 |vpAreaName|Text|->|4D View Pro area form object name|
 |styleName|Text|->|Name of style|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### Description
@@ -2733,7 +2735,6 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 |Constant|Value|Description|
 |---|---|---|
 |`vk table full range`|0|Get the cell range for the table area with footer and header (default if omitted)|
-
 |`vk table data range`|1|Get the cell range for the table data area only|
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
@@ -2959,6 +2960,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 |Parameter|Type||Description|
+
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
@@ -3003,7 +3005,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Description
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->. 
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface. 
 
 In *paramObj*, you can pass several properties:
 
@@ -3350,6 +3352,7 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection. 
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+
 
 
 #### Example
@@ -5086,7 +5089,6 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
 |Parameter|Type||Description|
-
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
@@ -5342,7 +5344,6 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 
 |Property | Type|  Description|
 |---|---|---|
-
 |columnCount | Integer | The number of frozen columns on the left of the sheet|
 |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet
 |rowCount | Integer |  The number of frozen rows on the top of the sheet |
@@ -5579,7 +5580,6 @@ VP SET ROW COUNT("ViewProArea";5)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Description
@@ -5650,7 +5650,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |name|Text|->|New name for the sheet|
-
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
 #### Description
@@ -5665,7 +5664,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > Indexing starts at 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -5674,7 +5673,7 @@ The command does nothing if:
 * the new name contains forbidden characters
 * the new name's value is blank
 * the new name already exists
-* the passed *index* does not exist
+* the passed *sheet* index does not exist
 
 #### Example
 
@@ -6341,7 +6340,6 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-
 |vPos  |Integer|->|Vertical view position of cell or row|
 |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
 
@@ -6442,6 +6440,6 @@ End if
 
 #### See also
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 

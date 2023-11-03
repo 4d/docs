@@ -1541,7 +1541,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 The following code returns the number of columns in the 4D View Pro area:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -2338,7 +2338,6 @@ VP SET CELL STYLE($range;$style)
 |vpAreaName|Text|->|4D View Pro area form object name|
 |styleName|Text|->|Name of style|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### Description
@@ -2801,6 +2800,7 @@ If *rangeObj* contains multiple cells or multiple ranges, the value of the first
 
 
 
+
 #### Example
 
 ```4d
@@ -2872,6 +2872,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
@@ -4902,6 +4903,7 @@ The optional *formatPattern* defines a pattern for the *dateValue* and *timeValu
 
 ```4d
 //Set the cell value as the current date and time
+
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
  
 //Set the cell value as the 18th of December
@@ -4920,7 +4922,6 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
 |Parameter|Type||Description|
-
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
@@ -5178,7 +5179,6 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 
 |Property | Type|  Description|
 |---|---|---|
-
 |columnCount | Integer | The number of frozen columns on the left of the sheet|
 |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet
 |rowCount | Integer |  The number of frozen rows on the top of the sheet |
@@ -5414,7 +5414,6 @@ VP SET ROW COUNT("ViewProArea";5)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Description
@@ -5486,7 +5485,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |name|Text|->|New name for the sheet|
-
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
 #### Description
@@ -5501,7 +5499,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > Indexing starts at 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -5510,7 +5508,7 @@ The command does nothing if:
 * the new name contains forbidden characters
 * the new name's value is blank
 * the new name already exists
-* the passed *index* does not exist
+* the passed *sheet* does not exist
 
 #### Example
 
@@ -6175,7 +6173,6 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-
 |vPos  |Integer|->|Vertical view position of cell or row|
 |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
 
@@ -6276,6 +6273,6 @@ End if
 
 #### See also
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
