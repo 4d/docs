@@ -157,7 +157,7 @@ If you modify a value either in the parent form or in the subform, it is automat
 
 ### Utilização de ponteiros (compatibilidade)
 
-In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. For example, to update a subform object, you could call the following code:
+In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. Por exemplo, para atualizar um objeto subformulário, você pode chamar o seguinte código:
 
 ```4d  
 // Subform form method If (Form event code=On Bound Variable Change) 
