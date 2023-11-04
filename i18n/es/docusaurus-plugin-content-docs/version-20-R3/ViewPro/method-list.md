@@ -937,6 +937,7 @@ utilice el siguiente código:
 
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1658,7 +1659,7 @@ Puede definir dónde obtener el número de columnas en el parámetro opcional *s
 El siguiente código devuelve el número de columnas en el área 4D View Pro:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1753,6 +1754,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1814,7 +1816,9 @@ devolverá esta información en el objeto *$defaultStyle*:
 | Result     | Text   | <- | Formula|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción
@@ -2486,13 +2490,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                  |
-| ---------- | ------- | -- | -------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| styleName  | Text    | -> | Nombre del estilo                            |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Parámetros | Tipo    |    | Descripción                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro  |
+| styleName  | Text    | -> | Nombre del estilo                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)   |
+| Result     | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -2810,8 +2815,7 @@ En el parámetro *onlyData*, puede pasar una de las siguientes constantes para i
 | Constante             | Valor | Descripción                                                                                                  |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
 | `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
-
-|`vk table data range`|1|Obtener el rango de celdas sólo para el área de datos de la tabla|
+| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                            |
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -3041,12 +3045,9 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-| Parámetros | Tipo   |    | Descripción                                                                      |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
-| Result     | Object | <- | Objeto que contiene las opciones del libro de trabajo|<!-- END REF -->
+|Parámetro|Tipo||Descripción|
 
-|
+|---|---|---|---| |vpAreaName  |Text|->|Nombre del objeto del formulario de área de 4D View Pro| |Resultado |Object|<-|Object containing the workbook options|<!-- END REF -->
 
 #### Descripción
 
@@ -3090,7 +3091,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descripción
 
-El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* en el área de 4D View Pro *vpAreaName* y reemplaza su contenido. *vpBlob* debe contener un documento 4D View Pro previamente guardado como Blob, ya sea mediante el comando [VP EXPORT TO BLOB](#vp-export-to-blob) o a través de la interfaz de 4D View Pro<!-- END REF -->.
+El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 En *paramObj*, puede pasar varias propiedades:
 
@@ -3448,6 +3449,7 @@ Este comando inserta algunas líneas en la tabla *tableName*, NO en la hoja. El 
 Si la tabla *tableName* está vinculada a un [contexto de datos](#vp-set-data-context), el comando inserta nuevos elementos vacíos en la colección.
 
 Si *tableName* no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
+
 
 
 #### Ejemplo
@@ -5235,9 +5237,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parámetro|Tipo||Descripción|
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| dateValue     | Fecha  | -> | Valor date a definir                         |
+| formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5493,11 +5499,12 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro *paneObj*. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
 
-| Propiedad | Tipo | Descripción |
-| --------- | ---- | ----------- |
-|           |      |             |
-
-|columnCount | Integer | El número de columnas congeladas a la izquierda de la hoja| |trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja |rowCount | Integer | El número de filas congeladas en la parte superior de la hoja | |trailingRowCount | Integer | El número de filas congeladas en la parte inferior de la hoja|
+| Propiedad           | Tipo    | Descripción                                                    |
+| ------------------- | ------- | -------------------------------------------------------------- |
+| columnCount         | Integer | El número de columnas congeladas a la izquierda de la hoja     |
+| trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja       |
+| rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
+| trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5736,11 +5743,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros | Tipo   |    | Descripción                                       |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| rangeObj   | Object | -> | Objeto rango de celdas|<!-- END REF -->
 
-|rangeObj |Object|->|Rango objeto de celdas|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5807,12 +5814,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
-| name       | Text | -> | Nuevo nombre para la hoja                    |
+| Parámetros | Tipo    |    | Descripción                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro             |
+| name       | Text    | -> | Nuevo nombre para la hoja                                |
+| sheet      | Integer | -> | Índice de la hoja a renombrar|<!-- END REF -->
 
-|sheet|Integer|->|Índice de la hoja a renombrar|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5826,7 +5834,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-Si no se pasa el *index*, el comando renombra la hoja actual.
+Si no se pasa el *sheet*, el comando renombra la hoja actual.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5835,7 +5843,7 @@ El comando no hace nada si:
 * el nuevo nombre contiene caracteres prohibidos
 * el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
-* el *índice* pasado no existe
+* el índice de *sheet* pasado no existe
 
 #### Ejemplo
 
@@ -6517,11 +6525,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |
-| ---------- | ------ | -- | ------------ |
-| rangeObj   | Object | -> | Objeto rango |
+| Parámetros | Tipo    |    | Descripción                                                                          |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
+| rangeObj   | Object  | -> | Objeto rango                                                                         |
+| vPos       | Integer | -> | Posición vertical de la vista de la celda o de la línea                              |
+| hPos       | Integer | -> | Posición horizontal de la vista de la celda o de la línea|<!-- END REF -->
 
-|vPos |Integer|->|Posición de vista vertical de la celda o línea| |hPos |Integer|->|Posición de vista horizontal de la celda o línea|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -6620,6 +6630,6 @@ End if
 
 #### Ver también
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
