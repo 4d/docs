@@ -931,6 +931,7 @@ utilizar o seguinte código:
 
 
 
+
 | Parâmetro  | Tipo   |    | Descrição                                       |
 | ---------- | ------ | -- | ----------------------------------------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro      |
@@ -1112,6 +1113,7 @@ No parâmetro *options* , você pode passar as seguintes opções de exportaçã
 | includeBindingSource | Parâmetros | True (padrão) para exportar os valores do contexto de dados atual como valores de célula no objeto exportado (os contextos de dados em si não são exportados). Caso contrário, false. Cell binding sempre é exportada.                                                            |
 
 Para mais informações sobre os objectos 4D View Pro, consulte o parágrafo [objeto 4D View Pro](configuring.md#4d-view-pro-object).
+
 
 #### Exemplo 1
 
@@ -1574,7 +1576,7 @@ Você pode definir onde obter a contagem de colunas no parâmetro opcional *shee
 O código seguinte retorna o número de colunas na área 4D View Pro:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -2396,13 +2398,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |
-| ---------- | ------- | -- | ------------------------------------------ |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
-| styleName  | Text    | -> | Nome do estilo                             |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)   |
+| Parâmetro  | Tipo    |    | Descrição                                     |
+| ---------- | ------- | -- | --------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro    |
+| styleName  | Text    | -> | Nome do estilo                                |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)      |
+| Resultados | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -2947,6 +2950,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
+
 | Parâmetro  | Tipo   |    | Descrição                                                                   |
 | ---------- | ------ | -- | --------------------------------------------------------------------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                  |
@@ -3962,6 +3966,7 @@ This command removes rows from the *tableName* table, NOT from the sheet. O núm
 
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
 
+
 Se *tableName* não existir, não acontece nada.
 
 
@@ -4230,7 +4235,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 | `<customProperty>` | misto            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 
-The following property is automatically added by the command if necessary:
+A seguinte propriedade é automaticamente adicionada pelo comando, se necessário:
 
 | Propriedade    | Tipo    | Descrição                                                       |
 | -------------- | ------- | --------------------------------------------------------------- |
@@ -5041,9 +5046,13 @@ The optional *formatPattern* defines a pattern for the *dateValue* and *timeValu
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parâmetro|Tipo||Descrição|
+| Parâmetro     | Tipo   |    | Descrição                                   |
+| ------------- | ------ | -- | ------------------------------------------- |
+| rangeObj      | Object | -> | Objeto intervalo                            |
+| dateValue     | Date   | -> | Valor date a definir                        |
+| formatPattern | Text   | -> | Formato do valor|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -5291,11 +5300,12 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. If a property is set to less than zero, the command does nothing. Pode passar:
 
-| Propriedade | Tipo | Descrição |
-| ----------- | ---- | --------- |
-|             |      |           |
-
-|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
+| Propriedade         | Tipo    | Descrição                                                |
+| ------------------- | ------- | -------------------------------------------------------- |
+| columnCount         | Integer | O número de colunas congeladas à esquerda da folha       |
+| trailingColumnCount | Integer | O número de colunas congeladas à direita da folha        |
+| rowCount            | Integer | O número de linhas congeladas na parte superior da folha |
+| trailingRowCount    | Integer | O número de linhas congeladas na parte inferior da folha |
 
 No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
@@ -5501,7 +5511,7 @@ O comando `VP SET ROW COUNT` <!-- REF #_method_.VP SET ROW COUNT.Summary -->defi
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the total number of rows in the *rowCount* parameter. *rowCount* tem de ser superior a 0.
+Passe o número total de linhas no parâmetro *rowCount*. *rowCount* tem de ser superior a 0.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the *rowCount* will be applied (counting begins at 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
@@ -5528,11 +5538,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parâmetro | Tipo |  | Descrição |
-| --------- | ---- |  | --------- |
-|           |      |  |           |
+| Parâmetro | Tipo   |    | Descrição                                              |
+| --------- | ------ | -- | ------------------------------------------------------ |
+| rangeObj  | Object | -> | Objeto intervalo de células|<!-- END REF -->
 
-|rangeObj |Object|->|Objeto de intervalo de células|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -5599,12 +5609,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parâmetro  | Tipo |    | Descrição                                  |
-| ---------- | ---- | -- | ------------------------------------------ |
-| vpAreaName | Text | -> | Nome de objeto formulário área 4D View Pro |
-| name       | Text | -> | Novo nome para a folha                     |
+| Parâmetro  | Tipo    |    | Descrição                                                   |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |
+| name       | Text    | -> | Novo nome para a folha                                      |
+| sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
 
-|sheet|Integer|->|Índice da folha a ser renomeada|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -5618,7 +5629,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > A indexação começa em 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 O novo nome não pode conter os seguintes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5627,7 +5638,7 @@ O comando não faz nada se:
 * o novo nome contém caracteres proibidos
 * o valor do novo nome está em branco
 * o novo nome já existe
-* o *índice* passado não existe
+* the passed *sheet* does not exist
 
 #### Exemplo
 
@@ -6216,7 +6227,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. Se a célula seguinte estiver vazia, transborda o conteúdo.</td></tr></table>                                                                                                                              |
 | pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.          |
 | referenceStyle                        | number                  | Estilo para referências de células e intervalos em fórmulas de células. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                    |
-| resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                   |
+| resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Usa a política de desenho atual quando a linha ou coluna é redimensionada para zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                   |
 | rowResizeMode                         | number                  | A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                      |
 | scrollbarAppearance                   | number                  | Aspeto da barra de deslocação. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>                                                                                                                                                                             |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                    |
@@ -6261,11 +6272,13 @@ $workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProAre
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parâmetro | Tipo   |    | Descrição        |
-| --------- | ------ | -- | ---------------- |
-| rangeObj  | Object | -> | Objeto intervalo |
+| Parâmetro | Tipo    |    | Descrição                                                          |
+| --------- | ------- | -- | ------------------------------------------------------------------ |
+| rangeObj  | Object  | -> | Objeto intervalo                                                   |
+| vPos      | Integer | -> | Posição vertical da vista da célula ou linha                       |
+| hPos      | Integer | -> | Horizontal view position of cell or row|<!-- END REF -->
 
-|vPos  |Integer|->|Vertical view position of cell or row| |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -6360,6 +6373,6 @@ If(FORM Event.code=On Clicked)
 
 #### Veja também
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
