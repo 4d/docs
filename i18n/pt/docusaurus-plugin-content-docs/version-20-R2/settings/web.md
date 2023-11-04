@@ -233,7 +233,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS_URI         | X   | X   | URI onde o pedido é efectuado                                               |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                    |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                    |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year  |
+| DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano   |
 | METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                     |
 | PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o caractere "$"        |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                            |
