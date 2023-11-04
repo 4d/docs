@@ -92,7 +92,7 @@ End if
 
 ## Exemplo
 
-In a CRM application, each salesperson manages their own client portfolio. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
+Em uma aplicação CRM, cada vendedor gerencia seu próprio portefólio de clientes. The datastore contains at least two linked dataclasses: Customers and SalesPersons (a salesperson has several customers).
 
 ![alt-text](../assets/en/WebServer/exampleSession.png)
 
