@@ -1572,7 +1572,7 @@ Puede definir dónde obtener el número de columnas en el parámetro opcional *s
 El siguiente código devuelve el número de columnas en el área 4D View Pro:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -2398,13 +2398,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                  |
-| ---------- | ------- | -- | -------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| styleName  | Text    | -> | Nombre del estilo                            |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Parámetros | Tipo    |    | Descripción                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro  |
+| styleName  | Text    | -> | Nombre del estilo                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)   |
+| Result     | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -2879,6 +2880,7 @@ Si *rangeObj* contiene varias celdas o varios rangos, se devuelve el valor de la
 
 
 
+
 #### Ejemplo
 
 ```4d
@@ -2952,6 +2954,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
+
 | Parámetros | Tipo   |    | Descripción                                                                      |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
@@ -5048,10 +5051,11 @@ El parámetro opcional *formatPattern* define un modelo para los parámetros *da
 #### Ejemplo
 
 ```4d
-//Definir el valor de la celda como la fecha y hora actuales
+//Set the cell value as the current date and time
+
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
 
-//Definir el valor de la celda como 18 de diciembre
+//Set the cell value as the 18th of December
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
@@ -5066,9 +5070,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parámetro|Tipo||Descripción|
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| dateValue     | Fecha  | -> | Valor date a definir                         |
+| formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5323,11 +5331,12 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro *paneObj*. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
 
-| Propiedad | Tipo | Descripción |
-| --------- | ---- | ----------- |
-|           |      |             |
-
-|columnCount | Integer | El número de columnas congeladas a la izquierda de la hoja| |trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja |rowCount | Integer | El número de filas congeladas en la parte superior de la hoja | |trailingRowCount | Integer | El número de filas congeladas en la parte inferior de la hoja|
+| Propiedad           | Tipo    | Descripción                                                    |
+| ------------------- | ------- | -------------------------------------------------------------- |
+| columnCount         | Integer | El número de columnas congeladas a la izquierda de la hoja     |
+| trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja       |
+| rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
+| trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5565,11 +5574,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros | Tipo   |    | Descripción                                       |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| rangeObj   | Object | -> | Objeto rango de celdas|<!-- END REF -->
 
-|rangeObj |Object|->|Rango objeto de celdas|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5637,12 +5646,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
-| name       | Text | -> | Nuevo nombre para la hoja                    |
+| Parámetros | Tipo    |    | Descripción                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro             |
+| name       | Text    | -> | Nuevo nombre para la hoja                                |
+| sheet      | Integer | -> | Índice de la hoja a renombrar|<!-- END REF -->
 
-|sheet|Integer|->|Índice de la hoja a renombrar|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5656,7 +5666,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-Si no se pasa el *index*, el comando renombra la hoja actual.
+Si no se pasa el *sheet*, el comando renombra la hoja actual.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5665,7 +5675,7 @@ El comando no hace nada si:
 * el nuevo nombre contiene caracteres prohibidos
 * el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
-* el *índice* pasado no existe
+* the passed *sheet* does not exist
 
 #### Ejemplo
 
@@ -6345,11 +6355,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |
-| ---------- | ------ | -- | ------------ |
-| rangeObj   | Object | -> | Objeto rango |
+| Parámetros | Tipo    |    | Descripción                                                                          |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
+| rangeObj   | Object  | -> | Objeto rango                                                                         |
+| vPos       | Integer | -> | Posición vertical de la vista de la celda o de la línea                              |
+| hPos       | Integer | -> | Posición horizontal de la vista de la celda o de la línea|<!-- END REF -->
 
-|vPos |Integer|->|Posición de vista vertical de la celda o línea| |hPos |Integer|->|Posición de vista horizontal de la celda o línea|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -6448,6 +6460,6 @@ End if
 
 #### Ver también
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
