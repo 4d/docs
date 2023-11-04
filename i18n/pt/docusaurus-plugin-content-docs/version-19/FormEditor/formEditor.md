@@ -666,7 +666,7 @@ A seleção é então colocada na nova vista:
 
 ![](../assets/en/FormEditor/objNewView.png)
 
-You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
+Você também pode mover um objeto para outra visualização por meio do menu de contexto do objeto. Right-click on the object, select **Move to view**, and select a view from the list of available views:
 
 ![](../assets/en/FormEditor/moveObject2.png)
 > A [vista atual](#before-you-begin) é mostrado em negrito.
