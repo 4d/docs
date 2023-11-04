@@ -71,7 +71,7 @@ Para eliminar uma barra de menu, um menu ou um item de menu:
 
 ### Utilizar a linguagem 4D
 
-Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` to unload the menu reference from the memory.
+Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` para descarregar a referência de menu da memória.
 
 ## Anexar os menus
 
