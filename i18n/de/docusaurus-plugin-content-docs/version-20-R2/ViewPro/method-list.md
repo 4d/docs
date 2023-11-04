@@ -938,6 +938,7 @@ use the following code:
 
 
 
+
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name         |
@@ -1121,6 +1122,7 @@ In the *options* parameter, you can pass the following export options, if requir
 | includeBindingSource | Boolean | True (default) to export the current data context values as cell values in the exported object (data contexts themselves are not exported). False otherwise. Cell binding is always exported.                             |
 
 For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) paragraph.
+
 
 #### Beispiel 1
 
@@ -1587,7 +1589,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 The following code returns the number of columns in the 4D View Pro area:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -2442,13 +2444,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                           |
-| ---------- | -------- | -- | -------------------------------------- |
-| vpAreaName | Text     | -> | 4D View Pro area form object name      |
-| styleName  | Text     | -> | Name of style                          |
-| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted) |
+| Parameter  | Typ      |    | Beschreibung                                  |
+| ---------- | -------- | -- | --------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name             |
+| styleName  | Text     | -> | Name of style                                 |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)        |
+| Ergebnis   | Objekt   | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -2996,6 +2999,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
+
 | Parameter  | Typ    |    | Beschreibung                                                      |
 | ---------- | ------ | -- | ----------------------------------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name                                 |
@@ -4017,6 +4021,7 @@ The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summa
 This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
 
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
+
 
 If *tableName* does not exist, nothing happens.
 
@@ -5130,9 +5135,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parameter|Type||Description|
+| Parameter     | Typ    |    | Beschreibung                               |
+| ------------- | ------ | -- | ------------------------------------------ |
+| rangeObj      | Objekt | -> | Range object                               |
+| dateValue     | Datum  | -> | Date value to set                          |
+| formatPattern | Text   | -> | Format of value|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5388,11 +5397,12 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. If a property is set to less than zero, the command does nothing. You can pass:
 
-| Property | Typ | Beschreibung |
-| -------- | --- | ------------ |
-|          |     |              |
-
-|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
+| Property            | Typ      | Beschreibung                                           |
+| ------------------- | -------- | ------------------------------------------------------ |
+| columnCount         | Ganzzahl | The number of frozen columns on the left of the sheet  |
+| trailingColumnCount | Ganzzahl | The number of frozen columns on the right of the sheet |
+| rowCount            | Ganzzahl | The number of frozen rows on the top of the sheet      |
+| trailingRowCount    | Ganzzahl | The number of frozen rows on the bottom of the sheet   |
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 
@@ -5668,11 +5678,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parameter | Typ |  | Beschreibung |
-| --------- | --- |  | ------------ |
-|           |     |  |              |
+| Parameter | Typ    |    | Beschreibung                                     |
+| --------- | ------ | -- | ------------------------------------------------ |
+| rangeObj  | Objekt | -> | Range object of cells|<!-- END REF -->
 
-|rangeObj |Object|->|Range object of cells|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5739,12 +5749,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parameter  | Typ  |    | Beschreibung                      |
-| ---------- | ---- | -- | --------------------------------- |
-| vpAreaName | Text | -> | 4D View Pro area form object name |
-| name       | Text | -> | New name for the sheet            |
+| Parameter  | Typ      |    | Beschreibung                                                |
+| ---------- | -------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name                           |
+| name       | Text     | -> | New name for the sheet                                      |
+| sheet      | Ganzzahl | -> | Index of the sheet to be renamed|<!-- END REF -->
 
-|sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -5758,7 +5769,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > Indexing starts at 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -5767,7 +5778,7 @@ The command does nothing if:
 * the new name contains forbidden characters
 * the new name's value is blank
 * the new name already exists
-* the passed *index* does not exist
+* the passed *sheet* does not exist
 
 #### Beispiel
 
@@ -6446,11 +6457,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parameter | Typ    |    | Beschreibung |
-| --------- | ------ | -- | ------------ |
-| rangeObj  | Objekt | -> | Range object |
+| Parameter | Typ      |    | Beschreibung                                                       |
+| --------- | -------- | -- | ------------------------------------------------------------------ |
+| rangeObj  | Objekt   | -> | Range object                                                       |
+| vPos      | Ganzzahl | -> | Vertical view position of cell or row                              |
+| hPos      | Ganzzahl | -> | Horizontal view position of cell or row|<!-- END REF -->
 
-|vPos  |Integer|->|Vertical view position of cell or row| |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -6549,6 +6562,6 @@ End if
 
 #### See also
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
