@@ -156,7 +156,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
 | state                | resposta dada pelo servidor                                                                                                                                          |
 | length               | tamanho dos dados retornados (HTTP header exceto) ou 0                                                                                                               |
-| Referer              | DLF only- Contains the URL of the page pointing to the requested document.                                                                                           |
+| Referer              | DLF apenas- Contém a URL da página apontando para o documento solicitado.                                                                                            |
 | User-agent           | DLF only- Contains the name and version of the browser or software of the client at the origin of the request                                                        |
 
 #### ELF/WLF
@@ -187,7 +187,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                     |
 | CS_URI_QUERY | X   | X   | Request query parameters                                                                                                                          |
 | CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                                          |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                                        |
+| DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano                                                                         |
 | METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                           |
 | PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                               |
 | STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                  |
