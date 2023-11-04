@@ -67,7 +67,7 @@ To enable data change tracking:
 
 Em seguida, 4D faz as seguintes alterações:
 
-- A preconfigured `__GlobalStamp` field is added to the table(s).
+- Um campo pré-configurado `__GlobalStamp` é adicionado à(s) tabela(s).
 - If not already existing, a `__DeletedRecords` table is added to the structure.
 
 
