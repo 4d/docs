@@ -9,7 +9,7 @@ This module allows backing up a database currently in use without having to exit
 
 Cópias de segurança ou backups podem ser começadas de forma manual ou de forma automatica em intervalores regulares sem qualquer intervenção do usuário. Comandos específicos da linguagem, assim como métodos de bancos de dados específicos, permitem integrar funções de backup em uma interface personalizada.
 
-Databases can be restored automatically when a damaged database is opened.
+A restauração de um banco de dados após um incidente pode ser feita automaticamente quando um banco de dados danificado é aberto.
 
 Além disso, o módulo de cópia de segurança integrada pode aproveitar o arquivo .journal ([de histórico](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. In case of problems with a database in use, any operations missing in the data file are automatically reintegrated the next time the database is opened. Pode ver os conteúdos do arquivo journal a qualquer momento.
 
