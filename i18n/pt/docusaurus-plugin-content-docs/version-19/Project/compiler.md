@@ -146,7 +146,7 @@ This setting allows you to select the processor family for which your 4D project
 - Os processadores **Intel/AMD** (todas as máquinas),
 - os processadores **Apple Silicon**.
 
-Duas opções de alvo estão disponíveis. The result depends on the processor of the machine on which 4D is running.
+Duas opções de alvo estão disponíveis. O resultado depende do processador da máquina em que 4D está em execução.
 
 | *Opção*                                                | *no Windows Intel/AMD*                                                                     | *macOS Intel*                                                                                | *no macOS Silicon*                                                                           |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -159,7 +159,7 @@ Duas opções de alvo estão disponíveis. The result depends on the processor o
 
 Use this area to set the default type for ambiguous database objects.
 
-- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. You can optimize the running of your database by choosing the Longint type.
+- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
 - **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
 
 ### Métodos Compilação para
@@ -272,7 +272,7 @@ To do this, you must surround the code to be excluded from range checking with t
 
 4D contém dois compiladores:
 
-- a "classic" compiler, used to compile native code for Intel/AMD processors;
+- um compilador "clássico", usado para compilar código nativo para processadores Intel/AMD;
 - um compilador Silicon, para compilar código nativo para processadores Apple Silicon.
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
