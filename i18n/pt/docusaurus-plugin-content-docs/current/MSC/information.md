@@ -47,6 +47,6 @@ As informações são fornecidas sob a forma de gráficos:
 ![](../assets/en/MSC/MSC_Data.png)
 > This page does not take into account any data that may be stored outside of the data file (see "External storage").
 
-Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
+Arquivos que são muito fragmentados reduzem o desempenho do disco e, assim, do banco de dados. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
 
 A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](../assets/en/MSC/MSC_compactwarn.png)
