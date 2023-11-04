@@ -48,7 +48,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 *   To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-*   To select a column, click on the corresponding letter (or set of letters).
+*   Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
 
 *   Para selecionar uma linha, clique no número correspondente.
 
