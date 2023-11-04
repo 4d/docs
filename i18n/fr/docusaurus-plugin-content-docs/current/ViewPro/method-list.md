@@ -938,6 +938,7 @@ saisissez le code suivant :
 
 
 
+
 | Paramètres | Type   |    | Description                                 |
 | ---------- | ------ | -- | ------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro     |
@@ -1663,7 +1664,7 @@ Vous pouvez définir où compter les colonnes à l'aide du paramètre optionnel 
 Le code suivant retourne le nombre de colonnes dans la zone 4D View Pro :
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1758,6 +1759,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1819,7 +1821,9 @@ retournera les informations suivantes dans l'objet *$defaultStyle* :
 | Résultat   | Text   | <- | Formula|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -2495,8 +2499,9 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | styleName  | Text    | -> | Nom du style                                             |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Description
 
@@ -2813,8 +2818,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | Constante             | Valeur | Description                                                                       |
 | --------------------- | ------ | --------------------------------------------------------------------------------- |
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
-
-|`vk table data range`|1|Get the cell range for the table data area only|
+| `vk table data range` | 1      | Get the cell range for the table data area only                                   |
 
 Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
 > La numérotation démarre à 0.
@@ -3090,7 +3094,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Description
 
-La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importe le *vpBlob* dans la zone 4D View Pro *vpAreaName* et remplace son contenu. .<!-- END REF -->.
+La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 
@@ -3448,6 +3452,7 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+
 
 
 #### Exemple
