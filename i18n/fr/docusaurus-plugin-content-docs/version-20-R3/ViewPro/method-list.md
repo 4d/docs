@@ -938,6 +938,7 @@ saisissez le code suivant :
 
 
 
+
 | Paramètres | Type   |    | Description                                 |
 | ---------- | ------ | -- | ------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro     |
@@ -1663,7 +1664,7 @@ Vous pouvez définir où compter les colonnes à l'aide du paramètre optionnel 
 Le code suivant retourne le nombre de colonnes dans la zone 4D View Pro :
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1758,6 +1759,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1819,7 +1821,9 @@ retournera les informations suivantes dans l'objet *$defaultStyle* :
 | Résultat   | Text   | <- | Formula|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -2495,8 +2499,9 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | styleName  | Text    | -> | Nom du style                                             |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
+| Résultat   | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Description
 
@@ -2813,8 +2818,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | Constante             | Valeur | Description                                                                       |
 | --------------------- | ------ | --------------------------------------------------------------------------------- |
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
-
-|`vk table data range`|1|Get the cell range for the table data area only|
+| `vk table data range` | 1      | Get the cell range for the table data area only                                   |
 
 Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
 > La numérotation démarre à 0.
@@ -3044,12 +3048,9 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-| Paramètres | Type   |    | Description                                                        |
-| ---------- | ------ | -- | ------------------------------------------------------------------ |
-| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                            |
-| Résultat   | Object | <- | Objet contenant les options de workbook|<!-- END REF -->
+|Paramètre|Type||Description|
 
-|
+|---|---|---|---| |vpAreaName  |Text|->|4D View Pro area form object name| |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
 
 #### Description
 
@@ -3093,7 +3094,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Description
 
-La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importe le *vpBlob* dans la zone 4D View Pro *vpAreaName* et remplace son contenu. .<!-- END REF -->.
+La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 
@@ -3451,6 +3452,7 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+
 
 
 #### Exemple
@@ -5236,9 +5238,13 @@ Le paramètre optionnel *formatPattern* définit un modèle pour les paramètres
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Paramètre|Type||Description|
+| Paramètres    | Type   |    | Description                                    |
+| ------------- | ------ | -- | ---------------------------------------------- |
+| rangeObj      | Object | -> | Objet plage                                    |
+| dateValue     | Date   | -> | Valeur date à fixer                            |
+| formatPattern | Text   | -> | Format de la valeur|<!-- END REF -->
 
-Résultat du traitement (le cas échéant)<!-- END REF -->
+|
 
 #### Description
 
@@ -5494,11 +5500,12 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Vous pouvez passer un objet définissant les lignes et colonnes à figer dans le paramètre *paneObj*. Si vous fixez la valeur d'une propriété de colonne ou de ligne à zéro, cela réinitialise (ne fige plus) la propriété. Si une propriété est définie sur une valeur inférieure à zéro, la commande ne fait rien. Vous pouvez passer :
 
-| Propriété | Type | Description |
-| --------- | ---- | ----------- |
-|           |      |             |
-
-|columnCount | Integer | Le nombre de colonnes gelées à gauche de la feuille| |trailingColumnCount |Integer | Le nombre de colonnes gelées à droite de la feuille |rowCount | Integer | Le nombre de lignes gelées en haut de la feuille| |trailingRowCount | Integer | Le nombre de lignes gelées en bas de la feuille|
+| Propriété           | Type    | Description                                              |
+| ------------------- | ------- | -------------------------------------------------------- |
+| columnCount         | Integer | Le nombre de colonnes figées sur la gauche de la feuille |
+| trailingColumnCount | Integer | Le nombre de colonnes figées sur la droite de la feuille |
+| rowCount            | Integer | Le nombre de lignes figées en haut de la feuille         |
+| trailingRowCount    | Integer | Le nombre de lignes figées en bas de la feuille          |
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
@@ -5737,11 +5744,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Paramètres | Type |  | Description |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Paramètres | Type   |    | Description                                           |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| rangeObj   | Object | -> | Objet de plage de cellules|<!-- END REF -->
 
-|rangeObj |Objet|->|Objet de plage de cellules|<!-- END REF -->
+|
 
 #### Description
 
@@ -5808,12 +5815,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Paramètres | Type |    | Description                             |
-| ---------- | ---- | -- | --------------------------------------- |
-| vpAreaName | Text | -> | Nom d'objet formulaire zone 4D View Pro |
-| name       | Text | -> | Nouveau nom de la feuille               |
+| Paramètres | Type    |    | Description                                               |
+| ---------- | ------- | -- | --------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                   |
+| name       | Text    | -> | Nouveau nom de la feuille                                 |
+| sheet      | Integer | -> | Index de la feuille à renommer|<!-- END REF -->
 
-|sheet|Integer|->|Numéro de la feuille à renommer|<!-- END REF -->
+|
 
 #### Description
 
@@ -5827,7 +5835,7 @@ Dans *sheet*, passez le numéro de la feuille à renommer.
 
 > La numérotation démarre à 0.
 
-Si aucun *sheet* n'est passé, la commande renomme la feuille en cours.
+Si aucune *sheet* n'est fournie, la commande renomme la feuille courante.
 
 Le nouveau nom ne peut pas contenir les caractères suivants : `*, :, [, ], ?,\,/`
 
@@ -5836,7 +5844,7 @@ La commande ne fait rien si :
 * le nouveau nom contient des caractères interdits
 * la valeur du nouveau nom est vide
 * le nouveau nom existe déjà
-* le numéro *sheet * passé n'existe pas
+* l'index *sheet* transmis n'existe pas
 
 #### Exemple
 
@@ -6529,11 +6537,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Paramètres | Type   |    | Description |
-| ---------- | ------ | -- | ----------- |
-| rangeObj   | Object | -> | Objet plage |
+| Paramètres | Type    |    | Description                                                                            |
+| ---------- | ------- | -- | -------------------------------------------------------------------------------------- |
+| rangeObj   | Object  | -> | Objet plage                                                                            |
+| vPos       | Integer | -> | Position verticale de la vue de la cellule ou de la ligne                              |
+| hPos       | Integer | -> | Position horizontale de la vue de la cellule ou de la ligne|<!-- END REF -->
 
-|vPos  |Integer|->|Vertical view position of cell or row| |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
+|
 
 #### Description
 
@@ -6632,6 +6642,6 @@ End if
 
 #### Voir également
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 
