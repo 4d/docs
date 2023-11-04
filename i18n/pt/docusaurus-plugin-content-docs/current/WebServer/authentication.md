@@ -58,7 +58,7 @@ Os valores introduzidos são então avaliados:
     - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
 
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
-> With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.
+> With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validação de usuários/senhas é realizada pela aplicação 4D Server.
 
 ### Protocolo DIGEST
 
@@ -132,7 +132,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
 
-Vejamos o exemplo de uma ligação Intranet. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 
 | URL introduzido no navegador Web     | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |
