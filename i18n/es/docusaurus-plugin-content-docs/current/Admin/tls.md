@@ -64,13 +64,13 @@ Los certificados TLS gestionados por 4D deben estar en formato **PEM**. Si su pr
 
 :::info Compatibilidad
 
-The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
+El formato de cifrado ECDSA no es compatible con la 4D [capa de red legacy](../settings/client-server.md#network-layer).
 
 :::
 
 :::note
 
-4D proposes two commands to help you requesting a RSA certificate, [see the tutorial below](#how-to-get-a-rsa-certificate-tutorial).
+4D le propone dos comandos para ayudarle a solicitar un certificado RSA, [vea el tutorial más abajo](#how-to-get-a-rsa-certificate-tutorial).
 
 :::
 
@@ -80,7 +80,7 @@ The ECDSA encryption format is not supported by the 4D [legacy network layer](..
 
 ### Instalar los archivos `key.pem` y `cert.pem`
 
-To be able to use the TLS protocol with 4D, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server or client on which you want to use TLS.
+Para poder utilizar el protocolo TLS con 4D, debe instalar **key.pem** (documento que contiene la llave privada de cifrado) y **cert.pem** (documento que contiene el certificado) en la ubicación adecuada. Se requieren diferentes ubicaciones en función del servidor o cliente en el que se quiera utilizar TLS.
 
 :::caution
 
@@ -91,7 +91,7 @@ Los archivos *key.pem* y*cert.pem* por defecto se entregan con 4D. Para un mayor
 
 #### Con el servidor HTTP
 
-To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
+Para ser utilizado por el servidor HTTP de 4D, los archivos **key.pem** y **cert.pem** deben ser colocados:
 
 - con 4D en modo local o 4D Server, junto a la [carpeta del proyecto](Project/architecture.md#project-folder)
 - con 4D en modo remoto, en la carpeta de la base cliente en la máquina remota (para más información sobre la ubicación de esta carpeta, ver el comando [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
@@ -102,7 +102,7 @@ Debe copiar estos archivos manualmente en la máquina remota.
 
 Para ser utilizado por el cliente HTTP 4D, los archivos **key.pem** y **cert.pem** deben ubicarse por defecto en "ClientCertificatesFolder" que es creada junto a la [carpeta del proyecto](Project/architecture.md#project-folder).
 
-This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html) command).
+Esta ubicación se puede personalizar utilizando el comando [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html)).
 
 
 #### Con el servidor de aplicaciones (aplicaciones de escritorio cliente-servidor)
