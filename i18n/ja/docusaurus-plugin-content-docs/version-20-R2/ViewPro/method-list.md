@@ -2413,12 +2413,12 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| 引数         | タイプ     |    | 説明                                            |
-| ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                       |
-| styleName  | Text    | -> | スタイルの名前                                       |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                   |
-| 戻り値        | Object  | <- | Style sheet object|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                       |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                  |
+| styleName  | Text    | -> | スタイルの名前                                  |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)              |
+| 戻り値        | Object  | <- | スタイルシートオブジェクト|<!-- END REF -->
 
 |
 
@@ -5709,7 +5709,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 * 新しい名前に禁止文字が含まれている
 * 新しい名前が空の文字列である
 * 新しい名前が既に存在している
-* the passed *sheet* does not exist
+* *sheet* に渡したシートが存在しない
 
 #### 例題
 
