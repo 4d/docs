@@ -2399,12 +2399,12 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| 引数         | タイプ     |    | 説明                                            |
-| ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                       |
-| styleName  | Text    | -> | スタイルの名前                                       |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                   |
-| 戻り値        | Object  | <- | Style sheet object|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                       |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                  |
+| styleName  | Text    | -> | スタイルの名前                                  |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)              |
+| 戻り値        | Object  | <- | スタイルシートオブジェクト|<!-- END REF -->
 
 |
 
@@ -5050,11 +5050,11 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 #### 例題
 
 ```4d
-//Set the cell value as the current date and time
+// セルの値をカレントの日付と時間に設定
 
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
 
-//Set the cell value as the 18th of December
+// セルの値を 12月18日に設定
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
@@ -5674,7 +5674,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 * 新しい名前に禁止文字が含まれている
 * 新しい名前が空の文字列である
 * 新しい名前が既に存在している
-* the passed *sheet* does not exist
+* *sheet* に渡したシートが存在しない
 
 #### 例題
 
