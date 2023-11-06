@@ -2491,12 +2491,12 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| 引数         | タイプ     |    | 説明                                            |
-| ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                       |
-| styleName  | Text    | -> | スタイルの名前                                       |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                   |
-| 戻り値        | Object  | <- | Style sheet object|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                       |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                  |
+| styleName  | Text    | -> | スタイルの名前                                  |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)              |
+| 戻り値        | Object  | <- | スタイルシートオブジェクト|<!-- END REF -->
 
 |
 
@@ -3092,7 +3092,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### 説明
 
-`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->。 *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
 
 *paramObj* には、複数のプロパティを渡せます:
 
