@@ -30,7 +30,7 @@ This button toggles and can be used to control the activation of the 4D Server H
 
 ## Informação Web
 
-This area provides specific information about the Web server of 4D Server.
+Esta área fornece informações específicas sobre o servidor Web de 4D Server.
 
 - **Pedidos Web**: aceites ou rejeitados. Esta informação indica se o servidor Web está ativado. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
 - **Maximum connections**: Maximum number of Web connections allowed. Este valor depende da licença instalada na máquina do servidor.

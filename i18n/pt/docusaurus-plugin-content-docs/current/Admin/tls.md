@@ -9,7 +9,7 @@ Todos os servidores 4D podem se comunicar em modo seguro através do protocolo T
 - o servidor de aplicação (aplicações desktop cliente-servidor)
 - o servidor SQL
 
-In addition, the 4D HTTP client (`HTTP get` command for example) also supports the TLS protocol.
+Além disso, o cliente HTTP (comando `HTTP get` por exemplo) também é compatível com o protocolo TLS.
 
 ## Visão Geral
 
@@ -53,24 +53,24 @@ Pode controlar o nível de segurança de seu **servidor web** definindo a versã
 
 ### Formato
 
-TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
+Certificados TLS gerenciados por 4D devem ser no **PEM format**. Se seu fornecedor de certificado (por exemplo, [WoTrus](https://store.wotrus.com/)) envia um certificado que está no formato binário tais como .crt, .pfx ou .p12, tem que converter para o formato PEM para poder usá-lo. Há web sites tais como [sslshopper](https://www.sslshopper.com/) onde se pode fazer a conversão on-line.
 
-### Encryption
+### Criptografia
 
-4D supports certificates in the following standard encryption formats:
+4D fornece certificados nos formatos de criptografia abaixo:
 
 - [**RSA**](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [**ECDSA**](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)
 
 :::info Compatibilidade
 
-The ECDSA encryption format is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
+O formato de criptografia ECDSA não é compatível com [a camada de rede legado 4D](../settings/client-server.md#network-layer).
 
 :::
 
 :::note
 
-4D proposes two commands to help you requesting a RSA certificate, [see the tutorial below](#how-to-get-a-rsa-certificate-tutorial).
+4D oferece dois comandos para ajudar a peticionar um certificado RSA, [veja o tutorial abaixo](#how-to-get-a-rsa-certificate-tutorial).
 
 :::
 
@@ -80,7 +80,7 @@ The ECDSA encryption format is not supported by the 4D [legacy network layer](..
 
 ### Arquivos `key.pem` e `cert.pem`
 
-To be able to use the TLS protocol with 4D, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server or client on which you want to use TLS.
+Para poder usar o protocolo TLS com 4D, deve instalar  **key.pem** (documento que contém a chave de criptografia privada) e **cert.pem** (documento contendo o certificado) nos locais apropriados. Locais diferentes são exigidos dependendo no servidor ou cliente no qual quiser usar TLS.
 
 :::caution
 
@@ -100,9 +100,9 @@ Deve copiar esses arquivos manualmente na máquina remota.
 
 #### Com o cliente HTTP
 
-To be used by the 4D HTTP client, the **key.pem** and **cert.pem** files must be placed by default in the "ClientCertificatesFolder" that is created next to the next to the [project folder](Project/architecture.md#project-folder).
+Para serem utilizados pelo cliente HTTP 4D os arquivos **key.pem** e **cert.pem** devem ser colocados por padrão em "ClientCertificatesFolder" que é criado ao lado da pasta  [de projeto](Project/architecture.md#project-folder).
 
-This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html) command).
+Este local pode ser personalizado usando o comando [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html)).
 
 
 #### Com o servidor de aplicações (aplicações de desktop cliente-servidor)

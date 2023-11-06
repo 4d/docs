@@ -938,6 +938,7 @@ use the following code:
 
 
 
+
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name         |
@@ -1659,7 +1660,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 The following code returns the number of columns in the 4D View Pro area:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1754,6 +1755,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1815,7 +1817,9 @@ will return this information in the *$defaultStyle* object:
 | Ergebnis  | Text   | <- | Formula|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Beschreibung
@@ -2518,13 +2522,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                           |
-| ---------- | -------- | -- | -------------------------------------- |
-| vpAreaName | Text     | -> | 4D View Pro area form object name      |
-| styleName  | Text     | -> | Name of style                          |
-| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted) |
+| Parameter  | Typ      |    | Beschreibung                                  |
+| ---------- | -------- | -- | --------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area form object name             |
+| styleName  | Text     | -> | Name of style                                 |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)        |
+| Ergebnis   | Objekt   | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Beschreibung
 
@@ -2842,8 +2847,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | Constant              | Wert | Beschreibung                                                                      |
 | --------------------- | ---- | --------------------------------------------------------------------------------- |
 | `vk table full range` | 0    | Get the cell range for the table area with footer and header (default if omitted) |
-
-|`vk table data range`|1|Get the cell range for the table data area only|
+| `vk table data range` | 1    | Get the cell range for the table data area only                                   |
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
 > Indexing starts at 0.
@@ -3119,7 +3123,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Beschreibung
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 In *paramObj*, you can pass several properties:
 
@@ -3477,6 +3481,7 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+
 
 
 #### Beispiel

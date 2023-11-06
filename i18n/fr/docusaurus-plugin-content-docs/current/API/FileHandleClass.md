@@ -13,7 +13,7 @@ Grâce au *refcounting* standard d'objets de 4D, un handle de fichier est automa
 
 :::note
 
-Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+Les ressources d'un objet, telles que les documents, sont libérées lorsqu'il n'y a plus de références en mémoire, ce qui se produit par exemple à la fin de l'exécution de la méthode pour les variables locales. Si vous souhaitez "forcer" la libération des ressources de l'objet à tout moment, vous pouvez [nullifier ses références](../Concepts/dt_object.md#resources).
 
 :::
 

@@ -937,6 +937,7 @@ utilice el siguiente código:
 
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1658,7 +1659,7 @@ Puede definir dónde obtener el número de columnas en el parámetro opcional *s
 El siguiente código devuelve el número de columnas en el área 4D View Pro:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1753,6 +1754,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1814,7 +1816,9 @@ devolverá esta información en el objeto *$defaultStyle*:
 | Result     | Text   | <- | Formula|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción
@@ -2486,13 +2490,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                  |
-| ---------- | ------- | -- | -------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| styleName  | Text    | -> | Nombre del estilo                            |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Parámetros | Tipo    |    | Descripción                                   |
+| ---------- | ------- | -- | --------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro  |
+| styleName  | Text    | -> | Nombre del estilo                             |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)   |
+| Result     | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -2810,8 +2815,7 @@ En el parámetro *onlyData*, puede pasar una de las siguientes constantes para i
 | Constante             | Valor | Descripción                                                                                                  |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
 | `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
-
-|`vk table data range`|1|Obtener el rango de celdas sólo para el área de datos de la tabla|
+| `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                            |
 
 En *sheet*, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 > La indexación comienza en 0.
@@ -3087,7 +3091,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descripción
 
-El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa el *vpBlob* en el área de 4D View Pro *vpAreaName* y reemplaza su contenido. *vpBlob* debe contener un documento 4D View Pro previamente guardado como Blob, ya sea mediante el comando [VP EXPORT TO BLOB](#vp-export-to-blob) o a través de la interfaz de 4D View Pro<!-- END REF -->.
+El comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 En *paramObj*, puede pasar varias propiedades:
 
@@ -3445,6 +3449,7 @@ Este comando inserta algunas líneas en la tabla *tableName*, NO en la hoja. El 
 Si la tabla *tableName* está vinculada a un [contexto de datos](#vp-set-data-context), el comando inserta nuevos elementos vacíos en la colección.
 
 Si *tableName* no existe o si no hay suficiente espacio en la hoja, no ocurre nada.
+
 
 
 #### Ejemplo

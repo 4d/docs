@@ -62,7 +62,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
 
-Vamos utilizar uma ligação intranet como exemplo. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
+Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP do seu Web Server 4D é 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
 
 | URL introduzido no navegador Web     | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |

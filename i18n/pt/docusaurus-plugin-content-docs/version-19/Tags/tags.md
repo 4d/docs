@@ -399,7 +399,7 @@ No name has been found.
 </BODY>
 ```
 
-This example inserts different pages depending on which user is connected:
+Este exemplo insere páginas diferentes dependendo de qual usuário está conectado:
 
 ```html
 <!--#4DIF LoggedIn=False-->
@@ -417,7 +417,7 @@ This example inserts different pages depending on which user is connected:
 
 #### Sintaxe: `<!--#4DINCLUDE path-->`
 
-This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). This lets you avoid conflicts related to meta tags present in the headers.
+This tag is mainly designed to include an HTML page (indicated by the *path* parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Isso permite evitar conflitos relacionados a meta etiquetas presentes nos cabeçalhos.
 
 However, if the HTML page specified does not contain `<body>``</body>` tags, the entire page is included. Cabe-lhe a você verificar a coerência das meta etiquetas.
 
@@ -425,7 +425,7 @@ The `<!--#4DINCLUDE -->` comment is very useful for tests (`<!--#4DIF-->`) or lo
 
 An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
 
-In *path*, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
+Em *path*, coloque o caminho que leva ao documento a incluir. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
 
 > You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
 
@@ -648,7 +648,7 @@ Também é possível inserir expressões 4D. You can for example directly insert
 In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT myvar--> : ## error # error code`.
 
 - É necessário utilizar variáveis processo.
-- É possível mostrar o conteúdo de um campo imagem. However, it is not possible to display the content of a picture array item.
+- É possível mostrar o conteúdo de um campo imagem. No entanto, não é possível exibir o conteúdo de um item matriz de imagens.
 - It is possible to display the contents of an object field by means of a 4D formula. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
 - Normalmente, trabalha-se com variáveis de tipo texto. No entanto, também é possível utilizar variáveis BLOB. You just need to generate BLOBs in `Text without length` mode.
 

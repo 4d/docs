@@ -302,7 +302,7 @@ Para designar um conjunto processo se utilizar uma expressão de tipo string que
 
 O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). A client set name can contain up to 255 characters, not including the dollar sign.
 
-**Note:** Sets are maintained on the Server machine. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. Para isso, utilizam-se os conjuntos clientes.
+**Nota:** Os conjuntos são mantidos na máquina servidor. In certain cases, for efficiency or special purposes, you may need to work with sets locally on the Client machine. Para isso, utilizam-se os conjuntos clientes.
 
 Exemplos:
 

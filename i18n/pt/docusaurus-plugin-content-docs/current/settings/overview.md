@@ -21,7 +21,7 @@ Pode aceder à caixa de diálogo Parâmetros:
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
 -   **User Settings...** gives you access to settings that can be stored externally in a user file. If these are modified, they are used instead of structure settings.
--   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. If they are modified, they are used instead of user or structure settings.
+-   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
 
 ### Informações de bloqueio
 

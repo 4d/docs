@@ -8,7 +8,7 @@ title: Objetos e coleções compartilhados
 
 Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
 
-- to create a shared object, use the `New shared object` command,
+- para criar um objeto compartilhado, use o comando `New shared object`,
 - to create a shared collection, use the `New shared collection` command.
 
 **Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.

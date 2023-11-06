@@ -13,7 +13,7 @@ A stepper lets the user scroll through numeric values, durations (times) or date
 
 You can assign the variable associated with the object to an enterable area (field or variable) to store or modify the current value of the object.
 
-A stepper can be associated directly with a number, time or date variable.
+Um stepper pode ser associado diretamente a uma variável número, hora ou data.
 
 * For values of the time type, the Minimum, Maximum and Step properties represent seconds. Por exemplo, para definir um passo de 8:00 a 18:00 com passos de 10 minutos:
   * [minimum](properties_Scale.md#minium) = 28 800 (8*60*60)

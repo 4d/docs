@@ -240,7 +240,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
 
-Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
+Passe de 1 a 9 como valor onde 1 é a compressão mais rápida e 9 mais alta. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
 
 ## HTTP Compression Threshold
 
@@ -303,7 +303,7 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por defeito, o valor
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                                                       |             |
 | Caixa de diálogos de configurações | [Página Opções (I)/Tempo limite dos processos inativos](../settings/web.md#inactive-process-timeout) | Slider      |
 
-Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
+Duração da vida (em minutos) dos processos inativos associados às sessões. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
 Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 

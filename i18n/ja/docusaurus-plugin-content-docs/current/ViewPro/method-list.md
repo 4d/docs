@@ -938,6 +938,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 
 
+
 | 引数         | タイプ    |    | 説明                                    |
 | ---------- | ------ | -- | ------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
@@ -1659,7 +1660,7 @@ $attr:=VP Get column attributes($range)
 以下のコードを実行すると、4D View Pro エリア内のカラムの数が返されます:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1754,6 +1755,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1815,7 +1817,9 @@ $defaultStyle:=VP Get default style("myDoc")
 | 戻り値      | Text   | <- | フォーミュラ|<!-- END REF -->
 
 
+
 |
+
 
 
 #### 説明
@@ -2487,13 +2491,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| 引数         | タイプ     |    | 説明                          |
-| ---------- | ------- | -- | --------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名     |
-| styleName  | Text    | -> | スタイルの名前                     |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |
+| 引数         | タイプ     |    | 説明                                       |
+| ---------- | ------- | -- | ---------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                  |
+| styleName  | Text    | -> | スタイルの名前                                  |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)              |
+| 戻り値        | Object  | <- | スタイルシートオブジェクト|<!-- END REF -->
 
-|戻り値|Object|-|スタイルシートオブジェクト|<!-- END REF -->
+|
 
 #### 説明
 
@@ -2811,8 +2816,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | 定数                    | 値 | 説明                                                |
 | --------------------- | - | ------------------------------------------------- |
 | `vk table full range` | 0 | フッターとヘッダーを含む表組みの全エリアを含むセルレンジを取得します (省略した場合のデフォルト) |
-
-|`vk table data range`|1|表組みのデータエリアのみを含むセルレンジを取得します|
+| `vk table data range` | 1 | 表組みのデータエリアのみを含むセルレンジを取得します                        |
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
@@ -3088,7 +3092,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### 説明
 
-`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。<!-- END REF -->。
+`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
 
 *paramObj* には、複数のプロパティを渡せます:
 
@@ -3446,6 +3450,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 *tableName* の表組みが [データコンテキスト](#vp-set-data-context) にバインドされている場合、このコマンドはコレクションに新しい空の要素を挿入します。
 
 *tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
+
 
 
 #### 例題

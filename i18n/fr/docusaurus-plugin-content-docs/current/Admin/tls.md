@@ -5,11 +5,11 @@ title: Protocole TLS (HTTPS)
 
 Tous les serveurs 4D peuvent communiquer en mode sécurisé via le protocole TLS (Transport Layer Security) :
 
-- the HTTP server
+- le serveur HTTP
 - le serveur d'application (application de bureau client-serveur)
 - le serveur SQL
 
-In addition, the 4D HTTP client (`HTTP get` command for example) also supports the TLS protocol.
+De plus, le client HTTP 4D (commande `HTTP get` par exemple) prend également en charge le protocole TLS.
 
 ## Vue d’ensemble
 
@@ -29,7 +29,7 @@ Le protocole TLS a pour but d'authentifier l'émetteur et le récepteur et de ga
 
 Les principes de sécurisation utilisés par TLS sont basés sur l’emploi d’un algorithme de cryptage utilisant une paire de clés : une clé privée et une clé publique. La clé privée est utilisée pour crypter les données. Elle est conservée par l’émetteur (le site Web).
 
-The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a certification authority, such as Verisign®. Moyennant une participation financière du site Web demandeur, cet organisme délivre un certificat, garantissant l’identité du serveur et contenant la clé publique permettant la communication en mode sécurisé.
+La clé publique est utilisée pour décrypter les informations et est envoyée aux récepteurs (navigateurs web) via un **certificat**. Le certificat est délivré par une autorité de certification, telle que Verisign®. Moyennant une participation financière du site Web demandeur, cet organisme délivre un certificat, garantissant l’identité du serveur et contenant la clé publique permettant la communication en mode sécurisé.
 
 :::note
 
@@ -41,15 +41,15 @@ Les navigateurs Web autorisent uniquement les certificats émis par une autorit�
 
 ## Version minimale
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
+Par défaut, la version minimale du protocole sécurisé acceptée par le serveur est TLS 1.3. Vous pouvez modifier cette valeur via le sélecteur `Min TLS version` de la commande `SET DATABASE PARAMETER`.
 
 :::note
 
-You can control the level of security of your **web server** by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+Vous pouvez contrôler le niveau de sécurité de votre **serveur web** en définissant la [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) acceptée pour les connexions.
 
 :::
 
-## Certificates
+## Certificats
 
 ### Format
 

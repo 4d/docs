@@ -931,6 +931,7 @@ utilizar o seguinte código:
 
 
 
+
 | Parâmetro  | Tipo   |    | Descrição                                       |
 | ---------- | ------ | -- | ----------------------------------------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro      |
@@ -1646,7 +1647,7 @@ Você pode definir onde obter a contagem de colunas no parâmetro opcional *shee
 O código seguinte retorna o número de colunas na área 4D View Pro:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1741,6 +1742,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1802,7 +1804,9 @@ devolverá esta informação no objeto *$defaultStyle*:
 | Resultados | Text   | <- | Formula|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descrição
@@ -2472,13 +2476,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                  |
-| ---------- | ------- | -- | ------------------------------------------ |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |
-| styleName  | Text    | -> | Nome do estilo                             |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)   |
+| Parâmetro  | Tipo    |    | Descrição                                     |
+| ---------- | ------- | -- | --------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro    |
+| styleName  | Text    | -> | Nome do estilo                                |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)      |
+| Resultados | Object  | <- | Style sheet object|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Descrição
 
@@ -2795,8 +2800,7 @@ No parâmetro *onlyData* pode passar uma das constantes abaixo se deseja obter a
 | Parâmetros            | Valor | Descrição                                                                                     |
 | --------------------- | ----- | --------------------------------------------------------------------------------------------- |
 | `vk table full range` | 0     | Obtém o intervalo de células para a área da tabela com rodapé e cabeçalho (padrão se omitido) |
-
-|`vk table data range`|1|Obter o intervalo de células somente para a área de dados da tabela|
+| `vk table data range` | 1     | Obter o intervalo de células apenas para a área de dados da tabela                            |
 
 Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` command
 > A indexação começa em 0.
@@ -3070,7 +3074,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descrição
 
-O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa  *vpBlob* na área de 4D View Pro *vpAreaName* e substitui seu conteúdo. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->.
+O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 Em *paramObj*, você pode passar várias propriedades:
 
@@ -3430,6 +3434,7 @@ Se a tabela *tableName*estiver vinculada a[data context](#vp-set-data-context), 
 se *tableName* não existir ou se não houver espaço suficiente na folha, nada acontece.
 
 
+
 #### Exemplo
 
 Você cria uma tabela com um contexto de dados:
@@ -3501,17 +3506,17 @@ Em *targetRange*, passe o intervalo de células onde os valores de célula, esti
 
 O parâmetro *options* tem várias propriedades:
 
-| Propriedade  | Tipo       | Descrição                                                                                                                                         |
-| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| copy         | Parâmetros | Determines if the values, formatting and formulas of the cells in *originRange* are removed after the command executes:<ul><li>*False* (padrão) para os remover</li><li>*True* para os manter</li></ul> |
-| pasteOptions | Longint    | Especifica o que é colado. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Cola apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                           |
+| Propriedade  | Tipo       | Descrição                                                                                                                                              |
+| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| copy         | Parâmetros | Determina se os valores, formatação e fórmulas das células no intervalo *originRange* são removidos após o comando executar:<ul><li>*False* (padrão) para os remover</li><li>*True* para os manter</li></ul> |
+| pasteOptions | Longint    | Especifica o que é colado. Valores possíveis: <p><table><tr><th>Valor</th><th>Descrição</th></tr><tr><td>`vk clipboard options all` (padrão)</td><td>Cola todos os objectos de dados, incluindo valores, formatação e fórmulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Cola apenas a formatação.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Cola apenas as fórmulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Cola as fórmulas e a formatação.</td></tr><tr><td>`vk clipboard options values`</td><td>Cola apenas os valores.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Cola os valores e a formatação.</td></tr></table></p>                                                                                |
 
 
 As opções de colagem definidas nas opções da pasta de trabalho [](#vp-set-workbook-options) são levadas em consideração.
 
 #### Exemplo
 
-To copy the contents, values, formatting and formulas from an origin range:
+Para copiar os conteúdos, valores, formatação e fórmulas de um intervalo de origem:
 
 ```4d
 var $originRange; $targetRange; $options : Object
@@ -3555,9 +3560,9 @@ O comando `VP Name` <!-- REF #_method_.VP Name.Summary -->devolve um novo objeto
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *rangeName* parameter specifies an existing named cell range.
+O parâmetro *rangeName* especifica um intervalo de célula nomeada existente.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet or the entire workbook with the following constants:
+No parâmetro *folha* opcional, você pode designar uma planilha específica onde *intervalo* é definido. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual ou toda a pasta de trabalho com as seguintes constantes:
 
 * `vk current sheet`
 * `vk workbook`
@@ -3591,13 +3596,13 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 #### Descrição
 
-O comando `VP NEW DOCUMENT` <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. The new empty document replaces any data already inserted in the area.
+O comando `VP NEW DOCUMENT` <!-- REF #_method_.VP NEW DOCUMENT.Summary -->carrega e exibe um novo documento padrão no objeto de área de formulário 4D View Pro, *vpAreaName*<!-- END REF -->. O novo documento vazio substitui quaisquer dados já inseridos na área.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 #### Exemplo
 
-You want to display an empty document in the "myVPArea" form object:
+Se quiser exibir um documento vazio no formulário "myVPArea":
 
 ```4d
 VP NEW DOCUMENT("myVPArea")
@@ -3621,15 +3626,15 @@ VP NEW DOCUMENT("myVPArea")
 | Parâmetro  | Tipo   |    | Descrição                                 |
 | ---------- | ------ | -- | ----------------------------------------- |
 | fontObj    | Object | -> | Objecto letra                             |
-| Resultados | Text   | <- | Font shorthand|<!-- END REF -->
+| Resultados | Text   | <- | Fonte abreviada<!-- END REF -->
 
 |
 
 #### Descrição
 
-O comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from *fontObj*<!-- END REF -->.
+O comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->retorna uma string abreviada de *fontObj*<!-- END REF -->.
 
-In *fontObj*, pass an object containing the font properties. As propriedades abaixo são compatíveis:
+Em *fontObj*, passe um objeto que contém as propriedades da fonte. As propriedades abaixo são compatíveis:
 
 | Propriedade | Tipo | Descrição                                                                                                           | Valores possíveis                                                                                                                                                                                                                                                                                                        | Obrigatório |
 | ----------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
@@ -3639,9 +3644,9 @@ In *fontObj*, pass an object containing the font properties. As propriedades aba
 | variant     | text | Especifica o tipo de letra em pequenas maiúsculas.                                                                  | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | Não         |
 | weight      | text | Define a espessura do tipo de letra.                                                                                | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | Não         |
 
-This object can be created with the [VP Font to object](#vp-font-to-object) command.
+Este objeto pode ser criado com o comando [Fonte VP para objeto](#vp-font-to-object).
 
-The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](#vp-set-cell-style), for example.
+A string abreviada retornada pode ser atribuída à propriedade "font" de uma célula com [VP SET CÉLULA](#vp-set-cell-style), por exemplo.
 
 #### Exemplo
 
@@ -3688,13 +3693,13 @@ $cellStyle.font:=VP Object to font($font)
 
 #### Descrição
 
-O comando `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
+O comando `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT.Summary -->Cola o conteúdo, o estilo e as fórmulas armazenadas no *dataObject* no objeto *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If *rangeObj* refers to more than one cell, only the first one is used.
+No *rangeObj*, passe o objeto de gama de células onde os valores, formatando, e/ou as células serão coladas. Se *rangeObj* se refere a mais de uma célula, apenas a primeira é usada.
 
-In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
+No *dataObject*, passa o objeto que contém os dados da célula, a formatação e as fórmulas a serem coladas.
 
-In the optional *options* parameter, you can specify what to paste in the cell range. Valores possíveis:
+Na opção opcional *opções* , você pode especificar o que colar no intervalo de células. Valores possíveis:
 
 | Parâmetros                                     | Descrição                                                                  |
 | ---------------------------------------------- | -------------------------------------------------------------------------- |
@@ -4135,7 +4140,7 @@ O comando `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -4363,7 +4368,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 | `<customProperty>` | misto            | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 
-The following property is automatically added by the command if necessary:
+A seguinte propriedade é automaticamente adicionada pelo comando, se necessário:
 
 | Propriedade    | Tipo    | Descrição                                                       |
 | -------------- | ------- | --------------------------------------------------------------- |
@@ -4853,7 +4858,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 Pass the total number of columns in the *columnCount* parameter. *columnCount* deve ser superior a 0.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the *columnCount* will be applied (counting begins at 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+In the optional *sheet* parameter, you can designate a specific spreadsheet where the *columnCount* will be applied (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5237,7 +5242,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 The *styleObj* lets you pass an object containing style settings. You can use an existing style sheet or you can create a new style. For more information, see the [Style objects](configuring.md#style-objects) paragraph.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the style will be defined. Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+In the optional *sheet* parameter, you can designate a specific spreadsheet where the style will be defined. Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5435,7 +5440,7 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 | rowCount            | Integer | O número de linhas congeladas na parte superior da folha |
 | trailingRowCount    | Integer | O número de linhas congeladas na parte inferior da folha |
 
-No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+No parâmetro opcional *sheet*, pode designar uma folha específica onde o intervalo será definido (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5521,7 +5526,7 @@ Pass the name of the 4D View Pro area to print in *vpAreaName*. Se passar um nom
 
 Pode passar um objeto que contenha as definições para vários atributos de impressão no parâmetro *printInfo*. Para ver a lista completa dos atributos disponíveis, consulte [Atributos de impressão](configuring.md#print-attributes).
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+In the optional *sheet* parameter, you can designate a specific spreadsheet to print (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5639,9 +5644,9 @@ O comando `VP SET ROW COUNT` <!-- REF #_method_.VP SET ROW COUNT.Summary -->defi
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Pass the total number of rows in the *rowCount* parameter. *rowCount* tem de ser superior a 0.
+Passe o número total de linhas no parâmetro *rowCount*. *rowCount* tem de ser superior a 0.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where the *rowCount* will be applied (counting begins at 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+In the optional *sheet* parameter, you can designate a specific spreadsheet where the *rowCount* will be applied (counting begins at 0). Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -5801,7 +5806,7 @@ Passe o nome da área 4D View Pro em *vpAreaName*. Se passar um nome que não ex
 
 Pass an object containing definitions for the options to set in the *sheetOptions* parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
 
-No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será usada por padrão. You can explicitly select the current spreadsheet with the following constant:
+No parâmetro opcional *sheet*, pode designar uma planilha específica (a contagem começa em 0). Se omitido, a planilha atual será utilizada por padrão. You can explicitly select the current spreadsheet with the following constant:
 
 * `vk current sheet`
 
@@ -6358,7 +6363,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Substituir o conteúdo dos dados por "####" e mostra a dica</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Mostra o conteúdo dos dados como uma cadeia de caracteres. Se a célula seguinte estiver vazia, transborda o conteúdo.</td></tr></table>                                                                                                                              |
 | pasteSkipInvisibleRange               | boolean                 | Colar ou ignorar a colagem de dados em intervalos invisíveis: <ul><li>Falso (padrão): colar dados</li><li>True: Saltar a colagem em intervalos invisíveis</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.          |
 | referenceStyle                        | number                  | Estilo para referências de células e intervalos em fórmulas de células. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Utilizar o estilo A1.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Utilizar o estilo R1C1</td></tr></table>                                                                                                                                    |
-| resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                   |
+| resizeZeroIndicator                   | number                  | Política de desenho quando a linha ou coluna é redimensionada para zero. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Usa a política de desenho atual quando a linha ou coluna é redimensionada para zero.</td></tr><tr><td> vk resize zero indicator enhance </td><td>1</td><td> Desenha duas linhas curtas quando a linha ou coluna é redimensionada para zero.</td></tr></table>                                                                                                                                   |
 | rowResizeMode                         | number                  | A forma como as linhas são redimensionadas. Os valores disponíveis são os mesmos que columnResizeMode                                                                                                                                                      |
 | scrollbarAppearance                   | number                  | Aspeto da barra de deslocação. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Aparência da barra de deslocação móvel.</td></tr><tr><td> vk scrollbar appearance skin (padrão)</td><td>0</td><td> Aparência da barra de deslocação clássica semelhante à do Excel.</td></tr></table>                                                                                                                                                                             |
 | scrollbarMaxAlign                     | boolean                 | The scroll bar aligns with the last row and column of the active sheet.                                                                                                                                                                                    |

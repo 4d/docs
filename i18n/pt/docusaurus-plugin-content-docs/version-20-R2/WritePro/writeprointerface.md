@@ -226,17 +226,17 @@ O ficheiro de tema em formato JSON contém os seguintes atributos:
 | tabela   | Object |             | Objeto que contém a definição de estilo aplicável à tabela.                                                                           |
 | rows     | Object |             | Objeto que contém a definição de estilo aplicável a todas as linhas.                                                                  |
 | cells    | Object |             | Objeto que contém a definição de estilo aplicável a todas as células.                                                                 |
-| header1  | Object |             | Object containing the style definition applicable to the first header row.                                                            |
+| header1  | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de cabeçalho.                                                      |
 | header2  | Object |             | Object containing the style definition applicable to the second header row.                                                           |
-| header3  | Object |             | Object containing the style definition applicable to the third header row.                                                            |
+| header3  | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de cabeçalho.                                                      |
 | header4  | Object |             | Object containing the style definition applicable to the fourth header row.                                                           |
-| header5  | Object |             | Object containing the style definition applicable to the fifth header row.                                                            |
+| header5  | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de cabeçalho.                                                        |
 | headers  | Object |             | Object containing the style definition applicable to the header rows, if a specific header (like header1, header2...) is not defined. |
 | data     | Object |             | Object containing the style definition applicable to the repeated data row.                                                           |
 | break1   | Object |             | Objeto que contém a definição de estilo aplicável à primeira linha de quebra.                                                         |
-| break2   | Object |             | Object containing the style definition applicable to the second break row.                                                            |
+| break2   | Object |             | Objeto que contém a definição de estilo aplicável à segunda linha de quebra.                                                          |
 | break3   | Object |             | Objeto que contém a definição de estilo aplicável à terceira linha de quebra.                                                         |
-| break4   | Object |             | Object containing the style definition applicable to the fourth break row.                                                            |
+| break4   | Object |             | Objeto que contém a definição de estilo aplicável à quarta linha de quebra.                                                           |
 | break5   | Object |             | Objeto que contém a definição de estilo aplicável à quinta linha de quebra.                                                           |
 | breaks   | Object |             | Object containing the style definition applicable to the break rows, if a specific break (like break1, break2...) is not defined.     |
 | bcor     | Object |             | Object containing the style definition applicable to the bottom carry-over row.                                                       |
