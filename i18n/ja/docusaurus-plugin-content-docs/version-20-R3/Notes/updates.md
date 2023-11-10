@@ -71,6 +71,7 @@ title: リリースノート
 
 #### ハイライト
 
+- 4D v20.2 は macOS Sonoma (macOS 14) 対応です。
 - (4D v20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
