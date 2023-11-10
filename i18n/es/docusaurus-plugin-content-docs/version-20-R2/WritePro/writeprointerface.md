@@ -83,7 +83,7 @@ The template file in JSON format contains the following attributes:
 | Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                              |
 |:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
-| columns              | Collection | x           | Collection of table columns                                                                                                                              |
+| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                           |
 | columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
 | columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
 | columns.source       | Text       | x           | Formula                                                                                                                                                  |
