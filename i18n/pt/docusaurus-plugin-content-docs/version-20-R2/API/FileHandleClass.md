@@ -13,7 +13,7 @@ Graças ao objecto padrão 4D *refcounting*, um handle de arquivo é automaticam
 
 :::note
 
-Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources).
+Os recursos de um objeto, como documentos, são liberados quando não existem mais referências na memória, que acontece, por exemplo, no final do método de execução das variáveis locais. Se você deseja "forçar" a liberação dos recursos do objeto a qualquer momento, você pode [anular suas referências](../Concepts/dt_object.md#resources).
 
 :::
 
@@ -280,11 +280,11 @@ Esta propriedade é **read/write**.
 
 :::caution
 
-When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. So, if you start reading with `readBlob()` and then call `readText()`, text reading will start at an inconsistent position. It is therefore essential to set the `.offset` property yourself if you switch from reading/writing blob to reading/writing text in the same filehandle. Por exemplo:
+When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Então, se você começar a ler com `readBlob()` e então chamar `readText()`, a leitura do texto começará em uma posição inconsistente. Portanto, é essencial definir a propriedade `.offset` caso você altere de leitura/escrita de blob para leitura/escrita de texto no mesmo filehandle. Por exemplo:
 
 ```4d
-  // Open a european text file using utf-16 encoding (two bytes per character)
-  // We want to read the first 10 characters as bytes, then the remaining as text.
+  // Abra um arquivo texto europeu usando a codificação utf-16 (dois bytes por caractere)
+  // Queremos ler os primeiros 10 caracteres como bytes, depois, o restante como texto.
 $fh:=File("/RESOURCES/sample_utf_16.txt").open()
   // lê os 20 primeiros bytes (i.e. 10 caracteres)
 $b:=$fh.readBlob(20) // $fh.offset=20
