@@ -109,7 +109,7 @@ Los objetos de servidor WebSocket ofrecen las siguientes propiedades y funciones
 | ----------------------------------- | ------------------ | :-: | ------------------------------------------------------------------------------- | ---------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             |  -> | Objeto de la clase usuario que declara las retrollamadas del servidor WebSocket |                  |
 | [options](#options-parameter)       | Object             |  -> | Parámetros de configuración de WebSocket                                        |                  |
-| Result                              | 4D.WebSocketServer |  <- | New WebSocketServer object                                                      | <!-- END REF --> |
+| Result                              | 4D.WebSocketServer |  <- | Nuevo objeto WebSocketServer                                                    | <!-- END REF --> |
 
 The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server that will use the specified _WSSHandler_ callbacks and (optionally) _options_, and returns a `4D.WebSocketServer` object<!-- END REF -->.
 
@@ -212,7 +212,7 @@ A `request` object contains the following properties:
 | url           | Text   | contiene sólo la URL que está presente en la petición HTTP real. Ex: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"                     |
 | remoteAddress | Text   | Dirección IP del cliente                                                                                                                             |
 
-### `connectionHandler` object
+### objeto `connectionHandler`
 
 As a result of the `WSHandler.onConnection` callback, pass a `connectionHandler` object, which is an instance of a user class that will be called every time an event occurs in the WebSocket connection --essentially, messages received. The class should define the following callback functions (only `onMessage` is mandatory):
 
