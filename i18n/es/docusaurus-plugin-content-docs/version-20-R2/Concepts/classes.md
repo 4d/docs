@@ -253,7 +253,7 @@ Function add($x : Variant; $y : Integer): Integer
 #### Ejemplo 1
 
 ```4d
-// Class: Rectangle
+// Clase: Rectangle
 property name : Text
 property height; width : Integer
 
@@ -262,7 +262,7 @@ Class constructor($width : Integer; $height : Integer)
  This.height:=$height
  This.width:=$width
 
-// Function definition
+// Definición de función
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
