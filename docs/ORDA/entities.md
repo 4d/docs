@@ -96,7 +96,7 @@ Entity attributes store data and map corresponding fields in the corresponding t
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
 - attributes of the **relatedEntity** kind will return an entity,
-- attributes of the **relatedEntities** kind will return an entity selection
+- attributes of the **relatedEntities** kind will return an entity selection,
 - attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured. 
 
 :::info
@@ -143,9 +143,9 @@ Each employee can be a manager and can have a manager. To get the manager of the
 
 You can store images in pictures attributes; similarly, you can store any binary data in blob attributes. 
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data, i.e. an image file (.jpg, .png..) or, in the case of blobs, a file of any type. Only the file path is saved within the entity. 
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data, i.e. an image file (.jpg, .png...) or, in the case of blobs, a file of any type. Only the file path is saved within the entity. 
 
-Thanks to this feature, you can reuse the same picture in multiple entities, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
 
 The file reference can be:
 
