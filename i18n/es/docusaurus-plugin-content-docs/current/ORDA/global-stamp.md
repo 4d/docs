@@ -55,7 +55,7 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 
 :::
 
-### Using the Structure Editor
+### Uso del Editor de estructuras
 
 The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
 
