@@ -128,7 +128,7 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) for details and examples.
+See [**SpreadJS's extented list of functions**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) for details and examples.
 
 
 ## 4D functions
@@ -238,6 +238,7 @@ For more information on supported incoming parameter types, please refer to the 
 * [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
 * [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
+
 * [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 * [boolean](Concepts/dt_boolean.md) (converted to bool in 4D View Pro)
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
