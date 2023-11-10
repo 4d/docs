@@ -102,16 +102,16 @@ Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une 
 
 Une expression utilisant un opérateur sur les bits retourne une valeur de type Entier long, à l'exception de l'opérateur Tester bit avec lequel l'expression retournée est du type Booléen. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération             | Opérateur | Syntaxe                   | Retourne                |
-| --------------------- | --------- | ------------------------- | ----------------------- |
-| ET                    | &         | long & E. E. long         | E. long                 |
-| OU (inclusif)         | &#124;    | long &#124; E. long       | E. long                 |
-| OU (exclusif)         | \^&#124; | long \^&#124; E. long    | E. long                 |
-| Décaler bits à gauche | <<        | E. Long << E. Long        | long (voir note n°1)    |
-| Décaler bits à droite | >>        | E. Long >> E. Long        | long (voir note n°1)    |
-| Mettre bit à 1        | ?+        | long ?+ E. E. long        | long (voir note n°2)    |
-| Mettre bit à 0        | ?-        | long ??                   | long (voir note n°2)    |
-| Tester bit            | ??        | long \^&#124; E. E. long | Booléen (voir note n°2) |
+| Opération             | Opérateur     | Syntaxe                   | Retourne                |
+| --------------------- | ------------- | ------------------------- | ----------------------- |
+| ET                    | &             | long & E. E. long         | E. long                 |
+| OU (inclusif)         | &#124;        | long &#124; E. long       | E. long                 |
+| OU (exclusif)         | &#094; &#124; | Long &#094; &#124; Long   | E. long                 |
+| Décaler bits à gauche | <<            | E. Long << E. Long        | long (voir note n°1)    |
+| Décaler bits à droite | >>            | E. Long >> E. Long        | long (voir note n°1)    |
+| Mettre bit à 1        | ?+            | long ?+ E. E. long        | long (voir note n°2)    |
+| Mettre bit à 0        | ?-            | long ??                   | long (voir note n°2)    |
+| Tester bit            | ??            | long \^&#124; E. E. long | Booléen (voir note n°2) |
 
 #### Notes
 
@@ -120,22 +120,26 @@ Une expression utilisant un opérateur sur les bits retourne une valeur de type 
 
 Le tableau suivant dresse la liste des opérateurs sur les bits et de leurs effets :
 
-| Opération | Description                                                                                                                                              |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ET        | Chaque bit retourné est le résultat de l'opération ET logique appliquée aux deux bits opérandes. Voici la table du ET logique :<li>1 & 1 --> 1</li> |
-<li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>En d'autres termes, le bit résultant est 1 si les deux bits de l'opérande sont 1 ; sinon, le bit résultant est 0.| |Bitwise OR (inclusive)|Chaque bit résultant est le OU logique des bits des deux opérandes. Voici la table du OU logique :<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>En d'autres termes, le bit résultant est 1 si au moins l'un des bits des deux opérandes est 1 ; sinon, le bit résultant est 0.| |Bitwise OR (exclusive)|Chaque bit résultant est le XOR logique des bits des deux opérandes. Voici la table du XOR logique :<li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li>En d'autres termes, le bit résultant est 1 si un seul des deux bits de l'opérande est 1 ; sinon, le bit résultant est 0.| |Left Bit Shift|La valeur résultante est fixée à la valeur du premier opérande, puis les bits résultants sont décalés vers la gauche du nombre de positions indiqué par le deuxième opérande. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0. 
-
-**Note :** En ne prenant en compte que les valeurs positives, le décalage vers la gauche de N bits revient à multiplier par 2^N.| |Right Bit Shift|La valeur résultante est fixée à la valeur du premier opérande, puis les bits résultants sont décalés vers la droite du nombre de positions indiqué par le second opérande. Les bits de droite sont perdus et les nouveaux bits de gauche sont mis à 0.**Note :** En ne prenant en compte que les valeurs positives, le décalage vers la droite de N bits revient à diviser par 2^N.| |Bit Set|La valeur résultante est mise à la valeur du premier opérande, puis le bit résultant, dont le nombre est indiqué par le second opérande, est mis à 1. Les autres bits restent inchangés.| |Bit Clear|La valeur résultante est mise à la valeur du premier opérande, puis le bit résultant, dont le numéro est indiqué par le second opérande, est mis à 0. Les autres bits sont inchangés.| |Tester bit|Retourne Vrai si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 1. Retourne Faux si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 0.|
+| Opération             | Description                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ET                    | Each resulting bit is the logical AND of the bits in the two operands. Here is the logical AND table:<li>1 & 1 --> 1</li><li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>En d'autres termes, le bit résultant est 1 si les deux bits d'opérande sont 1; sinon, le bit résultant est 0.                                                                        |
+| OU (inclusif)         | Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>En d'autres termes, le bit résultant est 1 si au moins l'un des deux bits d'opérande est 1; sinon, le bit résultant est 0.                                                              |
+| OU (exclusif)         | Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 &#094; &#124; 1 --> 0</li><li>0 &#094; &#124; 1 --> 1</li><li>1 &#094; &#124; 0 --> 1</li><li>0 &#094; &#124; 0 --> 0</li>En d'autres termes, le bit résultant est 1 si seul l'un des deux bits d'opérande est 1; sinon, le bit résultant est 0.                                                              |
+| Décaler bits à gauche | La valeur résultante est définie sur la première valeur d'opérande, puis les bits résultants sont décalés vers la gauche du nombre de positions indiqué par le deuxième opérande. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0. Les bits auparavant situés à gauche sont perdus et les nouveaux bits situés à droite ont la valeur 0. |
+| Décaler bits à droite | La valeur résultante est définie sur la première valeur d'opérande, puis les bits résultants sont décalés vers la droite du nombre de positions indiqué par le deuxième opérande. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                |
+| Mettre bit à 1        | La valeur retournée est la valeur du premier opérande dans lequel le bit dont le numéro est spécifié par le second opérande est positionné à 0. Les autres bits demeurent inchangés.                                                                                                                                                                                                          |
+| Mettre bit à 0        | La valeur retournée est la valeur du premier opérande dans lequel le bit dont le numéro est spécifié par le second opérande est positionné à 0. Les autres bits demeurent inchangés.                                                                                                                                                                                                          |
+| Tester bit            | Retourne Vrai si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 1. Retourne Faux si, dans le premier opérande, le bit dont le numéro est indiqué par le second opérande vaut 0.                                                                                                                                                                     |
 
 ### Exemples
 
-| Opération             | Exemple                         | Résultat   |
-| --------------------- | ------------------------------- | ---------- |
-| ET                    | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
-| OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
-| OU (exclusif)         | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
-| Décaler bits à gauche | 0x0000FFFF << 8                 | 0x00FFFF00 |
-| Décaler bits à droite | 0x0000FFFF >> 8                 | 0x000000FF |
-| Mettre bit à 1        | 0x00000000 ?+ 16                | 0x00010000 |
-| Mettre bit à 0        | 0x00010000 ?- 16                | 0x00000000 |
-| Tester bit            | 0x00010000 ?? 16                | True       |
+| Opération             | Exemple                             | Résultat   |
+| --------------------- | ----------------------------------- | ---------- |
+| ET                    | 0x0000FFFF & 0xFF00FF00             | 0x0000FF00 |
+| OU (inclusif)         | 0x0000FFFF &#124; 0xFF00FF00        | 0xFF00FFFF |
+| OU (exclusif)         | 0x0000FFFF &#094; &#124; 0xFF00FF00 | 0xFF0000FF |
+| Décaler bits à gauche | 0x0000FFFF << 8                     | 0x00FFFF00 |
+| Décaler bits à droite | 0x0000FFFF >> 8                     | 0x000000FF |
+| Mettre bit à 1        | 0x00000000 ?+ 16                    | 0x00010000 |
+| Mettre bit à 0        | 0x00010000 ?- 16                    | 0x00000000 |
+| Tester bit            | 0x00010000 ?? 16                    | True       |
