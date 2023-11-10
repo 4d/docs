@@ -50,7 +50,7 @@ Pode criar dois tipos de objetos:
 
 ## Noções básicas de sintaxe
 
-Object notation can be used to access object property values through a chain of tokens.
+A notação de objetos pode ser utilizada para acessar aos valores das propriedades de objetos através de uma string de tokens.
 
 ### Propriedades dos objectos
 
