@@ -40,7 +40,7 @@ Além disso, terá de criar duas classes de utilizador que conterão funções d
 
 É necessário [criar o servidor WebSocket](#4dwebsocketservernew) dentro de um [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) para manter a ligação activa.
 
-O servidor Web [4D](WebServerClass.md) deve ser iniciado.
+The [4D Web Server](WebServerClass.md) must be started.
 
 
 ### Exemplo
