@@ -97,6 +97,7 @@ Some data is also collected at regular intervals.
 |restHits|Number|Number of hits on the REST server during the data collection|
 |webserverBytesIn|Number|Bytes received by the web server during the data collection|
 |webserverBytesOut|Number|Bytes sent by the web server during the data collection|
+|qodly.webforms|Number|Number of Qodly webforms|
 
 
 

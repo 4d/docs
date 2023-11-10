@@ -127,7 +127,7 @@ const Sections = [
           <Translate>TLS Protocol</Translate>
         </Link>
         <Link to="Admin/licenses">
-          <Translate>Licenses & Data Collection</Translate>
+          <Translate>Licenses</Translate>
         </Link>
         <Link to="Users/overview">
           <Translate>Access Rights</Translate>
