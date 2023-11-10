@@ -124,7 +124,7 @@ Puede crear dos tipos de objetos:
 
 ## Propiedades
 
-Object notation can be used to access object property values through a chain of tokens. Con la notación de objetos, se puede acceder a las propiedades de los objetos de dos maneras:
+La notación de objetos puede utilizarse para acceder a los valores de las propiedades de objetos a través de una cadena de tokens. Con la notación de objetos, se puede acceder a las propiedades de los objetos de dos maneras:
 
 - using a "dot" symbol: > object.propertyName
 
@@ -297,18 +297,18 @@ Ejemplo:
 
 ## Resources
 
-Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object.
+Los objetos utilizan *recursos* tales documentos, bloqueos de entidades y, por supuesto, memoria. Estos recursos se conservan siempre que los objetos los necesiten. Normalmente, no tiene que preocuparse por ellos, 4D libera automáticamente todos los recursos adjuntos a un objeto cuando detecta que el objeto en sí ya no está referenciado por ninguna variable u otro objeto.
 
-For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
+Por ejemplo, cuando ya no hay más referencias a una entidad en la cual ha definido un bloqueo con [`$entity.lock()`](../API/EntityClass.md#lock), 4D liberará la memoria pero también liberará automáticamente el bloqueo asociado, por lo que una llamada a [`$entity.unlock()`](../API/EntityClass.md#unlock) es inútil.
 
-If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. Por ejemplo:
+Si desea liberar inmediatamente todos los recursos ocupados por un objeto sin tener que esperar que 4D lo haga automáticamente (al final de la ejecución del método para variables locales, por ejemplo), solo tiene que **anular todas sus referencias**. Por ejemplo:
 
 ```4d
 
 $doc:=WP Import document("large_novel.4wp")
-    ... // do something with $doc
-$doc:=Null  // free resources occupied by $doc
-    ... // continue execution with more free memory
+   ... // hacer algo con $doc
+$doc:=Null  // liberar los recursos ocupados por $doc
+   ... // continuar la ejecución con más memoria libre
 
 ```
 
@@ -354,7 +354,7 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- You can access properties as strings using the `[]` operator
+- Puede acceder a las propiedades como cadenas utilizando el operador `[]`
 
 ```4d
  $Emp["city"]:="Berlin" //modifica la propiedad city
