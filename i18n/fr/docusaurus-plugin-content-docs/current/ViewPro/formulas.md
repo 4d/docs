@@ -128,7 +128,7 @@ Les fonctions de tableur sont des formules prédéfinies utilisées pour calcule
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-Consultez la [**liste étendue des fonctions de SpreadJS**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) pour obtenir des détails et des exemples.
+See [**SpreadJS's extented list of functions**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) for details and examples.
 
 
 ## Fonctions 4D
@@ -237,8 +237,9 @@ Les méthodes projet 4D peuvent également retourner des valeurs dans la formule
 
 * [text](Concepts/dt_string.md) (converti en chaîne de caractères dans 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converti en numérique dans 4D View Pro)
-* [date](Concepts/dt_date.md) (converti en type JS Date dans 4D View Pro - heure, minute, seconde = 0)
-* [time](Concepts/dt_time.md) (converti en type JS Date dans 4D View Pro - date en date de base, c'est-à-dire 30/12/1899)
+* [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
+
+* [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 * [boolean](Concepts/dt_boolean.md) (converti en bool dans 4D View Pro)
 * [image](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg autres types convertis en png) crée un URI (data:image/png;base64,xxxx) et ensuite utilisé comme fond dans 4D View Pro dans la cellule où la formule est exécutée
 * [objet](Concepts/dt_object.md) avec les deux propriétés suivantes (permettant de passer une date et une heure) :
