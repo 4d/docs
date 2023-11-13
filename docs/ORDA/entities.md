@@ -141,16 +141,16 @@ Each employee can be a manager and can have a manager. To get the manager of the
 
 ### Assigning files to picture or blob attributes
 
-You can store images in pictures attributes; similarly, you can store any binary data in blob attributes. 
+You can store images in picture attributes; similarly, you can store any binary data in blob attributes. 
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data, i.e. an image file (.jpg, .png...) or, in the case of blobs, a file of any type. Only the file path is saved within the entity. 
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. In the case of a picture attribute, you can assign an image file (.jpg, .png...), in the case of a blob attribute, a file of any type. Only the file path is saved within the entity. 
 
 Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
 
 The file reference can be:
 
-- a path in POSIX format
 - a 4D.File object
+- a path in POSIX format
 
 Examples:
 
@@ -306,6 +306,7 @@ Examples:
  
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
+
 	//$highSal is shareable because of the query on dataClass
 $comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
