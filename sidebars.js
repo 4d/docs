@@ -126,7 +126,6 @@ module.exports =
 						"API/CollectionClass",
 						"API/CryptoKeyClass",
 						"API/DataClassClass",
-						"API/DataClassAttributeClass",
 						"API/DataStoreClass",
 						"API/EmailObjectClass",
 						"API/EntityClass",
