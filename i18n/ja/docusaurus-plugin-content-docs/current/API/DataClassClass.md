@@ -29,20 +29,52 @@ title: DataClass
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| バージョン  | 内容                       |
+| ------ | ------------------------ |
+| v19 R3 | Added .exposed attribute |
+| v17    | 追加                       |
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : object<!-- END REF -->
 
 #### 説明
 
 データクラスの属性は、 <!-- REF DataClassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF --> 。
 
-戻り値は [`DataClassAttribute`](DataClassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
+The returned objects have properties that you can read to get information about your dataclass attributes.
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
+
+
+#### 返されるオブジェクト
+
+Returned attribute objects contain the following properties:
+
+| プロパティ            | タイプ     | 説明                                                                                                                                                                                                                                                                              |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| autoFilled       | Boolean | True if the attribute value is automatically filled by 4D. Corresponds to the following 4D field properties: "Autoincrement" for numeric type fields and "Auto UUID" for UUID (alpha) fields. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                   |
+| exposed          | Boolean | True if the attribute is exposed in REST                                                                                                                                                                                                                                        |
+| fieldNumber      | integer | Internal 4D field number of the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                      |
+| fieldType        | Integer | 4D database field type of the attribute. Depends on the attribute `kind`. とりうる値: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>                                                                                            |
+| indexed          | Boolean | True if there is a B-tree or a Cluster B-tree index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                           |
+| inverseName      | Text    | Name of the attribute which is at the other side of the relation. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                            |
+| keywordIndexed   | Boolean | True if there is a keyword index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                              |
+| kind             | Text    | Category of the attribute. とりうる値:<li>"storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。</li><li>"calculated": computed attribute, i.e. defined through a [`get` function](../ORDA/ordaClasses.md#function-get-attributename)</li><li>"alias": attribute built upon [another attribute](../ORDA/ordaClasses.md#alias-attributes-1)</li><li>"relatedEntity": N -> 1 relation attribute (reference to an entity)</li><li>"relatedEntities": 1 -> N relation attribute (reference to an entity selection)</li>                                                                                                                  |
+| 必須               | Boolean | True if null value input is rejected for the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities". Note: This property corresponds to the "Reject NULL value input" field property at the 4D database level. フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。 |
+| name             | Text    | Name of the attribute as string                                                                                                                                                                                                                                                 |
+| path             | Text    | Path of [an alias attribute](../ORDA/ordaClasses.md#alias-attributes-1) based upon a relation                                                                                                                                                                                   |
+| readOnly         | Boolean | True if the attribute is read-only. For example, computed attributes without [`set` function](../ORDA/ordaClasses.md#function-set-attributename) are read-only.                                                                                                                 |
+| relatedDataClass | Text    | Name of the dataclass related to the attribute. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                              |
+| type             | Text    | Conceptual value type of the attribute, useful for generic programming. Depends on the attribute `kind`. とりうる値: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>                                                         |
+| unique           | Boolean | True if the attribute value must be unique. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                     |
+
+:::tip
+
+For generic programming, use `Bool(attributeName.property)`, `Num(attributeName.property)` or `String(attributeName.property)` (depending on the property type) to get a valid value even if the property is not returned.
+
+:::
+
+
 
 #### 例題 1
 
@@ -632,9 +664,6 @@ $number:=$ds.Persons.getCount()
  $dataClassAttribute:=ds.Employee[$pk] // 必要に応じてプライマリーキー属性へのアクセスが可能です
 ```
 
-#### 参照
-
-[DataClassAttribute.exposed](DataClassAttributeClass.md#exposed)
 
 <!-- END REF -->
 
