@@ -158,14 +158,14 @@ Examples:
 var $company : cs.CompanyEntity
 $company:=ds.Company.new()
 
-	//assignment with posix path
-$company.logo:="C:/Users/John/logo.png" //picture attribute
-$company.info:="C:/Users/John/info.txt" //blob attribute
-$company.save()  
-
 	//assignment with 4D.File
 $company.logo:=File("/RESOURCES/logo.jpg")
 $company.info:=File("/RESOURCES/info.txt")
+$company.save()  
+
+	//assignment with posix path
+$company.logo:="C:/Users/John/logo.png" //picture attribute
+$company.info:="C:/Users/John/info.txt" //blob attribute
 $company.save()  
 ```
 
