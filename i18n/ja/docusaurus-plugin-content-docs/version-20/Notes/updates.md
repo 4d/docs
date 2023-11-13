@@ -189,7 +189,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 
 - クラス: [計算プロパティ](../Concepts/classes.md#function-get-と-function-set) が利用可能に。
 - ORDAクラス: [計算属性](../ORDA/ordaClasses.md#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](../ORDA/ordaClasses.md#function-query-attributename) や [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) 関数もサポートしています。
-- 新しい ORDAデータクラス属性: [`exposed`](../API/DataClassAttributeClass.md#exposed) および [`readOnly`](../API/DataClassAttributeClass.md#readonly)。
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [ZIPアーカイブ](../API/ZipArchiveClass.md#zip-create-archive): *LZMA* および *xz* 圧縮アルゴリズムをサポート。
 - [新しいビルドオプション](../Desktop/building.md#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
 - macOS で [ダークモードをサポート](../Preferences/general.md#アピアランス-macosのみ)。
