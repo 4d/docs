@@ -31,14 +31,41 @@ title: DataClass
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : object<!-- END REF -->
 
 #### 説明
 
 データクラスの属性は、 <!-- REF DataClassClass.attributeName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF --> 。
 
-戻り値は [`DataClassAttribute`](DataClassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
+The returned objects have properties that you can read to get information about your dataclass attributes.
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
+
+
+#### 返されるオブジェクト
+
+Returned attribute objects contain the following properties:
+
+| プロパティ            | タイプ     | 説明                                                                                                                                                                                                                                                                              |
+| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| autoFilled       | Boolean | True if the attribute value is automatically filled by 4D. Corresponds to the following 4D field properties: "Autoincrement" for numeric type fields and "Auto UUID" for UUID (alpha) fields. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                   |
+| fieldNumber      | integer | Internal 4D field number of the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                      |
+| fieldType        | Integer | 4D database field type of the attribute. Depends on the attribute `kind`. とりうる値: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li>                                                                                                                     |
+| indexed          | Boolean | True if there is a B-tree or a Cluster B-tree index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                           |
+| inverseName      | Text    | Name of the attribute which is at the other side of the relation. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                            |
+| keywordIndexed   | Boolean | True if there is a keyword index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                              |
+| kind             | Text    | Category of the attribute. とりうる値:<li>"storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。</li><li>"relatedEntity": N -> 1 relation attribute (reference to an entity)</li><li>"relatedEntities": 1 -> N relation attribute (reference to an entity selection)</li>                                                                                                                                                                    |
+| 必須               | Boolean | True if null value input is rejected for the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities". Note: This property corresponds to the "Reject NULL value input" field property at the 4D database level. フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。 |
+| name             | Text    | Name of the attribute as string                                                                                                                                                                                                                                                 |
+| relatedDataClass | Text    | Name of the dataclass related to the attribute. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                              |
+| type             | Text    | Conceptual value type of the attribute, useful for generic programming. Depends on the attribute `kind`. とりうる値: <li>if `.kind` = "storage": "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types.</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li>                                                                                      |
+| unique           | Boolean | True if the attribute value must be unique. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                     |
+
+:::tip
+
+For generic programming, use `Bool(attributeName.property)`, `Num(attributeName.property)` or `String(attributeName.property)` (depending on the property type) to get a valid value even if the property is not returned.
+
+:::
+
 
 #### 例題 1
 
@@ -482,7 +509,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | 戻り値 | Object | <- | データクラスの情報|<!-- END REF -->
 
 
+
 |
+
 
 
 #### 説明
@@ -927,15 +956,15 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のプロパティがサポートされています:
 
-| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                  |
+| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                   |
 | attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
-| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                   |
-| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                              |
-| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                  |
-| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                  |
-| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                            |
+| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                    |
+| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                               |
+| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                   |
+| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                   |
+| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                             |
 
 **queryPlan と queryPath について**
 
