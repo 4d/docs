@@ -189,7 +189,7 @@ $value:=($size>1000)? a:b // Aquí 'a:b' se considera un operador ternario.
 
 - Las [propiedades calculadas](../Concepts/classes.md#function-get-and-function-set) están disponibles en las clases.
 - [Los atributos calculados](../ORDA/ordaClasses.md#computed-attributes) están disponibles en las clases ORDA. Son similares a las propiedades calculadas pero también soportan las funciones [query](../ORDA/ordaClasses.md#function-query-attributename) y [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename).
-- Nuevos atributos de dataclass ORDA: [`exposed`](../API/DataClassAttributeClass.md#exposed) y [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [Los archivos ZIP](../API/ZipArchiveClass.md#zip-create-archive) ahora soportan los algoritmos de compresión *LZMA* y *xz*.
 - Una [nueva opción de build](../Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita la inclusión de los clientes Silicon Mac en las aplicaciones servidor en Windows.
 - [soporte del modo oscuro](../Preferences/general.md#appearance-macos-only) en macOS.
