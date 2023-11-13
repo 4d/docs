@@ -56,17 +56,17 @@ Date formats control the way dates appear when displayed or printed. For data en
 
 The table below shows choices available:
 
-| Format name                     | JSON String  | Example (US system)           |
-| ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (default)  | 03/25/20                      |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
-| System date long                | systemLong   | Wednesday, March 25, 2020     |
-| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
-| Internal date long              | lang         | March 25, 2020                |
-| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
-| Internal date short             | short        | 03/25/2020                    |
-| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
+| Format name                     | JSON String           | Example (US system)           |
+| ------------------------------- | --------------------- | ----------------------------- |
+| System date short               | systemShort (default) | 03/25/20                      |
+| System date abbreviated *(1)*   | systemMedium          | Wed, Mar 25, 2020             |
+| System date long                | systemLong            | Wednesday, March 25, 2020     |
+| RFC 822                         | rfc822                | Tue, 25 Mar 2020 22:00:00 GMT |
+| Short Century                   | shortCentury          | 03/25/20 but 04/25/2032 *(2)* |
+| Internal date long              | lang                  | March 25, 2020                |
+| Internal date abbreviated *(1)* | abbreviated           | Mar 25, 2020                  |
+| Internal date short             | short                 | 03/25/2020                    |
+| ISO Date Time *(3)*             | iso8601               | 2020-03-25T00:00:00           |
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
 
