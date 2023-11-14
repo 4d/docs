@@ -159,13 +159,13 @@ var $company : cs.CompanyEntity
 $company:=ds.Company.new()
 
 	//assignment with 4D.File
-$company.logo:=File("/RESOURCES/logo.jpg")
-$company.info:=File("/RESOURCES/info.txt")
+$company.logo:=File("/RESOURCES/logo.jpg") //picture attribute
+$company.info:=File("/RESOURCES/info.txt") //blob attribute
 $company.save()  
 
 	//assignment with posix path
-$company.logo:="C:/Users/John/logo.png" //picture attribute
-$company.info:="C:/Users/John/info.txt" //blob attribute
+$company.logo:="C:/Users/John/logo.png"
+$company.info:="C:/Users/John/info.txt"
 $company.save()  
 ```
 
