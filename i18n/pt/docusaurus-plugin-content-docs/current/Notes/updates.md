@@ -27,6 +27,7 @@ Leia [**O que há de novo no 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d
 - Suporte do parâmetro *context* em [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Compatibilidade com a propriedade  `cabeçalhos` no parâmetro *connectionHandler*  de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Carimbo de modificação global](../ORDA/global-stamp.md) para ajudar a implementar módulos de sincronização de dados. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
 - Suporte para [inicialização do valor da variável e do tipo de dados na linha de declaração](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Os parâmetros do arquivo de historial agora são [salvos com o arquivo de dados atual](../Backup/settings.md#log-file-management)
 - Nova sintaxe para [declaração de parâmetros variáveis](../Concepts/parameters.md#declaring-variadic-parameters)
