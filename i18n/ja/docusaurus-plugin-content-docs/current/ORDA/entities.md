@@ -10,10 +10,10 @@ ORDA では、[エンティティ](dsMapping.md#entity) および [エンティ�
 
 データクラス内に新しいエンティティを作成する方法は二つあります:
 
-*   エンティティはデータベースレコードへの参照であるため、"クラシックな" 4Dランゲージを使用してレコードを作成し、それを`entity.next( )` や `entitySelection.first( )` といった ORDAメソッドで参照することでエンティティを作成できます。
-*   また、`dataClass.new( )` メソッドを使用することでもエンティティも作成することができます。
+*   Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
+*   You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
 
-エンティティはメモリ内にしか作成されないという点に注意してください。 データストアに追加したい場合、`entity.save( )` メソッドを呼ぶ必要があります。
+エンティティはメモリ内にしか作成されないという点に注意してください。 If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
 
 エンティティ属性は、エンティティオブジェクトのプロパティとして直接利用可能です。 詳細な情報については、[エンティティ属性の使用](#エンティティ属性の使用) を参照してください。
 
@@ -85,15 +85,25 @@ $myEntity.save() // エンティティを保存します
 ```
 
 他の 4D のオブジェクトと同様にエンティティを扱うことができ、[引数](Concepts/parameters.md) としてその参照を渡すことができます。
-> エンティティでは、クラシックな 4D言語のような "カレントレコード" という概念はありません。 エンティティは、いくつでも必要な数を同時に使用することができます。 また、エンティティには自動ロックの機構が備わっています ([エンティティロッキング](#エンティティロッキング) 参照)。 エンティティの読み込みには、[レイジーローディング](glossary.md#レイジーローディング) 機構が使用されます。これはつまり必要な分の情報だけが読み込まれるということです。 いずれにせよ、クライアント/サーバーでは必要であればエンティティを直接自動的に読み込むことも可能です。
+> With the entities, there is no concept of "current record" as in the 4D language. エンティティは、いくつでも必要な数を同時に使用することができます。 また、エンティティには自動ロックの機構が備わっています ([エンティティロッキング](#エンティティロッキング) 参照)。 エンティティの読み込みには、[レイジーローディング](glossary.md#レイジーローディング) 機構が使用されます。これはつまり必要な分の情報だけが読み込まれるということです。 いずれにせよ、クライアント/サーバーでは必要であればエンティティを直接自動的に読み込むことも可能です。
 
 
 ## エンティティ属性の使用
 
-エンティティ属性はデータを保存し、対応するテーブルの対応するフィールドをマップします。 ストレージ型のエンティティ属性はエンティティオブジェクトの単純なプロパティとして設定や取得ができますが、**リレートエンティティ (relatedEntity)** 型と **リレートエンティティズ (relatedEntities)** 型のエンティティ属性はエンティティあるいはエンティティセレクションを返します。
-> 属性の型についての詳細な情報については、[ストレージ属性とリレーション属性](dsMapping.md#ストレージ属性とリレーション属性) の段落を参照してください。
+Entity attributes store data and map corresponding fields in the corresponding table.
 
-たとえば、ストレージ属性を設定するためには:
+- attributes of the **storage** kind can be set or get as simple properties of the entity object,
+- attributes of the **relatedEntity** kind will return an entity,
+- attributes of the **relatedEntities** kind will return an entity selection,
+- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
+
+:::info
+
+属性の型についての詳細な情報については、[ストレージ属性とリレーション属性](dsMapping.md#ストレージ属性とリレーション属性) の段落を参照してください。
+
+:::
+
+For example, to get and set a storage attribute value of type string:
 
 ```4d
  $entity:=ds.Employee.get(1) // ID1 の社員エンティティを取得します
@@ -103,6 +113,7 @@ $myEntity.save() // エンティティを保存します
 ```
 
 > データベースの BLOBフィールド ([スカラーBLOB](Concepts/dt_blob.md)) は、ORDAで扱われるにあたって、BLOBオブジェクト属性 ([`4D.Blob`](Concepts/dt_blob.md)) に自動変換されます。 BLOBオブジェクト属性を保存する際には、(利用可能なメモリによってのみサイズ制限される BLOBオブジェクトとは異なり) BLOBフィールドのサイズが 2GB に制限されることに注意してください。
+
 
 リレート属性にアクセスできるかどうかは、属性の型によります。 たとえば、以下のようなストラクチャーがあるとき:
 
@@ -126,7 +137,53 @@ $myEntity.save() // エンティティを保存します
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## リレーション属性への値の代入
+### Assigning files to picture or blob attributes
+
+You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
+
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
+
+Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+
+The file reference can be:
+
+- a 4D.File object
+- a path in POSIX format
+
+例:
+
+```4d
+Function createCompany($name : Text; $logo : 4D.File)
+
+    var $company : cs.CompanyEntity
+    $company:=ds.Company.new()
+
+    $company.name:=$name 
+        //assignment using a file object
+    $company.logo:=$logo 
+        //assignment using a path
+    $company.datablob:="/RESOURCES/"+$name+"/data.bin"
+    $company.save() 
+```
+
+Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view.
+
+The file does not have to exist on disk at the time of assignment (no error is returned in this case). If the referenced file is not found when the attribute is read, a null value is returned.
+
+:::tip
+
+4D loads images and data into a local cache. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+
+:::
+
+:::note
+
+File reference assignment is only supported in local mode (4D Server or 4D single-user). An error is generated if the assignment is made remotely or via a REST request.
+
+:::
+
+
+### リレーション属性への値の代入
 
 ORDAアーキテクチャーでは、リレーション属性はエンティティにリレートされたデータを直接格納します:
 
@@ -245,12 +302,13 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
-    // データクラスに対するクエリによって生成されたため $highSal は共有可能です
-$comp:=$highSal.employer // $highSal が共有可能なため $comp も共有可能です
+
+    //$highSal is shareable because of the query on dataClass
+$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-    // オプション無しの copy( ) によって生成されたため $lowSal は追加可能です
-$comp2:=$lowSal.employer // $lowSal が追加可能なため $comp2 も追加可能です
+    //$lowSal is alterable because of the copy()
+$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
 :::note サーバーから返されるエンティティセレクション
