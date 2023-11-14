@@ -134,6 +134,17 @@ Function add($x : Variant; $y : Integer): Integer
 	$0:=$x+$y
 ```
 
+:::warning
+
+Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. For example:
+
+```qs
+	//invalid declaration
+Function myTransform ($x : Integer) -> $x : Integer 
+	//error: $x is declared twice
+``` 
+
+:::
 
 ### Supported data types
 
