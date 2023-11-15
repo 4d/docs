@@ -3,7 +3,7 @@ id: qodly-studio
 title: Qodly Studio
 ---
 
-:::caution Developer Preview
+:::caution Vista previa para desarrolladores
 
 Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production.
 
