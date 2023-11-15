@@ -38,8 +38,29 @@ module.exports =
 
 					items: [
 						"Project/architecture",
+						"Project/code-overview",
 						"Project/documentation",
-						"Project/compiler"
+						{
+							type: "category",
+							label: "Settings",
+							link: {
+								type: 'doc',
+								id: 'settings/overview',
+							},					
+							items: [
+								"settings/general",
+								"settings/interface",
+								"settings/compiler",
+								"settings/database",
+								"settings/backup",
+								"settings/client-server",
+								"settings/web",
+								"settings/sql",
+								"settings/php",
+								"settings/security",
+								"settings/compatibility"
+							],
+						},
 					],
 				},
 				{
@@ -118,7 +139,7 @@ module.exports =
 				},					
 				{
 					type: "category",
-					label: "Class Functions",
+					label: "4D Class Functions",
 					items: [
 						"API/overview",
 						"API/BlobClass",
@@ -164,57 +185,27 @@ module.exports =
 				},
 				{
 					type: "category",
-					label: "Handling Code",
-					link: {
-						type: 'doc',
-						id: 'code-editor/overview',
-					},
+					label: "Develop and Debug",
 					items: [
 						"code-editor/write-class-method",
-						"code-editor/creating-using-macros"
+						"Tags/tags",
+						{
+							type: "category",
+							label: "Debugging",
+							link: {
+								type: 'doc',
+								id: 'Debugging/basics',
+							},
+							items: [
+								"Debugging/debugger",
+								"Debugging/breakpoints",
+								"Debugging/debugging-remote",
+							]
+						},
+						"Debugging/debugLogFiles",
+						"Project/compiler",
 					]
-				},
-				{
-					type: "category",
-					label: "Tags",
-					items: [
-						"Tags/tags"
-					]
-				},				{
-					type: "category",
-					label: "Debugging",
-					link: {
-						type: 'doc',
-						id: 'Debugging/basics',
-					},
-					items: [
-						"Debugging/debugger",
-						"Debugging/breakpoints",
-						"Debugging/debugging-remote",
-						"Debugging/debugLogFiles"
-					]
-				},
-				{
-					type: "category",
-					label: "Settings",
-					link: {
-						type: 'doc',
-						id: 'settings/overview',
-					},					
-					items: [
-						"settings/general",
-						"settings/interface",
-						"settings/compiler",
-						"settings/database",
-						"settings/backup",
-						"settings/client-server",
-						"settings/web",
-						"settings/sql",
-						"settings/php",
-						"settings/security",
-						"settings/compatibility"
-					],
-				},
+				},			
 				{
 					type: "category",
 					label: "Preferences",

@@ -1,12 +1,12 @@
 ---
-id: overview
-title: Handling Code
+id: code-overview
+title: Creating methods and classes
 ---
 
 
-The 4D code used across your application is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md). 
+The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md). 
 
-The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](write-class-method.md) to work with your code.
+The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](../code-editor/write-class-method.md) to work with your code.
 
 
 ## Creating methods
@@ -16,7 +16,7 @@ A method in 4D is stored in a **.4dm** file located in the appropriate folder of
 You can create [several types of methods](../Concepts/methods.md):
 
 - All types of methods can be created or opened from the **Explorer** window (except Object methods which are managed from the [Form editor](../FormEditor/formEditor.md)).
-- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](write-class-method.md#shortcuts).
+- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](../code-editor/write-class-method.md#shortcuts).
 - Triggers can also be created or opened from the Structure editor.
 - Form methods can also be created or opened from the [Form editor](../FormEditor/formEditor.md).
 
@@ -41,7 +41,7 @@ To delete an existing method or class, you can:
 
 ## Importing and exporting code
   
-You can import and export a method or a class code in the form of a file. These commands are found in the **Method** menu of the Code editor. 
+You can import and export a method or a class code in the form of a file. These commands are found in the **Method** menu of the [Code editor](../code-editor/write-class-method.md). 
 
 - When you select the **Export Method...** command, a standard file saving dialog box appears, allowing you to choose the name, location and format of the export file (see below). As with printing, exporting does not take the collapsed state of code structures into account and the entire code is exported. 
 - When you select the **Import Method...** command, a standard file opening dialog box appears, allowing you to designate the file to be imported. Importing replaces the selected text in the method. To replace an existing method by an imported method, select the entire contents of the method before carrying out the import.
@@ -62,7 +62,7 @@ The other types of methods do not have specific properties. Their properties are
 
 To display the **Method Properties** dialog box for a project method, you can either:
 
-- in the [Code Editor](write-class-method.md), select the **Method Properties...** command in the **Method** menu,
+- in the [Code Editor](../code-editor/write-class-method.md), select the **Method Properties...** command in the **Method** menu,
 - or on the **Methods** page of the Explorer, **right-click** on the project method and select **Method Properties...** in the context menu or options menu. 
 
 
