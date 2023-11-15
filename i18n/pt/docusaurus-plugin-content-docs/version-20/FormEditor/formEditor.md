@@ -587,7 +587,7 @@ The current view is indicated with a check mark (*e.g.*, "Work Address" in the i
 
 ### Antes de começar
 
-Here are a few important things to know before you start working with views:
+Aqui estão algumas coisas importantes que você deve saber antes de começar a trabalhar com vistas:
 
 - **Context of use**: Views are a purely graphic tool which can only be used in the Form Editor; you cannot access views programmatically or in the Application environment.
 
@@ -734,7 +734,7 @@ By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next 
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. O cadeado está fechado, o que significa que a vista está agora bloqueada:
+Para bloquear os objetos de uma visualização, clique no ícone *Bloquear/Desbloquear*. O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
 > A [vista atual](#before-you-begin) não pode ser bloqueada.
