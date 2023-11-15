@@ -169,7 +169,7 @@ Evento emitido cuando se cierra el servidor HTTP o el servidor WebSocket.
 
 Evento emitido cuando se produce un error en el servidor WebSocket.
 
-### Example of `WSSHandler` class
+### Ejemplo de clase \`WSSHandler
 
 This example of a basic chat feature illustrates how to handle WebSocket server connections in a _WSSHandler_ class.
 
