@@ -124,6 +124,17 @@ Function add($x : Variant; $y : Integer): Integer
 ```
 
 
+:::warning
+
+Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. 例:
+
+```qs
+    //invalid declaration
+Function myTransform ($x : Integer) -> $x : Integer 
+    //error: $x is declared twice
+```
+
+:::
 
 
 
@@ -574,6 +585,7 @@ ALERT([People]Name)
 ```
 
 `CreatePerson` メソッドを実行すると、サブルーチンにおいても同じオブジェクト参照が扱われているため、両方のアラートボックスにおいて ”50” と表示されます。
+
 
 **4D Server:** "サーバー上で実行" オプションが使用された場合など、同じマシン上で実行されないメソッド間で引数が渡される場合、参照渡しは利用できません。 このような場合には、参照の代わりにオブジェクトとコレクションのコピーが引数として渡されます。
 

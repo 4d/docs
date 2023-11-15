@@ -939,6 +939,7 @@ use the following code:
 
 
 
+
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name         |
@@ -961,7 +962,7 @@ You can specify the exported file's format by including an extension after the d
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", or ".csv")
-* [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
+* [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
 If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
@@ -983,7 +984,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 
 **Notes about Excel format**:
 
-* When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. For example, 4D methods and formulas are not supported by Excel. You can verify other settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+* When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. For example, 4D methods and formulas are not supported by Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about PDF format**:
@@ -999,7 +1000,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 
 **Notes about SpreadJS file format**:
 
-* [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files.
+* [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
@@ -1754,6 +1755,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 [VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP Get binding path](#vp-get-binding-path)<br/>[VP SET BINDING PATH](#vp-set-binding-path)
 
 ### VP Get default style
+
 
 
 <!-- REF #_method_.VP Get default style.Syntax -->
@@ -2895,7 +2897,7 @@ The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tablethe
 
 #### Beispiel
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+The command returns a full `theme` object even if a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
 
 ```4d
 var $param : cs.ViewPro.TableTheme
@@ -3198,7 +3200,7 @@ In *filePath*, pass the path and name of the document to be imported. The follow
 * 4D View Pro documents (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
 * text documents (extension ".txt", ".csv", the document must be in utf-8)
-* [SpreadJS documents](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extension ".sjs")
+* [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
 
@@ -3226,7 +3228,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 :::note Notes
 
 - Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
-- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 :::
@@ -3481,6 +3483,7 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+
 
 
 
@@ -4170,6 +4173,7 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 #### See also
 
 [VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE COLUMNS](#vp-remove-table-columns)
+
 
 
 
@@ -5226,6 +5230,7 @@ Here's the result once the columns are generated:
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
+
 | Parameter     | Typ    |    | Beschreibung                               |
 | ------------- | ------ | -- | ------------------------------------------ |
 | rangeObj      | Objekt | -> | Range object                               |
@@ -6126,14 +6131,14 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 In the *attributes* parameter, pass an object that contains the properties to set:
 
-| Property            | Typ     | Beschreibung                                                                                                                                                                  |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | Text    | Table column's property name in the data context.                                                                                                                             |
-| name                | Text    | Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.                     |
-| formula             | Text    | Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | Text    | Column footer value.                                                                                                                                                          |
-| footerFormula       | Text    | Column footer formula.                                                                                                                                                        |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                     |
+| Property            | Typ     | Beschreibung                                                                                                                                                                      |
+| ------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | Text    | Table column's property name in the data context.                                                                                                                                 |
+| name                | Text    | Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.                         |
+| formula             | Text    | Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) |
+| footerText          | Text    | Column footer value.                                                                                                                                                              |
+| footerFormula       | Text    | Column footer formula.                                                                                                                                                            |
+| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                         |
 
 In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 > Indexing starts at 0.
@@ -6531,7 +6536,7 @@ The following table lists the available workbook options:
 | calcOnDemand                          | boolean                 | Formulas are calculated only when they are demanded.                                                                                                                                                                                                   |
 | columnResizeMode                      | Zahl                    | Resize mode for columns. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>                                                                                                                                                                                  |
 | copyPasteHeaderOptions                | Zahl                    | Headers to include when data is copied to or pasted. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table>                                                                                                                                                      |
-| customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).         |
+| customList                            | collection              | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists). |
 | cutCopyIndicatorBorderColor           | string                  | Border color for the indicator displayed when the user cuts or copies the selection.                                                                                                                                                                   |
 | cutCopyIndicatorVisible               | boolean                 | Display an indicator when copying or cutting the selected item.                                                                                                                                                                                        |
 | defaultDragFillType                   | Zahl                    | The default drag fill type. Available values : <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Clears cell values.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table>                                                                                                                                                                              |
@@ -6539,12 +6544,12 @@ The following table lists the available workbook options:
 | enableFormulaTextbox                  | boolean                 | The formula text box is enabled.                                                                                                                                                                                                                       |
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
 | highlightInvalidData                  | boolean                 | Invalid data is highlighted.                                                                                                                                                                                                                           |
-| iterativeCalculation                  | boolean                 | Enables iterative calculation. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                            |
+| iterativeCalculation                  | boolean                 | Enables iterative calculation. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative).                                                                                             |
 | iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
 | iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | Zahl                    | Changes display mode when date/number data width is longer than column width. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                             |
-| pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |
+| pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range) for more information on invisible ranges.             |
 | referenceStyle                        | Zahl                    | Style for cell and range references in cell formulas. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table>                                                                                                                                                     |
 | resizeZeroIndicator                   | Zahl                    | Drawing policy when the row or column is resized to zero. Available values: <table><tr><th>Constant</th><th>Wert</th><th>Beschreibung</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table>                                                                                                                                                 |
 | rowResizeMode                         | Zahl                    | The way rows are resized. Available values are the same as columnResizeMode                                                                                                                                                                            |
@@ -6599,7 +6604,9 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 | vPos      | Ganzzahl | -> | Vertical view position of cell or row                              |
 | hPos      | Ganzzahl | -> | Horizontal view position of cell or row|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 

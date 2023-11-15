@@ -85,7 +85,7 @@ The data file is fully decrypted and a confirmation message is displayed: ![](..
 
 ## Guardar la llave de encriptación
 
-4D le permite guardar la llave de encriptación de datos en un archivo dedicado. The file name must have the `.4DKeyChain` extension, for example "myKeys.4DKeyChain". El almacenamiento de este archivo en un dispositivo externo, como una llave USB, facilitará el uso de una aplicación cifrada, ya que el usuario sólo tendría que conectar el dispositivo para entregar la llave antes de abrir la aplicación para acceder a los datos cifrados.
+4D le permite guardar la llave de encriptación de datos en un archivo dedicado. El nombre del archivo debe tener la extensión `.4DKeyChain`, por ejemplo "myKeys.4DKeyChain". El almacenamiento de este archivo en un dispositivo externo, como una llave USB, facilitará el uso de una aplicación cifrada, ya que el usuario sólo tendría que conectar el dispositivo para entregar la llave antes de abrir la aplicación para acceder a los datos cifrados.
 
 Puede guardar la llave de encriptación cada vez que se proporcione una nueva frase secreta:
 
@@ -96,7 +96,7 @@ Las llaves de encriptación sucesivas pueden ser almacenadas en el mismo disposi
 
 :::caution
 
-Storing the data encryption key file at the first level of the device is mandatory when you use the  [Automatic restore and log integration feature](../Backup/settings.md#automatic-restore-and-log-integration). When the restoring sequence is triggered, 4D must have access to the encryption key file, otherwise an error occurs.
+Almacenar el archivo de llave de cifrado de datos en el primer nivel del dispositivo es obligatorio cuando utiliza la función  [de restauración automática y de integración de historiales](../Backup/settings.md#automatic-restore-and-log-integration). Cuando se activa la secuencia de restauración, 4D debe tener acceso al archivo de llave de cifrado, de lo contrario se produce un error.
 
 :::
 

@@ -70,7 +70,7 @@ El archivo de plantilla permite definir lo siguiente:
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
-:::info Limitation
+:::info Limitación
 
 In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. This limitation will be removed in the next version.
 
@@ -83,21 +83,21 @@ The template file in JSON format contains the following attributes:
 | Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                              |
 |:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
-| columns              | Collection | x           | Collection of table columns                                                                                                                              |
+| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                           |
 | columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
-| columns.header       | Text       | x           | Label shown to the user                                                                                                                                  |
+| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
 | columns.source       | Text       | x           | Formula                                                                                                                                                  |
 | breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
+| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
 | breaks.source        | Text       | x           | Formula                                                                                                                                                  |
 | breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
-| breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
 | breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 | bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
-| bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
 | extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
-| extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 
 :::note Francés
@@ -164,7 +164,7 @@ The translation file in JSON format contains the following attributes:
 
 | Atributo  | Tipo       | Obligatorio | Descripción                                                                           |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tablas    | Collection |             | Collection of translated table objects                                                |
+| tablas    | Collection |             | Colección de objetos de tabla traducidos                                              |
 | fields    | Collection |             | Collection of translated field objects                                                |
 | formulas  | Collection |             | Collection of translated formula objects                                              |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |

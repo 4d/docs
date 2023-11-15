@@ -24,6 +24,7 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 
 #### Destacados
 
+- 4D v20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D v20.1) Nueva propiedad `plugins` en el parámetro *options* para el comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) soportan palabras claves personalizadas.
@@ -188,7 +189,7 @@ $value:=($size>1000)? a:b // Aquí 'a:b' se considera un operador ternario.
 
 - Las [propiedades calculadas](../Concepts/classes.md#function-get-and-function-set) están disponibles en las clases.
 - [Los atributos calculados](../ORDA/ordaClasses.md#computed-attributes) están disponibles en las clases ORDA. Son similares a las propiedades calculadas pero también soportan las funciones [query](../ORDA/ordaClasses.md#function-query-attributename) y [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename).
-- Nuevos atributos de dataclass ORDA: [`exposed`](../API/DataClassAttributeClass.md#exposed) y [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [Los archivos ZIP](../API/ZipArchiveClass.md#zip-create-archive) ahora soportan los algoritmos de compresión *LZMA* y *xz*.
 - Una [nueva opción de build](../Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita la inclusión de los clientes Silicon Mac en las aplicaciones servidor en Windows.
 - [soporte del modo oscuro](../Preferences/general.md#appearance-macos-only) en macOS.

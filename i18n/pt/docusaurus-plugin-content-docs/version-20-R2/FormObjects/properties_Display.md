@@ -56,17 +56,17 @@ Os formatos de data controlam como as datas aparecem quando são apresentadas ou
 
 A tabela seguinte apresenta as opções disponíveis:
 
-| Nome do formato                 | Cadeia JSON  | Exemplo (sistema americano)       |
-| ------------------------------- | ------------ | --------------------------------- |
-| System date short               | - (o padrão) | 03/25/20                          |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020                 |
-| System date long                | systemLong   | Quarta-feira, 25 de março de 2020 |
-| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT     |
-| Short Century                   | shortCentury | 25/03/20 mas 25/04/2032 *(2)*     |
-| Internal date long              | long         | March 25, 2020                    |
-| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                      |
-| Internal date short             | short        | 03/25/2020                        |
-| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00               |
+| Nome do formato                 | Cadeia JSON           | Exemplo (sistema americano)       |
+| ------------------------------- | --------------------- | --------------------------------- |
+| System date short               | systemShort (default) | 03/25/20                          |
+| System date abbreviated *(1)*   | systemMedium          | Wed, Mar 25, 2020                 |
+| System date long                | systemLong            | Quarta-feira, 25 de março de 2020 |
+| RFC 822                         | rfc822                | Tue, 25 Mar 2020 22:00:00 GMT     |
+| Short Century                   | shortCentury          | 25/03/20 mas 25/04/2032 *(2)*     |
+| Internal date long              | long                  | March 25, 2020                    |
+| Internal date abbreviated *(1)* | abbreviated           | Mar 25, 2020                      |
+| Internal date short             | short                 | 03/25/2020                        |
+| ISO Date Time *(3)*             | iso8601               | 2020-03-25T00:00:00               |
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidade só se aplica às versões francesas de 4D.
 

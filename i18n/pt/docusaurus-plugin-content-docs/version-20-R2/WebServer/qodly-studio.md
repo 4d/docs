@@ -87,7 +87,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Activating authentication
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+Authentication on the WebAdmin web server is granted using an access key. Para obter mais detalhes, consulte [Chave de acesso](../Admin/webAdmin.md#access-key).
 
 ### Ativação da renderização
 
@@ -106,7 +106,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for informati
 
 Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
 
-Keep in mind that the Qodly Web Studio runs through the 4D WebAdmin web server. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
+Tenha em mente que Qodly Web Studio é executado pelo servidor web 4D WebAdmin. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
 
 However, webform rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
 

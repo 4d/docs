@@ -38,7 +38,7 @@ To enable data change tracking, the application structure must contain at least 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
 - The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
-- A `__DeletedRecords` table must be added, with the following fields:
+- Uma tabela `__DeletedRecords` deve ser adicionada, com os seguintes campos:
 
 | Campo         | Tipo            | Descrição                             |
 | ------------- | --------------- | ------------------------------------- |

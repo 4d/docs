@@ -2412,12 +2412,12 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro  |
-| styleName  | Text    | -> | Nombre del estilo                             |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)   |
-| Result     | Object  | <- | Style sheet object|<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                      |
+| ---------- | ------- | -- | ------------------------------------------------ |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro     |
+| styleName  | Text    | -> | Nombre del estilo                                |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)      |
+| Result     | Object  | <- | Objeto hoja de estilo|<!-- END REF -->
 
 |
 
@@ -5235,7 +5235,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 | Parámetros    | Tipo   |    | Descripción                                  |
 | ------------- | ------ | -- | -------------------------------------------- |
 | rangeObj      | Object | -> | Objeto rango                                 |
-| formula       | Text   | -> | Formula or 4D method                         |
+| formula       | Text   | -> | Fórmula o método 4D                          |
 | formatPattern | Text   | -> | Formato del campo|<!-- END REF -->
 
 |
@@ -5710,7 +5710,7 @@ El comando no hace nada si:
 * el nuevo nombre contiene caracteres prohibidos
 * el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
-* the passed *sheet* does not exist
+* no existe la *hoja* pasada
 
 #### Ejemplo
 
@@ -6352,14 +6352,14 @@ En la siguiente tabla se listan las opciones de libros de trabajo disponibles:
 | scrollPixel                           | integer                 | Decide el desplazamiento por ese número de píxeles cuando scrollByPixel es true. Los píxeles finales de desplazamiento son el resultado de `scroll delta * scrollPixel`. Por ejemplo: delta de desplazamiento es 3, scrollPixel es 5, los píxeles finales de desplazamiento son 15.                   |
 | showDragDropTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                               |
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                                                         |
-| showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                                                                            |
+| showDragFillTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                               |
 | showHorizontalScrollbar               | boolean                 | Mostrar la barra de desplazamiento horizontal.                                                                                                                                                                                                                                                        |
 | showResizeTip                         | number                  | Cómo mostrar el tip de redimensionamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Se muestran consejos de redimensionamiento horizontal y vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Sólo se muestra la punta de redimensionamiento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                                                            |
 | showScrollTip                         | number                  | How to display the scroll tip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Se muestran las extremidades horizontales y verticales.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                                                                        |
 | showVerticalScrollbar                 | boolean                 | Mostrar la barra de desplazamiento vertical.                                                                                                                                                                                                                                                          |
 | tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                                                                    |
 | tabNavigationVisible                  | boolean                 | Mostrar la navegación por pestañas.                                                                                                                                                                                                                                                                   |
-| tabStripPosition                      | number                  | Position of the tab strip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>                                                                                                                                                                                                                            |
+| tabStripPosition                      | number                  | Posición de la barra de pestañas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>                                                                                                                                                                                                                     |
 | tabStripRatio                         | number                  | Valor porcentual (0,x) que especifica qué parte del espacio horizontal se asignará al tabulador. El resto del área horizontal (1 - 0.x) se asignará a la barra de desplazamiento horizontal.                                                                                                          |
 | tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                                                                          |
 | tabStripWidth                         | number                  | Ancho de la etiqueta cuando la posición es izquierda o derecha. Por defecto y el mínimo es 80.                                                                                                                                                                                                        |

@@ -199,7 +199,7 @@ Quando a função é chamada, recebe na propriedade `$editor.editor` uma cópia 
 
 Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
 
-Here are the properties returned in the *$editor* parameter:
+Aqui estão as propriedades retornadas no parâmetro *$editor*:
 
 | Propriedade                      | Tipo       | Descrição                                                                         |
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
@@ -301,7 +301,7 @@ When executing a macro, if 4D encounters an error which prevents the macro from 
 
 #### Exemplo
 
-In a macro class definition, you can write the following generic error code:
+Em uma definição de classe macro, você pode escrever o seguinte código de erro genérico:
 
 ```4d
 Function onError($editor : Object; $resultMacro : Object; $error : Collection)

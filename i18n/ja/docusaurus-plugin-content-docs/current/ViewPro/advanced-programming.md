@@ -3,9 +3,9 @@ id: advanced-programming
 title: Javascript による高度なプログラミング
 ---
 
-4D View Pro Area エリアは、[埋め込みWebレンダリングエンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用する [Webエリアフォームオブジェクト](../FormObjects/webArea_overview.md) です。 つまり、他のWebエリアと同様に、[`WA Evaluate Javascript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) 4Dコマンドを呼び出すことで、Javascript のコードを実行させることができます。
+4D View Pro Area エリアは、[埋め込みWebレンダリングエンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用する [Webエリアフォームオブジェクト](../FormObjects/webArea_overview.md) です。 つまり、他のWebエリアと同様に、[`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/ja/page1029.html) 4Dコマンドを呼び出すことで、Javascript のコードを実行させることができます。
 
-4D View Proは [SpreadJS スプレッドシートソリューション](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) に基づいて動作するため、4D View Pro エリア内で SpreadJS の Javascriptメソッドを呼び出すことも可能です。
+4D View Proは [SpreadJS スプレッドシートソリューション](https://developer.mescius.com/spreadjs) に基づいて動作するため、4D View Pro エリア内で SpreadJS の Javascriptメソッドを呼び出すことも可能です。
 
 ## 例題: リボンを非表示にする
 
@@ -27,7 +27,7 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 Javascript メソッドの SpreadJSライブラリを利用し、これらを直接呼び出してスプレッドシートを制御することができます。
 
-4D は、4D View Pro エリア内のスプレッドシート (ワークブックとも呼ばれます) を指すビルトインの `Utils.spread` 式を提供しており、これを使うことでより簡単に SpreadJS の [Workbookメソッド](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html) を呼び出すことができます。
+4D は、4D View Pro エリア内のスプレッドシート (ワークブックとも呼ばれます) を指すビルトインの `Utils.spread` 式を提供しており、これを使うことでより簡単に SpreadJS の [Workbookメソッド](https://developer.mescius.com/spreadjs/api/modules/GC.Data) を呼び出すことができます。
 
 #### 例題
 

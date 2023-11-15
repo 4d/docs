@@ -3269,7 +3269,7 @@ Quiere saber si al menos un valor de la colección es >0.
 La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original y también devuelve la colección ordenada<!-- END REF --> .
 > Esta función modifica la colección original.
 
-Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.  If the collection contains scalar values of different types, they are first grouped by type and sorted afterwards. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.  Si la colección contiene valores escalares de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1.  null
 2.  booleans

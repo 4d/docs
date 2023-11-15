@@ -27,6 +27,7 @@ Leia [**O que há de novo no 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d
 - Suporte do parâmetro *context* em [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Compatibilidade com a propriedade  `cabeçalhos` no parâmetro *connectionHandler*  de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Carimbo de modificação global](../ORDA/global-stamp.md) para ajudar a implementar módulos de sincronização de dados. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
 - Suporte para [inicialização do valor da variável e do tipo de dados na linha de declaração](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Os parâmetros do arquivo de historial agora são [salvos com o arquivo de dados atual](../Backup/settings.md#log-file-management)
 - Nova sintaxe para [declaração de parâmetros variáveis](../Concepts/parameters.md#declaring-variadic-parameters)
@@ -85,6 +86,7 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 
 #### Destaques
 
+- 4D v20.2 is certified on macOS Sonoma (macOS 14).
 - (4D v20.1) Nova propriedade `plugins` no parâmetro *options* para o comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore).
 - [Classe de transportador IMAP](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) retorna *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) retorna *id*, *flags* e *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) e [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) suportam palavras-chave personalizadas.
@@ -249,7 +251,7 @@ $value:=($size>1000)? a:b // Aqui 'a:b' é visto como um operador ternário.
 
 - As [propriedades computadas](../Concepts/classes.md#function-get-and-function-set) estão disponíveis em classes.
 - [Atributos computados](../ORDA/ordaClasses.md#computed-attributes) estão disponíveis nas classes ORDA. Elas são semelhantes às propriedades computadas, mas também suportam as funções [query](../ORDA/ordaClasses.md#function-query-attributename) e [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) .
-- Novos atributos de classe de dados ORDA: [`expostos`](../API/DataClassAttributeClass.md#exposed) e [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [Arquivos ZIP](../API/ZipArchiveClass.md#zip-create-archive) agora suportam os algoritmos de compactação *LZMA* e *xz* .
 - Uma nova opção de compilação [](../Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita a inclusão de clientes Silicon Mac em aplicativos de servidor no Windows.
 - Suporte estendido para [do modo escuro](../Preferences/general.md#appearance-macos-only) no macOS.

@@ -29,20 +29,50 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece una interfaz de objeto a una
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Versión | Modificaciones           |
+| ------- | ------------------------ |
+| v19 R3  | Added .exposed attribute |
+| v17     | Añadidos                 |
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : object<!-- END REF -->
 
 #### Descripción
 
 Los atributos de las clases de datos son <!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
-Los objetos devueltos son del tipo class [`DataClassAttribute`](DataClassAttributeClass.md). Estos objetos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
+The returned objects have properties that you can read to get information about your dataclass attributes.
 > Los objetos del atributo Dataclass pueden ser modificados, pero la estructura subyacente de la base de datos no será alterada.
+
+
+#### Objeto devuelto
+
+Returned attribute objects contain the following properties:
+
+| Propiedad        | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                    |
+| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| autoFilled       | Boolean | True if the attribute value is automatically filled by 4D. Corresponds to the following 4D field properties: "Autoincrement" for numeric type fields and "Auto UUID" for UUID (alpha) fields. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                  |
+| exposed          | Boolean | True if the attribute is exposed in REST                                                                                                                                                                                                                                                                                                                       |
+| fieldNumber      | integer | Internal 4D field number of the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                     |
+| fieldType        | Integer | 4D database field type of the attribute. Depends on the attribute `kind`. Valores posibles: <li>if `.kind` = "storage": corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv20/help/command/en/page1509.html)</li><li>if `.kind` = "relatedEntity": 38 (`is object`)</li><li>if `.kind` = "relatedEntities": 42 (`is collection`)</li><li>if `.kind` = "calculated" or "alias" = same as above, depending on the resulting value (field type, relatedEntity or relatedEntities)</li>                                                                                                                                                                |
+| indexed          | Boolean | True if there is a B-tree or a Cluster B-tree index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                          |
+| inverseName      | Text    | Name of the attribute which is at the other side of the relation. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                           |
+| keywordIndexed   | Boolean | True if there is a keyword index on the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                             |
+| kind             | Text    | Category of the attribute. Valores posibles:<li>"storage": atributo de almacenamiento (o escalar), es decir, atributo que almacena un valor, no una referencia a otro atributo</li><li>"calculated": computed attribute, i.e. defined through a [`get` function](../ORDA/ordaClasses.md#function-get-attributename)</li><li>"alias": attribute built upon [another attribute](../ORDA/ordaClasses.md#alias-attributes-1)</li><li>"relatedEntity": N -> 1 relation attribute (reference to an entity)</li><li>"relatedEntities": 1 -> N relation attribute (reference to an entity selection)</li>                                                                                                                                                                                      |
+| mandatory        | Boolean | True if null value input is rejected for the attribute. Not returned if `.kind` = "relatedEntity" or "relatedEntities". Note: This property corresponds to the "Reject NULL value input" field property at the 4D database level. No tiene relación con la propiedad "Obligatorio" existente, que es una opción de control de entrada de datos para una tabla. |
+| name             | Text    | Nombre del atributo como cadena                                                                                                                                                                                                                                                                                                                                |
+| path             | Text    | Path of [an alias attribute](../ORDA/ordaClasses.md#alias-attributes-1) based upon a relation                                                                                                                                                                                                                                                                  |
+| readOnly         | Boolean | True if the attribute is read-only. For example, computed attributes without [`set` function](../ORDA/ordaClasses.md#function-set-attributename) are read-only.                                                                                                                                                                                                |
+| relatedDataClass | Text    | Name of the dataclass related to the attribute. Returned only when `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                             |
+| type             | Text    | Conceptual value type of the attribute, useful for generic programming. Depends on the attribute `kind`. Valores posibles: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>                                                                                                                             |
+| unique           | Boolean | True if the attribute value must be unique. Not returned if `.kind` = "relatedEntity" or "relatedEntities".                                                                                                                                                                                                                                                    |
+
+:::tip
+
+For generic programming, use `Bool(attributeName.property)`, `Num(attributeName.property)` or `String(attributeName.property)` (depending on the property type) to get a valid value even if the property is not returned.
+
+:::
 
 #### Ejemplo 1
 
@@ -632,9 +662,6 @@ La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve 
  $dataClassAttribute:=ds.Employee[$pk] // Si es necesario, el atributo que coincide con la llave primaria es accesible
 ```
 
-#### Ver también
-
-[DataClassAttribute.exposed](DataClassAttributeClass.md#exposed)
 
 <!-- END REF -->
 

@@ -126,6 +126,17 @@ Function add($x : Variant; $y : Integer): Integer
 ```
 
 
+:::warning
+
+Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. Por ejemplo:
+
+```qs
+    //invalid declaration
+Function myTransform ($x : Integer) -> $x : Integer 
+    //error: $x is declared twice
+```
+
+:::
 
 
 
@@ -576,6 +587,7 @@ El método `ChangeAge` añade 10 al atributo Age del objeto recibido
 ```
 
 Cuando se ejecuta el método `CreatePerson`, las dos cajas de alerta dirán "50" ya que la misma referencia de objeto es manejada por ambos métodos.
+
 
 **4D Server:** cuando se pasan parámetros entre métodos que no se ejecutan en la misma máquina (utilizando por ejemplo la opción "Ejecutar en el servidor"), las referencias no son utilizables. En estos casos, se envían copias de los parámetros de objetos y colecciones en lugar de referencias.
 

@@ -24,6 +24,7 @@ title: リリースノート
 
 #### ハイライト
 
+- 4D v20.2 は macOS Sonoma (macOS 14) 対応です。
 - (4D v20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
@@ -188,7 +189,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 
 - クラス: [計算プロパティ](../Concepts/classes.md#function-get-と-function-set) が利用可能に。
 - ORDAクラス: [計算属性](../ORDA/ordaClasses.md#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](../ORDA/ordaClasses.md#function-query-attributename) や [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) 関数もサポートしています。
-- 新しい ORDAデータクラス属性: [`exposed`](../API/DataClassAttributeClass.md#exposed) および [`readOnly`](../API/DataClassAttributeClass.md#readonly)。
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [ZIPアーカイブ](../API/ZipArchiveClass.md#zip-create-archive): *LZMA* および *xz* 圧縮アルゴリズムをサポート。
 - [新しいビルドオプション](../Desktop/building.md#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
 - macOS で [ダークモードをサポート](../Preferences/general.md#アピアランス-macosのみ)。

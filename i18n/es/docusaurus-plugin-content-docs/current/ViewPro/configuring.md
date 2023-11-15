@@ -221,7 +221,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 | + y -       | Signos más y menos                                                                          | ### + ### = ###,### |
 | ( )         | Paréntesis izquierdo y derecho                                                              | (-###.##)            |
 | :           | Dos puntos                                                                                  | hh:mm:ss             |
-| ^           | Caret                                                                                       | #\^#                |
+| ^           | Circunflejo                                                                                 | #\^#                |
 | '           | Apostrofe                                                                                   | '######              |
 | { }         | Paréntesis curvos                                                                           | {###,###,###}        |
 | `< >` | Signos menor que y mayor que                                                                | ## >##              |
@@ -356,7 +356,7 @@ Los atributos de tamaño de papel se utilizan para especificar las dimensiones o
 * Si el tamaño del papel se especifica utilizando las propiedades `height` y `width`,  [`VP Get print info`](./method-list.md#vp-get-print-info) devuelve un tamaño de papel con `custom` como valor para `kind`.
 
 * Si establece el tamaño del papel mediante la propiedad `kind`, puede utilizar cualquiera de los dos:
-  * uno de los formatos de la [lista de formatos SpreadJS](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
+  * uno de los formatos de la [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
   * uno de los formatos devueltos por el comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html). En ese caso, [`VP Get print info`](./method-list.md#vp-get-print-info) devuelve el formato correspondiente con el alto y el ancho.
 
 ### Escala
@@ -491,7 +491,7 @@ Contiene las siguientes propiedades:
 | meta         | Object        | Contenido gratuito, reservado para el desarrollador 4D |
 | spreadJS     | Object        | Reservado para el componente 4D View Pro               |
 
-## 4D View Pro Form Object Variable
+## Variable de objeto de formulario 4D View Pro
 
 La variable del objeto del formulario 4D View Pro es la variable del objeto [](Concepts/dt_object.md) asociada al área del formulario 4D View Pro. Gestiona la información utilizada por el objeto 4D View Pro.
 > La variable objeto del formulario 4D View Pro sólo tiene fines informativos (es decir, de depuración). Bajo ninguna circunstancia debe modificarse.

@@ -23,7 +23,7 @@ Note that the HTTP address must be on the same machine as 4D.
 
 ### Número de puerto
 
-Port number of the PHP interpreter. Por defecto, 4D utiliza el puerto 8002.
+Número de puerto del intérprete PHP. Por defecto, 4D utiliza el puerto 8002.
 
 Puede cambiar la dirección y/o el puerto si ya están siendo utilizados por otro servicio o si tiene varios intérpretes en la misma máquina. 
 

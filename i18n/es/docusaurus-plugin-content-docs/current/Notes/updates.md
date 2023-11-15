@@ -11,7 +11,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Destacados
 
-- Support of [`ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- Soporte de formato de cifrado [`ECDSA`](../Admin/tls.md#encryption) para certificados TLS.
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
 
 
@@ -26,7 +26,8 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 - Nueva función [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Soporte del parámetro *context* en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Soporte de la propiedad `headers` en el parámetro *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
-- [Marcador de modificación global](../ORDA/global-stamp.md) para ayudar a implantar módulos de sincronización de datos. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
+- [Marcador de modificación global](../ORDA/global-stamp.md) para ayudar a implantar módulos de sincronización de datos. Nuevas funciones: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) y [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
 - Soporte para [inicializar el valor de la variable y el tipo de datos en la línea de declaración](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Los parámetros del archivo de historial se guardan ahora en [con el archivo de datos actual](../Backup/settings.md#log-file-management)
 - Nueva sintaxis para [declarando parámetros variables](../Concepts/parameters.md#declaring-variadic-parameters)
@@ -85,6 +86,7 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 
 #### Destacados
 
+- 4D v20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D v20.1) Nueva propiedad `plugins` en el parámetro *options* para el comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) devuelve *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) devuelve *id*, *flags* y *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) y [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) soportan palabras claves personalizadas.
@@ -249,7 +251,7 @@ $value:=($size>1000)? a:b // Aquí 'a:b' se considera un operador ternario.
 
 - Las [propiedades calculadas](../Concepts/classes.md#function-get-and-function-set) están disponibles en las clases.
 - [Los atributos calculados](../ORDA/ordaClasses.md#computed-attributes) están disponibles en las clases ORDA. Son similares a las propiedades calculadas pero también soportan las funciones [query](../ORDA/ordaClasses.md#function-query-attributename) y [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename).
-- Nuevos atributos de dataclass ORDA: [`exposed`](../API/DataClassAttributeClass.md#exposed) y [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [Los archivos ZIP](../API/ZipArchiveClass.md#zip-create-archive) ahora soportan los algoritmos de compresión *LZMA* y *xz*.
 - Una [nueva opción de build](../Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita la inclusión de los clientes Silicon Mac en las aplicaciones servidor en Windows.
 - [soporte del modo oscuro](../Preferences/general.md#appearance-macos-only) en macOS.

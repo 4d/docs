@@ -27,6 +27,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - Support of *context* parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Support of `headers` property in *connectionHandler* parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Global modification stamp](../ORDA/global-stamp.md) to help implementing data synchronization modules. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
 - Support for [initializing the variable's value and data type in the declaration line](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Log file settings are now [saved with the current data file](../Backup/settings.md#log-file-management)
 - New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
@@ -85,6 +86,7 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 
 #### Highlights
 
+- 4D v20.2 is certified on macOS Sonoma (macOS 14).
 - (4D v20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns *id*, *flags* and *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
@@ -249,7 +251,7 @@ $value:=($size>1000)? a:b // Here 'a:b' is viewed as a ternary operator.
 
 - [Computed properties](../Concepts/classes.md#function-get-and-function-set) are available in classes.
 - [Computed attributes](../ORDA/ordaClasses.md#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](../ORDA/ordaClasses.md#function-query-attributename) and [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) functions.
-- New ORDA dataclass attributes: [`exposed`](../API/DataClassAttributeClass.md#exposed) and [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [ZIP archives](../API/ZipArchiveClass.md#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
 - A [new build option](../Desktop/building.md#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
 - Extended [support of dark mode](../Preferences/general.md#appearance-macos-only) on macOS.

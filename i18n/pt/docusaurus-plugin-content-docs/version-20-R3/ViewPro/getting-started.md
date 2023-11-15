@@ -9,7 +9,7 @@ title: Começando
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
+A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs) integrated in 4D.
 
 Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
 
@@ -83,7 +83,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   clique numa célula ou num intervalo de células:
-    *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
+    *   **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
     *   **Ordenar**: ordena o conteúdo da coluna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](../assets/en/ViewPro/vpContext2.PNG)

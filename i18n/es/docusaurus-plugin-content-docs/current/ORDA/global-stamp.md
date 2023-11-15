@@ -31,7 +31,7 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
-### Structure requirements
+### Requisitos de estructura
 
 To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
 
@@ -40,12 +40,12 @@ In addition, to ensure proper operation of the feature, the following conditions
 - The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
 - A `__DeletedRecords` table must be added, with the following fields:
 
-| Campo         | Tipo            | Descripción                           |
-| ------------- | --------------- | ------------------------------------- |
-| __PrimaryKey  | Text            | Primary key of the deleted entity     |
-| __Stamp       | Integer 64 bits | Global stamp just before the deletion |
-| __TableName   | Text            | Name of the deleted entity table      |
-| __TableNumber | Entero largo    | Number of the deleted entity table    |
+| Campo         | Tipo           | Descripción                           |
+| ------------- | -------------- | ------------------------------------- |
+| __PrimaryKey  | Text           | Primary key of the deleted entity     |
+| __Stamp       | Entero 64 bits | Global stamp just before the deletion |
+| __TableName   | Text           | Name of the deleted entity table      |
+| __TableNumber | Entero largo   | Number of the deleted entity table    |
 
 You can only track changes for data in tables having the `__GlobalStamp` field.
 
@@ -55,7 +55,7 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 
 :::
 
-### Using the Structure Editor
+### Uso del Editor de estructuras
 
 The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
 

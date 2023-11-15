@@ -103,10 +103,10 @@ Si la conexión no es posible, se devuelve un objeto `null` y se genera un error
 
 ### Parámetro *connectionHandler*
 
-In *connectionHandler*, you can pass an object containing callback functions to be called according to connection events, as well as data type and headers to handle.
+En *connectionHandler*, puede pasar un objeto que contenga funciones de retrollamada a ser llamadas según los eventos de conexión, así como el tipo de datos y encabezados a manejar.
 
 - Las retrollamadas se llaman automáticamente en el contexto del formulario o worker que inicia la conexión.
-- The WebSocket will be valid as long as the form or worker is not closed.
+- El WebSocket será válido siempre y cuando el formulario o trabajador no esté cerrado.
 
 | Propiedad   | Tipo                         | Descripción                                                                                                                                                                                                                     |
 | ----------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ Esta es la secuencia de llamadas de retorno:
 
 #### Ejemplo
 
-You want to set headers in the `WSConnectionHandler` user class:
+Quiere definir los encabezados en la clase usuario `WSConnectionHandler`:
 
 ```4d
 // Clase WSConnectionHandler
@@ -203,11 +203,11 @@ La función `.send()` <!-- REF #WebSocketClass.send().Summary -->envía *message
 
 Los siguientes contenidos se envían en función del tipo de *mensaje*:
 
-| Tipo   | Contenido                                                                                                           |
-| ------ | ------------------------------------------------------------------------------------------------------------------- |
-| Text   | Texto en UTF-8                                                                                                      |
-| Blob   | Datos binarios                                                                                                      |
-| Object | Text in JSON UTF-8 (same result as with [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
+| Tipo   | Contenido                                                                                                                |
+| ------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Text   | Texto en UTF-8                                                                                                           |
+| Blob   | Datos binarios                                                                                                           |
+| Object | Texto en JSON UTF-8 (mismo resultado que con [`JSON Stringify`](https://doc.4d.com/4dv20/help/command/en/page1217.html)) |
 
 
 <!-- END REF -->

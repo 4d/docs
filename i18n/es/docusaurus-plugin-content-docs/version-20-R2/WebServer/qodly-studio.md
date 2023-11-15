@@ -3,7 +3,7 @@ id: qodly-studio
 title: Qodly Studio
 ---
 
-:::caution Developer Preview
+:::caution Vista previa para desarrolladores
 
 Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production.
 
@@ -18,7 +18,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 - create webforms by placing components on a page
 - map components to data
 - trigger 4D code by configuring events
-- and much more.
+- y mucho más.
 
 :::info
 
@@ -40,7 +40,7 @@ Qodly Studio supports the following web browsers:
 
 The recommended resolution is 1920x1080.
 
-#### 4D application
+#### Aplicación 4D
 
 - Development: 4D v20 R2 or higher
 - Deployment: 4D Server v20 R2 or higher
@@ -85,7 +85,7 @@ After you have enabled access to Qodly Studio at the 4D level, you need to expli
 Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
 
 
-### Activating authentication
+### Activando autenticación
 
 Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
@@ -121,14 +121,14 @@ However, webform rendering happens outside 4D Web Studio, and is served by the s
 For deployment, the WebAdmin server is not necessary. End-user access to your web application made with Qodly Studio is based on the 4D REST protocol, and as such, it works as through a conventional 4D remote application.
 
 
-### Using project methods
+### Uso métodos proyecto
 
 We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
 
 - You can call your methods from class functions.
 - You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
-## Opening Qodly Studio
+## Abrir Qodly Studio
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
 
@@ -170,9 +170,9 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
 | Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
-| Programming language                                         | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
+| Lenguaje de programación                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
 | Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| Debugger                                                     | 4D IDE debugger                                                                             | Qodly Studio debugger                   |
+| Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
 | REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
@@ -186,7 +186,7 @@ In accordance with the management of 4D projects, only the following usages are 
 - deployment of 4D applications powered with Qodly webforms must be done using **4D Server**.
 
 
-### Known issue
+### Problema conocido
 
 - In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file.
 
@@ -199,9 +199,9 @@ In accordance with the management of 4D projects, only the following usages are 
 
 QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
 
-#### Symbols and keywords
+#### Símbolos y palabras clave
 
-Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
+Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. Estas se listan a continuación:
 
 | QodlyScript | Lenguaje 4D                                                 | Comentario          |
 | ----------- | ----------------------------------------------------------- | ------------------- |
@@ -225,7 +225,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
 
 - Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
-- However, some command have been renamed for a better compliance. They are listed below:
+- However, some command have been renamed for a better compliance. Estas se listan a continuación:
 
 | QodlyScript            | Lenguaje 4D      |
 | ---------------------- | ---------------- |
