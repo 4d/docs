@@ -706,12 +706,12 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 
 ### Alias properties
 
-Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".  
+Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".  
 
 An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute: 
 
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection"). 
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection"). 
 
 Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property). 
 
@@ -963,6 +963,7 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 ![](../assets/en/ORDA/showClass.png)
 
 ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+
 
 ![](../assets/en/ORDA/classORDA2.png)
 
