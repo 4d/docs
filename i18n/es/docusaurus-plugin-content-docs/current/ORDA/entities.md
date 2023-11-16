@@ -137,7 +137,7 @@ Cada empleado puede ser gerente y puede tener un gerente. Para obtener el gerent
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-### Assigning files to picture or blob attributes
+### Asignación de archivos a atributos imagen o blob
 
 You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
 
@@ -147,8 +147,8 @@ Thanks to this feature, you can reuse the same picture in multiple entities with
 
 The file reference can be:
 
-- a 4D.File object
-- a path in POSIX format
+- un objeto 4D.File
+- una ruta en formato POSIX
 
 Ejemplo:
 
@@ -159,9 +159,9 @@ Function createCompany($name : Text; $logo : 4D.File)
     $company:=ds.Company.new()
 
     $company.name:=$name 
-        //assignment using a file object
+        //asignación utilizando un objeto de archivo
     $company.logo:=$logo 
-        //assignment using a path
+        //asignación usando una ruta
     $company.datablob:="/RESOURCES/"+$name+"/data.bin"
     $company.save() 
 ```
@@ -172,7 +172,7 @@ The file does not have to exist on disk at the time of assignment (no error is r
 
 :::tip
 
-4D loads images and data into a local cache. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+4D carga imágenes y datos en una caché local. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
 
 :::
 
