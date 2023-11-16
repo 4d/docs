@@ -8,7 +8,7 @@ As barras de menu constituem a principal interface das aplicações personalizad
 4D lets you associate a custom splash screen picture with each menu bar and to preview this menu bar at any time.
 
 
-## Splash screen
+## Tela inicial
 
 
 You can enhance the appearance of each menu bar by associating a custom splash screen with it. The window containing the splash screen is displayed below the menu bar when it appears. Pode conter um logótipo ou qualquer tipo de imagem. Por padrão, 4D mostra o logo 4D na tela inicial:
