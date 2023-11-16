@@ -3,15 +3,16 @@ id: processes
 title: Processes
 ---
 
-Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. These operations are called processes.
+Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. These operations are called processes. Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
 
-Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
+If you write thread-safe code, you can create **preemptive processes** that will be able to take advantage of multi-core computers in your compiled applications, for faster execution.
 
-The 4D application creates processes for its own needs, for example the Main process to manage the display windows of the user interface, the Design process to manages the windows and editors of the Design environment (note that both are [worker processes](#worker-processes)), the Web Server process, the Cache Manager process, the Indexing process, or the On Event Manager process.
 
 ## Basics
 
-### Creating and Clearing Processes
+The 4D application creates processes for its own needs, for example the Main process to manage the display windows of the user interface, the Design process to manages the windows and editors of the Design environment (note that both are [worker processes](#worker-processes)), the Web Server process, the Cache Manager process, the Indexing process, or the On Event Manager process.
+
+### Creating and clearing processes
 
 There are several ways to create a new process:
 
@@ -36,7 +37,7 @@ A process can be cleared under the following conditions (the first two condition
 A process can create another process. Processes are not organized hierarchically—all processes are equal, regardless of the process from which they have been created. Once the “parent” process creates a “child” process, the child process will continue regardless of whether or not the parent process is still executing.
 
 
-### Elements of a Process 
+### Elements of a process 
 
 Each process contains specific elements that it can handle independently from other processes. 
 
@@ -70,8 +71,9 @@ Each process also has a separate current selection and current record per table.
 
 :::
 
+The 4D application creates processes for its own needs, for example the Main process to manage the display windows of the user interface, the Design process to manages the windows and editors of the Design environment (note that both are [worker processes](#worker-processes)), the Web Server process, the Cache Manager process, the Indexing process, or the On Event Manager process.
 
-### Global and Local Processes
+### Global and local processes
 
 Processes can be either global or local in scope. By default, all processes are global.
 
@@ -85,7 +87,7 @@ If you attempt to access data from a local process, you access it though the Mai
 
 :::
 
-### 4D Server
+#### 4D Server
 
 Using local processes on the remote side for operations that do not require data access reserves more processing time for server-intensive tasks. When you create a process local to client (using `New process` for example), it only exists on the remote side.
 
@@ -158,128 +160,147 @@ For more information, please see [this blog post](https://blog.4d.com/4d-summit-
 
 ## Preemptive processes
 
+The compiled 4D code can be executed in **preemptive processes**. Thanks to this feature, your 4D compiled applications can take full advantage of multi-core computers so that their execution is faster and they can support more connected users. 
 
-4D allows you to create **preemptive user processes** in compiled mode.
+### What is a preemptive process? 
 
-When run in preemptive mode, a process is dedicated to a CPU. Process management is then delegated to the system, which can allocate each CPU separately on a multi-core machine. When run in cooperative mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine.
+When run in *preemptive* mode, a process is dedicated to a CPU. Process management is then delegated to the system, which can allocate each CPU separately on a multi-core machine.
 
-As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to methods that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
+When run in *cooperative* mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine. 
 
-Management of preemptive processes is covered in the Preemptive 4D processes section. 
+As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to code that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
+
+### Availability of preemptive mode   
+
+The use of preemptive mode is supported in the following execution contexts:
+
+|Context|Preemptive execution|
+|---|----|
+|4D Server|yes|
+|4D remote|yes, with [ServerNet or QUIC](../settings/client-server#network-layer)|
+|4D single-user|yes|
+|Compiled mode|yes|
+|Interpreted mode|no|
+
+If the execution context supports preemptive mode and if the method is "thread-safe", a new 4D process launched using the `New process` or `CALL WORKER` commands, or the "Run method" menu item, will be executed in a preemptive thread.
+
+Otherwise, if you call `New process` or `CALL WORKER` from an execution context that is not supported (i.e. from interpreted mode), the process is always cooperative.
 
 
-Record Locking Between Processes  OutlineEditDeleteOrganizeSee the differencesAnchor
-A record is locked when another process has successfully loaded the record for modification. A locked record can be loaded by another process, but cannot be modified. The record is unlocked only in the process in which the record is being modified. A table must be in read/write mode for a record to be loaded unlocked. For more information, refer to the Record Locking section.
+### Thread-safe vs thread-unsafe code
 
-
-
-
-
-
-
-## Enabling User settings
-
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
-
-![](../assets/en/settings/user-settings-enable.png)
-
-When you check this option, the settings are separated into three dialog boxes: 
-
-* **Structure Settings**
-* **User Settings**
-* **User Settings for Data file**
-
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
-
-![](../assets/en/settings/user-settings-dialog.png)
-
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate *settingsType* selector.
-
-The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings). 
-
-## User Settings and User Settings for Data file
-
-The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
-
-![](../assets/en/settings/user-settings-2.png)
-
-The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
-
-| **Page of Structure Settings** | **Page of User Settings** | **Page of User Settings for Data File**|
-| --- | --- | --- |
-| [General page](../settings/general.md) | N/a | N/a |
-| [Interface page](../settings/interface.md) | Identical to standard settings | Identical to standard settings |
-| [Compiler page](../settings/compiler.md) | N/a | N/a |
-| [Database/Data storage page](../settings/database.md#data-storage) | N/a | N/a |
-| [Database/Memory page](../settings/database.md#memory) | Identical to standard settings | Identical to standard settings |
-| [Backup/Scheduler page](../settings/backup.md#scheduler) | N/a | Identical to standard settings |
-| [Backup/Configuration page](../settings/backup.md#configuration) | N/a | Identical to standard settings |
-| [Backup/Backup & Restore page](../settings/backup.md#backup-restore) | N/a | Identical to standard settings |
-| [Client-server/Network options page](../settings/client-server.md#network-options) | Identical to standard settings | Identical to standard settings |
-| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration) | Identical to standard settings | Identical to standard settings |
-| [Web/Configuration page](../settings/web.md#configuration) | Identical to standard settings | Identical to standard settings |
-| [Web/Options (I) page](../settings/web.md#options) | Identical to standard settings | Identical to standard settings |
-| [Web/Options (II) page](../settings/web.md#options-ii) | Identical to standard settings | Identical to standard settings |
-| [Web/Log (type) page](../settings/web.md#log) | Identical to standard settings | Identical to standard settings |
-| [Web/Log (backup) page](../settings/web.md#log) | Identical to standard settings | Identical to standard settings |
-| [Web/Web Services page](../settings/web.md#web-services) | Method prefixing option not available | Method prefixing option not available |
-| [SQL page](../settings/sql.md) | Identical to standard settings | Identical to standard settings |
-| [PHP page](../settings/php.md) | Identical to standard settings | Identical to standard settings |
-| [Security page](../settings/security.md) | N/a | N/a |
-| [Compatibility page](../settings/compatibility.md) | N/a | N/a |
-
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below) or the *Backup.4DSettings* file (check the [Backup settings](../Backup/settings.md) page for more information).
-
-## `SET DATABASE PARAMETER` and user settings  
-
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
-
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command are automatically saved in the user settings for the data file.
-
-> `Table sequence number` is an exception; this setting value is always saved in the data file itself.
-
-## settings.4DSettings files  
-
-When you [check the **Enable User Settings** option](#enabling-user-settings), user settings files are automatically created. Their location depends on the type of user settings defined.
-
-### User Settings  
-
-The standard user settings file is automatically created and placed in a settings folder at the following location:
-
-[`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-user)
-
-... where *ProjectFolder* is the name of the folder containing the project structure file.
-
-In merged applications, the user settings file is placed at the following location:
-
-* In single-user versions: ProjectFolder/Database/Settings/settings.4DSettings
-* In client/server versions: ProjectFolder/Server Database/Settings/settings.4DSettings
-
-### User Settings for Data File 
-
-The user settings file linked to the data file is automatically created and placed in a settings folder at the following location:
-
-[`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings-user-data)
-
-... where *Data* is the name of the folder containing the current data file of the application.
-
-> When the data file is located at the same level as the project structure file, structure-based and data-based user settings files share the same location and file. The **User Settings for Data File...** menu command is not proposed.
+4D code can only be run in a preemptive thread when certain specific conditions are met. Each part of the code being executed (commands, methods, variables, functions, etc.) must be compliant with preemptive use. Elements that can be run in preemptive threads are called thread-safe and those that cannot be run in preemptive threads are called thread-unsafe.
 
 :::note
 
-Settings files are XML files; they can be read and modified using integrated 4D XML commands or using an XML editor. This means that you can manage settings by programming, particularly in the context of applications compiled and merged with 4D Volume Desktop. When you modify this file by programming, the changes are only taken into account the next time the database is opened. 
+Since a thread is handled independently starting from the parent process method, the entire call chain must not include any thread-unsafe code; otherwise, preemptive execution will not be possible. This point is discussed [in this paragraph].
 
 :::
 
+The "thread safety" property of each element depends on the element itself:
 
-## Priority of settings 
+- 4D commands: thread safety is an internal property. In the [4D Language Reference manual](https://doc.4d.com/4Dv20/4D/20.1/4D-Language-Reference.100-6479538.en.html), thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](https://doc.4d.com/4dv20/help/command/en/page538.html) command to know if a command is thread-safe. A large part of 4D commands can run in preemptive mode.
+- Project methods: conditions for being thread-safe are listed in [this paragraph].
 
-Settings can be stored at three levels. Each setting defined at one level overrides the same setting defined at a previous level, if any:
+Basically, code to be run in preemptive threads cannot call parts with external interactions, such as plug-in code or interprocess variables. Accessing data, however, is allowed since the 4D data server and ORDA support preemptive execution.
 
-| **Priority level** | **Name** | **Location** | **Comments** |
-|---|---|---|---|
-| 3 (lowest) | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.  |
-| 2 | User settings (all data files) | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder | Overrides Structure settings. Stored within the application package. |
-| 1 (highest) | User settings (current data file) | ***settings.4DSettings*** file in the Settings folder at the same level as the data file | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
 
-Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.
+### Declaring a preemptive method
+
+By default, 4D executes all the project methods of your application in cooperative mode. If you want to benefit from the preemptive mode feature, the first step consists of explicitly declaring all methods that you want to be started in preemptive mode whenever possible -- that is, methods that you consider capable of being run in a preemptive process. The compiler will [check that these methods are actually thread-safe] at compile time. You can also disallow preemptive mode for some methods, if necessary.
+
+Keep in mind that declaring a method "capable" of preemptive use makes it eligible for preemptive execution but does not guarantee that it will actually be executed in preemptive mode at runtime. Starting a process in preemptive mode results from an [evaluation performed by 4D] regarding the properties of all the methods in the call chain of the process.
+
+To declare your method eligible for use in preemptive mode, you need to use the "Execution mode" declaration option in the Method Properties dialog box:
+
+![](../assets/en/Develop/preemptif.png)
+
+The following options are provided:
+
+- **Can be run in preemptive processes**: By checking this option, you declare that the method is able of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. The "preemptive" property of the method is set to "capable".
+
+	When this option is checked, the 4D compiler will verify that the method is actually capable and will return errors if this is not the case -- for example, if it directly or indirectly calls commands or methods that cannot be run in preemptive mode (the entire call chain is parsed but errors are only reported to the first sublevel). You can then edit the method so that it becomes thread-safe, or select another option.
+
+	If the method's preemptive capability is approved, it is tagged "thread-safe" internally and will be executed in preemptive mode whenever the required conditions are met. This property defines its eligibility for preemptive mode but does not guarantee that the method will actually be run in preemptive mode, since this execution mode requires a [specific context](#when-is-a-process-started-preemptively).
+
+- **Cannot be run in preemptive processes**: By checking this option, you declare that the method must never be run in preemptive mode, and therefore must always be run in cooperative mode, as in previous 4D versions. The "preemptive" property of the method is set to "incapable".
+
+	When this option is checked, the 4D compiler will not verify the ability of the method to run preemptively; it is automatically tagged "thread-unsafe" internally (even if it is theoretically capable). When called at runtime, this method will "contaminate" any other methods in the same thread, thus forcing this thread to be executed in cooperative mode, even if the other methods are thread-safe.
+
+- **Indifferent**(default): By checking this option, you declare that you do not want to handle the preemptive property for the method. The "preemptive" property of the method is set to "indifferent".
+
+	When this option is checked, the 4D compiler will evaluate the preemptive capability of the method and will tag it internally as "thread-safe" or "thread-unsafe". No error related to preemptive execution is returned. If the method is evaluated as thread-safe, at runtime it will not prevent preemptive thread execution when called in a preemptive context. Conversely, if the method is evaluated "thread-unsafe", at runtime it will prevent any preemptive thread execution when called.
+
+Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the `New process` command). If tagged "thread-safe" internally, it is only taken into account when called from other methods inside a call chain.
+
+:::note Particular case
+
+If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
+
+::: 
+
+### When is a process started preemptively?
+
+:::info Reminder
+
+Preemptive execution is only available in compiled mode.
+
+:::
+
+In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named *parent* method) and executes the process in preemptive or cooperative mode, depending on this property:
+
+- If the process method is thread-safe (validated during compilation), the process is executed in a preemptive thread.
+- If the process method is thread-unsafe, the process is run in a cooperative thread.
+- If the preemptive property of the process method was set to "indifferent", by compatibility the process is run in a cooperative thread (even if the method is actually capable of preemptive use). Note however that this compatibility feature is only applied when the method is used as a process method: a method declared "indifferent" but internally tagged "thread-safe" by the compiler can be called preemptively by another method (see below).
+
+The actual thread-safe property depends on the call chain. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. A preemptive thread can be created only when the entire chain is thread-safe and the process method has been declared "Can be run in preemptive process".
+On the other hand, the same thread-safe method may be executed in a preemptive thread when it is in one call chain, and in a cooperative thread when it is in another call chain.
+
+For example, consider the following project methods:
+
+```4d
+  //MyDialog project method
+  //contains interface calls: will be internally thread unsafe
+ $win:=Open form window("tools";Palette form window)
+ DIALOG("tools")
+```
+
+```4d  
+  //MyComp project method
+  //contains simple computing: will be internally thread safe
+ #DECLARE($value : Integer) -> $result : Integer
+ $result:=$value*2
+```
+
+```4d
+  //CallDial project method
+ var $vName : Text
+ MyDialog
+```
+
+```4d
+  //CallComp project method
+ var $vAge : Integer
+ MyComp($vAge)
+```
+
+Executing a method in preemptive mode will depend on its "execution" property and the call chain. The following table illustrates these various situations:
+
+![](../assets/en/Develop/legend.png)
+
+
+|Declaration and call chain|Compilation|Resulting thread safety|Execution	|Comment|
+|---|----|----|---|---|
+|![](../assets/en/Develop/scenar1.png)|	OK|![](../assets/en/Develop/scenar2.png)|Preemptive|CallComp is the parent method, declared "capable" of preemptive use; since MyComp is thread-safe internally, CallComp is thread-safe and the process is preemptive
+|![](../assets/en/Develop/scenar3.png)|Error|![](../assets/en/Develop/scenar4.png)|Execution is impossible|CallDial is the parent method, declared "capable"; MyDialog is "indifferent". However, since MyDialog is thread-unsafe internally, it contaminates the call chain. The compilation fails because of a conflict between the declaration of CallDial and its actual capability. The solution is either to modify MyDialog so that it becomes thread-safe so that execution is preemptive, or to change the declaration of CallDial 's property in order to run as cooperative
+|![](../assets/en/Develop/scenar5.png)|OK|![](../assets/en/Develop/scenar6.png)|Cooperative|Since CallDial is declared "incapable" of preemptive use, compilation is thread-unsafe internally; thus execution will always be cooperative, regardless of the status of MyDialog
+|![](../assets/en/Develop/scenar7.png)|OK|![](../assets/en/Develop/scenar8.png)|Cooperative|Since CallComp is the parent method with property "Indifferent", then the process is cooperative even if the entire chain is thread-safe.
+|![](../assets/en/Develop/scenar9.png)|OK|![](../assets/en/Develop/scenar10.png)|Cooperative|Since CallDial is the parent method (property was "Indifferent"), then the process is cooperative and compilation is successful|
+
+
+#### How to find out the actual execution mode 
+
+4D allows you to identify the execution mode of processes in compiled mode:
+
+- The [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html) command allows you to find out whether a process is run in preemptive or cooperative mode.
+- Both the Runtime Explorer and the [4D Server administration window](../ServerWindow/processes.md#process-type) display specific icons for preemptive processes.
