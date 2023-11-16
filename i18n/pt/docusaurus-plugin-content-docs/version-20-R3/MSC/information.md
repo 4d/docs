@@ -22,7 +22,7 @@ A parte central da janela indica o nome e local do projeto de bancos de dados e 
 Esta página fornece uma visão geral das tabelas da sua base de dados:
 
 ![](../assets/en/MSC/MSC_Tables.png)
-> Information on this page is available in both standard and maintenance modes.
+> As informações desta página estão disponíveis nos modos standard e de manutenção.
 
 The page lists all the tables of the database (including invisible tables) as well as their characteristics:
 
