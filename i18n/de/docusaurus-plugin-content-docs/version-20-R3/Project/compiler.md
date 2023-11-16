@@ -36,7 +36,7 @@ Double-click on each error detected to open the method or class concerned direct
 
 Use the **Previous Error** / **Next Error** commands of the **Method** menu to navigate from one error to the next.
 
-The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-files) of the errors in order to help you correct them.
+The number of errors found during your first compilations may be daunting, but do not let this put you off. You will soon discover that they often spring from the same source, i.e., non-compliance with certain project conventions. The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
 
 > Compilation requires an appropriate license. Without this license, it is not possible to carry out a compilation (buttons are disabled). Nevertheless, it is still possible to check the syntax and generate Typing methods.
 
@@ -127,7 +127,7 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 
 #### Generate error file
 
-Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 
 #### Compilation Path
