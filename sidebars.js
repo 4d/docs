@@ -65,6 +65,47 @@ module.exports =
 				},
 				{
 					type: "category",
+					label: "Develop and Debug",
+					items: [
+						"code-editor/write-class-method",
+						"Develop/processes",
+						"Tags/tags",
+						{
+							type: "category",
+							label: "Debugging",
+							link: {
+								type: 'doc',
+								id: 'Debugging/basics',
+							},
+							items: [
+								"Debugging/debugger",
+								"Debugging/breakpoints",
+								"Debugging/debugging-remote",
+							]
+						},
+						"Debugging/debugLogFiles",
+						"Project/compiler",
+					]
+				},			
+{
+					type: "category",
+					label: "ORDA",
+					link: {
+						type: 'doc',
+						id: 'ORDA/overview',
+					},
+					items: [
+						"ORDA/dsmapping",
+						"ORDA/ordaClasses",
+						"ORDA/entities",
+						"ORDA/global-stamp",
+						"ORDA/datastores",
+						"ORDA/privileges",
+						"ORDA/glossary"
+					],
+				},
+				{
+					type: "category",
 					label: "4D Language Concepts",
 					link: {
 						type: 'generated-index',
@@ -113,23 +154,6 @@ module.exports =
 						"Concepts/plug-ins",
 						"Concepts/identifiers",
 						"Concepts/paths"
-					],
-				},
-				{
-					type: "category",
-					label: "ORDA",
-					link: {
-						type: 'doc',
-						id: 'ORDA/overview',
-					},
-					items: [
-						"ORDA/dsmapping",
-						"ORDA/ordaClasses",
-						"ORDA/entities",
-						"ORDA/global-stamp",
-						"ORDA/datastores",
-						"ORDA/privileges",
-						"ORDA/glossary"
 					],
 				},
 				{
@@ -183,30 +207,6 @@ module.exports =
 					},
 
 				},
-				{
-					type: "category",
-					label: "Develop and Debug",
-					items: [
-						"code-editor/write-class-method",
-						"Develop/processes",
-						"Tags/tags",
-						{
-							type: "category",
-							label: "Debugging",
-							link: {
-								type: 'doc',
-								id: 'Debugging/basics',
-							},
-							items: [
-								"Debugging/debugger",
-								"Debugging/breakpoints",
-								"Debugging/debugging-remote",
-							]
-						},
-						"Debugging/debugLogFiles",
-						"Project/compiler",
-					]
-				},			
 				{
 					type: "category",
 					label: "Preferences",

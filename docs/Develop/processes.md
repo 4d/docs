@@ -8,9 +8,14 @@ Multi-tasking in 4D is the ability to have multiple operations that are executed
 If you write thread-safe code, you can create **preemptive processes** that will be able to take advantage of multi-core computers in your compiled applications, for faster execution.
 
 
-## Basics
+:::note
 
 The 4D application creates processes for its own needs, for example the Main process to manage the display windows of the user interface, the Design process to manages the windows and editors of the Design environment (note that both are [worker processes](#worker-processes)), the Web Server process, the Cache Manager process, the Indexing process, or the On Event Manager process.
+
+:::
+
+## Basics
+
 
 ### Creating and clearing processes
 
