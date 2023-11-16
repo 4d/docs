@@ -701,14 +701,14 @@ Function orderBy age($event : Object)-> $result : Text
 
 ### エイリアスのプロパティ
 
-エイリアス属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティ (属性の種類) は "alias" です。
+Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
 
-エイリアス属性は、ターゲット属性の [`type`](../API/DataClassAttributeClass.md#type) プロパティを継承します。
+An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
 
-- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
-- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("*classname*Entity" または "*classname*Selection") になります。
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
 
-リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassAttributeClass.md#path) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
+Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
 
 
 ### 例題
@@ -957,6 +957,7 @@ ORDA データモデルユーザークラスは、クラスと同じ名称の .4
 > 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](../assets/en/ORDA/showClass.png)
 
 ORDA ユーザークラスは通常のクラスとは異なるアイコンで表されます。 空のクラスは薄く表示されます:
+
 
 ![](../assets/en/ORDA/classORDA2.png)
 
