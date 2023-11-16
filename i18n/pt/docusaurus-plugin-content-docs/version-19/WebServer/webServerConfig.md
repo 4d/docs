@@ -68,11 +68,11 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                    | Comentários                                                                    |
-| ---------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| `WEB SET OPTION`                   | `Web CORS settings`                                     | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| Caixa de diálogos de configurações | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)        |
+| Pode ser definido com              | Nome                                                    | Comentários                                                                  |
+| ---------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS) |
+| `WEB SET OPTION`                   | `Web CORS settings`                                     | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS) |
+| Caixa de diálogos de configurações | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)      |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
@@ -183,7 +183,7 @@ Indicates whether or not the web server will accept non-secure connections.
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
 | objeto webServer                   | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean     |
 | `WEB SET OPTION`                   | `Web HTTPS enabled`                                  |             |
-| Caixa de diálogos de configurações | Configuration page/Enable HTTPS                      |             |
+| Caixa de diálogos de configurações | Página configuração/Habilitar HTTPS                  |             |
 
 Estado da comunicação por HTTPS. This option is described in [this section](Admin/tls.md).
 
