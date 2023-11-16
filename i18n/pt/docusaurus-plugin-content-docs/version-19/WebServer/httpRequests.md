@@ -9,7 +9,7 @@ The 4D web server provides several features to handle HTTP requests:
 - o URL `/4DACTION` para chamar o código do lado do servidor
 - `WEB GET VARIABLES` to get values from HTML objects sent to the server
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
-- the *COMPILER_WEB* project method, to declare your variables.
+- o método projeto *COMPILER_WEB*, para declarar suas variáveis.
 
 ## On Web Connection
 
@@ -373,7 +373,7 @@ Esses comandos estão resumidos no gráfico a seguir:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
+The 4D web server supports files uploaded in chunked transfer encoding from any Web client. A codificação de transferência em pedaços é um mecanismo de transferência de dados especificado no HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
 
 ## Método projeto COMPILER_WEB
 
