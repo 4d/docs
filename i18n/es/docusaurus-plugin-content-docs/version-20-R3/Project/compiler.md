@@ -36,7 +36,7 @@ Haga doble clic en cada error detectado para abrir el método o la clase en cues
 
 Utilice los comandos **Error anterior** / **Error siguiente** del menú **Método** para navegar de un error a otro.
 
-El número de errores encontrados durante las primeras compilaciones puede ser desalentador, pero no deje que esto lo desanime. Pronto descubrirá que a menudo proceden de la misma fuente, es decir, el incumplimiento de ciertas convenciones del proyecto. El compilador siempre ofrece un [diagnóstico preciso](#error-files) de los errores para ayudarle a corregirlos.
+El número de errores encontrados durante las primeras compilaciones puede ser desalentador, pero no deje que esto lo desanime. Pronto descubrirá que a menudo proceden de la misma fuente, es decir, el incumplimiento de ciertas convenciones del proyecto. The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
 
 > La compilación requiere una licencia apropiada. Sin esta licencia, no es posible llevar a cabo una compilación (los botones están desactivados). Sin embargo, aún es posible comprobar la sintaxis y generar métodos de digitación.
 
@@ -127,7 +127,7 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 
 #### Generar archivo de errores
 
-Se utiliza para generar el archivo de errores (ver [archivo de errores](#symbol-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
 
 #### Ruta de compilación
