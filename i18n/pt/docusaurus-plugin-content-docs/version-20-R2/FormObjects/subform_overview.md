@@ -15,13 +15,13 @@ In order to clearly define the concepts implemented with subforms, here are some
 *   **Parent form**: a form containing one or more subform(s).
 *   **Subform container**: an object included in the parent form, displaying an instance of the subform.
 *   **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-*   **List form**: instance of subform displayed as a list.
+*   **Formulário lista**: instância do subformulário exibido como uma lista.
 *   **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
 
 
 ## Sub formulários lista
 
-A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
+A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. Você pode ter vários subformulários provenientes de tabelas diferentes no mesmo formulário. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
 
 For example, a Contacts manager database might use a list subform to display all the telephone numbers for a particular contact. Although the telephone numbers appear on the Contacts screen, the information is actually stored in a related table. Using a One to Many relation, this database design makes it easy to store an unlimited number of telephone numbers per contact. With automatic relations, you can support data entry directly into the related Many table without programming.
 
