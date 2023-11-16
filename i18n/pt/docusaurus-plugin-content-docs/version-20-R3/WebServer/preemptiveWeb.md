@@ -12,11 +12,11 @@ For in-depth information on preemptive process in 4D, please refer to the *Preem
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
-| 4D Server             | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
-| --------------------- | ------------------------------------------------------------------- | ----------------------------------------- | --------------- |
-| Servidor REST         | cooperativo                                                         | preemptive                                | preemptive      |
-| Servidor Web          | cooperativo                                                         | cooperativo                               | *parâmetro web* |
-| Servidor Web Services | cooperativo                                                         | cooperativo                               | *parâmetro web* |
+| 4D Server             | Interpretado ([associado ao depurador](../Debugging/debugging-remote.md)) | Interpretado (não associado ao depurador) | Compilado       |
+| --------------------- | ------------------------------------------------------------------------- | ----------------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                               | preemptive                                | preemptive      |
+| Servidor Web          | cooperativo                                                               | cooperativo                               | *parâmetro web* |
+| Servidor Web Services | cooperativo                                                               | cooperativo                               | *parâmetro web* |
 
 | 4D remoto/usuário único | Interpretado | Compilado       |
 | ----------------------- | ------------ | --------------- |
