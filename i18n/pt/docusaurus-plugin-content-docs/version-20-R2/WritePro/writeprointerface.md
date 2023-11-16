@@ -100,7 +100,7 @@ The template file in JSON format contains the following attributes:
 | extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
 
-:::note French language
+:::note idioma francês
 
 If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
 
