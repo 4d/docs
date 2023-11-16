@@ -80,7 +80,7 @@ Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
 
 ```
 
-:::tip Client-Side JS
+:::tip JS do lado do cliente
 
 See [this blog post](https://blog.4d.com/websocket-server/) for an example of client-side Javascript code handling a WebSocket connection.
 
