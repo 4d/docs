@@ -200,7 +200,7 @@ A noter que l'entité correspondante est rechargée depuis le datastore.
 
 #### Description
 
-Tout attribut de dataclass peut être utilisé en tant que propriété d'une entity selection afin de retourner <!-- REF EntitySelectionClass.attributeName.Summary -->une "projection" des valeurs de l'attribut dans l'entity selection<!-- END REF -->. Les valeurs projetées peuvent être une collection ou une nouvelle entity selection, selon le [kind](DataClassAttributeClass.md#kind) (`storage` ou `relation`) de l'attribut.
+Tout attribut de dataclass peut être utilisé en tant que propriété d'une entity selection afin de retourner <!-- REF EntitySelectionClass.attributeName.Summary -->une "projection" des valeurs de l'attribut dans l'entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassClass.md#attributename) (`storage` or `relation`) of the attribute.
 
 *   Si le "kind" de *attributeName* est `storage` : `.attributeName` retourne une collection de valeurs du même type que *attributeName*.
 *   Si le "kind" de *attributeName* est `relatedEntity` : `.attributeName` retourne une nouvelle entity selection de valeurs liées du même type que *attributeName*. Les doublons sont supprimés (une entity selection non ordonnée est retournée).
@@ -956,8 +956,8 @@ Avec cette syntaxe, `.extract()` remplit la collection retournée avec des valeu
 
 Par défaut, les entités pour lesquelles *attributePath* est *null* ou indéfini sont ignorées dans la collection résultante. Vous pouvez passer la constante `ck keep null` dans le paramètre *option* pour intégrer ces valeurs comme des éléments **null** dans la collection retournée.
 
-*   Les attributs dataclass avec [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" sont extraits sous forme de collection d'entités (les duplications sont conservées).
-*   Les attributs dataclass avec [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" sont extraits sous forme de collection d'entity selections.
+*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntity" are extracted as a collection of entities (duplications are kept).
+*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntities" are extracted as a collection of entity selections.
 
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
@@ -966,8 +966,8 @@ Avec cette syntaxe, `.extract()` remplit la collection retournée avec les valeu
 
 Si plusieurs *attributePath* sont renseignés, un *targetPath* doit être fourni pour chacun. Seules les paires \[*attributePath*, *targetPath*] valides sont extraites.
 
-*   Les attributs dataclass avec [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" sont extraits sous forme d'entity.
-*   Les attributs dataclass avec [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" sont extraits sous forme d'entity selection.
+*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntity" are extracted as an entity.
+*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntities" are extracted as an entity selection.
 
 > Les entités d'une collection d'entités auxquelles on accède par \[ ] ne sont pas rechargées depuis la base de données.
 
@@ -2232,7 +2232,7 @@ $sum:=$sel.sum("salary")
 
 La fonction `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->crée et retourne une collection dans laquelle chaque élément est un objet contenant un ensemble de propriétés et de valeurs <!-- END REF -->correspondant aux noms et valeurs d'attributs de l'entity selection.
 
-Si aucun paramètre de filtre n'est passé ou si le paramètre contient une chaîne vide ou "*", tous les attributs sont extraits. Les attributs dont la propriété [kind](DataClassAttributeClass.md#kind) est "relatedEntity" sont extraits avec la forme simple : un objet avec la propriété \_\_KEY (clé primaire). Les attributs dont la propriété "kind" est "relatedEntities" ne sont pas extraits.
+Si aucun paramètre de filtre n'est passé ou si le paramètre contient une chaîne vide ou "*", tous les attributs sont extraits. Attributes with [kind](DataClassClass.md#attributename) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Les attributs dont la propriété "kind" est "relatedEntities" ne sont pas extraits.
 
 Vous pouvez également indiquer les attributs à extraire à l'aide d'un paramètre de filtre. Deux types de filtres sont utilisables :
 
