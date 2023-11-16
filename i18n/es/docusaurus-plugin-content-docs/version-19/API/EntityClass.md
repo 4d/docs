@@ -50,7 +50,7 @@ Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA
 Todo atributo de la clase de datos está disponible como propiedad de una entidad, que <!-- REF EntityClass.attributeName.Summary -->almacena el valor del atributo para la entidad<!-- END REF -->.
 > Los atributos dataclass también se pueden alcanzar utilizando la sintaxis alternativa con \[ ].
 
-El tipo de valor del atributo depende del tipo [kind](DataClassAttributeClass.md#kind) de atributo (relación o almacenamiento):
+The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
 
 * If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
 * If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Los valores de la entidad relacionada están disponibles directamente a través de las propiedades en cascada, por ejemplo "myEntity.employer.employees\[0].lastname".
@@ -151,7 +151,7 @@ Las diferencias se devuelven como una colección de objetos cuyas propiedades so
 
 Sólo se incluyen en la colección los atributos con valores diferentes. Si no se encuentran diferencias, `.diff()` devuelve una colección vacía.
 
-La función se aplica a las propiedades cuyo [kind](DataClassAttributeClass.md#kind) es **storage** o **relatedEntity**. En caso de que se haya actualizado una entidad relacionada (es decir, la llave foránea), el nombre de la entidad relacionada y su nombre de llave primaria se devuelven como propiedades *attributeName* (*value* y *otherValue* están vacíos para el nombre de la entidad relacionada).
+The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. En caso de que se haya actualizado una entidad relacionada (es decir, la llave foránea), el nombre de la entidad relacionada y su nombre de llave primaria se devuelven como propiedades *attributeName* (*value* y *otherValue* están vacíos para el nombre de la entidad relacionada).
 
 Si una de las entidades comparadas es **Null**, se produce un error.
 
@@ -1263,21 +1263,21 @@ La función `.toObject()` <!-- REF #EntityClass.toObject().Summary -->devuelve u
 Si no se especifica ningún filtro, o si el parámetro *filterString* contiene una cadena vacía o "*", el objeto devuelto contendrá:
 
 * todos los atributos de la entidad de almacenamiento
-* atributos de la `relatedEntity` [kind](DataClassAttributeClass.md#kind): se obtiene una propiedad con el mismo nombre que la entidad relacionada (nombre del enlace muchos-a-uno). El atributo se extrae con la forma simple.
-* atributos donde [kind](DataClassAttributeClass.md#kind) es `relatedEntities`: no se devuelve el atributo.
+* attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). El atributo se extrae con la forma simple.
+* attributes of the `relatedEntities` [kind](DataClassClass.md#attributename): attribute is not returned.
 
 En el primer parámetro, se pasa el atributo o atributos de la entidad a extraer. Puede pasar:
 
 * *filterString*: una cadena con rutas de propiedades separadas por comas: "propertyPath1, propertyPath2, ...", o
 * *filterCol*: una colección de cadenas: \["propertyPath1","propertyPath2";...]
 
-Si se especifica un filtro para los atributos de la relatedEntity [kind](DataClassAttributeClass.md#kind):
+Si se especifica un filtro para los atributos de la relatedEntity [kind](DataClassClass.md#attributename):
 
 * propertyPath = "relatedEntity" -> se extrae de forma sencilla: un objeto con la propiedad \_\_KEY (llave primaria).
 * propertyPath = "relatedEntity.*" -> se extraen todas las propiedades
 * propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> sólo se extraen esas propiedades
 
-Si se especifica un filtro para los atributos de las relatedEntities [kind](DataClassAttributeClass.md#kind):
+If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
 
 * propertyPath = "relatedEntities.*" -> se extraen todas las propiedades
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> sólo se extraen esas propiedades
@@ -1584,7 +1584,7 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 La función `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->devuelve los nombres de los atributos que han sido modificados desde que la entidad fue cargada en memoria<!-- END REF -->.
 
-Esto se aplica a los atributos [kind](DataClassAttributeClass.md#kind) `storage` o `relatedEntity`.
+This applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
 En el caso de que se haya tocado una entidad relacionada (es decir, la llave externa), se devuelve el nombre de la entidad relacionada y el nombre de su llave primaria.
 
