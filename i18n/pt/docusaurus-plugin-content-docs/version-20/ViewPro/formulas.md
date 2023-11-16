@@ -12,7 +12,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 Para introduzir uma fórmula numa área 4D View Pro:
 
 1.  Select the cell into which you will enter the formula or function.
-2.  Enter = (the equal sign).
+2.  Digite = (o sinal de igual).
 3.  Type the formula and hit the **Enter** key.
 
 Ao escrever uma fórmula, pode utilizar diferentes atalhos:
