@@ -678,14 +678,14 @@ Os atributos de alias são apenas de leitura (exceto quando baseados num atribut
 
 ### Propriedades alias
 
-Atributo de alias [`tipo`](../API/DataClassAttributeClass.md#kind) é "alias".
+Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
 
-Um atributo de alias herda os seus dados [`type`](../API/DataClassAttributeClass.md#type) propriedade do atributo de destino:
+An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
 
-- se o atributo de destino [`kind`](../API/DataClassAttributeClass.md#kind) for "storage", o tipo de dados do alias é do mesmo tipo,
-- se o atributo de destino [`kind`](../API/DataClassAttributeClass.md#kind) for "relatedEntity" ou "relatedEntities", o tipo de dados do alias é do tipo `4D.Entity` ou `4D.EntitySelection` ("*classname*Entity" ou "*classname*Selection").
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
 
-Os atributos de alias baseados em relações têm uma propriedade [`path`](../API/DataClassAttributeClass.md#path) específica, que contém o caminho dos seus atributos de destino. Os atributos de alias baseados em atributos da mesma classe de dados têm as mesmas propriedades que os seus atributos de destino (e nenhuma propriedade  `path` ).
+Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Os atributos de alias baseados em atributos da mesma classe de dados têm as mesmas propriedades que os seus atributos de destino (e nenhuma propriedade  `path` ).
 
 
 ### Exemplos
@@ -921,6 +921,7 @@ Uma classe de usuário do modelo de dados ORDA é definida adicionando, na [mesm
 > Por padrão, as classes ORDA vazias não são exibidas no Explorer. Para as mostrar, é necessário selecionar **Mostrar todas as classes de dados** no menu de opções do Explorador: ![](../assets/en/ORDA/showClass.png)
 
 As classes de utilizadores ORDA têm um ícone diferente das classes normais. As classes vazias são escurecidas:
+
 
 ![](../assets/en/ORDA/classORDA2.png)
 
