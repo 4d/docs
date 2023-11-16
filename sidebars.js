@@ -188,6 +188,7 @@ module.exports =
 					label: "Develop and Debug",
 					items: [
 						"code-editor/write-class-method",
+						"Develop/processes",
 						"Tags/tags",
 						{
 							type: "category",
