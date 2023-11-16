@@ -313,7 +313,7 @@ In the Code Editor, the drag-and-drop mechanism is activated as soon as a portio
 You can automatically modify the case of selected characters using the commands in **Methods** > **Case** or the context menu of the editor:
 
 - **Uppercase** / **Lowercase**: Switch the selected characters to uppercase or lowercase.
-- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. Este tipo de notação é frequentemente utilizado para as nomenclaturas de variáveis. hireDate and PurchaseDate are examples of two variants of camel case notation.
+- **camelCase** / **CamelCase** : Switch the selected characters to "camel case". This consists in changing each first letter of a group of attached words to uppercase. Este tipo de notação é frequentemente utilizado para as nomenclaturas de variáveis. hireDate e PurchaseDate são exemplos de duas variantes da notação camel case.
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
@@ -354,7 +354,7 @@ You can move the line where the cursor is directly without selecting it first us
 
 ### Funções de preenchimento automático
 
-O editor de código fornece funções de preenchimento automático. 4D automatically displays suggestions based on the first few characters typed.
+O editor de código fornece funções de preenchimento automático. 4D exibe automaticamente sugestões baseadas nos primeiros caracteres digitados.
 
 In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
 
@@ -406,7 +406,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 ![](../assets/en/code-editor/autocomplete-object-attributes.png)
 
-> The `length` property is always included for use with collections.
+> A propriedade `length` é sempre incluída para uso com coleções.
 
 Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.
 
@@ -556,7 +556,7 @@ Comments can be created by typing `/` characters. Or, the **Comment/Uncomment** 
 
 If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
 
-A collapsed portion of code can be selected, copied, pasted or deleted. All the lines included therein will be copied, pasted or deleted respectively. Quando uma parte do código é colada, é automaticamente expandida.
+A collapsed portion of code can be selected, copied, pasted or deleted. Todas as linhas incluídas nesse documento serão copiadas, coladas ou excluídas, respectivamente. Quando uma parte do código é colada, é automaticamente expandida.
 
 Existem várias formas de expandir e recolher código:
 
@@ -647,7 +647,7 @@ This feature is also available through the keyboard shortcut **Ctrl+K** (Windows
 The effect of the **Goto Definition...** command varies depending on the target element:
 
 - with a project method, it displays the contents of the method in a new window of the Code Editor
-- with a class name or class function, it opens the class in the the Code Editor
+- com um nome de classe ou função classe, ele abre a classe no Editor de código
 - with a built-in 4D command or function, it has the same effect as the [**Show documentation**](#show-documentation) command.
 
 ## Mostrar documentação
