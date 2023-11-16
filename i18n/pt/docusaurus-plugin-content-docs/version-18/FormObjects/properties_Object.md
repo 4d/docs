@@ -113,7 +113,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. Não digita efetivamente a variável em si. In view of database compilation, you must use the 4D language commands of the `Compiler` theme.
 
-However, this property has a typing function in the following specific cases:
+No entanto, essa propriedade tem uma função de digitação nos seguintes casos específicos:
 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
 - **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. O tipo de texto não tem formatos de visualização específicos. Também estão disponíveis quaisquer formatos personalizados existentes.
