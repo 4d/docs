@@ -128,12 +128,12 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. Por ejemplo:
+Parameters, which include the returned value, must be declared only once. En particular, no se puede declarar el mismo parámetro como entrada y salida, incluso con el mismo tipo. Por ejemplo:
 
 ```qs
-    //invalid declaration
-Function myTransform ($x : Integer) -> $x : Integer 
-    //error: $x is declared twice
+    ///declaración inválida
+myTransform de función ($x : Integerto) -> $x : Integer 
+    //error: $x se declara dos veces
 ```
 
 :::
