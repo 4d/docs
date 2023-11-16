@@ -32,7 +32,7 @@ La classe `WebForm` contient des fonctions et des propriétés permettant de gé
 
 ### *.componentName*
 
-<!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemclass.md)<!-- END REF -->
+<!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
 #### Description
 
