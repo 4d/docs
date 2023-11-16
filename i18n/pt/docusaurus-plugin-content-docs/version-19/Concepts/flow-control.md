@@ -1,6 +1,6 @@
 ---
 id: control-flow
-title: Control flow overview
+title: Visão geral do fluxo de controle
 ---
 
 Regardless of the simplicity or complexity of a method, you will always use one or more of three types of programming structures. As estruturas de programação determinam o fluxo de execução, se serão executadas, e a ordem das linhas de instruções dentro do método. Há três tipos de estruturas:
