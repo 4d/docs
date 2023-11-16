@@ -50,7 +50,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
 > Dataclass attributes can also be reached using the alternate syntax with \[ ].
 
-The attribute value type depends on the attribute [kind](DataClassAttributeClass.md#kind) (relation or storage):
+The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
 
 * If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
 * If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Values of the related entity are directly available through cascading properties, for example "myEntity.employer.employees\[0].lastname".
@@ -151,7 +151,7 @@ The differences are returned as a collection of objects whose properties are:
 
 Only attributes with different values are included in the collection. If no differences are found, `.diff()` returns an empty collection.
 
-The function applies for properties whose [kind](DataClassAttributeClass.md#kind) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
+The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. In case a related entity has been updated (meaning the foreign key), the name of the related entity and its primary key name are returned as *attributeName* properties (*value* and *otherValue* are empty for the related entity name).
 
 If one of the compared entities is **Null**, an error is raised.
 
@@ -1264,21 +1264,21 @@ The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns a
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
 
 * all storage entity attributes
-* attributes of the `relatedEntity` [kind](DataClassAttributeClass.md#kind): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.
-* attributes of the `relatedEntities` [kind](DataClassAttributeClass.md#kind): attribute is not returned.
+* attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). Attribute is extracted with the simple form.
+* attributes of the `relatedEntities` [kind](DataClassClass.md#attributename): attribute is not returned.
 
 In the first parameter, you pass the entity attribute(s) to extract. You can pass:
 
 * *filterString*: a string with property paths separated with commas: "propertyPath1, propertyPath2, ...", or
 * *filterCol*: a collection of strings: \["propertyPath1","propertyPath2";...]
 
-If a filter is specified for attributes of the relatedEntity [kind](DataClassAttributeClass.md#kind):
+If a filter is specified for attributes of the relatedEntity [kind](DataClassClass.md#attributename):
 
 * propertyPath = "relatedEntity" -> it is extracted with simple form: an object with property \_\_KEY (primary key).
 * propertyPath = "relatedEntity.*" -> all the properties are extracted
 * propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted
 
-If a filter is specified for attributes of the relatedEntities [kind](DataClassAttributeClass.md#kind):
+If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
 
 * propertyPath = "relatedEntities.*" -> all the properties are extracted
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> only those properties are extracted -> only those properties are extracted
@@ -1585,7 +1585,7 @@ In this example, we check to see if it is necessary to save the entity:
 
 The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
-This applies for attributes of the [kind](DataClassAttributeClass.md#kind) `storage` or `relatedEntity`.
+This applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
 
 In the case of a related entity having been touched (i.e., the foreign key), the name of the related entity and its primary key's name are returned.
 
