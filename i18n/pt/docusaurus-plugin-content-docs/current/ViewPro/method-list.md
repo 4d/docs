@@ -2336,7 +2336,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 Em *sheet*, passe o índice da folha cujo nome será devolvido.
 
-If the passed sheet index does not exist, the method returns an empty name.
+Se o índice de folha passado não existir, o método devolve um nome vazio.
 > A indexação começa em 0.
 
 #### Exemplo
@@ -2478,12 +2478,12 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                     |
-| ---------- | ------- | -- | --------------------------------------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro    |
-| styleName  | Text    | -> | Nome do estilo                                |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)      |
-| Resultados | Object  | <- | Style sheet object|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                            |
+| ---------- | ------- | -- | ---------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro           |
+| styleName  | Text    | -> | Nome do estilo                                       |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)             |
+| Resultados | Object  | <- | Objeto da folha de estilo|<!-- END REF -->
 
 |
 
@@ -2804,7 +2804,7 @@ No parâmetro *onlyData* pode passar uma das constantes abaixo se deseja obter a
 | `vk table full range` | 0     | Obtém o intervalo de células para a área da tabela com rodapé e cabeçalho (padrão se omitido) |
 | `vk table data range` | 1     | Obter o intervalo de células apenas para a área de dados da tabela                            |
 
-Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` command
+Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especificado, o comando se aplica à folha atual.
 > A indexação começa em 0.
 
 Se*tableName* não for encontrado, o comando retorna **null**.
@@ -2850,7 +2850,7 @@ O comando devolve um objeto da classe [cs.ViewPro.TableTheme](classes.md#tableth
 
 #### Exemplo
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+O comando devolve um objeto `tema` completo mesmo se for usado um nome de [tema SpreadJS nativo](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) para definir o tema.
 
 ```4d
 var $param : cs. ViewPro. TableTheme
@@ -2895,7 +2895,7 @@ O comando `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->devolve um
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` command
+Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especificado, o comando se aplica à folha atual.
 > A indexação começa em 0.
 
 
@@ -3076,7 +3076,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Descrição
 
-O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+O comando `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importa  *vpBlob* na área de 4D View Pro *vpAreaName* e substitui seu conteúdo<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
 Em *paramObj*, você pode passar várias propriedades:
 
@@ -3151,7 +3151,7 @@ Em *filePath*, passe o caminho de destino e o nome do documento a ser importado.
 * Os documentos 4D View Pro (extensão ".4vp")
 * Microsoft Excel (extensão ".xlsx")
 * documentos textos (extensão ".txt", ".csv", o documento deve ser em utf-8)
-* [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+* [Documentos SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extensión ".sjs")
 
 Se a extensão do documento não for uma extensão conhecida, como `.4vp` ou `.xlsx`, o documento é considerado como sendo um documento texto. Deve passar uma rota completa, a não ser que o documento esteja localizado no mesmo nível que a pasta Project, em cujo caso pode passar apenas seu nome.
 
@@ -3179,7 +3179,7 @@ O parâmetro opcional *paramObj* permite definir as propriedades do documento im
 :::note Notas
 
 - Importar arquivos em formatos .xslx, .csv, e .sjs é **asynchronous**. Com estes formatos, deve usar o atributo `formula` se quiser iniciar uma ação ao final do processamento de documento
-- Quando importar um arquivo formatado em Excel em um documento 4D View Pro, algumas configurações podem ser perdidas. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
+- Quando importar um arquivo formatado em Excel em um documento 4D View Pro, algumas configurações podem ser perdidas. Você pode verificar suas configurações com [esta lista do SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Para obter mais informações sobre CSV e valores separados por delimitadores, consulte [este artigo na Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 :::
@@ -4520,27 +4520,27 @@ VP SET ACTIVE CELL($activeCell)
 |
 > **Compatibidade**
 >
-> Para maior flexíbilidade, é recomendado usar o comando [`VP SET PERSONALIZADOS`](#vp-set-custom-functions) que permite que você designe fórmulas 4D que podem ser chamadas de 4D View Pro. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
+> Para maior flexíbilidade, é recomendado usar o comando [`VP SET PERSONALIZADOS`](#vp-set-custom-functions) que permite que você designe fórmulas 4D que podem ser chamadas de 4D View Pro. Assim que `VP DET PERSONALIZADO DE FUNÇÕES` for chamado, `VP SET DE MÉTODOS` chamadas são ignoradas. A 4D View Pro também suporta o comando genérico `do 4D PERMITIR METHODS` se nem o comando `VP SET DE FUNÇÕES DO CUSTOM` nem `VP SET METES` são chamados. no entanto não é recomendado usar o comando genérico.
 
 
 #### Descrição
 
-O comando `VP SET ALLOWED METHODS` <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
+O comando `VP SET ALLOWED METHODS` <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->define os métodos do projeto que podem ser chamados em 4D View Pro formulas<!-- END REF -->. Esse comando se aplica a todas as áreas do 4D View Pro inicializadas após sua chamada durante a sessão. Ele pode ser chamado várias vezes na mesma sessão para inicializar diferentes configurações.
 
-By default for security reasons, if you do not execute the `VP SET ALLOWED METHODS` command, no method call is allowed in 4D View Pro areas -- except if 4D's generic `SET ALLOWED METHODS` command was used (see compatibility note). A utilização de um método não autorizado numa fórmula imprime um error #NOME? erro na área 4D View Pro.
+Por padrão, por motivos de segurança, se você não executar o comando `VP SET ALLOWED METHODS` , nenhuma chamada de método será permitida nas áreas do 4D View Pro - exceto se o comando genérico `SET ALLOWED METHODS` do 4D tiver sido usado (consulte a nota de compatibilidade). A utilização de um método não autorizado numa fórmula imprime um error #NOME? erro na área 4D View Pro.
 
-In the *methodObj* parameter, pass an object in which each property is the name of a function to define in the 4D View Pro areas:
+No parâmetro *methodObj* , passe um objeto no qual cada propriedade é o nome de uma função a ser definida nas áreas do 4D View Pro:
 
-| Propriedade            |            |            | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ---------------------- | ---------- | ---------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<functionName>` |            |            | Object                 | Definição da função personalizada. The `<functionName>` property name defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                      |
-|                        | method     |            | Text                   | (obrigatório) Nome do método projeto 4D existente para permitir                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|                        | parameters |            | Uma coleção de objetos | Collection of parameters (in the order they are defined in the method).                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|                        |            | \[ ].name | Text                   | Name of a parameter to display for the `<functionName>`.**Note**: Parameter names must not contain space characters.                                                                                                                                                                                                                                                                                                                                                                                                      |
-|                        |            | \[ ].type | Number                 | Tipo do parâmetro. Tipos suportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If type is `Is object`, the object has the same structure as the object returned by [`VP Get value`](#vp-get-value). |
-|                        | resumo     |            | Text                   | Descrição da função a ser exibida no 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|                        | minParams  |            | Number                 | Número mínimo de parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|                        | maxParams  |            | Number                 | Número máximo de parâmetros. Passing a number higher than the length of parameters allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                     |
+| Propriedade            |            |            | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------- | ---------- | ---------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `<functionName>` |            |            | Object                 | Definição da função personalizada. O nome da propriedade `<functionName>` define o nome da função personalizada a ser exibida nas fórmulas do 4D View Pro (não são permitidos espaços)                                                                                                                                                                                                                                                                                                                                                     |
+|                        | method     |            | Text                   | (obrigatório) Nome do método projeto 4D existente para permitir                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                        | parameters |            | Uma coleção de objetos | Coleção de parâmetros (na ordem em que são definidos no método).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                        |            | \[ ].name | Text                   | Nome de um parâmetro a ser exibido para o `<functionName>`.**Observação**: Os nomes dos parâmetros não devem conter caracteres de espaço.                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                        |            | \[ ].type | Number                 | Tipo do parâmetro. Tipos suportados:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>Se omitido, por padrão, o valor é enviado automaticamente com seu tipo, exceto os valores de data ou hora que são enviados como um objeto (consulte a seção [Parameters](formulas.md#parameters)). Se o tipo for `Is object`, o objeto terá a mesma estrutura do objeto retornado por [`VP Get value`](#vp-get-value). |
+|                        | resumo     |            | Text                   | Descrição da função a ser exibida no 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|                        | minParams  |            | Number                 | Número mínimo de parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|                        | maxParams  |            | Number                 | Número máximo de parâmetros. Passar um número maior que o comprimento dos parâmetros permite declarar parâmetros "opcionais" com o tipo padrão                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 #### Exemplo
 
@@ -4565,11 +4565,11 @@ $allowed. Byebye.minParams:=3
 $allowed. Byebye.maxParams:=3 VP SET ALLOWED METHODS($allowed)
 ```
 
-After this code is executed, the defined functions can be used in 4D View Pro formulas:
+Depois que esse código é executado, as funções definidas podem ser usadas nas fórmulas do 4D View Pro:
 
 ![](../assets/en/ViewPro/cmd_vpSetAllowedMethods.PNG)
 
-> In 4D View Pro formulas, function names are automatically displayed in uppercase.
+> Nas fórmulas do 4D View Pro, os nomes das funções são automaticamente exibidos em letras maiúsculas.
 
 #### Veja também
 
@@ -4599,20 +4599,20 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 #### Descrição
 
-O comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->liga um atributo do contexto de dados de uma folha a *rangeObj*<!-- END REF -->. Depois de definir um contexto de dados utilizando o método [SET DATA CONTEXT](#vp-set-data-context). When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+O comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->liga um atributo do contexto de dados de uma folha a *rangeObj*<!-- END REF -->. Depois de definir um contexto de dados utilizando o método [SET DATA CONTEXT](#vp-set-data-context). Quando carregado, se o contexto de dados contiver o atributo, o valor de *dataContextAttribute* será automaticamente exibido nas células em *rangeObj*.
 
 Em *rangeObj*, passe um objeto que seja um intervalo de células ou um intervalo combinado de células.
 
-* If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
-* If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
+* Se *rangeObj* for um intervalo com várias células, o comando associará o atributo à primeira célula do intervalo.
+* Se *rangeObj* contiver vários intervalos de células, o comando associará o atributo à primeira célula de cada intervalo.
 
-If *dataContextAttribute* is an empty string, the function removes the current binding. In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*.
+No *dataContextAtributo*, passe o nome do atributo para vincular ao intervalo *e Obj*. Se *dataContextAtributo* é uma string vazia, a função remove a vinculação atual.
 
-> Os atributos do tipo coleção não são suportados. When you pass the name of a collection attribute, the command does nothing.
+> Os atributos do tipo coleção não são suportados. Quando você passar o nome de uma coleção, o comando não faz nada.
 
 #### Exemplo
 
-Set a data context and bind the `firstName` and `lastName` attribute to cells:
+Defina um contexto de dados e vincule o atributo `firstName` e `lastName` às células:
 
 ```4d
 var $p : Object
@@ -4647,7 +4647,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 O comando `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->atribui um valor booleano especificado a um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 
 O parâmetro *boolValue* permite-lhe passar o valor booleano (**True** ou **False**) que será atribuído ao *rangeObj*.
@@ -4679,18 +4679,18 @@ O parâmetro *boolValue* permite-lhe passar o valor booleano (**True** ou **Fals
 
 #### Descrição
 
-O comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->applies the border style(s) defined in *borderStyleObj* and *borderPosObj* to the range defined in the *rangeObj*<!-- END REF -->.
+O comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->aplica o(s) estilo(s) de borda definido(s) em *borderStyleObj* e *borderPosObj* ao intervalo definido em *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass a range of cells where the border style will be applied. If the *rangeObj* contains multiple cells, borders applied with `VP SET BORDER` will be applied to the *rangeObj* as a whole (as opposed to the [`VP SET CELL STYLE`](#vp-set-cell-style) command which applies borders to each cell of the *rangeObj*). If a style sheet has already been applied, `VP SET BORDER` will override the previously applied border settings for the *rangeObj*.
+Em *rangeObj*, passe um intervalo de células em que o estilo de borda será aplicado. Se o *rangeObj* contiver várias células, as bordas aplicadas com `VP SET BORDER` serão aplicadas ao *rangeObj* como um todo (ao contrário do comando [`VP SET CELL STYLE`](#vp-set-cell-style) que aplica bordas a cada célula do *rangeObj*). Se uma folha de estilo já tiver sido aplicada, `VP SET BORDER` substituirá as configurações de borda aplicadas anteriormente para o *rangeObj*.
 
-The *borderStyleObj* parameter allows you to define the style for the lines of the border. The *borderStyleObj* supports the following properties:
+O parâmetro *borderStyleObj* permite que você defina o estilo das linhas da borda. O *borderStyleObj* oferece suporte às seguintes propriedades:
 
 | Propriedade | Tipo    | Descrição                                       | Valores possíveis                                                                                                                                                                                                                                                                                                                                                            |
 | ----------- | ------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color       | text    | Define a cor da margem. Predefinição = black.   | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                           |
+| color       | text    | Define a cor da margem. Predefinição = black.   | Sintaxe da cor CSS "#rrggbb" (sintaxe preferencial), sintaxe da cor CSS "rgb(r,g,b)" (sintaxe alternativa), nome da cor CSS (sintaxe alternativa)                                                                                                                                                                                                                            |
 | style       | Integer | Define o estilo da borda. Predefinição = vazio. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
-You can define the position of the *borderStyleObj* (i.e., where the line is applied) with the *borderPosObj*:
+Você pode definir a posição do *borderStyleObj* (ou seja, onde a linha é aplicada) com o *borderPosObj*:
 
 | Propriedade     | Tipo    | Descrição                                                                  |
 | --------------- | ------- | -------------------------------------------------------------------------- |
@@ -4718,7 +4718,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 #### Exemplo 2
 
-This code demonstrates the difference between `VP SET BORDER` and setting borders with the [`VP SET CELL STYLE`](#vp-set-cell-style) command:
+Esse código demonstra a diferença entre `VP SET BORDER` e a definição de bordas com o comando [`VP SET CELL STYLE`](#vp-set-cell-style) :
 
 ```4d
 // Definir margens usando VP SET BORDER
@@ -5157,7 +5157,7 @@ Eis o resultado após as colunas serem geradas:
 
 O comando `VP SET DATE TIME VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->assigns a specified date and time value to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 The *dateValue* parameter specifies a date value to be assigned to the *rangeObj*.
 
@@ -5320,7 +5320,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 O comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
 
 The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
 
@@ -5488,7 +5488,7 @@ $panes.rowCount:=1 VP SET FROZEN PANES("ViewProArea";$panes)
 
 O comando `VP SET NUM VALUE` <!-- REF #_method_.VP SET NUM VALUE.Summary -->atribui um valor numérico especificado a um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 The *numberValue* parameter specifies a numeric value to be assigned to the *rangeObj*.
 
@@ -5920,7 +5920,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` é passado por defeito.
 
-Em *sheet*, passe o índice da folha de destino. The `VP Get sheet index` command
+Em *sheet*, passe o índice da folha de destino. Se nenhum índice for especificado, o comando se aplica à folha atual.
 
 
 > A indexação começa em 0.
@@ -6152,7 +6152,7 @@ $param.theme.secondColumnStripStyle:=$styleColumn2 VP SET TABLE THEME("ViewProAr
 
 O comando `VP SET TEXT VALUE` <!-- REF #_method_.VP SET TEXT VALUE.Summary -->atribui um valor de texto especificado a um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 The *textValue* parameter specifies a text value to be assigned to the *rangeObj*.
 
@@ -6188,7 +6188,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 O comando `VP SET TIME VALUE` <!-- REF #_method_.VP SET TIME VALUE.Summary -->atribui um valor de tempo especificado a um intervalo de células designado<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
@@ -6226,7 +6226,7 @@ O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->atribui um v
 
 The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
 
-In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
+Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
 The parameter *valueObj* is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to *rangeObj*. Pode incluir as seguintes propriedades:
 
