@@ -3,7 +3,7 @@ id: processes
 title: Processes
 ---
 
-Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. These operations are called processes. Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
+Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. These operations are called **processes**. Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
 
 If you write thread-safe code, you can create **preemptive processes** that will be able to take advantage of multi-core computers in your compiled applications, for faster execution.
 
@@ -56,12 +56,12 @@ Interface elements are used in [Desktop applications](../category/desktop-applic
 - [Menu bar](../Menus/creating.md): Each process can have its own current menu bar. The menu bar of the frontmost process is the current menu bar for the application.
 - One or more windows: Each process can have more than one window open simultaneously. On the other hand, some processes have no windows at all.
 - One active (frontmost) window: Even though a process can have several windows open simultaneously, each process has only one active window. To have more than one active window, you must start more than one process.
+- Input and Output forms: Default input and output forms can be set procedurally for each table in each process.
 
 :::info
 
 - Processes do not include menu bars by default which means that the standard **Edit** menu shortcuts (in particular, cut/copy/paste) are not availalbe in process windows. When you call dialog boxes or 4D editors (form editor, query editor, Request, etc.) from a process, if you want for the user to be able to benefit from keyboard shortcuts like copy/paste, you need to make sure that the equivalent of an **Edit** menu is installed in the process.
 - [Preemptive processes](#preemptive-processes) and processes that are executed on the server (stored procedures) must not contain elements of the interface.
-- Input and Output forms: Default input and output forms can be set procedurally for each table in each process.
 
 :::
 
@@ -322,7 +322,7 @@ To be thread-safe, a method must respect the following rules:
 
 (2) The [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command provides an elegant solution to call interface objects from a preemptive process.
 
-:::Notes Notes
+:::note Notes
 
 - In the case of a "Shared by components and host databases" method, the "Can be run in preemptive processes" property must be selected.
 - All SQL statements are thread-safe. SQL code inserted in `Begin SQL`/`End SQL` blocks must comply with the following conditions:
