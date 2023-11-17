@@ -69,6 +69,11 @@ title: リリースノート
 
 [**4D v20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D v20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
+:::caution Minimal client version for 4D Server v20.2 and later
+
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+
+:::
 
 #### インデックス再構築の警告
 
