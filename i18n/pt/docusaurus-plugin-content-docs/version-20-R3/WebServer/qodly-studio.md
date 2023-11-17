@@ -17,7 +17,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 - criar formulários Web colocando componentes em uma página
 - mapear componentes para dados
-- trigger 4D code by configuring events
+- acionar o código 4D configurando eventos
 - e muito mais.
 
 :::info
@@ -281,6 +281,14 @@ QodlyScript command names are written in camel case without spaces. Talvez você
  End for each
 
 ```
+
+### Offline use
+
+You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
+
+- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
+
 
 ## Sobre a licença de uso
 
