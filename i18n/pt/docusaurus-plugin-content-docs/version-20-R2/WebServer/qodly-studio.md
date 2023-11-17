@@ -17,7 +17,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 - criar formulários Web colocando componentes em uma página
 - mapear componentes para dados
-- trigger 4D code by configuring events
+- acionar o código 4D configurando eventos
 - e muito mais.
 
 :::info
