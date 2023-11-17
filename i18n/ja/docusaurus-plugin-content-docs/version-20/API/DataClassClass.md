@@ -29,10 +29,10 @@ title: DataClass
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                       |
-| ------ | ------------------------ |
-| v19 R3 | Added .exposed attribute |
-| v17    | 追加                       |
+| バージョン  | 内容             |
+| ------ | -------------- |
+| v19 R3 | .exposed 属性を追加 |
+| v17    | 追加             |
 
 </details>
 
@@ -64,13 +64,13 @@ title: DataClass
 | name             | Text    | 属性名 (文字列)                                                                                                                                                                                                           |
 | path             | Text    | リレーションに基づく [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) のパス。                                                                                                                                                         |
 | readOnly         | Boolean | 読み取り専用属性の場合に trueです。 たとえば、[`set` 関数](../ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。                                                                                                         |
-| relatedDataClass | Text    | Name of the dataclass related to the attribute. `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                        |
-| type             | Text    | Conceptual value type of the attribute, useful for generic programming. これは属性の種類 (`kind`) によります。 とりうる値: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>     |
-| unique           | Boolean | True if the attribute value must be unique. `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                   |
+| relatedDataClass | Text    | 属性にリレートされているデータクラスの名称。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                 |
+| type             | Text    | 属性の概念的な値タイプ。汎用的なプログラミングに有用です。 これは属性の種類 (`kind`) によります。 とりうる値: <li>`.kind` = "storage" の場合: "blob", "bool", "date", "image", "number", "object", または "string"。 数値型の場合 "number" が返されます (時間を含む)。UUID、文字およびテキスト型フィールドの場合 "string" が返されます。"blob" 属性は [BLOB オブジェクト](../Concepts/dt_blob.md#blob-の種類) です。</li><li>`.kind` = "relatedEntity" の場合: リレートされたデータクラス名</li><li>`.kind` = "relatedEntities" の場合: リレートされたデータクラス名 + "Selection" 接尾辞</li><li>`.kind` = "calculated" または "alias" の場合: 結果の値に応じて、上に同じ</li>                                               |
+| unique           | Boolean | 属性値が重複不可の場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                         |
 
 :::tip
 
-For generic programming, use `Bool(attributeName.property)`, `Num(attributeName.property)` or `String(attributeName.property)` (depending on the property type) to get a valid value even if the property is not returned.
+汎用的なプログラミングにおいては、プロパティが返されない場合でも有効な値を取得するため、`Bool(attributeName.property)`、`Num(attributeName.property)`、または `String(attributeName.property)` をプロパティの型に応じて使用することが推奨されます。
 
 :::
 
