@@ -282,6 +282,14 @@ QodlyScript のコマンド名は、スペースを入れずにキャメルケ�
 
 ```
 
+### Offline use
+
+You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
+
+- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
+
+
 ## ライセンスの使用について
 
 Webフォームをレンダリングするには、プロジェクトデータベースのメインの Webサーバーでセッションが開かれるため、使用可能なライセンスが必要です。
