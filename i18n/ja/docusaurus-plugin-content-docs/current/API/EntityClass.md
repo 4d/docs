@@ -51,7 +51,7 @@ title: Entity
 データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
-The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
+この属性値タイプは属性の種類 ([](DataClassClass.md#attributename).kind; リレーションまたはストレージ) によります。
 
 * *attributeName* で指定した属性がストレージ型の場合: `.attributeName` は *attributeName* と同じ型の値を返します。
 * *attributeName* で指定した属性がリレートエンティティ型の場合: `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
@@ -151,7 +151,7 @@ The attribute value type depends on the attribute [kind](DataClassClass.md#attri
 
 コレクションに含まれるのは異なる値を持っていた属性のみです。 差異が見つからない場合、`diff()` は空のコレクションを返します。
 
-The function applies for properties whose [kind](DataClassClass.md#attributename) is **storage** or **relatedEntity**. リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が *attributeName* プロパティに返されます (リレーション名についての *value* および *otherValue* は空になります)。
+この関数は、種類 ([kind](DataClassClass.md#attributename)) が **storage** あるいは **relatedEntity** であるプロパティに適用されます。 リレート先のエンティティそのものが変更された場合 (外部キーの変更)、リレーションの名称とそのプライマリーキー名が *attributeName* プロパティに返されます (リレーション名についての *value* および *otherValue* は空になります)。
 
 比較するどちらかのエンティティが **Null** である場合、エラーが生成されます。
 
@@ -1332,21 +1332,21 @@ $info:=$address.getRemoteContextAttributes()
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
 * すべてのストレージエンティティ属性
-* attributes of the `relatedEntity` [kind](DataClassClass.md#attributename): you get a property with the same name as the related entity (name of the many-to-one link). 属性は単純な形式で取得されます。
-* attributes of the `relatedEntities` [kind](DataClassClass.md#attributename): attribute is not returned.
+* リレートエンティティ型の属性 ([kind](DataClassClass.md#attributename) が `relatedEntity`) : リレートエンティティと同じ名前 (N対1リレーション名) のプロパティ。 属性は単純な形式で取得されます。
+* リレートエンティティズ型の属性 ([kind](DataClassClass.md#attributename) が `relatedEntities`): 属性は返されません。
 
 最初の引数として、取得するエンティティ属性を渡します。 以下のものを渡すことができます:
 
 * *filterString*: プロパティパスをカンマで区切った文字列: "propertyPath1, propertyPath2, ..." または
 * *filterCol*: 文字列のコレクション: \["propertyPath1","propertyPath2";...]
 
-If a filter is specified for attributes of the relatedEntity [kind](DataClassClass.md#attributename):
+filter 引数がリレートエンティティ型の属性を指定する場合 ([kind](DataClassClass.md#attributename) が relatedEntity):
 
 * propertyPath = "relatedEntity" -> 単純な形式で取得されます: \_\_KEY プロパティ(プライマリーキー) を持つオブジェクト
 * propertyPath = "relatedEntity.*" -> 全プロパティが取得されます
 * propertyPath = "relatedEntity.propertyName1; relatedEntity.propertyName2; ..." -> 指定されたプロパティのみが取得されます
 
-If a filter is specified for attributes of the relatedEntities [kind](DataClassClass.md#attributename):
+filter 引数がリレートエンティティ型の属性を指定する場合 ([kind](DataClassClass.md#attributename) が relatedEntities):
 
 * propertyPath = "relatedEntities.*" -> 全プロパティが取得されます
 * propertyPath = "relatedEntities.propertyName1; relatedEntities.propertyName2; ..." -> 指定されたプロパティのみが取得されます
@@ -1660,7 +1660,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 `.touchedAttributes()` 関数は、 <!-- REF #EntityClass.touchedAttributes().Summary -->メモリに読み込み後に変更されたエンティティの属性名を返します<!-- END REF -->。
 
-This applies for attributes of the [kind](DataClassClass.md#attributename) `storage` or `relatedEntity`.
+この関数は、種類 ([kind](DataClassClass.md#attributename)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 
 リレート先のエンティティそのものが更新されていた場合 (外部キーの変更)、リレートエンティティの名称とそのプライマリーキー名が返されます。
 
