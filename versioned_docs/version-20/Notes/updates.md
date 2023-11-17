@@ -8,6 +8,13 @@ title: Release Notes
 Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D v20.
 
 
+:::caution 4D v20.2 client/server versions
+
+For internal reasons, 4D remote clients and 4D Server must use the same version: only remote 4D v20.2 can connect to 4D Server v20.2 and vice versa. 
+
+:::
+
+
 #### Index rebuild warning
  
 4D v20 includes an ICU library update (see below) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
