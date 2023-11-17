@@ -91,9 +91,9 @@ title: リモートデータストアの利用
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
-:::warning Compatibility Note
+:::warning 互換性に関する注記
 
-Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D v20.x remote application can only use contexts of a 4D Server v20.x datastore.
+[`Open datastore`](../API/DataStoreClass.md#open-datastore) で確立された接続で扱われるコンテキストは、メジャーバージョンが共通する 4D でのみ使用できます。 たとえば、4D v20.x リモートアプリケーションは、4D Server v20.x のデータストアのコンテキストのみを使用できます。
 
 :::
 
