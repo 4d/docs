@@ -135,12 +135,12 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. 例:
+戻り値を含む引数の宣言をおこなうのは、一度だけです。 特に、同じ型であっても、同じ引数を入力と出力の両方として宣言することはできません。 例:
 
 ```qs
-    //invalid declaration
+    // 無効な宣言
 Function myTransform ($x : Integer) -> $x : Integer 
-    //error: $x is declared twice
+    // エラー: $x が2回宣言されています
 ```
 
 :::
