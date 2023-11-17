@@ -956,9 +956,15 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のプロパティがサポートされています:
 
-エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。 詳細な情報については、[**クライアント/サーバーの最適化**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.ja.html#4461913) の章を参照ください。</td> </tr> 
-
-</tbody> </table> 
+| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                   |
+| attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
+| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                    |
+| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                               |
+| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。 詳細な情報については、[**クライアント/サーバーの最適化**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.ja.html#4461913) の章を参照ください。                                                                                                                                |
+| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                   |
+| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                             |
 
 **queryPlan と queryPath について**
 
@@ -966,17 +972,12 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 たとえば、以下のクエリを実行した場合:
 
-
-
 ```4d
  $sel:=ds.Employee.query("salary < :1 and employer.name = :2 or employer.revenues > :3";\  
  50000;"Lima West Kilo";10000000;New object("queryPath";True;"queryPlan";True))
 ```
 
-
 queryPlan:
-
-
 
 ```4d
 {Or:[{And:[{item:[index : Employee.salary ] < 50000},  
@@ -986,10 +987,7 @@ queryPlan:
  subquery:[{item:[index : Company.revenues ] > 10000000}]}]}
 ```
 
-
 queryPath:
-
-
 
 ```4d
 {steps:[{description:OR,time:63,recordsfounds:1388132,  
@@ -999,71 +997,48 @@ queryPath:
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
 
-
-
-
 #### 例題 1
 
 この例題では、様々なクエリの例を紹介します。
 
 文字列のクエリ:
 
-
-
 ```4d
 $entitySelection:=ds.Customer.query("firstName = 'S@'")
 ```
 
-
 NOT節を用いたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("not(firstName=Kim)")
 ```
 
-
 日付のクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("birthDate > :1";"1970-01-01")
 $entitySelection:=ds.Employee.query("birthDate <= :1";Current date-10950)
 ```
 
-
 値のインデックスプレースホルダーを使用したクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Customer.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@")
 ```
 
-
 リレートデータクラス対して値のインデックスプレースホルダーを使用したクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("lastName = :1 and manager.lastName = :2";"M@";"S@")
 ```
 
-
 降順の order by ステートメントを含んだ、インデックスプレースホルダーを使用したクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Student.query("nationality = :1 order by campus.name desc, lastname";"French")
 ```
 
-
 値の命名プレースホルダーを使用したクエリ:
-
-
 
 ```4d
 var $querySettings : Object
@@ -1073,10 +1048,7 @@ $querySettings.parameters:=New object("userId";1234;"extraInfo";New object("name
 $managedCustomers:=ds.Customer.query("salesperson.userId = :userId and name = :extraInfo.name";$querySettings)
 ```
 
-
 値の命名プレースホルダーと、値のインデックスプレースホルダーの両方を使用したクエリ:
-
-
 
 ```4d
 var $querySettings : Object
@@ -1085,10 +1057,7 @@ $querySettings.parameters:=New object("userId";1234)
 $managedCustomers:=ds.Customer.query("salesperson.userId = :userId and name=:1";"Smith";$querySettings)
 ```
 
-
 queryPlan および queryPath オブジェクトを返すクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
@@ -1099,28 +1068,19 @@ $queryPlan:=$entitySelection.queryPlan
 $queryPath:=$entitySelection.queryPath
 ```
 
-
 コレクション型の属性パスを用いたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[].name = :1";"horsebackriding")
 ```
 
-
 コレクション型の属性パスとクエリ条件をリンクしたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and extraInfo.hobbies[a].level=:2";"horsebackriding";2)
 ```
 
-
 コレクション型の属性パスとクエリ条件を、複数リンクしたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
@@ -1128,37 +1088,25 @@ $entitySelection:=ds.Employee.query("extraInfo.hobbies[a].name = :1 and
  extraInfo.hobbies[b].level = :4";"horsebackriding";2;"Tennis";5)
 ```
 
-
 オブジェクト型の属性パスを用いたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("extra.eyeColor = :1";"blue")
 ```
 
-
 IN節を用いたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("firstName in :1";New collection("Kim";"Dixie"))
 ```
 
-
 NOT (IN) 節を用いたクエリ:
-
-
 
 ```4d
 $entitySelection:=ds.Employee.query("not (firstName in :1)";New collection("John";"Jane"))
 ```
 
-
 属性パスのインデックスプレースホルダーを使用したクエリ:
-
-
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1166,10 +1114,7 @@ $es:=ds.Employee.query(":1 = 1234 and :2 = 'Smith'";"salesperson.userId";"name")
   // salesperson はリレートエンティティです
 ```
 
-
 属性パスのインデックスプレースホルダーと、値の命名プレースホルダーを使用したクエリ:
-
-
 
 ```4d
 var $es : cs.EmployeeSelection
@@ -1180,19 +1125,13 @@ $es:=ds.Customer.query(":1 = 1234 and :2 = :customerName";"salesperson.userId";"
   // salesperson はリレートエンティティです
 ```
 
-
 属性パスと値のインデックスプレースホルダーを使用したクエリ:
-
-
 
 ```4d
 var $es : cs.EmployeeSelection
 $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith")
   // salesperson はリレートエンティティです
 ```
-
-
-
 
 #### 例題 2
 
@@ -1201,8 +1140,6 @@ $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith
 2件のエンティティをもつ Employee データクラスを前提に考えます:
 
 エンティティ1:
-
-
 
 ```4d
 name: "Marie"
@@ -1214,10 +1151,7 @@ softwares:{
 }
 ```
 
-
 エンティティ2:
-
-
 
 ```4d
 name: "Sophie"
@@ -1229,10 +1163,7 @@ softwares:{
 }
 ```
 
-
 属性パスの命名プレースホルダーを使用したクエリ:
-
-
 
 ```4d
  var $querySettings : Object
@@ -1243,10 +1174,7 @@ softwares:{
   //$es.length=1 (Employee Marie)
 ```
 
-
 属性パスと値の命名プレースホルダーを使用したクエリ:
-
-
 
 ```4d
  var $querySettings : Object
@@ -1264,26 +1192,18 @@ softwares:{
  End if
 ```
 
-
-
-
 #### 例題 3
 
 この例題では、クエリにおいて、引数あり・引数なしでフォーミュラを使用する様々な方法を紹介します。
 
 `eval()` を使い、テキストとしてフォーミュラを *queryString* パラメーターに渡すクエリ:
 
-
-
 ```4d
  var $es : cs.StudentsSelection
  $es:=ds.Students.query("eval(length(This.lastname) >=30) and nationality='French'")
 ```
 
-
 プレースホルダーを使い、`Formula`オブジェクトとしてフォーミュラを渡すクエリ:
-
-
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1292,10 +1212,7 @@ softwares:{
  $es:=ds.Students.query(":1 and nationality='French'";$formula)
 ```
 
-
 `Formula` オブジェクトのみを検索条件として渡したクエリ:
-
-
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1304,10 +1221,7 @@ softwares:{
  $es:=ds.Students.query($formula)
 ```
 
-
 フォーミュラを複数適用したクエリ:
-
-
 
 ```4d
  var $formula1; $1; $formula2 ;$0 : Object
@@ -1316,10 +1230,7 @@ softwares:{
  $0:=ds.Students.query(":1 and :2 and nationality='French'";$formula1;$formula2)
 ```
 
-
 *queryString* のテキストフォーミュラが引数を受け取るクエリ:
-
-
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1329,19 +1240,13 @@ softwares:{
  $es:=ds.Students.query("eval(checkName($1.filter)) and nationality=:1";"French";$settings)
 ```
 
-
-
-
 ```4d
   // checkName メソッド
  #DECLARE($exclude : Text) -> $result : Boolean
  $result:=(Position($exclude;This.lastname)=0)
 ```
 
-
 同じ ***checkName*** メソッドを `Formula` オブジェクトに格納してプレースホルダーで渡し、引数を受け取るクエリ:
-
-
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1354,10 +1259,7 @@ softwares:{
  $es:=ds.Students.query(":1 and nationality=:2";$formula;"French";$settings)
 ```
 
-
 ユーザーがクエリを入力する場合などに、フォーミュラを禁止する場合:
-
-
 
 ```4d
  var $es : cs.StudentsSelection
@@ -1369,9 +1271,6 @@ softwares:{
     $es:=ds.Students.query($queryString;$settings) // $queryString にフォーミュラが格納されていた場合にはエラーが生成されます
  End if
 ```
-
-
-
 
 #### 参照
 
