@@ -764,11 +764,11 @@ La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->cré
 
 In *rangeObj*, pass the cell range where the table will be created.
 
-In *tableName*, pass a name for the table. The name must:
+Dans *tableName*, passez un nom pour la table. Le nom doit :
 
-* be unique in the sheet
-* include at least 5 characters
-* not include spaces or start with a number
+* être unique dans la feuille
+* inclure au moins 5 caractères
+* ne pas inclure d'espaces ou commencer par un nombre
 
 In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row.
 
