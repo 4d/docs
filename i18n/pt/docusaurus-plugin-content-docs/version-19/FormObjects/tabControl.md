@@ -71,7 +71,7 @@ You can assign a [choice list](properties_DataSource.md#choice-list-static-list)
 
 ### Utilizar um array texto
 
-You can create a Text array that contains the names of each page of the form. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+Você pode criar um array Text que contenha os nomes de cada página do formulário. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
 
 ```4d
  ARRAY TEXT(arrPages;3)

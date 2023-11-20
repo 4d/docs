@@ -173,7 +173,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | host                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                 |
 | rfc931               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                          |
-| user                 | user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).                      |
+| user                 | user name as it is authenticated, or else it is - (a minus sign). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).              |
 | DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
 | request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
 | state                | resposta dada pelo servidor                                                                                                                                          |

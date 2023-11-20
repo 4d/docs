@@ -58,7 +58,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 ### Introdução de dados
 
-Double-clicking on a cell allows passing into input mode in the relevant cell. If the cell is not empty, the insertion cursor is placed after the content of the cell.
+Clicar duas vezes em uma célula permite passar para o modo entrada na célula relevante. If the cell is not empty, the insertion cursor is placed after the content of the cell.
 
 ![](../assets/en/ViewPro/vpInput.PNG)
 
@@ -120,7 +120,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilização de objectos de intervalo
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. Esta área pode ser composta por uma ou várias células. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+Some 4D View Pro methods require a *rangeObj* parameter. No 4D View Pro, um intervalo é um objeto que referir-se a uma área em uma planilha. Esta área pode ser composta por uma ou várias células. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
 
 Por exemplo, para criar um objeto intervalo para as seguintes células:
 

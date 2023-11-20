@@ -31,7 +31,7 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
-### Structure requirements
+### Requisitos de estrutura
 
 To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
 
@@ -59,7 +59,7 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 
 The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
 
-To enable data change tracking:
+Para ativar o rastreamento de alterações de dados:
 
 1. Select the table(s) for which you want to enable data change tracking.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.

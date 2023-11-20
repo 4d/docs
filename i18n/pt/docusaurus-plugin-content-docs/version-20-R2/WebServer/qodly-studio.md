@@ -17,7 +17,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 - criar formulários Web colocando componentes em uma página
 - mapear componentes para dados
-- trigger 4D code by configuring events
+- acionar o código 4D configurando eventos
 - e muito mais.
 
 :::info
@@ -47,7 +47,7 @@ A resolução recomendada é 1920x1080.
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
-### Enabling access to Qodly Studio
+### Habilitando o acesso a Qodly Studio
 
 Por padrão, o acesso a Qodly Studio não é concedido.
 
@@ -85,7 +85,7 @@ After you have enabled access to Qodly Studio at the 4D level, you need to expli
 Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
 
 
-### Activating authentication
+### Ativando autenticação
 
 Authentication on the WebAdmin web server is granted using an access key. Para obter mais detalhes, consulte [Chave de acesso](../Admin/webAdmin.md#access-key).
 
@@ -128,7 +128,7 @@ We recommend using class functions over project methods. Apenas as funções de 
 - You can call your methods from class functions.
 - You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
-## Opening Qodly Studio
+## Abertura do Qodly Studio
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
 
@@ -178,7 +178,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 
-### Project management
+### Gerenciamento de projetos
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
@@ -203,19 +203,19 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
-| QodlyScript | Línguagem 4D                                                | Comentário          |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| ,           | ;                                                           | argument separator  |
-| =           | :=                                                          | assignment operator |
-| ==          | =                                                           | comparison operator |
-| declare     | #Declare                                                    |                     |
-| switch      | Case of                                                     |                     |
-| constructor | Class constructor                                           |                     |
-| extends     | Class extends                                               |                     |
-| end         | End for, End For each, End if, End case, End use, End while |                     |
-| forEach     | For each                                                    |                     |
-| string      | Text                                                        | var type            |
-| number      | Real                                                        | var type            |
+| QodlyScript | Línguagem 4D                                                | Comentário              |
+| ----------- | ----------------------------------------------------------- | ----------------------- |
+| ,           | ;                                                           | separador de argumentos |
+| =           | :=                                                          | operador de atribuição  |
+| ==          | =                                                           | comparison operator     |
+| declare     | #Declare                                                    |                         |
+| switch      | Case of                                                     |                         |
+| constructor | Class constructor                                           |                         |
+| extends     | Class extends                                               |                         |
+| end         | End for, End For each, End if, End case, End use, End while |                         |
+| forEach     | For each                                                    |                         |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
@@ -282,7 +282,7 @@ QodlyScript command names are written in camel case without spaces. Talvez você
 
 ```
 
-## About license usage
+## Sobre a licença de uso
 
 To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.
 

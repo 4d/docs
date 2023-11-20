@@ -380,7 +380,7 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. Neste cas
 
 ---
 
-## Not rendered
+## Não renderizado
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 

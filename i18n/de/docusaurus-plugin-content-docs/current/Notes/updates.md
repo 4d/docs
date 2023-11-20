@@ -69,6 +69,11 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), the blog post that lists all new features and enhancements in 4D v20.
 
+:::caution Minimal client version for 4D Server v20.2 and later
+
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+
+:::
 
 #### Index rebuild warning
 

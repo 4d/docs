@@ -78,7 +78,7 @@ After any change to these settings, you must [restart the WebAdmin web server](.
 
 :::
 
-#### At project level
+#### A nivel del proyecto
 
 After you have enabled access to Qodly Studio at the 4D level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio).
 
@@ -169,7 +169,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
+| Formularios de escritorio                                    | 4D IDE                                                                                      | *no soportado*                          |
 | Lenguaje de programación                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
 | Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
 | Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
@@ -195,7 +195,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their webforms in Qodly Studio. Code examples are provided in QodlyScript, but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations:
 
-#### Variable names
+#### Nombres de variables
 
 QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
 
@@ -220,7 +220,7 @@ Some basic symbols, operators, and keywords differ in QodlyScript and must be ad
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
 
-#### Command names
+#### Nombres de comandos
 
 QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
 

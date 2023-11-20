@@ -29,10 +29,10 @@ title: DataClass
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                       |
-| ------ | ------------------------ |
-| v19 R3 | Added .exposed attribute |
-| v17    | 追加                       |
+| バージョン  | 内容             |
+| ------ | -------------- |
+| v19 R3 | .exposed 属性を追加 |
+| v17    | 追加             |
 
 </details>
 
@@ -64,13 +64,13 @@ title: DataClass
 | name             | Text    | 属性名 (文字列)                                                                                                                                                                                                           |
 | path             | Text    | リレーションに基づく [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) のパス。                                                                                                                                                         |
 | readOnly         | Boolean | 読み取り専用属性の場合に trueです。 たとえば、[`set` 関数](../ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。                                                                                                         |
-| relatedDataClass | Text    | Name of the dataclass related to the attribute. `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                        |
-| type             | Text    | Conceptual value type of the attribute, useful for generic programming. これは属性の種類 (`kind`) によります。 とりうる値: <li>if `.kind` = "storage": "blob", "bool", "date", "image", "number", "object", or "string". "number" is returned for any numeric types including duration; "string" is returned for uuid, alpha and text attribute types; "blob" attributes are [blob objects](../Concepts/dt_blob.md#blob-type).</li><li>if `.kind` = "relatedEntity": related dataClass name</li><li>if `.kind` = "relatedEntities": related dataClass name + "Selection" suffix</li><li>if `.kind` = "calculated" or "alias": same as above, depending on the result</li>     |
-| unique           | Boolean | True if the attribute value must be unique. `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                   |
+| relatedDataClass | Text    | 属性にリレートされているデータクラスの名称。 `.kind` = "relatedEntity" または "relatedEntities" の場合にのみ返されます。                                                                                                                                 |
+| type             | Text    | 属性の概念的な値タイプ。汎用的なプログラミングに有用です。 これは属性の種類 (`kind`) によります。 とりうる値: <li>`.kind` = "storage" の場合: "blob", "bool", "date", "image", "number", "object", または "string"。 数値型の場合 "number" が返されます (時間を含む)。UUID、文字およびテキスト型フィールドの場合 "string" が返されます。"blob" 属性は [BLOB オブジェクト](../Concepts/dt_blob.md#blob-の種類) です。</li><li>`.kind` = "relatedEntity" の場合: リレートされたデータクラス名</li><li>`.kind` = "relatedEntities" の場合: リレートされたデータクラス名 + "Selection" 接尾辞</li><li>`.kind` = "calculated" または "alias" の場合: 結果の値に応じて、上に同じ</li>                                               |
+| unique           | Boolean | 属性値が重複不可の場合に true です。 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。                                                                                                                         |
 
 :::tip
 
-For generic programming, use `Bool(attributeName.property)`, `Num(attributeName.property)` or `String(attributeName.property)` (depending on the property type) to get a valid value even if the property is not returned.
+汎用的なプログラミングにおいては、プロパティが返されない場合でも有効な値を取得するため、`Bool(attributeName.property)`、`Num(attributeName.property)`、または `String(attributeName.property)` をプロパティの型に応じて使用することが推奨されます。
 
 :::
 
@@ -1195,7 +1195,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 | attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
 | args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                    |
 | allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                               |
-| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                   |
+| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。 詳細な情報については、[**クライアント/サーバーの最適化**](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                  |
 | queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                                     |
 | queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                               |
 

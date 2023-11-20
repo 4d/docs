@@ -18,7 +18,7 @@ The 4D web server automatically creates a default root folder and a default home
 
 ## Segurança
 
-Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. A segurança do servidor web 4D é baseada nos seguintes elementos:
+A segurança dos dados está presente em todos os estágios das implementações do servidor web 4D. Security levels are scalable and default settings usually select the most secure options. A segurança do servidor web 4D é baseada nos seguintes elementos:
 
 * Extended support of the [**TLS Protocol (HTTPS)**](../Admin/tls.md),
 

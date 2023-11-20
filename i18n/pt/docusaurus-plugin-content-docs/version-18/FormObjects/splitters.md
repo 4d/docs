@@ -7,7 +7,7 @@ title: Separador
 
 A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. Um repartidor pode ser horizontal ou vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your database’s interface. Um separador pode ou não ser um "empurrador."
 
-Splitter are used for example in output forms so that columns can be resized:
+O divisor é usado, por exemplo, em formulários de saída para que as colunas possam ser redimensionadas:
 
 ![](../assets/en/FormObjects/split1.png)
 
