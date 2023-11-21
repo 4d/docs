@@ -3878,7 +3878,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 O comando `VP REMOVE TABLE COLUMNS` <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->remove uma ou *count* coluna(s) no *tableName* especificado no índice especificado *coluna*<!-- END REF -->. O comando remove valores e estilos.
 
-The command removes columns from the *tableName* table, NOT from the sheet. O número total de colunas da folha não é impactado pelo  comando. The total number of columns of the sheet is not impacted by the command.
+O comando remove colunas da tabela *tableName* , NÃO da planilha. O número total de colunas da folha não é impactado pelo  comando. The total number of columns of the sheet is not impacted by the command.
 
 Se *tableName* não existir, não acontece nada.
 
@@ -4589,9 +4589,9 @@ Em *rangeObj*, passe um intervalo de células em que o estilo será aplicado. Se
 
 O parâmetro *styleObj* permite que você passe um objeto contendo configurações de estilo. Pode utilizar uma folha de estilos existente ou criar um novo estilo. Se o *styleObj* contiver uma folha de estilo existente e configurações de estilo adicionais, a folha de estilo existente será aplicada primeiro, seguida pelas configurações adicionais.
 
-To remove a style and revert to the default style settings (if any), pass a NULL value:
+Para remover um estilo e reverter para as configurações de estilo padrão (se houver), passe um valor NULL:
 
-* giving the *styleObj* parameter a NULL value will remove any style settings from the *rangeObj*,
+* O fato de dar ao parâmetro *styleObj* um valor NULL removerá todas as configurações de estilo do parâmetro *rangeObj*,
 * giving an attribute a NULL value will remove this specific attribute from the *rangeObj*.
 
 For more information about style objects and style sheets, see the [Style Objects](configuring.md#style-objects) paragraph.
