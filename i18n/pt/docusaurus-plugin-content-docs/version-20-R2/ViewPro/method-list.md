@@ -4623,9 +4623,9 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 O comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->aplica o(s) estilo(s) definido(s) no *styleObj* às células definidas no *rangeObj*<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo de células em que o estilo será aplicado. Se o *rangeObj* contiver várias células, o estilo será aplicado a cada célula.
-> Borders applied with `VP SET CELL STYLE` will be applied to each cell of the *rangeObj*, as opposed to the [VP SET BORDER](#vp-set-border) command which applies borders to the *rangeObj* as a whole.
+> As bordas aplicadas com `VP SET CELL STYLE` serão aplicadas a cada célula do intervalo *rangeObj*, ao contrário do comando [VP SET BORDER](#vp-set-border) que aplica bordas ao intervalo *rangeObj* como um todo.
 
-The *styleObj* parameter lets you pass an object containing style settings. Pode utilizar uma folha de estilos existente ou criar um novo estilo. If the *styleObj* contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
+O parâmetro *styleObj* permite que você passe um objeto contendo configurações de estilo. Pode utilizar uma folha de estilos existente ou criar um novo estilo. Se o *styleObj* contiver uma folha de estilo existente e configurações de estilo adicionais, a folha de estilo existente será aplicada primeiro, seguida pelas configurações adicionais.
 
 To remove a style and revert to the default style settings (if any), pass a NULL value:
 
@@ -5609,11 +5609,11 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |
-| name       | Text    | -> | Novo nome para a folha                                      |
-| sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                                  |
+| ---------- | ------- | -- | ---------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                 |
+| name       | Text    | -> | Novo nome para a folha                                     |
+| sheet      | Integer | -> | Índice da folha a ser renomeada|<!-- END REF -->
 
 |
 
