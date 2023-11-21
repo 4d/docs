@@ -69,9 +69,9 @@ title: リリースノート
 
 [**4D v20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D v20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
-:::caution Minimal client version for 4D Server v20.2 and later
+:::caution 4D v20.2 以降の4D Server に接続する最小クライアントバージョンについて
 
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+内部的な理由により、4D v20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D v20.2 以上でなければなりません。
 
 :::
 
@@ -256,7 +256,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 
 - クラス: [計算プロパティ](../Concepts/classes.md#function-get-と-function-set) が利用可能に。
 - ORDAクラス: [計算属性](../ORDA/ordaClasses.md#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](../ORDA/ordaClasses.md#function-query-attributename) や [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) 関数もサポートしています。
-- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
+- 新しい ORDAデータクラス [属性](../API/DataClassClass.md#attributename): `exposed` および `readOnly`。
 - [ZIPアーカイブ](../API/ZipArchiveClass.md#zip-create-archive): *LZMA* および *xz* 圧縮アルゴリズムをサポート。
 - [新しいビルドオプション](../Desktop/building.md#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
 - macOS で [ダークモードをサポート](../Preferences/general.md#アピアランス-macosのみ)。

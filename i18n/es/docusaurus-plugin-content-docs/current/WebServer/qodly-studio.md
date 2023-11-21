@@ -9,15 +9,15 @@ Qodly Studio in 4D is currently in the **Developer Preview** phase. It should no
 
 :::
 
-**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the Qodly Cloud.
+**Qodly Studio** forma parte de la **plataforma Qodly**, dedicada al desarrollo de aplicaciones web profesionales diseñadas, probadas y publicadas íntegramente en Qodly Cloud.
 
 As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
 - create webforms by placing components on a page
-- map components to data
-- trigger 4D code by configuring events
+- mapear componentes a datos
+- activar código 4D configurando eventos
 - y mucho más.
 
 :::info
@@ -38,7 +38,7 @@ Qodly Studio supports the following web browsers:
 - Edge
 - FireFox
 
-The recommended resolution is 1920x1080.
+La resolución recomendada es 1920x1080.
 
 #### Aplicación 4D
 
@@ -89,7 +89,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
-### Enabling rendering
+### Activación del renderizado
 
 To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
 
@@ -151,7 +151,7 @@ For example, after launching a local web server on port 7080, type this address 
 You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
 
 
-## Using Qodly Studio
+## Utilizar Qodly Studio
 
 The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
@@ -167,10 +167,10 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 |                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio for Qodly developers       |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
+| View and edit tables (dataclasses), attributes and relations | Editor de estructura 4D(1)                                                                  | Qodly Studio Model Editor               |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
 | Desktop forms                                                | 4D IDE                                                                                      | *no soportado*                          |
-| Lenguaje de programación                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
+| Lenguaje de programación                                     | Lenguaje 4D con ORDA                                                                        | QodlyScript featuring ORDA              |
 | Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
 | Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
 | REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
@@ -178,7 +178,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 
-### Project management
+### Gestión de proyectos
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
@@ -203,19 +203,19 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. Estas se listan a continuación:
 
-| QodlyScript | Lenguaje 4D                                                 | Comentario          |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| ,           | ;                                                           | argument separator  |
-| =           | :=                                                          | assignment operator |
-| ==          | =                                                           | comparison operator |
-| declare     | #Declare                                                    |                     |
-| switch      | Case of                                                     |                     |
-| constructor | Class constructor                                           |                     |
-| extends     | Class extends                                               |                     |
-| end         | End for, End For each, End if, End case, End use, End while |                     |
-| forEach     | For each                                                    |                     |
-| string      | Text                                                        | var type            |
-| number      | Real                                                        | var type            |
+| QodlyScript | Lenguaje 4D                                                 | Comentario              |
+| ----------- | ----------------------------------------------------------- | ----------------------- |
+| ,           | ;                                                           | separador de argumentos |
+| =           | :=                                                          | operador de asignación  |
+| ==          | =                                                           | operador de comparación |
+| declare     | #Declare                                                    |                         |
+| switch      | Case of                                                     |                         |
+| constructor | Class constructor                                           |                         |
+| extends     | Class extends                                               |                         |
+| end         | End for, End For each, End if, End case, End use, End while |                         |
+| forEach     | For each                                                    |                         |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
