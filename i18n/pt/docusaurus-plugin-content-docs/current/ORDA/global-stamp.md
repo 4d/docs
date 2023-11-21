@@ -44,7 +44,7 @@ In addition, to ensure proper operation of the feature, the following conditions
 | ------------- | --------------- | ------------------------------------- |
 | __PrimaryKey  | Text            | Chave primária da entidade excluída   |
 | __Stamp       | Integer 64 bits | Global stamp just before the deletion |
-| __TableName   | Text            | Name of the deleted entity table      |
+| __TableName   | Text            | Nome da tabela de entidades excluída  |
 | __TableNumber | Long Integer    | Número da tabela da entidade excluída |
 
 You can only track changes for data in tables having the `__GlobalStamp` field.

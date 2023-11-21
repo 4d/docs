@@ -145,7 +145,7 @@ ORDA lets you assign either the data itself, i.e. an image or a blob object, or 
 
 Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
 
-The file reference can be:
+La referencia del archivo puede ser:
 
 - un objeto 4D.File
 - una ruta en formato POSIX

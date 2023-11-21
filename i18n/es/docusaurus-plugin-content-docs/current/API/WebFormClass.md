@@ -36,7 +36,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### Descripción
 
-The components of webforms are <!-- REF #WebFormClass.componentName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estos webforms.
+Los componentes de los webforms son <!-- REF #WebFormClass.componentName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estos webforms.
 
 For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
 
