@@ -201,7 +201,7 @@ LogFile("!!! Server error: "+$event.errors.first().message)
 
 ```
 
-### `request` object
+### objeto `request`
 
 A `request` object contains the following properties:
 
