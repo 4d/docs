@@ -360,7 +360,7 @@ Quando uma [expressão booleana](properties_Object.md#expression-type) é aprese
 
 ---
 
-## Display Type
+## Tipo de exibição
 
 Utilizado para associar um formato de visualização aos dados da coluna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
