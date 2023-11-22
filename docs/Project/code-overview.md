@@ -1,6 +1,6 @@
 ---
 id: code-overview
-title: Creating methods and classes
+title: Methods and classes
 ---
 
 
