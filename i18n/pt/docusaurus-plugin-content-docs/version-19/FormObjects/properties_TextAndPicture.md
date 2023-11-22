@@ -108,7 +108,7 @@ Estão representados os seguintes estados:
 
 1. botão não clicado / caixa de verificação desmarcada (valor da variável=0)
 2. botão clicado/caixa de seleção marcada (valor variável=1)
-3. roll over
+3. sobreposição
 4. disabled
 
 #### Gramática JSON
