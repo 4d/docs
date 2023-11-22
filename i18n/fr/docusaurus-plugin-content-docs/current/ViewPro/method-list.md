@@ -758,11 +758,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### Description
 
-La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
+La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Un tableau contient généralement des données liées dans des lignes et des colonnes, et tire parti d'un [contexte de données](#vp-set-data-context).
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
-In *rangeObj*, pass the cell range where the table will be created.
+Dans *rangeObj*, passez la plage de cellules dans laquelle la table sera créée.
 
 Dans *tableName*, passez un nom pour la table. Le nom doit :
 
@@ -962,7 +962,7 @@ Vous pouvez préciser le format du document en incluant une extension après son
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", or ".csv")
-* [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
+* [Document SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
 Si l'extension n'est pas incluse mais que le format est spécifié dans *paramObj*, le fichier exporté aura l'extension qui correspond au format, à l'exception du format CSV (aucune extension n'est ajoutée dans ce cas).
 
@@ -3105,7 +3105,7 @@ Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 | formula             | 4D.Function | Callback method to be launched when the import has completed.                                                                                                                                                                                                                                                                                                                                                                                               |
 | calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                                   |
 | dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                        |
-| fullRecalc          | Boolean     | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                                                                                                                                                                                                         |
+| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                                                |
 | includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                  |
 | includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                    |
 | includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                               |
@@ -3116,7 +3116,7 @@ Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 | Paramètres |               | Type    | Description                                             |
 |:---------- |:------------- |:------- |:------------------------------------------------------- |
 | param1     |               | text    | Nom de l'objet 4D View Pro                              |
-| param2     |               | 4D.Blob | The imported blob                                       |
+| param2     |               | 4D.Blob | Le blob importé                                         |
 | param3     |               | object  | Référence au *paramObj* de la commande                  |
 | param4     |               | object  | Objet retourné par la méthode avec un message de statut |
 |            | .success      | boolean | Vrai si l'import est réussi, Faux sinon.                |
@@ -3171,7 +3171,7 @@ Dans *filePath*, passez le chemin et le nom du document à importer. Les formats
 * Les documents 4D View Pro (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
 * documents texte (extension ".txt", ".csv", le document doit être en utf-8)
-* [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+* [Documents SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
 Si l'extension du document n'est pas une extension reconnue, telle que `.4vp` ou `.xslx`, le document est considéré comme un document texte. Vous devez passer un chemin d'accès complet, sauf si le document est situé au même niveau que le dossier Project, auquel cas vous pouvez simplement passer son nom.
 
@@ -3187,10 +3187,10 @@ Le paramètre optionnel *paramObj* vous permet de définir les propriétés du d
 |            | range               | object      | Plage de cellules contenant la première cellule dans laquelle les données seront saisies. Si la plage spécifiée n'est pas une plage de cellules, seule la première cellule de la plage est utilisée.                                                                  |
 |            | rowDelimiter        | text        | Délimiteur de ligne. S'il n'est pas défini, le délimiteur est automatiquement déterminé par 4D.                                                                                                                                                                       |
 |            | columnDelimiter     | text        | Délimiteur de colonne. Par défaut : ","                                                                                                                                                                                                                               |
-| sjsOptions |                     | object      | options for sjs import                                                                                                                                                                                                                                                |
-|            | calcOnDemand        | boolean     | Whether to calculate formulas only when they are demanded, default is false.                                                                                                                                                                                          |
-|            | dynamicReferences   | boolean     | Whether to calculate functions with dynamic references, default is true.                                                                                                                                                                                              |
-|            | fullRecalc          | boolean     | Whether to calculate after loading the json data, false by default.                                                                                                                                                                                                   |
+| sjsOptions |                     | object      | options d'import sjs                                                                                                                                                                                                                                                  |
+|            | calcOnDemand        | boolean     | Indique si les formules doivent être calculées uniquement lorsqu'elles sont demandées, la valeur par défaut est faux.                                                                                                                                                 |
+|            | dynamicReferences   | boolean     | Indique si les fonctions doivent être calculées avec des références dynamiques, la valeur par défaut est vrai.                                                                                                                                                        |
+|            | fullRecalc          | boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                          |
 |            | includeFormulas     | boolean     | Whether to include the formulas when loading, default is true.                                                                                                                                                                                                        |
 |            | includeStyles       | boolean     | Whether to include the styles when loading, default is true.                                                                                                                                                                                                          |
 |            | includeUnusedStyles | boolean     | Whether to include the unused name styles when converting excel xml to the json, default is true.                                                                                                                                                                     |
@@ -3377,16 +3377,16 @@ Le résultat est le suivant :
 | ----------- | ------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                    |
 | tableName   | Text    | -> | Nom de table                                                               |
-| column      | Integer | -> | Index in the table of the starting column to insert                        |
-| count       | Text    | -> | Number of columns to add (must be >0)                                      |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *column*               |
+| column      | Integer | -> | Index dans la table de la colonne de départ à insérer                      |
+| count       | Text    | -> | Nombre de colonnes à ajouter (doit être >0)                                |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*               |
 | sheet       | Integer | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+La commande `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
 
 When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command.
 
@@ -4123,7 +4123,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Description
 
-removes one or *count* row(s) from the specified *tableName* at the specified *row* index <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->The `VP REMOVE TABLE ROWS` command<!-- END REF -->. The command removes values and styles.
+La commande `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->The `VP REMOVE TABLE ROWS` command<!-- END REF -->. The command removes values and styles.
 
 This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
 

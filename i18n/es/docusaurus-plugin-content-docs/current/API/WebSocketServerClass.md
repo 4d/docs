@@ -267,7 +267,7 @@ Función llamada cuando se cierra el WebSocket.
 
 Función llamada cuando se ha producido un error.
 
-### Example of `connectionHandler` class
+### Ejemplo de clase \`connectionHandler
 
 This example of a basic chat feature illustrates how to handle messages in a _connectionHandler_ class.
 
@@ -371,9 +371,9 @@ Esta propiedad es de sólo lectura.
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| Parámetros | Tipo |     | Descripción                     |                  |
-| ---------- | ---- | :-: | ------------------------------- | ---------------- |
-|            |      |     | Does not require any parameters | <!-- END REF --> |
+| Parámetros | Tipo |     | Descripción                  |                  |
+| ---------- | ---- | :-: | ---------------------------- | ---------------- |
+|            |      |     | No requiere ningún parámetro | <!-- END REF --> |
 
 #### Descripción
 

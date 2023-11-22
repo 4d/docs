@@ -55,7 +55,7 @@ For more information, please refer to the [`.componentName` description in the Q
 
 #### Descripción
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->.
+La función `.setError()` <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->.
 
 For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
@@ -74,7 +74,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 #### Descripción
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
+La función `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
 
 For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
@@ -92,7 +92,7 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 
 #### Descripción
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->.
+La función `.setWarning()`  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->.
 
 For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 
@@ -102,14 +102,14 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 <!-- REF #_command_.Web Form.Syntax -->**Web Form** : 4D.WebForm<!-- END REF -->
 
 <!-- REF #_command_.Web Form.Params -->
-| Parámetros | Tipo       |    | Descripción                |
-| ---------- | ---------- |:--:| -------------------------- |
-| Result     | 4D.WebForm | <- | New `WebForm` proxy object |
+| Parámetros | Tipo       |    | Descripción                  |
+| ---------- | ---------- |:--:| ---------------------------- |
+| Result     | 4D.WebForm | <- | Nuevo objeto proxy `WebForm` |
 <!-- END REF -->
 
 #### Descripción
 
-The `Web Form` command <!-- REF #_command_.webForm.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
+El comando `Web Form` <!-- REF #_command_.webForm.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
 
 For more information, please refer to the [`webForm` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webform).
 
@@ -126,6 +126,6 @@ For more information, please refer to the [`webForm` command description in the 
 
 #### Descripción
 
-The `Web Event` command <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a webform component<!-- END REF -->.
+El comando `Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a webform component<!-- END REF -->.
 
 For more information, please refer to the [`webEvent` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webevent). 

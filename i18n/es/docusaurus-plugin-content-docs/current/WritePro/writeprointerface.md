@@ -80,25 +80,25 @@ The template file must be stored in a "[`Resources`](../Project/architecture.md#
 
 The template file in JSON format contains the following attributes:
 
-| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                              |
-|:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
-| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                           |
-| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
-| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
-| columns.source       | Text       | x           | Formula                                                                                                                                                  |
-| breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                             |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
+| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                      |
+|:-------------------- |:---------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                                     |
+| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                   |
+| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                                       |
+| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| columns.source       | Text       | x           | Formula                                                                                                                                                          |
+| breaks               | Collection |             | Collection of break objects. El orden de las interrupciones es importante. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                          |
+| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                           |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                          |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                               |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                          |
+| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                           |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                          |
 
 :::note Francés
 

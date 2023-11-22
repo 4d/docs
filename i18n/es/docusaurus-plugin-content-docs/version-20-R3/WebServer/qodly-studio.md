@@ -5,7 +5,7 @@ title: Qodly Studio
 
 :::caution Vista previa para desarrolladores
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production.
+Qodly Studio in 4D is currently in the **Developer Preview** phase. No debe utilizarse en producción.
 
 :::
 
@@ -42,12 +42,12 @@ La resolución recomendada es 1920x1080.
 
 #### Aplicación 4D
 
-- Development: 4D v20 R2 or higher
+- Desarrollo: 4D v20 R2 o superior
 - Deployment: 4D Server v20 R2 or higher
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
-### Enabling access to Qodly Studio
+### Acceso a Qodly Studio
 
 By default, access to Qodly Studio is not granted.
 
@@ -165,15 +165,15 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-|                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio for Qodly developers       |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | Editor de estructura 4D(1)                                                                  | Qodly Studio Model Editor               |
-| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Formularios de escritorio                                    | 4D IDE                                                                                      | *no soportado*                          |
-| Lenguaje de programación                                     | Lenguaje 4D con ORDA                                                                        | QodlyScript featuring ORDA              |
-| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
-| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
+|                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio para desarrolladores Qodly       |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| View and edit tables (dataclasses), attributes and relations | Editor de estructura 4D(1)                                                                  | Qodly Studio Model Editor                     |
+| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor                   |
+| Formularios de escritorio                                    | 4D IDE                                                                                      | *no soportado*                                |
+| Lenguaje de programación                                     | Lenguaje 4D con ORDA                                                                        | QodlyScript con ORDA                          |
+| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
+| Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                         |
+| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Editor de roles y privilegios de Qodly Studio |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
@@ -191,7 +191,7 @@ In accordance with the management of 4D projects, only the following usages are 
 - In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file.
 
 
-### From QodlyScript to 4D Language
+### De QodlyScript al lenguaje 4D
 
 4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their webforms in Qodly Studio. Code examples are provided in QodlyScript, but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations:
 
@@ -282,7 +282,7 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 ```
 
-### Offline use
+### Uso sin conexión
 
 You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
 
@@ -314,7 +314,7 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
-As a result, two licenses are retained.
+Como resultado, se conservan dos licencias.
 
 :::note
 

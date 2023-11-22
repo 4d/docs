@@ -4767,9 +4767,9 @@ O parâmetro *styleObj* permite que você passe um objeto contendo configuraçõ
 Para remover um estilo e reverter para as configurações de estilo padrão (se houver), passe um valor NULL:
 
 * O fato de dar ao parâmetro *styleObj* um valor NULL removerá todas as configurações de estilo do parâmetro *rangeObj*,
-* giving an attribute a NULL value will remove this specific attribute from the *rangeObj*.
+* Atribuir um valor NULL a um atributo removerá esse atributo específico do *rangeObj*.
 
-For more information about style objects and style sheets, see the [Style Objects](configuring.md#style-objects) paragraph.
+Para obter mais informações sobre objetos de estilo e folhas de estilo, consulte o parágrafo [Style Objects](configuring.md#style-objects) .
 
 #### Exemplo
 
@@ -4806,7 +4806,7 @@ $style.backgroundImage:=Null //remove a specific attribute VP SET CELL STYLE(VP 
 
 #### Descrição
 
-O comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the *propertyObj* to the columns in the *rangeObj*<!-- END REF -->.
+O comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> aplica os atributos definidos na propriedade *propertyObj* às colunas no intervalo *rangeObj*<!-- END REF -->.
 
 Em *rangeObj*, passe um objeto que contenha um intervalo. If the range contains both columns and rows, attributes are applied only to the columns.
 
