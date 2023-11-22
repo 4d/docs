@@ -27,7 +27,8 @@ module.exports =
 				keywords: ['core'],
 				image: '/img/docusaurus.png',
 				},
-			items: [
+			items:
+			[
 				{
 					type: "category",
 					label: "Project Management",
@@ -35,65 +36,56 @@ module.exports =
 						type: 'doc',
 						id: 'Project/overview',
 					},
-
 					items: [
 						"Project/architecture",
-						"Project/documentation",
-						"Project/compiler"
-					],
-				},
-				{
-					type: "category",
-					label: "4D Language Concepts",
-					link: {
-						type: 'generated-index',
-						title: '4D Language Concepts',
-						description: 'The main concepts of the 4D Language',
-						keywords: ['concepts'],
-						image: '/img/docusaurus.png',
-					},
-					items: [
-						"Concepts/about",
-						"Concepts/quick-tour",
-						"Concepts/operators",
-						{ 
+						{
 							type: "category",
-							label: "Data Types",
+							label: "Settings",
 							link: {
-									type: 'doc',
-									id: "Concepts/data-types",
-								},
+								type: 'doc',
+								id: 'settings/overview',
+							},
 							items: [
-								"Concepts/blob",
-								"Concepts/boolean",
-								"Concepts/collection",
-								"Concepts/date",
-								"Concepts/null-undefined",
-								"Concepts/number",
-								"Concepts/object",
-								"Concepts/picture",
-								"Concepts/pointer",
-								"Concepts/string",
-								"Concepts/time",
-								"Concepts/variant",
+								"settings/general",
+								"settings/interface",
+								"settings/compiler",
+								"settings/database",
+								"settings/backup",
+								"settings/client-server",
+								"settings/web",
+								"settings/sql",
+								"settings/php",
+								"settings/security",
+								"settings/compatibility"
 							],
 						},
-						"Concepts/variables",
-						"Concepts/arrays",
-						"Concepts/methods",
-						"Concepts/parameters",
-						"Concepts/shared",
-						"Concepts/classes",
-						"Concepts/commands",
-						"Concepts/control-flow",
-						"Concepts/error-handling",
-						"Concepts/interpreted-compiled",
-						"Concepts/components",
-						"Concepts/plug-ins",
-						"Concepts/identifiers",
-						"Concepts/paths"
+						"Project/documentation",
 					],
 				},
+								{
+					type: "category",
+					label: "Development Environment",
+					items: [
+						"Project/code-overview",
+						"code-editor/write-class-method",
+						"Project/compiler",
+						{
+							type: "category",
+							label: "Debugging",
+							link: {
+								type: 'doc',
+								id: 'Debugging/basics',
+							},
+							items: [
+								"Debugging/debugger",
+								"Debugging/breakpoints",
+								"Debugging/debugging-remote",
+							]
+						},
+						"Debugging/debugLogFiles",
+					]
+				},
+
 				{
 					type: "category",
 					label: "ORDA",
@@ -112,116 +104,122 @@ module.exports =
 					],
 				},
 				{
-						type: 'link',
-						label: '4D Language Reference', // 
-						href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html', 
-				},					
-				{
 					type: "category",
-					label: "Class Functions",
+					label: "Language",
 					items: [
-						"API/overview",
-						"API/BlobClass",
-						"API/ClassClass",
-						"API/CollectionClass",
-						"API/CryptoKeyClass",
-						"API/DataClassClass",
-						"API/DataStoreClass",
-						"API/EmailObjectClass",
-						"API/EntityClass",
-						"API/EntitySelectionClass",
-						"API/FileClass",
-						"API/FileHandleClass",
-						"API/FolderClass",
-						"API/FunctionClass",
-						"API/HTTPRequestClass",
-						"API/IMAPTransporterClass",
-						"API/MailAttachmentClass",
-						"API/POP3TransporterClass",
-						"API/SessionClass",
-						"API/SignalClass",
-						"API/SMTPTransporterClass",
-						"API/SystemWorkerClass",
-						"API/WebFormClass",
-						"API/WebFormItemClass",
-						"API/WebServerClass",
-						"API/WebSocketClass",
-						"API/WebSocketConnectionClass",
-						"API/WebSocketServerClass",
-						"API/ZipArchiveClass",
-						"API/ZipFileClass",
-						"API/ZipFolderClass"
+						{
+							type: "category",
+							label: "Concepts",
+							link: {
+								type: 'generated-index',
+								title: '4D Language Concepts',
+								description: 'The main concepts of the 4D Language',
+								keywords: ['concepts'],
+								image: '/img/docusaurus.png',
+							},
+							items: [
+								"Concepts/about",
+								"Concepts/quick-tour",
+								"Concepts/operators",
+								{
+									type: "category",
+									label: "Data Types",
+									link: {
+											type: 'doc',
+											id: "Concepts/data-types",
+										},
+									items: [
+										"Concepts/blob",
+										"Concepts/boolean",
+										"Concepts/collection",
+										"Concepts/date",
+										"Concepts/null-undefined",
+										"Concepts/number",
+										"Concepts/object",
+										"Concepts/picture",
+										"Concepts/pointer",
+										"Concepts/string",
+										"Concepts/time",
+										"Concepts/variant",
+									],
+								},
+								"Concepts/variables",
+								"Concepts/arrays",
+								"Concepts/methods",
+								"Concepts/parameters",
+								"Concepts/shared",
+								"Concepts/classes",
+								"Concepts/commands",
+								"Concepts/control-flow",
+								"Concepts/error-handling",
+								"Concepts/interpreted-compiled",
+								"Concepts/components",
+								"Concepts/plug-ins",
+								"Concepts/identifiers",
+								"Concepts/paths"
+							],
+						},
+						{
+							type: 'link',
+							label: 'Commands', //
+							href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html',
+						},
+						{
+							type: "category",
+							label: "Classes",
+							items: [
+								"API/overview",
+								"API/BlobClass",
+								"API/ClassClass",
+								"API/CollectionClass",
+								"API/CryptoKeyClass",
+								"API/DataClassClass",
+								"API/DataStoreClass",
+								"API/EmailObjectClass",
+								"API/EntityClass",
+								"API/EntitySelectionClass",
+								"API/FileClass",
+								"API/FileHandleClass",
+								"API/FolderClass",
+								"API/FunctionClass",
+								"API/HTTPRequestClass",
+								"API/IMAPTransporterClass",
+								"API/MailAttachmentClass",
+								"API/POP3TransporterClass",
+								"API/SessionClass",
+								"API/SignalClass",
+								"API/SMTPTransporterClass",
+								"API/SystemWorkerClass",
+								"API/WebFormClass",
+								"API/WebFormItemClass",
+								"API/WebServerClass",
+								"API/WebSocketClass",
+								"API/WebSocketConnectionClass",
+								"API/WebSocketServerClass",
+								"API/ZipArchiveClass",
+								"API/ZipFileClass",
+								"API/ZipFolderClass"
+							],
+							link: {
+								type: 'generated-index',
+								title: 'Class Functions',
+								description: 'List of built-in 4D classes',
+								slug: '/category/class-API-reference',
+								keywords: ['class'],
+								image: '/img/docusaurus.png',
+							},
+						},
 					],
-					link: {
-						type: 'generated-index',
-						title: 'Class Functions',
-						description: 'List of built-in 4D classes',
-						slug: '/category/class-API-reference',
-						keywords: ['class'],
-						image: '/img/docusaurus.png',
-					},
-
 				},
-				{
-					type: "category",
-					label: "Handling Code",
-					link: {
-						type: 'doc',
-						id: 'code-editor/overview',
-					},
-					items: [
-						"code-editor/write-class-method",
-						"code-editor/creating-using-macros"
-					]
-				},
-				{
-					type: "category",
-					label: "Tags",
-					items: [
-						"Tags/tags"
-					]
-				},				{
-					type: "category",
-					label: "Debugging",
-					link: {
-						type: 'doc',
-						id: 'Debugging/basics',
-					},
-					items: [
-						"Debugging/debugger",
-						"Debugging/breakpoints",
-						"Debugging/debugging-remote",
-						"Debugging/debugLogFiles"
-					]
-				},
-				{
-					type: "category",
-					label: "Settings",
-					link: {
-						type: 'doc',
-						id: 'settings/overview',
-					},					
-					items: [
-						"settings/general",
-						"settings/interface",
-						"settings/compiler",
-						"settings/database",
-						"settings/backup",
-						"settings/client-server",
-						"settings/web",
-						"settings/sql",
-						"settings/php",
-						"settings/security",
-						"settings/compatibility"
-					],
-				},
+				"Develop/processes",
+				"Tags/tags",
 				{
 					type: "category",
 					label: "Preferences",
 					link: {
 						type: 'doc',
 						id: 'Preferences/overview',
-					},					
+					},
 					items: [
 						"Preferences/general",
 						"Preferences/structure",
@@ -229,10 +227,9 @@ module.exports =
 						"Preferences/methods",
 						"Preferences/shortcuts",
 					]
-				}
-			]
+				},
+			],
 		},
-		
 		{
 			type: "category",
 			label: "Administration",
@@ -244,13 +241,13 @@ module.exports =
 				image: '/img/docusaurus.png',
 				},
 			items: [
-				{	
+				{
 					type: "category",
 					label: "4D Server Administration Window",
 					link: {
 						type: 'doc',
 						id: 'ServerWindow/overview',
-					},					
+					},
 					items: [
 						"ServerWindow/monitor",
 						"ServerWindow/users",
@@ -300,7 +297,7 @@ module.exports =
 					link: {
 						type: 'doc',
 						id: 'MSC/overview',
-					},					
+					},
 					items: [
 						"MSC/information",
 						"MSC/analysis",
@@ -319,7 +316,7 @@ module.exports =
 					link: {
 						type: 'doc',
 						id: 'Backup/overview',
-					},					
+					},
 					items: [
 						"Backup/backup",
 						"Backup/settings",
@@ -332,7 +329,7 @@ module.exports =
 					label: "Data Collection",
 					id: "Admin/data-collect",
 				},
-			],	
+			],
 		},
 		{
 			type: "category",
@@ -352,7 +349,7 @@ module.exports =
 								keywords: ['4D View Pro'],
 								image: '/img/docusaurus.png',
 								},
-							items: [				
+							items: [
 								"ViewPro/getting-started",
 								"ViewPro/configuring",
 								"ViewPro/formulas",
@@ -364,37 +361,37 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html', 
-						},					
+						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html',
+						},
 						{
 						  type: 'doc',
 						  label: '4D Write Pro Interface', // The link label
-						  id: "WritePro/writeprointerface", 
-						},					
+						  id: "WritePro/writeprointerface",
+						},
 						{
 						  type: 'link',
 						  label: '4D Mobile App Server', // The link label
-						  href: 'https://github.com/4d-go-mobile/4D-Mobile-App-Server', 
+						  href: 'https://github.com/4d-go-mobile/4D-Mobile-App-Server',
 						},
 						{
 						  type: 'link',
 						  label: '4D NetKit', // The link label
-						  href: 'https://github.com/4d/4D-NetKit', 
+						  href: 'https://github.com/4d/4D-NetKit',
 						},
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html', 
+						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html', 
+						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html', 
+						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
@@ -412,13 +409,13 @@ module.exports =
 				image: '/img/docusaurus.png',
 				},
 			items: [
-				{	
+				{
 					type: "category",
 					label: "Web Server",
 					link: {
 						type: 'doc',
 						id: 'WebServer/webServer',
-					},					
+					},
 					items: [
 						"WebServer/webServerConfig",
 						"WebServer/webServerAdmin",
@@ -431,7 +428,7 @@ module.exports =
 					link: {
 						type: 'doc',
 						id: 'WebServer/gettingStarted',
-					},					
+					},
 				items: [
 						"WebServer/templates",
 						"WebServer/httpRequests",
@@ -452,7 +449,7 @@ module.exports =
 						description: 'Configuring the 4D REST Server and using the REST API.',
 						keywords: ['REST server'],
 						image: '/img/docusaurus.png',
-					},					
+					},
 					items: [
 						{
 						type: "category",
@@ -460,7 +457,7 @@ module.exports =
 						link: {
 							type: 'doc',
 							id: 'REST/gettingStarted',
-						},					
+						},
 						items: [
 								"REST/configuration",
 								"REST/authUsers",
@@ -525,11 +522,11 @@ module.exports =
 					],
 				},
 				],
-				},
-				
-				{
+		},
+
+		{
 					type: "category",
-					label: "Desktop Applications",					
+					label: "Desktop Applications",
 					link: {
 						type: 'generated-index',
 						title: 'Desktop Applications',
@@ -539,7 +536,7 @@ module.exports =
 						},
 
 					items: [
-						{	
+						{
 							type: "doc",
 							label: "Client/Server",
 							id: "Desktop/clientServer",
@@ -567,18 +564,18 @@ module.exports =
 						link: {
 							type: 'doc',
 							id: 'FormEditor/forms',
-						},					
+						},
 						items: [
 								"FormEditor/stylesheets",
 								"FormEditor/pictures",
-								{	
+								{
 									type: "category",
 									label: "Form Editor",
 									link: {
 										type: 'doc',
 										id: 'FormEditor/formEditor',
-									},				
-									items: [								
+									},
+									items: [
 										"FormEditor/macros",
 										"FormEditor/objectLibrary"	]
 								},
@@ -588,7 +585,7 @@ module.exports =
 									link: {
 										type: 'doc',
 										id: 'FormEditor/jsonReference',
-									},				
+									},
 									items: [
 								"FormEditor/action",
 								"FormEditor/propertiesForm",
@@ -605,7 +602,7 @@ module.exports =
 									link: {
 										type: 'doc',
 										id: 'FormObjects/formObjectsOverview',
-									},	
+									},
 									items: [
 										"FormObjects/buttonOverview",
 										"FormObjects/buttonGridOverview",
@@ -641,7 +638,7 @@ module.exports =
 									link: {
 										type: 'doc',
 										id: 'FormObjects/propertiesReference',
-									},	
+									},
 									items: [
 										"FormObjects/propertiesAction",
 										"FormObjects/propertiesAnimation",
@@ -677,7 +674,7 @@ module.exports =
 									link: {
 										type: 'doc',
 										id: 'Events/overview',
-									},	
+									},
 									items: [
 										"Events/onActivate",
 										"Events/onAfterEdit",
@@ -741,19 +738,19 @@ module.exports =
 										"Events/onWindowOpeningDenied"
 									],
 								},
-										
-								
-								
+
+
+
 							],
 						},
-						
+
 						{
 							type: "category",
 							label: "Menus",
 							link: {
 								type: 'doc',
 								id: 'Menus/overview',
-							},	
+							},
 							items: [
 								"Menus/creating",
 								"Menus/properties",
