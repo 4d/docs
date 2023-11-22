@@ -758,11 +758,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### Description
 
-La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
+La commande `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crée une table dans la plage spécifiée<!-- END REF -->. Vous pouvez créer une table dans une plage de cellules pour faciliter la gestion et l'analyse d'un groupe de données connexes. Un tableau contient généralement des données liées dans des lignes et des colonnes, et tire parti d'un [contexte de données](#vp-set-data-context).
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
-In *rangeObj*, pass the cell range where the table will be created.
+Dans *rangeObj*, passez la plage de cellules dans laquelle la table sera créée.
 
 Dans *tableName*, passez un nom pour la table. Le nom doit :
 
@@ -3203,16 +3203,16 @@ Le résultat est le suivant :
 | ----------- | ------- | -- | -------------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                    |
 | tableName   | Text    | -> | Nom de table                                                               |
-| column      | Integer | -> | Index in the table of the starting column to insert                        |
-| count       | Text    | -> | Number of columns to add (must be >0)                                      |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *column*               |
+| column      | Integer | -> | Index dans la table de la colonne de départ à insérer                      |
+| count       | Text    | -> | Nombre de colonnes à ajouter (doit être >0)                                |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *column*               |
 | sheet       | Integer | -> | Indice de la feuille (feuille courante si omis)|<!-- END REF -->
 
 |
 
 #### Description
 
-The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
+La commande `VP INSERT TABLE COLUMNS` <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->.
 
 When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command.
 
@@ -3947,7 +3947,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 #### Description
 
-removes one or *count* row(s) from the specified *tableName* at the specified *row* index <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->The `VP REMOVE TABLE ROWS` command<!-- END REF -->. The command removes values and styles.
+La commande `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->The `VP REMOVE TABLE ROWS` command<!-- END REF -->. The command removes values and styles.
 
 This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
 
