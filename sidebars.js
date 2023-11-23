@@ -211,7 +211,14 @@ module.exports =
 						},
 					],
 				},
-				"Develop/processes",
+				{
+					type: "category",
+					label: "Processes",
+					items: [
+						"Develop/processes",
+						"Develop/preemptive",
+					]
+				},
 				"Tags/tags",
 				{
 					type: "category",
