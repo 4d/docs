@@ -10,6 +10,8 @@ Error handling meets two main needs:
 - finding out and fixing potential errors and bugs in your code during the development phase,
 - catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface. 
 
+Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write [`try()` keywords](#try-expression) before pieces of code that call a function, method, or expression that can throw an error. 
+
 :::tip Good practice
 
 It is highly recommended to install a global error-handling method on 4D Server, for all code running on the server. When 4D Server is not running [headless](../Admin/cli.md) (i.e. launched with its [administration window](../ServerWindow/overview.md)), this method would avoid unexpected dialog boxes to be displayed on the server machine. In headless mode, errors are logged in the [4DDebugLog file](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) for further analysis. 
@@ -130,5 +132,80 @@ If (Error=-43)
 End if
 ON ERR CALL("")
 ```
+
+
+## try(expression)
+
+The `try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws. Using `try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method. 
+
+The formal syntax of the `try(expression)` statement is:
+
+```4d
+
+try (expression) : any | Undefined
+
+```
+
+*expression* can be any valid expression returning a value.
+
+- If *expression* is executed without error, its result is returned by the `try()` statement. 
+- If an error occurred, it is intercepted and `try()` returns `Undefined`. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command returns the error. 
+Note that no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `try()`. 
+
+:::note
+
+If an [error-handling method](#installing-an-error-handling-method) is installed by *expression*, it is called in case of error. 
+
+:::
+
+If *expression* throws an error within a stack of `try()` calls, the execution flow stops and returns to the latest executed `try()` (the first found back in the call stack). 
+
+### Examples
+
+1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. You can write:
+
+```4d
+var $text : Text
+var $fileHandle : 4D.File := try($file.open())
+If ($fileHandle # Null)
+  $text:=(try($fileHandle.readText()) || "Error reading the file" )
+End if
+```
+
+
+2. You want to handle the divide by zero error. In this case, you don't want to return Undefined but 0:
+
+```4d
+function divide( $p1: real; $p2: real)-> $result: real
+  if ($p2=0)
+     $result:=0 //only for clarity (0 is the default for reals)
+     throw(errorDivideByZero) 
+  else
+    $result:=$p1/$p2
+  end if
+
+function test()
+  $result:=try(divide($p1;$p2))
+  If (Last errors#null)
+    ALERT("Error")
+  End if
+
+```
+
+3. You want to handle both ["predictable" and "non-predictable"](#error-or-status) errors:
+
+```4d
+var $e:=ds.Employee.new()
+$e.name:="Smith"
+$status:=try($e.save()) //catch critical and non-critical errors
+If ($status.success)
+   ALERT( "Success")
+Else
+   ALERT( "Error: "+JSON Stringify($status.errors))
+End if
+
+``` 
+
+
 
 
