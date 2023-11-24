@@ -18,9 +18,9 @@ Variables, fields or expressions of the Object type can contain various types of
 	- picture(2)
 	- collection
 
-(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory. 
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory. 
 
-(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]". 
+(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]". 
 
 :::caution
 
@@ -154,6 +154,7 @@ Since an object property value can be an object or a collection, object notation
 ```
 
 Object notation is available on any language element that can contains or returns an object, i.e:
+
 
 
 
