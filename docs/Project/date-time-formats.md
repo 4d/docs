@@ -7,247 +7,134 @@ title: Date and Time Formats
 
 Throughout your 4D projects, you will need to format date and/or time values according to the specificities of the application, the platform, or the interface. 
 
-4D includes a consistent management of date and time formats that you can define and use from any part of the project:
+4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications. Customized format patterns are supported by the following features:
 
 - the [`String`](https://doc.4d.com/4dv20/help/command/en/page10.html) command,
 - the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20/help/command/en/page894.html) commands,
 - the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
 
 
+## Pattern list
+
+The following table lists all supported patterns for date and time formats. 
+
+|Symbol|Meaning|Pattern|Example Output|
+|---|---|---|----|
+|G|era designator|G, GG, or GGG|AD|
+| | |GGGG|Anno Domini|
+| | |GGGGG|A|
+|y|year|yy|96|
+| | |y or yyyy|1996|
+|Y|year of "Week of Year"|Y|1997|
+|u|extended year|u|4601|
+|Q|quarter|Q|2|
+| | |QQ|02|
+| | |QQQ|Q2|
+| | |QQQQ|2nd quarter|
+| | |QQQQQ|2|
+|q|stand-alone quarter|q|2|
+| | |qq|02|
+| | |qqq|Q2|
+| | |qqqq|2nd quarter|
+| | |qqqqq|2|
+|M|month in year|M|9|
+| | |MM|09|
+| | |MMM|Sep|
+| | |MMMM|September|
+| | |MMMMM|S|
+|L|stand-alone month in year|L|9|
+| | |LL|09|
+| | |LLL|Sep|
+| | |LLLL|September|
+| | |LLLLL|S|
+w|week of year|w|27
+ | |ww|27
+|d|day in month|d|2|
+| | |dd|2|
+|D|day of year|D|189|
+|E|day of week|E, EE, or EEE|Tue|
+| | |EEEE|Tuesday|
+| | |EEEEE|T|
+| | |EEEEEE|Tu|
+|e|local day of week|e|2|
+| | |ee|02|
+| | |eee|Tue|
+| | |eeee|Tuesday|
+| | |eeeee|T|
+| | |eeeeee|Tu|
+|c|stand-alone local day of week|c or cc|2|
+| | |c or cc|2|
+| | |ccc|Tue|
+| | |cccc|Tuesday|
+| | |ccccc|T|
+| | |cccccc|Tu|
+|a|AM or PM|a, aa, or aaa|PM [abbrev]|
+| | |a, aa, or aaa| |
+| | |aaaa|PM [wide]|
+| | |aaaaa|p|
+|b|am, pm, noon, midnight|b, bb, or bbb|mid.|
+| | |bbbb|midnight|
+| | |bbbbb|md|
+|B|flexible day periods|B, BB, or BBB|at night [abbrev]|
+| | |BBBB|at night [wide]|
+| | |BBBBB|at night [narrow]|
+|h|hour in am/pm (1~12)|h|7|
+| | |hh|07|
+|H|hour in day (0~23)|H|0|
+| | |HH|00|
+|K|hour in am/pm (0~11)|K|0|
+| | |KK|00|
+|k|hour in day (1~24)|k|24|
+| | |kk|24|
+|m|minute in hour|m|4|
+| | |mm|04|
+|s|second in minute|s|5|
+| | |ss|05|
+|S|fractional second - truncates (like other time fields)|S|2|
+| |to the count of letters when formatting. Appends|SS|23|
+| |zeros if more than 3 letters specified. Truncates at|SSS|235|
+| |three significant digits when parsing.|SSSS|2350|
+|X|Time Zone: ISO8601 basic hm?, with Z for 0|X|-08, +0530, Z|
+| |Time Zone: ISO8601 basic hm, with Z|XX|-0800, Z|
+| |Time Zone: ISO8601 extended hm, with Z|XXX|-08:00, Z|
+| |Time Zone: ISO8601 basic hms?, with Z|XXXX|-0800, -075258, Z|
+| |Time Zone: ISO8601 extended hms?, with Z|XXXXX|-08:00, -07:52:58, Z|
+|x|Time Zone: ISO8601 basic hm?, without Z for 0|x|-08, +0530|
+| |Time Zone: ISO8601 basic hm, without Z|xx|-800|
+| |Time Zone: ISO8601 extended hm, without Z|xxx|-08:00|
+| |Time Zone: ISO8601 basic hms?, without Z|xxxx|-0800, -075258|
+| |Time Zone: ISO8601 extended hms?, without Z|xxxxx|-08:00, -07:52:58|
+|O|Time Zone: short localized GMT|O|GMT-8|
+| |Time Zone: long localized GMT (=ZZZZ)|OOOO|GMT-08:00|
+|z|Time Zone: specific non-location|z, zz, or zzz|-0800|
+| | |zzzz|GMT-08:00|
+| | |zzzzz|-08:00, -07:52:58, Z|
+|| | | | 
+|'|escape for text|'|'|
+|' '|two single quotes produce one|' '|' '|
 
 
-The following project elements accept documentation:
+:::caution
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
-- Classes
-- Forms
-- Tables and Fields
-
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
-
-Documentation is displayed in the preview area (right-side panel) of the Explorer:
-
-![](../assets/en/Project/explorer_Doc.png)
-
-It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
-
-
-## Documentation files
-
-### Documentation file name
-
-Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
-
-In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).  
-
-
-### Documentation file architecture
-
-All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
-
-The `Documentation` folder architecture is the following:
-
-- `Documentation`
-	+ `Classes`
-		* myClass.md
-	+ `DatabaseMethods`
-		* onStartup.md
-		* ...
-	+ `Forms`
-		* loginDial.md
-		* ...
-	+ `Methods`
-		* myMethod.md
-		* ...
-	+ `TableForms`
-		* **1**
-			- input.md
-			- ...
-		* ...
-	+ `Triggers`
-		* table1.md
-		* ...
-
-- A project form and its project form method share the same documentation file for form and method.
-- A table form and its table form method share the same documentation file for form and method.
-
-> Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
-
-
-## Documentation in the Explorer
-
-### Viewing documentation
-
-To view documentation in the Explorer window:
-
-1. Make sure the preview area is displayed.
-2. Select the documented element in the Explorer list.
-3. Click the **Documentation** button located below the preview area.
-
-![](../assets/en/Project/comments-explo2.png)
-
-- If no documentation file was found for the selected element, a **Create** button is displayed (see below).
-
-- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
-
-### Editing documentation file
-
-You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
-
-If there is no documentation file for the selected element, you can:
-
-- click on the **Create** button in the `Documentation` pane or,
-- choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
-
-![](../assets/en/Project/comments-explo3.png)
-
-4D automatically creates an appropriately named .md file with a basic template at the relevant location and opens it with your default Markdown editor.
-
-If a documentation file already exists for the selected element, you can open it with your Markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
-
-
-
-## Viewing documentation in the code editor
-
-The 4D code editor displays a part of a method's documentation in its help tip.
-
-![](../assets/en/Project/codeEditor_Comments.png)
-
-If a file named `\<MethodName>.md` exists in the `\<package>/documentation` folder, the code editor displays (by priority):
-
-- Any text entered in an HTML comment tag (`<!-- command documentation -->`) at the top of the markdown file.
-
-- Or, if no html comment tag is used, the first sentence after a `# Description` tag of the markdown file.  
-In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
-
-:::note
-
-Otherwise, the code editor displays [the block comment at the top of the method code](../code-editor/write-class-method.md#using-help-tips).
+A pattern containing any invalid pattern letter results in a failing UErrorCode result during formatting or parsing.
 
 :::
 
+### Exploring patterns
 
-## Documentation file definition
+#### `y` vs `Y`
 
-4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
+`y` is the calendar year, while `Y` is the year based on the week number. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
 
-However, you can use any [supported Markdown tags](#supported-markdown).
+#### `L` (stand-alone) vs `M` 
 
-New documentation files are created with the following default contents:
+In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
-![](../assets/en/Project/comments-explo4.png)
+#### `e` vs `c`
+ 
+Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and `e` is for a day in a date ("Tuesday January 15, 1951").
 
-|Line|Description|
-|---|---|
-|`<!-- Type here your summary -->`|HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)|
-|## Description|Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used|
-|## Example|Heading level 2, you can use this area to show sample code|
-|```` ```4d Type here your example``` ````|Used to format 4D code examples (uses highlight.js library)|
+#### `E` vs `e`
 
+`e` is based on system settings: if the week is defined in the system as starting on a Wednesday, then Wednesday will have the numerical value "1" (or zero) whereas "E" always returns the same value (from 1 to 7 or from 0 to 6).
 
-### Supported Markdown
-- The title tag is supported:
-
-```md
-# Title 1
-## Title 2
-### Title 3
-```
-
-- The style tags (italic, bold, strikethrough) are supported:
-
-```md
-_italic_
-**bold**
-**_bold/italic_**
-~~strikethrough~~
-```
-
-
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
-
-````md
-```4d
-	var $txt : Text
-	$txt:="Hello world!"  
-```
-````
-
-- The table tag is supported:
-
-```md
-| Parameter | Type   | Description  |
-| --------- | ------ | ------------ |
-| wpArea    | String |Write pro area|
-| toolbar   | String |Toolbar name  |
-```
-
-
-- The link tag is supported:
-
-```md
-// Case 1
-The [documentation](https://doc.4d.com) of the command ....
-
-// Case 2
-[4D blog][1]
-
-[1]: https://blog.4d.com
-```
-
-- The image tags are supported:
-
-```md
-![image info](pictures/image.png)
-
-![logo 4D](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")
-
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
-```
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
-
-> For more information, see the [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/).
-
-
-
-
-## Example
-
-In the `WP SwitchToolbar.md` file, you can write:
-
-````md
-<!-- This method returns a different logo depending on the size parameter -->
-
-
-GetLogo (size) -> logo
-
-
-| Parameter | Type   | in/out | Description |
-| --------- | ------ | ------ | ----------- |
-| size      | Longint | in | Logo style selector (1 to 5)  |
-| logo      | Picture | out | Selected logo |
-
-
-## Description
-
-This method returns a logo of a specific size, depending on the value of the *size* parameter.
-1 = smallest size, 5 = largest size.
-
-## Example
-
-```4d
-C_PICTURE($logo)
-C_LONGINT($size)
-
-//Get the largest logo
-$logo:=GetLogo(5)
-```
-````
-
-- Explorer view:
-
-![](../assets/en/Project/explorer_Doc.png)
-
-- Code editor view:
-
-![](../assets/en/Project/comments-explo5.png)
