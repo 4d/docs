@@ -18,9 +18,9 @@ title: オブジェクト
     - ピクチャー(2)
     - コレクション
 
-(1) [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクトは **オブジェクトフィールド** には保存できませんが、メモリ内の **オブジェクト変数** に保存することは可能です。
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
 
-(2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
+(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 :::caution
 
@@ -151,6 +151,7 @@ $col:=$o.col[5] // 6
 ```
 
 オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
+
 
 
 
