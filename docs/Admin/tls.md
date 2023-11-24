@@ -124,11 +124,6 @@ To use TLS with the 4D application server (client-server desktop applications) o
 - With the application server, select the **Encrypt Client-Server Communications** option in the ["Client-server/Network options" page of the Settings dialog box](../settings/client-server#encrypt-client-server-communications).
 - With the SQL server, select the **Enable TLS** option in the ["SQL" page of the Settings dialog box](../settings/sql#sql-server-publishing).
 
-:::info Compatibility
-
-This automatic configuration is not supported by the 4D [legacy network layer](../settings/client-server.md#network-layer).
-
-::: 
 
 
 
