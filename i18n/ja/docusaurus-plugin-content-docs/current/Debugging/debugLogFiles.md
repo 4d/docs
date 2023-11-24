@@ -1,6 +1,6 @@
 ---
 id: debugLogFiles
-title: ログファイルの詳細
+title: ログファイル
 ---
 
 4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) あるいは [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
