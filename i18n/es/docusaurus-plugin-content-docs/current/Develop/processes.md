@@ -50,23 +50,23 @@ Cada proceso contiene elementos específicos que puede manejar independientement
 
 ### Elementos de la interfaz
 
-Interface elements are used in [Desktop applications](../category/desktop-applications). Consisten en lo siguiente:
+Los elementos de interfaz se utilizan en [Aplicaciones de escritorio](../category/desktop-applications). Consisten en lo siguiente:
 
-- [Menu bar](../Menus/creating.md): Each process can have its own current menu bar. The menu bar of the frontmost process is the current menu bar for the application.
-- One or more windows: Each process can have more than one window open simultaneously. On the other hand, some processes have no windows at all.
-- One active (frontmost) window: Even though a process can have several windows open simultaneously, each process has only one active window. To have more than one active window, you must start more than one process.
-- Input and Output forms: Default input and output forms can be set procedurally for each table in each process.
+- [Barra de menús](../Menus/creating.md): cada proceso puede tener su propia barra de menús actual. La barra de menús del proceso del primer plano es la barra de menús actual de la aplicación.
+- Una o más ventanas: cada proceso puede tener varias ventanas abiertas simultáneamente. Por el contrario, algunos procesos no tienen ventanas.
+- Una ventana activa (primer plano): aunque un proceso puede tener varias ventanas abiertas simultáneamente, cada proceso tiene sólo una ventana activa. Para tener más de una ventana activa, debe iniciar más de un proceso.
+- Formularios de entrada y salida: los formularios de entrada y salida predeterminados pueden definirse por procedimiento para cada tabla de cada proceso.
 
 :::info
 
-- Processes do not include menu bars by default which means that the standard **Edit** menu shortcuts (in particular, cut/copy/paste) are not availalbe in process windows. When you call dialog boxes or 4D editors (form editor, query editor, Request, etc.) from a process, if you want for the user to be able to benefit from keyboard shortcuts like copy/paste, you need to make sure that the equivalent of an **Edit** menu is installed in the process.
-- [Preemptive processes](preemptive.md) and processes that are executed on the server (stored procedures) must not contain elements of the interface.
+- Los procesos no incluyen barras de menú por defecto, lo que significa que los atajos de menú estándar de **Edición** (en particular, cortar/copiar/pegar) no están disponibles en las ventanas de proceso. Cuando se llama a los diálogos o a los editores 4D (editor de formularios, editor de búsquedas, Request, etc.) desde un proceso, si desea que el usuario pueda beneficiarse de atajos de teclado como copiar/pegar, debe asegurarse de que el equivalente a un menú **Edición** esté instalado en el proceso.
+- [Procesos apropiativos](preemptive.md) y los procesos que se ejecutan en el servidor (procedimientos almacenados) no deben contener elementos de la interfaz.
 
 :::
 
 :::note
 
-Each process also has a separate current selection and current record per table. For more information about these concepts, please refer to [doc.4d.com](https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
+Cada proceso tiene también una selección actual y un registro actual por tabla. Para más información sobre estos conceptos, consulte [doc.4d.com](https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
 
 :::
 
@@ -74,37 +74,37 @@ La aplicación 4D crea procesos para sus propias necesidades, por ejemplo el pro
 
 ## Procesos globales y locales
 
-Processes can be either global or local in scope. Por defecto, todos los procesos son globales.
+El alcance de los procesos puede ser local o global. Por defecto, todos los procesos son globales.
 
-Global processes can perform any operation, including accessing and manipulating data. In most cases, you will want to use global processes. Local processes should be used only for operations that do not access data. For example, you can use a local process to run an event-handling method or to control interface elements such as floating windows.
+Los procesos globales pueden realizar cualquier operación, incluido el acceso y la manipulación de datos. En la mayoría de los casos, querrá utilizar procesos globales. Los procesos locales sólo deben utilizarse para operaciones que no accedan a datos. Por ejemplo, puede utilizar un proceso local para ejecutar un método de gestión de eventos o para controlar elementos de la interfaz como ventanas flotantes.
 
-You specify that a process is local in scope through its name. The name of local process must start with a dollar sign ($).
+Especifica que un proceso es local en alcance a través de su nombre. El nombre del proceso local debe comenzar con un signo de dólar ($).
 
 :::warning
 
-If you attempt to access data from a local process, you access it though the Main process (process #1), risking conflicts with operations performed within that process.
+Si intenta acceder a los datos desde un proceso local, accede a los datos por medio del proceso principal (proceso #1) y toma el riesgo de entrar en conflicto con las operaciones efectuadas en ese proceso.
 
 :::
 
 ### 4D Server
 
-Using local processes on the remote side for operations that do not require data access reserves more processing time for server-intensive tasks. When you create a process local to client (using `New process` for example), it only exists on the remote side.
+El uso de procesos locales del lado del Cliente para operaciones que no requieran acceso a datos, reserva más tiempo de procesamiento para tareas que requieren el servidor intensivamente. Cuando crea un proceso local para el cliente (utilizando por ejemplo New process), solo existe del lado del cliente.
 
-When you create a global process on the client, a "twin" process is created on the server, thus consuming server resources, to handle data access and database context. However, for optimization reason, the twin process is created only if necessary, i.e. the first time the global process needs to access data.
+Cuando crea un proceso global, se crea un proceso "doble" en el servidor, que consume recursos del servidor, para manejar el acceso a los datos y el contexto de la base de datos. Sin embargo, por razones de optimización, el proceso doble se crea solo si es necesario, es decir, la primera vez que el proceso global necesita acceder a los datos.
 
 ## Procesos worker
 
-Using a Worker process is a simple and powerful way to exchange information between processes. This feature is based upon an asynchronous messaging system that allows processes and forms to be called and asked to execute methods with parameters in their own context.
+Un proceso Worker es una forma sencilla y poderosa de intercambiar información entre procesos. Esta funcionalidad se basa en un sistema de mensajería asíncrono que permite a los procesos y formularios ser llamados y se les pide ejecutar métodos con parámetros en su propio contexto.
 
-A worker can be "hired" by any process (using the [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html) command) to execute project methods with parameters in their own context, thus allowing access to shared information.
+Un worker puede ser "contratado" por cualquier proceso (utilizando el comando [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/es/page1389.html)) para ejecutar métodos de proyecto con parámetros en su propio contexto, permitiendo así el acceso a información compartida.
 
 :::info
 
-In Desktop applications, a project method can also be executed with parameters in the context of any form using the [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command.
+En aplicaciones de escritorio, un método de proyecto también puede ser ejecutado con parámetros en el contexto de cualquier formulario utilizando el comando [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html).
 
 :::
 
-This functionality addresses the following needs regarding 4D interprocess communication:
+Esta funcionalidad responde a las siguientes necesidades en materia de comunicación entre procesos en 4D:
 
 - Since they are supported by both cooperative and preemptive processes, they are the perfect solution for interprocess communication in [preemptive processes](preemptive.md) ([interprocess variables are deprecated](https://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) and not allowed in preemptive processes).
 - They provide a simple alternative to semaphores, which can be cumbersome to set and complex to use
