@@ -31,7 +31,7 @@ A caixa de diálogo Criar aplicação inclui várias páginas que podem ser aced
 
 A geração só pode ser efetuada após a compilação do banco de dados. If you select this command without having previously compiled the database, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the database must be (re)compiled.
 
-### Build application settings
+### Parâmetros do gerador de aplicações
 
 Each build application parameter is stored as an XML key in the application project file named "buildApp.4DSettings" XML file, located in the Settings folder of the database.
 
