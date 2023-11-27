@@ -1,11 +1,10 @@
 ---
 id: creating
-title: Working with a project
+title: Creating or opening a project
 ---
 
 4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
 
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 ## Creating a project
 
@@ -91,8 +90,8 @@ Files with the `.4DLink` extension are XML files that contain parameters intende
 
 4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
 
-* Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX represents the version number of the application. For example, "Favorites v19" for 4D v19.
 
@@ -103,23 +102,5 @@ That folder is divided into two subfolders:
 
 `.4DLink` files can also be created with an XML editor.
 
-4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
+4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the `\Resources\DTD\` subfolder of the 4D application.
 
-## File saving
-
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
-
-Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
-
-The 4D development framework includes a file access manager to control concurrent access:
-
-* if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
-* if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
-
-![](../assets/en/Project/projectReload.png)
-
-* **Yes**: discard editor changes and reload the modified version
-* **No**: save changes and overwrite the other version
-* **Cancel**: do not save
-
-This feature is enabled for all built-in 4D editors (Structure, Form, Method, Settings, and Toolbox).
