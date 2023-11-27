@@ -10,10 +10,10 @@ En ORDA, se accede a los datos a través de [entidades](dsMapping.md#entity) y [
 
 Hay dos maneras de crear una nueva entidad en una dataclass:
 
-*   Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
-*   You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
+*   Dado que las entidades son referencias a registros de la base de datos, puede crear entidades creando registros mediante el lenguaje 4D y luego referenciarlos con funciones ORDA como [`entity.next()`](../API/EntityClass.md#next) o [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
+*   También puede crear una entidad utilizando la función [`dataClass.new()`](../API/DataClassClass.md#new).
 
-Tenga en cuenta que la entidad sólo se crea en la memoria. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
+Tenga en cuenta que la entidad sólo se crea en la memoria. Si desea añadirla al almacén de datos, debe llamar a la función [`entity.save()`](../API/EntityClass.md#save).
 
 Los atributos de la entidad están disponibles directamente como propiedades del objeto entidad. Para más información, consulte [Uso de los atributos de entidad](#using-entity-attributes).
 
@@ -90,12 +90,12 @@ Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referen
 
 ## Uso de los atributos de entidades
 
-Entity attributes store data and map corresponding fields in the corresponding table.
+Los atributos de entidad almacenan los datos y mapean los campos correspondientes en la tabla correspondiente.
 
-- attributes of the **storage** kind can be set or get as simple properties of the entity object,
-- attributes of the **relatedEntity** kind will return an entity,
-- attributes of the **relatedEntities** kind will return an entity selection,
-- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
+- los atributos de tipo **storage** pueden definirse u obtenerse como propiedades simples del objeto de la entidad,
+- los atributos del tipo **RelatedEntity** devolverán una entidad,
+- los atributos de tipo **relatedEntities** devolverán una selección de entidad,
+- los atributos de tipo **computed** y **alias** pueden devolver todo tipo de datos, dependiendo de cómo estén configurados.
 
 :::info
 
@@ -103,7 +103,7 @@ Para más información sobre el tipo de atributo, consulte el párrafo [Atributo
 
 :::
 
-For example, to get and set a storage attribute value of type string:
+Por ejemplo, para obtener y definir un valor de atributo de almacenamiento de tipo cadena:
 
 ```4d
  $entity:=ds.Employee.get(1) //obtener el atributo de Employee con ID 1
@@ -139,11 +139,11 @@ Cada empleado puede ser gerente y puede tener un gerente. Para obtener el gerent
 
 ### Asignación de archivos a atributos imagen o blob
 
-You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
+Puede almacenar imágenes en atributos imagen; de forma similar, puede almacenar cualquier dato binario en atributos blob.
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
+ORDA permite asignar al atributo los datos en sí, es decir, una imagen o un objeto blob, o una **referencia a un archivo** que contenga los datos. Sólo se guarda la ruta del archivo dentro de la entidad.
 
-Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Además, puede controlar el tamaño del archivo de datos.
+Gracias a esta funcionalidad, puede reutilizar la misma imagen en varias entidades sin duplicarla, organizar los archivos como desee o utilizarlos fuera de 4D. Además, puede controlar el tamaño del archivo de datos.
 
 La referencia del archivo puede ser:
 
@@ -166,19 +166,19 @@ Function createCompany($name : Text; $logo : 4D.File)
     $company.save() 
 ```
 
-Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view.
+Independientemente de cómo se asigne el atributo (datos propiamente dichos o referencia a un archivo), el acceso de lectura al atributo es transparente desde el punto de vista del usuario.
 
-The file does not have to exist on disk at the time of assignment (no error is returned in this case). If the referenced file is not found when the attribute is read, a null value is returned.
+El archivo no tiene que existir en el disco en el momento de la asignación (no se devuelve ningún error en este caso). Si el archivo de referencia no se encuentra cuando se lee el atributo, se devuelve un valor null.
 
 :::tip
 
-4D carga imágenes y datos en una caché local. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+4D carga imágenes y datos en una caché local. Si el archivo referenciado es modificado después de haber sido cargado, debe reasignar el archivo para que la modificación se tenga en cuenta en la aplicación.
 
 :::
 
 :::note
 
-File reference assignment is only supported in local mode (4D Server or 4D single-user). Se genera un error si la asignación se realiza de forma remota o a través de una petición REST.
+La asignación de referencia de archivos solo se admite en modo local (4D Server o 4D mono usuario). Se genera un error si la asignación se realiza de forma remota o a través de una petición REST.
 
 :::
 
@@ -303,12 +303,12 @@ Ejemplos:
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
-    //$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+    //$highSal es compartible debido a la búsqueda en dataClass
+$comp:=$highSal.employer //$comp es compartible porque $highSal es compartible
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-    //$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+    //$lowSal es modificable debido a copy()
+$comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
 ```
 
 :::note Selecciones de entidades devueltas por el servidor
