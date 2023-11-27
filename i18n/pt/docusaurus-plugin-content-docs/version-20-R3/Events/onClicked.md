@@ -12,7 +12,7 @@ title: On Clicked
 
 The `On Clicked` event is generated when the user clicks on an object.
 
-> Alguns objetos do formulário podem ser ativados com o teclado. Por exemplo, quando uma caixa de verificação recebe o foco, pode ser introduzida utilizando a barra de espaços. In such a case, the `On Clicked` event is still generated.
+> Alguns objetos do formulário podem ser ativados com o teclado. Por exemplo, quando uma caixa de verificação recebe o foco, pode ser introduzida utilizando a barra de espaços. Nesse caso, o evento `On Clicked` ainda é gerado.
 
 The `On Clicked` event usually occurs once the mouse button is released. No entanto, há várias excepções:
 
