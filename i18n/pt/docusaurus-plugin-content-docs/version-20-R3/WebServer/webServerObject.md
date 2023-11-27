@@ -48,7 +48,7 @@ webServer:=WEB Server(Web server database)
 ```
 
 Se a aplicação utilizar componentes e o usuário pretender chamar:
-- the host application's web server from a component or
+- o servidor Web da aplicação host a partir de um componente ou
 - o servidor que recebeu o pedido (qualquer que seja o servidor),
 
 também pode ser utilizado:
