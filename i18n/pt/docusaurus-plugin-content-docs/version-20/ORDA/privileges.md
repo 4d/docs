@@ -79,7 +79,7 @@ A privilege or a role can be associated to several "action + resource" combinati
 
 ### Exemplo
 
-To allow a role in a session:
+Para permitir uma função em uma sessão:
 
 ```4d
 
