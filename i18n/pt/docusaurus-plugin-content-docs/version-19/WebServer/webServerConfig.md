@@ -3,11 +3,11 @@ id: webServerConfig
 title: Configuração
 ---
 
-The 4D web server settings include security parameters, listening ports, defaults paths, and various options covering all the server features. 4D fornece valores padrão para cada configuração.
+As configurações do servidor web 4D incluem parâmetros de segurança, portas de escuta, caminhos padrão e várias opções que abrangem todos os recursos do servidor. 4D fornece valores padrão para cada configuração.
 
 ## Onde configurar os parâmetros?
 
-There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
+Há diferentes maneiras de configurar as definições do servidor web 4D, dependendo do escopo e do servidor que você deseja definir:
 
 | Localização do parâmetro                 | Âmbito                                              | Servidor Web a ser usado                                       |
 | ---------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
@@ -26,24 +26,24 @@ There are different ways to configure the 4D web server settings, depending on t
 
 Ativa e configura a cache da página Web.
 
-The 4D web server has a cache that allows you to load static pages, GIF images, JPEG images (<512 kb) and style sheets (.css files) in memory, as they are requested. Using the cache allows you to significantly increase the web server’s performance when sending static pages. A cache é partilhada entre todos os processos Web.
+O servidor web 4D tem um cache que permite carregar páginas estáticas, imagens GIF, imagens JPEG (<512 kb) e folhas de estilo (arquivos .css) na memória, à medida que forem solicitadas. O uso do cache permite que você aumente significativamente o desempenho do servidor da Web ao enviar páginas estáticas. A cache é partilhada entre todos os processos Web.
 
-You can modify the size of the cache in the **Pages Cache Size** area. The value you set depends on the number and size of your website’s static pages, as well as the resources that the host machines has at its disposal.
-> While using your web database, you can check the performance of the cache by using the `WEB GET STATISTICS` command. If, for example, you notice that the cache’s rate of use is close to 100%, you may want to consider increasing the size that has been allocated to it. The [/4DSTATS] and [/4DHTMLSTATS] URLs allow you to also obtain information about the cache’s state.
+Você pode modificar o tamanho da cache na área **Pages Cache Size** . O valor que você define depende do número e do tamanho das páginas estáticas do seu site, bem como dos recursos que as máquinas hospedeiras têm à disposição.
+> Ao usar o banco de dados da Web, você pode verificar o desempenho da cache usando o comando `WEB GET STATISTICS` . Se, por exemplo, você notar que a taxa de utilização do cache está próxima a 100%, você pode querer considerar aumentar o tamanho que lhe foi atribuído. As URLs [/4DSTATS] e [/4DHTMLSTATS] permitem que você também obtenha informações sobre o estado do cache.
 
 ## Pasta de certificados
 
-| Pode ser definido com | Nome                | Comentários                                                                                                                             |
-| --------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| objeto webServer      | `certificateFolder` | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
+| Pode ser definido com | Nome                | Comentários                                                                                                                                   |
+| --------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| objeto webServer      | `certificateFolder` | Propriedade de texto, mas pode ser um objeto [`4D. Folder`](API/FolderClass.md)  quando usado com o parâmetro *settings* da função `start()`. |
 
-Folder where the TLS certificate files for the web server are located.
+Pasta onde estão localizados os arquivos de certificado TLS para o servidor web.
 
-By default with 4D or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder).
+Por padrão, com o 4D ou o 4D Server, esses arquivos devem ser colocados ao lado da pasta do projeto [](Project/architecture.md#project-folder).
 
-With 4D in remote mode, these files must be located in the local resources folder of the database on the remote machine (see `4D Client Database Folder` paragraph of the `Get 4D folder` command). Deve copiar esses arquivos manualmente na máquina remota.
+Com o 4D em modo remoto, esses arquivos devem estar localizados na pasta de recursos locais do banco de dados na máquina remota (consulte `4D Client Database Folder` parágrafo do comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
 
-> TLS certificate files are *key.pem* (document containing the private encryption key) and *cert.pem* (document containing the certificate).
+> Os arquivos de certificado TLS são *key.pem* (documento que contém a chave de criptografia privada) e *cert.pem* (documento que contém o certificado).
 
 ## Conjunto de caracteres
 
@@ -54,31 +54,31 @@ With 4D in remote mode, these files must be located in the local resources folde
 | Caixa de diálogos de configurações | Página Opções (II) /Conjunto standard | Menu pop-up                    |
 
 Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor padrão realmente depende da linguagem do SO.
-> This setting is also used for generating Quick Reports in HTML format .
+> Essa configuração também é usada para gerar relatórios rápidos em formato HTML.
 
-## Cipher list
+## Lista de cifras
 
 | Pode ser definido com | Nome                                               | Comentários |
 | --------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer      | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text        |
 
-Cipher list used for the secure protocol; sets the priority of ciphering algorithms implemented by the web server. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
+Lista de cifras usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
-> The default cipher list used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server, client/server connections, as well as the HTTP client and all the 4D commands that make use of the secure protocol.
+> A lista de cifras padrão usada por 4D pode ser modificada para a sessão usando o comando `SET DATABASE PARAMETER` . Nesse caso, a modificação se aplica a todo o aplicativo 4D, incluindo o servidor web, o servidor SQL, as conexões cliente/servidor, bem como o cliente HTTP e todos os comandos 4D que usam o protocolo seguro.
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                    | Comentários                                                                  |
-| ---------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS) |
-| `WEB SET OPTION`                   | `Web CORS settings`                                     | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS) |
-| Caixa de diálogos de configurações | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)      |
+| Pode ser definido com              | Nome                                                          | Comentários                                                                      |
+| ---------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)          | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)     |
+| `WEB SET OPTION`                   | `Web CORS settings`                                           | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS)     |
+| Caixa de diálogos de configurações | Opções (II) página/Nomes de domínio e métodos HTTP permitidos | Clique no botão [+] para adicionar um nome de domínio permitido e seu método (s) |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
 #### Nomes de domínio
 
-Domain name or IP address from where external pages are allowed to send data requests to the Server via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
+Nome de domínio ou endereço IP de onde as páginas externas têm permissão para enviar solicitações de dados ao servidor via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
 
 - 192.168.5.17:8081
 - 192.168.5.17
@@ -226,7 +226,7 @@ Compression level for all compressed HTTP exchanges for the 4D web server (clien
 
 Passe de 1 a 9 como valor onde 1 é a compressão mais rápida e 9 mais alta. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
 
-## HTTP Compression Threshold
+## Limite de compressão HTTP
 
 | Pode ser definido com | Nome                                                                         | Comentários |
 | --------------------- | ---------------------------------------------------------------------------- | ----------- |
