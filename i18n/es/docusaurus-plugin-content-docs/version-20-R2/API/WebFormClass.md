@@ -12,7 +12,7 @@ title: WebForm
 </details>
 
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+La clase `WebForm` contiene funciones y propiedades que permiten manejar sus componentes de webforms Qodly. Esta clase se detalla en la [documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass).
 
 
 
@@ -38,7 +38,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 Los componentes de los webforms son <!-- REF #WebFormClass.componentName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estos webforms.
 
-For more information, please refer to the [`.componentName` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#componentname).
+Para más información, consulte la descripción de [`.componentName` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#componentname).
 
 
 
@@ -48,16 +48,16 @@ For more information, please refer to the [`.componentName` description in the Q
 **.setError**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setError().Params -->
-| Parámetros | Tipo   |    | Descripción                              |
-| ---------- | ------ |:--:| ---------------------------------------- |
-| msg        | string | -> | Error message to display in the web form |
+| Parámetros | Tipo   |    | Descripción                                     |
+| ---------- | ------ |:--:| ----------------------------------------------- |
+| msg        | string | -> | Mensaje de error a mostrar en el formulario web |
 <!-- END REF -->
 
 #### Descripción
 
-La función `.setError()` <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web form<!-- END REF -->.
+La función `.setError()` <!-- REF #WebFormClass.setError().Summary -->envía *msg* como mensaje de error al formulario web<!-- END REF -->.
 
-For more information, please refer to the [`.setError()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#seterror).
+Para más información, consulte la descripción de [`.setError()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#seterror).
 
 
 
@@ -67,16 +67,16 @@ For more information, please refer to the [`.setError()` description in the Qodl
 **.setMessage**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setMessage().Params -->
-| Parámetros | Tipo   |    | Descripción                                    |
-| ---------- | ------ |:--:| ---------------------------------------------- |
-| msg        | string | -> | Information message to display in the web form |
+| Parámetros | Tipo   |    | Descripción                                           |
+| ---------- | ------ |:--:| ----------------------------------------------------- |
+| msg        | string | -> | Mensaje de información a mostrar en el formulario web |
 <!-- END REF -->
 
 #### Descripción
 
-La función `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
+La función `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envía *msg* como mensaje de información al formulario web<!-- END REF -->.
 
-For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
+Para más información, consulte la descripción de [`.setMessage()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 
 
 ### .setWarning()
@@ -85,16 +85,16 @@ For more information, please refer to the [`.setMessage()` description in the Qo
 **.setWarning**( *msg* : string)<!-- END REF -->
 
 <!-- REF #WebFormClass.setWarning().Params -->
-| Parámetros | Tipo   |    | Descripción                                |
-| ---------- | ------ |:--:| ------------------------------------------ |
-| msg        | string | -> | Warning message to display in the web form |
+| Parámetros | Tipo   |    | Descripción                                              |
+| ---------- | ------ |:--:| -------------------------------------------------------- |
+| msg        | string | -> | Mensaje de advertencia para mostrar en el formulario web |
 <!-- END REF -->
 
 #### Descripción
 
-La función `.setWarning()`  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web form<!-- END REF -->.
+La función `.setWarning()`  <!-- REF #WebFormClass.setWarning().Summary -->envía *msg* como mensaje de advertencia al formulario web<!-- END REF -->.
 
-For more information, please refer to the [`.setWarning()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
+Para más información, consulte la descripción de [`.setWarning()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#setwarning).
 
 
 ## Web Form
@@ -109,9 +109,9 @@ For more information, please refer to the [`.setWarning()` description in the Qo
 
 #### Descripción
 
-El comando `Web Form` <!-- REF #_command_.webForm.Summary --> returns a `4D.WebForm` proxy object that allows you to interact with the web form<!-- END REF -->.
+El comando `Web Form` <!-- REF #_command_.webForm.Summary --> devuelve un objeto proxy `4D.WebForm` que permite interactuar con el formulario web<!-- END REF -->.
 
-For more information, please refer to the [`webForm` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webform).
+Para más información, consulte la descripción del comando [`webForm` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webform).
 
 
 ## Web Event
@@ -126,6 +126,6 @@ For more information, please refer to the [`webForm` command description in the 
 
 #### Descripción
 
-El comando `Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a webform component<!-- END REF -->.
+El comando `Web Event` <!-- REF #_command_.Web Event.Summary -->devuelve un objeto con información sobre un evento desencadenado vinculado a un componente webform<!-- END REF -->.
 
-For more information, please refer to the [`webEvent` command description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#webevent). 
+Para más información, consulte la descripción del comando [`webEvent` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass#webevent). 
