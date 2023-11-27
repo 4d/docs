@@ -33,7 +33,7 @@ A caixa de diálogo Criar aplicação inclui várias páginas que podem ser aced
 
 A geração do banco de dados só pode ser realizado quando o banco de dados for compilado. Se selecionar esse comando sem ter previamente compilado o banco de dados, ou no caso do código compilado não for correspondente ao código interpretado, aparece uma caixa de diálogo de advertência que indica que o banco de dados deve ser (re)compilado.
 
-### Build application settings
+### Parâmetros do gerador de aplicações
 
 Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the `Settings` folder of the project.
 
