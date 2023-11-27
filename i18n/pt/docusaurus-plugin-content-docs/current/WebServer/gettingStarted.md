@@ -19,7 +19,7 @@ Para iniciar o servidor web 4D:
 
 É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. Para o verificar, vamos apresentar a página inicial padrão.
 
-### Displaying the default home page
+### Exibição da página inicial padrão
 
 The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
 
