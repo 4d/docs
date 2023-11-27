@@ -37,13 +37,13 @@ Uma [DataClass](ORDA/dsMapping.md#dataclass) oferece uma interface de objeto a u
 
 Os atributos dos dataclasses são <!-- REF DataClassClass.attributeName.Summary -->objetos que estão disponíveis diretamente como propriedades<!-- END REF --> destas classes.
 
-The returned objects have properties that you can read to get information about your dataclass attributes.
+Os objetos retornados têm propriedades que você pode ler para obter informações sobre os atributos da classe de dados.
 > Os objetos do atributo Dataclass podem ser modificados, mas a estrutura subjacente do banco de dados não será alterada.
 
 
 #### Objeto devolvido
 
-Returned attribute objects contain the following properties:
+Os objetos atributos retornados contêm as seguintes propriedades:
 
 | Propriedade      | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                              |
 | ---------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
