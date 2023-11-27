@@ -165,8 +165,8 @@ The translation file in JSON format contains the following attributes:
 | Atributo  | Tipo       | Obligatorio | Descripción                                                                           |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
 | tablas    | Collection |             | Colección de objetos de tabla traducidos                                              |
-| fields    | Collection |             | Collection of translated field objects                                                |
-| formulas  | Collection |             | Collection of translated formula objects                                              |
+| fields    | Collection |             | Colección de objetos de campo traducidos                                              |
+| formulas  | Collection |             | Colección de objetos fórmula traducidos                                               |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
@@ -297,4 +297,4 @@ For every attribute used in your JSON file (header, data, carry-over, summary, a
 
 #### Ver también
 
-[4D Write Pro - Table Wizard (tutorial video)](https://www.youtube.com/watch?v=2ChlTju-mtM)
+[4D Write Pro - Asistente de tablas (vídeo tutorial)](https://www.youtube.com/watch?v=2ChlTju-mtM)
