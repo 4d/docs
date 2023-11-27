@@ -106,50 +106,50 @@ En aplicaciones de escritorio, un método de proyecto también puede ser ejecuta
 
 Esta funcionalidad responde a las siguientes necesidades en materia de comunicación entre procesos en 4D:
 
-- Since they are supported by both cooperative and preemptive processes, they are the perfect solution for interprocess communication in [preemptive processes](preemptive.md) ([interprocess variables are deprecated](https://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) and not allowed in preemptive processes).
-- They provide a simple alternative to semaphores, which can be cumbersome to set and complex to use
+- Ya que son compatibles con ambos procesos cooperativos y apropiativos, son la solución perfecta para la comunicación entre procesos en los [procesos apropiativos](preemptive.md) ([las variables interproceso son obsoletas](https://doc.4d.com/4Dv20/4D/20/Deprecated-or-Removed-Features.100-6259787.en.html#5868705) y no están permitidas en los procesos apropiativos).
+- Ofrecen una alternativa sencilla a los semáforos, que puede ser engorrosos de definir y difíciles de usar
 
 :::note
 
-Although they have been designed mainly for interprocess communication in the context of preemptive processes, `CALL WORKER` and `CALL FORM` can be used with cooperative processes.
+Aunque se han diseñado principalmente para la comunicación entre procesos en el contexto de los procesos apropiativos, `CALL WORKER` y`CALL FORM` se pueden utilizar con los procesos cooperativos.
 
 :::
 
 ### Utilizar workers
 
-A worker is used to ask a process to execute project methods. Un worker consiste de:
+Un worker se utiliza para pedir a un proceso que ejecute métodos proyecto. Un worker consiste de:
 
-- a unique name (_warning: the name is case sensitive_), also used to name its associated process
-- an associated process, that may or may not exist at a given moment
-- a message box
-- a startup method (optional)
+- un nombre único (_atención: el nombre es sensible a mayúsculas_), también utilizado para nombrar su proceso asociado
+- un proceso asociado, que puede existir o no en un momento dado
+- un buzón de mensajes
+- un método de inicio (opcional)
 
-You ask a worker to execute a project method by calling the `CALL WORKER` command. The worker and its message box are created at first use; its associated process is also automatically launched at first use. If the worker process dies thereafter, the message box remains open and any new message in the box will start a new worker process.
+Se le pide a un worker ejecutar un método proyecto mediante una llamada al comando `CALL WORKER`. El worker y su buzón de mensajes se crean en el primer uso; su proceso asociado también se ejecuta automáticamente en el primer uso. Si el proceso worker muere luego, el buzón de mensajes permanece abierto y cualquier nuevo mensaje en el buzón iniciará un nuevo proceso worker.
 
-The following animation illustrates this sequence:
+La siguiente animación ilustra esta secuencia:
 
 ![](../assets/en/Develop/WorkerAnimation.gif)
 
-Unlike a process created with the `New process` command, a worker process **remains alive after the execution of the process method ends**. This means that all method executions for the same worker will be run in the same process, which maintains all process state information (process variables, current record and current selection, etc.). Consequently, methods executed successively will access and thus share the same information, allowing communication between processes. The worker's message box handles successive calls asynchronously.
+A diferencia de un proceso creado con el comando `New process`, un proceso worker **permanece vivo después de que termine la ejecución del método proceso**. Esto significa que todas las ejecuciones del método para el mismo worker se llevarán a cabo en el mismo proceso, que mantiene toda la información de estado del proceso (variables de proceso, registro actual y selección actual...). En consecuencia, los métodos ejecutados sucesivamente tendrán acceso y de este modo compartirán la misma información, lo que permite las comunicaciones entre procesos. El buzón de mensajes del worker maneja las llamadas sucesivas de forma asíncrona.
 
-`CALL WORKER` encapsulates both the method name and command arguments in a message that is posted in the worker's message box. The worker process is then started, if it does not already exist, and asked to execute the message. This means that `CALL WORKER` will usually return before the method is actually executed (processing is asynchronous). For this reason, `CALL WORKER` does not return any value. If you need a worker to send information back to the process which called it (callback), you need to use `CALL WORKER` again to pass the information needed to the caller. Of course, in this case, the caller itself must be a worker.
+`CALL WORKER` encapsula tanto el nombre del método como los argumentos del comando en un mensaje que se publica en el buzón de mensajes del worker. El proceso worker se inicia a continuación, si no existe, y se pide ejecutar el mensaje. Esto significa que `CALL WORKER` normalmente volverá antes de que el método se ejecute realmente (el procesamiento es asíncrono). Por esta razón, `CALL WORKER` no devuelve ningún valor. Si necesita un worker para enviar información al proceso que lo llamó (retrollamada), es necesario utilizar `CALL WORKER` nuevamente para pasar al llamante la información necesaria. Por supuesto, en este caso, el propio llamante debe ser un worker.
 
-It is not possible to use `CALL WORKER` to execute a method in a process created by the `New process` command. Only worker processes have a message box and can thus be called by `CALL WORKER`. Note that a process created by `New process` can call a worker, but cannot be called back.
+No es posible utilizar `CALL WORKER` para ejecutar un método en un proceso creado por el comando `New process`. Sólo los procesos worker tienen un buzón de mensajes y, por tanto, pueden ser llamados por `CALL WORKER`. Tenga en cuenta que un proceso creado por `New process` puede llamar a un worker, pero no puede llamarse de nuevo.
 
-Worker processes can be created on 4D Server through stored procedures: for example, you can use the `Execute on server` command to execute a method that calls the `CALL WORKER` command.
+Los procesos worker se pueden crear en 4D Server a través de procedimientos almacenados: por ejemplo, puede utilizar el comando `Execute on server` para ejecutar un método que llama al comando `CALL WORKER`.
 
-A worker process is closed by a call to the [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html) command, which empties the worker's message box and asks the associated process to stop processing messages and to terminate its current execution as soon as the current task is finished.
+Un proceso worker se cierra mediante una llamada al comando [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html), que vacía el buzón de mensajes del worker y pide al proceso asociado que deje de procesar mensajes y termine su ejecución actual en cuanto termine la tarea actual.
 
-The startup method of a worker is the method used to create the worker (at first use). If `CALL WORKER` is called with an empty _method_ parameter, then the startup method is automatically reused as method to execute.
+El método de inicio de un worker es el método utilizado para crear el worker (primer uso). Si `CALL WORKER` es llamado con un parámetro _method_ vacío, entonces el método de inicio se reutiliza automáticamente como método para ejecutar.
 
-The main process created by 4D when opening a database for user and application modes is a worker process and can be called using `CALL WORKER`. Note that the name of the main process may vary depending on the 4D localization language, but it always has the process number 1; as a result, it's more convenient to designate it by process number instead of process name when calling `CALL WORKER`.
+El proceso principal creado por 4D al abrir una base de datos para los modos usuario y aplicación es un proceso worker y puede ser llamado utilizando `CALL WORKER`. Tenga en cuenta que el nombre del proceso principal puede variar dependiendo del idioma de localización de 4D, pero siempre tiene el número de proceso 1; como resultado, es más conveniente designarlo por el número de proceso en lugar del nombre de proceso cuando se llama a `CALL WORKER`.
 
-### Identifying Worker processes
+### Identificación de los procesos workers
 
-All worker processes, except the main process, have the process type `Worker process` (5) returned by the [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html) command.
+Todos los procesos worker, excepto el proceso principal, tienen el tipo de proceso `Worker process` (5) devuelto por el comando [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html).
 
-[Specific icons](../ServerWindow/processes#process-type) identify worker processes.
+[Iconos específicos](../ServerWindow/processes#process-type) identifican los procesos worker.
 
 ### Ver también
 
-For more information, please see [this blog post](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) about how to use workers.
+Para más información, consulte [este artículo de blog](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sobre cómo utilizar los workers.
