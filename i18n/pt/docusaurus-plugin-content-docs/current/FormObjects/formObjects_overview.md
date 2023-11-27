@@ -21,7 +21,7 @@ Pode adicionar ou modificar objetos de formulários 4D das seguintes formas:
 
 * **4D language**: Commands from the `Objects (Forms)` theme such as [`OBJECT DUPLICATE`](https://doc.4d.com/4dv20/help/command/en/page1111.html) or [`OBJECT SET FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page166.html) allow to create and define form objects.
 
-*   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Use the [type](properties_Object.md#type) property to define the object type, then set its [available properties](properties_Reference.md). Example for a button object:
+*   **Editor de formulários:** arraste um objeto da barra de ferramentas do editor de formulários ao formulário. Use the [type](properties_Object.md#type) property to define the object type, then set its [available properties](properties_Reference.md). Exemplo de um objeto botão:
 
 ```json
     {
