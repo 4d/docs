@@ -25,7 +25,7 @@ Se aplican las siguientes reglas para todas las conversiones:
   * Tablas con llaves primarias compuestas.
 * Los atributos de tipo [BLOB](Concepts/dt_blob.md) no se gestionan en el datastore. Los atributos de tipo BLOB se devuelven como Null en las entidades y no se pueden asignar.
 
-> ORDA mapping does not take into account:  
+> El mapeo ORDA no tiene en cuenta:  
 > 
 > * la opción "Invisible" para las tablas o los campos,
 > * la estructura virtual definida mediante `SET TABLE TITLES` o `SET FIELD TITLES`,
