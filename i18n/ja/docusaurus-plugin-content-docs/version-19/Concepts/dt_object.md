@@ -18,9 +18,9 @@ title: オブジェクト
     - ピクチャー(2)
     - コレクション
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
+(1) ORDAオブジェクト ([エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) 等)、[FileHandle オブジェクト](../API/FileHandleClass.md)、[Webサーバーオブジェクト](../API/WebServerClass.md) などの **ストリームできないオブジェクト** は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
-(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
 **警告:** 属性名は大文字と小文字を区別するという点に注意してください。
 
