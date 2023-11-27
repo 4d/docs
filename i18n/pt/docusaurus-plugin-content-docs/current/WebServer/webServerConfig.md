@@ -153,7 +153,7 @@ You can designate another default home page by entering its pathname.
 
 - The path is relative to the [default HTML root folder](#root-folder).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
-- The path must neither start not end with a slash.
+- O caminho não deve começar nem terminar com uma barra.
 
 For example, if you want the default home page to be "MyHome.htm", and it is located in the "Web" folder (itself located in the default HTML root folder), use "Web/MyHome.htm".
 
@@ -322,11 +322,11 @@ Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
 ## Endereço IP de escuta
 
-| Pode ser definido com              | Nome                                                           | Comentários |
-| ---------------------------------- | -------------------------------------------------------------- | ----------- |
-| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten) |             |
-| `WEB SET OPTION`                   | `Web IP address to listen`                                     |             |
-| Caixa de diálogos de configurações | [Configuration page/IP Address](../settings/web.md#ip-address) | Menu pop-up |
+| Pode ser definido com              | Nome                                                             | Comentários |
+| ---------------------------------- | ---------------------------------------------------------------- | ----------- |
+| objeto webServer                   | [`IPAddressToListen`](API/WebServerClass.md#ipaddresstolisten)   |             |
+| `WEB SET OPTION`                   | `Web IP address to listen`                                       |             |
+| Caixa de diálogos de configurações | [Página Configuração/Endereço IP](../settings/web.md#ip-address) | Menu pop-up |
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
