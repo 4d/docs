@@ -41,11 +41,11 @@ Web browsers authorize only the certificates issued by a certification authority
 
 ## Minimum version
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
+By default, the minimum version of the secured protocol accepted by the 4D servers is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
 
 :::note
 
-You can control the level of security of your **web server** by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+You can control separately the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) for **webServer objects**.
 
 :::
 
@@ -98,7 +98,7 @@ Both **key.pem** and **cert.pem** files must be located:
 
 ### Enabling TLS
 
-For TLS connections to be accepted by the HTTP server, you must enable HTTPS using one of the [possible options](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](WebServer/webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode.
+For TLS connections to be accepted by the HTTP server, you must enable HTTPS. Refer to the [**Enable HTTPS**](WebServer/webServerConfig.md#enable-https) paragraph to know the different ways to enable TLS for the HTTP server. 
 
 :::note
 
