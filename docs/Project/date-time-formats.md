@@ -63,16 +63,14 @@ w|week of year|w|27
 | | |eeeee|T|
 | | |eeeeee|Tu|
 |c|stand-alone local day of week|c or cc|2|
-| | |c or cc|2|
 | | |ccc|Tue|
 | | |cccc|Tuesday|
 | | |ccccc|T|
 | | |cccccc|Tu|
 |a|AM or PM|a, aa, or aaa|PM [abbrev]|
-| | |a, aa, or aaa| |
 | | |aaaa|PM [wide]|
 | | |aaaaa|p|
-|b|am, pm, noon, midnight|b, bb, or bbb|mid.|
+|b|AM, PM, noon, midnight|b, bb, or bbb|mid.|
 | | |bbbb|midnight|
 | | |bbbbb|md|
 |B|flexible day periods|B, BB, or BBB|at night [abbrev]|
@@ -90,10 +88,6 @@ w|week of year|w|27
 | | |mm|04|
 |s|second in minute|s|5|
 | | |ss|05|
-|S|fractional second - truncates (like other time fields)|S|2|
-| |to the count of letters when formatting. Appends|SS|23|
-| |zeros if more than 3 letters specified. Truncates at|SSS|235|
-| |three significant digits when parsing.|SSSS|2350|
 |X|Time Zone: ISO8601 basic hm?, with Z for 0|X|-08, +0530, Z|
 | |Time Zone: ISO8601 basic hm, with Z|XX|-0800, Z|
 | |Time Zone: ISO8601 extended hm, with Z|XXX|-08:00, Z|
@@ -120,21 +114,59 @@ A pattern containing any invalid pattern letter results in a failing UErrorCode 
 
 :::
 
-### Exploring patterns
+## Exploring patterns
 
-#### `y` vs `Y`
+
+### `y` vs `Y`
 
 `y` is the calendar year, while `Y` is the year based on the week number. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
 
-#### `L` (stand-alone) vs `M` 
+### `L` (stand-alone) vs `M` 
 
 In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
-#### `e` vs `c`
+### `e` vs `c`
  
 Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and `e` is for a day in a date ("Tuesday January 15, 1951").
 
-#### `E` vs `e`
+### `E` vs `e`
 
 `e` is based on system settings: if the week is defined in the system as starting on a Wednesday, then Wednesday will have the numerical value "1" (or zero) whereas "E" always returns the same value (from 1 to 7 or from 0 to 6).
 
+### Leading zeros
+
+In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ex: "yyyyyy" would give "001996".
+
+### Localized parts
+
+Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according regional settings.
+
+For example, for the time `13:25:34`, "B" will display *in the afternoon* in an US system, and *après-midi* on a French system. 
+
+
+### Extra letters
+
+Formatting strings can contain characters no to be interpreted as formatting characters: if they are between "a" and "z" or "A" and "Z", they must be enclosed in single quotes. 
+
+For example:
+
+"15:30:00" with pattern "HH 'hours and' mm 'minutes'" produce "15 hours and 30 minutes". 
+
+
+## Examples
+
+|Date or time|Pattern|Result|Comments|
+|---|---|----|---|
+|15/06/2000|"QQQQ"|"2nd quarter"|localized|
+|17/03/2001|"D"|"76"|76th day of the year|
+|17/03/1954|"w"|"11"|11th week of the year|
+|17/03/1954|"eeee"|"Wednesday"|localized|
+|15:00:00|"a"|"PM"||
+|18:00:00|"Ka"|"6 PM"||
+|13:30:15|"hh:mm aa O"|"01:30 PM GMT+1"
+
+
+
+## See also
+
+See [this blogpost](https://blog.4d.com/new-formats-for-dates-and-times) for more information on the custom date and time formats. 
