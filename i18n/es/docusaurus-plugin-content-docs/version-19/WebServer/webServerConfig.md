@@ -329,7 +329,7 @@ Para evitar esta confusión, se recomienda utilizar la notación [ ] siempre que
  [2001:0DB8::85a3:0:ac1f:8001]:8081 //Dirección IPv6 con puerto 8081
 ```
 
-## Sesiones Keep
+## Keep Session
 
 | Puede ajustarse con           | Nombre                                               | Comentarios |
 | ----------------------------- | ---------------------------------------------------- | ----------- |
