@@ -53,7 +53,7 @@ Once the table has been integrated into the document, the user can customize its
 
 ### WP Table Wizard template configuration
 
-The templates configuration includes:
+A configuração dos modelos inclui:
 
 * Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
 * Translating table, field, and formula names from the [translation file](#translation-files).
@@ -61,7 +61,7 @@ The templates configuration includes:
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
-#### Template files
+#### Arquivos de modelo
 
 O ficheiro modelo permite-lhe definir o seguinte:
 
@@ -80,25 +80,25 @@ The template file must be stored in a "[`Resources`](../Project/architecture.md#
 
 The template file in JSON format contains the following attributes:
 
-| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                |
-|:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
-| columns              | Collection | x           | Collection of table columns                                                                                                                              |
-| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                          |
-| columns.header       | Text       | x           | Label shown to the user                                                                                                                                  |
-| columns.source       | Text       | x           | Formula                                                                                                                                                  |
-| breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                              |
-| breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
-| bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                 |
-| extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
+| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                 |
+|:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                              |
+| columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                              |
+| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                           |
+| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
+| columns.source       | Text       | x           | Formula                                                                                                                                                   |
+| breaks               | Collection |             | Collection of break objects. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                   |
+| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                               |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                   |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                        |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                   |
+| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                  |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                   |
 
 :::note idioma francês
 
@@ -154,7 +154,7 @@ Eis um breve exemplo do aspeto do seu ficheiro JSON:
 
 ```
 
-#### Translation files
+#### Arquivos de tradução
 
 Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
 
