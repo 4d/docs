@@ -3,13 +3,13 @@ id: preemptive
 title: プリエンプティブプロセス
 ---
 
-The compiled 4D code can be executed in **preemptive processes**. Thanks to this feature, your 4D compiled applications can take full advantage of multi-core computers so that their execution is faster and they can support more connected users.
+コンパイルされたコードは、**プリエンプティブプロセス** として実行できます。 この新機能のおかげで、コンパイルされた 4Dアプリケーションはマルチコアコンピューターの利点をすべて活かすことができ、それによって実行速度が向上し、またより多くのユーザーの接続をサポートすることができます。
 
-## What is a preemptive process?
+## プリエンプティブプロセスとは？
 
-When run in _preemptive_ mode, a process is dedicated to a CPU. Process management is then delegated to the system, which can allocate each CPU separately on a multi-core machine.
+_プリエンプティブ_ モードで実行された場合、プロセスは CPU に割り当てられます。 プロセス管理はシステムへと委任され、マルチコアのマシン上にてシステムはプロセスをそれぞれのCPUへと個別に割り当てます。
 
-When run in _cooperative_ mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine.
+_コオペラティブ_ モードで実行された場合には、たとえマルチコアのマシン上であっても、すべてのプロセスは親アプリケーションのスレッドにより管理され、同じ CPU を共有します。
 
 As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to code that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
 
