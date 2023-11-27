@@ -175,9 +175,9 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 これらのオブジェクトは属性を表しますが、データへのアクセスは与えないという点に注意してください。 データの読み書きは [エンティティオブジェクト](entities.md#エンティティ属性の使用) を通しておこなわれます。
 
-#### Computed and Alias attributes
+#### 計算属性とエイリアス属性
 
-[Computed attributes](ordaClasses.md#computed-attributes) and [alias attributes](ordaClasses.md#alias-attributes) are "virtual" attributes. この属性値はアクセスされるたびに評価され、保存されません。 計算属性は、基礎となるデータベースストラクチャーには属しませんが、その上に構築され、データモデルの属性と同様に使用することができます。
+[計算属性](ordaClasses.md#計算属性) と [エイリアス属性](ordaClasses.md#エイリアス属性) は "仮想" 属性です。 この属性値はアクセスされるたびに評価され、保存されません。 計算属性は、基礎となるデータベースストラクチャーには属しませんが、その上に構築され、データモデルの属性と同様に使用することができます。
 
 
 ### エンティティ
