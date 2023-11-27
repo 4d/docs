@@ -143,7 +143,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 | Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                              |
 | ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
 | area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                            |
-| ranges      |                   | collection | Collection of range(s)                                              | sempre disponível                                            |
+| ranges      |                   | collection | Coleção de intervalo(s)                                             | sempre disponível                                            |
 |             | \[ ].name        | text       | Nome do intervalo                                                   | name                                                         |
 |             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
 |             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                               |
