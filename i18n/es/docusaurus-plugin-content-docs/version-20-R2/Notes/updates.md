@@ -28,9 +28,9 @@ Lea [**Novedades en 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/)
 Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la entrada del blog que enumera todas las nuevas funcionalidades y mejoras de 4D v20.
 
 
-:::caution Minimal client version for 4D Server v20.2 and later
+:::caution Versión mínima cliente para 4D Server v20.2 y posteriores
 
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+Por razones internas, la versión de los clientes remotos que se conectan a 4D Server v20.2 y posteriores debe ser al menos 4D v20.2.
 
 :::
 
