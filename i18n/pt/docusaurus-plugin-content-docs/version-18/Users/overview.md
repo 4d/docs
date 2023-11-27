@@ -31,7 +31,7 @@ Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 
 In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. No entanto, o controle de acesso só é eficaz em bancos de dados 4D Server. A tabela abaixo lista as principais funcionalidades de usuários e grupos e sua disponibilidade:
 
-|                                                            | 4D Developer (single-user)           | 4D Server |
+|                                                            | 4D Developer (usuário único)         | 4D Server |
 | ---------------------------------------------------------- | ------------------------------------ | --------- |
 | Adicionar/editar usuários e grupos                         | sim                                  | sim       |
 | Atribuir acesso de usuário/grupo a servidores              | sim                                  | sim       |
