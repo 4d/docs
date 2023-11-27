@@ -1,6 +1,6 @@
 ---
 id: templates
-title: Template pages
+title: Páginas de modelo
 ---
 
 4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
