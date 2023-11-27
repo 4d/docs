@@ -11,187 +11,187 @@ _プリエンプティブ_ モードで実行された場合、プロセスは C
 
 _コオペラティブ_ モードで実行された場合には、たとえマルチコアのマシン上であっても、すべてのプロセスは親アプリケーションのスレッドにより管理され、同じ CPU を共有します。
 
-As a result, in preemptive mode, overall performance of the application is improved, especially on multi-core machines, since multiple processes (threads) can truly run simultaneously. However, actual gains depend on the operations being executed. In return, since each thread is independent from the others in preemptive mode, and not managed directly by the application, there are specific constraints applied to code that you want to be compliant with preemptive use. Additionally, preemptive execution is only available in certain specific contexts.
+結果として、プリエンプティブモードでは、アプリケーションの全体的なパフォーマンスは向上します。マルチコアのマシン上では複数のプロセス (スレッド) が真実同時実行可能であるため、パフォーマンスの向上はさらに顕著になります。 (ただし、実際のパフォーマンスの差は、実行される処理に依存します。) その一方で、プリエンプティブモードではそれぞれのスレッドが他から独立しており、アプリケーションによって直接管理されている訳ではないため、プリエンプティブに準拠させるにあたってはメソッドに特定の制約が課されます。 それに加え、プリエンプティブ実行は特定のコンテキストでのみ使用可能です。
 
-## Availability of preemptive mode
+## プリエンプティブモードの利用可能状況
 
-The use of preemptive mode is supported in the following execution contexts:
+プリエンプティブモードの使用は、以下の実行コンテキストでサポートされています:
 
-| コンテキスト           | プリエンプティブ実行                                                             |
-| ---------------- | ---------------------------------------------------------------------- |
-| 4D Server        | ◯                                                                      |
-| 4D remote        | yes, with [ServerNet or QUIC](../settings/client-server#network-layer) |
-| 4D single-user   | ◯                                                                      |
-| Compiled mode    | ◯                                                                      |
-| Interpreted mode | no                                                                     |
+| コンテキスト      | プリエンプティブ実行                                                         |
+| ----------- | ------------------------------------------------------------------ |
+| 4D Server   | ◯                                                                  |
+| 4Dリモート      | ◯ ([ServerNet または QUIC](../settings/client-server#ネットワークレイヤー) 使用時) |
+| 4D シングルユーザー | ◯                                                                  |
+| コンパイルモード    | ◯                                                                  |
+| インタープリターモード | ×                                                                  |
 
-If the execution context supports preemptive mode and if the method is "thread-safe", a new 4D process launched using the `New process` or `CALL WORKER` commands, or the "Run method" menu item, will be executed in a preemptive thread.
+実行コンテキストがプリエンプティブモードをサポートし、かつメソッドが "スレッドセーフ" である場合、`New process` あるいは `CALL WORKER` コマンドあるいは "メソッドを実行" メニュー項目を使用してローンチされた新しい 4Dプロセスは、プリエンプティブスレッド内にて実行されます。
 
-Otherwise, if you call `New process` or `CALL WORKER` from an execution context that is not supported (i.e. from interpreted mode), the process is always cooperative.
+それ以外の場合で、サポートされていない実行コンテキスト (たとえばインタープリタモードなど) から `New process` あるいは `CALL WORKER` コマンドを呼び出した場合、プロセスは常にコオペラティブに実行されます。
 
-## Thread-safe vs thread-unsafe code
+## スレッドセーフとスレッドアンセーフ
 
-4D code can only be run in a preemptive thread when certain specific conditions are met. Each part of the code being executed (commands, methods, variables, functions, etc.) must be compliant with preemptive use. Elements that can be run in preemptive threads are called thread-safe and those that cannot be run in preemptive threads are called thread-unsafe.
+4Dコードは、いくつかの特定の条件に合致していた場合に限りプリエンプティブスレッド内で実行することができます。 実行コードのそれぞれの部分 (コマンド、メソッド、変数など) が プリエンプティブ実行に準拠している必要性があります。 プリエンプティブスレッドで実行可能な要素はスレッドセーフと呼ばれ、プリエンプティブスレッドで実行できない要素はスレッドアンセーフと呼ばれます。
 
 :::note
 
-Since a thread is handled independently starting from the parent process method, the entire call chain must not include any thread-unsafe code; otherwise, preemptive execution will not be possible. This point is discussed [in this paragraph](#when-is-a-process-started-preemptively).
+スレッドは、親プロセスメソッドをスタートとして独自に管理されているので、呼び出しチェーン全体のどこにおいてもスレッドアンセーフなコードが含まれていてはいけません。そのようなコードが含まれていた場合、プリエンプティブに実行することはできません。 この点については、[こちらの章](#プロセスがプリエンプティブに実行される条件とは) で詳細な説明があります。
 
 :::
 
-The "thread safety" property of each element depends on the element itself:
+要素毎の "スレッドセーフティ" プロパティは、その要素自身によります:
 
-- 4D commands: thread safety is an internal property. In the [4D Language Reference manual](https://doc.4d.com/4Dv20/4D/20.1/4D-Language-Reference.100-6479538.en.html), thread-safe commands are identified by the ![](../assets/en/Develop/thread-safe.png) icon. You can also use the [`Command name`](https://doc.4d.com/4dv20/help/command/en/page538.html) command to know if a command is thread-safe. A large part of 4D commands can run in preemptive mode.
-- Project methods: conditions for being thread-safe are listed in [this paragraph](#writing-a-thread-safe-method).
+- 4Dコマンド: スレッドセーフティは内部プロパティです。 [4Dランゲージリファレンス](https://doc.4d.com/4Dv20/4D/20.1/4D-Language-Reference.100-6479538.ja.html) 内では、スレッドセーフなコマンドは ![](../assets/en/Develop/thread-safe.png) のアイコンで識別されています。 [`Command name`](https://doc.4d.com/4dv20/help/command/ja/page538.html) コマンドを使用して、コマンドがスレッドセーフであるかどうかを知ることもできます。 4Dコマンドの大部分はプリエンプティブモードで実行可能です。
+- プロジェクトメソッド: スレッドセーフであるための条件は [こちらの段落](#スレッドセーフなメソッドの書き方) にまとめられています。
 
-Basically, code to be run in preemptive threads cannot call parts with external interactions, such as plug-in code or interprocess variables. Accessing data, however, is allowed since the 4D data server and ORDA support preemptive execution.
+原則として、プリエンプティブスレッド内で実行されるコードは外部との相互作用する部分、たとえばプラグインコードやインタープロセス変数などを呼び出すことはできません。 しかしながら、4Dデータサーバーと ORDA はプリエンプティブ実行をサポートしていることから、データアクセスは可能です。
 
-## Declaring a preemptive method
+## プリエンプティブ実行宣言
 
-By default, 4D executes all the project methods of your application in cooperative mode. If you want to benefit from the preemptive mode feature, the first step consists of explicitly declaring all methods that you want to be started in preemptive mode whenever possible -- that is, methods that you consider capable of being run in a preemptive process. The compiler will [check that these methods are actually thread-safe](#writing-a-thread-safe-method) at compile time. You can also disallow preemptive mode for some methods, if necessary.
+デフォルトでは、4D はアプリケーション内のプロジェクトメソッドをすべてコオペラティブモードで実行します。 プリエンプティブモードを利用したい場合は、まず最初に、可能な限りプリエンプティブモードで開始したいメソッドをすべて明示的に宣言することから始まります。これはつまり、プリエンプティブプロセスで実行可能なメソッドであるということです。 コンパイラーは、[それらのメソッドが実際にスレッドセーフであるかどうかをチェックします](#スレッドセーフなメソッドの書き方)。 また、必要であれば、一部のメソッドに対してプリエンプティブモードを禁止することもできます。
 
-Keep in mind that declaring a method "capable" of preemptive use makes it eligible for preemptive execution but does not guarantee that it will actually be executed in preemptive mode at runtime. Starting a process in preemptive mode results from an [evaluation performed by 4D](#when-is-a-process-started-preemptively) regarding the properties of all the methods in the call chain of the process.
+プリエンプティブで使用可能 ("capable") であると宣言することは、当該メソッドにプリエンプティブ実行の資格を与えますが、実行時にそのメソッドが実際にプリエンプティブモードで実行されることを保障するものではないことに留意が必要です。 プロセスをプリエンプティブモードで開始することは、プロセス内の呼び出しチェーン内のすべてのメソッドの関連プロパティを [4Dが評価して](#プロセスがプリエンプティブに実行される条件とは) 初めて可能になります。
 
-To declare your method eligible for use in preemptive mode, you need to use the "Execution mode" declaration option in the Method Properties dialog box:
+メソッドがプリエンプティブモードに則していることを宣言するためには、メソッドプロパティダイアログボックスの "実行モード" 宣言オプションを使用する必要があります:
 
 ![](../assets/en/Develop/preemptif.png)
 
 以下のオプションが提供されています:
 
-- **Can be run in preemptive processes**: By checking this option, you declare that the method is able of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. メソッドの "preemptive" プロパティは "capable" に設定されます。
+- **プリエンプティブプロセスで実行可能**: このオプションをチェックすると、メソッドがプリエンプティブプロセスでの実行が可能であると宣言し、可能な場合にはプリエンプティブモードで実行するべきと宣言します。 メソッドの "preemptive" プロパティは "capable" に設定されます。
 
   このオプションがチェックされている場合、4Dコンパイラーはメソッドが実際にプリエンプティブモードで実行可能かどうかを検証し、そうでない場合 (たとえば、プリエンプティブモードで実行不可能なコマンドやメソッドを直接的あるいは間接的に呼び出している場合など) にはエラーを返します。なお、コールチェーンはすべて解析されますが、最初のサブレベルに対してのみエラーが報告されます。 エラーの場合には、メソッドを編集してスレッドセーフにするか、あるいは別のオプションを選択します。
 
-  メソッドのプリエンプティブ性が証明されると、内部で "thread safe" というタグ付けがされ、すべての要件が満たされればプリエンプティブモードで実行されます。 This property defines its eligibility for preemptive mode but does not guarantee that the method will actually be run in preemptive mode, since this execution mode requires a [specific context](#when-is-a-process-started-preemptively).
+  メソッドのプリエンプティブ性が証明されると、内部で "thread safe" というタグ付けがされ、すべての要件が満たされればプリエンプティブモードで実行されます。 このプロパティはプリエンプティブモードの資格を定義しますが、メソッドが実際にプリエンプティブモードで実行されることを保証するものではありません。プリエンプティブ実行モードは [特定のコンテキスト](#プロセスがプリエンプティブに実行される条件とは) を必要とするからです。
 
-- **Cannot be run in preemptive processes**: By checking this option, you declare that the method must never be run in preemptive mode, and therefore must always be run in cooperative mode, as in previous 4D versions. メソッドの "preemptive" プロパティは "incapable" に設定されます。
+- **プリエンプティブプロセスでは実行不可**: このオプションをチェックすると、当該メソッドはプリエンプティブモードでの実行は不可能であると宣言し、以前の 4D のバージョンと同様に常にコオペラティブモードで実行されます。 メソッドの "preemptive" プロパティは "incapable" に設定されます。
 
   このオプションがチェックされている場合、4Dコンパイラーはメソッドがプリエンプティブ実行可能かどうかを検証しません。メソッドは内部で自動的に "thread unsafe" とタグ付けされます (たとえ、理論的にはスレッドセーフであってもです)。 ランタイムで呼び出された場合、このメソッドは同じスレッド内の他のメソッドを "汚染" し、他のメソッドがスレッドセーフであったとしても、スレッドはコオペラティブモードでの実行を強制されます。
 
-- **Indifferent**(default): By checking this option, you declare that you do not want to handle the preemptive property for the method. メソッドの "preemptive" プロパティは "indifferent" に設定されます。
+- **特に設定しない** (デフォルト): このオプションをチェックすると、当該メソッドについてはプリエンプティブプロパティを管理しないことを宣言します。 メソッドの "preemptive" プロパティは "indifferent" に設定されます。
 
   このオプションがチェックされているとき、4Dコンパイラーはメソッドのプリエンプティブ性を評価し、内部的に "thread safe" あるいは "thread unsafe" のタグ付けをします。 プリエンプティブ実行に関するエラーは報告されません。 メソッドがスレッドセーフと評価されていれば、ランタイムでプリエンプティブコンテキストから呼び出された場合にはプリエンプティブスレッド実行を妨げません。 逆に、メソッドがスレッドアンセーフであると評価された場合には、ランタイムで呼び出された場合に、プリエンプティブなスレッド実行を不可能にします。
 
-Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the `New process` command). 内部で "thread-safe" とタグ付けされている場合、そのタグはコールチェーン内で他のメソッドから呼び出された場合に限り考慮されます。
+このオプションを使用した場合、内部でのスレッドセーフ評価に関わらず、最初の親メソッドとしてメソッドが 4D から直接呼び出された場合 (たとえば `New process` コマンドから呼び出された場合など)、メソッドは常にコオペラティブモードで実行されます。 内部で "thread-safe" とタグ付けされている場合、そのタグはコールチェーン内で他のメソッドから呼び出された場合に限り考慮されます。
 
-:::note Particular case
+:::note 特殊なケース
 
-If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
-
-:::
-
-## When is a process started preemptively?
-
-:::info Reminder
-
-Preemptive execution is only available in compiled mode.
+メソッドの [**コンポーネントとホストプロジェクト間で共有**](../Project/code-overview.md#コンポーネントとホストプロジェクト間で共有) プロパティがチェックされている場合、**特に設定しない** オプションを選択するとメソッドは自動的にスレッドアンセーフであるとタグ付けされます。 共有コンポーネントメソッドをスレッドセーフにしたい場合には、**プリエンプティブプロセスで実行可能** オプションを明示的に選択する必要があります。
 
 :::
 
-In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named _parent_ method) and executes the process in preemptive or cooperative mode, depending on this property:
+## プロセスがプリエンプティブに実行される条件とは?
 
-- If the process method is thread-safe (validated during compilation), the process is executed in a preemptive thread.
-- If the process method is thread-unsafe, the process is run in a cooperative thread.
-- If the preemptive property of the process method was set to "indifferent", by compatibility the process is run in a cooperative thread (even if the method is actually capable of preemptive use). Note however that this compatibility feature is only applied when the method is used as a process method: a method declared "indifferent" but internally tagged "thread-safe" by the compiler can be called preemptively by another method (see below).
+:::info リマインダー
 
-The actual thread-safe property depends on the call chain. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. A preemptive thread can be created only when the entire chain is thread-safe and the process method has been declared "Can be run in preemptive process".
-On the other hand, the same thread-safe method may be executed in a preemptive thread when it is in one call chain, and in a cooperative thread when it is in another call chain.
+プリエンプティブ実行はコンパイル済みモードでのみ利用可能です。
 
-For example, consider the following project methods:
+:::
+
+コンパイル済みモードでは、`New process` あるいは `CALL WORKER` メソッドで作成されたプロセスを開始するとき、4D はプロセスメソッド (別名 _親_ メソッド) のプリエンプティブプロパティを読み、そのプロパティに応じてプロセスをプリエンプティブモードあるいはコオペラティブモードで実行します:
+
+- プロセスメソッドが "thread safe" であった場合 (コンパイル時に評価)、プロセスはプリエンプティブスレッド内で実行されます。
+- プロセスメソッドが "thread unsafe" であった場合、プロセスはコオペラティブスレッド内で実行されます。
+- プロセスメソッドのプリエンプティブプロパティが "indifferent" であった場合、(メソッドが実際にはプリエンプティブに実行可能だったとしても) 互換性のためにプロセスはコオペラティブスレッド内で実行されます。 この互換性機能はメソッドがプロセスメソッドとして使用された場合にのみ適用されるという点に注意してください。また "indifferent" と宣言されたもののコンパイラーによって内部で "thread safe" とタグ付けされたメソッドに関しては、他のメソッドからプリエンプティブに呼び出すことが可能です (以下参照)。
+
+実際のスレッドセーフプロパティは呼び出しチェーンによります。 "capable" と宣言されたプロパティを持つメソッドが、スレッドアンセーフなメソッドをサブレベル (どの階層でも) で呼び出した場合、コンパイルエラーが返されます。呼び出しチェーン全体の中で一つでもメソッドがスレッドアンセーフであれば、それは他のすべてのメソッドをいわば "汚染" し、プリエンプティブ実行はコンパイラーによって拒否されます。 プリエンプティブスレッドは、呼び出しチェーン全体がスレッドセーフであり、プロセスメソッドが "プリエンプティブプロセスで実行可能" と宣言されている場合にのみ作成可能です。
+その一方で、同じスレッドセーフメソッドを、呼び出しチェーン内ではプリエンプティブスレッド内で実行し、他の呼び出しチェーン内ではコオペラティブスレッド内で実行することが可能です。
+
+たとえば、次のプロジェクトメソッドの場合:
 
 ```4d
-  //MyDialog project method
-  //contains interface calls: will be internally thread unsafe
+  // MyDialog プロジェクトメソッド
+  // インターフェースコールを含み、内部的にスレッドアンセーフです
  $win:=Open form window("tools";Palette form window)
  DIALOG("tools")
 ```
 
 ```4d
-  //MyComp project method
-  //contains simple computing: will be internally thread safe
+  // MyComp プロジェクトメソッド
+  // 単純な演算を含み、内部的にスレッドセーフです
  #DECLARE($value : Integer) -> $result : Integer
  $result:=$value*2
 ```
 
 ```4d
-  //CallDial project method
+  // CallDial プロジェクトメソッド
  var $vName : Text
  MyDialog
 ```
 
 ```4d
-  //CallComp project method
+  // CallComp プロジェクトメソッド
  var $vAge : Integer
  MyComp($vAge)
 ```
 
-Executing a method in preemptive mode will depend on its "execution" property and the call chain. The following table illustrates these various situations:
+プリエンプティブモードでのメソッド実行は、"プリエンプティブ" プロパティや呼び出しチェーンに依存します。 以下の表は、これらの様々な状況をまとめたものです:
 
 ![](../assets/en/Develop/legend.png)
 
-| Declaration and call chain            | コンパイル | Resulting thread safety                | Execution               | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------- | ----- | -------------------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Develop/scenar1.png) | OK    | ![](../assets/en/Develop/scenar2.png)  | Preemptive              | CallComp is the parent method, declared "capable" of preemptive use; since MyComp is thread-safe internally, CallComp is thread-safe and the process is preemptive                                                                                                                                                                                                                                                                                                          |
-| ![](../assets/en/Develop/scenar3.png) | Error | ![](../assets/en/Develop/scenar4.png)  | Execution is impossible | CallDial is the parent method, declared "capable"; MyDialog is "indifferent". However, since MyDialog is thread-unsafe internally, it contaminates the call chain. The compilation fails because of a conflict between the declaration of CallDial and its actual capability. The solution is either to modify MyDialog so that it becomes thread-safe so that execution is preemptive, or to change the declaration of CallDial 's property in order to run as cooperative |
-| ![](../assets/en/Develop/scenar5.png) | OK    | ![](../assets/en/Develop/scenar6.png)  | Cooperative             | Since CallDial is declared "incapable" of preemptive use, compilation is thread-unsafe internally; thus execution will always be cooperative, regardless of the status of MyDialog                                                                                                                                                                                                                                                                                          |
-| ![](../assets/en/Develop/scenar7.png) | OK    | ![](../assets/en/Develop/scenar8.png)  | Cooperative             | Since CallComp is the parent method with property "Indifferent", then the process is cooperative even if the entire chain is thread-safe.                                                                                                                                                                                                                                                                                                                                   |
-| ![](../assets/en/Develop/scenar9.png) | OK    | ![](../assets/en/Develop/scenar10.png) | Cooperative             | Since CallDial is the parent method (property was "Indifferent"), then the process is cooperative and compilation is successful                                                                                                                                                                                                                                                                                                                                             |
+| 宣言と呼び出しチェーン                           | コンパイル | スレッドセーフの結果                             | 実行モード    | 説明                                                                                                                                                                                                                                                               |
+| ------------------------------------- | ----- | -------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Develop/scenar1.png) | OK    | ![](../assets/en/Develop/scenar2.png)  | プリエンプティブ | CallComp は親メソッドで、プリエンプティブな使用が "capable" (可能) と宣言されています。MyComp は内部的にスレッドセーフなので、CallComp も内部的にスレッドセーフとなり、プロセスはプリエンプティブになります                                                                                                                                        |
+| ![](../assets/en/Develop/scenar3.png) | エラー発生 | ![](../assets/en/Develop/scenar4.png)  | 実行不可能    | CallDial は親メソッドでプリエンプティブ "capable" (可能)、MyDialog は "indifferent" と宣言されています。 しかし、MyDialog が内部的にはスレッドアンセーフのため、呼び出しチェーンを "汚染" してしまいます。 CallDial の宣言と実際の実効性が矛盾するためコンパイルは失敗します。 解決方法は、MyDialog を変更してスレッドセーフにして実行をプリエンプティブにするか、CallDial のプロパティを変更してコオペラティブに実行するようにします。 |
+| ![](../assets/en/Develop/scenar5.png) | OK    | ![](../assets/en/Develop/scenar6.png)  | コオペラティブ  | CallDial はプリエンプティブな使用が "incapable"(不可) と宣言されているのでコンパイル時には内部的にスレッドアンセーフとなり、MyDialog の状況に関わらず実行はかならずコオペラティブになります。                                                                                                                                                  |
+| ![](../assets/en/Develop/scenar7.png) | OK    | ![](../assets/en/Develop/scenar8.png)  | コオペラティブ  | CallComp が親メソッドでプロパティが "indifferent" のため、呼び出しチェーンがすべてスレッドセーフでも、プロセスはコオペラティブになります。                                                                                                                                                                                |
+| ![](../assets/en/Develop/scenar9.png) | OK    | ![](../assets/en/Develop/scenar10.png) | コオペラティブ  | CallDial が親メソッドでプロパティが "indifferent" のため、プロセスはコオペラティブになり、コンパイルは成功します。                                                                                                                                                                                            |
 
-### How to find out the actual execution mode
+### 実際の実行モードの調べ方
 
-4D allows you to identify the execution mode of processes in compiled mode:
+4Dではプロセスに対してコオペラティブ実行かプリエンプティブ実行かを識別する機能を提供しています:
 
-- The [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html) command allows you to find out whether a process is run in preemptive or cooperative mode.
-- Both the Runtime Explorer and the [4D Server administration window](../ServerWindow/processes.md#process-type) display specific icons for preemptive processes.
+- [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/ja/page336.html) コマンドを使用するとプロセスがプリエンプティブモードあるいはコオペラティブモードで実行されているかを調べる事ができます。
+- ランタイムエクスプローラーと [4D Server管理ウィンドウ](../ServerWindow/processes.md#プロセスタイプ) は、どちらもプリエンプティブプロセスに対して新しい特定のアイコンを表示するようになりました:
 
-## Writing a thread-safe method
+## スレッドセーフなメソッドの書き方
 
-To be thread-safe, a method must respect the following rules:
+スレッドセーフであるためには、メソッドは以下のルールに従う必要があります:
 
-- It must have either the "Can be run in preemptive processes" or "Indifferent" property
-- It must not call a 4D command or function that is thread-unsafe.
-- It must not call another project method or function that is thread-unsafe
-- It must not call a plug-in that is thread-unsafe.
-- It must not use any interprocess variables(1)
-- It must not call interface objects(2) (there are exceptions however, see below).
+- "プリエンプティブプロセスで実行可能" もしくは "特に設定しない" プロパティを持っている
+- スレッドセーフでない 4Dコマンドを呼び出していない
+- スレッドセーフでない他のプロジェクトメソッドを呼び出していない
+- スレッドセーフでないプラグインを呼び出していない
+- インタープロセス変数を使用していない(1)
+- インターフェースオブジェクトを呼び出していない(2) (例外あり、以下参照)
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
-[Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes.
+(1) プリエンティブプロセス間 (およびすべてのプロセス間) でデータを交換するためには、[共有コレクションあるいは共有オブジェクト](../Concepts/shared.md) を引数としてプロセスに渡すか、[Storage](https://doc.4d.com/4dv20/help/command/ja/page1525.html) カタログを使用することができます。
+[ワーカープロセス](processes.md#ワーカープロセス) という新種のプロセスによって、プリエンプティブプロセスを含むあらゆるプロセス間でデータの交換ができるようになります。
 
-(2) The [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command provides an elegant solution to call interface objects from a preemptive process.
+[`CALL FORM`](https://doc.4d.com/4dv20/help/command/ja/page1391.html) コマンドを使用すると、プリエンプティブプロセスからインターフェースオブジェクトを呼び出せるというスマートなソリューションが可能になります。
 
 :::note 注記
 
-- In the case of a "Shared by components and host databases" method, the "Can be run in preemptive processes" property must be selected.
-- All SQL statements are thread-safe. SQL code inserted in `Begin SQL`/`End SQL` blocks must comply with the following conditions:
-  - It must apply to the 4D Server or 4D local database (ODBC or remote databases via `SQL LOGIN` are thread-unsafe. However, local databases used with `USE DATABASE` are thread-safe).
-  * Any trigger called by SQL statements must be thread-safe (see [Triggers](#triggers) below).
+- "コンポーネントとホストデータベース間で共有" メソッドの場合、"プリエンプティブプロセスで実行可能" プロパティが選択されている必要があります。
+- すべての SQLステートメントはスレッドセーフです。 `Begin SQL`/`End SQL` ブロックに挿入される SQLコードは、以下の条件に従う必要があります:
+  - 4D Server あるいは 4Dローカルデータベースに適用される (ODBC あるいは `SQL LOGIN` 経由のリモートデータベースではスレッドセーフではありません。 ただし、`USE DATABASE` を使用したローカルなデータベースはスレッドセーフです)。
+  * SQLステートメントから呼び出されるトリガーはすべてスレッドセーフでなければなりません (以下の[トリガー](#トリガー) を参照ください)。
 
 :::
 
-Methods with the "Can be run in preemptive processes" property will be checked by 4D during compilation. A compilation error is issued whenever the compiler finds something that prevents it from being thread-safe:
+"プリエンプティブプロセスで実行可能" プロパティを持つメソッドは、コンパイル時に 4D によってチェックされます。 メソッドがスレッドセーフになるのを妨げる要因をコンパイラーが見つけた場合にはコンパイルエラーが生成されます:
 
 ![](../assets/en/Develop/thread-unsafe.png)
 
 :::info
 
-It is possible to [disable locally the thread-safety verification](#).
+スレッドセーフであるかどうかの検証は [局所的に無効化](#部分的なスレッドセーフ検証の無効化) することができます
 
 :::
 
-The [symbol file](../Project/compiler.md/#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+[シンボルファイル](../Project/compiler.md/#メソッドの全リスト) (有効化されていた場合)には、それぞれのメソッドについてのスレッドセーフの状態が含まれます。
 
 ### ユーザーインターフェース
 
-Since they are "external" accesses, calls to user interface objects such as forms, as well as to the Debugger, are not allowed in preemptive threads.
+厳密に言えば "外部" アクセスにあたるため、フォームやデバッガーなどのユーザーインターフェースオブジェクトへの呼び出しは、プリエンプティブスレッドでは許可されません。
 
-The only possible accesses to the user interface from a preemptive thread are:
+プリエンプティブスレッドからアクセス可能なユーザーインターフェースは以下のものに限られます:
 
-- [Standard error dialog](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). The **Trace** button is disabled.
-- Standard progress indicators
-- `ALERT`, `Request` and `CONFIRM` dialogs. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
+- [標準のエラーダイアログ](../Debugging/basics)。 ダイアログはユーザーモードプロセス (4D)、あるいはサーバーユーザーインターフェースプロセス (4D Server) 内で表示されます。 ただし **トレース** ボタンは無効化されます。
+- 標準の進捗インジケーター
+- `ALERT`、`Request` そして `CONFIRM` ダイアログ。 ダイアログはユーザーモードプロセス (4D)、あるいはサーバーユーザーインターフェースプロセス (4D Server) 内で表示されます。 ただし、4D Server を Windows上でユーザー操作を許可しないサービスとしてローンチした場合には、ダイアログは表示されないという点に注意して下さい。
 
-### Triggers
+### トリガー
 
 When a method uses a command that can call a trigger, the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
 
@@ -255,7 +255,7 @@ The use of DocRef type parameters (opened document reference, used or returned b
 - When called from a preemptive process, a `DocRef` reference is only usable from that preemptive process.
 - When called from a cooperative process, a `DocRef` reference is usable from any other cooperative process.
 
-## Disabling thread safety checking locally
+## 部分的なスレッドセーフ検証の無効化
 
 There may be some cases where you prefer that thread safety checking of commands not be applied to certain parts of code, for example when it contains thread-unsafe commands that you know to be never called.
 
