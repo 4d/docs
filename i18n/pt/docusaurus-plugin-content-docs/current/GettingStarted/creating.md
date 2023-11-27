@@ -1,11 +1,10 @@
 ---
 id: creating
-title: Trabalhar com um projecto
+title: Creating or opening a project
 ---
 
 Projetos 4D são criados e desenvolvidos usando a aplicação **4D** , que fornece um abrangente Ambiente Integrado de Desenvolvimento (IDE). **4D Server** também pode criar novos projetos vazios.
 
-O desenvolvimento multi-usuário é gerido através de ferramentas de **source control** padrão (Perforce, Git, SVN, etc.), que permitem aos programadores trabalhar em ramos diferentes e comparar, fundir ou reverter modificações.
 
 ## Criar arquivos de projeto
 
@@ -91,8 +90,8 @@ Arquivos`.4DLink` podem salvar o endereço de um projeto 4D assim como seus iden
 
 4D gera automaticamente um `. DLink` arquivo quando um projeto local é aberto pela primeira vez ou quando se conecta a um servidor pela primeira vez. O arquivo é armazenado na pasta de preferências locais no seguinte local:
 
-* Windows 7 e superior: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX representa o número da versão da aplicação. Por exemplo, "Favorites v19" para 4D v19.
 
@@ -103,23 +102,5 @@ Esta pasta está dividida em duas subpastas:
 
 Os arquivos `.4DLink` podem também ser criados com um editor XML.
 
-4D fornece um DTD descrevendo as chaves XML que podem ser usadas para construir um arquivo `.4DLink`. Este DTD é nomeado database_link.dtd e é encontrado na subpasta \Resources\DTD\ da aplicação 4D.
+4D fornece um DTD descrevendo as chaves XML que podem ser usadas para construir um arquivo `.4DLink`. This DTD is named database_link.dtd and is found in the `\Resources\DTD\` subfolder of the 4D application.
 
-## Guardar arquivos
-
-Ao trabalhar em um projeto em 4D, você pode usar editores 4D integrados para criar, modificar ou salvar itens de estrutura, métodos, formulários, etc. Modificações são salvas no disco quando selecionar um item de menu **Salvar** ou quando a janela do editor perder ou ficar com o foco.
-
-Jà que os editores usam arquivos no disco, podem ocorrer conflitos potenciais se o mesmo arquivo for modificado ou até mesmo excluído de locais diferentes. Por exemplo, se o mesmo método for editado em uma janela do Editor de Código *e* em um editor de texto, salvar ambas as modificações resultará num conflito.
-
-A estrutura de desenvolvimento 4D inclui um gerenciador de acesso a ficheiros para controlar o acesso simultâneo:
-
-* se um arquivo aberto for somente leitura no nível do SO, um ícone bloqueado será exibido no editor: ![](../assets/en/Project/lockicon.png)
-* se um arquivo aberto for editado simultaneamente a partir de diferentes locais, 4D exibe uma caixa de diálogo de alerta ao tentar salvar as alterações:
-
-![](../assets/en/Project/projectReload.png)
-
-* **Sim**: descartar as alterações do editor e recarregar a versão modificada
-* **Não**: salve as alterações e substitui a outra versão
-* **Cancelar**: não guardar
-
-Esta funcionalidade está ativada para todos os editores 4D incorporados (Estrutura, Formulário, Método, Definições e Caixa de Ferramentas).
