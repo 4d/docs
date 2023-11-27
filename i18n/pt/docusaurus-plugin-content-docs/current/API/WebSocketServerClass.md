@@ -13,7 +13,7 @@ title: WebSocketServer
 
 The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
 
-:::note About WebSocket Servers
+:::note Sobre os servidores WebSocket
 
 O protocolo WebSocket proporciona um canal de comunicação full-duplex entre um servidor WebSocket e um cliente (por exemplo, um navegador Web). For more information on WebSocket servers, read [this page on Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
 
@@ -109,13 +109,13 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 | ----------------------------------- | ------------------ | :-: | ---------------------------------------------------------------------------------------- | ---------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             |  -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |                  |
 | [options](#options-parameter)       | Object             |  -> | Parâmetros de configuração do WebSocket                                                  |                  |
-| Resultados                          | 4D.WebSocketServer |  <- | New WebSocketServer object                                                               | <!-- END REF --> |
+| Resultados                          | 4D.WebSocketServer |  <- | Novo objeto WebSocketServer                                                              | <!-- END REF --> |
 
 The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server that will use the specified _WSSHandler_ callbacks and (optionally) _options_, and returns a `4D.WebSocketServer` object<!-- END REF -->.
 
 Calling this function requires that the [4D Web Server](WebServerClass.md) is started. The **host** and **port** of the WebSocket server are the same as the host and port of the 4D Web Server.
 
-### _WSSHandler_ parameter
+### Parâmetro _WSSHandler_
 
 In the _WSSHandler_ parameter, pass an instance of a user class that will be called every time an event occurs on the WebSocket server --essentially, connection events. The class should define the following callback functions (only `onConnection` is mandatory):
 
@@ -133,7 +133,7 @@ In the _WSSHandler_ parameter, pass an instance of a user class that will be cal
 | WSServer  |         | 4D.WebSocketServer |  <- | Objecto actual do servidor WebSocket                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | "event"   |         | Object             |  <- | Parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |           | type    | Text               |     | "connection"                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|           | request | Object             |     | `request` object. Contém informações sobre o pedido de ligação (ver abaixo)                                                                                                                                                                                                                                                                                                                                                                                                    |
+|           | request | Object             |     | objeto `request`. Contém informações sobre o pedido de ligação (ver abaixo)                                                                                                                                                                                                                                                                                                                                                                                                    |
 | Resultado |         | Object             |  -> | [`connectionHandler` object](#connectionhandler-object) (see below). If this function returns a `connectionHandler` object, a [`4D.WebSocketConnection` object](WebSocketConnectionClass.md#websocketconnection-object) is automatically created and added to the [collection of connections](#connections). This object is then received as parameter in each function of the `connectionHandler` object. Se o valor devolvido for nulo ou indefinido, a ligação é cancelada. |
 
 Esta chamada de retorno é feita quando o handshake estiver concluído. It must be called with a valid [`connectionHandler` object](#connectionhandler-object) to create the WebSocket connection, otherwise the connection is cancelled.
@@ -169,7 +169,7 @@ Evento emitido quando o servidor HTTP ou o servidor WebSocket é encerrado.
 
 Evento emitido quando ocorre um erro no servidor WebSocket.
 
-### Example of `WSSHandler` class
+### Exemplo de classe `WSSHandler`
 
 This example of a basic chat feature illustrates how to handle WebSocket server connections in a _WSSHandler_ class.
 
@@ -201,7 +201,7 @@ LogFile("!!! Server error: "+$event.errors.first().message)
 
 ```
 
-### `request` object
+### objeto `request`
 
 A `request` object contains the following properties:
 
@@ -212,7 +212,7 @@ A `request` object contains the following properties:
 | url           | Text   | contém apenas o URL que está presente no pedido HTTP efectivo. Ex: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"               |
 | remoteAddress | Text   | Endereço IP do cliente                                                                                                                       |
 
-### `connectionHandler` object
+### objeto `connectionHandler`
 
 As a result of the `WSHandler.onConnection` callback, pass a `connectionHandler` object, which is an instance of a user class that will be called every time an event occurs in the WebSocket connection --essentially, messages received. The class should define the following callback functions (only `onMessage` is mandatory):
 
@@ -267,7 +267,7 @@ Função chamada quando o WebSocket é fechado.
 
 Função chamada quando ocorre um erro.
 
-### Example of `connectionHandler` class
+### Exemplo de classe `connectionHandler`
 
 This example of a basic chat feature illustrates how to handle messages in a _connectionHandler_ class.
 
@@ -300,7 +300,7 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 ```
 
-### _options_ parameter
+### Parâmetro _options_
 
 In the optional _options_ parameter, pass an object that contains the following properties:
 
@@ -371,9 +371,9 @@ Esta propriedade é só de leitura.
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| Parâmetro | Tipo |     | Descrição                       |                  |
-| --------- | ---- | :-: | ------------------------------- | ---------------- |
-|           |      |     | Does not require any parameters | <!-- END REF --> |
+| Parâmetro | Tipo |     | Descrição                  |                  |
+| --------- | ---- | :-: | -------------------------- | ---------------- |
+|           |      |     | Não exige nenhum parâmetro | <!-- END REF --> |
 
 #### Descrição
 
