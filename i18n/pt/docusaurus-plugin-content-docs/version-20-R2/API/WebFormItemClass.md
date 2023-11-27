@@ -33,9 +33,9 @@ The `WebFormItem` class is detailed in the [Qodly documentation](https://develop
 **.hide**()<!-- END REF -->
 
 <!-- REF #WebFormItemClass.hide().Params -->
-| Parâmetro | Tipo |  | Descrição                       |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
 <!-- END REF -->
 
 
@@ -54,9 +54,9 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 
 <!-- REF #WebFormItemClass.show().Params -->
-| Parâmetro | Tipo |  | Descrição                       |
-| --------- | ---- |::| ------------------------------- |
-|           |      |  | Does not require any parameters |
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
 <!-- END REF -->
 
 
