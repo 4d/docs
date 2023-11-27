@@ -1,6 +1,6 @@
 ---
 id: processes
-title: Processes and Workers
+title: Processos e Workers
 ---
 
 Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. These operations are called **processes**. Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
@@ -13,7 +13,7 @@ The 4D application creates processes for its own needs, for example the Main pro
 
 :::
 
-## Creating and clearing processes
+## Criar e limpar processos
 
 There are several ways to create a new process:
 
@@ -24,7 +24,7 @@ There are several ways to create a new process:
 
 :::note
 
-In Desktop applications, processes can be run by choosing menu commands. In the [Menu Bar editor](../Menus/creating.md), select the menu command and click the **Start a New Process** check box. The method associated with the menu command is the process method.
+In Desktop applications, processes can be run by choosing menu commands. In the [Menu Bar editor](../Menus/creating.md), select the menu command and click the **Start a New Process** check box. O método associado ao comando do menu é o método de processo.
 
 :::
 
@@ -37,18 +37,18 @@ A process can be cleared under the following conditions (the first two condition
 
 A process can create another process. Processes are not organized hierarchically—all processes are equal, regardless of the process from which they have been created. Once the “parent” process creates a “child” process, the child process will continue regardless of whether or not the parent process is still executing.
 
-## Elements of a process
+## Elementos de um processo
 
 Each process contains specific elements that it can handle independently from other processes.
 
-### Language elements
+### Elementos da linguagem
 
 - Variables: Every process has its own [process variables](../Concepts/variables#process-variables). Process variables are recognized only within the domain of their native process.
 - Process sets: Each process has its own process sets. `LockedSet` é um conjunto de processos. Process sets are cleared as soon as the process method ends.
 - [Error-handling method](../Concepts/error-handling#installing-an-error-handling-method): Each process can have its own error-handling method.
 - [Debugger window](../Debugging/debugger#calling-the-debugger): Each process can have its own Debugger window.
 
-### Interface elements
+### Elementos da interface
 
 Interface elements are used in [Desktop applications](../category/desktop-applications). Eles consistem nos seguintes:
 
@@ -120,7 +120,7 @@ Although they have been designed mainly for interprocess communication in the co
 A worker is used to ask a process to execute project methods. Um worker consiste de:
 
 - a unique name (_warning: the name is case sensitive_), also used to name its associated process
-- an associated process, that may or may not exist at a given moment
+- um processo associado, que pode ou não existir em um determinado momento
 - a message box
 - a startup method (optional)
 
