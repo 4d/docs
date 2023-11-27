@@ -88,7 +88,7 @@ Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referen
 
 ## Uso de los atributos de entidades
 
-Entity attributes store data and map corresponding fields in the corresponding table. Los atributos de entidad del tipo de almacenamiento pueden definirse u obtenerse en forma de propiedades simples del objeto entidad, mientras que las entidades de tipo **relatedEntity** o **relatedEntities** devolverán una entidad o una selección de entidades.
+Los atributos de entidad almacenan los datos y mapean los campos correspondientes en la tabla correspondiente. Los atributos de entidad del tipo de almacenamiento pueden definirse u obtenerse en forma de propiedades simples del objeto entidad, mientras que las entidades de tipo **relatedEntity** o **relatedEntities** devolverán una entidad o una selección de entidades.
 > Para más información sobre el tipo de atributo, consulte el párrafo [Atributos de almacenamiento y de relación](dsMapping.md#storage-and-relation-attributes).
 
 Por ejemplo, para definir un atributo de almacenamiento:
