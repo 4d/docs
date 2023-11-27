@@ -1,6 +1,6 @@
 ---
 id: debugLogFiles
-title: Descrição de arquivos de histórico
+title: Log files
 ---
 
 Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os registos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
