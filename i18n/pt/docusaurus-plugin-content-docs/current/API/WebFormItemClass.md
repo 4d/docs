@@ -41,7 +41,7 @@ The `WebFormItem` class is detailed in the [Qodly documentation](https://develop
 
 #### Descrição
 
-A função `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->hides the component<!-- END REF -->.
+A função `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->oculta o componente<!-- END REF -->.
 
 
 For more information, please refer to the [`.hide()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
@@ -62,7 +62,7 @@ For more information, please refer to the [`.hide()` description in the Qodly do
 
 #### Descrição
 
-A função `.show()` <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.
+A função `.show()` <!-- REF #WebFormItemClass.show().Summary -->torna o componente visível<!-- END REF -->.
 
 For more information, please refer to the [`.show()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#show).
 
@@ -70,7 +70,7 @@ For more information, please refer to the [`.show()` description in the Qodly do
 ### .addCSSClass()
 
 <!-- REF #WebFormItemClass.addCSSClass().Syntax -->
-**.addCSSClass**(*className* : string)<!-- END REF -->
+**.addCSSClass**(*className*: string)<!-- END REF -->
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 | Parâmetro | Tipo   |    | Descrição                                         |
@@ -99,7 +99,7 @@ For more information, please refer to the [`.addCSSClass` description in the Qod
 
 #### Descrição
 
-A função `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->removes the class specified in *className* from the component<!-- END REF -->.
+A função `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->remove a classe especificada em *className* do componente<!-- END REF -->.
 
 For more information, please refer to the [`.removeCSSClass()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass). 
 

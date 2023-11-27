@@ -121,13 +121,10 @@ Sie können zwei Arten von Objekten erstellen:
 - shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Diese Objekte lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Objekte wird über `Use...End use` Strukturen gesteuert. For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
-## Grundlagen der Syntax
 
-Mit Objektnotation können Sie auf Werte von Objekteigenschaften über eine Kette von Tokens zugreifen.
+## Properties
 
-### Objekteigenschaften
-
-Objektnotation bietet zwei Wege, um auf Objekteigenschaften zuzugreifen:
+Object notation can be used to access object property values through a chain of tokens. Objektnotation bietet zwei Wege, um auf Objekteigenschaften zuzugreifen:
 
 - using a "dot" symbol: > object.propertyName
 
@@ -154,6 +151,9 @@ Da der Wert einer Objekteigenschaft ein Objekt oder eine Collection sein kann, a
 ```
 
 Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein Objekt enthalten oder zurückgeben, wie z.B:
+
+
+
 
 - **Die Objekte selbst** (gespeichert in Variablen, Feldern, Objekteigenschaften, Objekt Arrays oder Collection Elementen). Beispiele:
 
@@ -187,28 +187,6 @@ Objektnotation ist in allen Elementen der Programmiersprache verfügbar, die ein
      myColl.length //size of the collection
 ```
 
-### Zeiger
-
-**Vorbemerkung:** Da Objekte immer per Referenz übergeben werden, sind normalerweise keine Zeiger erforderlich. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
-
-Die Objektnotation mit Zeigern ist ähnlich wie die Objektnotation direkt mit Objekten, der Unterschied ist Weglassen des Zeichens "Punkt".
-
-- Direkter Zugriff:
-> pointerOnObject->propertyName
-
-- Zugriff über Name:
-> pointerOnObject->["propertyName"]
-
-Beispiel:
-
-```4d
- var vObj : Object
- var vPtr : Pointer
- vObj:=New object
- vObj.a:=10
- vPtr:=->vObj
- x:=vPtr->a //x=10
-```
 
 ### Wert Null
 
@@ -264,7 +242,7 @@ Das Bewerten einer Objekteigenschaft kann manchmal einen undefinierten Wert erge
      End case
 ```
 
-- Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
+Einer vorhandenen Objekteigenschaft einen undefinierten Wert zuweisen, initialisiert je nach Typ ihren Wert neu oder hebt ihn auf:
  - Objekt, Collection, Zeiger: Null
  - Bild: Leeres Bild
  - Boolean: Falsch
@@ -291,6 +269,48 @@ Erwartet Ihr 4D Code Ausdrücke eines bestimmten Typs, können Sie sicherstellen
 ```
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
+
+
+### Zeiger
+
+**Vorbemerkung:** Da Objekte immer per Referenz übergeben werden, sind normalerweise keine Zeiger erforderlich. 4D verwendet bei Objekten intern automatisch einen ähnlichen Mechanismus wie bei einem Zeiger. Das minimiert Speicherplatz, Sie können die Parameter verändern und Änderungen zurückgeben. Folglich benötigen Sie eigentlich keine Zeiger. Wollen Sie jedoch Zeiger verwenden, können Sie über Zeiger auf Eigenschaftswerte zugreifen.
+
+Die Objektnotation mit Zeigern ist ähnlich wie die Objektnotation direkt mit Objekten, der Unterschied ist Weglassen des Zeichens "Punkt".
+
+- Direkter Zugriff:
+> pointerOnObject->propertyName
+
+- Zugriff über Name:
+> pointerOnObject->["propertyName"]
+
+Beispiel:
+
+```4d
+ var vObj : Object
+ var vPtr : Pointer
+ vObj:=New object
+ vObj.a:=10
+ vPtr:=->vObj
+ x:=vPtr->a //x=10
+```
+
+
+## Resources
+
+Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object.
+
+For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
+
+If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. Beispiel:
+
+```4d
+
+$doc:=WP Import document("large_novel.4wp")
+    ... // do something with $doc
+$doc:=Null  // free resources occupied by $doc
+    ... // continue execution with more free memory
+
+```
 
 ## Beispiele
 
@@ -333,7 +353,8 @@ Der Einsatz von Objektnotation im 4D Code vereinfacht die Verwaltung von Objekte
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-- Mit dem Operator [ ] können Sie auf Eigenschaften als String zugreifen
+
+- You can access properties as strings using the `[]` operator
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

@@ -23,7 +23,7 @@ As seguintes regras são aplicadas a quaisquer conversões:
 * Uma datastore só referencia as tabelas com uma única chave primária. As tabelas seguintes não são referenciadas:
   * Tabelas sem chave primária
   * Tabelas com chaves primárias compostas.
-* [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. BLOB type attributes are returned as Null in entities and cannot be assigned.
+* [BLOB](Concepts/dt_blob.md) type attributes are not managed in the datastore. Os atributos BLOB são retornados como Null nas entidades e não podem ser atribuídos.
 
 > ORDA mapping does not take into account:  
 > 
@@ -70,7 +70,7 @@ When handled through the code, the datastore is an object whose properties are a
 * the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
 * one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
 
-A datastore references only a single local or remote database.
+Um datastore faz referência apenas a um único banco de dados local ou remoto.
 
 O próprio objeto datastore não pode ser copiado como um objeto:
 
@@ -135,7 +135,7 @@ Dataclass properties are attribute objects describing the underlying fields or r
  $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. Essa sintaxe NAO devolve valores mantidos dentro do atributo, mas sim devolve referências aos próprios atributos. To handle values, you need to go through [Entities](#entity).
+This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. Essa sintaxe NAO devolve valores mantidos dentro do atributo, mas sim devolve referências aos próprios atributos. Para manejar os valores, é necessário passar por [Entidades](#entity).
 
 All eligible fieds in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
 

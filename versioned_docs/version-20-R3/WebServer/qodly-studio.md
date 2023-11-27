@@ -284,6 +284,14 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 ```
 
+### Offline use
+
+You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
+
+- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
+
+
 ## About license usage
 
 To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.

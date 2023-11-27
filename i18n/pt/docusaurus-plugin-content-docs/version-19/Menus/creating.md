@@ -48,7 +48,7 @@ For each of the menus, you must add the commands that appear when the menu drops
 
 Para adicionar um item de menu:
 
-1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
+1. In the list of source menus, select the menu to which you want to add a command. Se o menu já contiver comandos, eles serão exibidos na lista central. If you want to insert the new command, select the command that you want it to appear above. Você sempre pode reorganizar o menu posteriormente, arrastando e soltando.
 2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
 3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Pode conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see below).
 
@@ -60,7 +60,7 @@ Utilize `INSERT MENU ITEM` ou `APPEND MENU ITEM` para inserir ou adicionar itens
 
 ### Utilizar o editor de menus
 
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. When you delete the last reference of a menu, 4D displays an alert.
+Você pode excluir uma barra de menus, um menu ou um item de menu a qualquer momento. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. When you delete the last reference of a menu, 4D displays an alert.
 
 Para eliminar uma barra de menu, um menu ou um item de menu:
 
@@ -71,7 +71,7 @@ Para eliminar uma barra de menu, um menu ou um item de menu:
 
 ### Utilizar a linguagem 4D
 
-Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` to unload the menu reference from the memory.
+Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` para descarregar a referência de menu da memória.
 
 ## Anexar os menus
 

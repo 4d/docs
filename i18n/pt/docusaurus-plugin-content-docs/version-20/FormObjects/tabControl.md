@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Abas
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.
@@ -9,7 +9,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 ![](../assets/en/FormObjects/tabControl1.png)
 
-To navigate from screen to screen, the user simply clicks the desired tab.
+Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
 The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
@@ -75,7 +75,7 @@ You can assign a [choice list](properties_DataSource.md#choice-list-static-list)
 
 ### Utilizar um array texto
 
-You can create a Text array that contains the names of each page of the form. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+Você pode criar um array Text que contenha os nomes de cada página do formulário. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
 
 ```4d
  ARRAY TEXT(arrPages;3)

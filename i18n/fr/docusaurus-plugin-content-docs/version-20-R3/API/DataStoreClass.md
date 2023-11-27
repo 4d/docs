@@ -995,7 +995,7 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 <!-- REF #DataStoreClass.setGlobalStamp().Syntax -->**.setGlobalStamp**(*newStamp*: Integer)**<!-- END REF -->
 
 
-<!-- REF #DataStoreClass.getGlobalStamp().Params -->
+<!-- REF #DataStoreClass.setGlobalStamp().Params -->
 | Paramètres | Type |    | Description                                                                   |
 | ---------- | ---- | -- | ----------------------------------------------------------------------------- |
 | newStamp   | Real | -> | Nouvelle valeur du marqueur de modification global|<!-- END REF -->

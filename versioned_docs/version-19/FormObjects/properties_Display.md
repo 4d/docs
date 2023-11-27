@@ -60,7 +60,7 @@ The table below shows choices available:
 
 |Format name|JSON String|Example (US system)|
 |---|---|---|
-|System date short|- (default)|03/25/20     |
+|System date short|systemShort (default)|03/25/20     |
 |System date abbreviated *(1)*|systemMedium|Wed, Mar 25, 2020  |
 |System date long|systemLong|Wednesday, March 25, 2020 |
 |RFC 822|rfc822|Tue, 25 Mar 2020 22:00:00 GMT |

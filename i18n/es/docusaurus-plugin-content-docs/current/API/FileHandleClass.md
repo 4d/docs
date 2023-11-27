@@ -11,6 +11,12 @@ Los objetos manejadores de archivos se crean con la función [`file.open()`](Fil
 
 Gracias al objeto estándar 4D *refcounting*, un manejador de archivo se elimina automáticamente cuando deja de ser referenciado y, por tanto, el objeto [`File`](FileClass) solicitado se cierra automáticamente. Por lo tanto, con los gestores de archivos no hay que preocuparse por el cierre de los documentos.
 
+:::note
+
+Los recursos de los objetos, como los documentos, se liberan cuando ya no existen referencias en la memoria, lo que ocurre, por ejemplo, al final de la ejecución del método para las variables locales. Si desea "forzar" la liberación de los recursos del objeto en cualquier momento, puede [anular sus referencias](../Concepts/dt_object.md#resources).
+
+:::
+
 
 ### Ejemplo
 
@@ -276,7 +282,7 @@ Esta propiedad es **lectura/escritura**.
 
 :::caution
 
-When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
+Cuando se crea un filehandle, el valor `.offset` es un número de bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Según el conjunto de caracteres del archivo, un caracter corresponde a uno o varios bytes. Por lo tanto, si comienza a leer con `readBlob()` y luego llama a `readText()`, la lectura de texto comenzará en una posición inconsistente. Por lo tanto, es esencial que establezca usted mismo la propiedad `.offset` si pasa de leer/escribir blob a leer/escribir texto en el mismo filehandle. Por ejemplo:
 
 ```4d
   // Abrir un fichero de texto europeo utilizando la codificación utf-16 (dos bytes por caracter)
@@ -367,11 +373,11 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 La función `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->devuelve una línea de texto desde la posición actual hasta que se encuentre un delimitador de fin de línea o se llegue al final del documento<!-- END REF -->.
 
-When this function is executed, the current position ([`.offset`](#offset)) is updated.
+Cuando se ejecuta esta función, la posición actual ([`.offset`](#offset)) se actualiza.
 
 :::caution Advertencia
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la descripción de [.offset](#offset).
 
 :::
 
@@ -418,7 +424,7 @@ Cuando se ejecuta esta función, el ([.offset](#offset)) se coloca justo despué
 
 :::caution Advertencia
 
-This function assumes that the [`.offset`](#offset) property is a number of characters, not a number of bytes. For more information, see the [.offset description](#offset).
+Esta función asume que la propiedad [`.offset`](#offset) es un número de caracteres, no un número de bytes. Para más información, consulte la descripción de [.offset](#offset).
 
 :::
 

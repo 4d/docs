@@ -11,7 +11,7 @@ No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das 
 Existem duas maneiras de criar uma nova entidade numa dataclass:
 
 *   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-*   You can also create an entity using the `dataClass.new( )` method.
+*   Você também pode criar uma entidade usando o método `dataClass.new()`.
 
 Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the `entity.save( )` method.
 
@@ -90,7 +90,7 @@ You can handle entities like any other object in 4D and pass their references di
 
 ## Utilização de atributos de entidades
 
-Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
+Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
 > For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
 
 Por exemplo, para definir um atributo de armazenamento:

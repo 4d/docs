@@ -45,7 +45,7 @@ You install plug-ins in the 4D environment by copying their files into the appro
 
 “PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
 
-You can put the PlugIns folder in two different places:
+Você pode colocar a pasta PlugIns em dois locais diferentes:
 
 - Ao nível da aplicação 4D executável, ou seja:
   - No Windows: junto ao ficheiro .exe
@@ -53,7 +53,7 @@ You can put the PlugIns folder in two different places:
     In this case, plug-ins are available in every database opened by this application.
 - No mesmo nível do arquivo de estrutura do banco de dados. In this case,  plug-ins are only available in this particular database.
 
-The choice of location depends on how you want to use the plug-in.
+A escolha do ubicação depende de como você deseja usar o plug-in.
 
 If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
 

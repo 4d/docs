@@ -31,7 +31,7 @@ No modo standard, está aberto um projeto. Neste modo, algumas funções de manu
 
 ## Disponibilidade de funcionalidades
 
-Certain MSC functions are not available depending on the MSC opening mode:
+Certas funções do CSM não estão disponíveis dependendo do modo de abertura do CSM:
 
 - Backup function is only available when the project is open (the MSC must have been opened in standard mode).
 - Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.

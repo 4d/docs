@@ -4,6 +4,18 @@ title: Release Notes
 ---
 
 
+## 4D v20 R4
+
+Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D v20 R4.
+
+
+#### Points forts
+
+- Support of [`ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
+
+
+
 ## 4D v20 R3
 
 Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20 R3.
@@ -14,7 +26,8 @@ Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-
 - Nouvelle fonction [`collection.multiSort`](../API/CollectionClass.md#multisort) .
 - Prise en charge du paramètre *context* dans [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Prise en charge de la propriété `headers` dans le paramètre *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
-- [Marqueur global de modification](../ORDA/global-stamp.md) pour faciliter la mise en œuvre des modules de synchronisation des données. Nouvelles fonctions : [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) et [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp).
+- [Marqueur global de modification](../ORDA/global-stamp.md) pour faciliter la mise en œuvre des modules de synchronisation des données. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
+- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
 - Prise en charge de [l'initialisation de la valeur et du type de la variable dans la ligne de déclaration](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Les paramètres du fichier journal sont désormais [sauvegardés avec le fichier de données courant](../Backup/settings.md#log-file-management)
 - Nouvelle syntaxe pour [déclarer un nombre variable de paramètres](../Concepts/parameters.md#declaring-variadic-parameters)
@@ -22,6 +35,7 @@ Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-
 - Commandes du langage 4D : [page What's news](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) sur doc.4d.com.
 - 4D Write Pro: [page What's new](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) sur doc.4d.com.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R3): Liste de tous les bugs corrigés dans 4D v20 R3.
+
 
 
 #### Changements de comportement
@@ -55,6 +69,11 @@ Lisez [**Les nouveautés de 4D v20 R2**](https://blog.4d.com/fr-whats-new-in-4d-
 
 Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20/), le billet de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20.
 
+:::caution Minimal client version for 4D Server v20.2 and later
+
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+
+:::
 
 #### Avertissement concernant la reconstruction de l'index
 
@@ -72,6 +91,7 @@ Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20
 
 #### Points forts
 
+- 4D v20.2 is certified on macOS Sonoma (macOS 14).
 - (4D v20.1) Nouvelle propriété `plugins` dans le paramètre *options* de la commande [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) .
 - 4D Server intègre automatiquement plusieurs journaux : [Restauration automatique](../Backup/settings.md#automatic-restore).
 - [Classe IMAP Transporter](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) renvoie *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) renvoie *id*, *flags* et *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) et [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) supportent les mots-clés personnalisés.
@@ -178,6 +198,7 @@ Lisez [**Les nouveautés de 4D v19 R7**](https://blog.4d.com/fr-whats-new-in-4d-
 
 ## 4D v19 R5
 
+
 - Le fichier [directory.json](Users/editing#directoryjson-file) du projet peut désormais être [intégré dans le serveur](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) au moment du build, ce qui vous permet de déployer une application client/serveur avec une configuration de sécurité de base pour les utilisateurs et les groupes.
 - Vous pouvez désormais [désélectionner les modules inutiles](../Desktop/building.md#deselecting-modules) dans les applications que vous avez créées.
 - La bibliothèque *MeCab* est incluse par défaut dans toutes les applications 4D sur macOS. Dans les versions précédentes, cette bibliothèque, spécialement conçue pour gérer le texte japonais, n'était disponible que dans la version japonaise de 4D sur macOS. Si vous n'avez pas besoin de cette bibliothèque dans vos applications finales, vous pouvez maintenant [la désélectionner](../Desktop/building.md#deselecting-modules).
@@ -235,7 +256,7 @@ $value:=($size>1000)? a:b // Ici, "a:b" est considéré comme un opérateur tern
 
 - Les [propriétés calculées](../Concepts/classes.md#function-get-and-function-set) sont disponibles dans les classes.
 - Les [attributs calculés](../ORDA/ordaClasses.md#computed-attributes) sont disponibles dans les classes ORDA. Elles sont similaires aux propriétés calculées mais prennent également en charge les fonctions [query](../ORDA/ordaClasses.md#function-query-attributename) et [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) .
-- Nouveaux attributs de dataclass ORDA : [`exposed`](../API/DataClassAttributeClass.md#exposed) et [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - Les [archives ZIP](../API/ZipArchiveClass.md#zip-create-archive) prennent désormais en charge les algorithmes de compression *LZMA* et *xz* .
 - Une nouvelle [option de build](../Desktop/building.md#allow-connection-of-silicon-mac-clients) permet d'inclure plus facilement les clients Silicon Mac dans les applications serveur sous Windows.
 - Prise en charge étendue du [mode sombre](../Preferences/general.md#appearance-macos-only) sur macOS.

@@ -701,14 +701,14 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 
 ### Alias properties
 
-Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
+Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassAttributeClass.md#type) property from the target attribute:
+An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
 
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "storage", the alias data type is of the same type,
-- if the target attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
+- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassAttributeClass.md#path) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
+Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Alias attributes based upon attributes of the same dataclass have the same properties as their target attributes (and no `path` property).
 
 
 ### Exemples
@@ -957,6 +957,7 @@ Une classe utilisateur ORDA de modèle de données est définie en ajoutant, au 
 > Par défaut, les classes ORDA vides ne sont pas affichées dans l'Explorateur. Vous devez les afficher en sélectionnant **Afficher toutes les dataclasses** dans le menu d'options de l'Explorateur : ![](../assets/en/ORDA/showClass.png)
 
 Les classes d'utilisateurs ORDA ont une icône différente des autres classes. Les classes vides sont grisées :
+
 
 ![](../assets/en/ORDA/classORDA2.png)
 

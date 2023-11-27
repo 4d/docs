@@ -379,5 +379,5 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Three-States](properties_Display.md#three-states) (Flat, Regular)
+- [Três estados](properties_Display.md#three-states) (plano, clássico)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

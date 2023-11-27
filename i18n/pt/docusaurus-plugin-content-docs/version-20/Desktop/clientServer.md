@@ -35,7 +35,7 @@ Para conectar remotamente a um projeto 4D Server:
 
 Aparece o diálogo de ligação do 4D Server. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
+If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. A lista é classificada por ordem de aparecimento e atualizada dinamicamente.
 
 ![](../assets/en/getStart/serverConnect.png)
 

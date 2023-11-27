@@ -56,17 +56,17 @@ title: 表示
 
 利用可能な日付表示フォーマットは以下のとおりです:
 
-| フォーマット                          | JSON 文字列     | 例                             |
-| ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (デフォルト)    | 20/03/25                      |
-| System date abbreviated *(1)*   | systemMedium | 2020/03/25                    |
-| System date long                | systemLong   | 2020年3月25日 水曜日                |
-| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20、ただし 04/25/2032 *(2)* |
-| Internal date long              | long         | March 25, 2020                |
-| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
-| Internal date short             | short        | 03/25/2020                    |
-| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
+| フォーマット                          | JSON 文字列            | 例                             |
+| ------------------------------- | ------------------- | ----------------------------- |
+| System date short               | systemShort (デフォルト) | 20/03/25                      |
+| System date abbreviated *(1)*   | systemMedium        | 2020/03/25                    |
+| System date long                | systemLong          | 2020年3月25日 水曜日                |
+| RFC 822                         | rfc822              | Tue, 25 Mar 2020 22:00:00 GMT |
+| Short Century                   | shortCentury        | 03/25/20、ただし 04/25/2032 *(2)* |
+| Internal date long              | long                | March 25, 2020                |
+| Internal date abbreviated *(1)* | abbreviated         | Mar 25, 2020                  |
+| Internal date short             | short               | 03/25/2020                    |
+| ISO Date Time *(3)*             | iso8601             | 2020-03-25T00:00:00           |
 
 *(1)* "June" は "Jun"、”July” は "Jul" に省略されます。
 

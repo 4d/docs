@@ -45,5 +45,5 @@ Uma data nula é especificada por _!00-00-00!_.
 |                      |               |            | !2017-01-20! !2017-01-20!    | False        |
 | Maior ou igual a     | Date >= Date  | Parâmetros | !2017-01-20! !2017-01-20!    | True         |
 |                      |               |            | !2017-01-01!>=!2017-01-20!   | False        |
-| Menor que ou igual a | Date <= Date  | Parâmetros | !2017-01-01!\<=!2017-01-20! | True         |
-|                      |               |            | !2017-01-20!\<=!2017-01-01! | False        |
+| Menor que ou igual a | Date <= Date  | Parâmetros | !2017-01-20! <= !2017-01-20! | True         |
+|                      |               |            | !2017-01-20! <= !2017-01-01! | False        |

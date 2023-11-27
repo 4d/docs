@@ -137,7 +137,7 @@ Specific form events are intended for programmed management of Web areas, more p
 - `On Open External Link`
 - `On Window Opening Denied`
 
-In addition, Web areas support the following generic form events:
+Além disso, as áreas da Web são compatíveis com os seguintes eventos de formulário genéricos:
 
 - `On Load`
 - `On Unload`
@@ -159,7 +159,7 @@ When the form is executed, standard browser interface functions are available to
 For reasons related to window redrawing mechanisms, the insertion of a Web area into a subform is subject to the following constraints:
 
 - O subformulário não deve poder deslocar-se
-- The limits of the Web area must not exceed the size of the subform
+- Os limites da área Web não devem ultrapassar o tamanho do subformulário
 
 > Superimposing a Web area on top of or beneath other form objects is not supported.
 
@@ -177,7 +177,7 @@ The URLs handled by programming in Web areas under macOS must begin with the pro
 
 ## Acesso ao inspetor Web
 
-You can view and use a Web inspector within Web areas of your forms. The Web inspector is a debugger which is provided by the embedded Web engine. It allows to parse the code and the flow of information of the Web pages.
+You can view and use a Web inspector within Web areas of your forms. O inspetor Web é um depurador fornecido pelo motor Web integrado. It allows to parse the code and the flow of information of the Web pages.
 
 ### Exibir o inspector Web
 

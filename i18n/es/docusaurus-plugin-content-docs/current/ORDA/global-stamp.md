@@ -27,11 +27,11 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 
 
-## Configuring data change tracking
+## Configuración del seguimiento de cambios en los datos
 
 By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
-### Structure requirements
+### Requisitos de estructura
 
 To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
 
@@ -40,12 +40,12 @@ In addition, to ensure proper operation of the feature, the following conditions
 - The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
 - A `__DeletedRecords` table must be added, with the following fields:
 
-| Campo         | Tipo            | Descripción                           |
-| ------------- | --------------- | ------------------------------------- |
-| __PrimaryKey  | Text            | Primary key of the deleted entity     |
-| __Stamp       | Integer 64 bits | Global stamp just before the deletion |
-| __TableName   | Text            | Name of the deleted entity table      |
-| __TableNumber | Entero largo    | Number of the deleted entity table    |
+| Campo         | Tipo           | Descripción                               |
+| ------------- | -------------- | ----------------------------------------- |
+| __PrimaryKey  | Text           | Llave primaria de la entidad eliminada    |
+| __Stamp       | Entero 64 bits | Global stamp just before the deletion     |
+| __TableName   | Text           | Nombre de la tabla de entidades eliminada |
+| __TableNumber | Entero largo   | Número de la tabla de entidades eliminada |
 
 You can only track changes for data in tables having the `__GlobalStamp` field.
 
@@ -55,27 +55,27 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 
 :::
 
-### Using the Structure Editor
+### Uso del Editor de estructuras
 
 The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
 
-To enable data change tracking:
+Para activar el seguimiento de cambios en los datos:
 
 1. Select the table(s) for which you want to enable data change tracking.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
-3. A confirmation dialog box is displayed. Haga clic en **OK**.
+3. Aparece una caja de diálogo de confirmación. Haga clic en **OK**.
 
-4D then makes the following changes:
+4D realiza entonces los siguientes cambios:
 
 - A preconfigured `__GlobalStamp` field is added to the table(s).
 - If not already existing, a `__DeletedRecords` table is added to the structure.
 
 
-To disable data change tracking:
+Para desactivar el seguimiento de cambios de datos:
 
 1. Select the table(s) for which you want to remove data change tracking.
 2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
-3. A confirmation dialog box is displayed. Haga clic en **OK**.
+3. Aparece una caja de diálogo de confirmación. Haga clic en **OK**.
 
 4D then removes the `__GlobalStamp` field from the table(s). Note that if you want to remove the `__DeletedRecords` table, you need to do it manually.
 

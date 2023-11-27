@@ -14,7 +14,8 @@ title: リリースノート
 - 新しい [`collection.multiSort()`](../API/CollectionClass.md#multisort) 関数を追加しました。
 - [`Formula from string`](../API/FunctionClass.md#formula-from-string) で *context* パラメーターをサポート。
 - [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew) の *connectionHandler* パラメーターで `headers` プロパティをサポート。
-- データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 新しい [`ds.getGlobalStamp`](../API/DatastoreClass.md#getglobalstamp) と [`ds.setGlobalStamp`](../API/DatastoreClass.md#setglobalstamp) 関数が追加されました。
+- データ同期モジュールの実装に役立つ [グローバル変更スタンプ](../ORDA/global-stamp.md)。 新しい [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) と [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp) 関数が追加されました。
+- ピクチャー/Blob属性へのファイル参照の代入は、[ORDAでサポートされています](../ORDA/entities.md#d#ピクチャーまたは-blob属性にファイルを代入する)。
 - [宣言と同時に変数のデータ型と値を初期化](../Concepts/variables/#宣言と同時に変数を初期化する) できるようになりました。
 - ログファイルの設定は、[カレントデータファイル](../Backup/settings.md#ログ管理) とともに保存されるようになりました。
 - [可変長引数を宣言するための新しいシンタックス](../Concepts/parameters.md#可変長引数の宣言)
@@ -54,6 +55,11 @@ title: リリースノート
 
 [**4D v20 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20/): 4D v20 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
+:::caution 4D v20.2 以降の4D Server に接続する最小クライアントバージョンについて
+
+内部的な理由により、4D v20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D v20.2 以上でなければなりません。
+
+:::
 
 #### インデックス再構築の警告
 
@@ -71,6 +77,7 @@ title: リリースノート
 
 #### ハイライト
 
+- 4D v20.2 は macOS Sonoma (macOS 14) 対応です。
 - (4D v20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの *options* パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が *id* を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が *id*, *flags* および *permanentFlags* を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
@@ -234,7 +241,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 
 - クラス: [計算プロパティ](../Concepts/classes.md#function-get-と-function-set) が利用可能に。
 - ORDAクラス: [計算属性](../ORDA/ordaClasses.md#計算属性) が利用可能に。 計算プロパティと似ていますが、[クエリ](../ORDA/ordaClasses.md#function-query-attributename) や [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) 関数もサポートしています。
-- 新しい ORDAデータクラス属性: [`exposed`](../API/DataClassAttributeClass.md#exposed) および [`readOnly`](../API/DataClassAttributeClass.md#readonly)。
+- 新しい ORDAデータクラス [属性](../API/DataClassClass.md#attributename): `exposed` および `readOnly`。
 - [ZIPアーカイブ](../API/ZipArchiveClass.md#zip-create-archive): *LZMA* および *xz* 圧縮アルゴリズムをサポート。
 - [新しいビルドオプション](../Desktop/building.md#silicon-macos-クライアントからの接続を許可) により、Windows上で Serverアプリケーションに Silicon Macクライアントを組み込むのが簡単になりました。
 - macOS で [ダークモードをサポート](../Preferences/general.md#アピアランス-macosのみ)。

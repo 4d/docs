@@ -10,10 +10,10 @@ No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das 
 
 Existem duas maneiras de criar uma nova entidade numa dataclass:
 
-*   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-*   You can also create an entity using the `dataClass.new( )` method.
+*   Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
+*   You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
 
-Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the `entity.save( )` method.
+Tenha em atenção que a entidade só é criada na memória. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
 
 Os atributos da entidade estão diretamente disponíveis como propriedades do objeto entidade. For more information, please refer to [Using entity attributes](#using-entity-attributes).
 
@@ -85,15 +85,25 @@ E o método é:
 ```
 
 You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the classic 4D language. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+> With the entities, there is no concept of "current record" as in the 4D language. Pode utilizar tantas entidades quantas as necessárias, em simultâneo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
 
 ## Utilização de atributos de entidades
 
-Os atributos de entidade armazenam dados e mapeiam os campos correspondentes na tabela correspondente. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
-> For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+Entity attributes store data and map corresponding fields in the corresponding table.
 
-Por exemplo, para definir um atributo de armazenamento:
+- attributes of the **storage** kind can be set or get as simple properties of the entity object,
+- attributes of the **relatedEntity** kind will return an entity,
+- attributes of the **relatedEntities** kind will return an entity selection,
+- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
+
+:::info
+
+For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+
+:::
+
+For example, to get and set a storage attribute value of type string:
 
 ```4d
  $entity:=ds. Employee.get(1) //get employee attribute with ID 1
@@ -102,6 +112,7 @@ Por exemplo, para definir um atributo de armazenamento:
 ```
 
 > Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D. Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
+
 
 O acesso a um atributo relacionado depende do tipo de atributo. Por exemplo, com a seguinte estrutura:
 
@@ -125,7 +136,53 @@ Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of 
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Atribuição de valores a atributos de relação
+### Assigning files to picture or blob attributes
+
+You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
+
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
+
+Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+
+A referência do arquivo pode ser:
+
+- a 4D.File object
+- a path in POSIX format
+
+Exemplo:
+
+```4d
+Function createCompany($name : Text; $logo : 4D.File)
+
+    var $company : cs.CompanyEntity
+    $company:=ds.Company.new()
+
+    $company.name:=$name 
+        //assignment using a file object
+    $company.logo:=$logo 
+        //assignment using a path
+    $company.datablob:="/RESOURCES/"+$name+"/data.bin"
+    $company.save() 
+```
+
+Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view.
+
+The file does not have to exist on disk at the time of assignment (no error is returned in this case). If the referenced file is not found when the attribute is read, a null value is returned.
+
+:::tip
+
+4D loads images and data into a local cache. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+
+:::
+
+:::note
+
+File reference assignment is only supported in local mode (4D Server or 4D single-user). An error is generated if the assignment is made remotely or via a REST request.
+
+:::
+
+
+### Atribuição de valores a atributos de relação
 
 In the ORDA architecture, relation attributes directly contain data related to entities:
 
@@ -243,12 +300,13 @@ A new entity selection **inherits** from the original entity selection nature in
 Exemplos:
 
 ```4d
-$highSal:=ds. Employee.query("salary >= :1"; 1000000)   
- //$highSal is shareable because of the query on dataClass
+$highSal:=ds.Employee.query("salary >= :1"; 1000000)   
+
+    //$highSal is shareable because of the query on dataClass
 $comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
-$lowSal:=ds. Employee.query("salary <= :1"; 10000).copy() 
- //$lowSal is alterable because of the copy()
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+    //$lowSal is alterable because of the copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 

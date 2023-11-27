@@ -13,7 +13,7 @@ Alpha formats control the way the alphanumeric fields and variables appear when 
 
 Pode escolher um formato desta lista ou utilizar qualquer formato personalizado. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. Neste caso, o formato não pode ser modificado nas propriedades do objeto. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
 
-The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
+O sinal de número (#) é o espaço reservado para um formato de exibição alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
 For example, consider a part number with a format such as "RB-1762-1".
 
@@ -56,17 +56,17 @@ Os formatos de data controlam como as datas aparecem quando são apresentadas ou
 
 A tabela seguinte apresenta as opções disponíveis:
 
-| Nome do formato                 | Cadeia JSON  | Exemplo (sistema americano)       |
-| ------------------------------- | ------------ | --------------------------------- |
-| System date short               | - (o padrão) | 03/25/20                          |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020                 |
-| System date long                | systemLong   | Quarta-feira, 25 de março de 2020 |
-| RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT     |
-| Short Century                   | shortCentury | 25/03/20 mas 25/04/2032 *(2)*     |
-| Internal date long              | long         | March 25, 2020                    |
-| Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                      |
-| Internal date short             | short        | 03/25/2020                        |
-| ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00               |
+| Nome do formato                 | Cadeia JSON           | Exemplo (sistema americano)       |
+| ------------------------------- | --------------------- | --------------------------------- |
+| System date short               | systemShort (default) | 03/25/20                          |
+| System date abbreviated *(1)*   | systemMedium          | Wed, Mar 25, 2020                 |
+| System date long                | systemLong            | Quarta-feira, 25 de março de 2020 |
+| RFC 822                         | rfc822                | Tue, 25 Mar 2020 22:00:00 GMT     |
+| Short Century                   | shortCentury          | 25/03/20 mas 25/04/2032 *(2)*     |
+| Internal date long              | long                  | March 25, 2020                    |
+| Internal date abbreviated *(1)* | abbreviated           | Mar 25, 2020                      |
+| Internal date short             | short                 | 03/25/2020                        |
+| ISO Date Time *(3)*             | iso8601               | 2020-03-25T00:00:00               |
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidade só se aplica às versões francesas de 4D.
 
@@ -151,7 +151,7 @@ A number display format can have up to three parts allowing you to specify displ
 Não é necessário especificar as três partes do formato. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
-> The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. Por outras palavras, o que é realmente introduzido é o que será apresentado para o valor zero.
+> The third part (zero) is not interpreted and does not accept replacement characters. Se você digitar `###;###;#`, o valor zero será exibido como "#". Por outras palavras, o que é realmente introduzido é o que será apresentado para o valor zero.
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
@@ -360,7 +360,7 @@ Quando uma [expressão booleana](properties_Object.md#expression-type) é aprese
 
 ---
 
-## Display Type
+## Tipo de exibição
 
 Utilizado para associar um formato de visualização aos dados da coluna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
@@ -380,7 +380,7 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. Neste cas
 
 ---
 
-## Not rendered
+## Não renderizado
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
@@ -435,7 +435,7 @@ Esta propriedade está disponível para uma coluna list box se:
 * the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
 * the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
 
-In that cases, the title of the check box can be entered using this property.
+Nesse caso, o título da caixa de seleção pode ser inserido usando essa propriedade.
 
 #### Gramática JSON
 
@@ -458,7 +458,7 @@ This option is available for columns with any type of contents, except pictures 
 * When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
  ![](../assets/en/FormObjects/property_truncate1.png)
-> A posição das elipses depende do sistema operativo. In the above example (Windows), it is added on the right side of the text. No macOS, as reticências são adicionadas no meio do texto.
+> A posição das elipses depende do sistema operativo. No exemplo acima (Windows), ele é adicionado no lado direito do texto. No macOS, as reticências são adicionadas no meio do texto.
 
 * When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 

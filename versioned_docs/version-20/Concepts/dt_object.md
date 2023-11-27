@@ -18,9 +18,9 @@ Variables, fields or expressions of the Object type can contain various types of
 	- picture(2)
 	- collection
 
-(1)ORDA objects such as [entities](ORDA/dsMapping.md#entity) or [entity selections](ORDA/dsMapping.md#entity-selection) cannot be stored in **object fields**; however, they are fully supported in **object variables** in memory. 
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory. 
 
-(2)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]". 
+(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]". 
 
 :::caution
 
@@ -122,13 +122,10 @@ You can create two types of objects:
 For more information, refer to the [Shared objects and collections](shared.md) section.
 
 
-## Syntax basics
 
-Object notation can be used to access object property values through a chain of tokens.
+## Properties
 
-### Object properties
-
-With object notation, object properties can be accessed in two ways:
+Object notation can be used to access object property values through a chain of tokens. With object notation, object properties can be accessed in two ways:
 
 - using a "dot" symbol:
     > object.propertyName
@@ -157,6 +154,10 @@ Since an object property value can be an object or a collection, object notation
 ```
 
 Object notation is available on any language element that can contains or returns an object, i.e:
+
+
+
+
 
 - **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
     Examples:
@@ -194,28 +195,6 @@ Object notation is available on any language element that can contains or return
      myColl.length //size of the collection
 ```
 
-### Pointers
-
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers. 
-
-Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
-
-- Direct access:
-> pointerOnObject->propertyName
-
-- Access by name:
-> pointerOnObject->["propertyName"]
-
-Example:
-
-```4d
- var vObj : Object
- var vPtr : Pointer
- vObj:=New object
- vObj.a:=10
- vPtr:=->vObj
- x:=vPtr->a //x=10
-```
 
 ### Null value
 
@@ -271,7 +250,7 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
      End case
 ```
 
-- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
+Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
  - Object, collection, pointer: Null
  - Picture: Empty picture
  - Boolean: False
@@ -298,6 +277,48 @@ When expressions of a given type are expected in your 4D code, you can make sure
 ```
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
+
+
+### Pointers
+
+**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers. 
+
+Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
+
+- Direct access:
+> pointerOnObject->propertyName
+
+- Access by name:
+> pointerOnObject->["propertyName"]
+
+Example:
+
+```4d
+ var vObj : Object
+ var vPtr : Pointer
+ vObj:=New object
+ vObj.a:=10
+ vPtr:=->vObj
+ x:=vPtr->a //x=10
+```
+
+
+## Resources
+
+Objects use *resources* such a documents, entity locks, and of course, memory. These resources are retained as long as objects need them. Usually, you do not have to worry about them, 4D automatically releases all resources attached to an object when it detects that the object itself is no longer referenced by any variable or other object. 
+
+For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
+
+If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. For example:
+
+```4d
+
+$doc:=WP Import document("large_novel.4wp")
+	... // do something with $doc
+$doc:=Null  // free resources occupied by $doc
+	... // continue execution with more free memory
+
+```
 
 ## Examples
 
@@ -340,7 +361,8 @@ Using object notation simplifies the 4D code while handling objects. Note howeve
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-- You can access properties as strings using the [ ] operator 
+
+- You can access properties as strings using the `[]` operator 
 
 ```4d
  $Emp["city"]:="Berlin" //modifies the city property

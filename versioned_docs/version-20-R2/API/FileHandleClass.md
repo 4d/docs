@@ -11,6 +11,11 @@ File handle objects are created with the [`file.open()`](FileClass#open) functio
 
 Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Consequently, with file handles you don't need to worry about closing documents.
 
+:::note
+
+Object resources, such as documents, are released when no more references exist in memory, which occurs for example at the end of the method execution for local variables. If you want to "force" the release of object resources at any moment, you can [nullify its references](../Concepts/dt_object.md#resources). 
+
+:::
 
 ### Example
 

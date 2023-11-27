@@ -88,7 +88,7 @@ The object bar contains all the active and inactive objects that can be used in 
 | ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)                                                                                                                                                                           |   D   |
 | ![](../assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |   X   |
 
-To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
+To draw an object type, select the corresponding button and then trace the object in the form. Após criar um objeto, você pode modificar seu tipo utilizando a Lista de Propriedades. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
 
 The current variant of the theme is the object that will be inserted in the form. When you click the right side of a button, you access the variant menu:
 
@@ -161,7 +161,7 @@ Pode querer realizar a mesma operação em mais de um objecto de forma - por exe
 - Right-click on the object and choose the **Select Similar Objects** command in the context menu.
 - Hold down the **Shift** key and click the objects you want to select.
 - Start at a location outside the group of objects you want to select and drag a marquee (sometimes called a selection rectangle) around the objects. When you release the mouse button, if any part of an object lies within or touches the boundaries of the selection rectangle, that object is selected.
-- Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Any object that is completely enclosed by the marquee is selected.
+- Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Os objetos que estiverem completamente no retângulo serão selecionados.
 
 The figure below shows a marquee being drawn to select two objects:
 
@@ -179,7 +179,7 @@ Para duplicar um ou mais objectos:
 
 1. Seleccione os objectos que pretende agrupar.
 2. Escolher **Duplicar** a partir do menu **Editar**. 4D cria uma cópia de cada objecto selecionado e coloca a cópia em frente e ligeiramente para o lado do original.
-3. Deslocar a cópia para a localização pretendida. If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. Subsequent copies are also placed in the same relation to their originals. The figure below shows how this relative placement of copies works:
+3. Deslocar a cópia para a localização pretendida. If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. As cópias subsequentes também são colocadas na mesma relação com seus originais. The figure below shows how this relative placement of copies works:
 
 ![](../assets/en/FormEditor/duplicateObjects.png)
 
@@ -201,7 +201,7 @@ You can move any graphic or active object in the form including fields and objec
 
 - Mova o objeto arrastando-o,
 - Mova o objeto um píxel de cada vez utilizando as teclas de seta,
-- Move the object by steps using the arrow keys (20-pixel steps by default),
+- Mova o objeto em etapas usando as teclas de seta (etapas de 20 píxeis por padrão),
 
 As you begin dragging the selected object, its handles disappear. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
 
@@ -221,11 +221,11 @@ Para mover um objeto em passos:
 
 When you resize a group, all the objects in the group are resized proportionally (except text areas, which are resized in steps according to their font sizes.
 
-You can ungroup a group of objects to treat them as individual objects again.
+Você pode desagrupar um grupo de objetos a qualquer momento e tratá-los novamente como objetos independentes.
 
 Um objecto activo que tenha sido agrupado deve ser desarticulado antes de se poder aceder às suas propriedades ou método. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand).
 
-O agrupamento só afeta os objetos no editor de formulários. When the form is executed, all grouped objects act as if they were ungrouped.
+O agrupamento só afeta os objetos no editor de formulários. Quando o formulário é executado, todos os objetos agrupados agem como se não estivessem agrupados.
 > It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
 
 Para agrupar objectos:
@@ -356,7 +356,7 @@ In cases such as this, a custom data entry order allows you to enter the informa
 
 #### Visualização e alteração da ordem de introdução de dados
 
-You can view the current entry order either using the “Entry order” shields, or by using the “Entry order” mode. However, you can only modify the entry order using the “Entry order” mode.
+You can view the current entry order either using the “Entry order” shields, or by using the “Entry order” mode. No entanto, você só pode modificar a ordem de entrada usando o modo “Ordem de entrada”.
 
 This paragraph describes viewing and modifying the entry order using the “Entry order” mode. For more information about viewing the entry order using shields, refer to [Using shields](#using-shields).
 
@@ -370,7 +370,7 @@ Para ver ou alterar a ordem de entrada:
 
 4. When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu.4D returns to normal operation of the Form editor.
 
-> Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+> Somente a ordem de entrada da página atual do formulário é exibida. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
 
 #### Utilização de um grupo de introdução de dados
 
@@ -472,7 +472,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
  Por padrão, todos os campos são selecionados. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
 
- You can change the order of the fields by dragging them and dropping them.
+ Você pode alterar a ordem dos campos arrastando-os e soltando-os.
 
 4. The expression to fill the list box's rows from the entity selection is prefilled:
 
@@ -513,18 +513,18 @@ If you don't want to display shields, select **No Shields** in the selection men
 
 Segue-se uma descrição de cada tipo de escudo:
 
-| Ícone                                           | Nome                                | É exibido ...                                                                                                                    |
-| ----------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/objectMethod.png)   | Método objecto                      | Para objectos com um método objeto associado                                                                                     |
-| ![](../assets/en/FormEditor/standardAction.png) | Acção padrão                        | Para objectos com uma acção padrão associada                                                                                     |
-| ![](../assets/en/FormEditor/resizing.png)       | Redimensionamento                   | Para objectos com pelo menos uma propriedade de redimensionamento, indica a combinação de propriedades actuais                   |
-| ![](../assets/en/FormEditor/entryOrder.png)     | Ordem de entrada                    | Para objectos enterráveis, indica o número da ordem de entrada                                                                   |
-| ![](../assets/en/FormEditor/viewNumber.png)     | Vista actual                        | Para todos os objectos na vista actual                                                                                           |
-| ![](../assets/en/FormEditor/cssShield.png)      | [Folha de estilo](stylesheets.html) | Para objectos com um ou mais valores de atributo anulados por uma folha de estilo.                                               |
-| ![](../assets/en/FormEditor/filter.png)         | Filtro                              | Para objectos enterráveis com um filtro de entrada associado                                                                     |
-| ![](../assets/en/FormEditor/helpTip.png)        | Dica de Ajuda                       | Para objetos com uma mensagem de ajuda associada                                                                                 |
-| ![](../assets/en/FormEditor/localized.png)      | Localizado                          | For objects whose label comes from a reference (label beginning with “:”). A referência pode ser do tipo recurso (STR#) ou XLIFF |
-| ![](../assets/en/FormEditor/noShields.png)      | No Shields                          | No shields appear                                                                                                                |
+| Ícone                                           | Nome                                | É exibido ...                                                                                                                        |
+| ----------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| ![](../assets/en/FormEditor/objectMethod.png)   | Método objecto                      | Para objectos com um método objeto associado                                                                                         |
+| ![](../assets/en/FormEditor/standardAction.png) | Acção padrão                        | Para objectos com uma acção padrão associada                                                                                         |
+| ![](../assets/en/FormEditor/resizing.png)       | Redimensionamento                   | Para objectos com pelo menos uma propriedade de redimensionamento, indica a combinação de propriedades actuais                       |
+| ![](../assets/en/FormEditor/entryOrder.png)     | Ordem de entrada                    | Para objectos enterráveis, indica o número da ordem de entrada                                                                       |
+| ![](../assets/en/FormEditor/viewNumber.png)     | Vista actual                        | Para todos os objectos na vista actual                                                                                               |
+| ![](../assets/en/FormEditor/cssShield.png)      | [Folha de estilo](stylesheets.html) | Para objectos com um ou mais valores de atributo anulados por uma folha de estilo.                                                   |
+| ![](../assets/en/FormEditor/filter.png)         | Filtro                              | Para objectos enterráveis com um filtro de entrada associado                                                                         |
+| ![](../assets/en/FormEditor/helpTip.png)        | Dica de Ajuda                       | Para objetos com uma mensagem de ajuda associada                                                                                     |
+| ![](../assets/en/FormEditor/localized.png)      | Localizado                          | Para objetos cuja etiqueta possui uma referência (etiqueta começando com “:”). A referência pode ser do tipo recurso (STR#) ou XLIFF |
+| ![](../assets/en/FormEditor/noShields.png)      | No Shields                          | No shields appear                                                                                                                    |
 
 ## Vistas
 
@@ -560,7 +560,7 @@ The current view is indicated with a check mark (*e.g.*, "Work Address" in the i
 
 ### Antes de começar
 
-Here are a few important things to know before you start working with views:
+Aqui estão algumas coisas importantes que você deve saber antes de começar a trabalhar com vistas:
 
 - **Context of use**: Views are a purely graphic tool which can only be used in the Form Editor; you cannot access views programmatically or in the Application environment.
 
@@ -666,10 +666,10 @@ A seleção é então colocada na nova vista:
 
 ![](../assets/en/FormEditor/objNewView.png)
 
-You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
+Você também pode mover um objeto para outra visualização por meio do menu de contexto do objeto. Right-click on the object, select **Move to view**, and select a view from the list of available views:
 
 ![](../assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> A [vista atual](#before-you-begin) é mostrado em negrito.
 
 #### Seleccionar todos os objectos de uma vista
 
@@ -685,7 +685,7 @@ Também pode utilizar o botão na parte inferior da paleta de vistas:
 
 #### Mostrar ou esconder objectos de uma vista
 
-You can show or hide objects belonging to a view at any time in the form's current page. This way you can focus on certain objects when editing the form, for example.
+You can show or hide objects belonging to a view at any time in the form's current page. Essa função pode ser usada, por exemplo, para focar em determinados objetos ao modificar o formulário.
 
 By default, all views are shown, as indicated by the *Show/Hide* icon:
 
@@ -706,7 +706,7 @@ By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next 
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. O cadeado está fechado, o que significa que a vista está agora bloqueada:
+Para bloquear os objetos de uma visualização, clique no ícone *Bloquear/Desbloquear*. O cadeado está fechado, o que significa que a vista está agora bloqueada:
 
 ![](../assets/en/FormEditor/locked.png)
 > A [vista atual](#before-you-begin) não pode ser bloqueada.

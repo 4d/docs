@@ -9,7 +9,7 @@ title: Começando
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
+A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs) integrated in 4D.
 
 Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
 
@@ -48,7 +48,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 *   To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-*   To select a column, click on the corresponding letter (or set of letters).
+*   Para selecionar uma coluna, clique na letra correspondente (ou conjunto de letras).
 
 *   Para selecionar uma linha, clique no número correspondente.
 
@@ -58,7 +58,7 @@ As folhas de cálculo são compostas por linhas e colunas. A cada linha está as
 
 ### Introdução de dados
 
-Double-clicking on a cell allows passing into input mode in the relevant cell. If the cell is not empty, the insertion cursor is placed after the content of the cell.
+Clicar duas vezes em uma célula permite passar para o modo entrada na célula relevante. If the cell is not empty, the insertion cursor is placed after the content of the cell.
 
 ![](../assets/en/ViewPro/vpInput.PNG)
 
@@ -83,7 +83,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   clique numa célula ou num intervalo de células:
-    *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
+    *   **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
     *   **Ordenar**: ordena o conteúdo da coluna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](../assets/en/ViewPro/vpContext2.PNG)
@@ -120,13 +120,13 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilização de objectos de intervalo
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. Esta área pode ser composta por uma ou várias células. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+Some 4D View Pro methods require a *rangeObj* parameter. No 4D View Pro, um intervalo é um objeto que referir-se a uma área em uma planilha. Esta área pode ser composta por uma ou várias células. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
 
 Por exemplo, para criar um objeto intervalo para as seguintes células:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](method-list.md#vp-cells) method:
+Você pode usar o método [VP Cells](method-list.md#vp-cells):
 
 ```4d 
 var $myRange : Object
@@ -144,7 +144,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 | ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
 | area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                            |
 | ranges      |                   | collection | Collection of range(s)                                              | sempre disponível                                            |
-|             | \[ ].name        | text       | Range name                                                          | name                                                         |
+|             | \[ ].name        | text       | Nome do intervalo                                                   | name                                                         |
 |             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
 |             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                               |
 |             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                              |

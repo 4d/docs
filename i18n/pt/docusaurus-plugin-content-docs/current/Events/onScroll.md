@@ -10,7 +10,7 @@ title: On Scroll
 
 ## Descrição
 
-This event can be generated in the context of a picture input or a list box.
+Esse evento pode ser gerado no contexto de uma entrada imagem ou de um list box.
 
 This event is triggered after any other user event related to the scrolling action ([On Clicked](onClicked.md), [On After Keystroke](onAfterKeystroke.md), etc.). The event is only generated in the object method (not in the form method).
 

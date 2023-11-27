@@ -126,7 +126,7 @@ A pasta DerivedData contém dados em cache usados internamente por 4D para otimi
 
 ## Pasta Resources
 
-The Resources folder contains any custom database resource files and folders. Nesta pasta, pode colocar todos os ficheiros necessários para a tradução ou personalização da interface da aplicação (arquivo imagem, arquivo texto, arquivo XLIFF, etc.). 4D usa mecanismos automáticos para trabalhar com o conteúdo desta pasta, em particular para a manipulação de ficheiros XLIFF e imagens estáticas. Para utilizar no modo remoto, a pasta Recursos permite-lhe partilhar arquivo entre o servidor e todas as máquinas clientes. Consulte o *Manual 4D Server*.
+A pasta Resources contém todos os arquivos e pastas de recursos personalizados do banco de dados. Nesta pasta, pode colocar todos os ficheiros necessários para a tradução ou personalização da interface da aplicação (arquivo imagem, arquivo texto, arquivo XLIFF, etc.). 4D usa mecanismos automáticos para trabalhar com o conteúdo desta pasta, em particular para a manipulação de ficheiros XLIFF e imagens estáticas. Para utilizar no modo remoto, a pasta Recursos permite-lhe partilhar arquivo entre o servidor e todas as máquinas clientes. Consulte o *Manual 4D Server*.
 
 | Conteúdos             | Descrição                                                                                                                                                                  | Formato |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |

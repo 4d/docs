@@ -937,6 +937,7 @@ utilice el siguiente código:
 
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1120,6 +1121,7 @@ En el parámetro *options*, puede pasar las siguientes opciones de exportación,
 | includeBindingSource | Boolean | True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el objeto exportado (los contextos de datos en sí no se exportan). False en caso contrario. El enlace de la celda siempre se exporta.                                 |
 
 Para más información sobre los objetos 4D View Pro, consulte el párrafo [objeto 4D View Pro](configuring.md#4d-view-pro-object).
+
 
 #### Ejemplo 1
 
@@ -1586,7 +1588,7 @@ Puede definir dónde obtener el número de columnas en el parámetro opcional *s
 El siguiente código devuelve el número de columnas en el área 4D View Pro:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -2410,13 +2412,14 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                  |
-| ---------- | ------- | -- | -------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| styleName  | Text    | -> | Nombre del estilo                            |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)  |
+| Parámetros | Tipo    |    | Descripción                                      |
+| ---------- | ------- | -- | ------------------------------------------------ |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro     |
+| styleName  | Text    | -> | Nombre del estilo                                |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)      |
+| Result     | Object  | <- | Objeto hoja de estilo|<!-- END REF -->
 
-|Result|Object|<-|Style sheet object|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -2964,6 +2967,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
+
 | Parámetros | Tipo   |    | Descripción                                                                      |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                                     |
@@ -3985,6 +3989,7 @@ El comando `VP REMOVE TABLE ROWS` <!-- REF #_method_.VP REMOVE TABLE ROWS.Summar
 Este comando elimina las líneas de la tabla *tableName*, NO de la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia arriba en función del número de líneas eliminadas.
 
 Si la tabla *tableName* está vinculada a un [contexto de datos](#vp-set-data-context), el comando elimina el/los elemento/s de la colección.
+
 
 Si *tableName* no existe, no pasa nada.
 
@@ -5099,9 +5104,13 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
-|Parámetro|Tipo||Descripción|
+| Parámetros    | Tipo   |    | Descripción                                  |
+| ------------- | ------ | -- | -------------------------------------------- |
+| rangeObj      | Object | -> | Objeto rango                                 |
+| dateValue     | Fecha  | -> | Valor date a definir                         |
+| formatPattern | Text   | -> | Formato del valor|<!-- END REF -->
 
-|---|---|---|---| |rangeObj |Object|->|Range object| |dateValue |Date|->|Date value to set| |formatPattern |Text|->|Format of value|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5226,7 +5235,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 | Parámetros    | Tipo   |    | Descripción                                  |
 | ------------- | ------ | -- | -------------------------------------------- |
 | rangeObj      | Object | -> | Objeto rango                                 |
-| formula       | Text   | -> | Formula or 4D method                         |
+| formula       | Text   | -> | Fórmula o método 4D                          |
 | formatPattern | Text   | -> | Formato del campo|<!-- END REF -->
 
 |
@@ -5357,11 +5366,12 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Puede pasar un objeto que defina las columnas y líneas a congelar en el parámetro *paneObj*. Al definir el valor de una propiedad de columna o de línea en cero, se restablece (descongela) la propiedad. Si una propiedad está definida como menor que cero, el comando no hace nada. Puede pasar:
 
-| Propiedad | Tipo | Descripción |
-| --------- | ---- | ----------- |
-|           |      |             |
-
-|columnCount | Integer | El número de columnas congeladas a la izquierda de la hoja| |trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja |rowCount | Integer | El número de filas congeladas en la parte superior de la hoja | |trailingRowCount | Integer | El número de filas congeladas en la parte inferior de la hoja|
+| Propiedad           | Tipo    | Descripción                                                    |
+| ------------------- | ------- | -------------------------------------------------------------- |
+| columnCount         | Integer | El número de columnas congeladas a la izquierda de la hoja     |
+| trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja       |
+| rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
+| trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
 En el parámetro opcional *sheet*, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5600,11 +5610,11 @@ VP SET ROW COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
-| Parámetros | Tipo |  | Descripción |
-| ---------- | ---- |  | ----------- |
-|            |      |  |             |
+| Parámetros | Tipo   |    | Descripción                                       |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| rangeObj   | Object | -> | Objeto rango de celdas|<!-- END REF -->
 
-|rangeObj |Object|->|Rango objeto de celdas|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5671,12 +5681,13 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| Parámetros | Tipo |    | Descripción                                  |
-| ---------- | ---- | -- | -------------------------------------------- |
-| vpAreaName | Text | -> | Nombre de objeto formulario área 4D View Pro |
-| name       | Text | -> | Nuevo nombre para la hoja                    |
+| Parámetros | Tipo    |    | Descripción                                              |
+| ---------- | ------- | -- | -------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro             |
+| name       | Text    | -> | Nuevo nombre para la hoja                                |
+| sheet      | Integer | -> | Índice de la hoja a renombrar|<!-- END REF -->
 
-|sheet|Integer|->|Índice de la hoja a renombrar|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -5690,7 +5701,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 > La indexación comienza en 0.
 
-Si no se pasa el *index*, el comando renombra la hoja actual.
+Si no se pasa el *sheet*, el comando renombra la hoja actual.
 
 El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
@@ -5699,7 +5710,7 @@ El comando no hace nada si:
 * el nuevo nombre contiene caracteres prohibidos
 * el nuevo valor del nombre está en blanco
 * el nuevo nombre ya existe
-* el *índice* pasado no existe
+* no existe la *hoja* pasada
 
 #### Ejemplo
 
@@ -6341,14 +6352,14 @@ En la siguiente tabla se listan las opciones de libros de trabajo disponibles:
 | scrollPixel                           | integer                 | Decide el desplazamiento por ese número de píxeles cuando scrollByPixel es true. Los píxeles finales de desplazamiento son el resultado de `scroll delta * scrollPixel`. Por ejemplo: delta de desplazamiento es 3, scrollPixel es 5, los píxeles finales de desplazamiento son 15.                   |
 | showDragDropTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                               |
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                                                         |
-| showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                                                                            |
+| showDragFillTip                       | boolean                 | Mostrar la punta de arrastrar y soltar.                                                                                                                                                                                                                                                               |
 | showHorizontalScrollbar               | boolean                 | Mostrar la barra de desplazamiento horizontal.                                                                                                                                                                                                                                                        |
 | showResizeTip                         | number                  | Cómo mostrar el tip de redimensionamiento. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Se muestran consejos de redimensionamiento horizontal y vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Sólo se muestra la punta de redimensionamiento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                                                            |
 | showScrollTip                         | number                  | How to display the scroll tip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Se muestran las extremidades horizontales y verticales.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                                                                        |
 | showVerticalScrollbar                 | boolean                 | Mostrar la barra de desplazamiento vertical.                                                                                                                                                                                                                                                          |
 | tabEditable                           | boolean                 | The sheet tab strip can be edited.                                                                                                                                                                                                                                                                    |
 | tabNavigationVisible                  | boolean                 | Mostrar la navegación por pestañas.                                                                                                                                                                                                                                                                   |
-| tabStripPosition                      | number                  | Position of the tab strip. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>                                                                                                                                                                                                                            |
+| tabStripPosition                      | number                  | Posición de la barra de pestañas. Valores disponibles: <table><tr><th>Constante</th><th>Valor</th><th>Descripción</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> La posición de la tabulación es relativa a la parte inferior del libro de trabajo.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> La posición de la tabulación es relativa a la izquierda del libro de trabajo.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> La posición de la tabulación es relativa a la derecha del libro de trabajo.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> La posición de la tabulación es relativa a la parte superior del libro de trabajo.</td></tr></table>                                                                                                                                                                                                                     |
 | tabStripRatio                         | number                  | Valor porcentual (0,x) que especifica qué parte del espacio horizontal se asignará al tabulador. El resto del área horizontal (1 - 0.x) se asignará a la barra de desplazamiento horizontal.                                                                                                          |
 | tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                                                                          |
 | tabStripWidth                         | number                  | Ancho de la etiqueta cuando la posición es izquierda o derecha. Por defecto y el mínimo es 80.                                                                                                                                                                                                        |
@@ -6378,11 +6389,13 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
-| Parámetros | Tipo   |    | Descripción  |
-| ---------- | ------ | -- | ------------ |
-| rangeObj   | Object | -> | Objeto rango |
+| Parámetros | Tipo    |    | Descripción                                                                          |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
+| rangeObj   | Object  | -> | Objeto rango                                                                         |
+| vPos       | Integer | -> | Posición vertical de la vista de la celda o de la línea                              |
+| hPos       | Integer | -> | Posición horizontal de la vista de la celda o de la línea|<!-- END REF -->
 
-|vPos |Integer|->|Posición de vista vertical de la celda o línea| |hPos |Integer|->|Posición de vista horizontal de la celda o línea|<!-- END REF -->
+|
 
 #### Descripción
 
@@ -6481,6 +6494,6 @@ End if
 
 #### Ver también
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 

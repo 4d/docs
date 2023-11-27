@@ -6,7 +6,7 @@ title: Utilizar um datastore remoto
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
+- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. Esses acessos são transmitidos pelo servidor **HTTP REST**.
 - 4D for iOS queries for updating iOS applications. These accesses are handled by the **HTTP server**.
 
 
@@ -91,6 +91,11 @@ The optimization context is based upon the following implementations:
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
+:::warning Compatibility Note
+
+Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D v20.x remote application can only use contexts of a 4D Server v20.x datastore.
+
+:::
 
 
 #### Exemplo

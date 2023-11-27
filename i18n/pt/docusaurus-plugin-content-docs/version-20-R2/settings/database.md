@@ -53,7 +53,7 @@ São oferecidos três opções de localização:
 
 -   **Current data language:** Used to configure the language used for character string processing and comparison. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. Por padrão, 4D usa a linguagem do sistema.
 
-    A 4D project can thus operate in a language different from that of the system. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
+    Um projeto 4D pode, portanto, operar em uma linguagem diferente da do sistema. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
 
     > You can modify this setting in the application Preferences (see [General Page](../Preferences/general.md)). In this case, the setting applies to all the new databases created by 4D.
 
@@ -104,6 +104,6 @@ You use the settings on this tab to configure the cache memory for the database.
 
     When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
 
-    If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. This slowness means that a huge amount of records is being saved. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.
+    If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. Essa lentidão significa que uma grande quantidade de registros está sendo salva. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.
 
-    By default, 4D displays a small window when the cache is flushed. If you do not want this visual reminder, you can uncheck the **Flushing progress** option on the [Interface page](./interface.md).
+    Por padrão, 4D exibe uma pequena janela quando o cache é liberado. If you do not want this visual reminder, you can uncheck the **Flushing progress** option on the [Interface page](./interface.md).

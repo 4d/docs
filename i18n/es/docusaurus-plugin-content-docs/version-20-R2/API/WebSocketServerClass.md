@@ -40,7 +40,7 @@ Además, tendrá que crear dos clases de usuario que contendrán funciones de re
 
 Debe [crear el servidor WebSocket](#4dwebsocketservernew) dentro de un [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) para mantener viva la conexión.
 
-El [4D Web Server](WebServerClass.md) debe estar iniciado.
+El [4D Web Server](WebServerClass.md) debe ser iniciado.
 
 
 ### Ejemplo
@@ -98,7 +98,7 @@ Los objetos de servidor WebSocket ofrecen las siguientes propiedades y funciones
 | [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate())&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
 
 

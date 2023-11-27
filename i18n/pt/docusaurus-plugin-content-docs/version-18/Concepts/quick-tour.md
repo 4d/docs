@@ -85,7 +85,7 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## Constantes
 
-4D oferece um conjunto extensivo de constantes predefinidas, cujos valores são acessíveis por nome. Por exemplo, `Read Mode` é uma constante (valor 2). Predefined constants appear underlined by default in the 4D Method editor. Isso permite escrever código mais legível.
+4D oferece um conjunto extensivo de constantes predefinidas, cujos valores são acessíveis por nome. Por exemplo, `Read Mode` é uma constante (valor 2). Constantes predefinidos aparecem sublinhados por padrão no editor de métodos 4D. Isso permite escrever código mais legível.
 
 ```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apenas leitura
@@ -115,7 +115,7 @@ For($vlChar;1;Length(vtSomeText))
  End for
 ```
 
-Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. A method can return a single value in the $0 parameter. Quando chamar um método, apenas digite seu nome:
+Um método projeto pode chamar a outro método projeto com ou sem parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Um método pode retornar um único valor no parâmetro $0. Quando chamar um método, apenas digite seu nome:
 
 ```4d
 $myText:="hello"

@@ -67,9 +67,9 @@ Enables cycling through the contents of the picture button at the specified spee
 
 ---
 
-## Switch when roll over
+## Alternar quando rolar sobre
 
-Modifies the contents of the picture button when the mouse cursor passes over it. The initial picture is displayed when the cursor leaves the button’s area.
+Modifies the contents of the picture button when the mouse cursor passes over it. A imagem inicial é exibida quando o cursor sai da área do botão.
 
 #### Gramática JSON
 

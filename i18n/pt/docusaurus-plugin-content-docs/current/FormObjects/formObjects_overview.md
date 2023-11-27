@@ -17,7 +17,7 @@ You build and customize your application forms by manipulating the objects on th
 
 Pode adicionar ou modificar objetos de formulários 4D das seguintes formas:
 
-*   **[Form Editor](FormEditor/formEditor.md):** Drag an object from the Form Editor toolbar onto the form. Then use the Property List to specify the object's properties.
+*   **[Form Editor](FormEditor/formEditor.md):** Drag an object from the Form Editor toolbar onto the form. Em seguida, use a Lista de propriedades para especificar as propriedades do objeto.
 
 * **4D language**: Commands from the `Objects (Forms)` theme such as [`OBJECT DUPLICATE`](https://doc.4d.com/4dv20/help/command/en/page1111.html) or [`OBJECT SET FONT STYLE`](https://doc.4d.com/4dv20/help/command/en/page166.html) allow to create and define form objects.
 

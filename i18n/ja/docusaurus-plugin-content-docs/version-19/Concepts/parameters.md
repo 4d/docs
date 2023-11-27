@@ -133,6 +133,17 @@ Function add($x : Variant; $y : Integer): Integer
     $0:=$x+$y
 ```
 
+:::warning
+
+戻り値を含む引数の宣言をおこなうのは、一度だけです。 特に、同じ型であっても、同じ引数を入力と出力の両方として宣言することはできません。 例:
+
+```qs
+    // 無効な宣言
+Function myTransform ($x : Integer) -> $x : Integer 
+    // エラー: $x が2回宣言されています
+```
+
+:::
 
 ### サポートされているデータ型
 

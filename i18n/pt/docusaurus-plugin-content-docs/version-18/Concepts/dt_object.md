@@ -45,7 +45,7 @@ Exemplo:
 Pode criar dois tipos de objetos:
 
 - regular (non-shared) objects, using the `New object` command. Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
-- shared objects, using the `New shared object` command. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- objetos compartilhados, usando o comando `New shared object`. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
 
 ## Noções básicas de sintaxe
@@ -224,7 +224,7 @@ Token member names (i.e., object property names accessed using the object notati
 **Nota:**
 
 - Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. É necessário utilizar uma variável intermédia.
-- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
+- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. Por exemplo, o atributo $o["My Att"] é válido em 4D, apesar do espaço. In this case, however, it will not be possible to use dot notation with this attribute.
 
 
 ## Exemplos

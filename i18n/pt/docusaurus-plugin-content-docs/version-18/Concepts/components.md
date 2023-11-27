@@ -165,7 +165,7 @@ An [error-handling method](Concepts/error-handling.md) installed by the `ON ERR 
 
 **Note:** If a component uses the `ADD RECORD` command, the current Input form of the host database will be displayed, in the context of the host database. Consequently, if the form includes variables, the component will not have access to it.
 
-- You can publish component forms as subforms in the host databases. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
+- Pode publicar formulários componentes como subformulários nos bancos de dados locais. Pode publicar formulários componentes como subformulários no banco de dados local Isso significa que pode desenvolver componentes oferecendo objetos gráficos. Por exemplo, Widgets fornecidos por 4D são baseados no uso de subformulários em componentes.
 
 ## Uso de tabelas e campos
 

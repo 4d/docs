@@ -58,13 +58,13 @@ Os valores introduzidos são então avaliados:
     - If the user name does not exist in the table of 4D users, the [`On Web Authentication`](#on-web-authentication) database method is called. If the `On Web Authentication` database method does not exist, connections are rejected.
 
 - If the **Include 4D passwords** option is not checked, user credentials are sent to the [`On Web Authentication`](#on-web-authentication) database method along with the other connection parameters (IP address and port, URL...) so that you can process them. If the `On Web Authentication` database method does not exist, connections are rejected.
-> With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validation of users/passwords is carried out by the 4D Server application.
+> With the 4D Client web server, keep in mind that all the sites published by the 4D Client machines will share the same table of users. Validação de usuários/senhas é realizada pela aplicação 4D Server.
 
 ### Protocolo DIGEST
 
 This mode provides a greater level of security since the authentication information is processed by a one-way process called hashing which makes their contents impossible to decipher.
 
-As in BASIC mode, users must enter their name and password when they connect. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
+Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $6 parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
 > You must restart the web server in order for the changes made to these parameters to be taken into account.
 
 
@@ -132,7 +132,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 The first parameter (`$1`) is the URL received by the server, from which the host address has been removed.
 
-Vejamos o exemplo de uma ligação Intranet. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
+Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. The following table shows the values of $1 depending on the URL entered in the Web browser:
 
 | URL introduzido no navegador Web     | Valor do parâmetro $1    |
 | ------------------------------------ | ------------------------ |

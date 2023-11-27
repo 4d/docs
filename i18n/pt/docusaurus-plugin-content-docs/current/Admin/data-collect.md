@@ -97,6 +97,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 | restHits          | Number | Número de acessos ao servidor REST durante a recolha de dados |
 | webserverBytesIn  | Number | Bytes recebidos pelo servidor Web durante a recolha de dados  |
 | webserverBytesOut | Number | Bytes enviados pelo servidor Web durante a recolha de dados   |
+| qodly.webforms    | Number | Number of Qodly webforms                                      |
 
 
 

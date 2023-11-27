@@ -9,7 +9,7 @@ title: Prise en main
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro est alimenté par la [solution de tableur SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) intégrée à 4D.
+Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs) integrated in 4D.
 
 L'intégration de zones 4D View Pro dans vos formulaires vous permet d'importer et d'exporter des documents de type tableur à l'aide des commandes 4D View Pro.
 
@@ -83,7 +83,7 @@ Les zones 4D View Pro bénéficient d'un menu contextuel automatique qui offre d
 
 *   cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
 *   cliquez sur une cellule ou une plage de cellules :
-    *   **Filtrer** : permet de masquer la ligne via des filtres (voir [Filtrer les lignes](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) dans la documentation SpreadJS).
+    *   **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
     *   **Trier** : permet de trier le contenu des colonnes.
     *   **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :  
       ![](../assets/en/ViewPro/vpContext2.PNG)

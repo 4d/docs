@@ -12,7 +12,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 Para introduzir uma fórmula numa área 4D View Pro:
 
 1.  Select the cell into which you will enter the formula or function.
-2.  Enter = (the equal sign).
+2.  Digite = (o sinal de igual).
 3.  Type the formula and hit the **Enter** key.
 
 Ao escrever uma fórmula, pode utilizar diferentes atalhos:
@@ -33,7 +33,7 @@ Todas as fórmulas têm operandos e operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
 *   **Operandos** inclui várias categorias:
-    *   [values](#values-and-operators) (5 data types are supported)
+    *   Os [valores](#values-and-operators) (5 tipos de dados são suportados)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
     *   [funções standard de folha de cálculo](#using-functions)
     *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
@@ -218,7 +218,7 @@ Parameters can be passed to 4D functions that call project methods using the fol
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-These parameters are received in *methodName* in $1, $2...$N.
+Esses parâmetros são recebidos em *methodName* em $1, $2...$N.
 
 Note that the ( ) are mandatory, even if no parameters are passed:
 
@@ -235,7 +235,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
-* [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
+* [text](Concepts/dt_string.md) (convertido em uma cadeia de caracteres em 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
 * [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
 * [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
@@ -287,7 +287,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
 *   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
-*   The field type must be supported by 4D View Pro (see above).
+*   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
 

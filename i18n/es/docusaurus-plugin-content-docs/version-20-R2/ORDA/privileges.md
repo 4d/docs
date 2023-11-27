@@ -66,7 +66,7 @@ La definición de permisos requiere ser coherente, en particular:
 
 
 
-## Privileges and Roles
+## Privilegios y roles
 
 A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
 

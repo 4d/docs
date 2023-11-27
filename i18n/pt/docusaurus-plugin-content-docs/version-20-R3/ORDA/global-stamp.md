@@ -31,20 +31,20 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
-### Structure requirements
+### Requisitos de estrutura
 
 To enable data change tracking, the application structure must contain at least one table with a `__GlobalStamp` field.
 
 In addition, to ensure proper operation of the feature, the following conditions are required:
 
 - The `__GlobalStamp` field must must be of type *Integer 64 bits*, with *automatic index*, *Expose as REST resource*, and *Invisible* properties selected.
-- A `__DeletedRecords` table must be added, with the following fields:
+- Uma tabela `__DeletedRecords` deve ser adicionada, com os seguintes campos:
 
 | Campo         | Tipo            | Descrição                             |
 | ------------- | --------------- | ------------------------------------- |
 | __PrimaryKey  | Text            | Chave primária da entidade excluída   |
 | __Stamp       | Integer 64 bits | Global stamp just before the deletion |
-| __TableName   | Text            | Name of the deleted entity table      |
+| __TableName   | Text            | Nome da tabela de entidades excluída  |
 | __TableNumber | Long Integer    | Número da tabela da entidade excluída |
 
 You can only track changes for data in tables having the `__GlobalStamp` field.
@@ -59,7 +59,7 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 
 The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
 
-To enable data change tracking:
+Para ativar o rastreamento de alterações de dados:
 
 1. Select the table(s) for which you want to enable data change tracking.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
@@ -67,7 +67,7 @@ To enable data change tracking:
 
 Em seguida, 4D faz as seguintes alterações:
 
-- A preconfigured `__GlobalStamp` field is added to the table(s).
+- Um campo pré-configurado `__GlobalStamp` é adicionado à(s) tabela(s).
 - If not already existing, a `__DeletedRecords` table is added to the structure.
 
 

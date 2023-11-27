@@ -5,7 +5,7 @@ title: Gestão de usuários e grupos 4D
 
 ## Designer e Administrador
 
-4D provides users with certain standard access privileges and certain powers. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
+4D fornece aos usuários privilégios de acesso standard e certos poderes. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
 
 O usuário mais poderoso é chamado **Designer**. Nenhum aspecto do banco de dados está fechado para o Desenhador. O Designer pode:
 

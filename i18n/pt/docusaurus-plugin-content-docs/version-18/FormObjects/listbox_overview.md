@@ -689,7 +689,7 @@ As colunas da caixa de listagem podem tratar de arrays de objectos. Uma vez que 
 A seguinte caixa de listagem foi concebida utilizando uma matriz de objectos:
 
 ![](../assets/en/FormObjects/listbox_column_objectArray.png)
-> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. Using this feature requires you to have a valid 4D View license. Para obter mais informações, consulte o site de 4D.
+> **Note about Licensing**: The ability to use object arrays in list boxes is a first step to the upcoming "4D View Pro" tool that will progressively replace the 4D View plug-in. O uso desse recurso exige que você tenha uma licença válida do 4D View. Para obter mais informações, consulte o site de 4D.
 
 ### Configuração de uma coluna de matriz de objectos
 

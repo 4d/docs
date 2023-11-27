@@ -15,7 +15,7 @@ In order to clearly define the concepts implemented with subforms, here are some
 * **Parent form**: a form containing one or more subform(s).
 * **Subform container**: an object included in the parent form, displaying an instance of the subform.
 * **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-* **List form**: instance of subform displayed as a list.
+* **Formulário lista**: instância do subformulário exibido como uma lista.
 * **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
 
 ## Sub formulários lista
@@ -56,7 +56,7 @@ In this case, you must use the On Bound Variable Change form event. This event m
 
 ![](../assets/en/FormObjects/subforms2.png)
 
-The `On Bound Variable Change` form event is generated:
+O evento de formulário `On Bound Variable Change` é gerado:
 
 * as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
 * se o subformulário pertence à página formulário atual ou à página 0.

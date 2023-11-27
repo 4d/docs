@@ -1,12 +1,12 @@
 ---
-id: overview
-title: Handling Code
+id: code-overview
+title: Methods and classes
 ---
 
 
-The 4D code used across your application is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md). 
+The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md). 
 
-The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](write-class-method.md) to work with your code.
+The 4D IDE provides you with various features to create, edit, export, or delete your code. You will usually use the 4D [code editor](../code-editor/write-class-method.md) to work with your code.
 
 
 ## Creating methods
@@ -16,7 +16,7 @@ A method in 4D is stored in a **.4dm** file located in the appropriate folder of
 You can create [several types of methods](../Concepts/methods.md):
 
 - All types of methods can be created or opened from the **Explorer** window (except Object methods which are managed from the [Form editor](../FormEditor/formEditor.md)).
-- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](write-class-method.md#shortcuts).
+- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](../code-editor/write-class-method.md#shortcuts).
 - Triggers can also be created or opened from the Structure editor.
 - Form methods can also be created or opened from the [Form editor](../FormEditor/formEditor.md).
 
@@ -41,7 +41,7 @@ To delete an existing method or class, you can:
 
 ## Importing and exporting code
   
-You can import and export a method or a class code in the form of a file. These commands are found in the **Method** menu of the Code editor. 
+You can import and export a method or a class code in the form of a file. These commands are found in the **Method** menu of the [Code editor](../code-editor/write-class-method.md). 
 
 - When you select the **Export Method...** command, a standard file saving dialog box appears, allowing you to choose the name, location and format of the export file (see below). As with printing, exporting does not take the collapsed state of code structures into account and the entire code is exported. 
 - When you select the **Import Method...** command, a standard file opening dialog box appears, allowing you to designate the file to be imported. Importing replaces the selected text in the method. To replace an existing method by an imported method, select the entire contents of the method before carrying out the import.
@@ -62,7 +62,7 @@ The other types of methods do not have specific properties. Their properties are
 
 To display the **Method Properties** dialog box for a project method, you can either:
 
-- in the [Code Editor](write-class-method.md), select the **Method Properties...** command in the **Method** menu,
+- in the [Code Editor](../code-editor/write-class-method.md), select the **Method Properties...** command in the **Method** menu,
 - or on the **Methods** page of the Explorer, **right-click** on the project method and select **Method Properties...** in the context menu or options menu. 
 
 
@@ -112,31 +112,7 @@ For more information on this option, refer to [Execute on Server attribute](http
 
 ### Execution mode  
 
-This option allows you to declare the method eligible for execution in preemptive mode. By default, 4D executes all the project methods of your applications in cooperative mode. 
-
-If you want to benefit from the preemptive mode feature, you must explicitly declare all the methods that you want to be started in preemptive mode. The compiler will then check that these methods are actually thread-safe.
-
-**Note:** Execution in preemptive mode is only available in compiled mode. For more information, refer to the [Preemptive 4D processes](https://doc.4d.com/4Dv19R6/4D/19-R6/Preemptive-4D-processes.300-5911166.en.html) section.
-
-The following options are provided:
-
--   **Can be run in preemptive processes**: By checking this option, you declare that the method is capable of being run in a preemptive process and therefore should be run in preemptive mode whenever possible. The "preemptive" property of the method is set to "capable".
-
-When this option is checked, the 4D compiler will verify that the method is actually capable and will return errors if this is not the case -- for example, if it directly or indirectly calls commands or methods that cannot be run in preemptive mode (the entire call chain is parsed but errors are only reported to the first sublevel). You can then edit the method so that it becomes thread-safe, or select another option.
-
-If the method's preemptive capability is approved, it is tagged "thread-safe" internally and will be executed in preemptive mode whenever the required conditions are met. This property defines its eligibility for preemptive mode but does not guarantee that the method will actually be run in preemptive mode, since this execution mode requires a specific context (see [When is a process started preemptively?](https://doc.4d.com/4Dv19R5/4D/19-R5/Preemptive-4D-processes.300-5830919.en.html#2822148)).
-
--   **Cannot be run in preemptive processes**: By checking this option, you declare that the method must never be run in preemptive mode, and therefore must always be run in cooperative mode, as in previous 4D versions. The "preemptive" property of the method is set to "incapable".
-
-When this option is checked, the 4D compiler will not verify the ability of the method to run preemptively; it is automatically tagged "thread-unsafe" internally (even if it is theoretically capable). When called at runtime, this method will "contaminate" any other methods in the same thread, thus forcing this thread to be executed in cooperative mode, even if the other methods are thread-safe.
-
--   **Indifferent**(default): By checking this option, you declare that you do not want to handle the preemptive property for the method. The "preemptive" property of the method is set to "indifferent".
-
-When this option is checked, the 4D compiler will evaluate the preemptive capability of the method and will tag it internally as "thread-safe" or "thread-unsafe". No error related to preemptive execution is returned. If the method is evaluated as thread-safe, at runtime it will not prevent preemptive thread execution when called in a preemptive context. Conversely, if the method is evaluated "thread-unsafe", at runtime it will prevent any preemptive thread execution when called.
-
-Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the [New process](https://doc.4d.com/4Dv19R5/4D/19-R5/New-process.301-5830903.en.html) command). If tagged "thread-safe" internally, it is only taken into account when called from other methods inside a call chain.
-
-***Particular case*:** If the method has also the [**Shared by components and host database**](shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**. 
+This option allows you to declare the method eligible for execution in preemptive mode. It is described in the [Preemptive processes section](../Develop/processes.md#preemptive-processes).
 
 ### Available through  
 

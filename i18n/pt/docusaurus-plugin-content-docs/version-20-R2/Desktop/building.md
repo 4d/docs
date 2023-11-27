@@ -88,7 +88,7 @@ This feature creates a `.4dz`file within a `Compiled Database/<project name>` fo
 
 Um ficheiro .4dz é essencialmente uma versão zipada (embalada) da pasta do projecto. A .4dz file is essentially a zipped (packed) version of the project folder. The compact and optimized size of .4dz files makes project packages easy to deploy.
 
-> When generating .4dz files, 4D uses a **standard** zip format by default. The advantage of this format is that it is easily readable by any unzip tool. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
+> When generating .4dz files, 4D uses a **standard** zip format by default. A vantagem desse formato é que ele pode ser lido facilmente por todas as ferramentas de descompactação. If you do not want to use this standard format, add the `UseStandardZipFormat` XML key with value `False` in your [`buildApp.4DSettings`](#build-application-settings) file (for more information, see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
 #### Incluir pastas relacionadas
 
@@ -214,7 +214,7 @@ Once built, a client/server application is composed of two customized parts: the
 
 > If you want to deploy a client/server application in an heterogeneous environment (client applications running on Intel/AMD and Apple Silicon machines), it is recommended to [compile the project for all processors](Project/compiler.md#compilation-target) on a macOS machine, so that all client applications will run natively.
 
-Also, the client/server application is customized and its handling simplified:
+Além disso, o aplicativo cliente/servidor é personalizado e fácil de usar:
 
 * To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
 * To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. The client targets the server either using its name, when the client and server are on the same sub-network, or using its IP address, which is set using the `IPAddress` XML key in the buildapp.4DSettings file. If the connection fails, [specific alternative mechanisms can be implemented](#management-of-client-connections). You can "force" the display of the standard connection dialog box by holding down the **Option** (macOS) or **Alt** (Windows) key while launching the client application. Only the client portion can connect to the corresponding server portion. If a user tries to connect to the server portion using a standard 4D application, an error message is returned and connection is impossible.
@@ -256,7 +256,7 @@ Embedding the project directory file allows you to deploy a client/server applic
 
 #### Permitir a ligação de clientes Silicon Mac
 
-When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. You can then specify a path to the structure compiled for Apple Silicon/Intel.
+When building a server on Windows, check this option to allow Apple Silicon clients to connect to your server application. Em seguida, você pode especificar um caminho para a estrutura compilada para Apple Silicon/Intel.
 
 To allow Apple Silicon clients to connect to a Server application built on Windows, you must first build a client application on macOS, with a project compiled for Apple Silicon and Intel. This automatically creates a compiled structure, identical to the one created with the **[Build compiled structure](#build-compiled-structure)** option (without the related folders).
 
@@ -353,7 +353,7 @@ If 4D cannot carry out the update of the client application, the client machine 
 
 Existem muitas causas possíveis para este erro. When you get this message, it is advisable to check the following parameters first off:
 
-* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). More particularly, check the pathnames to the versions of 4D Volume Desktop.
+* **Pathnames** - Check the validity of the pathnames set in the application project via the Application builder dialog box or via XML keys (for example *ClientMacFolderToWin*). Em particular, verifique os caminhos para as versões do 4D Volume Desktop.
 * **Read/write privileges** - On the client machine, check that the current user has write access rights for the client application update.
 
 ### Ficheiros gerados
@@ -471,7 +471,7 @@ If there is a conflict between two different versions of the same plug-in (one l
 
 ### Anular a selecção de módulos
 
-A module is a built-in code library used by 4D to control specific features. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
+Um módulo é uma biblioteca de código integrada usada por 4D para controlar funções específicas. If you know that your built application does not use any of the features covered by a module, you can deselect it in the list to reduce the size of your application files.
 
 > **Warning:** Deselecting a module could prevent your built application from working as expected. If you are not 100% certain that a module is never called by your application, it is recommended to keep it selected.
 
@@ -621,7 +621,7 @@ This may be unsuitable if you want to duplicate a merged application intended to
 
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
-*Duplication when data linked by application name:* ![](../assets/en/Project/datalinking1.png)
+*Duplicação quando os dados são vinculados pelo nome da aplicação:* ![](../assets/en/Project/datalinking1.png)
 
 *Duplication when data linked by application path:* ![](../assets/en/Project/datalinking2.png)
 
@@ -656,14 +656,14 @@ The management of connections by client applications covers the mechanisms by wh
 
 ### Cenário de ligação
 
-The connection procedure for merged client applications supports cases where the dedicated server is not available. The startup scenario for a 4D client application is the following:
+The connection procedure for merged client applications supports cases where the dedicated server is not available. O cenário de inicialização de um aplicação cliente 4D é o seguinte:
 
 1. The client application tries to connect to the server using the discovery service (based upon the server name, broadcasted on the same subnet).  
    OR  
    If valid connection information is stored in the "EnginedServer.4DLink" file within the client application, the client application tries to connect to the specified server address.
 
 2. If this fails, the client application tries to connect to the server using information stored in the application's user preferences folder ("lastServer.xml" file, see last step).
-3. If this fails, the client application displays a connection error dialog box.
+3. En cas d'échec, l'application cliente affiche une boîte de dialogue d'erreur de connexion.
 
 * If the user clicks on the **Select...** button (when allowed by the 4D developer at the build step, see below), the standard "Server connection" dialog box is displayed.
 * If the user clicks on the **Quit** button, the client application quits.
@@ -704,7 +704,7 @@ Pode automatizar este procedimento em grande medida utilizando os seguintes coma
 
 > You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
-Here is the scenario for updating a server or merged single-user application:
+Este é o cenário para atualizar um servidor ou aplicação mesclada usuário único:
 
 1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
 2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).

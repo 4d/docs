@@ -28,6 +28,12 @@ Leia [**O que há de novo no 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d
 See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
 
 
+:::caution Minimal client version for 4D Server v20.2 and later
+
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+
+:::
+
 #### Aviso de reconstrução do índice
 
 4D v20 inclui uma atualização da biblioteca da UCI (ver abaixo) que forçará uma reconstrução automática de índices do tipo alfa, texto e objeto. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
@@ -208,7 +214,7 @@ $value:=($size>1000)? a:b // Aqui 'a:b' é visto como um operador ternário.
 
 - As [propriedades computadas](../Concepts/classes.md#function-get-and-function-set) estão disponíveis em classes.
 - [Atributos computados](../ORDA/ordaClasses.md#computed-attributes) estão disponíveis nas classes ORDA. Elas são semelhantes às propriedades computadas, mas também suportam as funções [query](../ORDA/ordaClasses.md#function-query-attributename) e [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) .
-- Novos atributos de classe de dados ORDA: [`expostos`](../API/DataClassAttributeClass.md#exposed) e [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - [Arquivos ZIP](../API/ZipArchiveClass.md#zip-create-archive) agora suportam os algoritmos de compactação *LZMA* e *xz* .
 - Uma nova opção de compilação [](../Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita a inclusão de clientes Silicon Mac em aplicativos de servidor no Windows.
 - Suporte estendido para [do modo escuro](../Preferences/general.md#appearance-macos-only) no macOS.

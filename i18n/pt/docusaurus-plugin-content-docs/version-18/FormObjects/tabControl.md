@@ -9,7 +9,7 @@ O seguinte formulário de várias páginas utiliza um objeto de controlo de pest
 
 ![](../assets/en/FormObjects/tabControl1.png)
 
-To navigate from screen to screen, the user simply clicks the desired tab.
+Para passar de uma tela para outra, o usuário simplesmente clica na guia correspondente.
 
 The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
@@ -43,7 +43,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 There are several ways to supply the labels for a tab control:
 
 * You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Os ícones associados aos itens da lista no editor de listas serão apresentados no controle de pestanas.
-* You can create a Text array that contains the names of each page of the form. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+* Você pode criar um array Text que contenha os nomes de cada página do formulário. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -63,7 +63,7 @@ You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-P
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+The command is executed when the `On Clicked` event occurs. Em seguida, você deve excluir o array quando ocorrer o evento `On Unload`.
 
 Eis um exemplo de método objeto:
 

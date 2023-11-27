@@ -28,6 +28,12 @@ Lisez [**Les nouveautés de 4D v20 R2**](https://blog.4d.com/fr-whats-new-in-4d-
 Lisez [**Les nouveautés de 4D v20**](https://blog.4d.com/fr-whats-new-in-4d-v20/), le billet de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D v20.
 
 
+:::caution Minimal client version for 4D Server v20.2 and later
+
+For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+
+:::
+
 #### Avertissement concernant la reconstruction de l'index
 
 4D v20 inclut une mise à jour de la bibliothèque ICU (voir ci-dessous) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
@@ -208,7 +214,7 @@ $value:=($size>1000)? a:b // Ici, "a:b" est considéré comme un opérateur tern
 
 - Les [propriétés calculées](../Concepts/classes.md#function-get-and-function-set) sont disponibles dans les classes.
 - Les [attributs calculés](../ORDA/ordaClasses.md#computed-attributes) sont disponibles dans les classes ORDA. Elles sont similaires aux propriétés calculées mais prennent également en charge les fonctions [query](../ORDA/ordaClasses.md#function-query-attributename) et [orderBy](../ORDA/ordaClasses.md#function-orderby-attributename) .
-- Nouveaux attributs de dataclass ORDA : [`exposed`](../API/DataClassAttributeClass.md#exposed) et [`readOnly`](../API/DataClassAttributeClass.md#readonly).
+- New ORDA dataclass [attributes](../API/DataClassClass.md#attributename): `exposed` and `readOnly`.
 - Les [archives ZIP](../API/ZipArchiveClass.md#zip-create-archive) prennent désormais en charge les algorithmes de compression *LZMA* et *xz* .
 - Une nouvelle [option de build](../Desktop/building.md#allow-connection-of-silicon-mac-clients) permet d'inclure plus facilement les clients Silicon Mac dans les applications serveur sous Windows.
 - Prise en charge étendue du [mode sombre](../Preferences/general.md#appearance-macos-only) sur macOS.

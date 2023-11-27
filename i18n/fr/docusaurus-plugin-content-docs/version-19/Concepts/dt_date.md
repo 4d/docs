@@ -21,7 +21,7 @@ Une constante littérale de type date est comprise entre deux points d'exclamati
 
 Une date nulle s’écrit _!00-00-00!_.
 
-**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour entrer une date nulle. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
+**Astuce :** L'éditeur de code comprend un raccourci pour saisir une date nulle. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
 
 **Notes :**
 
@@ -45,5 +45,5 @@ Une date nulle s’écrit _!00-00-00!_.
 |                     |                  |          | !2017-01-20! < !2017-01-20!  | False        |
 | Supérieur ou égal à | Date >= Date     | Boolean  | !2017-01-20! >=!2017-01-01!  | True         |
 |                     |                  |          | !2017-01-01!>=!2017-01-20!   | False        |
-| Inférieur ou égal à | Date \<= Date   | Boolean  | !2017-01-01!\<=!2017-01-20! | True         |
-|                     |                  |          | !2017-01-20!\<=!2017-01-01! | False        |
+| Inférieur ou égal à | Date <= Date     | Boolean  | !2017-01-20! <= !2017-01-20! | True         |
+|                     |                  |          | !2017-01-20! <= !2017-01-01! | False        |

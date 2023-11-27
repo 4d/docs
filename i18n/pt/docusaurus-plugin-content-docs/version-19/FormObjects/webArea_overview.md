@@ -177,7 +177,7 @@ As URLs manejadas por programação em áreas web em macOS devem começar com o 
 
 ## Acesso ao inspector web
 
-Pode ver e usar um inspetor web dentro das áreas web de seus formulários. The web inspector is a debugger which is provided by the embedded Web engine. It allows parsing the code and the flow of information of the web pages.
+Pode ver e usar um inspetor web dentro das áreas web de seus formulários. O inspetor web é um depurador fornecido pelo motor web integrado. It allows parsing the code and the flow of information of the web pages.
 
 ### Exibir o inspector web
 

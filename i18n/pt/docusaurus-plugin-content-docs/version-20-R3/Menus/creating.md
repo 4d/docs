@@ -5,7 +5,7 @@ title: Criação de menus e barras de menus
 
 É possível criar menus e barras de menu:
 
-- usando o editor de menus da janela da caixa de ferramentas 4D. In this case, menus and menu bars are stored in the application's structure.
+- usando o editor de menus da janela da caixa de ferramentas 4D. Nesse caso, os menus e as barras de menu são armazenados na estrutura da aplicação.
 - dinamicamente, utilizando os comandos de linguagem do tema "Menus". In this case, menus and menu bars are not stored, they only exist in memory.
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
@@ -47,7 +47,7 @@ For each of the menus, you must add the commands that appear when the menu drops
 ### Utilizar o editor de menus
 Para adicionar um item de menu:
 
-1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
+1. In the list of source menus, select the menu to which you want to add a command. Se o menu já contiver comandos, eles serão exibidos na lista central. If you want to insert the new command, select the command that you want it to appear above. Você sempre pode reorganizar o menu posteriormente, arrastando e soltando.
 2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
 3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Pode conter até 31 caracteres. You can enter the name as "hard coded" or enter a reference (see below).
 
@@ -72,7 +72,7 @@ Para eliminar uma barra de menu, um menu ou um item de menu:
 
 ### Utilizar a linguagem 4D
 
-Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` to unload the menu reference from the memory.
+Utilize `DELETE MENU ITEM` para remover um item de uma referência de menu. Use `RELEASE MENU` para descarregar a referência de menu da memória.
 
 
 ## Anexar os menus

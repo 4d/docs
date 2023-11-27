@@ -6,7 +6,7 @@ title: Utilizar um datastore remoto
 A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accessed simultaneously through different clients:
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
-- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
+- Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. Esses acessos são transmitidos pelo servidor **HTTP REST**.
 - As petições 4D for iOS para atualizar aplicações iOS. These accesses are handled by the **HTTP server**.
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
@@ -33,7 +33,7 @@ Processes that manage sessions for datastore access are shown in the 4D Server a
 
 - nome: "REST Handler: \<process name\>"
 - type: type Worker Server HTTP
-- session: session name is the user name passed to the Open datastore command.
+- session: o nome da sessão é o nome de usuário passado para o comando Open datastore.
 
 In the following example, two processes are running for the same session:
 

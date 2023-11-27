@@ -701,14 +701,14 @@ Function orderBy age($event : Object)-> $result : Text
 
 ### エイリアスのプロパティ
 
-エイリアス属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティ (属性の種類) は "alias" です。
+エイリアス属性の [`kind`](../API/DataClassClass.md#attributename) プロパティ (属性の種類) は "alias" です。
 
-エイリアス属性は、ターゲット属性の [`type`](../API/DataClassAttributeClass.md#type) プロパティを継承します。
+エイリアス属性は、ターゲット属性の [`type`](../API/DataClassClass.md#attributename) プロパティを継承します。
 
-- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
-- ターゲット属性の [`kind`](../API/DataClassAttributeClass.md#kind) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("*classname*Entity" または "*classname*Selection") になります。
+- ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) プロパティが "storage" の場合、エイリアス属性の `type` はターゲット属性と同じになります。
+- ターゲット属性の [`kind`](../API/DataClassClass.md#attributename) が "relatedEntity" または "relatedEntities" の場合、エイリアスの `type` は `4D.Entity` または `4D.EntitySelection` ("*classname*Entity" または "*classname*Selection") になります。
 
-リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassAttributeClass.md#path) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
+リレーションに基づくエイリアス属性は、そのターゲット属性のパスを格納する専用の [`path`](../API/DataClassClass.md#attributename) プロパティを持ちます。 同じデータクラスの属性に基づくエイリアス属性は、ターゲット属性と同じプロパティを持ちます (`path` プロパティはありません)。
 
 
 ### 例題
@@ -957,6 +957,7 @@ ORDA データモデルユーザークラスは、クラスと同じ名称の .4
 > 空の ORDA クラスは、デフォルトではエクスプローラーに表示されません。 表示するにはエクスプローラーのオプションメニューより **データクラスを全て表示** を選択します: ![](../assets/en/ORDA/showClass.png)
 
 ORDA ユーザークラスは通常のクラスとは異なるアイコンで表されます。 空のクラスは薄く表示されます:
+
 
 ![](../assets/en/ORDA/classORDA2.png)
 

@@ -15,7 +15,7 @@ In order to clearly define the concepts implemented with subforms, here are some
 *   **Parent form**: a form containing one or more subform(s).
 *   **Subform container**: an object included in the parent form, displaying an instance of the subform.
 *   **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-*   **List form**: instance of subform displayed as a list.
+*   **Formulário lista**: instância do subformulário exibido como uma lista.
 *   **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
 
 
@@ -157,7 +157,7 @@ If you modify a value either in the parent form or in the subform, it is automat
 
 ### Utilização de ponteiros (compatibilidade)
 
-In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. For example, to update a subform object, you could call the following code:
+In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. Por exemplo, para atualizar um objeto subformulário, você pode chamar o seguinte código:
 
 ```4d  
 // Subform form method If (Form event code=On Bound Variable Change) 

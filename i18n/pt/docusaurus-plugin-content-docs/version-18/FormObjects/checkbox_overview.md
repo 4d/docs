@@ -181,7 +181,7 @@ Exemplo com estados selecionado/ não selecionado/ ressaltado:
 
 The Rounded Bevel check box style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's behavior.
 
-The Rounded Bevel style has a light gray background with a title. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
+O estilo Bevel arredondado tem um fundo cinza claro com um título. Está geralmente associado com uma [imagem de 4 estados](properties_TextAndPicture.md#number-of-states).
 
 Exemplo em macOS:
 
@@ -294,7 +294,7 @@ As cores (ressaltado e fundo) de um botão com o estilo Office XP são baseadas 
 
 This check box style can be used to add a standard collapse/expand icon. Esses botões são usados nativamente em listas hierárquicas.
 
-- *Windows* - the button looks like a [+] or a [-]
+- *Windows* - o botão se parece com um [+] ou um [-]
 
   ![](../assets/en/FormObjects/checkbox_collapse.png)
 
@@ -381,5 +381,5 @@ Todas as caixas de seleção partilhar o mesmo conjunto de propriedades básicas
 Propriedades específicas adicionais estão disponíveis, dependendo do [estilo botão](#button-styles):
 
 - [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Three-States](properties_Display.md#three-states) (Flat, Regular)
+- [Três estados](properties_Display.md#three-states) (plano, clássico)
 - [Number of States](properties_TextAndPicture.md#number-of-states) - [Picture pathname](properties_TextAndPicture.md#picture-pathname) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) (Toolbar button, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Custom)

@@ -128,7 +128,7 @@ title: 式と関数
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-詳細や例題については [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) (英文) を参照ください。
+詳細や例題については [**SpreadJS's extented list of functions**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) (英文) を参照ください。
 
 
 ## 4Dファンクション
@@ -238,6 +238,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 * [テキスト](Concepts/dt_string.md) (4D View Pro 内で文字列に変換)
 * [実数](Concepts/dt_number.md)/[倍長整数](Concepts/dt_number.md) (4D View Pro 内で数値に変換)
 * [日付](Concepts/dt_date.md) (4D View Pro 内で JS日付型に変換 - 時間、分、秒 = 0)
+
 * [時間](Concepts/dt_time.md) (4D View Pro 内で JS日付型に変換 - 日付は基準日、つまり 1899年12月30日)
 * [ブール](Concepts/dt_boolean.md) (4D View Pro 内でブールに変換)
 * [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。

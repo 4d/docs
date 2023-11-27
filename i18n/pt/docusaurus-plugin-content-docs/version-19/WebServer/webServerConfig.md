@@ -9,7 +9,7 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Localização do parâmetro                 | Scope                                               | Servidor Web a ser usado                                       |
+| Localização do parâmetro                 | Âmbito                                              | Servidor Web a ser usado                                       |
 | ---------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
 | [objeto webServer](webServerObject.md)   | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
 | `WEB SET OPTION` ou um comando `WEB XXX` | Temporário (sessão atual)                           | Servidor principal                                             |
@@ -68,11 +68,11 @@ Cipher list used for the secure protocol; sets the priority of ciphering algorit
 
 ## Parâmetros CORS
 
-| Pode ser definido com              | Nome                                                    | Comentários                                                                    |
-| ---------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| `WEB SET OPTION`                   | `Web CORS settings`                                     | Collection of objects (List of allowed hosts and methods for the CORS service) |
-| Caixa de diálogos de configurações | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)        |
+| Pode ser definido com              | Nome                                                    | Comentários                                                                  |
+| ---------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| objeto webServer                   | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS) |
+| `WEB SET OPTION`                   | `Web CORS settings`                                     | Coleção de objetos (lista de hosts e métodos permitidos para o serviço CORS) |
+| Caixa de diálogos de configurações | Options (II) page/Domain names and HTTP methods allowed | Click on the [+] button to add an allowed domain name and its method(s)      |
 
 Lista de hosts e métodos permitidos para o serviço CORS.
 
@@ -104,7 +104,7 @@ Método(s) HTTP aceite(s) para o host CORS correspondente. São suportados os se
 - TRACE
 - PATCH
 
-Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, null, or undefined, all methods are enabled.
+Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver vazio, null ou indefinido, todos os métodos serão ativados.
 
 #### Veja também
 
@@ -183,7 +183,7 @@ Indicates whether or not the web server will accept non-secure connections.
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
 | objeto webServer                   | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean     |
 | `WEB SET OPTION`                   | `Web HTTPS enabled`                                  |             |
-| Caixa de diálogos de configurações | Configuration page/Enable HTTPS                      |             |
+| Caixa de diálogos de configurações | Página configuração/Habilitar HTTPS                  |             |
 
 Estado da comunicação por HTTPS. This option is described in [this section](Admin/tls.md).
 
@@ -200,7 +200,7 @@ When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabl
 
 HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
 
-> HSTS requires that HTTPS is [enabled](enable-https) on the server. [HTTP](enable-http) must also be enabled to allow client initial connections.
+> A ativação do HSTS exige que o HTTPS esteja [ativado](enable-https) no servidor. [HTTP](enable-http) must also be enabled to allow client initial connections.
 
 > You can get the current connection mode using the `WEB Is secured connection` command.
 
@@ -224,7 +224,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
 
-Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
+Passe de 1 a 9 como valor onde 1 é a compressão mais rápida e 9 mais alta. You can also pass -1 to get a compromise between speed and rate of compression. Por padrão, o nível de compressão é 1 (compressão mais rápida).
 
 ## HTTP Compression Threshold
 
@@ -281,7 +281,7 @@ Número da porta IP de escuta para conexões HTTPS via TLS. Por defeito, o valor
 | `WEB SET OPTION`                   | `Web inactive process timeout`                                           |             |
 | Caixa de diálogos de configurações | Página Opções (I)/Tempo limite dos processos inativos                    | Slider      |
 
-Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
+Duração da vida (em minutos) dos processos inativos associados às sessões. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
 Padrão: 480 minutos (passe 0 para repor o valor predefinido)
 
@@ -360,7 +360,7 @@ Este parâmetro permite-lhe selecionar o formato deste ficheiro. Os valores disp
 | 0     | Sem ficheiro de registo | Por padrão                                                                                                                                                                                                               |
 | 1     | Registo em formato CLF  | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
 | 2     | Registo em formato DLF  | Combined Log Format - Similar to CLF format but adds two additional HTTP fields at the end of each request: Referer and User-agent.                                                                                      |
-| 3     | Registo em formato ELF  | Extended Log Format - To be customized in the Settings dialog box                                                                                                                                                        |
+| 3     | Registo em formato ELF  | Extended Log Format - A ser personalizado na caixa de diálogo das Propriedades                                                                                                                                           |
 | 4     | Registo em formato WLF  | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                             |
 
 > Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. If you use one of these formats without any of its fields having been selected on this page, the log file will not be generated.
@@ -598,9 +598,9 @@ The **Use Keep-Alive Connections** option enables or disables keep-alive TCP con
 
 The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.
 
-In some cases, other optimized internal functions may be invoked. As ligações persistentes são úteis principalmente para páginas estáticas.
+Em alguns casos, outras funções internas otimizadas podem ser invocadas. As ligações persistentes são úteis principalmente para páginas estáticas.
 
-Two options allow you to set how the keep-alive connections work:
+Duas opções permitem que você defina como funcionam as conexões persistentes:
 
 - **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers). The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.
 

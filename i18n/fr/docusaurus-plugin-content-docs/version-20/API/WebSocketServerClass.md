@@ -12,85 +12,85 @@ title: WebSocketServer
 </details>
 
 
-The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
+La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois le serveur WebSocket 4D actif, vous pouvez ouvrir et utiliser les connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
-:::note About WebSocket Servers
+:::note À propos des serveurs WebSocket
 
-The WebSocket protocol provides full-duplex communication channel between a WebSocket Server and a client (e.g. a Web browser). For more information on WebSocket servers, read [this page on Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
+Le protocole WebSocket fournit un canal de communication full-duplex entre un serveur WebSocket et un client (par exemple un navigateur Web). Pour plus d'informations sur les serveurs WebSocket, lisez [cette page sur Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
 
 :::
 
-:::info See also
+:::info Voir aussi
 
-See also [this blog post](https://blog.4d.com/new-built-in-websocket-server/) about the 4D WebSocket server.
+Voir également [cet article de blog](https://blog.4d.com/new-built-in-websocket-server/) sur le serveur WebSocket 4D.
 
 :::
 
 ### Conditions requises
 
-To create and handle your WebSocket Server in 4D, you will have to use two 4D build-in classes:
+Pour créer et gérer votre serveur WebSocket dans 4D, vous devrez utiliser deux classes intégrées à 4D :
 
-- this class (`4D.WebSocketServer`) to manage the server itself,
-- the [`4D.WebSocketConnection`](WebSocketConnectionClass.md) class to manage connections and messages.
+- cette classe (`4D.WebSocketServer`) pour gérer le serveur lui-même,
+- la classe [`4D.WebSocketConnection`](WebSocketConnectionClass.md) pour gérer les connexions et les messages.
 
-In addition, you will have to create two user classes that will contain callback functions:
+De plus, vous devrez créer deux classes utilisateurs qui contiendront les fonctions de callback :
 
-- a user class to handle server connections,
-- a user class to handle messages.
+- une classe utilisateur pour gérer les connexions serveur,
+- une classe utilisateur pour gérer les messages.
 
-You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) to keep the connection alive.
+Vous devez [créer le serveur WebSocket](#4dwebsocketservernew) au sein d'un [worker](https://doc.4d.com/4dv20/help/command/fr/page1389.html) pour maintenir la connexion active.
 
-The [4D Web Server](WebServerClass.md) must started.
+The [4D Web Server](WebServerClass.md) must be started.
 
 
 ### Exemple
 
-In this basic example, our WebSocket server will return messages in uppercase.
+Dans cet exemple de base, notre serveur WebSocket renverra les messages en majuscules.
 
-1. Create the WebSocket server using a worker (mandatory) and pass your server connection class as parameter:
+1. Créez le serveur WebSocket en utilisant un worker (obligatoire) et passez votre classe de connexion serveur en tant que paramètre :
 
 ```4d
-    //create an instance of the user class
-    //that will handle the connections to the server
-var $handler:cs.myServerHandler
-$handler:=cs.myServerHandler.new()
+    // Créer une instance de la classe utilisateur
+    // qui gérera les connexions vers le serveur
+var $handler: cs.myServerHandler
+$handler := cs.myServerHandler.new()
 
-CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))  
-    //assign a variable (wss) to the WebSocket allows you  
-    //to call wss.terminate() afterwards
+CALL WORKER("WebSocketServer"; Formula(wss := 4D.WebSocketServer.new($handler)))
+    // attribuer une variable (wss) au WebSocket vous permet
+    // d'appeler wss.terminate() par la suite
 ```
 
-2. Define the `myServerHandler` user class containing callback function(s) used to handle connections to the server:
+2. Définissez la classe utilisateur `myServerHandler` contenant la ou les fonction(s) de callback utilisée(s) pour gérer les connexions au serveur :
 
 ```4d
-//myServerHandler class
+// Classe myServerHandler
 
-Function onConnection($wss : Object; $event : Object) : Object
-    //returns an instance of the user class
-    //that will handle the messages
+Function onConnection($wss: Object; $event: Object): Object
+    // retourne une instance de la classe utilisateur
+    // qui traitera les messages
     return cs.myConnectionHandler.new() 
 ```
 
-3. Define the `myConnectionHandler` user class containing callback function(s) used to handle messages:
+3. Définissez la classe utilisateur `myConnectionHandler` contenant la ou les fonction(s) de callback utilisée(s) pour gérer les messages :
 
 ```4d
-// myConnectionHandler class
+// Classe myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-    //resends the message in uppercase  
+    // renvoie le message en majuscules
     $ws.send(Uppercase($message.data))
 
 ```
 
 :::tip Client-Side JS
 
-See [this blog post](https://blog.4d.com/websocket-server/) for an example of client-side Javascript code handling a WebSocket connection.
+Voir [cet article de blog](https://blog.4d.com/websocket-server/) pour un exemple de code Javascript côté client gérant une connexion WebSocket.
 
 :::
 
-### WebSocketServer object
+### Objet WebSocketServer
 
-WebSocket server objects provide the following properties and functions:
+Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 
 |                                                                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,7 +98,7 @@ WebSocket server objects provide the following properties and functions:
 | [<!-- INCLUDE #WebSocketServerClass.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.dataType.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.handler.Syntax -->](#handler)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.handler.Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.path.Summary -->|
-| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate())&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
+| [<!-- INCLUDE #WebSocketServerClass.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminate().Summary -->|
 | [<!-- INCLUDE #WebSocketServerClass.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #WebSocketServerClass.terminated.Summary -->|
 
 

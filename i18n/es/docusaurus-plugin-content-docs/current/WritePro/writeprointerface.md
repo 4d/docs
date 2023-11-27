@@ -15,62 +15,62 @@ A continuación encontrará la documentación de configuración del Asistente pa
 
 El asistente de tablas está aquí para simplificar aún más la creación de tablas basadas en datos de bases d utilizando contextos, fuentes de datos y fórmulas.
 
-The Table Wizard, accessible to end-users, loads templates provided and configured by 4D developers. This enables developers to customize the template according to the specific use cases and business requirements of the users.
+El asistente de tablas, accesible a los usuarios finales, carga plantillas suministradas y configuradas por los desarrolladores de 4D. Esto permite a los desarrolladores personalizar la plantilla según los casos de uso específicos y los requisitos empresariales de los usuarios.
 
-The Table Wizard comes with default templates and themes, which developers can configure to adapt its content to match the specific requirements of the application.
+El Asistente de tablas viene con plantillas y temas predeterminados, que los desarrolladores pueden configurar para adaptar su contenido a los requisitos específicos de la aplicación.
 
-To implement the Table Wizard in your application, the developers are able to create and configure template files.
+Para implementar el Asistente de tablas en su aplicación, los desarrolladores pueden crear y configurar archivos de plantilla.
 
 ### Interfaz del Asistente de tablas WP
 
-The user opens the Table Wizard dialog from the "Insert table"  menu item in 4D Write Pro interface toolbar and sidebar.
+El usuario abre el diálogo Asistente para tablas desde el elemento de menú "Insertar tabla" de la barra de herramientas y la barra lateral de la interfaz de 4D Write Pro.
 
 ![](../assets/en/WritePro/tablewizard-interface.png)
 
-From this interface, the user can select a template or a table from the first drop-down list and a theme from the second.
+Desde esta interfaz, el usuario puede seleccionar una plantilla o una tabla en la primera lista desplegable y un tema en la segunda.
 
 ##### En Columnas:
 
 ![](../assets/en/WritePro/columns2.PNG)
 
-Depending on the user's selection of a template or a table, the user can view the list of fields stored in the template (Blob and object types are automatically excluded). They can then select columns to display in the table by checking the box in front of the field name and order them by moving and dragging the fields list.
+Dependiendo de si el usuario selecciona un modelo o una tabla, puede ver la lista de campos almacenados en el modelo (los tipos Blob y objeto se excluyen automáticamente). A continuación, pueden seleccionar las columnas que se mostrarán en la tabla marcando la casilla situada delante del nombre del campo y ordenarlas moviendo y arrastrando la lista de campos.
 
 ##### En líneas:
 
 ![](../assets/en/WritePro/rows.PNG)
 
-In the Table Wizard, the user can also define the number of header rows and extra rows (0 to 5 each), set [break rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (summary rows) above or below the data row, and choose to show/hide [carry-over rows](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
+En el Asistente de tablas, el usuario también puede definir el número de líneas de encabezado y de líneas adicionales (de 0 a 5 cada una), definir [líneas de interrupción](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6233076) (líneas de resumen) por encima o por debajo de la línea de datos, y elegir mostrar/ocultar [líneas de arrastre](https://doc.4d.com/4Dv20/4D/20/Handling-tables.200-6229469.en.html#6236686).
 
 ##### En pantalla:
 
 ![](../assets/en/WritePro/display2.PNG)
 
-The user adjusts the zoom level according to their preference by selecting the desired option from a drop-down list, uses radio buttons to display formulas or data for clear presentation, and chooses to display a horizontal ruler using a checkbox.
+El usuario ajusta el nivel de zoom según sus preferencias seleccionando la opción deseada de una lista desplegable, utiliza botones de opción para mostrar fórmulas o datos para una presentación clara y elige mostrar una regla horizontal utilizando una casilla de verificación.
 
-After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
+Tras finalizar la creación y personalización de la tabla, el usuario puede hacer clic en el botón **Insertar** para añadir la tabla a su documento WP.
 
-Once the table has been integrated into the document, the user can customize its style. The formatting tools of the toolbar and sidebar are still available.
+Una vez integrada la tabla en el documento, el usuario puede personalizar su estilo. Las herramientas de formato de la barra de herramientas y la barra lateral siguen estando disponibles.
 
-### WP Table Wizard template configuration
+### Configuración de la plantilla WP Table Wizard
 
-The templates configuration includes:
+La configuración de las plantillas incluye:
 
-* Defining tables and fields as well as preparing formulas adapted to the application from the [template file](#template-files).
-* Translating table, field, and formula names from the [translation file](#translation-files).
-* Designing graphic styles and customized  themes from the [theme file](#theme-files).
+* Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+* Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+* Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
-These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
+Estos tres tipos de archivos contribuyen a la configuración del Asistente para tablas y, aunque cada uno de ellos tiene una finalidad distinta, ninguno de ellos se considera un componente esencial.
 
 #### Archivos de plantillas
 
-The template file allows you to define the following:
+El archivo de plantilla permite definir lo siguiente:
 
-- the formula that returns an entity selection used as the table's data source,
+- la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
 - the break formulas (if any break row can be inserted)
 - the dataclass attributes that can be used as table columns,
 - the formulas available as contextual menus inside break rows, carry-over row or extra rows.
 
-:::info Limitation
+:::info Limitación
 
 In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. This limitation will be removed in the next version.
 
@@ -80,25 +80,25 @@ The template file must be stored in a "[`Resources`](../Project/architecture.md#
 
 The template file in JSON format contains the following attributes:
 
-| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                              |
-|:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                             |
-| columns              | Collection | x           | Collection of table columns                                                                                                                              |
-| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                               |
-| columns.header       | Text       | x           | Label shown to the user                                                                                                                                  |
-| columns.source       | Text       | x           | Formula                                                                                                                                                  |
-| breaks               | Collection |             | Collection of break objects. The order of the breaks is important. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Label shown to the user                                                                                                                                  |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                  |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                   |
-| breakFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                  |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                       |
-| bcorFormulas.label   | Text       | x           | Label shown to the user                                                                                                                                  |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                  |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                   |
-| extraFormulas.label  | Text       | x           | Label shown to the user                                                                                                                                  |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                  |
+| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                      |
+|:-------------------- |:---------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                                     |
+| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                   |
+| columns.check        | Text       | x           | True when the column is already checked in the template editor. False when the column is unchecked in the template editor.                                       |
+| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| columns.source       | Text       | x           | Formula                                                                                                                                                          |
+| breaks               | Collection |             | Collection of break objects. El orden de las interrupciones es importante. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                          |
+| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                           |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                          |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                               |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                          |
+| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                           |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                          |
 
 :::note Francés
 
@@ -164,17 +164,17 @@ The translation file in JSON format contains the following attributes:
 
 | Atributo  | Tipo       | Obligatorio | Descripción                                                                           |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Collection of translated table objects                                                |
+| tables    | Collection |             | Colección de objetos de tabla traducidos                                              |
 | fields    | Collection |             | Collection of translated field objects                                                |
 | formulas  | Collection |             | Collection of translated formula objects                                              |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
-| Atributo    | Tipo | Obligatorio | Descripción                             |
-|:----------- |:---- |:----------- |:--------------------------------------- |
-| original    | Text | x           | Original text intended for translation  |
-| translation | Text | x           | Translated version of the original text |
+| Atributo    | Tipo | Obligatorio | Descripción                           |
+|:----------- |:---- |:----------- |:------------------------------------- |
+| original    | Text | x           | Texto original destinado a traducción |
+| translation | Text | x           | Versión traducida del texto original  |
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 

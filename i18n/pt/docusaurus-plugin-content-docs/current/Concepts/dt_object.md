@@ -118,13 +118,10 @@ Pode criar dois tipos de objetos:
 - objectos partilhados, utilizando o comando `New shared object` . Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use... End use` structures. Para saber mais, consulte a seção [Objetos e coleções compartidos](Concepts/shared.md).
 
 
-## Noções básicas de sintaxe
 
-A notação de objetos pode ser utilizada para acessar aos valores das propriedades de objetos através de uma string de tokens.
+## Propriedades
 
-### Propriedades dos objectos
-
-Identificadores de propriedades de objetos
+A notação de objetos pode ser utilizada para acessar aos valores das propriedades de objetos através de uma string de tokens. Identificadores de propriedades de objetos
 
 - usar uma string dentro de colchetes: > object["propertyName"]
 
@@ -151,6 +148,9 @@ Uma vez que um valor de propriedade de objeto pode ser um objeto ou uma coleçã
 ```
 
 A notação de objetos está disponível em qualquer elemento da lenguagem que possa conter ou devolver um objeto, ou seja:
+
+
+
 
 - com os **Objetos** mesmos (armazenados em variáveis, campos, propriedades de objetos, arrays de objetos ou elementos de coleções). Exemplos:
 
@@ -184,28 +184,6 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
      myColl.length //tamanho da coleção
 ```
 
-### Ponteiro
-
-**Nota preliminar:** dado que os objetos são passados sempre por referência, geralmente não é preciso usar ponteiros. Ao passar o objeto, internamente 4D utiliza automaticamente um mecanismo similar a um ponteiro, minimizando a necessidade de memória e permitindo modificar o parâmetro e devolver as modificações. Como resultado, não é necessário usar ponteiros. Mas se quiser usar ponteiros, valores de propriedade podem ser acessados com ponteiros.
-
-Usar notação de objeto com ponteiros é parecido com usar notação de objeto diretamente com os objetos, exceto que o símbolo "ponto" deve ser omitido.
-
-- Acesso direto
-> pointerOnObject->propertyName
-
-- Acesso pelo nome:
-> pointerOnObject->["propertyName"]
-
-Exemplo:
-
-```4d
- C_OBJECT(vObj)
- C_POINTER(vPtr)
- vObj:=New object
- vObj.a:=10
- vPtr:=->vObj
- x:=vPtr->a //x=10
-```
 
 ### Valor Null
 
@@ -261,7 +239,7 @@ A avaliação de uma propriedade de um objeto pode produzir às vezes um valor i
      End case
 ```
 
-- A atribuição de um valor indefinido a um objecto existente reinicia ou limpa o seu valor, dependendo do seu tipo:
+A atribuição de um valor indefinido a um objecto existente reinicia ou limpa o seu valor, dependendo do seu tipo:
  - Objecto, colecção, ponteiro: Null
  - Imagem: Imagem vazia
  - Booleano: Falso
@@ -288,6 +266,48 @@ Quando expressões de um certo tipo são esperadas em seu código 4D, pode garan
 ```
 
 Para saber mais, veja a descrição do comando `Null`
+
+
+### Ponteiro
+
+**Nota preliminar:** dado que os objetos são passados sempre por referência, geralmente não é preciso usar ponteiros. Ao passar o objeto, internamente 4D utiliza automaticamente um mecanismo similar a um ponteiro, minimizando a necessidade de memória e permitindo modificar o parâmetro e devolver as modificações. Como resultado, não é necessário usar ponteiros. Mas se quiser usar ponteiros, valores de propriedade podem ser acessados com ponteiros.
+
+Usar notação de objeto com ponteiros é parecido com usar notação de objeto diretamente com os objetos, exceto que o símbolo "ponto" deve ser omitido.
+
+- Acesso direto
+> pointerOnObject->propertyName
+
+- Acesso pelo nome:
+> pointerOnObject->["propertyName"]
+
+Exemplo:
+
+```4d
+ C_OBJECT(vObj)
+ C_POINTER(vPtr)
+ vObj:=New object
+ vObj.a:=10
+ vPtr:=->vObj
+ x:=vPtr->a //x=10
+```
+
+
+## Resources
+
+Os objetos usam *recursos* documentos, bloqueios de entidades e, é claro, memória. Esses recursos são mantidos enquanto os objetos precisarem. Normalmente, você não precisa se preocupar com eles, 4D libera automaticamente todos os recursos anexados a um objeto quando detecta que o objeto em si não é mais referenciado por qualquer variável ou outro objeto.
+
+Por exemplo, quando não houver mais referências a uma entidade na qual você defina um bloqueio com [`$entity. ock()`](../API/EntityClass.md#lock), 4D liberará a memória, mas também liberará automaticamente o bloqueio associado, uma chamada para [`$entity. nlock()`](../API/EntityClass.md#unlock) é inútil.
+
+Se quiser liberar imediatamente todos os recursos ocupados por um objeto sem ter que esperar que 4D faça isso automaticamente (no final da execução do método para variáveis locais por exemplo) tem que **nullify all its references**. Por exemplo:
+
+```4d
+
+$doc:=WP Import document("large_novel.4wp")
+    ... // faça algo com $doc
+$doc:=Null  // free resources occupied by $doc
+    . . // continue a execução com mais memória livre
+
+```
 
 ## Exemplos
 
@@ -330,7 +350,8 @@ Usar notação de objeto simplifica o código 4D no manejo dos mesmos. Entretant
  $vCity:=$Emp.city //"Paris"
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
-- É possível acessar as propriedades como strings usando o operador []
+
+- Você pode acessar propriedades como strings usando o operador `[]`
 
 ```4d
  $Emp["city"]:="Berlim" //modifica a propriedade da cidade

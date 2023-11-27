@@ -221,7 +221,7 @@ Además de los caracteres y códigos especiales descritos en las secciones anter
 | + y -       | Signos más y menos                                                                          | ### + ### = ###,### |
 | ( )         | Paréntesis izquierdo y derecho                                                              | (-###.##)            |
 | :           | Dos puntos                                                                                  | hh:mm:ss             |
-| ^           | Caret                                                                                       | #\^#                |
+| ^           | Circunflejo                                                                                 | #\^#                |
 | '           | Apostrofe                                                                                   | '######              |
 | { }         | Paréntesis curvos                                                                           | {###,###,###}        |
 | `< >` | Signos menor que y mayor que                                                                | ## >##              |
@@ -491,7 +491,7 @@ Contiene las siguientes propiedades:
 | meta         | Object        | Contenido gratuito, reservado para el desarrollador 4D |
 | spreadJS     | Object        | Reservado para el componente 4D View Pro               |
 
-## 4D View Pro Form Object Variable
+## Variable de objeto de formulario 4D View Pro
 
 La variable del objeto del formulario 4D View Pro es la variable del objeto [](Concepts/dt_object.md) asociada al área del formulario 4D View Pro. Gestiona la información utilizada por el objeto 4D View Pro.
 > La variable objeto del formulario 4D View Pro sólo tiene fines informativos (es decir, de depuración). Bajo ninguna circunstancia debe modificarse.

@@ -926,6 +926,8 @@ use the following code:
 
 
 
+
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -946,7 +948,7 @@ You can specify the exported file's format by including an extension after the d
 * Microsoft Excel (".xlsx")
 * PDF (".pdf")
 * CSV (".txt", or ".csv")
-* [SpreadJS document](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (".sjs")
+* [SpreadJS document](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
 If the extension is not included, but the format is specified in *paramObj*, the exported file will have the extension that corresponds to the format, except for the CSV format (no extension is added in this case).
 
@@ -968,7 +970,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 
 **Notes about Excel format**:
 
-* When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. For example, 4D methods and formulas are not supported by Excel. You can verify other settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+* When exporting a 4D View Pro document into a Microsoft Excel-formatted file, some settings may be lost. For example, 4D methods and formulas are not supported by Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 **Notes about PDF format**:
@@ -984,7 +986,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 
 **Notes about SpreadJS file format**:
 
-* [SpreadJS files](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) are zipped files. 
+* [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files. 
 * Exporting in this format is run asynchronously, use the `formula` property of the *paramObj* for code to be executed after the export.
 
 Once the export operation is finished, `VP EXPORT DOCUMENT` automatically triggers the execution of the method set in the *formula* property of the *paramObj*, if used.
@@ -1625,7 +1627,7 @@ You can define where to get the column count in the optional *sheet* parameter u
 The following code returns the number of columns in the 4D View Pro area:
 
 ```4d
-C_Integer($colCount)
+C_INTEGER($colCount)
 $colCount:=VP Get column count("ViewProarea")
 ```
 
@@ -1716,6 +1718,8 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 ### VP Get default style
 
+
+
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
@@ -1773,6 +1777,7 @@ will return this information in the *$defaultStyle* object:
 |---|---|---|---|
 |rangeObj  |Object|->|Range object|
 |Result  |Text|<-|Formula|<!-- END REF -->
+
 
 
 #### Description
@@ -2423,7 +2428,6 @@ VP SET CELL STYLE($range;$style)
 |vpAreaName|Text|->|4D View Pro area form object name|
 |styleName|Text|->|Name of style|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
-
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### Description
@@ -2733,7 +2737,6 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 |Constant|Value|Description|
 |---|---|---|
 |`vk table full range`|0|Get the cell range for the table area with footer and header (default if omitted)|
-
 |`vk table data range`|1|Get the cell range for the table data area only|
 
 In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
@@ -2781,7 +2784,7 @@ The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tablethe
 
 #### Example
 
-The command returns a full `theme` object even if a [native SpreadJS theme](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
+The command returns a full `theme` object even if a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) name was used to define the theme.
 
 ```4d
 var $param : cs.ViewPro.TableTheme
@@ -2959,6 +2962,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 |Parameter|Type||Description|
+
 |---|---|---|---|
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |Result |Object|<-|Object containing the workbook options|<!-- END REF -->
@@ -3003,7 +3007,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### Description
 
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface<!-- END REF -->. 
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the *vpBlob* in the 4D View Pro area *vpAreaName* and replaces its contents<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface. 
 
 In *paramObj*, you can pass several properties:
 
@@ -3076,7 +3080,7 @@ In *filePath*, pass the path and name of the document to be imported. The follow
 * 4D View Pro documents (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
 * text documents (extension ".txt", ".csv", the document must be in utf-8)
-* [SpreadJS documents](https://www.grapecity.com/blogs/new-javascript-spreadsheet-file-formats-in-spreadjs-v-16) (extension ".sjs")
+* [SpreadJS documents](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
 
@@ -3104,7 +3108,7 @@ The optional *paramObj* parameter allows you to define properties for the import
 :::note Notes
 
 - Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
-- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
+- When importing a Microsoft Excel-formatted file into a 4D View Pro document, some settings may be lost. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - For more information on the CSV format and delimiter-separated values in general, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
 
 :::
@@ -3350,6 +3354,8 @@ This command inserts some rows in the *tableName* table, NOT in the sheet. The t
 If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection. 
 
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+
+
 
 
 #### Example
@@ -4014,6 +4020,7 @@ VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 #### See also
 
 [VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE COLUMNS](#vp-remove-table-columns)
+
 
 
 
@@ -5045,6 +5052,7 @@ Here's the result once the columns are generated:
 
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
+
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
@@ -5086,7 +5094,6 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
 |Parameter|Type||Description|
-
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
@@ -5342,7 +5349,6 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 
 |Property | Type|  Description|
 |---|---|---|
-
 |columnCount | Integer | The number of frozen columns on the left of the sheet|
 |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet
 |rowCount | Integer |  The number of frozen rows on the top of the sheet |
@@ -5579,7 +5585,6 @@ VP SET ROW COUNT("ViewProArea";5)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-
 |rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Description
@@ -5650,7 +5655,6 @@ VP SET SHEET COUNT("ViewProArea";3)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |name|Text|->|New name for the sheet|
-
 |sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
 #### Description
@@ -5665,7 +5669,7 @@ In *sheet*, pass the index of the sheet to rename.
 
 > Indexing starts at 0.
 
-If no *index* is passed, the command renames the current sheet.
+If no *sheet* is passed, the command renames the current sheet.
 
 The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
 
@@ -5674,7 +5678,7 @@ The command does nothing if:
 * the new name contains forbidden characters
 * the new name's value is blank
 * the new name already exists
-* the passed *index* does not exist
+* the passed *sheet* index does not exist
 
 #### Example
 
@@ -5887,7 +5891,7 @@ In the *attributes* parameter, pass an object that contains the properties to se
 |---|---|---|
 |dataField|text|Table column's property name in the data context.|
 |name|text|Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.|
-|formula|text|Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref)|
+|formula|text|Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)|
 |footerText|text|Column footer value.|
 |footerFormula|text|Column footer formula.|
 |filterButtonVisible|boolean|Sets whether the table column's filter button is displayed (default is `True` when the table is created). |
@@ -6276,7 +6280,7 @@ The following table lists the available workbook options:
 | calcOnDemand | boolean | Formulas are calculated only when they are demanded. |
 | columnResizeMode | number | Resize mode for columns. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk resize mode normal </td><td>0</td><td> Use normal resize mode (i.e remaining columns are affected)</td></tr><tr><td> vk resize mode split </td><td>1</td><td> Use split mode (i.e remaining columns are not affected)</td></tr></table>|
 | copyPasteHeaderOptions | number | Headers to include when data is copied to or pasted. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk copy paste header options all headers</td><td>3</td><td> Includes selected headers when data is copied; overwrites selected headers when data is pasted.</td></tr><tr><td> vk copy paste header options column headers </td><td>2</td><td> Includes selected column headers when data is copied; overwrites selected column headers when data is pasted.</td></tr><tr><td> vk copy paste header options no headers</td><td>0</td><td> Column and row headers are not included when data is copied; does not overwrite selected column or row headers when data is pasted.</td></tr><tr><td> vk copy paste header options row headers</td><td>1</td><td>  Includes selected row headers when data is copied; overwrites selected row headers when data is pasted.</td></tr></table> |
-| customList | collection | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [GrapeCity's website](https://www.grapecity.com/spreadjs/docs/v13/online/AutoFillLists.html#b).|
+| customList | collection | The list for users to customize drag fill, prioritize matching this list in each fill. Each collection item is a collection of strings. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/cells/AutoFillData/AutoFillLists).|
 | cutCopyIndicatorBorderColor | string | Border color for the indicator displayed when the user cuts or copies the selection. |
 | cutCopyIndicatorVisible | boolean | Display an indicator when copying or cutting the selected item. |
 | defaultDragFillType | number | The default drag fill type. Available values : <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk auto fill type auto </td><td>5</td><td> Automatically fills cells. </td></tr><tr><td> vk auto fill type clear values </td><td>4</td><td> Clears cell values.</td></tr><tr><td> vk auto fill type copycells </td><td>0</td><td> Fills cells with all data objects, including values, formatting, and formulas.</td></tr><tr><td> vk auto fill type fill formatting only </td><td>2</td><td> Fills cells only with formatting.</td></tr><tr><td> vk auto fill type fill series </td><td>1</td><td> Fills cells with series. </td></tr><tr><td> vk auto fill type fill without formatting </td><td>3</td><td> Fills cells with values and not formatting. </td></tr></table> |
@@ -6284,12 +6288,12 @@ The following table lists the available workbook options:
 | enableFormulaTextbox | boolean | The formula text box is enabled. |
 | grayAreaBackColor | string | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on. |
 | highlightInvalidData | boolean | Invalid data is highlighted. |
-| iterativeCalculation | boolean | Enables iterative calculation. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html). |
+| iterativeCalculation | boolean | Enables iterative calculation. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative). |
 | iterativeCalculationMaximumChange | numeric | Maximum amount of change between two calculation values. |
 | iterativeCalculationMaximumIterations | numeric | Number of times the formula should recalculate. |
 | newTabVisible | boolean | Display a special tab to let users insert new sheets. |
 | numbersFitMode | number | Changes display mode when date/number data width is longer than column width. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>|
-| pasteSkipInvisibleRange | boolean | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.|
+| pasteSkipInvisibleRange | boolean | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range) for more information on invisible ranges.|
 | referenceStyle | number | Style for cell and range references in cell formulas. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table> |
 | resizeZeroIndicator | number | Drawing policy when the row or column is resized to zero. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table> |
 | rowResizeMode | number | The way rows are resized. Available values are the same as columnResizeMode |
@@ -6341,9 +6345,9 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-
 |vPos  |Integer|->|Vertical view position of cell or row|
 |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
+
 
 #### Description
 
@@ -6442,6 +6446,6 @@ End if
 
 #### See also
 
-[VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
+[VP RECOMPUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 
 

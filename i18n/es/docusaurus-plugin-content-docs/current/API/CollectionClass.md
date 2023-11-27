@@ -2330,9 +2330,9 @@ $address.push({city: "Lyon"; country: "France"})
 $address.push({city: "Eching"; country: "Germany"})
 $address.push({city: "Berlin"; country: "Germany"})
 
-$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); $address)
-//["Alain Martin","Jane Doe","John Smith","John Doe"]
-//["Lyon France","Eching Germany","Paris France","Berlin Germany"]
+$name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
+//"Alain Martin","Jane Doe","John Smith","John Doe"
+//"Lyon France","Eching Germany","Paris France","Berlin Germany"
 
 ```
 

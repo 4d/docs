@@ -92,7 +92,7 @@ Additional areas are defined when you use a collection of positions in the [Form
 
 > In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
 
-A form always starts with a Header, Detail, Break level 0, and Footer areas.
+Um formulário sempre começa com as áreas Cabeçalho, Detalhe, Quebra nível 0 e Rodapé.
 
 Break at level 0 zero takes in all the records; it occurs after all the records are printed. Additional Break areas can be added, i.e. a Break level 1, Break level 2, etc.
 

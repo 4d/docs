@@ -17,7 +17,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 - criar formulários Web colocando componentes em uma página
 - mapear componentes para dados
-- trigger 4D code by configuring events
+- acionar o código 4D configurando eventos
 - e muito mais.
 
 :::info
@@ -47,13 +47,13 @@ A resolução recomendada é 1920x1080.
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
-### Enabling access to Qodly Studio
+### Habilitando o acesso a Qodly Studio
 
 Por padrão, o acesso a Qodly Studio não é concedido.
 
 Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
 
-To enable access to Qodly Studio, you must explicitly allow it at two levels:
+Para permitir o acesso ao Qodly Studio, você deve permiti-lo explicitamente em dois níveis:
 
 * a nível 4D (4D ou 4D Server)
 * a nível do projeto
@@ -64,11 +64,11 @@ If one of the two levels (or both) are not enabled, access to Qodly Studio is de
 
 As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
-This setting applies to the 4D application (4D or 4D Server) on the host machine. All projects opened with that 4D application take this setting into account.
+This setting applies to the 4D application (4D or 4D Server) on the host machine. Todos os projetos abertos com essa aplicação 4D consideram essa configuração.
 
 Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application.
 
-Check this option to make it possible to access Qodly Studio. However, you still need to enable it at every project level.
+Check this option to make it possible to access Qodly Studio. No entanto, você ainda precisa habilitá-lo em todos os níveis do projeto.
 
 Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
@@ -85,9 +85,9 @@ After you have enabled access to Qodly Studio at the 4D level, you need to expli
 Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
 
 
-### Activating authentication
+### Ativando autenticação
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+Authentication on the WebAdmin web server is granted using an access key. Para obter mais detalhes, consulte [Chave de acesso](../Admin/webAdmin.md#access-key).
 
 ### Ativação da renderização
 
@@ -106,7 +106,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for informati
 
 Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
 
-Keep in mind that the Qodly Web Studio runs through the 4D WebAdmin web server. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
+Tenha em mente que Qodly Web Studio é executado pelo servidor web 4D WebAdmin. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
 
 However, webform rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
 
@@ -123,12 +123,12 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 
 ### Using project methods
 
-We recommend using class functions over project methods. Apenas as funções de classe podem ser chamadas a partir de componentes. However, you can still use your project methods in Qodly Studio in two ways:
+We recommend using class functions over project methods. Apenas as funções de classe podem ser chamadas a partir de componentes. No entanto, você ainda pode usar seus métodos projeto no Qodly Studio de duas maneiras:
 
 - You can call your methods from class functions.
 - You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
-## Opening Qodly Studio
+## Abertura do Qodly Studio
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
 
@@ -165,20 +165,20 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 ### Feature comparison
 
-|                                                              | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
-| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Desktop forms                                                | 4D IDE                                                                                      | *not supported*                         |
-| Linguagem de programação                                     | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
-| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
-| Depurador                                                    | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
-| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
+|                                                                      | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Visualizar e editar tabelas (classes de dados), atributos e relações | 4D Structure Editor(1)                                                                      | Qodly Studio Model Editor               |
+| Webforms                                                             | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
+| Desktop forms                                                        | 4D IDE                                                                                      | *not supported*                         |
+| Linguagem de programação                                             | 4D Language featuring ORDA                                                                  | QodlyScript featuring ORDA              |
+| Coding IDE                                                           | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                |
+| Depurador                                                            | Depurador 4D IDE                                                                            | Qodly Studio debugger                   |
+| REST/Web roles and privileges                                        | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 
-### Project management
+### Gerenciamento de projetos
 
 In accordance with the management of 4D projects, only the following usages are supported:
 
@@ -203,19 +203,19 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
-| QodlyScript | Línguagem 4D                                                | Comentário          |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| ,           | ;                                                           | argument separator  |
-| =           | :=                                                          | assignment operator |
-| ==          | =                                                           | comparison operator |
-| declare     | #Declare                                                    |                     |
-| switch      | Case of                                                     |                     |
-| constructor | Class constructor                                           |                     |
-| extends     | Class extends                                               |                     |
-| end         | End for, End For each, End if, End case, End use, End while |                     |
-| forEach     | For each                                                    |                     |
-| string      | Text                                                        | var type            |
-| number      | Real                                                        | var type            |
+| QodlyScript | Línguagem 4D                                                | Comentário              |
+| ----------- | ----------------------------------------------------------- | ----------------------- |
+| ,           | ;                                                           | separador de argumentos |
+| =           | :=                                                          | operador de atribuição  |
+| ==          | =                                                           | comparison operator     |
+| declare     | #Declare                                                    |                         |
+| switch      | Case of                                                     |                         |
+| constructor | Class constructor                                           |                         |
+| extends     | Class extends                                               |                         |
+| end         | End for, End For each, End if, End case, End use, End while |                         |
+| forEach     | For each                                                    |                         |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
@@ -225,7 +225,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
 
 - Normalmente, você só precisará converter os nomes. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
-- However, some command have been renamed for a better compliance. They are listed below:
+- No entanto, alguns comandos foram renomeados para uma melhor conformidade. They are listed below:
 
 | QodlyScript            | Línguagem 4D     |
 | ---------------------- | ---------------- |
@@ -282,7 +282,7 @@ QodlyScript command names are written in camel case without spaces. Talvez você
 
 ```
 
-## About license usage
+## Sobre a licença de uso
 
 To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.
 
@@ -298,7 +298,7 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. O servidor da Web do seu banco de dados é iniciado somente em uma porta HTTP.
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
@@ -327,7 +327,7 @@ For more information on the `SameSite` attribute, check out [this blog post](htt
 To avoid using more licenses than necessary, we recommend doing one of the following:
 
 - Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
-- Ensure the Qodly Studio and your database are reached on the same URL scheme.
+- Assegure-se de que o Qodly Studio e seu banco de dados sejam acessados no mesmo esquema de URL.
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
 
 

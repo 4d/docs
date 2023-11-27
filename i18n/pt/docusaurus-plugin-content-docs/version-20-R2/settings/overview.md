@@ -14,20 +14,20 @@ Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros po
 
 Pode aceder à caixa de diálogo Parâmetros:
 
--   using the **Design > Settings...** menu option
+-   usando a opção de menu **Desenho > Parâmetros...**
 -   clicando em **Parâmetros** na barra de ferramentas 4D
 -   on 4D Server, using the **Edit > Settings...** menu option
 
 When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
 
 -   **User Settings...** gives you access to settings that can be stored externally in a user file. If these are modified, they are used instead of structure settings.
--   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. If they are modified, they are used instead of user or structure settings.
+-   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. Se eles forem modificados, serão usados em vez de parâmetros de usuário ou estrutura.
 
 ### Informações de bloqueio
 
 O bloqueio pode ocorrer nos modos Projeto e Cliente/servidor quando:
 
--   The *settings.4DSettings* file is 'Read-only' (Projects only). Modifying a setting will display an alert to unlock it, if possible.
+-   O arquivo *settings.4DSettings* é 'Somente leitura' (Projetos somente). Modifying a setting will display an alert to unlock it, if possible.
 -   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Apenas cliente/servidor)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
