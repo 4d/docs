@@ -85,7 +85,7 @@ Y el método es:
 ```
 
 Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referencias directamente como [parámetros](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the 4D language. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
+> Con las entidades, no existe el concepto de "registro actual" como en el lenguaje 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
 
 
 ## Uso de los atributos de entidades
@@ -143,7 +143,7 @@ You can store images in picture attributes; similarly, you can store any binary 
 
 ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
 
-Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Además, puede controlar el tamaño del archivo de datos.
 
 La referencia del archivo puede ser:
 
@@ -178,7 +178,7 @@ The file does not have to exist on disk at the time of assignment (no error is r
 
 :::note
 
-File reference assignment is only supported in local mode (4D Server or 4D single-user). An error is generated if the assignment is made remotely or via a REST request.
+File reference assignment is only supported in local mode (4D Server or 4D single-user). Se genera un error si la asignación se realiza de forma remota o a través de una petición REST.
 
 :::
 
