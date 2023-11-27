@@ -163,7 +163,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 :::
 
-### Feature comparison
+### Comparação de funcionalidades
 
 |                                                                      | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------- |
