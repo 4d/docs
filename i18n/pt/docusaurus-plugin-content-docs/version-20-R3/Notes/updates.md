@@ -77,7 +77,7 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 #### Destaques
 
-- 4D v20.2 is certified on macOS Sonoma (macOS 14).
+- 4D v20.2 é certificado no macOS Sonoma (macOS 14).
 - (4D v20.1) Nova propriedade `plugins` no parâmetro *options* para o comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore).
 - [Classe de transportador IMAP](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) retorna *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) retorna *id*, *flags* e *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) e [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) suportam palavras-chave personalizadas.
