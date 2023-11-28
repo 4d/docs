@@ -5,9 +5,9 @@ title: Date and Time Formats
 
 
 
-Throughout your 4D projects, you will need to format date and/or time values according to the specificities of the application, the platform, or the interface. 
+Throughout your 4D projects, you might need to format date and/or time values according to the specificities of the application, the platform, or the interface. 
 
-4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications. Customized format patterns are supported by the following features:
+4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
 
 - the [`String`](https://doc.4d.com/4dv20/help/command/en/page10.html) command,
 - the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20/help/command/en/page894.html) commands,
@@ -162,7 +162,7 @@ For example:
 |17/03/1954|"w"|"11"|11th week of the year|
 |17/03/1954|"eeee"|"Wednesday"|localized|
 |15:00:00|"a"|"PM"||
-|18:00:00|"Ka"|"6 PM"||
+|18:00:00|"K a"|"6 PM"||
 |13:30:15|"hh:mm aa O"|"01:30 PM GMT+1"
 
 
