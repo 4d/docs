@@ -29,11 +29,11 @@ The TLS protocol is designed to authenticate the sender and receiver and to guar
 
 TLS uses a public key encryption technique based on a pair of asymmetric keys for encryption and decryption: a public key and a private key. The private key is used to encrypt data. The sender (the website) does not give it to anyone. 
 
-The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a certification authority, such as Verisign®. The website pays the Certificate Authority to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode. 
+The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a Certification Authority. The website pays the certificate provider to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode. 
 
 :::note
 
-Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
+Web browsers authorize only the certificates issued by a Certification Authority referenced in their properties.
 
 :::
 
@@ -63,7 +63,7 @@ To be able to use the TLS protocol with the 4D HTTP server, you have to:
 
 #### Format
 
-TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
+TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are web sites where you can do this conversion on-line.
 
 #### Encryption
 
@@ -93,7 +93,7 @@ Certificate files include:
 
 Both **key.pem** and **cert.pem** files must be located:
 
-- with 4D in local mode or 4D Server, next to the [project folder](Project/architecture.md#project-folder)
+- with 4D Server or 4D in local mode, next to the [project folder](Project/architecture.md#project-folder)
 - with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html) command). You must copy these files manually on the remote machine.
 
 ### Enabling TLS
@@ -149,10 +149,10 @@ To get a digital certificate:
 To fill in a certificate request, you might need to contact the certification authority. The certification authority checks that the information transmitted are correct. The certificate request is generated in a BLOB using the PKCS format encoded in base64 (PEM format). This principle allows you to copy and paste the keys as text and to send them via E-mail without modifying the key content. For example, you can save the BLOB containing the certificate request in a text document (using the `BLOB TO DOCUMENT` command), then open and copy and paste its content in a mail or a Web form to be sent to the certification authority.
 
 4. Once you get your certificate, create a text file named “cert.pem” and paste the contents of the certificate into it.
-You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in PEM format, *i.e.*, PKCS encoded in base64.
+You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in [PEM format](#format), *i.e.*, PKCS encoded in base64.
 
  >CR line-ending characters are not supported on their own; you must use CRLF or LF.
 
 5. Place the “cert.pem” file in the [appropriate location](#installing-certificate-files).
 
-The 4D server can now work in a secured mode. A certificate is valid between 3 months to a year.
+The 4D server can now work in a secured mode. A certificate is usually valid between 3 months to a year.
