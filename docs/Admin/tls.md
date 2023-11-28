@@ -29,11 +29,11 @@ The TLS protocol is designed to authenticate the sender and receiver and to guar
 
 TLS uses a public key encryption technique based on a pair of asymmetric keys for encryption and decryption: a public key and a private key. The private key is used to encrypt data. The sender (the website) does not give it to anyone. 
 
-The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a certification authority, such as Verisign®. The website pays the Certificate Authority to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode. 
+The public key is used to decrypt the information and is sent to the receivers (web browsers) through a **certificate**. The certificate is delivered through a Certification Authority. The website pays the certificate provider to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode. 
 
 :::note
 
-Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
+Web browsers authorize only the certificates issued by a Certification Authority referenced in their properties.
 
 :::
 
@@ -41,21 +41,31 @@ Web browsers authorize only the certificates issued by a certification authority
 
 ## Minimum version
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
+By default, the minimum version of the secured protocol accepted by the 4D servers is TLS 1.3. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER` command.
 
 :::note
 
-You can control the level of security of your **web server** by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+You can control separately the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) for **webServer objects**.
 
 :::
 
-## Certificates
 
-### Format
 
-TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider (for example, [WoTrus](https://store.wotrus.com/)) sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are Web sites such as [sslshopper](https://www.sslshopper.com/) where you can do this conversion on-line.
+## Enabling TLS with the HTTP server
 
-### Encryption
+To be able to use the TLS protocol with the 4D HTTP server, you have to:
+
+1. Get your certificate files.
+2. Install your certificate files at the appropriate location(s) 
+3. Enable TLS.
+
+### Certificates
+
+#### Format
+
+TLS certificates managed by 4D must be in the **PEM format**. If your certificate provider sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are web sites where you can do this conversion on-line.
+
+#### Encryption
 
 4D supports certificates in the following standard encryption formats:
 
@@ -74,63 +84,47 @@ The ECDSA encryption format is not supported by the 4D [legacy network layer](..
 
 ::: 
 
+### Installing certificate files
 
+Certificate files include:
 
-## Installation and activation  
+- **key.pem**: a document containing the private encryption key,
+- **cert.pem**: a document containing the certificate.
 
-### Installing `key.pem` and `cert.pem` files
+Both **key.pem** and **cert.pem** files must be located:
 
-To be able to use the TLS protocol with 4D, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server or client on which you want to use TLS.
+- with 4D Server or 4D in local mode, next to the [project folder](Project/architecture.md#project-folder)
+- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html) command). You must copy these files manually on the remote machine.
 
-:::caution
+### Enabling TLS
 
-Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+For TLS connections to be accepted by the HTTP server, you must enable HTTPS. Refer to the [**Enable HTTPS**](WebServer/webServerConfig.md#enable-https) paragraph to know the different ways to enable TLS for the HTTP server. 
+
+:::note
+
+The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
 
 :::
 
 
-#### With the HTTP server
-
-To be used by the 4D HTTP server, the **key.pem** and **cert.pem** files must be placed:
-
-- with 4D in local mode or 4D Server, next to the [project folder](Project/architecture.md#project-folder)
-- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
-
-You must copy these files manually on the remote machine.
-
-#### With the HTTP client
-
-To be used by the 4D HTTP client, the **key.pem** and **cert.pem** files must be placed by default in the "ClientCertificatesFolder" that is created next to the next to the [project folder](Project/architecture.md#project-folder).
-
-This location can be customized using the [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/en/page1306.html) command).
-
-
-#### With the application server (client-server desktop applications)
-
-To be used by the 4D application server, the **key.pem** and **cert.pem** files must be placed in the [**Resources** folder](Project/architecture.md#resources) of the 4D Server application.
-
-
-#### With the SQL server
-
-To be used by the 4D SQL server, the **key.pem** and **cert.pem** files must be placed next to the [project folder](Project/architecture.md#project-folder).
-
-### Enabling TLS
-
-The installation of **key.pem** and **cert.pem** files makes it possible to use TLS with the 4D server. However, in order for TLS connections to be accepted by the server, you must enable them:
-
-- With the 4D web server, you must [enable HTTPS](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](WebServer/webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode.
-- With the application server, you must select the **Encrypt Client-Server Communications** option in the "Client-server/Network options" page of the Settings dialog box.
-- With the SQL server, you must select the **Enable TLS** option in the "SQL" page of the Settings dialog box.
-
-> The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
-
-## Perfect Forward Secrecy (PFS)  
+### Perfect Forward Secrecy (PFS)  
 
 [PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adds an additional layer of security to your communications. Rather than using pre-established exchange keys, PFS creates session keys cooperatively between the communicating parties using Diffie-Hellman (DH) algorithms. The joint manner in which the keys are constructed creates a "shared secret" which impedes outside parties from being able to compromise them.
 
-When TLS is enabled on the server, PFS is automatically enabled. If the *dhparams.pem* file (document containing the server's DH private key) does not already exist, 4D will automatically generate it with a key size of 2048. The initial generation of this file could take several minutes. The file is placed with the [*key.pem* and *cert.pem* files](#key-pem-and-cert-pem-files).
+When TLS is enabled on the server, PFS is automatically enabled. If the *dhparams.pem* file (document containing the server's DH private key) does not already exist, 4D will automatically generate it with a key size of 2048. The initial generation of this file could take several minutes. The file is placed with the [*key.pem* and *cert.pem* files](#installing-certificate-files).
 
 If you use a [custom cipher list](WebServer/webServerConfig.md##cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+
+
+
+## Enabling TLS with the other servers
+
+To use TLS with the 4D application server (client-server desktop applications) or the SQL server, you only have to enable TLS communications and the server automatically configures the connections at startup.
+
+- With the application server, select the **Encrypt Client-Server Communications** option in the ["Client-server/Network options" page of the Settings dialog box](../settings/client-server#encrypt-client-server-communications).
+- With the SQL server, select the **Enable TLS** option in the ["SQL" page of the Settings dialog box](../settings/sql#sql-server-publishing).
+
+
 
 
 ## How to get a RSA certificate? (tutorial)  
@@ -155,10 +149,10 @@ To get a digital certificate:
 To fill in a certificate request, you might need to contact the certification authority. The certification authority checks that the information transmitted are correct. The certificate request is generated in a BLOB using the PKCS format encoded in base64 (PEM format). This principle allows you to copy and paste the keys as text and to send them via E-mail without modifying the key content. For example, you can save the BLOB containing the certificate request in a text document (using the `BLOB TO DOCUMENT` command), then open and copy and paste its content in a mail or a Web form to be sent to the certification authority.
 
 4. Once you get your certificate, create a text file named “cert.pem” and paste the contents of the certificate into it.
-You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in PEM format, *i.e.*, PKCS encoded in base64.
+You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in [PEM format](#format), *i.e.*, PKCS encoded in base64.
 
  >CR line-ending characters are not supported on their own; you must use CRLF or LF.
 
-5. Place the “cert.pem” file in the [appropriate location](#installation-and-activation).
+5. Place the “cert.pem” file in the [appropriate location](#installing-certificate-files).
 
-The 4D server can now work in a secured mode. A certificate is valid between 3 months to a year.
+The 4D server can now work in a secured mode. A certificate is usually valid between 3 months to a year.
