@@ -60,7 +60,7 @@ CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))
     //llamar después a wss.terminate()
 ```
 
-2. Define the `myServerHandler` user class containing callback function(s) used to handle connections to the server:
+2. Define la clase usuario `myServerHandler` que contiene la(s) función(es) de retrollamada utilizada(s) para manejar las conexiones al servidor:
 
 ```4d
 //clase myServerHandler
@@ -367,7 +367,7 @@ Esta propiedad es de sólo lectura.
 
 #### Descripción
 
-La propiedad `.handler` contiene <!-- REF #WebSocketServerClass.handler.Summary -->the accessor that gets the `WSSHandler` object used to initiate the WebSocket server<!-- END REF -->.
+La propiedad `.handler` contiene <!-- REF #WebSocketServerClass.handler.Summary -->el accesor que recupera el objeto `WSHandler` utilizado para iniciar el servidor WebSocket<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -379,7 +379,7 @@ La propiedad `.handler` contiene <!-- REF #WebSocketServerClass.handler.Summary 
 
 #### Descripción
 
-La propiedad `.path` contiene <!-- REF #WebSocketServerClass.path.Summary -->the pattern of the path to access the WebSocket server<!-- END REF -->. Si no se ha definido ninguna ruta, el servidor WebSocket gestiona todas las conexiones.
+La propiedad `.path` contiene <!-- REF #WebSocketServerClass.path.Summary -->el modelo de la ruta de acceso al servidor WebSocket<!-- END REF -->. Si no se ha definido ninguna ruta, el servidor WebSocket gestiona todas las conexiones.
 
 Esta propiedad es de sólo lectura.
 <!-- END REF -->

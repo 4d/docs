@@ -55,7 +55,7 @@ Leia [**O que há de novo no 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d
 
 See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) on doc.4d.com.
 
-:::caution Minimal client version for 4D Server v20.2 and later
+:::caution Versão mínima cliente para 4D Server v20.2 e posterior
 
 For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
 
@@ -77,7 +77,7 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 #### Destaques
 
-- 4D v20.2 is certified on macOS Sonoma (macOS 14).
+- 4D v20.2 é certificado no macOS Sonoma (macOS 14).
 - (4D v20.1) Nova propriedade `plugins` no parâmetro *options* para o comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - O Servidor 4D integra automaticamente múltiplos journals: [Restauração automática](../Backup/settings.md#automatic-restore).
 - [Classe de transportador IMAP](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) retorna *id*, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) retorna *id*, *flags* e *permanentFlags*, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) e [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) suportam palavras-chave personalizadas.

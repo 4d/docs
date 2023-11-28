@@ -1,11 +1,10 @@
 ---
 id: creating
-title: Trabajar con un proyecto
+title: Creating or opening a project
 ---
 
 Los proyectos 4D se crean y desarrollan utilizando la aplicación **4D**, que ofrece un completo Entorno de Desarrollo Integrado (IDE). **4D Server** también puede crear nuevos proyectos vacíos.
 
-El desarrollo multiusuario se gestiona a través de herramientas estándar del repositorio de **control de fuentes** (Perforce, Git, SVN, etc.), que permiten a los desarrolladores trabajar en diferentes ramas y comparar, fusionar o revertir las modificaciones.
 
 ## Crear un proyecto
 
@@ -91,8 +90,8 @@ Los archivos `.4DLink` pueden guardar la dirección de un proyecto 4D, así como
 
 4D genera automáticamente un archivo `.4DLink` cuando se abre un proyecto local por primera vez o cuando se conecta a un servidor por primera vez. El archivo se almacena en la carpeta de preferencias locales en la siguiente ubicación:
 
-* Windows 7 y superior: C:|Users\NuserName\NappData\Roaming\4D\Favorites vXX\
-* OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX representa el número de versión de la aplicación. Por ejemplo, "Favoritos v19" para 4D v19.
 
@@ -103,23 +102,5 @@ Esa carpeta está dividida en dos subcarpetas:
 
 Los archivos `.4DLink` también pueden crearse con un editor XML.
 
-4D ofrece un DTD que describe las llaves XML que pueden utilizarse para crear un archivo `.4DLink`. Este DTD se llama database_link.dtd y se encuentra en la subcarpeta \Resources\DTD de la aplicación 4D.
+4D ofrece un DTD que describe las llaves XML que pueden utilizarse para crear un archivo `.4DLink`. Este DTD se llama database_link.dtd y se encuentra en la subcarpeta `\Resources\DTD\` de la aplicación 4D.
 
-## Guardado de archivos
-
-Cuando trabaja en un proyecto en 4D, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Las modificaciones se guardan en el disco cuando se selecciona una opción de menú **Guardar**, o cuando la ventana del editor pierde o recupera el foco.
-
-Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Por ejemplo, si se edita el mismo método en una ventana del Editor de Código *y* en un editor de texto, al guardar ambas modificaciones se producirá un conflicto.
-
-El marco de desarrollo 4D incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
-
-* if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
-* si un archivo abierto se edita simultáneamente desde diferentes ubicaciones, 4D muestra un diálogo de alerta al intentar guardar los cambios:
-
-![](../assets/en/Project/projectReload.png)
-
-* **Sí**: ignorar los cambios del editor y volver a cargar la versión modificada
-* **No**: guardar los cambios y sobrescribir la otra versión
-* **Cancelar**: no guardar
-
-Esta funcionalidad está activa para todos los editores 4D integrados (Estructura, Formulario, Método, Parámetros y Caja de herramientas).

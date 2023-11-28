@@ -356,7 +356,7 @@ La propiedad `.lastHeaderCellStyle` es la <!-- REF #TableThemeOptions.lastHeader
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
+La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->nombre de un [tema SpreadJS nativo ](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
 
 ### .secondColumnStripSize
 

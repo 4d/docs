@@ -27,7 +27,7 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 
 
-## Configuring data change tracking
+## Configurando rastreamento de alterações de dados
 
 By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
@@ -55,7 +55,7 @@ In the 4D language, the `__GlobalStamp` field value should be handled through a 
 
 :::
 
-### Using the Structure Editor
+### Usando o Editor de estruturas
 
 The 4D Structure Editor allows you to enable or disable data change tracking using a single menu item.
 
@@ -71,7 +71,7 @@ Em seguida, 4D faz as seguintes alterações:
 - If not already existing, a `__DeletedRecords` table is added to the structure.
 
 
-To disable data change tracking:
+Para desativar o rastreamento de alterações de dados:
 
 1. Select the table(s) for which you want to remove data change tracking.
 2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.

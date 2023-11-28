@@ -15,7 +15,7 @@ As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and s
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
-- create webforms by placing components on a page
+- crear formularios web colocando componentes en una página
 - mapear componentes a datos
 - activar código 4D configurando eventos
 - y mucho más.
@@ -43,13 +43,13 @@ La resolución recomendada es 1920x1080.
 #### Aplicación 4D
 
 - Desarrollo: 4D v20 R2 o superior
-- Deployment: 4D Server v20 R2 or higher
+- Despliegue: 4D Server v20 R2 o superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
 ### Acceso a Qodly Studio
 
-By default, access to Qodly Studio is not granted.
+Por defecto, no se permite el acceso a Qodly Studio.
 
 Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
 
@@ -116,23 +116,23 @@ However, webform rendering happens outside 4D Web Studio, and is served by the s
 
 :::
 
-### WebAdmin server and deployment
+### Servidor WebAdmin y despliegue
 
 For deployment, the WebAdmin server is not necessary. End-user access to your web application made with Qodly Studio is based on the 4D REST protocol, and as such, it works as through a conventional 4D remote application.
 
 
 ### Uso métodos proyecto
 
-We recommend using class functions over project methods. Only class functions can be called from components. However, you can still use your project methods in Qodly Studio in two ways:
+We recommend using class functions over project methods. Sólo las funciones de clase pueden ser llamadas desde los componentes. However, you can still use your project methods in Qodly Studio in two ways:
 
-- You can call your methods from class functions.
+- Puede llamar a sus métodos desde funciones clase.
 - You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
 
 ## Abrir Qodly Studio
 
 The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
 
-There are two ways to access Qodly Studio:
+Hay dos formas de acceder a Qodly Studio:
 
 * from your 4D single-user application, go to **Design** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
@@ -163,9 +163,9 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 
 :::
 
-### Feature comparison
+### Comparación de funcionalidades
 
-|                                                              | Qodly Studio for 4D developers using 4D IDE                                                 | Qodly Studio para desarrolladores Qodly       |
+|                                                              | Qodly Studio para desarrolladores 4D que utilizan 4D IDE                                    | Qodly Studio para desarrolladores Qodly       |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | View and edit tables (dataclasses), attributes and relations | Editor de estructura 4D(1)                                                                  | Qodly Studio Model Editor                     |
 | Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor                   |
@@ -290,7 +290,7 @@ To render webforms, you must have an available license, as rendering a webform o
 
 Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
 
-As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. As such, it behaves like a conventional 4D Client.
+As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Como tal, se comporta como un Cliente 4D convencional.
 
 If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
 

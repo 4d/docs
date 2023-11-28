@@ -120,7 +120,7 @@ A pasta Trash contém métodos e formulários eliminados do projeto (se existire
 
 Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". A organização das pastas é idêntica à da pasta [Sources](#sources).
 
-### DerivedData folder
+### Pasta DerivedData
 
 A pasta DerivedData contém dados em cache usados internamente por 4D para otimizar o processamento. É criado ou recriado automaticamente quando necessário. Você pode ignorar essa pasta.
 
@@ -202,7 +202,7 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 
 This folder contains the components to be available in the project database only. Deve ser armazenado ao mesmo nível que a pasta Project.
 
-> A project database can be used itself as a component:
+> Um banco de dados projeto pode ser usada como um componente:
 > 
 > - for development: put an alias of the .4dproject file in the Components folder of the host database.
 > - for deployment: build the component (see [Building a project package](building.md)) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host database.

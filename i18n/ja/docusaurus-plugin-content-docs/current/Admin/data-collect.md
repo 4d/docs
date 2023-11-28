@@ -97,7 +97,7 @@ title: データ収集
 | restHits          | Number | データ収集中の RESTサーバーのヒット数    |
 | webserverBytesIn  | Number | データ収集中に Webサーバーが受信したバイト数 |
 | webserverBytesOut | Number | データ収集中に Webサーバーが送信したバイト数 |
-| qodly.webforms    | Number | Number of Qodly webforms |
+| qodly.webforms    | Number | Qodly Webフォームの数          |
 
 
 

@@ -31,7 +31,7 @@ You can benefit from this feature in the following environments (with 4D 64-bit 
 *   Method Editor windows
 *   Janelas do editor de formulários
 
-All windows from these editors can be put in tab form:
+Todas as janelas destes editores podem ser colocadas no formulário de tabulação:
 
 ![](../assets/en/Preferences/general2.png)
 

@@ -11,7 +11,7 @@ New 4D projects can only be created from **4D Developer** (see [Developing a pro
 
 > You can create project databases by exporting existing binary databases. See "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
 
-## Creating the project files
+## Criar arquivos do projeto
 
 Para criar um novo projeto de base de dados:
 

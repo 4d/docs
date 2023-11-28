@@ -57,7 +57,7 @@ Pode criar dois tipos de coleções:
 - regular (non-shared) collections, using the `New collection` command. Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
 - shared collections, using the `New shared collection` command. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
 
-## Collection methods
+## Métodos de coleção
 
 4D collection references benefit from special methods (sometimes named *member functions*). Thanks to object notation, these methods can be applied to collection references using the following syntax:
 

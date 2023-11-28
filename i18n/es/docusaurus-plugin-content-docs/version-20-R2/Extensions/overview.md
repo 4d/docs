@@ -8,7 +8,7 @@ title: Extensiones
 
 ## Componentes 4D preinstalados
 
-4D includes by default a set of built-in 4D components, that you can see in the **Component Methods** theme of the Explorer's Methods page. All these components can also be found on the [4D github repository](https://github.com/4d).
+4D incluye por defecto un conjunto de componentes 4D integrados, que puede ver en el tema **Métodos componentes** de la página Métodos del Explorador. Todos estos componentes también se pueden encontrar en el [repositorio github 4D](https://github.com/4d).
 
 
 | Componente                                                          | Descripción                                                                                                                                                                 | Principales funcionalidades                                                             |

@@ -15,7 +15,7 @@ A 4D project contains all of the source code of a 4D database application, from 
 Moreover, since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
 
 
-## Source control
+## Controle da origem
 
 4D project files make it easier to program generically, create application templates, and share code.
 

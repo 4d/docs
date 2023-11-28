@@ -1,11 +1,10 @@
 ---
 id: creating
-title: Travailler avec des projets
+title: Creating or opening a project
 ---
 
 Les projets 4D sont créés et développés à l'aide de l'application **4D**, qui constitue un environnement de développement intégré (IDE) complet. **4D Server** peut également créer des projets vides.
 
-Le développement multi-utilisateur est géré via des outils de **source control** standard (Perforce, Git, SVN, etc.), permettant aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
 
 ## Créer un projet
 
@@ -91,8 +90,8 @@ Les fichiers portant l'extension `.4DLink` sont des fichiers XML contenant des p
 
 4D génère automatiquement un fichier `.4DLink` lors de la première ouverture d'un projet local ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
-* Windows 7 et ultérieur : C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 
@@ -103,23 +102,5 @@ Ce dossier est divisé en deux sous-dossiers :
 
 `Les fichiers .4DLink` peuvent également être créés à l'aide d'un éditeur XML.
 
-4D fournit une DTD décrivant les clés XML qui peuvent être utilisées pour construire un fichier `.4DLink` . Cette DTD s'appelle database_link.dtd et se trouve dans le sous-dossier \Resources\DTD de l'application 4D.
+4D fournit une DTD décrivant les clés XML qui peuvent être utilisées pour construire un fichier `.4DLink` . This DTD is named database_link.dtd and is found in the `\Resources\DTD\` subfolder of the 4D application.
 
-## Enregistrement des fichiers
-
-Lorsque vous travaillez sur un projet dans 4D, vous pouvez utiliser les éditeurs 4D intégrés pour créer, modifier ou enregistrer des éléments de structure, des méthodes, des formulaires, etc. Les modifications sont enregistrées sur le disque lorsque vous sélectionnez une commande **Enregistrer**, ou lorsque la fenêtre de l'éditeur perd ou récupère le focus.
-
-Étant donné que les éditeurs utilisent des fichiers sur le disque, des conflits potentiels peuvent se produire si le même fichier est modifié ou même supprimé à différents endroits. Par exemple, si la même méthode est modifiée dans une fenêtre de l'éditeur de code *et* dans un éditeur de texte, l'enregistrement des deux modifications entraînera un conflit.
-
-Le framework de développement 4D comprend un gestionnaire d'accès aux fichiers pour contrôler l'accès simultané :
-
-* si un fichier ouvert est en lecture seule au niveau du système d'exploitation, une icône de verrouillage est affichée dans l'éditeur : ![](../assets/en/Project/lockicon.png)
-* si un fichier ouvert est modifié simultanément à partir de différents emplacements, 4D affiche une boîte de dialogue d'alerte lorsqu'on tente d'enregistrer les modifications :
-
-![](../assets/en/Project/projectReload.png)
-
-* **Oui**: annuler les modifications de l'éditeur et recharger la version modifiée
-* **Non** : enregistre les modifications et écrase l'autre version
-* **Annuler** : ne pas enregistrer
-
-Cette fonction est activée pour tous les éditeurs 4D intégrés (Structure, Formulaires, Méthodes, Paramètres et Toolbox).

@@ -140,14 +140,14 @@ Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of 
 
 You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Somente o caminho do arquivo é salvo na entidade.
 
-Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Além disso, você pode controlar o tamanho do arquivo de dados.
 
 A referência do arquivo pode ser:
 
-- a 4D.File object
-- a path in POSIX format
+- um objeto 4D.File
+- um caminho no formato POSIX
 
 Exemplo:
 

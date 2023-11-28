@@ -4,7 +4,7 @@ title: Página Restauração
 sidebar_label: Página Restauração
 ---
 
-## Restoring a backup
+## Restauração de um backup
 
 You can manually restore an archive of the current database using the **Restore** page. This page provides several options that can be used to control the database restoration:
 
