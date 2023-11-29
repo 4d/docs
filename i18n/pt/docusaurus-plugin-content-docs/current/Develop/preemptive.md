@@ -76,120 +76,121 @@ Note que com essa opção, independentemente da avaliação interna de seguranç
 
 :::note Caso particular
 
-If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
+Se o método também tem a propriedade [**Compartilhada por componentes e banco de dados host**](../Project/code-overview.md#shared-by-components-and-host-database), configurando a opção **Indiferente** irá automaticamente marcar o método como thread-unsafe. Se pretender que um método de componente partilhado seja thread-safe, deve defini-lo explicitamente como **Pode ser executado em processos preemptivos**.
 
 :::
 
-## When is a process started preemptively?
+## Quando um processo é iniciado de forma preemptiva?
 
 :::info Lembrete
 
-Preemptive execution is only available in compiled mode.
+A execução apropriativa só está disponível em modo compilado.
 
 :::
 
-In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named _parent_ method) and executes the process in preemptive or cooperative mode, depending on this property:
+Em modo compilado, quando for iniciado um processo criado pelos métodos `New process` ou `CALL WORKER`, 4D lê a propriedade apropiativa do método processo (também chamado método pai) e executa o processo em modo apropriativo ou cooperativo, em função desta propriedade:
 
-- If the process method is thread-safe (validated during compilation), the process is executed in a preemptive thread.
-- If the process method is thread-unsafe, the process is run in a cooperative thread.
-- If the preemptive property of the process method was set to "indifferent", by compatibility the process is run in a cooperative thread (even if the method is actually capable of preemptive use). Note however that this compatibility feature is only applied when the method is used as a process method: a method declared "indifferent" but internally tagged "thread-safe" by the compiler can be called preemptively by another method (see below).
+- Se o método processo for thread seguro (validado durante a compilação), o processo é executado em um thread apropriativo.
+- Se o método processo for thread inseguro, o processo é executado em um thread cooperativo.
+- Se a propriedade apropiativa do método de processo era "indiferente", por compatibilidade o processo é executado em um thread cooperativo (mesmo que o método seja realmente capaz de uso preemptivo). Note, entretanto, que esta funcionalidade de compatibilidade for aplicada só quando for utilizado o método como método de processo: um método declarado "indiferente", mas internamente etiquetado "thread seguro" pelo compilador pode ser chamado apropriativamente por outro método (ver abaixo).
 
-The actual thread-safe property depends on the call chain. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. A preemptive thread can be created only when the entire chain is thread-safe and the process method has been declared "Can be run in preemptive process".
-On the other hand, the same thread-safe method may be executed in a preemptive thread when it is in one call chain, and in a cooperative thread when it is in another call chain.
+A propriedade segurança de thread depende da cadeia de chamadas. Se um método com a propriedade declarada "capable" chamar a um método thread inseguro em qualquer de seus subníveis, um erro de compilação será devolvido: se um método único em toda a cadeia de chamadas for thread inseguro, "contaminará" todos os outros métodos e a execução apropriativa será recusada pelo compilador. Um thread apropriativo só pode ser criado quando toda a cadeia for thread seguro e o método de processo tiver sido declarado "Pode ser executado em processo apropiativo".
+Por outro lado, o mesmo método thread seguro pode ser executado em um thread apropriativo em uma cadeia de chamada e em thread cooperativo em outra cadeia de chamada.
 
-For example, consider the following project methods:
+Por exemplo, considere os métodos de projeto abaixo:
 
 ```4d
-  //MyDialog project method
-  //contains interface calls: will be internally thread unsafe
+  //Método projeto MyDialog
+  //contém chamadas de interface: será internamente thread inseguro
  $win:=Open form window("tools";Palette form window)
  DIALOG("tools")
 ```
 
 ```4d
-  //MyComp project method
-  //contains simple computing: will be internally thread safe
+  //Método projeto MyComp
+  //contém computação simples: será internamente thread seguro
  #DECLARE($value : Integer) -> $result : Integer
  $result:=$value*2
 ```
 
 ```4d
-  //CallDial project method
+  //Método projeto CallDial
  var $vName : Text
  MyDialog
 ```
 
 ```4d
-  //CallComp project method
+  //Método projeto CallComp
  var $vAge : Integer
  MyComp($vAge)
 ```
 
-Executing a method in preemptive mode will depend on its "execution" property and the call chain. The following table illustrates these various situations:
+A execução de un método no modo preemptivo dependerá de que a propriedade "execução" e da cadeia de chamadas. A tabela abaixo ilustra estas diversas situações:
 
 ![](../assets/en/Develop/legend.png)
 
-| Declaration and call chain            | Compilação | Resulting thread safety                | Execution               | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------- | ---------- | -------------------------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/Develop/scenar1.png) | OK         | ![](../assets/en/Develop/scenar2.png)  | Preemptive              | CallComp is the parent method, declared "capable" of preemptive use; since MyComp is thread-safe internally, CallComp is thread-safe and the process is preemptive                                                                                                                                                                                                                                                                                                          |
-| ![](../assets/en/Develop/scenar3.png) | Error      | ![](../assets/en/Develop/scenar4.png)  | A execução é impossível | CallDial is the parent method, declared "capable"; MyDialog is "indifferent". However, since MyDialog is thread-unsafe internally, it contaminates the call chain. The compilation fails because of a conflict between the declaration of CallDial and its actual capability. The solution is either to modify MyDialog so that it becomes thread-safe so that execution is preemptive, or to change the declaration of CallDial 's property in order to run as cooperative |
-| ![](../assets/en/Develop/scenar5.png) | OK         | ![](../assets/en/Develop/scenar6.png)  | Cooperative             | Since CallDial is declared "incapable" of preemptive use, compilation is thread-unsafe internally; thus execution will always be cooperative, regardless of the status of MyDialog                                                                                                                                                                                                                                                                                          |
-| ![](../assets/en/Develop/scenar7.png) | OK         | ![](../assets/en/Develop/scenar8.png)  | Cooperative             | Since CallComp is the parent method with property "Indifferent", then the process is cooperative even if the entire chain is thread-safe.                                                                                                                                                                                                                                                                                                                                   |
-| ![](../assets/en/Develop/scenar9.png) | OK         | ![](../assets/en/Develop/scenar10.png) | Cooperative             | Since CallDial is the parent method (property was "Indifferent"), then the process is cooperative and compilation is successful                                                                                                                                                                                                                                                                                                                                             |
+| Declaração e cadeia de chamadas       | Compilação | Segurança de thread resultante         | Execução                | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------- | ---------- | -------------------------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/Develop/scenar1.png) | OK         | ![](../assets/en/Develop/scenar2.png)  | Apropiativo             | CallComp é o método pai, declarado "capable" de uso preemptivo; já que MyComp é internamente thread seguro, CallComp é thread seguro e o processo for preemptivo                                                                                                                                                                                                                                                                                   |
+| ![](../assets/en/Develop/scenar3.png) | Error      | ![](../assets/en/Develop/scenar4.png)  | A execução é impossível | CallDial é o método pai, declarado "capaz"; MyDialog é "indiferente". Entretanto, já que MyDialog está internamente thread inseguro, contamina a string de chamadas. A compilação falha devido a um conflito entre a declaração deCallDial e sua capacidade real. A solução é modificar MyDialog para ser thread seguro, de modo que a execução seja preemptiva, ou mudar a declaração de propriedade de CallDial para executá-lo como cooperativo |
+| ![](../assets/en/Develop/scenar5.png) | OK         | ![](../assets/en/Develop/scenar6.png)  | Cooperativo             | Como CallDial se declara "incapable" de uso apropiativo, a compilação é internamente thread inseguro, a execução sempre será cooperativa, independentemente do estado de MyDialog                                                                                                                                                                                                                                                                  |
+| ![](../assets/en/Develop/scenar7.png) | OK         | ![](../assets/en/Develop/scenar8.png)  | Cooperativo             | Como CallComp é o método pai com a propriedade "Indifferent", depois o processo é cooperativo mesmo se toda a string for thread seguro.                                                                                                                                                                                                                                                                                                            |
+| ![](../assets/en/Develop/scenar9.png) | OK         | ![](../assets/en/Develop/scenar10.png) | Cooperativo             | Como CallDial é o método pai (propriedade era "Indifferent"), então o processo é cooperativo e a compilação exitosa                                                                                                                                                                                                                                                                                                                                |
 
-### How to find out the actual execution mode
+### Como descobrir o modo de execução real
 
-4D allows you to identify the execution mode of processes in compiled mode:
+4D permite que você identifique o modo de execução dos processos no modo compilado:
 
-- The [`PROCESS PROPERTIES`](https://doc.4d.com/4dv20/help/command/en/page336.html) command allows you to find out whether a process is run in preemptive or cooperative mode.
-- Both the Runtime Explorer and the [4D Server administration window](../ServerWindow/processes.md#process-type) display specific icons for preemptive processes.
+- O comando \[`PROCESS PROPERTIES`] (https\://doc.4d.com/4dv20/help/command/en/page336.html) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
+- O Explorador de execução e a \[janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
+  mostram ícones específicos para os processos preemptivos.
 
-## Writing a thread-safe method
+## Escrevendo um método thread seguro
 
-To be thread-safe, a method must respect the following rules:
+Para ser thread seguro, um método deve respeitar as seguintes regras:
 
-- It must have either the "Can be run in preemptive processes" or "Indifferent" property
-- It must not call a 4D command or function that is thread-unsafe.
-- It must not call another project method or function that is thread-unsafe
-- It must not call a plug-in that is thread-unsafe.
-- It must not use any interprocess variables(1)
-- It must not call interface objects(2) (there are exceptions however, see below).
+- deve ter a propriedade "Pode ser executado em processos preemptivos" ou "Indiferente"
+- não chama a um comando 4D que seja thread inseguro.
+- não deve chamar outro método projeto ou função de que não seja thread seguro
+- não deve chamar um plug-in que seja thread inseguro.
+- não deve usar nenhuma variável de interprocesso(1)
+- não deve chamar objetos de interface (2) (existem, no entanto, exceções, veja abaixo).
 
-(1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
-[Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes.
+(1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
+[Os processos worker](processes.md#worker-processes) também permitem que você troque mensagens entre quaisquer processos, inclusive processos preemptivos.
 
-(2) The [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command provides an elegant solution to call interface objects from a preemptive process.
+(2) O comando \[`CALL FORM`] (https\://doc.4d.com/4dv20/help/command/en/page1391.html) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
 
 :::note Notas
 
-- In the case of a "Shared by components and host databases" method, the "Can be run in preemptive processes" property must be selected.
-- All SQL statements are thread-safe. SQL code inserted in `Begin SQL`/`End SQL` blocks must comply with the following conditions:
-  - It must apply to the 4D Server or 4D local database (ODBC or remote databases via `SQL LOGIN` are thread-unsafe. However, local databases used with `USE DATABASE` are thread-safe).
-  * Any trigger called by SQL statements must be thread-safe (see [Triggers](#triggers) below).
+- No caso de um método "Compartilhado por componentes e bancos de dados host", a propriedade "Pode ser executado em processos preemptivos" deve ser selecionada.
+- Todas as instruções SQL são thread- seguro. O código SQL inserido nos blocos `Begin SQL`/`End SQL` deve estar em conformidade com as seguintes condições:
+  - Deve ser aplicado ao 4D Server ou ao banco de dados local do 4D (ODBC ou bancos de dados remotos via `SQL LOGIN` não são thread seguros. No entanto, os bancos de dados locais usados com `USE DATABASE` são thread seguro).
+  * Qualquer trigger chamado por instruções SQL deve ser thread seguro (consulte [Triggers](#triggers) abaixo).
 
 :::
 
-Methods with the "Can be run in preemptive processes" property will be checked by 4D during compilation. A compilation error is issued whenever the compiler finds something that prevents it from being thread-safe:
+Os métodos com a propriedade "Pode ser executado em processos preemptivos" serão verificados por 4D na etapa de compilação. Um erro de compilação se emite quando o compilador encontrar algo que lhe impeça ser thread seguro:
 
 ![](../assets/en/Develop/thread-unsafe.png)
 
 :::info
 
-It is possible to [disable locally the thread-safety verification](#).
+É possível [desativar localmente a verificação thread seguro](#).
 
 :::
 
-The [symbol file](../Project/compiler.md/#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+O [arquivo de símbolos](../Project/compiler.md/#complete-list-of-methods), se ativado, também contém o estado de segurança de thread para cada método.
 
-### Interface do usuário
+### Interface de usuário
 
 Since they are "external" accesses, calls to user interface objects such as forms, as well as to the Debugger, are not allowed in preemptive threads.
 
 The only possible accesses to the user interface from a preemptive thread are:
 
-- [Standard error dialog](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). The **Trace** button is disabled.
+- [Diálogo de erro padrão](.../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). The **Trace** button is disabled.
 - Standard progress indicators
-- `ALERT`, `Request` and `CONFIRM` dialogs. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
+- Diálogos `ALERT`, `Request` e `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 
 ### Triggers
 
@@ -212,7 +213,7 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
  SAVE RECORD(Table(myMethodThatReturnsATableNumber())->)
 ```
 
-In this case, all triggers are evaluated. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
+Nesse caso, todos os triggers são avaliados. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
 
 ### Error-handling methods
 
