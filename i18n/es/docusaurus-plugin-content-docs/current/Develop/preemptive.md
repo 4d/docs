@@ -151,8 +151,8 @@ To be thread-safe, a method must respect the following rules:
 - It must have either the "Can be run in preemptive processes" or "Indifferent" property
 - It must not call a 4D command or function that is thread-unsafe.
 - It must not call another project method or function that is thread-unsafe
-- It must not call a plug-in that is thread-unsafe.
-- It must not use any interprocess variables(1)
+- No debe llamar a un plug-in que no sea hilo seguro.
+- No debe utilizar ninguna variable interproceso(1)
 - It must not call interface objects(2) (there are exceptions however, see below).
 
 (1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
@@ -187,9 +187,9 @@ Since they are "external" accesses, calls to user interface objects such as form
 
 The only possible accesses to the user interface from a preemptive thread are:
 
-- [Standard error dialog](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). The **Trace** button is disabled.
+- [Diálogo de error estándar](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). ../assets/en/WritePro/rows.PNG
 - Standard progress indicators
-- `ALERT`, `Request` and `CONFIRM` dialogs. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
+- Diálogos `ALERT`, `Request` y `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 
 ### Triggers
 
@@ -212,7 +212,7 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
  SAVE RECORD(Table(myMethodThatReturnsATableNumber())->)
 ```
 
-In this case, all triggers are evaluated. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
+En este caso, se evalúan todos los triggers. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
 
 ### Error-handling methods
 
