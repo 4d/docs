@@ -46,7 +46,12 @@ A autoridade de certificação é escolhida de acordo com vários critérios. Se
 Para obter um certificado digital:
 
 1. Crie uma chave privada usando o comando `GENERATE ENCRYPTION KEYPAIR`.
-> **Aviso**: por razões de segurança, a chave privada deve ser sempre mantida em segredo. Na verdade deve ser mantida sempre na máquina servidor. Para o servidor web, o arquivo Key.pem deve ser localizado na pasta Project.
+
+:::caution
+
+For security reasons, the private key should always be kept secret. Na verdade deve ser mantida sempre na máquina servidor. Para o servidor web, o arquivo Key.pem deve ser localizado na pasta Project.
+
+:::
 
 2. Use o comando `GENERATE CERTIFICATE REQUEST` para emitir uma petição de certificado.
 
@@ -64,7 +69,12 @@ O servidor 4D pode trabalhar em modo seguro. Um certificado é válido de 3 mese
 ### Arquivos `key.pem` e `cert.pem`
 
 A instalação de arquivos **key.pem** e **cert.pem** torna possível usar TLS com o servidor 4D. Entretanto para que as conexões TLS sejam aceitas pelo servidor, precisa ativá-las:
-> Arquivos padrão *key.pem* e *cert.pem* são oferecidos com 4D. Para um maior nível de segurança, recomendamos fortemente que esses arquivos sejam substituídos por seus próprios certificados.
+
+:::caution
+
+Arquivos padrão *key.pem* e *cert.pem* são oferecidos com 4D. Para um maior nível de segurança, recomendamos fortemente que esses arquivos sejam substituídos por seus próprios certificados.
+
+:::
 
 #### Com o servidor web
 
