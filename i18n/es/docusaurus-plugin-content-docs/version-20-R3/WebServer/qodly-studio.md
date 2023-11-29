@@ -32,7 +32,7 @@ The use of Qodly Studio in 4D requires a specific license. Qodly Studio options 
 
 #### Navegador
 
-Qodly Studio supports the following web browsers:
+Qodly Studio soporta los siguientes navegadores web:
 
 - Chrome
 - Edge
@@ -214,8 +214,8 @@ Some basic symbols, operators, and keywords differ in QodlyScript and must be ad
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | var type                |
-| number      | Real                                                        | var type                |
+| string      | Text                                                        | tipo de variable        |
+| number      | Real                                                        | tipo de variable        |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
