@@ -49,7 +49,7 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 
 :::caution
 
-For security reasons, the private key should always be kept secret. 実際、秘密鍵は常にサーバーマシンと一緒に存在しているべきです。 Webサーバーの場合、Key.pem ファイルは Projectフォルダーに保存されていなければなりません。
+セキュリティ上の理由により、秘密鍵は常に機密でなければなりません。 実際、秘密鍵は常にサーバーマシンと一緒に存在しているべきです。 Webサーバーの場合、Key.pem ファイルは Projectフォルダーに保存されていなければなりません。
 
 :::
 
