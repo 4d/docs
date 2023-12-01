@@ -1,6 +1,6 @@
 ---
 id: debugLogFiles
-title: Log files
+title: Arquivo de histórico
 ---
 
 Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os registos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
@@ -229,7 +229,7 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 O arquivo *4DDiagnosticLog.txt* pode registar diferentes níveis de mensagens, desde `ERROR` (mais importante) a `TRACE` (menos importante). Por predefinição, o nível `INFO` está definido, o que significa que o arquivo registará apenas eventos importantes, incluindo erros e resultados inesperados (ver abaixo).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
+Pode selecionar o nível das mensagens utilizando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), consoante as suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
 | Parâmetros  | Descrição                                                                                            | Quando seleccionado, inclui                                   |
 | ----------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -266,9 +266,9 @@ Os arquivos de histórico podem ser produzidos em duas versões:
  Para começar esse histórico:
 
 ```4d
-SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
-SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
-SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+SET DATABASE PARAMETER(SMTP Log;1) //inicia SMTP log
+SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
+SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 ```
 
 > 4D Server: Clique no botão **Start Request and Debug Logs** na página [Maintenance](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) da janela de administração de 4D Server.
