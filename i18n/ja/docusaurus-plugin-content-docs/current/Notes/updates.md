@@ -12,6 +12,7 @@ title: リリースノート
 #### ハイライト
 
 - TLS証明書の [`ECDSA` 暗号化形式](../Admin/tls.md#暗号化) をサポート。
+- Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
 
 
@@ -40,13 +41,20 @@ title: リリースノート
 
 #### 動作の変更
 
-- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみで "キャッチ可能" でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。
+- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみで "キャッチ可能" でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。 However, for such errors, on Intel processors only, the procedure is still interrupted as before(1), whereas on Apple Silicon processors the procedure is only interrupted if you call the `ABORT` command. (1) except for accessing a character beyond the end of a text, which does not cause an `ABORT`, unlike accesses outside boundaries of a BLOB or an array.
 - 4D は内部的な PHPインタプリターを実装しなくなりました。 PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) 必要があります。
 
 
 ## 4D v20 R2
 
 [**4D v20 R2 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R2/): 4D v20 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 
 #### ハイライト
@@ -72,6 +80,12 @@ title: リリースノート
 :::caution 4D v20.2 以降の4D Server に接続する最小クライアントバージョンについて
 
 内部的な理由により、4D v20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D v20.2 以上でなければなりません。
+
+:::
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -234,6 +248,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 ## 4D v19 R4
 
 - ORDAクラス: [エイリアス属性](../ORDA/ordaClasses.md#エイリアス属性-1) が利用可能に。
+
 - ループにおける [break と continue](../Concepts/flow-control.md#break-と-continue) 文のサポート。
 - [return](../Concepts/flow-control.md#return-expression) 文と、値を返すための [return {expression}](../Concepts/parameters.md#return-expression) 文のサポート。
 - [複合代入演算子](../Concepts/operators.md#複合代入演算子)、[短絡演算子](../Concepts/operators.md#短絡演算子)、および [三項演算子](../Concepts/operators.md#三項演算子) のサポート。
@@ -306,6 +321,13 @@ ALERT($param1+" "+$param2)
 <details><summary>過去のリリースについてはこちらをクリックしてください。</summary>
 
 ### 4D v19
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
+
 
 - [IMAPTransporter クラス](../API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](../API/FileClass.md): 新しい `setAppInfo()` および `getAppInfo()` 関数
