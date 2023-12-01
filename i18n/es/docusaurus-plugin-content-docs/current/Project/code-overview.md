@@ -4,9 +4,9 @@ title: Métodos y clases
 ---
 
 
-The 4D code used across your project is written in [methods](../Concepts/methods.md) and [classes](../Concepts/classes.md).
+El código 4D utilizado en todo el proyecto está escrito en [métodos](../Concepts/methods.md) y [clases](../Concepts/classes.md).
 
-El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eliminar su código. You will usually use the 4D [code editor](../code-editor/write-class-method.md) to work with your code.
+El IDE de 4D le ofrece varias funcionalidades para crear, editar, exportar o eliminar su código. Por lo general, utilizará el [editor de código](../code-editor/write-class-method.md) de 4D para trabajar con su código.
 
 
 ## Creación de métodos
@@ -16,7 +16,7 @@ Un método en 4D se almacena en un archivo **.4dm** ubicado en la carpeta corres
 Puede crear [varios tipos de métodos](../Concepts/methods.md):
 
 - Todos los tipos de métodos pueden crearse o abrirse desde la ventana del **Explorador** (excepto los métodos Objeto que se gestionan desde el [editor de formularios](../FormEditor/formEditor.md)).
-- Project methods can also be created or opened from the **File** menu or toolbar (**New/Method...** or **Open/Method...**) or using shortcuts in the [Code editor window](../code-editor/write-class-method.md#shortcuts).
+- Los métodos proyecto también pueden crearse o abrirse desde el menú **Archivo** o la barra de herramientas (**Nuevo/Método...** o **Abrir/Método...**) o utilizando los accesos directos de la ventana del [editor de código](../code-editor/write-class-method.md#shortcuts).
 - Los triggers también pueden crearse o abrirse desde el editor de Estructura.
 - Los métodos formulario también pueden crearse o abrirse desde el [editor de formularios](../FormEditor/formEditor.md).
 
@@ -41,7 +41,7 @@ Para eliminar un método o clase existente, puede:
 
 ## Importar y exportar el código
 
-Puede importar y exportar un método o un código de una clase en forma de archivo. These commands are found in the **Method** menu of the [Code editor](../code-editor/write-class-method.md).
+Puede importar y exportar un método o un código de una clase en forma de archivo. Estos comandos se encuentran en el menú **Método** del editor de código [](../code-editor/write-class-method.md).
 
 - Cuando se selecciona el comando **Exportar el método...**, aparece una caja de diálogo estándar para guardar archivos, que permite elegir el nombre, la ubicación y el formato del archivo de exportación (ver abajo). Al igual que con la impresión, la exportación no tiene en cuenta el estado contraído de las estructuras de código y se exporta todo el código.
 - Cuando se selecciona el comando **Importar el método...**, aparece una caja de diálogo estándar de apertura de archivos que permite designar el archivo a importar. La importación sustituye el texto seleccionado en el método. Para reemplazar un método existente por un método importado, seleccione todo el contenido del método antes de realizar la importación.
@@ -62,7 +62,7 @@ Los otros tipos de métodos no tienen propiedades específicas. Sus propiedades 
 
 Para mostrar la caja de diálogo **Propiedades del método** para un método proyecto, puede:
 
-- in the [Code Editor](../code-editor/write-class-method.md), select the **Method Properties...** command in the **Method** menu,
+- en el [editor de código](../code-editor/write-class-method.md), seleccione el comando **Propiedades del método...** en el menú **Método**,
 - o en la página **Métodos** del Explorador, **haga clic derecho** en el método proyecto y seleccione **Propiedades del método...** en el menú contextual o en el menú de opciones.
 
 
@@ -112,7 +112,7 @@ Para más información sobre esta opción, consulte [Atributo Ejecutar en el ser
 
 ### Modo Ejecución
 
-Esta opción permite declarar el método elegible para la ejecución en modo apropiativo. It is described in the [Preemptive processes section](../Develop/processes.md#preemptive-processes).
+Esta opción permite declarar el método elegible para la ejecución en modo apropiativo. Se describe en la [sección Procesos apropiativos](../Develop/processes.md#preemptive-processes).
 
 ### Disponibilidad
 
