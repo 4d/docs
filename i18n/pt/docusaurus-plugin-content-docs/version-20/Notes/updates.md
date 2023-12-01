@@ -14,6 +14,11 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 :::
 
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 #### Aviso de reconstrução do índice
 
@@ -245,6 +250,12 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 <details><summary>Clique para ver as notas de lançamento das versões anteriores</summary>
 
 ### 4D v19
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 - [Classe IMAPTransporter](../API/IMAPTransporterClass.md): novas funções `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` e `.unsubscribe()`.
 - [Classe File](../API/FileClass.md): novas funções `setAppInfo()` e `getAppInfo()`.
