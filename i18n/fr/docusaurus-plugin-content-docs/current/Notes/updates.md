@@ -41,7 +41,7 @@ Lisez [**Les nouveautés de 4D v20 R3**](https://blog.4d.com/fr-whats-new-in-4d-
 
 #### Changements de comportement
 
-- Certaines erreurs étaient "interceptables" par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) en mode interprété uniquement. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : *Indice hors de la plage*, *Type incompatible*, et *Déréférencement d'un pointeur Null*. However, for such errors, on Intel processors only, the procedure is still interrupted as before(1), whereas on Apple Silicon processors the procedure is only interrupted if you call the `ABORT` command. (1) except for accessing a character beyond the end of a text, which does not cause an `ABORT`, unlike accesses outside boundaries of a BLOB or an array.
+- Some errors were catchable by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*. However on Intel processors, for such errors except accessing a character beyond the end of a text, the procedure is still interrupted as before, whereas on Apple Silicon processors the procedure is only interrupted if you call the [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html) command.
 - 4D n'inclut plus d'interpréteur PHP interne. Vous devez [configurer et exécuter votre propre interpréteur PHP](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) pour utiliser les commandes PHP.
 
 
