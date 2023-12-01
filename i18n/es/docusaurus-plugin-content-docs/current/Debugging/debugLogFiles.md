@@ -233,15 +233,23 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 El archivo *4DDiagnosticLog.txt* puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
-Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de registro de diagnóstico` del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
-| Columna # | Descripción                                                                                     | Cuando se selecciona, incluye   |
-| --------- | ----------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR     | Una parte de la aplicación no funciona                                                          | ERROR                           |
-| WARN      | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | ERROR, WARN                     |
-| INFO      | *Nivel por defecto* - Evento de aplicación importante                                           | ERROR, WARN, INFO               |
-| DEBUG     | Detalle del flujo de aplicación (para los servicios técnicos 4D)                                | ERROR, WARN, INFO, DEBUG        |
-| TRACE     | Otra información interna (para los servicios técnicos de 4D)                                    | ERROR, WARN, INFO, DEBUG, TRACE |
+| Constante   | Descripción                                                                                     | Cuando se selecciona, incluye                                 |
+| ----------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | Una parte de la aplicación no funciona                                                          | `Log error`                                                   |
+| `Log warn`  | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | `Log error`, `Log warn`                                       |
+| `Log info`  | *Nivel por defecto* - Evento de aplicación importante                                           | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | Detalle del flujo de aplicación (para los servicios técnicos 4D)                                | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | Otra información interna (para los servicios técnicos de 4D)                                    | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+
+Ejemplo:
+
+```4d
+SET DATABASE PARAMETER (Diagnostic log recording; 1)
+SET DATABASE PARAMETER (Diagnostic log level; Log trace)
+```
+
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt y 4DIMAPLog.txt
 
@@ -261,11 +269,11 @@ Los archivos de historial pueden producirse en dos versiones:
 
  Para iniciar este historial:
 
- ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //iniciar log SMTP 
- SET DATABASE PARAMETER(POP3 Log;1) //iniciar log POP3 
- SET DATABASE PARAMETER(IMAP Log;1) //iniciar log IMAP
- ```
+```4d
+SET DATABASE PARAMETER(SMTP Log;1) //inicia SMTP log
+SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
+SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
+```
 
 > 4D Server: clic en el botón **Iniciar los historiales de peticiones y de depuración** en la página [Mantenimiento](ServerWindow/maintenance.md) ode la ventana de administración de 4D Server.
 

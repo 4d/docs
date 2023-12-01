@@ -72,7 +72,7 @@ El archivo de plantilla permite definir lo siguiente:
 
 :::info Limitación
 
-In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. This limitation will be removed in the next version.
+In the current implementation (4D v20 R2), formulas in breaks, data sources and contextual menus do not support calls to the host database methods. Esta limitación se eliminará en la próxima versión.
 
 :::
 

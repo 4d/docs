@@ -97,7 +97,7 @@ In compiled mode, when starting a process created by either `New process` or `CA
 The actual thread-safe property depends on the call chain. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. A preemptive thread can be created only when the entire chain is thread-safe and the process method has been declared "Can be run in preemptive process".
 On the other hand, the same thread-safe method may be executed in a preemptive thread when it is in one call chain, and in a cooperative thread when it is in another call chain.
 
-For example, consider the following project methods:
+Por ejemplo, considere los siguientes métodos proyecto:
 
 ```4d
   //MyDialog project method
@@ -187,7 +187,7 @@ Since they are "external" accesses, calls to user interface objects such as form
 
 The only possible accesses to the user interface from a preemptive thread are:
 
-- [Diálogo de error estándar](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). ../assets/en/WritePro/rows.PNG
+- [Diálogo de error estándar](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). El botón **Rastrear** está desactivado.
 - Standard progress indicators
 - Diálogos `ALERT`, `Request` y `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 

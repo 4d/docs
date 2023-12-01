@@ -229,19 +229,27 @@ Les champs suivants sont enregistrés pour chaque évènement :
 
 En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.
 
-### Activation du fichier
+### Niveaux du journal de diagnostic
 
 The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
 
-| Colonne # | Description                                                          | When selected, includes         |
-| --------- | -------------------------------------------------------------------- | ------------------------------- |
-| ERROR     | Numéro d'opération séquentiel et unique dans la session d'historique | ERROR                           |
-| WARN      | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             | ERROR, WARN                     |
-| INFO      | ID du Process 4D                                                     | ERROR, WARN, INFO               |
-| DEBUG     | ID unique du process                                                 | ERROR, WARN, INFO, DEBUG        |
-| TRACE     | Other internal information (for 4D technical services)               | ERROR, WARN, INFO, DEBUG, TRACE |
+| Constante   | Description                                                          | When selected, includes                                       |
+| ----------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | Numéro d'opération séquentiel et unique dans la session d'historique | `Log error`                                                   |
+| `Log warn`  | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             | `Log error`, `Log warn`                                       |
+| `Log info`  | ID du Process 4D                                                     | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | ID unique du process                                                 | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | Other internal information (for 4D technical services)               | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+
+Voici un exemple :
+
+```4d
+SET DATABASE PARAMETER (Diagnostic log recording; 1)
+SET DATABASE PARAMETER (Diagnostic log level; Log trace)
+```
+
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, et 4DIMAPLog.txt
 
@@ -261,11 +269,11 @@ Les fichiers d'historique peuvent être générés en deux versions :
 
  Pour lancer cet historique :
 
- ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
- ```
+```4d
+SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
+SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
+SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+```
 
 > 4D Server : Cliquez sur le bouton **Démarrer les journaux de requêtes et de débogage** dans la [Page Maintenance](ServerWindow/maintenance.md) de la fenêtre d'administration de 4D Server.
 

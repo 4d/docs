@@ -224,7 +224,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
 
-- Usually, you will only have to simply convert names. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- Normalmente, sólo tendrá que convertir los nombres. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - However, some command have been renamed for a better compliance. Estas se listan a continuación:
 
 | QodlyScript            | Lenguaje 4D      |

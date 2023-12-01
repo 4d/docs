@@ -203,7 +203,7 @@ LogFile("!!! Server error: "+$event.errors.first().message)
 
 ### objeto `request`
 
-A `request` object contains the following properties:
+Um objeto `request` contém as seguintes propriedades:
 
 | Parâmetro     | Tipo   | Descrição                                                                                                                                    |
 | ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------- |

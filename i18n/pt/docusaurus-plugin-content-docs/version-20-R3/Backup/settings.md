@@ -73,7 +73,7 @@ The **Use Log File** option, when checked, indicates that the application uses a
 
 Como padrão, todo banco de dados criado com 4D usando um arquivo de histórico (opção marcada na página **Geral** das **Preferências**). O arquivo de histórico é chamado *data.journal* e está na pasta Data.
 
-> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
+> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Quando você marcar essa opção para o arquivo de dados usado no momento, uma mensagem de aviso informará ser necessário fazer um backup. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
 
 
 ## Cópia de segurança e restauração

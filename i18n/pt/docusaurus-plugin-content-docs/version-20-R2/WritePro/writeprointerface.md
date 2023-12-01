@@ -51,7 +51,7 @@ After finalizing the table creation and customization, the user can click on the
 
 Once the table has been integrated into the document, the user can customize its style. The formatting tools of the toolbar and sidebar are still available.
 
-### WP Table Wizard template configuration
+### Configuração do modelo do WP Table Wizard
 
 A configuração dos modelos inclui:
 

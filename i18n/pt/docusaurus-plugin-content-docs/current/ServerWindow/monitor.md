@@ -24,7 +24,7 @@ The graphic area lets you see the evolution in real time of several parameters: 
 Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
 
 
-## Overview Area
+## Área Visão geral
 
 The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
 
