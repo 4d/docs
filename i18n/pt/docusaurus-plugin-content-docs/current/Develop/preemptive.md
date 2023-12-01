@@ -188,7 +188,7 @@ Since they are "external" accesses, calls to user interface objects such as form
 
 The only possible accesses to the user interface from a preemptive thread are:
 
-- [Diálogo de erro padrão](.../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). The **Trace** button is disabled.
+- [Diálogo de erro padrão](.../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). O botão **Rastreamento** está desativado.
 - Standard progress indicators
 - Diálogos `ALERT`, `Request` e `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 
@@ -249,7 +249,7 @@ Method2:
 
 If either the process running Method1 or the process running Method2 is preemptive, then the expression `$value:=$1->` will throw an execution error.
 
-### DocRef document reference
+### Referência do documento DocRef
 
 The use of DocRef type parameters (opened document reference, used or returned by `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) is limited to the following contexts:
 
