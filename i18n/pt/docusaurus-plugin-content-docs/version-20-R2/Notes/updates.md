@@ -8,6 +8,11 @@ title: Notas de Lançamento
 
 Leia [**O que há de novo no 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), a postagem do blog que lista todos os novos recursos e aprimoramentos no 4D v20 R2.
 
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 #### Destaques
 
@@ -33,6 +38,13 @@ See the [**previous Release notes**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Re
 For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
 
 :::
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
+
 
 #### Aviso de reconstrução do índice
 
@@ -263,6 +275,12 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 <details><summary>Clique para ver as notas de lançamento das versões anteriores</summary>
 
 ### 4D v19
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 - [Classe IMAPTransporter](../API/IMAPTransporterClass.md): novas funções `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` e `.unsubscribe()`.
 - [Classe File](../API/FileClass.md): novas funções `setAppInfo()` e `getAppInfo()`.
