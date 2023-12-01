@@ -53,7 +53,7 @@ Essa propriedade é **apenas leitura**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->Parâmetros<!-- END REF -->
+<!-- REF #ClassClass.new().Syntax -->**.new**() : 4D.Class<br/>**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 
 <!-- REF #ClassClass.new().Params -->
