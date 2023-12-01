@@ -137,7 +137,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 | Caracteres | Descrição                                                                                                                                                                                                               | Exemplo                                                                                                                    |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | 0          | Marcador de posição mostrando zeros.                                                                                                                                                                                    | #.00 mostrará 1.1 como 1.10                                                                                                |
-| .          | Displays a decimal point                                                                                                                                                                                                | 0.00 mostrará 1999 como 1999.00                                                                                            |
+| .          | Exibe um ponto decimal                                                                                                                                                                                                  | 0.00 mostrará 1999 como 1999.00                                                                                            |
 | ,          | Mostra o separador de milhares num número. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000. | #,0 mostrará 12200000 como 12,200,000                                                                                      |
 | \_       | Salta a largura do carácter seguinte.                                                                                                                                                                                   | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
 | @          | Formatador de texto. Aplica o formato a todo o texto da célula                                                                                                                                                          | "\[Red]@" aplica a cor de letra vermelha aos valores de texto.                                                            |
@@ -296,7 +296,7 @@ The following special characters allow the automatic addition or formatting of i
 | I          | Itálico                         | printInfo.headerLeft:="&IThis is text."                                | *Isto é texto.*                                      |
 | "          | Prefixo do tipo de letra        | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K          | Prefixo da cor do texto         | printInfo.headerLeft:="&KFF0000Isto é texto."                          | Este é o texto (a vermelho).                         |
-| F          | Workbook name                   | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
+| F          | Nome do Workbook                | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
 | A          | Nome da folha de cálculo        | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
 
 ### Margens
@@ -395,7 +395,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 \* Se estiver usando o tipo de texto, passe o caminho do arquivo (absoluto ou relativo) da imagem. If you pass a relative path, the file should be located next to the database structure file. No Windows, a extensão do ficheiro deve ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 
-## Style Objects
+## Objetos Estilo
 
 4D View Pro style objects and style sheets allow you to control the graphical aspects and the look of your 4D View Pro documents.
 
