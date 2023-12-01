@@ -12,6 +12,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 #### Destacados
 
 - Soporte de formato de cifrado [`ECDSA`](../Admin/tls.md#encryption) para certificados TLS.
+- Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
 
 
@@ -27,7 +28,7 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 - Soporte del parámetro *context* en [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Soporte de la propiedad `headers` en el parámetro *connectionHandler* de [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Marcador de modificación global](../ORDA/global-stamp.md) para ayudar a implantar módulos de sincronización de datos. Nuevas funciones: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) y [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
-- Assigning file references to picture/blob attributes is [supported in ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
+- La asignación de referencias de archivo a atributos imagen/blob es [soportada en ORDA](../ORDA/entities.md#d#assigning-files-to-picture-or-blob-attributes).
 - Soporte para [inicializar el valor de la variable y el tipo de datos en la línea de declaración](../Concepts/variables/#initializing-variables-in-the-declaration-line).
 - Los parámetros del archivo de historial se guardan ahora en [con el archivo de datos actual](../Backup/settings.md#log-file-management)
 - Nueva sintaxis para [declarando parámetros variables](../Concepts/parameters.md#declaring-variadic-parameters)
@@ -40,13 +41,20 @@ Conozca las [**Novedades de 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Cambios de comportamiento
 
-- Algunos errores eran "capturables" por su método de gestión de errores [](../Concepts/error-handling.md) solo en modo interpretado. Se ha realizado una corrección para que los siguientes errores se detecten también en modo compilado: *Indice fuera de rango*, *Tipo incompatible*, y *Desreferenciación de un puntero Null*.
+- Algunos errores eran "capturables" por su método de gestión de errores [](../Concepts/error-handling.md) solo en modo interpretado. Se ha realizado una corrección para que los siguientes errores se detecten también en modo compilado: *Indice fuera de rango*, *Tipo incompatible*, y *Desreferenciación de un puntero Null*. However, for such errors, on Intel processors only, the procedure is still interrupted as before(1), whereas on Apple Silicon processors the procedure is only interrupted if you call the `ABORT` command. (1) except for accessing a character beyond the end of a text, which does not cause an `ABORT`, unlike accesses outside boundaries of a BLOB or an array.
 - 4D ya no incluye un intérprete PHP interno. Necesita [configurar y ejecutar su propio intérprete PHP](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) para utilizar comandos PHP.
 
 
 ## 4D v20 R2
 
 Lea [**Novedades en 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras en 4D v20 R2.
+
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 
 #### Destacados
@@ -72,6 +80,12 @@ Lea [**Novedades en 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), la e
 :::caution Versión mínima cliente para 4D Server v20.2 y posteriores
 
 Por razones internas, la versión de los clientes remotos que se conectan a 4D Server v20.2 y posteriores debe ser al menos 4D v20.2.
+
+:::
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -234,6 +248,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 ## 4D v19 R4
 
 - [Atributos Alias](../ORDA/ordaClasses.md#alias-attributes-1) están disponibles en las clases ORDA.
+
 - Soporte para las instrucciones [break y continue](../Concepts/flow-control.md#break-and-continue) en los bucles.
 - Soporte a la instrucción [return](../Concepts/flow-control.md#return-expression) y la [return expression](../Concepts/parameters.md#return-expression) para devolver los valores.
 - Soporte de los [operadores de asignación compuestos](../Concepts/operators.md#compound-assignment-operators), [los operadores de cortocircuito](../Concepts/operators.md#short-circuit-operators) y del [operador ternario](../Concepts/operators.md#ternary-operator)
@@ -306,6 +321,13 @@ Para obtener información detallada, consulte [esta entrada del blog](https://bl
 <details><summary>Haga clic para ver las notas de las versiones anteriores</summary>
 
 ### 4D v19
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
+
 
 - [IMAPTransporter Class](../API/IMAPTransporterClass.md): nuevas funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` y `.unsubscribe()`.
 - [File Class](../API/FileClass.md): nuevas funciones `setAppInfo()` y `getAppInfo()`.
