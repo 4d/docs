@@ -270,9 +270,9 @@ Los archivos de historial pueden producirse en dos versiones:
  Para iniciar este historial:
 
 ```4d
-SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
-SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
-SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+SET DATABASE PARAMETER(SMTP Log;1) //inicia SMTP log
+SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
+SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
 ```
 
 > 4D Server: clic en el botón **Iniciar los historiales de peticiones y de depuración** en la página [Mantenimiento](ServerWindow/maintenance.md) ode la ventana de administración de 4D Server.
