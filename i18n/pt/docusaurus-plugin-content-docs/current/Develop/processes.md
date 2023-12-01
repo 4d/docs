@@ -35,7 +35,7 @@ A process can be cleared under the following conditions (the first two condition
 - If you stop the process procedurally or use the **Abort** button in the Debugger or in the Runtime Explorer
 - If you call the [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html) command (to delete a worker process only).
 
-A process can create another process. Processes are not organized hierarchically—all processes are equal, regardless of the process from which they have been created. Once the “parent” process creates a “child” process, the child process will continue regardless of whether or not the parent process is still executing.
+Um processo pode criar outro processo. Processes are not organized hierarchically—all processes are equal, regardless of the process from which they have been created. Once the “parent” process creates a “child” process, the child process will continue regardless of whether or not the parent process is still executing.
 
 ## Elementos de um processo
 
@@ -74,7 +74,7 @@ The 4D application creates processes for its own needs, for example the Main pro
 
 ## Processos globais e locais
 
-Processes can be either global or local in scope. By default, all processes are global.
+Processes can be either global or local in scope. Por padrão, todos os processos são globais.
 
 Global processes can perform any operation, including accessing and manipulating data. Geralmente, você desejará usar processos globais. Local processes should be used only for operations that do not access data. For example, you can use a local process to run an event-handling method or to control interface elements such as floating windows.
 
@@ -126,7 +126,7 @@ A worker is used to ask a process to execute project methods. Um worker consiste
 
 You ask a worker to execute a project method by calling the `CALL WORKER` command. The worker and its message box are created at first use; its associated process is also automatically launched at first use. If the worker process dies thereafter, the message box remains open and any new message in the box will start a new worker process.
 
-The following animation illustrates this sequence:
+A animação a seguir ilustra esta sequência:
 
 ![](../assets/en/Develop/WorkerAnimation.gif)
 
