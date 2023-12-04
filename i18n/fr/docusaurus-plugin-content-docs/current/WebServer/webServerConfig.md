@@ -124,7 +124,7 @@ Séparez chaque méthode par un ";" (ex : "post;get"). Si Méthodes est vide, nu
 | objet webServer         | `debugLog`      | number       |
 | `WEB SET OPTION`        | `Web debug log` | number       |
 
-Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent également être enregistrées.
+Status of the HTTP request log file of the web server ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), stored in the "Logs" folder of the application -- nn is the file number). Il est utile pour déboguer les problèmes liés au serveur Web. Il enregistre chaque demande et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
 
 | Valeur | Constante                      | Description                                                                           |
 | ------ | ------------------------------ | ------------------------------------------------------------------------------------- |
