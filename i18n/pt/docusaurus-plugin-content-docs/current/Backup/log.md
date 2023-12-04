@@ -45,11 +45,11 @@ Pode averiguar se seu banco de dados utiliza um arquivo de histórico a qualquer
 
 Para criar um arquivo de histórico:
 
-1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. O programa exibe um caixa de diálogo abrir/novo arquivo. Como padrão, o nome arquivo é chamado *data.journal*.
+1. Na página **Cópia de segurança/Configuração** das Propriedades do banco de dados, marque a opção **Utilizar o arquivo de histórico**. O programa exibe um caixa de diálogo abrir/novo arquivo. Como padrão, o nome arquivo é chamado *data.journal*.
 
 2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo. Se tiver pelo menos dois discos duros, é recomendado que coloque o arquivo de histórico no disco que não tenha seu banco de dados. Se perder o disco duro do banco de dados, poderá então recuperar o arquivo de histórico.
 
-3. Clique **Salvar**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. Clique **Salvar**. O disco e o nome do arquivo de histórico aberto agora estão exibidos na área **Usar histórico** da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 
 4. Valide a caixa de diálogo das Propriedades.
 
@@ -64,16 +64,16 @@ Sem ter que fazer nada a mais, todas as operações realizadas sobre os dados s�
 
 Precisa criar outro arquivo de histórico se criar um novo arquivo de dados. Precisa estabelecer ou criar outro arquivo de shitórico se abrir outro arquivo de dados que não estiver linnkado a um arquivo de histórico (ou se o arquivo de histórico estiver faltando).
 
-## Log file settings
+## Configurações do arquivo de registro
 
-The [log file settings](settings.md#log-file-management) are based on two pieces of information: a boolean value and a path.
+As configurações do arquivo de log [](settings.md#log-file-management) são baseadas em duas informações: um valor booleano e um caminho.
 
-1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. Por padrão, o valor booleano é armazenado em *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
+1. **Valor booleano**: indicando se o recurso "Usar arquivo de registro" está ativado ou desativado no aplicativo. Por padrão, o valor booleano é armazenado em *catalog.4DCatalog*. No entanto, quando as configurações do usuário [](../Desktop/user-settings.md) são ativadas, a configuração do arquivo *catalog.4DCatalog* é substituída e o valor booleano pode ser definido no arquivo *Backup.4DSettings* arquivo [ao lado do arquivo de dados](../Project/architecture.md#settings-user-data) ou no arquivo *Backup.4DSettings* [na pasta do projeto](../Project/architecture.md#settings-user) (consulte também a documentação `JournalFileEnabled` xml backup key em [doc.4d.com](https://doc.4d.com)).
 
-2. **Path**: a string pointing to where the log file is located. O caminho do arquivo de registro é sempre armazenado no arquivo de dados vinculados.
+2. **Path**: uma string apontando para onde o arquivo de log está localizado. O caminho do arquivo de registro é sempre armazenado no arquivo de dados vinculados.
 
 
-## Stopping a log file
+## Parando um arquivo de log
 
 Se quiser parar as operações de registro no arquivo de histórico atual, apenas desmarque a opção **Use Log|Usar o arquivo de histórico ** na página **Backup/Configuration** das Propriedades do banco de dados.
 
