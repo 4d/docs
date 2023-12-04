@@ -145,18 +145,18 @@ Les deux fichiers journaux sont automatiquement créés dans le dossier **Logs**
 
 Le [fichier de débogage](webServerConfig.md#debug-log) peut être activé via l'objet [`web server`](webServerObject.md) ou la commande `WEB FIXER OPTION`
 
-Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent également être enregistrées.
+Ce fichier journal enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
 
 Les champs suivants sont enregistrés pour Requête et Réponse :
 
-| Noms des champs | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                           |
-| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
-| PeerPort        | Port utilisé par l'hôte (client)                                     |
-| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
-| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
+| Noms des champs | Description                                                       |
+| --------------- | ----------------------------------------------------------------- |
+| SocketID        | ID du socket utilisé pour la communication                        |
+| PeerIP          | Adresse IPv4 de l'hôte (client)                                   |
+| PeerPort        | Port utilisé par l'hôte (client)                                  |
+| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)      |
+| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication) |
+| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log    |
 
 
 ### logweb.txt
