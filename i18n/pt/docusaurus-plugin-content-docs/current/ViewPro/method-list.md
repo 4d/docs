@@ -5776,7 +5776,7 @@ O comando não faz nada se:
 * o novo nome contém caracteres proibidos
 * o valor do novo nome está em branco
 * o novo nome já existe
-* the passed *sheet* index does not exist
+* o índice *sheet* passado não existe
 
 #### Exemplo
 
@@ -6388,7 +6388,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | tabStripPosition                      | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk tab strip position bottom </td><td>0</td><td> Tab strip position is relative to the bottom of the workbook.</td></tr><tr><td> vk tab strip position left </td><td>2</td><td> Tab strip position is relative to the left of the workbook.</td></tr><tr><td> vk tab strip position right </td><td>3</td><td> Tab strip position is relative to the right of the workbook.</td></tr><tr><td> vk tab strip position top </td><td>1</td><td> Tab strip position is relative to the top of the workbook.</td></tr></table>                                                                                                                                                                                         |
 | tabStripRatio                         | number                  | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.                                                                   |
 | tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                                       |
-| tabStripWidth                         | number                  | Width of the tab strip when position is left or right. Default and minimum is 80.                                                                                                                                                                                  |
+| tabStripWidth                         | number                  | Width of the tab strip when position is left or right. O padrão e o mínimo são 80.                                                                                                                                                                                 |
 | useTouchLayout                        | boolean                 | Whether to use touch layout to present the Spread component.                                                                                                                                                                                                       |
 
 #### Exemplo
