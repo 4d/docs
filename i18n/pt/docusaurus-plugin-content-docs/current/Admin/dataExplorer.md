@@ -24,7 +24,7 @@ Para ligar à página Web do Explorador de dados:
 
 - A partir de uma aplicação 4D (com interface):
   - Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :
-  - To open the Data Explorer in an external browser tab, select **Data Explorer In Browser** in the **Records** menu or press the **Alt** key (Windows)/**Option** key (macOS) and click on the **Data** button in the main toolbar.
+  - Para abrir o Explorador de dados num separador de browser externo, seleccione **Explorador de dados no browser** no menu **Registos** ou prima a tecla **Alt** (Windows)/**Option** (macOS) e clique no botão **Dados** na barra de ferramentas principal.
 - no menu **Window**  (em 4D Server)
 
 - mesmo se usar uma aplicação 4D headless, pode abrir seu navegador web e digitar o endereço abaixo:
