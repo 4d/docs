@@ -51,7 +51,7 @@ Uma entidade [](ORDA/dsMapping.md#entity) é uma instância de um [Dataclass](OR
 Qualquer atributo de dataclass está disponível como uma propriedade de entidade, que <!-- REF EntityClass.attributeName.Summary -->armazena o valor de atributo para a entidade<!-- END REF -->.
 > Atributos de Dataclass também podem ser alcançados usando a sintaxe alternativa com \[ ].
 
-The attribute value type depends on the attribute [kind](DataClassClass.md#attributename) (relation or storage):
+O tipo de valor do atributo depende do atributo [kind](DataClassClass.md#attributename) (relação ou armazenamento):
 
 * If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
 * If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. Valores da entidade relacionada estão diretamente disponíveis através de propriedades em cascata, por exemplo "myEntity.employer.employees\[0].lastname".

@@ -233,7 +233,7 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 El archivo *4DDiagnosticLog.txt* puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
+Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de registro de diagnóstico` del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
 | Constante   | Descripción                                                                                     | Cuando se selecciona, incluye                                 |
 | ----------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
