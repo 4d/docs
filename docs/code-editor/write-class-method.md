@@ -39,6 +39,7 @@ You can customize the display of the editing area. Any customization is automati
 
 | Option | Description | Set in... |
 
+
 |---|---|---|
 |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**
 |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md)|
@@ -506,7 +507,7 @@ The Code Live Checker is activated at three levels:
 Two kinds of symbols are displayed:
 
 - **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. They do not prevent compilation.
-- **errors**![error](../assets/en/code-editor/incorrect-expression-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile. 
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile. 
 
 When you move the mouse over the symbol, a help tip displays the cause of the error:
 
