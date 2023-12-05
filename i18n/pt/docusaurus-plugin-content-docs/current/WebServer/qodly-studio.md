@@ -169,7 +169,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | Visualizar e editar tabelas (classes de dados), atributos e relações | Editor de estrutura 4D(1)                                                                   | Qodly Studio Model Editor               |
 | Webforms                                                             | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
-| Desktop forms                                                        | 4D IDE                                                                                      | *não suportado*                         |
+| Formulários para desktop                                             | 4D IDE                                                                                      | *não suportado*                         |
 | Linguagem de programação                                             | Linguagem 4D com ORDA                                                                       | QodlyScript com ORDA                    |
 | Coding IDE                                                           | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio           |
 | Depurador                                                            | Depurador 4D IDE                                                                            | Depurador Qodly Studio                  |

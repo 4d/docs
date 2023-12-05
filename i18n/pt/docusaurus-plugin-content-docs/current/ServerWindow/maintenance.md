@@ -60,7 +60,7 @@ This area indicates the date and time of the [last backup](MSC/backup.md) of the
 The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
 
 
-## Request and Debug logs
+## Histórico de solicitações e depuração
 
 This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
 

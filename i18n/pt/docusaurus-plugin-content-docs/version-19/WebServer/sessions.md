@@ -59,7 +59,7 @@ Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) prope
 
 Uma sessão Web escalável é encerrada quando:
 
-- the web server is stopped,
+- o servidor web está parado,
 - o tempo limite do cookie de sessão foi atingido.
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.

@@ -180,7 +180,7 @@ Inicia ou interrompe o registro das solicitações recebidas pelo servidor da We
 > The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
 
 
-The log format menu provides the following options:
+O menu de formato do histórico oferece as seguintes opções:
 
 -   **No Log File**: When this option is selected, 4D will not generate a log file of requests.
 

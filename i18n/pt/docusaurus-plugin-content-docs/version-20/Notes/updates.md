@@ -14,7 +14,7 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 :::
 
-:::warning Security Note
+:::warning Nota de segurança
 
 If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
@@ -251,7 +251,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ### 4D v19
 
-:::warning Security Note
+:::warning Nota de segurança
 
 If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 

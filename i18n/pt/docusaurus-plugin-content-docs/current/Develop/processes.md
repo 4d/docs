@@ -3,7 +3,7 @@ id: processes
 title: Processos e Workers
 ---
 
-Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. These operations are called **processes**. Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
+Multi-tasking in 4D is the ability to have multiple operations that are executed simultaneously. Essas operações são chamadas **processos**. Multiple processes are like multiple users on the same computer, each working on his or her own task. This essentially means that each method can be executed as a distinct database task.
 
 If you write thread-safe code, you can create [**preemptive processes**](preemptive.md) that will be able to take advantage of multi-core computers in your compiled applications, for faster execution.
 
@@ -15,7 +15,7 @@ The 4D application creates processes for its own needs, for example the Main pro
 
 ## Criar e limpar processos
 
-There are several ways to create a new process:
+Existem várias maneiras de criar um processo:
 
 - Execute a method in the Design environment after checking the **New Process** check box in the "Execute Method" dialog box. The method chosen in the Execute Method dialog box is the process method.
 - Use the [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) command. The method passed as a parameter to the `New process` command is the process method.
@@ -30,8 +30,8 @@ In Desktop applications, processes can be run by choosing menu commands. In the 
 
 A process can be cleared under the following conditions (the first two conditions are automatic):
 
-- When the process method finishes executing
-- When the user quits from the application
+- Quando o método processo termina de ser executado
+- Quando o usuário sai da aplicação
 - If you stop the process procedurally or use the **Abort** button in the Debugger or in the Runtime Explorer
 - If you call the [`KILL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1390.html) command (to delete a worker process only).
 
@@ -44,7 +44,7 @@ Each process contains specific elements that it can handle independently from ot
 ### Elementos da linguagem
 
 - Variables: Every process has its own [process variables](../Concepts/variables#process-variables). Process variables are recognized only within the domain of their native process.
-- Process sets: Each process has its own process sets. `LockedSet` é um conjunto de processos. Process sets are cleared as soon as the process method ends.
+- Conjuntos de processo: cada processo tem seus próprios conjuntos de processos. `LockedSet` é um conjunto de processos. Process sets are cleared as soon as the process method ends.
 - [Error-handling method](../Concepts/error-handling#installing-an-error-handling-method): Each process can have its own error-handling method.
 - [Debugger window](../Debugging/debugger#calling-the-debugger): Each process can have its own Debugger window.
 
@@ -122,7 +122,7 @@ A worker is used to ask a process to execute project methods. Um worker consiste
 - a unique name (_warning: the name is case sensitive_), also used to name its associated process
 - um processo associado, que pode ou não existir em um determinado momento
 - a message box
-- a startup method (optional)
+- um método de inicialização (opcional)
 
 You ask a worker to execute a project method by calling the `CALL WORKER` command. The worker and its message box are created at first use; its associated process is also automatically launched at first use. If the worker process dies thereafter, the message box remains open and any new message in the box will start a new worker process.
 

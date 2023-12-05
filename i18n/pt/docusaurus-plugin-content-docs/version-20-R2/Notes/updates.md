@@ -8,7 +8,7 @@ title: Notas de Lançamento
 
 Leia [**O que há de novo no 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), a postagem do blog que lista todos os novos recursos e aprimoramentos no 4D v20 R2.
 
-:::warning Security Note
+:::warning Nota de segurança
 
 If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
@@ -39,7 +39,7 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 :::
 
-:::warning Security Note
+:::warning Nota de segurança
 
 If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
@@ -276,7 +276,7 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 
 ### 4D v19
 
-:::warning Security Note
+:::warning Nota de segurança
 
 If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
