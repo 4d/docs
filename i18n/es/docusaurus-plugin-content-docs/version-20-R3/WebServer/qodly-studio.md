@@ -5,15 +5,15 @@ title: Qodly Studio
 
 :::caution Vista previa para desarrolladores
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. No debe utilizarse en producción.
+Qodly Studio en 4D se encuentra actualmente en la fase **Developer Preview**. No debe utilizarse en producción.
 
 :::
 
 **Qodly Studio** forma parte de la **plataforma Qodly**, dedicada al desarrollo de aplicaciones web profesionales diseñadas, probadas y publicadas íntegramente en Qodly Cloud.
 
-As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+A partir de 4D v20 R2, puede utilizar Qodly Studio directamente desde 4D para crear interfaces web modernas y sofisticadas que puede integrar fácilmente a sus proyectos 4D existentes y desplegar **in situ**.
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
+Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se familiarizará con el concepto de fuentes de datos y aprenderá a:
 
 - crear formularios web colocando componentes en una página
 - mapear componentes a datos
@@ -22,7 +22,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 :::info
 
-The use of Qodly Studio in 4D requires a specific license. Qodly Studio options and menu items won't appear if the license is not activated.
+El uso de Qodly Studio en 4D requiere una licencia específica. Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
 
 :::
 
@@ -44,50 +44,50 @@ La resolución recomendada es 1920x1080.
 
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
-- Qodly Studio only works with 4D projects (binary databases are not supported).
+- Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
 
 
 ### Acceso a Qodly Studio
 
 Por defecto, no se permite el acceso a Qodly Studio.
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+Qodly Studio es servido por el [servidor web WebAdmin](../Admin/webAdmin.md) y muestra datos de proyectos 4D gestionados por el [servidor web 4D](webServer.md).
 
-To enable access to Qodly Studio, you must explicitly allow it at two levels:
+Para permitir el acceso a Qodly Studio, debe permitirlo explícitamente en dos niveles:
 
 * a nivel 4D (4D o 4D Server)
 * a nivel del proyecto
 
-If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
+Si uno de los dos niveles (o ambos) no están habilitados, se niega el acceso a Qodly Studio (se devuelve una página 403).
 
-#### A nivel 4D
+#### En nivel 4D
 
-As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
+Como primer nivel de seguridad, necesita [permitir el acceso a Qodly Studio en el servidor web WebAdmin](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
-This setting applies to the 4D application (4D or 4D Server) on the host machine. All projects opened with that 4D application take this setting into account.
+Esta configuración se aplica a la aplicación 4D (4D o 4D Server) en la máquina local. Todos los proyectos abiertos con esa aplicación 4D tienen en cuenta esta configuración.
 
-Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application.
+Mantenga esta opción desmarcada si desea asegurarse de que no se permite el acceso a Qodly Studio en la aplicación.
 
-Check this option to make it possible to access Qodly Studio. However, you still need to enable it at every project level.
+Marque esta opción para poder acceder a Qodly Studio. Sin embargo, sigue siendo necesario activarla en cada nivel del proyecto.
 
-Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Además, puede [configurar el puerto HTTP/HTTPS del servidor web WebAdmin utilizado](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
 :::note
 
-After any change to these settings, you must [restart the WebAdmin web server](../Admin/webAdmin.md#start-and-stop) for the new configuration to be effective.
+Después de cualquier cambio en estos parámetros, debe [reiniciar el servidor web WebAdmin](../Admin/webAdmin.md#start-and-stop) para que la nueva configuración sea efectiva.
 
 :::
 
 #### A nivel del proyecto
 
-After you have enabled access to Qodly Studio at the 4D level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio).
+Después de haber habilitado el acceso a Qodly Studio en el nivel 4D, es necesario designar explícitamente cada proyecto al que se puede acceder. La opción **Enable access to Qodly Studio** debe estar habilitada en la página [Funcionalidades Web de los parámetros de la aplicación 4D](../settings/web.md#enable-access-to-qodly-studio).
 
-Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
+Tenga en cuenta que los [parámetros de usuario](../settings/overview.md) pueden definirse a varios niveles y que se aplican prioridades.
 
 
-### Activando autenticación
+### Activando la autenticación
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. For more details, see [Access key](../Admin/webAdmin.md#access-key).
 
 ### Activación del renderizado
 
