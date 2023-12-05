@@ -29,11 +29,11 @@ TLSプロトコルは、送信者と受信者を認証するために設計さ�
 
 TLS は公開鍵暗号化技術を用います。これは、暗号化と復号化の非対称鍵のペアである公開鍵と秘密鍵に基づいています。 秘密鍵はデータを暗号化するために使用されます。 送信者 (Webサイト) は、それを誰にも渡しません。
 
-公開鍵は情報を復号化するために使用され、**証明書** を通して受信者 (Webブラウザー) へ送信されます。 証明書は Verisign® などの認証機関を通して発行されます。 Webサイトは証明書を認証機関 から購入します。この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
+公開鍵は情報を復号化するために使用され、**証明書** を通して受信者 (Webブラウザー) へ送信されます。 The certificate is delivered through a Certification Authority. The website pays the certificate provider to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode.
 
 :::note
 
-ブラウザーは、ルート証明書がインストールされた認証機関によって発行された証明書のみを許可します。ルート証明書がインストールされていない場合、通常警告が表示されます。
+Web browsers authorize only the certificates issued by a Certification Authority referenced in their properties.
 
 :::
 
@@ -41,21 +41,31 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 
 ## 最低バージョン
 
-デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.3 となります。 この値は `SET DATABASE PARAMETER` コマンドで `Min TLS version` セレクターを使用することで変更可能です。
+By default, the minimum version of the secured protocol accepted by the 4D servers is TLS 1.3. この値は `SET DATABASE PARAMETER` コマンドで `Min TLS version` セレクターを使用することで変更可能です。
 
 :::note
 
-接続時に受け入れる [最低TLSバージョン](WebServer/webServerConfig.md#最低tlsバージョン) を定義することで、**Webサーバー** のセキュリティレベルを制御することができます。
+You can control separately the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) for **webServer objects**.
 
 :::
 
-## 証明書
 
-### 形式
 
-4D が管理する TLS証明書は **PEM形式** でなければなりません。 証明書プロバイダー (たとえば [WoTrus](https://store.wotrus.com/)) ら .crt、.pfx、.p12 などのバイナリー形式の証明書が送られてきた場合、それらを使うためには PEM形式に変換する必要があります。 [sslshopper](https://www.sslshopper.com/) のような Webサイトでは、この変換をオンラインですることができます。
+## Enabling TLS with the HTTP server
 
-### 暗号化
+To be able to use the TLS protocol with the 4D HTTP server, you have to:
+
+1. Get your certificate files.
+2. Install your certificate files at the appropriate location(s)
+3. Enable TLS.
+
+### 証明書
+
+#### 形式
+
+4D が管理する TLS証明書は **PEM形式** でなければなりません。 If your certificate provider sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are web sites where you can do this conversion on-line.
+
+#### 暗号化
 
 4D は以下の標準的な暗号化形式の証明書をサポートしています:
 
@@ -74,63 +84,47 @@ ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/clien
 
 :::
 
+### Installing certificate files
 
+Certificate files include:
 
-## インストールとアクティベーション
+- **key.pem**: a document containing the private encryption key,
+- **cert.pem**: a document containing the certificate.
 
-### `key.pem` と `cert.pem` ファイルのインストール
+Both **key.pem** and **cert.pem** files must be located:
 
-4D で TLSプロトコルを使用するには、**key.pem** (秘密の暗号鍵を含むドキュメント) と **cert.pem** (証明書を含むドキュメント) が所定の場所にインストールされていなければなりません。 TLS を使用するサーバーまたはクライアントによって、インストールする場所が異なります。
+- with 4D Server or 4D in local mode, next to the [project folder](Project/architecture.md#project-folder)
+- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv20/help/command/en/page485.html) command). You must copy these files manually on the remote machine.
 
-:::caution
+### TLSを有効にする
 
-デフォルトの *key.pem* と *cert.pem* は 4D によって提供されています。 より高レベルのセキュリティのためには、これらのファイルをご自身の証明書で置き換えることが強く推奨されます。
+For TLS connections to be accepted by the HTTP server, you must enable HTTPS. Refer to the [**Enable HTTPS**](WebServer/webServerConfig.md#enable-https) paragraph to know the different ways to enable TLS for the HTTP server.
+
+:::note
+
+4D Webサーバーは、セキュアな HTTPS接続のみを許可するとブラウザーに対して宣言するための [HSTSオプション](WebServer/webServerConfig.md#hstsを有効にする) をサポートしています。
 
 :::
 
 
-#### HTTPサーバーの場合
-
-4D HTTPサーバーで使用するには、**key.pem** と **cert.pem** を次の場所に保存します:
-
-- 4D (ローカル) および 4D Server では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
-- 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv19/help/command/ja/page485.html) コマンドの説明を参照ください。
-
-これらのファイルをリモートマシンに手動でコピーする必要があります。
-
-#### HTTPクライアントの場合
-
-4D HTTPクライアントで使用するには、**key.pem** と **cert.pem** ファイルは [Project フォルダー](Project/architecture.md#project-フォルダー) の隣に作成された "ClientCertificatesFolder" の中に置く必要があります (デフォルトの場合)。
-
-この場所は [`HTTP SET CERTIFICATES FOLDER`](https://doc.4d.com/4dv20/help/command/ja/page1306.html) コマンドでカスタマイズすることができます。
-
-
-#### アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション) の場合
-
-4D アプリケーションサーバーで使用する場合、**key.pem** と **cert.pem** ファイルは、4D Serverアプリケーションの [**Resources** フォルダー](Project/architecture.md#resources) の中に配置する必要があります。
-
-
-#### SQLサーバーの場合
-
-4D SQLサーバーで使用するには、**key.pem** と **cert.pem** ファイルは[Project フォルダー](Project/architecture.md#project-フォルダー) の隣に配置する必要があります。
-
-### TLSを有効にする
-
-**key.pem** と **cert.pem** ファイルをインストールすることにより、4Dサーバーにおける TLS の使用を可能にします。 ただし、サーバーによって受け入れられるようにするには、TLS接続を有効化しなければなりません:
-
-- 4D Webサーバーの場合、[HTTPSを有効](WebServer/webServerConfig.md#httpsを有効にする) にする必要があります。 [HSTSオプション](WebServer/webServerConfig.md#hstsを有効にする) を設定して、HTTPモードで接続しようとするブラウザーをリダイレクトすることができます。
-- アプリケーションサーバーでは、ストラクチャー設定ダイアログボックスの "C/S (クライアントサーバー)" ページで **クライアント-サーバー通信の暗号化** オプションを選択する必要があります。
-- SQLサーバーの場合は、ストラクチャー設定ダイアログボックスの "SQL" ページで **TLSを有効にする** オプションを選択する必要があります。
-
-> 4D Webサーバーは、セキュアな HTTPS接続のみを許可するとブラウザーに対して宣言するための [HSTSオプション](WebServer/webServerConfig.md#hstsを有効にする) をサポートしています。
-
-## Perfect Forward Secrecy (PFS)
+### Perfect Forward Secrecy (PFS)
 
 [PFS](https://ja.wikipedia.org/wiki/Forward_secrecy) は通信の中に新たなレイヤーのセキュリティを追加します。 事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。 このように協同で鍵を作成することで "共有の秘密" が作成され、外部への漏洩を防ぐことができます。
 
-サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 このファイルは、[*key.pem* および *cert.pem* ファイル](#key-pem-と-cert-pem-ファイル)と同じ場所に置きます。
+サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 The file is placed with the [*key.pem* and *cert.pem* files](#installing-certificate-files).
 
 [カスタムの暗号リスト](WebServer/webServerConfig.md#暗号リスト) を使用していて、PFS を有効化したい場合、DH あるいは ECDH (Elliptic-curve Diffie–Hellman) アルゴリズムのエントリーがそのリストに含まれている必要があります。
+
+
+
+## Enabling TLS with the other servers
+
+To use TLS with the 4D application server (client-server desktop applications) or the SQL server, you only have to enable TLS communications and the server automatically configures the connections at startup.
+
+- With the application server, select the **Encrypt Client-Server Communications** option in the ["Client-server/Network options" page of the Settings dialog box](../settings/client-server#encrypt-client-server-communications).
+- With the SQL server, select the **Enable TLS** option in the ["SQL" page of the Settings dialog box](../settings/sql#sql-server-publishing).
+
+
 
 
 ## RSA証明書の取得方法 (チュートリアル)
@@ -151,9 +145,9 @@ ECDSA形式は、4D の [Legacyネットワークレイヤー](../settings/clien
 
 3. その証明書リクエストを選択された認証機関へ送ります。 証明書リクエストを記入する際、認証機関への問い合わせが必要となる場合があります。 認証機関は送信されてきた情報が正確なものかを確認します。 その証明書リクエストは base64 で暗号化された PKCSフォーマット (PEMフォーマット) を用いて BLOB に作成さ れます。 この原理を使用すると、テキストとしてキーをコピー＆ペーストできます。キーの内容を修正せずに認証機関に提出します。 たとえば、テキストドキュメントに証明書リクエストを含んでいる BLOB を保存します (`BLOB TO DOCUMENT` コマンドを使用)。そして、コンテンツを開き、それをコピーして、認証機関へ送信するメールまたは Webフォームにペーストします。
 
-4. 証明書を取得したら、"cert.pem" という名前でテキストファイルを作成し、その証明書の内容をそのファイルへコピーします。 証明書は様々な方法で受け取ることができます (通常は Eメールまたは HTML形式で受け取ります)。 4D は証明書に関しては全プラットフォームに関連したテキストフォーマットを受け付けます (OS X、Windows、Linux、等)。 ただし、証明書は PEMフォーマット、つまり base64 で PKCSエンコードされている必要があります。
+4. 証明書を取得したら、"cert.pem" という名前でテキストファイルを作成し、その証明書の内容をそのファイルへコピーします。 証明書は様々な方法で受け取ることができます (通常は Eメールまたは HTML形式で受け取ります)。 4D は証明書に関しては全プラットフォームに関連したテキストフォーマットを受け付けます (OS X、Windows、Linux、等)。 However, the certificate must be in [PEM format](#format), *i.e.*, PKCS encoded in base64.
 > CR改行コードは、それ単体ではサポートされていません。改行コードは CRLF または LF を使用してください。
 
-5. "cert.pem" ファイルを [適切な場所](#インストールとアクティベーション) に保存します。
+5. Place the “cert.pem” file in the [appropriate location](#installing-certificate-files).
 
-4Dサーバーが保護モードで動作するようになります。 証明書は 3ヶ月から1年間の間で有効です。
+4Dサーバーが保護モードで動作するようになります。 A certificate is usually valid between 3 months to a year.
