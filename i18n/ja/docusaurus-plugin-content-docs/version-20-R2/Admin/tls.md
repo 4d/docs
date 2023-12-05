@@ -73,7 +73,7 @@ TLS は公開鍵暗号化技術を用います。これは、暗号化と復号�
 - 4D (ローカル) および 4D Server では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
 - 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv19/help/command/ja/page485.html) コマンドの説明を参照ください。
 
-これらのファイルをリモートマシンに手動でコピーする必要があります。
+You must copy these files manually on the remote machine.
 
 #### アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション) の場合
 
