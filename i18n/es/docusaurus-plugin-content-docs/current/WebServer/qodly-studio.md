@@ -87,54 +87,54 @@ Tenga en cuenta que los [parámetros de usuario](../settings/overview.md) pueden
 
 ### Activando la autenticación
 
-La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. Para más detalles, consulte [Llave de acceso](../Admin/webAdmin.md#access-key).
 
 ### Activación del renderizado
 
-To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
+Para habilitar el renderizado de los webforms que se crean en Qodly Studio, se deben configurar las siguientes opciones.
 
-* The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated
-* The [4D web server](webServer.md) must be running
+* El proyecto 4D debe tener activada la opción **Parámetros** > **Web** > **Funcionalidades Web** > [**Exponer como servidor REST**](../settings/web.md#exposed-as-rest-server)
+* El [servidor web 4D](webServer.md) debe estar en ejecución
 
-When rendering webforms in the Web Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Al renderizar webforms en el Web Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+Consulte [esta página](https://developer.qodly.com/docs/studio/rendering) para obtener información sobre cómo renderizar formularios web en Qodly.
 
 :::
 
-Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
+Tenga en cuenta que cuando presione el botón "Vista previa en una nueva pestaña", se abrirá una pestaña en `IP:port/$lib/renderer/?w=WebFormName` en su máquina.
 
-Keep in mind that the Qodly Web Studio runs through the 4D WebAdmin web server. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
+Tenga en cuenta que Qodly Web Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Web Studio como desarrollador, incluso cuando previsualiza un formulario web en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
-However, webform rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+Sin embargo, el renderizado del formulario web ocurre fuera de 4D Web Studio, y es servido por el servidor web estándar de 4D. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Consulte [Funciones expuestas frente a no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exposición de tablas](../REST/configuration.md#exposing-tables) para obtener más información sobre cómo exponer activos.
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are hidden if the configuration options are not activated.
+Los [botones del renderizador](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) se ocultan si las opciones de configuración no están activadas.
 
 :::
 
 ### Servidor WebAdmin y despliegue
 
-For deployment, the WebAdmin server is not necessary. End-user access to your web application made with Qodly Studio is based on the 4D REST protocol, and as such, it works as through a conventional 4D remote application.
+Para el despliegue, el servidor WebAdmin no es necesario. El acceso del usuario final a su aplicación web realizada con Qodly Studio se basa en el protocolo 4D REST, y como tal, funciona como a través de una aplicación remota 4D convencional.
 
 
 ### Uso métodos proyecto
 
-We recommend using class functions over project methods. Sólo las funciones de clase pueden ser llamadas desde los componentes. However, you can still use your project methods in Qodly Studio in two ways:
+Recomendamos utilizar funciones clase en lugar de métodos proyecto. Sólo las funciones de clase pueden ser llamadas desde los componentes. Sin embargo, puede seguir utilizando sus métodos de proyecto en Qodly Studio de dos maneras:
 
 - Puede llamar a sus métodos desde funciones clase.
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- Puede [ejecutar sus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) directamente desde el Explorador de Qodly.
 
 ## Abrir Qodly Studio
 
-The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
+La página de Qodly Studio está disponible cuando el [servidor web WebAdmin](../Admin/webAdmin.md#start-and-stop) se está ejecutando y la autenticación está activada (ver arriba).
 
 Hay dos formas de acceder a Qodly Studio:
 
-* from your 4D single-user application, go to **Design** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
+* desde su aplicación monopuesto 4D, vaya a **Diseño** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
 
 * on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
 
