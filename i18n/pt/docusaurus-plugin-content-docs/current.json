@@ -342,5 +342,45 @@
   "sidebar.docs.doc.4D Write Pro Interface": {
     "message": "Interface 4D Write Pro",
     "description": "The label for the doc item 4D Write Pro Interface in sidebar docs, linking to the doc WritePro/writeprointerface"
+  },
+  "sidebar.docs.category.Development Environment": {
+    "message": "Development Environment",
+    "description": "The label for category Development Environment in sidebar docs"
+  },
+  "sidebar.docs.category.Language": {
+    "message": "Línguagem",
+    "description": "The label for category Language in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts.link.generated-index.title": {
+    "message": "Conceitos da linguagem 4D",
+    "description": "The generated-index page title for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts.link.generated-index.description": {
+    "message": "Os principais conceitos da Linguagem 4D",
+    "description": "The generated-index page description for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Classes": {
+    "message": "Classes",
+    "description": "The label for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.title": {
+    "message": "Class Functions",
+    "description": "The generated-index page title for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.description": {
+    "message": "Lista de classes 4D integradas",
+    "description": "The generated-index page description for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Processes": {
+    "message": "Processos",
+    "description": "The label for category Processes in sidebar docs"
+  },
+  "sidebar.docs.link.Commands": {
+    "message": "Comandos",
+    "description": "The label for link Commands in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html"
   }
 }

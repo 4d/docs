@@ -24,7 +24,7 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
 > You do not need to relaunch the 4D application to start or stop the web server.
 
-## Stopping the 4D Web Server
+## Parando o servidor Web 4D
 
 O servidor web principal de 4D pode ser parado de diferentes maneiras:
 

@@ -601,5 +601,8 @@
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
     "message": "Alternar barra de navegação",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "Licenses": {
+    "message": "Licenças"
   }
 }
