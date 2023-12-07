@@ -63,7 +63,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controles das Abas](tabControl.md)
 
 ---
 
