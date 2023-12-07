@@ -203,7 +203,7 @@ Tags are displayed in their appearing order inside the method/class.
 
 To display the tags of a method or class in alphabetical order, do one of the following:
 
-- **right-click** the dropdown tool
+- **Clique direito** na ferramenta suspensa
 - hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
 
 > As etiquetas em funções movem-se com os seus itens pais.

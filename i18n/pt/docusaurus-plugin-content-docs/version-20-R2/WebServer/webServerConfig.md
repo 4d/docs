@@ -43,7 +43,7 @@ Pasta onde estão localizados os arquivos de certificado TLS para o servidor web
 
 Por padrão, com o 4D ou o 4D Server, esses arquivos devem ser colocados ao lado da pasta do projeto [](Project/architecture.md#project-folder).
 
-Com o 4D em modo remoto, esses arquivos devem estar localizados na pasta de recursos locais do banco de dados na máquina remota (consulte `4D Client Database Folder` parágrafo do comando `Get 4D folder`). You must copy these files manually on the remote machine.
+Com o 4D em modo remoto, esses arquivos devem estar localizados na pasta de recursos locais do banco de dados na máquina remota (consulte `4D Client Database Folder` parágrafo do comando `Get 4D folder`). Deve copiar esses arquivos manualmente na máquina remota.
 
 > Os arquivos de certificado TLS são *key.pem* (documento que contém a chave de criptografia privada) e *cert.pem* (documento que contém o certificado).
 

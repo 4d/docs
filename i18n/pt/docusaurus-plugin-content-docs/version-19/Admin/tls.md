@@ -73,7 +73,7 @@ To be able to use the TLS protocol with the server, you must install the **key.p
 - with 4D in local mode or 4D Server, these files must be placed next to the [project folder](Project/architecture.md#project-folder)
 - with 4D in remote mode, these files must be located in the client database folder on the remote machine (for more information about the location of this folder, see the `Get 4D folder` command).
 
-You must copy these files manually on the remote machine.
+Deve copiar esses arquivos manualmente na máquina remota.
 
 :::caution
 
