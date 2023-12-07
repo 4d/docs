@@ -634,7 +634,7 @@ Para mudar o nome de uma vista, pode utilizar:
 
  ![](../assets/en/FormEditor/rename2.png)
 
-#### Reordering views
+#### Reordenação de visualizações
 
 You can change the display order of views by dragging/dropping them within the View palette.
 
