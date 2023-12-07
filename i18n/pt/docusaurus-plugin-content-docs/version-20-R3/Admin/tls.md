@@ -83,7 +83,7 @@ Para poder usar o protocolo TLS com o servidor, deve instalar **key.pem** (docum
 - com 4D em modo local em Servidor 4D, esses arquivos devem ser colocados ao lado da [pasta projeto](Project/architecture.md#project-folder)
 - com 4D em modo remoto, esses arquivos devem estar na pasta de banco de dados cliente na máquina remota (para saber mais sobre a localização dessa pasta, veja o comando `Get 4D folder`).
 
-You must copy these files manually on the remote machine.
+Deve copiar esses arquivos manualmente na máquina remota.
 
 #### Com o servidor de aplicações (aplicações de desktop cliente-servidor)
 
