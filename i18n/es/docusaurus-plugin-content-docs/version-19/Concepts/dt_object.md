@@ -18,7 +18,7 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
     - imagen(2)
     - collection
 
-(1) **Los objetos no transferibles** como los objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [selecciones de entidades](ORDA/dsMapping.md#entity-selection), etc.), [manejadores de archivos](../API/FileHandleClass.md), [servidor web](../API/WebServerClass.md)... no pueden almacenarse en **campos objeto**. Se devuelve un error si intentas hacerlo; sin embargo, están completamente soportados en **variables objeto** en la memoria.
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. Se devuelve un error si intentas hacerlo; sin embargo, están completamente soportados en **variables objeto** en la memoria.
 
 (2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[objeto Imagen]".
 
