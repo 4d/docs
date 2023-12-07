@@ -68,7 +68,7 @@ This setting applies to the 4D application (4D or 4D Server) on the host machine
 
 Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application.
 
-Check this option to make it possible to access Qodly Studio. No entanto, você ainda precisa habilitá-lo em todos os níveis do projeto.
+Marque esta opção para ser possível acessar a Qodly Studio. No entanto, você ainda precisa habilitá-lo em todos os níveis do projeto.
 
 Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
@@ -94,7 +94,7 @@ Authentication on the WebAdmin web server is granted using an access key. Para o
 To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
 
 * The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated
-* The [4D web server](webServer.md) must be running
+* O [servidor web 4D](webServer.md) deve estar em execução
 
 When rendering webforms in the Web Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
@@ -171,7 +171,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | Webforms                                                             | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
 | Formulários para desktop                                             | 4D IDE                                                                                      | *não suportado*                         |
 | Linguagem de programação                                             | Linguagem 4D com ORDA                                                                       | QodlyScript com ORDA                    |
-| Coding IDE                                                           | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio           |
+| IDE de codificação                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio           |
 | Depurador                                                            | Depurador 4D IDE                                                                            | Depurador Qodly Studio                  |
 | REST/Web roles and privileges                                        | roles.json direct edit/Qodly Studio roles and privileges editor                             | Qodly Studio role and privileges editor |
 
@@ -284,7 +284,7 @@ QodlyScript command names are written in camel case without spaces. Talvez você
 
 ### Uso fora de linha
 
-You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
+You can develop with Qodly Studio while your computer is not connected to the internet. Nesse caso, entretanto, os seguintes recursos não estão disponíveis:
 
 - [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
