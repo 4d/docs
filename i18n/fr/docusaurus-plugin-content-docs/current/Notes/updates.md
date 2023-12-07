@@ -252,7 +252,7 @@ WA OPEN URL(* ; "WebArea";WA Get last filtered URL(* ; "WebArea"))
 - Prise en charge des instructions [break et continue](../Concepts/flow-control.md#break-and-continue) dans les boucles.
 - Prise en charge de l'instruction [return](../Concepts/flow-control.md#return-expression) et de l'expression [return](../Concepts/parameters.md#return-expression) pour renvoyer des valeurs.
 - Prise en charge des [opérateurs d'assignation composés](../Concepts/operators.md#compound-assignment-operators), [opérateurs de court-circuit](../Concepts/operators.md#short-circuit-operators), et [opérateur ternaire](../Concepts/operators.md#ternary-operator)
-- L'[éditeur de code](../code-editor/overview.md) comprend désormais un outil déroulant et prend en charge les marqueurs pour une meilleure navigation dans le code.
+- The [Code Editor](../code-editor/write-class-method.md) now includes an dropdown tool and supports markers for better code navigation.
 - Nouvelles préférences : [**Inclure les tokens dans les fichiers source du projet**](../Preferences/general.md#include-tokens-in-project-source-files) et [**Afficher les presse-papiers**](../Preferences/methods.md#show-clipboards) dans la page Méthodes.
 - Nouvelle requête REST pour [verrouiller/déverrouiller](../REST/$lock.md) les entités.
 - Un [chapitre 4D View Pro](../ViewPro/getting-started.md) a été ajouté avec de nouvelles commandes : [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
