@@ -134,9 +134,9 @@ La página de Qodly Studio está disponible cuando el [servidor web WebAdmin](..
 
 Hay dos formas de acceder a Qodly Studio:
 
-* desde su aplicación monopuesto 4D, vaya a **Diseño** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
+* desde su aplicación monopuesto 4D, vaya a **Diseño** > **Qodly Studio...**. Si el servidor web WebAdmin ya está en funcionamiento, dependiendo de su configuración, su navegador por defecto se abre en `IPaddress:HTTPPort/studio` o `IPaddress:HTTPSPort/studio`. De lo contrario, se le preguntará si desea iniciar primero el servidor web WebAdmin.
 
-* on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
+* en un navegador, con el servidor web WebAdmin en ejecución (lanzado desde 4D o 4D Server), introduzca la siguiente dirección:
 
 `IPaddress:HTTPPort/studio`
 
@@ -144,36 +144,36 @@ o:
 
 `IPaddress:HTTPSPort/studio`
 
-For example, after launching a local web server on port 7080, type this address in your browser:
+Por ejemplo, después de iniciar un servidor web local en el puerto 7080, escriba esta dirección en su navegador:
 
 `localhost:7080/studio`
 
-You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
+A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
 
 ## Utilizar Qodly Studio
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+La documentación oficial de Qodly Studio está disponible en el [sitio web de documentación Qodly](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
+Puede confiar en esta documentación y sus recursos asociados para desarrollar aplicaciones web basadas en formularios web. Sin embargo, dependiendo de la fase de implementación, los desarrolladores 4D utilizarán Qodly Studio o 4D IDE.
 
 :::info
 
-There is no direct compatibility between apps implemented with 4D and apps implemented with Qodly.
+No existe compatibilidad directa entre las aplicaciones implementadas con 4D y las implementadas con Qodly.
 
 :::
 
 ### Comparación de funcionalidades
 
-|                                                              | Qodly Studio para desarrolladores 4D que utilizan 4D IDE                                    | Qodly Studio para desarrolladores Qodly       |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | Editor de estructura 4D(1)                                                                  | Qodly Studio Model Editor                     |
-| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor                   |
-| Formularios de escritorio                                    | 4D IDE                                                                                      | *no soportado*                                |
-| Lenguaje de programación                                     | Lenguaje 4D con ORDA                                                                        | QodlyScript con ORDA                          |
-| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
-| Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                         |
-| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Editor de roles y privilegios de Qodly Studio |
+|                                                               | Qodly Studio para desarrolladores 4D que utilizan 4D IDE                                        | Qodly Studio para desarrolladores Qodly       |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| Ver y editar tablas (clases de datos), atributos y relaciones | Editor de estructura 4D(1)                                                                      | Qodly Studio Model Editor                     |
+| Webforms                                                      | Qodly Studio Webform Editor                                                                     | Qodly Studio Webform Editor                   |
+| Formularios de escritorio                                     | 4D IDE                                                                                          | *no soportado*                                |
+| Lenguaje de programación                                      | Lenguaje 4D con ORDA                                                                            | QodlyScript con ORDA                          |
+| Coding IDE                                                    | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
+| Debugger                                                      | Depurador 4D IDE                                                                                | Qodly Studio debugger                         |
+| REST/Web roles and privileges                                 | roles.json direct edit/Qodly Studio roles and privileges editor                                 | Editor de roles y privilegios de Qodly Studio |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
@@ -324,9 +324,9 @@ For more information on the `SameSite` attribute, check out [this blog post](htt
 
 ### Recomendaciones
 
-To avoid using more licenses than necessary, we recommend doing one of the following:
+Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de las siguientes cosas:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
+- Ejecutar el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su formulario Web: `IP:port/$lib/renderer/?w=NombreFormularioWeb`).
 - Ensure the Qodly Studio and your database are reached on the same URL scheme.
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
 
@@ -335,6 +335,6 @@ To avoid using more licenses than necessary, we recommend doing one of the follo
 
 ## Hello, World
 
-This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
+Este vídeo de 5 minutos ofrece un ejemplo "Hello World" y cubre cómo activar el acceso al estudio, crear una interfaz básica y configurar un evento que salude al usuario por su nombre:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="Reproductor de vídeo YouTube" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
