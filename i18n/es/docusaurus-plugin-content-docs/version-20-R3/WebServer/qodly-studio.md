@@ -171,7 +171,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Webforms                                                      | Qodly Studio Webform Editor                                                                     | Qodly Studio Webform Editor                   |
 | Formularios de escritorio                                     | 4D IDE                                                                                          | *no soportado*                                |
 | Lenguaje de programación                                      | Lenguaje 4D con ORDA                                                                            | QodlyScript con ORDA                          |
-| Coding IDE                                                    | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
+| IDE de código                                                 | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
 | Debugger                                                      | Depurador 4D IDE                                                                                | Qodly Studio debugger                         |
 | REST/Web roles and privileges                                 | roles.json direct edit/Qodly Studio roles and privileges editor                                 | Editor de roles y privilegios de Qodly Studio |
 
@@ -222,9 +222,9 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 #### Nombres de comandos
 
-QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
+Los nombres de los comandos QodlyScript se escriben en mayúsculas y sin espacios. Puede que necesite adaptar estos comandos al lenguaje 4D.
 
-- Normalmente, sólo tendrá que convertir los nombres. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- Normalmente, sólo tendrá que convertir los nombres. Por ejemplo, `newCollection` en QodlyScript es `New collection` en Lenguaje 4D.
 - However, some command have been renamed for a better compliance. Estas se listan a continuación:
 
 | QodlyScript            | Lenguaje 4D      |
