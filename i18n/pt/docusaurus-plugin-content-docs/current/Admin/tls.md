@@ -29,7 +29,7 @@ O protocolo TLS foi criado para autenticar o emissor e o recipiente e assim gara
 
 TLS usa uma técnica de criptografia de chave pública baseado em duas chaves assimétricas para criptografia e descriptografia: uma chave pública e outra privada. A chave privada é usada para criptografar os dados. O emissor (o website) não dá essa chave para ninguém.
 
-A chave pública é usada para decriptografar a informação e enviá-la para os recipientes (navegadores web) através de um **certificado**. The certificate is delivered through a Certification Authority. The website pays the certificate provider to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode.
+A chave pública é usada para decriptografar a informação e enviá-la para os recipientes (navegadores web) através de um **certificado**. O certificado é fornecido através de uma autoridade de certificação. The website pays the certificate provider to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode.
 
 :::note
 
@@ -57,13 +57,13 @@ To be able to use the TLS protocol with the 4D HTTP server, you have to:
 
 1. Get your certificate files.
 2. Install your certificate files at the appropriate location(s)
-3. Enable TLS.
+3. Habilitar TLS.
 
 ### Certificados
 
 #### Formato
 
-Certificados TLS gerenciados por 4D devem ser no **PEM format**. If your certificate provider sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. There are web sites where you can do this conversion on-line.
+Certificados TLS gerenciados por 4D devem ser no **PEM format**. If your certificate provider sends you a certificate that is in a binary format such as .crt, .pfx or .p12, you have to convert it to PEM format in order to be able to use it. Há sites em que você pode fazer essa conversão on-line.
 
 #### Criptografia
 
@@ -150,4 +150,4 @@ Para obter um certificado digital:
 
 5. Place the “cert.pem” file in the [appropriate location](#installing-certificate-files).
 
-O servidor 4D pode trabalhar em modo seguro. A certificate is usually valid between 3 months to a year.
+O servidor 4D pode trabalhar em modo seguro. Um certificado é normalmente válido entre 3 meses e um ano.
