@@ -188,6 +188,44 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 <!-- END REF -->
 
+<!-- REF #Parse HTTP message().Desc -->
+## Parse HTTP message()
+
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R4|Added|
+
+</details>
+
+<!-- REF #Parse HTTP message().Syntax -->**Parse HTTP message**( *data* : Text ) : Object<br/>**Parse HTTP message**( *data* : Blob ) : Object<!-- END REF -->
+
+
+<!-- REF #Parse HTTP message().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|data|Text, Blob|->|<Data to be parsed|
+|Result|Object|<-|Object collection of the parsed data, each element is a part of the multipart data|<!-- END REF -->
+
+#### Description
+
+The `Parse HTTP message()` function <!-- REF #Parse HTTP message().Summary -->parses a multipart/form-data text or blob and extracts the content to a collection of objects. Each element is a part of the multipart data<!-- END REF -->.
+
+
+#### Example 
+
+In the following example, we extract the data from a file called *HTTPClientLog.txt* and use `Parse HTTP message` to get the content of *$response*in an Object format; whose attributes are : headers, parts, and statusLine.
+
+```4d
+var $response : Text:=File("/RESOURCES/HTTPClientLog.txt").getText()
+var $message : Object:=Parse HTTP message($response)
+
+```
+
+<!-- END REF -->
+
 <!-- REF #HTTPRequestClass.dataType.Desc -->
 ## .dataType
 
