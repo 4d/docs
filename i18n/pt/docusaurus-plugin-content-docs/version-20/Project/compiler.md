@@ -255,7 +255,7 @@ Um ficheiro de erros pode conter três tipos de mensagens:
 
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
-- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. There are two cases in which the compiler reports a general error:
+- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. Há dois casos em que o compilador informa um erro geral:
     - Não foi possível determinar o tipo de dados de uma variável processo.
     - Dois tipos diferentes de objetos têm o mesmo nome.
 
