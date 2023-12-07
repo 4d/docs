@@ -6,17 +6,17 @@ title: Aparência
 
 ## Botão predefinido
 
-The default button property designates the button that gets the initial focus at runtime when no button of the form has the [Focusable](properties_Entry.md#focusable) property.
+A propriedade default button designa o botão que recebe o foco inicial em tempo de execução quando nenhum botão do formulário tem a propriedade [Focusable](properties_Entry.md#focusable) .
 
 Só pode haver um botão predefinido por página de formulário.
 
-In addition, on macOS, the default button property modifies the button's appearance in order to indicate a "recommended choice" to the user and is automatically bound to the **Enter** key, even if it does not have the focus. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
+Além disso, no macOS, a propriedade do botão padrão modifica a aparência do botão para indicar uma "escolha recomendada" ao usuário e é automaticamente vinculada à tecla **Enter** , mesmo que não tenha o foco. O botão padrão pode diferir do botão selecionado. Os botões predefinidos têm um aspeto azul específico no macOS:
 
 ![](../assets/en/FormObjects/property_defaultButtonmacOS.en.png)
 
 > O botão tem de ter uma altura padrão para obter o aspeto de botão predefinido.
 
-On Windows, the concept of "recommended choice" is not supported: only the focused button has a different appearance at runtime and the **Enter** key is bound to the focused button. However, in the 4D form editor, the default button is represented with a blue outline:
+No Windows, o conceito de "escolha recomendada" não é compatível: somente o botão focalizado tem uma aparência diferente em tempo de execução e a tecla **Enter** está vinculada ao botão focalizado. No entanto, no editor de formulários 4D, o botão padrão é representado por um contorno azul:
 
 ![](../assets/en/FormObjects/property_defaultButtonWindows.en.png)
 
@@ -29,13 +29,13 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 #### Objectos suportados
 
-[Regular Button](button_overview.md#regular) - [Flat Button](button_overview.md#regular)
+[Botão Regular](button_overview.md#regular) - [Botão Flat](button_overview.md#regular)
 
 ---
 
 ## Esconder retangulo foco
 
-Durante a execução, um campo ou qualquer área introduzível é delineado por um retângulo de seleção quando tem o foco (através da tecla Tab ou de um único clique). Pode ocultar este retângulo ativando esta propriedade. Hiding the focus rectangle may be useful in the case of specific interfaces.
+Durante a execução, um campo ou qualquer área introduzível é delineado por um retângulo de seleção quando tem o foco (através da tecla Tab ou de um único clique). Pode ocultar este retângulo ativando esta propriedade. Ocultar o retângulo de foco pode ser útil no caso de interfaces específicas.
 
 #### Gramática JSON
 
@@ -45,7 +45,7 @@ Durante a execução, um campo ou qualquer área introduzível é delineado por 
 
 #### Objectos suportados
 
-[4D Write Pro area](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Subform](subform_overview.md)
+[Áreas Write Pro](writeProArea_overview.md) - [Lista hierárquica](list_overview.md) - [Entrada](input_overview.md) - [List Box](listbox_overview.md) - [Subformulário](subform_overview.md)
 
 ---
 
@@ -55,7 +55,7 @@ Durante a execução, um campo ou qualquer área introduzível é delineado por 
 
 Esta propriedade é utilizada para desativar o realce de seleção nos list boxes.
 
-When this option is enabled, the selection highlight is no longer visible for selections made in list boxes. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+Quando esta opção estiver habilitada, o destaque de seleção não fica mais visível para as seleções feitas nas caixas de lista. As seleções em si ainda são válidas e funcionam exatamente da mesma forma que antes; no entanto, elas não são mais representadas graficamente na tela, e você precisará [definir a aparência delas programaticamente](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 Por defeito, esta opção não está activada.
 
@@ -73,17 +73,17 @@ Por defeito, esta opção não está activada.
 
 ## Altura linha
 
-An interface tool allowing the user to move the viewing area to the left or right.
+Uma ferramenta de interface que permite ao usuário mover a área de visualização para a esquerda ou direita.
 
 Valores disponíveis:
 
-| Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                |
-| --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sim                   | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Não                   | "hidden"    | A barra de deslocação nunca é visível                                                                                                                    |
-| Automático            | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                              |
+| --------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sim                   | "visible"   | A barra de rolagem está sempre visível, mesmo quando não é necessária (em outras palavras, quando o tamanho do conteúdo do objeto é menor do que o tamanho do quadro). |
+| Não                   | "hidden"    | A barra de deslocação nunca é visível                                                                                                                                  |
+| Automático            | "automatic" | A barra de rolagem aparece automaticamente sempre que necessário e o usuário pode inserir texto maior do que a largura do objeto                                       |
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> Os objetos de imagem podem ter barras de rolagem quando o formato de exibição da imagem estiver definido como "Truncado (não centralizado)".
 
 #### Gramática JSON
 
@@ -93,7 +93,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 
@@ -103,7 +103,7 @@ Valores disponíveis:
 
 ## Resolução
 
-Define a resolução do ecrã para o conteúdo da área 4D Write Pro. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
+Define a resolução do ecrã para o conteúdo da área 4D Write Pro. Por padrão, ele é definido como 72 dpi (macOS), que é a resolução padrão para formulários 4D em todas as plataformas. Definir essa propriedade como 96 dpi definirá uma renderização de janelas/web nas plataformas macOS e Windows. Definir essa propriedade como **automatic** significa que a renderização do documento será diferente entre as plataformas macOS e Windows.
 
 #### Gramática JSON
 
@@ -156,7 +156,7 @@ Apresenta/oculta os rodapés quando o [modo de visualização da página](#view-
 
 Quando activada, a barra de fórmulas é visível por baixo da interface da barra de ferramentas na área 4D View Pro. Se não estiver selecionada, a barra de fórmulas fica oculta.
 
-> This property is available only for the [Toolbar](#user-interface) interface.
+> Essa propriedade está disponível somente para a interface [Toolbar](#user-interface) .
 
 #### Gramática JSON
 
@@ -173,7 +173,7 @@ Quando activada, a barra de fórmulas é visível por baixo da interface da barr
 
 ## Mostrar cabeçalhos
 
-Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
+Exibe/oculta os cabeçalhos quando [Modo de exibição de página](#view-mode) está definido como "Página".
 
 #### Gramática JSON
 
@@ -207,7 +207,7 @@ Apresenta/oculta caracteres invisíveis
 
 ## Mostrar régua horizontal
 
-Displays/hides the horizontal ruler when the document view is in [Page mode](#view-mode).
+Exibe/oculta a régua horizontal quando a visualização do documento está no modo [Page](#view-mode).
 
 #### Gramática JSON
 
@@ -224,7 +224,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 ## Mostrar HTML WYSYWIG
 
-Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
+Ativa/desativa a visualização HTML WYSIWYG, na qual todos os atributos avançados do 4D Write Pro que não são compatíveis com todos os navegadores são removidos.
 
 #### Gramática JSON
 
@@ -241,7 +241,7 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 ## Mostrar moldura da página
 
-Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page".
+Exibe/oculta o quadro da página quando [Modo de exibição de página](#view-mode) está definido como "Page".
 
 #### Gramática JSON
 
@@ -258,9 +258,9 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 ## Mostrar referências
 
-Displays all 4D expressions inserted in the 4D Write Pro document as *references*. When this option is disabled, 4D expressions are displayed as *values*. By default when you insert a 4D field or expression, 4D Write Pro computes and displays its current value. Select this property if you wish to know which field or expression is displayed. The field or expression references then appear in your document, with a gray background.
+Apresenta todas as expressões 4D inseridas no documento 4D Write Pro como *referências *. Quando esta opção for desativada, expressões 4D são exibidas como *valores*. Por padrão, quando você insere um campo ou expressão 4D, o 4D Write Pro calcula e exibe seu valor atual. Selecione essa propriedade se quiser saber qual campo ou expressão é exibido. O campo ou as referências de expressão em seguida, aparecem em seu documento, com um fundo cinza.
 
-For example, you have inserted the current date along with a format, the date is displayed:
+Por exemplo, se você tiver inserido a data atual junto com um formato, a data será exibida:
 
 ![](../assets/en/FormObjects/writePro1.png)
 
@@ -268,7 +268,7 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 ![](../assets/en/FormObjects/writeProExpr.png)
 
-> 4D expressions can be inserted using the `ST INSERT EXPRESSION` command.
+> As expressões 4D podem ser inseridas usando o comando `ST INSERT EXPRESSION` .
 
 #### Gramática JSON
 
@@ -285,7 +285,7 @@ Com a propriedade Mostrar as referências ativada, a referência é apresentada:
 
 ## Mostrar régua vertical
 
-Displays/hides the vertical ruler when the document view is in [Page mode](#view-mode).
+Exibe/oculta a régua vertical quando a visualização do documento está no modo [Page](#view-mode).
 
 #### Gramática JSON
 
@@ -301,11 +301,11 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 ---
 
-## Tab Control Direction
+## Direção de tabulação
 
-É possível definir a direção dos controles de tabulação nos formulários. This property is available on all the platforms but can only be displayed in macOS. You can choose to place the tab controls on top (standard) or on the bottom.
+É possível definir a direção dos controles de tabulação nos formulários. Esta propriedade está disponível em todas as plataformas, mas só pode ser exibida no macOS. Você pode escolher colocar os controles de abas no topo (padrão) ou na parte inferior.
 
-When tab controls with a custom direction are displayed under Windows, they automatically return to the standard direction (top).
+Quando os controles de aba com uma direção personalizada são exibidos no Windows, eles retornam automaticamente à direção padrão (superior).
 
 #### Gramática JSON
 
@@ -316,13 +316,13 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controles das Abas](tabControl.md)
 
 ---
 
 ## Interface do usuário
 
-You can add an interface to 4D View Pro areas to allow end users to perform basic modifications and data manipulations. 4D View Pro offers two optional interfaces to choose from, **Ribbon** and **Toolbar**.
+É possível adicionar uma interface às áreas do 4D View Pro para permitir que os usuários finais realizem modificações básicas e manipulações de dados. O 4D View Pro oferece duas interfaces opcionais à sua escolha: **Ribbon** e **Toolbar**.
 
 #### Gramática JSON
 
@@ -343,19 +343,19 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 ## Barra rolagem vertical
 
-An interface tool allowing the user to move the viewing area up and down.
+Uma ferramenta de interface que permite ao usuário mover a área de visualização para cima e para baixo.
 
 Valores disponíveis:
 
-| Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                |
-| --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sim                   | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| Não                   | "hidden"    | A barra de deslocação nunca é visível                                                                                                                    |
-| Automático            | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                              |
+| --------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sim                   | "visible"   | A barra de rolagem está sempre visível, mesmo quando não é necessária (em outras palavras, quando o tamanho do conteúdo do objeto é menor do que o tamanho do quadro). |
+| Não                   | "hidden"    | A barra de deslocação nunca é visível                                                                                                                                  |
+| Automático            | "automatic" | A barra de rolagem aparece automaticamente sempre que necessário (em outras palavras, quando o tamanho do conteúdo do objeto é maior do que o tamanho do quadro)       |
 
-> Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
+> Os objetos de imagem podem ter barras de rolagem quando o formato de exibição da imagem estiver definido como "Truncado (não centralizado)".
 
-> If a text input object does not have a scroll bar, the user can scroll the information using the arrow keys.
+> Se um objeto de entrada de texto não tiver uma barra de rolagem, o usuário poderá rolar as informações usando as teclas de seta.
 
 #### Gramática JSON
 
@@ -365,7 +365,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 
@@ -375,11 +375,11 @@ Valores disponíveis:
 
 ## Modo de visualização
 
-Sets the mode for displaying the 4D Write Pro document in the form area. Há três valores disponíveis:
+Define o modo de exibição do documento 4D Write Pro na área do formulário. Há três valores disponíveis:
 
-- **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
+- **Página**: o modo de visualização mais completo, que inclui contornos de página, orientação, margens, quebras de página, cabeçalhos e rodapés, etc.
 - **Rascunho**: modo rascunho com propriedades básicas do documento
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Embutido**: modo de exibição adequado para áreas incorporadas; não exibe margins, rodapés, cabeçalhos, quadros da página, etc. Este modo também pode ser usado para produzir uma saída de exibição semelhante à web (se você também selecionar a resolução [96 dpi](#resolution) e [Mostrar propriedades HTML WYSIWYG](#show-html-wysiwyg)).
 
 > A propriedade Mode vista só é utilizada para a renderização no ecrã. Para os parâmetros de impressão, são usadas automaticamente regras de renderização específicas.
 
@@ -398,7 +398,7 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Há tr�
 
 ## Zoom
 
-Sets the zoom percentage for displaying 4D Write Pro area contents.
+Define a porcentagem de zoom para a exibição do conteúdo da área do 4D Write Pro.
 
 #### Gramática JSON
 
