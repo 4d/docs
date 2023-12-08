@@ -11,7 +11,7 @@ A spreadsheet formula is an expression that calculates the value of a cell.
 
 Para introduzir uma fórmula numa área 4D View Pro:
 
-1.  Select the cell into which you will enter the formula or function.
+1.  Selecione a célula onde você digitará a fórmula ou função.
 2.  Digite = (o sinal de igual).
 3.  Type the formula and hit the **Enter** key.
 
@@ -220,7 +220,7 @@ Parameters can be passed to 4D functions that call project methods using the fol
 
 Esses parâmetros são recebidos em *methodName* em $1, $2...$N.
 
-Note that the ( ) are mandatory, even if no parameters are passed:
+Observe que os ( ) são obrigatórios, mesmo que nenhum parâmetro seja passado:
 
 ```
 =METHODWITHOUTNAME()
@@ -333,7 +333,7 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
     SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
     ```
 
-3.  Edit the content of a cell in the 4D View Pro area and enter "=e":
+3.  Edite o conteúdo de uma célula na área do 4D View Pro e digite "=e":
 
 ![](../assets/en/ViewPro/vpFieldMeth2.PNG)
 

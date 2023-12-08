@@ -4979,7 +4979,7 @@ Eis o resultado após as colunas serem geradas:
 
 #### Descrição
 
-O comando `VP SET DATE TIME VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->assigns a specified date and time value to a designated cell range<!-- END REF -->.
+O comando `VP SET DATE TIME VALUE` <!-- REF #_method_.VP SET DATE TIME VALUE.Summary -->atribui um valor de data e hora especificado a um intervalo de células designado<!-- END REF -->.
 
 Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) cujo valor você deseja especificar. Se *rangeObj* incluir várias células, o valor especificado será repetido em cada célula.
 
@@ -5072,7 +5072,7 @@ O comando `VP SET DEFAULT STYLE` <!-- REF #_method_.VP SET DEFAULT STYLE.Summary
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-The *styleObj* lets you pass an object containing style settings. You can use an existing style sheet or you can create a new style. For more information, see the [Style objects](configuring.md#style-objects) paragraph.
+The *styleObj* lets you pass an object containing style settings. Você pode usar uma folha de estilo existente ou criar um estilo. For more information, see the [Style objects](configuring.md#style-objects) paragraph.
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the style will be defined. Se omitido, a planilha atual será utilizada por padrão. Você pode selecionar explicitamente a planilha atual com a seguinte constante:
 
@@ -5199,7 +5199,7 @@ O comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->assign
 
 In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose formula you want to specify. Se *rangeObj* incluir vários intervalos, somente o primeiro será usado.
 
-The *formulasCol* is a two-dimensional collection:
+O parâmetro *formulasCol* é uma coleção bidimensional:
 
 * A coleção de primeiro nível contém subcoleções de fórmulas. Cada subcolecção define uma linha.
 * Cada subcoleção define os valores das células para a linha. Values must be text elements containing the formulas to assign to the cells.
@@ -5589,7 +5589,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 Em *name*, introduza um novo nome para a folha.
 
-In *sheet*, pass the index of the sheet to rename.
+Em *sheet*, passe o índice da folha a ser renomeada.
 
 > A indexação começa em 0.
 
@@ -6148,7 +6148,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 In *optionObj*, pass the workbook options to apply to *vpAreaName*.
 
-If *optionObj* is empty, the command does nothing.
+Se *optionObj* estiver vazio, o comando não fará nada.
 
 As opções modificadas do livro são guardadas com o documento.
 
@@ -6213,7 +6213,7 @@ A tabela seguinte lista as opções de libro disponíveis:
 | tabStripRatio                         | number                  | Percentage value (0.x) that specifies how much of the horizontal space will be allocated to the tab strip. The rest of the horizontal area (1 - 0.x) will allocated to the horizontal scrollbar.                                                           |
 | tabStripVisible                       | boolean                 | Display the sheet tab strip.                                                                                                                                                                                                                               |
 | tabStripWidth                         | number                  | Width of the tab strip when position is left or right. O padrão e o mínimo são 80.                                                                                                                                                                         |
-| useTouchLayout                        | boolean                 | Whether to use touch layout to present the Spread component.                                                                                                                                                                                               |
+| useTouchLayout                        | boolean                 | Se deve ser usado o layout de toque para apresentar o componente Spread.                                                                                                                                                                                   |
 
 #### Exemplo
 

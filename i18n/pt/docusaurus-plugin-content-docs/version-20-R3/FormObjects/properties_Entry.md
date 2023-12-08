@@ -201,7 +201,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 ## Placeholder (valores provisórios)
 
-4D can display placeholder text in the fields of your forms.
+4D pode exibir texto com marcador de posição nos campos de seus formulários.
 
 Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. This text disappears as soon as the user enters a character in the area:
 

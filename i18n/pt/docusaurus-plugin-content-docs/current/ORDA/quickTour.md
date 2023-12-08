@@ -35,7 +35,7 @@ ds. Company.city //returns the name of the city
 
 You have also noticed the extra `hires` property in the ds. Company dataclass. Não corresponde a um campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
-![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
+![](../assets/en/ORDA/struc2s.png) *Nome da relação conforme definido no Inspetor*
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 

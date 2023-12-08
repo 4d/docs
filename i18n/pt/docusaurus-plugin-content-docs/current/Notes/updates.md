@@ -252,7 +252,7 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - Suporte para [instruções break e continue](../Concepts/flow-control.md#break-and-continue) em loops.
 - Suporte para [return](../Concepts/flow-control.md#return-expression) statement e [return expression](../Concepts/parameters.md#return-expression) para retornar valores.
 - Suporte para os operadores de atribuição composta [](../Concepts/operators.md#compound-assignment-operators), [operadores de curto-circuito](../Concepts/operators.md#short-circuit-operators)e [operador ternário](../Concepts/operators.md#ternary-operator)
-- O [Code Editor](../code-editor/overview.md) agora inclui uma ferramenta suspensa e suporta marcadores para melhorar a navegação do código.
+- The [Code Editor](../code-editor/write-class-method.md) now includes an dropdown tool and supports markers for better code navigation.
 - Novas preferências: [**Incluir tokens nos arquivos de origem do projeto**](../Preferences/general.md#include-tokens-in-project-source-files) e [**Mostrar pranchetas**](../Preferences/methods.md#show-clipboards) opção na página Métodos.
 - Nova solicitação REST para [bloquear/desbloquear entidades](../REST/$lock.md) .
 - [4D View Pro](../ViewPro/getting-started.md) capítulo adicionado com novos comandos: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
