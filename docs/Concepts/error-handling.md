@@ -165,7 +165,8 @@ If an [error-handling method](#installing-an-error-handling-method) is installed
 
 ```4d
 var $text : Text
-var $fileHandle : 4D.File := try($file.open())
+var $file : 4D.File := File("/RESOURCES/myFile.txt")
+var $fileHandle : 4D.FileHandle := try($file.open())
 If ($fileHandle # Null)
   $text:=(try($fileHandle.readText()) || "Error reading the file" )
 End if
