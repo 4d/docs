@@ -109,7 +109,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-プロトコル部分 (`http://` または `https://`) を省略した場合には、https リクエストが送信されます。
+If you omit the scheme part (`http://` or `https://`), a https request is sent.
 
 たとえば、次の文字列を受け渡すことができます:
 
