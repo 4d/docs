@@ -10,6 +10,8 @@ La gestion des erreurs répond à deux besoins principaux :
 - rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
 - détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
 
+Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write [`try()` keywords](#try-expression) before pieces of code that call a function, method, or expression that can throw an error.
+
 :::tip Bonne pratique
 
 Il est fortement recommandé d'installer une méthode globale de gestion des erreurs sur 4D Server, pour tout le code s'exécutant sur le serveur. Lorsque 4D Server ne fonctionne pas [headless](../Admin/cli.md) (c'est-à-dire qu'il est lancé avec sa [fenêtre d'administration](../ServerWindow/overview.md)), cette méthode permet d'éviter l'affichage de boîtes de dialogue sur la machine serveur. En mode headless, les erreurs sont enregistrées dans le fichier [4DDebugLog](../Debugging/debugLogFiles.md#4ddebuglogtxt-standard) pour une analyse plus approfondie.
@@ -21,7 +23,7 @@ Il est fortement recommandé d'installer une méthode globale de gestion des err
 
 De nombreuses fonctions de classe 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
 
-D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être traitée par une méthode de gestion des erreurs.
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. This category of errors generates exceptions and needs to be handled through an error-handling method or a `try()` keyword.
 
 
 ## Installer une méthode de gestion des erreurs
@@ -130,5 +132,80 @@ If (Error=-43)
 End if
 ON ERR CALL.("")
 ```
+
+
+## try(expression)
+
+The `try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
+
+The formal syntax of the `try(expression)` statement is:
+
+```4d
+
+try (expression) : any | Undefined
+
+```
+
+*expression* can be any valid expression.
+
+If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `try()`. If *expression* returns a value, `try()` returns the last evaluated value, otherwise it returns `Undefined`.
+
+You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `try()` calls, the execution flow stops and returns to the latest executed `try()` (the first found back in the call stack).
+
+:::note
+
+If an [error-handling method](#installing-an-error-handling-method) is installed by *expression*, it is called in case of error.
+
+:::
+
+
+### Exemples
+
+1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. Vous pouvez écrire :
+
+```4d
+var $text : Text
+var $file : 4D.File := File("/RESOURCES/myFile.txt")
+var $fileHandle : 4D.FileHandle := try($file.open())
+If ($fileHandle # Null)
+  $text:=try($fileHandle.readText()) || "Error reading the file"
+End if
+```
+
+
+2. You want to handle the divide by zero error. In this case, you want to return 0 and throw an error:
+
+```4d
+function divide( $p1: real; $p2: real)-> $result: real
+  if ($p2=0)
+     $result:=0 //only for clarity (0 is the default for reals)
+     throw(-12345; "Division by zero")
+  else
+    $result:=$p1/$p2
+  end if
+
+function test()
+  $result:=try(divide($p1;$p2))
+  If (Last errors # null)
+    ALERT("Error")
+  End if
+
+```
+
+3. You want to handle both [predictable and non-predictable](#error-or-status) errors:
+
+```4d
+var $e:=ds.Employee.new()
+$e.name:="Smith"
+$status:=try($e.save()) //catch predictable and non-predictable errors
+If ($status.success)
+   ALERT( "Success")
+Else
+   ALERT( "Error: "+JSON Stringify($status.errors))
+End if
+
+``` 
+
+
 
 
