@@ -10,7 +10,7 @@ La gestión de errores responde a dos necesidades principales:
 - descubrir y corregir posibles errores y fallos en el código durante la fase de desarrollo,
 - detectar y recuperar errores inesperados en las aplicaciones desplegadas; en particular, puede sustituir los diálogos de error del sistema (disco lleno, archivo perdido, etc.) por su propia interfaz.
 
-Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write [`try()` keywords](#try-expression) before pieces of code that call a function, method, or expression that can throw an error.
+Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write a [`Try()` keyword](#tryexpression) before pieces of code that call a function, method, or expression that can throw an error.
 
 :::tip Buenas prácticas
 
@@ -23,7 +23,7 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 Muchas funciones de clase 4D, como `entity.save()` o `transporter.send()`, devuelven un objeto *status*. Este objeto se utiliza para almacenar errores "predecibles" en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no detienen la ejecución del programa. Esta categoría de errores puede ser manejada por el código habitual.
 
-Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. This category of errors generates exceptions and needs to be handled through an error-handling method or a `try()` keyword.
+Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. This category of errors generates exceptions and needs to be handled through an error-handling method or a `Try()` keyword.
 
 
 ## Instalación de un método de gestión de errores
@@ -136,23 +136,23 @@ ON ERR CALL("")
 ```
 
 
-## try(expression)
+## Try(expression)
 
-The `try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
+The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `Try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
 
-The formal syntax of the `try(expression)` statement is:
+The formal syntax of the `Try(expression)` statement is:
 
 ```4d
 
-try (expression) : any | Undefined
+Try (expression) : any | Undefined
 
 ```
 
 *expression* can be any valid expression.
 
-If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `try()`. If *expression* returns a value, `try()` returns the last evaluated value, otherwise it returns `Undefined`.
+If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`.
 
-You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `try()` calls, the execution flow stops and returns to the latest executed `try()` (the first found back in the call stack).
+You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
 
 :::note
 
@@ -168,9 +168,9 @@ If an [error-handling method](#installing-an-error-handling-method) is installed
 ```4d
 var $text : Text
 var $file : 4D.File := File("/RESOURCES/myFile.txt")
-var $fileHandle : 4D.FileHandle := try($file.open())
+var $fileHandle : 4D.FileHandle := Try($file.open())
 If ($fileHandle # Null)
-  $text:=try($fileHandle.readText()) || "Error reading the file"
+  $text:=Try($fileHandle.readText()) || "Error reading the file"
 End if
 ```
 
@@ -187,7 +187,7 @@ function divide( $p1: real; $p2: real)-> $result: real
   end if
 
 function test()
-  $result:=try(divide($p1;$p2))
+  $result:=Try(divide($p1;$p2))
   If (Last errors # null)
     ALERT("Error")
   End if
@@ -199,7 +199,7 @@ function test()
 ```4d
 var $e:=ds.Employee.new()
 $e.name:="Smith"
-$status:=try($e.save()) //catch predictable and non-predictable errors
+$status:=Try($e.save()) //catch predictable and non-predictable errors
 If ($status.success)
    ALERT( "Success")
 Else
