@@ -54,7 +54,7 @@ the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIS
 
 ## Lista de opções (lista estática)
 
-List of static values to use as labels for the tab control object.
+Lista de valores estáticos a serem usados como etiquetas para o objeto de controle de tabulação.
 
 #### Gramática JSON
 
