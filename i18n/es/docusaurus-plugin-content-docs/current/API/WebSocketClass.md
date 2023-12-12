@@ -70,9 +70,9 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                       |
-| ------- | ---------------------------------------------------- |
-| v20 R3  | Support of `headers` property in *connectionHandler* |
+| Versión | Modificaciones                                               |
+| ------- | ------------------------------------------------------------ |
+| v20 R3  | Soporte de la propiedad `encabezados` en *connectionHandler* |
 
 </details>
 
