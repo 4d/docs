@@ -5051,11 +5051,11 @@ El parámetro opcional *formatPattern* define un modelo para los parámetros *da
 #### Ejemplo
 
 ```4d
-//Set the cell value as the current date and time
+//Definir el valor de la celda como la fecha y hora actuales
 
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
 
-//Set the cell value as the 18th of December
+//Definir el valor de la celda como 18 de diciembre
 VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 

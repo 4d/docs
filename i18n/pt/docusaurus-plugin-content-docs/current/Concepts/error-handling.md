@@ -166,7 +166,7 @@ var $text : Text
 var $file : 4D.File := File("/RESOURCES/myFile.txt")
 var $fileHandle : 4D.FileHandle := Try($file.open())
 If ($fileHandle # Null)
-  $text:=Try($fileHandle.readText()) || "Error reading the file"
+  $text:=Try($fileHandle.readText()) || "Erro ao ler o arquivo"
 End if
 ```
 

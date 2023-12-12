@@ -109,7 +109,7 @@ En *url*, pase la URL a la que desea enviar la petición. La sintaxis a utilizar
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-If you omit the scheme part (`http://` or `https://`), a https request is sent.
+Si omite la parte del esquema (`http://` o `https://`), se envía una solicitud https.
 
 Por ejemplo, puede pasar las siguientes cadenas:
 

@@ -197,7 +197,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 #### Nombres de variables
 
-QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
+QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. En el código 4D, asegúrese de **prefijar los nombres de las variables con `$`** para que sean identificadas como variables locales por 4D.
 
 #### Símbolos y palabras clave
 
@@ -298,11 +298,11 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. El servidor web de su base de datos se inicia sólo en un puerto HTTP.
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **rendering** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. En Qodly Studio, hace clic en el ícono **renderizado**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
