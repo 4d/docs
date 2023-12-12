@@ -10,7 +10,7 @@ La gestión de errores responde a dos necesidades principales:
 - descubrir y corregir posibles errores y fallos en el código durante la fase de desarrollo,
 - detectar y recuperar errores inesperados en las aplicaciones desplegadas; en particular, puede sustituir los diálogos de error del sistema (disco lleno, archivo perdido, etc.) por su propia interfaz.
 
-Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write a [`Try()` keyword](#tryexpression) before pieces of code that call a function, method, or expression that can throw an error.
+Básicamente, hay dos maneras de manejar los errores en 4D. Puede [instalar un método de gestión de errores](#installing-an-error-handling-method), o escribir una palabra clave [`Try()`](#tryexpression) antes de los fragmentos de código que llamen a una función, método o expresión que pueda lanzar un error.
 
 :::tip Buenas prácticas
 
@@ -23,7 +23,7 @@ Es muy recomendable instalar un método global de gestión de errores en 4D Serv
 
 Muchas funciones de clase 4D, como `entity.save()` o `transporter.send()`, devuelven un objeto *status*. Este objeto se utiliza para almacenar errores "predecibles" en el contexto de ejecución, por ejemplo, una contraseña no válida, una entidad bloqueada, etc., que no detienen la ejecución del programa. Esta categoría de errores puede ser manejada por el código habitual.
 
-Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. This category of errors generates exceptions and needs to be handled through an error-handling method or a `Try()` keyword.
+Otros errores "imprevisibles" son el error de escritura en el disco, el fallo de la red o, en general, cualquier interrupción inesperada. Esta categoría de errores genera excepciones y debe gestionarse mediante un método de gestión de errores o una palabra clave `Try()`.
 
 
 ## Instalación de un método de gestión de errores
@@ -170,7 +170,7 @@ var $text : Text
 var $file : 4D.File := File("/RESOURCES/myFile.txt")
 var $fileHandle : 4D.FileHandle := Try($file.open())
 If ($fileHandle # Null)
-  $text:=Try($fileHandle.readText()) || "Error reading the file"
+  $text:=Try($fileHandle.readText()) || "Error al leer el archivo"
 End if
 ```
 
@@ -180,8 +180,8 @@ End if
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
   if ($p2=0)
-     $result:=0 //only for clarity (0 is the default for reals)
-     throw(-12345; "Division by zero")
+     $result:=0 //sólo por claridad (0 es el valor por defecto para reales)
+     throw(-12345; "División por cero")
   else
     $result:=$p1/$p2
   end if
@@ -199,7 +199,7 @@ function test()
 ```4d
 var $e:=ds.Employee.new()
 $e.name:="Smith"
-$status:=Try($e.save()) //catch predictable and non-predictable errors
+$status:=Try($e.save()) //Capturar errores predecibles y no predecibles
 If ($status.success)
    ALERT( "Success")
 Else
