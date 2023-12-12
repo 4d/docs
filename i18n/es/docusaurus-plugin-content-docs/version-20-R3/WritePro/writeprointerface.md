@@ -178,9 +178,9 @@ Whitin each one of these attribute, the translation object includes the followin
 
 Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
 
-If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. In addition, only the table defined within the translation file is displayed and translated.
+If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. Además, solo se visualiza y traduce la tabla definida en el archivo de traducción.
 
-The translation file serves an additional role when a user selects a table in the interface. It can filter the tables and fields proposed to the user. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+El archivo de traducción cumple una función adicional cuando un usuario selecciona una tabla en la interfaz. Puede filtrar las tablas y los campos propuestos al usuario. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
 
 ##### Ejemplo
 
