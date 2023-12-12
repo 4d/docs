@@ -1033,7 +1033,7 @@ El siguiente código define el marcador de modificación global:
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value
+$newValue:=ReadValueFrom //obtener un nuevo valor
 ds.setGlobalStamp($newValue)
 ```
 
