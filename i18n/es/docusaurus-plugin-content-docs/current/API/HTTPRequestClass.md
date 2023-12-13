@@ -206,29 +206,29 @@ Un objeto authentication maneja la propiedad `options.serverAuthentication` o `o
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Parámetros | Tipo       |    | Descripción                                                                      |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------- |
-| data       | Text, Blob | -> | Data to be parsed                                                                |
-| Result     | Object     | <- | Object, each property is a part of the multipart data|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                                              |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
+| data       | Text, Blob | -> | Datos a analizar                                                                         |
+| Result     | Object     | <- | Objeto, cada propiedad es parte de los datos de varias partes|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+El comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Cada propiedad del objeto devuelto corresponde a una parte de los datos multiparte<!-- END REF -->.
 
 :::info
 
-HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+El propio HTTP es un protocolo de comunicación sin estado. En este marco, los clientes inician la comunicación enviando mensajes de "petición" a los servidores, especificando detalles como el método, el objetivo, los encabezados, el contenido, etc. Los servidores, a su vez, responden con mensajes de "respuesta" que incluyen los mismos detalles. `HTTP Parse message` analiza el mensaje "request" o "response" en un objeto bien organizado.
 
 :::
 
 
 #### Ejemplo
 
-In the following example, we parse the data from a text file containing HTTP requests.
+En el siguiente ejemplo, analizamos los datos de un archivo de texto que contiene peticiones HTTP.
 
-Here is the content of the file:
+Este es el contenido del archivo:
 
 ```
 POST /batch/gmail/v1/ HTTP/1.1
@@ -257,7 +257,7 @@ GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?for
 
 --batch_19438756D576A14ABA87C112F56B9396--
 ```
-To parse the file:
+Para analizar el archivo:
 
 ```4d
 var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
