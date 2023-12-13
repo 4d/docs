@@ -19,7 +19,7 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
     *   4D: **Execução\>iniciar servidor Web**<br/>![](../assets/en/WebServer/start1.png)
     *   4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
-*   Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
+*   Inicia automaticamente cada vez que a aplicação 4D é aberta. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 
 *   Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
 
@@ -173,7 +173,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | host                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                 |
 | rfc931               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                          |
-| user                 | user name as it is authenticated, or else it is - (a minus sign). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).              |
+| user                 | nome de usuário conforme é autenticado, ou então é - (um sinal de menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).      |
 | DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
 | request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
 | state                | resposta dada pelo servidor                                                                                                                                          |
@@ -208,7 +208,7 @@ The following table lists the fields available for each format (in alphabetical 
 | CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                           |
 | CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                     |
 | CS_URI_QUERY | X   | X   | Parâmetros da consulta                                                                                                                            |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                                          |
+| CS_URI_STEM  | X   | X   | Parte da solicitação sem parâmetros de consulta                                                                                                   |
 | DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano                                                                         |
 | METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                           |
 | PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                               |
