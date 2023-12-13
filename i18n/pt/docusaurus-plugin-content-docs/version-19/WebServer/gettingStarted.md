@@ -122,7 +122,7 @@ O servidor Web devolve os resultados em JSON:
 
 You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
 
-You can also get any data.
+Você também pode obter qualquer dado.
 
 3. Introduzir o seguinte URL:
 
