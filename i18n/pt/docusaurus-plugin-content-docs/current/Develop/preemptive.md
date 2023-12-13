@@ -189,7 +189,7 @@ Since they are "external" accesses, calls to user interface objects such as form
 The only possible accesses to the user interface from a preemptive thread are:
 
 - [Diálogo de erro padrão](.../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). O botão **Rastreamento** está desativado.
-- Standard progress indicators
+- Indicadores de progresso padrão
 - Diálogos `ALERT`, `Request` e `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 
 ### Triggers
