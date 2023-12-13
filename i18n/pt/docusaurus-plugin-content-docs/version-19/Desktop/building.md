@@ -555,7 +555,7 @@ This mode allows you to duplicate your merged applications without breaking the 
 
 *Duplicação quando os dados são vinculados pelo nome da aplicação:* ![](../assets/en/Project/datalinking1.png)
 
-*Duplication when data linked by application path:* ![](../assets/en/Project/datalinking2.png)
+*Duplicação quando os dados estiverem ligados por caminho da aplicação:* ![](../assets/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. Pode:
 
