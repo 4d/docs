@@ -13,7 +13,7 @@ Para introduzir uma fórmula numa área 4D View Pro:
 
 1.  Selecione a célula onde você digitará a fórmula ou função.
 2.  Digite = (o sinal de igual).
-3.  Type the formula and hit the **Enter** key.
+3.  Digite a fórmula e pressione a tecla **Enter**.
 
 Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
@@ -253,7 +253,7 @@ If the 4D method returns nothing, an empty string is automatically returned.
 
 É devolvido um erro na célula 4D View Pro se:
 
-*   the 4D method returns another type other than those listed above,
+*   o método 4D retorna outro tipo além do listado acima
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
 
 #### Exemplo
