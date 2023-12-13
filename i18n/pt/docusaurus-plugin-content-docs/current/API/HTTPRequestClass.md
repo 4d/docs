@@ -200,16 +200,16 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                        |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------- |
-| data       | Text, Blob | -> | Data to be parsed                                                                |
-| Resultados | Object     | <- | Object, each property is a part of the multipart data|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                  |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
+| data       | Text, Blob | -> | Dados a serem analisados                                                                   |
+| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+O comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
 
 :::info
 
@@ -222,7 +222,7 @@ HTTP itself is a stateless communication protocol. Within this framework, client
 
 In the following example, we parse the data from a text file containing HTTP requests.
 
-Here is the content of the file:
+Aqui está o conteúdo do arquivo:
 
 ```
 POST /batch/gmail/v1/ HTTP/1.1
@@ -251,7 +251,7 @@ GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?for
 
 --batch_19438756D576A14ABA87C112F56B9396--
 ```
-To parse the file:
+Para analisar o arquivo:
 
 ```4d
 var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
