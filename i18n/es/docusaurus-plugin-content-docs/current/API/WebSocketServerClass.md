@@ -11,17 +11,17 @@ title: WebSocketServer
 
 </details>
 
-The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
+La clase `WebSocketServer` permite crear y configurar un servidor WebSocket en 4D. Una vez que el servidor WebSocket 4D está activo, puede abrir y utilizar las conexiones WebSocket entre 4D y los clientes utilizando la clase [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 :::note Acerca de los servidores WebSocket
 
-El protocolo WebSocket ofrece un canal de comunicación full-duplex entre un servidor WebSocket y un cliente (por ejemplo, un navegador web). For more information on WebSocket servers, read [this page on Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
+El protocolo WebSocket ofrece un canal de comunicación full-duplex entre un servidor WebSocket y un cliente (por ejemplo, un navegador web). Para más información sobre servidores WebSocket, lea [esta página en Wikipedia](https://en.wikipedia.org/wiki/WebSocket).
 
 :::
 
 :::info Ver también
 
-See also [this blog post](https://blog.4d.com/new-built-in-websocket-server/) about the 4D WebSocket server.
+Ver también [esta entrada de blog](https://blog.4d.com/new-built-in-websocket-server/) sobre el servidor WebSocket 4D.
 
 :::
 
@@ -29,17 +29,17 @@ See also [this blog post](https://blog.4d.com/new-built-in-websocket-server/) ab
 
 Para crear y manejar su Servidor WebSocket en 4D, tendrá que utilizar dos clases 4D integradas:
 
-- this class (`4D.WebSocketServer`) to manage the server itself,
-- the [`4D.WebSocketConnection`](WebSocketConnectionClass.md) class to manage connections and messages.
+- esta clase (`4D.WebSocketServer`) para gestionar el propio servidor,
+- la clase [`4D.WebSocketConnection`](WebSocketConnectionClass.md) para administrar conexiones y mensajes.
 
 Además, tendrá que crear dos clases de usuario que contendrán funciones de retrollamada:
 
 - una clase usuario para gestionar las conexiones al servidor,
 - una clase usuario para gestionar mensajes.
 
-You must [create the WebSocket server](#4dwebsocketservernew) within a [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) to keep the connection alive.
+Debe [crear el servidor WebSocket](#4dwebsocketservernew) dentro de un [worker](https://doc.4d.com/4dv19R/help/command/en/page1389.html) para mantener viva la conexión.
 
-The [4D Web Server](WebServerClass.md) must be started.
+El [servidor Web 4D](WebServerClass.md) debe estar iniciado.
 
 ### Ejemplo
 
@@ -48,17 +48,17 @@ En este ejemplo básico, nuestro servidor WebSocket devolverá los mensajes en m
 1. Crea el servidor WebSocket utilizando un worker (obligatorio) y pasa su clase de conexión al servidor como parámetro:
 
 ```4d
-	//create an instance of the user class
-	//that will handle the connections to the server
+// crear una instancia de la clase usuario
+    // que manejará las conexiones al servidor
 var $handler:cs.myServerHandler
 $handler:=cs.myServerHandler.new()
 
 CALL WORKER("WebSocketServer"; Formula(wss:=4D.WebSocketServer.new($handler)))  
-	//assign a variable (wss) to the WebSocket allows you  
-	//to call wss.terminate() afterwards
+    //asignar una variable (wss) al WebSocket permite   
+    //llamar a wss.terminate() después
 ```
 
-2. Define the `myServerHandler` user class containing callback function(s) used to handle connections to the server:
+2. Defina la clase usuario `myServerHandler` que contiene las funciones de retrollamada utilizadas para manejar las conexiones al servidor:
 
 ```4d
 //clase myServerHandler
