@@ -171,7 +171,7 @@ End if
 ```
 
 
-2. You want to handle the divide by zero error. In this case, you want to return 0 and throw an error:
+2. Você deseja tratar o erro de divisão por zero. In this case, you want to return 0 and throw an error:
 
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
