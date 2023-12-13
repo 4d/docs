@@ -20,14 +20,14 @@ Este evento é gerado quando a largura de uma coluna na caixa de listagem é mod
 
 This event is generated when the width of a column is modified by a user. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Propriedade | Tipo          | Descrição                                                           |
-| ----------- | ------------- | ------------------------------------------------------------------- |
-| code        | inteiro longo | On Column Resize                                                    |
-| description | text          | "On Column Resize"                                                  |
-| objectName  | text          | Nome da área 4D View Pro                                            |
-| sheetName   | text          | Nome da folha do evento                                             |
-| range       | object        | Intervalo de células das colunas cujas larguras foram alteradas     |
-| header      | boolean       | True if the row header column (first column) is resized, else false |
+| Propriedade | Tipo          | Descrição                                                                                |
+| ----------- | ------------- | ---------------------------------------------------------------------------------------- |
+| code        | inteiro longo | On Column Resize                                                                         |
+| description | text          | "On Column Resize"                                                                       |
+| objectName  | text          | Nome da área 4D View Pro                                                                 |
+| sheetName   | text          | Nome da folha do evento                                                                  |
+| range       | object        | Intervalo de células das colunas cujas larguras foram alteradas                          |
+| header      | boolean       | True se a coluna de cabeçalho da linha (primeira coluna) for redimensionada, senão false |
 
 #### Exemplo
 

@@ -129,7 +129,7 @@ La propiedad `.tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->es u
 
 La propiedad `.theme` <!-- REF #TableOptions.theme.Summary -->define el tema de una tabla. También puede ser un texto (nombre de un tema nativo SpreadJS)<!-- END REF -->.
 
-See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+Consulte los[ temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 ### .useFooterDropDownList
@@ -260,7 +260,7 @@ La propiedad `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.S
 **.theme**: [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme**: Text<!-- END REF -->
 
 
-La propiedad `.theme` <!-- REF #TableTheme.theme.Summary -->define el tema de una tabla<!-- END REF -->. If Text: name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+La propiedad `.theme` <!-- REF #TableTheme.theme.Summary -->define el tema de una tabla<!-- END REF -->. Si Text: nombre de un [tema nativo SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 

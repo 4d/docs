@@ -138,9 +138,9 @@ Function add($x : Variant; $y : Integer): Integer
 Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. Por exemplo:
 
 ```qs
-    //invalid declaration
+    //declaração inválida
 Function myTransform ($x : Integer) -> $x : Integer 
-    //error: $x is declared twice
+    //erro: $x é declarado duas vezes
 ```
 
 :::

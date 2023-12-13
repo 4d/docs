@@ -86,7 +86,7 @@ The `On Web Authentication` database method is therefore called:
 
 The `On Web Authentication` database method is NOT called:
 
-- when the web server receives a URL requesting a valid static page.
+- quando o servidor Web recebe um URL solicitando uma página estática válida.
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 

@@ -53,7 +53,7 @@ Há várias maneiras de fornecer as etiquetas para um controle de tabulação:
 ```
 > You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
 
-## Managing tabs programmatically
+## Gerenciamento programada das abas
 
 ### Comando FORM GOTO PAGE
 

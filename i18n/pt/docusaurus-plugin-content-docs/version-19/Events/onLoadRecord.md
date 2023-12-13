@@ -3,9 +3,9 @@ id: onLoadRecord
 title: On Load Record
 ---
 
-| Code | Pode ser chamado por | Definição                                                           |
-| ---- | -------------------- | ------------------------------------------------------------------- |
-| 40   | Formulário           | During user entry in list, a record is loaded and a field is edited |
+| Code | Pode ser chamado por | Definição                                                                           |
+| ---- | -------------------- | ----------------------------------------------------------------------------------- |
+| 40   | Formulário           | Durante a entrada do usuário na lista, um registro é carregado e um campo é editado |
 
 
 ## Descrição

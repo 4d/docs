@@ -214,7 +214,7 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
 
 En este caso, se evalúan todos los triggers. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
 
-### Error-handling methods
+### Métodos de gestión de errores
 
 [Error-catching methods](../Concepts/error-handling.md) installed by the `ON ERR CALL` command must be thread-safe if they are likely to be called from a preemptive process. In order to handle this case, the compiler checks the thread safety property of error-catching project methods passed to the `ON ERR CALL` command during compilation and returns appropriate errors if they do not comply with preemptive execution.
 

@@ -57,7 +57,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 | [Caixa de selecção](checkbox_overview.md)               | Valor da variável associada (0, 1, 2)                                                  |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
 | [Botão rádio](radio_overview.md)                        | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
-| [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
+| [Tab control](tabControl.md)                            | Número da aba selecionada                                                              |
 
 #### Gramática JSON
 

@@ -279,7 +279,7 @@ $error:=SMTP_From($smtp_id;"henry@gmail.com")
 
 ## Conjuntos
 
-From the scope point of view, there are two types of sets:
+Do ponto de vista do escopo, há dois tipos de conjuntos:
 
 - Conjuntos interprocesso
 - Conjuntos process

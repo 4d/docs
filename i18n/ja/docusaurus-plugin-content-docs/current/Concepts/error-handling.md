@@ -10,7 +10,7 @@ title: エラー処理
 - 開発フェーズにおいて、問題となりうるコードのエラーやバグを発見して修正したい。
 - 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。
 
-Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write a [`Try()` keyword](#tryexpression) before pieces of code that call a function, method, or expression that can throw an error.
+基本的に、4D でエラー処理する方法は 2つあります。 [エラー処理メソッドをインストール](#エラー処理メソッドの実装) するか、エラーを投げる可能性のある関数・メソッド・式を呼び出すコードの前に [`Try()`キーワード](#tryexpression) を書く方法です。
 
 :::tip グッドプラクティス
 
@@ -23,7 +23,7 @@ Basically, there are two ways to handle errors in 4D. You can [install an error-
 
 `entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
 
-ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 This category of errors generates exceptions and needs to be handled through an error-handling method or a `Try()` keyword.
+ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 これらのエラーは例外を発生させ、エラー処理メソッドや `Try()` キーワードを介して対応する必要があります。
 
 
 ## エラー処理メソッドの実装
