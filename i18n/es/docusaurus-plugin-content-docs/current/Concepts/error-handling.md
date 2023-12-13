@@ -175,7 +175,7 @@ End if
 ```
 
 
-2. You want to handle the divide by zero error. In this case, you want to return 0 and throw an error:
+2. Quiere manejar el error de dividir por cero. En este caso, se desea devolver 0 y lanzar un error:
 
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
@@ -194,7 +194,7 @@ function test()
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#error-or-status) errors:
+3. Desea gestionar tanto los errores [previsibles como los no previsibles>](#error-or-status):
 
 ```4d
 var $e:=ds.Employee.new()
