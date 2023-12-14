@@ -66,7 +66,7 @@ Estos tres tipos de archivos contribuyen a la configuración del Asistente para 
 El archivo de plantilla permite definir lo siguiente:
 
 - la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
-- the break formulas (if any break row can be inserted)
+- las fórmulas de ruptura (si se puede insertar una línea de ruptura)
 - los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
 - las fórmulas disponibles como menús contextuales dentro de líneas de ruptura, líneas de arrastre o líneas adicionales.
 
@@ -96,7 +96,7 @@ El archivo de plantilla en formato JSON contiene los siguientes atributos:
 | bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                               |
 | bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                          |
-| extraFormulas        | Collection |             | Collection of formula objects applicable to extra rows                                                                                                           |
+| extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                  |
 | extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
 | extraFormulas.source | Text       | x           | Formula                                                                                                                                                          |
 
@@ -214,7 +214,7 @@ El archivo de traducción cumple una función adicional cuando un usuario selecc
 
 ```
 
-#### Theme files
+#### Archivos de temas
 
 El componente 4D Write Pro Interface proporciona por defecto una lista de temas, como "Arial", "CourierNew" y "YuGothic", disponibles en múltiples variaciones como "Blue" y "Green". Sin embargo, puede crear su propio tema colocándolo en la carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" dentro de su proyecto.
 
