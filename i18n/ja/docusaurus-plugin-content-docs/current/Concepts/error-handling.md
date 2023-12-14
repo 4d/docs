@@ -136,9 +136,9 @@ ON ERR CALL("")
 
 ## Try(expression)
 
-The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `Try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
+`Try(expression)` 文は、実際の実行コンテキスト (特にローカル変数の値を含む) で単一行の式をテストし、スローされるエラーをキャッチすることで、4D のエラーダイアログボックスが表示されないようにできます。 `Try(expression)` を使用すると、非常に少ないコードで単純なエラーケースを処理することができ、エラー処理メソッドを必要としません。
 
-The formal syntax of the `Try(expression)` statement is:
+`Try(expression)` 文の正式なシンタックスは、以下の通りです:
 
 ```4d
 
@@ -146,40 +146,40 @@ Try (expression) : any | Undefined
 
 ```
 
-*expression* can be any valid expression.
+*expression* には任意の有効な式を使用できます。
 
-If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`.
+実行中にエラーが発生した場合、`Try()` の呼び出し前に [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされたかどうかに関係なく、エラーダイアログは表示されず、エラーはキャッチされます。 *expression* が値を返す場合、`Try()` は最後に評価された値を返します。値が返されない場合、`Try()` は `Undefined` を返します。
 
-You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
+エラーは、[`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドを使用することで処理できます。 *expression* が `Try()` のスタック内でエラーをスローした場合、実行フローは停止し、最後に実行された `Try()` (コールスタック内で最初に見つかったもの) に戻ります。
 
 :::note
 
-If an [error-handling method](#installing-an-error-handling-method) is installed by *expression*, it is called in case of error.
+もし *expression* によって [エラー処理メソッド](#エラー処理メソッドの実装) がインストールされた場合、エラー発生時にはそれが呼び出されます。
 
 :::
 
 
 ### 例題
 
-1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. 以下のように書くことができます:
+1. ファイルをエラーなく開くことができ、その内容が読み取り可能な場合に、ファイルの内容を表示します。 以下のように書くことができます:
 
 ```4d
 var $text : Text
 var $file : 4D.File := File("/RESOURCES/myFile.txt")
 var $fileHandle : 4D.FileHandle := Try($file.open())
 If ($fileHandle # Null)
-  $text:=Try($fileHandle.readText()) || "Error reading the file"
+  $text:=Try($fileHandle.readText()) || "ファイル読み込みエラー"
 End if
 ```
 
 
-2. You want to handle the divide by zero error. In this case, you want to return 0 and throw an error:
+2. ゼロ除算エラーを処理します。 ここでは 0 を返し、エラーをスローするようにします:
 
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
   if ($p2=0)
-     $result:=0 //only for clarity (0 is the default for reals)
-     throw(-12345; "Division by zero")
+     $result:=0 // 可読性のため (実数のデフォルトは 0 です)
+     throw(-12345; "ゼロ除算")
   else
     $result:=$p1/$p2
   end if
@@ -187,21 +187,21 @@ function divide( $p1: real; $p2: real)-> $result: real
 function test()
   $result:=Try(divide($p1;$p2))
   If (Last errors # null)
-    ALERT("Error")
+    ALERT("エラー")
   End if
 
 ```
 
-3. You want to handle both [predictable and non-predictable](#error-or-status) errors:
+3. [予測可能なエラーと予測不可能なエラー](#エラーステータス) の両方を処理します。
 
 ```4d
 var $e:=ds.Employee.new()
 $e.name:="Smith"
-$status:=Try($e.save()) //catch predictable and non-predictable errors
+$status:=Try($e.save()) // 予測可能なエラーと予測不可能なエラーをキャッチします
 If ($status.success)
-   ALERT( "Success")
+   ALERT( "成功")
 Else
-   ALERT( "Error: "+JSON Stringify($status.errors))
+   ALERT( "エラー: "+JSON Stringify($status.errors))
 End if
 
 ``` 
