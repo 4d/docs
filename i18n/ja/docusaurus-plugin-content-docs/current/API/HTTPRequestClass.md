@@ -206,29 +206,29 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 
 <!-- REF #HTTP Parse message.Params -->
-| 引数   | タイプ        |    | 説明                                                                               |
-| ---- | ---------- |:--:| -------------------------------------------------------------------------------- |
-| data | Text, Blob | -> | Data to be parsed                                                                |
-| 戻り値  | Object     | <- | Object, each property is a part of the multipart data|<!-- END REF -->
+| 引数   | タイプ        |    | 説明                                                        |
+| ---- | ---------- |:--:| --------------------------------------------------------- |
+| data | Text, Blob | -> | 解析するデータ                                                   |
+| 戻り値  | Object     | <- | オブジェクト (各プロパティは、マルチパートの各データです)|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->。
+`HTTP Parse message` コマンドは、 <!-- REF #HTTP Parse message.Summary -->multipart/form-data のテキストまたは Blob (HTTP "response" メッセージ) をパースし、コンテンツをオブジェクトに抽出します。 戻り値のオブジェクトの各プロパティは、マルチパートの各データに対応します<!-- END REF -->。
 
 :::info
 
-HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+HTTP 自体はステートレスな通信プロトコルです。 このフレームワークの中で、クライアントは、メソッド・ターゲット・ヘッダー・コンテンツなどの詳細を指定した "request" メッセージをサーバーに送ることによって通信を開始します。 サーバーは、同じ詳細を含む "response" メッセージで応答します。 `HTTP Parse message` コマンドは、"request" または "response" メッセージを解析し、オブジェクトの形式に整えます。
 
 :::
 
 
 #### 例題
 
-In the following example, we parse the data from a text file containing HTTP requests.
+次の例では、HTTPリクエストを格納するテキストファイルのデータを解析します。
 
-Here is the content of the file:
+ファイルの中身は次のとおりです:
 
 ```
 POST /batch/gmail/v1/ HTTP/1.1
@@ -257,7 +257,7 @@ GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?for
 
 --batch_19438756D576A14ABA87C112F56B9396--
 ```
-To parse the file:
+ファイルを解析します:
 
 ```4d
 var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
