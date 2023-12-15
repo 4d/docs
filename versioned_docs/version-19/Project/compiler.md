@@ -128,8 +128,9 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
 
 - **Type the variables**: Passes by all the stages that make compilation possible.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
-- **All variables are typed**: The pass for typing local, process and interprocess variables is not carried out. Use this option when you are certain that all the process, interprocess and local variables have been clearly typed.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+
 
 #### Compilation Target
 
@@ -172,7 +173,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 - **Interprocess Variables**: Groups together interprocess variable declarations;
 - **Arrays**: Groups together process array declarations;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`).
+- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). 
 
 You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
 
