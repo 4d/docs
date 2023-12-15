@@ -940,6 +940,7 @@ use the following code:
 
 
 
+
 | Parameter  | Typ    |    | Beschreibung                              |
 | ---------- | ------ | -- | ----------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro area form object name         |
@@ -1759,15 +1760,15 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 
 <!-- REF #_method_.VP Get default style.Syntax -->
-**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
+**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parameter  | Typ      |    | Beschreibung                                        |
-| ---------- | -------- | -- | --------------------------------------------------- |
-| vpAreaName | Text     | -> | 4D View Pro area from object name                   |
-| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)              |
-| Ergebnis   | Ganzzahl | <- | Total number of columns |<!-- END REF -->
+| Parameter  | Typ      |    | Beschreibung                                       |
+| ---------- | -------- | -- | -------------------------------------------------- |
+| vpAreaName | Text     | -> | 4D View Pro area from object name                  |
+| sheet      | Ganzzahl | -> | Sheet index (current sheet if omitted)             |
+| Ergebnis   | Objekt   | <- | Default style settings |<!-- END REF -->
 
 |
 
@@ -5482,6 +5483,7 @@ You remove the formulas in *rangeObj* by replacing them with an empty string (""
 $formulas:=New collection
 $formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
 $formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+
 
 VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
 ```
