@@ -347,23 +347,15 @@ Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterst�
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
-
-> Sie können auch [benannte Parameter](#parameter-mit-namen) mit dem Schlüsselwort `#DECLARE` verwende.
-
 - Trigger - Der Parameter $0 (Lange Ganzzahl), der das Ergebnis eines Trigger ist, wird vom Compiler typisiert, wenn der Parameter nicht explizit deklariert wurde. Wollen Sie ihn jedoch deklarieren, müssen Sie das direkt im Trigger tun.
 
 - Formularobjekte mit dem Formularereignis `On Drag Over` - Der Parameter $0 (Lange Ganzzahl), der das Ergebnis des Formularereignisses `On Drag Over` ist, wird vom Compiler typisiert, wenn der Parameter nicht explizit deklariert wurde. Wollen Sie ihn jedoch deklarieren, müssen Sie das direkt in der Objektmethode tun. **Hinweis:** Der Compiler initialisiert nicht den Parameter $0, d. h. sobald Sie das Formularereignis`On Drag Over` verwenden, müssen Sie $0 initialisieren. Beispiel:
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
     If($DataType=Is picture)
        $0:=-1
     End if
