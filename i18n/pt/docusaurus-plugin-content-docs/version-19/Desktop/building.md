@@ -16,14 +16,14 @@ O construtor de aplicações permite-lhe:
 
 > As aplicações compiladas baseiam-se em ficheiros [.4dz](#build-compiled-structure) que são **só de leitura**. Tenha em atenção que a utilização de comandos ou funções que modificam os ficheiros de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, pode criar aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
-## Build application overview
+## Visão geral do aplicativo gerador de aplicações
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * o comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
 * ou a [Janela do criador de aplicações](#application-builder).
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+Para exibir o diálogo Build Application , selecione **Design** > **Build Application...** na barra de menu.
 
 ![](../assets/en/Project/buildappProj.png)
 

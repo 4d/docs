@@ -138,9 +138,9 @@ ON ERR CALL("")
 
 ## Try(expression)
 
-The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `Try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
+The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. El uso de `Try(expression)` ofrece una manera fácil de manejar casos de error simples con un número muy bajo de líneas de código, y sin requerir un método de gestión de errores.
 
-The formal syntax of the `Try(expression)` statement is:
+La sintaxis formal de la declaración `Try(expresión)` es:
 
 ```4d
 
@@ -150,20 +150,20 @@ Try (expression) : any | Undefined
 
 *expresion* puede ser toda expresión válida.
 
-If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`.
+If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. Si *expression* devuelve un valor, `Try()` devuelve el último valor evaluado, en caso contrario devuelve `Undefined`.
 
-You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
+Puede gestionar el error o errores utilizando el comando [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html). If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
 
 :::note
 
-If an [error-handling method](#installing-an-error-handling-method) is installed by *expression*, it is called in case of error.
+Si un [método de gestión de errores](#installing-an-error-handling-method) es instalado por *expression*, es llamado en caso de error.
 
 :::
 
 
 ### Ejemplos
 
-1. You want to display the contents of a file if the file can be open without error, and if its contents can be read. Puede escribir:
+1. Quiere mostrar el contenido de un archivo si el archivo se puede abrir sin errores y si su contenido se puede leer. Puede escribir:
 
 ```4d
 var $text : Text

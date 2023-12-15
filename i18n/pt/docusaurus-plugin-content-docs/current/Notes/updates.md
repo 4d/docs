@@ -362,7 +362,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                  |
 | ---------- | ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
 | ICU        | 73.2         | 20.1             | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
-| CEF        | 113          | 20 R2            | Chromium 5672                                                                                               |
+| CEF        | 118          | 20 R3            | Chromium 5993                                                                                               |
 | Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                         |
 | PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                              |
 | SpreadJS   | 19.6         | 20               | Motor 4D View Pro                                                                                           |

@@ -72,17 +72,17 @@ Function onConnection($wss : Object; $event : Object) : Object
 3. Define la clase usuario `myConnectionHandler` que contiene las funciones de retrollamada utilizadas para manejar los mensajes:
 
 ```4d
-// myConnectionHandler class
+// Clase myConnectionHandler
 
 Function onMessage($ws : 4D.WebSocketConnection; $message : Object)
-	//resends the message in uppercase	
+	// reenvía el mensaje en mayúsculas
 	$ws.send(Uppercase($message.data))
 
 ```
 
 :::tip JS del lado del cliente
 
-See [this blog post](https://blog.4d.com/websocket-server/) for an example of client-side Javascript code handling a WebSocket connection.
+Consulte [esta entrada de blog](https://blog.4d.com/websocket-server/) para ver un ejemplo de código Javascript del lado del cliente que gestiona una conexión WebSocket.
 
 :::
 
