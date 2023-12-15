@@ -280,6 +280,7 @@ Here we have a method called `SumNumbers` that returns the calculated total for 
 ```4d
 
 #DECLARE( ... : Real) : Real 
+
 var $number; $total : Real 
 
 For each ($number; 1; Count parameters)
@@ -306,18 +307,18 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still su
 
 :::
 
-## `Compiler` method
+## `Compiler_Methods` method
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. Beispiel:
+When using the `#DECLARE` keyword, parameters are declared. Beispiel:
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
     // all parameters are declared with their type
 ```
 
-However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
+However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
 
 - you can group all local variable parameters for project methods in one or more project method(s)
 - the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
@@ -327,7 +328,7 @@ Beispiel:
 
 ```4d  
  // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```
 
 :::note
@@ -336,18 +337,25 @@ This syntax is not executable in interpreted mode.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
+:::info
+
+Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
 
 - Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. Zu Beginn der Datenbankmethode müssen Sie schreiben (selbst wenn keiner der Parameter genutzt wird):
 
 ```4d
 // On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+C_TEXT($1;$2;$3;$4;$5;$6)
+
+```
+
+- Functions - Function parameters are automatically declared for compilation in the function prototype. Beispiel:
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // all parameters are declared with their type
 ```
 
 - Trigger - Der Parameter $0 (Lange Ganzzahl), der das Ergebnis eines Trigger ist, wird vom Compiler typisiert, wenn der Parameter nicht explizit deklariert wurde. Wollen Sie ihn jedoch deklarieren, müssen Sie das direkt im Trigger tun.
@@ -356,7 +364,7 @@ Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterst�
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -364,12 +372,9 @@ Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterst�
     End if
     ...
  End if
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
 ```
+
+:::
 
 
 
@@ -580,6 +585,7 @@ Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als 
  ChangeAge($person)
  ALERT(String($person.Age))  
 ```
+
 
 Die Methode `ChangeAge` fügt dem Attribut Age des empfangenen Objekts 10 hinzu
 
