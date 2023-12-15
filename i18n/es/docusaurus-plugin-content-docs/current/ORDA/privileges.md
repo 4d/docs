@@ -72,7 +72,7 @@ Un **privilegio ** es la capacidad técnica de ejecutar **acciones ** en **recur
 
 Un privilegio o un rol pueden asociarse a varias combinaciones "acción + recurso". Se pueden asociar varios privilegios a una acción. Un privilegio puede incluir otros privilegios.
 
-- Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
+- Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). **Configura** su alcance asignándolos a acción(es) de permiso aplicadas a recurso(s).
 
 - Usted **permite** privilegios y/o roles a cada sesión de usuario utilizando la función [`.setPrivileges()`](../API/SessionClass.md#setprivileges) de la clase `Session`.
 
