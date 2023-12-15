@@ -940,6 +940,7 @@ saisissez le code suivant :
 
 
 
+
 | Paramètres | Type   |    | Description                                 |
 | ---------- | ------ | -- | ------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro     |
@@ -1763,7 +1764,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 
 <!-- REF #_method_.VP Get default style.Syntax -->
-**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
+**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get default style.Params -->
 
@@ -1771,7 +1772,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 | ---------- | ------- | -- | -------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Integer | <- | Nombre total de colonnes |<!-- END REF -->
+| Résultat   | Object  | <- | Default style settings |<!-- END REF -->
 
 |
 
@@ -5450,10 +5451,11 @@ Vous pouvez supprimer les formules dans *rangeObj* en les remplaçant par une ch
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // Première ligne
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Deuxième ligne
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
 
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Associer les formules et les formules
+
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
 ```
 
 *myMethod* :
