@@ -80,25 +80,25 @@ El archivo de plantilla debe almacenarse en una carpeta "[`Resources`](../Projec
 
 El archivo de plantilla en formato JSON contiene los siguientes atributos:
 
-| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                      |
-|:-------------------- |:---------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Fórmula de la fuente de datos de la tabla                                                                                                                        |
-| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                   |
-| columns.check        | Text       | x           | True cuando la columna ya está marcada en el editor de plantillas. False cuando la columna está desmarcada en el editor de plantillas.                           |
-| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
-| columns.source       | Text       | x           | Formula                                                                                                                                                          |
-| breaks               | Collection |             | Collection of break objects. El orden de las interrupciones es importante. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                          |
-| breakFormulas        | Collection |             | Collection of formula objects applicable to break rows                                                                                                           |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                          |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                               |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                          |
-| extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                  |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                     |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                          |
+| Atributo             | Tipo       | Obligatorio | Descripción                                                                                                                                                          |
+|:-------------------- |:---------- |:----------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x           | Fórmula de la fuente de datos de la tabla                                                                                                                            |
+| columns              | Collection | x           | Colección de columnas de tabla                                                                                                                                       |
+| columns.check        | Text       | x           | True cuando la columna ya está marcada en el editor de plantillas. False cuando la columna está desmarcada en el editor de plantillas.                               |
+| columns.header       | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
+| columns.source       | Text       | x           | Formula                                                                                                                                                              |
+| breaks               | Collection |             | Collection of break objects. El orden de las interrupciones es importante. Corresponde al orden en el documento cuando las rupturas están sobre las líneas de datos. |
+| breaks.label         | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                              |
+| breakFormulas        | Collection |             | Colección de objetos de fórmula aplicables a las líneas de ruptura                                                                                                   |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                              |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                   |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                              |
+| extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                      |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                         |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                              |
 
 :::note Francés
 
@@ -156,18 +156,18 @@ He aquí un breve ejemplo del aspecto que podría tener su archivo JSON:
 
 #### Archivos de traducción
 
-Translation files translate the names of templates, themes, tables, fields, and formulas. These files are added to the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" folder in your project.
+Los archivos de traducción traducen los nombres de plantillas, temas, tablas, campos y fórmulas. Estos archivos se añaden a la carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Translations" de su proyecto.
 
-Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
+Cada archivo de traducción debe nombrarse con el código de idioma correspondiente (por ejemplo, "en" para inglés o "fr" para francés).
 
-The translation file in JSON format contains the following attributes:
+El archivo de traducción en formato JSON contiene los siguientes atributos:
 
-| Atributo  | Tipo       | Obligatorio | Descripción                                                                           |
-|:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tablas    | Collection |             | Colección de objetos de tabla traducidos                                              |
-| fields    | Collection |             | Colección de objetos de campo traducidos                                              |
-| formulas  | Collection |             | Colección de objetos fórmula traducidos                                               |
-| fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |
+| Atributo  | Tipo       | Obligatorio | Descripción                                                                               |
+|:--------- |:---------- |:----------- |:----------------------------------------------------------------------------------------- |
+| tablas    | Collection |             | Colección de objetos de tabla traducidos                                                  |
+| fields    | Collection |             | Colección de objetos de campo traducidos                                                  |
+| formulas  | Collection |             | Colección de objetos fórmula traducidos                                                   |
+| fileNames | Collection |             | Colección de objetos fileName traducidos (aplicables al tema y al nombre de la plantilla) |
 
 Whitin each one of these attribute, the translation object includes the following attributes:
 
@@ -176,11 +176,11 @@ Whitin each one of these attribute, the translation object includes the followin
 | original    | Text | x           | Texto original destinado a traducción |
 | translation | Text | x           | Versión traducida del texto original  |
 
-Defining these attributes within the translation object ensures proper organization and alignment between the source and translated content.
+La definición de estos atributos dentro del objeto de traducción garantiza una organización y alineación adecuadas entre el contenido original y el traducido.
 
-If the template name or the formula (break, carry-over row, or extra) exists in the translated file, its translation is applied in the Table Wizard. Además, solo se visualiza y traduce la tabla definida en el archivo de traducción.
+Si el nombre de la plantilla o la fórmula (ruptura, línea de arrastre o extra) existe en el archivo traducido, su traducción se aplica en el Asistente de tablas. Además, solo se visualiza y traduce la tabla definida en el archivo de traducción.
 
-El archivo de traducción cumple una función adicional cuando un usuario selecciona una tabla en la interfaz. Puede filtrar las tablas y los campos propuestos al usuario. For example, to hide table IDs, this behavior is similar to the `SET TABLE TITLES` and `SET FIELD TITLES` commands.
+El archivo de traducción cumple una función adicional cuando un usuario selecciona una tabla en la interfaz. Puede filtrar las tablas y los campos propuestos al usuario. Por ejemplo, para ocultar los ID de tabla, este comportamiento es similar a los comandos `SET TABLE TITLES` y `SET FIELD TITLES`.
 
 ##### Ejemplo
 
