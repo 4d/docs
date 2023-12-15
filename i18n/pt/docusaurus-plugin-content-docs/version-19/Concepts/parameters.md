@@ -344,16 +344,13 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
 ```4d
 // On Web Connection C_TEXT($1;$2;$3;$4;$5;$6)
 ```
-
-> Pode usar [parametros nomeados](#named-parameters) com a palavra chave `#DECLARE`.
-
 - Gatilhos - O parâmetro $0 (Longint), que é o resultado de um gatilho, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
 - Objectos de formulário que aceitam o evento de formulário `On Drag Over` - O parâmetro $0 (Longint), que é o resultado do evento de formulário `On Drag Over` , é tipado pelo compilador se o parâmetro não tiver sido explicitamente declarado. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
