@@ -49,7 +49,7 @@ Para obtener un certificado digital:
 
 :::caution
 
-For security reasons, the private key should always be kept secret. En realidad, debería permanecer siempre en la máquina del servidor. Para el servidor web, el archivo Key.pem debe colocarse en la carpeta Project.
+Por razones de seguridad, la llave privada debe mantenerse siempre en secreto. En realidad, debería permanecer siempre en la máquina del servidor. Para el servidor web, el archivo Key.pem debe colocarse en la carpeta Project.
 
 :::
 
