@@ -14,6 +14,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 - Soporte de formato de cifrado [`ECDSA`](../Admin/tls.md#encryption) para certificados TLS.
 - Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Formato HTML directo para [exportaciones de definición de estructura](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
+- New [`Try(expression)` keyword](../Concepts/error-handling.md#tryexpression) to handle simple error cases.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
 
 
