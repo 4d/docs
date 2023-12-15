@@ -13,7 +13,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 
 - Soporte de formato de cifrado [`ECDSA`](../Admin/tls.md#encryption) para certificados TLS.
 - Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
-- Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
+- Formato HTML directo para [exportaciones de definición de estructura](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
 
 
@@ -363,7 +363,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 | Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
 | --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
 | ICU       | 73.2           | 20.1              | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
-| CEF       | 113            | 20 R2             | Chromium 5672                                                                                                 |
+| CEF       | 118            | 20 R3             | Chromium 5993                                                                                                 |
 | Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
 | PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                |
 | SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                             |
