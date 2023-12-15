@@ -48,11 +48,11 @@ Básicamente, el código que se ejecuta en hilos apropiativos no puede llamar a 
 
 ## Declarar un método apropiativo
 
-By default, 4D executes all the project methods of your application in cooperative mode. If you want to benefit from the preemptive mode feature, the first step consists of explicitly declaring all methods that you want to be started in preemptive mode whenever possible -- that is, methods that you consider capable of being run in a preemptive process. The compiler will [check that these methods are actually thread-safe](#writing-a-thread-safe-method) at compile time. You can also disallow preemptive mode for some methods, if necessary.
+Por defecto, 4D ejecuta todos los métodos proyecto de su aplicación en modo cooperativo. If you want to benefit from the preemptive mode feature, the first step consists of explicitly declaring all methods that you want to be started in preemptive mode whenever possible -- that is, methods that you consider capable of being run in a preemptive process. El compilador [verificará que estos métodos sean realmente hilo seguro](#writing-a-thread-safe-method) durante el tiempo de compilación. También puede desactivar el modo apropiativo para algunos métodos, si es necesario.
 
-Keep in mind that declaring a method "capable" of preemptive use makes it eligible for preemptive execution but does not guarantee that it will actually be executed in preemptive mode at runtime. Starting a process in preemptive mode results from an [evaluation performed by 4D](#when-is-a-process-started-preemptively) regarding the properties of all the methods in the call chain of the process.
+Tenga en cuenta que declarar un método "capable" de uso apropiativo lo hace elegible para la ejecución apropiativa, pero no garantiza que realmente se ejecute en modo apropiativo en tiempo de ejecución. Starting a process in preemptive mode results from an [evaluation performed by 4D](#when-is-a-process-started-preemptively) regarding the properties of all the methods in the call chain of the process.
 
-To declare your method eligible for use in preemptive mode, you need to use the "Execution mode" declaration option in the Method Properties dialog box:
+Para declarar su método como elegible para su uso en modo apropiativo, debe utilizar la opción de declaración "Modo de ejecución" en el diálogo Propiedades del Método:
 
 ![](../assets/en/Develop/preemptif.png)
 
@@ -76,7 +76,7 @@ Note that with this option, whatever the internal thread safety evaluation, the 
 
 :::note Caso particular
 
-If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. If you want a shared component method to be thread-safe, you must explicitely set it to **Can be run in preemptive processes**.
+If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
 
 :::
 
@@ -90,25 +90,25 @@ La ejecución en modo apropiativo solo está disponible en modo compilado.
 
 In compiled mode, when starting a process created by either `New process` or `CALL WORKER` commands, 4D reads the preemptive property of the process method (also named _parent_ method) and executes the process in preemptive or cooperative mode, depending on this property:
 
-- If the process method is thread-safe (validated during compilation), the process is executed in a preemptive thread.
-- If the process method is thread-unsafe, the process is run in a cooperative thread.
-- If the preemptive property of the process method was set to "indifferent", by compatibility the process is run in a cooperative thread (even if the method is actually capable of preemptive use). Note however that this compatibility feature is only applied when the method is used as a process method: a method declared "indifferent" but internally tagged "thread-safe" by the compiler can be called preemptively by another method (see below).
+- Si el método del proceso es hilo seguro (validado durante la compilación), el proceso se ejecuta en un hilo apropiativo.
+- Si el método del proceso no es hilo seguro, el proceso se ejecuta en un hilo cooperativo.
+- Si la propiedad apropiativa del método de proceso fue definida "indifferent", por compatibilidad el proceso se ejecuta en un hilo cooperativo (incluso si el método es realmente capaz de utilizar apropiativo). Note however that this compatibility feature is only applied when the method is used as a process method: a method declared "indifferent" but internally tagged "thread-safe" by the compiler can be called preemptively by another method (see below).
 
-The actual thread-safe property depends on the call chain. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. A preemptive thread can be created only when the entire chain is thread-safe and the process method has been declared "Can be run in preemptive process".
+La propiedad real hilo seguro depende de la cadena de llamada. If a method with the property declared as "capable" calls a thread-unsafe method at either of its sublevels, a compilation error will be returned: if a single method in the entire call chain is thread-unsafe, it will "contaminate" all other methods and preemptive execution will be rejected by the compiler. Un hilo apropiativo sólo se puede crear cuando toda la cadena es hilo seguro y el método de proceso ha sido declarado "Se puede ejecutar en proceso apropiativo".
 On the other hand, the same thread-safe method may be executed in a preemptive thread when it is in one call chain, and in a cooperative thread when it is in another call chain.
 
 Por ejemplo, considere los siguientes métodos proyecto:
 
 ```4d
-  //MyDialog project method
-  //contains interface calls: will be internally thread unsafe
+  //Método proyecto MyDialog
+  //Contiene llamadas a interfaces: será internamente hilo no seguro
  $win:=Open form window("tools";Palette form window)
  DIALOG("tools")
 ```
 
 ```4d
-  //MyComp project method
-  //contains simple computing: will be internally thread safe
+  //Método proyecto MyComp
+  //Contiene computación simple: será internamente hilo seguro
  #DECLARE($value : Integer) -> $result : Integer
  $result:=$value*2
 ```
@@ -120,12 +120,12 @@ Por ejemplo, considere los siguientes métodos proyecto:
 ```
 
 ```4d
-  //CallComp project method
+  //Método proyecto CallComp
  var $vAge : Integer
  MyComp($vAge)
 ```
 
-Executing a method in preemptive mode will depend on its "execution" property and the call chain. The following table illustrates these various situations:
+La ejecución de un método en modo apropiativo dependerá de su propiedad "ejecución" y de la cadena de llamadas. La siguiente tabla ilustra estas diversas situaciones:
 
 ![](../assets/en/Develop/legend.png)
 
@@ -146,64 +146,64 @@ Executing a method in preemptive mode will depend on its "execution" property an
 
 ## Escribir un método hilo seguro
 
-To be thread-safe, a method must respect the following rules:
+Para ser hilo seguro, un método debe respetar las siguientes reglas:
 
-- It must have either the "Can be run in preemptive processes" or "Indifferent" property
-- It must not call a 4D command or function that is thread-unsafe.
-- It must not call another project method or function that is thread-unsafe
+- Debe tener la propiedad "Puede ejecutarse en procesos apropiativos" o "Indiferente"
+- No debe llamar a un comando o función 4D que no sea hilo seguro.
+- No debe llamar a otro método proyecto o función que no sea hilo seguro
 - No debe llamar a un plug-in que no sea hilo seguro.
 - No debe utilizar ninguna variable interproceso(1)
-- It must not call interface objects(2) (there are exceptions however, see below).
+- No debe llamar a objetos de interfaz(2) (sin embargo, hay excepciones, ver más abajo).
 
 (1) To exchange data between preemptive processes (and between all processes), you can pass [shared collections or shared objects](../Concepts/shared.md) as parameters to processes, and/or use the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) catalog.
-[Worker processes](processes.md#worker-processes) also allow you to exchange messages between any processes, including preemptive processes.
+Los [procesos Worker](processes.md#worker-processes) también permiten intercambiar mensajes entre cualquier proceso, incluidos los procesos apropiativos.
 
-(2) The [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) command provides an elegant solution to call interface objects from a preemptive process.
+(2) El comando [`CALL FORM`](https://doc.4d.com/4dv20/help/command/en/page1391.html) ofrece una solución elegante para llamar a objetos de interfaz desde un proceso en espera.
 
 :::note Notas
 
-- In the case of a "Shared by components and host databases" method, the "Can be run in preemptive processes" property must be selected.
+- En el caso de un método "Compartido por componentes y bases de datos locales", debe seleccionarse la propiedad "Puede ejecutarse en procesos apropiativos".
 - Todas las declaraciones SQL son hilo seguro. SQL code inserted in `Begin SQL`/`End SQL` blocks must comply with the following conditions:
-  - It must apply to the 4D Server or 4D local database (ODBC or remote databases via `SQL LOGIN` are thread-unsafe. However, local databases used with `USE DATABASE` are thread-safe).
-  * Any trigger called by SQL statements must be thread-safe (see [Triggers](#triggers) below).
+  - Debe aplicarse a 4D Server o a la base de datos local de 4D (ODBC o bases de datos remotas vía `SQL LOGIN` no son hilo seguro. Sin embargo, las bases de datos locales usadas con `USE DATABASE` son hilo seguro).
+  * Todo trigger llamado por sentencias SQL debe ser hilo seguro (ver [Triggers](#triggers) a continuación).
 
 :::
 
-Methods with the "Can be run in preemptive processes" property will be checked by 4D during compilation. A compilation error is issued whenever the compiler finds something that prevents it from being thread-safe:
+Los métodos con la propiedad "Se puede ejecutar en procesos apropiativos" serán comprobados por 4D durante la compilación. Se emite un error de compilación cada vez que el compilador encuentra algo que impide que sea hilo seguro:
 
 ![](../assets/en/Develop/thread-unsafe.png)
 
 :::info
 
-It is possible to [disable locally the thread-safety verification](#).
+Es posible [desactivar localmente la verificación de la seguridad de los hilos](#).
 
 :::
 
-The [symbol file](../Project/compiler.md/#complete-list-of-methods), if enabled, also contains the thread safety status for each method.
+Si está activado, el [archivo de símbolos](../Project/compiler.md/#complete-list-of-methods), también contiene el estado de seguridad de los hilos para cada método.
 
 ### Interfaz de usuario
 
-Since they are "external" accesses, calls to user interface objects such as forms, as well as to the Debugger, are not allowed in preemptive threads.
+Dado que se trata de accesos "externos", las llamadas a objetos de la interfaz de usuario como formularios, así como al depurador, no están permitidas en hilos apropiativos.
 
-The only possible accesses to the user interface from a preemptive thread are:
+Los únicos accesos posibles a la interfaz de usuario desde un hilo apropiativo son:
 
-- [Diálogo de error estándar](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). El botón **Rastrear** está desactivado.
+- [Diálogo de error estándar](../Debugging/basics). El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). El botón **Rastrear** está desactivado.
 - Indicadores de progreso estándar
-- Diálogos `ALERT`, `Request` y `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
+- Diálogos `ALERT`, `Request` y `CONFIRM`. El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 
 ### Triggers
 
-When a method uses a command that can call a trigger, the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+Cuando un método utiliza un comando que puede llamar a un trigger, el compilador 4D evalúa la seguridad de los hilos del trigger para comprobar la seguridad de hilos del método:
 
 ```4d
- SAVE RECORD([Table_1]) //trigger on Table_1, if it exists, must be thread-safe
+ SAVE RECORD([Table_1]) //activar en Table_1, si existe, debe ser hilo seguro
 ```
 
 Here is the list of commands that are checked at compilation time for trigger thread safety:
 
 `SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`.
 
-If the table is passed dynamically, the compiler may sometimes not be able to find out which trigger it needs to evaluate. Estos son algunos ejemplos de estas situaciones:
+Si la tabla se pasa dinámicamente, a veces el compilador no puede averiguar qué trigger debe evaluar. Estos son algunos ejemplos de estas situaciones:
 
 ```4d
  DEFAULT TABLE([Table_1])
@@ -212,24 +212,24 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
  SAVE RECORD(Table(myMethodThatReturnsATableNumber())->)
 ```
 
-En este caso, se evalúan todos los triggers. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
+En este caso, se evalúan todos los triggers. Si se detecta un comando que no sea hilo seguro en al menos un trigger, se rechaza todo el grupo y el método se declara hilo no seguro.
 
 ### Métodos de gestión de errores
 
 [Error-catching methods](../Concepts/error-handling.md) installed by the `ON ERR CALL` command must be thread-safe if they are likely to be called from a preemptive process. In order to handle this case, the compiler checks the thread safety property of error-catching project methods passed to the `ON ERR CALL` command during compilation and returns appropriate errors if they do not comply with preemptive execution.
 
-Note that this checking is only possible when the method name is passed as a constant, and is not computed, as shown below:
+Tenga en cuenta que esta comprobación solo es posible cuando el nombre del método se pasa como una constante y no se calcula, como se muestra a continuación:
 
 ```4d
- ON ERR CALL("myErrMethod1") //will be checked by the compiler
- ON ERR CALL("myErrMethod"+String($vNum)) //will not be checked by the compiler
+ ON ERR CALL("myErrMethod1") //será verificado por el compilador
+ ON ERR CALL("myErrMethod "+String($vNum)) //no será verificado por el compilador
 ```
 
 In addition, if an error-catching project method cannot be called at runtime (following a thread safety issue, or for any reason like "method not found"), the error -10532 "Cannot call error handling project method 'methodName'" is generated.
 
 ### Compatibilidad de punteros
 
-A process can dereference a pointer to access the value of another process variable only if both processes are cooperative; otherwise, 4D will throw an error. In a preemptive process, if some 4D code tries to dereference a pointer to an interprocess variable, 4D will throw an error.
+Un proceso puede desreferenciar un puntero para acceder al valor de la variable de otro proceso solo si ambos procesos están cooperando; en caso contrario, 4D lanzará un error. En un proceso apropiativo, si algún código 4D intenta hacer referencia a un puntero a una variable interproceso, 4D lanzará un error.
 
 Ejemplo con los siguientes métodos:
 
@@ -246,14 +246,14 @@ Method2:
  $value:=$1->
 ```
 
-If either the process running Method1 or the process running Method2 is preemptive, then the expression `$value:=$1->` will throw an execution error.
+Si el proceso que ejecuta el Method1 o el proceso que ejecuta el Method2 es apropiativo, entonces la expresión `$value:=$1->` lanzará un error de ejecución.
 
 ### Referencia de documento refDoc
 
-The use of DocRef type parameters (opened document reference, used or returned by `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) is limited to the following contexts:
+El uso de parámetros de tipo DocRef (referencia de documento abierto, utilizada o devuelta por `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) está limitado a los siguientes contextos:
 
-- When called from a preemptive process, a `DocRef` reference is only usable from that preemptive process.
-- When called from a cooperative process, a `DocRef` reference is usable from any other cooperative process.
+- Cuando se llama desde un proceso en espera, una referencia `DocRef` solo es utilizable desde ese proceso en espera.
+- Cuando se llama desde un proceso cooperativo, una referencia `DocRef` es utilizable desde cualquier otro proceso cooperativo.
 
 ## Desactivar localmente la verificación hilo de seguridad
 
