@@ -363,7 +363,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | Library   | Current version | Updated in 4D | Kommentar                                                                                |
 | --------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
 | ICU       | 73.2            | 20.1          | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| CEF       | 113             | 20 R2         | Chromium 5672                                                                            |
+| CEF       | 118             | 20 R3         | Chromium 5993                                                                            |
 | Hunspell  | 1.7.2           | 20            | Used for spell checking in 4D forms and 4D Write Pro                                     |
 | PDFWriter | 4.3             | 20            | FreeType dependency in 12.2.1                                                            |
 | SpreadJS  | 16.0.4          | 20            | 4D View Pro engine                                                                       |
