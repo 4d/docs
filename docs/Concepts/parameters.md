@@ -342,7 +342,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 :::tip
 
-Declaring parameters in prototypes is recommended, even in non-compiled projects. 
+Declaring parameters in prototypes is a good practice, even in non-compiled projects. 
 
 :::
 
