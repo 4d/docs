@@ -128,8 +128,9 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 コンパイラーによって実施されるコード解析の実行周期数を設定するために使用します。これは、コンパイルの所要時間に影響します。
 
 - **すべて定義させる**: コンパイルのために実施できるステップをすべておこないます。
-- **ローカル変数のみ自動定義させる**: プロセスおよびインタープロセス変数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
-- **自動変数定義は行わない**: ローカル、プロセスおよびインタープロセス変数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべての変数が明示的に宣言されていなければなりません。
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+
 
 #### コンパイル対象CPU
 
