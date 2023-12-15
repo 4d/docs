@@ -17,7 +17,7 @@ These areas indicate the date, time and status of the last [data verification](M
 
 This button can be used to launch the verification operation directly, without interrupting the server. Note that the server may be noticeably slowed down during the operation.
 
-All the records and all the indexes of the database are verified. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
+Todos os registros e todos os índices do banco de dados são verificados. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
 
 After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
@@ -60,7 +60,7 @@ This area indicates the date and time of the [last backup](MSC/backup.md) of the
 The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
 
 
-## Request and Debug logs
+## Histórico de solicitações e depuração
 
 This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
 
@@ -70,7 +70,7 @@ Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section 
 
 The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
 
-> This button only logs operations that are executed on the server.
+> Este botão registra apenas operações executadas no servidor.
 
 When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
 

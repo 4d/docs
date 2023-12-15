@@ -47,7 +47,7 @@ Para criar um arquivo de histórico:
 
 2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. If the database hard drive is lost, you can still recall your log file.
 
-3. Clique **Salvar**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. Clique **Salvar**. O disco e o nome do arquivo de histórico aberto agora estão exibidos na área **Usar histórico** da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 
 4. Validar a caixa de diálogo Propriedades da base de dados.
 
@@ -62,7 +62,7 @@ Without having to do anything else, all operations performed on the data are log
 
 Precisa criar outro arquivo de histórico se criar um novo arquivo de dados. Precisa estabelecer ou criar outro arquivo de shitórico se abrir outro arquivo de dados que não estiver linnkado a um arquivo de histórico (ou se o arquivo de histórico estiver faltando).
 
-## Stopping a log file
+## Parando um arquivo de log
 
 If you would like to stop logging operations to the current log file, simply deselect the **Use Log** option on the **Backup/Configuration** page of the Database Settings.
 

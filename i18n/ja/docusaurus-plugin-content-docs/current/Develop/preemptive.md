@@ -193,17 +193,17 @@ _コオペラティブ_ モードで実行された場合には、たとえマ�
 
 ### トリガー
 
-When a method uses a command that can call a trigger, the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+トリガーを呼び出すことのあるコマンドをメソッドが使用している場合、4Dコンパイラーはメソッドがスレッドセーフであるかどうかをチェックするために、トリガーがスレッドセーフかどうかを評価します:
 
 ```4d
- SAVE RECORD([Table_1]) //trigger on Table_1, if it exists, must be thread-safe
+ SAVE RECORD([Table_1]) // Table_1 にトリガーが存在する場合、トリガーはスレッドセーフでなければなりません
 ```
 
-Here is the list of commands that are checked at compilation time for trigger thread safety:
+以下は、トリガーがスレッドセーフであるかどうかがコンパイル時にチェックされるコマンドの一覧です:
 
-`SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`.
+`SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`
 
-If the table is passed dynamically, the compiler may sometimes not be able to find out which trigger it needs to evaluate. Here are some examples of such situations:
+テーブルが動的に渡された場合、コンパイラーはどのトリガーを評価すべきなのかが分からない場合があります。 以下はそのような状況の一例です:
 
 ```4d
  DEFAULT TABLE([Table_1])
@@ -212,26 +212,26 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
  SAVE RECORD(Table(myMethodThatReturnsATableNumber())->)
 ```
 
-In this case, all triggers are evaluated. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
+この場合、すべてのトリガーが評価されます。 スレッドセーフでないコマンドの使用が検出されたトリガーが 1つでもあれば、グループ全体がチェックに失敗し、メソッドはスレッドアンセーフと宣言されます。
 
-### Error-handling methods
+### エラー処理メソッド
 
-[Error-catching methods](../Concepts/error-handling.md) installed by the `ON ERR CALL` command must be thread-safe if they are likely to be called from a preemptive process. In order to handle this case, the compiler checks the thread safety property of error-catching project methods passed to the `ON ERR CALL` command during compilation and returns appropriate errors if they do not comply with preemptive execution.
+`ON ERR CALL` コマンドによって実装された [エラーキャッチメソッド](../Concepts/error-handling.md) は、プリエンプティブプロセスから呼び出される可能性が高いのであれば、スレッドセーフでなければなりません。 このような状況を管理するため、コンパイラーは `ON ERR CALL` コマンドに渡されたエラーキャッチプロジェクトメソッドのスレッドセーフプロパティをコンパイル時にチェックし、メソッドがプリエンプティブ実行に適応していない場合には適切なエラーを返します。
 
-Note that this checking is only possible when the method name is passed as a constant, and is not computed, as shown below:
+このチェックはメソッド名が定数として渡された場合にのみ可能であり、以下に示すような、計算された値の場合にはチェックされないという点に注意してください:
 
 ```4d
- ON ERR CALL("myErrMethod1") //will be checked by the compiler
- ON ERR CALL("myErrMethod"+String($vNum)) //will not be checked by the compiler
+ ON ERR CALL("myErrMethod1") // コンパイラーによってチェックされます
+ ON ERR CALL("myErrMethod"+String($vNum)) // コンパイラーによってチェックされません
 ```
 
-In addition, if an error-catching project method cannot be called at runtime (following a thread safety issue, or for any reason like "method not found"), the error -10532 "Cannot call error handling project method 'methodName'" is generated.
+これに加え、エラーキャッチプロジェクトメソッドをランタイムで呼び出せない場合 (スレッドセーフに関する問題がある、あるいは "メソッドが見つかりません" などの理由の場合)、エラー -10532 "'methodName'というエラーハンドルメソッドを呼び出す事ができません" が生成されます。
 
-### Pointers compatibility
+### ポインターの互換性
 
-A process can dereference a pointer to access the value of another process variable only if both processes are cooperative; otherwise, 4D will throw an error. In a preemptive process, if some 4D code tries to dereference a pointer to an interprocess variable, 4D will throw an error.
+あるプロセスにおいてポインターをデリファレンスし、別のプロセス変数の値へアクセスすることができますが、これは、両プロセスがともにコオペラティブである場合にかぎります。それ以外の場合、4D はエラーを生成します。 プリエンプティブプロセスにおいては、4Dコードがインタープロセス変数の値をポインター経由で照会しようとした場合、エラーが生成されます。
 
-Example with the following methods:
+以下のメソッドでそのような例を考えます:
 
 Method1:
 
@@ -246,28 +246,28 @@ Method2:
  $value:=$1->
 ```
 
-If either the process running Method1 or the process running Method2 is preemptive, then the expression `$value:=$1->` will throw an execution error.
+Method1、あるいは Method2 を実行するプロセスのどちらか一つがプリエンプティブであった場合、"$value:=$1->" という式は実行エラーを生成します。
 
-### DocRef document reference
+### DocRef 参照番号
 
-The use of DocRef type parameters (opened document reference, used or returned by `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) is limited to the following contexts:
+DocRef 参照番号 (開かれたドキュメントの参照番号。次のコマンドで使用、または戻り値として返されます: `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) の使用は次のコンテキストに限られます:
 
-- When called from a preemptive process, a `DocRef` reference is only usable from that preemptive process.
-- When called from a cooperative process, a `DocRef` reference is usable from any other cooperative process.
+- プリエンプティブプロセスからコールされた場合に生成される `DocRef` 参照は同プリエンプティブプロセスでのみ使用可能です。
+- コオペラティブプロセスからコールされた場合に生成される `DocRef` 参照は、別のコオペラティブプロセスでも使用可能です。
 
 ## 部分的なスレッドセーフ検証の無効化
 
-There may be some cases where you prefer that thread safety checking of commands not be applied to certain parts of code, for example when it contains thread-unsafe commands that you know to be never called.
+スレッドセーフではないが、実行されることもないと分かっているコマンドがコードに含まれている場合など、コードの一部をスレッドセーフ検証から除外したい場合があるかもしれません。
 
-To do this, you must surround the code to be excluded from command thread safety checking with the special directives `%T-` and `%T+` as comments. The `//%T-` comment disables thread safety checking and `//%T+` enables it again:
+特定のコードを検証対象から除外するには、コメント形式の専用ディレクティブ `%T-` および `%T+` でそのコードを挟みます。 `//%T-` は以降のコードを検証から除外し、`//%T+` は以降のコードに対する検証を有効に戻します:
 
 ```4d
-  // %T- to disable thread safety checking
+  // %T- 検証を無効にします
  
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
+  // スレッドセーフ検証から除外するコード
+ $w:=Open window(10;10;100;100) // 例
  
-  // %T+ to enable thread safety checking again for the rest of the method
+  // %T+ 検証を有効に戻します
 ```
 
-Of course, the 4D developer is responsible for the preemptive mode compatibility of the code between the deactivation and reactivation directives. Runtime errors will be generated if thread-unsafe code is executed in a preemptive thread.
+無効化および有効化用のディレクティブでコードを挟んだ場合、そのコードがスレッドセーフかどうかについては、開発者が熟知している必要があります。 プリエンプティブなスレッドでスレッドセーフでないコードが実行された場合には、ランタイムエラーが発生します。

@@ -136,7 +136,7 @@ Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of 
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-### Assigning files to picture or blob attributes
+### Atribuição de arquivos a atributos imagem ou blob
 
 You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
 
@@ -171,7 +171,7 @@ The file does not have to exist on disk at the time of assignment (no error is r
 
 :::tip
 
-4D loads images and data into a local cache. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+4D carrega imagens e dados em um cache local. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
 
 :::
 

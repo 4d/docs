@@ -62,7 +62,7 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
 
-The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
+O nome desses métodos deve começar com `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
 
 ![](../assets/en/Project/compilerWin3.png)
 
@@ -148,7 +148,7 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 </details>
 
-This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
+This setting allows you to select the processor family for which your 4D project must be natively compiled. O compilador 4D pode criar código nativo para duas famílias de processadores:
 
 - Os processadores **Intel/AMD** (todas as máquinas),
 - os processadores **Apple Silicon**.
@@ -255,7 +255,7 @@ Um ficheiro de erros pode conter três tipos de mensagens:
 
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
-- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. There are two cases in which the compiler reports a general error:
+- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. Há dois casos em que o compilador informa um erro geral:
     - Não foi possível determinar o tipo de dados de uma variável processo.
     - Dois tipos diferentes de objetos têm o mesmo nome.
 

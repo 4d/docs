@@ -103,7 +103,7 @@ Em *url*, passe o URL para onde pretende enviar o pedido. A sintaxe a utilizar �
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-Se omitir a parte do protocolo (`http://` ou `https://`), é enviado um pedido https.
+Se você omitir a parte do esquema (`http://` ou `https://`), será enviada uma solicitação https.
 
 Por exemplo, pode passar as seguintes cordas:
 
@@ -181,6 +181,87 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 | name        | Text | Nome utilizado para autenticação                               | indefinido |
 | senha       | Text | Senha utilizada para autenticação                              | indefinido |
 | method      | Text | Método utilizado para autenticação: "basic", "digest", "auto". | "auto"     |
+
+<!-- END REF -->
+
+<!-- REF #HTTP Parse message.Desc -->
+## HTTP Parse message
+
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v20 R4 | Adicionado |
+
+</details>
+
+<!-- REF #HTTP Parse message.Syntax -->**HTTP Parse message**( *data* : Text ) : Object<br/>**HTTP Parse message**( *data* : Blob ) : Object<!-- END REF -->
+
+
+<!-- REF #HTTP Parse message.Params -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                  |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
+| data       | Text, Blob | -> | Dados a serem analisados                                                                   |
+| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes|<!-- END REF -->
+
+|
+
+#### Descrição
+
+O comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+
+:::info
+
+HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+
+:::
+
+
+#### Exemplo
+
+In the following example, we parse the data from a text file containing HTTP requests.
+
+Aqui está o conteúdo do arquivo:
+
+```
+POST /batch/gmail/v1/ HTTP/1.1
+Accept-Encoding: gzip, deflate
+Authorization: Bearer xxxxxx
+Connection: Close
+Content-Length: 442
+Content-Type: multipart/mixed; boundary=batch_19438756D576A14ABA87C112F56B9396; charset=UTF-8
+Date: Wed, 29 Nov 2023 13:51:35 GMT
+Host: gmail.googleapis.com
+User-Agent: 4D/20.4.0
+
+
+--batch_19438756D576A14ABA87C112F56B9396
+Content-Type: application/http
+Content-ID: <item1>
+
+GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58689824c92?format=raw HTTP/1.1
+
+
+--batch_19438756D576A14ABA87C112F56B9396
+Content-Type: application/http
+Content-ID: <item2>
+
+GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?format=raw HTTP/1.1
+
+--batch_19438756D576A14ABA87C112F56B9396--
+```
+Para analisar o arquivo:
+
+```4d
+var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
+var $parsedMessage : Object:=HTTP Parse message($message)
+//$parsedMessage= {
+//headers:{"User-Agent":"4D/20.4.0",...},
+//parts:[{"contentType":"application/http","contentID":"item1",...}], 
+//requestLine:"POST /batch/gmail/v1/ HTTP/1.1"
+//}
+```
 
 <!-- END REF -->
 

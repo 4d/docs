@@ -1,11 +1,11 @@
 ---
 id: debugLogFiles
-title: Log files
+title: Fichiers journaux
 ---
 
-Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+Les applications 4D peuvent générer divers fichiers d'historique (ou "logs") qui sont utiles pour le débogage ou l'optimisation de leur exécution. Les journaux sont généralement démarrés ou arrêtés à l'aide des sélecteurs des commandes [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) et sont stockés dans le dossier [Logs](Project/architecture.md#logs) du projet.
 
-Les informations de l'historique doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers d'historique suivants :
+Les informations des journaux doivent être analysées pour détecter et corriger les problèmes. Cette section fournit une description complète des fichiers journaux suivants :
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
@@ -15,20 +15,20 @@ Les informations de l'historique doivent être analysées pour détecter et corr
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-* [ORDA requests log file](#orda-requests)
+* [Fichier journal des requêtes ORDA](#orda-requests)
 
-> Lorsqu'un fichier d'historique peut être généré soit sur 4D Server, soit sur le client distant, le mot " Server " est ajouté au nom du fichier d'historique côté serveur, par exemple " 4DRequestsLogServer.txt"
+> Lorsqu'un fichier journal peut être généré soit sur 4D Server, soit sur le client distant, le mot "Server " est ajouté au nom du fichier côté serveur, par exemple "4DRequestsLogServer.txt"
 
-Les fichiers de logs partagent certains champs, ce qui vous permet d'établir une chronologie et de faire des connexions entre les entrées lors du debugging :
+Les fichiers journaux partagent certains champs, ce qui vous permet d'établir une chronologie et de faire des connexions entre les entrées lors du débogage :
 
-* `sequence_number` : ce numéro est unique parmi tous les fichiers d'historique de débogage et est incrémenté à chaque nouvelle entrée, quel que soit le fichier d'historique, de manière à ce que vous puissiez connaître la séquence exacte des opérations.
+* `sequence_number` : ce numéro est unique parmi tous les fichiers journaux de débogage et est incrémenté à chaque nouvelle entrée, quel que soit le fichier journal, de manière à ce que vous puissiez connaître la séquence exacte des opérations.
 * `connection_uuid` : pour chaque process 4D créé sur un client 4D qui se connecte au serveur, cet UUID de connexion est stocké à la fois côté serveur et client. Il vous permet d'identifier facilement le client distant qui a lancé le process.
 
 ## 4DRequestsLog.txt
 
-Ce fichier de logs enregistre les requêtes standard envoyées par la machine du 4D Server, ou la machine à distance qui a exécuté la commande (requêtes web exclues).
+Ce fichier de log enregistre les requêtes standard envoyées par la machine du 4D Server, ou la machine à distance qui a exécuté la commande (hors requêtes web).
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 * sur le serveur :
 
@@ -43,7 +43,7 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 //côté distant
 ```
-> Cette instruction démarre également le fichier d'historique [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
+> Cette instruction démarre également le fichier [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt).
 
 #### En-têtes
 
@@ -59,19 +59,19 @@ Pour chaque requête, les champs suivants sont enregistrés :
 
 | Noms des champs                            | Description                                                                                                                                                                                                                                        |
 | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sequence_number                            | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                               |
+| sequence_number                            | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                     |
 | time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                       |
 | systemid                                   | ID système                                                                                                                                                                                                                                         |
 | component                                  | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                             |
-| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                                 |
-| request                                    | [C/S or ORDA request ID](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) or message string for SQL requests or `LOG EVENT` messages                                                                                      |
+| process\_info\_index                   | Correspond au champ "index" du journal 4DRequestsLog_ProcessInfo.txt, et permet de relier une demande à un process.                                                                                                                                |
+| request                                    | [ID de la requête C/S ou ORDA](https://github.com/4d/request-log-definitions/blob/master/RequestIDs.txt) ou message pour les requêtes SQL ou messages `LOG EVENT`                                                                                  |
 | bytes_in                                   | Nombre d'octets reçus                                                                                                                                                                                                                              |
 | bytes_out                                  | Nombre d'octets envoyés                                                                                                                                                                                                                            |
 | server\_duration &#124; exec\_duration | Dépend de l'endroit où l'historique est généré :<li>*server\_duration* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. Correspond au chemin B vers F dans l'image ci-dessous, OU</li><li>*exec\_duration* lorsqu'il est généré sur le serveur --Temps en microsecondes pris par le serveur pour traiter la requête. Correspond au chemin B vers F dans l'image ci-dessous.</li>                                                                                                                                                 |
 | write\_duration                          | Temps en microsecondes pour envoyer :<li>La requête (lorsqu'elle est exécutée sur le client). Correspond au chemin A vers B dans l'image ci-dessous.</li><li>La réponse (lorsqu'elle est exécutée sur le serveur). Correspond au chemin E vers F dans l'image ci-dessous.</li>                                                                                                                                                            |
 | task_kind                                  | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                |
 | rtt                                        | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. Correspond respectivement aux chemins A vers D et E vers H dans l'image ci-dessous.<li>Mesuré uniquement lorsque la couche réseau ServerNet est utilisée, retourne 0 lorsque l'ancienne couche réseau est utilisée.</li><li>Dans les versions antérieures à Windows 10 ou à Windows Server 2016, l'appel retournera la valeur 0.</li> |
-| extra                                      | Additional information related to the context, for example dataclass name and/or attribute name in case of ORDA request                                                                                                                            |
+| extra                                      | Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA                                                                                                   |
 
 Acheminement de la requête :
 
@@ -79,9 +79,9 @@ Acheminement de la requête :
 
 ## 4DRequestsLog_ProcessInfo.txt
 
-Ce fichier de logs enregistre des informations sur chaque process créé sur la machine du 4D Server, ou la machine à distance qui a exécuté la commande (requêtes web exclues).
+Ce fichier de log enregistre des informations sur chaque process créé sur la machine du 4D Server, ou la machine à distance qui a exécuté la commande (requêtes web exclues).
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 * sur le serveur :
 
@@ -108,29 +108,29 @@ Ce fichier commence avec les en-têtes suivants :
 
 Pour chaque process, les champs suivants sont enregistrés :
 
-| Noms des champs                   | Description                                                          |
-| --------------------------------- | -------------------------------------------------------------------- |
-| sequence_number                   | Numéro d'opération séquentiel et unique dans la session d'historique |
-| time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"         |
-| process\_info_index             | Numéro de process séquentiel et unique                               |
-| CDB4DBaseContext                  | UUID du contexte de base du composant DB4D                           |
-| systemid                          | ID système                                                           |
-| server\_process\_id           | ID du process sur le serveur                                         |
-| remote\_process\_id           | ID du process sur le client                                          |
-| process\_name                   | Nom du process                                                       |
-| cID                               | Identifiant de la connexion 4D                                       |
-| uID                               | Identifiant du client 4D                                             |
-| IP Client                         | Addresse IPv4/IPv6 du client                                         |
-| host_name                         | Nom d'hôte du client                                                 |
-| user_name                         | Nom de connexion utilisateur sur le client                           |
-| connection\_uuid                | Identifiant UUID de process de connexion                             |
-| server\_process\_unique\_id | ID unique du process sur le serveur                                  |
+| Noms des champs                   | Description                                                    |
+| --------------------------------- | -------------------------------------------------------------- |
+| sequence_number                   | Numéro d'opération séquentiel et unique dans la session de log |
+| time                              | Date et heure au format ISO 8601 : "YYYY-MM-DDTHH:MM:SS.mmm"   |
+| process\_info_index             | Numéro de process séquentiel et unique                         |
+| CDB4DBaseContext                  | UUID du contexte de base du composant DB4D                     |
+| systemid                          | ID système                                                     |
+| server\_process\_id           | ID du process sur le serveur                                   |
+| remote\_process\_id           | ID du process sur le client                                    |
+| process\_name                   | Nom du process                                                 |
+| cID                               | Identifiant de la connexion 4D                                 |
+| uID                               | Identifiant du client 4D                                       |
+| IP Client                         | Addresse IPv4/IPv6 du client                                   |
+| host_name                         | Nom d'hôte du client                                           |
+| user_name                         | Nom de connexion utilisateur sur le client                     |
+| connection\_uuid                | Identifiant UUID de process de connexion                       |
+| server\_process\_unique\_id | ID unique du process sur le serveur                            |
 
 ## HTTPDebugLog.txt
 
-Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parts du body peuvent également être enregistrées.
+Ce fichier journal enregistre chaque requête HTTP et chaque réponse en mode brut (raw). Les requêtes sont enregistrées dans leur totalité (en-têtes compris). Les parties body peuvent également être enregistrées.
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 ```4d
 
@@ -142,20 +142,20 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 
 Les champs suivants sont enregistrés pour Requête et Réponse :
 
-| Noms des champs | Description                                                          |
-| --------------- | -------------------------------------------------------------------- |
-| SocketID        | ID du socket utilisé pour la communication                           |
-| PeerIP          | Adresse IPv4 de l'hôte (client)                                      |
-| PeerPort        | Port utilisé par l'hôte (client)                                     |
-| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)         |
-| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication)    |
-| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique |
+| Noms des champs | Description                                                       |
+| --------------- | ----------------------------------------------------------------- |
+| SocketID        | ID du socket utilisé pour la communication                        |
+| PeerIP          | Adresse IPv4 de l'hôte (client)                                   |
+| PeerPort        | Port utilisé par l'hôte (client)                                  |
+| TimeStamp       | Horodatage en millisecondes (depuis le démarrage du système)      |
+| ConnectionID    | Connexion UUID (UUID du VTCPSocket utilisé pour la communication) |
+| SequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log    |
 
 ## 4DDebugLog.txt (standard)
 
-Ce fichier d'historique enregistre chaque évènement qui a lieu au niveau de la programmation 4D. Le mode standard offre une vue d'ensemble des évènements.
+Ce fichier journal enregistre chaque évènement qui a lieu au niveau de la programmation 4D. Le mode standard offre une vue d'ensemble des évènements.
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2)  
@@ -169,7 +169,7 @@ Les champs suivants sont enregistrés pour chaque évènement :
 
 | Colonne # | Description                                                                                                                      |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| 1         | Numéro d'opération séquentiel et unique dans la session d'historique                                                             |
+| 1         | Numéro d'opération séquentiel et unique dans la session de log                                                                   |
 | 2         | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                       |
 | 3         | ID process (p=xx) et ID unique process (puid=xx)                                                                                 |
 | 4         | Niveau de stack (pile)                                                                                                           |
@@ -180,7 +180,7 @@ Les champs suivants sont enregistrés pour chaque évènement :
 
 Ce fichier de logs enregistre chaque évènement au niveau de la programmation 4D sous un format compact avec des tabulations, qui inclut des informations supplémentaires par rapport au format standard.
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 ```4d
 SET DATABASE PARAMETER(Debug Log Recording;2+4)  
@@ -194,12 +194,12 @@ Les champs suivants sont enregistrés pour chaque évènement :
 
 | Colonne # | Noms des champs                 | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------- | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session d'historique                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 1         | sequence_number                 | Numéro d'opération séquentiel et unique dans la session de log                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | 2         | time                            | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 3         | ProcessID                       | ID du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | 4         | unique_processID                | ID unique du process                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | 5         | stack_level                     | Niveau de stack (pile)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 6         | operation_type                  | Type d'opération enregistrée. Il peut s'agir d'une valeur absolue :<p><ol><li>Command</li><li>Méthode (méthode projet, méthode base, etc.)</li><li>Message (sent by [LOG EVENT](https://doc.4d.com/4dv20/help/command/en/page667.html) command only)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task (Process)</li><li>Méthode membre (méthode attachée à une collection ou un objet)</li></ol></p>Lors de la fermeture d'un niveau de stack, les colonnes `operation_type`, `operation` et `operation_parameters` ont la même valeur que le niveau de stack d'ouverture enregistré dans la colonne `stack_opening_sequence_number`. Par exemple :<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>Les 1re et 2e lignes ouvrent un niveau de stack, les 3e et 4e lignes ferment un niveau de stack. Les valeurs des colonnes 6, 7 et 8 sont répétées dans la ligne du niveau de stack de fermeture. La colonne 10 contient les numéros de séquence d'ouverture du niveau de stack, c'est-à-dire 122 pour la 3e ligne et 121 pour la 4e. |
+| 6         | operation_type                  | Type d'opération enregistrée. Il peut s'agir d'une valeur absolue :<p><ol><li>Command</li><li>Méthode (méthode projet, méthode base, etc.)</li><li>Message (envoyé par la commande [LOG EVENT](https://doc.4d.com/4dv20/help/command/fe/page667.html) uniquement)</li><li>PluginMessage</li><li>PluginEvent</li><li>PluginCommand</li><li>PluginCallback</li><li>Task (Process)</li><li>Méthode membre (méthode attachée à une collection ou un objet)</li></ol></p>Lors de la fermeture d'un niveau de stack, les colonnes `operation_type`, `operation` et `operation_parameters` ont la même valeur que le niveau de stack d'ouverture enregistré dans la colonne `stack_opening_sequence_number`. Par exemple :<p><ol><li>121  15:16:50:777  5  8  1  2 CallMethod Parameters 0</li><li>122  15:16:50:777  5  8  2  1 283  0</li><li>123  15:16:50:777  5  8  2  1 283  0 122 3</li><li>124  15:16:50:777  5  8  1  2 CallMethod Parameters 0 121 61</li></ol></p>Les 1re et 2e lignes ouvrent un niveau de stack, les 3e et 4e lignes ferment un niveau de stack. Les valeurs des colonnes 6, 7 et 8 sont répétées dans la ligne du niveau de stack de fermeture. La colonne 10 contient les numéros de séquence d'ouverture du niveau de stack, c'est-à-dire 122 pour la 3e ligne et 121 pour la 4e. |
 | 7         | operation                       | Peut représenter (en fonction du type d'opération) :<li>un ID de commande du langage (lorsque type=1)</li><li>un nom de méthode (lorsque type=2)</li><li>une combinaison de pluginIndex;pluginCommand (lorsque type=4, 5, 6 ou 7). Peut contenir des éléments tels que '3;2'</li><li>un UUID de connexion de process (lorsque type=8)</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 8         | operation_parameters            | Paramètres passés aux commandes, méthodes ou aux plugins                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 9         | form_event                      | Evénement formulaire, le cas échéant ; vide dans les autres cas (par conséquent cette colonne est utilisée lorsque le code est exécuté dans une méthode formulaire ou méthode objet)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -208,9 +208,9 @@ Les champs suivants sont enregistrés pour chaque évènement :
 
 ## 4DDiagnosticLog.txt
 
-Ce fichier d'historique enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. Vous pouvez inclure des informations personnalisées dans ce fichier à l'aide de la commande [LOG EVENT](https://doc.4d.com/4dv19/help/command/fr/page667.html).
+Ce fichier journal enregistre de nombreux événements liés au fonctionnement interne de l'application et est lisible par un humain. Vous pouvez inclure des informations personnalisées dans ce fichier à l'aide de la commande [LOG EVENT](https://doc.4d.com/4dv19/help/command/fr/page667.html).
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 ```4d
  SET DATABASE PARAMETER(Diagnostic log recording;1) //lancer l'enregistrement
@@ -218,30 +218,30 @@ Pour lancer cet historique :
 
 Les champs suivants sont enregistrés pour chaque évènement :
 
-| Nom des champs     | Description                                                          |
-| ------------------ | -------------------------------------------------------------------- |
-| sequenceNumber     | Numéro d'opération séquentiel et unique dans la session d'historique |
-| timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)           |
-| loggerID           | Optionnel                                                            |
-| componentSignature | Optionnel - signature de composant interne                           |
-| messageLevel       | Info, Attention, Erreur                                              |
-| message            | Description de la saisie de journal                                  |
+| Nom des champs     | Description                                                    |
+| ------------------ | -------------------------------------------------------------- |
+| sequenceNumber     | Numéro d'opération séquentiel et unique dans la session de log |
+| timestamp          | Date et heure au format ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)     |
+| loggerID           | Optionnel                                                      |
+| componentSignature | Optionnel - signature de composant interne                     |
+| messageLevel       | Info, Attention, Erreur                                        |
+| message            | Description de la saisie de journal                            |
 
 En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.
 
 ### Niveaux du journal de diagnostic
 
-The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+Le fichier *4DDiagnosticLog.txt* peut enregistrer différents niveaux de messages, de `ERROR` (le plus important) à `TRACE` (le moins important). Par défaut, le niveau `INFO` est défini, ce qui signifie que le fichier n'enregistre que les événements importants, y compris les erreurs et les résultats inattendus (voir ci-dessous).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+Vous pouvez sélectionner le niveau des messages à l'aide du sélecteur `Diagnostic log level` de la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), en fonction de vos besoins. Lorsque vous sélectionnez un niveau, les niveaux supérieurs (qui sont plus importants) sont implicitement sélectionnés également. Les niveaux suivants sont disponibles :
 
-| Constante   | Description                                                          | When selected, includes                                       |
+| Constante   | Description                                                          | Lorsque sélectionné, inclut                                   |
 | ----------- | -------------------------------------------------------------------- | ------------------------------------------------------------- |
 | `Log error` | Numéro d'opération séquentiel et unique dans la session d'historique | `Log error`                                                   |
 | `Log warn`  | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             | `Log error`, `Log warn`                                       |
 | `Log info`  | ID du Process 4D                                                     | `Log error`, `Log warn`, `Log info`                           |
 | `Log debug` | ID unique du process                                                 | `Log error`, `Log warn`, `Log info`, `Log debug`              |
-| `Log trace` | Other internal information (for 4D technical services)               | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+| `Log trace` | Autres informations internes (pour les services techniques de 4D)    | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
 
 Voici un exemple :
 
@@ -253,13 +253,13 @@ SET DATABASE PARAMETER (Diagnostic log level; Log trace)
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, et 4DIMAPLog.txt
 
-Ces fichiers d'historique enregistrent chaque échange entre l'application 4D et le serveur de mail (SMTP, POP3, IMAP) initialisé par les commandes suivantes :
+Ces fichiers journaux enregistrent chaque échange entre l'application 4D et le serveur de mail (SMTP, POP3, IMAP) initialisé par les commandes suivantes :
 
 * SMTP - [SMTP New transporter](API/SMTPTransporterClass.md#smtp-new-transporter)
 * POP3 - [POP3 New transporter](API/POP3TransporterClass.md#pop3-new-transporter)
 * IMAP  - [IMAP New transporter](API/IMAPTransporterClass.md#imap-new-transporter)
 
-Les fichiers d'historique peuvent être générés en deux versions :
+Les fichiers peuvent être générés en deux versions :
 
 * une version classique :
   * fichiers nommés 4DSMTPLog.txt, 4DPOP3Log.txt, ou 4DIMAPLog.txt
@@ -267,12 +267,12 @@ Les fichiers d'historique peuvent être générés en deux versions :
   * avec un recyclage automatique tous les 10 MB
   * conçue pour des fonctions de débogage habituelles
 
- Pour lancer cet historique :
+ Pour démarrer ce journal :
 
 ```4d
-SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
-SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
-SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+SET DATABASE PARAMETER(SMTP Log;1) //démarrer le journal SMTP
+SET DATABASE PARAMETER(POP3 Log;1) //démarrer le journal POP3
+SET DATABASE PARAMETER(IMAP Log;1) //démarrer le journal IMAP
 ```
 
 > 4D Server : Cliquez sur le bouton **Démarrer les journaux de requêtes et de débogage** dans la [Page Maintenance](ServerWindow/maintenance.md) de la fenêtre d'administration de 4D Server.
@@ -280,11 +280,11 @@ SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
    Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 * une version étendue :
-  * attachment(s) included no automatic recycling
+  * pièce(s) jointe(s) inclue(s) pas de recyclage automatique
   * nom personnalisé
-  * conçue à des fins spécifiques
+  * réservée à des fins spécifiques
 
- Pour lancer cet historique :
+ Pour démarrer ce journal :
 
  ```4d
  $server:=New object
@@ -306,56 +306,56 @@ SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
 
 Pour chaque requête, les champs suivants sont enregistrés :
 
-| Colonne # | Description                                                          |
-| --------- | -------------------------------------------------------------------- |
-| 1         | Numéro d'opération séquentiel et unique dans la session d'historique |
-| 2         | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             |
-| 3         | ID du Process 4D                                                     |
-| 4         | ID unique du process                                                 |
-| 5         | <ul><li>Informations sur le lancement d'une session SMTP, POP3 ou IMAP, y compris le nom d'hôte du serveur, le numéro de port TCP utilisé pour se connecter au serveur SMTP, POP3 ou IMAP et l'état TLS, ou</li><li>données échangées entre le serveur et le client, en commençant par "S <" (données reçues depuis le serveur SMTP, POP3 ou IMAP) ou "C>" (données envoyées par le client IMAP) : liste des modes d'authentification envoyés par le serveur et mode d'authentification sélectionné, toute erreur signalée par le serveur SMTP, POP3 ou IMAP, les informations sur l'en-tête de l'e-mail envoyé (version standard uniquement) et si l'e-mail est sauvegardé sur le serveur, ou</li><li>Les informations sur la clôture de la session IMAP.</li></ul>                                           |
+| Colonne # | Description                                                    |
+| --------- | -------------------------------------------------------------- |
+| 1         | Numéro d'opération séquentiel et unique dans la session de log |
+| 2         | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)       |
+| 3         | ID du Process 4D                                               |
+| 4         | ID unique du process                                           |
+| 5         | <ul><li>Informations sur le lancement d'une session SMTP, POP3 ou IMAP, y compris le nom d'hôte du serveur, le numéro de port TCP utilisé pour se connecter au serveur SMTP, POP3 ou IMAP et l'état TLS, ou</li><li>données échangées entre le serveur et le client, en commençant par "S <" (données reçues depuis le serveur SMTP, POP3 ou IMAP) ou "C>" (données envoyées par le client IMAP) : liste des modes d'authentification envoyés par le serveur et mode d'authentification sélectionné, toute erreur signalée par le serveur SMTP, POP3 ou IMAP, les informations sur l'en-tête de l'e-mail envoyé (version standard uniquement) et si l'e-mail est sauvegardé sur le serveur, ou</li><li>Les informations sur la clôture de la session IMAP.</li></ul>                                     |
 
-## ORDA requests
+## Requêtes ORDA
 
-ORDA requests logs can record each ORDA request and server response. Two ORDA requests logs are available:
+Les journaux des requêtes ORDA peuvent enregistrer chaque requête ORDA et chaque réponse du serveur. Deux journaux de requêtes ORDA sont disponibles :
 
-- a client-side ORDA request log, in .txt format
-- a server-side ORDA request log, in .jsonl format
+- un journal des requêtes ORDA côté client, au format .txt
+- un journal des requêtes ORDA côté serveur, au format .jsonl
 
-### Client-side
+### Côté client
 
-The client-side ORDA log records each ORDA request sent from a remote machine. You can direct log information to memory or to a .txt file on disk of the remote machine. Vous pouvez choisir le nom et l'emplacement de ce fichier journal.
+Le journal ORDA côté client enregistre chaque requête ORDA envoyée depuis une machine distante. Vous pouvez diriger les informations du journal vers la mémoire ou vers un fichier .txt sur le disque de la machine distante. Vous pouvez choisir le nom et l'emplacement de ce fichier journal.
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 ```4d
-    //on a remote machine
+    //sur une machine distante
 SET DATABASE PARAMETER(Client Log Recording;1)  
 ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //can be also sent to memory
+    //peut également être envoyé en mémoire
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
 :::note
 
-Triggering the client-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` field.
+Il n'est pas obligatoire de démarrer le fichier [4DRequestsLog.txt](#4drequestslogtxt) côté client à l'aide de `SET DATABASE PARAMETER`. Il est toutefois nécessaire si vous souhaitez enregistrer le champ unique `sequenceNumber`.
 
 :::
 
 
 Les champs suivants sont enregistrés pour chaque requête :
 
-| Noms des champs | Description                                                          | Exemple                                                   |
-| --------------- | -------------------------------------------------------------------- | --------------------------------------------------------- |
-| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique | 104                                                       |
-| url             | Request URL                                                          | "rest/Persons(30001)"                                     |
-| startTime       | Date et heure de début au format ISO 8601                            | "2019-05-28T08:25:12.346Z"                                |
-| endTime         | Date et heure de fin au format ISO 8601                              | "2019-05-28T08:25:12.371Z"                                |
-| duration        | Client processing duration in milliseconds (ms)                      | 25                                                        |
-| response        | Objet réponse du serveur                                             | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| Noms des champs | Description                                                    | Exemple                                                   |
+| --------------- | -------------------------------------------------------------- | --------------------------------------------------------- |
+| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log | 104                                                       |
+| url             | URI de la requête                                              | "rest/Persons(30001)"                                     |
+| startTime       | Date et heure de début au format ISO 8601                      | "2019-05-28T08:25:12.346Z"                                |
+| endTime         | Date et heure de fin au format ISO 8601                        | "2019-05-28T08:25:12.371Z"                                |
+| duration        | Durée du traitement du client en millisecondes (ms)            | 25                                                        |
+| response        | Objet réponse du serveur                                       | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
 
 #### Exemple
 
-Here is an example of a client-side ORDA log file record:
+Voici un exemple d'enregistrement d'un fichier journal ORDA côté client :
 
 ```json
     {
@@ -371,14 +371,14 @@ Here is an example of a client-side ORDA log file record:
     }
 ```
 
-### Server-side
+### Côté serveur
 
-The server-side ORDA log records each ORDA request processed by the server, as well as the server response (optional). Log information is saved in a .jsonl file on the server machine disk (by default, *ordaRequests.jsonl*).
+Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le serveur, ainsi que la réponse du serveur (facultatif). Les informations du journal sont enregistrées dans un fichier .jsonl sur le disque de la machine serveur (par défaut, *ordaRequests.jsonl*).
 
-Pour lancer cet historique :
+Pour lancer ce journal :
 
 ```4d
-    //on the server
+    //sur le serveur
 SET DATABASE PARAMETER(4D Server log recording;1)
 ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
     //srl... parameter is optional 
@@ -387,27 +387,27 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 
 :::note
 
-Triggering the server-side [4DRequestsLog.txt](#4drequestslogtxt) using `SET DATABASE PARAMETER` is not mandatory. However, it is required if you want to log the unique `sequenceNumber` and the `duration` fields.
+Il n'est pas obligatoire de démarrer le fichier [4DRequestsLog.txt](#4drequestslogtxt) côté serveur à l'aide de `SET DATABASE PARAMETER`. Toutefois, il est nécessaire si vous souhaitez enregistrer les champs uniques `sequenceNumber` et `duration`.
 
 :::
 
 Les champs suivants sont enregistrés pour chaque requête :
 
-| Noms des champs | Description                                                                                                   | Exemple                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session d'historique                                          | 104                                                       |
-| url             | Request URL                                                                                                   | "rest/Persons(30001)"                                     |
-| startTime       | Date et heure de début au format ISO 8601                                                                     | "2019-05-28T08:25:12.346Z"                                |
-| duration        | Server processing duration in microseconds (µ)                                                                | 2500                                                      |
-| response        | Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
-| ipAddress       | User IP address                                                                                               | "192.168.1.5"                                             |
-| userName        | Name of the 4D user                                                                                           | "henry"                                                   |
-| systemUserName  | Login name of the user on the machine                                                                         | "hsmith"                                                  |
-| machineName     | Name of the user machine                                                                                      | "PC of Henry Smith"                                       |
+| Noms des champs | Description                                                                                                            | Exemple                                                   |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| sequenceNumber  | Numéro d'opération séquentiel et unique dans la session de log                                                         | 104                                                       |
+| url             | URI de la requête                                                                                                      | "rest/Persons(30001)"                                     |
+| startTime       | Date et heure de début au format ISO 8601                                                                              | "2019-05-28T08:25:12.346Z"                                |
+| duration        | Durée de traitement du serveur en microsecondes (µ)                                                                    | 2500                                                      |
+| response        | Objet de réponse du serveur, peut être configuré dans [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) | {"status":200,"body":{"__entityModel":"Persons",\[...]}} |
+| ipAddress       | Adresse IP utilisateur                                                                                                 | "192.168.1.5"                                             |
+| userName        | Nom de l'utilisateur 4D                                                                                                | "henry"                                                   |
+| systemUserName  | Login de l'utilisateur sur la machine                                                                                  | "hsmith"                                                  |
+| machineName     | Nom de la machine de l'utilisateur                                                                                     | "PC de Henry Smith                                        |
 
 #### Exemple
 
-Here is an example of a server-side ORDA log record:
+Voici un exemple d'enregistrement ORDA côté serveur :
 
 ```json
    {
@@ -435,29 +435,29 @@ Vous pouvez utiliser un **fichier de configuration de log** pour gérer facileme
 
 ### Activation du fichier
 
-There are several ways to enable the log configuration file, depending on your configuration:
+Il existe plusieurs façons d'activer le fichier de configuration du journal, en fonction de votre configuration :
 
-- **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
-- **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
-- **a built application**: the file must be named `logConfig.json` and copied in the following folder:
+- **4D Server avec interface** : vous pouvez ouvrir la page Maintenance et cliquer sur le bouton [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file), puis sélectionner le fichier. Dans ce cas, vous pouvez utiliser n'importe quel nom pour le fichier de configuration. Il est immédiatement activé sur le serveur.
+- **un projet interprété ou compilé** : le fichier doit être nommé `logConfig.json` et copié dans le dossier [Settings](../Project/architecture.md#settings-1) du projet (situé au même niveau que le dossier [`Project`](../Project/architecture.md#project-folder)). Il est activé au démarrage du projet (uniquement sur le serveur en client/serveur).
+- **une application générée** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
     * Windows : `Users\[userName]\AppData\Roaming\[application]`
     * macOS : `/Users/[userName]/Library/ApplicationSupport/[application]`
-- **all projects with a stand-alone or remote 4D**: the file must be named `logConfig.json` and copied in the following folder:
+- **tous projets avec un 4D monoposte ou distant** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
     * Windows: `Users\[userName]\AppData\Roaming\4D`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D`
-- **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
+- **tous projets avec 4D Server** : le fichier doit être nommé `logConfig.json` et copié dans le dossier suivant :
     * Windows: `Users\[userName]\AppData\Roaming\4D Server`
     * macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
 
 :::note
 
-If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
+Si un fichier `logConfig.json` est installé à la fois dans les dossiers Settings et AppData/Library, le fichier du dossier Settings aura la priorité.
 
 :::
 
 ### Description du fichier JSON
 
-The log configuration file is a `.json` file that must comply with the following json schema:
+Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :
 
 ```json
 {

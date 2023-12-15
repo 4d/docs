@@ -84,7 +84,7 @@ If the method has also the [**Shared by components and host database**](../Proje
 
 :::info Recordatorio
 
-Preemptive execution is only available in compiled mode.
+La ejecución en modo apropiativo solo está disponible en modo compilado.
 
 :::
 
@@ -114,8 +114,8 @@ Por ejemplo, considere los siguientes métodos proyecto:
 ```
 
 ```4d
-  //CallDial project method
- var $vName : Text
+  //Método proyecto CallDial
+ var $vName : Texto
  MyDialog
 ```
 
@@ -188,7 +188,7 @@ Since they are "external" accesses, calls to user interface objects such as form
 The only possible accesses to the user interface from a preemptive thread are:
 
 - [Diálogo de error estándar](../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). El botón **Rastrear** está desactivado.
-- Standard progress indicators
+- Indicadores de progreso estándar
 - Diálogos `ALERT`, `Request` y `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
 
 ### Triggers
@@ -203,7 +203,7 @@ Here is the list of commands that are checked at compilation time for trigger th
 
 `SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`.
 
-If the table is passed dynamically, the compiler may sometimes not be able to find out which trigger it needs to evaluate. Here are some examples of such situations:
+If the table is passed dynamically, the compiler may sometimes not be able to find out which trigger it needs to evaluate. Estos son algunos ejemplos de estas situaciones:
 
 ```4d
  DEFAULT TABLE([Table_1])
@@ -214,7 +214,7 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
 
 En este caso, se evalúan todos los triggers. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
 
-### Error-handling methods
+### Métodos de gestión de errores
 
 [Error-catching methods](../Concepts/error-handling.md) installed by the `ON ERR CALL` command must be thread-safe if they are likely to be called from a preemptive process. In order to handle this case, the compiler checks the thread safety property of error-catching project methods passed to the `ON ERR CALL` command during compilation and returns appropriate errors if they do not comply with preemptive execution.
 

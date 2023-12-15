@@ -372,7 +372,7 @@ As colunas booleanas também podem ser apresentadas como menus pop-up. Neste cas
 
 | Nome        | Tipo de dados | Valores possíveis                                  |
 | ----------- | ------------- | -------------------------------------------------- |
-| controlType | string        | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**colunas booleanas**: "checkbox" (padrão) ou "popup"</li> |
+| controlType | string        | <li>**número de colunas**: "automatic" (padrão) ou "checkbox"</li><li>**colunas booleanas**: "checkbox" (padrão) ou "popup"</li> |
 
 #### Objectos suportados
 

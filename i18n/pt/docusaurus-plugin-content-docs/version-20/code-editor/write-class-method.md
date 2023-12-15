@@ -203,7 +203,7 @@ Tags are displayed in their appearing order inside the method/class.
 
 To display the tags of a method or class in alphabetical order, do one of the following:
 
-- **right-click** the dropdown tool
+- **Clique direito** na ferramenta suspensa
 - hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
 
 > As etiquetas em funções movem-se com os seus itens pais.
@@ -478,7 +478,7 @@ The search carried out is of the "Find Next" type in the current code editor win
 The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. Por exemplo, as maiúsculas e minúsculas devem corresponder.
 
 
-### Bookmark All
+### Marcar tudo
 
 The **Edit > Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. Deste modo, é fácil identificar todos os resultados da pesquisa. For more information about bookmarks, refer to [Bookmarks](#bookmarks).
 

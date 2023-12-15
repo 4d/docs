@@ -9,7 +9,7 @@ Uma vez que o ORDA é baseado em objectos, a sua utilização requer conheciment
 
 The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
-This example will use the following simple 4D database structure:
+Este exemplo utilizará a seguinte estrutura de banco de dados 4D simple:
 
 ![](../assets/en/ORDA/struc.png)
 
@@ -35,7 +35,7 @@ ds. Company.city //returns the name of the city
 
 You have also noticed the extra `hires` property in the ds. Company dataclass. Não corresponde a um campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
-![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
+![](../assets/en/ORDA/struc2s.png) *Nome da relação conforme definido no Inspetor*
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 

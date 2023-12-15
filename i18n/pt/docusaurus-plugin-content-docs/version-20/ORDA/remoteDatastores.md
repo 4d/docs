@@ -51,7 +51,7 @@ ORDA features related to entity locking and transaction are managed at process l
 *   Os bloqueios nas entidades são removidos e as transações são anuladas:
     *   quando o processo é eliminado.
     *   quando a sessão é encerrada no servidor
-    *   when the session is killed from the server administration window.
+    *   quando a sessão é encerrada na janela de administração do servidor.
 
 ### Fechamento das sessões
 

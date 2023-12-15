@@ -575,7 +575,7 @@ La función `.getGlobalStamp()` <!-- REF #DataStoreClass.getGlobalStamp().Summar
 
 :::info
 
-This function can only be used with a local datastore, on 4D Server or 4D single-user.
+Esta función sólo puede utilizarse con un datastore local, en 4D Server o 4D monopuesto.
 
 :::
 
@@ -1019,7 +1019,7 @@ La función `.setGlobalStamp()` <!-- REF #DataStoreClass.setGlobalStamp().Summar
 
 :::info
 
-This function can only be used with a local datastore, on 4D Server or 4D single-user.
+Esta función sólo puede utilizarse con un datastore local, en 4D Server o 4D monopuesto.
 
 :::
 
@@ -1033,7 +1033,7 @@ El siguiente código define el marcador de modificación global:
 
 ```4d
 var $newValue: Real
-$newValue:=ReadValueFrom //get a new value
+$newValue:=ReadValueFrom //obtener un nuevo valor
 ds.setGlobalStamp($newValue)
 ```
 

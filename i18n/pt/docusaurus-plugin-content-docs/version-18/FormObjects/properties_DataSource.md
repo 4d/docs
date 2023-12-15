@@ -52,7 +52,7 @@ Associa uma lista de opções a um objeto. It can be a choice list name (a list 
 
 ## Lista de opções (lista estática)
 
-List of static values to use as labels for the tab control object.
+Lista de valores estáticos a serem usados como etiquetas para o objeto de controle de tabulação.
 
 #### Gramática JSON
 
@@ -62,7 +62,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controles das Abas](tabControl.md)
 
 ---
 

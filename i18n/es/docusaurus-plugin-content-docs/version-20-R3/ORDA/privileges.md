@@ -62,19 +62,19 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 La definición de permisos requiere ser coherente, en particular:
 
 - los permisos **update** y **drop** también necesitan el permiso **read** (pero **create** no lo necesita)
-- **promote** permission also need **describe** permission.
+- el permiso **promote** también necesita el permiso **describe**.
 
 
 
 ## Privilegios y roles
 
-A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
+Un **privilegio ** es la capacidad técnica de ejecutar **acciones ** en **recursos **, mientras que un **rol** es un privilegio publicado para ser utilizado por un administrador. Básicamente, un rol reúne varios privilegios para definir un perfil de usuario empresarial. Por ejemplo, "manageInvoices" podría ser un privilegio mientras que "secretary" podría ser un rol (que incluye "manageInvoices" y otros privilegios).
 
-A privilege or a role can be associated to several "action + resource" combinations. Se pueden asociar varios privilegios a una acción. Un privilegio puede incluir otros privilegios.
+Un privilegio o un rol pueden asociarse a varias combinaciones "acción + recurso". Se pueden asociar varios privilegios a una acción. Un privilegio puede incluir otros privilegios.
 
 - Usted **crea** privilegios y/o roles en el archivo `roles.json` (ver abajo). You **configure** their scope by assigning them to permission action(s) applied to resource(s).
 
-- You **allow** privileges and/or roles to every user session using the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function of the `Session` class.
+- Usted **permite** privilegios y/o roles a cada sesión de usuario utilizando la función [`.setPrivileges()`](../API/SessionClass.md#setprivileges) de la clase `Session`.
 
 
 ### Ejemplo

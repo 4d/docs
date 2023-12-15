@@ -5,15 +5,15 @@ title: Qodly Studio
 
 :::caution Vista previa para desarrolladores
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. No debe utilizarse en producción.
+Qodly Studio en 4D se encuentra actualmente en la fase **Developer Preview**. No debe utilizarse en producción.
 
 :::
 
 **Qodly Studio** forma parte de la **plataforma Qodly**, dedicada al desarrollo de aplicaciones web profesionales diseñadas, probadas y publicadas íntegramente en Qodly Cloud.
 
-As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+A partir de 4D v20 R2, puede utilizar Qodly Studio directamente desde 4D para crear interfaces web modernas y sofisticadas que puede integrar fácilmente a sus proyectos 4D existentes y desplegar **in situ**.
 
-With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
+Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se familiarizará con el concepto de fuentes de datos y aprenderá a:
 
 - crear formularios web colocando componentes en una página
 - mapear componentes a datos
@@ -22,7 +22,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 :::info
 
-The use of Qodly Studio in 4D requires a specific license. Qodly Studio options and menu items won't appear if the license is not activated.
+El uso de Qodly Studio en 4D requiere una licencia específica. Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
 
 :::
 
@@ -44,99 +44,99 @@ La resolución recomendada es 1920x1080.
 
 - Desarrollo: 4D v20 R2 o superior
 - Despliegue: 4D Server v20 R2 o superior
-- Qodly Studio only works with 4D projects (binary databases are not supported).
+- Qodly Studio solo funciona con proyectos 4D (no soporta bases de datos binarias).
 
 
 ### Acceso a Qodly Studio
 
 Por defecto, no se permite el acceso a Qodly Studio.
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+Qodly Studio es servido por el [servidor web WebAdmin](../Admin/webAdmin.md) y muestra datos de proyectos 4D gestionados por el [servidor web 4D](webServer.md).
 
-To enable access to Qodly Studio, you must explicitly allow it at two levels:
+Para permitir el acceso a Qodly Studio, debe permitirlo explícitamente en dos niveles:
 
 * a nivel 4D (4D o 4D Server)
 * a nivel del proyecto
 
-If one of the two levels (or both) are not enabled, access to Qodly Studio is denied (a 403 page is returned).
+Si uno de los dos niveles (o ambos) no están habilitados, se niega el acceso a Qodly Studio (se devuelve una página 403).
 
-#### A nivel 4D
+#### En nivel 4D
 
-As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
+Como primer nivel de seguridad, necesita [permitir el acceso a Qodly Studio en el servidor web WebAdmin](../Admin/webAdmin.md#enable-access-to-qodly-studio).
 
-This setting applies to the 4D application (4D or 4D Server) on the host machine. All projects opened with that 4D application take this setting into account.
+Esta configuración se aplica a la aplicación 4D (4D o 4D Server) en la máquina local. Todos los proyectos abiertos con esa aplicación 4D tienen en cuenta esta configuración.
 
-Keep this option unchecked if you want to make sure no access to Qodly Studio is allowed on the application.
+Mantenga esta opción desmarcada si desea asegurarse de que no se permite el acceso a Qodly Studio en la aplicación.
 
-Check this option to make it possible to access Qodly Studio. However, you still need to enable it at every project level.
+Marque esta opción para poder acceder a Qodly Studio. Sin embargo, sigue siendo necesario activarla en cada nivel del proyecto.
 
-Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Además, puede [configurar el puerto HTTP/HTTPS del servidor web WebAdmin utilizado](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
 :::note
 
-After any change to these settings, you must [restart the WebAdmin web server](../Admin/webAdmin.md#start-and-stop) for the new configuration to be effective.
+Después de cualquier cambio en estos parámetros, debe [reiniciar el servidor web WebAdmin](../Admin/webAdmin.md#start-and-stop) para que la nueva configuración sea efectiva.
 
 :::
 
 #### A nivel del proyecto
 
-After you have enabled access to Qodly Studio at the 4D level, you need to explicitly designate every project that can be accessed. The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio).
+Después de haber habilitado el acceso a Qodly Studio en el nivel 4D, es necesario designar explícitamente cada proyecto al que se puede acceder. La opción **Enable access to Qodly Studio** debe estar habilitada en la página [Funcionalidades Web de los parámetros de la aplicación 4D](../settings/web.md#enable-access-to-qodly-studio).
 
-Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
+Tenga en cuenta que los [parámetros de usuario](../settings/overview.md) pueden definirse a varios niveles y que se aplican prioridades.
 
 
-### Activando autenticación
+### Activando la autenticación
 
-Authentication on the WebAdmin web server is granted using an access key. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. Para más detalles, consulte [Llave de acceso](../Admin/webAdmin.md#access-key).
 
 ### Activación del renderizado
 
-To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
+Para habilitar el renderizado de los webforms que se crean en Qodly Studio, se deben configurar las siguientes opciones.
 
-* The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated
-* The [4D web server](webServer.md) must be running
+* El proyecto 4D debe tener activada la opción **Parámetros** > **Web** > **Funcionalidades Web** > [**Exponer como servidor REST**](../settings/web.md#exposed-as-rest-server)
+* El [servidor web 4D](webServer.md) debe estar en ejecución
 
-When rendering webforms in the Web Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Al renderizar webforms en el Web Studio, el renderizador se conectará al servidor web 4D a través de HTTP o HTTPS, dependiendo de la configuración, siguiendo el mismo patrón de conexión HTTP/HTTPS que para el [servidor web WebAdmin](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+Consulte [esta página](https://developer.qodly.com/docs/studio/rendering) para obtener información sobre cómo renderizar formularios web en Qodly.
 
 :::
 
-Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
+Tenga en cuenta que cuando presione el botón "Vista previa en una nueva pestaña", se abrirá una pestaña en `IP:port/$lib/renderer/?w=WebFormName` en su máquina.
 
-Keep in mind that the Qodly Web Studio runs through the 4D WebAdmin web server. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
+Tenga en cuenta que Qodly Web Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Web Studio como desarrollador, incluso cuando previsualiza un formulario web en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
-However, webform rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+Sin embargo, el renderizado del formulario web ocurre fuera de 4D Web Studio, y es servido por el servidor web estándar de 4D. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Consulte [Funciones expuestas frente a no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exposición de tablas](../REST/configuration.md#exposing-tables) para obtener más información sobre cómo exponer activos.
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are hidden if the configuration options are not activated.
+Los [botones del renderizador](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) se ocultan si las opciones de configuración no están activadas.
 
 :::
 
 ### Servidor WebAdmin y despliegue
 
-For deployment, the WebAdmin server is not necessary. End-user access to your web application made with Qodly Studio is based on the 4D REST protocol, and as such, it works as through a conventional 4D remote application.
+Para el despliegue, el servidor WebAdmin no es necesario. El acceso del usuario final a su aplicación web realizada con Qodly Studio se basa en el protocolo 4D REST, y como tal, funciona como a través de una aplicación remota 4D convencional.
 
 
 ### Uso métodos proyecto
 
-We recommend using class functions over project methods. Sólo las funciones de clase pueden ser llamadas desde los componentes. However, you can still use your project methods in Qodly Studio in two ways:
+Recomendamos utilizar funciones clase en lugar de métodos proyecto. Sólo las funciones de clase pueden ser llamadas desde los componentes. Sin embargo, puede seguir utilizando sus métodos de proyecto en Qodly Studio de dos maneras:
 
 - Puede llamar a sus métodos desde funciones clase.
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- Puede [ejecutar sus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) directamente desde el Explorador de Qodly.
 
 ## Abrir Qodly Studio
 
-The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
+La página de Qodly Studio está disponible cuando el [servidor web WebAdmin](../Admin/webAdmin.md#start-and-stop) se está ejecutando y la autenticación está activada (ver arriba).
 
 Hay dos formas de acceder a Qodly Studio:
 
-* from your 4D single-user application, go to **Design** > **Qodly Studio...**. If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. Otherwise, you will be prompted if you want to start the WebAdmin web server first.
+* desde su aplicación monopuesto 4D, vaya a **Diseño** > **Qodly Studio...**. Si el servidor web WebAdmin ya está en funcionamiento, dependiendo de su configuración, su navegador por defecto se abre en `IPaddress:HTTPPort/studio` o `IPaddress:HTTPSPort/studio`. De lo contrario, se le preguntará si desea iniciar primero el servidor web WebAdmin.
 
-* on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:
+* en un navegador, con el servidor web WebAdmin en ejecución (lanzado desde 4D o 4D Server), introduzca la siguiente dirección:
 
 `IPaddress:HTTPPort/studio`
 
@@ -144,38 +144,38 @@ o:
 
 `IPaddress:HTTPSPort/studio`
 
-For example, after launching a local web server on port 7080, type this address in your browser:
+Por ejemplo, después de iniciar un servidor web local en el puerto 7080, escriba esta dirección en su navegador:
 
 `localhost:7080/studio`
 
-You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
+A continuación, se le pedirá que introduzca la [llave de acceso](../Admin/webAdmin.md#access-key) para acceder a Qodly Studio.
 
 
 ## Utilizar Qodly Studio
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+La documentación oficial de Qodly Studio está disponible en el [sitio web de documentación Qodly](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
+Puede confiar en esta documentación y sus recursos asociados para desarrollar aplicaciones web basadas en formularios web. Sin embargo, dependiendo de la fase de implementación, los desarrolladores 4D utilizarán Qodly Studio o 4D IDE.
 
 :::info
 
-There is no direct compatibility between apps implemented with 4D and apps implemented with Qodly.
+No existe compatibilidad directa entre las aplicaciones implementadas con 4D y las implementadas con Qodly.
 
 :::
 
 ### Comparación de funcionalidades
 
-|                                                              | Qodly Studio para desarrolladores 4D que utilizan 4D IDE                                    | Qodly Studio para desarrolladores Qodly       |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| View and edit tables (dataclasses), attributes and relations | Editor de estructura 4D(1)                                                                  | Qodly Studio Model Editor                     |
-| Webforms                                                     | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor                   |
-| Formularios de escritorio                                    | 4D IDE                                                                                      | *no soportado*                                |
-| Lenguaje de programación                                     | Lenguaje 4D con ORDA                                                                        | QodlyScript con ORDA                          |
-| Coding IDE                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
-| Debugger                                                     | Depurador 4D IDE                                                                            | Qodly Studio debugger                         |
-| REST/Web roles and privileges                                | roles.json direct edit/Qodly Studio roles and privileges editor                             | Editor de roles y privilegios de Qodly Studio |
+|                                                               | Qodly Studio para desarrolladores 4D que utilizan 4D IDE                                        | Qodly Studio para desarrolladores Qodly       |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| Ver y editar tablas (clases de datos), atributos y relaciones | Editor de estructura 4D(1)                                                                      | Qodly Studio Model Editor                     |
+| Webforms                                                      | Qodly Studio Webform Editor                                                                     | Qodly Studio Webform Editor                   |
+| Formularios de escritorio                                     | 4D IDE                                                                                          | *no soportado*                                |
+| Lenguaje de programación                                      | Lenguaje 4D con ORDA                                                                            | QodlyScript con ORDA                          |
+| IDE de código                                                 | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
+| Debugger                                                      | Depurador 4D IDE                                                                                | Qodly Studio debugger                         |
+| Roles y privilegios REST/Web                                  | roles.json direct edit/Qodly Studio roles and privileges editor                                 | Editor de roles y privilegios de Qodly Studio |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
+(1) Si hace clic en el botón **Model** en Qodly Studio, no ocurre nada. (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
 
 
 ### Gestión de proyectos
@@ -197,7 +197,7 @@ In accordance with the management of 4D projects, only the following usages are 
 
 #### Nombres de variables
 
-QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
+QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. En el código 4D, asegúrese de **prefijar los nombres de las variables con `$`** para que sean identificadas como variables locales por 4D.
 
 #### Símbolos y palabras clave
 
@@ -222,9 +222,9 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 #### Nombres de comandos
 
-QodlyScript command names are written in camel case without spaces. You might need to adapt these commands to the 4D Language.
+Los nombres de los comandos QodlyScript se escriben en mayúsculas y sin espacios. Puede que necesite adaptar estos comandos al lenguaje 4D.
 
-- Normalmente, sólo tendrá que convertir los nombres. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- Normalmente, sólo tendrá que convertir los nombres. Por ejemplo, `newCollection` en QodlyScript es `New collection` en Lenguaje 4D.
 - However, some command have been renamed for a better compliance. Estas se listan a continuación:
 
 | QodlyScript            | Lenguaje 4D      |
@@ -284,9 +284,9 @@ QodlyScript command names are written in camel case without spaces. You might ne
 
 ### Uso sin conexión
 
-You can develop with Qodly Studio while your computer is not connected to the internet. In this case however, the following features are not available:
+Puede desarrollar con Qodly Studio mientras su ordenador no esté conectado a Internet. En este caso, sin embargo, las siguientes funciones no están disponibles:
 
-- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- [Plantillas](https://developer.qodly.com/docs/studio/design-webforms/templates): la librería de plantillas está vacía
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
 
@@ -306,11 +306,11 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
 
-2. The web server of your database is started only on an HTTP port.
+2. El servidor web de su base de datos se inicia sólo en un puerto HTTP.
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **rendering** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. En Qodly Studio, hace clic en el ícono **renderizado**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
@@ -332,9 +332,9 @@ For more information on the `SameSite` attribute, check out [this blog post](htt
 
 ### Recomendaciones
 
-To avoid using more licenses than necessary, we recommend doing one of the following:
+Para evitar utilizar más licencias de las necesarias, recomendamos hacer una de las siguientes cosas:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
+- Ejecutar el renderizador en otra pestaña del navegador (introduciendo la URL renderizada de su formulario Web: `IP:port/$lib/renderer/?w=NombreFormularioWeb`).
 - Ensure the Qodly Studio and your database are reached on the same URL scheme.
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
 
@@ -343,6 +343,6 @@ To avoid using more licenses than necessary, we recommend doing one of the follo
 
 ## Hello, World
 
-This 5-minute video provides a "Hello World" example and covers how to enable access to the studio, create a basic interface, and configure an event that greets the user by their name:
+Este vídeo de 5 minutos ofrece un ejemplo "Hello World" y cubre cómo activar el acceso al estudio, crear una interfaz básica y configurar un evento que salude al usuario por su nombre:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GwIdic4OhPQ" title="Reproductor de vídeo YouTube" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
