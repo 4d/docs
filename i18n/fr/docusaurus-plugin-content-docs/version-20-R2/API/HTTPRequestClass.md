@@ -109,7 +109,7 @@ Dans *url*, passez l'URL où vous voulez envoyer la requête. La syntaxe à util
 {https://}[{user}:[{password}]@]host[ :{port}][/{path}][ ?{queryString}]
 ```
 
-If you omit the scheme part (`http://` or `https://`), a https request is sent.
+Si vous omettez la partie "scheme" (`http://` ou `https://`), une requête https est envoyée.
 
 Par exemple, vous pouvez passer les chaînes suivantes :
 
