@@ -263,16 +263,16 @@ Esse comando significa que a partir do quarto parâmetro (incluído), o método 
 
 ## `Compilador` método
 
-Mesmo não sendo obrigatório em [modo interpretado](Concepts/interpreted.md), deve declarar cada parâmetro nos métodos chamados para evitar problemas.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-Quando se utiliza a palavra-chave `#DECLARE` ou o protótipo `Function` , os parâmetros são automaticamente declarados. Por exemplo:
+When using the `#DECLARE` keyword, parameters are automatically declared. Por exemplo:
 
 ```4d
-Função add($x : Variante; $y : Integer)-> $result : Integer
-    // todos os parâmetros são declarados com o seu tipo
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
+    // all parameters are declared with their type
 ```
 
-No entanto, uma caraterística do compilador 4D permite que você declare todos os seus parâmetros num método específico usando uma sintaxe especial:
+However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
 
 - é possível agrupar todos os parâmetros de variáveis locais para métodos de projeto num ou mais métodos de projeto
 - o(s) nome(s) do(s) método(s) deve(m) começar por "**Compiler**", por exemplo "Compiler_MyParameters".
@@ -281,8 +281,7 @@ No entanto, uma caraterística do compilador 4D permite que você declare todos 
 Por exemplo:
 
 ```4d  
- // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```
 
 :::note
@@ -291,18 +290,24 @@ Esta sintaxe não é executável em modo interpretado.
 
 :::
 
-Pode criar e preencher automaticamente um método do `Compilador` contendo todos os seus parâmetros utilizando o botão [**Métodos do Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** botão na caixa de diálogo Configurações do compilador.
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-A declaração de parâmetros também é obrigatóiria nos contextos abaixo (esses contextos não são compatíveis com declarações em um método "Compiler"):
+:::info
+
+Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
 
 - Métodos de base de dados - Por exemplo, o método de base de dados `On Web Connection` recebe seis parâmetros do tipo de dados Text. No começo do método database, tem que escrever (mesmo se todos os parâmetros não forem usados):
 
 ```4d
-// On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+// On Web Connection C_TEXT($1;$2;$3;$4;$5;$6)
+
+```
+
+- Functions - Function parameters are automatically declared for compilation in the function prototype. Por exemplo:
+
+```4d
+Função add($x : Variante; $y : Integer)-> $result : Integer
+    // todos os parâmetros são declarados com o seu tipo
 ```
 
 - Gatilhos - O parâmetro $0 (Longint), que é o resultado de um gatilho, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
@@ -311,7 +316,7 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -321,6 +326,7 @@ A declaração de parâmetros também é obrigatóiria nos contextos abaixo (ess
  End if
 ```
 
+:::
 
 
 ## Tipo de parámetro equivocado

@@ -264,16 +264,16 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) // 追加の引数が受け渡�
 
 ## `Compiler` メソッド
 
-[インタープリターモード](interpreted.md) では必須ではないものの、プロジェクトをコンパイルする予定があれば、メソッドや関数の各パラメーターを宣言しておくべきでしょう。
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-`#DECLARE` キーワード、または `Function` プロトタイプを使用すると、パラメーターは自動的に宣言されます。 例:
+When using the `#DECLARE` keyword, parameters are automatically declared. 例:
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-    // すべての引数はデータ型とともに宣言されます
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
+    // all parameters are declared with their type
 ```
 
-また、4Dコンパイラーには、特殊なシンタックスを使って専用メソッドにてパラメーターをすべて宣言できる機能があります:
+However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
 
 - プロジェクトメソッドのパラメーター宣言は、コンパイル用に 1つ以上のプロジェクトメソッドにまとめることができます。
 - これらの専用メソッドの名前は "**Compiler**" で始まります。例: "Compiler_MyParameters"。
@@ -283,7 +283,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 ```4d  
  // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```
 
 :::note
@@ -292,18 +292,25 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 :::
 
-コンパイラー設定の [**コンパイラーメソッド...**](../Project/compiler.md#コンパイラーメソッド) セクションで定義した `Compiler` メソッドは、コンパイラーウィンドウの **型宣言を生成** ボタンを使用すると自動的に作成されます。
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-パラメーターの宣言は次のコンテキストにおいても必須となります (これらのコンテキストは "Compiler" メソッドによる一括宣言をサポートしません)。
+:::info
+
+Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
 
 - データベースメソッド - たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
 
 ```4d
 // On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+C_TEXT($1;$2;$3;$4;$5;$6)
+
+```
+
+- Functions - Function parameters are automatically declared for compilation in the function prototype. 例:
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // すべての引数はデータ型とともに宣言されます
 ```
 
 - トリガー - トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
@@ -312,7 +319,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -322,6 +329,7 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
  End if
 ```
 
+:::
 
 
 ## 引数の型間違い

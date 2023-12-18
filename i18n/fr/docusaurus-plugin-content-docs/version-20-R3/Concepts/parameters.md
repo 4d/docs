@@ -279,6 +279,7 @@ Nous avons ici une méthode appelée `SumNumbers` qui renvoie le total calculé 
 ```4d
 
 #DECLARE( ... : Real) : Real 
+
 var $number; $total : Real 
 
 For each ($number; 1; Count parameters)
@@ -305,18 +306,18 @@ La syntaxe legacy de déclaration des paramètres variadiques (`C_TEXT(${4})`) e
 
 :::
 
-## Méthode `Compiler`
+## `Compiler_Methods` method
 
-Même si ce n'est pas obligatoire en [mode interprété](interpreted.md), vous devez déclarer chaque paramètre dans les méthodes ou fonctions appelées dès que vous avez l'intention de compiler votre projet.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-Lors de l'utilisation du mot-clé `#DECLARE` ou du prototype `Function` , les paramètres sont automatiquement déclarés. Par exemple :
+When using the `#DECLARE` keyword, parameters are declared. Par exemple :
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-    // tous les paramètres sont déclarés avec leur type
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
+    // all parameters are declared with their type
 ```
 
-Cependant, une fonctionnalité du compilateur 4D vous permet de déclarer tous vos paramètres dans une méthode spécifique à l'aide d'une syntaxe spéciale :
+However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
 
 - vous pouvez regrouper tous les paramètres des variables locales des méthodes projet dans une ou plusieurs méthode(s) projet
 - le nom de la ou des méthode(s) doit commencer par "**Compiler**", par exemple "Compiler_MyParameters".
@@ -326,7 +327,7 @@ Par exemple :
 
 ```4d  
  // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```
 
 :::note
@@ -335,18 +336,23 @@ Cette syntaxe n'est pas exécutable en mode interprété.
 
 :::
 
-Vous pouvez créer et remplir automatiquement une méthode `Compiler` contenant tous vos paramètres en utilisant le bouton [**Méthodes Compilateur pour...**](../Project/compiler.md#compiler-methods-for) **Méthodes** dans la boîte de dialogue des Propriétés du compilateur.
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-La déclaration des paramètres est également obligatoire dans les contextes suivants (ces contextes ne prennent pas en charge les déclarations dans une méthode "Compiler") :
+:::info
+
+Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
 
 - Méthodes base - Par exemple, la méthode base `On Web Connection` reçoit six paramètres de type Texte. Au début de la méthode base, vous devez écrire (même si tous les paramètres ne sont pas utilisés) :
 
 ```4d
-// On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+C_TEXT($1;$2;$3;$4;$5;$6)
+```
+
+- Functions - Function parameters are automatically declared for compilation in the function prototype. Par exemple :
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // tous les paramètres sont déclarés avec leur type
 ```
 
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
@@ -355,7 +361,7 @@ La déclaration des paramètres est également obligatoire dans les contextes su
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -364,6 +370,8 @@ La déclaration des paramètres est également obligatoire dans les contextes su
     ...
  End if
 ```
+
+:::
 
 
 
@@ -574,6 +582,7 @@ Par exemple, considérons que la méthode `CreatePerson`, qui crée un objet et 
  ChangeAge($person)
  ALERT(String($person.Age))  
 ```
+
 
 La méthode `ChangeAge` ajoute 10 à l'attribut Age de l'objet reçu
 

@@ -14,6 +14,7 @@ title: リリースノート
 - TLS証明書の [`ECDSA` 暗号化形式](../Admin/tls.md#暗号化) をサポート。
 - クライアント/サーバーおよび SQLサーバーの TLS接続は、[動的に設定](../Admin/tls.md#他のサーバーで-tls-を有効にする) されるようになりました (証明書ファイルは必要ありません)。
 - [ストラクチャー定義の書き出し](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.ja.html) について、直接HTML形式に書き出せるようになりました。
+- New [`Try(expression)` keyword](../Concepts/error-handling.md#tryexpression) to handle simple error cases.
 - 新しい [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) コマンド。
 
 

@@ -933,6 +933,7 @@ utilizar o seguinte código:
 
 
 
+
 | Parâmetro  | Tipo   |    | Descrição                                       |
 | ---------- | ------ | -- | ----------------------------------------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro      |
@@ -1746,15 +1747,15 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 
 <!-- REF #_method_.VP Get default style.Syntax -->
-**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
+**VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                           |
-| ---------- | ------- | -- | --------------------------------------------------- |
-| vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário              |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida)            |
-| Resultados | Integer | <- | Número total de colunas |<!-- END REF -->
+| Parâmetro  | Tipo    |    | Descrição                                          |
+| ---------- | ------- | -- | -------------------------------------------------- |
+| vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário             |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)           |
+| Resultados | Object  | <- | Default style settings |<!-- END REF -->
 
 |
 
@@ -5388,7 +5389,10 @@ You remove the formulas in *rangeObj* by replacing them with an empty string (""
 ```4d
 $formulas:=New collection
 $formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+
+
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
 ```
 
 *myMethod*:
