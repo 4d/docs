@@ -41,11 +41,11 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 Estes parâmetros devem ser declarados como se indica a seguir:
 
 ```4d
-//On Web Connection database method
+//Método base On Web Authentication
 
  C_TEXT($1;$2;$3;$4;$5;$6)
 
-//Code for the method
+//Código do método
 ```
 
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
