@@ -21,7 +21,7 @@ For each user connected to the server, the list provides the following informati
 
 - Sistema da máquina cliente (macOS ou Windows) como um ícone.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
+- **Nome de máquina**: nome da máquina remota.
 - **Session name**: Name of the session opened on the remote machine.
 - **IP Address**: IP address of the remote machine.
 - **Login date**: Date and time of the remote machine connection.
