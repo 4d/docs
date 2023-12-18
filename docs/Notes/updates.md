@@ -367,7 +367,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |CEF|118|20 R3|Chromium 5993|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
-|SpreadJS|16.0.4|20|4D View Pro engine|
+|SpreadJS|16.2.6|20 R4|4D View Pro engine|
 |OpenSSL|3.1.1|20||
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
