@@ -109,7 +109,7 @@ Dans *url*, passez l'URL où vous voulez envoyer la requête. La syntaxe à util
 {https://}[{user}:[{password}]@]host[ :{port}][/{path}][ ?{queryString}]
 ```
 
-If you omit the scheme part (`http://` or `https://`), a https request is sent.
+Si vous omettez la partie "scheme" (`http://` ou `https://`), une requête https est envoyée.
 
 Par exemple, vous pouvez passer les chaînes suivantes :
 
@@ -206,29 +206,29 @@ Un objet d'authentification gère la propriété `options.serverAuthentication` 
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Paramètres | Type       |    | Description                                                                      |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------- |
-| data       | Text, Blob | -> | Data to be parsed                                                                |
-| Résultat   | Object     | <- | Object, each property is a part of the multipart data|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                                    |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
+| data       | Text, Blob | -> | Données à analyser                                                                             |
+| Résultat   | Object     | <- | Objet dont chaque propriété est une partie des données multiparties|<!-- END REF -->
 
 |
 
 #### Description
 
-The `HTTP Parse message` command <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+La commande `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analyse un texte ou un blob multipart/form-data (message HTTP "response") et en extrait le contenu dans un objet. Chaque propriété de l'objet renvoyé correspond à une partie des données multiparties<!-- END REF -->.
 
 :::info
 
-HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+HTTP lui-même est un protocole de communication sans état. Dans ce cadre, les clients initient la communication en envoyant des messages "request" aux serveurs, en spécifiant des détails tels que la méthode, la cible, les en-têtes, le contenu, etc. Les serveurs, à leur tour, répondent par des messages "response" qui contiennent les mêmes détails. `HTTP Parse message` analyse le message "request" ou "response" et retourne un objet structuré.
 
 :::
 
 
 #### Exemple
 
-In the following example, we parse the data from a text file containing HTTP requests.
+Dans l'exemple suivant, nous analysons les données d'un fichier texte contenant des requêtes HTTP.
 
-Here is the content of the file:
+Voici le contenu du fichier :
 
 ```
 POST /batch/gmail/v1/ HTTP/1.1
@@ -257,7 +257,7 @@ GET https://gmail.googleapis.com/gmail/v1/users/me/messages/18c1b58642b28e2b?for
 
 --batch_19438756D576A14ABA87C112F56B9396--
 ```
-To parse the file:
+Pour analyser le fichier :
 
 ```4d
 var $message : Text:=File("/RESOURCES/HTTPrequest.txt").getText()
