@@ -40,6 +40,7 @@ You can customize the display of the editing area. Any customization is automati
 | Option | Description | Set in... |
 
 
+
 |---|---|---|
 |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**
 |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md)|
@@ -494,7 +495,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 ## Warnings and errors
 
-The 4D Code Live Checker is a security system that automatically checks the syntax, consistency, and structure of the entered code in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
+Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
 The Code Live Checker is activated at three levels:
 
@@ -813,6 +814,7 @@ Here is the list of tags and their mode of use:
 |  | - index: Clipboard to be pasted. Values = number of the clipboard (0 to 9). |
 
 - Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).
+
 - If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
 
 Here is an example of a macro definition:

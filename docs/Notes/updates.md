@@ -21,7 +21,7 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 #### Behavior changes
 
-- Using a legacy syntax for declaring parameters in class functions (e.g. `C_TEXT($1)` or `var $1 : Text`) now generates an error during code typing, syntax checking, and compilation steps.  
+- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.  
 
 
 ## 4D v20 R3

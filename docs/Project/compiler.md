@@ -42,7 +42,7 @@ The number of errors found during your first compilations may be daunting, but d
 
 ## Run Compiled 
 
-Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](GettingStarted/creating.md#options) also offers a choice between interpreted or compiled mode for database startup. 
+Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](GettingStarted/creating.md#options) also offers a choice between interpreted or compiled mode for database startup. 
 
 When you switch from one mode to the other, 4D closes the current mode and opens the new one. This is equivalent to exiting and reopening the application. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
 
@@ -134,9 +134,16 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 
 Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
 
-- **Type the variables**: Passes by all the stages that make compilation possible.
+- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation. 
 - **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
+
+:::tip
+
+You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options. 
+
+:::
+
 
 #### Compilation Target
 
