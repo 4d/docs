@@ -1673,11 +1673,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| 引数         | タイプ     |    | 説明                                                 |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名                         |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                        |
-| 戻り値        | Object  | <- | Default style settings |<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                      |
+| ---------- | ------- | -- | --------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名              |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)             |
+| 戻り値        | Object  | <- | デフォルトスタイル設定 |<!-- END REF -->
 
 |
 
