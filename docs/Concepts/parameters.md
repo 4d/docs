@@ -282,6 +282,7 @@ Here we have a method called `SumNumbers` that returns the calculated total for 
 #DECLARE( ... : Real) : Real 
 
 
+
 var $number; $total : Real 
 
 For each ($number; 1; Count parameters)
@@ -355,7 +356,7 @@ It can happen that method parameters are not declared in `#DECLARE` prototypes. 
 When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
 
 - you can group all local variable parameters for project methods in one or more project method(s)
-- the method name(s) must start with "**Compiler**", by default "Compiler_Methods".
+- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
 - within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
 For example:
