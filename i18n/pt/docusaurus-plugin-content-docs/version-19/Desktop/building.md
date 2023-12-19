@@ -329,7 +329,7 @@ If you checked the “Allow automatic update of client application” option, an
 
 If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Estes itens são os seguintes:
 
-* *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+* *arquivos cert.pem* e *key.pem* (opcional): Esses arquivos são usados para conexões SSL e por comandos de criptografia de dados,
 * Pasta raiz Web por defeito (WebFolder).
 
 Os elementos devem ser instalados:

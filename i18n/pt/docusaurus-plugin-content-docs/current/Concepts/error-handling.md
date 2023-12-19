@@ -144,7 +144,7 @@ Try (expression) : any | Undefined
 
 ```
 
-*expression* can be any valid expression.
+*expression* pode ser qualquer expressão válida.
 
 If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. If *expression* returns a value, `Try()` returns the last evaluated value, otherwise it returns `Undefined`.
 

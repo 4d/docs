@@ -367,7 +367,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 | CEF       | 118            | 20 R3             | Chromium 5993                                                                                                 |
 | Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
 | PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                |
-| SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                             |
+| SpreadJS  | 16.2.6         | 20 R4             | Motor 4D View Pro                                                                                             |
 | OpenSSL   | 3.1.1          | 20                |                                                                                                               |
 | libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
 | LZMA      | 5.4.1          | 20                |                                                                                                               |

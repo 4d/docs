@@ -293,7 +293,7 @@ No que diz respeito à distribuição dos objetos, 4D propõe uma distância bas
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
 Esta operação aplica-se a todos os tipos de objetos dos formulários. A grelha magnética pode ser ativada ou desactivada em qualquer altura utilizando o comando **Ativar a grade magnética** no menu **Formulário** ou no menu contextual do editor. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
-> The Magnetic Grid also influences the manual resizing of objects.
+> O magnetismo também leva à observação de etapas ao redimensionar objetos manualmente.
 
 ### Distribuição de objectos
 

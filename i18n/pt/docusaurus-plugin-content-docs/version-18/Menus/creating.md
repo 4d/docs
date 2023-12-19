@@ -19,7 +19,7 @@ This allows the user to access the Application environment as soon as the databa
 A barra de menus predefinida inclui três menus:
 
 - **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
-- **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
+- **Editar**: padrão e completamente modificável. Editing functions such as copy, paste, etc. are defined using standard actions.
 - **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
 > > > Menu items appear *in italics* because they consist of references and not hard-coded text. Consultar [Propriedade Título](properties.md#title).
 

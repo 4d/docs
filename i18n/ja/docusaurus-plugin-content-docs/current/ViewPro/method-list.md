@@ -1764,11 +1764,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| 引数         | タイプ     |    | 説明                                                 |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名                         |
-| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                        |
-| 戻り値        | Object  | <- | Default style settings |<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                      |
+| ---------- | ------- | -- | --------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro エリアフォームオブジェクト名              |
+| sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)             |
+| 戻り値        | Object  | <- | デフォルトスタイル設定 |<!-- END REF -->
 
 |
 
@@ -5449,11 +5449,11 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") // 引数の区切り文字に ","
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // 一行目
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // 二行目
 
 
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // フォーミュラをセルに設定します
 ```
 
 *myMethod*:
