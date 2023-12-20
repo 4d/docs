@@ -200,7 +200,7 @@ Para mais informações, consultar a descrição do comando `WA SET PREFERENCE`.
 
 When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Quando selecionar essa opção, a janela do inspetor Web é exibida.
 
-> The web inspector is included in the embedded web rendering engine. Para uma descrição detalhada nas funcionalidades do depurador, veja a documentação fornecida pelo motor de renderização web.
+> O inspetor web está incluído no mecanismo de renderização web incorporado. Para uma descrição detalhada nas funcionalidades do depurador, veja a documentação fornecida pelo motor de renderização web.
 
 ## Propriedades compatíveis
 
