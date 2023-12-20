@@ -268,14 +268,14 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword, parameters are automatically declared. Por ejemplo:
+Cuando se utiliza la palabra clave `#DECLARE`, los parámetros se declaran automáticamente. Por ejemplo:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all parameters are declared with their type
+    // todos los parámetros se declaran con su tipo
 ```
 
-However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
+Sin embargo, el compilador 4D necesita que declare todos sus parámetros en un método específico utilizando una sintaxis especial:
 
 - puede agrupar todos los parámetros de variables locales para métodos de proyecto en uno o más métodos de proyecto
 - el(los) nombre(s) del método debe(n) empezar por "**Compiler**", por ejemplo "Compiler_MyParameters".
