@@ -37,13 +37,11 @@ title: コードエディター
 
 この編集エリアの表示はカスタマイズできます。 カスタマイズした内容は、すべてのコードエディターに反映されます:
 
-| オプション                  | 説明                                                                                              | 設定場所                                                                                                                                  |
-| ---------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **フォント** と **フォントサイズ** | 編集エリアの文字フォントとサイズを設定します                                                                          | **環境設定** の [**メソッド**](../Preferences/methods.md) ページ、または **メソッド** メニューから **表示 ＞ フォントを大きく / フォントを小さく** で設定します。                         |
-| **シンタックス要素のスタイルとカラー**  | 4Dランゲージの要素タイプごとに異なる色やスタイルを割り当てることができます。  また、編集エリアのインターフェースで使用されている色 (ハイライト、背景色など) を変更することができます。 | ランゲージ要素 (変数、キーワード等) 上でコンテキストメニューを表示し、 **スタイル** サブメニューからオプションを選択します。 または、**環境設定** の [**メソッド**](../Preferences/methods.md) ページでも設定できます。 |
-| **スペース**               | 単語間のスペースを空白ではなくピリオド (.) で表示することができます。 この設定は、すべてのコード要素 (コマンド名、変数、コメントなど) に適用されます。                | **メソッド ＞ 表示 ＞ ホワイトスペース**                                                                                                              |
-| **テーマ**                | Dark または Light テーマが選択できるほか、カスタムテーマも設定可能です                                                       | **環境設定** ＞ [**メソッド**](../Preferences/methods.md)                                                                                      |
-| **コードインデント幅**          | コードのインデント幅を設定します                                                                                | **環境設定** ＞ [**メソッド**](../Preferences/methods.md)                                                                                      |
+| Option | Description | Set in... |
+
+
+
+|---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) **スタイル** サブメニューからオプションを選択します。 Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. この設定は、すべてのコード要素 (コマンド名、変数、コメントなど) に適用されます。 | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
 
 #### 更新行の通知
 
@@ -484,28 +482,50 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 
 
+## Warnings and errors
 
-## シンタックスエラー
+Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
-4D は自動でメソッドシンタックスをチェックします。 シンタックスが正しくない場合、4Dはそのことを示す記号を表示します ![](../assets/en/code-editor/incorrect-expression-icon.png)。 マウスを記号に重ねるとエラーの内容が表示されます:
+The Code Live Checker is activated at three levels:
+
+- when you write code in the code editor,
+- when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
+- when you [compile](../Project/compiler.md) the project.
+
+4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+
+Two kinds of symbols are displayed:
+
+- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. 警告によりコンパイルが中断されることはありません。
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
+
+マウスを記号に重ねるとエラーの内容が表示されます:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-コード入力の際、テンキー側の **Enter** を押すと、改行されることなく現在の行のシンタックスチェックをおこなえます。 4Dは行を評価し、フォーマットし、エラーがあればそれを表示し、挿入カーソルを行の最後に移動します。 メソッドやクラス、関数の行にエラーがあると表示された場合には、それを修正してください。 正しく修正されると、4D はエラー記号を削除します。 保存したりウィンドウを閉じたりしたときはメソッド全体が評価されます。 **Enter** キーを押すと、強制的に評価をおこなえます。
+The Code Live Checker is activated while you enter the code. メソッドやクラス、関数の行にエラーがあると表示された場合には、それを修正してください。 正しく修正されると、4D はエラー記号を削除します。 保存したりウィンドウを閉じたりしたときはメソッド全体が評価されます。
 
-メソッド、クラス、関数を評価する際、4Dは以下をチェックします:
+You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
 
-- 基本的なシンタックスエラー
+The Code Live Checker checks for:
+
+- basic syntax errors (wrong operators, misspellings and the like)
 - ステートメントの構造 (`If`, `End if` など)
-- 括弧やクォーテーションマークなどの対応 (ペアになっているか)。 閉じる文字を入力すると、4D は開始と終了文字を灰色の四角で囲み、それらがペアであることを示します:
+- matching enclosing characters in the code such as parentheses or brackets (see tip below)
+- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+
+:::tip
+
+When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-> コード中のこれらの閉じる文字をクリックすると、4D はデフォルトで対応するペアの文字を灰色の四角で囲みます。 この振る舞いは **環境設定** の **メソッド** ＞ **オプション** の **括弧のマッチング** で変更できます。
+You can modify the way 4D indicates matching enclosing characters or disable this feature in the [**Preferences**](../Preferences/methods.md#options-1).
 
-コードエディターではスペルミスなどの大きなシンタックスエラーしかチェックできません。 実行時エラーはチェックできません。 実行時エラーは、コードが実行されているときに 4D が検出します。
+:::
 
-このようなエラーを処理するために、4D はデバッガー ([デバッガー](../Debugging/debugger.md) 参照) を提供します。 また、コンパイラーもエラー検出には欠かせません。 コンパイラーについての詳細は、[コンパイル](../Project/compiler.md) を参照ください。
+The Code Live Checker cannot detect some errors that only occur during execution. 実行時エラーは、コードが実行されているときに 4D が検出します。 However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
+
 
 ## ヘルプTips
 
@@ -773,6 +793,7 @@ XML仕様に準拠し、いくつかのタグは属性を含むことがあり�
 |                                  | - index: ペーストするクリップボード。 値 = クリップボード番号 (0 - 9)。                                                                                                                                                                                                                   |
 
 - * マクロは、コードエディターのコンテキストメニューやタイプアヘッド機能を使用して呼び出すことができます (後述参照)。
+
 - ** XML言語仕様に準拠するには、拡張文字 (アクセント文字や引用符など) を使用してはなりません。
 
 以下はマクロ定義の例です:
