@@ -85,7 +85,7 @@ This button allows you to load a special server [log configuration file](Debuggi
 
 ### Pausar no registo
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+This button suspends all currently logging operations started on the server. Esta funcionalidade pode ser útil para aligeirar temporariamente as tarefas do servidor.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 

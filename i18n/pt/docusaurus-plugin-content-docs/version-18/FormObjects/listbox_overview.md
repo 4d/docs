@@ -1027,7 +1027,7 @@ OB SET($ob;"label";"Edit...")
 
 ### Gestão de eventos
 
-Several events can be handled while using an object list box array:
+Vários eventos podem ser tratados durante o uso de um list box array de objetos:
 
 * **On Data Change**: An `On Data Change` event is triggered when any value has been modified either:
   * numa zona de introdução de texto

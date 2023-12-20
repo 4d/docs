@@ -14,9 +14,14 @@ title: リリースノート
 - TLS証明書の [`ECDSA` 暗号化形式](../Admin/tls.md#暗号化) をサポート。
 - クライアント/サーバーおよび SQLサーバーの TLS接続は、[動的に設定](../Admin/tls.md#他のサーバーで-tls-を有効にする) されるようになりました (証明書ファイルは必要ありません)。
 - [ストラクチャー定義の書き出し](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.ja.html) について、直接HTML形式に書き出せるようになりました。
+- New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
+- Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md#compilation).
 - 新しい [`Try(expression)` キーワード](../Concepts/error-handling.md#tryexpression) で単純なエラーケースを処理できます。
 - 新しい [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) コマンド。
 
+#### 動作の変更
+
+- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
 
 
 ## 4D v20 R3
@@ -50,6 +55,7 @@ title: リリースノート
 ## 4D v20 R2
 
 [**4D v20 R2 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R2/): 4D v20 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
 
 
 :::warning セキュリティに関する注記
@@ -376,4 +382,3 @@ ALERT($param1+" "+$param2)
 | PHP       | 8.2.4     | 20             |                                                       |
 | libldap   | 2.6.4     | 20 R3          |                                                       |
 | libsasl   | 2.1.28    | 20             |                                                       |
-

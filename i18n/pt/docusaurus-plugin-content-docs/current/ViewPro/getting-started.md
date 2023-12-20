@@ -140,16 +140,16 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 *   área - O nome da área 4D View Pro
 *   intervalos - Uma coleção de objeto(s) intervalo. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
-| Propriedade |                   | Tipo       | Descrição                                                           | Disponível para                                              |
-| ----------- | ----------------- | ---------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
-| area        |                   | text       | Nome de objeto formulário área 4D View Pro                          | sempre disponível                                            |
-| ranges      |                   | collection | Coleção de intervalo(s)                                             | sempre disponível                                            |
-|             | \[ ].name        | text       | Nome do intervalo                                                   | name                                                         |
-|             | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
-|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                            | célula, células, linha, linhas                               |
-|             | \[ ].rowCount    | number     | Contagem de linhas                                                  | células, linhas                                              |
-|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                           | célula, células, coluna, colunas                             |
-|             | \[ ].columnCount | number     | Contagem das colunas                                                | cells, columns                                               |
+| Propriedade |                   | Tipo       | Descrição                                                                 | Disponível para                                              |
+| ----------- | ----------------- | ---------- | ------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| area        |                   | text       | Nome de objeto formulário área 4D View Pro                                | sempre disponível                                            |
+| ranges      |                   | collection | Coleção de intervalo(s)                                                   | sempre disponível                                            |
+|             | \[ ].name        | text       | Nome do intervalo                                                         | name                                                         |
+|             | \[ ].sheet       | number     | Índice da folha (índice da folha atual por padrão) (contagem começa em 0) | célula, células, linha, linhas, coluna, colunas, todas, nome |
+|             | \[ ].row         | number     | Índice da linha (a contagem começa em 0)                                  | célula, células, linha, linhas                               |
+|             | \[ ].rowCount    | number     | Contagem de linhas                                                        | células, linhas                                              |
+|             | \[ ].column      | number     | Índice da coluna (a contagem começa em 0)                                 | célula, células, coluna, colunas                             |
+|             | \[ ].columnCount | number     | Contagem das colunas                                                      | cells, columns                                               |
 
 
 ## Importação e exportação de documentos

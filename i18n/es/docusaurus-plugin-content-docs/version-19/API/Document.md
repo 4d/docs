@@ -473,7 +473,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descripción
 
-La función `.getContent()`  <!-- REF #document.getContent().Summary -->The `.getContent()` function<!-- END REF -->. .
+La función `.getContent()`  <!-- REF #document.getContent().Summary -->devuelve un `BLOB` que contiene todo el contenido de un archivo<!-- END REF -->. .
 
 **Valor devuelto**
 

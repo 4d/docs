@@ -90,7 +90,7 @@ Permite-lhe desativar/ativar os parâmetros do código "internacional" para a ap
 
 #### Indentação
 
-Changes the indentation value for the 4D code in the Method editor. A largura deve ser especificada em pontos (10 por defeito).
+Altera o valor de indentação do código 4D no editor de métodos. A largura deve ser especificada em pontos (10 por defeito).
 
 O código 4D é automaticamente indentado para revelar a sua estrutura:
 

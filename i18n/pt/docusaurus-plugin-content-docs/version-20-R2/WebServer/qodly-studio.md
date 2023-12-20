@@ -222,7 +222,7 @@ Some other items have a different case (ex: `this` vs `This`) but can be pasted 
 
 #### Nomes de comandos
 
-QodlyScript command names are written in camel case without spaces. Talvez você precise adaptar esses comandos à linguagem 4D.
+Os nomes dos comandos QodlyScript são escritos em letras maiúsculas e minúsculas, sem espaços. Talvez você precise adaptar esses comandos à linguagem 4D.
 
 - Normalmente, você só precisará converter os nomes. For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
 - No entanto, alguns comandos foram renomeados para uma melhor conformidade. Eles estão listados abaixo:

@@ -78,7 +78,7 @@ In the current implementation (4D v20 R2), formulas in breaks, data sources and 
 
 The template file must be stored in a "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" folder within your project.
 
-The template file in JSON format contains the following attributes:
+O arquivo de modelo no formato JSON contém os seguintes atributos:
 
 | Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                 |
 |:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------- |

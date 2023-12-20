@@ -337,7 +337,7 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
     ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
-    São apresentadas as primeiras palavras dos itens copiados ou cortados. Select an item to insert it at the current location of the cursor.
+    São apresentadas as primeiras palavras dos itens copiados ou cortados. Selecione um item para inseri-lo no local atual do cursor.
 
 - Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or [using keyboard shortcuts](#shortcuts):
 
@@ -487,7 +487,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 ## Erros de sintaxe
 
-4D automatically checks the method syntax to see if it is correct. Se introduzir texto ou selecionar um componente que não esteja sintaticamente correto, 4D apresenta um símbolo para indicar a expressão incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+4D verifica automaticamente a sintaxe do método para ver se está correta. Se introduzir texto ou selecionar um componente que não esteja sintaticamente correto, 4D apresenta um símbolo para indicar a expressão incorrecta ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
