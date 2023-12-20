@@ -20,7 +20,7 @@ The SDI mode is available in the following execution environment only:
 Enabling and using the SDI mode in your application require the following steps:
 
 1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
-2. Build a merged application (standalone and/or client application).
+2. Construa uma aplicação mesclada (monoposto /ou aplicação cliente).
 
 Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
 
