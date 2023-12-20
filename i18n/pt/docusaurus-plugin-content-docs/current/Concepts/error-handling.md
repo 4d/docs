@@ -136,7 +136,7 @@ ON ERR CALL("")
 
 The `Try(expression)` statement allows you to test a single-line expression in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed. Using `Try(expression)` provides an easy way to handle simple error cases with a very low number of code lines, and without requiring an error-handling method.
 
-The formal syntax of the `Try(expression)` statement is:
+A sintaxe formal da instrução `Try(expression)` é:
 
 ```4d
 
