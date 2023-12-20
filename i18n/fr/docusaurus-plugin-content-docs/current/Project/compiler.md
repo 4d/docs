@@ -42,7 +42,7 @@ Le nombre d'erreurs trouvées lors de vos premières compilations peut être dé
 
 ## Exécuter la compilation
 
-Une fois le projet compilé, il est possible de passer du [mode interprété au mode compilé](Concepts/interpreted.md), et vice versa, à tout moment et sans avoir à quitter l'application 4D (sauf si le code interprété a été supprimé). Pour ce faire, utilisez les commandes **Redémarrer en interprété** et **Redémarrer en compilé** du menu **Exécution**. La [boîte de dialogue d'ouverture de projet ](GettingStarted/creating.md#options) de 4D permet également de choisir le mode interprété ou compilé au lancement du projet.
+Une fois le projet compilé, il est possible de passer du [mode interprété au mode compilé](Concepts/interpreted.md), et vice versa, à tout moment et sans avoir à quitter l'application 4D (sauf si le code interprété a été supprimé). To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. La [boîte de dialogue d'ouverture de projet ](GettingStarted/creating.md#options) de 4D permet également de choisir le mode interprété ou compilé au lancement du projet.
 
 Lorsque vous passez d'un mode à l'autre, 4D ferme le mode courant et ouvre le nouveau. Cela équivaut à quitter et à rouvrir l'application. Chaque fois que vous passez d'un mode à l'autre, 4D exécute les deux méthodes base suivantes (si elles sont spécifiées) dans cet ordre : `On Exit` -> `On Startup`.
 
@@ -60,7 +60,7 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 ### Générer le typage
 
-Le bouton **Générer le typage** crée ou met à jour les méthodes de compilation du typage. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
+Le bouton **Générer le typage** crée ou met à jour les méthodes de compilation du typage. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Ces méthodes, lorsqu'elles existent, sont utilisées directement par le compilateur lors de la compilation du code, ce qui permet d'accélérer les durées de compilation.
 
 Le nom de ces méthodes doit commencer par `Compiler_`. Vous pouvez définir le nom par défaut de chacune des 5 méthodes du compilateur dans [la fenêtre des paramètres du compilateur](#compiler-methods-for). Les méthodes de compilation qui sont générées et gérées par 4D ont automatiquement l'attribut `Invisible` :
 
@@ -134,9 +134,16 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 
 Permet de définir le nombre de passes (analyse du code) effectuées par le compilateur et donc la durée de la compilation.
 
-- **Effectuer les passes de typage** : Passer par toutes les étapes qui permettent la compilation.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Cette option peut être utilisée lorsque vous avez déjà effectué le typage de toutes vos variables process et interprocess soit vous-même, soit en utilisant la fonction de génération automatique des méthodes compilateur.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
+
+:::tip
+
+You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options.
+
+:::
+
 
 #### Cible de compilation
 
@@ -179,7 +186,7 @@ Jusqu'à 5 méthodes de compilateur peuvent être générées ; une méthode de 
 - **Variables interprocess** : Regroupe les déclarations de variables interprocess ;
 - **Tableaux** : Regroupe les déclarations de tableaux de process ;
 - **Tableaux interprocess** : Regroupe les déclarations de tableaux interprocess ;
-- **Méthodes** : Regroupe les déclarations de paramètres de méthodes (par exemple, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Methods**: Groups together method parameter declarations (e.g `C_LONGINT(mymethod;$1;$2)`) for [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
 
 Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, mais elles seront toujours précédées de l'étiquette `Compiler_` (non modifiable). Le nom de chaque méthode (préfixe compris) ne doit pas comporter plus de 31 caractères. Il doit également être unique et respecter les [règles 4D de nommage des méthodes](Concepts/identifiers.md#méthodes-projet).
 
@@ -191,6 +198,7 @@ Vous pouvez renommer chacune de ces méthodes dans les zones correspondantes, ma
 Si vous cochez l'option [**Générer le fichier de symboles**](#generate-the-symbol-file) dans les propriétés du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le [dossier Logs](Project/architecture.md#logs) du projet pendant la compilation. Il est divisé en plusieurs parties :
 
 #### Liste des variables process et interprocess
+
 
 Ces deux listes contiennent quatre colonnes :
 
