@@ -1763,11 +1763,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                        |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario       |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)        |
-| Result     | Object  | <- | Default style settings |<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                  |
+| ---------- | ------- | -- | ------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                 |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                  |
+| Result     | Object  | <- | Parámetros de estilo por defecto |<!-- END REF -->
 
 |
 
@@ -5450,11 +5450,11 @@ Las fórmulas de *rangeObj* se eliminan sustituyéndolas por una cadena vacía (
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // Primera línea
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Segunda línea
 
 
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Definir las celdas con las fórmulas
 ```
 
 *myMethod*:
