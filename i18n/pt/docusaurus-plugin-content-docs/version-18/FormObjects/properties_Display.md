@@ -310,19 +310,19 @@ Os formatos de hora controlam a forma como as horas aparecem quando são apresen
 
 The table below shows the Time field display formats and gives examples:
 
-| Nome do formato              | Cadeia JSON  | Comentários                                                                                                                                      | Exemplo para 04:30:25          |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                       |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                          |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 horas 30 minutos 25 segundos |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 horas 30 minutos             |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                      |
-| MM SS                        | mm_ss        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270:25                         |
-| Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270 minutos 25 segundos        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
-| System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                     | 04:30:25                       |
-| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: this format is the same as the System time short format         | 4•30•25 AM                     |
-| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: this format is the same as the System time short format             | 4:30:25 AM HNEC                |
+| Nome do formato              | Cadeia JSON  | Comentários                                                                                                                                          | Exemplo para 04:30:25          |
+| ---------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                      | 04:30:25                       |
+| HH:MM                        | hh_mm        |                                                                                                                                                      | 04:30                          |
+| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                      | 4 horas 30 minutos 25 segundos |
+| Hour Min                     | HH_MM        |                                                                                                                                                      | 4 horas 30 minutos             |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                      | 4:30 a.m.                      |
+| MM SS                        | mm_ss        | Hora expressa como uma duração de 00:00:00                                                                                                           | 270:25                         |
+| Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                           | 270 minutos 25 segundos        |
+| ISO Date Time                | iso8601      | Corresponde ao padrão XML para representar dados relacionados ao tempo. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
+| System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                         | 04:30:25                       |
+| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: this format is the same as the System time short format             | 4•30•25 AM                     |
+| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: this format is the same as the System time short format                 | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
