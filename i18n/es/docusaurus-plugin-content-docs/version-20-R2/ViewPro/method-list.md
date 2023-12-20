@@ -1688,11 +1688,11 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                        |
-| ---------- | ------- | -- | -------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario       |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)        |
-| Result     | Object  | <- | Default style settings |<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                                  |
+| ---------- | ------- | -- | ------------------------------------------------------------ |
+| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario                 |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                  |
+| Result     | Object  | <- | Parámetros de estilo por defecto |<!-- END REF -->
 
 |
 
