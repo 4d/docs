@@ -160,9 +160,9 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : Object)
 
-| Parâmetro | Tipo   | Descrição                                                |
-| --------- | ------ | -------------------------------------------------------- |
-| $macro    | Object | Macro declaration object (in the `formMacros.json` file) |
+| Parâmetro | Tipo   | Descrição                                                    |
+| --------- | ------ | ------------------------------------------------------------ |
+| $macro    | Object | Objeto de declaração de macro (no arquivo `formMacros.json`) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
