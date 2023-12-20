@@ -280,6 +280,8 @@ Function myfunction (var1: Integer ; ... : Text)
 
 #DECLARE( ... : Real) : Real 
 
+
+
 var $number; $total : Real 
 
 For each ($number; 1; Count parameters)
@@ -306,28 +308,61 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // エラー
 
 :::
 
-## `Compiler_Methods` メソッド
+## コンパイル
 
-[インタープリターモード](interpreted.md) では必須ではないものの、プロジェクトをコンパイルする予定があれば、メソッドの各パラメーターを宣言しておくべきでしょう。
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must make sure that all method and function parameters are properly declared as soon as you intend to compile your project.
 
-`#DECLARE` キーワードを使用すると、パラメーターは宣言されます。 例:
+:::note
+
+You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+
+:::
+
+
+### Parameters declared in prototypes
+
+When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. 例:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // すべての引数はデータ型とともに宣言されます
+    // all method parameters are declared with their type
 ```
 
-しかしながら、4Dコンパイラーのために、特殊なシンタックスを使って専用メソッド内でパラメーターをすべて宣言する必要があります:
+```4d
+    // On Web Connection Database Method
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text)
+```
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // all function parameters are declared with their type
+```
+
+:::tip
+
+Declaring parameters in prototypes is a good practice, even in non-compiled projects.
+
+:::
+
+### Method parameters declared outside prototypes
+
+It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
+
+#### `Compiler_Methods` メソッド
+
+When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
 
 - プロジェクトメソッドのパラメーター宣言は、コンパイル用に 1つ以上のプロジェクトメソッドにまとめることができます。
-- これらの専用メソッドの名前は "**Compiler**" で始まります。例: "Compiler_MyParameters"。
-- 各プロジェクトメソッドのパラメーターを専用メソッド内であらかじめ宣言するには、次のように書きます: `C_XXX(methodName;parameter)`。
+- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
+- within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
 例:
 
 ```4d  
- // Compiler_method
- C_REAL(OneMethodAmongOthers;$1) 
+ // Compiler_Methods
+ C_REAL(OneMethodAmongOthers;$1;$2) 
 ```
 
 :::note
@@ -336,26 +371,13 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // エラー
 
 :::
 
-コンパイラー設定の [**コンパイラーメソッド...**](../Project/compiler.md#コンパイラーメソッド) セクションで定義した `Compiler` メソッドは、コンパイラーウィンドウの **型宣言を生成** ボタンを使用すると自動的に作成されます。
+You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
 :::info
 
-コンテキストによっては、"Compiler" メソッドでの宣言をサポートしていないため、別途処理されます:
+#### Particular cases
 
-- データベースメソッド - たとえば、`On Web Connection データベースメソッド` は 6つのテキスト型の引数を受け取ります。 たとえすべての引数を使用しない場合でも、データベースメソッドの先頭で次のように宣言しなくてはなりません:
-
-```4d
-// On Web Connection
-C_TEXT($1;$2;$3;$4;$5;$6)
-
-```
-
-- 関数 - 関数の引数は、関数プロトタイプにおいてコンパイルのために自動的に宣言されます。 例:
-
-```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-    // すべての引数はデータ型とともに宣言されます
-```
+Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
 
 - トリガー - トリガーの結果である $0 パラメーター (倍長整数) は、明確に定義されていなければコンパイラーによって型指定されます。 定義する場合は、トリガーの中でおこなう必要があります。
 
@@ -374,6 +396,11 @@ Function add($x : Variant; $y : Integer)-> $result : Integer
 ```
 
 :::
+
+### Conflicts between declarations
+
+- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
+- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
 
 
 
