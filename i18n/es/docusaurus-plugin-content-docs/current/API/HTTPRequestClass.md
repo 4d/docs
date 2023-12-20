@@ -215,7 +215,7 @@ Un objeto authentication maneja la propiedad `options.serverAuthentication` o `o
 
 #### Descripción
 
-El comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Cada propiedad del objeto devuelto corresponde a una parte de los datos multiparte<!-- END REF -->.
+El comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analiza un texto o blob multipart/form-data (mensaje HTTP "response") y extrae el contenido a un objeto. Cada propiedad del objeto devuelto corresponde a una parte de los datos multiparte<!-- END REF -->.
 
 :::info
 
