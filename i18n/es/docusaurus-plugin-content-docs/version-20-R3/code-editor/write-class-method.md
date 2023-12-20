@@ -491,7 +491,7 @@ El comando **Editar > Marcar todo** se activa cuando ya se ha especificado una b
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-Al introducir un código, puede comprobar inmediatamente la sintaxis de la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evalúa la línea, le da formato, marca cualquier error y coloca el punto de inserción al final de la línea. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
+Al introducir un código, puede comprobar inmediatamente la sintaxis de la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método. También puede forzar la validación presionando la tecla **Intro**.
 
 Cuando se valida el método, clase o función, 4D verifica:
 
