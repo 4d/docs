@@ -289,7 +289,7 @@ return $total
 
 ```
 
-This method can be called with a variable number of Real parameters. In case of wrong parameter type, an error will be returned before the method is executed :
+Esse método pode ser chamado com um número variável de parâmetros Real. In case of wrong parameter type, an error will be returned before the method is executed :
 
 ```4d
 
