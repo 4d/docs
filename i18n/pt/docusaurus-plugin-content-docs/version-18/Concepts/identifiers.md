@@ -26,7 +26,7 @@ As regras seguintes aplicam-se a todas as estruturas 4D.
 ### Regras adicionais para SQL
 
 - Only the characters _0123456789abcdefghijklmnopqrstuvwxyz are accepted
-- Names must not include any SQL keywords (command, attribute, etc.).
+- Os nomes não devem incluir nenhuma palavra-chave SQL (comando, atributo, etc.).
 
 **Note:** The "SQL" area of the Inspector in the Structure editor automatically indicates any unauthorized characters in the name of a table or field.
 
