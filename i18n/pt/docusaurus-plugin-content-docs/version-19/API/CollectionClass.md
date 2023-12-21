@@ -1115,7 +1115,7 @@ Se quiser encontrar o nome da cidade dentro da coleção:
  $c2:=$c.find("FindCity";"Clanton") //$c2={name:Clanton,zc:35046}
 ```
 
-The code for ***FindCity*** is:
+O código do método ***FindCity*** é:
 
 ```4d
  var $1 : Object
@@ -1513,7 +1513,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* recebe os seguintes parâmetros:
 
-* in *$1.value* (any type): element value to be mapped
+* em *$1.value* (qualquer tipo): valor do elemento a ser mapeado
 * em *$2* (qualquer tipo): *param*
 * em *$N...* (todos os tipos): *paramN...*
 
