@@ -42,7 +42,7 @@ title: コンパイル
 
 ## コンパイル済み実行
 
-プロジェクトがコンパイルされると、[インタープリターモードとコンパイル済みモード](Concepts/interpreted.md) を切り替えて実行できるようになります。この際、4Dアプリケーションを終了する必要はありません (インタープリターコードを削除している場合は除きます)。 To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. [プロジェクトを開くダイアログボックス](GettingStarted/creating.md#オプション) でも、起動時にインタープリターモードとコンパイル済みモードから選択することができます。
+プロジェクトがコンパイルされると、[インタープリターモードとコンパイル済みモード](Concepts/interpreted.md) を切り替えて実行できるようになります。この際、4Dアプリケーションを終了する必要はありません (インタープリターコードを削除している場合は除きます)。 切り替えには、**実行** メニューの **インタープリター再起動** や **コンパイル済み再起動** コマンドを使用します。 [プロジェクトを開くダイアログボックス](GettingStarted/creating.md#オプション) でも、起動時にインタープリターモードとコンパイル済みモードから選択することができます。
 
 モードを変更すると、4D は現在のモードを閉じ、新しいモードを開きます。 つまり、アプリケーションが閉じられ、再び開かれます。 モードを切り替えるたびに、4D は 2つのデータベースメソッド (定義されていれば) を次の順番に実行します: `On Exit` -> `On Startup`。
 
@@ -60,7 +60,7 @@ title: コンパイル
 
 ### 型宣言を生成する
 
-**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
+**型宣言を生成** ボタンは、型宣言をおこなう "コンパイラーメソッド" を作成 (または更新) します。 コンパイラーメソッドは、すべての変数・配列の型宣言 (プロセスおよびインタープロセス) と [プロトタイプ宣言されていないメソッド引数の定義](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を集約したプロジェクトメソッドです。 これらのメソッドが存在する場合には、これらが直接コンパイラーによってコンパイル中に利用されるため、コンパイル速度が向上します。
 
 これらのメソッドは、必ず `Compiler_` で始まります。 [コンパイラー設定](#コンパイラーメソッド) にて、5つのコンパイラーメソッドそれぞれに対してデフォルト名を設定することができます。 4D により生成、管理されるコンパイラーメソッドは自動的に "非表示" 属性が割り当てられます:
 
@@ -134,13 +134,13 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 コンパイラーによって実施されるコード解析の実行周期数を設定するために使用します。これは、コンパイルの所要時間に影響します。
 
-- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
+- **すべて定義させる**: コード内の変数や引数の型をコンパイラーに推論させたい場合は、このオプションをチェックします。 このオプションは、コンパイルを可能にするために必要なすべてのステップをコンパイラーに実行させるため、コンパイルの時間が増加します。
+- **ローカル変数のみ自動定義させる**: プロセスおよびインタープロセス変数、そしてプロトタイプ宣言されていないメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべてのプロセス変数とインタープロセス変数は開発者自身が宣言するか、コンパイラーメソッドを自動生成する機能を使用しなければなりません。
+- **自動変数定義は行わない**: ローカル、プロセス、インタープロセス変数および、プロトタイプ宣言されていないメソッド引数の型を決定する処理はおこなわれません。 このオプションを選択する場合、すべての変数およびメソッド引数が明示的に宣言されていなければなりません。
 
 :::tip
 
-You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options.
+あらかじめ [型宣言を生成する](#型宣言を生成する) ボタンを使用すると、"ローカル変数のみ自動定義させる" および "自動変数定義は行わない" のオプションを選択してコンパイルすることができます。
 
 :::
 
@@ -186,7 +186,7 @@ You can use the [Generate Typing](#generate-typing) button then compile with one
 - **インタープロセス変数**: インタープロセス変数定義を集約します。
 - **配列**: プロセス配列定義を集約します。
 - **インタープロセス配列**: インタープロセス配列定義を集約します。
-- **Methods**: Groups together method parameter declarations (e.g `C_LONGINT(mymethod;$1;$2)`) for [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
+- **メソッド**: [プロトタイプ宣言されていないメソッド引数](../Concepts/parameters.md#プロトタイプ宣言されていない引数) を受け入れるローカル変数定義を集約します (例: `C_LONGINT(mymethod;$1)`)。 詳細については [`Compiler_Methods` メソッド](../Concepts/parameters.md#compiler_methods-メソッド) を参照ください。
 
 それぞれの対応するエリアで、作成されるメソッド名を編集できますが、これらには必ず `Compiler_` という接頭辞が付きます。これは変更できません。 各メソッド名は、接頭辞を含めて 31文字以下でなければなりません。 また、メソッド名はユニークでなければならず、[メソッドの命名規則](Concepts/identifiers.md#プロジェクトメソッド) に準じたものでなければなりません。
 
