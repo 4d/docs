@@ -4,35 +4,35 @@ title: Marcadores
 ---
 
 
-These properties let you specify the precise location of markers on the vertical ruler of a **table form**. Os marcadores são utilizados principalmente em formulários de saída. They control the information that is listed and set header, breaks, detail and footer areas of the form. Any object that placed in these areas is displayed or printed at the appropriate location.
+Essas propriedades permitem que você especifique o local exato dos marcadores na régua vertical de um formulário de tabela ****. Os marcadores são utilizados principalmente em formulários de saída. Eles controlam as informações que são listadas e definem as áreas de cabeçalho, quebras, detalhes e rodapé do formulário. Qualquer objeto colocado nessas áreas é exibido ou impresso no local apropriado.
 
-Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. No entanto, não têm nenhum efeito quando é utilizado um formulário para introdução de dados.
+Sempre que qualquer formulário for usado para saída, seja para exibição na tela ou para impressão, as linhas de marcador de saída entrarão em vigor e as áreas serão exibidas ou impressas nos locais designados. Os marcadores também têm efeito quando um formulário é usado como o formulário de lista em uma área de subformulário. No entanto, não têm nenhum efeito quando é utilizado um formulário para introdução de dados.
 
-Methods that are associated with objects in these areas are executed when the areas are printed or displayed as long as the appropriate events have been activated. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
+Os métodos associados aos objetos nessas áreas são executados quando as áreas são impressas ou exibidas, desde que os eventos apropriados tenham sido ativados. Por exemplo, um método de objeto colocado na área do cabeçalho é executado quando ocorre o evento `On Header` .
 
 ---
 
 ## Quebra de formulário
 
-Form Break areas are displayed once at the end of the list of records and are printed once after the records have been printed in a report.
+As áreas de quebra de formulário são exibidas uma vez no final da lista de registros e são impressas uma vez após a impressão dos registros em um relatório.
 
-The Break area is defined as the area between the Detail control line and the Break control line. There can be [several Break areas](#additional-areas) in your report.
+A área de quebra é definida como a área entre a linha de controle de detalhes e a linha de controle de quebra. Pode haver [várias áreas de quebra](#additional-areas) em seu relatório.
 
-É possível tornar as áreas de Quebra menor ou maior. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. In a printed report, you can use a Break area for calculating and printing subtotals and other summary calculations.
+É possível tornar as áreas de Quebra menor ou maior. É possível usar uma área de quebra para exibir informações que não fazem parte dos registros (instruções, data atual, hora atual etc.) ou para exibir uma linha ou outro elemento gráfico que conclua a exibição da tela. Em um relatório impresso, é possível usar uma área de quebra para calcular e imprimir subtotais e outros cálculos de resumo.
 
 #### Gramática JSON
 
-| Nome        | Tipo de dados                     | Valores possíveis                                                                                   |
-| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
+| Nome        | Tipo de dados                     | Valores possíveis                                                                                               |
+| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Posição do marcador de quebra ou coleção de posições do marcador de quebra em pixels.<br/>Valor mínimo: 0 |
 
 ---
 
 ## Formulário detalhado
 
-The form Detail area is displayed on the screen and printed once for each record in a report. The Detail area is defined as the area between the Header control line and the Detail control line.
+A área de dFormulário detalhado é exibida na tela e impressa uma vez para cada registro em um relatório. A área de Formulário detalhado é definida como a área entre a linha de controle do cabeçalho e a linha de controle de detalhes.
 
-É possível aumentar ou diminuir a área Detalhe. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
+É possível aumentar ou diminuir a área Detalhe. O que quer que seja colocado na área Detalhes é exibido ou impresso uma vez para cada registro. Na maioria das vezes, você coloca campos ou variáveis na área Detail para que as informações de cada registro sejam exibidas ou impressas, mas também é possível colocar outros elementos na área Detail.
 
 #### Gramática JSON
 
@@ -44,11 +44,11 @@ The form Detail area is displayed on the screen and printed once for each record
 
 ## Rodapé do formulário
 
-The Form Footer area is displayed on screen under the list of records. É sempre impresso na parte inferior de cada página de um relatório. The Footer area is defined as the area between the Break control line and the Footer control line.
+A área do Rodapé do formulário é exibida na tela na lista de registros. É sempre impresso na parte inferior de cada página de um relatório. A área do rodapé é definida como a área entre a linha de controle Break e a linha de controle Footer.
 
 A área de rodapé pode ser aumentada ou diminuída.
 
-You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. São aceites objectos activos.
+Você pode usar a área do Rodapé para imprimir gráficos, números de página, data atual, ou qualquer texto que você queira no final de cada página de um relatório. Para formulários de saída projetados para uso na tela, a área do rodapé normalmente contém botões que dão ao usuário opções como fazer uma pesquisa ou classificação, imprimir registros ou guardar o relatório atual. São aceitos objetos ativos.
 
 #### Gramática JSON
 
@@ -60,11 +60,11 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 ## Cabeçalho do formulário
 
-The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
+A área de cabeçalho do formulário é exibida na parte superior de cada tela e é impressa na parte superior de cada página de um relatório. A área de Cabeçalho é definida como a área acima da linha de controle do Cabeçalho.
 
-Pode aumentar ou diminuir a área do cabeçalho. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
+Você pode tornar a área de Cabeçalho menor ou maior. Você pode usar a área do Cabeçalho para nomes de colunas, para instruções, informações adicionais, ou até mesmo um gráfico, como um logotipo de empresa ou um padrão decorativo.
 
-You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Podem ser inseridos os seguintes objetos ativos:
+Também é possível colocar e usar objetos ativos na área do cabeçalho dos formulários de saída exibidos como subformulários, na janela de exibição de registros ou usando os comandos `DISPLAY SELECTION` e `MODIFY SELECTION` . Podem ser inseridos os seguintes objetos ativos:
 
 - Botões, botões imagem,
 - Combo boxes, listas pendentes, menus pop-up de imagens,
@@ -72,29 +72,29 @@ You can also place and use active objects in the Header area of output forms dis
 - Botões rádio, caixas de selecção, caixas de selecção 3D,
 - Indicadores de progresso, réguas, degraus, fiadeiras.
 
-Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPLAY SELECTION` and `MODIFY SELECTION`) or `Automatic splitter` can be assigned to the inserted buttons. The following events apply to the active objects you insert in the Header area: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Keep in mind that the form method is called with the `On Header` event after calling the object methods of the area.
+Ações padrão, como `Add Subrecord`, `Cancel` (listas exibidas usando `DISPLAY SELECTION` e `MODIFY SELECTION`) ou `Automatic splitter` podem ser atribuídas aos botões inseridos. Os eventos a seguir se aplicam aos objetos ativos que você insere na área do Cabeçalho: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Lembre-se de que o método de formulário é chamado com o evento `On Header` depois de chamar os métodos de objeto da área.
 
-The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+O formulário pode conter [áreas de cabeçalho adicionais](#additional-areas) para serem associadas a intervalos adicionais. Um cabeçalho de nível 1 é impresso imediatamente antes da impressão dos registros agrupados pelo primeiro campo classificado.
 
 #### Gramática JSON
 
-| Nome         | Tipo de dados                     | Valores possíveis                                                                                     |
-| ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
+| Nome         | Tipo de dados                     | Valores possíveis                                                                                                     |
+| ------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Posição do marcador de cabeçalho ou coleção de posições do marcador de cabeçalho em pixels.<br/>Valor mínimo: 0 |
 
 ## Áreas adicionais
 
-You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
+Você pode criar áreas de interrupção e áreas de cabeçalho adicionais para um relatório. Essas áreas adicionais permitem imprimir subtotais e outros cálculos em um relatório e exibir outras informações de forma eficaz.
 
-Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
+Áreas adicionais são definidas quando você usa uma coleção de posições nas propriedades [Form Break](#form-break) e [Form Header](#form-header) .
 
-> In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
+> No editor 4D Form, você cria linhas de controle adicionais mantendo pressionada a tecla **Alt** enquanto clica no marcador de controle apropriado.
 
 Um formulário sempre começa com as áreas Cabeçalho, Detalhe, Quebra nível 0 e Rodapé.
 
-Break at level 0 zero takes in all the records; it occurs after all the records are printed. Additional Break areas can be added, i.e. a Break level 1, Break level 2, etc.
+A interrupção no nível 0 zero inclui todos os registros; ela ocorre depois que todos os registros são impressos. Áreas de interrupção adicionais podem ser adicionadas, por exemplo, um nível de interrupção 1, nível de interrupção 2, etc.
 
-A Break level 1 occurs after the records grouped by the first sorted field are printed.
+Um nível de interrupção 1 ocorre depois que os registros agrupados pelo primeiro campo classificado são impressos.
 
 | Etiqueta | Descrição          | Prints after groups created by: |
 | -------- | ------------------ | ------------------------------- |
@@ -102,7 +102,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 | B2       | Nível de ruptura 2 | Segundo campo ordenado          |
 | B3       | Nível de ruptura 3 | Terceiro campo classificado     |
 
-As áreas de cabeçalho adicionais estão associadas às pausas. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+As áreas de cabeçalho adicionais estão associadas às pausas. Um cabeçalho de nível 1 é impresso imediatamente antes da impressão dos registros agrupados pelo primeiro campo classificado.
 
 | Etiqueta | Descrição            | Prints after groups created by: |
 | -------- | -------------------- | ------------------------------- |
@@ -110,4 +110,4 @@ As áreas de cabeçalho adicionais estão associadas às pausas. A level 1 Heade
 | H2       | Cabeçalho no nível 2 | Segundo campo ordenado          |
 | H3       | Cabeçalho no nível 3 | Terceiro campo classificado     |
 
-If you use the `Subtotal` function to initiate Break processing, you should create a Break area for every level of Break that will be generated by the sort order, minus one. If you do not need anything printed in one of the Break areas, you can reduce its size to nothing by placing its marker on top of another control line. If you have more sort levels than Break areas, the last Break area will be repeated during printing.
+Se você usar a função `Subtotal` para iniciar o processamento de Quebra, deverá criar uma área de Quebra para cada nível de Quebra que será gerado pela ordem de classificação, menos um. Se não for necessário imprimir nada em uma das áreas de quebra, é possível reduzir seu tamanho a nada colocando o marcador em cima de outra linha de controle. Se você tiver mais níveis de classificação do que áreas de quebra, a última área de quebra será repetida durante a impressão.
