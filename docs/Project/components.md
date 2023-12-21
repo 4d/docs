@@ -46,6 +46,11 @@ The **/Sources/dependencies.json** file contents must be like:
 
 ... where "myComponent1" and "myComponent2" are the name of the components located at the same level as you project that you want to be loaded in your project.
 
+### Deployment
+
+To deploy an application with a [built component](../Desktop/building.md#build-component), put the component .4dz file in a `.4dbase` folder in the `Components` folder of the host application. 
+
+
 ## Defining component path
 
 If you want to customize the location of your components, you can use a **environment4d.json** file. This file allows you to declare the paths for the components that are not stored at the same level as the project folder. 
@@ -71,6 +76,6 @@ In the absence of **environment4d.json** for a given dependency, or if this file
 
 :::info Compatibility
 
-Components located in the legacy **Components** folder of your projects are loaded if there is no conflict with existing dependencies.
+Components located in the legacy [**Components** folder of your project](architecture.md#components) are also loaded after the above sequence if there is no conflict with existing dependencies.
 
 :::

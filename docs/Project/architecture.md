@@ -221,7 +221,13 @@ CompilerIntermediateFiles|Intermediate files resulting from Apple Silicon compil
 
 ## `Components`
 
-This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
+Legacy folder containing components (must be stored at the same level as the Project folder). 
+
+:::info
+
+Using the Components folder is no longer recommended, components must be [declared in **dependencies.json** and (optionnally) **environment4d.json** files](components.md).
+
+:::
 
 > An application project can be used itself as a component:
 > - for development: put an alias of the .4dproject file in the Components folder of the host project.
@@ -240,6 +246,7 @@ This folder contains all documentation files (.md) created for the project eleme
 For more information, refer to [Documenting a project](Project/documentation.md). 
 
 ## `WebFolder`
+
 
 Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
 
