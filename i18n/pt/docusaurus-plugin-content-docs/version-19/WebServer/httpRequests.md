@@ -3,7 +3,7 @@ id: httpRequests
 title: Processamento de pedidos HTTP
 ---
 
-The 4D web server provides several features to handle HTTP requests:
+O servidor web 4D oferece várias funcionalidades para lidar com solicitações HTTP:
 
 - the `On Web Connection` database method, a router for your web application,
 - o URL `/4DACTION` para chamar o código do lado do servidor
@@ -72,7 +72,7 @@ Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP d
 | <http://123.4.567.89/Customers/Add>  | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note que você está livre para usar este parâmetro a sua conveniência. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Cabeçalho e corpo do pedido HTTP
 
