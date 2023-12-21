@@ -183,7 +183,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 
 #### ELF/WLF
 
-The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
 The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
 
@@ -235,7 +235,7 @@ The automatic backup parameters for the logweb.txt are set on the **Web/Log (bac
 
 ![](../assets/en/WebServer/backup.png)
 
-Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
+Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
 
 *   **No Backup**: The scheduled backup function is deactivated.
 
