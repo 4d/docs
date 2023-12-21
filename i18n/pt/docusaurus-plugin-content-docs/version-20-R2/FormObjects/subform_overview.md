@@ -38,7 +38,7 @@ Page subforms can display the data of the current subrecord or any type of perti
 
 The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. Também é possível utilizar um formulário projeto. When executed, a page subform has the same standard display characteristics as an input form.
 
-> 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
+> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
 
 ### Utilizar a variável ou expressão ligada
@@ -87,7 +87,7 @@ O seguinte código é executado:
     Form.clockValue:=OBJECT Get subform container value //synchonize the local value End if
 ```
 
-It updates the value of `Form.clockValue` in the subform:
+Ele atualiza o valor de `Form.clockValue` no subformulário:
 
 ![](../assets/en/FormObjects/update-subform.png)
 
