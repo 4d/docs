@@ -56,7 +56,7 @@ No entanto, é necessário ler um objeto/coleção partilhado em `Use...End use`
 É possível chamar `OB Copy` com um objeto partilhado (ou com um objeto que contenha objetos partilhados como propriedades), mas devolverá um objeto padrão (não partilhado), incluindo os objetos nele contidos (se existirem).
 
 ### Armazenamento
-**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. This shared object is returned by the `Storage` command. É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
+**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. Esse objeto compartilhado é retornado pelo comando `Storage`. É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
 
 Note-se que, ao contrário dos objetos partilhados padrão, o objeto `storage` não cria um grupo partilhado quando são adicionados objetos/coleções partilhados como suas propriedades. Esta exceção permite que o objeto **Storage** seja utilizado sem bloquear todos os objectos partilhados ou colecções ligados.
 

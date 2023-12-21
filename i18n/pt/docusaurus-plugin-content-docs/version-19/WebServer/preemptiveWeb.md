@@ -65,7 +65,7 @@ Most of the web-related 4D commands and functions, database methods and URLs are
 
 ### Comandos 4D e métodos base
 
-All 4D web-related commands are thread-safe, *i.e.*:
+Todos os comandos 4D relacionados à Web são thread-safe, *i.e.*:
 
 - todos os comandos do tema *Servidor Web*,
 - todos os comandos do tema *Cliente HTTP*.

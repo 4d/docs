@@ -1262,10 +1262,10 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| Parâmetro   | Tipo                |    | Descrição                                                              |
-| ----------- | ------------------- |:--:| ---------------------------------------------------------------------- |
-| pathString  | Text                | -> | Attribute path(s) and sorting instruction(s) for the entity selection  |
-| pathObjects | Collection          | -> | Coleção de objetos criterio                                            |
+| Parâmetro   | Tipo                |    | Descrição                                                                  |
+| ----------- | ------------------- |:--:| -------------------------------------------------------------------------- |
+| pathString  | Text                | -> | Rota(s) de atributos e instruções de classificação para a entity selection |
+| pathObjects | Collection          | -> | Coleção de objetos criterio                                                |
 | Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada|<!-- END REF -->
 
 |

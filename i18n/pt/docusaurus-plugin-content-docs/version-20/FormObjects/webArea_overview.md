@@ -60,7 +60,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `function(result)`: função a passar como último argumento. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. Recebe o parâmetro `result`.
 
-- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). Você pode usar o comando `C_OBJECT` para retornar os objetos.
 
 > Por padrão, 4D trabalha em UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 

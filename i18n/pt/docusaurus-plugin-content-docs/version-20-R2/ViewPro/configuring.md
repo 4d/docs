@@ -363,7 +363,7 @@ Os atributos de escala são usados para especificar a otimização e ajustes de 
 
 | Propriedade    | Tipo          | Descrição                                                                                                       |
 | -------------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Valor padrão = "false"                     |
+| bestFitColumns | boolean       | A largura da coluna é ajustada para se adequar à maior largura de texto para impressão. Valor padrão = "false"  |
 | bestFitRows    | boolean       | A altura da linha é ajustada para se adequar à altura do texto mais alto para impressão. Valor padrão = "false" |
 | fitPagesTall   | inteiro longo | The number of vertical pages (portrait orientation) to check when optimizing printing. Valor padrão = -1        |
 | fitPagesWide   | inteiro longo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Valor padrão = -1     |

@@ -10,7 +10,7 @@ The 4D built-in language, consisting of more than 1300 commands, makes 4D a powe
 - Comunicar-se com outros aparelhos,
 - Enviar emails,
 - Gerenciar documentos e páginas web,
-- Import and export data between 4D databases and other applications,
+- Importação e exportação de dados entre bancos de dados 4D e outras aplicações,
 - incorporar procedimentos escritos em outras linguagens na linguagem de programação 4D
 
 A flexibilidade e poder da lnguagem de programação 4D faz com que seja ferramenta ideal para todos os níveis de usuários e desenvolvedores oferecendo uma completa gama de tarefas de gestão da informação. Os usuários principiantes podem realizar rapidamente os cálculos. Experienced users without programming experience can customize their databases. Experienced developers can use this powerful programming language to add sophisticated features and capabilities to their databases, including file transfer, communications, monitoring. Os desenvolvedores com experiência em programação em outras linguagens podem adicionar seus próprios comandos à linguagem 4D.

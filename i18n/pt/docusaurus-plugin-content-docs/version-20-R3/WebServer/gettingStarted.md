@@ -69,7 +69,7 @@ Create a basic database with, for example, a single table containing some record
 
 The most simple solution to display data is to call a [template page](templates.md) containing tags.
 
-1. Using any text editor, create a file containing the following lines:
+1. Usando qualquer editor de texto, crie um arquivo com as seguintes linhas:
 
 ```html
 <html>

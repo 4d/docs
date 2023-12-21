@@ -74,7 +74,7 @@ For more information, please refer to the [`.setError()` description in the Qodl
 
 #### Descrição
 
-A função `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web form<!-- END REF -->.
+A função `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envia *msg* como uma mensagem de informação para o formulário Web<!-- END REF -->.
 
 For more information, please refer to the [`.setMessage()` description in the Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass#setmessage).
 

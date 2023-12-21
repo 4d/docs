@@ -5,7 +5,7 @@ title: Descrição geral do controlo de acesso
 
 If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data, even in single-user applications.
 
-4D access control strategy depends on your deployment configuration:
+A estratégia de controle de acesso 4D depende da configuração de sua implementação:
 
 - em aplicações multi-usuário, pode confiar nos usuários e grupos 4D,
 - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](https://doc.4d.com/4dv19R/help/command/en/page484.html).

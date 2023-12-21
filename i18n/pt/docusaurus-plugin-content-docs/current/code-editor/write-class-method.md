@@ -197,7 +197,7 @@ All markers located inside functions are indented in the dropdown list, except f
 
 #### Ordem de visualização
 
-Tags are displayed in their appearing order inside the method/class.
+As etiquetas são exibidas em sua ordem de aparecimento dentro do método/classe.
 
 To display the tags of a method or class in alphabetical order, do one of the following:
 
@@ -410,7 +410,7 @@ Once created, property names are stored in an internal global list and are avail
 
 ![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
-The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
+A lista de sugestões é atualizada dinamicamente enquanto você edita o código. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
 
 Quando o banco de dados é reiniciado, a lista é reinicializada.
 
@@ -443,7 +443,7 @@ The search defined in this area will be performed in the code located in the win
 
 The **find** entry area enables you to enter the string to be searched for. This area is a combo box that stores the last 10 strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. Pode então utilizar este texto ou substituí-lo por outro.
 
-Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. It also indicates the current position of the cursor among all hits.
+Once a string is entered or selected, all occurrences found in the opened window are highlighted and the right side of the area displays the total number of hits found. Também indica a posição atual do cursor entre todos os resultados.
 
 Hit the **Enter** key to select closest occurrence to the cursor. Também pode clicar nos botões **Próximo / Anterior** ![find-next-previous](../assets/en/code-editor/find-next.png) para selecionar todas as ocorrências sequencialmente no início ou no fim do método atual, a partir da localização inicial do cursor, ou utilizar os comandos **Procurar seguinte** e **Procurar anterior** do menu [**Editar**](#shortcuts).
 
@@ -553,7 +553,7 @@ A [barra de estado](#status-bar) também fornece informações contextuais.
 
 ## Comentar / Não comentar
 
-There is no limit on the number of lines. The code editor does not apply any particular style within comments. The length of comments is limited to the maximum size of 32,000 characters per line. The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code.
+There is no limit on the number of lines. O editor de código não aplica nenhum estilo específico nos comentários. The length of comments is limited to the maximum size of 32,000 characters per line. The 4D language supports [comments](../Concepts/quick-tour.md#comments), which are inactive lines of code.
 
 There are two kinds of comments: `//comment` (single line comment) and `/*comment*/`(inline comments or multiline comment blocks).
 
@@ -622,7 +622,7 @@ These commands are found in the **Method** menu as well as the context menu of t
 
 ## Marcadores
 
-4D lets you associate bookmarks with certain lines in your methods. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
+4D permite que você associe marcadores a certas linhas em seus métodos. You can then browse quickly within the code by passing from one bookmark to another using specific commands.
 
 ![](../assets/en/code-editor/bookm.png)
 
