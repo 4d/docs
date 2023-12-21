@@ -111,10 +111,6 @@ module.exports =
 							type: "category",
 							label: "Concepts",
 							items: [
-								{
-									type: "category",
-									label: "About 4D Language",
-									items: [
 										"Concepts/about",
 										"Concepts/quick-tour",
 										"Concepts/operators",
@@ -155,18 +151,6 @@ module.exports =
 										"Concepts/identifiers",
 										"Concepts/paths"
 									],	
-								},
-								
-								{
-									type: "category",
-									label: "Processes",
-									items: [
-										"Develop/processes",
-										"Develop/preemptive",
-									]
-								},
-
-							],
 						},
 						{
 							type: 'link',
