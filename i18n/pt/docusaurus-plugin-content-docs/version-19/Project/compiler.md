@@ -188,7 +188,7 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 Estas duas listas contêm quatro colunas:
 
 - Names of process and interprocess variables and arrays used in your project. Estas variáveis são enumeradas por ordem alfabética.
-- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
+- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. Se o tipo de uma variável não puder ser determinado, a coluna estará vazia.
 - Número de dimensões se a variável for um array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
   - If the variable was found in a database method, the database method name is given, preceded by (M)*.
