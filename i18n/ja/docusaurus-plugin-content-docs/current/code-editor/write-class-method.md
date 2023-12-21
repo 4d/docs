@@ -482,7 +482,7 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 
 
-## Warnings and errors
+## 警告とエラー
 
 Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
