@@ -93,7 +93,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ![](../assets/en/FormObjects/button_toolbar.png)
 
-- *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+- *macOS* - o destaque do botão nunca aparece. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Exemplo
 
@@ -121,7 +121,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 ![](../assets/en/FormObjects/button_bevel.png)
 
-- *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+- *macOS* - o destaque do botão nunca aparece. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Exemplo
 
