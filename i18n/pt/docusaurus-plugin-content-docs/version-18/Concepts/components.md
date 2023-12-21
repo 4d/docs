@@ -32,7 +32,7 @@ By default, all the project methods of a matrix database installed as a componen
 To protect the project methods of a component effectively, simply compile the matrix database and provide it in the form of a .4dc file (compiled database that does not contain the interpreted code). Quando um banco de dados matriz compilado é instalado como um componente:
 
 - The shared project methods are shown on the Methods Page of the Explorer and can be called in the methods of the host database. However, their contents will not appear in the preview area nor in the debugger.
-- The other project methods of the matrix database will never appear.
+- Os outros métodos projeto do banco de dados de matriz nunca aparecerão.
 
 ## Partilhar os métodos de projeto
 
