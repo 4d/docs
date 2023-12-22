@@ -176,7 +176,7 @@ End if
 ```4d
 function divide( $p1: real; $p2: real)-> $result: real
   if ($p2=0)
-     $result:=0 //only for clarity (0 is the default for reals)
+     $result:=0 //apenas para fins de clareza (0 é o padrão para reais)
      throw(-12345; "Division by zero")
   else
     $result:=$p1/$p2
@@ -195,7 +195,7 @@ function test()
 ```4d
 var $e:=ds.Employee.new()
 $e.name:="Smith"
-$status:=Try($e.save()) //catch predictable and non-predictable errors
+$status:=Try($e.save()) // Captura de erros previsíveis e não previsíveis
 If ($status.success)
    ALERT( "Success")
 Else

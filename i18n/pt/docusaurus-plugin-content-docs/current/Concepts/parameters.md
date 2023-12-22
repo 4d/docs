@@ -126,7 +126,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. In particular, you cannot declare the same parameter as input and output, even with the same type. Por exemplo:
+Os parâmetros, que incluem o valor retornado, devem ser declarados apenas uma vez. Em particular, você não pode declarar o mesmo parâmetro como entrada e saída, mesmo com o mesmo tipo. Por exemplo:
 
 ```qs
     //declaração inválida
@@ -220,7 +220,7 @@ Os parâmetros da função devem ser passados na ordem correta: primeiro o forma
  Result:=MySum("000";1;18;4;23;17)
 ```
 
-Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Parameters are all available within the called code through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using the [variadic notation](#declaring-variadic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html) command. Por exemplo:
+Observe que, mesmo que tenha declarado 0, 1 ou mais parâmetros, você sempre poderá passar o número de parâmetros que desejar. Os parâmetros estão todos disponíveis no código chamado por meio da sintaxe `${N}` e o tipo de parâmetros extras é [Variant](dt_variant.md) por padrão (você pode declará-los usando a [notação variadic](#declaring-variadic-parameters)). Basta ter a certeza de que os parâmetros existem, graças ao comando [`Count parameters`](https://doc.4d.com/4dv20/help/command/en/page259.html). Por exemplo:
 
 ```4d
 // Método projeto OneMethodAmongOthers
@@ -245,7 +245,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) foo("hello";"world";!01/01/2021!
 
 Não é obrigatório declarar parâmetros variáveis. Os parâmetros variáveis não declarados recebem automaticamente o tipo [Variant](dt_variant.md).
 
-However, to avoid type mismatch errors during code execution, you can declare a variable number of parameters using the "..." notation in the prototypes of your functions, class constructors and methods (variadic parameters). You specify the parameter's type following notation "..." with the desired type.
+Entretanto, para evitar erros de incompatibilidade de tipos durante a execução do código, você pode declarar um número variável de parâmetros usando a notação "..." nos protótipos de suas funções, construtores de classes e métodos (parâmetros variádicos). Você especifica o tipo do parâmetro seguindo a notação "..." com o tipo desejado.
 
 ```4d
 #DECLARE ( ... : Text ) // Número indefinido de parâmetros 'Text'
@@ -258,7 +258,7 @@ Fonction myfunction ( ... : Text)
 ```
 
 
-When declaring multiple parameters, variadic notation must be employed at last position, for example:
+Ao declarar vários parâmetros, a notação variadic deve ser empregada na última posição, por exemplo:
 
 ```4d
 #DECLARE ( param: Real ; ... : Text )
@@ -273,7 +273,7 @@ Function myfunction (var1: Integer ; ... : Text)
 
 #### Exemplo
 
-Here we have a method called `SumNumbers` that returns the calculated total for all the numbers passed as parameters:
+Aqui temos um método chamado `SumNumbers` que retorna o total calculado para todos os números passados como parâmetros:
 
 ```4d
 
@@ -291,7 +291,7 @@ return $total
 
 ```
 
-Esse método pode ser chamado com um número variável de parâmetros Real. In case of wrong parameter type, an error will be returned before the method is executed :
+Esse método pode ser chamado com um número variável de parâmetros Real. No caso de um tipo de parâmetro incorreto, um erro será retornado antes que o método seja executado:
 
 ```4d
 
@@ -303,59 +303,59 @@ $total3:=SumNumbers(1; 2; "hello"; 4; 5) // erro
 
 :::note Nota de compatibilidade
 
-The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still supported for compatibility but the variadic notation is now preferred.
+A sintaxe herdada para declarar parâmetros variádicos (`C_TEXT(${4})`) ainda é compatível, mas a notação variádica agora é a preferida.
 
 :::
 
 ## Compilação
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must make sure that all method and function parameters are properly declared as soon as you intend to compile your project.
+Mesmo que isso não seja obrigatório no [modo interpretado](interpreted.md), você deve se certificar de que todos os parâmetros de métodos e funções sejam declarados corretamente assim que pretender compilar o projeto.
 
 :::note
 
-You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). No entanto, essa opção aumenta significativamente o tempo de compilação.
 
 :::
 
 
-### Parameters declared in prototypes
+### Parâmetros declarados em protótipos
 
-When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. Exemplos:
+Ao usar as palavras-chave `#DECLARE` ou `Function`, os parâmetros são declarados automaticamente e nenhuma informação adicional é necessária para o compilador. Exemplos:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all method parameters are declared with their type
+    // todos os parâmetros do método são declarados com seu tipo
 ```
 
 ```4d
-    // On Web Connection Database Method
+    // Método de banco de dados On Web Connection
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)
 ```
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
-    // all function parameters are declared with their type
+Função add($x : Variante; $y : Integer)-> $result : Integer
+    // todos os parâmetros da função são declarados com seu tipo
 ```
 
 :::tip
 
-Declaring parameters in prototypes is a good practice, even in non-compiled projects.
+Declarar parâmetros em protótipos é uma boa prática, mesmo em projetos não compilados.
 
 :::
 
-### Method parameters declared outside prototypes
+### Parâmetros de método declarados fora dos protótipos
 
-It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
+Pode acontecer de os parâmetros do método não serem declarados em protótipos `#DECLARE`. Essas declarações podem ser encontradas, em particular, no código 4D herdado. Nesse caso, você deve configurar um método `Compiler_Methods` para reunir as declarações desses parâmetros de método.
 
-#### `Compiler_Methods` method
+#### Método `Compiler_Methods`
 
-When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
+Quando alguns parâmetros de método não são declarados nos protótipos `#DECLARE`, o compilador 4D precisa que você os declare em um método específico usando uma sintaxe especial:
 
 - é possível agrupar todos os parâmetros de variáveis locais para métodos de projeto num ou mais métodos de projeto
-- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
-- within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- o(s) nome(s) do método (s) deve iniciar com "**Compiler_**", por padrão "Compiler_Methods".
+- dentro desse método, você predeclara os parâmetros de cada método usando a seguinte sintaxe: `C_XXX(methodName;parameter)`.
 
 Por exemplo:
 
@@ -370,15 +370,15 @@ Esta sintaxe não é executável em modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Você pode criar e preencher automaticamente um método `Compiler_Methods` contendo todos os seus parâmetros declarados fora dos protótipos usando o botão [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** na caixa de diálogo Parâmetros do compilador.
 
 :::info
 
-#### Particular cases
+#### Casos particulares
 
-Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
+Alguns contextos não suportam a declaração em um método "Compiler_", portanto, são tratados especificamente:
 
-- Gatilhos - O parâmetro $0 (Longint), que é o resultado de um gatilho, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
+- Triggers - O parâmetro $0 (Longint), o resultado de um trigger, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
 
 - Objectos de formulário que aceitam o evento de formulário `On Drag Over` - O parâmetro $0 (Longint), que é o resultado do evento de formulário `On Drag Over` , é tipado pelo compilador se o parâmetro não tiver sido explicitamente declarado. Entretanto, se quiser fazer a declaração, deve fazer isso no método objeto. **Nota:** o compilador não inicializa o parâmetro $0. Portanto, logo que utilizar o evento formulário `On Drag Over`, deve inicializar $0. Por exemplo:
 
@@ -396,10 +396,10 @@ Some contexts do not support declaration in a "Compiler_" method, thus they are 
 
 :::
 
-### Conflicts between declarations
+### Conflitos entre declarações
 
-- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
-- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
+- Se um parâmetro for declarado em um protótipo `#DECLARE` e em um método *Compiler_*, a entrada do método  *Compiler_* será ignorada.
+- Se um parâmetro for declarado em um protótipo `#DECLARE` e em um método *Compiler_*, mas com um tipo de dados diferente, o Code Live Checker gerará um erro durante a verificação de sintaxe e a compilação.
 
 
 
