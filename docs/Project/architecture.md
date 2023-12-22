@@ -53,18 +53,19 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 ### `Sources`
 
-Contents|Description|Format
---------|-------|----
-catalog.4DCatalog|Table and field definitions|XML
-folders.json|Explorer folder definitions|JSON
-menus.json|Menu definitions|JSON
-settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML
-tips.json|Defined tips|JSON
-lists.json|Defined lists|JSON
-filters.json|Defined filters|JSON
-styleSheets.css|CSS style sheets|CSS
-styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS    
-styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS    
+Contents|Description|Format|
+--------|-------|----|
+catalog.4DCatalog|Table and field definitions|XML|
+folders.json|Explorer folder definitions|JSON|
+menus.json|Menu definitions|JSON|
+settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-user)* or *[user settings for data](#settings-user-data)* are defined (see also [Priority of settings](../Desktop/user-settings.md#priority-of-settings). **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to [enable](../Desktop/user-settings.md#enabling-user-settings) and use *user settings* or *user settings for data* to define custom settings.|XML|
+tips.json|Defined tips|JSON|
+lists.json|Defined lists|JSON|
+filters.json|Defined filters|JSON|
+dependencies.json|Names of [components to load](components.md) in the project|JSON|
+styleSheets.css|CSS style sheets|CSS|
+styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS| 
+styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS|
 
 
 #### `DatabaseMethods`
@@ -225,13 +226,9 @@ Legacy folder containing components (must be stored at the same level as the Pro
 
 :::info
 
-Using the Components folder is no longer recommended, components must be [declared in **dependencies.json** and (optionnally) **environment4d.json** files](components.md).
+It is now recommended to [use the **dependencies.json** and (optionnally) **environment4d.json** files](components.md) to declare your components instead of the Components folder.
 
 :::
-
-> An application project can be used itself as a component:
-> - for development: put an alias of the .4dproject file in the Components folder of the host project.
-> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. 
 
 
 ## `Plugins`

@@ -7,7 +7,7 @@ title: Build Application
 
 The application builder allows you to:
 
-* Build a compiled structure, without interpreted code,
+* Build a compiled structure or component, without interpreted code,
 * Build a stand-alone, double-clickable application, *i.e.*, merged with 4D Volume Desktop, the 4D database engine,
 * Build different applications from the same compiled structure via an XML project,
 * Build homogeneous client-server applications,
@@ -20,7 +20,7 @@ The application builder allows you to:
 
 Building a project package can be carried out using:
 
-* either the [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html) command,
+* either the [`BUILD APPLICATION`](https://doc.4d.com/4dv20/help/command/en/page871.html) command,
 * or the [Build Application dialog](#application-builder).
 
 :::tip
@@ -98,7 +98,7 @@ When you check this option, any folders related to the project are copied into t
 
 Builds a compiled component from the structure.
 
-A component is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and installed in another 4D project (the host application project), its functionalities are accessible from the host project.
+A [component](../Extensions/develop-components.md) is a standard 4D project in which specific functionalities have been developed. Once the component has been configured and [installed in another 4D project](../Project/components.md) (the host application project), its functionalities are accessible from the host project.
 
 If you have named your application, *MyComponent*, 4D will create a *Components* folder containing *MyComponent.4dbase* folder:
 
@@ -107,8 +107,9 @@ If you have named your application, *MyComponent*, 4D will create a *Components*
 The *MyComponent.4dbase* folder contains:
 
 * *MyComponent.4DZ* file
-
 * A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
+
+The *MyComponent.4dbase* folder is the [package folder of the compiled component](../Project/components.md).  
 
 ## Application page
 
@@ -129,9 +130,9 @@ On Windows, this feature creates an executable file (.exe). On macOS, it handles
 
 The principle consists of merging a compiled structure file with 4D Volume Desktop. The functionality provided by the 4D Volume Desktop file is linked with the product offer to which you have subscribed. For more information about this point, refer to the sales documentation and to the [4D Store](http://www.4d.com/).
 
-You can define a default data file or allow users to create and use their own data file (see the [Data file management in final applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Data-file-management-in-final-applications.300-4354729.en.html) section).
+You can define a default data file or allow users to [create and use their own data file](#management-of-data-files).
 
-It is possible to automate the update of merged single-user applications by means of a sequence of language commands (see [Automatic updating of server or single-user applications](https://doc.4d.com/4Dv17R6/4D/17-R6/Automatic-updating-of-server-or-single-user-applications.300-4354721.en.html).
+It is possible to [automate the update of merged single-user applications](#automatic-updating-of-server-or-single-user-applications) by means of a sequence of language commands.
 
 #### 4D Volume Desktop Location
 
@@ -452,7 +453,7 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 ## Plugins & components page
 
-On this tab, you set each [**plug-in**](Concepts/plug-ins.md), [**component**](Concepts/components.md), and [**module**](#deselecting-modules) that you will use in your stand-alone or client/server application.
+On this tab, you set each [**plug-in**](Concepts/plug-ins.md), [**component**](../Project/components.md), and [**module**](#deselecting-modules) that you will use in your stand-alone or client/server application.
 
 The page lists the elements loaded by the current 4D application:
 

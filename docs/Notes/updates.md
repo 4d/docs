@@ -4,6 +4,18 @@ title: Release Notes
 ---
 
 
+## 4D v20 R5
+
+Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D v20 R5.
+
+
+#### Highlights
+
+- New [Package manager](../Project/components.md) to handle components through a `dependencies`.json file. 
+
+
+
+
 ## 4D v20 R4
 
 Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D v20 R4.
