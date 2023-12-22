@@ -83,6 +83,7 @@ The table below shows choices available:
 
 >Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
 
+
 ### Custom formats
 
 Customized date formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. For example:
@@ -101,9 +102,7 @@ Customized date formats can be built using several patterns described in the [**
 
 :::note blankIfNull
 
-By default, a null date is displayed with zeros, e.g. 00/00/00. With the "blankIfNull" option, a null date is displayed as an empty area. "blankIfNull" must be combined with the selected format value:
-- with a built-in format, after a space character, ex: "systemShort blankIfNull"
-- with a custom format, without space character, ex: "ee dd LLblankIfNull"
+By default, a null date is displayed with zeros, e.g. 00/00/00. With the "blankIfNull" option, a null date is displayed as an empty area. The "blankIfNull" string (case sensitive) must be combined with the selected format value. Ex: "systemShort blankIfNull" or "ee dd LL blankIfNull".
 
 :::
 
@@ -380,9 +379,7 @@ Customized time formats can be built using several patterns described in the [**
 
 :::note blankIfNull
 
-By default, a null time is displayed with zeros, e.g. "00:00:00". With the "blankIfNull" option, a null time is displayed as an empty area. "blankIfNull" must be combined with the selected format value:
-- with a built-in format, after a space character, ex: "MM_SS blankIfNull"
-- with a custom format, without space character, ex: "hh:mm aablankIfNull"
+By default, a null time is displayed with zeros, e.g. "00:00:00". With the "blankIfNull" option, a null time is displayed as an empty area. The "blankIfNull" string (case sensitive) must be combined with the selected format value. Ex: "MM_SS blankIfNull" or "hh:mm aa blankIfNull"
 
 #### Objects Supported
 

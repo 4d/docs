@@ -146,11 +146,20 @@ For example, for the time `13:25:34`, "B" will display *in the afternoon* in an 
 
 ### Extra letters
 
-Formatting strings can contain characters no to be interpreted as formatting characters: if they are between "a" and "z" or "A" and "Z", they must be enclosed in single quotes. 
+Formatting strings can contain characters not to be interpreted as formatting characters: if they are between "a" and "z" or "A" and "Z", they must be enclosed in single quotes. 
 
 For example:
 
-"15:30:00" with pattern "HH 'hours and' mm 'minutes'" produce "15 hours and 30 minutes". 
+"15:30:00" with pattern "HH 'hours and' mm 'minutes'" produces "15 hours and 30 minutes". 
+
+### Starting and ending spaces
+
+Starting and ending spaces in patterns are automatically trimmed in outputs. If you want to add spaces before or after the resulting string, you must enclose them in single quotes.
+
+For example:
+
+" HH : mm : ss " ---> "09 : 10 : 25"
+"' 'HH : mm : ss' '" ---> " 09 : 10 : 25 "
 
 
 ## Examples
