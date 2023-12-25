@@ -37,11 +37,11 @@ title: コードエディター
 
 この編集エリアの表示はカスタマイズできます。 カスタマイズした内容は、すべてのコードエディターに反映されます:
 
-| Option | Description | Set in... |
+| オプション | 説明 | 設定場所 |
 
 
 
-|---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) **スタイル** サブメニューからオプションを選択します。 Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. この設定は、すべてのコード要素 (コマンド名、変数、コメントなど) に適用されます。 | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
+|---|---|---| |**フォント** と **フォントサイズ**| 編集エリアの文字フォントとサイズを設定します| **環境設定** の [**メソッド**](../Preferences/methods.md) ページ、または **メソッド** メニューから **表示 ＞ フォントを大きく** / **フォントを小さく** で設定します。|**シンタックス要素のスタイルとカラー**| 4Dランゲージの要素タイプごとに異なる色やスタイルを割り当てることができます。  また、編集エリアのインターフェースで使用されている色 (ハイライト、背景色など) を変更することができます。| ランゲージ要素 (変数、キーワード等) 上でコンテキストメニューを表示し、 **スタイル** サブメニューからオプションを選択します。 または、**環境設定** の [**メソッド**](../Preferences/methods.md) ページでも設定できます。| |**スペース**| 単語間のスペースを空白ではなくピリオド (.) で表示することができます。 この設定は、すべてのコード要素 (コマンド名、変数、コメントなど) に適用されます。 | **メソッド ＞ 表示 ＞ ホワイトスペース** |**テーマ**| Dark または Light テーマが選択できるほか、カスタムテーマも設定可能です | [**環境設定 ＞ メソッド**](../Preferences/methods.md) |**コードインデント幅**| コードのインデント幅を設定します| [**環境設定 ＞ メソッド**](../Preferences/methods.md)
 
 #### 更新行の通知
 
@@ -484,15 +484,15 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 ## 警告とエラー
 
-Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
+実行エラーを防ぐため、入力されたコードのシンタックス、一貫性、および構造が 4Dコードライブチェッカーにより自動的にチェックされます。 たとえば、コードライブチェッカーは、適切な閉じる括弧がないこと、または不明なデータクラス属性を使用したことを検出できます。
 
-The Code Live Checker is activated at three levels:
+コードライブチェッカーは 3つの段階で作動します:
 
-- when you write code in the code editor,
-- when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
-- when you [compile](../Project/compiler.md) the project.
+- コードエディターでコードを書いているとき
+- コンパイラーで [シンタックスをチェック](../Project/compiler.md#シンタックスチェック) するとき
+- プロジェクトを [コンパイル](../Project/compiler.md) するとき
 
-4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+4D はコードのシンタックスが正しいかどうかを自動的にチェックします。 シンタックスが正しくない場合、4D はそのことを示す記号を表示します 。
 
 Two kinds of symbols are displayed:
 
