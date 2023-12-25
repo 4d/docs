@@ -494,37 +494,37 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 4D はコードのシンタックスが正しいかどうかを自動的にチェックします。 シンタックスが正しくない場合、4D はそのことを示す記号を表示します 。
 
-Two kinds of symbols are displayed:
+2種類の記号が表示されます:
 
-- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. 警告によりコンパイルが中断されることはありません。
-- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
+- **警告** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): 警告は、実行エラーにつながる可能性のあるステートメントに注意を促すためのものです。 警告によりコンパイルが中断されることはありません。
+- **エラー**![error](../assets/en/code-editor/error-icon.png): エラーとは、コードの正しい実行を妨げる異常のことです。 これらを修正しないかぎり、プロジェクトはコンパイルされません。
 
 マウスを記号に重ねるとエラーの内容が表示されます:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-The Code Live Checker is activated while you enter the code. メソッドやクラス、関数の行にエラーがあると表示された場合には、それを修正してください。 正しく修正されると、4D はエラー記号を削除します。 保存したりウィンドウを閉じたりしたときはメソッド全体が評価されます。
+コードライブチェッカーは、コードを入力するときに作動します。 メソッドやクラス、関数の行にエラーがあると表示された場合には、それを修正してください。 正しく修正されると、4D はエラー記号を削除します。 保存したりウィンドウを閉じたりしたときはメソッド全体が評価されます。
 
-You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
+コードを入力する際、テンキー側の **Enter** を押すと、改行されることなく現在の行のシンタックスチェックをおこなえます。 4D は行を評価し、フォーマットし、エラーがあればそれを表示し、挿入カーソルを行の最後に移動します。
 
-The Code Live Checker checks for:
+コードライブチェッカーは、次のことをチェックします:
 
-- basic syntax errors (wrong operators, misspellings and the like)
+- 基本的なシンタックスエラー (演算子が間違っている、スペルミスなど)
 - ステートメントの構造 (`If`, `End if` など)
-- matching enclosing characters in the code such as parentheses or brackets (see tip below)
-- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+- 括弧やクォーテーションマークなどの対応 (ペアになっているか) (後述の tip 参照)
+- 属性や関数の呼び出しが、モデル (ORDA) やユーザークラス定義に準じていること。 たとえば、データクラスの計算属性への呼び出しが宣言された同属性の型と互換性がない場合に、コードライブチェッカーはエラーを生成します。
 
 :::tip
 
-When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
+閉じる文字を入力すると、4D は開始と終了文字を灰色 (デフォルト) の四角で囲み、それらがペアであることを示します:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-You can modify the way 4D indicates matching enclosing characters or disable this feature in the [**Preferences**](../Preferences/methods.md#options-1).
+これら括弧のマッチングに関する振る舞いは [**環境設定**](../Preferences/methods.md#オプション-1) で変更できます。
 
 :::
 
-The Code Live Checker cannot detect some errors that only occur during execution. 実行時エラーは、コードが実行されているときに 4D が検出します。 However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
+コードライブチェッカーは、実行時にのみ発生するようなエラーは検出することができません。 実行時エラーは、コードが実行されているときに 4D が検出します。 しかし、エラー検出にあたっては、[コンパイラー](../Project/compiler.md) も不可欠な助けを提供していることに留意してください。
 
 
 ## ヘルプTips
