@@ -512,11 +512,11 @@ The Code Live Checker checks for:
 - basic syntax errors (wrong operators, misspellings and the like)
 - la estructura de las instrucciones (`If`, `End if` y así sucesivamente)
 - matching enclosing characters in the code such as parentheses or brackets (see tip below)
-- the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.
+- the calls of attributes and functions according to your model (ORDA) and user class definitions. Por ejemplo, el Verificador de código en vivo genera un error cuando una llamada a un atributo calculado de base de datos no es compatible con el tipo de atributo calculado declarado.
 
 :::tip
 
-When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles by default:
+Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los caracteres de inicio/fin con rectángulos grises por defecto:
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
