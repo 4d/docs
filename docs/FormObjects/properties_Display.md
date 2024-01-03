@@ -84,6 +84,7 @@ The table below shows choices available:
 >Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html) command.
 
 
+
 ### Custom formats
 
 Customized date formats can be built using several patterns described in the [**Date and Time Formats**](../Project/date-time-formats.md) page. For example:
@@ -98,7 +99,7 @@ Customized date formats can be built using several patterns described in the [**
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|dateFormat|string|<li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Custom formats: any format built using a [supported pattern](../Project/date-time-formats.md) + "blankIfNull"</li>|
+|dateFormat|string|<li>Built-in formats: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Custom formats: any format built using a [supported pattern](../Project/date-time-formats.md) + " blankIfNull"</li>|
 
 :::note blankIfNull
 
@@ -322,6 +323,7 @@ When the area that contains a picture with the **Replicated** format is enlarged
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
 #### JSON Grammar
+
 
 |Name|Data Type|Possible Values|
 |---|---|---|
