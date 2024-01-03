@@ -37,11 +37,11 @@ Aquí es donde se escribe y edita el código. El editor aplica automáticamente 
 
 Puede personalizar la visualización del área de edición. Toda personalización se transmite automáticamente a todas las ventanas del editor de código:
 
-| Option | Description | Set in... |
+| Opción | Descripción | Definir en... |
 
 
 
-|---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) > Submenú **Estilo**. Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
+|---|---|---| |**fuente** y **tamaño de fuente**| Defin la fuente y el tamaño de los caracteres que se utilizarán en el área de edición| **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Ver** > **Fuente más grande** o **Fuente más pequeña** |**estilo y color de los elementos de sintaxis**| asigna un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los diferentes colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).| Haga clic derecho en un elemento del lenguaje (variable, palabra clave, etc.) > Submenú **Estilo**. O **Preferencias** > [**Métodos**](../Preferences/methods.md)| |**espacios**| Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Vista > Espacios en blanco** |**temas**| Puede seleccionar el tema Oscuro o Claro, o definir uno personalizado | **Preferencias** > [**Métodos**](../Preferences/methods.md) |**ancho de las sangrías de código**| Defina el ancho de las sangrías de código| **Preferencias** > [**Métodos**](../Preferences/methods.md)
 
 #### Barras de cambio
 
@@ -482,13 +482,13 @@ El comando **Editar > Marcar todo** se activa cuando ya se ha especificado una b
 
 
 
-## Warnings and errors
+## Advertencias y errores
 
-Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
+Gracias al Verificador en vivo de código 4D, la sintaxis, la consistencia y la estructura del código introducido se comprueban automáticamente para evitar errores de ejecución. Por ejemplo, el Verificador en vivo de código puede detectar que falta un paréntesis derecho o que utilizo un atributo dataclass desconocido.
 
-The Code Live Checker is activated at three levels:
+El Verificador en vivo de código se activa en tres niveles:
 
-- when you write code in the code editor,
+- cuando escriba código en el editor de código,
 - when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
 - when you [compile](../Project/compiler.md) the project.
 
