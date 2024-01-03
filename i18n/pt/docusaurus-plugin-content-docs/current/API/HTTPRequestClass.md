@@ -209,18 +209,18 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 
 #### Descrição
 
-O comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->parses a multipart/form-data text or blob (HTTP "response" message) and extracts the content to an object. Each property of the returned object corresponds to a part of the multipart data<!-- END REF -->.
+O comando `HTTP Parse message` <!-- REF #HTTP Parse message.Summary -->analisa um texto ou blob multipart/form-data (mensagem HTTP "response") e extrai o conteúdo para um objeto. Cada propriedade do objeto retornado corresponde a uma parte dos dados multipartes<!-- END REF -->.
 
 :::info
 
-HTTP itself is a stateless communication protocol. Within this framework, clients initiate communication by sending "request" messages to servers, specifying details like method, target, headers, content, etc. Servers, in turn, respond with "response" messages that include the same details. `HTTP Parse message` parses either the "request" or the "response" message into a well-organized object.
+HTTP em si, é um protocolo de comunicação sem estado. Neste quadro, os clientes iniciam uma comunicação enviando mensagens "request" aos servidores, especificando detalhes como método, alvo, cabeçalhos, conteúdo, etc. Os servidores, respondem com mensagens de "resposta" que incluem os mesmos detalhes. `HTTP Parse message` analisa a mensagem "request" ou de "response" em um objeto bem organizado.
 
 :::
 
 
 #### Exemplo
 
-In the following example, we parse the data from a text file containing HTTP requests.
+No exemplo a seguir, analisamos os dados de um arquivo de texto que contém solicitações HTTP.
 
 Aqui está o conteúdo do arquivo:
 
