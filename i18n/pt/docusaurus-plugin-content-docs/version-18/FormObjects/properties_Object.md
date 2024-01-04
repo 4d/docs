@@ -211,7 +211,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 ---
 
-## Radio Group
+## Grupo Rádio
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
@@ -260,7 +260,7 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
+| Cálculo                | Num | Text | Date | Hora | Bool | Pict | tipo var rodapé         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
 | Mínimo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |
 | Máximo                 | X   |      | X    | X    | X    |      | Igual ao tipo de coluna |
