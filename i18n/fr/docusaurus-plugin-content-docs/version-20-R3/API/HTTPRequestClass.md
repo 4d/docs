@@ -77,10 +77,10 @@ Les objets HTTPRequest fournissent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                |
-| ------- | -------------------------------------------- |
-| v20     | Validation TLS par défaut                    |
-| v19 R7  | Prise en charge de la propriété *decodeData* |
+| Version | Modifications                                                  |
+| ------- | -------------------------------------------------------------- |
+| v20     | Validation TLS par défaut                                      |
+| v19 R7  | Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -130,6 +130,7 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 
 | Propriété              | Type                                            | Description                                                                                                                                                                                                                                                   | Par défaut  |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| automaticRedirections  | Boolean                                         | If true, redirections are performed automatically                                                                                                                                                                                                             | True        |
 | body                   | Variant                                         | Corps de la requête (requis dans le cas des requêtes `post` ou `put`). Il peut s'agir d'un texte, d'un blob ou d'un objet. Le content-type est déterminé à partir du type de cette propriété, sauf s'il est défini dans les headers                           | undefined   |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Définit le dossier actif des certificats du client                                                                                                                                                                                                            | undefined   |
 | dataType               | Text                                            | Type de l'attribut response body. Valeurs : "text", "blob", "object", ou "auto". Si "auto", le type du contenu du corps sera déduit de son type MIME (object pour JSON, text pour texte, javascript, xml, message http et url sous forme encodée, blob sinon) | "auto"      |
