@@ -57,7 +57,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 | [Caixa de selecção](checkbox_overview.md)               | Valor da variável associada (0, 1, 2)                                                  |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
 | [Botão rádio](radio_overview.md)                        | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
-| [Tab control](tabControl.md)                            | Número da aba selecionada                                                              |
+| [Controle de abas](tabControl.md)                       | Número da aba selecionada                                                              |
 
 #### Gramática JSON
 
@@ -237,7 +237,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 ---
 
-## Radio Group
+## Grupo Rádio
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
@@ -286,7 +286,7 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
+| Cálculo                | Num | Text | Date | Hora | Bool | Pict | tipo var rodapé         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
 | Mínimo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Máximo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |

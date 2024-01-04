@@ -45,7 +45,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **temas**                                 | Pode selecionar o tema Escuro ou Claro, ou definir um tema personalizado                                                                                                                      | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
 | **largura das indentações de código**     | Definir a largura das indentações do código                                                                                                                                                   | **Preferências** > [**Métodos**](../Preferences/methods.md)                                                                                                                                                                       |
 
-#### Change bars
+#### Mudar barras
 
 Colored bars instantly show you where lines of code were modified since the method was opened:
 
@@ -317,7 +317,7 @@ You can automatically modify the case of selected characters using the commands 
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
-### Swap expression
+### Trocar expressão
 
 The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
 

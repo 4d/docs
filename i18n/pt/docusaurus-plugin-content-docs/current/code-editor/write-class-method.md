@@ -43,7 +43,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 |---|---|---| |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font** |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) Submenu > **Estilo**. Or **Preferences** > [**Methods**](../Preferences/methods.md)| |**spaces**| You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.). | **Method > View > White Spaces** |**themes**| You can select the Dark or Light theme, or set a custom one | **Preferences** > [**Methods**](../Preferences/methods.md) |**width of code indentations**| Set the width of code indentations| **Preferences** > [**Methods**](../Preferences/methods.md)
 
-#### Change bars
+#### Mudar barras
 
 Colored bars instantly show you where lines of code were modified since the method was opened:
 
@@ -315,7 +315,7 @@ You can automatically modify the case of selected characters using the commands 
 
 When you apply one of these commands to a text selection, the spaces and "_" characters are removed and the first letter of each word becomes uppercase.
 
-### Swap expression
+### Trocar expressão
 
 The **Swap Expression** function can be used to reverse the arguments of an expression assigning a value. Por exemplo,
 
@@ -482,7 +482,7 @@ The **Edit > Bookmark All** command is enabled when a search has already been sp
 
 
 
-## Warnings and errors
+## Avisos e erros
 
 Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of the entered code are automatically checked in order to prevent execution errors. For example, the Code Live Checker can detect that a right parenthesis is missing or that you used an unknown dataclass attribute.
 
@@ -490,14 +490,14 @@ The Code Live Checker is activated at three levels:
 
 - when you write code in the code editor,
 - when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
-- when you [compile](../Project/compiler.md) the project.
+- quando você [compila](../Project/compiler.md) o projeto.
 
-4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+4D verifica automaticamente a sintaxe do código para ver se está correta. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
 
 Two kinds of symbols are displayed:
 
 - **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. Não impedem a compilação.
-- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
+- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. Eles devem ser corrigidos, caso contrário o projeto não será compilado.
 
 When you move the mouse over the symbol, a help tip displays the cause of the error:
 
@@ -509,7 +509,7 @@ You can format the current line (without advancing to the next line) by pressing
 
 The Code Live Checker checks for:
 
-- basic syntax errors (wrong operators, misspellings and the like)
+- erros básicos de sintaxe (operadores errados, erros de ortografia e similares)
 - the structure of statements (`If`, `End if` and so on)
 - matching enclosing characters in the code such as parentheses or brackets (see tip below)
 - the calls of attributes and functions according to your model (ORDA) and user class definitions. For example, the Code Live Checker generates an error when a call to a dataclass computed attribute is not compatible with the declared computed attribute type.

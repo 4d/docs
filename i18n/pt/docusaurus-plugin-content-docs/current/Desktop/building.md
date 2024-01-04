@@ -711,7 +711,7 @@ Este é o cenário para atualizar um servidor ou aplicação mesclada usuário �
 
 > Esta sequência é compatível com aplicações servidor Windows executadas como um Serviço.
 
-### Update log
+### Histórico de atualização
 
 The installation procedure produces a log file detailing the update operations of merged applications (client, server or single-user) on the target machines. This file is useful for analyzing any errors that occur during the installation process.
 

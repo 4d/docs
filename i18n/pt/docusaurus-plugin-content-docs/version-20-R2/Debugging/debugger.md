@@ -269,7 +269,7 @@ After you deploy the list of parameters, you can drag and drop parameters and fu
 
 Também pode utilizar o comando [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para obter a cadeia de chamadas por programação.
 
-## Custom Watch Pane
+## Painel de Observação Personalizado
 
 O Painel de controle personalizado é útil para avaliar expressões. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Qualquer tipo de expressão pode ser avaliado:
 
@@ -378,11 +378,11 @@ Por exemplo:
   // ...
 ```
 
-Digamos que o contador de programas esteja definido na linha `If (This condition)`. Quando você clica no botão **Step over**, o contador do programa passa diretamente para a linha `DO_SOMETHING_ELSE`. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+Digamos que o contador de programas esteja definido na linha `If (This condition)`. Quando você clica no botão **Step over**, o contador do programa passa diretamente para a linha `DO_SOMETHING_ELSE`. Para examinar os resultados da linha `DO_SOMETHING`, você pode mover o contador do programa para essa linha e executá-la.
 
 ### Menu contextual
 
-The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
+O menu contextual do painel Código-fonte fornece acesso a várias funções que são úteis ao executar métodos no modo Rastreamento:
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 

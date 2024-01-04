@@ -3,7 +3,7 @@ id: propertiesPrint
 title: Imprimir
 ---
 
-## Print frame
+## Impressão quadro
 
 This property handles the print mode for objects whose size can vary from one record to another depending on their contents. Estes objetos podem ser definidos para imprimir com uma moldura fixa ou variável. Fixed frame objects print within the confines of the object as it was created on the form. Variable frame objects expand during printing to include the entire contents of the object. Note that the width of objects printed as a variable size is not affected by this property; only the height varies automatically based on the contents of the object.
 

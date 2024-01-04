@@ -82,7 +82,7 @@ O arquivo de modelo no formato JSON contém os seguintes atributos:
 
 | Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                 |
 |:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Formula of table data source                                                                                                                              |
+| tableDataSource      | Text       | x           | Fórmula da fonte de dados da tabela                                                                                                                       |
 | columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                              |
 | columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                           |
 | columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
@@ -214,7 +214,7 @@ The translation file serves an additional role when a user selects a table in th
 
 ```
 
-#### Theme files
+#### Arquivos de temas
 
 A list of themes is provided by default in the 4D Write Pro Interface component, such as "Arial", "CourierNew" and "YuGothic", available in multiple variations like "Blue" and "Green". However, you can create your own theme by placing it in the "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Themes" folder within your project.
 

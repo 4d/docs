@@ -56,6 +56,6 @@ The 4D web server supports access to data stored in your 4D applications through
 
 * [specific URLs](httpRequests.md) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
 
-## Dedicated Database Methods
+## Métodos banco de dados dedicados
 
 `On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
