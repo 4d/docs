@@ -21,7 +21,7 @@ You can select the interface to use with your 4D View Pro form areas in the **Pr
 
 As interfaces permitem modificações básicas e a manipulação de dados. User-defined modifications are saved in the 4D View Pro object when the user saves the document.
 
-#### Ribbon
+#### Fita
 
 ![](../assets/en/ViewPro/vpRibbon.png)
 
