@@ -66,7 +66,7 @@ A definição das permissões deve ser coerente, nomeadamente:
 
 
 
-## Privileges and Roles
+## Privilégios e roles
 
 A **privilege** is the technical ability to run **actions** on **resources**, while a **role** is a privilege pusblished to be used by an administrator. Basically, a role gathers several privileges to define a business user profile. For example, "manageInvoices" could be a privilege while "secretary" could be a role (which includes "manageInvoices" and other privileges).
 
@@ -124,8 +124,8 @@ A sintaxe do ficheiro `roles.json` é a seguinte:
 | privileges          |                 |               | Coleção de objectos `privilege`  | X           | Lista de privilégios definidos                                               |
 |                     | \[].privilege  |               | String                           |             | Nome do privilégio                                                           |
 |                     | \[].includes   |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                      |
-| roles               |                 |               | Coleção de objetos `role`        |             | List of defined roles                                                        |
-|                     | \[].role       |               | String                           |             | Role name                                                                    |
+| roles               |                 |               | Coleção de objetos `role`        |             | Lista de roles definidos                                                     |
+|                     | \[].role       |               | String                           |             | Nome da role                                                                 |
 |                     | \[].privileges |               | Coleção de strings               |             | Lista de nomes de privilégios incluídos                                      |
 | permissions         |                 |               | Object                           | X           | Lista de acções permitidas                                                   |
 |                     | allowed         |               | Coleção de objectos `permission` |             | Lista de permissões permitidas                                               |
