@@ -3,13 +3,14 @@ id: debugLogFiles
 title: ログファイルの詳細
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) あるいは [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([標準](#4ddebuglogtxt-標準) & [タブ分け](#4ddebuglogtxt-タブ分け))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
@@ -149,6 +150,35 @@ WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可�
 | TimeStamp      | (システムが開始されてからの) ミリ秒単位でのタイムスタンプ      |
 | ConnectionID   | 接続UUID (通信に使用された VTCPSocket の UUID) |
 | SequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号      |
+
+## 4DHTTPClientLog.txt
+
+This log file records the HTTP traffic that goes through the 4D HTTP client. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+
+このログの開始方法:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//other values are available
+```
+
+リクエストとレスポンスの両方に対して以下のフィールドが記録されます:
+
+| フィールド名          | 説明                                                                               |
+| --------------- | -------------------------------------------------------------------------------- |
+| SequenceID      | ログセッション内で固有かつシーケンシャルなオペレーション番号                                                   |
+| ConnectionID    | プロセス接続の UUID識別子                                                                  |
+| LocalIP         | Client IP address                                                                |
+| PeerIP          | Server IP address                                                                |
+| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
+| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+
+Depending on log options, various other fields can also be logged.
+
+- For request: request line, headers, request body
+- For response: status line, headers, response body (uncompressed), if any
+
 
 ## 4DDebugLog.txt (標準)
 
