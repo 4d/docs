@@ -3,13 +3,14 @@ id: debugLogFiles
 title: Descripción de los archivos históricos
 ---
 
-Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los historiales suelen iniciarse o detenerse utilizando selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) o [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) y se almacenan en la carpeta [Logs folder](Project/architecture.md#logs) del proyecto.
+Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los historiales suelen iniciarse o detenerse utilizando los selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) o [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) y se almacenan en la carpeta [Logs folder](Project/architecture.md#logs) del proyecto.
 
 La información histórica debe ser analizada para detectar y solucionar los problemas. Esta sección ofrece una descripción completa de los siguientes archivos de registro:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -150,6 +151,35 @@ Los siguientes campos se registran tanto para la solicitud como para la respuest
 | TimeStamp        | Timestamp en milisegundos (desde el inicio del sistema)            |
 | ConnectionID     | Conexión UUID (UUID del VTCPSocket utilizado para la comunicación) |
 | SequenceNumber   | Número de operación único y secuencial en la sesión de historial   |
+
+## 4DHTTPClientLog.txt
+
+Este archivo de historial registra el tráfico HTTP que pasa por el cliente HTTP de 4D. Se registran las peticiones y respuestas completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
+
+Como iniciar este historial:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//hay otros valores disponibles
+```
+
+Los siguientes campos se registran tanto para la solicitud como para la respuesta:
+
+| Nombre del campo | Descripción                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
+| SequenceID       | Número de operación único y secuencial en la sesión de historial                                       |
+| ConnectionID     | Identificador UUID de proceso de conexión                                                              |
+| LocalIP          | Dirección IP del cliente                                                                               |
+| PeerIP           | Dirección IP del servidor                                                                              |
+| TimeStamp        | Marca de tiempo (ms) en el momento en que se envía la solicitud o se recibe completamente la respuesta |
+| ElapsedTimeInMs  | (sólo respuesta) Diferencia con la marca de tiempo de la petición                                      |
+
+Dependiendo de las opciones de historial, también se pueden registrar otros campos.
+
+- Para la petición: línea de petición, encabezados, cuerpo de la petición
+- Para respuesta: línea de estado, encabezados, cuerpo de la respuesta (sin comprimir), si lo hay
+
 
 ## 4DDebugLog.txt (estándar)
 
