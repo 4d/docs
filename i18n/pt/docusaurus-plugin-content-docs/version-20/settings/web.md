@@ -245,7 +245,7 @@ The following table lists the fields available for each format (in alphabetical 
 
 > As datas e horas são indicadas em GMT.
 
-## Log (backup)
+## Histórico (backup)
 
 Configure the automatic backup parameters for the request log. Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
 
