@@ -188,7 +188,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - Related data and computed/alias attributes can be displayed in the [Data Explorer](../Admin/dataExplorer#basics).
 - New [FileHandle](../API/FileHandleClass.md) class and new [`.open()`](../API/FileClass.md#open) function in the `File` class.
 - [Entity selection Class](../API/EntitySelectionClass.md): [`.add()`](../API/EntitySelectionClass.md#add) supports an *entitySelection* parameter, [`.minus()`](../API/EntitySelectionClass.md#minus) supports a *keepOrder* parameter.
-- Support of *automaticRedirections* and *decodeData* options in [4D.HTTPRequest.new()](../API/HTTPRequestClass.md#4dhttprequestnew).
+- Support of *automaticRedirections* and *decodeData* options in [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew).
 - New [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlog) log file.
 - 4D View Pro: new table commands [VP Find table](../ViewPro/method-list.md#vp-find-table), [VP Get table column attributes](../ViewPro/method-list.md#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list.md#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list.md#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list.md#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list.md#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list.md#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list.md#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list.md#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list.md#vp-set-table-column-attributes).
 - Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
@@ -258,7 +258,6 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 ## 4D v19 R4
 
 - [Alias attributes](../ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
-
 - Support for [break and continue](../Concepts/flow-control.md#break-and-continue) statements in loops.
 - Support for [return](../Concepts/flow-control.md#return-expression) statement and [return expression](../Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](../Concepts/operators.md#compound-assignment-operators), [short-circuit operators](../Concepts/operators.md#short-circuit-operators), and [ternary operator](../Concepts/operators.md#ternary-operator)

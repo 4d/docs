@@ -10,7 +10,7 @@ Information logged needs to be analyzed to detect and fix issues. This section p
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
-* [4DHTTPClientLog.txt](#4dhttpclientlog)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
