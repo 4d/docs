@@ -3,13 +3,14 @@ id: debugLogFiles
 title: Description of log files
 ---
 
-4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) or [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
+4D applications can generate several log files that are useful for debugging or optimizing their execution. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Information logged needs to be analyzed to detect and fix issues. This section provides a comprehensive description of the following log files:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([standard](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -152,6 +153,35 @@ The following fields are logged for both Request and Response:
 |TimeStamp| Timestamp in milliseconds (since system startup)|
 |ConnectionID| Connection UUID (UUID of VTCPSocket used for communication)|
 |SequenceNumber| Unique and sequential operation number in the logging session|
+
+## 4DHTTPClientLog.txt  
+
+This log file records the HTTP traffic that goes through the 4D HTTP client. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+
+How to start this log:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//other values are available
+```
+
+The following fields are logged for both Request and Response:
+
+|Field name| Description|
+|---|---|
+|SequenceID |Unique and sequential operation number in the logging session|
+|ConnectionID| UUID identifier of process connection| 
+|LocalIP| Client IP address|
+|PeerIP| Server IP address|
+|TimeStamp |Timestamp (ms) at the time the request is sent or the response is fully received|
+|ElapsedTimeInMs|(response only) Difference with the request timestamp|
+
+Depending on log options, various other fields can also be logged.
+
+- For request: request line, headers, request body
+- For response: status line, headers, response body (uncompressed), if any
+
 
 ## 4DDebugLog.txt (standard)  
 

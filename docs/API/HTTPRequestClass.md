@@ -80,7 +80,7 @@ HTTPRequest objects provide the following properties and functions:
 |Version|Changes|
 |---|---|
 |v20|TLS validation by default |
-|v19 R7|Support of *decodeData* property |
+|v19 R7|Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -128,6 +128,7 @@ In the *options* parameter, pass an object that can contain the following proper
 
 |Property|Type|Description|Default|
 |---|---|---|---|
+|automaticRedirections|Boolean|If true, redirections are performed automatically|True|
 |body|Variant|Body of the request (required in case of `post` or `put` requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers|undefined|
 |certificatesFolder|[Folder](FolderClass.md)|Sets the active client certificates folder|undefined|
 |dataType|Text|Type of the response body attribute. Values: "text", "blob", "object", or "auto". If "auto", the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise)|"auto"|

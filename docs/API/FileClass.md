@@ -63,6 +63,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 |Version|Changes|
 |---|---|
+|v19 R4|New `HTTP Client log file` constant|
 |v17 R5|Added|
 
 </details>
@@ -113,6 +114,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 |Debug log file|12|Log file created by the `SET DATABASE PARAMETER(Debug log recording)` command. Stored in the Logs folder. |
 |Diagnostic log file|11|Log file created by the `SET DATABASE PARAMETER(Diagnostic log recording)` command. Stored in the Logs folder. |
 |Directory file|16|directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file). |
+|HTTP Client log file|24|Log file created by the `HTTP SET OPTION(HTTP client log)` command. Stored in the Logs folder. |
 |HTTP debug log file|9|Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder. |
 |HTTP log file|8|Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.|
 |IMAP Log file|23|Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.|  
