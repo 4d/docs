@@ -591,7 +591,7 @@
     "description": "The ARIA label for the main navigation"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "Barra lateral de documentos",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
