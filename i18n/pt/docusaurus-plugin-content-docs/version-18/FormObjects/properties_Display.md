@@ -15,7 +15,7 @@ Pode escolher um formato desta lista ou utilizar qualquer formato personalizado.
 
 O sinal de número (#) é o espaço reservado para um formato de exibição alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
-For example, consider a part number with a format such as "RB-1762-1".
+Por exemplo, considere um número de peça com um formato como "RB-1762-1".
 
 O formato alfa seria:
 
@@ -246,7 +246,7 @@ The following table shows how different formats affect the display of numbers. T
 
 ## Formato imagem
 
-Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+Os formatos imagem controlam a aparência das imagens quando exibidas ou impressas. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
 As opções de truncagem e escala não afetam a imagem em si. O conteúdo de um campo Imagem é sempre guardado. Only the display on the particular form is affected by the picture display format.
 
@@ -487,7 +487,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 ## Visibilidade
 
-This property allows hiding the object in the Application environment.
+Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
 É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
 
