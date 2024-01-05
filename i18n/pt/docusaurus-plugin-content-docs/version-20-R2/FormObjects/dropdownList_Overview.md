@@ -53,7 +53,7 @@ Form.myDrop.index:=-1 //currentValue é um placeholder
 Form.myDrop.currentValue:="Select a fruit" 
 ```
 
-The drop-down list is displayed with the placeholder string:
+A lista suspensa é exibida com a string de placeholder:
 
 ![](../assets/en/FormObjects/fruits2.png)
 

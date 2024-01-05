@@ -61,7 +61,7 @@ The 4D Structure Editor allows you to enable or disable data change tracking usi
 
 Para ativar o rastreamento de alterações de dados:
 
-1. Select the table(s) for which you want to enable data change tracking.
+1. Selecione a(s) tabela(s) para as quais você deseja habilitar o rastreamento de alterações nos dados.
 2. Right-click on a selected table and select **Enable data change tracking** in the contextual menu.
 3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
 
@@ -73,7 +73,7 @@ Em seguida, 4D faz as seguintes alterações:
 
 Para desativar o rastreamento de alterações de dados:
 
-1. Select the table(s) for which you want to remove data change tracking.
+1. Selecione a(s) tabela(s) para as quais você deseja remover o rastreamento de alterações nos dados.
 2. Right-click on a selected table and select **Disable data change tracking** in the contextual menu.
 3. É exibida uma caixa de diálogo de confirmação. **Date and Time**: Date and time of backup.
 

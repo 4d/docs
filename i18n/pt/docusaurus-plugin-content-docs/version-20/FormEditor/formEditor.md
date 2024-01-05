@@ -469,7 +469,7 @@ The List box builder lets you create and fill entity selection list boxes in a f
 
  ![](../assets/en/FormEditor/listboxBuilder.png)
 
-2. Select a table from the **Table** dropdown list:
+2. Selecione uma tabela na lista suspensa **Table**:
 
  ![](../assets/en/FormEditor/listboxBuilderTable.png)
 

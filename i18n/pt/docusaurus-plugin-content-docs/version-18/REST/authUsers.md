@@ -12,7 +12,7 @@ You log in a user to your application by passing the user's name and password to
 
 Quando um usuário é registrado com sucesso, uma sessão é aberta. See below to know how to handle the session cookie in subsequent client requests, if necessary.
 
-The session will automatically be closed once the timeout is reached.
+A sessão será encerrada automaticamente quando o tempo limite for atingido.
 
 ## Cookie de sessão
 

@@ -160,7 +160,7 @@ Translation files translate the names of templates, themes, tables, fields, and 
 
 Each translation file must be named with the corresponding language code (for example "en" for English or "fr" for French).
 
-The translation file in JSON format contains the following attributes:
+O arquivo de tradução no formato JSON contém os seguintes atributos:
 
 | Atributo  | Tipo       | Obrigatório | Descrição                                                                             |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |

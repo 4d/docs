@@ -88,14 +88,14 @@ This information can allow you to check the functioning of your server and event
 
 The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
 
-| Elemento                | Descrição                                                              |
-| ----------------------- | ---------------------------------------------------------------------- |
-| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                      |
-| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                     |
-| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                      |
-| Cache Use               | Porcentagem do cache usado                                             |
-| Cached Objects          | Number of objects found in the cache, **without pictures**             |
-| Objectos filtrados      | Number of objects in cache not counted by URL, in particular, pictures |
+| Elemento                | Descrição                                                               |
+| ----------------------- | ----------------------------------------------------------------------- |
+| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                       |
+| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                      |
+| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                       |
+| Cache Use               | Porcentagem do cache usado                                              |
+| Cached Objects          | Number of objects found in the cache, **without pictures**              |
+| Objectos filtrados      | Número de objetos no cache não contados por URL, em particular, imagens |
 
 ### /4DCACHECLEAR
 

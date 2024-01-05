@@ -71,10 +71,10 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v20    | Validação TLS por padrão            |
-| v19 R7 | Suporte de propriedade *decodeData* |
+| Versão | Mudanças                                                       |
+| ------ | -------------------------------------------------------------- |
+| v20    | Validação TLS por padrão                                       |
+| v19 R7 | Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -124,6 +124,7 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 
 | Propriedade            | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Por padrão    |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| automaticRedirections  | Parâmetros                                      | If true, redirections are performed automatically                                                                                                                                                                                                                           | True          |
 | body                   | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
 | dataType               | Text                                            | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob) | "auto"        |

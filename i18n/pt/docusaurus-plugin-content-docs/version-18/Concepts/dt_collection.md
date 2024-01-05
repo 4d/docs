@@ -83,7 +83,7 @@ Some methods return the original collection after modification, so that you can 
 ### parâmetro caminoPropriedade
 
 
-Several methods accept a _propertyPath_ as parameter. Este parâmetro significa:
+Vários métodos aceitam um _propertyPath_ como parâmetro. Este parâmetro significa:
 
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".

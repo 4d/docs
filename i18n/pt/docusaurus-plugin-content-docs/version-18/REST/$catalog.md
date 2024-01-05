@@ -213,7 +213,7 @@ Aqui estão as propriedades para cada atributo exposto que são devolvidas:
 | indexed     | String     | Se algum **Index Kind** foi seleccionado, esta propriedade voltará a ser verdadeira. Caso contrário, esta propriedade não aparece.                                   |
 | type        | String     | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
 | identifying | Parâmetros | Esta propriedade retorna True se o atributo for a chave primária. Caso contrário, esta propriedade não aparece.                                                      |
-| path        | String     | Name of the relation for a relatedEntity or relateEntities attribute.                                                                                                |
+| path        | String     | Nome da relação para um atributo relatedEntity ou relateEntities.                                                                                                    |
  foreignKey|String   |For a relatedEntity attribute, name of the related attribute.| inverseName |String |Name of the opposite relation for a relatedEntity or relateEntities attribute.|
 
 ### Método(s)

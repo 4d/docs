@@ -1224,7 +1224,7 @@ Para criar um registo de pedidos ORDA do lado do cliente, chame esta função nu
 To create a server-side ORDA request log, call this function on the server machine. Os dados de registo são escritos num ficheiro no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
 - If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
-- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. By default when the parameter is omitted, the full response is logged. As seguintes constantes podem ser utilizadas neste parâmetro:
+- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:
 
 | Parâmetros                    | Descrição                                          |
 | ----------------------------- | -------------------------------------------------- |
