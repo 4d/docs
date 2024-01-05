@@ -10,7 +10,7 @@ On Windows, 4D developers can configure their 4D merged applications to work as 
 
 ## Disponibilidade do modo SDI
 
-The SDI mode is available in the following execution environment only:
+O modo SDI está disponível somente no seguinte ambiente de execução:
 
 - Windows
 - Aplicação 4D fundida, autônoma ou cliente
