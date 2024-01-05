@@ -10,7 +10,7 @@ title: On VP Ready
 
 ## Descrição
 
-This event is generated when the 4D View Pro area loading is complete.
+Este evento é gerado quando o carregamento da área 4D View Pro estiver completo.
 
 You need to use this event to write initialization code for the area. Any 4D View Pro area initialization code, for loading or reading values from or in the area, must be located in the `On VP Ready` form event of the area. Este evento formulário é acionado quando o carregamento da área estiver concluído. Testing this event makes you sure that the code will be executed in a valid context. An error is returned if a 4D View Pro command is called before the `On VP Ready` form event is generated.
 
