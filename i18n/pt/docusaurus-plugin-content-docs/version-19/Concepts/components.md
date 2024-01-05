@@ -15,7 +15,7 @@ A 4D component is a set of 4D methods and forms representing one or more functio
 
 ### Princípios
 
-Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
+Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
 
 - Um componente é constituído por um ficheiro de projeto 4D clássico.
 - Para instalar um componente, basta copiá-lo para a pasta [`Components` do projeto](Project/architecture.md). Pode usar pseudónimos ou atalhos.
