@@ -4,7 +4,7 @@ title: Começando
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Permite que você incorpore funcionalidades avançadas de planilha em seus projetos.
 
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
