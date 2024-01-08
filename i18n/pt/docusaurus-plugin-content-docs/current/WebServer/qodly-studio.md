@@ -286,7 +286,7 @@ Os nomes dos comandos QodlyScript são escritos em letras maiúsculas e minúscu
 
 You can develop with Qodly Studio while your computer is not connected to the internet. Nesse caso, entretanto, os seguintes recursos não estão disponíveis:
 
-- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
+- [Modelos](https://developer.qodly.com/docs/studio/design-webforms/templates): a biblioteca de modelos está vazia
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
 

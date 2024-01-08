@@ -9,11 +9,11 @@ As configurações do servidor web 4D incluem parâmetros de segurança, portas 
 
 Há diferentes maneiras de configurar as definições do servidor web 4D, dependendo do escopo e do servidor que você deseja definir:
 
-| Localização do parâmetro                 | Âmbito                                              | Servidor Web a ser usado                                       |
-| ---------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
-| [objeto webServer](webServerObject.md)   | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
-| `WEB SET OPTION` ou um comando `WEB XXX` | Temporário (sessão atual)                           | Servidor principal                                             |
-| **Settings** dialog box (**Web** pages)  | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
+| Localização do parâmetro                             | Âmbito                                              | Servidor Web a ser usado                                       |
+| ---------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------- |
+| [objeto webServer](webServerObject.md)               | Temporário (sessão atual)                           | Qualquer servidor Web, incluindo servidores Web de componentes |
+| `WEB SET OPTION` ou um comando `WEB XXX`             | Temporário (sessão atual)                           | Servidor principal                                             |
+| **Caixa de diálogo Configurações** (páginas**Web** ) | Permanente (todas as sessões, armazenadas no disco) | Servidor principal                                             |
 
 > Alguns parâmetros não estão disponíveis em todos os locais.
 
@@ -56,15 +56,15 @@ Com o 4D em modo remoto, esses arquivos devem estar localizados na pasta de recu
 Define o conjunto de caracteres a serem usados pelo servidor web 4D. O valor padrão realmente depende da linguagem do SO.
 > Essa configuração também é usada para gerar relatórios rápidos em formato HTML.
 
-## Lista de cifras
+## Lista de criptogramas
 
 | Pode ser definido com | Nome                                               | Comentários |
 | --------------------- | -------------------------------------------------- | ----------- |
 | objeto webServer      | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text        |
 
-Lista de cifras usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
+Lista de criptogramas  usada para o protocolo seguro; define a prioridade dos algoritmos de cifra implementados pelo servidor da Web. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
-> A lista de cifras padrão usada por 4D pode ser modificada para a sessão usando o comando `SET DATABASE PARAMETER` . Nesse caso, a modificação se aplica a todo o aplicativo 4D, incluindo o servidor web, o servidor SQL, as conexões cliente/servidor, bem como o cliente HTTP e todos os comandos 4D que usam o protocolo seguro.
+> A lista de criptogramas padrão usada por 4D pode ser modificada para a sessão usando o comando `SET DATABASE PARAMETER` . Nesse caso, a modificação se aplica a todo o aplicativo 4D, incluindo o servidor web, o servidor SQL, as conexões cliente/servidor, bem como o cliente HTTP e todos os comandos 4D que usam o protocolo seguro.
 
 ## Parâmetros CORS
 
@@ -108,22 +108,22 @@ Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver va
 
 #### Veja também
 
-[Activar CORS](#enable-cors-service)
+[Ativar CORS](#enable-cors-service)
 
-## Debug log
+## Registro de depuração
 
 | Pode ser definido com | Nome            | Comentários |
 | --------------------- | --------------- | ----------- |
 | objeto webServer      | `debugLog`      | number      |
 | `WEB SET OPTION`      | `Web debug log` | number      |
 
-Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
+Status do arquivo de log de requisições HTTP do servidor web (HTTPDebugLog_nn. xt, armazenado na pasta "Logs" da aplicação -- nn é o número do arquivo). É útil para a depuração de problemas relacionados com o servidor Web. Regista cada pedido e cada resposta em modo bruto. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
 | Valor | Parâmetros  | Descrição                              |
 | ----- | ----------- | -------------------------------------- |
 | 0     | wdl disable | Os debug logs Web HTTP são desativados |
 
-|1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|
+|1|wdl enable without body|O registro de depuração HTTP da Web está habilitado sem partes do corpo (o tamanho do corpo é fornecido nesse caso)| |3|wdl enable with response body|O registro de depuração HTTP da Web está habilitado com parte do corpo somente na resposta| |5|wdl enable with request body|O registro de depuração HTTP da Web está habilitado com parte do corpo somente na solicitação| |7|wdl enable with all body parts|O registro de depuração HTTP da Web está habilitado com partes do corpo na resposta e na solicitação|
 
 ## Página inicial do Defaut
 
@@ -200,7 +200,7 @@ Quando [HTTPS estiver ativado](#enable-https), lembre-se de que se [HTTP também
 
 O HSTS permite que o servidor web 4D declare que os navegadores só devem interagir com ele por meio de conexões HTTPS seguras. Uma vez ativado, o servidor 4D da web irá adicionar automaticamente informações relacionadas ao HSTS em todos os cabeçalhos de resposta. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor da web 4D, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O tempo que esta informação é armazenada pelo navegador é especificado com a configuração da Web **HSTS idade máxima**.
 
-> A ativação do HSTS exige que o HTTPS esteja [ativado](enable-https) no servidor. [HTTP](enable-http) must also be enabled to allow client initial connections.
+> A ativação do HSTS exige que o HTTPS esteja [ativado](enable-https) no servidor. [O HTTP](enable-http) também deve ser ativado para permitir conexões iniciais do cliente.
 
 > Você pode obter o modo de conexão atual usando o comando `WEB Is secured connection` .
 
@@ -349,7 +349,7 @@ True por padrão (ativado).
 | ---------------------------------- | ---------------------------------------------------- | ----------- |
 | objeto webServer                   | [`logRecording`](API/WebServerClass.md#logrecording) |             |
 | `WEB SET OPTION`                   | `Web log recording`                                  |             |
-| Caixa de diálogos de configurações | Log (type) page/Log Format                           | Menu pop-up |
+| Caixa de diálogos de configurações | Página (tipo) de registro/formato de registro        | Menu pop-up |
 
 Inicia ou interrompe o registro das solicitações recebidas pelo servidor da Web 4D no arquivo *logweb.txt* e define seu formato. Por padrão, os pedidos não são registados (0/No Log File). Quando ativado, o arquivo *logweb.txt* é automaticamente colocado na pasta Logs .
 
@@ -363,7 +363,7 @@ Esta configuração permite que você selecione o formato deste arquivo. Os valo
 | 3     | Registo em formato ELF     | Extended Log Format - A ser personalizado na caixa de diálogo das Propriedades                                                                                                                                                                        |
 | 4     | Registo em formato WLF     | WebStar Log Format - Para ser personalizado na caixa de diálogo Propriedades                                                                                                                                                                          |
 
-> Formats 3 and 4 are custom formats whose contents must be set beforehand in the Settings dialog box. Se você usar um destes formatos sem que nenhum dos seus campos tenha sido selecionado nesta página, o arquivo de log não será gerado.
+> Formatos 3 e 4 são formatos personalizados cujo conteúdo deve ser definido antecipadamente na caixa de diálogo Configurações. Se você usar um destes formatos sem que nenhum dos seus campos tenha sido selecionado nesta página, o arquivo de log não será gerado.
 
 ## Processos Web em simultâneo máximo
 
@@ -373,7 +373,7 @@ Esta configuração permite que você selecione o formato deste arquivo. Os valo
 | `WEB SET OPTION`                   | `Web max concurrent processes`                                           |             |
 | Caixa de diálogos de configurações | Página opções (I)/Processos Web simultâneos máximos                      |             |
 
-Strictly high limit of concurrent web processes that can be simultaneously open on the server. Esse parâmetro permite evitar a saturação do servidor como resultado de um grande número de solicitações. Quando o número máximo de processos da Web simultâneos (menos um) for alcançado, 4D não cria mais novos processos e envia o status HTTP `503 - Serviço Indisponível` para todas as novas solicitações.
+Limite estritamente alto de processos da Web simultâneos que podem ser abertos simultaneamente no servidor. Esse parâmetro permite evitar a saturação do servidor como resultado de um grande número de solicitações. Quando o número máximo de processos da Web simultâneos (menos um) for alcançado, 4D não cria mais novos processos e envia o status HTTP `503 - Serviço Indisponível` para todas as novas solicitações.
 
 Por padrão, o valor é 100. Pode definir o número entre 10 e 32000.
 
@@ -582,7 +582,7 @@ Permite otimizar a operação do 4D Web Server no modo remoto, reutilizando proc
 Quando a opção **Reutilizar Contextos Temporários** é marcada, no modo remoto 4D mantém os processos web específicos e reutiliza-os para solicitações subsequentes. Removendo o estágio de criação do processo, o desempenho do servidor web é melhorado.
 
 Em troca, você deve se certificar neste caso de inicializar sistematicamente as variáveis usadas em métodos 4D para evitar obter resultados incorretos. Da mesma forma, é necessário apagar quaisquer seleções ou registros atuais definidos durante a solicitação anterior.
-> - This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
+> - Essa opção é verificada (e bloqueada) automaticamente quando a opção **Automatic Session Management** estiver marcada. Na verdade, o mecanismo de gerenciamento de sessão baseia-se no princípio de reciclagem de processos da Web: cada sessão usa o mesmo processo que é mantido durante o tempo de vida da sessão. No entanto, observe que os processos de sessão não podem ser "compartilhados" entre sessões diferentes: quando a sessão termina, o processo é automaticamente encerrado (e não é reutilizado). Portanto, não é necessário redefinir as seleções ou variáveis nesse caso.
 > 
 > - Esta opção só tem um efeito com um servidor web 4D em modo remoto. Com um 4D em modo local, todos os processos da Web (exceto os processos de sessão) são eliminados após seu uso.
 

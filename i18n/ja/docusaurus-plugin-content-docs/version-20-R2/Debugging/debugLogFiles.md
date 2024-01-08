@@ -15,7 +15,7 @@ title: ログファイルの詳細
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
-* [ORDAリクエストのログファイル](#orda-requests)
+* [ORDAリクエストのログファイル](#ordaリクエスト)
 
 > サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。 たとえば、"4DRequestsLogServer.txt" のようにです。
 
