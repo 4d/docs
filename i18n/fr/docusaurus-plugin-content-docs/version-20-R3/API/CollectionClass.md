@@ -2300,11 +2300,10 @@ $city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
 $country:=["France"; "France"; "Morocco"; "Germany"; "US"]
 $continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
 
-$continent.multiSort($country; {collection: $city; order: ck ascending})
-//$continent=["Africa", "America","Europe","Europe","Europe"]
-//$country=["Morocco", "US","Germany","France","France"]
-//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
-
+$continent.multiSort([$country; {collection: $city; order: ck ascending}])
+//$continent=["Africa","America","Europe","Europe","Europe"]
+//$country=["Morocco","US","France","France","Germany"]
+//$city=["Rabat","San Diego","Lyon","Paris","Eching"]
 ```
 
 #### Exemple 3
