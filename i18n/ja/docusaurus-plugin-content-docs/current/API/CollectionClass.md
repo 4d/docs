@@ -2296,15 +2296,14 @@ var $city : Collection
 var $country : Collection
 var $continent : Collection
 
-$city:=["Eching"; "Rabat"; "Paris"; "Lyon"; "San Diego"]
-$country:=["Germany"; "Morocco"; "France"; "France"; "US"]
-$continent:=["Europe"; "Africa"; "Europe"; "Europe"; "America"]
+$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
+$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
+$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
 
 $continent.multiSort([$country; {collection: $city; order: ck ascending}])
-
-//$continent=["Africa", "America","Europe","Europe","Europe"]
-//$country=["Morocco", "US","Germany","France","France"]
-//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
+//$continent=["Africa","America","Europe","Europe","Europe"]
+//$country=["Morocco","US","France","France","Germany"]
+//$city=["Rabat","San Diego","Lyon","Paris","Eching"]
 
 ```
 
