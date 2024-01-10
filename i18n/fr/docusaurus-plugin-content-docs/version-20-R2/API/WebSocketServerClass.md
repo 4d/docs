@@ -135,40 +135,40 @@ In the *WSSHandler* parameter, pass an instance of a user class that will be cal
 | ------------ | ---------------------------- | ------------------------------------------------------------------------ | ---------- |
 | onConnection | [Function](FunctionClass.md) | (mandatory) Callback when a new client connection is started (see below) | undefined  |
 | onOpen       | [Function](FunctionClass.md) | Callback when the WebSocket server is started (see below)                | undefined  |
-| onTerminate  | [Function](FunctionClass.md) | Callback when the WebSocket server is terminated (see below)             | undefined  |
-| onError      | [Function](FunctionClass.md) | Callback when an error has occurred (see below)                          | undefined  |
+| onTerminate  | [Function](FunctionClass.md) | Callback quand le serveur WebSocket est stoppé (voir ci-dessous)         | undefined  |
+| onError      | [Function](FunctionClass.md) | Callback quand une erreur est survenue (voir ci-dessous)                 | undefined  |
 
 
 **WSHandler.onConnection**(*WSServer* : Object ; *event* : Object) : Object | null
 
 | Paramètres |         | Type               |    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ---------- | ------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer   |         | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| evénement  |         | Object             | <- | Paramètres                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| WSServer   |         | 4D.WebSocketServer | <- | Objet serveur WebSocket courant                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| event      |         | Object             | <- | Paramètres                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |            | type    | Text               |    | "connection"                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|            | request | Object             |    | `request` object. Contains information on the connection request (see below)                                                                                                                                                                                                                                                                                                                                                                                                        |
+|            | request | Object             |    | `request` object. Contient les informations de la requête de connexion (voir ci-dessous)                                                                                                                                                                                                                                                                                                                                                                                            |
 | Résultat   |         | Object             | -> | [`connectionHandler` object](#connectionhandler-object) (see below). If this function returns a `connectionHandler` object, a [`4D.WebSocketConnection` object](WebSocketConnectionClass.md#websocketconnection-object) is automatically created and added to the [collection of connections](#connections). This object is then received as parameter in each function of the `connectionHandler` object. If the returned value is null or undefined, the connection is cancelled. |
 
-This callback is called when the handshake is complete. It must be called with a valid [`connectionHandler` object](#connectionhandler-object) to create the WebSocket connection, otherwise the connection is cancelled.
+Cette callback est appelée lorsque le handshake est terminé. It must be called with a valid [`connectionHandler` object](#connectionhandler-object) to create the WebSocket connection, otherwise the connection is cancelled.
 
 
 **WSHandler.onOpen**(*WSServer* : Object ; *event* : Object)
 
 | Paramètres |      | Type               |    | Description                     |
 | ---------- | ---- | ------------------ |:--:| ------------------------------- |
-| WSServer   |      | 4D.WebSocketServer | <- | Current WebSocket server object |
-| evénement  |      | Object             | <- | Paramètres                      |
+| WSServer   |      | 4D.WebSocketServer | <- | Objet serveur WebSocket courant |
+| event      |      | Object             | <- | Paramètres                      |
 |            | type | Text               |    | "open"                          |
 
-Event emitted when the websocket server is started.
+Événement émis lorsque le serveur websocket est démarré.
 
 
 **WSHandler.onTerminate**(*WSServer* : Object ; *event* : Object)
 
 | Paramètres |      | Type               |    | Description                     |
 | ---------- | ---- | ------------------ |:--:| ------------------------------- |
-| WSServer   |      | 4D.WebSocketServer | <- | Current WebSocket server object |
-| evénement  |      | Object             | <- | Paramètres                      |
+| WSServer   |      | 4D.WebSocketServer | <- | Objet serveur WebSocket courant |
+| event      |      | Object             | <- | Paramètres                      |
 |            | type | Text               |    | "terminate"                     |
 
 Event emitted when the HTTP server or the WebSocket server is closed.
@@ -178,13 +178,13 @@ Event emitted when the HTTP server or the WebSocket server is closed.
 
 | Paramètres |        | Type               |    | Description                                                                                                                        |
 | ---------- | ------ | ------------------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
-| WSServer   |        | 4D.WebSocketServer | <- | Current WebSocket server object                                                                                                    |
-| evénement  |        | Object             | <- | Paramètres                                                                                                                         |
+| WSServer   |        | 4D.WebSocketServer | <- | Objet serveur WebSocket courant                                                                                                    |
+| event      |        | Object             | <- | Paramètres                                                                                                                         |
 |            | type   | Text               |    | "error"                                                                                                                            |
 |            | errors | Collection         |    | Collection of 4D error stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |
 
 
-Event emitted when an error occurs on the WebSocket server.
+Événement émis lorsqu'une erreur se produit sur le serveur WebSocket.
 
 ### Example of `WSSHandler` class
 
@@ -222,12 +222,12 @@ LogFile("!!! Server error: "+$event.errors.first().message)
 
 A `request` object contains the following properties:
 
-| Paramètres    | Type   | Description                                                                                                                                         |
-| ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| headers       | Object | The client HTTP GET request. `headers.key=value` (value can be a collection if the same key appears multiple times)                                 |
-| query         | Object | Object that contains the URL parameters. For example, if parameters are: `?key1=value1&key2=value2` -> `query.key1=value1`, `query.key2=value2` |
-| url           | Text   | contains only the URL that is present in the actual HTTP request. Ex: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"                   |
-| remoteAddress | Text   | IP Address of the client                                                                                                                            |
+| Paramètres    | Type   | Description                                                                                                                                            |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| headers       | Object | La requête HTTP GET du client. `headers.key=value` (value can be a collection if the same key appears multiple times)                                  |
+| query         | Object | Objet qui contient les paramètres de l'URL. For example, if parameters are: `?key1=value1&key2=value2` -> `query.key1=value1`, `query.key2=value2` |
+| url           | Text   | contient uniquement l'URL qui est présente dans la requête HTTP réelle. Ex: `GET /status?name=ryan HTTP/1.1` -> url="/status?name=ryan"                |
+| remoteAddress | Text   | Adresse IP du client                                                                                                                                   |
 
 
 ### `connectionHandler` object
@@ -247,7 +247,7 @@ As a result of the `WSHandler.onConnection` callback, pass a `connectionHandler`
 | Paramètres |      | Type                                                    |    | Description                         |
 | ---------- | ---- | ------------------------------------------------------- |:--:| ----------------------------------- |
 | ws         |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Current WebSocket connection object |
-| evénement  |      | Object                                                  | <- | Paramètres                          |
+| event      |      | Object                                                  | <- | Paramètres                          |
 |            | type | Text                                                    |    | "message"                           |
 |            | data | Texte / Blob / Objet                                    |    | data sent by the client             |
 
@@ -259,7 +259,7 @@ This Callback for WebSocket data. Called each time the WebSocket receives data.
 | Paramètres |      | Type                                                    |    | Description                         |
 | ---------- | ---- | ------------------------------------------------------- |:--:| ----------------------------------- |
 | ws         |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Current WebSocket connection object |
-| evénement  |      | Object                                                  | <- | Paramètres                          |
+| event      |      | Object                                                  | <- | Paramètres                          |
 |            | type | Text                                                    |    | "open"                              |
 
 Called when the `connectionHandler` object is created (after `WSS.onConnection` event).
@@ -270,7 +270,7 @@ Called when the `connectionHandler` object is created (after `WSS.onConnection` 
 | Paramètres |        | Type                                                    |    | Description                                                                                                                                                                             |
 | ---------- | ------ | ------------------------------------------------------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ws         |        | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Current WebSocket connection object                                                                                                                                                     |
-| evénement  |        | Object                                                  | <- | Paramètres                                                                                                                                                                              |
+| event      |        | Object                                                  | <- | Paramètres                                                                                                                                                                              |
 |            | type   | Text                                                    |    | "terminate"                                                                                                                                                                             |
 |            | code   | Number                                                  |    | Status code indicating why the connection has been closed. If the WebSocket does not return an error code, `code` is set to 1005 if no error occurred or to 1006 if there was an error. |
 |            | reason | Text                                                    |    | String explaining why the connection has been closed. If the websocket doesn't return an reason, code is undefined                                                                      |
@@ -282,7 +282,7 @@ Function called when the WebSocket is closed.
 | Paramètres |        |            | Type                                                    |                                                                                                                                     | Description                         |
 | ---------- | ------ | ---------- | ------------------------------------------------------- |:-----------------------------------------------------------------------------------------------------------------------------------:| ----------------------------------- |
 | ws         |        |            | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) |                                                                 <-                                                                  | Current WebSocket connection object |
-| evénement  |        |            | Object                                                  |                                                                 <-                                                                  | Paramètres                          |
+| event      |        |            | Object                                                  |                                                                 <-                                                                  | Paramètres                          |
 |            | type   |            | Text                                                    |                                                                                                                                     | "error"                             |
 |            | errors | Collection |                                                         | Collection of 4D errors stack in case of execution error<li>\[].errCode (number) -  4D error code</li><li>\[].message (text) - Description of the 4D error</li><li>\[].componentSignature (text) - Signature of the internal component which returned the error</li> |                                     |
 
