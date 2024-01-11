@@ -321,8 +321,8 @@ The table below shows the Time field display formats and gives examples:
 | Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                           | 270 minutos 25 segundos        |
 | ISO Date Time                | iso8601      | Corresponde ao padrão XML para representar dados relacionados ao tempo. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
 | System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                         | 04:30:25                       |
-| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: this format is the same as the System time short format             | 4•30•25 AM                     |
-| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: this format is the same as the System time short format                 | 4:30:25 AM HNEC                |
+| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: esse formato é o mesmo que o formato curto da hora do sistema       | 4•30•25 AM                     |
+| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: esse formato é o mesmo que o formato curto da hora do sistema           | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
