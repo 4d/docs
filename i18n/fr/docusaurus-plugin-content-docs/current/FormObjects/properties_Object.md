@@ -164,9 +164,9 @@ A list of space-separated words used as class selectors in [css files](FormEdito
 
 #### Grammaire JSON
 
-| Nom    | Type de données | Valeurs possibles                                         |
-| ------ | --------------- | --------------------------------------------------------- |
-| classe | string          | One string with CSS name(s) separated by space characters |
+| Nom   | Type de données | Valeurs possibles                                         |
+| ----- | --------------- | --------------------------------------------------------- |
+| class | string          | One string with CSS name(s) separated by space characters |
 
 #### Objets pris en charge
 

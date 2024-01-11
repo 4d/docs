@@ -84,7 +84,7 @@ The `On Web Authentication` database method is therefore called:
 - when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
 - when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
 
-The `On Web Authentication` database method is NOT called:
+O método banco de dados `On Web Authentication` NÃO é chamado:
 
 - quando o servidor Web recebe um URL solicitando uma página estática válida.
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).

@@ -309,7 +309,7 @@ A sintaxe herdada para declarar parâmetros variádicos (`C_TEXT(${4})`) ainda �
 
 Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword, parameters are declared. Por exemplo:
+Ao usar a palavra-chave `#DECLARE`, os parâmetros são declarados. Por exemplo:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean

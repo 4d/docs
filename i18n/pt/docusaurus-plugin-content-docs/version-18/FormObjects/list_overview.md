@@ -112,7 +112,7 @@ You can usually work in two ways with the contents of hierarchical lists: by pos
 
 ### Utilização de números de referência dos items (itemRef)
 
-Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. This value is only intended for your own use: 4D simply maintains it.
+Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. Este valor é apenas destinado ao seu próprio uso: 4D simplesmente o mantém.
 
 > Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
 

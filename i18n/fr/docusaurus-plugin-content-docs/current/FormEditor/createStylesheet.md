@@ -236,8 +236,8 @@ This CSS defines a color combination for text and text background in the light s
 La majorité des attributs d'objet formulaire peuvent être définis dans une feuille de style, à l'exception des attributs suivants :
  - `method`
  - `type`
- - `classe`
- - `evénement`
+ - `class`
+ - `event`
  - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
 
 Les attributs d'objet formulaire peuvent être déclarés avec leur [nom JSON](FormObjects/properties_Reference.md) en tant qu'attributs CSS (à l'exclusion des types d'objet, méthodes, événements et listes).

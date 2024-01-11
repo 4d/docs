@@ -11,7 +11,7 @@ For example if you have a recurring report with specific formatting (e.g., certa
 *   Criar e executar código 4D
 *   Exibir diálogos
 *   Seleccionar objectos do formulário
-*   Add / delete / modify forms, form objects as well as their properties
+*   Adicionar / excluir / modificar formulários, objetos de formulário e suas propriedades
 *   Modificar ficheiros de projeto (atualizar, apagar)
 
 Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.

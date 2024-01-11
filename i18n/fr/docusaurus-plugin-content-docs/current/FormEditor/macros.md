@@ -113,7 +113,7 @@ Voici la description du contenu du fichier JSON :
 | -------- | ------------------- | ------------------------ | ------ | ----------------------------------------------------------------- |
 | macros   |                     |                          | object | liste des macros définis                                          |
 |          | `<macroName>` |                          | object | définition de la macro                                            |
-|          |                     | classe                   | string | nom de classe de la macro                                         |
+|          |                     | class                    | string | nom de classe de la macro                                         |
 |          |                     | `<customProperty>` | any    | (optionnel) valeur personnalisée à récupérer dans le constructeur |
 
 Les propriétés personnalisées, lorsqu'elles sont utilisées, sont passées à la fonction [constructeur](#class-constructor) de la macro.

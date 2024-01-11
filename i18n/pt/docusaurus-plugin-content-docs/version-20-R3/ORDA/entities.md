@@ -103,7 +103,7 @@ For more information on the attribute kind, please refer to the [Storage and Rel
 
 :::
 
-For example, to get and set a storage attribute value of type string:
+Por exemplo, para obter e definir um valor de atributo de armazenamento do tipo string:
 
 ```4d
  $entity:=ds. Employee.get(1) //get employee attribute with ID 1
@@ -194,7 +194,7 @@ Vejamos a seguinte estrutura (simplificada):
 ![](../assets/en/ORDA/entityAttributes3.png)
 
 In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-> In ORDA, the Automatic or Manual property of relations has no effect.
+> Na ORDA, a propriedade Automática ou Manual das relações não tem efeito.
 
 To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Por exemplo:
 
