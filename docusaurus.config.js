@@ -37,10 +37,6 @@ module.exports = {
               label: 'v20 R3',
               banner: 'none',
             },
-		 '20-R2': {
-              label: 'v20 R2',
-              banner: 'none',
-            },
          '20': {
               label: 'v20',
               banner: 'none',
