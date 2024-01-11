@@ -79,7 +79,7 @@ Once you have created a menu, you can attach it to one or several other menus (s
 
 Sub-menus can be used to group together functions organized according to subject within the same menu. Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
 
-You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
+Você pode criar submenus de submenus em uma profundidade praticamente ilimitada. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
 
 At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
 
