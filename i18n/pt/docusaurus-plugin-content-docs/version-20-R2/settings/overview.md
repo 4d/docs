@@ -7,7 +7,7 @@ Os parâmetros configuram o funcionamento do projeto atual. Esses parâmetros po
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
+> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. Para obter mais informações, consulte [Preferencies](../Preferencies/general.md).
 
 
 ## Aceder os parâmetros
