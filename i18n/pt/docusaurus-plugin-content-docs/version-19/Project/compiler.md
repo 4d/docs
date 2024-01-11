@@ -158,7 +158,7 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 ### Digitação por defeito
 
-Use this area to set the default type for ambiguous database objects.
+Use esta área para definir o tipo padrão para objetos de banco de dados ambíguos.
 
 - **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
 - **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
