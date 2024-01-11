@@ -177,7 +177,7 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 
 Depending on log options, various other fields can also be logged.
 
-- For request: request line, headers, request body
+- Para solicitação: linha de solicitação, cabeçalhos, corpo da solicitação
 - For response: status line, headers, response body (uncompressed), if any
 
 
