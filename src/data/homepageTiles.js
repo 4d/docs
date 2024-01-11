@@ -72,29 +72,29 @@ const Sections = [
         <Link to="Project/overview" >
           <Translate>Project Management</Translate>
         </Link>
-        <Link to="Concepts/about">
-          <Translate>Language Concepts</Translate>
-        </Link>
-        <Link to={localizedLinks["homepage.sections.core-development.langage-ref-url"]} >
-          <Translate>Language Reference (4D Doc Center)</Translate>
-        </Link>
-        <Link to="ORDA/overview" >
-          <Translate>Object Relational Data Access (ORDA)</Translate>
-        </Link>
-        <Link to="API/overview" >
-          <Translate>Class Functions</Translate>
-        </Link>
-        <Link to="code-editor/overview" >
+         <Link to="code-editor/write-class-method" >
           <Translate>Handling Code</Translate>
-        </Link>
-        <Link to="Tags/tags" >
-          <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Debugging/basics" >
           <Translate>Debugging</Translate>
         </Link>
-        <Link to="settings/overview" >
-          <Translate>Settings</Translate>
+         <Link to="ORDA/overview" >
+          <Translate>Object Relational Data Access (ORDA)</Translate>
+        </Link>
+       <Link to="Concepts/about">
+          <Translate>Language Concepts</Translate>
+        </Link>
+       <Link to={localizedLinks["homepage.sections.core-development.langage-ref-url"]} >
+          <Translate>Language Reference (4D Doc Center)</Translate>
+        </Link>
+        <Link to="API/overview" >
+          <Translate>Class Functions</Translate>
+        </Link>
+        <Link to="Develop/processes" >
+          <Translate>Processes</Translate>
+        </Link>
+        <Link to="Tags/tags" >
+          <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Preferences/overview" >
           <Translate>Preferences</Translate>
