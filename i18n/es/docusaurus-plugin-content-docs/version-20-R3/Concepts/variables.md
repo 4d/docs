@@ -17,12 +17,16 @@ Las variables son objetos del lenguaje; puede crear y utilizar variables que nun
 
 ## Declaración de variables
 
-Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de declarar las variables:
+You usually create variables by declaring them. El lenguaje 4D ofrece dos formas de declarar las variables:
 
 - utilizando la palabra clave `var` (recomendado, especialmente si su código utiliza objetos y clases),
-- utilizando uno de los comandos del lenguaje 4D del tema "Compilador" o "Arrays" (lenguaje clásico únicamente).
+- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
-**Note:** aunque no se suele recomendar, puede crear variables básicas simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si declara una variable que contenga la fecha actual más 30 días, puede escribir:
+Cuando se declaran las variables, se inicializan con el [**valor por defecto correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no se les haya [asignado](#assigning-data). Alternativamente, al declarar variables, puede [inicializar](#initializing-variables-in-the-declaration-line) su valor junto con su tipo de datos todo dentro de una línea.
+
+:::note
+
+Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -30,7 +34,9 @@ Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de decla
  // and assigns the current date plus 30 days
 ```
 
-Cuando se declaran las variables, se inicializan con el [**valor por defecto correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no se les haya [asignado](#assigning-data). Alternativamente, al declarar variables, puede [inicializar](#initializing-variables-in-the-declaration-line) su valor junto con su tipo de datos todo dentro de una línea.
+When a variable is created before being declared, it is not initialized at the declaration step.
+
+:::
 
 
 ### Utilizando la palabra clave `var`
