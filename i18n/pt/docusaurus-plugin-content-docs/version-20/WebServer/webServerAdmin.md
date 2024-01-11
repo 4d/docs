@@ -194,29 +194,29 @@ When you choose the ELF or WLF format, the “Web Log Token Selection” area di
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                                                                                                                             |
-| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                                           |
-| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                                                                                                 |
-| C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                                                                                            |
-| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                                                                                              |
-| CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                                                |
-| CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                                                                                             |
-| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                         |
-| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                              |
-| CS(USER_AGENT) | X   | X   | Informações sobre o software e o sistema operacional do cliente                                                                                   |
-| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                           |
-| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                     |
-| CS_URI_QUERY | X   | X   | Parâmetros da consulta                                                                                                                            |
-| CS_URI_STEM  | X   | X   | Parte da solicitação sem parâmetros de consulta                                                                                                   |
-| DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano                                                                         |
-| METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                           |
-| PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                               |
-| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                  |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                               |
-| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                                                                                              |
-| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). If the user name contains spaces, they are replaced by _ (underlines) |
-| URL            |     | X   | URL solicitado pelo cliente                                                                                                                       |
+| Campo          | ELF | WLF | Valor                                                                                                                                                         |
+| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                                                       |
+| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                                                                                                             |
+| C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                                                                                                        |
+| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                                                                                                          |
+| CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                                                            |
+| CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                                                                                                         |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                                     |
+| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                                          |
+| CS(USER_AGENT) | X   | X   | Informações sobre o software e o sistema operacional do cliente                                                                                               |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                                       |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                                 |
+| CS_URI_QUERY | X   | X   | Parâmetros da consulta                                                                                                                                        |
+| CS_URI_STEM  | X   | X   | Parte da solicitação sem parâmetros de consulta                                                                                                               |
+| DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano                                                                                     |
+| METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                                       |
+| PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                                           |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                              |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                                           |
+| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                                                                                                          |
+| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). Se o nome do usuário contiver espaços, eles serão substituídos por _ (sublinhado) |
+| URL            |     | X   | URL solicitado pelo cliente                                                                                                                                   |
 
 > As datas e horas são indicadas em GMT.
 
