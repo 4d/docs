@@ -114,7 +114,7 @@ When a list subform has this property enabled, the user can modify record data d
 ---
 ## Formulário lista
 
-You use this property to declare the list form to use in the subform. A list subform lets you enter, view, and modify data in other tables.
+Você usa essa propriedade para declarar o formulário de lista a ser usado no subformulário. Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas.
 
 List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. O formulário de entrada é designado Formulário detalhado.
 
