@@ -49,9 +49,9 @@ ORDA features related to entity locking and transaction are managed at process l
 - Os bloqueios nas entidades são removidos e as transações são anuladas:
   - quando o processo é eliminado.
   - quando a sessão é encerrada no servidor
-  - when the session is killed from the server administration window.
+  - quando a sessão é encerrada na janela de administração do servidor.
 
-## Closing sessions
+## Fechamento das sessões
 
 A session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the `connectionInfo` parameter of the `Open datastore` command.
 

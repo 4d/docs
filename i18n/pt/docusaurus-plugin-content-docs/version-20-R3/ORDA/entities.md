@@ -103,7 +103,7 @@ For more information on the attribute kind, please refer to the [Storage and Rel
 
 :::
 
-For example, to get and set a storage attribute value of type string:
+Por exemplo, para obter e definir um valor de atributo de armazenamento do tipo string:
 
 ```4d
  $entity:=ds. Employee.get(1) //get employee attribute with ID 1
@@ -136,18 +136,18 @@ Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of 
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-### Assigning files to picture or blob attributes
+### Atribuição de arquivos a atributos imagem ou blob
 
 You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Somente o caminho do arquivo é salvo na entidade.
 
-Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
+Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Além disso, você pode controlar o tamanho do arquivo de dados.
 
 A referência do arquivo pode ser:
 
-- a 4D.File object
-- a path in POSIX format
+- um objeto 4D.File
+- um caminho no formato POSIX
 
 Exemplo:
 
@@ -171,7 +171,7 @@ The file does not have to exist on disk at the time of assignment (no error is r
 
 :::tip
 
-4D loads images and data into a local cache. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
+4D carrega imagens e dados em um cache local. If the referenced file is modified after it has been loaded, you must reassign the file so that the modification is taken into account in the application.
 
 :::
 
@@ -194,7 +194,7 @@ Vejamos a seguinte estrutura (simplificada):
 ![](../assets/en/ORDA/entityAttributes3.png)
 
 In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-> In ORDA, the Automatic or Manual property of relations has no effect.
+> Na ORDA, a propriedade Automática ou Manual das relações não tem efeito.
 
 To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Por exemplo:
 

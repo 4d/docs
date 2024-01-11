@@ -61,9 +61,10 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
-| ------- | ------------- |
-| v17 R5  | Ajout         |
+| Version | Modifications                             |
+| ------- | ----------------------------------------- |
+| v19 R4  | Nouvelle constante `HTTP Client log file` |
+| v17 R5  | Ajout                                     |
 
 </details>
 
@@ -115,6 +116,7 @@ Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier sy
 | Debug log file                    | 12     | Fichier d'enregistrement des événements pour le débogage créé par la commande `SET DATABASE PARAMETER(Debug log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                       |
 | Diagnostic log file               | 11     | Fichier de diagnostic de 4D, créé par la commande `SET DATABASE PARAMETER(Diagnostic log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                              |
 | Directory file                    | 16     | fichier directory.json, contenant la description des groupes et utilisateurs (le cas échéant) du projet. Il se situe soit dans le dossier Settings de l'utilisateur (par défaut, s'applique à tout le projet), soit dans le dossier Settings du data (spécifique à un fichier de données).                                                                                                                                                                                      |
+| HTTP Client log file              | 24     | Fichier journal créé par la commande `HTTP SET OPTION(HTTP client log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                           |
 | HTTP debug log file               | 9      | Fichier d'enregistrement des requêtes Web créé par la commande `WEB SET OPTION(Web log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                |
 | HTTP log file                     | 8      | Fichier de débogage des requêtes HTTP, créé par la commande `WEB SET OPTION(Web debug log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                       |
 | IMAP Log file                     | 23     | Fichier d'historique créé par la commande `SET DATABASE PARAMETER(IMAP Log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                      |

@@ -346,16 +346,13 @@ La déclaration des paramètres est également obligatoire dans les contextes su
 // Sur connexion Web
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
-
-> Vosu pouvez également utiliser les [paramètres nommés](#paramètres-nommés) avec le mot-clé `#DECLARE`.
-
 - Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
 
 - Objets formulaires qui acceptent l'événement formulaire `Sur glisser` - Le paramètre $0 (Entier long), qui résulte de l'événement formulaire `Sur glisser` est typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans la méthode projet. **Note :** Le compilateur n'initialise pas le paramètre $0. Ainsi, dès que vous utilisez l'événement formulaire `Sur glisser`, vous devez initialiser $0. Par exemple :
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)

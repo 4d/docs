@@ -84,9 +84,9 @@ The `On Web Authentication` database method is therefore called:
 - when the web server receives a root access URL and no home page has been set in the Settings or by means of the `WEB SET HOME PAGE` command
 - when the web server processes a tag executing code (e.g `4DSCRIPT`) in a semi-dynamic page.
 
-The `On Web Authentication` database method is NOT called:
+O método banco de dados `On Web Authentication` NÃO é chamado:
 
-- when the web server receives a URL requesting a valid static page.
+- quando o servidor Web recebe um URL solicitando uma página estática válida.
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 
@@ -175,7 +175,7 @@ The `On Web Authentication` database method returns a boolean in $0:
 
 The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
 > **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
-> * - * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+> * - * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. O mesmo acontecerá se ocorrer um erro durante seu processamento.
 
 
 ### Exemplo

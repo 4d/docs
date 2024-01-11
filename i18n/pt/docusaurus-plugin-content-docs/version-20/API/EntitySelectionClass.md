@@ -195,7 +195,7 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 #### Descrição
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidades<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassClass.md#attributename) (`storage` or `relation`) of the attribute.
+Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->uma "projeção" de valores para o atributo na seleção de entidades<!-- END REF -->. Os valores projetados podem ser uma coleção ou uma nova seleção de entidades, dependendo do tipo de [kind](DataClassClass.md#attributename) (`storage` ou `relation`) do atributo.
 
 *   Se o "kind" de *attributeName* é `storage`: `.attributeName` devolve uma coleção de valores do mesmo tipo que *attributeName*.
 *   If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Se eliminam os duplicados (se devolve uma seleção de entidades desordenada).
@@ -939,8 +939,8 @@ Com esta sintaxe, `.extract()` preenche a coleção devolvida com os valores *at
 
 Como padrão, as entidades para as que *attributePath* for*null* ou indefinida são ignoradas na coleção resultante. Pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos**null**  na coleção retornada.
 
-*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntity" are extracted as a collection of entities (duplications are kept).
-*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntities" are extracted as a collection of entity selections.
+*   Os atributos dataclass com [.kind](DataClassClass.md#attributename) = "relatedEntity" são extraídos como uma coleção de entidades (as duplicações são mantidas).
+*   Os atributos dataclass com [.kind](DataClassClass.md#attributename) = "relatedEntities" se extraem como uma entity selection.
 
 
 **Atributos de Dataclass com [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" extraídos como uma coleção de entidades (duplicações são mantidas).**
@@ -949,8 +949,8 @@ Com esta sintaxe, `.extract()` preenche a coleção devolvida com as propriedade
 
 Se vários *attributePath*, forem dados, deve dar um *targetPath* para cada um. Só se extraem os pares válidos \[*attributePath*, *targetPath*].
 
-*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntity" are extracted as an entity.
-*   Dataclass attributes with [.kind](DataClassClass.md#attributename) = "relatedEntities" are extracted as an entity selection.
+*   Atributos de dataclass com [.kind](DataClassClass.md#attributename) = "relatedEntities" são extraídas como coleção de seleção de entidades.
+*   Os atributos dataclass com [.kind](DataClassClass.md#attributename) = "relatedEntities" são extraídos como uma seleção de entidade.
 
 > As entidades de uma colecção de entidades acedidas por \[ ] não são recarregadas da base de dados.
 
@@ -1603,10 +1603,10 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| Parâmetro   | Tipo                |    | Descrição                                                              |
-| ----------- | ------------------- |:--:| ---------------------------------------------------------------------- |
-| pathString  | Text                | -> | Attribute path(s) and sorting instruction(s) for the entity selection  |
-| pathObjects | Collection          | -> | Coleção de objetos criterio                                            |
+| Parâmetro   | Tipo                |    | Descrição                                                                  |
+| ----------- | ------------------- |:--:| -------------------------------------------------------------------------- |
+| pathString  | Text                | -> | Rota(s) de atributos e instruções de classificação para a entity selection |
+| pathObjects | Collection          | -> | Coleção de objetos criterio                                                |
 | Resultados  | 4D. EntitySelection | <- | Nova entity selection na ordem especificada|<!-- END REF -->
 
 |
@@ -2201,7 +2201,7 @@ $sum:=$sel.sum("salary")
 
 A função `.toCollection()` <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->correspondentes aos nomes e valores dos atributos para a selecção da entidade.
 
-Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "*", todos os atributos são extraídos. Attributes with [kind](DataClassClass.md#attributename) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
+Se nenhum parâmetro de filtro for passado ou se o primeiro parâmetro contiver uma cadeia vazia ou "*", todos os atributos são extraídos. Os atributos com [tipo](DataClassClass.md#attributename) propriedade como "relatedEntity" são extraídos com a forma simples: um objecto com propriedade \_KEY (chave primária). Atributos com propriedade tipo como "Entidades relacionadas" não são extraídos.
 
 Ou, pode designar os atributos da entidade a extrair utilizando um parâmetro de filtro. Pode usar um destes dois filtros:
 

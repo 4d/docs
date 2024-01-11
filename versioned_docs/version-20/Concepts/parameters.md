@@ -265,16 +265,16 @@ This command means that starting with the fourth parameter (included), the metho
 
 ## `Compiler` method
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project. 
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project. 
 
-When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. For example:
+When using the `#DECLARE` keyword, parameters are automatically declared. For example:
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
 	// all parameters are declared with their type
 ```
 
-However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
+However, the 4D compiler needs that you declare all your parameters in a specific method using a special syntax:
 
 - you can group all local variable parameters for project methods in one or more project method(s)
 - the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
@@ -284,7 +284,7 @@ For example:
 
 ```4d  
  // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```  
 
 :::note
@@ -293,18 +293,25 @@ This syntax is not executable in interpreted mode.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+:::info
+
+Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
 
 - Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
 
 ```4d
 // On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+C_TEXT($1;$2;$3;$4;$5;$6)
+
+```
+
+- Functions - Function parameters are automatically declared for compilation in the function prototype. For example: 
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // all parameters are declared with their type
 ```
 
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
@@ -314,7 +321,7 @@ Parameter declaration is also mandatory in the following contexts (these context
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -324,6 +331,7 @@ Parameter declaration is also mandatory in the following contexts (these context
  End if
 ```
 
+:::
 
 
 ## Wrong parameter type

@@ -49,7 +49,11 @@ To get a digital certificate:
 
 1. Generate a private key using the `GENERATE ENCRYPTION KEYPAIR` command.
 
->**Warning**: For security reasons, the private key should always be kept secret. Actually, it should always remain with the server machine. For the Web server, the Key.pem file must be placed in the Project folder.
+:::caution
+
+For security reasons, the private key should always be kept secret. Actually, it should always remain with the server machine. For the Web server, the Key.pem file must be placed in the Project folder.
+
+:::
 
 2. Use the `GENERATE CERTIFICATE REQUEST` command to issue a certificate request.
 
@@ -76,7 +80,11 @@ To be able to use the TLS protocol with the server, you must install the **key.p
 
 You must copy these files manually on the remote machine.
 
->Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+:::caution
+
+Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+
+:::
 
 ### Enabling TLS
 

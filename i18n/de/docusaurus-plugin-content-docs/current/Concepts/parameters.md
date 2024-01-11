@@ -280,6 +280,9 @@ Here we have a method called `SumNumbers` that returns the calculated total for 
 ```4d
 
 #DECLARE( ... : Real) : Real 
+
+
+
 var $number; $total : Real 
 
 For each ($number; 1; Count parameters)
@@ -306,28 +309,61 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is still su
 
 :::
 
-## `Compiler` method
+## Compilation
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions as soon as you intend to compile your project.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must make sure that all method and function parameters are properly declared as soon as you intend to compile your project.
 
-When using the `#DECLARE` keyword or `Function` prototype, parameters are automatically declared. Beispiel:
+:::note
+
+You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+
+:::
+
+
+### Parameters declared in prototypes
+
+When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. Beispiele:
+
+```4d
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
+    // all method parameters are declared with their type
+```
+
+```4d
+    // On Web Connection Database Method
+#DECLARE ($url : Text; $header : Text; \
+  $BrowserIP : Text; $ServerIP : Text; \
+  $user : Text; $password : Text)
+```
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-    // all parameters are declared with their type
+    // all function parameters are declared with their type
 ```
 
-However, a 4D compiler feature allows you to declare all your parameters in a specific method using a special syntax:
+:::tip
+
+Declaring parameters in prototypes is a good practice, even in non-compiled projects.
+
+:::
+
+### Method parameters declared outside prototypes
+
+It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
+
+#### `Compiler_Methods` method
+
+When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
 
 - you can group all local variable parameters for project methods in one or more project method(s)
-- the method name(s) must start with "**Compiler**", for example "Compiler_MyParameters".
-- within such a method, you can predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
+- within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
 
 Beispiel:
 
 ```4d  
- // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ // Compiler_Methods
+ C_REAL(OneMethodAmongOthers;$1;$2) 
 ```
 
 :::note
@@ -336,19 +372,13 @@ This syntax is not executable in interpreted mode.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all you parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterstützen nicht die Deklaration in einer "Compiler" Methode):
+:::info
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters of the data type Text. Zu Beginn der Datenbankmethode müssen Sie schreiben (selbst wenn keiner der Parameter genutzt wird):
+#### Particular cases
 
-```4d
-// On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
-```
+Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
 
 - Trigger - Der Parameter $0 (Lange Ganzzahl), der das Ergebnis eines Trigger ist, wird vom Compiler typisiert, wenn der Parameter nicht explizit deklariert wurde. Wollen Sie ihn jedoch deklarieren, müssen Sie das direkt im Trigger tun.
 
@@ -356,7 +386,7 @@ Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterst�
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -364,12 +394,14 @@ Deklarieren der Parameter ist auch in folgenden Kontexten zwingend (sie unterst�
     End if
     ...
  End if
-    If($DataType=Is picture)
-       $0:=-1
-    End if
-    ...
- End if
 ```
+
+:::
+
+### Conflicts between declarations
+
+- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
+- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
 
 
 
@@ -580,6 +612,7 @@ Nehmen wir z. B. die Methode `CreatePerson`, die ein Objekt erstellt und es als 
  ChangeAge($person)
  ALERT(String($person.Age))  
 ```
+
 
 Die Methode `ChangeAge` fügt dem Attribut Age des empfangenen Objekts 10 hinzu
 

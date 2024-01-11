@@ -19,7 +19,7 @@ Para iniciar o servidor web 4D:
 
 É tudo! The web server is started (you can see that the menu item has become **Stop Web Server**). Está agora pronto para processar pedidos. Para o verificar, vamos apresentar a página inicial padrão.
 
-### Displaying the default home page
+### Exibição da página inicial padrão
 
 The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
 
@@ -69,7 +69,7 @@ Create a basic database with, for example, a single table containing some record
 
 The most simple solution to display data is to call a [template page](templates.md) containing tags.
 
-1. Using any text editor, create a file containing the following lines:
+1. Usando qualquer editor de texto, crie um arquivo com as seguintes linhas:
 
 ```html
 <html>
@@ -125,7 +125,7 @@ O servidor Web devolve os resultados em JSON:
 
 You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
 
-You can also get any data.
+Você também pode obter qualquer dado.
 
 3. Introduzir o seguinte URL:
 

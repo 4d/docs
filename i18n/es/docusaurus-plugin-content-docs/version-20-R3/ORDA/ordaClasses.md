@@ -674,11 +674,11 @@ Los atributos alias son de sólo lectura (excepto cuando se basan en un atributo
 
 ### Propiedades del alias
 
-Alias attribute [`kind`](../API/DataClassClass.md#attributename) is "alias".
+Atributo alias [`kind`](../API/DataClassClass.md#attributename) es "alias".
 
-An alias attribute inherits its data [`type`](../API/DataClassClass.md#attributename) property from the target attribute:
+Un atributo alias hereda su propiedad [`type`](../API/DataClassClass.md#attributename) del atributo destino:
 
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "storage", the alias data type is of the same type,
+- si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "storage", el tipo de datos del alias es del mismo tipo,
 - if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
 
 Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).

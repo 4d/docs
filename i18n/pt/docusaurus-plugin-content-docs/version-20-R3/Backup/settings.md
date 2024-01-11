@@ -69,11 +69,11 @@ Para modificar o local onde se armazenam esses arquivos, clique no botão **...*
 
 ### Gestão do arquivo de histórico
 
-The **Use Log File** option, when checked, indicates that the application uses a log file. The pathname of the log file for the current data file is specified below the option. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico. For more information about the log file, please refer to [log file](log.md)
+A opção **Utilizar arquivo de histórico**, quando estiver marcada, indica que a aplicação utiliza um arquivo de histórico. O nome do caminho do arquivo de histórico do arquivo de dados atual é especificado abaixo da opção. Quando essa opção for marcada, não é possível abrir o banco de dados sem um arquivo de histórico. Para obter mais informações sobre o arquivo de histórico, consulte [arquivo de histórico](log.md)
 
 Como padrão, todo banco de dados criado com 4D usando um arquivo de histórico (opção marcada na página **Geral** das **Preferências**). O arquivo de histórico é chamado *data.journal* e está na pasta Data.
 
-> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. When you check this option for the currently used data file, a warning message informs you that a backup is necessary. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
+> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Quando você marcar essa opção para o arquivo de dados usado no momento, uma mensagem de aviso informará ser necessário fazer um backup. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
 
 
 ## Cópia de segurança e restauração

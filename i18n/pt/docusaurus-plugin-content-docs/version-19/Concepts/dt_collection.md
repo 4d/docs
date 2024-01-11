@@ -62,7 +62,7 @@ For more information, refer to the [Shared objects and collections](Concepts/sha
 
 ## Funções de Collection
 
-As referências a coleções 4D se beneficiam de métodos especiais (as vezes chamados *funções membro*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
+As referências a coleções 4D se beneficiam de métodos especiais (as vezes chamados *funções membro*). As funções de coleção estão listadas na seção [Class API Reference](API/CollectionClass.md).
 
 Por exemplo:
 

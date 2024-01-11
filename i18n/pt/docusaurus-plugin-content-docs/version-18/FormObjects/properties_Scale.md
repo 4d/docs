@@ -35,7 +35,7 @@ Apresenta/oculta as graduações junto às etiquetas.
 
 ---
 
-## Graduation step
+## Passo de graduação
 
 Medição do visor da escala.
 

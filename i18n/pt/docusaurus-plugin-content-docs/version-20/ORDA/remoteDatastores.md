@@ -51,9 +51,9 @@ ORDA features related to entity locking and transaction are managed at process l
 *   Os bloqueios nas entidades são removidos e as transações são anuladas:
     *   quando o processo é eliminado.
     *   quando a sessão é encerrada no servidor
-    *   when the session is killed from the server administration window.
+    *   quando a sessão é encerrada na janela de administração do servidor.
 
-### Closing sessions
+### Fechamento das sessões
 
 A session is automatically closed by 4D when there has been no activity during its timeout period. The default timeout is 60 mn, but this value can be modified using the `connectionInfo` parameter of the `Open datastore` command.
 
@@ -67,7 +67,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 
 ### Contexto
 
-The optimization context is based upon the following implementations:
+O contexto de otimização é baseado nas seguintes implementações:
 
 * When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards. Os seguintes métodos e funções accionam a fase de aprendizagem:
   * [`Criar uma seleção de entidades (entity selection)`](../API/EntitySelectionClass.md#create-entity-selection)
@@ -91,7 +91,7 @@ The optimization context is based upon the following implementations:
 
 ![](../assets/en/ORDA/cs-optimization-process.png)
 
-:::warning Compatibility Note
+:::warning Nota de compatibilidade
 
 Contexts handled in connections established through [`Open datastore`](../API/DataStoreClass.md#open-datastore) can only be used between similar main versions of 4D. For example, a 4D v20.x remote application can only use contexts of a 4D Server v20.x datastore.
 

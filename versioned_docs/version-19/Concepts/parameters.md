@@ -347,9 +347,6 @@ Parameter declaration is also mandatory in the following contexts (these context
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
-
-> You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword. 
-
 - Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
 
 - Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method.
@@ -357,7 +354,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)

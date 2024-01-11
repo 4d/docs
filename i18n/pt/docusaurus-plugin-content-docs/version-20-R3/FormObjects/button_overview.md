@@ -9,7 +9,7 @@ A button is an active object that can be assigned an action (*e.g.*, a database 
 
 Buttons can fulfill a variety of roles, depending on their style and the action assigned to it. For example, buttons could lead a user through a questionnaire or form to complete, or to make choices. Depending on its settings, a button may be designed to be clicked only once and execute a command, while others may require the user to click more than once to receive the desired result.
 
-## Handling buttons
+## Manipulação de botões
 
 The actions assigned to buttons can originate from predefined [standard actions](properties_Action.md#standard-action) or from custom object methods. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
 
@@ -102,7 +102,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 ![](../assets/en/FormObjects/button_toolbar.png)
 
- - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - o destaque do botão nunca aparece. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Exemplo
 
@@ -132,7 +132,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 ![](../assets/en/FormObjects/button_bevel.png)
 
- - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - o destaque do botão nunca aparece. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
 
 #### JSON Exemplo
 

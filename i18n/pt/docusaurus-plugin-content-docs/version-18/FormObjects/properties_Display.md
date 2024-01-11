@@ -15,7 +15,7 @@ Pode escolher um formato desta lista ou utilizar qualquer formato personalizado.
 
 O sinal de número (#) é o espaço reservado para um formato de exibição alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
-For example, consider a part number with a format such as "RB-1762-1".
+Por exemplo, considere um número de peça com um formato como "RB-1762-1".
 
 O formato alfa seria:
 
@@ -56,17 +56,17 @@ Os formatos de data controlam como as datas aparecem quando são apresentadas ou
 
 A tabela seguinte apresenta as opções disponíveis:
 
-| Nome do formato                 | Cadeia JSON           | Exemplo (sistema americano)       |
-| ------------------------------- | --------------------- | --------------------------------- |
-| System date short               | systemShort (default) | 03/25/20                          |
-| System date abbreviated *(1)*   | systemMedium          | Wed, Mar 25, 2020                 |
-| System date long                | systemLong            | Quarta-feira, 25 de março de 2020 |
-| RFC 822                         | rfc822                | Tue, 25 Mar 2020 22:00:00 GMT     |
-| Short Century                   | shortCentury          | 25/03/20 mas 25/04/2032 *(2)*     |
-| Internal date long              | long                  | March 25, 2020                    |
-| Internal date abbreviated *(1)* | abbreviated           | Mar 25, 2020                      |
-| Internal date short             | short                 | 03/25/2020                        |
-| ISO Date Time *(3)*             | iso8601               | 2020-03-25T00:00:00               |
+| Nome do formato                 | Cadeia JSON          | Exemplo (sistema americano)       |
+| ------------------------------- | -------------------- | --------------------------------- |
+| System date short               | systemShort (padrão) | 03/25/20                          |
+| System date abbreviated *(1)*   | systemMedium         | Wed, Mar 25, 2020                 |
+| System date long                | systemLong           | Quarta-feira, 25 de março de 2020 |
+| RFC 822                         | rfc822               | Tue, 25 Mar 2020 22:00:00 GMT     |
+| Short Century                   | shortCentury         | 25/03/20 mas 25/04/2032 *(2)*     |
+| Internal date long              | long                 | March 25, 2020                    |
+| Internal date abbreviated *(1)* | abbreviated          | Mar 25, 2020                      |
+| Internal date short             | short                | 03/25/2020                        |
+| ISO Date Time *(3)*             | iso8601              | 2020-03-25T00:00:00               |
 
 *(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidade só se aplica às versões francesas de 4D.
 
@@ -246,7 +246,7 @@ The following table shows how different formats affect the display of numbers. T
 
 ## Formato imagem
 
-Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+Os formatos imagem controlam a aparência das imagens quando exibidas ou impressas. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
 As opções de truncagem e escala não afetam a imagem em si. O conteúdo de um campo Imagem é sempre guardado. Only the display on the particular form is affected by the picture display format.
 
@@ -310,19 +310,19 @@ Os formatos de hora controlam a forma como as horas aparecem quando são apresen
 
 The table below shows the Time field display formats and gives examples:
 
-| Nome do formato              | Cadeia JSON  | Comentários                                                                                                                                      | Exemplo para 04:30:25          |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                       |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                          |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 horas 30 minutos 25 segundos |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 horas 30 minutos             |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                      |
-| MM SS                        | mm_ss        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270:25                         |
-| Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                       | 270 minutos 25 segundos        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
-| System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                     | 04:30:25                       |
-| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: this format is the same as the System time short format         | 4•30•25 AM                     |
-| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: this format is the same as the System time short format             | 4:30:25 AM HNEC                |
+| Nome do formato              | Cadeia JSON  | Comentários                                                                                                                                          | Exemplo para 04:30:25          |
+| ---------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                      | 04:30:25                       |
+| HH:MM                        | hh_mm        |                                                                                                                                                      | 04:30                          |
+| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                      | 4 horas 30 minutos 25 segundos |
+| Hour Min                     | HH_MM        |                                                                                                                                                      | 4 horas 30 minutos             |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                      | 4:30 a.m.                      |
+| MM SS                        | mm_ss        | Hora expressa como uma duração de 00:00:00                                                                                                           | 270:25                         |
+| Min Sec                      | MM_SS        | Hora expressa como uma duração de 00:00:00                                                                                                           | 270 minutos 25 segundos        |
+| ISO Date Time                | iso8601      | Corresponde ao padrão XML para representar dados relacionados ao tempo. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
+| System time short            | - (o padrão) | Formato de hora standard definido no sistema                                                                                                         | 04:30:25                       |
+| System time long abbreviated | systemMedium | apenas macOS: formato de hora abreviado definido no sistema. <br/>Windows: esse formato é o mesmo que o formato curto da hora do sistema       | 4•30•25 AM                     |
+| System time long             | systemLong   | apenas macOS: formato de hora longa definido no sistema. <br/>Windows: esse formato é o mesmo que o formato curto da hora do sistema           | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
@@ -487,7 +487,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 ## Visibilidade
 
-This property allows hiding the object in the Application environment.
+Esta propriedade permite ocultar o objeto no ambiente Aplicação.
 
 É possível tratar a propriedade Visibilidade para a maioria dos objetos de formulário. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
 

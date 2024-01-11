@@ -233,15 +233,22 @@ Depending on the event, various other fields can also be logged, such as task, s
 
 The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
 
-| Message level | Beschreibung                                                                                  | When selected, includes         |
-| ------------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR         | A part of the application does not work                                                       | ERROR                           |
-| WARN          | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
-| INFO          | *Default level* - Important application event                                                 | ERROR, WARN, INFO               |
-| DEBUG         | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
-| TRACE         | Other internal information (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG, TRACE |
+| Constant    | Beschreibung                                                                                  | When selected, includes                                       |
+| ----------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | A part of the application does not work                                                       | `Log error`                                                   |
+| `Log warn`  | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | `Log error`, `Log warn`                                       |
+| `Log info`  | *Default level* - Important application event                                                 | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | Detail of application flow (for 4D technical services)                                        | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | Other internal information (for 4D technical services)                                        | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+
+Beispiel:
+
+```4d
+SET DATABASE PARAMETER (Diagnostic log recording; 1)
+SET DATABASE PARAMETER (Diagnostic log level; Log trace)
+```
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, and 4DIMAPLog.txt
 

@@ -18,7 +18,7 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
     - imagem(2)
     - collection
 
-(1)Os objectos ORDA, tais como [entidades](ORDA/dsMapping.md#entity) ou [seleções de entidades](ORDA/dsMapping.md#entity-selection) não podem ser armazenados em **campos de objectos**; no entanto, são totalmente suportados em **variáveis de objectos** em memória.
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. Um erro será retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com as variáveis do objeto **** na memória.
 
 (*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
 

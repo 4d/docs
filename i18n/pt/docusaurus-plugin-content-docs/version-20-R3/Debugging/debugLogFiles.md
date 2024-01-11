@@ -1,15 +1,16 @@
 ---
 id: debugLogFiles
-title: Descrição de arquivos de histórico
+title: Arquivo de histórico
 ---
 
-Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Os registos são normalmente iniciados ou interrompidos utilizando os selectores dos comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html) ou [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) e são armazenados na [pasta Logs](Project/architecture.md#logs) do projeto.
+Aplicações 4D podem gerar vários arquivos de histórico ou log que são úteis para depuração e otimizar sua execução. Logs are usually started or stopped using selectors of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html), or [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) commands and are stored in the [Logs folder](Project/architecture.md#logs) of the project.
 
 Informação gravada precisa ser analisada para detectar e corrigir os problemas. Esta seção oferece uma descrição detalhada dos arquivos de log abaixo:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([padrão](#4ddebuglogtxt-standard) & [tabular](#4ddebuglogtxt-tabular))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
@@ -126,6 +127,8 @@ Para cada processo, os campos abaixo são registrados:
 | connection\_uuid                | Identificador UUID da conexão de processo                               |
 | server\_process\_unique\_id | ID de Processo único em Servidor                                        |
 
+
+
 ## HTTPDebugLog.txt
 
 Este arquivo registra cada petição HTTP e cada resposta em modo raw (não processado). Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
@@ -133,8 +136,6 @@ Este arquivo registra cada petição HTTP e cada resposta em modo raw (não proc
 Como iniciar esse log:
 
 ```4d
-
-
 
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //outros valores estão disponíveis
@@ -150,6 +151,36 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 | TimeStamp      | Timestamp em milisegundos (desde início sistema)             |
 | ConnectionID   | Connection UUID (UUID de VTCPSocket usada para comunicação)  |
 | SequenceNumber | Número de operação único e sequencial da sessão de histórico |
+
+
+## 4DHTTPClientLog.txt
+
+This log file records the HTTP traffic that goes through the 4D HTTP client. Whole requests and responses, including headers, are logged; optionally, body parts can be logged as well.
+
+Como iniciar esse log:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+//outros valores estão disponíveis
+```
+
+Os campos abaixo são registrados tanto para Request quanto para Response:
+
+| Campo nome      | Descrição                                                                        |
+| --------------- | -------------------------------------------------------------------------------- |
+| SequenceID      | Número de operação único e sequencial da sessão de histórico                     |
+| ConnectionID    | Identificador UUID da conexão de processo                                        |
+| LocalIP         | Endereço IP do Cliente                                                           |
+| PeerIP          | Endereço IP do servidor                                                          |
+| TimeStamp       | Timestamp (ms) at the time the request is sent or the response is fully received |
+| ElapsedTimeInMs | (response only) Difference with the request timestamp                            |
+
+Depending on log options, various other fields can also be logged.
+
+- Para solicitação: linha de solicitação, cabeçalhos, corpo da solicitação
+- For response: status line, headers, response body (uncompressed), if any
+
 
 ## 4DDebugLog.txt (standard)
 
@@ -229,15 +260,23 @@ Dependendo do evento, vários outros campos podem ser registrados, como task, so
 
 O arquivo *4DDiagnosticLog.txt* pode registar diferentes níveis de mensagens, desde `ERROR` (mais importante) a `TRACE` (menos importante). Por predefinição, o nível `INFO` está definido, o que significa que o arquivo registará apenas eventos importantes, incluindo erros e resultados inesperados (ver abaixo).
 
-Pode selecionar o nível das mensagens utilizando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) , consoante as suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
+Pode selecionar o nível das mensagens utilizando o seletor `Diagnostic log level` do comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), consoante as suas necessidades. Quando se selecciona um nível, os níveis acima (que são mais importantes) são implicitamente seleccionados também. Estão disponíveis os seguintes níveis:
 
-| Nível da mensagem | Descrição                                                                                            | Quando seleccionado, inclui     |
-| ----------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR             | Uma parte da aplicação não funciona                                                                  | ERROR                           |
-| WARN              | Erro potencial, utilização de uma função obsoleta, má utilização, situação indesejável ou inesperada | ERROR, WARN                     |
-| INFO              | *Nível padrão* - Evento de aplicação importante                                                      | ERROR, WARN, INFO               |
-| DEBUG             | Detalhe do fluxo de aplicação (para serviços técnicos 4D)                                            | ERROR, WARN, INFO, DEBUG        |
-| TRACE             | Outras informações internas (para serviços técnicos 4D)                                              | ERROR, WARN, INFO, DEBUG, TRACE |
+| Parâmetros  | Descrição                                                                                            | Quando seleccionado, inclui                                   |
+| ----------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | Uma parte da aplicação não funciona                                                                  | `Log error`                                                   |
+| `Log warn`  | Erro potencial, utilização de uma função obsoleta, má utilização, situação indesejável ou inesperada | `Log error`, `Log warn`                                       |
+| `Log info`  | *Nível padrão* - Evento de aplicação importante                                                      | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | Detalhe do fluxo de aplicação (para serviços técnicos 4D)                                            | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | Outras informações internas (para serviços técnicos 4D)                                              | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+
+Exemplo:
+
+```4d
+SET DATABASE PARAMETER (Diagnostic log recording; 1)
+SET DATABASE PARAMETER (Diagnostic log level; Log trace)
+```
+
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, e 4DIMAPLog.txt
 
@@ -257,11 +296,11 @@ Os arquivos de histórico podem ser produzidos em duas versões:
 
  Para começar esse histórico:
 
- ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log 
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log 
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
- ```
+```4d
+SET DATABASE PARAMETER(SMTP Log;1) //inicia SMTP log
+SET DATABASE PARAMETER(POP3 Log;1) //inicia POP3 log
+SET DATABASE PARAMETER(IMAP Log;1) //inicia IMAP log
+```
 
 > 4D Server: Clique no botão **Start Request and Debug Logs** na página [Maintenance](https://doc.4d.com/4Dv18R5/4D/18-R5/Maintenance-Page.300-5149308.en.html) da janela de administração de 4D Server.
 
@@ -524,7 +563,72 @@ O arquivo de configuração do registo é um arquivo `.json` que deve estar em c
                     "maximum": 7
                 },
                 "state": {
-                    "description":
+                    "description": "Enable/Disable recording of web requests",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 4
+                }
+            }
+        },
+        "HTTPClientLogs": {
+             "description": "Configuration for http client logs",
+             "type": "object",
+             "properties": {
+                  "state": {
+                       "description": "Configure http client logs",
+                       "type": "integer",
+                       "minimum": 0,
+                       "maximum": 7
+                  },
+             }
+        },
+        "POP3Logs": {
+            "description": "Configuration for POP3 logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable POP3 logs (from 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "SMTPLogs": {
+            "description": "Configuration for SMTP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable SMTP log recording (form 0 to N)",
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "IMAPLogs": {
+            "description": "Configuration for IMAP logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable IMAP log recording (form 0 to N)",
+                    "type": "integer"
+                }
+            }
+        },
+        "ORDALogs": {
+            "description": "Configuration for ORDA logs",
+            "type": "object",
+            "properties": {
+                "state": {
+                    "description": "Enable/Disable ORDA logs (0 or 1)",
+                    "type": "integer"
+                },
+                "filename": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
 ```
 
 ### Exemplo
@@ -557,6 +661,7 @@ Aqui está um exemplo de arquivo de configuração de log:
  },
  "IMAPLogs": {
         "state" : 1
+
  },
  "ORDALogs": {
         "state" : 1,

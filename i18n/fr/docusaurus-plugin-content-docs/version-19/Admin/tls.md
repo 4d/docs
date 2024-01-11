@@ -46,7 +46,12 @@ Le choix de l’autorité de certification dépend de plusieurs facteurs. Plus l
 Pour obtenir un certificat numérique :
 
 1. Générez une “clé privée” à l’aide de la commande `GENERER CLES CRYPTAGE`.
-> **Attention** : Pour des raisons de sécurité, la clé privée ne doit jamais être diffusée sur un réseau. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
+
+:::caution
+
+For security reasons, the private key should always be kept secret. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
+
+:::
 
 2. Etablissez une demande de certificat à l’aide de la commande `GENERER DEMANDE CERTIFICAT.`
 
@@ -68,8 +73,13 @@ Pour pouvoir utiliser le protocole TLS avec le serveur, vous devez installer le 
 - avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder)
 - avec 4D en mode distant, dans le dossier de la base de données cliente sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande `Dossier 4D`).
 
-Vous devez copier ces fichiers manuellement sur la machine distante.
-> Des fichiers *key.pem* et *cert.pem* par défaut sont fournis avec 4D. Pour un niveau de sécurité plus élevé, nous vous recommandons fortement de remplacer ces fichiers avec vos propres certificats.
+You must copy these files manually on the remote machine.
+
+:::caution
+
+Des fichiers *key.pem* et *cert.pem* par défaut sont fournis avec 4D. Pour un niveau de sécurité plus élevé, nous vous recommandons fortement de remplacer ces fichiers avec vos propres certificats.
+
+:::
 
 ### Activation du TLS
 

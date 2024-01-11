@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Controles Abas
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.
@@ -38,9 +38,9 @@ Under macOS, in addition to the standard position (top), the tab controls can al
  }
 ```
 
-## Adding labels to a tab control
+## Adicionando etiquetas a um controle de tabulação
 
-There are several ways to supply the labels for a tab control:
+Há várias maneiras de fornecer as etiquetas para um controle de tabulação:
 
 * You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Os ícones associados aos itens da lista no editor de listas serão apresentados no controle de pestanas.
 * Você pode criar um array Text que contenha os nomes de cada página do formulário. Este código deve ser executado antes de o formulário ser apresentado ao usuário. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
@@ -53,7 +53,7 @@ There are several ways to supply the labels for a tab control:
 ```
 > You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
 
-## Managing tabs programmatically
+## Gerenciamento programada das abas
 
 ### Comando FORM GOTO PAGE
 
@@ -63,7 +63,7 @@ You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-P
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. Em seguida, você deve excluir o array quando ocorrer o evento `On Unload`.
+O comando é executado quando ocorre o evento `On Clicked`. Em seguida, você deve excluir o array quando ocorrer o evento `On Unload`.
 
 Eis um exemplo de método objeto:
 

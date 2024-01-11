@@ -9,7 +9,7 @@ Uma vez que o ORDA é baseado em objectos, a sua utilização requer conheciment
 
 The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
-This example will use the following simple 4D database structure:
+Este exemplo utilizará a seguinte estrutura de banco de dados 4D simple:
 
 ![](../assets/en/ORDA/struc.png)
 
@@ -35,7 +35,7 @@ ds. Company.city //returns the name of the city
 
 You have also noticed the extra `hires` property in the ds. Company dataclass. Não corresponde a um campo. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
-![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
+![](../assets/en/ORDA/struc2s.png) *Nome da relação conforme definido no Inspetor*
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 
@@ -168,7 +168,7 @@ The **4D Client Web Server** and **4D Client SOAP Server** items lets you contro
 
 The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. Esta secção discute várias abordagens a esse esquema.
 
-In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+In this example, a user is assigned to one of three groups depending on their level of responsibility. Usuários atribuídos ao grupo Accounting são responsáveis pela entrada de dados. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 
 The groups are then nested so that privileges are correctly distributed to the users of each group.
 

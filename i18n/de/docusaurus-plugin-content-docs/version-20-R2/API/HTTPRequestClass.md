@@ -109,7 +109,7 @@ In *url*, pass the URL where you want to send the request. The syntax to use is:
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-If you omit the protocol part (`http://` or `https://`), a https request is sent.
+If you omit the scheme part (`http://` or `https://`), a https request is sent.
 
 For example, you can pass the following strings:
 

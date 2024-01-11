@@ -1115,7 +1115,7 @@ Se quiser encontrar o nome da cidade dentro da coleção:
  $c2:=$c.find("FindCity";"Clanton") //$c2={name:Clanton,zc:35046}
 ```
 
-The code for ***FindCity*** is:
+O código do método ***FindCity*** é:
 
 ```4d
  var $1 : Object
@@ -1513,7 +1513,7 @@ In *methodName*, pass the name of the method to use to evaluate collection eleme
 
 *methodName* recebe os seguintes parâmetros:
 
-* in *$1.value* (any type): element value to be mapped
+* em *$1.value* (qualquer tipo): valor do elemento a ser mapeado
 * em *$2* (qualquer tipo): *param*
 * em *$N...* (todos os tipos): *paramN...*
 
@@ -1803,7 +1803,7 @@ Esta função devolve uma *cópia superficial*, o que significa que os objetos o
 
 Em *methodName*, passe um método de comparação que compare dois valores e devolva **true** em *$1.result* se o primeiro valor for menor que o segundo. You can provide additional parameters to *methodName* if necessary.
 
-* *methodName* will receive the following parameters:
+* *methodName* receberá os seguintes parâmetros:
   * $1 (objeto), onde:
     * em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado
@@ -2507,7 +2507,7 @@ Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, tex
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. You can provide additional parameters to *methodName* if necessary.
 
-* *methodName* will receive the following parameters:
+* *methodName* receberá os seguintes parâmetros:
   * $1 (objeto), onde:
     * em *$1.value* (qualquer tipo): primeiro elemento a ser comparado
     * em *$1.value2* (qualquer tipo): segundo elemento a ser comparado

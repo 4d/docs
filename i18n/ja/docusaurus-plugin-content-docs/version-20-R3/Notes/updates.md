@@ -27,7 +27,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみで "キャッチ可能" でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。
+- いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: *範囲外のインデックス*、*互換性のない型*、*Null ポインターの逆参照*。 ただし、Intelプロセッサーでは、このようなエラーによって以前と同様に処理が中断されますが、Apple Siliconプロセッサーでは、[`ABORT`](https://doc.4d.com/4dv20/help/command/ja/page156.html)コマンドを呼び出さない限り、処理は中断されません。
 - 4D は内部的な PHPインタプリターを実装しなくなりました。 PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) 必要があります。
 
 
@@ -35,6 +35,11 @@ title: リリースノート
 
 [**4D v20 R2 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R2/): 4D v20 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
+:::warning セキュリティに関する注記
+
+4Dアプリケーションが TLS接続を使用する場合は、4D v20 R2 HF1 build 100440以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
+
+:::
 
 #### ハイライト
 
@@ -58,6 +63,12 @@ title: リリースノート
 :::caution 4D v20.2 以降の4D Server に接続する最小クライアントバージョンについて
 
 内部的な理由により、4D v20.2 以降の 4D Server に接続するリモートクライアントのバージョンは、4D v20.2 以上でなければなりません。
+
+:::
+
+:::warning セキュリティに関する注記
+
+4Dアプリケーションが TLS接続を使用する場合は、4D v20.2 LTS build 100956以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
 
 :::
 
@@ -106,6 +117,7 @@ title: リリースノート
 
 #### 動作の変更
 
+- v20.2 以降、4D v20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
 - **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい *option* プロパティで、この検証を管理することができます。
@@ -151,6 +163,8 @@ title: リリースノート
 - [データエクスプローラー](../Admin/dataExplorer#基本) にリレートデータと計算属性、エイリアス属性が表示できます。
 - 新しい [FileHandle](../API/FileHandleClass.md) クラスと、`File` クラスの新しい [`.open()`](../API/FileClass.md#open) 関数。
 - [EntitySelection クラス](../API/EntitySelectionClass.md): [`.add()`](../API/EntitySelectionClass.md#add) 関数が *entitySelection* 引数を、[`.minus()`](../API/EntitySelectionClass.md#minus) 関数が *keepOrder* 引数をサポートするようになりました。
+- [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew) において、*automaticRedirections* および *decodeData* オプションをサポート。
+- 新しい [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlog) ログファイル。
 - 4D View Pro に新しい表組みコマンドが追加されました: [VP Find table](../ViewPro/method-list.md#vp-find-table), [VP Get table column attributes](../ViewPro/method-list.md#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list.md#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list.md#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list.md#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list.md#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list.md#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list.md#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list.md#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list.md#vp-set-table-column-attributes)。
 - コンポーネント名前空間が [ エクスプローラーに表示](../Extensions/develop-components#コンポーネント名前空間の宣言) されるようになりました。
 - テキストエリアおよび入力フォームオブジェクトにおいて、[角の半径プロパティ](../FormObjects/properties_CoordinatesAndSizing#角の半径) をサポート。
@@ -292,6 +306,12 @@ ALERT($param1+" "+$param2)
 
 ### 4D v19
 
+:::warning セキュリティに関する注記
+
+4Dアプリケーションが TLS接続を使用する場合は、4D v19.7 LTS build 288986以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
+
+:::
+
 - [IMAPTransporter クラス](../API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](../API/FileClass.md): 新しい `setAppInfo()` および `getAppInfo()` 関数
 - 新しい [4DEACH](../Tags/tags#4deach-と-4dendeach) 変換タグ
@@ -324,7 +344,7 @@ ALERT($param1+" "+$param2)
 | ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
 | --------- | --------- | -------------- | ----------------------------------------------------- |
 | ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
-| CEF       | 113       | 20 R2          | Chromium 5672                                         |
+| CEF       | 118       | 20 R3          | Chromium 5993                                         |
 | Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
 | PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                   |
 | SpreadJS  | 16.0.4    | 20             | 4D View Pro エンジン                                      |

@@ -46,7 +46,12 @@ Le choix de l’autorité de certification dépend de plusieurs facteurs. Plus l
 Pour obtenir un certificat numérique :
 
 1. Générez une “clé privée” à l’aide de la commande `GENERER CLES CRYPTAGE`.
-> **Attention** : Pour des raisons de sécurité, la clé privée ne doit jamais être diffusée sur un réseau. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
+
+:::caution
+
+For security reasons, the private key should always be kept secret. En fait, elle ne doit pas quitter le poste serveur. Pour le serveur Web, le fichier Key.pem doit être placé dans le dossier de la structure du projet.
+
+:::
 
 2. Etablissez une demande de certificat à l’aide de la commande `GENERER DEMANDE CERTIFICAT.`
 
@@ -64,7 +69,12 @@ Le serveur Web peut dès lors fonctionner en mode sécurisé. La durée de valid
 ### Installer des fichiers `key.pem` et `cert.pem`
 
 Pour pouvoir utiliser le protocole TLS avec le serveur, vous devez installer **key.pem** (document contenant la clé de chiffrement privée) et **cert.pem** (document contenant le certificat) au(x) emplacement(s) approprié(s). Différents emplacements sont nécessaires en fonction du serveur sur lequel vous souhaitez utiliser TLS.
-> Des fichiers *key.pem* et *cert.pem* par défaut sont fournis avec 4D. Pour un niveau de sécurité plus élevé, nous vous recommandons fortement de remplacer ces fichiers avec vos propres certificats.
+
+:::caution
+
+Des fichiers *key.pem* et *cert.pem* par défaut sont fournis avec 4D. Pour un niveau de sécurité plus élevé, nous vous recommandons fortement de remplacer ces fichiers avec vos propres certificats.
+
+:::
 
 #### Avec le serveur Web
 
@@ -73,7 +83,7 @@ Pour être utilisés par le serveur web de 4D, les fichiers **key.pem** et **cer
 - avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder)
 - avec 4D en mode distant, dans le dossier de la base de données cliente sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
 
-Vous devez copier ces fichiers manuellement sur la machine distante.
+You must copy these files manually on the remote machine.
 
 #### Avec le serveur d'applications (applications de bureau client-serveur)
 

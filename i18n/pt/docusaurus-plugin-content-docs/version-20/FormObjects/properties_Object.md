@@ -34,9 +34,9 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### Gramática JSON
 
-| Nome | Tipo de dados | Valores possíveis                                                    |
-| ---- | ------------- | -------------------------------------------------------------------- |
-| name | string        | Any allowed name which does not belong to an already existing object |
+| Nome | Tipo de dados | Valores possíveis                                                 |
+| ---- | ------------- | ----------------------------------------------------------------- |
+| name | string        | Qualquer nome permitido que não pertença a um objeto já existente |
 
 #### Objectos suportados
 
@@ -57,7 +57,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 | [Caixa de selecção](checkbox_overview.md)               | Valor da variável associada (0, 1, 2)                                                  |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Número da linha seleccionada                                                           |
 | [Botão rádio](radio_overview.md)                        | Valor da variável associada (1, 0, True ou False para os botões, consoante o seu tipo) |
-| [Tab control](tabControl.md)                            | Number of selected tab                                                                 |
+| [Controle de abas](tabControl.md)                       | Número da aba selecionada                                                              |
 
 #### Gramática JSON
 
@@ -180,11 +180,12 @@ To use collection elements or entities to define the row contents of the list bo
 
 Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
 
-The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command:
+The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [`This`](../Concepts/classes.md#this) keyword:
 
-- if you used a collection of objects, you can call `This` in the datasource expression to access each property value, for example `This.\&#060;propertyPath&#062;`.
-- if you used an entity selection, you can call `This` in the datasource expression to access each attribute value, for example  `This.\&#060;attributePath&#062;`.
-> > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling `This.value` in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+- if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example `This.<propertyPath>`.
+- if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example `This.<attributePath>`.
+> > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling `This.value` in the datasource expression. However in this case you will not be able to modify values or to access the current object (see below).
+
 
 #### Gramática JSON
 
@@ -237,7 +238,7 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 ---
 
-## Radio Group
+## Grupo Rádio
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
@@ -286,7 +287,7 @@ This property sets the type of calculation to be done in a [column footer](listb
 
 Existem vários tipos de cálculos disponíveis. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
 
-| Cálculo                | Num | Text | Date | Hora | Bool | Pict | footer var type         |
+| Cálculo                | Num | Text | Date | Hora | Bool | Pict | tipo var rodapé         |
 | ---------------------- | --- | ---- | ---- | ---- | ---- | ---- | ----------------------- |
 | Mínimo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |
 | Máximo                 | X   | X    | X    | X    | X    |      | Igual ao tipo de coluna |

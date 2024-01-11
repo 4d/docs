@@ -53,7 +53,7 @@ Once you validate the dialog box, 4D creates a new object library on your disk a
 
 ### Abrir uma biblioteca de objetos
 
-A given object library can only be opened by one database at a time. However, several different libraries can be opened in the same database.
+Uma determinada biblioteca de objetos só pode ser aberta por um banco de dados de cada vez. However, several different libraries can be opened in the same database.
 
 To open a custom object library, select **Open>Object Library...** command in the 4D **File** menu or tool bar. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 

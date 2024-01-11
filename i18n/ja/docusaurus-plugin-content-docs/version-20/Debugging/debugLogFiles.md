@@ -3,19 +3,20 @@ id: debugLogFiles
 title: ログファイルの詳細
 ---
 
-4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) あるいは [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
+4Dアプリケーションは、デバッグや実行の最適化のために有用な複数のログファイルを生成することができます。 ログは通常 [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html)、[WEB SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1210.html)、あるいは [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/ja/page1160.html) コマンドのセレクターを使用して開始・停止され、プロジェクトの [Logsフォルダー](Project/architecture.md#logs) 内に保存されます。
 
 記録された情報は、問題の検知と修正のためには分析する必要があります。 この章では、以下のログファイルの詳細を説明します:
 
 * [4DRequestsLog.txt](#4drequestslogtxt)
 * [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt)
 * [HTTPDebugLog.txt](#httpdebuglogtxt)
+* [4DHTTPClientLog.txt](#4dhttpclientlogtxt)
 * 4DDebugLog.txt ([標準](#4ddebuglogtxt-標準) & [タブ分け](#4ddebuglogtxt-タブ分け))
 * [4DDiagnosticLog.txt](#4ddiagnosticlogtxt)
 * [4DIMAPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DPOP3Log.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
 * [4DSMTPLog.txt](#4dsmtplogtxt-4dpop3logtxt-および-4dimaplogtxt)
-* [ORDAリクエストのログファイル](#orda-requests)
+* [ORDAリクエストのログファイル](#ordaリクエスト)
 
 > サーバーとクライアントの両方においてログファイルが生成可能な場合、サーバー側のログファイル名には "Server" が追加されます。 たとえば、"4DRequestsLogServer.txt" のようにです。
 
@@ -150,6 +151,35 @@ WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可�
 | ConnectionID   | 接続UUID (通信に使用された VTCPSocket の UUID) |
 | SequenceNumber | ログセッション内で固有かつシーケンシャルなオペレーション番号      |
 
+## 4DHTTPClientLog.txt
+
+このログファイルは、4D HTTPクライアントを通過する HTTPトラフィックを記録します。 ヘッダーを含むリクエストおよびレスポンス全体が記録され、オプションでボディ部分も記録することができます。
+
+このログの開始方法:
+
+```4d
+
+HTTP SET OPTION(HTTP client log; HTTP enable log with all body parts)  
+// 他の値も利用できます
+```
+
+リクエストとレスポンスの両方に対して以下のフィールドが記録されます:
+
+| フィールド名          | 説明                                             |
+| --------------- | ---------------------------------------------- |
+| SequenceID      | ログセッション内で固有かつシーケンシャルなオペレーション番号                 |
+| ConnectionID    | プロセス接続の UUID識別子                                |
+| LocalIP         | クライアントの IPアドレス                                 |
+| PeerIP          | サーバー IPアドレス                                    |
+| TimeStamp       | リクエストが送信された時点、またはレスポンスが完全に受信された時点のタイムスタンプ (ms) |
+| ElapsedTimeInMs | (レスポンスのみ) リクエストタイムスタンプとの差分                     |
+
+ログオプションに応じて、他の様々なフィールドを記録に含めることができます。
+
+- リクエストの場合: リクエスト行、ヘッダー、リクエスト本文
+- レスポンスの場合: ステータス行、ヘッダー、非圧縮のレスポンス本文 (あれば)
+
+
 ## 4DDebugLog.txt (標準)
 
 このログファイルは、4Dプログラミングレベルで発生するそれぞれのイベントを記録します。 標準モードではイベントの基本的なビューを提供します。
@@ -232,15 +262,23 @@ SET DATABASE PARAMETER(Current process debug log recording;2+4)
 
 *4DDiagnosticLog.txt* ファイルは、`ERROR` (最も重要) から `TRACE` (あまり重要でない) まで、異なるレベルのメッセージをログに記録することができます。 デフォルトでは、`INFO` レベルが設定されており、エラーや予期せぬ結果などの重要なイベントのみを記録します (後述参照)。
 
-[SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドの `Diagnostic log level` セレクターを使用して、必要に応じてメッセージのレベルを選択することができます。 あるレベルを選択すると、その上のレベル (より重要なもの) も暗黙のうちに選択されます。 次のレベルが利用可能です:
+[SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/ja/page642.html) コマンドの `Diagnostic log level` セレクターを使用して、必要に応じてメッセージのレベルを選択することができます。 あるレベルを選択すると、その上のレベル (より重要なもの) も暗黙のうちに選択されます。 次のレベルが利用可能です:
 
-| カラム番号 | 説明                                            | 選択時に次を含みます                      |
-| ----- | --------------------------------------------- | ------------------------------- |
-| ERROR | ログセッション内で固有かつシーケンシャルなオペレーション番号                | ERROR                           |
-| WARN  | RFC3339 フォーマットの日付と時間 (yyyy-mm-ddThh:mm:ss.ms) | ERROR, WARN                     |
-| INFO  | 4DプロセスID                                      | ERROR, WARN, INFO               |
-| DEBUG | 固有プロセスID                                      | ERROR, WARN, INFO, DEBUG        |
-| TRACE | その他の内部情報 (4Dテクニカルサービス用)                       | ERROR, WARN, INFO, DEBUG, TRACE |
+| 定数          | 説明                                            | 選択時に次を含みます                                                    |
+| ----------- | --------------------------------------------- | ------------------------------------------------------------- |
+| `Log error` | ログセッション内で固有かつシーケンシャルなオペレーション番号                | `Log error`                                                   |
+| `Log warn`  | RFC3339 フォーマットの日付と時間 (yyyy-mm-ddThh:mm:ss.ms) | `Log error`, `Log warn`                                       |
+| `Log info`  | 4DプロセスID                                      | `Log error`, `Log warn`, `Log info`                           |
+| `Log debug` | 固有プロセスID                                      | `Log error`, `Log warn`, `Log info`, `Log debug`              |
+| `Log trace` | その他の内部情報 (4Dテクニカルサービス用)                       | `Log error`, `Log warn`, `Log info`, `Log debug`, `Log trace` |
+
+例:
+
+```4d
+SET DATABASE PARAMETER (Diagnostic log recording; 1)
+SET DATABASE PARAMETER (Diagnostic log level; Log trace)
+```
+
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, および 4DIMAPLog.txt
 

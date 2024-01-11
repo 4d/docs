@@ -17,14 +17,14 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
   * 4D: **Execução\>iniciar servidor Web**<br/>![](../assets/en/WebServer/start1.png)
   * 4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 
-* Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
+* Inicia automaticamente cada vez que a aplicação 4D é aberta. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 
 * Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
 
 The web server of any component can be launched by calling the [`webServer.start()`](API/WebServerClass.md#start) function on the component's web server object.
 > You do not need to relaunch the 4D application to start or stop the web server.
 
-## Stopping the 4D Web Server
+## Parando o servidor Web 4D
 
 O servidor web principal de 4D pode ser parado de diferentes maneiras:
 
@@ -88,14 +88,14 @@ This information can allow you to check the functioning of your server and event
 
 The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
 
-| Elemento                | Descrição                                                              |
-| ----------------------- | ---------------------------------------------------------------------- |
-| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                      |
-| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                     |
-| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                      |
-| Cache Use               | Porcentagem do cache usado                                             |
-| Cached Objects          | Number of objects found in the cache, **without pictures**             |
-| Objectos filtrados      | Number of objects in cache not counted by URL, in particular, pictures |
+| Elemento                | Descrição                                                               |
+| ----------------------- | ----------------------------------------------------------------------- |
+| Tamanho actual da cache | Tamanho atual da cache do servidor Web (em bytes)                       |
+| Tamanho máximo da cache | Tamanho máximo da cache (em bytes)                                      |
+| Cached Object Max Size  | Tamanho máximo de cada objeto na cache (em bytes)                       |
+| Cache Use               | Porcentagem do cache usado                                              |
+| Cached Objects          | Number of objects found in the cache, **without pictures**              |
+| Objectos filtrados      | Número de objetos no cache não contados por URL, em particular, imagens |
 
 ### /4DCACHECLEAR
 
@@ -151,7 +151,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | host                 | Endereço IP do cliente (por exemplo: 192.100.100.10)                                                                                                                 |
 | rfc931               | informação não gerada por 4D, é sempre - (um sinal de menos                                                                                                          |
-| user                 | user name as it is authenticated, or else it is - (a minus sign). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).              |
+| user                 | nome de usuário conforme é autenticado, ou então é - (um sinal de menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).      |
 | DD/MMM/YYYY:HH:MM:SS | DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds. A data e a hora são locais para o servidor. |
 | request              | petição enviada pelo cliente (por exemplo, GET /index.htm HTTP/1.0                                                                                                   |
 | state                | resposta dada pelo servidor                                                                                                                                          |
@@ -161,7 +161,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 
 #### ELF/WLF
 
-The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
 The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
 
@@ -172,29 +172,29 @@ When you choose the ELF or WLF format, the “Web Log Token Selection” area di
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                                                                                                                             |
-| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                                           |
-| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                                                                                                 |
-| C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                                                                                            |
-| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                                                                                              |
-| CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                                                |
-| CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                                                                                             |
-| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                         |
-| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                              |
-| CS(USER_AGENT) | X   | X   | Informações sobre o software e o sistema operacional do cliente                                                                                   |
-| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                           |
-| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                     |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                                                                                          |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                                                                                          |
-| DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano                                                                         |
-| METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                           |
-| PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                               |
-| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                  |
-| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                               |
-| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                                                                                              |
-| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). If the user name contains spaces, they are replaced by _ (underlines) |
-| URL            |     | X   | URL solicitado pelo cliente                                                                                                                       |
+| Campo          | ELF | WLF | Valor                                                                                                                                                         |
+| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BYTES_RECEIVED |     | X   | Número de bytes recebidos pelo servidor                                                                                                                       |
+| BYTES_SENT     | X   | X   | Número de bytes enviados pelo servidor ao cliente                                                                                                             |
+| C_DNS          | X   | X   | Endereço IP do DNS (ELF: campo idêntico ao campo C_IP)                                                                                                        |
+| C_IP           | X   | X   | Endereço IP do cliente (por exemplo, 192.100.100.10)                                                                                                          |
+| CONNECTION_ID  |     | X   | Número de identificação da ligação                                                                                                                            |
+| CS(COOKIE)     | X   | X   | Informações sobre as cookies contidas na petição HTTP                                                                                                         |
+| CS(HOST)       | X   | X   | Campo Host do pedido HTTP                                                                                                                                     |
+| CS(REFERER)    | X   | X   | URL da página que aponta para o documento solicitado                                                                                                          |
+| CS(USER_AGENT) | X   | X   | Informações sobre o software e o sistema operacional do cliente                                                                                               |
+| CS_SIP         | X   | X   | Endereço IP do servidor                                                                                                                                       |
+| CS_URI         | X   | X   | URI onde o pedido é efectuado                                                                                                                                 |
+| CS_URI_QUERY | X   | X   | Parâmetros da consulta                                                                                                                                        |
+| CS_URI_STEM  | X   | X   | Parte da solicitação sem parâmetros de consulta                                                                                                               |
+| DATE           | X   | X   | DDD: dia, MMM: abreviação de 3 letras por mês (jan, fev, etc.), YYYY: ano                                                                                     |
+| METHOD         | X   | X   | Método HTTP utilizado para o pedido enviado ao servidor                                                                                                       |
+| PATH_ARGS      |     | X   | Parâmetros CGI: cadeia de caracteres localizada após o carácter "$"                                                                                           |
+| STATUS         | X   | X   | Resposta fornecida pelo servidor                                                                                                                              |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                                           |
+| TRANSFER_TIME  | X   | X   | Tempo solicitado pelo servidor para gerar a resposta                                                                                                          |
+| USER           | X   | X   | Nome do usuário se estiver autenticado; caso contrário, - (sinal de menos). Se o nome do usuário contiver espaços, eles serão substituídos por _ (sublinhado) |
+| URL            |     | X   | URL solicitado pelo cliente                                                                                                                                   |
 
 > As datas e horas são indicadas em GMT.
 
@@ -212,7 +212,7 @@ The automatic backup parameters for the logweb.txt are set on the **Web/Log (bac
 
 ![](../assets/en/WebServer/backup.png)
 
-Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
+Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. Você deve então especificar o momento exato do backup, se necessário.
 
 * **No Backup**: The scheduled backup function is deactivated.
 

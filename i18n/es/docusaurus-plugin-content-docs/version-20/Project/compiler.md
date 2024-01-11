@@ -36,7 +36,7 @@ Haga doble clic en cada error detectado para abrir el método o la clase en cues
 
 Utilice los comandos **Error anterior** / **Error siguiente** del menú **Método** para navegar de un error a otro.
 
-El número de errores encontrados durante las primeras compilaciones puede ser desalentador, pero no deje que esto lo desanime. Pronto descubrirá que a menudo proceden de la misma fuente, es decir, el incumplimiento de ciertas convenciones del proyecto. The compiler always provides a [precise diagnosis](#error-file) of the errors in order to help you correct them.
+El número de errores encontrados durante las primeras compilaciones puede ser desalentador, pero no deje que esto lo desanime. Pronto descubrirá que a menudo proceden de la misma fuente, es decir, el incumplimiento de ciertas convenciones del proyecto. El compilador siempre ofrece un [diagnóstico preciso](#error-file) de los errores para ayudarle a corregirlos.
 
 > La compilación requiere una licencia apropiada. Sin esta licencia, no es posible llevar a cabo una compilación (los botones están desactivados). Sin embargo, aún es posible comprobar la sintaxis y generar métodos de digitación.
 
@@ -60,7 +60,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Los métodos de compilación son los métodos proyecto que agrupan todas las declaraciones de tipos de las variables y de los arrays (proceso e interproceso), así como los parámetros de los métodos. Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
+El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
 
 El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
 
@@ -127,7 +127,7 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 
 #### Generar archivo de errores
 
-Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
+Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-file)) en el momento del control sintáctico. El archivo de error se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto con el nombre `ProjectName_errors.xml`.
 
 
 #### Ruta de compilación
@@ -135,8 +135,8 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 Permite definir el número de pases (análisis de código) que realiza el compilador y, por tanto, la duración de la compilación.
 
 - **Definir los tipos de las variables**: pasa por todas las etapas que hacen posible la compilación.
-- **Las variables proceso e interproceso se escriben**: el pase de definir los tipo de las variables proceso e interproceso no se lleva a cabo. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **Se definen todos los tipos de las variables**: el pase para definir el tipo de las variables locales, proceso e interproceso no se lleva a cabo. Utilice esta opción cuando esté seguro de que todas las variables proceso, interproceso y locales tengan su tipo definido claramente.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
 
 #### Objetivo de compilación
 
@@ -179,7 +179,7 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$a;$b)`). Para más información, ver el método [`Compiler` ](../Concepts/parameters.md#compiler-method)
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 

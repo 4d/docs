@@ -8,7 +8,7 @@ title: Servidor Web
 
 ## Monitorização fácil
 
-You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
+Você pode iniciar ou parar a publicação da aplicação web a qualquer momento. To do so, you just need to select a menu command or execute a single line of code.
 
 Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
 
@@ -38,7 +38,7 @@ A segurança dos dados está presente em todos os estágios das implementações
 
 The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
 
-## Gateway to REST Requests
+## Ponto de acesso para solicitações REST
 
 The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
 
@@ -56,6 +56,6 @@ The 4D web server supports access to data stored in your 4D applications through
 
 * [specific URLs](httpRequests.md) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
 
-## Dedicated Database Methods
+## Métodos banco de dados dedicados
 
 `On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.

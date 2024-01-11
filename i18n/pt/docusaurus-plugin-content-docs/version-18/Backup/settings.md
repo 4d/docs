@@ -115,7 +115,7 @@ Essas opções se aplicam aos arquivos de cópia de segurança principais e aos 
 
 - **Restore last backup if database is damaged**: When this option is checked, the program automatically starts the restore of the data file of the last valid backup of the database, if an anomaly is detected (corrupted file, for example) during database launch. Nenhuma intervenção do usuário é necessária, mas a operação é gravada no diário da cópia de segurança.
 
-> In the case of an automatic restore, only the data file is restored. If you wish to get the attached files or the project files, you must perform a manual restore.
+> No caso de uma restauração automática, somente o arquivo de dados é restaurado. If you wish to get the attached files or the project files, you must perform a manual restore.
 
 - **Integrate last log file if database is incomplete**: When this option is checked, the program automatically integrates the log file when opening or restoring the database.
   - When opening a database, the current log file is automatically integrated if 4D detects that there are operations stored in the log file that are not present in the data. This situation arises, for example, if a power outage occurs when there are operations in the data cache that have not yet been written to the disk.

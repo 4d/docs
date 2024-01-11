@@ -60,9 +60,9 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 ### Gerar digitação
 
-The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
+The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters](../Concepts/parameters.md#compiler_methods-method). These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
 
-The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
+O nome desses métodos deve começar com `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
 
 ![](../assets/en/Project/compilerWin3.png)
 
@@ -135,8 +135,8 @@ Used to generate the error file (see [error file](#error-file)) at the time of s
 Used to set the number of passes (code parsing) performed by the compiler and thus the duration of compilation.
 
 - **Type the variables**: Passes by all the stages that make compilation possible.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
-- **All variables are typed**: The pass for typing local, process and interprocess variables is not carried out. Use this option when you are certain that all the process, interprocess and local variables have been clearly typed.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. This option can be used when you have already carried out the typing of all your process and interprocess variables either yourself or using the function for automatic generation of compiler methods.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
 
 #### Objectivo de compilação
 
@@ -148,7 +148,7 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 </details>
 
-This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
+This setting allows you to select the processor family for which your 4D project must be natively compiled. O compilador 4D pode criar código nativo para duas famílias de processadores:
 
 - Os processadores **Intel/AMD** (todas as máquinas),
 - os processadores **Apple Silicon**.
@@ -164,7 +164,7 @@ Duas opções de alvo estão disponíveis. O resultado depende do processador da
 
 ### Digitação por defeito
 
-Use this area to set the default type for ambiguous database objects.
+Use esta área para definir o tipo padrão para objetos de banco de dados ambíguos.
 
 - **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. Você pode otimizar a execução do seu banco de dados escolhendo o tipo Longint.
 - **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
@@ -179,7 +179,7 @@ Up to 5 compiler methods may be generated; a compiler method is only generated i
 - **Interprocess Variables**: Groups together interprocess variable declarations;
 - **Arrays**: Agrupa as declarações de arrays de processos;
 - **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$a;$b)`). For more information, see [`Compiler` method](../Concepts/parameters.md#compiler-method)
+- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
 
 You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
 
@@ -195,7 +195,7 @@ If you check the [**Generate the symbol file**](#generate-the-symbol-file) optio
 Estas duas listas contêm quatro colunas:
 
 - Names of process and interprocess variables and arrays used in your project. Estas variáveis são enumeradas por ordem alfabética.
-- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
+- Tipo da variável. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. Se o tipo de uma variável não puder ser determinado, a coluna estará vazia.
 - Número de dimensões se a variável for um array.
 - Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
     - If the variable was found in a database method, the database method name is given, preceded by (M)*.
@@ -237,7 +237,7 @@ result data type, number of calls, Thread Safe or Thread Unsafe
 
 You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
 
-Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces.
+Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. Também permite a criação de interfaces customizadas de exibição de erros.
 
 The length of the error file depends on the number of errors and warnings issued by the compiler.
 
@@ -255,7 +255,7 @@ Um ficheiro de erros pode conter três tipos de mensagens:
 
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
-- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. There are two cases in which the compiler reports a general error:
+- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. Há dois casos em que o compilador informa um erro geral:
     - Não foi possível determinar o tipo de dados de uma variável processo.
     - Dois tipos diferentes de objetos têm o mesmo nome.
 

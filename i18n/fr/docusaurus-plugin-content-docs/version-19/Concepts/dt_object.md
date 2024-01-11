@@ -18,9 +18,9 @@ Les variables, champs ou expressions de type objet peuvent contenir des données
     - Image(2)
     - collection
 
-(1) Les objets ORDA tels que les [entités](ORDA/dsMapping.md#entity) ou les [sélections d'entités](ORDA/dsMapping.md#entity-selection) ne peuvent pas être stockés dans les **champs objet**; ils sont néanmoins entièrement pris en charge dans les **variables objet** en mémoire.
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
 
-(2)Lorsqu'elles sont exposées sous forme de texte dans le débogueur ou exportées en JSON, les propriétés d'objet de type image indiquent "[objet Image]".
+(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 **Attention :** N'oubliez pas que les noms d'attributs tiennent compte des majuscules/minuscules.
 

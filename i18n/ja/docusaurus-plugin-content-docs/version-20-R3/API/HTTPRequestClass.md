@@ -77,10 +77,10 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                      |
-| ------ | ----------------------- |
-| v20    | TLS検証がデフォルトに            |
-| v19 R7 | *decodeData* プロパティをサポート |
+| バージョン  | 内容                                                   |
+| ------ | ---------------------------------------------------- |
+| v20    | TLS検証がデフォルトに                                         |
+| v19 R7 | *automaticRedirections* および *decodeData* プロパティをサポート。 |
 
 </details>
 
@@ -109,7 +109,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-プロトコル部分 (`http://` または `https://`) を省略した場合には、https リクエストが送信されます。
+スキーム部分 (`http://` または `https://`) を省略した場合には、https リクエストが送信されます。
 
 たとえば、次の文字列を受け渡すことができます:
 
@@ -130,6 +130,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 | プロパティ                  | タイプ                                             | 説明                                                                                                                                                                       | デフォルト       |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| automaticRedirections  | Boolean                                         | If true, redirections are performed automatically (up to 5 redirections are handled, the 6th redirection response is returned if any)                                    | true        |
 | body                   | Variant                                         | リクエストの本文 (`post` または `put` リクエストの場合に必須)。 テキスト、BLOB、またはオブジェクトを指定できます。 ヘッダー内で設定されていない限り、content-type は当プロパティの型によって決定されます。                                                  | undefined   |
 | certificatesFolder     | [Folder](FolderClass.md)                        | 使用するクライアント証明書フォルダーを指定します。                                                                                                                                                | undefined   |
 | dataType               | Text                                            | レスポンス本文のデータ型。 値: "text", "blob", "object", または "auto"。 "auto" の場合、本文の型は MIMEタイプから推定されます (JSON ならオブジェクト、テキスト・javascript・xml・httpメッセージ・URLエンコードされたフォームなどはテキスト、それ以外は BLOB)。 | "auto"      |

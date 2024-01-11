@@ -21,6 +21,6 @@ The `On Begin Drag Over` event is useful for preparing of the drag action. Pode 
 - Aceitar ou recusar o arrastamento através de $0 no método do objeto arrastado.
     - To indicate that drag actions are accepted, the method of the source object must return 0 (zero); you must therefore execute `$0:=0`.
     - To indicate that drag actions are refused, the method of the source object must return -1 (minus one); you must therefore execute `$0:=-1`.
-    - If no result is returned, 4D considers that drag actions are accepted.
+    - Se nenhum resultado for retornado, 4D considera que as ações de arrastar são aceitas.
 
 Os dados 4D são colocados na prancheta antes de chamar o evento. For example, in the case of dragging without the **Automatic Drag** action, the dragged text is already in the pasteboard when the event is called.

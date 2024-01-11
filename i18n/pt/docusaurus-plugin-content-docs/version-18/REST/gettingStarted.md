@@ -16,7 +16,7 @@ To keep the example simple, we’re going to use a 4D application and a browser 
 
 ## Criar e configurar o banco de dados 4D
 
-1. Launch your 4D or 4D Server application and create a new database. Pode chamar de "Emp4D", por exemplo.
+1. Lançar sua aplicação 4D ou 4D server e criar um novo banco de dados. Pode chamar de "Emp4D", por exemplo.
 
 2. Create a table with some fields, for example:
  - Lastname (Alpha)

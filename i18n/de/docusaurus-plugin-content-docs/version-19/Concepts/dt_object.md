@@ -18,9 +18,9 @@ Variablen, Felder oder Ausdrücke vom Typ Objekt können verschiedene Datentypen
     - Bild(2)
     - collection
 
-(1) ORDA Objekte wie [Entities](ORDA/dsMapping.md#entity) oder [Entity Selections](ORDA/dsMapping.md#entity-selection) lassen sich nicht in **Feldern vom Typ Objekt** speichern; sie werden jedoch voll in **Objektvariablen** im Speicher unterstützt.
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
 
-(2) Bei Darstellung als Text im Debugger oder Export in JSON zeigen die Eigenschaften des Objekts Bild "[Objekt Bild]" an.
+(2) When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
 
 **Warnung:** Beachten Sie, dass Attributnamen zwischen Groß- und Kleinschreibung unterscheiden.
 

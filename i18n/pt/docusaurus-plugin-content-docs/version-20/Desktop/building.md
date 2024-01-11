@@ -250,7 +250,7 @@ Quando se executa uma aplicação 4D Server construída:
 * Se o servidor tiver um ficheiro de directório de dados, este é carregado.
 * Se o servidor não tiver um ficheiro de directório de dados, o ficheiro de directório da aplicação é carregado.
 
-O ficheiro do directório de aplicação é apenas de leitura. Modifications made to users, groups and permissions during server execution are stored in the data directory file. If no data directory file already exists, it is automatically created. If the application directory file was embedded, it is duplicated as data directory file.
+O ficheiro do directório de aplicação é apenas de leitura. Modifications made to users, groups and permissions during server execution are stored in the data directory file. Se nenhum arquivo de diretório de dados já existir, ele será criado automaticamente. If the application directory file was embedded, it is duplicated as data directory file.
 
 Embedding the project directory file allows you to deploy a client/server application with a basic security user and group configuration. As alterações subsequentes são adicionadas ao ficheiro do diretório de dados.
 
@@ -322,7 +322,7 @@ Esta funcionalidade requer que clique no botão **[...]** e designe a localizaç
 | Plataforma de servidor actual | Ficheiro obrigatório                                         | Detalhes                                                                                                                                                                   |
 | ----------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | Por padrão, é selecionada a aplicação `4D Volume Desktop` para Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Windows                       | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| Windows                       | macOS client update archive                                  | Selecione um arquivo `.4darchive` assinado, criado anteriormente no macOS                                                                                                  |
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
@@ -363,7 +363,7 @@ Once a client/server application is built, you will find a new folder in the des
 
 This folder must be installed on each client machine. The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
 
-The contents of these folders vary depending on the current platform:
+O conteúdo dessas pastas varia dependendo da plataforma atual:
 
 * *Windows* - Each folder contains the application executable file, named `\&#060;ApplicationName&#062;Client.exe`for the client part and `\&#060;ApplicationName&#062;Server.exe` for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
 * *macOS* - Each folder contains only the application package, named `\&#060;ApplicationName&#062; Client` for the client part and `\&#060;ApplicationName&#062; Server` for the server part. Each package contains all the necessary items for the application to work. Each package contains all the necessary items for the application to work. No macOS, inicie um pacote fazendo duplo clique no mesmo.
@@ -391,7 +391,7 @@ Os elementos devem ser instalados:
 
 ### Incorporar uma aplicação cliente usuário único
 
-4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
+4D lhe permite incorporar uma estrutura compilada na aplicação cliente. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
 
 To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the *buildApp* settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the *EnginedServer.4Dlink* file, is placed in the "Database" folder.
 
@@ -617,13 +617,13 @@ With your compiled applications, 4D automatically uses the last data file opened
 
 This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
 
-4D therefore lets you link the data file path to the application path. In this case, the data file will be linked using a specific path and will not just be the last file opened. In this case, the data file will be linked using a specific path and will not just be the last file opened.
+Por conseguinte, a 4D permite ligar o caminho do arquivo de dados ao caminho da aplicação. In this case, the data file will be linked using a specific path and will not just be the last file opened. In this case, the data file will be linked using a specific path and will not just be the last file opened.
 
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
 *Duplicação quando os dados são vinculados pelo nome da aplicação:* ![](../assets/en/Project/datalinking1.png)
 
-*Duplication when data linked by application path:* ![](../assets/en/Project/datalinking2.png)
+*Duplicação quando os dados estiverem ligados por caminho da aplicação:* ![](../assets/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. Pode:
 
@@ -712,7 +712,7 @@ Este é o cenário para atualizar um servidor ou aplicação mesclada usuário �
 
 > Esta sequência é compatível com aplicações servidor Windows executadas como um Serviço.
 
-### Update log
+### Histórico de atualização
 
 The installation procedure produces a log file detailing the update operations of merged applications (client, server or single-user) on the target machines. This file is useful for analyzing any errors that occur during the installation process.
 

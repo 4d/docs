@@ -8,7 +8,7 @@ title: Entrada
 
 4D inclui funcionalidades de verificação ortográfica integrado e personalizável. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
-The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+The Auto Spellcheck property activates the spell-check for each object. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
 #### Gramática JSON
 
@@ -52,7 +52,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 The Enterable attribute indicates whether users can enter values into the object.
 
-Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. You control the data by methods that use the field or variable name. Pode ainda utilizar os eventos de formulário `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` e `On Losing Focus` com objetos não inseríveis. Isto facilita a gerenciamento de menus de contexto personalizados e permite-lhe conceber interfaces onde pode arrastar e largar e selecionar variáveis não introduzíveis.
+Os objectos são inseríveis por defeito. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. Um objeto não inserível apenas exibe dados. Você controla os dados por meio de métodos que usam o nome do campo ou da variável. Pode ainda utilizar os eventos de formulário `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` e `On Losing Focus` com objetos não inseríveis. Isto facilita a gerenciamento de menus de contexto personalizados e permite-lhe conceber interfaces onde pode arrastar e largar e selecionar variáveis não introduzíveis.
 
 When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
 
@@ -202,7 +202,7 @@ When this value is selected, the property is managed by the [Wordwrap](propertie
 
 ## Placeholder (valores provisórios)
 
-4D can display placeholder text in the fields of your forms.
+4D pode exibir texto com marcador de posição nos campos de seus formulários.
 
 Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. This text disappears as soon as the user enters a character in the area:
 

@@ -18,7 +18,7 @@ Variáveis, campos ou expressões do tipo Objecto podem conter vários tipos de 
     - imagem(2)
     - collection
 
-(1)Os objectos ORDA, tais como [entidades](ORDA/dsMapping.md#entity) ou [seleções de entidades](ORDA/dsMapping.md#entity-selection) não podem ser armazenados em **campos de objectos**; no entanto, são totalmente suportados em **variáveis de objectos** em memória.
+(1) **Objetos não transmissíveis** , como objetos ORDA ([entidades](ORDA/dsMapping.md#entity), [seleções de entidades](ORDA/dsMapping.md#entity-selection), etc.), [manipuladores de arquivos](../API/FileHandleClass.md), [servidor da Web](../API/WebServerClass.md)... não podem ser armazenados nos campos de objeto ****. Um erro será retornado se você tentar fazer isso; no entanto, eles são totalmente compatíveis com as variáveis do objeto **** na memória.
 
 (*)Quando se expõe como texto no depurador ou se exporta a JSON, as propriedades dos objetos imagem imprimem "[objeto Imagem]".
 
@@ -148,6 +148,7 @@ Uma vez que um valor de propriedade de objeto pode ser um objeto ou uma coleçã
 ```
 
 A notação de objetos está disponível em qualquer elemento da lenguagem que possa conter ou devolver um objeto, ou seja:
+
 
 
 

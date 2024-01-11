@@ -20,7 +20,7 @@ In order to clearly define the concepts implemented with subforms, here are some
 
 ## Sub formulários lista
 
-A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
+Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
 
 For example, a Contacts manager database might use a list subform to display all the telephone numbers for a particular contact. Although the telephone numbers appear on the Contacts screen, the information is actually stored in a related table. Using a One to Many relation, this database design makes it easy to store an unlimited number of telephone numbers per contact. With automatic relations, you can support data entry directly into the related Many table without programming.
 
@@ -36,7 +36,7 @@ Page subforms can display the data of the current subrecord or any type of perti
 
 The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. Também é possível utilizar um formulário projeto. When executed, a page subform has the same standard display characteristics as an input form.
 
-> 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
+> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
 ### Gestão da variável relacionada
 
@@ -46,13 +46,13 @@ The [variable](properties_Object.md#variable-or-expression) bound to a page subf
 
 Both objects (time variable and subform container) *have the same variable name*. In this case, when you open the parent form, 4D synchronizes both values automatically. Se o valor da variável é definido em vários locais, 4D usa o valor que foi carregado por último. It applies the following loading order: 1-Object methods of subform 2-Form method of subform 3-Object methods of parent form 4-Form method of parent form
 
-When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
+When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Podem ocorrer dois tipos de interações: formulário para subformulário e vice-versa.
 
 #### Atualização do conteúdo do subformulário
 
 Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
 
-In this case, you must use the On Bound Variable Change form event. This event must be selected in the subform properties; it is generated in the form method of the subform.
+Nesse caso, você deve usar o evento formulário On Bound Variable Change. This event must be selected in the subform properties; it is generated in the form method of the subform.
 
 ![](../assets/en/FormObjects/subforms2.png)
 
@@ -69,7 +69,7 @@ Caso 2: o conteúdo do subformulário é modificado e esta modificação deve se
 
 In this case, from the subform, you must assign the object value to the variable of the parent subform container. As in the previous example, we recommend that you use the `OBJECT Get pointer` command with the `Object subform container` selector which returns a pointer to the subform container.
 
-Assigning the value to the variable generates the `On Data Change` form event in the object method of the parent subform container, which lets you perform any type of action. The event must be selected in the properties of the subform container.
+Assigning the value to the variable generates the `On Data Change` form event in the object method of the parent subform container, which lets you perform any type of action. O evento deve ser selecionado nas propriedades do contêiner do subformulário.
 
 ![](../assets/en/FormObjects/subforms3.png)
 
@@ -114,7 +114,7 @@ Communication between the parent form and the instances of the subform may requi
 
 #### Comandos "Object get pointer" e "Object get name
 
-In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
+In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. Essa sintaxe só pode ser usada quando o seletor Object named é passado.
 
 Por exemplo, a seguinte instrução:
 

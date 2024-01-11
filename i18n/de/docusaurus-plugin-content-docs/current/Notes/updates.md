@@ -12,8 +12,16 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Highlights
 
 - Support of [`ECDSA` encryption format](../Admin/tls.md#encryption) for TLS certificates.
+- Client/server and SQL server TLS connections are now [configured dynamically](../Admin/tls.md#enabling-tls-with-the-other-servers) (no certificate files are required).
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-structure-to-text-files.300-6654851.en.html).
+- New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
+- Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md#compilation).
+- New [`Try(expression)` keyword](../Concepts/error-handling.md#tryexpression) to handle simple error cases.
+- New [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) command.
 
+#### Behavior changes
+
+- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
 
 
 ## 4D v20 R3
@@ -40,13 +48,21 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 #### Behavior changes
 
-- Some errors were "catchable" by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*.
+- Some errors were catchable by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: *Indice out of range*, *Type incompatible*, and *Dereferencing a Null pointer*. However, for such errors on Intel processors, the procedure is still interrupted as before, whereas on Apple Silicon processors the procedure is only interrupted if you call the [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html) command.
 - 4D no longer includes an internal PHP interpreter. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
 
 
 ## 4D v20 R2
 
 Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
+
+
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
 
 
 #### Highlights
@@ -72,6 +88,12 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 :::caution Minimal client version for 4D Server v20.2 and later
 
 For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+
+:::
+
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -120,6 +142,7 @@ For internal reasons, the version of remote clients connecting to 4D Server v20.
 
 #### Behavior changes
 
+- As of v20.2, 4D v20 LTS is no longer compatible with Windows Server 2012 R2.
 - **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
 - For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new *option* property allows you to control this validation.
@@ -234,10 +257,11 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 ## 4D v19 R4
 
 - [Alias attributes](../ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
+
 - Support for [break and continue](../Concepts/flow-control.md#break-and-continue) statements in loops.
 - Support for [return](../Concepts/flow-control.md#return-expression) statement and [return expression](../Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](../Concepts/operators.md#compound-assignment-operators), [short-circuit operators](../Concepts/operators.md#short-circuit-operators), and [ternary operator](../Concepts/operators.md#ternary-operator)
-- The [Code Editor](../code-editor/overview.md) now includes an dropdown tool and supports markers for better code navigation.
+- The [Code Editor](../code-editor/write-class-method.md) now includes an dropdown tool and supports markers for better code navigation.
 - New Preferences: [**Include tokens in project source files**](../Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](../Preferences/methods.md#show-clipboards) option on the Methods page.
 - New REST request to [lock/unlock](../REST/$lock.md) entities.
 - [4D View Pro](../ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object).
@@ -307,6 +331,13 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 ### 4D v19
 
+:::warning Security Note
+
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+
+:::
+
+
 - [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
 - New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
@@ -339,10 +370,10 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | Library   | Current version | Updated in 4D | Kommentar                                                                                |
 | --------- | --------------- | ------------- | ---------------------------------------------------------------------------------------- |
 | ICU       | 73.2            | 20.1          | This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes. |
-| CEF       | 113             | 20 R2         | Chromium 5672                                                                            |
+| CEF       | 118             | 20 R3         | Chromium 5993                                                                            |
 | Hunspell  | 1.7.2           | 20            | Used for spell checking in 4D forms and 4D Write Pro                                     |
 | PDFWriter | 4.3             | 20            | FreeType dependency in 12.2.1                                                            |
-| SpreadJS  | 16.0.4          | 20            | 4D View Pro engine                                                                       |
+| SpreadJS  | 16.2.6          | 20 R4         | 4D View Pro engine                                                                       |
 | OpenSSL   | 3.1.1           | 20            |                                                                                          |
 | libZip    | 1.9.2           | 20            | Used by zip class, 4D Write Pro, svg and serverNet components                            |
 | LZMA      | 5.4.1           | 20            |                                                                                          |
@@ -351,4 +382,3 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 | PHP       | 8.2.4           | 20            |                                                                                          |
 | libldap   | 2.6.4           | 20 R3         |                                                                                          |
 | libsasl   | 2.1.28          | 20            |                                                                                          |
-

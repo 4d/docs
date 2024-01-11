@@ -21,7 +21,7 @@ In order to clearly define the concepts implemented with subforms, here are some
 
 ## Sub formulários lista
 
-A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
+Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
 
 For example, a Contacts manager database might use a list subform to display all the telephone numbers for a particular contact. Although the telephone numbers appear on the Contacts screen, the information is actually stored in a related table. Using a One to Many relation, this database design makes it easy to store an unlimited number of telephone numbers per contact. With automatic relations, you can support data entry directly into the related Many table without programming.
 
@@ -38,7 +38,7 @@ Page subforms can display the data of the current subrecord or any type of perti
 
 The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. Também é possível utilizar um formulário projeto. When executed, a page subform has the same standard display characteristics as an input form.
 
-> 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
+> Os widgets 4D são objetos compostos predefinidos com base em subformulários de página. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
 
 ### Utilizar a variável ou expressão ligada
@@ -87,7 +87,7 @@ O seguinte código é executado:
     Form.clockValue:=OBJECT Get subform container value //synchonize the local value End if
 ```
 
-It updates the value of `Form.clockValue` in the subform:
+Ele atualiza o valor de `Form.clockValue` no subformulário:
 
 ![](../assets/en/FormObjects/update-subform.png)
 

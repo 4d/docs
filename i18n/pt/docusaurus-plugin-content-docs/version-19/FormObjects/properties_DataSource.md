@@ -54,7 +54,7 @@ the [OBJECT SET LIST BY NAME](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-LIS
 
 ## Lista de opções (lista estática)
 
-List of static values to use as labels for the tab control object.
+Lista de valores estáticos a serem usados como etiquetas para o objeto de controle de tabulação.
 
 #### Gramática JSON
 
@@ -64,7 +64,7 @@ List of static values to use as labels for the tab control object.
 
 #### Objectos suportados
 
-[Tab Control](tabControl.md)
+[Controles das Abas](tabControl.md)
 
 ---
 
@@ -304,11 +304,11 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 ---
 
-## Selection Name
+## Nome da seleção
 
 `Named selection list boxes`
 
-Especifica a seleção nomeada a ser utilizada. You must enter the name of a valid named selection. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica a seleção nomeada a ser utilizada. Você deve inserir o nome de uma seleção nomeada válida. It can be a process or interprocess named selection. O conteúdo do list box será baseado nesta seleção. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > As selecções nomeadas são listas ordenadas de registos. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

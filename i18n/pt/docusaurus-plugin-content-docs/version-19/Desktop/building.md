@@ -16,14 +16,14 @@ O construtor de aplicações permite-lhe:
 
 > As aplicações compiladas baseiam-se em ficheiros [.4dz](#build-compiled-structure) que são **só de leitura**. Tenha em atenção que a utilização de comandos ou funções que modificam os ficheiros de origem (como `CREATE INDEX` ou `CREATE TABLE` (SQL)) não é possível por padrão em aplicações compiladas. No entanto, pode criar aplicações específicas que suportem modificações locais utilizando a chave XML `PackProject` (ver [doc.4d.com](https://doc.4d.com)).
 
-## Build application overview
+## Visão geral do aplicativo gerador de aplicações
 
 A cria de um pacote de projetos pode ser efetuada utilizando:
 
 * o comando [BUILD APPLICATION](https://doc.4d.com/4Dv17R6/4D/17-R6/BUILD-APPLICATION.301-4311300.en.html),
 * ou a [Janela do criador de aplicações](#application-builder).
 
-To display the Build Application dialog, select **Design** > **Build Application...** from the menu bar.
+Para exibir o diálogo Build Application , selecione **Design** > **Build Application...** na barra de menu.
 
 ![](../assets/en/Project/buildappProj.png)
 
@@ -33,7 +33,7 @@ A caixa de diálogo Criar aplicação inclui várias páginas que podem ser aced
 
 A geração do banco de dados só pode ser realizado quando o banco de dados for compilado. Se selecionar esse comando sem ter previamente compilado o banco de dados, ou no caso do código compilado não for correspondente ao código interpretado, aparece uma caixa de diálogo de advertência que indica que o banco de dados deve ser (re)compilado.
 
-### Build application settings
+### Parâmetros do gerador de aplicações
 
 Each build application parameter is stored as an XML key in the application project file named `buildApp.4DSettings` XML file, located in the `Settings` folder of the project.
 
@@ -275,7 +275,7 @@ Esta funcionalidade requer que clique no botão **[...]** e designe a localizaç
 | Plataforma de servidor actual | Ficheiro obrigatório                                         | Detalhes                                                                                                                                                                   |
 | ----------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | macOS                         | Windows 4D Volume Desktop *ou* Windows client update archive | Por padrão, é selecionada a aplicação `4D Volume Desktop` para Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
-| Windows                       | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
+| Windows                       | macOS client update archive                                  | Selecione um arquivo `.4darchive` assinado, criado anteriormente no macOS                                                                                                  |
 
 You can build specific a `.4darchive` file on the concurrent platform by selecting only the [**Build client application**](#build-client-application) and the appropriate [**Allow automatic update...**](#copy-of-client-applications-inside-the-server-application) option.
 
@@ -316,7 +316,7 @@ Once a client/server application is built, you will find a new folder in the des
 
 This folder must be installed on each client machine. The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
 
-The contents of these folders vary depending on the current platform:
+O conteúdo dessas pastas varia dependendo da plataforma atual:
 
 * *Windows* - Each folder contains the application executable file, named `\&#060;ApplicationName&#062;Client.exe`for the client part and `\&#060;ApplicationName&#062;Server.exe` for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
 * *macOS* - Each folder contains only the application package, named `\&#060;ApplicationName&#062; Client` for the client part and `\&#060;ApplicationName&#062; Server` for the server part. Each package contains all the necessary items for the application to work. Each package contains all the necessary items for the application to work. No macOS, inicie um pacote fazendo duplo clique no mesmo.
@@ -329,7 +329,7 @@ If you checked the “Allow automatic update of client application” option, an
 
 If the server and/or client part of your double-clickable application is used as a Web server, the files and folders required by the server must be installed in specific locations. Estes itens são os seguintes:
 
-* *cert.pem* and *key.pem* files (optional): These files are used for SSL connections and by data encryption commands,
+* *arquivos cert.pem* e *key.pem* (opcional): Esses arquivos são usados para conexões SSL e por comandos de criptografia de dados,
 * Pasta raiz Web por defeito (WebFolder).
 
 Os elementos devem ser instalados:
@@ -344,7 +344,7 @@ Os elementos devem ser instalados:
 
 ### Incorporar uma aplicação cliente usuário único
 
-4D allows you to embed a compiled structure in the Client application. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
+4D lhe permite incorporar uma estrutura compilada na aplicação cliente. This feature can be used, for example, to provide users with a "portal" application, that gives access to different server applications thanks to the `OPEN DATABASE` command executing a `.4dlink` file.
 
 To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the *buildApp* settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the *EnginedServer.4Dlink* file, is placed in the "Database" folder.
 
@@ -549,13 +549,13 @@ With your compiled applications, 4D automatically uses the last data file opened
 
 This may be unsuitable if you want to duplicate a merged application intended to use different data files. Duplicated applications actually share the application's user preferences folder and thus, always use the same data file -- even if the data file is renamed, because the last file used for the application is opened.
 
-4D therefore lets you link the data file path to the application path. In this case, the data file will be linked using a specific path and will not just be the last file opened. In this case, the data file will be linked using a specific path and will not just be the last file opened.
+Por conseguinte, a 4D permite ligar o caminho do arquivo de dados ao caminho da aplicação. In this case, the data file will be linked using a specific path and will not just be the last file opened. In this case, the data file will be linked using a specific path and will not just be the last file opened.
 
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
 *Duplicação quando os dados são vinculados pelo nome da aplicação:* ![](../assets/en/Project/datalinking1.png)
 
-*Duplication when data linked by application path:* ![](../assets/en/Project/datalinking2.png)
+*Duplicação quando os dados estiverem ligados por caminho da aplicação:* ![](../assets/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. Pode:
 

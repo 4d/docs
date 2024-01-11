@@ -16,7 +16,7 @@
     "description": "The label for category Data Types in sidebar docs"
   },
   "sidebar.docs.category.Control Flow": {
-    "message": "Control Flow",
+    "message": "Fluxo de controle",
     "description": "The label for category Control Flow in sidebar docs"
   },
   "sidebar.docs.category.Project Databases": {

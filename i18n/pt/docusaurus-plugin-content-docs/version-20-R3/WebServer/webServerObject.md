@@ -48,7 +48,7 @@ webServer:=WEB Server(Web server database)
 ```
 
 Se a aplicação utilizar componentes e o usuário pretender chamar:
-- the host application's web server from a component or
+- o servidor Web da aplicação host a partir de um componente ou
 - o servidor que recebeu o pedido (qualquer que seja o servidor),
 
 também pode ser utilizado:
@@ -94,7 +94,7 @@ Estas propriedades são definidas:
 
 1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
 2. if not used, using the `WEB SET OPTION` command (host applications only),
-3. if not used, in the settings of the host application or the component.
+3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
 - If the web server is not started, the properties contain the values that will be used at the next web server startup.
 - If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.

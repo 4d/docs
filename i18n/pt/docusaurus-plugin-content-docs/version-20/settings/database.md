@@ -26,7 +26,7 @@ Os ficheiros bloqueados podem ser lidos, mas o seu conteúdo não pode ser modif
 
 This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
 
-The current location of this folder is displayed in the "Current:" area. You can click in this area to show the pathname as a scrolldown list:
+The current location of this folder is displayed in the "Current:" area. Você pode clicar nessa área para mostrar o nome do caminho como uma lista suspensa:
 
 ![](../assets/en/settings/temporary-file-location.png)
 
@@ -51,7 +51,7 @@ São oferecidos três opções de localização:
     -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) theme that accept the wildcard character ("@") in the object parameter.
     -   For security reasons, only the Administrator or Designer of the database can modify this parameter.
 
--   **Current data language:** Used to configure the language used for character string processing and comparison. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. Por padrão, 4D usa a linguagem do sistema.
+-   **Current data language:** Used to configure the language used for character string processing and comparison. A escolha do idioma influencia diretamente a classificação e a pesquisa de texto, bem como as letras maiúsculas e minúsculas, mas não afeta a tradução de textos nem os formatos de data, hora ou moeda, que permanecem no idioma do sistema. Por padrão, 4D usa a linguagem do sistema.
 
     Um projeto 4D pode, portanto, operar em uma linguagem diferente da do sistema. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
 
@@ -100,7 +100,7 @@ You use the settings on this tab to configure the cache memory for the database.
 
     The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. Geralmente, a cache adaptativa oferece um melhor desempenho.
 
--   **Limpar a cache a cada ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D salva os dados colocados no cache em intervalos regulares. You can specify any time interval between 1 second and 500 minutes. Por padrão, 4D salva seus dados a cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
+-   **Limpar a cache a cada ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D salva os dados colocados no cache em intervalos regulares. Você pode especificar qualquer intervalo de tempo entre 1 segundo e 500 minutos. Por padrão, 4D salva seus dados a cada 20 segundos. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
 
     When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
 

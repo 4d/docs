@@ -54,7 +54,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `function(result)`: função a passar como último argumento. Esta função "callback" é chamada de forma síncrona quando o método 4D termina de ser executado. Recebe o parâmetro `result`.
 
-- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). You can use the `C_OBJECT` command to return the objects.
+- `result`: Execution result of the 4D method, returned in the "$0" expression. This result can be of any type supported by JavaScript (string, number, array, object). Você pode usar o comando `C_OBJECT` para retornar os objetos.
 
 > Por padrão, 4D trabalha em UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
@@ -177,7 +177,7 @@ The URLs handled by programming in Web areas under macOS must begin with the pro
 
 ## Acesso ao inspetor Web
 
-You can view and use a Web inspector within Web areas of your forms. O inspetor Web é um depurador fornecido pelo motor Web integrado. It allows to parse the code and the flow of information of the Web pages.
+Você pode visualizar e usar um inspetor Web nas áreas Web dos seus formulários. O inspetor Web é um depurador fornecido pelo motor Web integrado. It allows to parse the code and the flow of information of the Web pages.
 
 ### Exibir o inspector Web
 
@@ -193,9 +193,9 @@ The following conditions must be met in order to view the Web inspector in a Web
 
 ### Utilizar o inspetor Web
 
-When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. When you select this option, the Web inspector window is displayed.
+When you have done the settings as described above, you then have new options such as **Inspect Element** in the context menu of the area. Quando você seleciona essa opção, a janela do inspetor da Web é exibida.
 
-> The Web inspector is included in the embedded Web rendering engine. For a detailed description of the features of this debugger, refer to the documentation provided by the Web rendering engine.
+> O inspetor Web está incluído no mecanismo de renderização Web incorporado. For a detailed description of the features of this debugger, refer to the documentation provided by the Web rendering engine.
 
 ## Propriedades compatíveis
 

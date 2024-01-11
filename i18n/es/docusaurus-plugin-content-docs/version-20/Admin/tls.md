@@ -46,7 +46,12 @@ La autoridad de certificación se elige en función de varios criterios. If the 
 Para obtener un certificado digital:
 
 1. Genere una llave privada utilizando el comando `GENERATE ENCRYPTION KEYPAIR`.
-> **Atención**: por razones de seguridad, la llave privada debe mantenerse siempre en secreto. En realidad, debería permanecer siempre en la máquina del servidor. Para el servidor web, el archivo Key.pem debe colocarse en la carpeta Project.
+
+:::caution
+
+Por razones de seguridad, la llave privada debe mantenerse siempre en secreto. En realidad, debería permanecer siempre en la máquina del servidor. Para el servidor web, el archivo Key.pem debe colocarse en la carpeta Project.
+
+:::
 
 2. Utilice el comando `GENERATE CERTIFICATE REQUEST` para emitir una solicitud de certificado.
 
@@ -64,7 +69,12 @@ El servidor 4D puede ahora trabajar en modo seguro. El certificado tiene una val
 ### Instalar los archivos `key.pem` y `cert.pem`
 
 Para poder utilizar el protocolo TLS con el servidor, debe instalar el **key.pem** (documento que contiene la llave privada de cifrado) y **cert.pem** (documento que contiene el certificado) en la ubicación adecuada). Se requieren diferentes ubicaciones en función del servidor en el que se quiera utilizar TLS.
-> Los archivos *key.pem* y*cert.pem* por defecto se entregan con 4D. Para un mayor nivel de seguridad, le recomendamos encarecidamente que sustituya estos archivos por sus propios certificados.
+
+:::caution
+
+Los archivos *key.pem* y*cert.pem* por defecto se entregan con 4D. Para un mayor nivel de seguridad, le recomendamos encarecidamente que sustituya estos archivos por sus propios certificados.
+
+:::
 
 #### Con el servidor Web
 

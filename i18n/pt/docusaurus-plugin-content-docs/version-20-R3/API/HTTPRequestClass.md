@@ -71,10 +71,10 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v20    | Validação TLS por padrão            |
-| v19 R7 | Suporte de propriedade *decodeData* |
+| Versão | Mudanças                                                       |
+| ------ | -------------------------------------------------------------- |
+| v20    | Validação TLS por padrão                                       |
+| v19 R7 | Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -103,7 +103,7 @@ Em *url*, passe o URL para onde pretende enviar o pedido. A sintaxe a utilizar �
 {https://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 ```
 
-Se omitir a parte do protocolo (`http://` ou `https://`), é enviado um pedido https.
+Se você omitir a parte do esquema (`http://` ou `https://`), será enviada uma solicitação https.
 
 Por exemplo, pode passar as seguintes cordas:
 
@@ -124,6 +124,7 @@ No parâmetro *opções* , passe um objeto que possa conter as seguintes proprie
 
 | Propriedade            | Tipo                                            | Descrição                                                                                                                                                                                                                                                                   | Por padrão    |
 | ---------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| automaticRedirections  | Parâmetros                                      | Se true, os redirecionamentos serão realizados automaticamente (até 5 redirecionamentos são tratados, a resposta do 6. º redirecionamento é retornada, se houver)                                                                                                           | True          |
 | body                   | Diferente de                                    | Corpo do pedido (requerido no caso de `post` ou `put` requests). Pode ser um texto, um blob, ou um objecto. O tipo de conteúdo é determinado a partir do tipo desta propriedade, a menos que seja colocado dentro dos cabeçalhos                                            | indefinido    |
 | certificatesFolder     | [Folder](FolderClass.md)                        | Define a pasta de certificados de cliente activos                                                                                                                                                                                                                           | indefinido    |
 | dataType               | Text                                            | Tipo de atributo do corpo de resposta. Valores: "texto", "blob", "objecto", ou "auto". Se "auto", o tipo do conteúdo do corpo será deduzido do seu tipo MIME (objecto para JSON, texto para texto, javascript, xml, mensagem http e forma codificada url, ou então um blob) | "auto"        |

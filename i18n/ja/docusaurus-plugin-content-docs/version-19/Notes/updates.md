@@ -9,6 +9,12 @@ title: リリースノート
 
 :::
 
+:::warning セキュリティに関する注記
+
+4Dアプリケーションが TLS接続を使用する場合は、4D v19.7 LTS build 288986以上へのアップグレードが推奨されます。 詳細は [セキュリティ情報](https://blog.4d.com/ja/security-bulletin-two-cves-and-how-to-stay-secure/) を参照ください。
+
+:::
+
 
 ## 4D v19.7
 

@@ -15,7 +15,7 @@ A 4D project contains all of the source code of a 4D database application, from 
 Moreover, since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
 
 
-## Source control
+## Controle da origem
 
 4D project files make it easier to program generically, create application templates, and share code.
 
@@ -33,6 +33,6 @@ Cria-se um projeto de base de dados 4D:
 - creating a new, blank project -- see [Creating a 4D project](creating.md).
 - exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
 
-Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). Team development interactions are handled by the source control tool.
+Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). As interações de desenvolvimento em equipe são gerenciadas pela ferramenta de controle de versão.
 
 4D projects can be compiled and easily deployed as single-user or client-server applications containing compacted versions of your project -- see [Building a project package](building.md).

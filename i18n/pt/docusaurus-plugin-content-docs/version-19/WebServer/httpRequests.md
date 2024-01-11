@@ -3,7 +3,7 @@ id: httpRequests
 title: Processamento de pedidos HTTP
 ---
 
-The 4D web server provides several features to handle HTTP requests:
+O servidor web 4D oferece várias funcionalidades para lidar com solicitações HTTP:
 
 - the `On Web Connection` database method, a router for your web application,
 - o URL `/4DACTION` para chamar o código do lado do servidor
@@ -39,11 +39,11 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 Estes parâmetros devem ser declarados como se indica a seguir:
 
 ```4d
-//On Web Connection database method
+//Método base On Web Authentication
 
  C_TEXT($1;$2;$3;$4;$5;$6)
 
-//Code for the method
+//Código do método
 ```
 
 Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
@@ -72,7 +72,7 @@ Vamos utilizar uma ligação intranet como exemplo. Suponha que o endereço IP d
 | <http://123.4.567.89/Customers/Add>  | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note que você está livre para usar este parâmetro a sua conveniência. 4D simplesmente ignora o valor passado além da parte do host da URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Cabeçalho e corpo do pedido HTTP
 
@@ -83,7 +83,7 @@ If your application uses this information, it is up to you to parse the header a
 
 ### $3 - Endereço IP do cliente Web
 
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
+O parâmetro $3 recebe o endereço IP do computador do navegador. This information can allow you to distinguish between intranet and internet connections.
 > 4D devolve endereços IPv4 em formato híbrido IPv6/IPv4 escritos com um prefixo de 96 bits, por exemplo ::ffff:192.168.2.34 para o endereço IPv4 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
 ### $4 - Endereço IP do servidor
@@ -359,7 +359,7 @@ As funcionalidades deste método são:
 - The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
 - Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. Isto diz-lhe qual o botão em que se clicou.
 
-Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` sempre retorna valores do tipo Text.
 
 ## Outros comandos do servidor Web
 

@@ -110,59 +110,52 @@ module.exports =
 						{
 							type: "category",
 							label: "Concepts",
-							link: {
-								type: 'generated-index',
-								title: '4D Language Concepts',
-								description: 'The main concepts of the 4D Language',
-								keywords: ['concepts'],
-								image: '/img/docusaurus.png',
-							},
 							items: [
-								"Concepts/about",
-								"Concepts/quick-tour",
-								"Concepts/operators",
-								{
-									type: "category",
-									label: "Data Types",
-									link: {
-											type: 'doc',
-											id: "Concepts/data-types",
+										"Concepts/about",
+										"Concepts/quick-tour",
+										"Concepts/operators",
+										{
+											type: "category",
+											label: "Data Types",
+											link: {
+													type: 'doc',
+													id: "Concepts/data-types",
+												},
+											items: [
+												"Concepts/blob",
+												"Concepts/boolean",
+												"Concepts/collection",
+												"Concepts/date",
+												"Concepts/null-undefined",
+												"Concepts/number",
+												"Concepts/object",
+												"Concepts/picture",
+												"Concepts/pointer",
+												"Concepts/string",
+												"Concepts/time",
+												"Concepts/variant",
+											],
 										},
-									items: [
-										"Concepts/blob",
-										"Concepts/boolean",
-										"Concepts/collection",
-										"Concepts/date",
-										"Concepts/null-undefined",
-										"Concepts/number",
-										"Concepts/object",
-										"Concepts/picture",
-										"Concepts/pointer",
-										"Concepts/string",
-										"Concepts/time",
-										"Concepts/variant",
-									],
-								},
-								"Concepts/variables",
-								"Concepts/arrays",
-								"Concepts/methods",
-								"Concepts/parameters",
-								"Concepts/shared",
-								"Concepts/classes",
-								"Concepts/commands",
-								"Concepts/control-flow",
-								"Concepts/error-handling",
-								"Concepts/interpreted-compiled",
-								"Concepts/components",
-								"Concepts/plug-ins",
-								"Concepts/identifiers",
-								"Concepts/paths"
-							],
+										"Concepts/variables",
+										"Concepts/arrays",
+										"Concepts/methods",
+										"Concepts/parameters",
+										"Concepts/shared",
+										"Concepts/classes",
+										"Concepts/commands",
+										"Concepts/control-flow",
+										"Concepts/error-handling",
+										"Concepts/interpreted-compiled",
+										"Concepts/components",
+										"Concepts/plug-ins",
+										"Concepts/identifiers",
+										"Concepts/paths"
+									],	
 						},
 						{
 							type: 'link',
 							label: 'Commands', //
-							href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html',
+							href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html',
 						},
 						{
 							type: "category",
@@ -368,7 +361,7 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Write Pro', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html',
 						},
 						{
 						  type: 'doc',
@@ -388,17 +381,17 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html',
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html',
+						  href: 'https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html',
 						},
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",

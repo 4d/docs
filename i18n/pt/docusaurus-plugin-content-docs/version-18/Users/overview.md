@@ -31,7 +31,7 @@ Para desativar o sistema de acesso a senhas, precisa remover a senha Designer.
 
 In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. No entanto, o controle de acesso só é eficaz em bancos de dados 4D Server. A tabela abaixo lista as principais funcionalidades de usuários e grupos e sua disponibilidade:
 
-|                                                            | 4D Developer (single-user)           | 4D Server |
+|                                                            | 4D Developer (usuário único)         | 4D Server |
 | ---------------------------------------------------------- | ------------------------------------ | --------- |
 | Adicionar/editar usuários e grupos                         | sim                                  | sim       |
 | Atribuir acesso de usuário/grupo a servidores              | sim                                  | sim       |
@@ -40,7 +40,7 @@ In project databases (.4DProject or .4dz files), 4D users and groups can be conf
 
 ## Editor de toolbox
 
-The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
+Os editores dos usuários e grupos estão localizados na caixa de ferramentas de 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
 
 ![](../assets/en/Users/editor.png)
 
@@ -53,6 +53,6 @@ Users, groups, as well as their access rights are stored in a specific database 
 Esse arquivo pode ser armazenado nos seguintes locais:
 
 - in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. Essas propriedades são usadas por padrão no banco de dados.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
+- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. A configuração personalizada não será afetada por uma atualização do banco de dados.
 
 > If users and groups management is not active, the directory.json is not created.

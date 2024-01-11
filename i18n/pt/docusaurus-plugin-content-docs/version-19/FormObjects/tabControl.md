@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Controles Abas
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.
@@ -38,7 +38,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
  }
 ```
 
-## Adding labels to a tab control
+## Adicionando etiquetas a um controle de tabulação
 
 There are several ways to supply the labels for a tab control:
 

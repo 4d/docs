@@ -13,14 +13,14 @@ Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes
 
 Pode criar diferentes tipos de listas pendentes com diferentes funcionalidades. Para definir um tipo, selecione os valores adequados **Tipo de expressão** e ** Tipo de dados** na lista Propriedade ou utilize o seu equivalente JSON.
 
-| Tipo                                | Funcionalidades                                                      | Tipo de expressão | Tipo de dados                   | Definição JSON                                                                                                                                                |
-| ----------------------------------- | -------------------------------------------------------------------- | ----------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object                              | Construído sobre uma colecção                                        | Object            | Numeric, Text, Date, ou Time    | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` ou `dateFormat: <format>` or `timeFormat: <format>` |
-| Array                               | Construído sobre um array                                            | Array             | Numeric, Text, Date, ou Time    | `dataSourceTypeHint: arrayNumber` ou `arrayText` ou `arrayDate` ou `arrayTime`                                                                                |
-| Lista de opções guardada como valor | Construído com base numa lista de opções (“padrão”)                  | Lista             | Valor do item seleccionado      | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Salvar como                         | Construído sobre numa lista de escolha. A posição do item é guardada | Lista             | Referência do item seleccionado | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Lista de seleção hierárquica        | Pode apresentar conteúdos hierárquicos                               | Lista             | Referência da lista             | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Ação padrão                         | Criado automaticamente pela ação                                     | *any*             | *any except List reference*     | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Tipo                                | Funcionalidades                                                      | Tipo de expressão | Tipo de dados                         | Definição JSON                                                                                                                                                |
+| ----------------------------------- | -------------------------------------------------------------------- | ----------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object                              | Construído sobre uma colecção                                        | Object            | Numeric, Text, Date, ou Time          | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` ou `dateFormat: <format>` or `timeFormat: <format>` |
+| Array                               | Construído sobre um array                                            | Array             | Numeric, Text, Date, ou Time          | `dataSourceTypeHint: arrayNumber` ou `arrayText` ou `arrayDate` ou `arrayTime`                                                                                |
+| Lista de opções guardada como valor | Construído com base numa lista de opções (“padrão”)                  | Lista             | Valor do item seleccionado            | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Salvar como                         | Construído sobre numa lista de escolha. A posição do item é guardada | Lista             | Referência do item seleccionado       | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Lista de seleção hierárquica        | Pode apresentar conteúdos hierárquicos                               | Lista             | Referência da lista                   | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Ação padrão                         | Criado automaticamente pela ação                                     | *any*             | *qualquer exceto referência de lista* | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 ## Manuseamento de listas pendentes
 
@@ -53,7 +53,7 @@ Form.myDrop.index:=-1 //currentValue é um placeholder
 Form.myDrop.currentValue:="Select a fruit" 
 ```
 
-The drop-down list is displayed with the placeholder string:
+A lista suspensa é exibida com a string de placeholder:
 
 ![](../assets/en/FormObjects/fruits2.png)
 

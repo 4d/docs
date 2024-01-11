@@ -128,7 +128,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. En particular, no se puede declarar el mismo parámetro como entrada y salida, incluso con el mismo tipo. Por ejemplo:
+Los parámetros, que incluyen el valor devuelto, deben declararse una sola vez. En particular, no se puede declarar el mismo parámetro como entrada y salida, incluso con el mismo tipo. Por ejemplo:
 
 ```qs
     ///declaración inválida
@@ -266,16 +266,16 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 ## Método `Compilador`
 
-Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos o funciones llamados tan pronto como pretenda compilar su proyecto.
+Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
 
-Cuando se utiliza la palabra clave `#DECLARE` o el prototipo `Function`, los parámetros se declaran automáticamente. Por ejemplo:
+Cuando se utiliza la palabra clave `#DECLARE`, los parámetros se declaran automáticamente. Por ejemplo:
 
 ```4d
-Function add($x : Variant; $y : Integer)-> $result : Integer
+#DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
     // todos los parámetros se declaran con su tipo
 ```
 
-Sin embargo, una característica del compilador 4D le permite declarar todos sus parámetros en un método específico utilizando una sintaxis especial:
+Sin embargo, el compilador 4D necesita que declare todos sus parámetros en un método específico utilizando una sintaxis especial:
 
 - puede agrupar todos los parámetros de variables locales para métodos de proyecto en uno o más métodos de proyecto
 - el(los) nombre(s) del método debe(n) empezar por "**Compiler**", por ejemplo "Compiler_MyParameters".
@@ -285,7 +285,7 @@ Por ejemplo:
 
 ```4d  
  // Compiler_method
- C_REAL(OneMethodAmongOthers;$myParam) 
+ C_REAL(OneMethodAmongOthers;$1) 
 ```
 
 :::note
@@ -294,18 +294,25 @@ Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
-Puede crear y rellenar automáticamente un método `Compiler` que contenga todos sus parámetros utilizando el botón [**Métodos Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** del diálogo de Propiedades del compilador.
+You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
 
-La declaración de parámetros también es obligatoria en los siguientes contextos (estos contextos no soportan la declaración en un método "Compiler"):
+:::info
+
+Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
 
 - Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de tipo de datos Text. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
 
 ```4d
 // On Web Connection
-#DECLARE ($url : Text; $header : Text; \
-  $BrowserIP : Text; $ServerIP : Text; \
-  $user : Text; $password : Text) \
-  -> $RequestAccepted : Boolean
+C_TEXT($1;$2;$3;$4;$5;$6)
+
+```
+
+- Functions - Function parameters are automatically declared for compilation in the function prototype. Por ejemplo:
+
+```4d
+Function add($x : Variant; $y : Integer)-> $result : Integer
+    // todos los parámetros se declaran con su tipo
 ```
 
 - Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio trigger.
@@ -314,7 +321,7 @@ La declaración de parámetros también es obligatoria en los siguientes context
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)
@@ -324,6 +331,7 @@ La declaración de parámetros también es obligatoria en los siguientes context
  End if
 ```
 
+:::
 
 
 ## Tipo de parámetro equivocado

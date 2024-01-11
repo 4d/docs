@@ -35,7 +35,7 @@ The following table indicates whether the preemptive mode is used or is availabl
   - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
   - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
 
-## Writing thread-safe web server code
+## Escrever código servidor Web hilo seguro
 
 All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
 
@@ -59,13 +59,13 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. For more information about thread-safety rules, please refer to the *Writing a thread-safe method* paragraph in the *Processes* chapter of the [4D Language Reference](https://doc.4d.com) manual.
 
-## Thread-safety of 4D web code
+## Código web 4D hilo seguro
 
 Most of the web-related 4D commands and functions, database methods and URLs are thread-safe and can be used in preemptive mode.
 
 ### Comandos 4D e métodos base
 
-All 4D web-related commands are thread-safe, *i.e.*:
+Todos os comandos 4D relacionados à Web são thread-safe, *i.e.*:
 
 - todos os comandos do tema *Servidor Web*,
 - todos os comandos do tema *Cliente HTTP*.

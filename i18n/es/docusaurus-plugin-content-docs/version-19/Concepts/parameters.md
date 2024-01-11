@@ -138,7 +138,7 @@ Function add($x : Variant; $y : Integer): Integer
 
 :::warning
 
-Parameters, which include the returned value, must be declared only once. En particular, no se puede declarar el mismo parámetro como entrada y salida, incluso con el mismo tipo. Por ejemplo:
+Los parámetros, que incluyen el valor devuelto, deben declararse una sola vez. En particular, no se puede declarar el mismo parámetro como entrada y salida, incluso con el mismo tipo. Por ejemplo:
 
 ```qs
     ///declaración inválida
@@ -349,16 +349,13 @@ La declaración de parámetros también es obligatoria en los siguientes context
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
-
-> También puede utilizar [parámetros nombrados](#named-parameters) con la palabra clave `#DECLARE`.
-
 - Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio trigger.
 
 - Objetos formulario que aceptan el evento formulario `On Drag Over` - El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio método proyecto. **Nota:** el compilador no inicializa el parámetro $0. Por lo tanto, tan pronto como utilice el evento formulario `On Drag Over`, debe inicializar $0. Por ejemplo:
 
 ```4d
  C_LONGINT($0)
- If(Form event=On Drag Over)
+ If(Form event code=On Drag Over)
     $0:=0
     ...
     If($DataType=Is picture)

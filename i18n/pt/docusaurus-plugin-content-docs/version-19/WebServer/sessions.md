@@ -32,7 +32,7 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 ## Session implementation
 
-When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. This cookie references the current web session for the application.
+When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. Este cookie faz referência à sessão web atual da aplicação.
 
 > The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename) property.
 
@@ -59,7 +59,7 @@ Each `Session` object provides a [`.storage`](API/SessionClass.md#storage) prope
 
 Uma sessão Web escalável é encerrada quando:
 
-- the web server is stopped,
+- o servidor web está parado,
 - o tempo limite do cookie de sessão foi atingido.
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.

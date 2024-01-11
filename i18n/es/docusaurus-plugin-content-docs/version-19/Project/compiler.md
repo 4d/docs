@@ -128,8 +128,9 @@ Se utiliza para generar el archivo de errores (ver [archivo de errores](#symbol-
 Permite definir el número de pases (análisis de código) que realiza el compilador y, por tanto, la duración de la compilación.
 
 - **Definir los tipos de las variables**: pasa por todas las etapas que hacen posible la compilación.
-- **Las variables proceso e interproceso se escriben**: el pase de definir los tipo de las variables proceso e interproceso no se lleva a cabo. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **Se definen todos los tipos de las variables**: el pase para definir el tipo de las variables locales, proceso e interproceso no se lleva a cabo. Utilice esta opción cuando esté seguro de que todas las variables proceso, interproceso y locales tengan su tipo definido claramente.
+- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters is not carried out. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
+- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters is not carried out. Use this option when you are certain that all the process, interprocess and local variables as well as method parameters have been clearly typed.
+
 
 #### Objetivo de compilación
 

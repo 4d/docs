@@ -19,7 +19,7 @@ As imagens são apresentadas num ciclo contínuo. When the user reaches the last
 
 ---
 
-## Switch back when released
+## Mudar de volta quando liberado
 
 Displays the first picture all the time except when the user clicks the button. Apresenta a segunda imagem até que o botão do rato seja libertado. This mode allows you to create an action button with a different picture for each state (idle and clicked). You can use this mode to create a 3D effect or display any picture that depicts the action of the button.
 
@@ -35,7 +35,7 @@ Displays the first picture all the time except when the user clicks the button. 
 
 ---
 
-## Switch continuously on clicks
+## Alternar continuamente em cliques
 
 Allows the user to hold down the mouse button to display the pictures continuously (i.e., as an animation). When the user reaches the last picture, the object does not cycle back to the first picture.
 
