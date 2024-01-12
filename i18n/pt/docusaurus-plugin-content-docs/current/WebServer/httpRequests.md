@@ -154,7 +154,7 @@ $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".ps
 
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
-A form can be submitted through two methods (both can be used with 4D):
+Um formulário pode ser enviado por dois métodos (ambos podem ser usados com 4D):
 - POST, normalmente utilizado para enviar dados para o servidor Web,
 - GET, normalmente utilizado para pedir dados ao servidor Web.
 
