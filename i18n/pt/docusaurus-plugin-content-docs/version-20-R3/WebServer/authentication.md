@@ -12,7 +12,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Using a **custom** authentication is recommended.
+> É recomendado usar uma autenticação **personalizada**.
 
 ### Visão Geral
 
@@ -27,7 +27,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
 
-This authentication mode is the most flexible because it allows you to:
+Este modo de autenticação é o mais flexível porque permite que você:
 
 - either, delegate the user authentication to a third-party application (e.g. a social network, SSO);
 - or, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm (see [this example](sessions.md#example) from the "User sessions" chapter). The important thing is that you never store the password in clear, using such code:
