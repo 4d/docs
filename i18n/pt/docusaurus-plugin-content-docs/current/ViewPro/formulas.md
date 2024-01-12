@@ -53,7 +53,7 @@ Todas as fórmulas têm operandos e operadores:
 
 ### Operadores de comparação
 
-The following operators can be used with two operands of the same type:
+Os operadores a seguir podem ser usados com dois operandos do mesmo tipo:
 
 | Operador   | Comparação           |
 | ---------- | -------------------- |
