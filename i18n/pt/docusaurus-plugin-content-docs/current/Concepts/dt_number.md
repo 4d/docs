@@ -75,7 +75,7 @@ O operador do módulo % devolve valores significativos com números que se encon
 
 O operador da divisão de longint retorna valores significativos apenas com números inteiros.
 
-### Real comparison
+### Comparação real
 
 To compare two reals for equality, 4D actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
 
