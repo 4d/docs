@@ -53,6 +53,6 @@ Users, groups, as well as their access rights are stored in a specific project f
 Esse arquivo pode ser armazenado nos seguintes locais:
 
 - in the user settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. Essas propriedades são usadas por padrão para a aplicação.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by an application upgrade.
+- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. A configuração personalizada não será afetada por uma atualização da aplicação.
 
 > If 4D password access control is not enabled, the **directory.json** is not created.
