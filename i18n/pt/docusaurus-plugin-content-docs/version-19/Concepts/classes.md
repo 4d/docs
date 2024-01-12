@@ -155,7 +155,7 @@ Quando 4D não encontrar uma função ou uma propriedade numa classe, procura-a 
 As palavras-chave 4D específicas podem ser utilizadas nas definições de classes:
 
 - `Função <Name>` para definir as funções de classe dos objectos.
-- `Class constructor` to define the properties of the objects.
+- `Class constructor` para definir as propriedades dos objetos.
 - `A classe estende-se a <ClassName>` para definir a herança.
 
 ### Function
