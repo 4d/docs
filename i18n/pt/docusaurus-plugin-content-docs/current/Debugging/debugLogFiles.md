@@ -179,7 +179,7 @@ Os campos abaixo são registrados tanto para Request quanto para Response:
 Depending on log options, various other fields can also be logged.
 
 - Para solicitação: linha de solicitação, cabeçalhos, corpo da solicitação
-- For response: status line, headers, response body (uncompressed), if any
+- Para resposta: linha de estado, cabeçalhos, corpo da resposta (não compactado), se houver
 
 
 ## 4DDebugLog.txt (standard)
