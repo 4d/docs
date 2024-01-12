@@ -1,7 +1,7 @@
 {
   "version.label": {
-    "message": "v20 R3",
-    "description": "The label for version 20-R3"
+    "message": "v20 R4 BETA",
+    "description": "The label for version 20-R4"
   },
   "sidebar.docs.category.Getting Started": {
     "message": "Começando",
@@ -23,53 +23,49 @@
     "message": "Gestão de projectos",
     "description": "The label for category Project Management in sidebar docs"
   },
-  "sidebar.docs.category.4D Language Concepts": {
-    "message": "Conceitos da linguagem 4D",
-    "description": "The label for category 4D Language Concepts in sidebar docs"
+  "sidebar.docs.category.Settings": {
+    "message": "Settings",
+    "description": "The label for category Settings in sidebar docs"
   },
-  "sidebar.docs.category.4D Language Concepts.link.generated-index.title": {
-    "message": "Conceitos da linguagem 4D",
-    "description": "The generated-index page title for category 4D Language Concepts in sidebar docs"
-  },
-  "sidebar.docs.category.4D Language Concepts.link.generated-index.description": {
-    "message": "Os principais conceitos da Linguagem 4D",
-    "description": "The generated-index page description for category 4D Language Concepts in sidebar docs"
-  },
-  "sidebar.docs.category.Data Types": {
-    "message": "Tipos de dados",
-    "description": "The label for category Data Types in sidebar docs"
-  },
-  "sidebar.docs.category.ORDA": {
-    "message": "ORDA",
-    "description": "The label for category ORDA in sidebar docs"
-  },
-  "sidebar.docs.category.Class Functions": {
-    "message": "Class Functions",
-    "description": "The label for category Class Functions in sidebar docs"
-  },
-  "sidebar.docs.category.Class Functions.link.generated-index.title": {
-    "message": "Class Functions",
-    "description": "The generated-index page title for category Class Functions in sidebar docs"
-  },
-  "sidebar.docs.category.Class Functions.link.generated-index.description": {
-    "message": "Lista de classes 4D integradas",
-    "description": "The generated-index page description for category Class Functions in sidebar docs"
-  },
-  "sidebar.docs.category.Handling Code": {
-    "message": "Gerenciamento do código",
-    "description": "The label for category Handling Code in sidebar docs"
-  },
-  "sidebar.docs.category.Tags": {
-    "message": "Etiquetas",
-    "description": "The label for category Tags in sidebar docs"
+  "sidebar.docs.category.Development Environment": {
+    "message": "Ambiente de desenvolvimento",
+    "description": "The label for category Development Environment in sidebar docs"
   },
   "sidebar.docs.category.Debugging": {
     "message": "Depuração",
     "description": "The label for category Debugging in sidebar docs"
   },
-  "sidebar.docs.category.Settings": {
-    "message": "Settings",
-    "description": "The label for category Settings in sidebar docs"
+  "sidebar.docs.category.ORDA": {
+    "message": "ORDA",
+    "description": "The label for category ORDA in sidebar docs"
+  },
+  "sidebar.docs.category.Language": {
+    "message": "Línguagem",
+    "description": "The label for category Language in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts": {
+    "message": "Conceitos",
+    "description": "The label for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Data Types": {
+    "message": "Tipos de dados",
+    "description": "The label for category Data Types in sidebar docs"
+  },
+  "sidebar.docs.category.Classes": {
+    "message": "Classes",
+    "description": "The label for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.title": {
+    "message": "Class Functions",
+    "description": "The generated-index page title for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.description": {
+    "message": "Lista de classes 4D integradas",
+    "description": "The generated-index page description for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Processes": {
+    "message": "Processos",
+    "description": "The label for category Processes in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
     "message": "Preferências",
@@ -239,13 +235,13 @@
     "message": "Aplicações móveis",
     "description": "The label for category Mobile Applications in sidebar docs"
   },
-  "sidebar.docs.link.4D Language Reference": {
-    "message": "Referência da linguagem 4D",
-    "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Language-Reference.100-6398284.en.html"
+  "sidebar.docs.link.Commands": {
+    "message": "Comandos",
+    "description": "The label for link Commands in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Language-Reference.100-6655756.en.html"
   },
   "sidebar.docs.link.4D Write Pro": {
     "message": "4D Write Pro",
-    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Write-Pro-Reference.100-6475174.en.html"
+    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Write-Pro-Reference.100-6683440.en.html"
   },
   "sidebar.docs.link.4D Mobile App Server": {
     "message": "4D Mobile App Server",
@@ -257,15 +253,15 @@
   },
   "sidebar.docs.link.4D Progress": {
     "message": "4D Progress",
-    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Progress.100-6614311.en.html"
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Progress.100-6790744.en.html"
   },
   "sidebar.docs.link.4D SVG": {
     "message": "4D SVG",
-    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-SVG-Component.100-6615182.en.html"
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-SVG-Component.100-6790835.en.html"
   },
   "sidebar.docs.link.4D Widgets": {
     "message": "4D Widgets",
-    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R3/4D/20-R3/4D-Widgets.100-6649651.en.html"
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv20R4/4D/20-R4/4D-Widgets.100-6791484.en.html"
   },
   "sidebar.docs.link.Go Mobile": {
     "message": "Go Mobile",

@@ -104,11 +104,11 @@ Você pode modificar esse local conforme desejar, por exemplo, se quiser exibir 
 
 ### Sítio Web
 
-URL access to the on-line documentation for the version on 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
+URL access to the on-line documentation for the version on 4D Doc Center. 4D cria chamadas para as páginas da documentação com base nessa URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
 
 ### Procurar primeiro na pasta local
 
 This option (checked by default) sets where 4D will look for the documentation page called using the Explorer or the F1 key.
 
-* When it is checked, 4D first looks for the page in the local folder. Se for encontrado, 4D mostra a página no navegador atual. If not, 4D will automatically look for it in the on-line documentation of the Web site. Desta forma, é possível aceder à documentação mesmo quando se está offline.
+* Quando essa opção está marcada, 4D procura primeiro a página na pasta local. Se for encontrado, 4D mostra a página no navegador atual. If not, 4D will automatically look for it in the on-line documentation of the Web site. Desta forma, é possível aceder à documentação mesmo quando se está offline.
 * When it is not checked, 4D looks for the desired page directly in the on-line documentation of the Web site and displays it in the current browser. Se não for encontrado, 4D mostra uma mensagem de erro no navegador.

@@ -59,16 +59,25 @@ title: 数値 (実数、倍長整数、整数)
 | 以下        | Number <= Number | Boolean | 10 <= 11 | true  |
 |           |                  |         | 11 <= 10 | false |
 
+### モジューロ
+
 モジューロ演算子 % は最初の数値を 2番目の数値で除算し、その余りの整数を返します。 次に例を示します:
 
 - 10 % 2は、0を返します。10 は 2 で割り切れるからです。
 - 10 % 3は、1を返します。余りが 1 だからです。
 - 10.5 % 2は、0を返します。余りが整数ではない (0.25) からです。
 
-**警告:**
+:::warning
 
-- モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 この範囲外の数値のモジューロ演算を実行するには、`Mod` コマンドを使用します。
-- 倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
+モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+
+### 倍長整数を返す除算
+
+倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
+
+### Real comparison
+
+To compare two reals for equality, 4D actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
 
 ### 優先順位
 

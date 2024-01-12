@@ -3,9 +3,9 @@ id: variables
 title: Variables
 ---
 
-Los datos en 4D se almacenan de dos formas fundamentalmente diferentes. **Los campos** almacenan los datos permanentemente en el disco; **las variables** almacenan los datos en la memoria de forma temporal.
+Los datos en 4D se almacenan de dos formas fundamentalmente diferentes. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
 
-Cuando define su base, especifique a 4D los nombres y los tipos de campos que desea utilizar. Las variables son muy parecidas, también se les da nombres y tipos diferentes (ver [Tipos de datos](Concepts/data-types.md)).
+Cuando define su base, especifique a 4D los nombres y los tipos de campos que desea utilizar. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
 
 Una vez creada, puede utilizar una variable dondequiera que la necesite en su aplicación. Por ejemplo, podría necesitar almacenar una variable texto en un campo del mismo tipo:
 
@@ -17,12 +17,16 @@ Las variables son objetos del lenguaje; puede crear y utilizar variables que nun
 
 ## Declaración de variables
 
-Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de declarar las variables:
+Generalmente se crean variables declarándolas. El lenguaje 4D ofrece dos formas de declarar las variables:
 
-- utilizando la palabra clave `var` (recomendado, especialmente si su código utiliza objetos y clases),
-- utilizando uno de los comandos del lenguaje 4D del tema "Compilador" o "Arrays" (lenguaje clásico únicamente).
+- using the `var` keyword (recommended, specially if your code uses objects and classes),
+- utilizando uno de los comandos del lenguaje 4D del tema "Compilador" o "Arrays" (sintaxis heredada).
 
-**Note:** aunque no se suele recomendar, puede crear variables básicas simplemente utilizándolas; no es necesario definirlas formalmente. Por ejemplo, si declara una variable que contenga la fecha actual más 30 días, puede escribir:
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
+
+:::note
+
+Aunque no es recomendable, puede crear variables simplemente utilizándolas; no es necesario declararlas formalmente. Por ejemplo, para crear una variable que mantenga la fecha actual más 30 días, puede escribir:
 
 ```4d
  MyDate:=Current date+30 //MyDate is created  
@@ -30,14 +34,15 @@ Las variables se crean declarándolas. El lenguaje 4D ofrece dos formas de decla
  // and assigns the current date plus 30 days
 ```
 
-Cuando se declaran las variables, se inicializan con el [**valor por defecto correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no se les haya [asignado](#assigning-data). Alternativamente, al declarar variables, puede [inicializar](#initializing-variables-in-the-declaration-line) su valor junto con su tipo de datos todo dentro de una línea.
+Cuando una variable se crea antes de ser declarada, no se inicializa en el paso de declaración.
 
+:::
 
-### Utilizando la palabra clave `var`
+### Using the `var` keyword
 
-Se recomienda declarar las variables utilizando la palabra clave `var` ya que esta sintaxis permite vincular las variables objeto con las clases. Using this syntax enhances code editor suggestions and type-ahead features.
+Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
 
-Para declarar una variable de cualquier tipo con la palabra clave `var`, utilice la siguiente sintaxis:
+To declare a variable of any type with the `var` keyword, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -50,35 +55,35 @@ var $myFile : 4D.File  //una variable objeto clase archivo
 var $myVar //una variable variant
 ```
 
-`varName` es el nombre de la variable, debe cumplir con las [reglas de 4D](Concepts/identifiers.md) sobre los identificadores. Esta sintaxis sólo soporta declaraciones de [variables locales y proceso](#local-process-and-interprocess-variables), por lo que se excluyen [variables interproceso](#interprocess-variables) y [arrays](Concepts/arrays.md).
+`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` puede ser:
+`varType` can be:
 
-- un [tipo básico](Concepts/data-types.md), en cuyo caso la variable contiene un valor del tipo declarado,
-- una [referencia de clase](Concepts/classes.md) (clase 4D o clase usuario), en cuyo caso la variable contiene una referencia a un objeto de la clase definida.
+- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
+- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
 
-Si `varType` se omite, una variable de tipo **variant** se crea.
+If `varType` is omitted, a variable of the **variant** type is created.
 
-La siguiente tabla enumera todos los valores `varType` soportados:
+The following table lists all supported `varType` values:
 
-| varType                                 | Contenido                                                        |
-| --------------------------------------- | ---------------------------------------------------------------- |
-| `Text`                                  | Valor texto                                                      |
-| `Fecha`                                 | Valor fecha                                                      |
-| `Hora`                                  | Valor Hora                                                       |
-| `Boolean`                               | Valor booleano                                                   |
-| `Integer`                               | Valor entero largo                                               |
-| `Real`                                  | Valor real                                                       |
-| `Puntero`                               | Valor puntero                                                    |
-| `Picture`                               | Valor imagen                                                     |
-| `Blob`                                  | Valeor Blob escalar                                              |
-| `Collection`                            | Valor colección                                                  |
-| `Variant`                               | Valor variant                                                    |
-| `Object`                                | Objeto con clase por defecto (4D.object)                         |
-| `4D.<className>`                  | Objeto del nombre de la clase 4D                                 |
-| `cs.<className>`                  | Objeto del nombre de la clase usuario                            |
-| `cs.<namespace><className>` | Objeto del nombre de la clase del componente `<namespace>` |
-
+| varType                     | Contenido                                                   |
+| --------------------------- | ----------------------------------------------------------- |
+| `Text`                      | Valor texto                                                 |
+| `Date`                      | Valor fecha                                                 |
+| `Time`                      | Valor Hora                                                  |
+| `Boolean`                   | Valor booleano                                              |
+| `Integer`                   | Valor entero largo                                          |
+| `Real`                      | Valor real                                                  |
+| `Pointer`                   | Valor puntero                                               |
+| `Picture`                   | Valor imagen                                                |
+| `Blob`                      | Valeor Blob escalar                                         |
+| `Collection`                | Valor colección                                             |
+| `Variant`                   | Valor variant                                               |
+| `Object`                    | Objeto con clase por defecto (4D.object) |
+| `4D.<className>`            | Objeto del nombre de la clase 4D                            |
+| `cs.<className>`            | Objeto del nombre de la clase usuario                       |
+| `cs.<namespace><className>` | Object of the `<namespace>` component class name            |
 
 #### Ejemplos
 
@@ -123,18 +128,18 @@ var $d : cs.Customer:=cs.Customer.new()
 Las variables también pueden ser declaradas e inicializadas sin mencionar explícitamente su tipo de datos, en cuyo caso su tipo será inferido por 4D. He aquí algunos ejemplos:
 
 ```4d
-var $text:="hello" // Inferido como Texto 
-var $number:=20 // Inferido como Real 
-var $obj:={}  // Inferido como Objeto 
-var $mycol:=[] // Inferido como Colección  
+var $text:="hello"  // Inferred as Text 
+var $number:=20  // Inferred as Real 
+var $obj:={}  // Inferred as an Object 
+var $mycol:=[]  // Inferred as a Collection  
 
 ```
 
 :::note
 
-El tipo inferido podría ser diferente entre [modo interpretado y compilado](interpreted.md) si la evaluación del valor es demasiado ambigua. En este caso, el compilador genera una advertencia y se utiliza un tipo variable. Por ejemplo, en el siguiente $a el tipo se inferirá correctamente en modo interpretado (Texto), pero la comprobación sintáctica generará una advertencia y $a se escribirá como una variable para el modo compilado.
+The inferred type might be different between [interpreted and compiled mode](interpreted.md) if the evaluation of the value is too ambiguous. En este caso, el compilador genera una advertencia y se utiliza un tipo variable. Por ejemplo, en el siguiente $a el tipo se inferirá correctamente en modo interpretado (Texto), pero la comprobación sintáctica generará una advertencia y $a se escribirá como una variable para el modo compilado.
 
-```4d 
+```4d
 var $class:={test: "a"}
 var $a:=$class.test
 
@@ -142,7 +147,7 @@ var $a:=$class.test
 
 :::
 
-4D intenta deducir el tipo más general. Por ejemplo, utiliza el tipo Real en lugar del tipo Entero cuando una variable se inicializa con un valor entero (por ejemplo, `var $a:=10 //Se infiere el tipo Real`). En tales casos, o cuando se inicializa una variable con un tipo complejo como la instanciación de una clase, se recomienda pasar el tipo explícitamente.
+4D intenta deducir el tipo más general. For instance, it uses the Real type rather than the Integer type when a variable is initialized with an integer value (e.g., `var $a:=10 //Real type is inferred`). En tales casos, o cuando se inicializa una variable con un tipo complejo como la instanciación de una clase, se recomienda pasar el tipo explícitamente.
 
 En la mayoría de los casos, todos los tipos de variables se determinan automáticamente. La excepción es cuando se asigna un valor a una variable de proceso o interproceso, lo que desencadena un mensaje de advertencia.
 
@@ -159,7 +164,7 @@ var $a; $b : Integer:=15 //error
 
 ## Asignar los valores
 
-Los datos pueden introducirse y copiarse en variables y arrays. Poner datos en una variable se llama **asignar los datos a la variable** y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos.
+Los datos pueden introducirse y copiarse en variables y arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). El operador de asignación también se utiliza para asignar datos a campos.
 
 El operador de asignación es un primer medio para crear una variable e introducir datos en ella. Se escribe el nombre de la variable que se quiere crear a la izquierda del operador de asignación. Por ejemplo:
 
@@ -167,17 +172,17 @@ El operador de asignación es un primer medio para crear una variable e introduc
 MyNumber:=3
 ```
 
-crea la variable _MyNumber_ y pone en ella el número 3. Si MyNumber ya existe, entonces toma el valor 3.
+creates the variable _MyNumber_ and puts the number 3 into it. Si MyNumber ya existe, entonces toma el valor 3.
 
-> Normalmente no se recomienda crear variables sin [declarar su tipo](#declaring-variables).
+> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
-Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
+Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-En este caso, _[Products]Size_ sería igual a 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
+In this case, _[Products]Size_ would be equal to 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
 
 Los valores se asignan a los elementos del array utilizando llaves ({...}):
 
@@ -187,7 +192,7 @@ atNames{1}:="Richard"
 
 ## Variables locales, proceso e interproceso
 
-Puedes crear tres tipos de variables: **local**, **proceso**, e **interproceso**. La diferencia entre los tres tipos de elementos es su alcance, o los objetos para los que están disponibles.
+You can create three types of variables: **local**, **process**, and **interprocess**. La diferencia entre los tres tipos de elementos es su alcance, o los objetos para los que están disponibles.
 
 ### Variables locales
 
@@ -203,10 +208,10 @@ El nombre de una variable local siempre comienza por el signo dólar ($) y puede
 
 Cuando se trabaja en un proyecto de aplicación con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. Puede crear y utilizar una variable local en el método sin preocuparse de si ha utilizado el mismo nombre de variable en otro lugar.
 
-Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. El comando `Request` puede obtener esta información. Muestra una caja de diálogo con un mensaje que solicita al usuario una respuesta. Cuando el usuario introduce la respuesta, el comando devuelve la información que el usuario introdujo. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
+Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. The `Request` command can obtain this information. Muestra una caja de diálogo con un mensaje que solicita al usuario una respuesta. Cuando el usuario introduce la respuesta, el comando devuelve la información que el usuario introdujo. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
 
 ```4d
- $vsID:=Request("Introduzca su identificación:")
+ $vsID:=Request("Please enter your ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -214,7 +219,7 @@ Con frecuencia, en una aplicación, se necesitan pequeñas piezas de informació
 
 Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Nota de compatibilidad:** no se recomienda esta funcionalidad para declarar variables dentro de métodos. Se recomienda utilizar la palabra clave [var](#using-the-var-keyword).
+**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
 
 ### Variables proceso
 
@@ -224,13 +229,13 @@ Una variable proceso no tiene un prefijo antes de su nombre. Un nombre de variab
 
 En modo interpretado, las variables se mantienen dinámicamente; se crean y se borran de la memoria "sobre la marcha". En modo compilado, todos los procesos que se crean (procesos usuario) comparten la misma definición de variables proceso, pero cada proceso tiene una instancia diferente para cada variable. Por ejemplo, la variable miVar es una variable en el proceso P_1 y otra en el proceso P_2.
 
-Un proceso puede leer y escribir las variables proceso de otro proceso utilizando los comandos `GET PROCESS VARIABLE` y `SET PROCESS VARIABLE`. Es una buena práctica de programación restringir el uso de estos comandos a la situación para la que fueron creados en 4D:
+A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. Es una buena práctica de programación restringir el uso de estos comandos a la situación para la que fueron creados en 4D:
 
 - Comunicación interprocesos en lugares específicos de su código
 - Gestión de arrastrar y soltar interproceso
 - En Cliente/Servidor, la comunicación entre los procesos en las máquinas cliente y los procedimientos almacenados ejecutados en las máquinas servidoras
 
-Para más información, consulte el capítulo **Procesos** y la descripción de estos comandos.
+For more information, see the chapter **Processes** and the description of these commands.
 
 ### Variables interproceso
 
@@ -238,6 +243,6 @@ Las variables interproceso están disponibles en todo el proyecto y son comparti
 
 > No se recomienda el uso de variables interproceso, ya que no están disponibles para los procesos apropiativos y tienden a hacer que el código sea menos mantenible.
 
-El nombre de una variable interproceso siempre comienza con los símbolos `<>` — un signo "menor que" seguido de un signo "mayor que"- seguido de 31 caracteres.
+The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 En modo cliente/servidor, cada máquina (cliente y servidor) comparten la misma definición de las variables interproceso, pero cada máquina tiene una instancia diferente para cada variable.

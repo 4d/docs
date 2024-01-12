@@ -311,7 +311,7 @@ Margin attributes are used to specify the 4D View Pro area margins for printing.
 |             | left    | inteiro longo | Margem esquerda, em centésimos de polegada. Valor padrão = 70         |
 |             | direita | inteiro longo | Margem direita, em centésimos de polegada. Valor padrão = 70          |
 |             | header  | inteiro longo | Deslocação do cabeçalho, em centésimos de polegada. Valor padrão = 30 |
-|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30            |
+|             | footer  | inteiro longo | Deslocamento do rodapé, em centésimos de polegada. Valor padrão = 30  |
 
 ### Orientação
 

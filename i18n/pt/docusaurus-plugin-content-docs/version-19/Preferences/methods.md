@@ -104,7 +104,7 @@ Lets you display the line numbers by default in each window of the Method editor
 
 #### Mostrar as listas
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. You can also show or hide each list directly from the Method editor.
+Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Method editor window is opened. Você também pode mostrar ou ocultar cada lista diretamente no editor de métodos.
 
 #### Destacar os blocos lógicos
 

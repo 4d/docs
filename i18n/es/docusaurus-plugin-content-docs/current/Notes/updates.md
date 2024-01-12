@@ -18,6 +18,10 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 - Los parámetros de método declarados en prototipos `#DECLARE` ya no son [necesarios en los métodos "Compiler_"](../Concepts/parameters.md#compilation).
 - Nueva palabra clave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error sencillos.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
+- Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.
+- 4D Write Pro: [Página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/Pagina-de-novedades.901-6683440.es.html) en doc.4d.com.
+- [**Lista de errores corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos los errores corregidos en 4D v20 R4.
+
 
 #### Cambios de comportamiento
 
@@ -188,7 +192,7 @@ Lea [**Novedades de 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-r7/)
 - Los datos relacionados y los atributos calculados/alias pueden mostrarse en el [explorador de datos](../Admin/dataExplorer#basics).
 - Nueva clase [FileHandle](../API/FileHandleClass.md) y nueva función [`.open()`](../API/FileClass.md#open) en la clase `File`.
 - [Clase Entity selection](../API/EntitySelectionClass.md): [`.add()`](../API/EntitySelectionClass.md#add) soporta un parámetro *entitySelection*, [`.minus()`](../API/EntitySelectionClass.md#minus) soporta un parámetro *keepOrder*.
-- Support of *automaticRedirections* and *decodeData* options in [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew).
+- Soporte de las opciones *automaticRedirections* y *decodeData* en [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#4dhttprequestnew).
 - Nuevo archivo de registro [4DHTTPClientLog.txt](../Debugging/debugLogFiles.md#4dhttpclientlog).
 - 4D View Pro: nuevos comandos tabla [VP Find table](../ViewPro/method-list.md#vp-find-table), [VP Get table column attributes](../ViewPro/method-list.md#vp-get-table-column-attributes), [VP Get table column index](../ViewPro/method-list.md#vp-get-table-column-index), [VP Get tables](../ViewPro/method-list.md#vp-get-tables), [VP INSERT TABLE COLUMNS](../ViewPro/method-list.md#vp-insert-table-columns), [VP INSERT TABLE ROWS](../ViewPro/method-list.md#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](../ViewPro/method-list.md#vp-remove-table-columns), [VP REMOVE TABLE ROWS](../ViewPro/method-list.md#vp-remove-table-rows), [VP RESIZE TABLE](../ViewPro/method-list.md#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](../ViewPro/method-list.md#vp-set-table-column-attributes).
 - Los espacios de nombres de los componentes ahora se [muestran en el Explorador](../Extensions/develop-components.md#declaring-the-component-namespace).
