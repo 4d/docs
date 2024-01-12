@@ -43,7 +43,7 @@ A resolução recomendada é 1920x1080.
 #### Aplicação 4D
 
 - Desenvolvimento: 4D v20 R2 ou superior
-- Deployment: 4D Server v20 R2 or higher
+- Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
