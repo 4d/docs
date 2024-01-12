@@ -38,7 +38,7 @@ When a variable is created before being declared, it is not initialized at the d
 
 :::
 
-### Using the `var` keyword
+### Usando a palavra-chave \`var
 
 Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. A utilização desta sintaxe melhora as sugestões do editor de código e as funcionalidades de antecipação de escrita.
 
@@ -58,7 +58,7 @@ var $myVar //a variant variable
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
 This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` pode ser:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
@@ -219,7 +219,7 @@ Frequentemente, em um banco de dados, pequenas pedaços de informação são nec
 
 Este método pede simplesmente ao utilizador que introduza uma identificação. Coloca a resposta numa variável local, $vsID, e depois procura o ID que o utilizador introduziu. Quando este método termina, a variável local $vsID é apagada da memória. Isto é ótimo, porque a variável é necessária apenas uma vez e apenas neste método.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** Parâmetros $1, $2... passados para os métodos são variáveis locais. For more information, please refer to [Parameters](Concepts/parameters.md).
 
 ### Variáveis processo
 
