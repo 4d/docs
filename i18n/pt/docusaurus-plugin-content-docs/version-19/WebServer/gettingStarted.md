@@ -7,7 +7,7 @@ This "Getting started" section is geared at first-time users who want an overall
 
 ## Exemplo Hello World
 
-Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
+Vamos começar fazendo com que o servidor Web envie "Hello World" para o navegador. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
 
 ### Iniciar o servidor Web
 
