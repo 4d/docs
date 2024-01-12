@@ -59,7 +59,7 @@ Los elementos de interfaz se utilizan en [Aplicaciones de escritorio](../categor
 
 :::info
 
-- Los procesos no incluyen barras de menú por defecto, lo que significa que los atajos de menú estándar de **Edición** (en particular, cortar/copiar/pegar) no están disponibles en las ventanas de proceso. Cuando se llama a los diálogos o a los editores 4D (editor de formularios, editor de búsquedas, Request, etc.) desde un proceso, si desea que el usuario pueda beneficiarse de atajos de teclado como copiar/pegar, debe asegurarse de que el equivalente a un menú **Edición** esté instalado en el proceso.
+- Processes do not include menu bars by default which means that the standard **Edit** menu shortcuts (in particular, cut/copy/paste) are not available in process windows. Cuando se llama a los diálogos o a los editores 4D (editor de formularios, editor de búsquedas, Request, etc.) desde un proceso, si desea que el usuario pueda beneficiarse de atajos de teclado como copiar/pegar, debe asegurarse de que el equivalente a un menú **Edición** esté instalado en el proceso.
 - [Procesos apropiativos](preemptive.md) y los procesos que se ejecutan en el servidor (procedimientos almacenados) no deben contener elementos de la interfaz.
 
 :::
@@ -69,8 +69,6 @@ Los elementos de interfaz se utilizan en [Aplicaciones de escritorio](../categor
 Cada proceso tiene también una selección actual y un registro actual por tabla. Para más información sobre estos conceptos, consulte [doc.4d.com](https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
 
 :::
-
-La aplicación 4D crea procesos para sus propias necesidades, por ejemplo el proceso Principal para gestionar las ventanas de visualización de la interfaz de usuario, el proceso de Diseño para gestionar las ventanas y editores del entorno de Diseño (note que ambos son [procesos worker](#worker-processes)), el proceso Servidor Web, el proceso Gestor de Caché, el proceso de Indexación, o el proceso On Event Manager.
 
 ## Procesos globales y locales
 
