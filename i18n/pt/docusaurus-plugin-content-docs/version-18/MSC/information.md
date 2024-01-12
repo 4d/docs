@@ -4,7 +4,7 @@ title: Página de informação
 sidebar_label: Página de informação
 ---
 
-The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
+The Information page provides information about the 4D and system environments, as well as the database and application files. Cada página pode ser exibida usando controles de guia na parte superior da janela.
 
 ## Programa
 
