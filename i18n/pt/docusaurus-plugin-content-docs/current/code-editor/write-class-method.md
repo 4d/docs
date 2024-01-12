@@ -488,7 +488,7 @@ Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of th
 
 The Code Live Checker is activated at three levels:
 
-- when you write code in the code editor,
+- quando você escreve código no editor de código,
 - when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
 - quando você [compila](../Project/compiler.md) o projeto.
 
