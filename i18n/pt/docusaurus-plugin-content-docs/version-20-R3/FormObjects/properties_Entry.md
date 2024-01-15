@@ -7,7 +7,7 @@ title: Entrada
 
 4D inclui funcionalidades de verificação ortográfica integrado e personalizável. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
-The Auto Spellcheck property activates the spell-check for each object. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objeto. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
 #### Gramática JSON
 
@@ -29,7 +29,7 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
-- **Fonts...**: displays the font system dialog box
+- **Fontes...**: exibe a caixa de diálogo do sistema de fontes
 - **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defeito, esta lista está vazia e a opção não é apresentada. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
@@ -108,7 +108,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9###-###-###               | Número de telefone interurbano. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Três entradas, hífen, três entradas, hífen, quatro entradas.       |
 | !0&9###-##-####               | Número de segurança social. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                                      |
 | ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                             |
-| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                   |
+| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Permitir letras minúsculas, números, espaços, vírgulas, pontos e hífens.                                                  |
 | &"0-9;.;-"                    | Números. Só são permitidos números, pontos decimais e hífenes (sinal de menos).                                                                                       |
 
 #### Gramática JSON

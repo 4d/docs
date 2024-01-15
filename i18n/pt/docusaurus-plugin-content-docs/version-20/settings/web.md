@@ -190,7 +190,7 @@ O menu de formato do histórico oferece as seguintes opções:
 
     -   host: endereço IP do cliente (ex. 192.100.100.10)
     -   rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
-    -   user: user name as it is authenticated, or else it is - (a minus sign). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
+    -   usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
     -   DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds
 
 > A data e a hora são locais para o servidor.
@@ -256,7 +256,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 -   **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
 -   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
 -   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
--   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+-   **Every X MB**: This option is used to program backups based on the size of the current request log file. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
 > In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
 

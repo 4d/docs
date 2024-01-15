@@ -75,7 +75,7 @@ El operador modulo % devuelve valores significativos con números que están en 
 
 El operador de división entero largo \ devuelve valores significativos sólo con números enteros.
 
-### Real comparison
+### Comparación real
 
 Para comparar dos números reales en busca de igualdad, 4D en realidad compara el valor absoluto de la diferencia con *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
 

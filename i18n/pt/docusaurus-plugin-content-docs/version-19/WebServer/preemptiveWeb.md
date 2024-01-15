@@ -55,7 +55,7 @@ All 4D code executed by the web server must be thread-safe if you want your web 
 
 - [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
 
-- Project methods with "REST Server" property checked (legacy REST calls)
+- Métodos projeto com a propriedade "Servidor REST" marcada (chamadas REST herdadas)
 
 For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. For more information about thread-safety rules, please refer to the *Writing a thread-safe method* paragraph in the *Processes* chapter of the [4D Language Reference](https://doc.4d.com) manual.
 
@@ -72,7 +72,7 @@ Todos os comandos 4D relacionados à Web são thread-safe, *i.e.*:
 
 The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
-Of course, the code executed by these methods must also be thread-safe.
+Obviamente, o código executado por esses métodos também deve ser thread-safe.
 
 ### URLs do servidor Web
 

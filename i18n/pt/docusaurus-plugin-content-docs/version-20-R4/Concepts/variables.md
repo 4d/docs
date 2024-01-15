@@ -63,9 +63,9 @@ This syntax only supports [local and process variables](#local-process-and-inter
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Se `varType` for omitido, será criada uma variável do tipo **variant**.
 
-The following table lists all supported `varType` values:
+A tabela seguinte enumera todos os valores `varType` suportados:
 
 | varType                     | Conteúdos                                                |
 | --------------------------- | -------------------------------------------------------- |
@@ -172,7 +172,7 @@ O operador de atribuição é a maneira mais importante de criar uma variável e
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
+cria a variável _MyNumber_ e coloca o número 3 nela. Se o MyNumber já existe, então o número 3 é apenas colocado nele.
 
 > It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
@@ -182,7 +182,7 @@ Naturalmente, as variáveis não seriam muito úteis se não se conseguisse obte
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
+Nesse caso, _[Products]Size_ seria igual a 3. Este exemplo é bastante simples, mas ilustra a forma fundamental como os dados são transferidos de um local para outro utilizando a língua.
 
 Atribui-se dados a elementos de matriz utilizando chaves ({...}):
 

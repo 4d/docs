@@ -159,7 +159,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 ## Importação e exportação de documentos
 
-4D View Pro supports the import and export of several document formats:
+4D View Pro suporta a importação e exportação de vários formatos de documentos:
 
 * .4vp
 * .xlsx

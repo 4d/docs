@@ -407,7 +407,7 @@ A página lista os elementos carregados pela aplicação 4D atual:
 
 ![](../assets/en/Project/buildapppluginsProj.png)
 
-* **Active** column - Indicates that the items will be integrated into the application package built. Todos os itens são selecionados por padrão. To exclude a plug-in or a component, deselect the check box next to it.
+* **Active** column - Indicates that the items will be integrated into the application package built. Todos os itens são selecionados por padrão. Para excluir um plug-in ou um componente, desmarque a caixa de seleção ao lado dele.
 
 * **Plugins and components** column - Displays the name of the plug-in/component.
 

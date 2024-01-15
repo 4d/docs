@@ -69,7 +69,7 @@ Código 4D do método `today`:
  $0:=String(Current date;System date long)
 ```
 
-In the Web area, the 4D method can be called with the following syntax:
+Na área Web, o método 4D pode ser chamado com a seguinte sintaxe:
 
 ```js
 $4d.today()

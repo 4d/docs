@@ -70,7 +70,7 @@ Todos os comandos 4D relacionados à Web são thread-safe, *i.e.*:
 
 The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
-Of course, the code executed by these methods must also be thread-safe.
+Obviamente, o código executado por esses métodos também deve ser thread-safe.
 
 
 ### URLs do servidor Web
