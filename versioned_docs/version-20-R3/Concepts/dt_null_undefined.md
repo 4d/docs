@@ -36,15 +36,14 @@ Typically when trying to read or assign undefined expressions, 4D will generate 
 ```
 
 - Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
-
- - Object, collection, pointer: Null
- - Picture: Empty picture
- - Boolean: False
- - String: ""
- - Number: 0
- - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
- - Time: 0 (number of ms)
- - Undefined, Null: no change
+	- Object, collection, pointer: Null
+	- Picture: Empty picture
+	- Boolean: False
+	- String: ""
+	- Number: 0
+	- Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+	- Time: 0 (number of ms)
+	- Undefined, Null: no change
 
 ```4d
      var $o : Object
