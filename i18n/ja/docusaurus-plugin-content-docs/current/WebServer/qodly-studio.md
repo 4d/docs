@@ -186,10 +186,6 @@ Webフォームを利用した Webアプリケーションを開発するには�
 - Qodly Webフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 
-### 既知の問題
-
-- 現在の実装では、Qodly Webフォームを使用する統合された 4Dアプリケーション (スタンドアロンおよびサーバー) をビルドするには、*.4dz* 圧縮されたアーキテクチャーを無効にする必要があります。そうでない場合、404エラーが返されます。 このような統合アプリケーションをビルドする場合は、buildApp.4DSettings ファイルで [` PackProject` XMLキー](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.ja.html) を `false` に設定してください。
-
 
 ### QodlyScript から 4Dランゲージへ
 
@@ -214,8 +210,8 @@ QodlyScript はローカル変数のみをサポートするため、QodlyScript
 | extends     | Class extends                                               |          |
 | end         | End for, End For each, End if, End case, End use, End while |          |
 | forEach     | For each                                                    |          |
-| string      | Text                                                        | 変数の型     |
-| number      | Real                                                        | 変数の型     |
+| string      | Text                                                        | var type |
+| number      | Real                                                        | var type |
 
 他の一部の項目では文字の大小が異なりますが (例: `this` と `This`)、4Dコードに直接貼り付けることができます。
 

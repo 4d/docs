@@ -214,8 +214,8 @@ Algunos símbolos básicos, operadores y palabras clave difieren en QodlyScript 
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | tipo de variable        |
-| number      | Real                                                        | tipo de variable        |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Algunos otros elementos tienen una capitalización diferente (por ejemplo: `this` vs `This`), pero se pueden pegar directamente en código de 4D.
 
