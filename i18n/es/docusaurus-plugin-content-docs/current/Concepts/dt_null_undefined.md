@@ -11,13 +11,81 @@ Null es un tipo de datos especial con un solo valor posible: **null**. Este valo
 
 En el lenguaje 4D y para los atributos de los campos de los objetos, los valores nulos se gestionan a través de la función `Null`. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
-- atributos de objetos
-- elementos de colecciones
-- variables de tipo objeto, colección, puntero, imagen o variante.
+- object attributes
+- collection elements
+- variables of the object, collection, pointer, picture, or variant type.
 
 ## Indefinido
 
-Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Una función (un método proyecto que devuelve un resultado) puede devolver un valor indefinido si, dentro del método, se asigna al resultado de la función ($0) una expresión indefinida (una expresión calculada con al menos una variable indefinida). Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo). Una variable variant tiene **indefinido** como valor por defecto.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. A project method can return an undefined value if, within the method, the result is assigned an undefined expression (an expression calculated with at least one undefined variable). Evaluating an object property can also produce an undefined value. Reading a property of an undefined object or value returns **undefined**.
+
+A variant variable has **undefined** as [default value](data-types.md#default-values).
+
+Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo).
+
+Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+
+- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
+
+```4d
+     var $o : Object
+     var $val : Integer
+     $val:=10 //$val=10
+     $val:=$o.a //$o. es indefinido (no hay error) y la asignación de este valor borra la variable
+      //$val=0
+```
+
+- La asignación de un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor, dependiendo de su tipo:
+    - Objeto, colección, puntero: Null
+    - Imagen: imagen vacía
+    - Booleano: False
+    - Cadena: ""
+    - Número: 0
+    - Fecha: !00-00-00! Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
+    - Hora: 0 (número de ms)
+    - Indefinido, Null: sin cambios
+
+```4d
+     var $o : Object
+     $o:=New object("a";2)
+     $o.a:=$o.b //$o.a=0
+```
+
+- La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+
+- Un valor indefinido pasado como parámetro a un método proyecto se convierte automáticamente en 0 o "" según el tipo de parámetro declarado.
+
+```4d
+     var $o : Object
+     mymethod($o.a) //Pasar un parámetro indefinido
+
+      //En el método mymethod
+     #Declare ($myText : Text) //El tipo de parámetro es texto
+      // $myText contiene ""
+```
+
+- Una expresión de condición se convierte automáticamente en falsa cuando se evalúa a indefinido con las palabras clave If y Case of:
+
+```4d
+     var $o : Object
+     If($o.a) // false
+     End if
+     Case of
+        :($o.a) // false
+     End case
+```
+
+
+:::tip
+
+Cuando se esperan expresiones de un tipo determinado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinidas, rodeándolas con el comando de transformación 4D apropiado: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. Por ejemplo:
+
+```4d
+ $myString:=Lowercase(String($o.a.b)) //asegurarse de obtener un valor de cadena aunque sea indefinido
+  //para evitar errores en el código
+```
+
+:::
 
 
 ## Operadores Null
