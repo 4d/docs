@@ -350,7 +350,7 @@ Some contexts do not support declaration in a "Compiler" method, thus they are h
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-- Functions - Function parameters are automatically declared for compilation in the function prototype. Por ejemplo:
+- Funciones - Los parámetros de función se declaran automáticamente para la compilación en el prototipo de la función. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
