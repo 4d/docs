@@ -214,8 +214,8 @@ Some basic symbols, operators, and keywords differ in QodlyScript and must be ad
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | tipo var                |
-| number      | Real                                                        | tipo var                |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
