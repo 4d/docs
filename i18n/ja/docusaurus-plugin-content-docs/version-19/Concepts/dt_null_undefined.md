@@ -11,9 +11,9 @@ Null は **null** の値のみをとることのできる特殊なデータタ�
 
 4D ランゲージやオブジェクトフィールド属性においては、`Null` 関数を使ってnull値を扱います。 この関数をつぎの式と組み合わせて使うことで、null値の設定や比較をおこなうことができます:
 
-- オブジェクトの属性
-- コレクションの要素
-- オブジェクト型、コレクション型、ポインター型、ピクチャー型、バリアント型の変数
+- object attributes
+- collection elements
+- variables of the object, collection, pointer, picture, or variant type.
 
 ## 未定義
 
