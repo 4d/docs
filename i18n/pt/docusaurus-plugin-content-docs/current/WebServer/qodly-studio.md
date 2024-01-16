@@ -186,10 +186,6 @@ In accordance with the management of 4D projects, only the following usages are 
 - deployment of 4D applications powered with Qodly webforms must be done using **4D Server**.
 
 
-### Problema conhecido
-
-- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file.
-
 
 ### De QodlyScript à linguagem 4D
 
@@ -214,8 +210,8 @@ Some basic symbols, operators, and keywords differ in QodlyScript and must be ad
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | tipo var                |
-| number      | Real                                                        | tipo var                |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
