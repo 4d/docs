@@ -173,7 +173,7 @@ The use of Web plugins and Java applets is not recommended in Web areas because 
 
 ### Inserção de protocolo (macOS)
 
-The URLs handled by programming in Web areas under macOS must begin with the protocol. For example, you need to pass the string "http://www.mysite.com" and not just "www.mysite.com".
+The URLs handled by programming in Web areas under macOS must begin with the protocol. Por exemplo, você precisa passar a cadeia de caracteres "http://www.mysite.com" e não apenas "www.mysite.com".
 
 ## Acesso ao inspetor Web
 
