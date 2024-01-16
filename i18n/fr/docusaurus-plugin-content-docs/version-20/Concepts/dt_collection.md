@@ -5,7 +5,7 @@ title: Collection
 
 Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, date, objet, booléen, collection ou null).
 
-Pour manipuler les variables de type Collection, vous devez utiliser la notation objet (voir [Les bases de la syntaxe](Concepts/dt_object.md#syntax-basics)).
+Collection type variables are managed using [object notation](dt_object.md#properties)).
 
 Pour des informations complémentaires sur les collections 4D, passez le numéro (l'indice) de l'élément entre crochets :
 
@@ -144,4 +144,13 @@ Plusieurs fonctions admettent un paramètre nommé _cheminPropriété_. Ce param
 ```4d
  $vmin:=$col.min("My.special.property") //indéfini
  $vmin:=$col.min(["My.special.property"]) //erreur
+```
+
+## Undefined
+
+La lecture de la propriété **length** d'une collection indéfinie renvoie 0 :
+
+```4d
+     var $c : Collection //variable created but no collection is defined
+     $size:=$c.length //$size = 0
 ```
