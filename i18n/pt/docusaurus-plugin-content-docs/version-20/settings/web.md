@@ -99,7 +99,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
-This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
+Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
 When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
 
@@ -272,7 +272,7 @@ This area contains various options related to the use of 4D as a Web Services "s
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. Quando essa opção está marcada, 4D cria o arquivo WSDL.
 -   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
--   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
+-   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
 

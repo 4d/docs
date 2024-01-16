@@ -9,9 +9,9 @@ Null est un type de données particulier avec une seule valeur possible : **null
 
 Dans le langage de 4D et pour les attributs des champs objets, les valeurs null sont gérées via la commande `Null`. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
-- attributs d'objets
-- éléments de collections
-- variables de type objet, collection, pointeur, image ou variant.
+- object attributes
+- collection elements
+- variables of the object, collection, pointer, picture, or variant type.
 
 ## Undefined
 

@@ -38,7 +38,7 @@ Cuando una variable se crea antes de ser declarada, no se inicializa en el paso 
 
 :::
 
-### Using the `var` keyword
+### Utilizando la palabra clave `var`
 
 Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
 
@@ -58,7 +58,7 @@ var $myVar //una variable variant
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
 This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` puede ser:
 
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
@@ -128,10 +128,10 @@ var $d : cs.Customer:=cs.Customer.new()
 Las variables también pueden ser declaradas e inicializadas sin mencionar explícitamente su tipo de datos, en cuyo caso su tipo será inferido por 4D. He aquí algunos ejemplos:
 
 ```4d
-var $text:="hello"  // Inferred as Text 
-var $number:=20  // Inferred as Real 
-var $obj:={}  // Inferred as an Object 
-var $mycol:=[]  // Inferred as a Collection  
+var $text:="hello" // Inferido como Texto 
+var $number:=20 // Inferido como Real 
+var $obj:={}  // Inferido como Objeto 
+var $mycol:=[] // Inferido como Colección  
 
 ```
 
@@ -219,7 +219,7 @@ Con frecuencia, en una aplicación, se necesitan pequeñas piezas de informació
 
 Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** los parámetros $1, $2... pasadas a los métodos son variables locales. For more information, please refer to [Parameters](Concepts/parameters.md).
 
 ### Variables proceso
 

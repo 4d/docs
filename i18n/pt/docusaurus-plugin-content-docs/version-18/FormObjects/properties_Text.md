@@ -328,7 +328,7 @@ O método *Color* iria conter :
     Form.meta.cell:=Form.colStyle //reuse the same object for better performance
  ...
 ```
-> See also the [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html) command.
+> Veja também o comando [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 #### Gramática JSON
 

@@ -13,7 +13,7 @@ The upper part of the page provides information about the current status of the 
 
 - **Estado**: Iniciado ou Parado
 - **Starting time**: Date and time the HTTP server was last launched.
-- **Uptime**: Time elapsed since last startup of the HTTP server.
+- **Tempo de atividade**: tempo decorrido desde a última inicialização do servidor HTTP.
 - **Total HTTP hits**: Number of (low level) HTTP hits received by the HTTP server since it was started.
 
 
@@ -24,7 +24,7 @@ This button toggles and can be used to control the activation of the 4D Server H
 - When the HTTP server state is "Started," the button is titled **Stop HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately stopped; the Web server, REST server, and SOAP server no longer accept any requests.
 - When the HTTP server state is "Stopped," the button is titled **Start HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately started; Web, REST, and SOAP requests are accepted.
 
-> You must have a suitable license in order to be able to start the HTTP server.
+> Você deve ter uma licença adequada para poder iniciar o servidor HTTP.
 > 
 > The HTTP server can also be launched automatically on application startup (Settings) or by programming.
 

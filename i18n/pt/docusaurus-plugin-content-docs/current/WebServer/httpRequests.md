@@ -81,9 +81,9 @@ Note que você está livre para usar este parâmetro a sua conveniência. 4D sim
 
 ### $2 - Cabeçalho e corpo do pedido HTTP
 
-The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
+O segundo parâmetro ($2) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+If your application uses this information, it is up to you to parse the header and the body. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
 > For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 
@@ -378,7 +378,7 @@ Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you us
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
 - the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
-- the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
+- o comando `WEB GET HTTP HEADER` retornam os cabeçalhos da solicitação. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
 - the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:

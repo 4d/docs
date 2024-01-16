@@ -16,7 +16,7 @@ Por razões de segurança, o padrão de 4D é não responder a petições REST. 
 
 ![alt-text](../assets/en/REST/Settings.png)
 
-> REST services use the 4D HTTP server, so you need to make sure that the 4D Web server is started.
+> Serviços REST usam o servidor 4D HTTP, por isso precisa ter certeza que o servidor Web 4D foi iniciado.
 
 A mensagem de aviso "Atenção, verifique os privilégios de acesso" é exibida quando checar essa opção para chamar atenção para o fato que os serviços REST foram ativados, como padrão acessar os objetos de banco de dados é grátis desde que os acessos REST não tenham sido configurados.
 
