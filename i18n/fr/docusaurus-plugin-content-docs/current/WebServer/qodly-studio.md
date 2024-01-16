@@ -186,10 +186,6 @@ In accordance with the management of 4D projects, only the following usages are 
 - deployment of 4D applications powered with Qodly webforms must be done using **4D Server**.
 
 
-### Known issue
-
-- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. If you build such merged applications, make sure you set the [`PackProject` XML key](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) to `False` in the buildApp.4DSettings file.
-
 
 ### From QodlyScript to 4D Language
 
