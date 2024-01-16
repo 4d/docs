@@ -96,10 +96,9 @@ var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
-
+// 次と同義です:
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+// C_OBJECT($o) とも同義です
 ```
 
 - 4Dクラス型のオブジェクト変数の宣言:
