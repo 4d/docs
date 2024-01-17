@@ -5,7 +5,7 @@ title: Página segurança
 
 This page contains options related to data access and protection for your desktop applications.
 
-**Note**: For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+**Note**: Para uma visão geral dos recursos de segurança de 4D, consulte o [guia de segurança 4D](https://blog.4d.com/4d-security-guide/).
 
 ## Acesso aos dados / Acesso de usuários remotos
 
