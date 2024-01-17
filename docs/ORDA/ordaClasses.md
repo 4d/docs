@@ -796,6 +796,108 @@ $arch.save() //courseName and name are "Archaeology II"
 ```
 
 
+## Restricting entity selections
+
+In ORDA, you can create filters to restrict access to entities of any of your dataclasses. A filter is automatically applied whenever the entities of the dataclass are accessed either by class functions such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by tools like the [Data Explorer](../Admin/dataExplorer.md).
+
+A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson. 
+
+
+### How to define a restrict filter
+
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](#dataclass-class) of the dataclass. The filter is then automatically enabled. 
+
+
+### `Function event restrict`
+
+#### Syntax
+
+```4d
+Function event restrict() -> $result : 4D.EntitySelection
+// code
+```
+
+This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created. 
+
+The function must return a valid entity selection of the dataclass. The filter can return any entity selection of the dataclass (an entity selection built upon a query, stored in the [`Storage`], etc.).
+
+Returning **null** means no filter is applied. 
+
+:::note
+
+We recommend to use **indexed attributes** in the definition of the filter.
+
+:::
+
+#### Example
+
+We want that a salesperson always work with their customers. During the authentication phase, the salesperson is stored in the `Session`. So we can write in the Customers dataclass class:
+
+```4d
+Class extends DataClass
+
+Function event restrict() : cs.CustomersSelection
+
+	var $result : cs.CustomersSelection
+
+	If (Session.storage.salesPerson#Null)  // the user is authenticated
+		$result:=This.query("salesID = :1"; Session.storage.salesPerson.id)
+	Else
+		return Null
+	End if
+
+	return $result
+```
+
+
+### Scope of the filters
+
+#### Environments
+
+Filters apply to requests executed in the following contexts:
+
+- 4D standalone applications,
+- 4D client/server applications,
+- [REST](../category/rest-server) requests (including [remote datastores](../API/DataStoreClass/md#open-datastore) and [REST requests from Qodly Studio](https://developer.qodly.com/docs/studio/rendering#data-flow-and-server-architecture).
+
+A restricting filter is implemented at a low level and applies to all entity selections and entities handled through ORDA in your 4D projects. The filter is activated as soon as the project is opened (i.e. it can be triggered in the On Startup database method).
+
+:::info
+
+Filters do not apply when handling selections of records through the 4D language (e.g. when calling `ALL RECORDS`).
+
+:::
+
+
+#### 4D language and interface
+
+Filters are applied the following ORDA functions, commands, or features are called.
+
+|Feature|Comment|
+|---|---|
+|[dataclass.get()](../API/DataClassClass.md#get)|If the entity does not match the filter, `null` is returned|
+|[entity.reload()](../API/EntityClass.md#reload)|`reload()` is equivalent to `get()`|
+|[dataclass.all()](../API/DataClassClass.md#all)||
+|[dataclass.fromCollection()](../API/DataClassClass.md#fromcollection)|<li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li>|
+|[entitySelection.and()](../API/EntitySelectionClass.md#and)|Only entities matching the filter are returned|
+|[entitySelection.or()](../API/EntitySelectionClass.md#or)|Only entities matching the filter are returned|
+|[entitySelection.minus()](../API/EntitySelectionClass.md#minus)|Only entities matching the filter are returned|
+|[dataclass.query()](../API/DataClassClass.md#query)||
+|[entitySelection.query()](../API/EntitySelectionClass.md#query)||
+|[Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)||
+|[entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)|Filter applied if *attributeName* is a relation attribute (including alias or computed attribute)|
+|[entity.attributeName](../API/EntityClass.md#attributename)|Filter applied if *attributeName* is a relation attribute (including alias or computed attribute)|
+|[Data Explorer](../Admin/dataExplorer.md)||
+|[Debugger](../Debugging/debugger.md)||
+
+
+Other ORDA functions accessing data do not directly trigger the filter, but they benefit from it beforehand. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection.  
+
+:::note
+
+If there is an error in the filter at runtime, it is thrown as if the error came from the ORDA function itself.
+
+:::
 
 
 ## Exposed vs non-exposed functions
