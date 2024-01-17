@@ -9,9 +9,9 @@ Null es un tipo de datos especial con un solo valor posible: **null**. Este valo
 
 En el lenguaje 4D y para los atributos de los campos de los objetos, los valores nulos se gestionan a través de la función `Null`. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
-- object attributes
-- collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- atributos de objetos
+- elementos de colecciones
+- variables de tipo objeto, colección, puntero, imagen o variante.
 
 ## Indefinido
 
