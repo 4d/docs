@@ -128,7 +128,7 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) for details and examples.
+Consulte a [** lista ampliada de funções SpreadJS**](https://developer.mescius.com/spreadjs/docs/formulareference/FormulaFunctions) para obter detalhes e exemplos.
 
 
 ## Funções 4D
