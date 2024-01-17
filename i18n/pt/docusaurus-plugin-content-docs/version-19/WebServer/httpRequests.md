@@ -365,8 +365,8 @@ Tenha em atenção que, com HTML, todos os objetos são objetos texto. If you us
 
 The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
 
-- the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
-- o comando `WEB GET HTTP HEADER` retornam os cabeçalhos da solicitação. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
+- o comando `WEB GET HTTP BODY` retorna o corpo como texto bruto, permitindo qualquer análise que você possa precisar
+- o comando `WEB GET HTTP HEADER` retornam os cabeçalhos da solicitação. É útil lidar com cookies personalizados, por exemplo (com o comando `WEB SET HTTP HEADER`).
 - the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
 
 Esses comandos estão resumidos no gráfico a seguir:
@@ -377,6 +377,6 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 
 ## Método projeto COMPILER_WEB
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
+O método COMPILER\_WEB, se existir, é chamado sistematicamente quando o servidor HTTP recebe uma solicitação dinâmica e chama ao motor 4D. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. É utilizado pelo compilador quando a aplicação é compilada. O método COMPILER\_WEB é comum a todos os formulários Web. Por defeito, o método COMPILER_WEB não existe. É necessário criá-lo explicitamente.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
