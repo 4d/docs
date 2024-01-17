@@ -25,7 +25,7 @@ A field cannot be undefined (the `Undefined` command always returns False for a 
 
 Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
+- Atribuindo um valor indefinido para variáveis (exceto arrays) tem o mesmo efeito que chamar [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) com eles:
 
 ```4d
      var $o : Object
