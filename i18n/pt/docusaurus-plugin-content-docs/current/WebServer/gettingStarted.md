@@ -23,7 +23,7 @@ Para iniciar o servidor web 4D:
 
 The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
 
-1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Inicie um navegador da Web e conecte-se ao endereço IP do servidor da Web (a porta http padrão do servidor Web 4D é 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
 
 É apresentada a página inicial predefinida:
 
