@@ -71,13 +71,21 @@ title: 数値 (実数、倍長整数、整数)
 
 モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
 
+:::
+
 ### 倍長整数を返す除算
 
 倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
 
 ### Real comparison
 
-To compare two reals for equality, 4D actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+
+:::note
+
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+
+:::
 
 ### 優先順位
 
