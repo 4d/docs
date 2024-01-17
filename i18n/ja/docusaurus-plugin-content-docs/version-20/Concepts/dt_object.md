@@ -29,7 +29,7 @@ title: オブジェクト
 :::
 
 
-You manage Object type variables, fields or expressions using the standard [object notation](#properties) or the commands available in the **Objects (Language)** theme. オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
+オブジェクト型の変数・フィールド・式を操作するには標準の [オブジェクト記法](プロパティ) を用いるか、**オブジェクト (ランゲージ)** テーマが提供するコマンドを使用します。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
@@ -124,7 +124,7 @@ $col:=$o.col[5] // 6
 
 ## プロパティ
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+オブジェクトのプロパティ値には、トークンのチェーンを通してアクセスします。 オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
 - "ドット" 記号を使用する方法: > object.propertyName
 
@@ -144,7 +144,7 @@ You access object property values through a chain of tokens. Object properties c
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。 これらのサブプロパティにアクセスするため、連続した字句を使うことができます:
 
 ```4d
  $vAge:=employee.children[2].age
@@ -152,7 +152,7 @@ Since an object property value can be an object or a collection, you can use a s
 
 オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
 
-- **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの) 例:
+- **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの)。 例:
 
 ```4d
      $age:=$myObjVar.employee.age // 変数
@@ -161,13 +161,13 @@ Since an object property value can be an object or a collection, you can use a s
      $pop:=$aObjCountries{2}.population // オブジェクト配列
      $val:=$myCollection[3].subvalue // コレクション要素
 ```
-- オブジェクトを返す **4D コマンド** 例:
+- オブジェクトを返す **4D コマンド**。 例:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** or **Functions** that return objects. 例:
+- オブジェクトを返す **プロジェクトメソッド** または **関数**。 例:
 
 ```4d
       // MyMethod1
@@ -178,7 +178,7 @@ Since an object property value can be an object or a collection, you can use a s
      $result:=MyMethod1.a // 10
 ```
 
-- **コレクション** 例:
+- **コレクション**。 例:
 
 ```4d
      myColl.length // コレクションの長さ
@@ -187,7 +187,7 @@ Since an object property value can be an object or a collection, you can use a s
 
 ### Null 値
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+オブジェクトを使用するにあたって、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティに割り当てたり、それらと比較したりすることができます。例:
 
 ```4d
  myObject.address.zip:=Null
@@ -198,7 +198,7 @@ When using the objects, the **null** value is supported though the **Null** comm
 
 ### 未定義の値
 
-オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 Assigning an undefined value to an existing object property reinitializes or clears its value. 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
+オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は初期化、あるいは消去されます。 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
 
 詳細については [Null と 未定義](dt_null_undefined.md) を参照ください。
 

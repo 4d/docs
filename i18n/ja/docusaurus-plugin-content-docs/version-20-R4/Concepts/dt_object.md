@@ -1,24 +1,24 @@
 ---
 id: object
-title: Object
+title: オブジェクト
 ---
 
 オブジェクト型の変数・フィールド・式にはさまざまなデータを格納することができます。 4D のネイティブなオブジェクトの構造は、よくある "プロパティ/値" (または "属性/値") というペア (連想配列) に基づいています。 これらオブジェクトの記法は JSON をもとにしていますが、完全に同じというわけではありません。
 
-- プロパティ名は必ずテキストで表現されます。 It must follow [specific rules](identifiers.md#object-properties).
+- プロパティ名は必ずテキストで表現されます。 プロパティ名には [命名規則](identifiers.md#オブジェクトプロパティ) があります。
 
 - プロパティ値は以下のどれかの型で表現されます:
   - 数値 (実数、整数、等)
   - text
   - null
   - boolean
-  - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
+  - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
   - 日付 (日付型あるいは ISO日付フォーマット文字列)
   - オブジェクト(1) (オブジェクトは入れ子にすることができます)
   - ピクチャー(2)
   - collection
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
+(1) **非ストリームオブジェクト** である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
 (2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -28,11 +28,11 @@ title: Object
 
 :::
 
-You manage Object type variables, fields or expressions using the standard [object notation](#properties) or the commands available in the **Objects (Language)** theme. Note that specific commands of the **Queries** theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+オブジェクト型の変数・フィールド・式を操作するには [オブジェクト記法](#プロパティ) を用いるか、**オブジェクト (ランゲージ)** テーマが提供するコマンドを使用します。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
-- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- メソッド (コードエディター) に書いても、外部化(フォーミュラ、`PROCESS 4D TAGS` あるいは Web Server によって処理される 4D tags ファイル、4D Write Proドキュメントなど) しても使用可能です。
 - デバッガー及びランタイムエクスプローラーの式エリア内。
 - フォームエディターにおいて、フォームオブジェクトのプロパティリスト内。変数あるいは式フィールド内の他、様々なセレクションリストボックス及びカラムの式 (データソース、背景色、スタイル、フォントカラー等) において使用可能です。
 
@@ -42,44 +42,44 @@ You manage Object type variables, fields or expressions using the standard [obje
 
 オブジェクトのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- using the `{}` operator.
+- [`New object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドを使用する。
+- `{}` 演算子を使用する。
 
 :::info
 
-Several 4D commands and functions return objects, for example [`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.en.html) or [`File`](../API/FileClass.md#file). この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Get database measures`](https://doc.4d.com/4dv20/help/command/ja/page1314.html) や [`File`](../API/FileClass.md#file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
-### `New object` command
+### `New object` コマンド
 
-The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
+[`New object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドは、新しい空の、またはプロパティが格納されたオブジェクトを作成し、その参照を返します。
 
 例:
 
 ```4d
- var $obVar : Object //declaration of an object type 4D variable
- $obVar:=New object //instantiation of an object and assignment to the 4D variable
- 
+ var $obVar : Object // オブジェクト型 4D変数の宣言
+ $obVar:=New object // オブジェクトのインスタンス化と 4D変数への代入
+
  var $obFilled : Object 
- $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
+ $obFilled:=New object("name"; "Smith"; "age";42) // プロパティが格納されたオブジェクトのインスタンス化と変数への代入
 ```
 
-### `{}` operator
+### `{}` 演算子
 
-The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). オブジェクトリテラルのシンタックスは、空の、またはプロパティが格納されたオブジェクトを作成します。
+`{}` 演算子を使って、**オブジェクトリテラル** を作成することができます。 オブジェクトリテラルとは、オブジェクトのプロパティ名とその値のペアが 0組以上含まれたセミコロン区切りのリストを中括弧 `{}` で囲んだものです。 オブジェクトリテラルのシンタックスは、空の、またはプロパティが格納されたオブジェクトを作成します。
 
-Since any property value is considered an expression, you can create sub-objects using `{}` in property values.  You can also create and reference **collection literals**.
+プロパティの値は式とみなされるため、プロパティ値に `{}` を使ってサブオブジェクトを作成することができます。  また、**コレクションリテラル** を作成し、参照することもできます。
 
 例:
 
 ```4d
- var $o ; $o2 ; $o3 : Object //declaration of object variables
- $o := {} // instantiation of an empty object 
- $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // instantiation of an object
- 		// with properties {"a":"foo","b":42,"c":{},"d":false})
+ var $o ; $o2 ; $o3 : Object // オブジェクト変数の宣言
+ $o := {} // 空のオブジェクトのインスタンス化
+ $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // プロパティを格納したオブジェクトのインスタンス化
+ 		// オブジェクト: {"a":"foo","b":42,"c":{},"d":false}
 
-	// same properties using variables
+	// 変数を使っても同様にオブジェクトをインスタンス化できます
  var $a : Text
  var $b : Number
  var $c : Object
@@ -90,7 +90,7 @@ Since any property value is considered an expression, you can create sub-objects
 
 ```
 
-You can mix the `New object` and literal syntaxes:
+`New object` とリテラルを使ったシンタックスは混在させることができます:
 
 ```4d
 $o:={\
@@ -101,24 +101,24 @@ $o:={\
 	col: [1; 2; 3; 4; 5; 6]\
 	}
 
-$o.form1()  //52
-$o.form2($o.ob2.message)  // displays Hello
-$col:=$o.col[5] //6
+$o.form1()  // 52
+$o.form2($o.ob2.message)  // Hello と表示します
+$col:=$o.col[5] // 6
 ```
 
 ### 通常オブジェクトと共有オブジェクト
 
 二種類のオブジェクトを作成することができます:
 
-- regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 Access to these objects is controlled by `Use...End use` structures.
+- [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.ja.html) コマンド、またはオブジェクトリテラルのシンタックス `{}` 使用して作成する通常 (非共有) オブジェクト。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.ja.html) コマンドを使用して作成する共有オブジェクト。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
   詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 ## プロパティ
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+オブジェクトのプロパティ値には、トークンのチェーンを通してアクセスします。 オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- using a "dot" symbol:
+- "ドット"記号を使用する方法:
   > object.propertyName
 
 例:
@@ -127,20 +127,20 @@ You access object property values through a chain of tokens. Object properties c
      employee.name:="Smith"
 ```
 
-- using a string within square brackets:
+- 大カッコ内の文字列を使用する方法:
   > object["propertyName"]
 
 例:
 
 ```4d
      $vName:=employee["name"]
-     //or also:
+     // または:
      $property:="name"
-	 $vName:=employee[$property]
+     $vName:=employee[$property]
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。 これらのサブプロパティにアクセスするため、連続した字句を使うことができます:
 
 ```4d
  $vAge:=employee.children[2].age
@@ -187,7 +187,7 @@ Since an object property value can be an object or a collection, you can use a s
 
 ### Null 値
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+When using the objects, the **null** value is supported though the **Null** command. このコマンドを使用すると、null 値をオブジェクトプロパティに割り当てたり、それらと比較したりすることができます。例:
 
 ```4d
  myObject.address.zip:=Null
@@ -198,7 +198,7 @@ For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
 ### 未定義の値
 
-オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 Assigning an undefined value to an existing object property reinitializes or clears its value. 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
+オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は初期化、あるいは消去されます。 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
