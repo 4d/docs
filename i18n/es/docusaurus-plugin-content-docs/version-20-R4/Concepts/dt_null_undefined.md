@@ -11,9 +11,9 @@ Null is a special data type with only one possible value: **null**. Este valor e
 
 In the 4D language and for object field attributes, null values are managed through the `Null` function. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
-- object attributes
-- collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- atributos de objetos
+- elementos de colecciones
+- variables de tipo objeto, colección, puntero, imagen o variante.
 
 ## Indefinido
 
