@@ -18,6 +18,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 - Los parámetros de método declarados en prototipos `#DECLARE` ya no son [necesarios en los métodos "Compiler_"](../Concepts/parameters.md#compilation).
 - Nueva palabra clave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error sencillos.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
+- New [Non-blocking printing](../settings/compatibility.md) compatibility option.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.
 - 4D Write Pro: [Página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/Pagina-de-novedades.901-6683440.es.html) en doc.4d.com.
 - [**Lista de errores corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos los errores corregidos en 4D v20 R4.
