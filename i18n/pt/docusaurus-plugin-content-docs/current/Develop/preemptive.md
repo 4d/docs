@@ -35,7 +35,7 @@ O código 4D pode ser executado em fio (thread) apropriativo só quando algumas 
 
 :::note
 
-Dado que um thread se maneja de forma independente a partir do método processo pai, toda a string de chamadas não deve incluir nenhum código thread inseguro, do contrário a execução apropriativa não será possível. Esse ponto é discutido \[neste parágrafo] (#when-is-a-process-started-preemptively).
+Dado que um thread se maneja de forma independente a partir do método processo pai, toda a string de chamadas não deve incluir nenhum código thread inseguro, do contrário a execução apropriativa não será possível. Esse ponto é discutido [neste parágrafo] (#when-is-a-process-started-preemptively).
 
 :::
 
@@ -48,9 +48,9 @@ Basicamente, o código que se executa em thread apropriativos não podem ser cha
 
 ## Declaração de um método preemptivo
 
-Como padrão, 4D executará todos os métodos de projeto em modo cooperativo. Se desejar se beneficiar da funcionalidade modo apropriativo, o primeiro passo consiste em declarar explicitamente todos os métodos que deseja que se iniciem em modo apropriativo sempre que for possível, ou seja, os métodos que considere capaz de executar em processo apropriativo. O compilador \[verificará se esses métodos são realmente thread-safe] (#writing-a-thread-safe-method) em tempo de compilação. Também pode desabilitar o modo apropriativo para alguns métodos, se for necessário.
+Como padrão, 4D executará todos os métodos de projeto em modo cooperativo. Se desejar se beneficiar da funcionalidade modo apropriativo, o primeiro passo consiste em declarar explicitamente todos os métodos que deseja que se iniciem em modo apropriativo sempre que for possível, ou seja, os métodos que considere capaz de executar em processo apropriativo. O compilador [verificará se esses métodos são realmente thread-safe] (#writing-a-thread-safe-method) em tempo de compilação. Também pode desabilitar o modo apropriativo para alguns métodos, se for necessário.
 
-Lembre que definir um método como apropriativo faz com que seja elegível para execução apropriativa, mas não garante que se execute realmente em modo apropriativo. Iniciar um processo no modo preemptivo resulta de uma \[avaliação realizada por 4D] (#when-is-a-process-started-preemptively) com relação às propriedades de todos os métodos na cadeia de chamadas do processo.
+Lembre que definir um método como apropriativo faz com que seja elegível para execução apropriativa, mas não garante que se execute realmente em modo apropriativo. Iniciar um processo no modo preemptivo resulta de uma [avaliação realizada por 4D] (#when-is-a-process-started-preemptively) com relação às propriedades de todos os métodos na cadeia de chamadas do processo.
 
 Para declarar seu método de elegibilidade para o modo apropriativo, é necessário utilizar a opção de declaração "Modo de execução" no quadro de diálogo Propriedades de método:
 
@@ -62,7 +62,7 @@ São fornecidas as seguintes opções:
 
   Quando essa opção estiver marcada, o compilador 4D verificará se o método é realmente capaz e retornará erros se esse não for o caso -- por exemplo, se ele chama direta ou indiretamente comandos ou métodos que não podem ser executados em modo preemptivo (toda a cadeia de chamadas é analisada, mas os erros são reportados apenas ao primeiro subnível). Pode então editar o método para que se torne thread-safe, ou selecionar outra opção.
 
-  Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Esta propriedade define a sua elegibilidade para o modo preemptivo, mas não garante que o método será efetivamente executado em modo preemptivo, uma vez que este modo de execução requer um \[contexto específico] (#when-is-a-process-started-preemptively).
+  Se a capacidade preemptiva do método for aprovada, este é marcado internamente como "thread-safe" e será executado em modo preemptivo sempre que as condições necessárias forem cumpridas. Esta propriedade define a sua elegibilidade para o modo preemptivo, mas não garante que o método será efetivamente executado em modo preemptivo, uma vez que este modo de execução requer um [contexto específico] (#when-is-a-process-started-preemptively).
 
 - **Não pode ser executado em um processo preemptivo**: selecionando esta opção, se declara que o método não deve ser executado em modo preemptivo, e, portanto, sempre se deve executar em modo cooperativo, da mesma forma que nas versões anteriores de 4D. A propriedade "preemptive" do método é definida como "incapable".
 
@@ -135,14 +135,14 @@ A execução de un método no modo preemptivo dependerá de que a propriedade "e
 | ![](../assets/en/Develop/scenar3.png) | Error      | ![](../assets/en/Develop/scenar4.png)  | A execução é impossível | CallDial é o método pai, declarado "capaz"; MyDialog é "indiferente". Entretanto, já que MyDialog está internamente thread inseguro, contamina a string de chamadas. A compilação falha devido a um conflito entre a declaração deCallDial e sua capacidade real. A solução é modificar MyDialog para ser thread seguro, de modo que a execução seja preemptiva, ou mudar a declaração de propriedade de CallDial para executá-lo como cooperativo |
 | ![](../assets/en/Develop/scenar5.png) | OK         | ![](../assets/en/Develop/scenar6.png)  | Cooperativo             | Como CallDial se declara "incapable" de uso apropiativo, a compilação é internamente thread inseguro, a execução sempre será cooperativa, independentemente do estado de MyDialog                                                                                                                                                                                                                                                                  |
 | ![](../assets/en/Develop/scenar7.png) | OK         | ![](../assets/en/Develop/scenar8.png)  | Cooperativo             | Como CallComp é o método pai com a propriedade "Indifferent", depois o processo é cooperativo mesmo se toda a string for thread seguro.                                                                                                                                                                                                                                                                                                            |
-| ![](../assets/en/Develop/scenar9.png) | OK         | ![](../assets/en/Develop/scenar10.png) | Cooperativo             | Como CallDial é o método pai (propriedade era "Indifferent"), então o processo é cooperativo e a compilação exitosa                                                                                                                                                                                                                                                                                                                                |
+| ![](../assets/en/Develop/scenar9.png) | OK         | ![](../assets/en/Develop/scenar10.png) | Cooperativo             | Como CallDial é o método pai (propriedade era "Indifferent"), então o processo é cooperativo e a compilação exitosa                                                                                                                                                                                                                                                                                                             |
 
 ### Como descobrir o modo de execução real
 
 4D permite que você identifique o modo de execução dos processos no modo compilado:
 
-- O comando \[`PROCESS PROPERTIES`] (https\://doc.4d.com/4dv20/help/command/en/page336.html) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
-- O Explorador de execução e a \[janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
+- O comando [`PROCESS PROPERTIES`] (https\://doc.4d.com/4dv20/help/command/en/page336.html) permite que você descubra se um processo é executado em modo apropriativo ou cooperativo.
+- O Explorador de execução e a [janela de administração de 4D Server] (../ServerWindow/processes.md#process-type)
   mostram ícones específicos para os processos preemptivos.
 
 ## Escrevendo um método thread seguro
@@ -159,7 +159,7 @@ Para ser thread seguro, um método deve respeitar as seguintes regras:
 (1) Para intercambiar dados entre processos preemptivos (e entre todos os processos), pode passar [coleções compartilhadas ou objetos compartidos](../Concepts/shared.md) como parâmetros a processos, ou usar o catálogo [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html).
 [Os processos worker](processes.md#worker-processes) também permitem que você troque mensagens entre quaisquer processos, inclusive processos preemptivos.
 
-(2) O comando \[`CALL FORM`] (https\://doc.4d.com/4dv20/help/command/en/page1391.html) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
+(2) O comando [`CALL FORM`] (https\://doc.4d.com/4dv20/help/command/en/page1391.html) oferece uma solução elegante para chamar objetos de interface a partir de um processo preemptivo.
 
 :::note Notas
 
@@ -184,17 +184,17 @@ O [arquivo de símbolos](../Project/compiler.md/#complete-list-of-methods), se a
 
 ### Interface de usuário
 
-Since they are "external" accesses, calls to user interface objects such as forms, as well as to the Debugger, are not allowed in preemptive threads.
+Como são acessos "externos", as chamadas para objetos da interface do usuário, como formulários, bem como para o depurador, não são permitidas em threads preemptivas.
 
-The only possible accesses to the user interface from a preemptive thread are:
+Os únicos acessos possíveis à interface do usuário de um thread preemptivo são:
 
-- [Diálogo de erro padrão](.../Debugging/basics). The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). O botão **Rastreamento** está desativado.
+- [Diálogo de erro padrão](.../Debugging/basics). A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). O botão **Rastreamento** está desativado.
 - Indicadores de progresso padrão
-- Diálogos `ALERT`, `Request` e `CONFIRM`. The dialog is displayed in the user mode process (on 4D) or the server user interface process (4D Server). Note that if 4D Server has been launched as a service on Windows with no user interaction allowed, the dialogs will not be displayed.
+- Diálogos `ALERT`, `Request` e `CONFIRM`. A caixa de diálogo é exibida no processo de modo de usuário (no 4D) ou no processo de interface de usuário do servidor (4D Server). Observe que, se o 4D Server tiver sido iniciado como um serviço no Windows sem interação com o usuário permitida, as caixas de diálogo não serão exibidas.
 
 ### Triggers
 
-When a method uses a command that can call a trigger, the 4D compiler evaluates the thread safety of the trigger in order to check the thread safety of the method:
+Quando um método usa um comando que pode chamar um gatilho, o compilador 4D avalia a segurança dos segmentos do gatilho a fim de verificar a segurança dos segmentos do método:
 
 ```4d
  SAVE RECORD([Table_1]) //trigger on Table_1, if it exists, must be thread-safe
