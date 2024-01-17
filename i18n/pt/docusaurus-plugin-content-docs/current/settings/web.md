@@ -34,7 +34,7 @@ Indicates whether or not the Web server will accept secure connections. Consulte
 
 #### Porta HTTPS
 
-Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
+Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
 
 #### Allow database Access through 4DSYNC URLs
 
@@ -99,7 +99,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
-Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
+Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Este mecanismo é descrito na secção [Gerenciamento de sessões Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
 When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
 
