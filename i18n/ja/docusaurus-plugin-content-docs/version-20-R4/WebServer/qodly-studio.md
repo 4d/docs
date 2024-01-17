@@ -205,8 +205,8 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 | extends     | Class extends                                               |          |
 | end         | End for, End For each, End if, End case, End use, End while |          |
 | forEach     | For each                                                    |          |
-| string      | Text                                                        | var type |
-| number      | Real                                                        | var type |
+| string      | Text                                                        | 変数の型     |
+| number      | Real                                                        | 変数の型     |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
