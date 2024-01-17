@@ -10,10 +10,10 @@ Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (e
 
 Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
-*   Since entities are references to database records, you can create entities by creating records using the 4D language and then reference them with ORDA functions such as [`entity.next()`](../API/EntityClass.md#next) or [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
-*   You can also create an entity using the [`dataClass.new()`](../API/DataClassClass.md#new) function.
+*   Les entités étant des références à des enregistrements de la base de données, vous pouvez créer des entités en créant des enregistrements à l'aide du langage 4D, puis en les référençant avec des fonctions ORDA telles que [`entity.next()`](../API/EntityClass.md#next) ou [`entitySelection.first()`](../API/EntitySelectionClass.md#first).
+*   Vous pouvez également créer une entité à l'aide de la fonction [`dataClass.new()`](../API/DataClassClass.md#new) .
 
-Gardez à l'esprit que l'entité est créée uniquement en mémoire. If you want to add it to the datastore, you must call the [`entity.save()`](../API/EntityClass.md#save) function.
+Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter au datastore, vous devez appeler la fonction [`entity.save()`](../API/EntityClass.md#save).
 
 Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous à [Utilisation des attributs d'entité](#using-entity-attributes).
 
@@ -85,17 +85,17 @@ Et la méthode est :
 ```
 
 Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the 4D language. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [lazy loading](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
+> Avec les entités, il n'y a pas le concept d'"enregistrement courant" comme dans le langage 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [lazy loading](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
 
 
 ## Utilisation des attributs d'entités
 
-Entity attributes store data and map corresponding fields in the corresponding table.
+Les attributs d'entité stockent les données et sont reliés aux champs correspondants dans la table correspondante.
 
-- attributes of the **storage** kind can be set or get as simple properties of the entity object,
-- attributes of the **relatedEntity** kind will return an entity,
-- attributes of the **relatedEntities** kind will return an entity selection,
-- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
+- les attributs du type **storage** peuvent être écrits ou lus en tant que simples propriétés de l'objet entité,
+- les attributs du type **relatedEntity** renvoient une entité,
+- les attributs du type **relatedEntities** renvoient une entity selection,
+- les attributs **calculés** et **alias** peuvent renvoyer n'importe quel type de données, en fonction de la manière dont ils sont configurés.
 
 :::info
 
@@ -103,7 +103,7 @@ Pour plus d'informations sur le type d'attribut, reportez-vous au paragraphe [At
 
 :::
 
-For example, to get and set a storage attribute value of type string:
+Par exemple, pour lire et écrire une valeur d'attribut de stockage de type chaîne :
 
 ```4d
  $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
@@ -137,11 +137,11 @@ Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le 
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-### Assigning files to picture or blob attributes
+### Assigner des fichiers à des attributs image ou blob
 
-You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
+Vous pouvez stocker des images dans les attributs image ; de même, vous pouvez stocker des données binaires dans les attributs blob.
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
+ORDA vous permet d'assigner à l'attribut soit les données elles-mêmes, c'est-à-dire une image ou un objet blob, soit une référence **à un fichier** contenant les données. Seul le chemin d'accès au fichier est sauvegardé dans l'entité.
 
 Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
 

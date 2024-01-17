@@ -104,7 +104,7 @@ Estas propriedades são definidas:
 
 ## Âmbito dos comandos 4D Web
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+A linguagem 4D contém [vários comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) que podem ser usados para controlar o servidor Web. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
 
 | Comando                         | Âmbito                            |
 | ------------------------------- | --------------------------------- |

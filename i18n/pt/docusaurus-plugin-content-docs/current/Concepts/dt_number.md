@@ -71,13 +71,21 @@ O operador do módulo % divide o primeiro número pelo segundo número e devolve
 
 O operador do módulo % devolve valores significativos com números que se encontram na gama do Long Integer (de menos 2^31 a 2^31 menos um). Para calcular o módulo com números fora desse intervalo, use o comando [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)].
 
+:::
+
 ### Divisão inteira
 
 O operador da divisão de longint retorna valores significativos apenas com números inteiros.
 
 ### Comparação real
 
-To compare two reals for equality, 4D actually compares the absolute value of the difference with *epsilon*. Veja o comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. Veja o comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+
+:::note
+
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+
+:::
 
 ### Precedência
 

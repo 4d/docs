@@ -102,7 +102,7 @@ El archivo de plantilla en formato JSON contiene los siguientes atributos:
 
 :::note Francés
 
-If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
+Si es probable que su aplicación se ejecute en un 4D con el idioma configurado en francés, asegúrese de utilizar [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) en sus fórmulas para que se interpreten correctamente independientemente de la configuración de idioma del usuario.
 
 :::
 
@@ -169,7 +169,7 @@ El archivo de traducción en formato JSON contiene los siguientes atributos:
 | formulas  | Collection |             | Colección de objetos fórmula traducidos                                                   |
 | fileNames | Collection |             | Colección de objetos fileName traducidos (aplicables al tema y al nombre de la plantilla) |
 
-Whitin each one of these attribute, the translation object includes the following attributes:
+En cada uno de estos atributos, el objeto de traducción incluye los atributos siguientes:
 
 | Atributo    | Tipo | Obligatorio | Descripción                           |
 |:----------- |:---- |:----------- |:------------------------------------- |

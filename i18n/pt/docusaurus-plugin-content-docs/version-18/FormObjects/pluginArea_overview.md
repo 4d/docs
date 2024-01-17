@@ -25,7 +25,7 @@ Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os
 
 ## Criação de plug-ins
 
-If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D provides a [complete kit (on github)](https://github.com/4d/4D-Plugin-SDK) to help you write custom plug-ins.
+If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D fornece um kit completo [(no github)](https://github.com/4d/4D-Plugin-SDK) para ajudá-lo a escrever plug-ins personalizados.
 
 ## Propriedades compatíveis
 
