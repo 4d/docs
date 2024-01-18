@@ -69,7 +69,7 @@ Exemplos:
  $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
 
-### `[]` operator
+### Operador `[]`
 
 The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). Quando cria uma coleção utilizando um literal de coleção, esta é instanciada com os valores especificados como seus elementos e o seu comprimento é definido para o número de argumentos especificados.
 

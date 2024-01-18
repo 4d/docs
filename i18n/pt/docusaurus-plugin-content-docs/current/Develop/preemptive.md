@@ -197,14 +197,14 @@ Os únicos acessos possíveis à interface do usuário de um thread preemptivo s
 Quando um método usa um comando que pode chamar um gatilho, o compilador 4D avalia a segurança dos segmentos do gatilho a fim de verificar a segurança dos segmentos do método:
 
 ```4d
- SAVE RECORD([Table_1]) //trigger on Table_1, if it exists, must be thread-safe
+ SALVAR RECORD([Table_1]) //trigger na Table_1, se ele existir, deve ser seguro por thread-safe
 ```
 
-Here is the list of commands that are checked at compilation time for trigger thread safety:
+Aqui está a lista de comandos que são marcados no tempo de compilação para acionar a segurança do tópico:
 
 `SAVE RECORD`, `SAVE RELATED ONE`, `DELETE RECORD`, `DELETE SELECTION`, `ARRAY TO SELECTION`, `JSON TO SELECTION`, `APPLY TO SELECTION`, `IMPORT DATA`, `IMPORT DIF`, `IMPORT ODBC`, `IMPORT SYLK`, `IMPORT TEXT`.
 
-If the table is passed dynamically, the compiler may sometimes not be able to find out which trigger it needs to evaluate. Aqui estão alguns exemplos de tais situações:
+Se a tabela for passada dinamicamente, o compilador poderá, às vezes, não ser capaz de descobrir qual acionador precisa avaliar. Aqui estão alguns exemplos de tais situações:
 
 ```4d
  DEFAULT TABLE([Table_1])
@@ -213,24 +213,24 @@ If the table is passed dynamically, the compiler may sometimes not be able to fi
  SAVE RECORD(Table(myMethodThatReturnsATableNumber())->)
 ```
 
-Nesse caso, todos os triggers são avaliados. If a thread-unsafe command is detected in at least one trigger, the whole group is rejected and the method is declared thread-unsafe.
+Nesse caso, todos os triggers são avaliados. Se um comando thread-unsafe for detectado em pelo menos um acionador, o grupo inteiro será rejeitado e o método será declarado thread-unsafe.
 
 ### Métodos de tratamento de erros
 
-[Error-catching methods](../Concepts/error-handling.md) installed by the `ON ERR CALL` command must be thread-safe if they are likely to be called from a preemptive process. In order to handle this case, the compiler checks the thread safety property of error-catching project methods passed to the `ON ERR CALL` command during compilation and returns appropriate errors if they do not comply with preemptive execution.
+Os [métodos de captura de erros](../Concepts/error-handling.md) instalados pelo comando `ON ERR CALL` devem ser thread-safe se for provável que sejam chamados a partir de um processo preemptivo. Para lidar com esse caso, o compilador verifica a propriedade de segurança de thread dos métodos de projeto de captura de erros passados para o comando `ON ERR CALL` durante a compilação e retorna os erros apropriados se eles não estiverem em conformidade com a execução preemptiva.
 
-Note that this checking is only possible when the method name is passed as a constant, and is not computed, as shown below:
+Observe que essa verificação só é possível quando o nome do método é passado como uma constante e não é computado, conforme mostrado abaixo:
 
 ```4d
- ON ERR CALL("myErrMethod1") //will be checked by the compiler
- ON ERR CALL("myErrMethod"+String($vNum)) //will not be checked by the compiler
+ ON ERR CALL("myErrMethod1") //será verificado pelo compilador
+ ON ERR CALL("myErrMethod "+String($vNum)) //não será verificado pelo compilador
 ```
 
-In addition, if an error-catching project method cannot be called at runtime (following a thread safety issue, or for any reason like "method not found"), the error -10532 "Cannot call error handling project method 'methodName'" is generated.
+Além disso, se um método de projeto de captura de erros não puder ser chamado em tempo de execução (devido a um problema de segurança de thread ou por qualquer motivo, como "método não encontrado"), será gerado o erro -10532 "Cannot call error handling project method 'methodName'".
 
 ### Compatibilidade de ponteiros
 
-A process can dereference a pointer to access the value of another process variable only if both processes are cooperative; otherwise, 4D will throw an error. In a preemptive process, if some 4D code tries to dereference a pointer to an interprocess variable, 4D will throw an error.
+Um processo pode desreferenciar um ponteiro para acessar o valor de outra variável de processo somente se ambos os processos forem cooperativos; caso contrário, 4D lançará um erro. Em um processo preemptivo, se algum código 4D tentar desreferenciar um ponteiro para uma variável de interprocesso, o 4D lançará um erro.
 
 Exemplo com os seguintes métodos:
 
@@ -247,28 +247,28 @@ Method2:
  $value:=$1->
 ```
 
-If either the process running Method1 or the process running Method2 is preemptive, then the expression `$value:=$1->` will throw an execution error.
+Se o processo que estiver executando o Method1 ou o processo que estiver executando o Method2 for preemptivo, a expressão `$value:=$1->` gerará um erro de execução.
 
 ### Referência do documento DocRef
 
-The use of DocRef type parameters (opened document reference, used or returned by `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) is limited to the following contexts:
+O uso de parâmetros do tipo DocRef (referência de documento aberto, usado ou retornado por `Open document`, `Create document`, `Append document`, `CLOSE DOCUMENT`, `RECEIVE PACKET`, `SEND PACKET`) é limitado aos seguintes contextos:
 
-- When called from a preemptive process, a `DocRef` reference is only usable from that preemptive process.
-- When called from a cooperative process, a `DocRef` reference is usable from any other cooperative process.
+- Quando chamada a partir de um processo preemptivo, uma referência `DocRef` só pode ser usada a partir desse processo preemptivo.
+- Quando chamada em um processo cooperativo, uma referência `DocRef` pode ser usada em qualquer outro processo cooperativo.
 
-## Disabling thread safety checking locally
+## Desabilitando verificação de segurança local
 
-There may be some cases where you prefer that thread safety checking of commands not be applied to certain parts of code, for example when it contains thread-unsafe commands that you know to be never called.
+Pode haver alguns casos em que você prefira que a verificação de segurança de thread dos comandos não seja aplicada a determinadas partes do código, por exemplo, quando ele contém comandos não seguros para thread que você sabe que nunca serão chamados.
 
-To do this, you must surround the code to be excluded from command thread safety checking with the special directives `%T-` and `%T+` as comments. The `//%T-` comment disables thread safety checking and `//%T+` enables it again:
+Para fazer isso, você deve envolver o código a ser excluído da verificação de segurança de thread de comando com as diretivas especiais `%T-` e `%T+` como comentários. O comentário `//%T-` desativa a verificação de segurança de thread e `//%T+` a ativa novamente:
 
 ```4d
-  // %T- to disable thread safety checking
+  // %T- para desativar a verificação de segurança de thread
  
-  // Place the code containing commands to be excluded from thread safety checking here
- $w:=Open window(10;10;100;100) //for example
+  // Coloque o código que contém os comandos a serem excluídos da verificação de segurança de thread aqui
+ $w:=Open window(10;10;100;100) //por exemplo
  
-  // %T+ to enable thread safety checking again for the rest of the method
+  // %T+ para ativar a verificação de segurança de thread novamente para o restante do método
 ```
 
-Of course, the 4D developer is responsible for the preemptive mode compatibility of the code between the deactivation and reactivation directives. Runtime errors will be generated if thread-unsafe code is executed in a preemptive thread.
+Obviamente, o desenvolvedor do 4D é responsável pela compatibilidade do modo preemptivo do código entre as diretivas de desativação e reativação. Erros de tempo de execução serão gerados se o código não seguro de thread for executado em um thread preemptivo.

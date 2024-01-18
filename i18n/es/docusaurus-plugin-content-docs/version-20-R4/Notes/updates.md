@@ -53,7 +53,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-R2/), the blog post that lists all new features and enhancements in 4D v20 R2.
 
-:::warning Security Note
+:::warning Nota de seguridad
 
 Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v20 R2 HF1 build 100440 o superior. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
@@ -83,7 +83,7 @@ Por razones internas, la versión de los clientes remotos que se conectan a 4D S
 
 :::
 
-:::warning Security Note
+:::warning Nota de seguridad
 
 Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v20.2 LTS build 100956 o superior. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
@@ -215,7 +215,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
   - The new [VP SET DATA CONTEXT](../ViewPro/method-list.md#vp-set-data-context), [VP Get data context](../ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](../ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](../ViewPro/method-list.md#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
   - [VP EXPORT DOCUMENT](../ViewPro/method-list.md#vp-get-binding-path) and [VP Export to object](../ViewPro/method-list.md#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
   - (Sólo Windows) Las áreas de 4D View Pro utilizan ahora una nueva ventana de configuración de impresión.
-- **Web areas**:
+- **Áreas web**:
   - New Windows system rendering engine: Web Areas using the [Windows system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) are now based upon **Microsoft Edge WebView2**. Esto afecta a las siguientes funcionalidades:
     - The `WA Create URL history menu` and `WA GET URL HISTORY` commands only return the current URL.
     * The [Progression variable](../FormObjects/properties_WebArea.md#progression) is no longer updated.
@@ -307,7 +307,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 ### 4D v19
 
-:::warning Security Note
+:::warning Nota de seguridad
 
 Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v19.7 LTS build 288986 o superior. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 

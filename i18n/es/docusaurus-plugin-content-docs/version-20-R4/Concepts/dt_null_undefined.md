@@ -119,10 +119,10 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | ----------------- | -------------------------------------------------- | -------- | ----------------------------------- | ----- |
 | Igual             | Undefined `=` Undefined                            | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
 |                   | Undefined `=` Null                                 | Boolean  | a.undefinedProp `=` c.nullProp      | True  |
-|                   | Undefined `=` _other values_                       | Boolean  | a.undefinedProp `=` 42              | False |
+|                   | Undefined `=` _otros valores_                      | Boolean  | a.undefinedProp `=` 42              | False |
 | Desigualdad       | Undefined `#` Undefined                            | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
 |                   | Undefined `#` Null                                 | Boolean  | a.undefinedProp `#` b.nullProp      | False |
-|                   | Undefined `#` _other values_                       | Boolean  | a.undefinedProp `#` 42              | True  |
+|                   | Undefined `#` _otros valores_                      | Boolean  | a.undefinedProp `#` 42              | True  |
 | Mayor que         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"           | False |
 | Menor que         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"           | False |
 | Mayor o igual que | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"          | False |
