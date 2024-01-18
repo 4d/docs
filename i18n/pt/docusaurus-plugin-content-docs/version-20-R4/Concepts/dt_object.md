@@ -65,7 +65,7 @@ Exemplos:
  $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
 ```
 
-### `{}` operator
+### `{}` operador
 
 The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). A sintaxe literal do objecto cria objectos vazios ou preenchidos.
 
