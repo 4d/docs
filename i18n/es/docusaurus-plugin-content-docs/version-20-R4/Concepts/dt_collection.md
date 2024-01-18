@@ -20,7 +20,7 @@ You can pass any valid 4D expression which returns a positive integer in _expres
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Atención:** los elementos de la colección se numeran a partir de 0.
 
 Puede asignar un valor a un elemento de la colección u obtener el valor de un elemento de colección:
 
@@ -47,7 +47,7 @@ Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o m
 La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
 - using the [`New collection`](../API/CollectionClass.md#new-collection) command,
-- using the `[]` operator.
+- utilizando el operador `[]`.
 
 :::info
 
@@ -55,7 +55,7 @@ Several 4D commands and functions return collections, for example [`Get Monitore
 
 :::
 
-### `New collection` command
+### Comando `New collection`
 
 The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
 
@@ -69,7 +69,7 @@ Ejemplos:
  $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
 ```
 
-### `[]` operator
+### operador `[]`
 
 The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). Cuando se crea una colección utilizando un literal de colección, se instancia con los valores especificados como sus elementos, y su longitud se establece en el número de argumentos especificados.
 
