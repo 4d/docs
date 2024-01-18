@@ -26,7 +26,8 @@ title: リリースノート
 
 #### 動作の変更
 
-- 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
+- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
+- The default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits were previously accepted by default but are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
 
 
 ## 4D v20 R3
@@ -374,18 +375,18 @@ ALERT($param1+" "+$param2)
 
 
 
-| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                    |
-| --------- | --------- | -------------- | ----------------------------------------------------- |
-| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。      |
-| CEF       | 118       | 20 R3          | Chromium 5993                                         |
-| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                |
-| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                   |
-| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                      |
-| OpenSSL   | 3.1.1     | 20             |                                                       |
-| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。 |
-| LZMA      | 5.4.1     | 20             |                                                       |
-| Zlib      | 1.2.13    | 20             |                                                       |
-| webKit    | WKWebView | 19             |                                                       |
-| PHP       | 8.2.4     | 20             |                                                       |
-| libldap   | 2.6.4     | 20 R3          |                                                       |
-| libsasl   | 2.1.28    | 20             |                                                       |
+| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                                                            |
+| --------- | --------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
+| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                              |
+| CEF       | 118       | 20 R3          | Chromium 5993                                                                                                 |
+| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                        |
+| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                                                                           |
+| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                                                              |
+| OpenSSL   | 3.2.0     | 20 R4          | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
+| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                         |
+| LZMA      | 5.4.1     | 20             |                                                                                                               |
+| Zlib      | 1.2.13    | 20             |                                                                                                               |
+| webKit    | WKWebView | 19             |                                                                                                               |
+| PHP       | 8.2.4     | 20             |                                                                                                               |
+| libldap   | 2.6.4     | 20 R3          |                                                                                                               |
+| libsasl   | 2.1.28    | 20             |                                                                                                               |
