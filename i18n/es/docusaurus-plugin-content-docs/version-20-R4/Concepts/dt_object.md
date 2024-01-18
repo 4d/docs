@@ -18,7 +18,7 @@ Las variables, campos o expresiones de tipo objeto pueden contener datos de dive
   - imagen(2)
   - collection
 
-(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be stored in **object fields**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
+(1) **Non-streamable objects** such as ORDA objects ([entities](ORDA/dsMapping.md#entity), [entity selections](ORDA/dsMapping.md#entity-selection), etc.), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... no pueden almacenarse en **campos objeto**. An error is returned if you try to do it; however, they are fully supported in **object variables** in memory.
 
 (2) Cuando se expone como texto en el depurador o se exporta a JSON, las propiedades de los objetos de tipo imagen indican "[objeto Imagen]".
 
@@ -43,7 +43,7 @@ Los objetos deben haber sido instanciados, de lo contrario intentar leer o modif
 La instanciación de objetos puede realizarse de una de las siguientes maneras:
 
 - using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
-- using the `{}` operator.
+- utilizando el operador `{}`.
 
 :::info
 
@@ -51,7 +51,7 @@ Several 4D commands and functions return objects, for example [`Get database mea
 
 :::
 
-### `New object` command
+### Comando `New object`
 
 The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
 
@@ -65,7 +65,7 @@ Ejemplos:
  $obFilled:=New object("name";"Smith";"age";42) //instantiation and assignment of a prefilled object
 ```
 
-### `{}` operator
+### operador \`{}
 
 The `{}` operator allows you to create an **object literal**. An object literal is a semi-column separated list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). La sintaxis literal de objeto crea objetos vacíos o llenos.
 
@@ -116,9 +116,9 @@ Puede crear dos tipos de objetos:
 
 ## Propiedades
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+You access object property values through a chain of tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 
-- using a "dot" symbol:
+- utilizando un símbolo de "punto":
   > object.propertyName
 
 Ejemplo:
@@ -127,7 +127,7 @@ Ejemplo:
      employee.name:="Smith"
 ```
 
-- using a string within square brackets:
+- utilizando una cadena entre corchetes:
   > object["propertyName"]
 
 Ejemplos:
@@ -159,7 +159,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
      $val:=$myCollection[3].subvalue //collection element
 ```
 
-- **4D commands** that return objects.
+- **Comandos 4D** que devuelven objetos.
   Ejemplo:
 
 ```4d
@@ -178,11 +178,11 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
      $result:=MyMethod1.a //10
 ```
 
-- **Collections**
-  Example:
+- **Colecciones**
+  Ejemplo:
 
 ```4d
-     myColl.length //size of the collection
+     myColl.length //tamaño de la colección
 ```
 
 ### Valor Null
