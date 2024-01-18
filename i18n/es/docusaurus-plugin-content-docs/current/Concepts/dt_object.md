@@ -124,7 +124,7 @@ Puede crear dos tipos de objetos:
 
 ## Propiedades
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+You access object property values through a chain of tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 
 - using a "dot" symbol: > object.propertyName
 
