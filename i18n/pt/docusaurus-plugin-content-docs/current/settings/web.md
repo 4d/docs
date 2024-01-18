@@ -3,7 +3,7 @@ id: web
 title: Página da Web
 ---
 
-Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html) chapter.
+Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). Para obter mais informações sobre os serviços Web 4D, consulte o capítulo [Publicação e uso de Serviços Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
 
 ## Configuração
 
@@ -177,7 +177,7 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parâmetros CORS
 
 Inicia ou interrompe o registro das solicitações recebidas pelo servidor da Web 4D no arquivo *logweb.txt* e define seu formato. Consulte [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
+> A ativação e a desativação do arquivo de histórico de solicitações também podem ser realizadas por programação usando o comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
 
 O menu de formato do histórico oferece as seguintes opções:
