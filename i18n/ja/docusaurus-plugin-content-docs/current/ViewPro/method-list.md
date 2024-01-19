@@ -258,7 +258,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 *styleName* 引数には、スタイルシートの名前を渡します。 同じスコープ内で名前が既に使用されている場合、新しいスタイルシートは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。
 
-*styleObj* には、スタイルシートの設定 (例: フォント、テキスト装飾、文字揃え、境界線、など) を指定します。 スタイルプロパティの完全な一覧については、[スタイルオブジェクトプロパティ](configuring.md#スタイルオブジェクトプロパティ) を参照ください。
+*styleObj* には、スタイルシートの設定 (例: フォント、テキスト装飾、文字揃え、境界線、など) を指定します。 For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 任意の *sheet* 引数を使用することで、スタイルシートをどこに定義するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
@@ -941,6 +941,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 
 
+
 | 引数         | タイプ    |    | 説明                                    |
 | ---------- | ------ | -- | ------------------------------------- |
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名               |
@@ -1124,7 +1125,8 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 | includeFormulas         | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                     |
 | includeStyles           | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                       |
 | includeUnusedNames      | Boolean     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                              |
-| saveAsView              | Boolean     | 書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。                        |
+
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
@@ -2511,6 +2513,7 @@ VP SET CELL STYLE($range;$style)
 
 *styleName* には、取得するスタイルシートの名前を渡します。
 
+
 任意の *sheet* 引数を使用することで、スタイルシートをどこから取得するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
 * `vk current sheet`
@@ -3267,7 +3270,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*viewPro* には有効な 4D View Pro オブジェクトを渡します。 このオブジェクトは手動で作成するほか、[VP Export to object](#vp-export-to-object) を使って取得することができます。 4D View Pro オブジェクトについての詳細は [4D View Pro オブジェクト](configuring.md#4d-view-pro-オブジェクト) を参照ください。
+*viewPro* には有効な 4D View Pro オブジェクトを渡します。 このオブジェクトは手動で作成するほか、[VP Export to object](#vp-export-to-object) を使って取得することができます。 For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 *viewPro* オブジェクトが無効な場合には、エラーが返されます。
 
@@ -4470,24 +4473,26 @@ Function onEvent()
    SET TIMER(60)
 
        :(FORM Event.code=On VP Range Changed)
-    // 計算の完了を感知し、 タイマーを再スタートさせます
-            If(This.isWaiting)
-                SET TIMER(60)
-            End if
+    // 計算の完了を感知し、 Restarts the timer
+         If(This.isWaiting)
+           SET TIMER(60)
+         End if
 
-       :(FORM Event.code=On Timer)
-    // この時点以降、他の 4D View コマンドを呼び出してもタイマーが再スタートしないようにします
-            This.isWaiting:=False
+  :(FORM Event.code=On Timer)
+ // To be sure to not restart the timer if you call others 4D View command after this point
+         This.isWaiting:=False
 
-    // タイマーを停止します
-            SET TIMER(0)
 
-    // PDF 書き出しを開始します
-            VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+ // Stop the timer
+   SET TIMER(0)
 
-       :(FORM Event.code=On URL Loading Error)
-            CANCEL 
-    End case
+ // Start the PDF export
+        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+
+     :(FORM Event.code=On URL Loading Error)
+
+         CANCEL 
+ End case
 ```
 
 *OffscreenArea* コールバックメソッドの内容は以下の通りです:
@@ -6541,6 +6546,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### 説明
+
 
 `VP SHOW CELL` コマンドは、 <!-- REF #_method_.VP SHOW CELL.Summary -->*rangeObj* で指定したレンジの表示位置を変更します<!-- END REF -->。
 
