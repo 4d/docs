@@ -143,7 +143,7 @@ Ao contrário de outras comparações de cadeias, a pesquisa por palavras-chave 
 
 **Notas:**
 
-- 4D usa a biblioteca ICU para comparar strings (usando `<>=#` operadores) e detetar palavras-chave. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+- 4D usa a biblioteca ICU para comparar strings (usando `<>=#` operadores) e detetar palavras-chave. Para mais informações sobre as regras aplicadas, consultar o seguinte endereço: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 
 - Na versão japonesa, em vez de ICU, 4D usa Mecab por defeito para detectar palavras-chave.
 
