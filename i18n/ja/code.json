@@ -604,5 +604,8 @@
   },
   "Licenses": {
     "message": "ライセンスリスト"
+  },
+  "Processes": {
+    "message": "プロセス"
   }
 }
