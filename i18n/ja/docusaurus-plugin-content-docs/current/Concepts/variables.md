@@ -19,7 +19,7 @@ title: 変数
 
 You usually create variables by declaring them. 4D ランゲージでは、変数の宣言方法は2つあります:
 
-- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合)
+- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
 - using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
 変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が [代入](#変数への代入) されない限り、セッション中はこの値が保持されます。 あるいは、変数を宣言するときに、データ型と値を1行で [初期化](#宣言と同時に変数を初期化する) することもできます。
@@ -38,12 +38,7 @@ When a variable is created before being declared, it is not initialized at the d
 
 :::
 
-
-### `var` キーワードによる宣言
-
-オブジェクト変数をクラスに紐づけることができるため、`var` キーワードを使った変数宣言が推奨されます。 このシンタックスはコードエディターの自動補完機能を強化します。
-
-`var` キーワードを使って変数を宣言するには、次のシンタックスを用います:
+To declare a variable of any type, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -86,7 +81,8 @@ var $myVar // バリアント型変数
 | `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト |
 
 
-#### 例題
+
+### 例題
 
 - 基本のデータ型の、ローカル変数およびプロセス変数の宣言:
 
