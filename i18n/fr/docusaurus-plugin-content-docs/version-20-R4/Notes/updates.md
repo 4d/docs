@@ -24,6 +24,7 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Changements de comportement
 
 - Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
 
 ## 4D v20 R3
 
@@ -343,7 +344,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | Hunspell     | 1.7.2            | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                           |
 | PDFWriter    | 4.3              | 20                  | FreeType dependency dans 12.2.1                                                                               |
 | SpreadJS     | 16.2.6           | 20 R4               | Moteur 4D View Pro                                                                                            |
-| OpenSSL      | 3.1.1            | 20                  |                                                                                                               |
+| OpenSSL      | 3.2.0            | 20 R4               | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
 | libZip       | 1.9.2            | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                    |
 | LZMA         | 5.4.1            | 20                  |                                                                                                               |
 | Zlib         | 1.2.13           | 20                  |                                                                                                               |
