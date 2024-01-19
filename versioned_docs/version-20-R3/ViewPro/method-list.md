@@ -263,7 +263,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *styleName* parameter lets you assign a name to the style sheet. If the name is already used within the same scope, the new style sheet replaces the existing one. Note that you can use the same name for different scopes (see below).
 
-Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-objects-properties).
+Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
 
@@ -929,6 +929,7 @@ use the following code:
 
 
 
+
 |Parameter|Type| |Description|
 |---|---|---|---|
 |vpAreaName| Text|->|4D View Pro area form object name|
@@ -1108,6 +1109,7 @@ In *paramObj*, you can pass several properties:
 |includeFormulas|Boolean|Whether to include the formula when saving, default=true.|
 |includeStyles|Boolean|Whether to include the style when saving, default=true.|
 |includeUnusedNames|Boolean|Whether to include the unused custom name when saving, default=true.|
+
 |saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
@@ -2439,6 +2441,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 In *styleName*, pass the name of the style sheet to get.
 
+
 You can define where to get the style sheet in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
 * `vk current sheet`
@@ -3177,7 +3180,7 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In *viewPro*, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](languageOverview.html#4d-view-pro-object) section.
+In *viewPro*, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 An error is returned if the *viewPro* object is invalid.
 
@@ -4348,6 +4351,7 @@ Function onEvent()
  // To be sure to not restart the timer if you call others 4D View command after this point
          This.isWaiting:=False
  
+
  // Stop the timer
    SET TIMER(0)
  
@@ -6352,6 +6356,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### Description
+
 
 The `VP SHOW CELL` command <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
 
