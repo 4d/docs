@@ -17,7 +17,7 @@ In the 4D language and for object field attributes, null values are managed thro
 
 ## Indefinido
 
-Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. A project method can return an undefined value if, within the method, the result is assigned an undefined expression (an expression calculated with at least one undefined variable). Evaluating an object property can also produce an undefined value. Reading a property of an undefined object or value returns **undefined**.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Un método proyecto puede devolver un valor indefinido si, dentro del método, se asigna al resultado una expresión indefinida (una expresión calculada con al menos una variable indefinida). La evaluación de una propiedad de objeto también puede producir un valor indefinido. Reading a property of an undefined object or value returns **undefined**.
 
 A variant variable has **undefined** as [default value](data-types.md#default-values).
 

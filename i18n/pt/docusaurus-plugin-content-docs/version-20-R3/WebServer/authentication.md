@@ -25,7 +25,7 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D só avalia solicitações HTTP [que requerem uma autenticação](#method-calls).
 
 Este modo de autenticação é o mais flexível porque permite que você:
 

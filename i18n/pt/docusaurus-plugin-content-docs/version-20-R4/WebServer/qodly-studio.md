@@ -98,7 +98,7 @@ When rendering webforms in the Web Studio, the renderer will connect to the 4D w
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+Veja [esta página](https://developer.qodly.com/docs/studio/rendering) para mais informações sobre como renderizar webforms em Qodly.
 
 :::
 
@@ -290,7 +290,7 @@ Se você executar o renderizador a partir do Qodly Studio e esses dois servidore
 
 #### Exemplo
 
-1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
+1. Você executa Qodly Studio em um esquema URL HTTPS (por exemplo, `https://127.0.0.1:7443/studio/`)
 
 2. O servidor da Web do seu banco de dados é iniciado somente em uma porta HTTP.
 

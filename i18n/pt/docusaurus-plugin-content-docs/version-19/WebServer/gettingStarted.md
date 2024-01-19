@@ -210,7 +210,7 @@ $webUser.save()
 
 ### Autenticação de usuários
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> Para ser seguro de ponta a ponta, deve toda a conexão seja estabelecida via [https](webServerConfig.md#enable-https).
 
 1. Abra o Explorador e crie um método projeto chamado "login".
 

@@ -296,7 +296,7 @@ If you run the renderer from the Qodly Studio and these two web servers are not 
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **rendering** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. En Qodly Studio, haga clic en el icono **renderización**. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 

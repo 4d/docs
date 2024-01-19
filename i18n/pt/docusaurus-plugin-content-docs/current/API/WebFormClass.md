@@ -12,7 +12,7 @@ title: WebForm
 </details>
 
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. Essa classe está detalhada na documentação de [Qodly](https://developer.qodly.com/docs/language/WebFormClass).
 
 
 
