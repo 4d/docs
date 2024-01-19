@@ -7,17 +7,17 @@ Null et Undefined sont des types de données qui gèrent les cas où la valeur d
 
 ## Null
 
-Null is a special data type with only one possible value: **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur.
+Null is a special data type with only one possible value: **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur. Trying to read a property of a **null** value returns an error.
 
 In the 4D language and for object field attributes, null values are managed through the `Null` function. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
 - object attributes
 - collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## Undefined
 
-Undefined (Indéfinie) n'est pas véritablement un type de données. Une variable dite "indéfinie" est une variable n'ayant pas encore été définie. A project method can return an undefined value if, within the method, the result is assigned an undefined expression (an expression calculated with at least one undefined variable). Evaluating an object property can also produce an undefined value. Reading a property of an undefined object or value returns **undefined**.
+Undefined (Indéfinie) n'est pas véritablement un type de données. Une variable dite "indéfinie" est une variable n'ayant pas encore été définie. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
 
 A variant variable has **undefined** as [default value](data-types.md#default-values).
 
