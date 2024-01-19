@@ -7,17 +7,17 @@ Null および未定義は、式の値が未知のケースを扱うデータ型
 
 ## Null
 
-Null は **null** の値のみをとることのできる特殊なデータタイプです。 この値は、値を持たない式によって返されます。
+Null は **null** の値のみをとることのできる特殊なデータタイプです。 この値は、値を持たない式によって返されます。 Trying to read a property of a **null** value returns an error.
 
 4D ランゲージやオブジェクトフィールド属性においては、`Null` 関数を使ってnull値を扱います。 この関数をつぎの式と組み合わせて使うことで、null値の設定や比較をおこなうことができます:
 
 - オブジェクトの属性
 - コレクションの要素
-- オブジェクト型、コレクション型、ポインター型、ピクチャー型、バリアント型の変数
+- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## 未定義
 
-未定義 (undefined) は、実際にはデータタイプではありません。 未定義は、まだ定義されていない変数を示します。 プロジェクトメソッドは、メソッド内で戻り値 ($0) に未定義式が代入されている場合、未定義値を返すことがあります。未定義式とは、未定義の変数を一つ以上使っている式のことです。 オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 Reading a property of an undefined object or value returns **undefined**.
+未定義 (undefined) は、実際にはデータタイプではありません。 未定義は、まだ定義されていない変数を示します。 Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
 
 バリアント型変数は **undefined** が [デフォルト値](data-types.md#デフォルト値) となっています。
 
