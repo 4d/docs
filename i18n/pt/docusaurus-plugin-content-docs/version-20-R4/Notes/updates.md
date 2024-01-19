@@ -24,6 +24,7 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Mudanças de comportamento
 
 - Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
 
 ## 4D v20 R3
 
@@ -335,18 +336,18 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 ## Tabela da biblioteca
 
-| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                  |
-| ---------- | ------------ | ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| ICU        | 73.2         | 20.1             | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
-| CEF        | 118          | 20 R3            | Chromium 5993                                                                                               |
-| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                         |
-| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                              |
-| SpreadJS   | 16.2.6       | 20 R4            | Motor 4D View Pro                                                                                           |
-| OpenSSL    | 3.1.1        | 20               |                                                                                                             |
-| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                        |
-| LZMA       | 5.4.1        | 20               |                                                                                                             |
-| Zlib       | 14.1.6       | 20               |                                                                                                             |
-| webKit     | WKWebView    | 19               |                                                                                                             |
-| PHP        | 8.2.4        | 20               |                                                                                                             |
-| libldap    | 2.6.4        | 20 R3            |                                                                                                             |
-| libsasl    | 2.1.28       | 20               |                                                                                                             |
+| Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                    |
+| ---------- | ------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
+| ICU        | 73.2         | 20.1             | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.   |
+| CEF        | 118          | 20 R3            | Chromium 5993                                                                                                 |
+| Hunspell   | 7.3.27       | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                           |
+| PDFWriter  | 4.3          | 20               | Dependência FreeType na 12.2.1                                                                                |
+| SpreadJS   | 16.2.6       | 20 R4            | Motor 4D View Pro                                                                                             |
+| OpenSSL    | 3.2.0        | 20 R4            | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
+| libZip     | 19.5         | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                          |
+| LZMA       | 5.4.1        | 20               |                                                                                                               |
+| Zlib       | 14.1.6       | 20               |                                                                                                               |
+| webKit     | WKWebView    | 19               |                                                                                                               |
+| PHP        | 8.2.4        | 20               |                                                                                                               |
+| libldap    | 2.6.4        | 20 R3            |                                                                                                               |
+| libsasl    | 2.1.28       | 20               |                                                                                                               |
