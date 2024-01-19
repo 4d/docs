@@ -19,7 +19,7 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 You usually create variables by declaring them. A linguagem 4D oferece duas maneiras de declarar variáveis:
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
+- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
 - using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
 When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
@@ -38,11 +38,7 @@ When a variable is created before being declared, it is not initialized at the d
 
 :::
 
-### Usando a palavra-chave \`var
-
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. A utilização desta sintaxe melhora as sugestões do editor de código e as funcionalidades de antecipação de escrita.
-
-To declare a variable of any type with the `var` keyword, use the following syntax:
+To declare a variable of any type, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -85,7 +81,7 @@ A tabela seguinte enumera todos os valores `varType` suportados:
 | `cs.<className>`            | Objeto do nome da classe usuário                         |
 | `cs.<namespace><className>` | Object of the `<namespace>` component class name         |
 
-#### Exemplos
+### Exemplos
 
 - Para declarar variáveis básicas locais e de processo:
 
