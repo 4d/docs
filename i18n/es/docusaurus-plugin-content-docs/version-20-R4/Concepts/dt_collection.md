@@ -57,7 +57,7 @@ Several 4D commands and functions return collections, for example [`Get Monitore
 
 ### Comando `New collection`
 
-The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
+El comando [`New collection`](../API/CollectionClass.md#new-collection) crea una nueva colección vacía o prellenada y devuelve su referencia.
 
 Ejemplos:
 
@@ -81,9 +81,9 @@ Ejemplos:
 
 ```4d
 var $col1; $col2; $users : Collection
-$col1:=[] //empty collection
-$col2:=[1;2;3;4;5;6] //collection of numbers
-//collection of objects
+$col1:=[] //colección vacía
+$col2:=[1;2;3;4;5;6] //colección de números
+//colección de objetos
 $users:=[{name: "Alice"; \
 	height: 183; \
 	eyecolor: "hazel"; \
@@ -97,7 +97,7 @@ $users:=[{name: "Alice"; \
 
 :::note
 
-If you create a collection literal containing a single element, make sure you do not use a name corresponding to an existing table name, otherwise the table syntax `[tableName]` will take priority.
+Si crea un literal de colección que contenga un único elemento, asegúrese de no utilizar un nombre que corresponda a un nombre de tabla existente; de lo contrario, la sintaxis de la tabla `[tableName]` tendrá prioridad.
 
 :::
 
@@ -108,11 +108,11 @@ Puede crear dos tipos de colecciones:
 - regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
 - shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
 
-For more information, refer to the [Shared objects and collections](shared.md) section.
+Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Funciones de colección
 
-4D collection references benefit from special class functions (sometimes named _member functions_). Collection functions are listed in the [Class API Reference](../API/CollectionClass.md) section.
+Las referencias a colecciones 4D se benefician de funciones de clase específicas (a veces llamados _funciones miembro_). Las funciones de colección están listadas en la sección [Referencia de la API de Clase](../API/CollectionClass.md).
 
 Por ejemplo:
 
