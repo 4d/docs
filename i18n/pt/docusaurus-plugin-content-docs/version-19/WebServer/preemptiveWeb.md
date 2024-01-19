@@ -27,7 +27,7 @@ The following table indicates whether the preemptive mode is used or is availabl
 | Legado REST             | cooperativo  | *parâmetro web* |
 
 - REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
-- Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
+- Servidor Web: lida com os modelos Web [](templates.md), [4DACTION e métodos de banco de dados](httpRequests.md)
 - Servidor de serviços Web: trata dos pedidos SOAP
 - Legacy REST: direct requests to 4D methods (`/rest/{table}/{methodName}`)
 - ***web setting*** means that the preemptive mode depends on a setting value:
