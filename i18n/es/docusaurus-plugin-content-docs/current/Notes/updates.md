@@ -27,7 +27,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 #### Cambios de comportamiento
 
 - El uso de una sintaxis heredada para declarar parámetros (por ejemplo, `C_TEXT($1)` o `var $1 : Text`) es obsoleto y genera advertencias en los pasos de escritura de código, verificación de sintaxis y compilación.
-- El nivel de seguridad SSL/TLS por defecto se ha cambiado de 1 a 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits were previously accepted by default but are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. En el nivel de seguridad 2 no se puede activar.
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. En el nivel de seguridad 2 no se puede activar.
 
 
 ## 4D v20 R3
