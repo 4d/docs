@@ -19,7 +19,7 @@ Les variables sont des objets du langage; vous pouvez créer et utiliser des var
 
 You usually create variables by declaring them. Le langage 4D propose deux manières de déclarer des variables :
 
-- à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
+- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
 - using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
 When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
@@ -38,12 +38,7 @@ When a variable is created before being declared, it is not initialized at the d
 
 :::
 
-
-### Utilisation du mot-clé `var`
-
-Il est recommandé de déclarer les variables à l'aide du mot-clé `var`, car cette syntaxe permet de lier les variables objet aux classes. L'utilisation de cette syntaxe améliore les suggestions de l'éditeur de code et les fonctionnalités type-ahead.
-
-Pour déclarer une variable de n'importe quel type avec le mot-clé `var`, utilisez la syntaxe suivante :
+To declare a variable of any type, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -86,7 +81,8 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | `cs.<namespace><className>` | Object de la classe className du composant `<namespace>` |
 
 
-#### Exemples
+
+### Exemples
 
 - Pour déclarer les variables locales et les variables process basiques :
 
