@@ -42,7 +42,7 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
-- using the [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command,
+- usando o comando [`New object`] (https\://doc.4d.com/4dv19R/help/command/en/page1471.html),
 - using the `{}` operator.
 
 :::info
@@ -53,7 +53,7 @@ Several 4D commands and functions return objects, for example [`Get database mea
 
 ### `New object` command
 
-The [`New object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) command creates a new empty or prefilled object and returns its reference.
+O comando [`New object`] (https\://doc.4d.com/4dv19R/help/command/en/page1471.html) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
 Exemplos:
 
