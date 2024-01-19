@@ -457,7 +457,7 @@ This -> Object
 | ---------- | ------ | -- | -------------- |
 | Resultados | object | <- | Objecto actual |
 
-A palavra-chave `This` devolve uma referência ao objecto actualmente processado. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+A palavra-chave `This` devolve uma referência ao objecto actualmente processado. Em 4D, ele pode ser usado em [contextos diferentes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 
 Na maioria dos casos, o valor de `This` é determinado pela forma como uma função é chamada. Não pode ser definido por atribuição durante a execução e pode ser diferente de cada vez que a função é chamada.
 
