@@ -112,7 +112,7 @@ Puede crear dos tipos de objetos:
 
 - regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Estos objetos pueden ser editados sin ningún control de acceso específico, pero no pueden ser compartidos entre procesos.
 - shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Access to these objects is controlled by `Use...End use` structures.
-  For more information, refer to the [Shared objects and collections](shared.md) section.
+  Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
 ## Propiedades
 
@@ -231,9 +231,9 @@ Ejemplo:
 
 Objects use _resources_ such a documents, entity locks, and of course, memory. Estos recursos se conservan siempre que los objetos los necesiten. Normalmente, no tiene que preocuparse por ellos, 4D libera automáticamente todos los recursos adjuntos a un objeto cuando detecta que el objeto en sí ya no está referenciado por ninguna variable u otro objeto.
 
-For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
+Por ejemplo, cuando ya no hay referencias a una entidad sobre la que se ha establecido un bloqueo con [`$entity.lock()`](../API/EntityClass.md#lock), 4D liberará la memoria pero también liberará automáticamente el bloqueo asociado, una llamada a [`$entity.unlock()`](../API/EntityClass.md#unlock) es inútil.
 
-If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. Por ejemplo:
+Si desea liberar inmediatamente todos los recursos ocupados por un objeto sin tener que esperar que 4D lo haga automáticamente (al final de la ejecución del método para variables locales, por ejemplo), solo tiene que **anular todas sus referencias**. Por ejemplo:
 
 ```4d
 
@@ -273,10 +273,10 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
 ```4d
  var $Emp : Object
  $Emp:=New object
- $Emp.city:="London" //creates the city property and sets its value to "London"
- $Emp.city:="Paris" //modifies the city property
+ $Emp.city:="London" //crea la propiedad city y establece su valor como"London"
+ $Emp.city:="Paris" //modifica la propiedad city
  $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  //creates the phone property and sets its value to an object
+  //crea la propiedad phone y establece su valor para un objeto
 ```
 
 - Obtener un valor en un subobjeto es muy sencillo utilizando la notación de objetos:
@@ -286,15 +286,15 @@ La utilización de la notación de objetos simplifica el código 4D en el manejo
  $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- You can access properties as strings using the `[]` operator
+- Puede acceder a las propiedades como cadenas utilizando el operador `[]`
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
+ $Emp["city"]:="Berlin" //modifica la propiedad city
+  //esto puede ser útil para crear propiedades a través de variables
  var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
  End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+  // crea 4 propiedades vacías "address1...address4" en el objeto $Emp
 ```
