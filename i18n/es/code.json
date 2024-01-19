@@ -604,5 +604,8 @@
   },
   "Licenses": {
     "message": "Licencias"
+  },
+  "Processes": {
+    "message": "Procesos"
   }
 }
