@@ -18,7 +18,7 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - Novo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
 - New [Non-blocking printing](../settings/compatibility.md) compatibility option.
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) em doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.en.html) on doc.4d.com.
+- 4D Write Pro: [Página Novidades] (https\://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new\.901-6683440.en.html) em doc.4d.com.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos os bugs corrigidos em 4D v20 R4.
 
 #### Mudanças de comportamento
@@ -41,7 +41,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - New syntax for [declaring variadic parameters](../Concepts/parameters.md#declaring-variadic-parameters)
 - 4D View Pro: Support for the [import](../ViewPro/method-list.md#vp-import-from-blob) and [export](../ViewPro/method-list.md#vp-export-to-blob) of 4D View Pro documents in Blob format.
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6531224.en.html) em doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new.901-6475174.en.html) on doc.4d.com.
+- 4D Write Pro: [Página Novidades] (https\://doc.4d.com/4Dv20R3/4D/20-R3/What-s-new\.901-6475174.en.html) em doc.4d.com.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R3): lista de todos os bugs corrigidos em 4D v20 R3.
 
 #### Mudanças de comportamento
@@ -65,7 +65,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - New QUIC network layer [interface setting](../settings/client-server.md#network-layer).
 - 4D View Pro: Support of the **.sjs** file format for the [import](../ViewPro/method-list.md#vp-import-document) and [export](../ViewPro/method-list.md#vp-export-document) of documents.
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6398284.en.html) em doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new.901-6390313.en.html) on doc.4d.com.
+- 4D Write Pro: [Página Novidades] (https\://doc.4d.com/4Dv20R2/4D/20-R2/What-s-new\.901-6390313.en.html) em doc.4d.com.
 - 4D Write Pro Interface: New [Table Wizard](../WritePro/writeprointerface.md).
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=20_R2): lista de todos os bugs corrigidos em 4D v20 R2.
 
@@ -126,7 +126,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - New properties for buttons, check boxes and radio buttons: [Image hugs title](../FormObjects/properties_TextAndPicture.md#image-hugs-title) and [Horizontal Alignment](../FormObjects/properties_Text.md#horizontal-alignment).
 - Support of `WinIcon` in [`file.setAppInfo()`](../API/FileClass.md#setappinfo) function.
 - New `validateTLSCertificate` option for [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) allowing you to control the automatic certificate validation.
-- 4D Language commands: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) on doc.4d.com.
+- Comandos da linguagem 4D: [página Novidades](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.en.html) em doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.en.html) on doc.4d.com.
 - Fixed bug lists: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1).
 
@@ -154,7 +154,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
   - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
   - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) em doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
+- 4D Write Pro: [Página Novidades] (https\://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new\.901-6130471.en.html) em doc.4d.com.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=19_R8): lista de todos os bugs corrigidos em 4D v19 R8.
 
 #### Mudanças de comportamento
@@ -178,12 +178,12 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - Component namespaces are now [displayed in the Explorer](../Extensions/develop-components.md#declaring-the-component-namespace).
 - Text area and Input form objects now support the [corner radius property](../FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 - Comandos da linguagem 4D: [Novidades de página](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-5944528.en.html) em doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new.901-6011873.en.html) on doc.4d.com.
+- 4D Write Pro: [Página Novidades] (https\://doc.4d.com/4Dv19R7/4D/19-R7/What-s-new\.901-6011873.en.html) em doc.4d.com.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=19_R7): lista de todos os bugs corrigidos em 4D v19 R7.
 
 #### Mudanças de comportamento
 
-- Para manter a consistência com as interfaces padrão (por exemplo, exploradores de arquivos do sistema operacional), as regras da caixa de listagem para seleção de linhas/arrastar e soltar foram modificadas. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
+- Para manter a consistência com as interfaces padrão (por exemplo, exploradores de arquivos do sistema operacional), as regras da caixa de listagem para seleção de linhas/arrastar e soltar foram modificadas. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. Para obter mais informações sobre arrastar e soltar em list boxes, consulte [esta postagem do blog] (https\:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) e faça download [deste projeto HDI 4D] (https\://github.com/4d-depot/HDI_LB_DragAndDrop).
 - A numeração de compilação interna do 4D foi modificada a partir do 4D v19 R7:
   - as versões até 4D v19 R6 (inclusive) são numeradas como 282xxx,
   - releases from 4D v19 R7 will be numbered 100xxx.\
