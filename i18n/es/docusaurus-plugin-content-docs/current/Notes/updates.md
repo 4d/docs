@@ -18,7 +18,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 - Los parámetros de método declarados en prototipos `#DECLARE` ya no son [necesarios en los métodos "Compiler_"](../Concepts/parameters.md#compilation).
 - Nueva palabra clave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error sencillos.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
-- New [Non-blocking printing](../settings/compatibility.md) compatibility option.
+- Nueva opción de compatibilidad [sin bloquear para imprimir](../settings/compatibility.md).
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.
 - 4D Write Pro: [Página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/Pagina-de-novedades.901-6683440.es.html) en doc.4d.com.
 - [**Lista de errores corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos los errores corregidos en 4D v20 R4.
@@ -26,8 +26,8 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 
 #### Cambios de comportamiento
 
-- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
-- The default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits were previously accepted by default but are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. En el nivel de seguridad 2 no se puede activar.
+- El uso de una sintaxis heredada para declarar parámetros (por ejemplo, `C_TEXT($1)` o `var $1 : Text`) es obsoleto y genera advertencias en los pasos de escritura de código, verificación de sintaxis y compilación.
+- El nivel de seguridad SSL/TLS por defecto se ha cambiado de 1 a 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits were previously accepted by default but are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. En el nivel de seguridad 2 no se puede activar.
 
 
 ## 4D v20 R3
