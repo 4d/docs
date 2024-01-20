@@ -5,7 +5,7 @@ title: Fórmulas e funções
 
 ## Usando fórmulas
 
-A spreadsheet formula is an expression that calculates the value of a cell.
+Uma fórmula de planilha é uma expressão que calcula o valor de uma célula.
 
 ### Introduzir fórmulas
 
@@ -13,7 +13,7 @@ Para introduzir uma fórmula numa área 4D View Pro:
 
 1. Selecione a célula onde você digitará a fórmula ou função.
 2. Digite = (o sinal de igual).
-3. Type the formula and hit the **Enter** key.
+3. Digite a fórmula e pressione a tecla **Enter**.
 
 Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
@@ -21,34 +21,34 @@ Ao escrever uma fórmula, pode utilizar diferentes atalhos:
 
 ![](../assets/en/ViewPro/formulas.PNG)
 
-- digite a primeira letra de uma função para entrar. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+- digite a primeira letra de uma função para entrar. Um menu pop-up que lista as funções e referências disponíveis é exibido, permitindo que você selecione os elementos desejados:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+Você também pode criar fórmulas nomeadas que podem ser chamadas por seu nome. Para fazer isso, insira essas fórmulas usando o comando [VP ADD FORMULA NAME] (method-list.md#vp-add-formula-name).
 
 ### Operadores e Operandos
 
 Todas as fórmulas têm operandos e operadores:
 
-- **Operators**: see [Values and operators](#values-and-operators) below.
-- **Operands** include several categories:
-  - [values](#values-and-operators) (5 data types are supported)
-  - [references to other cells](#cell-references) (relative, absolute, mixed or by name)
-  - [standard spreadsheet functions](#using-functions)
-  - [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
+- **Operadores**: consulte [Valores e operadores](#valores-e-operadores) abaixo.
+- **Operandos** inclui várias categorias:
+  - [valores](#values-and-operators) (há suporte para 5 tipos de dados)
+  - [referências a outras células](#cell-referências) (relativas, absolutas, mistas ou por nome)
+  - [funções de planilha padrão](#using-functions)
+  - [funções 4D](#4d-functions) com base em fórmulas 4D e fornecendo acesso a variáveis, campos, métodos, comandos ou expressões.
 
 ## Valores e operadores
 
-4D View Pro suporta cinco tipos de dados. For each data type, specific literal values and operators are supported.
+4D View Pro suporta cinco tipos de dados. Para cada tipo de dados, há suporte para valores literais e operadores específicos.
 
-| Tipos de dados                    | Valores                             | Operadores                                                                                                                                                                                                                                                                                                                                  |
-| --------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (addition)<br/>- (subtraction)<br/>\* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                          | * (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                                                         |
-| [Time](Concepts/dt_time.md)       | 10:12:10                            | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>\* (duration \* number -> duration)<br/>/ (duration / number -> duration)                                                                                                                          |
-| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                | & (concatenation)                                                                                                                                                                                                                                                                                                        |
-| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                       | -                                                                                                                                                                                                                                                                                                                                           |
+| Tipos de dados                    | Valores                             | Operadores                                                                                                                                                                                                                                                                                                                           |
+| --------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (adição)<br/>- (subtração)<br/>\* (multiplicação)<br/>/ (divisão)<br/>^ (expoente, o número de vezes para multiplicar um número por ele mesmo)<br/>% (porcentagem -- dividir o número antes do operador por cem) |
+| [Date](Concepts/dt_date.md)       | 10/24/2017                          | * (data + número de dias -> data)<br/>+ (data + hora -> data + hora do dia)<br/>- (data - número de dias -> data)<br/>- (data - data -> número de dias entre as duas)                                                                                    |
+| [Time](Concepts/dt_time.md)       | 10:12:10                            | Operadores de duração:<br/>+ (adição)<br/>- (subtração)<br/>\* (duração \* número -> duração)<br/>/ (duração / número -> duração)                                                                                                                        |
+| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                | & (concatenação)                                                                                                                                                                                                                                                                                                  |
+| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                       | -                                                                                                                                                                                                                                                                                                                                    |
 
 ### Operadores de comparação
 
@@ -81,13 +81,13 @@ Lista dos operadores, do mais importante para o menos importante:
 
 ## Referências de células
 
-As fórmulas referem-se frequentemente a outras células através de endereços de células. Pode copiar estas fórmulas para outras células. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+As fórmulas referem-se frequentemente a outras células através de endereços de células. Pode copiar estas fórmulas para outras células. Por exemplo, a fórmula a seguir, inserida na célula C8, adiciona os valores nas duas células acima dela e exibe o resultado.
 
 ```
 = C6 + C7
 ```
 
-Essa fórmula se refere às células C6 e C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+Essa fórmula se refere às células C6 e C7. Ou seja, 4D View Pro é instruído a consultar essas outras células para obter os valores a serem usados na fórmula.
 
 When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
 
