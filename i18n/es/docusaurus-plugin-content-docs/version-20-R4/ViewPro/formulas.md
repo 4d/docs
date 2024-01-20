@@ -13,7 +13,7 @@ Para introducir una fórmula en un área 4D View Pro:
 
 1. Seleccione la celda en la que introducirá la fórmula o función.
 2. Introduzca = (el signo igual).
-3. Type the formula and hit the **Enter** key.
+3. Escriba la fórmula y presione la tecla **Intro**.
 
 Al escribir una fórmula, puede utilizar diferentes atajos:
 
@@ -219,7 +219,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 :::note
 
-If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in _jstype_ will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) y su tipo se convertirá automáticamente. Dates in _jstype_ will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
 
 | Propiedad | Tipo  | Descripción      |
 | --------- | ----- | ---------------- |
