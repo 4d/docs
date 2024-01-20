@@ -327,7 +327,7 @@ will create and apply the following style object named _GreenDashDotStyle_:
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Range object of all cells                                   | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto intervalo de todas as células                        | <!-- END REF --> |
 
 #### Descrição
 
@@ -692,7 +692,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
 | ---------- | ------ | -- | ------------------------------------------- | ---------------- |
 | rangeObj   | Object | -> | Objeto intervalo                            |                  |
 | options    | Object | -> | Opções adicionais                           |                  |
-| Resultados | Object | <- | Objecto devolvido. Contains the copied data | <!-- END REF --> |
+| Resultados | Object | <- | Objecto devolvido. Contém os dados copiados | <!-- END REF --> |
 
 #### Descrição
 
@@ -975,17 +975,17 @@ The optional _paramObj_ parameter allows you to define multiple properties for t
 | sjsOptions           | object       | SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p> |
 | `\<customProperty>`  | any          | Qualquer propriedade personalizada que estará disponível por meio do parâmetro $3 no método de retorno de chamada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-**Notes about Excel format**:
+**Notas sobre o formato Excel**:
 
 - Ao exportar um documento do 4D View Pro para um arquivo no formato Microsoft Excel, algumas configurações podem ser perdidas. Por exemplo, os métodos e fórmulas 4D não são suportados pelo Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
 
-**Notes about PDF format**:
+**Notas sobre o formato PDF**:
 
 - Ao exportar um documento do 4D View Pro em PDF, as fontes usadas no documento são automaticamente incorporadas ao arquivo PDF. Somente fontes OpenType (arquivos .OTF ou .TTF) com um mapa Unicode podem ser incorporadas. Se não for encontrado nenhum arquivo de fonte válido para uma fonte, será usada uma fonte padrão.
 - Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
 
-**Notes about CSV format**:
+**Notas sobre o formato CSV**:
 
 - Ao exportar um documento do 4D View Pro para CSV, algumas configurações podem ser perdidas, pois somente o texto e os valores são salvos.
 - Todos os valores são guardados como cadeias de caracteres entre aspas duplas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
@@ -1050,7 +1050,7 @@ Você deseja exportar um documento do 4D View Pro no formato ".xlsx" e chamar um
  VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\convertedfile";$params)
 ```
 
-_**AfterExport**_ method:
+Método _**AfterExport**_:
 
 ```4d
  #DECLARE($areaName : Text ; $filePath : Text ; $params : Object ; $status : Object )
@@ -1542,7 +1542,7 @@ Este código:
 $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 ```
 
-... will return this object:
+... devolverá este objecto:
 
 ```4d
 {
@@ -1651,7 +1651,7 @@ $colCount:=VP Get column count("ViewProarea")
 | Parâmetro  | Tipo    |    | Descrição                                  |                  |
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| Resultado  | Integer | <- | Index of the current sheet                 | <!-- END REF --> |
+| Resultado  | Integer | <- | Índice da folha actual                     | <!-- END REF --> |
 
 #### Descrição
 
@@ -1866,10 +1866,10 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 <!-- REF #_method_.VP Get formulas.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                    |                  |
-| ---------- | ---------- | -- | ---------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo             |                  |
-| Resultados | Collection | <- | Collection of formula values | <!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição                         |                  |
+| ---------- | ---------- | -- | --------------------------------- | ---------------- |
+| rangeObj   | Object     | -> | Objeto intervalo                  |                  |
+| Resultados | Collection | <- | Coleção de valores de uma fórmula | <!-- END REF --> |
 
 #### Descrição
 
@@ -1964,7 +1964,7 @@ O objeto devolvido contém, por exemplo:
 | ---------- | ---------- | -- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro                     |                  |
 | scope      | Number     | -> | Escopo de destino (padrão = planilha atual) |                  |
-| Resultados | Collection | <- | Existing names in the defined scope                            | <!-- END REF --> |
+| Resultados | Collection | <- | Nomes existentes no âmbito definido                            | <!-- END REF --> |
 
 #### Descrição
 
@@ -2091,10 +2091,10 @@ zoomFactor:1
 
 <!-- REF #_method_.VP Get row attributes.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                    |                  |
-| ---------- | ---------- | -- | ---------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo             |                  |
-| Resultados | Collection | <- | Collection of row properties | <!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição                        |                  |
+| ---------- | ---------- | -- | -------------------------------- | ---------------- |
+| rangeObj   | Object     | -> | Objeto intervalo                 |                  |
+| Resultados | Collection | <- | Coleção de propriedades de linha | <!-- END REF --> |
 
 #### Descrição
 
@@ -2211,7 +2211,7 @@ $currentSelection:=VP Get selection("myVPArea")
 | Parâmetro  | Tipo    |    | Descrição                                  |                  |
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| Resultado  | Integer | <- | Number of sheets                           | <!-- END REF --> |
+| Resultado  | Integer | <- | Número de folhas                           | <!-- END REF --> |
 
 #### Descrição
 
@@ -2445,7 +2445,7 @@ VP SET CELL STYLE($range;$style)
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | styleName  | Text    | -> | Nome do estilo                                              |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Style sheet object                                          | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto da folha de estilo                                   | <!-- END REF --> |
 
 #### Descrição
 
@@ -2563,7 +2563,7 @@ Nesse caso, a planilha atual usa dois objetos estilo:
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | column     | Integer | -> | Índice da coluna na tabela                                  |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Attributes of the _column_                                  | <!-- END REF --> |
+| Resultados | Object  | <- | Atributos da _coluna_                                       | <!-- END REF --> |
 
 #### Descrição
 
@@ -2737,7 +2737,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | tableName  | Text    | -> | Nome da tabela                                                              |                  |
 | onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida)                 |                  |
-| Resultados | Object  | <- | Range that contains the table                                               | <!-- END REF --> |
+| Resultados | Object  | <- | Intervalo que contém a tabela                                               | <!-- END REF --> |
 
 #### Descrição
 
@@ -2779,11 +2779,11 @@ If _tableName_ is not found, the command returns **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parâmetro  | Tipo                                           |    | Descrição                                  |                  |
-| ---------- | ---------------------------------------------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text                                           | -> | Nome de objeto formulário área 4D View Pro |                  |
-| tableName  | Text                                           | -> | Nome da tabela                             |                  |
-| Resultados | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values        | <!-- END REF --> |
+| Parâmetro  | Tipo                                           |    | Descrição                                      |                  |
+| ---------- | ---------------------------------------------- | -- | ---------------------------------------------- | ---------------- |
+| vpAreaName | Text                                           | -> | Nome de objeto formulário área 4D View Pro     |                  |
+| tableName  | Text                                           | -> | Nome da tabela                                 |                  |
+| Resultados | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propriedade do tema da tabela atual | <!-- END REF --> |
 
 #### Descrição
 
@@ -2880,7 +2880,7 @@ The object returned will contain the `value` property, and, in case of a js date
 
 | Propriedade | Tipo                               | Descrição                                                                  |
 | ----------- | ---------------------------------- | -------------------------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date | Value in the _rangeObj_ (except- time)                  |
+| value       | Integer, Real, Boolean, Text, Date | Valor de _rangeObj_ (exceto - tempo)                    |
 | time        | Real                               | Valor hora (em segundos) se o valor for do tipo data js |
 
 Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e completado como abaixo:
@@ -3006,7 +3006,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 | ---------- | -------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text     | -> | Nome de objeto formulário área 4D View Pro |                  |
 | vpBlob     | 4D. Blob | -> | Blob contendo um documento 4D View Pro     |                  |
-| paramObj   | Object   | -> | Import options                             | <!-- END REF --> |
+| paramObj   | Object   | -> | Opções de importação                       | <!-- END REF --> |
 
 #### Descrição
 
@@ -3071,7 +3071,7 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 | ---------- | ------ | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro |                  |
 | filePath   | Text   | -> | Caminho do documento                       |                  |
-| paramObj   | Object | -> | Import options                             | <!-- END REF --> |
+| paramObj   | Object | -> | Opções de importação                       | <!-- END REF --> |
 
 #### Descrição
 
@@ -3304,7 +3304,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 | Parâmetros               | Valor | Descrição                                                                                       |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------------- |
 | `vk table insert before` | 0     | Insert column(s) before the _column_ (default if omitted) |
-| `vk table insert after`  | 1     | Insert column(s) after the _column_                                          |
+| `vk table insert after`  | 1     | Inserir coluna(s) após a _coluna_                                            |
 
 This command inserts some columns in the _tableName_ table, NOT in the sheet. O número total de colunas da folha não é impactado pelo  comando. Dados presentes à direita da tabela (se houver) são movidos para a direita automaticamente de acordo com o número de colunas adicionadas.
 
@@ -3352,7 +3352,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 | Parâmetros               | Valor | Descrição                                                                                 |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------- |
 | `vk table insert before` | 0     | Insert row(s) before the _row_ (default if omitted) |
-| `vk table insert after`  | 1     | Insert row(s) after the _row_                                          |
+| `vk table insert after`  | 1     | Inserir linha(s) após a _row_                                          |
 
 This command inserts some rows in the _tableName_ table, NOT in the sheet. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos para baixo automaticamente de acordo com o número de linhas adicionadas.
 
@@ -3540,10 +3540,10 @@ VP NEW DOCUMENT("myVPArea")
 
 <!-- REF #_method_.VP Object to font.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição      |                  |
-| ---------- | ------ | -- | -------------- | ---------------- |
-| fontObj    | Object | -> | Objecto letra  |                  |
-| Resultados | Text   | <- | Font shorthand | <!-- END REF --> |
+| Parâmetro  | Tipo   |    | Descrição       |                  |
+| ---------- | ------ | -- | --------------- | ---------------- |
+| fontObj    | Object | -> | Objecto letra   |                  |
+| Resultados | Text   | <- | Fonte abreviada | <!-- END REF --> |
 
 #### Descrição
 
@@ -3603,7 +3603,7 @@ $cellStyle.font:=VP Object to font($font)
 | ---------- | ------- | -- | ---------------------------------- | ---------------- |
 | rangeObj   | Object  | -> | Objeto intervalo de células        |                  |
 | dataObject | Object  | -> | Objeto que contém os dados a colar |                  |
-| options    | Longint | -> | Specifies what is pasted           | <!-- END REF --> |
+| options    | Longint | -> | Especifica o que é colado          | <!-- END REF --> |
 
 #### Descrição
 
@@ -3769,7 +3769,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 | Parâmetro  | Tipo    |    | Descrição                                  |                  |
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| index      | Integer | -> | Index of the sheet to remove               | <!-- END REF --> |
+| index      | Integer | -> | Índice da folha a remover                  | <!-- END REF --> |
 
 #### Veja também
 
@@ -3948,13 +3948,13 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Params -->
 
-| Parâmetro  | Tipo    |    | Descrição                                                   |                  |
-| ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
-| tableName  | Text    | -> | Nome da tabela                                              |                  |
-| column     | Integer | -> | Índice na tabela da coluna inicial a remover                |                  |
-| count      | Text    | -> | Number of columns to remove (must be >0) |                  |
-| sheet      | Integer | -> | Índice da folha (folha atual se omitida) | <!-- END REF --> |
+| Parâmetro  | Tipo    |    | Descrição                                                      |                  |
+| ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                     |                  |
+| tableName  | Text    | -> | Nome da tabela                                                 |                  |
+| column     | Integer | -> | Índice na tabela da coluna inicial a remover                   |                  |
+| count      | Text    | -> | Número de colunas a remover (tem de ser >0) |                  |
+| sheet      | Integer | -> | Índice da folha (folha atual se omitida)    | <!-- END REF --> |
 
 #### Descrição
 
@@ -4410,9 +4410,9 @@ VP SET ACTIVE CELL($activeCell)
 
 | Parâmetro | Tipo   |    | Descrição                                |                  |
 | --------- | ------ | -- | ---------------------------------------- | ---------------- |
-| methodObj | Object | -> | Allowed methods in the 4D View Pro areas | <!-- END REF --> |
+| methodObj | Object | -> | Métodos permitidos nas áreas 4D View Pro | <!-- END REF --> |
 
-> **Compatibility**
+> **Compatibidade**
 
 > For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
@@ -4838,7 +4838,7 @@ In the _formulaObj_ parameter, pass an object containing the 4D formulas that ca
 | Propriedade        |            |                                                              | Tipo                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------ | ---------- | ------------------------------------------------------------ | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<customFunction>` |            |                                                              | Object                 | Definição da função personalizada. `<customFunction>` defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)                                                                                                                                                                                                                                                                                                                                                                                   |
-|                    | formula    |                                                              | Object                 | Objeto fórmula 4D (obrigatório). See the `Formula` command.                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|                    | formula    |                                                              | Object                 | Objeto fórmula 4D (obrigatório). Ver o comando `Formula`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 |                    | parameters |                                                              | Uma coleção de objetos | Coleção de parâmetros (pela ordem em que são definidos na fórmula)                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 |                    |            | [ ].name | Text                   | Nome do parâmetro a mostrar no 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |                    |            | [ ].type | Number                 | Tipo do parâmetro. Supported types:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If _type_ is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section).If _type_ is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value). |
@@ -4846,7 +4846,7 @@ In the _formulaObj_ parameter, pass an object containing the 4D formulas that ca
 |                    | minParams  |                                                              | Number                 | Número mínimo de parâmetros                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |                    | maxParams  |                                                              | Number                 | Número máximo de parâmetros. Passing a number higher than the length of _parameters_ allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-> **WARNING**
+> **AVISO**
 
 > - As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](#vp-set-allowed-methods) command (if any) are ignored in the 4D View Pro area.
 > - As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
@@ -5041,7 +5041,7 @@ Eis o resultado após as colunas serem geradas:
 | rangeObj      | Object | -> | Objeto intervalo     |                  |
 | dateValue     | Date   | -> | Valor date a definir |                  |
 | timeValue     | Hora   | -> | Valor hora a definir |                  |
-| formatPattern | Text   | -> | Format of value      | <!-- END REF --> |
+| formatPattern | Text   | -> | Formato do valor     | <!-- END REF --> |
 
 #### Descrição
 
@@ -5081,7 +5081,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto intervalo     |                  |
 | dateValue     | Date   | -> | Valor date a definir |                  |
-| formatPattern | Text   | -> | Format of value      | <!-- END REF --> |
+| formatPattern | Text   | -> | Formato do valor     | <!-- END REF --> |
 
 #### Descrição
 
@@ -5172,7 +5172,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 | ------------- | -------- | -- | ---------------------------------------- | ---------------- |
 | rangeObj      | Object   | -> | Objeto intervalo                         |                  |
 | campo         | Ponteiro | -> | Referência ao campo na estrutura virtual |                  |
-| formatPattern | Text     | -> | Format of field                          | <!-- END REF --> |
+| formatPattern | Text     | -> | Formato do campo                         | <!-- END REF --> |
 
 #### Descrição
 
@@ -5206,7 +5206,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto intervalo     |                  |
 | formula       | Text   | -> | Fórmula ou método 4D |                  |
-| formatPattern | Text   | -> | Format of field      | <!-- END REF --> |
+| formatPattern | Text   | -> | Formato do campo     | <!-- END REF --> |
 
 #### Descrição
 
@@ -5382,7 +5382,7 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 | ------------- | ------ | -- | ------------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto intervalo          |                  |
 | numberValue   | Number | -> | Valor do número a definir |                  |
-| formatPattern | Text   | -> | Format of value           | <!-- END REF --> |
+| formatPattern | Text   | -> | Formato do valor          | <!-- END REF --> |
 
 #### Descrição
 
@@ -5611,7 +5611,7 @@ VP SET SELECTION($currentSelection)
 | Parâmetro  | Tipo    |    | Descrição                                  |                  |
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| number     | Integer | -> | Number of sheets                           | <!-- END REF --> |
+| number     | Integer | -> | Número de folhas                           | <!-- END REF --> |
 
 #### Descrição
 
@@ -5825,7 +5825,7 @@ The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
+In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` é passado por padrão.
 
 In _sheet_, pass the index of the target sheet. Se nenhum índice for especificado, o comando se aplica à folha atual.
 
@@ -6047,7 +6047,7 @@ VP SET TABLE THEME("ViewProArea"; "myTable"; $param)
 | ------------- | ------ | -- | --------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto intervalo      |                  |
 | textValue     | Text   | -> | Valor texto a definir |                  |
-| formatPattern | Text   | -> | Format of value       | <!-- END REF --> |
+| formatPattern | Text   | -> | Formato do valor      | <!-- END REF --> |
 
 #### Descrição
 
@@ -6081,7 +6081,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 | ------------- | ------ | -- | -------------------- | ---------------- |
 | rangeObj      | Object | -> | Objeto intervalo     |                  |
 | timeValue     | Text   | -> | Valor hora a definir |                  |
-| formatPattern | Text   | -> | Format of value      | <!-- END REF --> |
+| formatPattern | Text   | -> | Formato do valor     | <!-- END REF --> |
 
 #### Descrição
 
@@ -6293,9 +6293,9 @@ A tabela seguinte lista as opções de libro disponíveis:
 | scrollByPixel                         | boolean                 | Ativar a deslocação de precisão por pixel.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | scrollIgnoreHidden                    | boolean                 | A barra de rolagem ignora as linhas ou colunas ocultas.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | scrollPixel                           | integer                 | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| showDragDropTip                       | boolean                 | Display the drag-drop tip.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| showDragDropTip                       | boolean                 | Exibir a dica de arrastar e soltar.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| showDragFillTip                       | boolean                 | Exibir a dica de preenchimento de arrasto.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | showHorizontalScrollbar               | boolean                 | Mostrar a barra de deslocação horizontal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | showResizeTip                         | number                  | Position of the tab strip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> Horizontal and vertical resize tips are displayed.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Only the horizontal resize tip is displayed.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> No resize tip is displayed.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Only the vertical resize tip is displayed.</td></tr></table>                                                                                                                                                                                                                                                                                                                                                                                          |
 | showScrollTip                         | number                  | Position of the tab strip. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> Horizontal and vertical scroll tips are displayed.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Only the horizontal scroll tip is displayed.</td></tr><tr><td> vk show scroll tip none </td><td> No scroll tip is displayed.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Only the vertical scroll tip is displayed.</td></tr></table>                                                                                                                                                                                                                                                                                                                                                                                           |
