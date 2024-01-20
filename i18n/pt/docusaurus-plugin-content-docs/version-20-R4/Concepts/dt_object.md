@@ -182,7 +182,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
   Example:
 
 ```4d
-     myColl.length //size of the collection
+     myColl.length //tamanho da coleção
 ```
 
 ### Valor Null
