@@ -11,8 +11,8 @@ Null is a special data type with only one possible value: **null**. Este valor �
 
 In the 4D language and for object field attributes, null values are managed through the `Null` function. Esta função pode ser usada com as expressões abaixo para definir ou comparar o valor nulo:
 
-- object attributes
-- collection elements
+- atributos de objetos
+- elementos da coleção
 - variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## Indefinido
@@ -119,10 +119,10 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | -------------------- | -------------------------------------------------- | ---------- | ----------------------------------- | ----- |
 | Igual                | Undefined `=` Undefined                            | Parâmetros | a.undefinedProp `=` b.undefinedProp | True  |
 |                      | Undefined `=` Null                                 | Parâmetros | a.undefinedProp `=` c.nullProp      | True  |
-|                      | Undefined `=` _other values_                       | Parâmetros | a.undefinedProp `=` 42              | False |
+|                      | Undefined `=` _outros valores_                     | Parâmetros | a.undefinedProp `=` 42              | False |
 | Desigualdade         | Undefined `#` Undefined                            | Parâmetros | a.undefinedProp `#` b.undefinedProp | False |
 |                      | Undefined `#` Null                                 | Parâmetros | a.undefinedProp `#` b.nullProp      | False |
-|                      | Undefined `#` _other values_                       | Parâmetros | a.undefinedProp `#` 42              | True  |
+|                      | Undefined `#` _outros valores_                     | Parâmetros | a.undefinedProp `#` 42              | True  |
 | Maior que            | Undefined `>` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `>` "abc"           | False |
 | Menor que            | Undefined `<` string, Date, Time, Boolean, number  | Parâmetros | a.undefinedProp `<` "abc"           | False |
 | Maior ou igual a     | Undefined `>=` string, Date, Time, Boolean, number | Parâmetros | a.undefinedProp `>=` "abc"          | False |
