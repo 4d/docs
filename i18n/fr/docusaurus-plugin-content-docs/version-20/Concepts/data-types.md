@@ -53,9 +53,9 @@ La valeur par défaut dépend du type de variable :
 | Variant    | undefined            |
 
 
-### Null as default value
+### Null comme valeur par défaut
 
-Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.
+Les variables de type Objet, Collection, Pointeur et Image ont **null** comme valeur par défaut, mais ont en fait un statut intermédiaire lorsqu'elles sont déclarées et non assignées. Elles *se comportent comme* les valeurs **null**, mais avec quelques différences, générant moins d'erreurs lorsque le code tente d'y accéder.
 
 
 
