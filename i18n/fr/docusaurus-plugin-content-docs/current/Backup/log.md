@@ -45,13 +45,13 @@ Vous pouvez à tout moment savoir si votre application utilise un fichier d’hi
 
 Pour créer un fichier d’historique :
 
-1. On the **Backup/Configuration** page of the Structure Settings, check the **Use Log** option. The program displays a standard open/new file dialog box. By default, the log file is named *data.journal*.
+1. Dans la page **Backup/Configuration** des Paramètres de structure, cochez l'option **Use Log** . Le programme affiche une boîte de dialogue standard d'ouverture/création de fichier. Par défaut, le fichier journal est nommé *data.journal*.
 
-2. Keep the default name or rename it, and then select the file location. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the application project. If the application hard drive is lost, you can still recall your log file.
+2. Conservez le nom par défaut ou renommez-le, puis sélectionnez l'emplacement du fichier. Si vous disposez d'au moins deux disques durs, il est recommandé de placer le fichier journal sur un disque autre que celui contenant le projet d'application. En cas de perte du disque dur de l'application, vous pouvez toujours rappeler votre fichier journal.
 
-3. Click **Save**. The disk and the name of the open log file are now displayed in the **Use Log** area of the dialog box. You can click on this area in order to display a pop-up menu containing the log path on the disk.
+3. Cliquez sur **Enregistrer**. Le disque et le nom du fichier journal ouvert sont maintenant affichés dans la zone **Use Log** de la boîte de dialogue. Vous pouvez cliquer sur cette zone pour afficher un menu contextuel contenant le chemin d'accès au journal sur le disque.
 
-4. Validate the Settings dialog box.
+4. Validez la boîte de dialogue des Propriétés.
 
 Pour que vous puissiez directement créer un fichier d’historique, les données doivent se trouver dans une des situations suivantes :
 
@@ -64,13 +64,13 @@ Sans autre manipulation de votre part, toutes les opérations effectuées sur le
 
 Vous devrez créer un autre fichier d’historique si vous créez un nouveau fichier de données. Vous devrez désigner ou créer un autre fichier d’historique si vous ouvrez un autre fichier de données non associé à un fichier d’historique (ou si le fichier d’historique est manquant).
 
-## Log file settings
+## Paramètres du fichier journal
 
-The [log file settings](settings.md#log-file-management) are based on two pieces of information: a boolean value and a path.
+Les [paramètres du fichier journal](settings.md#log-file-management) sont basés sur deux informations : une valeur booléenne et un chemin d'accès.
 
-1. **Boolean Value**: indicating whether the "Use Log File" feature is enabled or disabled within the application. By default, the boolean value is stored in *catalog.4DCatalog*. However, when the [user settings](../Desktop/user-settings.md) are activated, the *catalog.4DCatalog* file configuration is overriden, and the boolean value can then be set either in the *Backup.4DSettings* file [next to the data file](../Project/architecture.md#settings-user-data) or the *Backup.4DSettings* file [in the project folder](../Project/architecture.md#settings-user) (see also the `JournalFileEnabled` xml backup key documentation on [doc.4d.com](https://doc.4d.com)).
+1. **Valeur booléenne** : indique si la fonction "Use Log File" est activée ou désactivée dans l'application. Par défaut, la valeur booléenne est stockée dans *catalog.4DCatalog*. Toutefois, lorsque les [paramètres utilisateur](../Desktop/user-settings.md) sont activés, la configuration du fichier *catalog.4DCatalog* est remplacée, et la valeur booléenne peut alors être définie soit dans le fichier *Backup.4DSettings* [à côté du fichier de données](../Project/architecture.md#settings-user-data) ou dans le fichier *Backup.4DSettings* [dans le dossier du projet](../Project/architecture.md#settings-user) (voir également la documentation de la clé backup xml `JournalFileEnabled` sur [doc.4d.com](https://doc.4d.com)).
 
-2. **Path**: a string pointing to where the log file is located. The log file path is always stored in the linked data file.
+2. **Chemin**: une chaîne pointant vers l'emplacement du fichier journal. Le chemin d'accès du fichier journal est toujours enregistré dans le fichier de données lié.
 
 
 ## Fermer l’historique
