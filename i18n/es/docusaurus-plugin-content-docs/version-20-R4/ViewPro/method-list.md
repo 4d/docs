@@ -46,7 +46,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area. Si pasa un nombre que no
 
 Pass the 4D View Pro formula that you want to name in _vpFormula_. For detailed information about formula syntax, see [Formulas and Functions](formulas.md) page.
 
-Pass the new name for the formula in _name_. Si el nombre ya se utiliza en el mismo alcance, la nueva fórmula nombrada sustituye la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
+Pase el nuevo nombre para la fórmula en _name_. Si el nombre ya se utiliza en el mismo alcance, la nueva fórmula nombrada sustituye la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
 You can pass an object with additional properties for the named formula in _options_. Se soportan las siguientes propiedades:
 
@@ -171,7 +171,7 @@ The `VP ADD SHEET` command <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a 
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _sheet_, you can pass an index for the new sheet. If the passed _index_ is inferior to or equal to 0, the command inserts the new sheet at the beginning. If _index_ exceeds the number of sheets, the command inserts the new sheet after the existing ones.
+En _sheet_, puede pasar un índice para la nueva hoja. If the passed _index_ is inferior to or equal to 0, the command inserts the new sheet at the beginning. If _index_ exceeds the number of sheets, the command inserts the new sheet after the existing ones.
 
 > La indexación comienza en 0.
 
@@ -211,7 +211,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 The `VP ADD SPAN` command combines the cells in _rangeObj_ as a single span of cells.
 
-In _rangeObj_, pass a range object of cells. Las celdas del rango se unen para crear una celda más grande que se extiende por varias columnas y/o líneas. Puede pasar varios rangos de celdas para crear varios espacios al mismo tiempo. Tenga en cuenta que si los rangos de celdas se superponen, sólo se utiliza el primer rango de celdas.
+En _rangeObj_, pase un rango de celdas. Las celdas del rango se unen para crear una celda más grande que se extiende por varias columnas y/o líneas. Puede pasar varios rangos de celdas para crear varios espacios al mismo tiempo. Tenga en cuenta que si los rangos de celdas se superponen, sólo se utiliza el primer rango de celdas.
 
 > - Sólo se muestran los datos de la celda superior izquierda. Los datos de las otras celdas combinadas se ocultan hasta que se elimina la fusión.
 > - Los datos ocultos en las celdas fusionadas son accesibles mediante fórmulas (empezando por la celda superior izquierda).
@@ -437,9 +437,9 @@ The _column_ parameter defines the first column of the cell range. Pase el índi
 
 In the _row_ parameter, you can define the row(s) of the cell range's position. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. If the range is within multiple rows, you should also use the _rowCount_ parameter.
 
-The _columnCount_ parameter allows you to define the total number of columns the range is within. _columnCount_ must be greater than 0.
+The _columnCount_ parameter allows you to define the total number of columns the range is within. _columnCount_ debe ser mayor que 0.
 
-The _rowCount_ parameter allows you to define the total number of rows the range is within. _rowCount_ must be greater than 0.
+The _rowCount_ parameter allows you to define the total number of rows the range is within. _rowCount_ debe ser mayor que 0.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
@@ -483,7 +483,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area. Si pasa un nombre que no
 
 The _column_ parameter defines the first column of the column range. Pase el índice de la columna (el conteo comienza en 0) en este parámetro. If the range contains multiple columns, you should also use the optional _columnCount_ parameter.
 
-The optional _columnCount_ parameter allows you to define the total number of columns of the range. _columnCount_ must be greater than 0. Si se omite, el valor se establecerá en 1 por defecto y se creará un rango de tipo de columna.
+The optional _columnCount_ parameter allows you to define the total number of columns of the range. _columnCount_ debe ser mayor que 0. Si se omite, el valor se establecerá en 1 por defecto y se creará un rango de tipo de columna.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted or if you pass `vk current sheet`, the current spreadsheet is used by default.
 
@@ -533,7 +533,7 @@ La selección de las columnas y la ejecución de este código:
  VP COLUMN AUTOFIT(VP Get selection("ViewProarea"))
 ```
 
-... resizes the columns to fit the size of the contents:
+... redimensiona las columnas para ajustarse al tamaño de los contenidos:
 
 ![](../assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
@@ -549,17 +549,17 @@ La selección de las columnas y la ejecución de este código:
 
 <!-- REF #_method_.VP Combine ranges.Params -->
 
-| Parámetros    | Tipo   |    | Descripción                        |                  |
-| ------------- | ------ | -- | ---------------------------------- | ---------------- |
-| rangeObj      | Object | -> | Objeto rango                       |                  |
-| otherRangeObj | Object | -> | Objeto rango                       |                  |
-| Result        | Object | <- | Object containing a combined range | <!-- END REF --> |
+| Parámetros    | Tipo   |    | Descripción                            |                  |
+| ------------- | ------ | -- | -------------------------------------- | ---------------- |
+| rangeObj      | Object | -> | Objeto rango                           |                  |
+| otherRangeObj | Object | -> | Objeto rango                           |                  |
+| Result        | Object | <- | Objeto que contiene un rango combinado | <!-- END REF --> |
 
 #### Descripción
 
 The `VP Combine Ranges` command <!-- REF #_method_.VP Combine ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Todos los rangos deben ser de la misma área 4D View Pro.
 
-In _rangeObj_, pass the first range object.
+En _rangeObj_, pase el primer rango.
 
 In _otherRangeObj_, pass another range object(s) to combine with _rangeObj_.
 
@@ -741,7 +741,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 | Versión | Modificaciones                                                                                              |
 | ------- | ----------------------------------------------------------------------------------------------------------- |
 | v19 R8  | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Support of `allowAutoExpand` option                                                                         |
+| v19 R7  | Soporte de la opción `allowAutoExpand`                                                                      |
 | v19 R6  | Añadidos                                                                                                    |
 
 </details>
@@ -785,7 +785,7 @@ Within the _options_ object, the _tableColumns_ collection determines the struct
 - When the column count in _rangeObj_ exceeds the number of columns in _tableColumns_, the table is filled with additional empty columns.
 - When the column count in _rangeObj_ is inferior to the number of _tableColumns_, the table displays a number of columns that match the range's column count.
 
-If you pass a _source_ but no _tableColumn_ option, the command generates columns automatically. In this case, _rangeObj_ must be a cell range. De lo contrario, se utilizará la primera celda del rango. Cuando se generan columnas automáticamente, se aplican las siguientes reglas:
+If you pass a _source_ but no _tableColumn_ option, the command generates columns automatically. En este caso, _rangeObj_ debe ser un rango de celdas. De lo contrario, se utilizará la primera celda del rango. Cuando se generan columnas automáticamente, se aplican las siguientes reglas:
 
 - Si los datos pasados al comando son una colección de objetos, los nombres de las propiedades se utilizan como títulos de las columnas. Por ejemplo:
 
@@ -975,11 +975,11 @@ The optional _paramObj_ parameter allows you to define multiple properties for t
 | includeBindingSource | boolean     | Sólo 4DVP y Microsoft Excel. True (por defecto) para exportar los valores del contexto de datos actual como valores de celda en el documento exportado (los contextos de datos en sí no se exportan). False en caso contrario. El enlace de la celda siempre se exporta. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | sheet                | number      | PDF únicamente (opcional) - Índice de la hoja a exportar (empezando por 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | pdfOptions           | object      | PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>author</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| csvOptions           | object      | CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| csvOptions           | object      | CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Por defecto: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | sjsOptions           | object      | SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p> |
 | `\<customProperty>`  | any         | Toda propiedad personalizada que estará disponible a través del parámetro $3 en el método de retrollamada.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-**Notes about Excel format**:
+**Notas sobre el formato Excel**:
 
 - Al exportar un documento 4D View Pro a un archivo con formato Microsoft Excel, pueden perderse algunos parámetros. Por ejemplo, los métodos y fórmulas 4D no son soportados por Excel. You can verify other settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
@@ -995,7 +995,7 @@ The optional _paramObj_ parameter allows you to define multiple properties for t
 - Todos los valores se guardan como cadenas entre comillas. For more information on delimiter-separated values, see [this article on Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values).
 - Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
 
-**Notes about SpreadJS file format**:
+**Notas sobre el formato de archivo SpreadJS**:
 
 - [SpreadJS files](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) are zipped files.
 - Exporting in this format is run asynchronously, use the `formula` property of the _paramObj_ for code to be executed after the export.
@@ -1106,7 +1106,7 @@ Aquí está el resultado:
 
 The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the _vpAreaName_ 4D View Pro document in a 4D.Blob according to the _paramObj_ options.<!-- END REF --> The exported blob is available through the export callback. Exportar e importar áreas de 4D View Pro como blogs es rápido y eficiente en memoria.
 
-In _paramObj_, you can pass several properties:
+En _paramObj_, puede pasar varias propiedades:
 
 | Propiedad               | Tipo        | Descripción                                                                                                                               |
 | ----------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1242,14 +1242,14 @@ The _searchValue_ parameter lets you pass the text to search for within the _ran
 
 You can pass the optional _searchCondition_ parameter to specify how the search is performed. Se soportan las siguientes propiedades:
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| afterColumn | Integer | El número de la columna justo antes de la columna inicial de la búsqueda. If the _rangeObj_ is a combined range, the column number given must be from the first range. Default value: -1 (beginning of the _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| afterRow    | Integer | El número de la línea justo antes de la línea inicial de la búsqueda. If the _rangeObj_ is a combined range, the row number given must be from the first range. Default value: -1 (beginning of the _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| all         | Boolean | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" is the same as "A".</td></tr><tr><td>`vk find flag none`</td><td>no search flags are considered (default)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>These flags can be combined. For example: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code> |
-| order       | Integer | <table><tr><td>`vk find order by columns`</td><td>The search is performed by columns. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>The search is performed by rows. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| target      | Integer | <table><tr><td>`vk find target formula`</td><td>The search is performed in the cell formula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. For example:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| afterColumn | Integer | El número de la columna justo antes de la columna inicial de la búsqueda. If the _rangeObj_ is a combined range, the column number given must be from the first range. Valor por defecto: -1 (inicio de _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| afterRow    | Integer | El número de la línea justo antes de la línea inicial de la búsqueda. If the _rangeObj_ is a combined range, the row number given must be from the first range. Valor por defecto: -1 (inicio de _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| all         | Boolean | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| flags       | Integer | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" is the same as "A".</td></tr><tr><td>`vk find flag none`</td><td>no search flags are considered (default)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) puede utilizarse en la cadena de búsqueda. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>These flags can be combined. For example: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code> |
+| order       | Integer | <table><tr><td>`vk find order by columns`</td><td>The search is performed by columns. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>The search is performed by rows. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| target      | Integer | <table><tr><td>`vk find target formula`</td><td>The search is performed in the cell formula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. For example:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 In the optional _replaceValue_ parameter, you can pass text to take the place of any instance of the text in _searchValue_ found in the _rangeObj_.
 
@@ -1581,10 +1581,10 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
-| Parámetros | Tipo       |    | Descripción                     |                  |
-| ---------- | ---------- | -- | ------------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto rango                    |                  |
-| Result     | Collection | <- | Collection of column properties | <!-- END REF --> |
+| Parámetros | Tipo       |    | Descripción                          |                  |
+| ---------- | ---------- | -- | ------------------------------------ | ---------------- |
+| rangeObj   | Object     | -> | Objeto rango                         |                  |
+| Result     | Collection | <- | Colección de propiedades de columnas | <!-- END REF --> |
 
 #### Descripción
 
@@ -1973,7 +1973,7 @@ El objeto devuelto contiene, por ejemplo:
 | ---------- | ---------- | -- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
 | scope      | Number     | -> | Alcance objetivo (por defecto= hoja actual) |                  |
-| Result     | Collection | <- | Existing names in the defined scope                            | <!-- END REF --> |
+| Result     | Collection | <- | Nombres existentes en el alcance definido                      | <!-- END REF --> |
 
 #### Descripción
 
@@ -2023,7 +2023,7 @@ $list:=VP Get names("ViewProArea";2) //nombres en la 3a hoja
 | ---------- | ------- | -- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Object  | <- | Object of printing information                                 | <!-- END REF --> |
+| Result     | Object  | <- | Objeto que contiene la información de impresión                | <!-- END REF --> |
 
 #### Descripción
 
@@ -2387,7 +2387,7 @@ The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the target sheet. If _sheet_ is omitted, the command applies to the current sheet.
+En _sheet_, pase el índice de la hoja objetivo. If _sheet_ is omitted, the command applies to the current sheet.
 
 > La indexación comienza en 0.
 
@@ -2506,7 +2506,7 @@ borderTop:{color:green,style:10}
 | ---------- | ---------- | -- | --------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                    |                  |
 | sheet      | Integer    | -> | Alcance objetivo (por defecto = hoja actual) |                  |
-| Result     | Collection | <- | Collection of style sheet objects                               | <!-- END REF --> |
+| Result     | Collection | <- | Colección de objetos de hojas de estilo                         | <!-- END REF --> |
 
 #### Descripción
 
@@ -2581,7 +2581,7 @@ The `VP Get table column attributes` command <!-- REF #_method_.VP Get table col
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -2643,7 +2643,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area.
 
 In _columnName_, pass the name of the table column for which you want to get the index.
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -2697,7 +2697,7 @@ In _tableName_, pass the name of the table for which you want to get the dirty r
 
 By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -2747,7 +2747,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | tableName  | Text    | -> | Nombre de la tabla                                                          |                  |
 | onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)              |                  |
-| Result     | Object  | <- | Range that contains the table                                               | <!-- END REF --> |
+| Result     | Object  | <- | Rango que contiene la tabla                                                 | <!-- END REF --> |
 
 #### Descripción
 
@@ -2762,7 +2762,7 @@ In the _onlyData_ parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0     | Obtiene el rango de celdas para el área de la tabla con pie de página y encabezado (por defecto si se omite) |
 | `vk table data range` | 1     | Obtener el rango de celdas sólo para el área de datos de la tabla                                                               |
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -2789,11 +2789,11 @@ If _tableName_ is not found, the command returns **null**.
 
 <!-- REF #_method_.VP Get table theme.Params -->
 
-| Parámetros | Tipo                                           |    | Descripción                                  |                  |
-| ---------- | ---------------------------------------------- | -- | -------------------------------------------- | ---------------- |
-| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| tableName  | Text                                           | -> | Nombre de la tabla                           |                  |
-| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Current table theme property values          | <!-- END REF --> |
+| Parámetros | Tipo                                           |    | Descripción                                      |                  |
+| ---------- | ---------------------------------------------- | -- | ------------------------------------------------ | ---------------- |
+| vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro     |                  |
+| tableName  | Text                                           | -> | Nombre de la tabla                               |                  |
+| Result     | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | Valores de propiedad del tema de la tabla actual | <!-- END REF --> |
 
 #### Descripción
 
@@ -2841,7 +2841,7 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 | ---------- | ---------- | -- | -------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
 | sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Collection | <- | Text collection with all table names                           | <!-- END REF --> |
+| Result     | Collection | <- | Colección de textos con todos los nombres de las tablas        | <!-- END REF --> |
 
 #### Descripción
 
@@ -2849,7 +2849,7 @@ The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns 
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -2875,10 +2875,10 @@ $tables:=VP Get tables("ViewProArea")
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Parámetros | Tipo   |    | Descripción                    |                  |
-| ---------- | ------ | -- | ------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango                   |                  |
-| Result     | Object | <- | Object containing a cell value | <!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                           |                  |
+| ---------- | ------ | -- | ------------------------------------- | ---------------- |
+| rangeObj   | Object | -> | Objeto rango                          |                  |
+| Result     | Object | <- | Objeto que contiene un valor de celda | <!-- END REF --> |
 
 #### Descripción
 
@@ -3024,7 +3024,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
 
-In _paramObj_, you can pass several properties:
+En _paramObj_, puede pasar varias propiedades:
 
 | Propiedad           | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3191,7 +3191,7 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 In _vpAreaName_, pass the name of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
 
-In _viewPro_, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+En _viewPro_, pase un objeto 4D View Pro válido. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 An error is returned if the _viewPro_ object is invalid.
 
@@ -3316,7 +3316,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 | Constante                | Valor | Descripción                                                                                     |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------------- |
 | `vk table insert before` | 0     | Insert column(s) before the _column_ (default if omitted) |
-| `vk table insert after`  | 1     | Insert column(s) after the _column_                                          |
+| `vk table insert after`  | 1     | Insertar columna(s) después de la _columna_                                  |
 
 This command inserts some columns in the _tableName_ table, NOT in the sheet. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
 
@@ -3351,7 +3351,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | vpAreaName  | Text    | -> | Nombre de objeto formulario área 4D View Pro                   |                  |
 | tableName   | Text    | -> | Nombre de la tabla                                             |                  |
 | row         | Integer | -> | Índice en la tabla de la línea inicial a insertar              |                  |
-| count       | Text    | -> | Number of rows to add (must be >0)          |                  |
+| count       | Text    | -> | Número de líneas a añadir (debe ser >0)     |                  |
 | insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` _row_      |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
@@ -3364,7 +3364,7 @@ In the _insertAfter_ parameter, you can pass one of the following constants to i
 | Constante                | Valor | Descripción                                                                               |
 | ------------------------ | ----- | ----------------------------------------------------------------------------------------- |
 | `vk table insert before` | 0     | Insert row(s) before the _row_ (default if omitted) |
-| `vk table insert after`  | 1     | Insert row(s) after the _row_                                          |
+| `vk table insert after`  | 1     | Insertar línea(s) después de la _línea_                                |
 
 This command inserts some rows in the _tableName_ table, NOT in the sheet. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia abajo según el número de líneas añadidas.
 
@@ -3439,7 +3439,7 @@ In _originRange_, pass a range object containing the values, style, and formula 
 
 In _targetRange_, pass the range of cells where the cell values, style, and formulas will be copied or moved.
 
-The _options_ parameter has several properties:
+El parámetro _options_ tiene varias propiedades:
 
 | Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -3691,7 +3691,7 @@ El código siguiente:
  VP PRINT("myVPArea")
 ```
 
-... will open a print dialog window:
+... abrirá una ventana de diálogo de impresión:
 
 ![](../assets/en/ViewPro/cmd_vpPrint.PNG)
 
@@ -3832,7 +3832,7 @@ VP REMOVE SHEET("ViewProArea";2)
 
 The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range object of the cell span. Las celdas fusionadas en el rango se dividen en celdas individuales.
+En _rangeObj_, pase un objeto rango de la fusión. Las celdas fusionadas en el rango se dividen en celdas individuales.
 
 #### Ejemplo
 
@@ -3925,7 +3925,7 @@ The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->remo
 
 In _vpAreaName_, pass the name of the area where the table to remove is located.
 
-In _tableName_, pass the name of the table to remove.
+En _tableName_, pase el nombre de la tabla a eliminar.
 
 In _options_, you can specify additional behavior. Los valores posibles son:
 
@@ -3979,7 +3979,7 @@ The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS
 
 The command removes columns from the _tableName_ table, NOT from the sheet. El número total de columnas de la hoja no se ve afectado por el comando. Los datos a la derecha de la tabla (si los hay) se desplazan automáticamente a la izquierda según el número de columnas eliminadas.
 
-If _tableName_ does not exist, nothing happens.
+Si _tableName_ no existe, no pasa nada.
 
 #### Ejemplo
 
@@ -4025,7 +4025,7 @@ This command removes rows from the _tableName_ table, NOT from the sheet. El nú
 
 If the _tableName_ table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
 
-If _tableName_ does not exist, nothing happens.
+Si _tableName_ no existe, no pasa nada.
 
 #### Ejemplo
 
@@ -4109,7 +4109,7 @@ Se aplican las siguientes reglas:
   - si se añaden líneas, se eliminan datos,
   - si se añaden columnas, los datos se mantienen y se muestran en nuevas columnas.
 
-If _tableName_ does not exist, nothing happens.
+Si _tableName_ no existe, no pasa nada.
 
 #### Ejemplo
 
@@ -4198,7 +4198,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area. Si pasa un nombre que no
 
 The _row_ parameter defines the first row of the row range. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. If the range contains multiple rows, you should also use the optional _rowCount_ parameter.
 
-The optional _rowCount_ parameter allows you to define the total number of rows of the range. _rowCount_ must be greater than 0. Si se omite, el valor será 1 por defecto.
+The optional _rowCount_ parameter allows you to define the total number of rows of the range. _rowCount_ debe ser mayor que 0. Si se omite, el valor será 1 por defecto.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). Si no se especifica, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -4320,7 +4320,7 @@ Function onEvent()
  End case
 ```
 
-The _OffscreenArea_ callback method:
+El método de retrollamada _OffscreenArea_:
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4373,7 +4373,7 @@ Function onEvent()
  End case
 ```
 
-The _OffscreenArea_ callback method:
+El método de retrollamada _OffscreenArea_:
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -4509,7 +4509,7 @@ Una vez ejecutado este código, las funciones definidas pueden utilizarse en las
 | Parámetros           | Tipo   |    | Descripción                                 |                  |
 | -------------------- | ------ | -- | ------------------------------------------- | ---------------- |
 | rangeObj             | Object | -> | Objeto rango                                |                  |
-| dataContextAttribute | Text   | -> | Name of the attribute to bind to _rangeObj_ | <!-- END REF --> |
+| dataContextAttribute | Text   | -> | Nombre del atributo a vincular a _rangeObj_ | <!-- END REF --> |
 
 #### Descripción
 
@@ -4591,7 +4591,7 @@ VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 | -------------- | ------ | -- | ----------------------------------------------- | ---------------- |
 | rangeObj       | Object | -> | Objeto rango                                    |                  |
 | borderStyleObj | Object | -> | Objeto que contiene el estilo de línea de borde |                  |
-| borderPosObj   | Object | -> | Object containing border placement              | <!-- END REF --> |
+| borderPosObj   | Object | -> | Objeto que contiene la posición del borde       | <!-- END REF --> |
 
 #### Descripción
 
@@ -4714,10 +4714,10 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| Parámetros  | Tipo   |    | Descripción                         |                  |
-| ----------- | ------ | -- | ----------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Objeto rango                        |                  |
-| propertyObj | Object | -> | Object containing column properties | <!-- END REF --> |
+| Parámetros  | Tipo   |    | Descripción                                    |                  |
+| ----------- | ------ | -- | ---------------------------------------------- | ---------------- |
+| rangeObj    | Object | -> | Objeto rango                                   |                  |
+| propertyObj | Object | -> | Objeto que contiene las propiedades de columna | <!-- END REF --> |
 
 #### Descripción
 
@@ -4774,7 +4774,7 @@ The `VP SET COLUMN COUNT` command <!-- REF #_method_.VP SET COLUMN COUNT.Summary
 
 In _vpAreaName_, pass the name of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
 
-Pass the total number of columns in the _columnCount_ parameter. _columnCount_ must be greater than 0.
+Pass the total number of columns in the _columnCount_ parameter. _columnCount_ debe ser mayor que 0.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the _columnCount_ will be applied (counting begins at 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -4805,7 +4805,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 | Parámetros | Tipo    |    | Descripción                                  |                  |
 | ---------- | ------- | -- | -------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |                  |
-| sheet      | Integer | <- | Index of the new current sheet               | <!-- END REF --> |
+| sheet      | Integer | <- | Índice de la nueva hoja actual               | <!-- END REF --> |
 
 #### Descripción
 
@@ -5520,16 +5520,16 @@ El PDF:
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
-| Parámetros  | Tipo   |    | Descripción                      |                  |
-| ----------- | ------ | -- | -------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Rango de líneas                  |                  |
-| propertyObj | Object | -> | Object containing row properties | <!-- END REF --> |
+| Parámetros  | Tipo   |    | Descripción                                       |                  |
+| ----------- | ------ | -- | ------------------------------------------------- | ---------------- |
+| rangeObj    | Object | -> | Rango de líneas                                   |                  |
+| propertyObj | Object | -> | Objeto que contiene las propiedades de las líneas | <!-- END REF --> |
 
 #### Descripción
 
 The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the _propertyObj_ to the rows in the _rangeObj_<!-- END REF -->.
 
-In the _rangeObj_, pass an object containing a range. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las líneas.
+En _rangeObj_, pase un objeto que contenga un rango. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las líneas.
 
 The _propertyObj_ parameter lets you specify the attributes to apply to the rows in the _rangeObj_. Estos atributos son:
 
@@ -5580,7 +5580,7 @@ The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->de
 
 In _vpAreaName_, pass the name of the 4D View Pro area. Si pasa un nombre que no existe, se devuelve un error.
 
-Pass the total number of rows in the _rowCount_ parameter. _rowCount_ must be greater than 0.
+Pass the total number of rows in the _rowCount_ parameter. _rowCount_ debe ser mayor que 0.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the _rowCount_ will be applied (counting begins at 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -5682,7 +5682,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 | ---------- | ------- | -- | -------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |                  |
 | name       | Text    | -> | Nuevo nombre para la hoja                    |                  |
-| sheet      | Integer | -> | Index of the sheet to be renamed             | <!-- END REF --> |
+| sheet      | Integer | -> | Índice de la hoja a renombrar                | <!-- END REF --> |
 
 #### Descripción
 
@@ -5858,7 +5858,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area.
 
 In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -5924,7 +5924,7 @@ In the _attributes_ parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Fórmula del pie de columna.                                                                                                                                                                 |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                |
 
-In _sheet_, pass the index of the target sheet. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
+En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
 > La indexación comienza en 0.
 
@@ -6004,7 +6004,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 | ---------- | ---------------------------------------------- | -- | -------------------------------------------- | ---------------- |
 | vpAreaName | Text                                           | -> | Nombre de objeto formulario área 4D View Pro |                  |
 | tableName  | Text                                           | -> | Nombre de la tabla                           |                  |
-| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Table theme properties to modify             | <!-- END REF --> |
+| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Propiedades del tema de la tabla a modificar | <!-- END REF --> |
 
 #### Descripción
 
@@ -6147,10 +6147,10 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Parámetros | Tipo   |    | Descripción                    |                  |
-| ---------- | ------ | -- | ------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto rango                   |                  |
-| valueObj   | Object | -> | Cell values and format options | <!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                               |                  |
+| ---------- | ------ | -- | ----------------------------------------- | ---------------- |
+| rangeObj   | Object | -> | Objeto rango                              |                  |
+| valueObj   | Object | -> | Valores de la celda y opciones de formato | <!-- END REF --> |
 
 #### Descripción
 
@@ -6164,7 +6164,7 @@ The parameter _valueObj_ is an object that includes properties for the value and
 
 | Propiedad | Tipo                                     | Descripción                                                                                                                                                       |
 | --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Pase null para borrar el contenido de la celda.                                                  |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valor a asignar a _rangeObj_ (excepto- hora). Pase null para borrar el contenido de la celda.                                                  |
 | time      | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                |
 | format    | Text                                     | Patrón de propiedad valor/tiempo. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
 
@@ -6222,7 +6222,7 @@ In _rangeObj_, pass a range for the cell (created with [`VP Cell`](#vp-cell)) wh
 > - If _rangeObj_ is not a cell range, only the first cell of the range is used.
 > - If _rangeObj_ includes multiple ranges, only the first cell of the first range is used.
 
-The _valuesCol_ parameter is two-dimensional:
+El parámetro _valuesCol_ es bidimensional:
 
 - La colección de primer nivel contiene subcolecciones de valores. Cada subcolección define una línea. Pasa una colección vacía para saltar una línea.
 - Cada subcolección define los valores de las celdas para la línea. Los valores pueden ser enteros, reales, booleanos, texto, fecha, null u objeto. Si el valor es un objeto, puede tener las siguientes propiedades:
