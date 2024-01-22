@@ -19,7 +19,7 @@ Las variables son objetos del lenguaje; puede crear y utilizar variables que nun
 
 Generalmente se crean variables declarándolas. El lenguaje 4D ofrece dos formas de declarar las variables:
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
+- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
 - utilizando uno de los comandos del lenguaje 4D del tema "Compilador" o "Arrays" (sintaxis heredada).
 
 When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
@@ -38,11 +38,7 @@ Cuando una variable se crea antes de ser declarada, no se inicializa en el paso 
 
 :::
 
-### Utilizando la palabra clave `var`
-
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
-
-To declare a variable of any type with the `var` keyword, use the following syntax:
+To declare a variable of any type, use the following syntax:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -85,7 +81,7 @@ The following table lists all supported `varType` values:
 | `cs.<className>`            | Objeto del nombre de la clase usuario                       |
 | `cs.<namespace><className>` | Object of the `<namespace>` component class name            |
 
-#### Ejemplos
+### Ejemplos
 
 - Para declarar variables básicas locales y de proceso:
 
@@ -172,7 +168,7 @@ El operador de asignación es un primer medio para crear una variable e introduc
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. Si MyNumber ya existe, entonces toma el valor 3.
+crea la variable _MyNumber_ y pone el número 3 en ella. Si MyNumber ya existe, entonces toma el valor 3.
 
 > It is usually not recommended to create variables without [declaring their type](#declaring-variables).
 
@@ -182,7 +178,7 @@ Por supuesto, las variables no serían muy útiles si no se pudieran obtener val
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
+En este caso, _[Products]Size_ sería igual a 3. Este ejemplo es bastante sencillo, pero ilustra la forma fundamental en que se transfieren los datos de un lugar a otro utilizando el lenguaje.
 
 Los valores se asignan a los elementos del array utilizando llaves ({...}):
 
@@ -208,7 +204,7 @@ El nombre de una variable local siempre comienza por el signo dólar ($) y puede
 
 Cuando se trabaja en un proyecto de aplicación con muchos métodos y variables, a menudo se encuentra que se necesita utilizar una variable sólo dentro del método en el que se está trabajando. Puede crear y utilizar una variable local en el método sin preocuparse de si ha utilizado el mismo nombre de variable en otro lugar.
 
-Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. The `Request` command can obtain this information. Muestra una caja de diálogo con un mensaje que solicita al usuario una respuesta. Cuando el usuario introduce la respuesta, el comando devuelve la información que el usuario introdujo. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
+Con frecuencia, en una aplicación, se necesitan pequeñas piezas de información del usuario. El comando `Request` puede obtener esta información. Muestra una caja de diálogo con un mensaje que solicita al usuario una respuesta. Cuando el usuario introduce la respuesta, el comando devuelve la información que el usuario introdujo. Generalmente no es necesario mantener esta información en sus métodos durante mucho tiempo. Esta es una forma típica de utilizar una variable local. Aquí un ejemplo:
 
 ```4d
  $vsID:=Request("Please enter your ID:")

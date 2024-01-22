@@ -7,7 +7,7 @@ Les collections sont des listes ordonnées de valeurs de types similaires ou dif
 
 Collection type variables are managed using [object notation](dt_object.md#properties)).
 
-Pour des informations complémentaires sur les collections 4D, passez le numéro (l'indice) de l'élément entre crochets :
+Pour accéder à un élément d'une collection, vous devez passer le numéro de l'élément entre crochets :
 
 ```4d
 collectionRef[expression]
@@ -42,16 +42,16 @@ Si vous assignez un numéro d'élément plus grand que celui du dernier élémen
 
 ## Instanciation
 
-Collections must have been instantiated, otherwise trying to read or modify their elements will generate a syntax error.
+Les collections doivent avoir été instanciées, sinon toute tentative de lecture ou de modification de leurs éléments génère une erreur de syntaxe.
 
-Collection instantiation can be done in one of the following ways:
+L'instanciation d'une collection peut se faire de l'une des manières suivantes :
 
 - using the [`New collection`](../API/CollectionClass.md#new-collection) command,
 - using the `[]` operator.
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). In this case, it is not necessary to instantiate explicitely the collection, the 4D language does it for you.
+Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). Dans ce cas, il n'est pas nécessaire d'instancier explicitement la collection, le langage 4D le fait pour vous.
 
 :::
 
@@ -71,11 +71,11 @@ Exemples :
 
 ### `[]` operator
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). When you create a collection using a collection literal, it is instantiated with the specified values as its elements, and its length is set to the number of arguments specified.
+The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). Lorsque vous créez une collection en utilisant une collection littérale, elle est instanciée avec les valeurs spécifiées comme éléments, et sa longueur est définie au nombre d'arguments spécifiés.
 
 Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
 
-If an element is undefined, it will appear as Null in the collection.
+Si un élément n'est pas défini, il apparaîtra comme Null dans la collection.
 
 Exemples :
 
@@ -128,7 +128,7 @@ Certaines fonctions retournent la collection d'origine après modification, de m
  $col2:=$col.push(10;100).sort() //$col2=[5,10,20,100]
 ```
 
-### paramètre cheminPropriété
+### paramètre propertyPath
 
 Several functions accept a _propertyPath_ as parameter. Ce paramètre peut contenir :
 

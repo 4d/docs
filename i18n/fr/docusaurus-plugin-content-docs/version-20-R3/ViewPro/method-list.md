@@ -258,7 +258,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Le paramètre *styleName* vous permet de nommer la feuille de style. Si le nom existe déjà dans le même scope, la nouvelle feuille de style remplace la feuille existante. A noter que vous pouvez utiliser le même nom pour plusieurs scopes (ci-dessous).
 
-Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). Pour consulter la liste complète des propriétés, reportez-vous à la section [Propriétés des objets de style](configuring.md#style-objects-properties).
+Dans *styleObj*, définissez les propriétés de la feuille de style (ex : police, alignement, bordures, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Vous pouvez désigner l'emplacement dans lequel vous souhaitez définir la feuille de style dans le paramètre optionnel *sheet*, à l'aide de l'indice de la feuille (la numérotation commence à zéro) ou à l'aide des constantes suivantes :
 
@@ -941,6 +941,7 @@ saisissez le code suivant :
 
 
 
+
 | Paramètres | Type   |    | Description                                 |
 | ---------- | ------ | -- | ------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro     |
@@ -1129,7 +1130,8 @@ Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 | includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                      |
 | includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                        |
 | includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                           |
-| saveAsView              | Boolean     | Whether to apply the format string to exporting value when saving, default=false.                              |
+
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
 Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
@@ -2514,6 +2516,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom in
 
 Dans *styleName*, passez le nom de la feuille de style que vous souhaitez lire.
 
+
 Vous pouvez définir où lire la feuille de style via le paramètre *sheet* en passant le numéro d'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
 * `vk current sheet`
@@ -3269,7 +3272,7 @@ La commande `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. Pour plus d'informations sur les objets 4D View Pro, référez-vous à la section [Objet 4D View Pro](languageOverview.html#4d-view-pro-object).
+Dans *viewPro*, passez un objet 4D View Pro valide. Cet objet peut avoir été créé en utilisant [VP Export to object](#vp-export-to-object) ou manuellement. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Une erreur est retournée si l'objet *viewPro* est invalide.
 
@@ -4479,6 +4482,7 @@ Function onEvent()
   :(FORM Event.code=On Timer)
  // To be sure to not restart the timer if you call others 4D View command after this point
          This.isWaiting:=False
+
 
  // Stop the timer
    SET TIMER(0)
@@ -6555,6 +6559,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### Description
+
 
 La commande `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->repositionne verticalement et horizontalement la vue du *rangeObj*<!-- END REF -->.
 

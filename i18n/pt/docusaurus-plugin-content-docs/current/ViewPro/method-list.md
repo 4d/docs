@@ -258,7 +258,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 O parâmetro *styleName* permite que você atribua um nome à folha de estilos. Se o nome já estiver sendo usado no mesmo escopo, a nova folha de estilo substituirá a existente. Note que pode utilizar o mesmo nome para diferentes âmbitos (ver abaixo).
 
-Em *styleObj*, designe as configurações da folha de estilos (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). Para obter a lista completa de propriedades de estilo, consulte [Propriedades do objeto de estilo](configuring.md#style-objects-properties).
+Em *styleObj*, designe as configurações da folha de estilos (por exemplo, fonte, decoração de texto, alinhamento, bordas etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
@@ -934,6 +934,7 @@ utilizar o seguinte código:
 
 
 
+
 | Parâmetro  | Tipo   |    | Descrição                                       |
 | ---------- | ------ | -- | ----------------------------------------------- |
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro      |
@@ -1115,7 +1116,8 @@ Em *paramObj*, você pode passar várias propriedades:
 | includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                      |
 | includeStyles           | Parâmetros   | Se deve incluir o estilo ao salvar, padrão=true.                                                                              |
 | includeUnusedNames      | Parâmetros   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                    |
-| saveAsView              | Parâmetros   | Se a string de formato deve ser aplicada ao valor de exportação ao ser salva, padrão = falso.                                 |
+
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
 Os seguintes parâmetros podem ser usados no método de retorno de chamada:
@@ -2496,6 +2498,7 @@ Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 Em *styleName*, passe o nome da folha de estilo a obter.
 
+
 Você pode designar onde definir a folha de estilos no parâmetro opcional *sheet* usando o índice da folha (a indexação começa em 0) ou com as seguintes constantes:
 
 * `vk current sheet`
@@ -3249,7 +3252,7 @@ O comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summa
 
 Em *vpAreaName*, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. Para mais informações sobre os objectos 4D View Pro, consulte a seção [objeto 4D View Pro](languageOverview.html#4d-view-pro-object).
+Em *viewPro*, passe um objeto 4D View Pro válido. Este objeto pode ter sido criado usando [VP Export to object](#vp-export-to-object) ou manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Um erro é retornado se o objeto *viewPro* for inválido.
 
@@ -4437,25 +4440,26 @@ Se quiser carregar um grande documento offscreen, aguardar todos os cálculos pa
    SET TIMER(60)
 
   :(FORM Event.code=On VP Range Changed)
- // Fim de cálculo detectado. Reinicia o temporizador
-         If(This. sEsperando)
+ // Fim de cálculo detectado. Restarts the timer
+         If(This.isWaiting)
            SET TIMER(60)
-         End se
+         End if
 
-  :(Evento FORM. ode=On Timer)
- // Para ter certeza de não reiniciar o temporizador se você chamar o comando 4D View após este ponto
-         Esta. sWaiting:=False
+  :(FORM Event.code=On Timer)
+ // To be sure to not restart the timer if you call others 4D View command after this point
+         This.isWaiting:=False
 
- // Pare o timer
+
+ // Stop the timer
    SET TIMER(0)
 
- // Inicie a exportação em PDF
-        VP EXPORT DOCUMENT(Este). rea;Está. dfPath;Novo objeto("fórmula";Fórmula(ACCEPT)))
+ // Start the PDF export
+        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
-     :(Evento FORM. ode=No URL carregando erro)
+     :(FORM Event.code=On URL Loading Error)
 
          CANCEL 
- Caso Final
+ End case
 ```
 
 O método de retorno de chamada *OffscreenArea*:
@@ -6380,9 +6384,9 @@ A tabela seguinte lista as opções de libro disponíveis:
 | scrollByPixel                         | boolean                 | Ativar a deslocação de precisão por pixel.                                                                                                                                                                                                                                   |
 | scrollIgnoreHidden                    | boolean                 | A barra de rolagem ignora as linhas ou colunas ocultas.                                                                                                                                                                                                                      |
 | scrollPixel                           | integer                 | Decides scrolling by that number of pixels at a time when scrollByPixel is true. The final scrolling pixels are the result of `scrolling delta * scrollPixel`. For example: scrolling delta is 3, scrollPixel is 5, the final scrolling pixels are 15.                       |
-| showDragDropTip                       | boolean                 | Display the drag-drop tip.                                                                                                                                                                                                                                                   |
+| showDragDropTip                       | boolean                 | Exibir a dica de arrastar e soltar.                                                                                                                                                                                                                                          |
 | showDragFillSmartTag                  | boolean                 | Display the drag fill dialog.                                                                                                                                                                                                                                                |
-| showDragFillTip                       | boolean                 | Display the drag-fill tip.                                                                                                                                                                                                                                                   |
+| showDragFillTip                       | boolean                 | Exibir a dica de preenchimento de arrasto.                                                                                                                                                                                                                                   |
 | showHorizontalScrollbar               | boolean                 | Mostrar a barra de deslocação horizontal.                                                                                                                                                                                                                                    |
 | showResizeTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show resize tip both </td><td>3</td><td> São apresentadas dicas de redimensionamento horizontal e vertical.</td></tr><tr><td> vk show resize tip column </td><td>1</td><td> Só é mostrada a ponta de redimensionamento horizontal.</td></tr><tr><td> vk show resize tip none </td><td>0</td><td> Nenhuma dica de redimensionamento é exibida.</td></tr><tr><td> vk show resize tip row </td><td>2</td><td> Somente a ponta de redimensionamento vertical é exibida.</td></tr></table>                                                                                                                                                                                                   |
 | showScrollTip                         | number                  | Position of the tab strip. Valores disponíveis: <table><tr><th>Parâmetros</th><th>Valor</th><th>Descrição</th></tr><tr><td> vk show scroll tip both </td><td>3</td><td> São apresentadas dicas de deslocação horizontal e vertical.</td></tr><tr><td> vk show scroll tip horizontal </td><td>1</td><td> Só é mostrada a ponta de deslocamento horizontal.</td></tr><tr><td> vk show scroll tip none </td><td> Nenhuma dica de rolagem é exibida.</td></tr><tr><td> vk show scroll tip vertical </td><td>2</td><td> Só é apresentada a ponta de deslocamento vertical.</td></tr></table>                                                                                                                                                                                                   |
@@ -6428,6 +6432,7 @@ $workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProAre
 
 
 #### Descrição
+
 
 O comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
 

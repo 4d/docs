@@ -53,6 +53,12 @@ La valeur par défaut dépend du type de variable :
 | Variant    | undefined            |
 
 
+### Null comme valeur par défaut
+
+Les variables de type Objet, Collection, Pointeur et Image ont **null** comme valeur par défaut, mais ont en fait un statut intermédiaire lorsqu'elles sont déclarées et non assignées. Elles *se comportent comme* les valeurs **null**, mais avec quelques différences, générant moins d'erreurs lorsque le code tente d'y accéder.
+
+
+
 ## Convertir les types de données
 
 Le langage de 4D comporte des fonctions et des opérateurs vous permettant de convertir des types de données en d’autres types, dans la mesure où de telles conversions ont un sens. 4D assure la vérification des types de données. Ainsi, vous ne pouvez pas écrire : "abc"+0.5+!25/12/96!-?00:30:45?, car cette opération génère une erreur de syntaxe.

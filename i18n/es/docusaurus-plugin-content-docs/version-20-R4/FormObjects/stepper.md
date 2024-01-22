@@ -29,5 +29,5 @@ For more information, please refer to [Using indicators](progressIndicator.md#us
 
 ## Ver también
 
-- [progress indicators](progressIndicator.md)
+- [indicadores de progreso](progressIndicator.md)
 - [rulers](ruler.md)

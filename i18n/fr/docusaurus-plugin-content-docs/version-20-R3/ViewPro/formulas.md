@@ -230,8 +230,17 @@ Vous pouvez déclarer le nom, le type et le nombre de paramètres via la collect
 
 Pour plus d'informations sur les types de paramètres entrants pris en charge, veuillez vous reporter à la description de la méthode [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions).
 
-> Si vous ne déclarez pas de paramètres, les valeurs peuvent être passées séquentiellement aux méthodes (elles seront reçues dans $1, $2...) et leur type sera automatiquement converti. Les dates dans *jstype* seront passées en tant qu'[objet](Concepts/dt_object.md) dans le code 4D avec deux propriétés :   
-> |Propriété|    Type|   Description| |---|---|---| |value| Date| Valeur de la date| |time |Real| Heure en secondes|
+:::note
+
+Si vous ne déclarez pas de paramètres, les valeurs peuvent être passées séquentiellement aux méthodes (elles seront reçues dans $1, $2...) et leur type sera automatiquement converti. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+
+| Propriété | Type | Description       |
+| --------- | ---- | ----------------- |
+| value     | Date | Valeur date       |
+| time      | Real | Heure en secondes |
+
+:::
+
 
 Les méthodes projet 4D peuvent également retourner des valeurs dans la formule de la cellule 4D View Pro via $0. Les types de données suivants sont pris en charge pour les paramètres retournés :
 

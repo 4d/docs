@@ -286,7 +286,7 @@ La configuración del esquema URL de Qodly Studio (HTTP y HTTPS) determina cuán
 
 As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Como tal, se comporta como un Cliente 4D convencional.
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Si ejecuta el renderizador desde Qodly Studio y no se accede a estos dos servidores web a través del mismo esquema de URL (HTTP o HTTPS), es posible que el conteo de licencias sea incorrecto.
 
 #### Ejemplo
 

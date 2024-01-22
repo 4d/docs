@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Préférences de sauvegarde
+title: Paramètres de sauvegarde
 ---
 
 Les paramètres de sauvegarde sont définis sur trois pages dans la boîte de dialogue des Propriétés. Vous pouvez définir :
@@ -110,7 +110,7 @@ Ces options s’appliquent aux fichiers de sauvegarde principaux et aux fichiers
   - **Normal** (par défaut) : cette option constitue un compromis vitesse de sauvegarde/taille des archives.
   - **Elevé** : le taux de compression maximal est appliqué aux archives. Les fichiers d’archives prennent le moins de place possible sur le disque mais la sauvegarde peut être sensiblement ralentie.
 
-- **Interlacing Rate and Redundancy Rate** 4D generates archives using specific algorithms that are based on optimization (interlacing) and security (redundancy) mechanisms. Vous pouvez paramétrer ces mécanismes en fonction de vos besoins. Les menus associés à ces options vous permettent de choisir un taux **Faible**, **Moyen**, **Elevé** ou **Aucun** (défaut).
+- **Taux d’entrelacement et Taux de redondance** 4D peut générer des archives à l’aide d’algorithmes spécifiques, basés sur des mécanismes d’optimisation (entrelacement) et de sécurisation (redondance). Vous pouvez paramétrer ces mécanismes en fonction de vos besoins. Les menus associés à ces options vous permettent de choisir un taux **Faible**, **Moyen**, **Elevé** ou **Aucun** (défaut).
   - **Taux d’entrelacement** : l’entrelacement consiste à stocker les données dans des secteurs non contigus afin de limiter les risques en cas d’endommagement des secteurs. Plus le taux est élevé, plus la sécurité est élevée ; en contrepartie, le traitement des données consomme davantage de mémoire.
   - **Taux de redondance** : la redondance permet de sécuriser les données présentes dans un fichier en répétant plusieurs fois les mêmes informations. Plus le taux est élevé, plus le fichier est sécurisé, mais plus le stockage est lent et la taille du fichier importante.
 
@@ -136,6 +136,6 @@ Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération
 
 :::caution
 
-If the [data file is encrypted](../MSC/encrypt.md), make sure you [saved the data encryption key](../MSC/encrypt#saving-the-encryption-key) in a `.4DKeyChain` file stored at the first level of the drive, so that 4D can access it if the automatic restore feature triggered. Otherwise, an error will be returned during the restoring sequence.
+Si le fichier de données [est crypté](../MSC/encrypt.md), assurez-vous d'avoir [enregistré la clé de cryptage des données](../MSC/encrypt#saving-the-encryption-key) dans un fichier `.4DKeyChain` stocké au premier niveau du disque, de sorte que 4D puisse y accéder si la fonction de restitution automatique se déclenche. Dans le cas contraire, une erreur sera renvoyée pendant la séquence de restitution.
 
 :::
