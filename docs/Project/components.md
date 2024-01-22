@@ -46,13 +46,15 @@ The **/Sources/dependencies.json** file contents must be like:
 
 If you want to customize the location of your components, you can use a **environment4d.json** file. This file allows you to declare the paths for the components that are not stored at the same level as the project folder. 
 
-You can use absolute or relative paths. For example:
+You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file. 
+
+Examples:
 
 ```json
 {
 	"dependencies": {
-		"myComponent1" : "../MyComponent1",
-		"myComponent2" : "./MyComponent2",
+		"myComponent1" : "MyComponent1",
+		"myComponent2" : "../MyComponent2",
         "myComponent3" : "file:///Users/jean/MyComponent3"
     }
 }
