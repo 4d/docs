@@ -24,7 +24,7 @@ All parameters must be passed in **headers** of a POST method:
 
 :::caution
 
-Since the password is transmitted in plain text, it is highly necessary to use a secured https connection during the login stage.
+Since the password is transmitted in plain text, it is strongly recommended to use a secured https connection for the login request.
 
 :::
 
