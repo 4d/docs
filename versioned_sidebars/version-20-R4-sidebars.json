@@ -61,6 +61,7 @@
                 "settings/compatibility"
               ]
             },
+			"Project/date-time-formats",
             "Project/documentation"
           ]
         },
