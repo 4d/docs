@@ -977,7 +977,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 
 |Variable|  |Type| Description|
 |---|---|---|---|
-|$1|  |text| The name of the 4D View Pro object|
+|$1|  |text| The name of the 4D View Pro area object|
 |$2|  |text| The filepath of the exported 4D View Pro object|
 |$3|  |object| A reference to the command's *paramObj*|
 |$4|  |object| An object returned by the method with a status message|
@@ -2802,6 +2802,7 @@ If *rangeObj* contains multiple cells or multiple ranges, the value of the first
 
 
 
+
 #### Example
 
 ```4d
@@ -2971,6 +2972,18 @@ $o.password:="excel123"
  
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+	//myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
 
 #### Example 3
 
@@ -5054,6 +5067,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 #### Description
 
+
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
@@ -5624,6 +5638,7 @@ You want to hide the grid lines as well as the row and column headers.
 var $options : Object
   
 $options:=New object
+
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
 $options.gridline.showHorizontalGridline:=False
