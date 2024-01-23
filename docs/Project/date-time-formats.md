@@ -139,9 +139,9 @@ In general, when the number of letters in the formatting string is higher than t
 
 ### Localized parts
 
-Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according regional settings.
+Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
 
-For example, for the time `13:25:34`, "B" will display *in the afternoon* in an US system, and *après-midi* on a French system. 
+For example, for the time `13:25:34`, "B" will display *in the afternoon* on an US system, and *après-midi* on a French system. 
 
 
 ### Extra letters
