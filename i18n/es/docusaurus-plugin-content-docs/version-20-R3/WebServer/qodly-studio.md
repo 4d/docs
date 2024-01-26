@@ -214,8 +214,8 @@ Algunos símbolos básicos, operadores y palabras clave difieren en QodlyScript 
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | tipo de variable        |
-| number      | Real                                                        | tipo de variable        |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Algunos otros elementos tienen una capitalización diferente (por ejemplo: `this` vs `This`), pero se pueden pegar directamente en código de 4D.
 
@@ -300,7 +300,7 @@ La configuración del esquema URL de Qodly Studio (HTTP y HTTPS) determina cuán
 
 Como se explica en la sección [configuración](#configuration), el servidor web WebAdmin ofrece un acceso web seguro a Qodly Studio. Por otro lado, el renderizador [](#rendering-webforms) se comunica con el servidor web 4D de la base de datos mediante peticiones REST. Como tal, se comporta como un Cliente 4D convencional.
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Si ejecuta el renderizador desde Qodly Studio y no se accede a estos dos servidores web a través del mismo esquema de URL (HTTP o HTTPS), es posible que el conteo de licencias sea incorrecto.
 
 #### Ejemplo
 

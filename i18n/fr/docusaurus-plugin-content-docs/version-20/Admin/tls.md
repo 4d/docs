@@ -83,7 +83,7 @@ Pour être utilisés par le serveur web de 4D, les fichiers **key.pem** et **cer
 - avec 4D en mode local ou 4D Server, à côté du [dossier du projet](Project/architecture.md#project-folder)
 - avec 4D en mode distant, dans le dossier de la base de données cliente sur la machine distante (pour plus d'informations sur l'emplacement de ce dossier, consultez la commande [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
 
-You must copy these files manually on the remote machine.
+Vous devez copier ces fichiers manuellement sur la machine distante.
 
 #### Avec le serveur d'applications (applications de bureau client-serveur)
 

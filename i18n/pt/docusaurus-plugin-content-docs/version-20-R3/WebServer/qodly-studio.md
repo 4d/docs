@@ -43,7 +43,7 @@ A resolução recomendada é 1920x1080.
 #### Aplicação 4D
 
 - Desenvolvimento: 4D v20 R2 ou superior
-- Deployment: 4D Server v20 R2 or higher
+- Desenvolvimento: 4D Server v20 R2 ou superior
 - Qodly Studio only works with 4D projects (binary databases are not supported).
 
 
@@ -70,7 +70,7 @@ Keep this option unchecked if you want to make sure no access to Qodly Studio is
 
 Marque esta opção para ser possível acessar a Qodly Studio. No entanto, você ainda precisa habilitá-lo em todos os níveis do projeto.
 
-Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Além disso, você pode [configurar a porta HTTP/HTTPS do servidor WebAdmin usada](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
 :::note
 
@@ -126,7 +126,7 @@ For deployment, the WebAdmin server is not necessary. End-user access to your we
 Recomendamos o uso de funções classe em vez de métodos projeto. Apenas as funções de classe podem ser chamadas a partir de componentes. No entanto, você ainda pode usar seus métodos projeto no Qodly Studio de duas maneiras:
 
 - Você pode chamar seus métodos a partir de funções classe.
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- Você pode executar diretamente [seus métodos](https://developer.qodly.com/docs/studio/coding#methods-and-classes) a partir de Qodly Explorer.
 
 ## Abertura do Qodly Studio
 
@@ -153,7 +153,7 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 ## Utilizar Qodly Studio
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+A documentação oficial de Qodly Studio está disponível no site de documentação de Qodly [](https://developer.qodly.com/docs/studio/overview).
 
 You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
 
@@ -214,8 +214,8 @@ Some basic symbols, operators, and keywords differ in QodlyScript and must be ad
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | tipo var                |
-| number      | Real                                                        | tipo var                |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 
@@ -296,11 +296,11 @@ To render webforms, you must have an available license, as rendering a webform o
 
 ### Esquemas URL
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering webforms. With the appropriate configuration, you can avoid unnecessary license retaining.
+A configuração do esquema de URL do Qodly Studio (HTTP e HTTPS) determina quantas licenças são retidas ao renderizar formulários Web. With the appropriate configuration, you can avoid unnecessary license retaining.
 
 As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
-If you run the renderer from the Qodly Studio and these two web servers are not reached through the same URL scheme (HTTP or HTTPS), it might lead to wrong licence counting.
+Se você executar o renderizador a partir do Qodly Studio e esses dois servidores web não forem acessados através do mesmo esquema de URL (HTTP ou HTTPS), isso pode levar a uma contagem incorreta de licenças.
 
 #### Exemplo
 
@@ -328,7 +328,7 @@ O comportamento descrito anteriormente é devido ao cookie de sessão do servido
 
 If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
 
-For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
+Para obter mais informações sobre o atributo `SameSite`, consulte [esta post do blog](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
 
 ### Recomendações
 

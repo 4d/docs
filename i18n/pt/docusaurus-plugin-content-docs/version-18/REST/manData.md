@@ -81,7 +81,7 @@ The method properties are configured accordingly on the 4D project side:
 
 ![alt-text](../assets/en/REST/methodProp_ex.png)
 
-Then you can send the following REST POST request, for example using the `HTTP Request` 4D command:
+Em seguida, você pode enviar a solicitação REST POST seguinte, por exemplo, usando o comando 4D `HTTP Request`:
 
 ```4d
 C_TEXT($content)

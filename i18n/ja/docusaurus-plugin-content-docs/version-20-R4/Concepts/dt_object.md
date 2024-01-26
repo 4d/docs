@@ -8,17 +8,17 @@ title: オブジェクト
 - プロパティ名は必ずテキストで表現されます。 プロパティ名には [命名規則](identifiers.md#オブジェクトプロパティ) があります。
 
 - プロパティ値は以下のどれかの型で表現されます:
-    - 数値 (実数、整数、等)
-    - テキスト
-    - null
-    - ブール
-    - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
-    - 日付 (日付型あるいは ISO日付フォーマット文字列)
-    - オブジェクト(1) (オブジェクトは入れ子にすることができます)
-    - ピクチャー(2)
-    - コレクション
+  - 数値 (実数、整数、等)
+  - text
+  - null
+  - boolean
+  - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
+  - 日付 (日付型あるいは ISO日付フォーマット文字列)
+  - オブジェクト(1) (オブジェクトは入れ子にすることができます)
+  - ピクチャー(2)
+  - collection
 
-(1) ORDAオブジェクト ([エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) 等)、[FileHandle オブジェクト](../API/FileHandleClass.md)、[Webサーバーオブジェクト](../API/WebServerClass.md) などの **ストリームできないオブジェクト** は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
+(1) **非ストリームオブジェクト** である [エンティティ](ORDA/dsMapping.md#エンティティ) や [エンティティセレクション](ORDA/dsMapping.md#エンティティセレクション) などの ORDAオブジェクト、[FileHandle](../API/FileHandleClass.md)、[Webサーバー](../API/WebServerClass.md)... は **オブジェクトフィールド** には保存できません。 保存しようとするとエラーが返されます。しかし、メモリ内の **オブジェクト変数** に保存することは可能です。
 
 (2) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
@@ -28,8 +28,7 @@ title: オブジェクト
 
 :::
 
-
-オブジェクト型の変数・フィールド・式を操作するには [オブジェクト記法](dt_object.md#オブジェクト記法の使用) を用いるか、**オブジェクト (ランゲージ)** テーマが提供するコマンドを使用します。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
+オブジェクト型の変数・フィールド・式を操作するには [オブジェクト記法](#プロパティ) を用いるか、**オブジェクト (ランゲージ)** テーマが提供するコマンドを使用します。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、**クエリ** テーマの特定のコマンドも使用することができます。
 
 オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
@@ -43,20 +42,18 @@ title: オブジェクト
 
 オブジェクトのインスタンス化は、以下のいずれかの方法でおこなうことができます:
 
-- [`New object`](https://doc.4d.com/4dv19R/help/command/ja/page1471.html) コマンドを使用する。
+- [`New object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドを使用する。
 - `{}` 演算子を使用する。
 
 :::info
 
-いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Get database measures`](https://doc.4d.com/4Dv19R7/4D/19-R7/Get-database-measures.301-5945423.ja.html) や [`File`](../API/FileClass.md#file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
+いくつかの 4Dコマンドや関数はオブジェクトを返します。たとえば、[`Get database measures`](https://doc.4d.com/4dv20/help/command/ja/page1314.html) や [`File`](../API/FileClass.md#file) などです。 この場合、オブジェクトを明示的にインスタンス化する必要はなく、4Dランゲージが代わりにおこなってくれます。
 
 :::
 
-
-
 ### `New object` コマンド
 
-[`New object`](https://doc.4d.com/4dv19R/help/command/ja/page1471.html) コマンドは、新しい空の、またはプロパティが格納されたオブジェクトを作成し、その参照を返します。
+[`New object`](https://doc.4d.com/4dv20/help/command/ja/page1471.html) コマンドは、新しい空の、またはプロパティが格納されたオブジェクトを作成し、その参照を返します。
 
 例:
 
@@ -68,7 +65,6 @@ title: オブジェクト
  $obFilled:=New object("name"; "Smith"; "age";42) // プロパティが格納されたオブジェクトのインスタンス化と変数への代入
 ```
 
-
 ### `{}` 演算子
 
 `{}` 演算子を使って、**オブジェクトリテラル** を作成することができます。 オブジェクトリテラルとは、オブジェクトのプロパティ名とその値のペアが 0組以上含まれたセミコロン区切りのリストを中括弧 `{}` で囲んだものです。 オブジェクトリテラルのシンタックスは、空の、またはプロパティが格納されたオブジェクトを作成します。
@@ -79,18 +75,18 @@ title: オブジェクト
 
 ```4d
  var $o ; $o2 ; $o3 : Object // オブジェクト変数の宣言
- $o := {} // 空のオブジェクトのインスタンス化 
+ $o := {} // 空のオブジェクトのインスタンス化
  $o2 := {a: "foo"; b: 42; c: {}; d: ($toto) ? true : false } // プロパティを格納したオブジェクトのインスタンス化
-        // オブジェクト: {"a":"foo","b":42,"c":{},"d":false}
+ 		// オブジェクト: {"a":"foo","b":42,"c":{},"d":false}
 
-    // 変数を使っても同様にオブジェクトをインスタンス化できます
+	// 変数を使っても同様にオブジェクトをインスタンス化できます
  var $a : Text
- var $b : Integer
+ var $b : Number
  var $c : Object
  $a:="foo"
  $b:=42
  $c:={}
- $o3:={a: $a; b: $b; c: $c} // オブジェクト: {"a":"foo",b":42,"c":{}}
+ $o3:={ a: $a; b: $b; c: $c } // {"a":"foo";b":42;"c":{}}
 
 ```
 
@@ -98,44 +94,44 @@ title: オブジェクト
 
 ```4d
 $o:={\
-    ob1: {age: 42}; \
-    ob2: New object("message"; "Hello"); \
-    form1: Formula(return This.ob1.age+10); \
-    form2 : Formula(ALERT($1)); \
-    col: [1; 2; 3; 4; 5; 6]\
-    }
+	ob1: {age: 42}; \
+	ob2: New object("message"; "Hello"); \
+	form1: Formula(return This.ob1.age+10); \
+	form2 : Formula(ALERT($1)); \
+	col: [1; 2; 3; 4; 5; 6]\
+	}
 
 $o.form1()  // 52
 $o.form2($o.ob2.message)  // Hello と表示します
 $col:=$o.col[5] // 6
 ```
 
-
-
-
 ### 通常オブジェクトと共有オブジェクト
 
 二種類のオブジェクトを作成することができます:
 
 - [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.ja.html) コマンド、またはオブジェクトリテラルのシンタックス `{}` 使用して作成する通常 (非共有) オブジェクト。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
-- [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.ja.html) コマンドを使用して作成する共有オブジェクト。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。 詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
-
-
+- [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.ja.html) コマンドを使用して作成する共有オブジェクト。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。
+  詳細な情報については、[共有オブジェクトと共有コレクション](shared.md) を参照ください。
 
 ## プロパティ
 
-オブジェクト記法を使うと、トークンのチェーンを通してオブジェクトのプロパティ値にアクセスすることができます。 オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
+オブジェクトのプロパティ値には、トークンのチェーンを通してアクセスします。 オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- "ドット" 記号を使用する方法: > object.propertyName
+- "ドット"記号を使用する方法:
+  > object.propertyName
 
 例:
+
 ```4d
      employee.name:="Smith"
 ```
 
-- 大カッコと文字列を使用する方法: > object["propertyName"]
+- 大カッコ内の文字列を使用する方法:
+  > object["propertyName"]
 
 例:
+
 ```4d
      $vName:=employee["name"]
      // または:
@@ -144,7 +140,7 @@ $col:=$o.col[5] // 6
 
 ```
 
-オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した字句を受け入れることができます:
+オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。 これらのサブプロパティにアクセスするため、連続した字句を使うことができます:
 
 ```4d
  $vAge:=employee.children[2].age
@@ -152,136 +148,72 @@ $col:=$o.col[5] // 6
 
 オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
 
-
-
-
-
-- **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの) 例:
+- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements).
+  例:
 
 ```4d
-     $age:=$myObjVar.employee.age // 変数
-     $addr:=[Emp]data_obj.address // フィールド
-     $city:=$addr.city // オブジェクトプロパティ
-     $pop:=$aObjCountries{2}.population // オブジェクト配列
-     $val:=$myCollection[3].subvalue // コレクション要素
+     $age:=$myObjVar.employee.age //variable
+     $addr:=[Emp]data_obj.address //field
+     $city:=$addr.city //property of an object
+     $pop:=$aObjCountries{2}.population //object array
+     $val:=$myCollection[3].subvalue //collection element
 ```
-- オブジェクトを返す **4D コマンド** 例:
+
+- **4D commands** that return objects.
+  例:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- オブジェクトを返す **プロジェクトメソッド** 例:
+- **Project methods** or **Functions** that return objects.
+  例:
 
 ```4d
       // MyMethod1
      #DECLARE -> $o : Object
      $o:=New object("a";10;"b";20)
-
-      // myMethod2
-     $result:=MyMethod1.a // 10
+     
+      //myMethod2
+     $result:=MyMethod1.a //10
 ```
 
-- **コレクション** 例:
+- **Collections**
+  Example:
 
 ```4d
-     myColl.length // コレクションの長さ
+     myColl.length //size of the collection
 ```
-
 
 ### Null 値
 
-オブジェクト記法を使用する場合、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティやコレクション要素に割り当てたり、それらと比較したりすることができます。例:
+When using the objects, the **null** value is supported though the **Null** command. このコマンドを使用すると、null 値をオブジェクトプロパティに割り当てたり、それらと比較したりすることができます。例:
 
 ```4d
  myObject.address.zip:=Null
  If(myColl[2]=Null)
 ```
 
-詳細については [Null と 未定義](dt_null_undefined.md) を参照ください。
+For more information, please refer to [Null and Undefined](dt_null_undefined.md).
 
 ### 未定義の値
 
-オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の式を読み込んだ、または割り当てようとしたときに 4D は通常、エラーを生成します。 ただし以下の場合には生成されません:
+オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は初期化、あるいは消去されます。 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
 
-- 未定義のオブジェクトやプロパティ値を読み込むと未定義 (undefined) が返されます。未定義の値を (配列を除く) 変数に割り当てることは、[`CLEAR VARIABLE`](https://doc.4d.com/4dv19R/help/command/ja/page89.html) コマンドを使うのと同じ効果があります:
-
-```4d
-     var $o : Object
-     var $val : Integer
-     $val:=10 // $val=10
-     $val:=$o.a // $o.a は未定義 (エラーなし) なため、この値を代入すると変数が初期化されます
-      // $val=0
-```
-
-- 未定義のコレクションの **length** プロパティは 0 を返します:
-
-```4d
-     var $c : Collection // 変数は作成されたが、コレクションは未定義
-     $size:=$c.length // $size = 0
-```
-
-- 未定義の値を引数としてプロジェクトメソッドに渡した場合、宣言された引数の型に応じて、0 あるいは "" (空の文字列) へと自動変換されます。
-
-```4d
-     var $o : Object
-     mymethod($o.a) // 未定義の引数を渡すと
-
-      // mymethod メソッド内では
-     #Declare ($myText : Text) // 引数の型はテキスト
-      // $myText の中身は ""
-```
-
-- 条件式で、If あるいは Case of キーワードで未定義と評価された場合には、自動的にfalse へと変換されます:
-
-```4d
-     var $o : Object
-     If($o.a) // false
-     End if
-     Case of
-        :($o.a) // false
-     End case
-```
-
-未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます:
- - オブジェクト、コレクション、ポインター: Null
- - ピクチャー: 空のピクチャー
- - ブール: False
- - 文字列: ""
- - 数値: 0
- - 日付:  "オブジェクトではISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
- - 時間: 0 (ミリ秒単位)
- - 未定義、Null: 変化なし
-
-```4d
-     var $o : Object
-     $o:=New object("a";2)
-     $o.a:=$o.b //$o.a=0
-```
-
-- 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
-
-
-4Dコード内の式に対して特定の型であることが要求される場合、その式を適切な 4Dキャストコマンド (`String`, `Num`, `Date`, `Time`, `Bool`) で囲うことで、たとえ未定義に評価されたとしても正しい型を確実に得ることができます。 これらのコマンドは式が未定義と評価された場合に、指定された型の空の値を返します。 例:
-
-```4d
- $myString:=Lowercase(String($o.a.b)) // 未定義の場合でもコード内でエラーが起きないように
-  // 文字列の値が得られるようにします
-```
-
-詳細については [Null と 未定義](dt_null_undefined.md) を参照ください。
-
+For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
 ### ポインター
 
-**注:** オブジェクトは常に参照として渡されるため、通常はポインターを使用する必要はありません。 オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
+**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
 
 ポインターを使ってオブジェクトプロパティにアクセスするには、直接オブジェクトを使用する場合と方法が似ていますが、"ドット" 記号は省略する必要があります。
 
 - オブジェクト記法によるアクセス:
+
 > pointerOnObject->propertyName
 
 - 大カッコを使用する方法:
+
 > pointerOnObject->["propertyName"]
 
 例:
@@ -295,21 +227,20 @@ $col:=$o.col[5] // 6
  x:=vPtr->a //x=10
 ```
 
+## Resources
 
-## リソース
+Objects use _resources_ such a documents, entity locks, and of course, memory. オブジェクトが必要とする限り、これらのリソースは保持されます。 変数や他のオブジェクトから参照されなくなったことを検知すると、4D はその参照されなくなったオブジェクトが使用していたリソースをすべて自動的に解放するため、通常はこの処理を意識することはありません。
 
-オブジェクトは、ドキュメント、エンティティロック、そしてメモリなどの *リソース* を使用します。 オブジェクトが必要とする限り、これらのリソースは保持されます。 変数や他のオブジェクトから参照されなくなったことを検知すると、4D はその参照されなくなったオブジェクトが使用していたリソースをすべて自動的に解放するため、通常はこの処理を意識することはありません。
+For instance, when there is no more references to an entity on which you have set a lock with [`$entity.lock()`](../API/EntityClass.md#lock), 4D will free the memory but also automatically release the associated lock, a call to [`$entity.unlock()`](../API/EntityClass.md#unlock) is useless.
 
-たとえば、[`$entity.lock()`](../API/EntityClass.md#lock) でロックしたエンティティへの参照がなくなると、4D はメモリを解放すると同時に、関連するロックも自動で解放するため、[`$entity.unlock()`](../API/EntityClass.md#unlock) の呼び出しは不要です。
-
-オブジェクトが占有しているすべてのリソースについて、4D による自動解放 (メソッド実行終了時のローカル変数など) を待たずに、すぐに解放したい場合、オブジェクトの **参照をすべて無効化** することができます。 例:
+If you want to release immediately all resources occupied by an object without having to wait that 4D does it automatically (at the end of the method execution for local variables for example), you just have to **nullify all its references**. 例:
 
 ```4d
 
 $doc:=WP Import document("large_novel.4wp")
-    ... // $doc に対する処理
-$doc:=Null  //  $docが占有するリソースを解放します
-    ... // 増えた空きメモリで実行を継続します
+	... // do something with $doc
+$doc:=Null  // free resources occupied by $doc
+	... // continue execution with more free memory
 
 ```
 
@@ -320,21 +251,21 @@ $doc:=Null  //  $docが占有するリソースを解放します
 - オブジェクトの読み書き (この例題ではオブジェクト記法とコマンド記法を比較します):
 
 ```4d
-  // オブジェクト記法を使用
- var $myObj : Object // 4Dオブジェクト変数を宣言
- $myObj:={} // オブジェクトリテラルを作成し、変数に代入
+  // Using the object notation
+ var $myObj : Object //declares a 4D variable object
+ $myObj:={} //creates an object literal and assigns it to the variable
  $myObj.age:=56
- $age:=$myObj.age // 56
-
-  // コマンド記法を使用
- var $myObj2 : Object // 4Dオブジェクト変数を宣言
- OB SET($myObj2;"age";42) // オブジェクトを作成し、ageプロパティを追加
- $age:=OB Get($myObj2;"age") // 42
-
-  // もちろん両方の記法を混用することもできます
+ $age:=$myObj.age //56
+ 
+  // Using the command notation
+ var $myObj2 : Object //declares a 4D variable object
+ OB SET($myObj2;"age";42) //creates an object and adds the age property
+ $age:=OB Get($myObj2;"age") //42
+ 
+  // Of course, both notations can be mixed
  var $myObj3 : Object
  OB SET($myObj3;"age";10)
- $age:=$myObj3.age // 10
+ $age:=$myObj3.age //10
 ```
 
 - プロパティの作成と、オブジェクトを含む値の代入:
@@ -342,28 +273,28 @@ $doc:=Null  //  $docが占有するリソースを解放します
 ```4d
  var $Emp : Object
  $Emp:=New object
- $Emp.city:="London" /// cityプロパティを作成し、その値を"London"に設定します
- $Emp.city:="Paris" // cityプロパティを変更します
+ $Emp.city:="London" //creates the city property and sets its value to "London"
+ $Emp.city:="Paris" //modifies the city property
  $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  // phoneプロパティを作成し、その値にオブジェクトを設定します
+  //creates the phone property and sets its value to an object
 ```
 
 - オブジェクト記法を使用すると、サブオブジェクトの値を簡単に取得できます:
 
 ```4d
- $vCity:=$Emp.city // "Paris"
- $vPhone:=$Emp.phone.home // "0011223344"
+ $vCity:=$Emp.city //"Paris"
+ $vPhone:=$Emp.phone.home //"0011223344"
 ```
 
-- 大カッコ `[ ]` を使用すると文字列を使ってプロパティにアクセスできます:
+- You can access properties as strings using the `[]` operator
 
 ```4d
- $Emp["city"]:="Berlin" // city プロパティを変更
-  // これは変数を通してプロパティを作成する場合に便利です
+ $Emp["city"]:="Berlin" //modifies the city property
+  //this can be useful for creating properties through variables
  var $addr : Text
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
  End for
-  /// $Emp object には 4つの空のプロパティ "address1...address4" が作成されました
+  // creates 4 empty properties "address1...address4" in the $Emp object
 ```

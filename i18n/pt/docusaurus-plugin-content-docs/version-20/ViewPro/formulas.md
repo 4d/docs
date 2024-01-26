@@ -53,7 +53,7 @@ Todas as fórmulas têm operandos e operadores:
 
 ### Operadores de comparação
 
-The following operators can be used with two operands of the same type:
+Os operadores a seguir podem ser usados com dois operandos do mesmo tipo:
 
 | Operador   | Comparação           |
 | ---------- | -------------------- |
@@ -128,7 +128,7 @@ Spreadsheet functions are preset formulas used to calculate cell values. When yo
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) for details and examples.
+Consulte a [**lista ampliada de funções de SpreadJS**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) para obter detalhes e exemplos.
 
 
 ## Funções 4D
@@ -286,7 +286,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 #### Requisitos
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
-*   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
+*   Os nomes das tabelas e dos campos devem estar em conformidade com (consulte [o standard ECMA ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.

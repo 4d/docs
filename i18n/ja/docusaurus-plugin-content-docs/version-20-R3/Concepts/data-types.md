@@ -53,6 +53,12 @@ title: データタイプの概要
 | バリアント  | undefined  |
 
 
+### Null as default value
+
+Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.
+
+
+
 ## データタイプの変換
 
 4D ランゲージには、データタイプ間の変換をおこなう演算子やコマンドがあります。 4D ランゲージはデータタイプをチェックします。 たとえば、"abc"+0.5+!12/25/96!-?00:30:45?のように記述することはできません。 これは、シンタックス (構文) エラーになります。

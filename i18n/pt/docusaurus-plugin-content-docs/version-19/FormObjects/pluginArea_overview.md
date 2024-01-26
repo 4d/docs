@@ -20,11 +20,11 @@ If advanced options are provided by the author of the plug-in, a **Plug-in** the
 
 ## Instalação de plug-ins
 
-Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os plug-ins são carregados quando se inicia 4D. For more information about the installation of plug-ins, refer to [Installing plugins or components](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
+Para adicionar um plug-in no seu ambiente 4D, primeiro precisa de sair do 4D. Os plug-ins são carregados quando se inicia 4D. Para obter mais informações sobre a instalação de plug-ins, consulte [Instalação de plug-ins ou componentes](https://doc.4d.com/4Dv17R6/4D/17-R6/Installing-plugins-or-components.300-4354866.en.html).
 
 ## Criação de plug-ins
 
-If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D provides a [complete kit (on github)](https://github.com/4d/4D-Plugin-SDK) to help you write custom plug-ins.
+If you are interested in designing your own plug-ins, you can receive extensive information about writing and implementing plug-ins. 4D fornece um kit completo [(no github)](https://github.com/4d/4D-Plugin-SDK) para ajudá-lo a escrever plug-ins personalizados.
 
 ## Propriedades compatíveis
 

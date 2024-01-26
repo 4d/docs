@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-objects-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -3096,7 +3096,7 @@ El comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summ
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](languageOverview.html#4d-view-pro-object).
+En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
@@ -3625,6 +3625,7 @@ El código siguiente:
 ## R
 
 ### VP RECOMPUTE FORMULAS
+
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Syntax -->
 **VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text ) <!-- END REF -->
@@ -5527,6 +5528,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 [VP Get row attributes](#vp-get-row-attributes)<br/>[VP get column attributes](#vp-get-column-attributes)<br/>[VP SET ROW ATTRIBUTES](#vp-set-row-attributes)
 
 ### VP SET ROW COUNT
+
 
 <!-- REF #_method_.VP SET ROW COUNT.Syntax -->
 **VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  ) <!-- END REF -->

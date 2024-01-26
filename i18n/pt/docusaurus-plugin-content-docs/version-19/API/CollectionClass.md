@@ -1017,7 +1017,7 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
   // $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]
 ```
 
-The code for ***TypeLookUp*** is:
+O código para ***TypeLookUp*** é:
 
 ```4d
  C_OBJECT($1)

@@ -18,9 +18,9 @@ The 4D application creates processes for its own needs, for example the Main pro
 Existem várias maneiras de criar um processo:
 
 - Execute a method in the Design environment after checking the **New Process** check box in the "Execute Method" dialog box. The method chosen in the Execute Method dialog box is the process method.
-- Use the [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) command. The method passed as a parameter to the `New process` command is the process method.
-- Use the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command in order to create a stored procedure on the server. O método passado como parâmetro do comando é o método processo.
-- Use the [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html) command. Se o processo worker ainda não existir, será criado.
+- Use o comando [`New process`] (https\://doc.4d.com/4dv20/help/command/en/page317.html). The method passed as a parameter to the `New process` command is the process method.
+- Use o comando [`Execute on server`] (https\://doc.4d.com/4dv20/help/command/en/page373.html) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
+- Use o comando [`CALL WORKER`] (https\://doc.4d.com/4dv20/help/command/en/page1389.html). Se o processo worker ainda não existir, será criado.
 
 :::note
 
@@ -59,18 +59,16 @@ Interface elements are used in [Desktop applications](../category/desktop-applic
 
 :::info
 
-- Processes do not include menu bars by default which means that the standard **Edit** menu shortcuts (in particular, cut/copy/paste) are not availalbe in process windows. When you call dialog boxes or 4D editors (form editor, query editor, Request, etc.) from a process, if you want for the user to be able to benefit from keyboard shortcuts like copy/paste, you need to make sure that the equivalent of an **Edit** menu is installed in the process.
+- Processes do not include menu bars by default which means that the standard **Edit** menu shortcuts (in particular, cut/copy/paste) are not available in process windows. When you call dialog boxes or 4D editors (form editor, query editor, Request, etc.) from a process, if you want for the user to be able to benefit from keyboard shortcuts like copy/paste, you need to make sure that the equivalent of an **Edit** menu is installed in the process.
 - [Preemptive processes](preemptive.md) and processes that are executed on the server (stored procedures) must not contain elements of the interface.
 
 :::
 
 :::note
 
-Each process also has a separate current selection and current record per table. For more information about these concepts, please refer to [doc.4d.com](https://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
+Each process also has a separate current selection and current record per table. Para obter mais informações sobre esses conceitos, consulte [doc.4d.com] (https\://doc.4d.com/4Dv20/4D/20.1/Displaying-and-selecting-records.300-6602144.en.html).
 
 :::
-
-The 4D application creates processes for its own needs, for example the Main process to manage the display windows of the user interface, the Design process to manages the windows and editors of the Design environment (note that both are [worker processes](#worker-processes)), the Web Server process, the Cache Manager process, the Indexing process, or the On Event Manager process.
 
 ## Processos globais e locais
 
@@ -152,4 +150,4 @@ All worker processes, except the main process, have the process type `Worker pro
 
 ### Veja também
 
-For more information, please see [this blog post](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) about how to use workers.
+Para obter mais informações, consulte [este post](https://blog.4d.com/4d-summit-2016-laurent-esnault-presents-workers-and-ui-in-preemptive-mode/) sobre como usar os workers.

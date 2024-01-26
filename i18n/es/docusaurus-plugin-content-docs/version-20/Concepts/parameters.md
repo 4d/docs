@@ -294,11 +294,11 @@ Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler` method containing all your parameters using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Puede crear y rellenar automáticamente un método `Compiler` que contenga todos sus parámetros utilizando el botón [**Métodos Compilador para...**](../Project/compiler.md#compiler-methods-for) **Métodos** del diálogo de Propiedades del compilador.
 
 :::info
 
-Some contexts do not support declaration in a "Compiler" method, thus they are handled specifically:
+Algunos contextos no soportan la declaración en un método "Compiler", por lo que se tratan de forma específica:
 
 - Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de tipo de datos Text. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
 
@@ -308,7 +308,7 @@ C_TEXT($1;$2;$3;$4;$5;$6)
 
 ```
 
-- Functions - Function parameters are automatically declared for compilation in the function prototype. Por ejemplo:
+- Funciones - Los parámetros de función se declaran automáticamente para la compilación en el prototipo de la función. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer

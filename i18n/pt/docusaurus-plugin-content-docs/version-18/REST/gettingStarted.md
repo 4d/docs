@@ -10,7 +10,7 @@ The REST server is included in the 4D and 4D Server applications, it is automati
 Esta seção tem o objetivo de familiarizar com as funcionalidades REST com um exemplo simples. Nós vamos:
 
 - criar e configurar uma base de dados 4D básica
-- access data from the 4D database through REST using a standard browser.
+- acessar dados do banco de dados 4D por REST usando um navegador padrão.
 
 To keep the example simple, we’re going to use a 4D application and a browser that are running on the same machine. Também poderia usar uma arquitetura remota.
 

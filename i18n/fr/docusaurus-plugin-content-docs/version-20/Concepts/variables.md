@@ -17,12 +17,16 @@ Les variables sont des objets du langage; vous pouvez créer et utiliser des var
 
 ## Déclaration des variables
 
-Vous créez des variables en les déclarant. Le langage 4D propose deux manières de déclarer des variables :
+You usually create variables by declaring them. Le langage 4D propose deux manières de déclarer des variables :
 
 - à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
-- à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (langage classique uniquement).
+- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
 
-**Note :** Bien que cela ne soit généralement pas recommandé, vous pouvez créer des variables basiques simplement en les utilisant ; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous souhaitez déclarer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire ce qui suit :
+When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+
+:::note
+
+Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
 
 ```4d
  MyDate:=Current date+30 //MyDate est créé 
@@ -30,7 +34,10 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
  // et affecte la date courante + 30 jours
 ```
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data).
+When a variable is created before being declared, it is not initialized at the declaration step.
+
+:::
+
 
 
 ### Utilisation du mot-clé `var`

@@ -28,7 +28,7 @@ In the subsequent REST requests, make sure this cookie is included in the **"Coo
 
 ### Exemplo
 
-The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
+A maneira de lidar com os cookies de sessão depende, na verdade, de seu cliente HTTP. Este exemplo mostra como extrair e reenviar o cookie de sessão no contexto de solicitações tratadas por meio do comando 4D `HTTP Request`.
 
 ```4d
 // Creating headers

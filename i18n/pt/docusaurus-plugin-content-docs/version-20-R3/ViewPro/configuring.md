@@ -311,7 +311,7 @@ Margin attributes are used to specify the 4D View Pro area margins for printing.
 |             | left    | inteiro longo | Margem esquerda, em centésimos de polegada. Valor padrão = 70         |
 |             | direita | inteiro longo | Margem direita, em centésimos de polegada. Valor padrão = 70          |
 |             | header  | inteiro longo | Deslocação do cabeçalho, em centésimos de polegada. Valor padrão = 30 |
-|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30            |
+|             | footer  | inteiro longo | Deslocamento do rodapé, em centésimos de polegada. Valor padrão = 30  |
 
 ### Orientação
 
@@ -354,8 +354,8 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 * If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./method-list.md#vp-get-print-info) returns a paper size with `custom` as value for `kind`.
 
 * If you set the paper size using the `kind` property, you can use either:
-  * one of the formats in the [SpreadJS format list](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
-  * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
+  * um dos formatos da [lista de formatos SpreadJS](https://developer.mescius.com/spreadjs/api/enums/GC.Spread.Sheets.Print.PaperKind)
+  * um dos formatos retornados pelo comando [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html). In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
 
 ### Escala
 

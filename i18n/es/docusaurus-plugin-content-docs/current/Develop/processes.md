@@ -70,8 +70,6 @@ Cada proceso tiene también una selección actual y un registro actual por tabla
 
 :::
 
-La aplicación 4D crea procesos para sus propias necesidades, por ejemplo el proceso Principal para gestionar las ventanas de visualización de la interfaz de usuario, el proceso de Diseño para gestionar las ventanas y editores del entorno de Diseño (note que ambos son [procesos worker](#worker-processes)), el proceso Servidor Web, el proceso Gestor de Caché, el proceso de Indexación, o el proceso On Event Manager.
-
 ## Procesos globales y locales
 
 El alcance de los procesos puede ser local o global. Por defecto, todos los procesos son globales.

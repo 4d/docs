@@ -3,9 +3,9 @@ id: advanced-programming
 title: Programação avançada com Javascript
 ---
 
-A 4D View Pro Area is a [Web Area form object](../FormObjects/webArea_overview.md) that uses the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). As such, it behaves just like any other web area, and you can get it to execute Javascript code by calling the [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html) 4D command.
+A 4D View Pro Area is a [Web Area form object](../FormObjects/webArea_overview.md) that uses the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, ele se comporta como qualquer outra área Web, e você pode fazer com que execute o código Javascript chamando o comando 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html).
 
-Since 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://developer.mescius.com/spreadjs), you can also call SpreadJS Javascript methods in 4D View Pro areas.
+Como 4D View Pro é alimentado pela [solução de planilha eletrônica SpreadJS](https://developer.mescius.com/spreadjs), você também pode chamar os métodos Javascript SpreadJS nas áreas 4D View Pro.
 
 ## Exemplo prático: Esconder a faixa de opções
 

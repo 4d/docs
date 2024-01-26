@@ -324,7 +324,7 @@ A página lista os elementos carregados pela aplicação 4D atual:
 
 ![](../assets/en/Project/buildapppluginsProj.png)
 
-* **Active** column - Indicates that the items will be integrated into the application package built. Todos os itens são selecionados por padrão. To exclude a plug-in or a component, deselect the check box next to it.
+* **Active** column - Indicates that the items will be integrated into the application package built. Todos os itens são selecionados por padrão. Para excluir um plug-in ou um componente, desmarque a caixa de seleção ao lado dele.
 
 * **Plugins and components** column - Displays the name of the plug-in/component.
 
@@ -399,7 +399,7 @@ Application notarization is highly recommended by Apple as of macOS 10.14.5 (Moj
 
 In 4D v18, the [built-in signing features](#os-x-signing-certificate) have been updated to meet all of Apple's requirements to allow using the Apple notary service. The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode). The notarization itself must be conducted by the developer and is independent from 4D (note also that it requires installing Xcode).
 
-For more information on the notarization concept, please refer to [this page on the Apple developer website](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
+Para obter mais informações sobre o conceito de notarização, consulte [nesta página no site de desenvolvedores Apple](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow).
 
 ## Personalizar ícones de uma aplicação
 
@@ -414,7 +414,7 @@ For more information on the notarization concept, please refer to [this page on 
 
  Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. Estão disponíveis as seguintes chaves:
+Você também pode definir as [chaves XML ](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) específicas no arquivo buildApp.4DSettings para designar cada ícone a ser usado. Estão disponíveis as seguintes chaves:
 
 * RuntimeVLIconWinPath
 * RuntimeVLIconMacPath
@@ -527,7 +527,7 @@ This mechanism addresses the case where the primary targeted server is temporary
 
 ### Disponibilidade da caixa de diálogo de seleção do servidor em caso de erro
 
-You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. The configuration depends on the value of the [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) XML key on the machine where the application was built:
+You can choose whether or not to display the standard server selection dialog box on merged client applications when the server cannot be reached. A configuração depende do valor da chave XML [ServerSelectionAllowed](https://doc.4d.com/4Dv17R6/4D/17-R6/ServerSelectionAllowed.300-4465714.en.html) no computador em que a aplicação foi criada:
 
 * **Display of an error message with no access possible to the server selection dialog box**. Operação por defeito. The application can only quit.  
   `ServerSelectionAllowed`: **False** or key omitted ![](../assets/en/Project/connect1.png)

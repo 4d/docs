@@ -45,7 +45,7 @@ Para criar um arquivo de histórico:
 
 1. On the **Backup/Configuration** page of the Database Settings, check the **Use Log** option. O programa exibe um caixa de diálogo abrir/novo arquivo. Como padrão, o nome arquivo é chamado *data.journal*.
 
-2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. If the database hard drive is lost, you can still recall your log file.
+2. Mantém o nome padrão ou renomeia, e daí seleciona o local do arquivo. If you have at least two hard drives, it is recommended that you place the log file on a disk other than the one containing the database. Se o disco duro do banco de dados for perdido, você ainda poderá recuperar o arquivo de histórico.
 
 3. Clique **Salvar**. O disco e o nome do arquivo de histórico aberto agora estão exibidos na área **Usar histórico** da caixa de diálogo. Pode clicar nessa área para exibir um menu pop-up contendo a rota de histórico no disco.
 

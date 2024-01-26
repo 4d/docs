@@ -9,7 +9,7 @@ title: Começando
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
+A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro é alimentado pela solução de [folha de cálculo SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrada em 4D.
 
 Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
 
@@ -159,7 +159,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 ## Importação e exportação de documentos
 
-4D View Pro supports the import and export of several document formats:
+4D View Pro suporta a importação e exportação de vários formatos de documentos:
 
 * .4vp
 * .xlsx
