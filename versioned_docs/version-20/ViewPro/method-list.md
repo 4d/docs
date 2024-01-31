@@ -2115,6 +2115,7 @@ The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
+
 #### Example
 
 In the following document:
@@ -2809,7 +2810,7 @@ If *rangeObj* contains multiple cells or multiple ranges, the value of the first
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -5055,6 +5056,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 

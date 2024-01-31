@@ -36,6 +36,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Highlights
 
+- *SpreadJS* updated to version 16.2.6 in 4D v20.2 HF1.
 - 4D v20.2 is certified on macOS Sonoma (macOS 14). 
 - (4D v20.1) New `plugins` property in the *options* parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command. 
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
@@ -286,7 +287,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 </details>
 
 
-## Library table
+## Library table (4D v20 LTS)
 
 
 
@@ -296,7 +297,8 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |CEF|109|20|Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
-|SpreadJS|16.0.4|20|4D View Pro engine|
+|SpreadJS|16.2.6|20.2 HF1|4D View Pro engine|
+||16.0.4|20||
 |OpenSSL|3.1.1|20||
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||

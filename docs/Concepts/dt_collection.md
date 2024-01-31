@@ -5,7 +5,7 @@ title: Collection
 
 Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
 
-Collection type variables are managed using [object notation](dt_object.md#properties)).
+Collection type variables are managed using [object notation](dt_object.md#properties).
 
 To access a collection element, you need to pass the element number inside square brackets:
 
