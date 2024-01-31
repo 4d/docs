@@ -91,6 +91,7 @@ You can handle entities like any other object in 4D and pass their references di
 
 With the entities, there is no concept of "current record" as in the 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
+
 :::
 
 ## Using entity attributes  
@@ -455,13 +456,13 @@ You create a filter for a dataclass by defining an `event restrict` function in 
 #### Syntax
 
 ```4d
-Function event restrict() -> $result : 4D.EntitySelection
+Function event restrict() -> $result : cs.*DataClassName*Selection
 // code
 ```
 
 This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created. 
 
-The filter can return any entity selection of the dataclass (an entity selection built upon a query, stored in the [`Storage`], etc.).
+The filter must return an entity selection of the dataclass. It can be an entity selection built upon a query, stored in the [`Storage`], etc.
 
 :::note
 
@@ -486,11 +487,13 @@ Class extends DataClass
 Function event restrict() : cs.CustomersSelection
 
 	var $result : cs.CustomersSelection
+	
+	// By default, no filter is applied - $result is Null
+	$result:=Null
 
-	If (Session.storage.salesPerson#Null)  // the user is authenticated
-		$result:=This.query("salesID = :1"; Session.storage.salesPerson.id)
-	Else
-		return Null
+	If (Session.storage.salesPerson#Null)  // the user is authenticated  
+			//only their customers are returned
+		$result:=Session.storage.salesPersons.first().customers
 	End if
 
 	return $result
@@ -523,7 +526,7 @@ Filters are automatically applied when the following ORDA functions, commands, o
 |Feature|Comment|
 |---|---|
 |[dataclass.get()](../API/DataClassClass.md#get)|If the entity does not match the filter, `null` is returned|
-|[entity.reload()](../API/EntityClass.md#reload)|`reload()` is equivalent to `get()`|
+|[entity.reload()](../API/EntityClass.md#reload)|Only in client/server and remote datastores|
 |[dataclass.all()](../API/DataClassClass.md#all)||
 |[dataclass.fromCollection()](../API/DataClassClass.md#fromcollection)|<li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li>|
 |[entitySelection.and()](../API/EntitySelectionClass.md#and)|Only entities matching the filter are returned|
@@ -532,13 +535,13 @@ Filters are automatically applied when the following ORDA functions, commands, o
 |[dataclass.query()](../API/DataClassClass.md#query)||
 |[entitySelection.query()](../API/EntitySelectionClass.md#query)||
 |[Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)||
-|[entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)|Filter applied if *attributeName* is a relation attribute (including alias or computed attribute)|
-|[entity.attributeName](../API/EntityClass.md#attributename)|Filter applied if *attributeName* is a relation attribute (including alias or computed attribute)|
+|[entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)|Filter applied if *attributeName* is a related entity or related entities of a filtered dataclass (including alias or computed attribute)|
+|[entity.attributeName](../API/EntityClass.md#attributename)|Filter applied if *attributeName* corresponds to related entities of a filtered dataclass (including alias or computed attribute)|
 |[Data Explorer](../Admin/dataExplorer.md)||
 |[Debugger](../Debugging/debugger.md)||
 
 
-Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection.  
+Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities. 
 
 :::note
 
