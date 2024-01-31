@@ -3,7 +3,7 @@ id: dataExplorer
 title: Data Explorer
 ---
 
-The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any step of the development process.
+The Data Explorer provides a web interface to view, query, and edit data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you quickly identifying issues at any step of the development process, as well as controlling and editing data.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
@@ -58,6 +58,12 @@ The minimum resolution to use the Data Explorer is 1280x720. Recommended resolut
 
 The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
 
+:::info
+
+When the ORDA model or data is modified on the database side (table added, record edited or deleted, etc.), you just need to refresh the Data Explorer page in the browser (using the F5 key, for example).
+
+:::
+
 You can switch to the **dark mode** display theme using the selector at the bottom of the page:
 
 ![alt-text](../assets/en/Admin/dark.png)
@@ -84,9 +90,6 @@ The page contains several areas:
   - **Ctrl+Click** (Windows) or **Command+Click** (macOS) on a related attribute name in the right side area displays the values of the attribute in an independant, floating area:<br/>
 ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
-### Updating contents
-
-When the ORDA model or data is modified on the database side (table added, record edited or deleted, etc.), you just need to refresh the Data Explorer page in the browser (using the F5 key, for example).
 
 ### Ordering entities
 
@@ -182,3 +185,36 @@ You can click on the `v` icon to display both [`queryPlan`](API/DataClassClass.m
 Right-click in the query area to display the previous valid queries:
 
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
+
+
+### Editing data
+
+You can edit your data using the Data Explorer. You can modify attribute values, add or delete entities, and save your edits on the server. 
+
+#### Allow editing
+
+For security reasons, to be able to edit data through the Data Explorer, you first need to enable the editing mode using the **Allow editing** selector. When enabled, edit action buttons are displayed to the right side:
+
+![allow-editing](../assets/en/Admin/editing.png)
+
+:::info
+
+Be careful when entering the editing mode of the Data Explorer since no confirmation dialog boxes are displayed in this administration tool.  
+
+:::
+
+#### Edition actions
+
+When the **Allow editing** selector is enabled, the following actions are available:
+
+- **Modification**: You can modify entity attribute values displayed in the Details pane of the Data Explorer. All attributes can be edited, including the primary key values of related entities. 
+ 
+ 
+#### Saving modifications
+
+In a stand-alone application, all modifications including deletions, are directly saved to the data. 
+
+In a client/server application, modifications are done locally and you need to click on the **Save** button to save them on the server.   
+
+Modifications are directly saved in data 
+The following edition act
