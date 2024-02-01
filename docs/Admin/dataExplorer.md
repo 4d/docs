@@ -39,11 +39,8 @@ or
 
 > [HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) values are configured in the `WebAdmin` settings.
 
-## Using the Data Explorer
 
-In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
-
-### Requirements
+## Requirements
 
 The Data Explorer supports the following web browsers:
 
@@ -53,6 +50,12 @@ The Data Explorer supports the following web browsers:
 - FireFox
 
 The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
+
+
+## Browsing Data
+
+In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
+
 
 ### Basics
 
@@ -187,30 +190,41 @@ Right-click in the query area to display the previous valid queries:
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
 
 
-### Editing data
+## Editing Data
 
-You can edit your data using the Data Explorer. You can modify attribute values, add or delete entities, and save your edits on the server. 
+The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to fix issues with invalid data.   
 
-#### Allow editing
+### Allow editing
 
 For security reasons, to be able to edit data through the Data Explorer, you first need to enable the editing mode using the **Allow editing** selector. When enabled, edit action buttons are displayed to the right side:
 
 ![allow-editing](../assets/en/Admin/editing.png)
 
+This selector must be enabled for each **table** and each **browser session**.
+
 :::info
 
-Be careful when entering the editing mode of the Data Explorer since no confirmation dialog boxes are displayed in this administration tool.  
+The selector is intended to prevent accidental modifications since no confirmation dialog boxes are displayed when editing data through the Data Explorer.  
 
 :::
 
-#### Edition actions
 
-When the **Allow editing** selector is enabled, the following actions are available:
+### Modifying attributes
 
-- **Modification**: You can modify entity attribute values displayed in the Details pane of the Data Explorer. All attributes can be edited, including the primary key values of related entities. 
+When the **Allow editing** selector is enabled for a table, you can modify values displayed in the Details pane for this table. All scalar attribute values can be edited:
+
+- text
+- boolean
+- numeric
+- date
+- time
+- image (you can upload an image from your disk)
+- object (JSON string)
+
+Blob attributes cannot be modified.  
  
  
-#### Saving modifications
+### Saving modifications
 
 In a stand-alone application, all modifications including deletions, are directly saved to the data. 
 
