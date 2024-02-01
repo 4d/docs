@@ -224,14 +224,14 @@ The following scalar attribute values can be edited:
 
 Blob attributes cannot be modified.  
 
-New or modified values are stored in the local cache, you need to [save them explicitely](#saving) to store them in the data. 
+New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data. 
 
 
-### Creating
+### Creating entities
 
 You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
 
-The new entity is is kept in the local cache, you need to [save it explicitely](#saving) to store it in the data. 
+The new entity is is kept in the local cache, you need to [save it explicitely](#saving-modifications) to store it in the data. 
 
 :::info
 
@@ -239,16 +239,16 @@ Attribute values that need to be calculated by 4D (IDs, computed attributes) wil
 
 :::
 
-### Reloading
+### Reloading values
 
 The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.   
 
 
-### Saving
+### Saving modifications
 
-Except for deletion (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
+Except for [deletion](#deleting-entities) (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
 
-To save modifications or to save a created entity, click on the **Save** button [save](../assets/en/Admin/data-explorer-save.png).
+To save modifications or to save an entity you created in the Data Explorer, click on the **Save** button ![save](../assets/en/Admin/data-explorer-save.png).
 
 :::info
 
@@ -257,19 +257,17 @@ Modifications on an existing entity are automatically saved when you select anot
 :::
 
 
-In case of conflict (e.g. another user has modified the same attribute value on the same entity), a conflict error message is displayed in the Data Explorer.
+In case of conflict (e.g. another user has modified the same attribute value on the same entity), an error message is displayed at the bottom of the Data Explorer.
 
-[error](../assets/en/Admin/data-explorer-error.png). 
+![error](../assets/en/Admin/data-explorer-error.png)
 
- In this case, you can click on the **Reload** button to get the new value from the data and then, apply and save your modifications. 
+In this case, you can click on the [**Reload** button](#reloading-values) to get the new value from the data and then, apply and save your modifications. 
 
-### Deleting
+### Deleting entities
 
-You can delete one or more entities by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png). 
+You can delete the selected entity by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png). 
 
-To delete the selected entity, just click on the delete button.
-
-To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the delete button.
+To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the **delete** button.
 
 :::caution
 
