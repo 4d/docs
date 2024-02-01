@@ -192,7 +192,7 @@ Right-click in the query area to display the previous valid queries:
 
 ## Editing Data
 
-The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to fix issues with invalid data.   
+The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to test implementations or fix issues with invalid data.   
 
 ### Allow editing
 
@@ -200,7 +200,7 @@ For security reasons, to be able to edit data through the Data Explorer, you fir
 
 ![allow-editing](../assets/en/Admin/editing.png)
 
-This selector must be enabled for each **table** and each **browser session**.
+This selector is enabled **per dataclass** and **per browser session**.
 
 :::info
 
@@ -208,10 +208,11 @@ The selector is intended to prevent accidental modifications since no confirmati
 
 :::
 
+### Entering values
 
-### Modifying attributes
-
-When the **Allow editing** selector is enabled for a table, you can modify values displayed in the Details pane for this table. All scalar attribute values can be edited:
+When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass. 
+  
+The following scalar attribute values can be edited:
 
 - text
 - boolean
@@ -222,13 +223,56 @@ When the **Allow editing** selector is enabled for a table, you can modify value
 - object (JSON string)
 
 Blob attributes cannot be modified.  
- 
- 
-### Saving modifications
 
-In a stand-alone application, all modifications including deletions, are directly saved to the data. 
+New or modified values are stored in the local cache, you need to [save them explicitely](#saving) to store them in the data. 
 
-In a client/server application, modifications are done locally and you need to click on the **Save** button to save them on the server.   
 
-Modifications are directly saved in data 
-The following edition act
+### Creating
+
+You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
+
+The new entity is is kept in the local cache, you need to [save it explicitely](#saving) to store it in the data. 
+
+:::info
+
+Attribute values that need to be calculated by 4D (IDs, computed attributes) will be returned only after you saved the entity. 
+
+:::
+
+### Reloading
+
+The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.   
+
+
+### Saving
+
+Except for deletion (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
+
+To save modifications or to save a created entity, click on the **Save** button [save](../assets/en/Admin/data-explorer-save.png).
+
+:::info
+
+Modifications on an existing entity are automatically saved when you select another entity of the same dataclass.
+
+:::
+
+
+In case of conflict (e.g. another user has modified the same attribute value on the same entity), a conflict error message is displayed in the Data Explorer.
+
+[error](../assets/en/Admin/data-explorer-error.png). 
+
+ In this case, you can click on the **Reload** button to get the new value from the data and then, apply and save your modifications. 
+
+### Deleting
+
+You can delete one or more entities by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png). 
+
+To delete the selected entity, just click on the delete button.
+
+To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the delete button.
+
+:::caution
+
+No confirmation dialog is displayed when you delete entities. Selected entities are immediately deleted from the data.  
+
+:::
