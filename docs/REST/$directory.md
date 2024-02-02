@@ -19,7 +19,7 @@ All parameters must be passed in **headers** of a POST method:
 |Header key|Header value|
 |---|---|
 |username-4D|User - Not mandatory
-|password-4D|Password in plan text - Not mandatory
+|password-4D|Password in plain text - Not mandatory
 |session-4D-length|Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory
 
 :::caution
