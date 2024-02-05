@@ -10,7 +10,10 @@ Error handling meets two main needs:
 - finding out and fixing potential errors and bugs in your code during the development phase,
 - catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface. 
 
-Basically, there are two ways to handle errors in 4D. You can [install an error-handling method](#installing-an-error-handling-method), or write a [`Try()` keyword](#tryexpression) before pieces of code that call a function, method, or expression that can throw an error. 
+Basically, there are two ways to handle errors in 4D. You can:
+
+- [install an error-handling method](#installing-an-error-handling-method), or
+- use a [`Try()` keyword](#tryexpression) or a [`Try/Catch` structure]() before pieces of code that call a function, method, or expression that can throw an error.
 
 :::tip Good practice
 
