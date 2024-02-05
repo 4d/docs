@@ -257,11 +257,7 @@ Modifications on an existing entity are automatically saved when you select anot
 :::
 
 
-In case of conflict (e.g. another user has modified the same attribute value on the same entity), an error message is displayed at the bottom of the Data Explorer.
-
-![error](../assets/en/Admin/data-explorer-error.png)
-
-In this case, you can click on the [**Reload** button](#reloading-values) to get the new value from the data and then, apply and save your modifications. 
+In case of conflict (e.g. another user has modified the same attribute value on the same entity), an error message is displayed at the bottom of the Data Explorer. You can click on the [**Reload** button](#reloading-values) to get the new value from the data and then, apply and save your modifications. 
 
 ### Deleting entities
 
