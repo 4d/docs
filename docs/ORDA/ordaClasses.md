@@ -216,7 +216,7 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 :::info
 
-[Retricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class). 
+[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class). 
 
 :::
 
