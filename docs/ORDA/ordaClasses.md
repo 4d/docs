@@ -202,9 +202,8 @@ Class extends EntitySelection
 
 //Extract the employees with a salary greater than the average from this entity selection 
 
-Function withSalaryGreaterThanAverage
-	C_OBJECT($0)
-	$0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+	return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -256,13 +255,13 @@ For information, please refer to the [Alias attributes](#alias-attributes-1) sec
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("population")
 
 
 Function isBigCity(): Boolean
 // The getPopulation() function is usable inside the class
-$0:=This.getPopulation()>50000
+	return This.getPopulation()>50000
 ```
 
 Then you can call this code: 
