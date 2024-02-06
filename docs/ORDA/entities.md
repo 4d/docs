@@ -92,6 +92,7 @@ You can handle entities like any other object in 4D and pass their references di
 With the entities, there is no concept of "current record" as in the 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
 
+
 :::
 
 ## Using entity attributes  
@@ -435,13 +436,13 @@ The last line will return in *$myInvoices* an entity selection of all invoices t
 
 ## Restricting entity selections
 
-In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by class functions such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by interface tools like the [Data Explorer](../Admin/dataExplorer.md).
+In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by **ORDA class functions** such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by the [**REST API**](../category/api-dataclass) (which involves the [Data Explorer](../Admin/dataExplorer.md) and [remote datastores](remoteDatastores.md)).
 
 A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson. 
 
 :::info
 
-Filters apply to entities. If you want restrict access to a dataclass itself or to one or more of its attributes, you might consider using [session privileges](../privileges.md) which are more appropriate in this case. 
+Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](../privileges.md) which are more appropriate in this case. 
 
 :::
 
@@ -489,7 +490,6 @@ Function event restrict() : cs.CustomersSelection
 	var $result : cs.CustomersSelection
 	
 	// By default, no filter is applied - $result is Null
-	$result:=Null
 
 	If (Session.storage.salesPerson#Null)  // the user is authenticated  
 			//only their customers are returned
@@ -500,30 +500,19 @@ Function event restrict() : cs.CustomersSelection
 ```
 
 
-### Scope of the filters
+### Filter activation details
 
-#### Environments
+Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). A filter is activated as soon as the project is opened, i.e. it can be triggered in the `On Startup` database method.
 
-Filters apply to requests executed in the following contexts:
-
-- 4D standalone applications,
-- 4D client/server applications,
-- Remote requests, including requests from [remote datastores](../API/DataStoreClass/md#open-datastore), [REST requests](../category/rest-server), and [REST requests from Qodly Studio](https://developer.qodly.com/docs/studio/rendering#data-flow-and-server-architecture).
-
-A restricting filter is implemented at a low level and applies to all entity selections and entities handled through ORDA in your 4D projects. The filter is activated as soon as the project is opened (i.e. it can be triggered in the On Startup database method).
 
 :::info
 
-Filters do not apply when handling selections of records through the 4D language (for example when calling `ALL RECORDS`).
+Filters do not apply to legacy selections of records handled through the 4D interface or the 4D language (for example when calling `ALL RECORDS`).
 
 :::
 
 
-#### 4D language and interface
-
-Filters are automatically applied when the following ORDA functions, commands, or features are called.
-
-|Feature|Comment|
+|Functions|Comment|
 |---|---|
 |[dataclass.get()](../API/DataClassClass.md#get)|If the entity does not match the filter, `null` is returned|
 |[entity.reload()](../API/EntityClass.md#reload)|Only in client/server and remote datastores|
@@ -534,11 +523,9 @@ Filters are automatically applied when the following ORDA functions, commands, o
 |[entitySelection.minus()](../API/EntitySelectionClass.md#minus)|Only entities matching the filter are returned|
 |[dataclass.query()](../API/DataClassClass.md#query)||
 |[entitySelection.query()](../API/EntitySelectionClass.md#query)||
-|[Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)||
 |[entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)|Filter applied if *attributeName* is a related entity or related entities of a filtered dataclass (including alias or computed attribute)|
 |[entity.attributeName](../API/EntityClass.md#attributename)|Filter applied if *attributeName* corresponds to related entities of a filtered dataclass (including alias or computed attribute)|
-|[Data Explorer](../Admin/dataExplorer.md)||
-|[Debugger](../Debugging/debugger.md)||
+|[Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)||
 
 
 Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities. 
