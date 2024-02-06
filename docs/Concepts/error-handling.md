@@ -239,7 +239,16 @@ End try
 The code placed between the `Try` and the `Catch` keywords is first executed, then the flow depends on the error(s) encountered during this execution. 
 
 - If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
-- If the code block execution throws an [non-deferred error](https://doc.4d.com/4dv20/help/command/en/page1805.html), the execution flow stops and executes the `Catch` code block. If several `Try...Catch...End try` are embedded, the `Catch` code block corresponding to the latest `Try` keyword encountered is executed (the first found going back in the call stack).
+- If the code block execution throws a *non-deferred error*, the execution flow stops and executes the corresponding `Catch` code block. 
+- If the code block execution throws a *deferred error*, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block. 
+
+:::info
+
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20/help/command/en/page1805.html) command description. 
+
+:::
+
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
 
 :::note
 
@@ -247,8 +256,7 @@ If an [error-handling method](#installing-an-error-handling-method) is installed
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command contains the last errors collection. 
+### Example
 
-You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
-
+...coming soon
 
