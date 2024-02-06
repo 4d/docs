@@ -219,7 +219,7 @@ The following scalar attribute values can be edited:
 - numeric
 - date
 - time
-- image (you can upload an image from your disk)
+- image (you can upload or drag and drop an image)
 - object (JSON string)
 
 Blob attributes cannot be modified.  
@@ -261,9 +261,15 @@ In case of conflict (e.g. another user has modified the same attribute value on 
 
 ### Deleting entities
 
-You can delete the selected entity by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png). 
+You can delete entities by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png). 
 
-To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the **delete** button.
+To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the **delete** button. 
+
+:::note
+
+If some entities could not be deleted because of a conflict (e.g. entities locked on the server), they are highlighted in the list. 
+
+:::
 
 :::caution
 
