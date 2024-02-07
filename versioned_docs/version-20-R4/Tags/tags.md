@@ -1,6 +1,5 @@
 ---
 id: tags
-slug: tags
 title: Transformation tags
 ---
 
@@ -79,7 +78,7 @@ Pass the "WEBFOLDER" keyword to restore the default path (relative to the page).
 The following code, which must specify a relative path for each call:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DINCLUDE folder/subpage1.html-->
 <!--#4DINCLUDE folder/subpage2.html-->
 <!--#4DINCLUDE folder/subpage3.html-->
@@ -89,7 +88,7 @@ The following code, which must specify a relative path for each call:
 ... is equivalent to:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DBASE folder/-->
 <!--#4DINCLUDE subpage1.html-->
 <!--#4DINCLUDE subpage2.html-->
@@ -202,7 +201,7 @@ The number of loops is based on the number of elements of the collection. At eac
  <table class="table">    
 
         <tr><th>Name</th></tr>
-        
+
           <!--#4DEACH $name in getNames-->
         <tr>
             <td><!--#4DTEXT $name--></td>
@@ -217,7 +216,7 @@ The number of loops is based on the number of elements of the collection. At eac
 
 ```html
     <table class="table">    
-         <!--#4DCODE 
+         <!--#4DCODE
             $salePersons:=getSalesPersons
           -->          
        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
@@ -264,9 +263,9 @@ var customers : cs.CustomersSelection
 var $input; $output : Text
 
 customers:=ds.Customers.all()
-$input:="<!--#4DEACH $cust in customers-->" 
+$input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->" 
+$input:=$input+"<!--#4DENDEACH-->"
 PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
@@ -516,7 +515,7 @@ The following code example:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/> 
+<!--#4DTEXT var--> <br/>
 <!--#4DENDLOOP-->
 ```
 
