@@ -221,7 +221,7 @@ End if
 
 The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
 
-Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try/Catch` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. 
+Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try...Catch...End try` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. In addition, the `Catch` block can be used to handle the error in any custom way. 
 
 
 The formal syntax of the `Try...Catch...End try` structure is:
@@ -242,13 +242,20 @@ The code placed between the `Try` and the `Catch` keywords is first executed, th
 - If the code block execution throws a *non-deferred error*, the execution flow stops and executes the corresponding `Catch` code block. 
 - If the code block execution throws a *deferred error*, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block. 
 
-:::info
+:::note
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20/help/command/en/page1805.html) command description. 
+If a *deferred* error is thrown outside of the `Try` block, the code execution continues until the end of the method or function. 
 
 :::
 
-In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
+:::info
+
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20/help/command/en/page1805.html) command description.
+
+:::
+
+
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
 
 :::note
 
