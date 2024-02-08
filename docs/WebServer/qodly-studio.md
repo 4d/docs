@@ -9,7 +9,7 @@ Qodly Studio in 4D is currently in the **Developer Preview** phase. It should no
 
 :::
 
-**Qodly Studio** is an application interface builder, including a form editor, a code editor, a web rendering engine, and natively supporting the ORDA technology. 
+**Qodly Studio** is an application interface builder. It provides developers with integrated tools, including a form editor, a code editor, a rendering engine, and supports natively the [ORDA technology](../ORDA/overview.md). 
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**. 
 
