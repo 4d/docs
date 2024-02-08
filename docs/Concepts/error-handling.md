@@ -282,14 +282,16 @@ Function createInvoice($customer : cs.customerEntity; $items : Collection; $invo
 			$newInvoiceLine.item:=$item.item
 			$newInvoiceLine.amount:=$item.amount
 			$newInvoiceLine.invoice:=$newInvoice
-			/* call other specific functions to validate invoiceline*/
+			//call other specific functions to validate invoiceline
 			$newInvoiceLine.save()
 		End for each 
 		$newInvoice.save()
 		ds.validateTransaction()
-		return $newInvoice
 	Catch
 		ds.cancelTransaction()
 		ds.logErrors(Last errors)
+		$newInvoice:=Null
 	End try
+	return $newInvoice
+
 ```
