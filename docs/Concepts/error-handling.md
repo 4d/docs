@@ -265,5 +265,31 @@ If an [error-handling method](#installing-an-error-handling-method) is installed
 
 ### Example
 
-...coming soon
+Combining transactions and `Try...Catch...End try` structures allows writing secured code for critical actions: 
 
+```4d
+Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
+	var $newInvoice : cs.invoiceEntity
+	var $newInvoiceLine : cs.invoiceLineEntity
+	var $item : Object
+	ds.startTransaction()
+	Try
+		$newInvoice:=This.new()
+		$newInvoice.customer:=$customer
+		$newInvoice.invoiceRef:=$invoiceRef
+		For each ($item; $items)
+			$newInvoiceLine:=ds.invoiceLine.new()
+			$newInvoiceLine.item:=$item.item
+			$newInvoiceLine.amount:=$item.amount
+			$newInvoiceLine.invoice:=$newInvoice
+			/* call other specific functions to validate invoiceline*/
+			$newInvoiceLine.save()
+		End for each 
+		$newInvoice.save()
+		ds.validateTransaction()
+		return $newInvoice
+	Catch
+		ds.cancelTransaction()
+		ds.logErrors(Last errors)
+	End try
+```
