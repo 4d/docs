@@ -1,7 +1,6 @@
 ---
 id: information
 title: Information Page
-sidebar_label: Information Page
 ---
 
 The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
