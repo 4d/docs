@@ -4,6 +4,17 @@ title: Release Notes
 ---
 
 
+
+## 4D v20 R5
+
+Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D v20 R5.
+
+#### Highlights
+
+- Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
+
+
+
 ## 4D v20 R4
 
 Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/), the blog post that lists all new features and enhancements in 4D v20 R4.
@@ -24,6 +35,7 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R4): list of all bugs that have been fixed in 4D v20 R4.
+
 
 
 #### Behavior changes
