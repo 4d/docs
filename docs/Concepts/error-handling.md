@@ -250,7 +250,7 @@ If a *deferred* error is thrown outside of the `Try` block, the code execution c
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20/help/command/en/page1805.html) command description.
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
 
 :::
 
