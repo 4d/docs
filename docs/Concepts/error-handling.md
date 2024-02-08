@@ -265,7 +265,7 @@ If an [error-handling method](#installing-an-error-handling-method) is installed
 
 ### Example
 
-Combining transactions and `Try...Catch...End try` structures allows writing secured code for critical actions: 
+Combining transactions and `Try...Catch...End try` structures allows writing secured code for critical features. 
 
 ```4d
 Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
