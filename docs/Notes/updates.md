@@ -392,7 +392,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
 |ICU|73.2|20.1|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
-|CEF|118|20 R3|Chromium 5993|
+|CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |SpreadJS|16.2.6|20 R4|4D View Pro engine|
