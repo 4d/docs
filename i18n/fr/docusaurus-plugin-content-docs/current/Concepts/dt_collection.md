@@ -5,7 +5,7 @@ title: Collection
 
 Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, date, objet, booléen, collection ou null).
 
-Les variables de type collection sont gérées à l'aide de la [notation objet](dt_object.md#properties).
+Collection type variables are managed using [object notation](dt_object.md#properties).
 
 Pour accéder à un élément d'une collection, vous devez passer le numéro de l'élément entre crochets :
 
