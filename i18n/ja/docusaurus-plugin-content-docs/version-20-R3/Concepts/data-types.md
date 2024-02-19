@@ -53,9 +53,9 @@ title: データタイプの概要
 | バリアント  | undefined  |
 
 
-### Null as default value
+### デフォルト値としての Null
 
-Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.
+Object型、Collection型、Pointer型、Picture型の変数は、デフォルト値として **null** を持ちますが、実際には宣言後で割り当て前の場合には中間的な状態になります。 これらは **null** 値の *ように振る舞います* が、コードがそれらにアクセスしようとしたときに発生するエラーが少なくなるなど、多少の違いがあります。
 
 
 
