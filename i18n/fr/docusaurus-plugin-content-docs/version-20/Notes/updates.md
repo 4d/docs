@@ -36,6 +36,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Points forts
 
+- *SpreadJS* updated to version 16.2.6 in 4D v20.2 HF1.
 - 4D v20.2 is certified on macOS Sonoma (macOS 14).
 - (4D v20.1) Nouvelle propriété `plugins` dans le paramètre *options* de la commande [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) .
 - 4D Server intègre automatiquement plusieurs journaux : [Restauration automatique](../Backup/settings.md#automatic-restore).
@@ -91,7 +92,7 @@ Lisez [**Les nouveautés de 4D v19 R8**](https://blog.4d.com/fr-whats-new-in-4d-
 
     - nouvelle commande [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows)
 - Commandes du langage 4D : [Liste des nouveautés](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) sur doc.4d.com.
-- 4D Write Pro: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) on doc.4d.com.
+- 4D Write Pro : [Liste des nouveautés](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6130471.en.html) sur doc.4d.com.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=19_R8): liste de tous les bugs qui ont été corrigés dans 4D v19 R8.
 
 
@@ -286,7 +287,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 </details>
 
 
-## Tableau des bibliothèques
+## Library table (4D v20 LTS)
 
 
 
@@ -296,7 +297,8 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | CEF          | 109              | 20                  | Chromium 5414. CORS policies now also apply when accessing files on disk (see the "security" paragraph on web areas in the [4D v19 R5](#4d-v19-r5) section above). |
 | Hunspell     | 1.7.2            | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                                |
 | PDFWriter    | 4.3              | 20                  | FreeType dependency dans 12.2.1                                                                                                                                    |
-| SpreadJS     | 16.0.4           | 20                  | Moteur 4D View Pro                                                                                                                                                 |
+| SpreadJS     | 16.2.6           | 20.2 HF1            | Moteur 4D View Pro                                                                                                                                                 |
+|              | 16.0.4           | 20                  |                                                                                                                                                                    |
 | OpenSSL      | 3.1.1            | 20                  |                                                                                                                                                                    |
 | libZip       | 1.9.2            | 20                  | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                                         |
 | LZMA         | 5.4.1            | 20                  |                                                                                                                                                                    |
