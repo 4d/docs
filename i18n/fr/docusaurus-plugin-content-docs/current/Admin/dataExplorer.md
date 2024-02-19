@@ -3,7 +3,7 @@ id: dataExplorer
 title: Explorateur de données
 ---
 
-L'Explorateur de données fournit une interface web pour visualiser et rechercher les données de votre datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. Il vous aide à contrôler les données et à identifier rapidement les problèmes rencontrés à chaque étape du développement.
+The Data Explorer provides a web interface to view, query, and edit data in your project datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. It helps you quickly identifying issues at any step of the development process, as well as controlling and editing data.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
@@ -37,11 +37,8 @@ Pour se connecter à la page web de l'Explorateur de données :
 
 > Les valeurs [HTTPPort](webAdmin.md#http-port) et [HTTPSPort](webAdmin.md#https-port) sont configurées dans les paramètres de `WebAdmin`.
 
-## Utilisation de l'Explorateur de données
 
-En plus d'une vue complète et personnalisable de vos données, l'Explorateur de données vous permet de rechercher et d'ordonner vos données.
-
-### Conditions requises
+## Conditions requises
 
 L'Explorateur de données prend en charge les navigateurs Web suivants :
 
@@ -52,9 +49,21 @@ L'Explorateur de données prend en charge les navigateurs Web suivants :
 
 La résolution minimale pour utiliser l'Explorateur de données est de 1280x720. La résolution recommandée est de 1920x1080.
 
-### Principes de base
+
+## Browsing Data
+
+En plus d'une vue complète et personnalisable de vos données, l'Explorateur de données vous permet de rechercher et d'ordonner vos données.
+
+
+### Basics
 
 L'Explorateur de données fournit un accès global au modèle de données ORDA conformément aux [règles de mapping ORDA](ORDA/dsMapping.md#general-rules).
+
+:::info
+
+Lorsque les données ou le modèle ORDA sont modifiés du côté de la base de données (ajout de table, enregistrement édité ou supprimé, etc.), il suffit de rafraîchir la page de l'Explorateur de données dans le navigateur (à l'aide de la touche F5, par exemple).
+
+:::
 
 Vous pouvez passer au thème d'affichage **mode sombre** à l'aide du sélecteur situé en bas de la page :
 
@@ -77,9 +86,6 @@ La page contient plusieurs zones :
   - Les données liées (relations N-vers-1 et 1-versN) peuvent être affichées par le biais de zones extensibles/réductibles :<br/> ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
   - **Ctrl+Click** (Windows) ou **Command+Click** (macOS) sur un nom d'attribut lié dans la zone de droite affiche les valeurs de l'attribut dans une zone flottante indépendante :<br/> ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
-### Mise à jour des contenus
-
-Lorsque les données ou le modèle ORDA sont modifiés du côté de la base de données (ajout de table, enregistrement édité ou supprimé, etc.), il suffit de rafraîchir la page de l'Explorateur de données dans le navigateur (à l'aide de la touche F5, par exemple).
 
 ### Ordonner les entités
 
@@ -175,3 +181,91 @@ Vous pouvez cliquer sur l'icône `v` pour afficher à la fois [`queryPlan`](API/
 Faites un clic droit dans la zone des requêtes pour afficher les précédentes requêtes valides :
 
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
+
+
+## Editing Data
+
+The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to test implementations or fix issues with invalid data.
+
+### Allow editing
+
+For security reasons, to be able to edit data through the Data Explorer, you first need to enable the editing mode using the **Allow editing** selector. When enabled, edit action buttons are displayed to the right side:
+
+![allow-editing](../assets/en/Admin/editing.png)
+
+This selector is enabled **per dataclass** and **per browser session**.
+
+:::info
+
+The selector is intended to prevent accidental modifications since no confirmation dialog boxes are displayed when editing data through the Data Explorer.
+
+:::
+
+### Entering values
+
+When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass.
+
+The following scalar attribute values can be edited:
+
+- text
+- boolean
+- numeric
+- date
+- time
+- image (you can upload or drag and drop an image)
+- object (JSON string)
+
+Blob attributes cannot be modified.
+
+New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data.
+
+
+### Creating entities
+
+You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
+
+The new entity is is kept in the local cache, you need to [save it explicitely](#saving-modifications) to store it in the data.
+
+:::info
+
+Attribute values that need to be calculated by 4D (IDs, computed attributes) will be returned only after you saved the entity.
+
+:::
+
+### Reloading values
+
+The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.
+
+
+### Saving modifications
+
+Except for [deletion](#deleting-entities) (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
+
+To save modifications or to save an entity you created in the Data Explorer, click on the **Save** button ![save](../assets/en/Admin/data-explorer-save.png).
+
+:::info
+
+Modifications on an existing entity are automatically saved when you select another entity of the same dataclass.
+
+:::
+
+
+In case of conflict (e.g. another user has modified the same attribute value on the same entity), an error message is displayed at the bottom of the Data Explorer. You can click on the [**Reload** button](#reloading-values) to get the new value from the data and then, apply and save your modifications.
+
+### Deleting entities
+
+You can delete entities by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png).
+
+To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the **delete** button.
+
+:::note
+
+If some entities could not be deleted because of a conflict (e.g. entities locked on the server), they are highlighted in the list.
+
+:::
+
+:::caution
+
+No confirmation dialog is displayed when you delete entities. Selected entities are immediately deleted from the data.
+
+:::
