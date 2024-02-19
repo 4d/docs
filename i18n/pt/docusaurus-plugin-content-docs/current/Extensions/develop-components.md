@@ -14,7 +14,7 @@ Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-
 - **Host Project**: Application project in which a component is installed and used.
 - **Component**: Matrix project that can be compiled or [built](Desktop/building.md#build-component), copied into the [`Components`](Project/architecture.md) folder of the host application and whose contents are used in the host application.
 
-## Básicos
+## Basics
 
 Criar e instalar componentes 4D é realizado diretamente a partir de 4D:
 
