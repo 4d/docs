@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-objects-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -940,6 +940,7 @@ utilice el siguiente código:
 
 
 
+
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ | -- | -------------------------------------------------- |
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
@@ -1123,7 +1124,8 @@ En *paramObj*, puede pasar varias propiedades:
 | includeFormulas         | Boolean     | Si se incluye la fórmula al guardar, por defecto=true.                                                                      |
 | includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                       |
 | includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                            |
-| saveAsView              | Boolean     | Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.                                           |
+
+|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
@@ -2510,6 +2512,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 En *styleName*, pase el nombre del estilo a leer.
 
+
 Puede definir de dónde obtener la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la numeración comienza en 0) o con las siguientes constantes:
 
 * `vk current sheet`
@@ -3266,7 +3269,7 @@ El comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summ
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](languageOverview.html#4d-view-pro-object).
+En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
@@ -4469,22 +4472,24 @@ Function onEvent()
    SET TIMER(60)
 
   :(FORM Event.code=On VP Range Changed)
- // Detectado el final del cálculo. Reinicia el temporizador
+ // Detectado el final del cálculo. Restarts the timer
          If(This.isWaiting)
            SET TIMER(60)
          End if
 
   :(FORM Event.code=On Timer)
- // Para asegurarse de no reiniciar el temporizador si llama a otros comandos de 4D View después de este punto
+ // To be sure to not restart the timer if you call others 4D View command after this point
          This.isWaiting:=False
 
- // Detener el temporizador
+
+ // Stop the timer
    SET TIMER(0)
 
- // Iniciar la exportación del PDF
-        VP EXPORT DOCUMENTO(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+ // Start the PDF export
+        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
      :(FORM Event.code=On URL Loading Error)
+
          CANCEL 
  End case
 ```
@@ -6543,6 +6548,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### Descripción
+
 
 El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->reposiciona vertical y horizontalmente la vista del *rangeObj*<!-- END REF -->.
 

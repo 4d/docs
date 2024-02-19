@@ -96,10 +96,9 @@ var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
-
+//equivalente a:  
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+//también equivalente a C_OBJECT($o)
 ```
 
 - Para declarar las variables objeto de la clase 4D:

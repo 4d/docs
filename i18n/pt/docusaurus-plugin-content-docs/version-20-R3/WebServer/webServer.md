@@ -54,7 +54,7 @@ The 4D web server supports access to data stored in your 4D applications through
 
 * Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
 
-* [specific URLs](httpRequests.md) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+* [URLs específicos](httpRequests.md) permitem que 4D seja chamado para executar qualquer ação; esses URLs também podem ser usados como ações de formulário para acionar o processamento quando o usuário publica formulários HTML.
 
 ## Métodos banco de dados dedicados
 

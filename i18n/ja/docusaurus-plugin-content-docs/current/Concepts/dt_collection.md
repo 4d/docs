@@ -5,7 +5,7 @@ title: コレクション
 
 コレクションとは、類似または混在した型 (テキスト、数値、日付、オブジェクト、ブール、コレクション、null) の値が順番に並べられたリストです。
 
-Collection type variables are managed using [object notation](dt_object.md#properties)).
+コレクション型の変数を扱うには、[オブジェクト記法](Concepts/dt_object.md#プロパティ) を使用します。
 
 コレクション要素にアクセスするには、大カッコ内に要素番号を渡します:
 

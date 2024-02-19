@@ -263,7 +263,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *styleName* parameter lets you assign a name to the style sheet. If the name is already used within the same scope, the new style sheet replaces the existing one. Note that you can use the same name for different scopes (see below).
 
-Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-objects-properties).
+Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
 
 You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
 
@@ -977,7 +977,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 
 |Variable|  |Type| Description|
 |---|---|---|---|
-|$1|  |text| The name of the 4D View Pro object|
+|$1|  |text| The name of the 4D View Pro area object|
 |$2|  |text| The filepath of the exported 4D View Pro object|
 |$3|  |object| A reference to the command's *paramObj*|
 |$4|  |object| An object returned by the method with a status message|
@@ -2115,6 +2115,7 @@ The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
+
 #### Example
 
 In the following document:
@@ -2500,6 +2501,7 @@ End if
 
 <details><summary>History</summary>
 
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -2801,13 +2803,14 @@ If *rangeObj* contains multiple cells or multiple ranges, the value of the first
 
 
 
+
 #### Example
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -2971,6 +2974,18 @@ $o.password:="excel123"
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
+```4d
+	//myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
+
 #### Example 3
 
 You want to import a `.txt` file that uses a comma (",") as delimiter:
@@ -3009,7 +3024,7 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In *viewPro*, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](languageOverview.html#4d-view-pro-object) section.
+In *viewPro*, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 An error is returned if the *viewPro* object is invalid.
 
@@ -3519,6 +3534,7 @@ The following code:
 ## R
 
 ### VP RECOMPUTE FORMULAS
+
 
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Syntax -->
 **VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text ) <!-- END REF -->
@@ -5041,6 +5057,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
 |Parameter|Type||Description|
@@ -5051,6 +5068,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 |formatPattern |Text|->|Format of field|<!-- END REF -->
 
 #### Description
+
 
 The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
 
@@ -5368,6 +5386,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 ### VP SET ROW COUNT
 
+
 <!-- REF #_method_.VP SET ROW COUNT.Syntax -->
 **VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  ) <!-- END REF -->
 
@@ -5621,6 +5640,7 @@ You want to hide the grid lines as well as the row and column headers.
 var $options : Object
   
 $options:=New object
+
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
 $options.gridline.showHorizontalGridline:=False

@@ -7,17 +7,17 @@ Null e Indefinido son tipos de datos que manejan los casos en los que no se cono
 
 ## Null
 
-Null es un tipo de datos especial con un solo valor posible: **null**. Este valor es devuelto por una expresión que no contiene ningún valor.
+Null es un tipo de datos especial con un solo valor posible: **null**. Este valor es devuelto por una expresión que no contiene ningún valor. Trying to read a property of a **null** value returns an error.
 
 En el lenguaje 4D y para los atributos de los campos de los objetos, los valores nulos se gestionan a través de la función `Null`. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
 - atributos de objetos
 - elementos de colecciones
-- variables de tipo objeto, colección, puntero, imagen o variante.
+- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
 
 ## Indefinido
 
-Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. A project method can return an undefined value if, within the method, the result is assigned an undefined expression (an expression calculated with at least one undefined variable). Evaluating an object property can also produce an undefined value. Reading a property of an undefined object or value returns **undefined**.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
 
 A variant variable has **undefined** as [default value](data-types.md#default-values).
 

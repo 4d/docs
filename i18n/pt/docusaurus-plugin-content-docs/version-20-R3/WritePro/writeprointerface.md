@@ -7,7 +7,7 @@ title: Interface 4D Write Pro
 
 A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+A [documentação principal da interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) pode ser encontrada no manual *Desenho 4D*.
 
 Você encontrará abaixo a documentação de configuração do Assistente de tabelas.
 

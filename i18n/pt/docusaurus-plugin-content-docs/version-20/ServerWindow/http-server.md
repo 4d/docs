@@ -4,7 +4,7 @@ title: Página Servidor HTTP
 ---
 
 
-The **HTTP Server** page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
+A página **HTTP Server** agrupa as informações sobre as operações do servidor Web e do servidor SOAP de 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. O servidor SOAP gere a publicação de serviços Web. Esses servidores dependem do servidor HTTP interno de 4D Server.
 
 ![](../assets/en/Admin/server-admin-web-page.png)
 
@@ -12,17 +12,17 @@ The **HTTP Server** page groups together information about the operation of the 
 The upper part of the page provides information about the current status of the HTTP server of 4D Server.
 
 - **Estado**: Iniciado ou Parado
-- **Starting time**: Date and time the HTTP server was last launched.
+- **Hora de início**: data e hora em que o servidor HTTP foi iniciado pela última vez.
 - **Tempo de atividade**: tempo decorrido desde a última inicialização do servidor HTTP.
 - **Total de hits HTTP**: Número de hits (em baixo nível) HTTP recebidos pelo servidor HTTP desde que foi iniciado.
 
 
 ## Iniciar/parar o servidor HTTP
 
-This button toggles and can be used to control the activation of the 4D Server HTTP server.
+Esse botão alterna e pode ser usado para controlar a ativação do servidor HTTP do 4D Server.
 
 - When the HTTP server state is "Started," the button is titled **Stop HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately stopped; the Web server, REST server, and SOAP server no longer accept any requests.
-- Quando o estado do servidor HTTP é "interrompido", o botão é intitulado **Iniciar o servidor HTTP**. If you click on this button, the 4D Server HTTP server is immediately started; Web, REST, and SOAP requests are accepted.
+- Quando o estado do servidor HTTP é "interrompido", o botão é intitulado **Iniciar o servidor HTTP**. Se você clicar nesse botão, o servidor HTTP de 4D Server será iniciado imediatamente; solicitações Web, REST e SOAP serão aceitas.
 
 > Você deve ter uma licença adequada para poder iniciar o servidor HTTP.
 > 

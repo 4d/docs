@@ -18,7 +18,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 - Los parámetros de método declarados en prototipos `#DECLARE` ya no son [necesarios en los métodos "Compiler_"](../Concepts/parameters.md#compilation).
 - Nueva palabra clave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error sencillos.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
-- New [Non-blocking printing](../settings/compatibility.md) compatibility option.
+- Nueva opción de compatibilidad [sin bloquear para imprimir](../settings/compatibility.md).
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.
 - 4D Write Pro: [Página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/Pagina-de-novedades.901-6683440.es.html) en doc.4d.com.
 - [**Lista de errores corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos los errores corregidos en 4D v20 R4.
@@ -27,6 +27,7 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 #### Cambios de comportamiento
 
 - El uso de una sintaxis heredada para declarar parámetros (por ejemplo, `C_TEXT($1)` o `var $1 : Text`) es obsoleto y genera advertencias en los pasos de escritura de código, verificación de sintaxis y compilación.
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. En el nivel de seguridad 2 no se puede activar.
 
 
 ## 4D v20 R3
@@ -381,7 +382,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 | Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
 | PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                |
 | SpreadJS  | 16.2.6         | 20 R4             | Motor 4D View Pro                                                                                             |
-| OpenSSL   | 3.1.1          | 20                |                                                                                                               |
+| OpenSSL   | 3.2.0          | 20 R4             | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
 | libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
 | LZMA      | 5.4.1          | 20                |                                                                                                               |
 | Zlib      | 1.2.13         | 20                |                                                                                                               |

@@ -230,8 +230,17 @@ You can declare the name, type, and number of parameters through the *parameters
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description.
 
-> If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
-> |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
+:::note
+
+If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+
+| Propriedade | Tipo | Descrição         |
+| ----------- | ---- | ----------------- |
+| value       | Date | Valor data        |
+| time        | Real | Tempo em segundos |
+
+:::
+
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 
@@ -287,7 +296,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 #### Requisitos
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
-*   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
+*   Os nomes das tabelas e dos campos devem estar em conformidade com (consulte [o standard ECMA ECMA Script](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
 *   O tipo de campo deve ser compatível com 4D View Pro (veja acima).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.

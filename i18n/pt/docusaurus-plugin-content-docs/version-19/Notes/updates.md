@@ -20,7 +20,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Destaques
 
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D v19.7.
+- [**Lista de bugs corrigidos**](https://bugs.4d.fr/fixedbugslist?version=19.7): lista de todos os bugs corrigidos no 4D v19.7.
 
 
 ## 4D v19.6

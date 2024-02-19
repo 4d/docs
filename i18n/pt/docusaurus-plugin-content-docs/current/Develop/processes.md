@@ -18,9 +18,9 @@ The 4D application creates processes for its own needs, for example the Main pro
 Existem várias maneiras de criar um processo:
 
 - Execute a method in the Design environment after checking the **New Process** check box in the "Execute Method" dialog box. The method chosen in the Execute Method dialog box is the process method.
-- Use the [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) command. The method passed as a parameter to the `New process` command is the process method.
+- Use o comando [`New process`] (https\://doc.4d.com/4dv20/help/command/en/page317.html). The method passed as a parameter to the `New process` command is the process method.
 - Use o comando [`Execute on server`] (https\://doc.4d.com/4dv20/help/command/en/page373.html) para criar um procedimento armazenado no servidor. O método passado como parâmetro do comando é o método processo.
-- Use the [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html) command. Se o processo worker ainda não existir, será criado.
+- Use o comando [`CALL WORKER`] (https\://doc.4d.com/4dv20/help/command/en/page1389.html). Se o processo worker ainda não existir, será criado.
 
 :::note
 

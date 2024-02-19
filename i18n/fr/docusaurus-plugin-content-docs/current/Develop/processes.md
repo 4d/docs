@@ -59,7 +59,7 @@ Les éléments d'interface sont utilisés dans les [Applications Desktop] (../ca
 
 :::info
 
-- Processes do not include menu bars by default which means that the standard **Edit** menu shortcuts (in particular, cut/copy/paste) are not available in process windows. Lorsque vous appelez les dialogues ou les éditeurs de 4D (éditeur de formules, éditeur de recherches...) depuis un process, assurez-vous que l'équivalent d'un menu **Edition** est installé dans le process si vous souhaitez que l'utilisateur bénéficie des raccourcis clavier de type copier/coller.
+- Par défaut, les process ne comportent pas de barre de menus, ce qui signifie que les raccourcis standard du menu **Edition** (notamment couper / copier / coller) ne sont pas disponibles dans les fenêtres des process. Lorsque vous appelez les dialogues ou les éditeurs de 4D (éditeur de formules, éditeur de recherches...) depuis un process, assurez-vous que l'équivalent d'un menu **Edition** est installé dans le process si vous souhaitez que l'utilisateur bénéficie des raccourcis clavier de type copier/coller.
 - Les process exécutés sur le serveur (procédures stockées) et les [process préemptifs](preemptive.md) ne doivent pas contenir d'éléments d'interface.
 
 :::

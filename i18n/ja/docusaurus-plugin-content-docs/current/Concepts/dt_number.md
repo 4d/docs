@@ -69,7 +69,7 @@ title: 数値 (実数、倍長整数、整数)
 
 :::warning
 
-モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+モジューロ演算子 % は倍長整数の範囲内 (-2^31 から (2^31)-1 まで) の数値に対して有効な値を返します。 この範囲外の数値のモジューロ演算を実行するには、[`Mod`](https://doc.4d.com/4dv20/help/command/ja/page98.html) コマンドを使用します。
 
 :::
 
@@ -77,13 +77,13 @@ title: 数値 (実数、倍長整数、整数)
 
 倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
 
-### Real comparison
+### 実数の比較
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+2つの実数が等しいかどうかを比較するために、4Dランゲージは実際には差の絶対値を *イプシロン値* と比較します。 [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/ja/page623.html) コマンドを参照ください。
 
 :::note
 
-For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+一貫性のため、4Dデータベースエンジンは実数型のデータベースフィールドを比較する際には常に *イプシロン値* として 10^-6 の値を使用し、`SET REAL COMPARISON LEVEL` の設定を考慮しません。
 
 :::
 

@@ -8,10 +8,11 @@ title: Release Notes
 
 Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D v20 R5.
 
-
 #### Highlights
 
-- Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections) 
+- Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
+- Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
 
 
 ## 4D v20 R4
@@ -26,18 +27,22 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
 - Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md#compilation).
+- Support of [custom date and time formats](../Project/date-time-formats.md)
 - New [`Try(expression)` keyword](../Concepts/error-handling.md#tryexpression) to handle simple error cases.
 - New [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) command.
 - New [Non-blocking printing](../settings/compatibility.md) compatibility option.
+- New [editing mode](../Admin/dataExplorer.md#editing-data) in the Data Explorer.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R4): list of all bugs that have been fixed in 4D v20 R4.
 
 
+
 #### Behavior changes
 
 - Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps. 
-- Selections are now kept consistent after some records have been deleted and others records created (see [this blog post]). 
+- Selections are now kept consistent after some records have been deleted and others records created (see [this blog post](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/). 
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
 
 
 ## 4D v20 R3
@@ -388,11 +393,11 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
 |ICU|73.2|20.1|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
-|CEF|118|20 R3|Chromium 5993|
+|CEF|121|20 R5|Chromium 6167|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |PDFWriter|4.3|20|FreeType dependency in 12.2.1|
 |SpreadJS|16.2.6|20 R4|4D View Pro engine|
-|OpenSSL|3.1.1|20||
+|OpenSSL|3.2.0|20 R4|Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4|
 |libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.4.1|20||
 |Zlib|1.2.13|20||
