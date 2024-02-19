@@ -28,7 +28,7 @@ Para ligar à página Web do Explorador de dados:
   - o menu **Registros** (em 4D monousuário)
   - o menu **Window** (no 4D Server)
 
-- whether you use a headless 4D application or not, you can open your web browser and enter the following address:
+- mesmo se usar uma aplicação 4D headless, pode abrir seu navegador web e digitar o endereço abaixo:
 
  `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 
@@ -53,7 +53,7 @@ O Data Explorer suporta os seguintes navegadores web:
 
 A resolução mínima para utilizar o Data Explorer é de 1280x720. A resolução recomendada é 1920x1080.
 
-### Básicos
+### Basics
 
 O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
