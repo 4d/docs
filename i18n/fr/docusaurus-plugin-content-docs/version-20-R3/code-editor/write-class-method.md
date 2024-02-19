@@ -74,22 +74,22 @@ Vous pouvez agrandir ou réduire la largeur relative de chaque zone de liste en 
 - Pour ajouter ou supprimer une liste, cliquez sur la zone de titre de l'une des listes et choisissez la commande correspondante dans le menu contextuel. La commande **Supprimer cette liste** est désactivée lorsque vous cliquez sur la dernière liste. Si vous souhaitez masquer toutes les listes, vous devez soit cliquer sur le bouton **show or hide lists**  en bas à droite de la fenêtre, soit les masquer par défaut dans **Preferences**.
 
 - Vous pouvez masquer les listes dans toutes les fenêtres de la manière suivante :
-  - Select the **View > Lists** option in the **Method** menu (a check mark indicates whether lists are displayed)
-  - Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option. For the modifications made in the **Preferences** dialog box to be taken into account, any open methods, classes or functions must first be closed then reopened.
+  - Sélectionnez l'option **Affichage > Listes** dans le menu **Méthode** (une coche indique si les listes sont affichées)
+  - Décochez l'option **Préférences** > **Méthodes** > **Options** > **Afficher les listes** . Pour que les modifications apportées dans la boîte de dialogue **Préférences** soient prises en compte, toutes les méthodes ouvertes, classes ou fonctions doivent d'abord être fermées puis rouvertes.
 
 #### Listes d'éléments disponibles
 
 Vous pouvez afficher les listes d'éléments suivantes dans la zone des listes de la fenêtre de l'éditeur de code :
 
-- **Toutes les tables et les champs**: Noms des tables et des champs de la base de données sous la forme d'une liste hiérarchique. When you insert a field name into the method by double-clicking on its name, 4D inserts it while respecting the syntax and adds the name of the table or subtable as the case may be.
+- **Toutes les tables et les champs**: Noms des tables et des champs de la base de données sous la forme d'une liste hiérarchique. Lorsque vous insérez un nom de champ dans la méthode en double-cliquant sur son nom, 4D l'insère en respectant la syntaxe et ajoute le nom de la table ou de la sous-table selon le cas.
 - **Table** (sous-menu) : Noms des champs de la table sélectionnée à l'aide d'un sous-menu.
-- **Current table**: Field names of the current table (available in triggers, form methods and object methods).
-- **Formulaires Projet**: Nom des formulaires de projet de la base de données. When you double-click on a project form name, 4D inserts its while respecting the syntax: the form name is inserted between quotes.
-- **Formulaires table**: Noms des tables et des formulaires de la base de données sous la forme d'une liste hiérarchique. When you insert a form name into a method by double-clicking its name, 4D inserts it while respecting the syntax: the form name is inserted between quotes and is preceded by the name of the table and a semi-colon. For example: [Table];"Form".
+- **Table actuelle**: noms des champs de la table actuelle (disponibles dans les déclencheurs, les méthodes de formulaire et les méthodes objet).
+- **Formulaires Projet**: Nom des formulaires de projet de la base de données. Lorsque vous double-cliquez sur le nom d'un formulaire de projet, 4D l'insère en respectant la syntaxe : le nom du formulaire est inséré entre guillemets.
+- **Formulaires table**: Noms des tables et des formulaires de la base de données sous la forme d'une liste hiérarchique. Lorsque vous insérez un nom de formulaire dans une méthode en double-cliquant sur son nom, 4D l'insère en respectant la syntaxe : le nom du formulaire est inséré entre guillemets et est précédé du nom de la table et d'un point-virgule. Par exemple: [Table]; "Formulaire".
 - **Méthodes**: noms des méthodes du projet de la base de données.
-- **Tous les dossiers**: Noms des dossiers et sous-dossiers d'objets définis dans la base de données, affichés sous la forme d'une liste hiérarchique. Folders can be used to organize objects in a customized manner. They are managed from the Home Page of the Explorer.
-- **Folders** (submenu): Contents of the folder selected using the submenu.
-- **Macros**: Macro names defined for the database (see [Creating and using macros](#creating-and-using-macros)).
+- **Tous les dossiers**: Noms des dossiers et sous-dossiers d'objets définis dans la base de données, affichés sous la forme d'une liste hiérarchique. Les dossiers peuvent être utilisés pour organiser les objets de manière personnalisée. Ils sont gérés à partir de la page Démarrage de l'Explorateur.
+- **Dossiers** (sous-menu) : Contenu du dossier sélectionné à l'aide d'un sous-menu.
+- **Macros**: Noms des macros définies pour la base de données (voir [Créer et utiliser des macros](#creating-and-using-macros)).
 - **Commandes**: Commandes du langage 4D par ordre alphabétique.
 - **Commandes par thèmes**: Commandes du langage 4D classées par thème sous forme de liste hiérarchique.
 - **Barres de menu**: Noms et numéros des barres de menu [créées avec l'éditeur de barres de menu 4D](../Menus/creating.md).
@@ -99,7 +99,7 @@ Vous pouvez afficher les listes d'éléments suivantes dans la zone des listes d
 - **Mots clés SQL**: ensemble de mots-clés reconnus par l'analyseur de syntaxe SQL de 4D. Cette liste comprend des commandes (par exemple SELECT), des clauses (par exemple WHERE) ainsi que des fonctions (ABS).
 - **Fonctions SQL**: fonctions SQL de 4D.
 
-**Note:** Except for the Macros element, all the lists are in alphabetical order.
+**Note :** A l'exception de l'élément Macros, toutes les listes sont classées par ordre alphabétique.
 
 #### Enregistrer comme modèle
 
@@ -112,35 +112,35 @@ Les paramètres suivants sont stockés dans le modèle :
 - Emplacement et contenu de chaque liste
 - Largeur relative de chaque liste
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
+Pour enregistrer une fenêtre de l'éditeur de code en tant que modèle, choisissez **Méthode** > **Enregistrer comme modèle**. Le modèle est enregistré immédiatement (aucune boîte de dialogue ne s'affiche). Il est stocké dans les **Préférences ** de l'application 4D. Si un modèle précédent existe déjà, il est remplacé.
 
-### Break points area
+### Zone de points d'arrêt
 
-This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.
+Cette zone, située à gauche de la zone d'édition, permet d'afficher les numéros de ligne et d'insérer des points d'arrêt directement à côté d'instructions spécifiques. Les points d'arrêt sont utiles pendant la phase de débogage de votre programmation. Ils arrêtent l'exécution de votre code à des endroits spécifiques et affichent le débogueur.
 
-For more information on break points, see the [Debugging](../Debugging/breakpoints.md#breakpoints) section.
+Pour plus d'informations sur les points d'arrêt, voir la section [Débogage](../Debugging/breakpoints.md#breakpoints) .
 
-You can display or hide the line numbers in the break points area for each window of the Code Editor.
+Vous pouvez afficher ou masquer les numéros de ligne dans la zone de points d'arrêt pour chaque fenêtre de l'éditeur de code.
 
-- To enable or disable the display of line numbers by default,  choose **Preferences** > **Methods** > **Show line numbers**.
-- To modify this display separately for each window of the Code Editor, choose **Method** > **View** > **Line Numbers**.
+- Pour activer ou désactiver l'affichage des numéros de ligne par défaut, choisissez **Préférences** > **Méthodes** > **Afficher numéros de lignes**.
+- Pour modifier cet affichage séparément pour chaque fenêtre de l'éditeur de code, choisissez **Méthode** > **Affichage** > **Numéros de lignes**.
 
-Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
+L'affichage des numéros de ligne permet de se repérer plus facilement dans la fenêtre. La commande **Méthode** > **Aller à la ligne n°...** vous permet également de profiter de cet affichage.
 
-This type of search is useful when used in conjunction with the [compiler](../Project/compiler.md), which flags runtime errors by the line number in which they occur.
+Ce type de recherche est utile lorsqu'il est utilisé conjointement avec le [compilateur](../Project/compiler.md), qui signale les erreurs d'exécution par le numéro de ligne où elles se produisent.
 
-### Status bar
+### Barre d'état
 
-The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
+La barre d'état située en bas à droite de la fenêtre de l'éditeur affiche à tout moment la position du curseur :
 
 ![](../assets/en/code-editor/status-bar.png)
 
-- **Ln**: Line number
-- **Col**: Column number, i.e., the level in the hierarchy of programming structures. The first level is 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
-- **Ch**: Location of character in the line.
-- ![](../assets/en/code-editor/show-hide-list.png): Hide/display lists.
+- **Ln**: Numéro de ligne
+- **Col**: Numéro de colonne, c'est-à-dire le niveau dans la hiérarchie des structures de programmation. Le premier niveau est 0. Le numéro de colonne est utile pour le débogage car cette information peut être fournie par l'interpréteur en cas d'erreur dans le code.
+- **Ch**: Emplacement du caractère dans la ligne.
+- ![](../assets/en/code-editor/show-hide-list.png): Masquer/afficher les listes.
 
-When you set the cursor in a command, function or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**: ![](../assets/en/code-editor/status-bar-bold.png)
+Lorsque vous placez le curseur dans une commande, une fonction ou un paramètre, la barre d'état affiche la syntaxe de la commande. Si vous écrivez ou sélectionnez un paramètre, la zone affiche le paramètre actuel en **gras** : ![](../assets/en/code-editor/status-bar-bold.png)
 
 ### Menu déroulant de navigation
 
@@ -212,11 +212,11 @@ Pour afficher les balises d'une méthode ou d'une classe par ordre alphabétique
 
 ### Raccourcis
 
-Multiple features of 4D's Code Editor are available through default keyboard shortcuts.
+De nombreuses fonctionnalités de l'éditeur de code de 4D sont disponibles par le biais de raccourcis clavier par défaut.
 
 :::info macOS
 
-Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
+Sous macOS, utilisez la touche **Command** au lieu de la touche **Ctrl** mentionnée (Windows).
 
 :::
 
@@ -256,14 +256,14 @@ Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Wind
 | [Ctrl]+[Alt]+G                                                  | Replace Next                                                                                                                               |
 | [Ctrl]+[Alt]+[Shift]+G                                          | Replace Previous                                                                                                                           |
 | [**Presse-papiers**](#clipboards)                               |                                                                                                                                            |
-| [Shift]+click or [Alt]+click on clipboard icon                  | Copy selected text to a clipboard                                                                                                          |
+| [Shift]+clic ou [Alt]+clic sur l'icône du presse-papiers        | Copy selected text to a clipboard                                                                                                          |
 | [Ctrl]+[Shift]+number key                                       | Copy selected text to the number clipboard                                                                                                 |
-| [Ctrl]+click on clipboard icon                                  | Paste contents of a clipboard at cursor location                                                                                           |
+| [Ctrl]+clic sur l'icône du presse-papiers                       | Paste contents of a clipboard at cursor location                                                                                           |
 | [Ctrl]+number key                                               | Paste contents of the number clipboard at cursor location                                                                                  |
 
 :::tip
 
-Most of these shortcuts can be customized in the [4D Preferences](../Preferences/shortcuts.md) dialog box.
+La plupart de ces raccourcis peuvent être personnalisés dans la boîte de dialogue [Préférences 4D](../Preferences/shortcuts.md).
 
 :::
 
@@ -572,7 +572,7 @@ There are several ways to expand and collapse code:
 
 Blocks can be defined by:
 
-- Quotation marks
+- Guillemets
 - Parentheses
 - A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Braces
