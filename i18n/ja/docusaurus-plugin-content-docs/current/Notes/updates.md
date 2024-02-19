@@ -3,6 +3,23 @@ id: updates
 title: リリースノート
 ---
 
+## 4D v20 R5
+
+#### ハイライト
+
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
+
+
+
+## 4D v20 R5
+
+[**4D v20 R5 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R5/): 4D v20 R5 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+#### ハイライト
+
+- [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) エラー処理構文のサポート。
+
+
 
 ## 4D v20 R4
 
@@ -16,18 +33,21 @@ title: リリースノート
 - HTML への直接の [ストラクチャー定義の書き出し](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.ja.html) をサポート。
 - 実行エラーを防ぐため、コード入力、シンタックスチェック、およびコンパイルステップにおけるコード管理を強化する新しい [コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー)。
 - `#DECLARE` プロトタイプで宣言されたメソッドの引数は、["Compiler_" メソッドではもはや必要ありません](../Concepts/parameters.md#コンパイル)。
+- [カスタムの日付と時間のフォーマット](../Project/date-time-formats.md) をサポート。
 - 新しい [`Try(expression)` キーワード](../Concepts/error-handling.md#tryexpression) で単純なエラーケースを処理できます。
 - 新しい [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) コマンド。
 - 新しい [ノンブロッキング印刷](../settings/compatibility.md) 互換性オプション。
+- データエクスプローラーの新しい [編集モード](../Admin/dataExplorer.md#データの編集)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R4): 4D v20 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
 
 
+
 #### 動作の変更
 
-- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
-- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
+- 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
+- 更新された [OpenSSL ライブラリ](#ライブラリの一覧) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
 
 
 ## 4D v20 R3
@@ -375,18 +395,18 @@ ALERT($param1+" "+$param2)
 
 
 
-| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                                                            |
-| --------- | --------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
-| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                              |
-| CEF       | 118       | 20 R3          | Chromium 5993                                                                                                 |
-| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                        |
-| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                                                                           |
-| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                                                              |
-| OpenSSL   | 3.2.0     | 20 R4          | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
-| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                         |
-| LZMA      | 5.4.1     | 20             |                                                                                                               |
-| Zlib      | 1.2.13    | 20             |                                                                                                               |
-| webKit    | WKWebView | 19             |                                                                                                               |
-| PHP       | 8.2.4     | 20             |                                                                                                               |
-| libldap   | 2.6.4     | 20 R3          |                                                                                                               |
-| libsasl   | 2.1.28    | 20             |                                                                                                               |
+| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                      |
+| --------- | --------- | -------------- | ----------------------------------------------------------------------- |
+| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                        |
+| CEF       | 121       | 20 R5          | Chromium 6167                                                           |
+| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                  |
+| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                                     |
+| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                        |
+| OpenSSL   | 3.2.0     | 20 R4          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の [動作の変更](#動作の変更) 参照。 |
+| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                   |
+| LZMA      | 5.4.1     | 20             |                                                                         |
+| Zlib      | 1.2.13    | 20             |                                                                         |
+| webKit    | WKWebView | 19             |                                                                         |
+| PHP       | 8.2.4     | 20             |                                                                         |
+| libldap   | 2.6.4     | 20 R3          |                                                                         |
+| libsasl   | 2.1.28    | 20             |                                                                         |
