@@ -288,7 +288,7 @@ En cuanto a la distribución de los objetos, 4D ofrece una distancia basada en l
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
 Este funcionamiento se aplica a todos los tipos de objetos de los formularios. La rejilla magnética puede activarse o desactivarse en cualquier momento utilizando el comando **Activar la rejilla magnética** del menú **Formulario** o del menú contextual del editor. También es posible definir la activación de esta función por defecto en la página **Preferencias** > **Formularios** (opción **Activar la alineación automática por defecto**). Puede activar o desactivar manualmente la rejilla magnética cuando se selecciona un objeto presionando la tecla **Ctrl** (Windows) o **Control** (macOS) .
-> Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
+> La rejilla magnética también influye en el redimensionamiento manual de los objetos.
 
 ### Distribuir los objetos
 
