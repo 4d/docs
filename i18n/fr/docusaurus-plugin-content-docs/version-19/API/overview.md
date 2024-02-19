@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Class functions and commands
+title: Fonctions de classe et commandes
 ---
 
 Cette section décrit l'API des classes 4D intégrées ainsi que les commandes de constructeur associées. Les propriétés et fonctions des classes 4D sont disponibles via les objets d'instance de classe.
@@ -17,9 +17,9 @@ Les conventions suivantes sont utilisées dans la syntaxe de la fonction :
 - la notation `{ ; ...param }` indique un nombre illimité de paramètres. Par exemple, `.concat( value : any { ;...valueN } ) : Collection` signifie qu'un nombre illimité de valeurs de n'importe quel type peut être passé à la fonction.
 - le mot-clé `any` est utilisé pour désigner un paramètre de tout type qui peut être stocké dans des attributs (nombre, texte, booléen, date, heure, objet, collection...).
 
-## Classic commands
+## Commandes classiques
 
-In addition to the built-in class functions, the 4D language contains hundreds of "classic" commands. Ces commandes sont décrites dans le manuel *4D Language Reference* sur [doc.4d.com](https://doc.4d.com). Pour référence, elles sont énumérées ci-dessous :
+En plus des fonctions de classe intégrées, le langage 4D contient des centaines de commandes "classiques". Ces commandes sont décrites dans le manuel *4D Language Reference* sur [doc.4d.com](https://doc.4d.com). Pour référence, elles sont énumérées ci-dessous :
 
 [A](#A) - [B](#b) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
 
