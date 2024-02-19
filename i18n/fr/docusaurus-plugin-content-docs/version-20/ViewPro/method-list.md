@@ -991,7 +991,7 @@ Lorsque vous passez le paramètre optionnel *paramObj*, la commande `VP EXPORT D
 
 | Variable |               | Type    | Description                                                |
 | -------- | ------------- | ------- | ---------------------------------------------------------- |
-| $1       |               | text    | Nom de l'objet 4D View Pro                                 |
+| $1       |               | text    | The name of the 4D View Pro area object                    |
 | $2       |               | text    | Chemin d'accès de l'objet 4D View Pro exporté              |
 | $3       |               | object  | Référence au *paramObj* de la commande                     |
 | $4       |               | object  | Objet retourné par la méthode avec un message de statut    |
@@ -2172,6 +2172,7 @@ La commande `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
+
 #### Exemple
 
 Dans le document suivant :
@@ -2534,7 +2535,7 @@ La commande `VP Get table column attributes` <!-- REF #_method_.VP Get table col
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 The command returns an object describing the current attributes of the *column*:
@@ -2597,7 +2598,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 In *columnName*, pass the name of the table column for which you want to get the index.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 Si *tableName* ou *columnName* n'est pas trouvé, la commande renvoie -1.
@@ -2655,7 +2656,7 @@ In *tableName*, pass the name of the table for which you want to get the dirty r
 
 By default, calling the command will clear the *dirty* status from the current table. To keep this status untouched, pass `False` in the *reset* parameter.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -2723,7 +2724,7 @@ In the *onlyData* parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
 | `vk table data range` | 1      | Get the cell range for the table data area only                                   |
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
 
 Si *tableName* n'est pas trouvé, la commande renvoie **null**.
@@ -2816,7 +2817,7 @@ La commande `VP Get tables` <!-- REF #_method_.VP Get tables.Summary -->retourne
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 > La numérotation démarre à 0.
 
 
@@ -2879,13 +2880,14 @@ Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la p
 
 
 
+
 #### Exemple
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3054,6 +3056,18 @@ $o.password:="excel123"
 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
 
 #### Exemple 3
 
@@ -3284,7 +3298,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -4049,7 +4063,7 @@ If *tableName* does not exist, nothing happens.
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -5047,12 +5061,12 @@ Le paramètre optionnel *formatPattern* définit un modèle pour les paramètres
 #### Exemple
 
 ```4d
-//Set the cell value as the current date and time
+//Attribuer la date et l'heure locales à la valeur de la cellule 
 
-VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
+ VP SET DATE TIME VALUE(VP Cell("ViewProArea";6;2);Current time;Current date;vk pattern full date time)
 
-//Set the cell value as the 18th of December
-VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
+ //Attribuer le 18 décembre à la valeur de la cellule
+ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pattern sortable date time)
 ```
 
 #### Voir également
@@ -5192,6 +5206,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
 | Paramètres | Type |  | Description |
@@ -5201,6 +5216,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 |rangeObj |Objet|->|Objet de plage| |formula |Text|->|Formule ou méthode 4D| |formatPattern |Text|->|Format du champ|<!-- END REF -->
 
 #### Description
+
 
 La commande `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->affecte une formule ou une méthode 4D spécifique à une plage de cellules désignée<!-- END REF -->.
 
@@ -5787,6 +5803,7 @@ Vous souhaitez masquer le quadrillage et les en-têtes des lignes et colonnes.
 var $options : Object
 
 $options:=New object
+
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
 $options.gridline.showHorizontalGridline:=False
@@ -5827,7 +5844,7 @@ Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 Dans *visible*, passez `True` pour afficher les lignes d'impression, et `False` pour les cacher. `True` est passé par défaut.
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 
 > La numérotation démarre à 0.
@@ -5895,7 +5912,7 @@ Dans le paramètre *attributes*, passez un objet contenant les propriétés à d
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                       |
 | filterButtonVisible | boolean | Définit si le bouton de filtre de la colonne de la table est affiché (la valeur par défaut est `True` lors de la création de la table).                                                           |
 
-Dans *sheet*, passez le numéro de la page cible. If no index is specified or if you pass -1, the command applies to the current sheet.
+Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 > La numérotation démarre à 0.
 
 Si *tableName* n'est pas trouvé ou si *column* est supérieur au nombre de colonnes, la commande ne fait rien.
@@ -5903,7 +5920,7 @@ Si *tableName* n'est pas trouvé ou si *column* est supérieur au nombre de colo
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context;$options : Object
@@ -6146,11 +6163,11 @@ Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Ce
 
 Le paramètre *valueObj* est un objet qui définit la valeur et le [format](configuring.md#cell-format) à assigner à *rangeObj*. Il peut contenir les propriétés suivantes :
 
-| Propriété | Type                                     | Description                                                                                                                                                                                       |
-| --------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Valeur à assigner à *rangeObj* (exceptée heure). Passez null pour effacer le contenu de la cellule.                                                                                               |
-| time      | Real                                     | Valeur heure (en secondes) à assigner à *rangeObj*                                                                                                                                                |
-| format    | Text                                     | Pattern for value/time property. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format de cellule](configuring.md#formats-des-cellules). |
+| Propriété | Type                                     | Description                                                                                                                                                                                           |
+| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Valeur à assigner à *rangeObj* (exceptée heure). Passez null pour effacer le contenu de la cellule.                                                                                                   |
+| time      | Real                                     | Valeur heure (en secondes) à assigner à *rangeObj*                                                                                                                                                    |
+| format    | Text                                     | Modèle pour la propriété value/time. Pour plus d'informations sur les modèles et les caractères de formatage, veuillez consulter la section [Format de cellule](configuring.md#formats-des-cellules). |
 
 #### Exemple
 
