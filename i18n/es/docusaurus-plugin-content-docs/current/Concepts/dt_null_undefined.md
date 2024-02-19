@@ -7,25 +7,25 @@ Null e Indefinido son tipos de datos que manejan los casos en los que no se cono
 
 ## Null
 
-Null es un tipo de datos especial con un solo valor posible: **null**. Este valor es devuelto por una expresión que no contiene ningún valor. Trying to read a property of a **null** value returns an error.
+Null es un tipo de datos especial con un solo valor posible: **null**. Este valor es devuelto por una expresión que no contiene ningún valor. Al intentar leer una propiedad de un valor **null** se produce un error.
 
 En el lenguaje 4D y para los atributos de los campos de los objetos, los valores nulos se gestionan a través de la función `Null`. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
 - atributos de objetos
 - elementos de colecciones
-- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
+- variables de tipo objeto, colección, puntero, imagen o variant (ver también [Null como valor predeterminado](data-types.md#null-as-default-value).
 
 ## Indefinido
 
-Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. La evaluación de una propiedad de objeto también puede producir un valor indefinido. La lectura de una propiedad de valor indefinido devuelve **undefined**.
 
-A variant variable has **undefined** as [default value](data-types.md#default-values).
+Una variable variant tiene **indefinido** como[ valor por defecto](data-types.md#default-values).
 
 Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo).
 
-Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará errores, excepto en los siguientes casos:
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
+- Asignar un valor indefinido a variables (excepto arrays) tiene el mismo efecto que llamar a [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) con ellas:
 
 ```4d
      var $o : Object
