@@ -19,6 +19,7 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.size.Summary -->|
 | [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
 
 
@@ -283,6 +284,16 @@ $transporter.send($email)
 #### 説明
 
 `.platformPath` プロパティは、 <!-- REF #MailAttachmentClass.platformPath.Summary -->カレントプラットフォームのシンタックスで表現された添付ファイルのパスを返します<!-- END REF -->。
+
+
+## .size
+
+<!-- REF #MailAttachmentClass.size.Syntax -->**.size** : Integer<!-- END REF -->
+
+
+#### 説明
+
+`.size` プロパティは、 <!-- REF #MailAttachmentClass.size.Summary -->添付ファイルの `size` ヘッダーを格納します<!-- END REF -->。 `.size`プロパティは、MIMEメッセージが添付ファイル部でサイズヘッダーを定義している場合に返されます。
 
 
 ## .type
