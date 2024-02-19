@@ -74,7 +74,7 @@ Essa caixa suspensa contém 3 opções de camada de rede para escolher entre: **
 
 :::note
 
-No caso de uma modificação, você precisa reiniciar o aplicativo para que a alteração seja levada em conta. Any client applications that were logged must also be restarted to be able to connect with the new network layer.
+No caso de uma modificação, você precisa reiniciar o aplicativo para que a alteração seja levada em conta. Todos os aplicativos clientes que foram conectados também devem ser reiniciados para poderem se conectar à nova camada de rede.
 
 :::
 
