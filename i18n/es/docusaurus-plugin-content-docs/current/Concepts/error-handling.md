@@ -10,7 +10,10 @@ La gestión de errores responde a dos necesidades principales:
 - descubrir y corregir posibles errores y fallos en el código durante la fase de desarrollo,
 - detectar y recuperar errores inesperados en las aplicaciones desplegadas; en particular, puede sustituir los diálogos de error del sistema (disco lleno, archivo perdido, etc.) por su propia interfaz.
 
-Básicamente, hay dos maneras de manejar los errores en 4D. Puede [instalar un método de gestión de errores](#installing-an-error-handling-method), o escribir una palabra clave [`Try()`](#tryexpression) antes de los fragmentos de código que llamen a una función, método o expresión que pueda lanzar un error.
+Básicamente, hay dos maneras de manejar los errores en 4D. Puede:
+
+- [install an error-handling method](#installing-an-error-handling-method), or
+- use a [`Try()` keyword](#tryexpression) or a [`Try/Catch` structure](#trycatchend-try) before pieces of code that call a function, method, or expression that can throw an error.
 
 :::tip Buenas prácticas
 
@@ -44,7 +47,7 @@ Para dejar de interceptar los errores en un contexto de ejecución y devolver la
 ON ERR CALL("";ek local) //devuelve el control al proceso local
 ```
 
-El comando [`Method called on error`](https://doc.4d.com/4dv19/help/command/en/page704.html) permite conocer el nombre del método instalado por `ON ERR CALL` para el proceso actual. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
+The  [`Method called on error`](https://doc.4d.com/4dv20/help/command/en/page704.html) command allows you to know the name of the method installed by `ON ERR CALL` for the current process. Es particularmente útil en el contexto de código genérico porque permite cambiar temporalmente y luego restaurar el método de captura de error:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -140,6 +143,12 @@ ON ERR CALL("")
 
 La sentencia `Try(expression)` permite probar una expresión de una sola línea en su contexto de ejecución real (incluyendo, en particular, los valores de las variables locales) e interceptar los errores que arroje para que no se muestre el diálogo de error 4D. El uso de `Try(expression)` ofrece una manera fácil de manejar casos de error simples con un número muy bajo de líneas de código, y sin requerir un método de gestión de errores.
 
+:::note
+
+If you want to try a more complex code than a single-line expression, you might consider using a [`Try/Catch` structure](#trycatchend-try).
+
+:::
+
 La sintaxis formal de la declaración `Try(expresión)` es:
 
 ```4d
@@ -206,8 +215,85 @@ Else
    ALERT( "Error: "+JSON Stringify($status.errors))
 End if
 
-``` 
+```
 
 
 
+## Try...Catch...End try
 
+The `Try...Catch...End try` structure allows you to test a block code in its actual execution context (including, in particular, local variable values) and to intercept errors it throws so that the 4D error dialog box is not displayed.
+
+Unlike the `Try(expression)` keyword that evaluates a single-line expression, the `Try...Catch...End try` structure allows you to evaluate any code block, from the most simple to the most complex, without requiring an error-handling method. In addition, the `Catch` block can be used to handle the error in any custom way.
+
+
+The formal syntax of the `Try...Catch...End try` structure is:
+
+```4d
+
+Try 
+    statement(s) // Code to evaluate
+Catch
+    statement(s) // Code to execute in case of error
+End try
+
+```
+
+The code placed between the `Try` and the `Catch` keywords is first executed, then the flow depends on the error(s) encountered during this execution.
+
+- If no error is thrown, the code execution continues after the corresponding `End try` keyword. The code placed between the `Catch` and the `End try` keywords is not executed.
+- If the code block execution throws a *non-deferred error*, the execution flow stops and executes the corresponding `Catch` code block.
+- If the code block execution throws a *deferred error*, the execution flow continues until the end of the `Try` block and then executes the corresponding `Catch` code block.
+
+:::note
+
+If a *deferred* error is thrown outside of the `Try` block, the code execution continues until the end of the method or function.
+
+:::
+
+:::info
+
+For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](https://doc.4d.com/4dv20R/help/command/en/page1805.html) command description.
+
+:::
+
+
+In the `Catch` code block, you can handle the error(s) using standard error handling commands. The [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) function contains the last errors collection. You can [declare an error-handling method](#installing-an-error-handling-method) in this code block, in which case it is called in case of error (otherwise the 4D error dialog box is displayed).
+
+:::note
+
+If an [error-handling method](#installing-an-error-handling-method) is installed in the code placed between the `Try` and the `Catch` keywords, it is called in case of error.
+
+:::
+
+### Ejemplo
+
+Combining transactions and `Try...Catch...End try` structures allows writing secured code for critical features.
+
+```4d
+Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
+    var $newInvoice : cs.invoiceEntity
+    var $newInvoiceLine : cs.invoiceLineEntity
+    var $item : Object
+    ds.startTransaction()
+    Try
+        $newInvoice:=This.new()
+        $newInvoice.customer:=$customer
+        $newInvoice.invoiceRef:=$invoiceRef
+        For each ($item; $items)
+            $newInvoiceLine:=ds.invoiceLine.new()
+            $newInvoiceLine.item:=$item.item
+            $newInvoiceLine.amount:=$item.amount
+            $newInvoiceLine.invoice:=$newInvoice
+            //call other specific functions to validate invoiceline
+            $newInvoiceLine.save()
+        End for each 
+        $newInvoice.save()
+        ds.validateTransaction()
+    Catch
+        ds.cancelTransaction()
+        ds.logErrors(Last errors)
+        $newInvoice:=Null
+    End try
+    return $newInvoice
+
+```
