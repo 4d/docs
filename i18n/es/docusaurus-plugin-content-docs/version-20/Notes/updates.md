@@ -36,6 +36,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v2
 
 #### Destacados
 
+- *SpreadJS* updated to version 16.2.6 in 4D v20.2 HF1.
 - 4D v20.2 está certificado en macOS Sonoma (macOS 14).
 - (4D v20.1) Nueva propiedad `plugins` en el parámetro *options* para el comando [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html).
 - 4D Server integra automáticamente varios historiales: [Restauración automática](../Backup/settings.md#automatic-restore).
@@ -286,7 +287,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 </details>
 
 
-## Tabla de las librerías
+## Tabla de librerías (4D v20 LTS)
 
 
 
@@ -296,7 +297,8 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 | CEF       | 109            | 20                | Chromium 5414. Las políticas CORS ahora también se aplican cuando se accede a archivos en disco (ver el párrafo "seguridad" sobre áreas web en la sección [4D v19 R5](#4d-v19-r5) arriba). |
 | Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                                                                  |
 | PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                                                                                             |
-| SpreadJS  | 16.0.4         | 20                | Motor 4D View Pro                                                                                                                                                                          |
+| SpreadJS  | 16.2.6         | 20.2 HF1          | Motor 4D View Pro                                                                                                                                                                          |
+|           | 16.0.4         | 20                |                                                                                                                                                                                            |
 | OpenSSL   | 3.1.1          | 20                |                                                                                                                                                                                            |
 | libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                                                     |
 | LZMA      | 5.4.1          | 20                |                                                                                                                                                                                            |
