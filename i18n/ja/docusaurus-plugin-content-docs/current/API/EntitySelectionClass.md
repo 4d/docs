@@ -75,9 +75,9 @@ title: EntitySelection
 
 任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
-| プロパティ   | タイプ  | 説明                                                                      |
-| ------- | ---- | ----------------------------------------------------------------------- |
-| context | Text | エンティティセレクションに適用されている [最適化コンテキスト](ORDA/entities.md#クライアントサーバーの最適化) のラベル。 |
+| プロパティ   | タイプ  | 説明                                                                                                                           |
+| ------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| context | Text | Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### 例題
