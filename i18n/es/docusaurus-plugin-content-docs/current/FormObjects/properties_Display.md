@@ -52,7 +52,13 @@ El campo contiene realmente "proportion". 4D acepta y almacena la entrada comple
 ## Formato Fecha
 
 Los formatos de fecha controlan la forma en que aparecen las fechas cuando se muestran o imprimen. Para la entrada de datos, las fechas se introducen en el formato MM/DD/AAAA, independientemente del formato de visualización que haya elegido.
-> A diferencia de los formatos [Alfa](#alpha-format) y [Número](#number-format), los formatos de visualización de fechas sólo deben seleccionarse entre los formatos integrados en 4D.
+
+Se pueden definir formatos de visualización para las fechas:
+
+- utilizando un formato integrado en 4D,
+- utilizando un modelo personalizado.
+
+### Formatos integrados
 
 La siguiente tabla muestra las opciones disponibles:
 
@@ -70,16 +76,34 @@ La siguiente tabla muestra las opciones disponibles:
 
 *(1)* Para evitar ambigüedades y de acuerdo con la práctica actual, los formatos de fecha abreviados muestran "jun" para junio y "jul" para julio. Esta particularidad sólo se aplica a las versiones francesas de 4D.
 
-*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
+*(2)* El año se muestra con dos dígitos cuando pertenece al intervalo (1930;2029), de lo contrario se mostrará con cuatro dígitos. Esto es por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
 
 *(3)* El formato `ISO Date Time` corresponde a la norma XML de representación de fecha y hora (ISO8601). Está pensado principalmente para ser utilizado al importar/exportar datos en formato XML y en Servicios Web.
-> Independientemente del formato de visualización, si el año se introduce con dos dígitos, 4D asume que el siglo es el 21 si el año pertenece al intervalo (00;29) y el 20 si pertenece al intervalo (30;99). Esta es la configuración por defecto, pero puede ser modificada utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
+> Independientemente del formato de visualización, si el año se introduce con dos dígitos, 4D asume que el siglo es el 21 si el año pertenece al intervalo (00;29) y el 20 si pertenece al intervalo (30;99). Esta es la configuración por defecto, pero puede modificarse utilizando el comando [SET DEFAULT CENTURY](https://doc.4d.com/4dv20/help/command/en/page392.html).
+
+
+
+### Formatos personalizados
+
+Se pueden crear formatos de fecha personalizados utilizando varios modelos descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
+
+| Modelo                   | Ejemplo (sistema USA) |
+| ------------------------ | --------------------- |
+| "eeee, dd"               | Wednesday, 29         |
+| "'Day' #D 'of the year'" | Day #333 of the year  |
+
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                              |
-| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string         | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (puede combinarse con otros valores posibles) |
+| Nombre     | Tipos de datos | Valores posibles                                   |
+| ---------- | -------------- | -------------------------------------------------- |
+| dateFormat | string         | <li>Formatos integrados: "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long" + " blankIfNull"</li><li>Formatos personalizados: todo formato creado utilizando un [modelo soportado](../Project/date-time-formats.md) + " blankIfNull"</li> |
+
+:::note blankIfNull
+
+Por defecto, una fecha null se muestra con ceros, por ejemplo 00/00/00. Con la opción "blankIfNull", una fecha null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Ej: "systemShort blankIfNull" o "ee dd LL blankIfNull".
+
+:::
 
 #### Objetos soportados
 
@@ -293,6 +317,7 @@ Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen
 
 #### Gramática JSON
 
+
 | Nombre        | Tipos de datos | Valores posibles                                                                                      |
 | ------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
 | pictureFormat | string         | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
@@ -306,7 +331,13 @@ Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen
 ## Formato Hora
 
 Los formatos de hora controlan la forma en que aparecen las horas cuando se muestran o imprimen. For data entry, you enter times in the 24-hour HH: MM:SS format or the 12-hour HH: MM:SS AM/PM format, regardless of the display format you have chosen.
-> A diferencia de los formatos [Alfa](#alpha-format) y [Número](#number-format), los formatos de visualización de las horas sólo deben seleccionarse entre los formatos integrados en 4D.
+
+Se pueden definir los formatos de visualización de las horas:
+
+- utilizando un formato integrado en 4D,
+- utilizando un modelo personalizado.
+
+### Formatos integrados
 
 La siguiente tabla muestra los formatos de visualización de los campos de hora y da ejemplos:
 
@@ -324,11 +355,26 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 | System time long abbreviated | systemMedium    | sólo macOS: formato de tiempo abreviado definido en el sistema. <br/>Windows: este formato es el mismo que el formato corto de la hora del sistema                     | 4•30•25 AM                     |
 | System time long             | systemLong      | macOS únicamente: formato de tiempo largo definido en el sistema. <br/>Windows: este formato es el mismo que el formato corto de la hora del sistema                   | 4:30:25 AM HNEC                |
 
+
+### Formatos personalizados
+
+Se pueden crear formatos de hora personalizados utilizando varios modelos descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
+
+| Modelo                                 | Ejemplo (sistema USA)           |
+| -------------------------------------- | ------------------------------- |
+| "HH 'hours' mm 'minutes' ss 'seconds'" | 13 horas 25 minutos 12 segundos |
+| "hh:mm aa"                             | 01:25 PM                        |
+
+
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                                                                                                                                      |
-| ---------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string         | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (puede combinarse con otros valores posibles) |
+| Nombre     | Tipos de datos | Valores posibles                                   |
+| ---------- | -------------- | -------------------------------------------------- |
+| timeFormat | string         | <li>Formatos integrados: "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS" + " blankIfNull"</li><li>Formatos personalizados: todo formato creado utilizando [un modelo soportado](../Project/date-time-formats.md) + "blankIfNull"</li> |
+
+:::note blankIfNull
+
+Por defecto, una hora null se muestra con ceros, por ejemplo "00:00:00". Con la opción "blankIfNull", una hora null se muestra como un área vacía. La cadena "blankIfNull" (distingue mayúsculas de minúsculas) debe combinarse con el valor de formato seleccionado. Ej: "MM_SS blankIfNull" o "hh:mm aa blankIfNull"
 
 #### Objetos soportados
 
@@ -502,7 +548,7 @@ Esta propiedad sólo se utiliza cuando se dibujan objetos situados en el cuerpo 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D no tiene en cuenta esta propiedad si el objeto se ocultó utilizando el comando [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html); en este caso, el objeto permanece invisible independientemente de si el registro está seleccionado o no.
+4D no tiene en cuenta esta propiedad si el objeto se ocultó utilizando el comando[`OBJECT SET VISIBLE`](https://doc.4d.com/4dv20/help/command/en/page603.html); en este caso, el objeto permanece invisible independientemente de si el registro está seleccionado o no.
 
 #### Gramática JSON
 
