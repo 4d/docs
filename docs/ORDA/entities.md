@@ -93,6 +93,7 @@ With the entities, there is no concept of "current record" as in the 4D language
 
 
 
+
 :::
 
 ## Using entity attributes  
@@ -480,23 +481,35 @@ The function must return a valid entity selection of the dataclass. No filter is
 
 #### Example
 
-We want sales persons to always work with their customers. During the authentication phase, the sales person is stored in the `Session`. So we can write in the Customers dataclass class:
+When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. During the authentication phase, the sales person is stored in the `Session` object. Other types of requests are also handled.
 
 ```4d
 Class extends DataClass
 
+
 Function event restrict() : cs.CustomersSelection
-
-	var $result : cs.CustomersSelection
-	
-	// By default, no filter is applied - $result is Null
-
-	If (Session.storage.salesPerson#Null)  // the user is authenticated  
-			//only their customers are returned
-		$result:=Session.storage.salesPersons.first().customers
-	End if
-
-	return $result
+    
+  
+    	//We work in a web or REST context
+    If (Session#Null)
+        
+        Case of 
+                // Only return the customers of the authenticated sales person stored in the session
+            : (Session.storage.salesInfo#Null)
+                return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
+                
+                //Data explorer - No filter is applied
+            : (Session.hasPrivilege("WebAdmin"))
+                return Null
+            Else 
+                //No customers can be read
+                return This.newSelection()
+                
+        End case 
+        
+    Else // We work in client server
+        return This.query("sales.userName = :1"; Current user)
+    End if 
 ```
 
 
