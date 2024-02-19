@@ -40,13 +40,13 @@ title: リリースノート
 - [**修正リスト**](https://4d-jp.github.io/293/release-note-version-19/): 4D v19.5 で修正されたバグのリストです。
 
 
-## 過去のリリース
+## Previous releases
 
 
 - doc.4d.com の [**過去のリリースノート**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.ja.html) を参照ください。
 
 
-## ライブラリの一覧
+## Library table
 
 
 | ライブラリ    | 現在のバージョン  | 更新された 4D バージョン | 説明                                                        |
