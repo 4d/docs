@@ -37,6 +37,11 @@ A permission action defined at a given level is inherited by default at lower le
 - A permission action defined at a dataclass level overrides the datastore setting (if any). By default, all attributes of the dataclass inherit from the dataclass permission(s).
 - Unlike dataclass permissions, a permission action defined at the attribute level does not override the parent dataclass permission(s), but is added to. For example, if you assigned the "general" privilege to a dataclass and the "detail" privilege to an attribute of the dataclass, both "general" and "detail" privileges must be set to the session to access the attribute.
 
+:::info
+
+Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](../entities.md#restricting-entity-selections) which can be more appropriate in this case.
+
+:::
 
 ## Permission actions
 
