@@ -27,8 +27,8 @@ Les filesystem suivants sont pris en charge :
 | "/LOGS"      | Dossier Logs                                             |
 | "/PACKAGE"   | Dossier racine du projet (avec ou sans extension 4dbase) |
 | "/PROJECT"   | Dossier Project                                          |
-| "/RESOURCES" | Dossier de ressources du projet en cours                 |
-| "/SOURCES"   | Dossier des sources du projet en cours                   |
+| "/RESOURCES" | Dossier de ressources du projet courant                  |
+| "/SOURCES"   | Dossier des sources du projet courant                    |
 
 ## Syntaxe POSIX
 
