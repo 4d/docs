@@ -9,7 +9,7 @@ A página **HTTP Server** agrupa as informações sobre as operações do servid
 ![](../assets/en/Admin/server-admin-web-page.png)
 
 
-The upper part of the page provides information about the current status of the HTTP server of 4D Server.
+A parte superior da página fornece informações sobre o estado atual do servidor HTTP do 4D Server.
 
 - **Estado**: Iniciado ou Parado
 - **Hora de início**: data e hora em que o servidor HTTP foi iniciado pela última vez.
