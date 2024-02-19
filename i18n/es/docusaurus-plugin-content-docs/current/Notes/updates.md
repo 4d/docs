@@ -3,6 +3,23 @@ id: updates
 title: Notas del lanzamiento
 ---
 
+## 4D v20 R5
+
+#### Destacados
+
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
+
+
+
+## 4D v20 R5
+
+Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D v20 R5.
+
+#### Destacados
+
+- Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
+
+
 
 ## 4D v20 R4
 
@@ -16,12 +33,15 @@ Conozca las [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - Nuevo [Verificador de código en vivo](../code-editor/write-class-method.md#warnings-and-errors) que mejora el control del código durante los pasos de escritura de código, revisión de sintaxis y compilación para evitar errores de ejecución.
 - Los parámetros de método declarados en prototipos `#DECLARE` ya no son [necesarios en los métodos "Compiler_"](../Concepts/parameters.md#compilation).
+- Support of [custom date and time formats](../Project/date-time-formats.md)
 - Nueva palabra clave [`Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error sencillos.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
 - Nueva opción de compatibilidad [sin bloquear para imprimir](../settings/compatibility.md).
+- New [editing mode](../Admin/dataExplorer.md#editing-data) in the Data Explorer.
 - Comandos del lenguaje 4D: [página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) en doc.4d.com.
 - 4D Write Pro: [Página Novedades](https://doc.4d.com/4Dv20R4/4D/20-R4/Pagina-de-novedades.901-6683440.es.html) en doc.4d.com.
 - [**Lista de errores corregidos**](https://bugs.4d.fr/fixedbugslist?version=20_R4): lista de todos los errores corregidos en 4D v20 R4.
+
 
 
 #### Cambios de comportamiento
@@ -375,18 +395,18 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 
 
 
-| Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                    |
-| --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------- |
-| ICU       | 73.2           | 20.1              | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto. |
-| CEF       | 118            | 20 R3             | Chromium 5993                                                                                                 |
-| Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                     |
-| PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                |
-| SpreadJS  | 16.2.6         | 20 R4             | Motor 4D View Pro                                                                                             |
-| OpenSSL   | 3.2.0          | 20 R4             | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
-| libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                        |
-| LZMA      | 5.4.1          | 20                |                                                                                                               |
-| Zlib      | 1.2.13         | 20                |                                                                                                               |
-| webKit    | WKWebView      | 19                |                                                                                                               |
-| PHP       | 8.2.4          | 20                |                                                                                                               |
-| libldap   | 2.6.4          | 20 R3             |                                                                                                               |
-| libsasl   | 2.1.28         | 20                |                                                                                                               |
+| Librería  | Versión actual | Actualizado en 4D | Comentario                                                                                                               |
+| --------- | -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ICU       | 73.2           | 20.1              | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.            |
+| CEF       | 121            | 20 R5             | Chromium 6167                                                                                                            |
+| Hunspell  | 1.7.2          | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                |
+| PDFWriter | 4.3            | 20                | Dependencia FreeType en 12.2.1                                                                                           |
+| SpreadJS  | 16.2.6         | 20 R4             | Motor 4D View Pro                                                                                                        |
+| OpenSSL   | 3.2.0          | 20 R4             | Se ha actualizado el nivel de seguridad TLS/SSL por defecto. See [Behavior changes](#behavior-changes) for release 20 R4 |
+| libZip    | 1.9.2          | 20                | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                   |
+| LZMA      | 5.4.1          | 20                |                                                                                                                          |
+| Zlib      | 1.2.13         | 20                |                                                                                                                          |
+| webKit    | WKWebView      | 19                |                                                                                                                          |
+| PHP       | 8.2.4          | 20                |                                                                                                                          |
+| libldap   | 2.6.4          | 20 R3             |                                                                                                                          |
+| libsasl   | 2.1.28         | 20                |                                                                                                                          |
