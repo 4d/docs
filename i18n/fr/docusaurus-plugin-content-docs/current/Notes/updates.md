@@ -3,6 +3,23 @@ id: updates
 title: Release Notes
 ---
 
+## 4D v20 R5
+
+#### Points forts
+
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
+
+
+
+## 4D v20 R5
+
+Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-R5/), the blog post that lists all new features and enhancements in 4D v20 R5.
+
+#### Points forts
+
+- Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
+
+
 
 ## 4D v20 R4
 
@@ -16,12 +33,15 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - Direct HTML format for [structure definition exports](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - New [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) that enhances code control during code typing, syntax checking, and compilation steps to prevent execution errors.
 - Method parameters declared in `#DECLARE` prototypes are [no longer necessary in "Compiler_" methods](../Concepts/parameters.md#compilation).
+- Support of [custom date and time formats](../Project/date-time-formats.md)
 - New [`Try(expression)` keyword](../Concepts/error-handling.md#tryexpression) to handle simple error cases.
 - New [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) command.
 - New [Non-blocking printing](../settings/compatibility.md) compatibility option.
+- New [editing mode](../Admin/dataExplorer.md#editing-data) in the Data Explorer.
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.en.html) on doc.4d.com.
 - 4D Write Pro: [What's new page](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.en.html) on doc.4d.com.
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R4): list of all bugs that have been fixed in 4D v20 R4.
+
 
 
 #### Changements de comportement
@@ -378,7 +398,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 | Bibliothèque | Version courante | Mise à jour dans 4D | Commentaire                                                                                                   |
 | ------------ | ---------------- | ------------------- | ------------------------------------------------------------------------------------------------------------- |
 | ICU          | 73.2             | 20.1                | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets. |
-| CEF          | 118              | 20 R3               | Chromium 5993                                                                                                 |
+| CEF          | 121              | 20 R5               | Chromium 6167                                                                                                 |
 | Hunspell     | 1.7.2            | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                           |
 | PDFWriter    | 4.3              | 20                  | FreeType dependency dans 12.2.1                                                                               |
 | SpreadJS     | 16.2.6           | 20 R4               | Moteur 4D View Pro                                                                                            |
