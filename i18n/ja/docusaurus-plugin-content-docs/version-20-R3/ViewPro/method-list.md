@@ -258,7 +258,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 *styleName* 引数には、スタイルシートの名前を渡します。 同じスコープ内で名前が既に使用されている場合、新しいスタイルシートは既存のものを上書きします。 ただし異なるスコープであれば同じ名前を使用することが可能です (以下参照)。
 
-*styleObj* には、スタイルシートの設定 (例: フォント、テキスト装飾、文字揃え、境界線、など) を指定します。 For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
+*styleObj* には、スタイルシートの設定 (例: フォント、テキスト装飾、文字揃え、境界線、など) を指定します。 スタイルプロパティの完全な一覧については、[スタイルオブジェクトプロパティ](configuring.md#スタイルオブジェクトプロパティ) を参照ください。
 
 任意の *sheet* 引数を使用することで、スタイルシートをどこに定義するかを指定することができます。シートインデックス (0 起点) か、以下の定数のいずれかを渡すことができます:
 
@@ -1013,7 +1013,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 | 引数     |               | タイプ     | 説明                                |
 | ------ | ------------- | ------- | --------------------------------- |
-| param1 |               | text    | 4D View Pro オブジェクト名               |
+| param1 |               | text    | 4D View Pro エリアのオブジェクト名           |
 | param2 |               | text    | 書き出された 4D View Pro オブジェクトのファイルパス  |
 | param3 |               | object  | コマンドの *paramObj* 引数への参照           |
 | param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
@@ -1115,18 +1115,18 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 *paramObj* には、複数のプロパティを渡せます:
 
-| プロパティ                   | タイプ         | 説明                                                              |
-| ----------------------- | ----------- | --------------------------------------------------------------- |
-| formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。                              |
-| includeAutoMergedCells  | Boolean     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                               |
-| includeBindingSource    | Boolean     | バインドされたソースを含めるかどうか。デフォルトは true。                                 |
-| includeCalcModelCache   | Boolean     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。              |
-| includeEmptyRegionCells | Boolean     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。 |
-| includeFormulas         | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                     |
-| includeStyles           | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                       |
-| includeUnusedNames      | Boolean     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                              |
+| プロパティ                   | タイプ         | 説明                                                                                    |
+| ----------------------- | ----------- | ------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (必須) 書き出しが完了した際に呼び出されるコールバックメソッド名。 [コールバックメソッドの渡し方](#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。 |
+| includeAutoMergedCells  | Boolean     | 自動的に結合されたセルを含めるかどうか。デフォルトは false。                                                     |
+| includeBindingSource    | Boolean     | バインドされたソースを含めるかどうか。デフォルトは true。                                                       |
+| includeCalcModelCache   | Boolean     | 計算の追加データを含めるか。 ファイルを開く速さに影響する場合があります。デフォルトは false。                                    |
+| includeEmptyRegionCells | Boolean     | 使用されるデータレンジの外側の空白セル (データがない、またはスタイルだけのセル) を含めるかどうか。デフォルトは true。                       |
+| includeFormulas         | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                           |
+| includeStyles           | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                             |
+| includeUnusedNames      | Boolean     | 使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                    |
 
-|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+|saveAsView|Boolean|書き出される値にフォーマット文字列を適用するかどうか。デフォルトは false。|
 
 
 コールバックメソッドでは、以下のパラメーターを使用することができます:
@@ -1985,6 +1985,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 ```4d
 var $panesObj : Object
+
 
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2985,7 +2986,7 @@ $tables:=VP Get tables("ViewProArea")
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3052,9 +3053,13 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
-|引数|タイプ||説明|
 
-|---|---|---|---| |vpAreaName  |Text|->|4D View Pro エリアフォームオブジェクト名| |戻り値 |Object|<-|Object containing the workbook options|<!-- END REF -->
+| 引数         | タイプ    |    | 説明                                                |
+| ---------- | ------ | -- | ------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                           |
+| 戻り値        | Object | <- | ワークブックオプションを格納したオブジェクト|<!-- END REF -->
+
+|
 
 #### 説明
 
@@ -3080,65 +3085,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
-
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| 引数         | タイプ     |    | 説明                                    |
-| ---------- | ------- | -- | ------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
-| vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob             |
-| paramObj   | Object  | -> | 読み込みのオプション|<!-- END REF -->
-
-|
-
-#### 説明
-
-`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
-
-*paramObj* には、複数のプロパティを渡せます:
-
-| プロパティ               | タイプ         | 説明                                                                                                                                                                                                                                                                                        |
-| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。                                                                                                                                                                                                                                                                  |
-| calcOnDemand        | Boolean     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                   |
-| dynamicReferences   | Boolean     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                           |
-| fullRecalc          | Boolean     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                     |
-| includeFormulas     | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                               |
-| includeStyles       | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                 |
-| includeUnusedStyles | Boolean     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                |
-| openMode            | Integer     | 0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ドキュメントを開くと、特定の時点で UI と UIイベントが更新され、応答します。 <br/>1 (lazy): レイジー (遅延) オープンモード。 ドキュメントを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。 <br/>2 (incremental): インクリメンタル (増分) オープンモード。 ドキュメントを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。 |
-
-コールバックメソッドでは、以下のパラメーターを使用することができます:
-
-| 引数     |               | タイプ     | 説明                                |
-|:------ |:------------- |:------- |:--------------------------------- |
-| param1 |               | text    | 4D View Pro オブジェクト名               |
-| param2 |               | 4D.Blob | インポートされた Blob                     |
-| param3 |               | object  | コマンドの *paramObj* 引数への参照           |
-| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
-|        | .success      | boolean | 読み込みに成功した場合は true 、それ以外の場合は false |
-|        | .errorCode    | integer | エラーコード。                           |
-|        | .errorMessage | text    | エラーメッセージ。                         |
-
-
-#### 例題
-
-myTableデータクラスの最初のエンティティに Blob として保存されている 4D View Proドキュメントを "ViewProArea" にインポートします。
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.myTable.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### 参照
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -3223,12 +3169,26 @@ End if
 パスワードで保護されている Microsoft Excel ドキュメントを 4D View Pro エリアに読み込みます:
 
 ```4d
+    	// 読み込みコード
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
-
+ 
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
+
+```4d
+    // myImport コールバックメソッド
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("読み込みに成功しました。")
+Else 
+     ALERT("エラー: "+$status.errorMessage)
+End if
+```
+
 
 #### 例題 3
 
@@ -3248,6 +3208,67 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+**VP IMPORT FROM BLOB** ( *vpAreaName* : Text ; *vpBlob* : 4D.blob { ; *paramObj* : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| 引数         | タイプ     |    | 説明                                    |
+| ---------- | ------- | -- | ------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名               |
+| vpBlob     | 4D.Blob | -> | 4D View Proドキュメントを含む Blob             |
+| paramObj   | Object  | -> | 読み込みのオプション|<!-- END REF -->
+
+|
+
+#### 説明
+
+`VP IMPORT FROM BLOB` コマンドは、 <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->*vpAreaName* の 4D View Pro エリアの中身を、読み込んだ *vpBlob* で置換します<!-- END REF -->。 *vpBlob* には、[VP EXPORT TO BLOB](#vp-export-to-blob) コマンド、または 4D View Pro インターフェース経由で、Blob として保存された 4D View Pro ドキュメントが格納されている必要があります。
+
+*paramObj* には、複数のプロパティを渡せます:
+
+| プロパティ               | タイプ         | 説明                                                                                                                                                                                                                                                                                        |
+| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | 読み込み終了時に実行させるコールバックメソッド。 [コールバックメソッドの渡し方](#コールバックメソッド-フォーミュラ-の渡し方) を参照ください。                                                                                                                                                                                                               |
+| calcOnDemand        | Boolean     | 要求されたときにだけフォーミュラを計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                   |
+| dynamicReferences   | Boolean     | 動的参照を含む関数を計算するかどうか。デフォルトは true。                                                                                                                                                                                                                                                           |
+| fullRecalc          | Boolean     | jsonデータを読み込んだ後に計算するかどうか。デフォルトは false。                                                                                                                                                                                                                                                     |
+| includeFormulas     | Boolean     | フォーミュラを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                               |
+| includeStyles       | Boolean     | スタイルを含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                                                 |
+| includeUnusedStyles | Boolean     | excel xml を json に変換する際、使用されていないカスタム名を含めるかどうか。デフォルトは true。                                                                                                                                                                                                                                |
+| openMode            | Integer     | 0 (normal): 通常のオープンモード、レイジーなし、インクリメンタルなし。 ドキュメントを開くと、特定の時点で UI と UIイベントが更新され、応答します。 <br/>1 (lazy): レイジー (遅延) オープンモード。 ドキュメントを開くと、アクティブなシートだけが直接読み込まれます。 他のシートは使用された場合にのみ読み込まれます。 <br/>2 (incremental): インクリメンタル (増分) オープンモード。 ドキュメントを開くと、データ読み込み中に UI と UIイベントが更新され、即座に応答します。 |
+
+コールバックメソッドでは、以下のパラメーターを使用することができます:
+
+| 引数     |               | タイプ     | 説明                                |
+|:------ |:------------- |:------- |:--------------------------------- |
+| param1 |               | text    | 4D View Pro エリアのオブジェクト名           |
+| param2 |               | 4D.Blob | インポートされた Blob                     |
+| param3 |               | object  | コマンドの *paramObj* 引数への参照           |
+| param4 |               | object  | メソッドから返されるステータスメッセージを格納したオブジェクト   |
+|        | .success      | boolean | 読み込みに成功した場合は true 、それ以外の場合は false |
+|        | .errorCode    | integer | エラーコード。                           |
+|        | .errorMessage | text    | エラーメッセージ。                         |
+
+
+#### 例題
+
+myTableデータクラスの最初のエンティティに Blob として保存されている 4D View Proドキュメントを "ViewProArea" にインポートします。
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.myTable.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### 参照
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 
 ### VP IMPORT FROM OBJECT
@@ -3270,7 +3291,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
-*viewPro* には有効な 4D View Pro オブジェクトを渡します。 このオブジェクトは手動で作成するほか、[VP Export to object](#vp-export-to-object) を使って取得することができます。 For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+*viewPro* には有効な 4D View Pro オブジェクトを渡します。 このオブジェクトは手動で作成するほか、[VP Export to object](#vp-export-to-object) を使って取得することができます。 4D View Pro オブジェクトについての詳細は [4D View Pro オブジェクト](configuring.md#4d-view-pro-オブジェクト) を参照ください。
 
 *viewPro* オブジェクトが無効な場合には、エラーが返されます。
 
@@ -3622,7 +3643,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | ---------- | ---- | -- | -------------------------------------------------- |
 | vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -3928,7 +3951,9 @@ VP REMOVE SHEET("ViewProArea";2)
 | 引数       | タイプ    |    | 説明                                   |
 | -------- | ------ | -- | ------------------------------------ |
 | rangeObj | Object | -> | レンジオブジェクト|<!-- END REF -->
+
 |
+
 #### 説明
 
 `VP REMOVE SPAN` コマンドは、 <!-- REF #_method_.VP REMOVE SPAN.Summary -->*rangeObj* で指定したレンジ内のセル結合を解除します<!-- END REF -->。
@@ -4473,26 +4498,26 @@ Function onEvent()
    SET TIMER(60)
 
        :(FORM Event.code=On VP Range Changed)
-    // 計算の完了を感知し、 Restarts the timer
-         If(This.isWaiting)
-           SET TIMER(60)
-         End if
+    // 計算の完了を感知し、 タイマーを再スタートさせます
+            If(This.isWaiting)
+                SET TIMER(60)
+            End if
 
-  :(FORM Event.code=On Timer)
- // To be sure to not restart the timer if you call others 4D View command after this point
-         This.isWaiting:=False
+       :(FORM Event.code=On Timer)
+    // この時点以降、他の 4D View コマンドを呼び出してもタイマーが再スタートしないようにします
+            This.isWaiting:=False
 
 
- // Stop the timer
-   SET TIMER(0)
 
- // Start the PDF export
-        VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
+    // タイマーを停止します
+            SET TIMER(0)
 
-     :(FORM Event.code=On URL Loading Error)
+    // PDF 書き出しを開始します
+            VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
-         CANCEL 
- End case
+       :(FORM Event.code=On URL Loading Error)
+            CANCEL 
+    End case
 ```
 
 *OffscreenArea* コールバックメソッドの内容は以下の通りです:
@@ -5240,6 +5265,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 [4D View Pro cell format](configuring.md#cell-format)<br/>[VP SET DATE VALUE](#vp-set-date-value)<br/>[VP SET TIME VALUE](#vp-set-time-value)<br/>[VP SET VALUE](#vp-set-value)
 
+
 ### VP SET DATE VALUE
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
@@ -5661,6 +5687,7 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
@@ -6546,6 +6573,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 
 #### 説明
+
 
 
 `VP SHOW CELL` コマンドは、 <!-- REF #_method_.VP SHOW CELL.Summary -->*rangeObj* で指定したレンジの表示位置を変更します<!-- END REF -->。
