@@ -9,9 +9,11 @@ Qodly Studio in 4D is currently in the **Developer Preview** phase. It should no
 
 :::
 
-**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the Qodly Cloud.
+**Qodly Studio** is an application interface builder. It provides developers with integrated tools, including a form editor, a code editor, a rendering engine, and supports natively the [ORDA technology](../ORDA/overview.md).
 
-As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+
+Qodly Studio can also be used in the [**Qodly Cloud platform**](qodly.com), dedicated to the development of web business applications.
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
@@ -22,7 +24,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 :::info
 
-The use of Qodly Studio in 4D requires a specific license. Qodly Studio options and menu items won't appear if the license is not activated.
+The use of Qodly Studio in 4D requires a 4D partner license. Qodly Studio options and menu items won't appear if the license is not activated.
 
 :::
 
