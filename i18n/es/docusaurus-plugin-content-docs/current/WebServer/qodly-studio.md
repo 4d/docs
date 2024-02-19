@@ -9,9 +9,11 @@ Qodly Studio en 4D se encuentra actualmente en la fase **Developer Preview**. No
 
 :::
 
-**Qodly Studio** forma parte de la **plataforma Qodly**, dedicada al desarrollo de aplicaciones web profesionales diseñadas, probadas y publicadas íntegramente en Qodly Cloud.
+**Qodly Studio** is an application interface builder. It provides developers with integrated tools, including a form editor, a code editor, a rendering engine, and supports natively the [ORDA technology](../ORDA/overview.md).
 
-A partir de 4D v20 R2, puede utilizar Qodly Studio directamente desde 4D para crear interfaces web modernas y sofisticadas que puede integrar fácilmente a sus proyectos 4D existentes y desplegar **in situ**.
+You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+
+Qodly Studio can also be used in the [**Qodly Cloud platform**](qodly.com), dedicated to the development of web business applications.
 
 Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se familiarizará con el concepto de fuentes de datos y aprenderá a:
 
@@ -22,7 +24,7 @@ Con Qodly Studio, descubrirá una interfaz de usuario web totalmente nueva, se f
 
 :::info
 
-El uso de Qodly Studio en 4D requiere una licencia específica. Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
+The use of Qodly Studio in 4D requires a 4D partner license. Las opciones y elementos de menú de Qodly Studio no aparecerán si la licencia no está activada.
 
 :::
 
@@ -210,8 +212,8 @@ Algunos símbolos básicos, operadores y palabras clave difieren en QodlyScript 
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | var type                |
-| number      | Real                                                        | var type                |
+| string      | Text                                                        | tipo de variable        |
+| number      | Real                                                        | tipo de variable        |
 
 Algunos otros elementos tienen una capitalización diferente (por ejemplo: `this` vs `This`), pero se pueden pegar directamente en código de 4D.
 
