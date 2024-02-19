@@ -9,7 +9,7 @@ Qodly Studio in 4D is currently in the **Developer Preview** phase. Não deve se
 
 :::
 
-**Qodly Studio** is an application interface builder. It provides developers with integrated tools, including a form editor, a code editor, a rendering engine, and supports natively the [ORDA technology](../ORDA/overview.md).
+**Qodly Studio** is an interface builder for web applications. It provides developers with a graphical form editor to design applications running in web browsers or smartphones. It supports natively the [ORDA objects](../ORDA/overview.md).
 
 You can use Qodly Studio directly from your **4D environment** to build modern and sophisticated interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
 
@@ -17,14 +17,14 @@ Qodly Studio can also be used in the [**Qodly Cloud platform**](qodly.com), dedi
 
 With Qodly Studio, you will discover a totally new web UI, get familiar with the concept of datasources, and learn how to:
 
-- criar formulários Web colocando componentes em uma página
+- create Qodly forms by placing components on a page
 - mapear componentes para dados
 - acionar o código 4D configurando eventos
 - e muito mais.
 
 :::info
 
-The use of Qodly Studio in 4D requires a 4D partner license. Qodly Studio options and menu items won't appear if the license is not activated.
+The development with Qodly Studio in 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). Qodly Studio options and menu items won't appear if the license is not activated.
 
 :::
 
@@ -93,24 +93,24 @@ Authentication on the WebAdmin web server is granted using an access key. Para o
 
 ### Ativação da renderização
 
-To enable the rendering of webforms that are created in Qodly Studio, the following options must be set.
+To enable the rendering of Qodly forms, the following options must be set.
 
 * The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated
 * O [servidor web 4D](webServer.md) deve estar em execução
 
-When rendering webforms in the Web Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render Qodly forms in Qodly.
 
 :::
 
-Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
+Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=QodlyFormName` on your machine.
 
-Tenha em mente que Qodly Web Studio é executado pelo servidor web 4D WebAdmin. When you use Qodly Web Studio as a developer, even when you preview a webform in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
+Keep in mind that the Qodly Studio runs through the 4D WebAdmin web server. When you use Qodly Studio as a developer, even when you preview a Qodly form in the studio, you're using the 4D WebAdmin web server. This allows you to see dataclasses, functions and attributes that are not exposed as REST resources for example (they are greyed out).
 
-However, webform rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+However, form rendering happens outside 4D Web Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
 
 :::note
 
@@ -157,7 +157,7 @@ You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-
 
 A documentação oficial de Qodly Studio está disponível no site de documentação de Qodly [](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by webforms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
+You can rely on this documentation and its associated resources for developing web applications powered by Qodly forms. However, depending on implementation stage, 4D developers will either use Qodly Studio or 4D IDE.
 
 :::info
 
@@ -170,7 +170,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 |                                                                      | Qodly Studio para desenvolvedores 4D que usam o IDE 4D                                      | Qodly Studio para desenvolvedores Qodly |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------- |
 | Visualizar e editar tabelas (classes de dados), atributos e relações | Editor de estrutura 4D(1)                                                                   | Qodly Studio Model Editor               |
-| Webforms                                                             | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
+| Qodly form                                                           | Qodly Studio Webform Editor                                                                 | Qodly Studio Webform Editor             |
 | Formulários para desktop                                             | 4D IDE                                                                                      | *não suportado*                         |
 | Linguagem de programação                                             | Linguagem 4D com ORDA                                                                       | QodlyScript com ORDA                    |
 | IDE de codificação                                                   | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio           |
@@ -185,13 +185,13 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 In accordance with the management of 4D projects, only the following usages are supported:
 
 - development with Qodly Studio must be done using **4D** (single-user).
-- deployment of 4D applications powered with Qodly webforms must be done using **4D Server**.
+- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
 
 
 
 ### De QodlyScript à linguagem 4D
 
-4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their webforms in Qodly Studio. Code examples are provided in QodlyScript, but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations:
+4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their Qodly forms in Qodly Studio. Code examples are provided in QodlyScript, but since QodlyScript inherits from the 4D Language, you won't be lost. Converting QodlyScript code to 4D language is easy, it only requires some adaptations:
 
 #### Nomes de variáveis
 
@@ -290,11 +290,11 @@ You can develop with Qodly Studio while your computer is not connected to the in
 
 ## Sobre a licença de uso
 
-To render webforms, you must have an available license, as rendering a webform opens a session on the project database's main web server.
+To render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
 
 ### Esquemas URL
 
-A configuração do esquema de URL do Qodly Studio (HTTP e HTTPS) determina quantas licenças são retidas ao renderizar formulários Web. With the appropriate configuration, you can avoid unnecessary license retaining.
+Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering Qodly forms. With the appropriate configuration, you can avoid unnecessary license retaining.
 
 As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. Dessa forma, se comporta como um Cliente 4D convencional.
 
@@ -332,7 +332,7 @@ Para obter mais informações sobre o atributo `SameSite`, consulte [esta post d
 
 To avoid using more licenses than necessary, we recommend doing one of the following:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
+- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=QodlyFormName`).
 - Assegure-se de que o Qodly Studio e seu banco de dados sejam acessados no mesmo esquema de URL.
 - Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
 
