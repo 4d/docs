@@ -40,13 +40,13 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D v19.5.
 
 
-## Lançamentos anteriores
+## Previous releases
 
 
 - Veja as [**notas de lançamento anteriores**](https://doc.4d.com/4Dv19/4D/19.4/4D-v19x-Release-Notes.100-6044726.en.html) em doc.4d.com.
 
 
-## Tabela da biblioteca
+## Library table
 
 
 | Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                  |
