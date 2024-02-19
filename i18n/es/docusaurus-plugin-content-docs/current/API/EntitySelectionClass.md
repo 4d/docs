@@ -74,9 +74,9 @@ Si la tabla *dsTable* no está expuesto en [`ds`](API/DataStoreClass.md#ds), se 
 
 En el parámetro opcional *settings*, puede pasar un objeto que contenga la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                             |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el [contexto de optimización](ORDA/entities.md#clientserver-optimization) aplicado a la entity selection. |
+| Propiedad | Tipo | Descripción                                                                                                                  |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Ejemplo
