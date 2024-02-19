@@ -111,7 +111,7 @@ This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.m
 
 :::info
 
-This command is designed to make current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
 
 :::
 
