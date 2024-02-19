@@ -50,7 +50,7 @@ Vous pouvez créer deux types d'objets :
 
 ## Principes de syntaxe
 
-Object notation can be used to access object property values through a chain of tokens.
+La notation objet est utilisée pour accéder aux valeurs de propriétés d'objets via des séquences de symboles et de propriétés référencées (tokens).
 
 ### Propriétés des objets
 
