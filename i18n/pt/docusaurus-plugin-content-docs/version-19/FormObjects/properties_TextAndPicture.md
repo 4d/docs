@@ -173,7 +173,7 @@ Aqui estão os resultados utilizando as várias opções para esta propriedade:
 
 This property allows setting the size (in pixels) of the vertical margins of the button. Esta margem delimita a área que o ícone e o título do botão não devem ultrapassar.
 
-This parameter is useful, for example, when the background picture contains borders.
+Este parâmetro é útil, por exemplo, quando a imagem de fundo contém contornos.
 
 > This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
 
