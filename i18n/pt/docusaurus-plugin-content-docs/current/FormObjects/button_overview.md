@@ -3,7 +3,7 @@ id: buttonOverview
 title: Botão
 ---
 
-A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
+Um botão é um objeto ativo ao qual pode ser atribuída uma ação (*por exemplo*, uma tarefa de banco de dados ou uma função de interface) a executar quando um usuário clica nele.
 
 ![](../assets/en/FormObjects/button_regular.png)
 
