@@ -112,7 +112,17 @@ O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela correspond
 
 Este comando não pode ser utilizado com um [datastore remoto](../ORDA/remoteDatastores.md).
 
-> Depois de uma chamada a `USE ENTITY SELECTION`, o primeiro registro da seleção atual (se não vazia) vira o registro atual, mas não é carregado na memória.. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` depois do comando `USE ENTITY SELECTION`.
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+Depois de uma chamada a `USE ENTITY SELECTION`, o primeiro registro da seleção atual (se não vazia) vira o registro atual, mas não é carregado na memória.. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` depois do comando `USE ENTITY SELECTION`.
+
+:::
 
 #### Exemplo
 
@@ -812,6 +822,7 @@ $paths:=ds. Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 
@@ -2107,8 +2118,10 @@ $sliced:=$sel.slice(0;9) //
 Assuming we have ds. Employee.all().length = 10
 
 ```4d
-var $slice : cs. EmployeeSelection
-$slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+var $slice : cs.EmployeeSelection
+
+
+$slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a 8, mas como 9 > 8, devolve uma seleção de entidades vazia
 
 ```
 
