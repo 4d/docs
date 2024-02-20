@@ -264,7 +264,7 @@ Em alguns casos, poderá querer impedir que as aplicações cliente possam cance
 
 Para forçar a atualização, basta excluir o número da versão atual das aplicações cliente (X-1 e anteriores) no intervalo de números de versão compatível com a aplicação do servidor. Neste caso, o mecanismo de atualização não permitirá a conexão de aplicativos cliente não atualizados. Por exemplo, se a nova versão do aplicativo cliente-servidor for 6, pode estipular-se que qualquer aplicativo cliente com um número de versão inferior a 6 não será autorizado a ligar.
 
-The [current version number](build-server-application) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
+O número da versão [atual](build-server-application) é definido na página do Cliente/Servidor da caixa de diálogo da aplicação de construção. The intervals of authorized numbers are set in the application project using specific [XML keys](#build-application-settings).
 
 #### Erro de actualização
 
