@@ -964,12 +964,12 @@ O parâmetro opcional *paramObj* permite definir várias propriedades para o obj
 **Notas sobre o formato Excel**:
 
 * Ao exportar um documento do 4D View Pro para um arquivo no formato Microsoft Excel, algumas configurações podem ser perdidas. Por exemplo, os métodos e fórmulas 4D não são suportados pelo Excel. Você pode verificar outras configurações com [essa lista do GrapeCity](http://help.grapecity.com/spread/SpreadSheets10/webframe.html#excelexport.html).
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* A exportação nesse formato é executada de forma assíncrona; use a fórmula ** propriedade do paramObj ** para o código a ser executado após a exportação.
 
 **Notas sobre o formato PDF**:
 
 * Ao exportar um documento do 4D View Pro em PDF, as fontes usadas no documento são automaticamente incorporadas ao arquivo PDF. Somente fontes OpenType (arquivos .OTF ou .TTF) com um mapa Unicode podem ser incorporadas. Se não for encontrado nenhum arquivo de fonte válido para uma fonte, será usada uma fonte padrão.
-* Exporting in this format is run asynchronously, use the *formula* property of the *paramObj* for code to be executed after the export.
+* A exportação nesse formato é executada de forma assíncrona; use a fórmula ** propriedade do paramObj ** para o código a ser executado após a exportação.
 
 **Notas sobre o formato CSV**:
 
