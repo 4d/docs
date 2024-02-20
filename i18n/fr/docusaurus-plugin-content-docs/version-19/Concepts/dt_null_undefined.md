@@ -13,7 +13,7 @@ Dans le langage de 4D et pour les attributs des champs objets, les valeurs null 
 
 - object attributes
 - collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- variables de type objet, collection, pointeur, image ou variant.
 
 ## Undefined
 

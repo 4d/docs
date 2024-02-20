@@ -1446,9 +1446,9 @@ $first:=$emptyCol.first() // retourne Undefined
 
 
 <!-- REF #collection.flat().Params -->
-| Paramètres | Type       |    | Description                                                                                     |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------------- |
-| depth      | Integer    | -> | La profondeur à laquelle une structure de collection imbriquée doit être mise à plat. Default=1 |
+| Paramètres | Type       |    | Description                                                                                        |
+| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------- |
+| depth      | Integer    | -> | La profondeur à laquelle une structure de collection imbriquée doit être mise à plat. Par défaut=1 |
 | Résultat   | Collection | <- | Collection mise à plat|<!-- END REF -->
 
 
@@ -1737,7 +1737,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 #### Description
 
-La fonction `.indices()` fonctionne exactement comme [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de *queryString*<!-- END REF -->, and not elements themselves. Les positions sont retournées dans un ordre croissant.
+La fonction `.indices()` fonctionne exactement comme [`.query()`](#query) mais <!-- REF #collection.indices().Summary -->retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de *queryString*<!-- END REF -->, et non les éléments eux-mêmes. Les positions sont retournées dans un ordre croissant.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Le paramètre *queryString* doit respecter la syntaxe suivante :

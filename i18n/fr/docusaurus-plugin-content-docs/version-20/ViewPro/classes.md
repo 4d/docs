@@ -45,7 +45,7 @@ The `.formatter` property <!-- REF #TableColumn.formatter.Summary -->contains th
 <!-- REF #TableColumn.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-La propriété `.name` <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (mandatory).
+La propriété `.name` <!-- REF #TableColumn.name.Summary -->contains the table column's name<!-- END REF --> (obligatoire).
 
 
 
@@ -160,7 +160,7 @@ The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[fore
 
 
 
-### .font
+### .police
 
 <!-- REF #TableStyle.font.Syntax -->
 **.font** : Text<!-- END REF -->
@@ -272,7 +272,7 @@ The `.theme` property <!-- REF #TableTheme.theme.Summary -->defines a table them
 <!-- REF #TableThemeOptions.firstColumnStripSize.Syntax -->
 **.firstColumnStripSize** : Integer<!-- END REF -->
 
-The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. Default=1
+The `.firstColumnStripSize` property is the <!-- REF #TableThemeOptions.firstColumnStripSize.Summary -->size of the first alternating column<!-- END REF -->. Par défaut=1
 
 ### .firstColumnStripStyle
 
@@ -300,7 +300,7 @@ The `.firstHeaderCellStyle` property is the <!-- REF #TableThemeOptions.firstHea
 <!-- REF #TableThemeOptions.firstRowStripSize.Syntax -->
 **.firstRowStripSize** : Integer<!-- END REF -->
 
-The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Default=1.
+The `.firstRowStripSize` property is the <!-- REF #TableThemeOptions.firstRowStripSize.Summary -->size of the first alternating column<!-- END REF -->. Par défaut=1.
 
 ### .firstRowStripStyle
 
@@ -363,7 +363,7 @@ The `.name` property is the <!-- REF #TableThemeOptions.name.Summary -->name of 
 <!-- REF #TableThemeOptions.secondColumnStripSize.Syntax -->
 **.secondColumnStripSize** : Integer<!-- END REF -->
 
-The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Default=1
+The `.secondColumnStripSize` property is the <!-- REF #TableThemeOptions.secondColumnStripSize.Summary -->size of the second alternating column<!-- END REF -->. Par défaut=1
 
 ### .secondColumnStripStyle
 
@@ -377,7 +377,7 @@ The `.secondColumnStripStyle` property is the <!-- REF #TableThemeOptions.second
 <!-- REF #TableThemeOptions.secondRowStripSize.Syntax -->
 **.secondRowStripSize** : Integer<!-- END REF -->
 
-The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Default=1.
+The `.secondRowStripSize` property is the <!-- REF #TableThemeOptions.secondRowStripSize.Summary -->size of the second alternating column<!-- END REF -->. Par défaut=1.
 
 ### .secondRowStripStyle
 

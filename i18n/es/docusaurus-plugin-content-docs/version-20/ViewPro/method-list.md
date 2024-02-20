@@ -990,7 +990,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando `VP EXPORT DOCUM
 
 | Variable |               | Tipo    | Descripción                                               |
 | -------- | ------------- | ------- | --------------------------------------------------------- |
-| $1       |               | text    | El nombre del objeto 4D View Pro                          |
+| $1       |               | text    | The name of the 4D View Pro area object                   |
 | $2       |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
 | $3       |               | object  | Referencia al *paramObj* del comando                      |
 | $4       |               | object  | Un objeto devuelto por el método con un mensaje de estado |
@@ -2172,6 +2172,7 @@ El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary --
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
+
 #### Ejemplo
 
 En el siguiente documento:
@@ -2881,13 +2882,14 @@ Si *rangeObj* contiene varias celdas o varios rangos, se devuelve el valor de la
 
 
 
+
 #### Ejemplo
 
 ```4d
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -3057,6 +3059,18 @@ $o.password:="excel123"
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
 ```
 
+```4d
+    //myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
+```
+
+
 #### Ejemplo 3
 
 Quiere importar un archivo `.txt` que utiliza una coma (",") como delimitador:
@@ -3096,7 +3110,7 @@ El comando `VP IMPORT FROM OBJECT` <!-- REF #_method_.VP IMPORT FROM OBJECT.Summ
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+En *viewPro*, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. Para más información sobre los objetos 4D View Pro, consulte la sección [Objecto 4D View Pro](configuring.md#4d-view-pro-object).
 
 Se devuelve un error si el objeto *viewPro* no es válido.
 
@@ -5197,6 +5211,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
 | Parámetros | Tipo |  | Descripción |
@@ -5206,6 +5221,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 |rangeObj |Object|->|Objeto de rango| |formula |Text|->|Formula o método 4D| |formatPattern |Text|->|Formato de campo|<!-- END REF -->
 
 #### Descripción
+
 
 El comando `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->asigna una fórmula especificada o un método 4D a un rango de celdas designado<!-- END REF -->.
 
@@ -5792,6 +5808,7 @@ Quiere ocultar las líneas de la cuadrícula, así como los encabezados de las l
 var $options : Object
 
 $options:=New object
+
 $options.gridline:=New object()
 $options.gridline.showVerticalGridline:=False
 $options.gridline.showHorizontalGridline:=False

@@ -226,7 +226,7 @@ Voici les propriétés retournées dans le paramètre *$editor* :
 | $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
+Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Toutes les propriétés sont optionnelles:
 
 | Propriété         | Type       | Description                                                 |
 | ----------------- | ---------- | ----------------------------------------------------------- |

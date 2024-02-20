@@ -11,7 +11,7 @@ Uma grelha de botões é um objecto transparente colocado em cima de um gráfico
 
 ## Criando grades de botões
 
-To create the button grid, add a background graphic to the form and place a button grid on top of it. Specify the number of [rows](properties_Crop.md#rows) and [columns](properties_Crop.md#columns).
+Para criar a grelha de botões, adicione um gráfico de fundo ao formulário e coloque uma grelha de botões por cima. Specify the number of [rows](properties_Crop.md#rows) and [columns](properties_Crop.md#columns).
 
 Em 4D, uma grelha de botões é utilizada como uma paleta de cores:
 
@@ -19,11 +19,11 @@ Em 4D, uma grelha de botões é utilizada como uma paleta de cores:
 
 ## Usar grades de botões
 
-Os botões da grelha estão numerados do canto superior esquerdo para o canto inferior direito. No exemplo acima, a grelha tem 16 colunas de largura por 16 linhas para baixo. O botão na posição superior-esquerda retorna 1 quando clicado. If the red button at the far right of the second row is selected, the button grid returns 32. Se nenhum elemento for seleccionado, o valor é 0
+Os botões da grelha estão numerados do canto superior esquerdo para o canto inferior direito. No exemplo acima, a grelha tem 16 colunas de largura por 16 linhas para baixo. O botão na posição superior-esquerda retorna 1 quando clicado. Se o botão vermelho na extremidade direita da segunda linha for selecionado, a grelha de botões apresenta 32. Se nenhum elemento for seleccionado, o valor é 0
 
 ### Ir para página
 
-Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) `gotoPage` a uma grade de botões. When this action is selected, 4D will automatically display the page of the form that corresponds to the number of the button that is selected in the button grid. For example, if the user selects the tenth button of the grid, 4D will display the tenth page of the current form (if it exists).
+Você pode atribuir a [ação padrão](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) `gotoPage` a uma grade de botões. Quando esta ação é selecionada, 4D mostrará automaticamente a página do formulário que corresponde ao número do botão selecionado na grelha de botões. Por exemplo, se o usuário seleciona o décimo botão da grade, 4D mostrará a décima página do formulário atual (se existir).
 
 ## Propriedades compatíveis
 

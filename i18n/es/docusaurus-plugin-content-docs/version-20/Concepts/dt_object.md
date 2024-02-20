@@ -29,7 +29,7 @@ Tenga en cuenta que los nombres de las propiedades distinguen entre mayúsculas 
 :::
 
 
-You manage Object type variables, fields or expressions using the standard [object notation](#properties) or the commands available in the **Objects (Language)** theme. Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
+Las variables, campos o expresiones de tipo Objeto se gestionan utilizando la [notación de objetos](#properties) estándar o los comandos disponibles en el tema **Objetos (Lenguaje)**. Tenga en cuenta que se pueden utilizar comandos específicos del tema **Búsquedas**, como `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, o `ORDER BY ATTRIBUTE` para llevar a cabo el procesamiento de los campos objetos.
 
 Cada valor de propiedad al que se accede a través de la notación de objeto se considera una expresión. Puede utilizar estos valores siempre que se esperen expresiones 4D:
 
@@ -124,7 +124,7 @@ Puede crear dos tipos de objetos:
 
 ## Propiedades
 
-You access object property values through a chain of tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
+Se accede a los valores de las propiedades de los objetos a través de una cadena de tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 
 - using a "dot" symbol: > object.propertyName
 
@@ -144,7 +144,7 @@ Ejemplos:
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+Dado que un valor de propiedad de un objeto puede ser un objeto o una colección, puede utilizar una secuencia de símbolos para acceder a subpropiedades, por ejemplo:
 
 ```4d
  $vAge:=employee.children[2].age
@@ -167,7 +167,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
      $measures:=Get database measures. DB.tables
 ```
 
-- **Project methods** or **Functions** that return objects. Ejemplo:
+- **Métodos proyecto** o **Funciones** que devuelven objetos. Ejemplo:
 
 ```4d
       // MyMethod1
@@ -187,7 +187,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
 
 ### Valor Null
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+Al usar los objetos, el valor **null** es soportado mediante el comando **Null**. Este comando se puede utilizar para asignar o comparar el valor null a propiedades de objetos, por ejemplo:
 
 ```4d
  myObject.address.zip:=Null
@@ -198,7 +198,7 @@ Para más información, consulte [Null e indefinido](dt_null_undefined.md).
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Assigning an undefined value to an existing object property reinitializes or clears its value. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
 Para más información, consulte [Null e indefinido](dt_null_undefined.md)
 

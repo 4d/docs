@@ -13,7 +13,7 @@ Na linguagem 4D e para os atributos dos campos dos objetos, os valores nulos sã
 
 - atributos de objetos
 - elementos da coleção
-- variables of the object, collection, pointer, picture, or variant type.
+- variáveis do objecto, colecção, ponteiro, imagem, ou tipo de variante.
 
 ## Indefinido
 

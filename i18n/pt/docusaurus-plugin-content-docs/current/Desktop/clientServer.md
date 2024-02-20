@@ -18,8 +18,8 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 A merged client/server application is customized and its starting is simplified:
 
-- To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application.
+- Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
+- Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor.
 
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
 
@@ -35,13 +35,11 @@ Para conectar remotamente a um projeto 4D Server:
 
 Aparece o diálogo de ligação do 4D Server. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. A lista é classificada por ordem de aparecimento e atualizada dinamicamente.
+If 4D Server is connected to the same subnetwork as the remote 4D, select **Available**. 4D Server includes a built-in broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. A lista é classificada por ordem de aparecimento e atualizada dinamicamente.
 
 ![](../assets/en/getStart/serverConnect.png)
 
 To connect to a server from the list, double-click on its name or select it and click the **OK** button.
-
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
 
 If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
 

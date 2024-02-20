@@ -9,7 +9,7 @@ A página **HTTP Server** agrupa as informações sobre as operações do servid
 ![](../assets/en/Admin/server-admin-web-page.png)
 
 
-The upper part of the page provides information about the current status of the HTTP server of 4D Server.
+A parte superior da página fornece informações sobre o estado atual do servidor HTTP do 4D Server.
 
 - **Estado**: Iniciado ou Parado
 - **Hora de início**: data e hora em que o servidor HTTP foi iniciado pela última vez.
@@ -43,7 +43,7 @@ This area provides specific information about the SOAP server of 4D Server and i
 - **Máximo de ligações**: Número máximo de ligações SOAP permitidas. Este valor depende da licença instalada na máquina do servidor.
 - **Accept/Reject SOAP requests** button: This button toggles and can be used to control the activation of the 4D Server SOAP server. This button modifies the value of the **Allow Web Services Requests** option on the "Web Services" page of the Settings (and vice versa). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
 
-If you click on the **Accept SOAP requests** button and the HTTP server is stopped, 4D automatically starts it.
+Se você clicar no botão **Aceitar solicitações SOAP** e o servidor HTTP for interrompido, o 4D automaticamente o inicia.
 
 ## Configuração servidor HTTP
 
