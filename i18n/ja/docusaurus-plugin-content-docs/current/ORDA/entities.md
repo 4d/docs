@@ -241,7 +241,7 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 *   [データクラス](API/DataClassClass.md#query) または [既存のエンティティセレクション](API/EntitySelectionClass.md#query) のエンティティに対してクエリを実行する;
 *   [`.all( )`](API/DataClassClass.md#all) DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;
-*   Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
+*   [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) コマンドあるいは [`.newSelection( )`](API/DataClassClass.md#newselection) DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;
 *   [`.copy( )`](API/EntitySelectionClass.md#copy) EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;
 *   [EntitySelectionクラス](API/EntitySelectionClass.md) の様々な関数の中から、[`.or( )`](API/EntitySelectionClass.md#or) のように新しいエンティティセレクションを返すものを使用する;
 *   "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
@@ -250,7 +250,7 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 :::note
 
-You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature.
+[エンティティセレクションを制限する](#制限されたエンティティセレクション) 機能を使って、データクラスのエンティティセレクションに含めるエンティティをビジネスルールに応じて選別することができます。
 
 :::
 
@@ -291,8 +291,8 @@ You can filter which entities must be included in entity selections for a datacl
 ```4d
 var $myComp : cs.CompanyEntity
 var $employees : cs.EmployeeSelection
-$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
-$employees:=$myComp.employees //$employees is shareable
+$myComp:=ds.Company.get(2) // $myComp はエンティティセレクションに属していません
+$employees:=$myComp.employees // $employees は共有可能です
 ```
 
 新規のエンティティセレクションは次の場合に **追加可能** です:
@@ -303,7 +303,7 @@ $employees:=$myComp.employees //$employees is shareable
 例:
 ```4d
 var $toModify : cs.CompanySelection
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() // $toModify は追加可能です
 ```
 
 
@@ -323,12 +323,12 @@ var $comp; $comp2 : cs.Company
 
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
-    //$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+    // データクラスに対するクエリによって生成されたため $highSal は共有可能です
+$comp:=$highSal.employer // $highSal が共有可能なため $comp も共有可能です
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-    //$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+    // オプション無しの copy( ) によって生成されたため $lowSal は追加可能です
+$comp2:=$lowSal.employer // $lowSal が追加可能なため $comp2 も追加可能です
 ```
 
 :::note サーバーから返されるエンティティセレクション
@@ -410,8 +410,8 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 ```4d
 var $locals : cs.PersonSelection
 var $localEmails : Collection
-$locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
-$localEmails:=$locals.emailAddress //collection of email addresses (strings)
+$locals:=ds.Person.query("city = :1";"San Jose") // 個人のエンティティセレクション
+$localEmails:=$locals.emailAddress // メールアドレス (文字列) のコレクション
 ```
 
 このコードは *$localEmails* 内に文字列としてのメールアドレスのコレクションを返します。
@@ -425,30 +425,30 @@ $localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```4d
 var $myParts : cs.PartSelection
 var $myInvoices : cs.InvoiceSelection
-$myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+$myParts:=ds.Part.query("ID < 100") // ID が 100未満のパーツを返します
 $myInvoices:=$myParts.invoiceItems.invoice
-  //All invoices with at least one line item related to a part in $myParts
+  // $myParts 内のパーツにリレートされている請求項目を1行以上含んでいるすべての請求書
 ```
 
-The last line will return in *$myInvoices* an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
+最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、*$myInvoices* 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
 
 
-## Restricting entity selections
+## 制限されたエンティティセレクション
 
-In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by **ORDA class functions** such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by the [**REST API**](../category/api-dataclass) (which involves the [Data Explorer](../Admin/dataExplorer.md) and [remote datastores](remoteDatastores.md)).
+ORDAでは、あらゆるデータクラスにおいて、エンティティへのアクセスを制限するフィルターを作成することができます。 一旦実装されると、データクラスのエンティティが **ORDAクラス関数** ([`all()`](../API/DataClassClass.md#all) や [`query()`](../API/EntitySelectionClass.md#query)など) または [**REST API**](../category/api-dataclass) ([Data Explorer](../Admin/dataExplorer.md) や [remote datastores](remoteDatastores.md)など) によってアクセスされるたびに、フィルターが自動的に適用されます。
 
-A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson.
+カレントセッションユーザーなど任意のビジネスルールに基づいて構築されたフィルターは、制限されたデータ表示を可能にします。 たとえば、営業担当者が顧客との取引に使用するようなアプリケーションでは、認証された営業担当者が管理する顧客のみに閲覧を制限することができます。
 
 :::info
 
-Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](../privileges.md) which are more appropriate in this case.
+フィルターは **エンティティ** に対して適用されます。 **データクラス** そのもの、または特定の **属性** へのアクセスを制限するには、[セッション権限](../privileges.md) の利用がより適切です。
 
 :::
 
 
-### How to define a restrict filter
+### 制限フィルターの定義
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
+データクラスのフィルターを作成するには、データクラスの [**DataClass クラス**](dsMapping.md#dataclass-class) 内に `event restrict` 関数を定義します。 すると、フィルターは自動的に有効になります。
 
 
 ### `Function event restrict`
@@ -457,29 +457,29 @@ You create a filter for a dataclass by defining an `event restrict` function in 
 
 ```4d
 Function event restrict() -> $result : cs.*DataClassName*Selection
-// code
+// コード
 ```
 
-This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created.
+この関数は、データクラスのエンティティセレクションまたはエンティティが要求されるたびに呼び出されます。 フィルターは、エンティティセレクションが作成されたときに一度だけ実行されます。
 
-The filter must return an entity selection of the dataclass. It can be an entity selection built upon a query, stored in the [`Storage`], etc.
+フィルターは、データクラスのエンティティセレクションを返さなければなりません。 戻り値のエンティティセレクションには、クエリの結果や、[`Storage`] に格納されているものなどが使えます。
 
 :::note
 
-For performance reasons, we recommend to use **indexed attributes** in the definition of the filter.
+パフォーマンス上の理由から、フィルターの定義には **インデックス付き属性** の使用が推奨されます。
 
 :::
 
-The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
+関数は、データクラスの有効なエンティティセレクションを返さなければなりません。 以下の場合、フィルターは適用されません (初期リクエストに対応するすべてのエンティティが返されます):
 
-- the function returns **null**,
-- the function returns **undefined**,
-- the function does not return a valid entity selection.
+- 関数の戻り値が **null** である
+- 関数の戻り値が **未定義** である
+- 関数の戻り値が有効なエンティティセレクションではない
 
 
 #### 例題
 
-When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. During the authentication phase, the sales person is stored in the `Session` object. Other types of requests are also handled.
+Web または RESTリクエストによりアクセスされた場合、Customersデータクラスが公開するのは、認証された営業担当者が担当している顧客に限定されるようにします。 認証段階で、営業担当者は `Session` オブジェクトに格納されます。 また、他の種類のリクエストも扱います。
 
 ```4d
 Class extends DataClass
@@ -488,55 +488,55 @@ Class extends DataClass
 Function event restrict() : cs.CustomersSelection
 
 
-        //We work in a web or REST context
+        // Web または REST コンテキストでの動作
     If (Session#Null)
 
         Case of 
-                // Only return the customers of the authenticated sales person stored in the session
+                // セッションが格納する認証された営業担当者の担当顧客のみを返します
             : (Session.storage.salesInfo#Null)
                 return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
 
-                //Data explorer - No filter is applied
+                // データエクスプローラーの場合には、フィルターを適用しません
             : (Session.hasPrivilege("WebAdmin"))
                 return Null
             Else 
-                //No customers can be read
+                // それ以外の場合は顧客情報を返しません
                 return This.newSelection()
 
         End case 
 
-    Else // We work in client server
+    Else // クライアントサーバーの場合
         return This.query("sales.userName = :1"; Current user)
     End if 
 ```
 
 
-### Filter activation details
+### フィルターの有効化に関する詳細
 
-Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). A filter is activated as soon as the project is opened, i.e. it can be triggered in the `On Startup` database method.
+フィルターは、4Dプロジェクト (スタンドアロンおよびクライアント/サーバーアーキテクチャ) で実行されるすべての ORDA または RESTリクエストに適用されます。 プロジェクトを開くと、フィルターはすぐに有効になります。つまり、`On Startup` データベースメソッド内でもトリガーできます。
 
 
 :::info
 
-Filters do not apply to legacy selections of records handled through the 4D interface or the 4D language (for example when calling `ALL RECORDS`).
+フィルターは、4Dインターフェースや4Dランゲージ (`ALL RECORDS` を呼び出す場合など) をよって処理される従来のレコードセレクションには適用されません。
 
 :::
 
 
-| 関数                                                                                | 説明                                                                                                                                        |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| [dataclass.get()](../API/DataClassClass.md#get)                                   | If the entity does not match the filter, `null` is returned                                                                               |
-| [entity.reload()](../API/EntityClass.md#reload)                                   | Only in client/server and remote datastores                                                                                               |
-| [dataclass.all()](../API/DataClassClass.md#all)                                   |                                                                                                                                           |
-| [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection)             | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li>                                                                                        |
-| [entitySelection.and()](../API/EntitySelectionClass.md#and)                       | Only entities matching the filter are returned                                                                                            |
-| [entitySelection.or()](../API/EntitySelectionClass.md#or)                         | Only entities matching the filter are returned                                                                                            |
-| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)                   | Only entities matching the filter are returned                                                                                            |
-| [dataclass.query()](../API/DataClassClass.md#query)                               |                                                                                                                                           |
-| [entitySelection.query()](../API/EntitySelectionClass.md#query)                   |                                                                                                                                           |
-| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)     | Filter applied if *attributeName* is a related entity or related entities of a filtered dataclass (including alias or computed attribute) |
-| [entity.attributeName](../API/EntityClass.md#attributename)                       | Filter applied if *attributeName* corresponds to related entities of a filtered dataclass (including alias or computed attribute)         |
-| [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection) |                                                                                                                                           |
+| 関数                                                                                | 説明                                                                                       |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [dataclass.get()](../API/DataClassClass.md#get)                                   | エンティティがフィルターに適合しない場合、`null` が返されます                                                       |
+| [entity.reload()](../API/EntityClass.md#reload)                                   | クライアント/サーバーおよびリモートデータストアのみ                                                               |
+| [dataclass.all()](../API/DataClassClass.md#all)                                   |                                                                                          |
+| [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection)             | <li>更新の場合、フィルターに適合するエンティティのみを更新できます。 フィルターに適合しないエンティティをコレクションが参照している場合、新規エンティティとして作成されます (重複PKエラーがない場合)。</li><li>作成の場合、フィルターに適合しないエンティティも作成されますが、作成後に読み込まれません</li>                                       |
+| [entitySelection.and()](../API/EntitySelectionClass.md#and)                       | フィルターに適合するエンティティのみが返されます                                                                 |
+| [entitySelection.or()](../API/EntitySelectionClass.md#or)                         | フィルターに適合するエンティティのみが返されます                                                                 |
+| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)                   | フィルターに適合するエンティティのみが返されます                                                                 |
+| [dataclass.query()](../API/DataClassClass.md#query)                               |                                                                                          |
+| [entitySelection.query()](../API/EntitySelectionClass.md#query)                   |                                                                                          |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)     | *attributeName* が、制限されたデータクラスのリレートエンティティまたはリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む) |
+| [entity.attributeName](../API/EntityClass.md#attributename)                       | *attributeName* が、制限されたデータクラスのリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)              |
+| [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection) |                                                                                          |
 
 
 Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
