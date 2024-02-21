@@ -1,6 +1,6 @@
 ---
 id: settings
-title: Backup Settings
+title: Configuración de copia de seguridad
 ---
 
 Los parámetros de copia de seguridad se definen a través de tres páginas en el [cuadro de diálogo de los parámetros](../settings/overview.md). Puede definir:
