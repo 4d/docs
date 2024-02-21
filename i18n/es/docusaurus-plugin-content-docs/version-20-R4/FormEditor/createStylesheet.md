@@ -1,6 +1,6 @@
 ---
 id: stylesheets
-title: Style sheets
+title: Hojas de estilo
 ---
 
 
