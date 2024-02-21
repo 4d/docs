@@ -290,6 +290,23 @@ You can develop with Qodly Studio while your computer is not connected to the in
 - UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
 
 
+## Force login
+
+With Qodly Studio in 4D, the user login mode defines if and when REST requests open web sessions. You can choose between two user login modes, available in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) of Qodly Studio:
+
+![alt-text](../assets/en/WebServer/forcelogin.png) 
+
+- the **default mode** (selector off): in this mode, a REST request automatically creates a web session if not already created and is processed by the server. Use this mode if you don't need to control how many web sessions are opened on the server.
+- the **force login** mode (selector on): in this mode, basic REST requests (`rest/$catalog` for example) are always processed by the server and do not need any web session. On the other hand, all other REST requests (asking data or executing a function) return an error if they are not executed within a web session. You must login the user by calling the `rest/$catalog/authentify` entrypoint function and then the `setPrivilege()` function. The web session is opened when the `setPrivilege()` function is executed. Use this mode if you want to control how many web sessions are opened on the server. 
+
+:::note
+
+Since web sessions opened upon REST requests require a license, the **force login** mode allows you to manage your license usage. 
+
+:::
+
+
+
 ## About license usage
 
 To render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
