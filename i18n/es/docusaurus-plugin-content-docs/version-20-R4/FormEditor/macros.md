@@ -1,6 +1,6 @@
 ---
 id: macros
-title: Form Editor Macros
+title: Macros del editor de formularios
 ---
 
 
