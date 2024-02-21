@@ -1276,6 +1276,7 @@ $condition.flags:=vk find flag exact match
  
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
   // Check for empty range object 
@@ -1815,7 +1816,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |name  |Text|->|Name of the named range|
 |scope  |Number|->|Target scope (default=current sheet)|
-|Result  |Text|<-|Named formula or named range definition|<!-- END REF -->
+|Result  |Object|<-|Named formula or named range definition|<!-- END REF -->
 
 #### Description
 
@@ -3537,6 +3538,7 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
+
 
 
 #### Description
@@ -5837,6 +5839,7 @@ Result:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6133,6 +6136,7 @@ In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`]
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+
 
 #### Example
 

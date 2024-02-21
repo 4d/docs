@@ -1529,6 +1529,7 @@ The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->
 In *rangeObj*, pass a range containing the style to retrieve.
 
 * If *rangeObj* contains a cell range, the cell style is returned.
+
 * If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
 * If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
 
@@ -1816,7 +1817,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |name  |Text|->|Name of the named range|
 |scope  |Number|->|Target scope (default=current sheet)|
-|Result  |Text|<-|Named formula or named range definition|<!-- END REF -->
+|Result  |Object|<-|Named formula or named range definition|<!-- END REF -->
 
 #### Description
 
@@ -1889,6 +1890,7 @@ You want to retrieve the formulas in the Sum and Average columns from this docum
 You can use this code:
 
 ```4d
+
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
 //$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
@@ -4840,6 +4842,7 @@ The document's current sheet is the first sheet:
 Set the current sheet to the third sheet:
 
 ```4d
+
 VP SET CURRENT SHEET("ViewProArea";2)
 ```
 
@@ -6330,6 +6333,7 @@ The following table lists the available workbook options:
 | referenceStyle | number | Style for cell and range references in cell formulas. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table> |
 | resizeZeroIndicator | number | Drawing policy when the row or column is resized to zero. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table> |
 | rowResizeMode | number | The way rows are resized. Available values are the same as columnResizeMode |
+
 | scrollbarAppearance | number | Scrollbar appearance. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>|
 | scrollbarMaxAlign | boolean | The scroll bar aligns with the last row and column of the active sheet. |
 | scrollbarShowMax | boolean | The displayed scroll bars are based on the entire number of columns and rows in the sheet. |
