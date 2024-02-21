@@ -25,7 +25,7 @@ Read [**What’s new in 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Changements de comportement
 
 - Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
-- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
+- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. Les clés RSA, DSA et DH de 1024 bits et plus et de moins de 2048 bits ainsi que les clés ECC de 160 bits et plus et de moins de 224 bits ne sont plus autorisées. Par défaut, la compression TLS était déjà désactivée dans les versions précédentes d'OpenSSL. Au niveau de sécurité 2, il ne peut pas être activé.
 
 ## 4D v20 R3
 
@@ -49,7 +49,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Changements de comportement
 
 - Some errors were catchable by your [error handling method](../Concepts/error-handling.md) in interpreted mode only. A fix has been done, so that the following errors will now be caught also in compiled mode: _Indice out of range_, _Type incompatible_, and _Dereferencing a Null pointer_. However, for such errors on Intel processors, the procedure is still interrupted as before, whereas on Apple Silicon processors the procedure is only interrupted if you call the [`ABORT`](https://doc.4d.com/4dv20/help/command/en/page156.html) command.
-- 4D no longer includes an internal PHP interpreter. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
+- 4D n'inclut plus d'interpréteur PHP interne. You need to [set up and run your own PHP interpreter](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) to use PHP commands.
 
 ## 4D v20 R2
 
@@ -57,7 +57,7 @@ Read [**What’s new in 4D v20 R2**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 :::warning Security Note
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20 R2 HF1 build 100440 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour 4D en release 20 R2 HF1 build 100440 ou plus. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -81,17 +81,17 @@ Read [**What’s new in 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), 
 
 :::caution Minimal client version for 4D Server v20.2 and later
 
-For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
+Pour des raisons internes, la version des clients distants se connectant à 4D Server v20.2 et plus doit être au moins 4D v20.2.
 
 :::
 
 :::warning Security Note
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v20.2 LTS build 100956 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour 4D en release 20.2 LTS build 100956 ou plus. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
-#### Index rebuild warning
+#### Avertissement concernant la reconstruction de l'index
 
 4D v20 inclut une mise à jour de la bibliothèque ICU (voir ci-dessous) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
 
@@ -99,14 +99,14 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 4D v20.1 comprend également une mise à jour de la bibliothèque ICU, ce qui a les conséquences suivantes :
 
-- It will force an automatic rebuild of indexes of type alpha, text, and object.
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
+- Elle forcera une reconstruction automatique des index de type alpha, texte et objet.
+- Pour des raisons de cohérence des tris, il est nécessaire que les clients distants 4D et le serveur 4D utilisent la même version : seuls les clients distants 4D v20.1 peuvent se connecter au serveur 4D v20.1 et vice versa.
 
 :::
 
 #### Points forts
 
-- 4D v20.2 is certified on macOS Sonoma (macOS 14).
+- 4D v20.2 est certifié sur macOS Sonoma (macOS 14).
 - (4D v20.1) New `plugins` property in the _options_ parameter for the [`Compile project`](https://doc.4d.com/4dv20/help/command/en/page1760.html) command.
 - 4D Server automatically integrates multiple journals: [Automatic restore](../Backup/settings.md#automatic-restore).
 - [IMAP Transporter Class](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass#getboxinfo) returns _id_, [`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) returns _id_, _flags_ and _permanentFlags_, [`.addFlags()`](../API/IMAPTransporterClass.md#addflags) and [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) support custom keywords.
@@ -134,7 +134,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 #### Changements de comportement
 
-- As of v20.2, 4D v20 LTS is no longer compatible with Windows Server 2012 R2.
+- À partir de la version 20.2, 4D v20 LTS n'est plus compatible avec Windows Server 2012 R2.
 - **Warning**: The starting [`offset`](../API/FileHandleClass.md#offset) value of [4D.FileHandle](../API/FileHandleClass.md) objects was incorrectly set to 1 instead of 0. A fix has been made in 4D as of versions **20.1 HF1** and **20 R2** and the value is now 0.
 - For HTTP RFC compliance, [`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) property now returns all header names **in lowercase**. If you want your code to continue working as before, use the new [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) property.
 - TLS certificates are now automatically validated by 4D when sending HTTP requests with [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new), and rejected with an error if they are invalid. A new _option_ property allows you to control this validation.
@@ -152,7 +152,7 @@ Read [**What’s new in 4D v19 R8**](https://blog.4d.com/en-whats-new-in-4d-v19-
 - Listboxes with collection or entity selection datasources now support [Automatic Row Height](../FormObjects/properties_CoordinatesAndSizing.md#automatic-row-height) column property.
 - ORDA: Support of the _roles.json_ file to define [privileges](../ORDA/privileges.md) assigned to the session with [`setPrivileges()`](../API/SessionClass.md#setprivileges).
 - Support of [SDI mode in test application mode](../Menus/sdi.md#sdi-mode-availability) on Windows.
-- 4D View Pro:
+- 4D View Pro :
   - support of themes in tables: new [VP SET TABLE THEME](../ViewPro/method-list.md#vp-set-table-theme) and [VP Get table theme](../ViewPro/method-list.md#vp-get-table-theme) commands, support of theme options in [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table)
   - new [VP Get table dirty rows](../ViewPro/method-list.md#vp-get-table-dirty-rows) command
 - 4D Language commands: [What's new page](https://doc.4d.com/4Dv19R8/4D/19-R8/What-s-new.901-6101683.en.html) on doc.4d.com.
@@ -185,12 +185,12 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 
 #### Changements de comportement
 
-- For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
-- The 4D internal build numbering has been modified as of 4D v19 R7:
-  - releases up to 4D v19 R6 (included) are numbered 282xxx,
+- Pour des raisons de cohérence avec les interfaces standard (par exemple, les explorateurs de fichiers des OS), les règles des list box pour la sélection des lignes/le glisser-déposer ont été modifiées. A continuous or discontinuous selection of rows can be dragged by simply clicking on and moving a selected row; the **Alt** key is not longer necessary (but can still be used like in previous previous). When the **Shift** or **Ctrl/Command** key is pressed, a mouse click is taken into account when the click is down. For more information on drag and drop in list boxes, you can refer to [this blog post](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) and download [this HDI 4D project](https://github.com/4d-depot/HDI_LB_DragAndDrop).
+- La numérotation interne de 4D a été modifiée à partir de 4D v19 R7 :
+  - Les versions jusqu'à 4D v19 R6 (incluses) sont numérotées 282xxx,
   - releases from 4D v19 R7 will be numbered 100xxx.\
-    Note that a specific 4D version is still uniquely identified by a branch name and a build number. The build number increases chronologically.
-- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
+    Note that a specific 4D version is still uniquely identified by a branch name and a build number. Le numéro de build augmente par ordre chronologique.
+- La possibilité d'utiliser le protocole REST de Wakanda/4D Mobile pour appeler une méthode de projet a été supprimée. You can use [ORDA data model class functions](../REST/ClassFunctions.md) or [/4DACTION urls](../WebServer/httpRequests.md#4daction) instead.
 
 ## 4D v19 R6
 
