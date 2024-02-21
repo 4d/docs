@@ -70,7 +70,7 @@ A tabela seguinte apresenta as opções disponíveis:
 
 *(1)* Para evitar ambiguidade e de acordo com a prática atual, os formatos de data abreviados exibem "jun" para junho e "jul" para julho. Esta particularidade só se aplica às versões francesas de 4D.
 
-*(2)* O ano é exibido com dois dígitos quando pertence ao intervalo (1930;2029); caso contrário, será exibido com quatro dígitos. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(2)* O ano é exibido com dois dígitos quando pertence ao intervalo (1930;2029); caso contrário, será exibido com quatro dígitos. Esse é o padrão, mas pode ser modificado com o comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) .
 
 *(3)* O formato `ISO Date Time` corresponde ao padrão XML de representação de data e hora (ISO8601). Seu principal objetivo é ser usado na importação/exportação de dados em formato XML e em serviços da Web.
 > Independentemente do formato de exibição, se o ano for inserido com dois dígitos, o 4D assume que o século é o 21º se o ano pertencer ao intervalo (00;29) e o 20º se pertencer ao intervalo (30;99). Esta é a configuração padrão, mas pode ser modificada usando o comando [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).

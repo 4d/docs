@@ -207,7 +207,7 @@ Quando trabalhar em um banco de dados com muitos métodos e variáveis, geralmen
 Frequentemente, em um banco de dados, pequenas pedaços de informação são necessários do usuário. The `Request` command can obtain this information. Apresenta uma caixa de diálogo com uma mensagem que solicita ao utilizador uma resposta. Quando o utilizador introduz a resposta, o comando devolve a informação que o utilizador introduziu. Normalmente não precisa de manter esta informação nos seus métodos durante muito tempo. Esta é uma forma típica de utilizar uma variável local. Aqui um exemplo simples:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("Por favor insira o seu ID:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if

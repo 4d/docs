@@ -195,12 +195,12 @@ ORDA で公開されるテーブル毎に、EntitySelection クラスが `cs` �
 #### 例題
 
 ```4d
-// cs.EmployeeSelection class
+// cs.EmployeeSelection クラス
 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+// 給与が平均超えの社員を当該エンティティセレクションから抽出します
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
     return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -251,7 +251,7 @@ Entity クラスでは、`Alias` キーワードを使用して **エイリア�
 #### 例題
 
 ```4d
-// cs.CityEntity class
+// cs.CityEntity クラス
 
 Class extends Entity
 
@@ -260,7 +260,7 @@ Function getPopulation() : Integer
 
 
 Function isBigCity(): Boolean
-// The getPopulation() function is usable inside the class
+// 関数 getPopulation() をクラス内で使用することができます
     return This.getPopulation()>50000
 ```
 

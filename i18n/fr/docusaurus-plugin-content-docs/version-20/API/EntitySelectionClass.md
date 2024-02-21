@@ -113,7 +113,17 @@ La commande `USE ENTITY SELECTION` met à jour la sélection courante de la tabl
 
 Cette commande ne peut pas être utilisée avec un [datastore distant](../ORDA/remoteDatastores.md).
 
-> Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la sélection courante mise à jour (s'il n'est pas vide) devient l'enregistrement courant, mais il n'est pas chargé en mémoire. Si vous avez besoin d'utiliser les valeurs des champs de l'enregistrement courant, utilisez la commande `LOAD RECORD` après la commande `USE ENTITY SELECTION`.
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la sélection courante mise à jour (s'il n'est pas vide) devient l'enregistrement courant, mais il n'est pas chargé en mémoire. Si vous avez besoin d'utiliser les valeurs des champs de l'enregistrement courant, utilisez la commande `LOAD RECORD` après la commande `USE ENTITY SELECTION`.
+
+:::
 
 #### Exemple
 
@@ -828,6 +838,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 
@@ -1675,11 +1686,11 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
 
 ```4d
-// tri avec formule
+// tri par formule
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // tri avec collection avec ou sans ordres de tri
+  // tri par collection avec ou dans ordre de tri
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1687,6 +1698,7 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
+
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
@@ -2136,7 +2148,8 @@ En supposant que ds.Employee.all().length = 10
 ```4d
 var $slice : cs.EmployeeSelection
 
-$slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'index 9 à 8, mais comme 9 > 8, retourne une lentity selection vide
+
+$slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'index 9 à 8, mais comme 9 > 8, retourne une entity selection vide
 
 ```
 

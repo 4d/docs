@@ -112,7 +112,17 @@ O comando `USE ENTITY SELECTION` atualiza a seleção atual da tabela correspond
 
 Este comando não pode ser utilizado com um [datastore remoto](../ORDA/remoteDatastores.md).
 
-> Depois de uma chamada a `USE ENTITY SELECTION`, o primeiro registro da seleção atual (se não vazia) vira o registro atual, mas não é carregado na memória.. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` depois do comando `USE ENTITY SELECTION`.
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+Depois de uma chamada a `USE ENTITY SELECTION`, o primeiro registro da seleção atual (se não vazia) vira o registro atual, mas não é carregado na memória.. Se precisar usar os valores dos campos no registro atual, use o comando `LOAD RECORD` depois do comando `USE ENTITY SELECTION`.
+
+:::
 
 #### Exemplo
 

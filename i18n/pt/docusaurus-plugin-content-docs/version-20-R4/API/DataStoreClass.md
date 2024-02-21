@@ -1218,7 +1218,7 @@ Para uma descrição do formato do registo de petições ORDA, consulte a secç�
 
 Para criar um registo de pedidos ORDA do lado do cliente, chame esta função numa máquina remota. O registro pode ser enviado para um arquivo ou para a memória, dependendo do parâmetro:
 
-* Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. If `.startRequestLog()` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+* Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. Se `.startRequestLog()` for chamado com um arquivo enquanto o registro em log tiver sido iniciado anteriormente na memória, o registro em memória será interrompido e esvaziado.
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON
 
 * Se passar um inteiro *reqNum*, se esvazia o registro em memória (se houver) e se inicializa um novo registro. Vai manter *reqNum* petições em memória até que se alcance o número, em cujo caso se esvaziam as entradas mais antigas (pilha FIFO).<br/>Se chamar a `.startRequestLog()` com um *reqNum* enquanto tiver iniciado previamente um registro em um arquivo, se para o registro do arquivo.
@@ -1227,10 +1227,10 @@ Para criar um registo de pedidos ORDA do lado do cliente, chame esta função nu
 
 #### Do lado do servidor
 
-To create a server-side ORDA request log, call this function on the server machine. Os dados de registo são escritos num ficheiro no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
+Para criar um registro de pedidos ORDA no lado do servidor, chame essa função no máquina servidor. Os dados de registo são escritos num ficheiro no formato `.jsonl`. Cada objeto representa um pedido. Se o ficheiro ainda não existir, é criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele.
 
-- If you passed the *file* parameter, the log data is written in this file, at the requested location. - If you omit the *file* parameter or if it is null, the log data is written in a file named *ordaRequests.jsonl* and stored in the "/LOGS" folder.
-- The *options* parameter can be used to specify if the server response has to be logged, and if it should include the body. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:
+- Se você passou o parâmetro *file*, os dados de registro serão gravados nesse arquivo, no local solicitado. - Se você omitir o parâmetro *file* ou se ele for null, os dados de registro serão gravados em um arquivo chamado *ordaRequests.jsonl* e armazenados na pasta "/LOGS".
+- O parâmetro *options* pode ser usado para especificar se a resposta do servidor deve ser registrada e se deve incluir o corpo. Por padrão, quando o parâmetro é omisso, a resposta completa é registrada. As seguintes constantes podem ser utilizadas neste parâmetro:
 
 | Parâmetros                    | Descrição                                          |
 | ----------------------------- | -------------------------------------------------- |
@@ -1276,7 +1276,7 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 #### Exemplo 3
 
-You want to log ORDA server requests in a specific file and enable the log sequence number and duration:
+Você deseja registrar as peticiones do servidor ORDA em um arquivo específico e ativar o número de sequência do registro e a duração:
 
 ```4d
 SET DATABASE PARAMETER(4D Server Log Recording;1)

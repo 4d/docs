@@ -1,6 +1,6 @@
 ---
 id: formEditor
-title: Form Editor
+title: Editor de formularios
 ---
 
 4D ofrece un completo editor de formularios que le permite modificar su formulario hasta conseguir el efecto que desea. Con el editor de formularios puede crear y eliminar objetos formulario, manipularlos directamente y definir las propiedades de los mismos.

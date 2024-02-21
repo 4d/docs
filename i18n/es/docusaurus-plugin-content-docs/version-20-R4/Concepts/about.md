@@ -1,6 +1,6 @@
 ---
 id: about
-title: About the 4D Language
+title: Acerca del lenguaje 4D
 ---
 
 El lenguaje integrado de 4D, que consta de más de 1300 comandos, convierte a 4D en una poderosa herramienta de desarrollo para aplicaciones web, móvil o de escritorio. Puede utilizar el lenguaje 4D para muchas tareas diferentes, desde la realización de cálculos sencillos hasta la creación de complejas interfaces de usuario personalizadas. Por ejemplo, puede:

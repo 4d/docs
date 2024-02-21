@@ -1,6 +1,6 @@
 ---
 id: overview
-title: About class functions
+title: Sobre as funções classe
 ---
 
 As funções e propriedades da classe 4D estão disponíveis através de objectos de instância de classe. Esta seção descreve a API da classe 4D incorporada, bem como os comandos de construção associados.

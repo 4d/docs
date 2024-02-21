@@ -1,6 +1,6 @@
 ---
 id: log
-title: Log file (.journal)
+title: Archivo de registro (.journal)
 ---
 
 Una aplicación de uso continuo siempre está registrando cambios, adiciones o supresiones. Realizar copias de seguridad periódicas de los datos es importante, pero no permite (en caso de incidente) restaurar los datos introducidos desde la última copia de seguridad. Para responder a esta necesidad, 4D ofrece ahora una herramienta específica: el archivo de historial. Este archivo permite garantizar la seguridad permanente de los datos.

@@ -1,6 +1,6 @@
 ---
 id: licenses
-title: Managing 4D Licenses
+title: Gestión de licencias 4D
 ---
 
 Una vez instalados en su disco, debe activar sus productos 4D para poder utilizarlos. Normalmente, la activación es automática si [inicia sesión con su cuenta 4D](GettingStarted/Installation.md) en el asistente de bienvenida.

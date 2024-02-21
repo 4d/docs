@@ -9,9 +9,9 @@ Lisez [**Les nouveautés de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19
 
 :::
 
-:::warning Security Note
+:::warning Note de sécurité
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. For more information, refer to this [Security bulletin](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. Pour plus d'informations, reportez-vous à ce [bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 

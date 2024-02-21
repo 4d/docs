@@ -1,6 +1,6 @@
 ---
 id: creating
-title: Creating or opening a project
+title: Crear o abrir un proyecto
 ---
 
 Los proyectos 4D se crean y desarrollan utilizando la aplicación **4D**, que ofrece un completo Entorno de Desarrollo Integrado (IDE). **4D Server** también puede crear nuevos proyectos vacíos.

@@ -194,19 +194,19 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 
 Some basic symbols, operators, and keywords differ in QodlyScript and must be adapted to the 4D Language. They are listed below:
 
-| QodlyScript | 4D Language                                                 | Commentaire         |
-| ----------- | ----------------------------------------------------------- | ------------------- |
-| ,           | ;                                                           | argument separator  |
-| =           | :=                                                          | assignment operator |
-| ==          | =                                                           | comparison operator |
-| declare     | #Declare                                                    |                     |
-| switch      | Case of                                                     |                     |
-| constructor | Class constructor                                           |                     |
-| extends     | Class extends                                               |                     |
-| end         | End for, End For each, End if, End case, End use, End while |                     |
-| forEach     | For each                                                    |                     |
-| string      | Text                                                        | var type            |
-| number      | Real                                                        | var type            |
+| QodlyScript | 4D Language                                                 | Commentaire             |
+| ----------- | ----------------------------------------------------------- | ----------------------- |
+| ,           | ;                                                           | argument separator      |
+| =           | :=                                                          | opérateur d'assignation |
+| ==          | =                                                           | comparison operator     |
+| declare     | #Declare                                                    |                         |
+| switch      | Case of                                                     |                         |
+| constructor | Class constructor                                           |                         |
+| extends     | Class extends                                               |                         |
+| end         | End for, End For each, End if, End case, End use, End while |                         |
+| forEach     | For each                                                    |                         |
+| string      | Text                                                        | var type                |
+| number      | Real                                                        | var type                |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 

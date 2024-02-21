@@ -75,9 +75,9 @@ title: EntitySelection
 
 任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
-| プロパティ   | タイプ  | 説明                                                                                                                           |
-| ------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
-| context | Text | Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection. |
+| プロパティ   | タイプ  | 説明                                                                                 |
+| ------- | ---- | ---------------------------------------------------------------------------------- |
+| context | Text | エンティティセレクションに適用されている [最適化コンテキスト](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) のラベル。 |
 
 
 #### 例題
@@ -116,7 +116,7 @@ $employees:=Create entity selection([Employee])
 
 :::info
 
-This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+このコマンドは、4Dのカレントセレクションが ORDAクエリの力を活用するためのものです。 パフォーマンス上の理由により、シングルユーザーの 4D と 4D Server では、このコマンドは *entitySelection* をカレントセレクションと直結します。 そのため、このコマンドに受け渡した *entitySelection* をその後に再利用したり変更したりすることは避けなければなりません。
 
 :::
 
@@ -131,9 +131,9 @@ This command is designed to make 4D current selections benefit from the power of
 ```4d
 var $entitySel : cs.EmployeeSelection
 
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
+$entitySel:=ds.Employee.query("lastName = :1";"M@") // $entitySel は Employee データクラスにリレートされています
 REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
+USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されます
 ```
 
 
