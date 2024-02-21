@@ -25,7 +25,7 @@ title: リリースノート
 #### 動作の変更
 
 - 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
-- 更新された [OpenSSL ライブラリ](#ライブラリの一覧) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
+- 更新された [OpenSSL ライブラリ](#ライブラリの一覧) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
 
 ## 4D v20 R3
 
@@ -49,7 +49,7 @@ title: リリースノート
 #### 動作の変更
 
 - いくつかのエラーは、[エラー処理メソッド](../Concepts/error-handling.md) によってインタプリタモードのみでキャッチ可能でした。 この問題の修正後、以下のエラーがコンパイルモードでも検出されるようになりました: _範囲外のインデックス_、_互換性のない型_、_Null ポインターの逆参照_。 ただし、Intelプロセッサーでは、このようなエラーによって以前と同様に処理が中断されますが、Apple Siliconプロセッサーでは、[`ABORT`](https://doc.4d.com/4dv20/help/command/ja/page156.html)コマンドを呼び出さない限り、処理は中断されません。
-- 4D no longer includes an internal PHP interpreter. PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) 必要があります。
+- 4D は内部的な PHPインタプリターを実装しなくなりました。 PHPコマンドを使用するには、[別途PHPインタプリターをセットアップして実行する](https://blog.4d.com/ja/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) 必要があります。
 
 ## 4D v20 R2
 
@@ -91,7 +91,7 @@ title: リリースノート
 
 :::
 
-#### Index rebuild warning
+#### インデックス再構築の警告
 
 4D v20 では、ICUライブラリのアップデート (後述参照) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
@@ -99,14 +99,14 @@ title: リリースノート
 
 4D v20.1 には ICUライブラリーのアップデートが含まれており、以下の影響があります:
 
-- It will force an automatic rebuild of indexes of type alpha, text, and object.
-- Because of sorting consistency, it requires that 4D remote clients and 4D Server use the same version: only remote 4D v20.1 can connect to 4D Server v20.1 and vice versa.
+- 文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。
+- 並べ替えの一貫性のため、4Dリモートクライアントと 4Dサーバーは同じバージョンを使用する必要があります。4D v20.1 のリモートと 4D v20.1 の 4Dサーバーのみが互いに接続できます。
 
 :::
 
 #### ハイライト
 
-- 4D v20.2 is certified on macOS Sonoma (macOS 14).
+- 4D v20.2 は macOS Sonoma (macOS 14) 対応です。
 - (4D v20.1) [`Compile project`](https://doc.4d.com/4dv20/help/command/ja/page1760.html) コマンドの _options_ パラメーターに `plugins` プロパティが新しく追加されました。
 - 4D Server は、複数のジャーナルを自動的に統合します: [自動復元](../Backup/settings.md#自動復元)。
 - [IMAP Transporter クラス](../API/IMAPTransporterClass.md): [`.getBoxInfo()`](../API/IMAPTransporterClass.md#getboxinfo) が _id_ を返すようになりました。[`.selectBox()`](../API/IMAPTransporterClass.md#selectbox) が _id_, _flags_ および _permanentFlags_ を返すようになりました。[`.addFlags()`](../API/IMAPTransporterClass.md#addflags) と [`.removeFlags()`](../API/IMAPTransporterClass.md#removeflags) がカスタムキーワードをサポートするようになりました。
@@ -134,7 +134,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- As of v20.2, 4D v20 LTS is no longer compatible with Windows Server 2012 R2.
+- v20.2 以降、4D v20 LTS は Windows Server 2012 R2 との互換性がなくなりました。
 - **警告**: [4D.FileHandle](../API/FileHandleClass.md) オブジェクトの [`offset`](../API/FileHandleClass.md#offset) の開始値が誤って 0 ではなく 1 に設定されていました。 **20.1 HF1** および **20 R2** のバージョンで 4D が修正され、この値が 0 になりました。
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) で HTTPリクエストを送信する際、TLS証明書が 4Dによって自動的に検証され、無効な場合はエラーで拒否されるようになりました。 新しい _option_ プロパティで、この検証を管理することができます。
@@ -185,12 +185,12 @@ title: リリースノート
 
 #### 動作の変更
 
-- For consistency with standard interfaces (e.g. OS file explorers), list box rules for row selection/drag and drop have been modified. 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
-- The 4D internal build numbering has been modified as of 4D v19 R7:
-  - releases up to 4D v19 R6 (included) are numbered 282xxx,
+- 標準的なインターフェース (OS のファイルエクスプローラなど) との一貫性を保つため、行の選択/ドラッグ＆ドロップに関するリストボックスのルールが変更されました。 連続または不連続の選択行をクリックして移動するだけで、ドラッグできるようになり、**Alt** キーは不要になりました (ひきつづき以前のように使用することはできます)。 **Shift** または **Ctrl/Command** キーが押されている場合、マウスのクリックは押されたとき (マウスダウン) に考慮されます。 リストボックスでのドラッグ＆ドロップの詳細については、[このブログ記事](https:/blog.4d.com/list-boxes-say-goodbye-to-alt-key/) を参照し、[このHDI 4Dプロジェクト](https://github.com/4D-JP/HDI/releases/download/19r7/HDI_LB_DragAndDrop.zip) をダウンロードしてください。
+- 4D v19 R7 から 4D の内部ビルド番号が変更されました:
+  - 4D v19 R6 (含む) までのリリースは 282xxx の番号です。
   - 4D v19 R7 以降のリリースは 100xxx という番号になります。\
-    なお、特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。 The build number increases chronologically.
-- The ability to use Wakanda/4D Mobile REST protocol to call a project method has been removed. [ORDAデータモデルクラス関数](../REST/ClassFunctions.md) または [/4DACTION URL](../WebServer/httpRequests.md#4daction) を代わりに使用することができます。
+    なお、特定の 4Dバージョンは、ブランチ名とビルド番号により一意に識別されます。 ビルド番号は時系列に増加します。 ビルド番号は時系列に増加します。
+- Wakanda/4D Mobile REST プロトコルを使用してプロジェクトメソッドを呼び出す機能が削除されました。 [ORDAデータモデルクラス関数](../REST/ClassFunctions.md) または [/4DACTION URL](../WebServer/httpRequests.md#4daction) を代わりに使用することができます。
 
 ## 4D v19 R6
 
@@ -199,34 +199,34 @@ title: リリースノート
 - リストボックスのセルは、[横方向](../FormObjects/properties_CoordinatesAndSizing.md#横方向パディング) および [縦方向](../FormObjects/properties_CoordinatesAndSizing.md#縦方向パディング) のパディングをサポートするようになりました。
 - 4D View Pro: 新しい [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) と [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) コマンドを使用して、シート内のテーブルを操作します。
 - [Webデータエクスプローラー](../Admin/dataExplorer.md#基本) でリレート属性、計算属性、およびエイリアス属性を表示することができます。
-- To help us make our products always better, we now automatically collect data regarding usage statistics on running 4D Server applications. This will have no impact on performance. [4D がデータを収集する理由と方法](../Admin/data-collect.md) について詳細を説明する新しいページを参照ください。
-- Components compiled for Silicon: On macOS Silicon platforms (Apple ARM CPUs), components must be recompiled with 4D v19 R6 or higher to be used with this release.
+- 4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 この処理はパフォーマンスに影響を与えません。 [4D がデータを収集する理由と方法](../Admin/data-collect.md) について詳細を説明する新しいページを参照ください。
+- Silicon用にコンパイルされたコンポーネント: macOS Siliconプラットフォーム (Apple ARM CPU) では、このリリースで使用するためには、コンポーネントを 4D v19 R6 以降で再コンパイルする必要があります。
 
 ## 4D v19 R5
 
 - ビルド時に、プロジェクトの [directory.json ファイル](../Users/editing.md#directoryjson-file) を [サーバーに埋め込む](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。 これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
 - ビルドするアプリケーションで、[使用しないモジュールの選択を解除](../Desktop/building.md#モジュールの選択解除) できるようになりました。
-- _MeCab_ ライブラリが、すべての macOS 4Dアプリケーションにデフォルトで含まれるようになりました。 In previous releases, this library, specifically designed to manage Japanese text, was only available in the Japanese version of 4D on macOS. 最終的なアプリケーションでこのライブラリが必要ない場合は、[選択を解除](../Desktop/building.md#モジュールの選択解除) することができます。
+- _MeCab_ ライブラリが、すべての macOS 4Dアプリケーションにデフォルトで含まれるようになりました。 日本語テキストの管理に特化したこのライブラリは、以前のリリースでは日本語版の macOS 4D でのみ利用可能でした。 最終的なアプリケーションでこのライブラリが必要ない場合は、[選択を解除](../Desktop/building.md#モジュールの選択解除) することができます。
 - [クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化): 新しいクラス関数により、ORDAキャッシュと最適化コンテキストの内容を操作することができます。 詳細は、[コンテキストの事前設定](../ORDA/remoteDatastores.md#コンテキストの事前設定) および [ORDAキャッシュ](../ORDA/remoteDatastores.md#ordaキャッシュ) を参照ください。
-  > These functions are intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use them.
+  > これらの関数は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 - [DataClass クラス](../API/DataClassClass.md): 新しい [.getCount()](../API/DataClassClass.md#getcount) 関数は、データクラスの総エンティティ数を返します。
 - _4DDiagnosticLog.txt_ ファイルは、デフォルトでは高レベルの情報のみを記録します ([INFOレベル](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt))。 `SET DATABASE PARAMETER` コマンドまたはログ設定ファイルの `Diagnostic log level` セレクターを使用して、記録する情報レベル (たとえばDEBUGレベル) を選択できるようになりました。
-- 非共有オブジェクトや非共有コレクションに対して `Use()` を呼び出しても何も起こりません (エラーが発生しなくなりました)。 Thus, it is now useless to test if the object or collection passed to Use() is actually shared.
+- 非共有オブジェクトや非共有コレクションに対して `Use()` を呼び出しても何も起こりません (エラーが発生しなくなりました)。 したがって、Use() に渡されたオブジェクトやコレクションが実際に共有されているかどうかをチェックする意味はなくなりました。
 - 分かりやすさのため、2つの SQLコマンドにプレフィックスが付けられました: `GET DATA SOURCE LIST` は `SQL GET DATA SOURCE LIST`、`Get current data source` は `SQL Get current data source` に名称変更されました。
 - **4D View Pro**:
   - 新しい [VP SET DATA CONTEXT](../ViewPro/method-list.md#vp-set-data-context)、[VP Get data context](../ViewPro/method-list.md#vp-get-data-context)、[VP SET BINDING PATH](../ViewPro/method-list.md#vp-set-binding-path)、および [VP Get binding path](../ViewPro/method-list.md#vp-get-binding-path) コマンドを使って、データコンテキストを作成し、その内容をシートのセルにバインドすることができます。
   - [VP EXPORT DOCUMENT](../ViewPro/method-list.md#vp-get-binding-path) と [VP Export to object](../ViewPro/method-list.md#vp-get-binding-path) は、データコンテキストの内容をセルの値としてエクスポートするための新しい `includeBindingSource` オプションを受け付けます。
-  - (Windows only) 4D View Pro areas now use a new print settings window.
+  - (Windowsのみ) 4D View Pro エリアの印刷設定ウィンドウが新しくなりました。
 - **Webエリア**:
-  - 新しい Windowsシステムのレンダリングエンジン: [Windowsシステムのレンダリングエンジン](../FormObjects/webArea_overview.md#webレンダリングエンジン) を使用している Webエリアは、**Microsoft Edge WebView2** をベースとするようになりました。 This impacts the following features:
+  - 新しい Windowsシステムのレンダリングエンジン: [Windowsシステムのレンダリングエンジン](../FormObjects/webArea_overview.md#webレンダリングエンジン) を使用している Webエリアは、**Microsoft Edge WebView2** をベースとするようになりました。 これにより、以下のような機能に影響があります:
     - `WA Create URL history menu` および `WA GET URL HISTORY` のコマンドは、カレントURL のみを返すようになりました。
     * [進捗状況変数](../FormObjects/properties_WebArea.md#進捗状況変数) は更新されなくなりました。
-    * Drag and drop features are handled by a Windows API which is tagged "experimental" by Microsoft. そのため、この API がインストールされていない場合、Webエリアが期待どおりに振る舞わないかもしれません: `WA enable URL drop` 設定が false に設定されていても、ドラッグ＆ドロップ機能が許可されているように見えるかもしれません。 しかし、ドロップアクションはデフォルトでブロックされており、許可する URL は [`On Window Opening Denied` イベント](../Events/onWindowOpeningDenied.md) で管理することができます (後述参照)。
+    * ドラッグ＆ドロップ機能は、マイクロソフトが "experimental" とタグ付けしている Windows API で処理されます。 そのため、この API がインストールされていない場合、Webエリアが期待どおりに振る舞わないかもしれません: `WA enable URL drop` 設定が false に設定されていても、ドラッグ＆ドロップ機能が許可されているように見えるかもしれません。 しかし、ドロップアクションはデフォルトでブロックされており、許可する URL は [`On Window Opening Denied` イベント](../Events/onWindowOpeningDenied.md) で管理することができます (後述参照)。
   * (Windows のみ) ユーザーが、埋め込みWebレンダリングエンジンを使用している Webエリアから **印刷...** メニューを選択した場合に表示される印刷設定ウィンドウが新しくなりました。
   * Webエリアにおけるコマンドの実際の効果 (ページズームレベルの増加/減少) を反映させるため、2つのコマンドの名前が変更されました: `WA SET PAGE TEXT LARGER` は `WA ZOOM IN` に、`WA SET PAGE TEXT SMALLER` は `WA ZOOM OUT` に名称変更されました。
   * [埋め込みWebレンダリングエンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) または (Microsoft Edge WebView2 に基づく) [Windowsシステムのレンダリングエンジン](../FormObjects/webArea_overview.md#webレンダリングエンジン) を使用する Webエリアでのセキュリティを強化しました:
-    - CORS policies now apply when accessing files on disk in web areas. たとえば、`WA OPEN URL` を使用して .html ファイルを開こうとした場合、その .html ファイルには、フォルダー外のファイルへのリンクを含めることはできません。
-    - Webエリアへの外部コンテンツのドロップは常にブロックされ、`WA enable URL drop` 設定が true に設定されている場合には、[`On Window Opening Denied` イベント](../Events/onWindowOpeningDenied.md) をトリガーします。`WA enable URL drop` 設定が false に設定されている場合、マウスカーソルのアイコンのみが変更され、`On Window Opening Denied` イベントはフィルターされます。 To allow a drop action, you need to execute additional code in the object method of the web area:
+    - Webエリアにおいてディスク上のファイルにアクセスする場合にも、CORSポリシーが適用されるようになりました。 たとえば、`WA OPEN URL` を使用して .html ファイルを開こうとした場合、その .html ファイルには、フォルダー外のファイルへのリンクを含めることはできません。
+    - Webエリアへの外部コンテンツのドロップは常にブロックされ、`WA enable URL drop` 設定が true に設定されている場合には、[`On Window Opening Denied` イベント](../Events/onWindowOpeningDenied.md) をトリガーします。`WA enable URL drop` 設定が false に設定されている場合、マウスカーソルのアイコンのみが変更され、`On Window Opening Denied` イベントはフィルターされます。 ドロップアクションを許可するには、Webエリアのオブジェクトメソッドにおいて以下のような追加のコードを実行する必要があります:
 
 ```4d
 WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
@@ -245,8 +245,8 @@ WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
 - [4D View Pro](../ViewPro/getting-started.md) の章が次の新コマンドとともに追加されました: [VP Copy to object](../ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](../ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](../ViewPro/method-list.md#vp-paste-from-object)。
 - 新しい [SystemWorker クラス](../API/SystemWorkerClass.md)。
 - ORDA でエイリアス属性をサポートしたことに起因する競合を解決するため、`Alias selection` 定数の名称を `Allow alias files` に変更しました。
-- ORDA の仕様により適合するため、_ヌル値に空値をマップ_ フィールドプロパティは、4D v19 R4以降で作成されたデータベースにおいてはデフォルトでチェックされないようになります。 You can also enable this default behavior in your databases converted from previous versions by selecting the Map NULL values to blank values unchecked by default at field creation compatibility setting. Working with Null values is now recommended since they are fully supported by ORDA.
-- [三項演算子](../Concepts/operators.md#三項演算子) のサポートに伴い、コロン ":" は今後、変数名、フィールド名、定数名、関数名、プラグイン名、プロジェクトメソッド名に使用できなくなります。 If your database/project contains identifiers with colons, you must replace them before converting it to v19 R4 or higher, otherwise errors may occur in your code. たとえば、_a:b_ という名前の変数があった場合、これが三項演算子シンタックスとして誤解されてしまう可能性があります:
+- ORDA の仕様により適合するため、_ヌル値に空値をマップ_ フィールドプロパティは、4D v19 R4以降で作成されたデータベースにおいてはデフォルトでチェックされないようになります。 以前のバージョンの 4D から変換されたデータベースにおいては、データベース設定の "フィールド作成時にヌル値を空値にマップをデフォルトでチェックを外す" オプションを選択することで、この新しいデフォルトの振る舞いを有効化することができます。 ORDA では NULL が完全にサポートされるようになったため、今後は使用することが推奨されます。
+- [三項演算子](../Concepts/operators.md#三項演算子) のサポートに伴い、コロン ":" は今後、変数名、フィールド名、定数名、関数名、プラグイン名、プロジェクトメソッド名に使用できなくなります。 データベース/プロジェクトにおいてコロンを含む識別子が使用されている場合には、v19 R4 以降への変換前にそれらを置換する必要があります。置換しない場合、コード内でエラーが起きる可能性があります。 たとえば、_a:b_ という名前の変数があった場合、これが三項演算子シンタックスとして誤解されてしまう可能性があります:
 
 ```4d
 $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解釈されます
@@ -263,7 +263,7 @@ $value:=($size>1000)? a:b // この場合 'a:b' は三項演算子として解�
 - macOS で [ダークモードをサポート](../Preferences/general.md#アピアランス-macosのみ)。
 - [`IMAP New transporter`](../API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](../API/POP3TransporterClass.md#pop3-new-transporter), および [`SMTP New transporter`](../API/SMTPTransporterClass.md#smtp-new-transporter) で **OAuth2 トークンオブジェクト** をサポート。
 - [サーバー管理ウィンドウ](../ServerWindow/maintenance.md#ログ設定ファイルを読み込む) のボタンを使って、[ログ設定ファイル](../Debugging/debugLogFiles.md#ログ設定ファイルを使用する) を読み込めるようになりました。
-- 宣言されたが渡されなかった引数にアクセスする場合の、4Dランゲージの [任意パラメーター](../Concepts/parameters.md#任意パラメーター) の扱いがより柔軟になりました。 For example, the following code no longer provokes an error:
+- 宣言されたが渡されなかった引数にアクセスする場合の、4Dランゲージの [任意パラメーター](../Concepts/parameters.md#任意パラメーター) の扱いがより柔軟になりました。 たとえば、以下のコードは今後、エラーを生成しません:
 
 ```4d
 // myClass クラスの "concate" 関数
@@ -282,20 +282,20 @@ ALERT($param1+" "+$param2)
 
 - 新しい [4D NetKit](https://github.com/4d/4D-NetKit) コンポーネントを使って、Microsoft Graph などのサードパーティーAPI に接続することができます。
 
-- 4D v19 R3 uses a stronger hashing algorithm for 4D user passwords: Bcrypt. ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 Once a password is modified, opening the database with a version prior to 4D v19 R3 will cause an authentication denial for this account. If you use 4D passwords, it is highly recommended to backup the .4db file (binary databases) or directory.json file (projects) before upgrading to 4D v19 R3 or later.
+- 4D v19 R3 では、4Dユーザーパスワードに対して、bcrypt というより強力なハッシュ化アルゴリズムを使用しています。 ツールボックス、`CHANGE PASSWORD` コマンド、または `Set user properties` コマンドを使用してパスワードを変更した際に、この新しいアルゴリズムが自動的に使用されます。 パスワードが一度変更されると、4D v19 R3 より前のバージョンで同じデータベースを開いた際には、そのアカウントの認証が拒否されます (ログインできません)。 そのため、4Dパスワードを使用している場合には、4D v19 R3 以降のバージョンにアップグレードする前に .4db ファイル (バイナリデータベース) または directory.json ファイル (プロジェクトデータベース) をバックアップしておくことが強く推奨されます。
 
 - 正確性のため、`4D digest` 定数は、`4D REST digest` へと名称が改められました。
 
-- End-of-line and BOM management for XML commands: When opened in 4D v19 R3, projects or databases created with previous releases behave differently regarding default end-of-line characters and BOM management in XML documents: line feed (LF) characters are used instead of CR (on macOS), and byte order marks (BOM) are not included. This allows a better compatibility with VCS tools. 必要であれば、`XML SET OPTIONS` コマンドを使用することで、v19 R2 以前の振る舞いに戻すことができます。 In projects or databases converted from versions prior to 19 R2, these options are managed by two compatibility settings.
+- XML コマンドにおける改行文字と BOM 管理: 以前のバージョンで作成されたプロジェクトまたはデータベースが 4D v19 R3 で開かれた場合、XMLドキュメントにおける改行文字と BOM 管理に関わる振る舞いが異なります: macOS において CR の代わりにラインフィード(LF) が使用されるほか、バイトオーダーマーク (BOM) が含まれなくなります。 これにより、VCS ツールとの互換性が改善されます。 必要であれば、`XML SET OPTIONS` コマンドを使用することで、v19 R2 以前の振る舞いに戻すことができます。 v19 R2 以前のバージョンから変換されたプロジェクトまたはデータベースにおいては、これらのオプションは 2つの互換性設定によって管理されます。
 
-- ビルドされたプロジェクトで、ランタイムエクスプローラーへのショートカットが削除: シングルユーザー版の組み込みプロジェクトアプリケーションにおいて、**Cmd/Ctrl+Shift+F9** ショートカットは、ランタイムエクスプローラーを表示しないようになりました。 This shortcut can now be a user application shortcut. ランタイムエクスプローラーウィンドウは、新しい `OPEN RUNTIME EXPLORER` コマンドを使用することで呼び出し可能です。
+- ビルドされたプロジェクトで、ランタイムエクスプローラーへのショートカットが削除: シングルユーザー版の組み込みプロジェクトアプリケーションにおいて、**Cmd/Ctrl+Shift+F9** ショートカットは、ランタイムエクスプローラーを表示しないようになりました。 このショートカットは、ユーザーアプリケーション用のショートカットとして使用できるようになりました。 ランタイムエクスプローラーウィンドウは、新しい `OPEN RUNTIME EXPLORER` コマンドを使用することで呼び出し可能です。
 
-- Extended debugging capabilities with 4D Server: In interpreted mode, 4D Server can now debug all kinds of processes, including scalable web sessions. これには、デバッガーをサーバーまたはリモートクライアントで有効化するだけです。\
-  _警告: インタープリターモードにおいて、サーバーでデバッガーが有効化された場合 (デフォルト) には、サーバーマシン上でのデバッグを可能にするため、すべてのサーバープロセスが自動でコオペラティブ実行されます。 This can have a significant impact on the performance of your converted applications when they run with 4D Server v19 R3 and higher. サーバーをプリエンプティブ実行に戻すには、サーバーのデバッガーを無効化します (そして必要な場合にはリモートクライアント側でデバッガーを有効化します)。_
+- 4D Server のデバッグ機能の拡張: 4D Server はインタープリターモードにおいて、スケーラブルWeb セッションを含め、全種類のプロセスをデバッグできるようになりました。 これには、デバッガーをサーバーまたはリモートクライアントで有効化するだけです。\
+  _警告: インタープリターモードにおいて、サーバーでデバッガーが有効化された場合 (デフォルト) には、サーバーマシン上でのデバッグを可能にするため、すべてのサーバープロセスが自動でコオペラティブ実行されます。 これは、4D Server v19 R3 以降に変換されたアプリケーションにおいては、パフォーマンスに重大な影響を生ずる可能性があります。 サーバーをプリエンプティブ実行に戻すには、サーバーのデバッガーを無効化します (そして必要な場合にはリモートクライアント側でデバッガーを有効化します)。_
 
-- Windows で、4D v19 R3 以降に作成された 4Dプロジェクトおよびデータベースは、フォームにおいて [DirectWrite API](https://learn.microsoft.com/ja-jp/windows/win32/DirectWrite/direct-write-portal) を使用します。 This API improves text rendering, especially in high DPI configurations. DirectWrite is used for text rendering with static and input text, checkboxes, buttons, and radio buttons. Note that listboxes already use DirectWrite. A compatibility option allows you to enable DirectWrite in projects and databases created with previous 4D versions.
+- Windows で、4D v19 R3 以降に作成された 4Dプロジェクトおよびデータベースは、フォームにおいて [DirectWrite API](https://learn.microsoft.com/ja-jp/windows/win32/DirectWrite/direct-write-portal) を使用します。 この API はテキストレンダリングを、特に高DPI 環境において改善させます。 スタティックテキスト、入力テキスト、チェックボックス、ボタン、ラジオボタンのテキストレンダリングに対して DirectWrite が使用されます。 リストボックスは、既に DirectWrite を使用しています。 以前の 4D のバージョンで作成されたプロジェクトやデータベースにおいても、互換性オプションを使用することで DirectWrite を有効化することができます。
 
-- Silicon (Apple ARM CPU) をターゲットに 4D v19.0 でコンパイルされたコンポーネントを使用しており、そのコンポーネント内で `Count parameters` コマンドを呼んでいる場合、4D v19 R3 以降のリリースとの互換性のために、4D v19 R3 でコンポーネントを再コンパイルすることが推奨されます。 If a component is not compiled for Silicon, there is no need to recompile.
+- Silicon (Apple ARM CPU) をターゲットに 4D v19.0 でコンパイルされたコンポーネントを使用しており、そのコンポーネント内で `Count parameters` コマンドを呼んでいる場合、4D v19 R3 以降のリリースとの互換性のために、4D v19 R3 でコンポーネントを再コンパイルすることが推奨されます。 コンポーネントが Silicon 向けにコンパイルされていない場合、再コンパイルの必要はありません。
 
 ## 4D v19 R2
 
@@ -303,7 +303,7 @@ ALERT($param1+" "+$param2)
 - 新しい [`4D.Blob`](Concepts/dt_blob.md#blob-の種類) オブジェクトを扱うための新しい[BlobクラスAPI](../API/BlobClass.md)
 - [`.setText()`](../API/FileClass.md#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 
-## Previous releases
+## 過去のリリース
 
 <details><summary>過去のリリースについてはこちらをクリックしてください。</summary>
 
@@ -336,7 +336,7 @@ ALERT($param1+" "+$param2)
 
 </details>
 
-## Library table
+## ライブラリの一覧
 
 | ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                    |
 | --------- | --------- | -------------- | --------------------------------------------------------------------- |
