@@ -1,9 +1,9 @@
 ---
 id: formSize
-title: Tamanho formulário
+title: Form Size
 ---
 
- 
+
 4D permite-lhe definir o tamanho do formulário e da [janela](properties_WindowSize.md). Estas propriedades são interdependentes e a interface da aplicação resulta da sua interação.
 
 As opções de tamanho dependem do valor da opção **Tamanho baseado em**.
@@ -61,7 +61,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ---
 
-## Margem vert.
+## Margem hor.
 
 Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
 

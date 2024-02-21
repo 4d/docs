@@ -1,6 +1,6 @@
 ---
 id: savedorderby
-title: '$savedorderby'
+title: $savedorderby
 ---
 
 Guarda a ordem definida por `$orderby` aquando da criação de um conjunto de entidades (*e.g.*, `$savedorderby="{orderby}"`)

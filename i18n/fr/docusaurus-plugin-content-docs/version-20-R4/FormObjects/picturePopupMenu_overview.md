@@ -1,6 +1,6 @@
 ---
 id: picturePopupMenuOverview
-title: Pop-up menu image
+title: Picture Pop-up Menu
 ---
 
 Un pop-up menu image affiche un tableau d’images bidimensionnel. Un pop-up menu image peut être utilisé à la place d’un [bouton image](pictureButton_overview.md). Le mode de création d’une image destinée à être utilisée dans un pop-up menu image est identique à celui d’un bouton image. Le mode de fonctionnement de l’objet, quant à lui, s’apparente à la [Grille de boutons](buttonGrid_overview.md), à la différence près que l’image est utilisée comme un pop-up menu et non comme un objet du formulaire.

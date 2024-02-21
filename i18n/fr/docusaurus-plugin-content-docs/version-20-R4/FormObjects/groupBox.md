@@ -1,6 +1,6 @@
 ---
 id: groupBox
-title: Zone de groupe
+title: Group Box
 ---
 
 Une zone de groupe est un objet statique qui vous permet de rassembler visuellement plusieurs objets de formulaire :

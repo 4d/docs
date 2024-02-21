@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Depurador
+title: Debugger
 ---
 
 O depurador é útil quando é necessário detetar erros ou monitorizar a execução de métodos. Permite-lhe percorrer o seu código lentamente e examinar a informação. Este processo é designado por "rastreio".

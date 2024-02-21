@@ -1,6 +1,6 @@
 ---
 id: timeout
-title: '$timeout'
+title: $timeout
 ---
 
 

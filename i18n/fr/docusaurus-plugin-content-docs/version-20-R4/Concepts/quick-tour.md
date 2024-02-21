@@ -1,7 +1,6 @@
 ---
 id: quick-tour
-title: Tour d'horizon
-sidebar_label: Tour d'horizon
+title: A Quick Tour
 ---
 
 En utilisant le langage 4D, le traditionnel "Hello, world!" peut s'afficher à l'écran de plusieurs manières. Le plus simple est probablement d'écrire la ligne suivante dans une méthode de projet :
@@ -120,7 +119,7 @@ L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Faire quelque chose avec le caractère si c'est un Tab
 
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)
@@ -210,6 +209,7 @@ $o:=cs.myClass.new()
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
+
 //in the myClass.4dm file
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who

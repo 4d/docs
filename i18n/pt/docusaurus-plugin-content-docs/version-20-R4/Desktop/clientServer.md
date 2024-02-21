@@ -1,6 +1,6 @@
 ---
 id: clientServer
-title: Gestão Cliente/Servidor
+title: Client/Server Management
 ---
 
 
@@ -18,8 +18,8 @@ As aplicações 4D desktop podem ser utilizadas numa configuração Cliente/Serv
 
 A merged client/server application is customized and its starting is simplified:
 
-- To launch the server portion, the user simply double-clicks on the server application. The database does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application.
+- Para iniciar a parte do servidor, o usuário simplesmente clica duas vezes no aplicativo do servidor. The database does not need to be selected.
+- Para iniciar a parte do cliente, o usuário simplesmente clica duas vezes no aplicativo cliente, que se conecta diretamente ao aplicativo do servidor.
 
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
 

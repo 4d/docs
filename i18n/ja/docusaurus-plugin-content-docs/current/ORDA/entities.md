@@ -85,8 +85,15 @@ $myEntity.save() // エンティティを保存します
 ```
 
 他の 4D のオブジェクトと同様にエンティティを扱うことができ、[引数](Concepts/parameters.md) としてその参照を渡すことができます。
-> エンティティでは、4Dランゲージのような "カレントレコード" という概念はありません。 エンティティは、いくつでも必要な数を同時に使用することができます。 また、エンティティには自動ロックの機構が備わっています ([エンティティロッキング](#エンティティロッキング) 参照)。 エンティティの読み込みには、[レイジーローディング](glossary.md#レイジーローディング) 機構が使用されます。これはつまり必要な分の情報だけが読み込まれるということです。 いずれにせよ、クライアント/サーバーでは必要であればエンティティを直接自動的に読み込むことも可能です。
 
+:::info
+
+エンティティでは、4Dランゲージのような "カレントレコード" という概念はありません。 エンティティは、いくつでも必要な数を同時に使用することができます。 また、エンティティには自動ロックの機構が備わっています ([エンティティロッキング](#エンティティロッキング) 参照)。 エンティティの読み込みには、[レイジーローディング](glossary.md#レイジーローディング) 機構が使用されます。これはつまり必要な分の情報だけが読み込まれるということです。 いずれにせよ、クライアント/サーバーでは必要であればエンティティを直接自動的に読み込むことも可能です。
+
+
+
+
+:::
 
 ## エンティティ属性の使用
 
@@ -234,12 +241,19 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 
 *   [データクラス](API/DataClassClass.md#query) または [既存のエンティティセレクション](API/EntitySelectionClass.md#query) のエンティティに対してクエリを実行する;
 *   [`.all( )`](API/DataClassClass.md#all) DataClassクラス関数を使用して、データクラス内の全エンティティを選択する;
-*   `Create entity selection` コマンドあるいは [`.newSelection( )`](API/DataClassClass.md#newselection) DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;
+*   [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) コマンドあるいは [`.newSelection( )`](API/DataClassClass.md#newselection) DataClassクラス関数を使用して空のエンティティコレクションオブジェクトを作成する;
 *   [`.copy( )`](API/EntitySelectionClass.md#copy) EntitySelectionクラス関数を使用して、既存のエンティティセレクションを複製する;
 *   [EntitySelectionクラス](API/EntitySelectionClass.md) の様々な関数の中から、[`.or( )`](API/EntitySelectionClass.md#or) のように新しいエンティティセレクションを返すものを使用する;
 *   "リレートエンティティズ" 型のリレーション属性を使用する (以下参照)
 
 データクラスに対して、異なるエンティティセレクションを好きなだけ同時に作成し、使用することができます。 エンティティセレクションは、エンティティへの参照を格納しているに過ぎないという点に注意してください。 異なるエンティティセレクションが同じエンティティへの参照を格納することも可能です。
+
+:::note
+
+[エンティティセレクションを制限する](#制限されたエンティティセレクション) 機能を使って、データクラスのエンティティセレクションに含めるエンティティをビジネスルールに応じて選別することができます。
+
+:::
+
 
 ### 共有可能/追加可能なエンティティセレクション
 
@@ -275,6 +289,8 @@ ORDAアーキテクチャーでは、リレーション属性はエンティテ�
 例:
 
 ```4d
+var $myComp : cs.CompanyEntity
+var $employees : cs.EmployeeSelection
 $myComp:=ds.Company.get(2) // $myComp はエンティティセレクションに属していません
 $employees:=$myComp.employees // $employees は共有可能です
 ```
@@ -286,6 +302,7 @@ $employees:=$myComp.employees // $employees は共有可能です
 
 例:
 ```4d
+var $toModify : cs.CompanySelection
 $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 ```
 
@@ -301,6 +318,9 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 例:
 
 ```4d
+var $highSal; $lowSal : cs.EmployeeSelection
+var $comp; $comp2 : cs.Company
+
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
     // データクラスに対するクエリによって生成されたため $highSal は共有可能です
@@ -388,8 +408,10 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 すべてのストレージ属性 (テキスト、数値、ブール、日付) はエンティティセレクションの、あるいはエンティティのプロパティとして利用可能です。 エンティティセレクションと組み合わせて使用した場合、スカラー属性はスカラー値のコレクションを返します。 例:
 
 ```4d
- $locals:=ds.Person.query("city = :1";"San Jose") // 個人のエンティティセレクション
- $localEmails:=$locals.emailAddress // メールアドレス (文字列) のコレクション
+var $locals : cs.PersonSelection
+var $localEmails : Collection
+$locals:=ds.Person.query("city = :1";"San Jose") // 個人のエンティティセレクション
+$localEmails:=$locals.emailAddress // メールアドレス (文字列) のコレクション
 ```
 
 このコードは *$localEmails* 内に文字列としてのメールアドレスのコレクションを返します。
@@ -401,12 +423,130 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") // ID が 100未満のパーツを返します
- $myInvoices:=$myParts.invoiceItems.invoice
+var $myParts : cs.PartSelection
+var $myInvoices : cs.InvoiceSelection
+$myParts:=ds.Part.query("ID < 100") // ID が 100未満のパーツを返します
+$myInvoices:=$myParts.invoiceItems.invoice
   // $myParts 内のパーツにリレートされている請求項目を1行以上含んでいるすべての請求書
 ```
 
-最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、$myInvoices 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
+最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、*$myInvoices* 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
+
+
+## 制限されたエンティティセレクション
+
+ORDAでは、あらゆるデータクラスにおいて、エンティティへのアクセスを制限するフィルターを作成することができます。 一旦実装されると、データクラスのエンティティが **ORDAクラス関数** ([`all()`](../API/DataClassClass.md#all) や [`query()`](../API/EntitySelectionClass.md#query)など) または [**REST API**](../category/api-dataclass) ([Data Explorer](../Admin/dataExplorer.md) や [remote datastores](remoteDatastores.md)など) によってアクセスされるたびに、フィルターが自動的に適用されます。
+
+カレントセッションユーザーなど任意のビジネスルールに基づいて構築されたフィルターは、制限されたデータ表示を可能にします。 たとえば、営業担当者が顧客との取引に使用するようなアプリケーションでは、認証された営業担当者が管理する顧客のみに閲覧を制限することができます。
+
+:::info
+
+フィルターは **エンティティ** に対して適用されます。 **データクラス** そのもの、または特定の **属性** へのアクセスを制限するには、[セッション権限](../privileges.md) の利用がより適切です。
+
+:::
+
+
+### 制限フィルターの定義
+
+データクラスのフィルターを作成するには、データクラスの [**DataClass クラス**](dsMapping.md#dataclass-class) 内に `event restrict` 関数を定義します。 すると、フィルターは自動的に有効になります。
+
+
+### `Function event restrict`
+
+#### シンタックス
+
+```4d
+Function event restrict() -> $result : cs.*DataClassName*Selection
+// コード
+```
+
+この関数は、データクラスのエンティティセレクションまたはエンティティが要求されるたびに呼び出されます。 フィルターは、エンティティセレクションが作成されたときに一度だけ実行されます。
+
+フィルターは、データクラスのエンティティセレクションを返さなければなりません。 戻り値のエンティティセレクションには、クエリの結果や、[`Storage`] に格納されているものなどが使えます。
+
+:::note
+
+パフォーマンス上の理由から、フィルターの定義には **インデックス付き属性** の使用が推奨されます。
+
+:::
+
+関数は、データクラスの有効なエンティティセレクションを返さなければなりません。 以下の場合、フィルターは適用されません (初期リクエストに対応するすべてのエンティティが返されます):
+
+- 関数の戻り値が **null** である
+- 関数の戻り値が **未定義** である
+- 関数の戻り値が有効なエンティティセレクションではない
+
+
+#### 例題
+
+Web または RESTリクエストによりアクセスされた場合、Customersデータクラスが公開するのは、認証された営業担当者が担当している顧客に限定されるようにします。 認証段階で、営業担当者は `Session` オブジェクトに格納されます。 また、他の種類のリクエストも扱います。
+
+```4d
+Class extends DataClass
+
+
+Function event restrict() : cs.CustomersSelection
+
+
+        // Web または REST コンテキストでの動作
+    If (Session#Null)
+
+        Case of 
+                // セッションが格納する認証された営業担当者の担当顧客のみを返します
+            : (Session.storage.salesInfo#Null)
+                return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
+
+                // データエクスプローラーの場合には、フィルターを適用しません
+            : (Session.hasPrivilege("WebAdmin"))
+                return Null
+            Else 
+                // それ以外の場合は顧客情報を返しません
+                return This.newSelection()
+
+        End case 
+
+    Else // クライアントサーバーの場合
+        return This.query("sales.userName = :1"; Current user)
+    End if 
+```
+
+
+### フィルターの有効化に関する詳細
+
+フィルターは、4Dプロジェクト (スタンドアロンおよびクライアント/サーバーアーキテクチャ) で実行されるすべての ORDA または RESTリクエストに適用されます。 プロジェクトを開くと、フィルターはすぐに有効になります。つまり、`On Startup` データベースメソッド内でもトリガーできます。
+
+
+:::info
+
+フィルターは、4Dインターフェースや4Dランゲージ (`ALL RECORDS` を呼び出す場合など) をよって処理される従来のレコードセレクションには適用されません。
+
+:::
+
+
+| 関数                                                                                | 説明                                                                                       |
+| --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| [dataclass.get()](../API/DataClassClass.md#get)                                   | エンティティがフィルターに適合しない場合、`null` が返されます                                                       |
+| [entity.reload()](../API/EntityClass.md#reload)                                   | クライアント/サーバーおよびリモートデータストアのみ                                                               |
+| [dataclass.all()](../API/DataClassClass.md#all)                                   |                                                                                          |
+| [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection)             | <li>更新の場合、フィルターに適合するエンティティのみを更新できます。 フィルターに適合しないエンティティをコレクションが参照している場合、新規エンティティとして作成されます (重複PKエラーがない場合)。</li><li>作成の場合、フィルターに適合しないエンティティも作成されますが、作成後に読み込まれません</li>                                       |
+| [entitySelection.and()](../API/EntitySelectionClass.md#and)                       | フィルターに適合するエンティティのみが返されます                                                                 |
+| [entitySelection.or()](../API/EntitySelectionClass.md#or)                         | フィルターに適合するエンティティのみが返されます                                                                 |
+| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)                   | フィルターに適合するエンティティのみが返されます                                                                 |
+| [dataclass.query()](../API/DataClassClass.md#query)                               |                                                                                          |
+| [entitySelection.query()](../API/EntitySelectionClass.md#query)                   |                                                                                          |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)     | *attributeName* が、制限されたデータクラスのリレートエンティティまたはリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む) |
+| [entity.attributeName](../API/EntityClass.md#attributename)                       | *attributeName* が、制限されたデータクラスのリレートエンティティズの場合、フィルターが適用されます (エイリアスおよび計算属性も含む)              |
+| [Create entity selection](../API/EntitySelectionClass.md#create-entity-selection) |                                                                                          |
+
+
+Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
+
+:::note
+
+If there is an error in the filter at runtime, it is thrown as if the error came from the ORDA function itself.
+
+:::
+
 
 
 ## エンティティロッキング
@@ -426,6 +566,7 @@ ORDA では、以下の二つのロックモードを提供しています:
 *   各エンティティには保存されるたびにインクリメントされる内部的なロックスタンプを持っています。
 *   プロセスあるいはユーザーが `entity.save( )` メソッドでエンティティを保存しようとした場合、4D は保存しようとしているエンティティのスタンプの値とデータ内にあるエンティティのスタンプの値を比較します (データ編集の場合):
     *   値が合致している場合、エンティティは保存され、内部スタンプの値はインクリメントされます。
+
     *   値が合致しない場合、読み込みから保存までの間に他のユーザーがエンティティを編集したことになります。 保存は実行されず、エラーが返されます。
 
 オプティミスティック・ロックの動作は以下ように図解することができます:

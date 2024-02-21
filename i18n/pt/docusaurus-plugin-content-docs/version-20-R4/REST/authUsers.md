@@ -1,6 +1,6 @@
 ---
 id: authUsers
-title: Usuários e sessões
+title: Users and sessions
 ---
 
 Os pedidos REST podem beneficiar das [sessões usuário Web](WebServer/sessions.md), fornecendo funcionalidades adicionais, como o tratamento de vários pedidos, a partilha de dados entre os processos do cliente Web e os privilégios do usuário.

@@ -1,7 +1,6 @@
 ---
 id: formEditor
-slug: overview
-title: Editor de formulários
+title: Form Editor
 ---
 
 4D fornece um editor de formulários completo que permite modificar seu formulário até conseguir o efeito que deseja. Com o editor de formulários, é possível criar e eliminar objetos, manipulá-los diretamente e definir as propriedades de objetos e formulários.
@@ -30,7 +29,7 @@ When a form is opened in the editor, interface elements are displayed or hidden 
 
 - the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
 - the current [form type](properties_FormProperties.md#form-type):
-  - Markers and marker labels are always displayed by default on list forms
+  - Marcadores e rótulos de marcadores são sempre exibidos por padrão em formulários lista
   - O papel é apresentado por defeito nos formulários "para impressão".
 
 #### Exibir/ocultar elementos
@@ -93,7 +92,7 @@ The object bar contains all the active and inactive objects that can be used in 
 
 To draw an object type, select the corresponding button and then trace the object in the form. Após criar um objeto, você pode modificar seu tipo utilizando a Lista de Propriedades. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
 
-The current variant of the theme is the object that will be inserted in the form. When you click the right side of a button, you access the variant menu:
+The current variant of the theme is the object that will be inserted in the form. Ao clicar no lado direito de um botão, você acessa o menu de variantes:
 
 ![](../assets/en/FormEditor/objectBar.png)
 
@@ -678,7 +677,7 @@ To create an object in another view, simply select the view in the View palette 
 It's also possible to move one or more objects from one view to another. No formulário, selecionar o(s) objeto(s) cuja vista se pretende alterar. The view list indicates, using a symbol, the view to which the selection belongs:
 
 ![](../assets/en/FormEditor/symbol.png)
-> The selection can contain several objects belonging to different views.
+> A seleção pode conter vários objetos pertencentes a diferentes visualizações.
 
 Simply select the destination view, right-click, and select **Move to**:
 

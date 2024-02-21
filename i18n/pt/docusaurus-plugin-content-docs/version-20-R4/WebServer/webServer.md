@@ -1,7 +1,6 @@
 ---
 id: webServer
-slug: overview
-title: Servidor Web
+title: Web Server
 ---
 
 4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
@@ -25,7 +24,7 @@ A segurança dos dados está presente em todos os estágios das implementações
 * **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](../REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
 
 * **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. É necessário declarar:
-  * [Project methods](templates.md#allowing-project-methods) exposed through HTTP requests
+  * [Métodos projeto](templates.md#allowing-project-methods) expostos por meio de solicitações HTTP
   * [ORDA functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
   * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
 
@@ -54,7 +53,7 @@ The 4D web server supports access to data stored in your 4D applications through
 
 * Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
 
-* [specific URLs](httpRequests.md) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+* [URLs específicos](httpRequests.md) permitem que 4D seja chamado para executar qualquer ação; esses URLs também podem ser usados como ações de formulário para acionar o processamento quando o usuário publica formulários HTML.
 
 ## Métodos banco de dados dedicados
 

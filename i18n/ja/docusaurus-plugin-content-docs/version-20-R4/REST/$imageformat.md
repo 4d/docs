@@ -1,6 +1,6 @@
 ---
 id: imageformat
-title: '$imageformat'
+title: $imageformat
 ---
 
 画像取得の際に使用する画像形式を指定します (*例*: `$imageformat=png`)

@@ -1,6 +1,6 @@
 ---
 id: httpRequests
-title: Traitement des requêtes HTTP
+title: Processing HTTP requests
 ---
 
 The 4D web server provides several features to handle HTTP requests:

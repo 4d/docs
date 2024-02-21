@@ -1,11 +1,11 @@
 ---
 id: creating
-title: Criação de menus e barras de menus
+title: Creating menus and menu bars
 ---
 
 É possível criar menus e barras de menu:
 
-- usando o editor de menus da janela da caixa de ferramentas 4D. In this case, menus and menu bars are stored in the application's structure.
+- usando o editor de menus da janela da caixa de ferramentas 4D. Nesse caso, os menus e as barras de menu são armazenados na estrutura da aplicação.
 - dinamicamente, utilizando os comandos de linguagem do tema "Menus". In this case, menus and menu bars are not stored, they only exist in memory.
 
 You can combine both features and use menus created in structure as templates to define menus in memory.
@@ -60,7 +60,7 @@ Utilize `INSERT MENU ITEM` ou `APPEND MENU ITEM` para inserir ou adicionar itens
 ## Eliminar menus e itens
 
 ### Utilizar o editor de menus
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. Quando você exclui a última referência de um menu, o 4D exibe um alerta.
+Você pode excluir uma barra de menus, um menu ou um item de menu a qualquer momento. Note que cada menu ou barra de menu tem apenas uma referência. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. A eliminação de um menu apenas elimina uma referência. Quando você exclui a última referência de um menu, o 4D exibe um alerta.
 
 Para eliminar uma barra de menu, um menu ou um item de menu:
 

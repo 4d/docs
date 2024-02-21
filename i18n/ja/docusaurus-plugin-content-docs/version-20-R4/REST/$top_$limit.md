@@ -1,6 +1,6 @@
 ---
 id: top_$limit
-title: '$top/$limit'
+title: $top/$limit
 ---
 
 返されるエンティティの数を制限します (例: `$top=50`)

@@ -1,6 +1,6 @@
 ---
 id: orderby
-title: '$orderby'
+title: $orderby
 ---
 
 

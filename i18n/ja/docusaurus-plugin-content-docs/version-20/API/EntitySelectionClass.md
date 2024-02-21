@@ -113,7 +113,17 @@ $employees:=Create entity selection([Employee])
 
 [リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
 
-> `USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+`USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+
+:::
 
 #### 例題
 
@@ -828,6 +838,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 
@@ -2136,7 +2147,8 @@ ds.Employee.all().length = 10 である場合:
 ```4d
 var $slice : cs.EmployeeSelection
 
-$slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番までを返そうとしますが、9 > 8 なので空のセレクションが返されます
+
+$slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番までを返そうとしますが、9 > 8 のため空のセレクションが返されます
 
 ```
 

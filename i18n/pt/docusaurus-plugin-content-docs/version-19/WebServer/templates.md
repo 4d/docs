@@ -63,7 +63,7 @@ Essas tags são descritas na página [Transformation Tags](Tags/tags.md) .
 
 Por motivos de otimização, a análise do código-fonte HTML não é realizada pelo servidor da Web 4D quando as páginas HTML são chamadas usando URLs simples que são sufixadas com ".HTML" ou ".HTM".
 
-Analisar o conteúdo das páginas de modelo enviadas pelo servidor da web 4D ocorre quando o `ARQUIVO ENVIAR` (. tm, .html, .shtm, . html), `WEB SEND BLOB` (text/html tipo BLOB) ou `WEB SEND TEXT` são chamados, bem como ao enviar páginas chamadas usando URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. Para "forçar" a análise de páginas HTML nesse caso, você deve adicionar o sufixo ".shtm" ou ".shtml" (por exemplo, `http://www.server.com/dir/page.shtm`). Um exemplo do uso desse tipo de página é dado na descrição do comando `WEB GET STATISTICS` . As páginas XML (.xml, .xsl) também são suportadas e sempre analisadas por 4D.
+Analisar o conteúdo das páginas de modelo enviadas pelo servidor da web 4D ocorre quando o `ARQUIVO ENVIAR` (. tm, .html, .shtm, . html), `WEB SEND BLOB` (text/html tipo BLOB) ou `WEB SEND TEXT` são chamados, bem como ao enviar páginas chamadas usando URLs. Nesse último caso, por motivos de otimização, as páginas sufixadas com ".htm" e ".html" NÃO são analisadas. Para "forçar" a análise de páginas HTML nesse caso, você deve adicionar o sufixo ".shtm" ou ".shtml" (por exemplo, `http://www.server.com/dir/page.shtm`). Um exemplo do uso desse tipo de página é dado na descrição do comando `WEB GET STATISTICS` . As páginas XML (.xml, .xsl) também são suportadas e sempre analisadas por 4D.
 
 Você também pode realizar a análise fora do contexto da Web ao usar o comando `PROCESS 4D TAGS` .
 

@@ -1,6 +1,6 @@
 ---
 id: parameters
-title: Parámetros
+title: Parameters
 ---
 
 
@@ -312,26 +312,26 @@ La sintaxis heredada para declarar parámetros variádicos (`C_TEXT(${4})`) sigu
 
 ## Compilación
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must make sure that all method and function parameters are properly declared as soon as you intend to compile your project.
+Incluso si no es obligatorio en [modo interpretado](interpreted.md), debe asegurarse de que todos los parámetros de método y función se declaren correctamente tan pronto como tenga la intención de compilar su proyecto.
 
 :::note
 
-You can delegate the declaration of parameters (as well as all variables) to the compiler by checking the [**Type the variable** compilation path option](../Project/compiler.md#compilation-path). However this option significantly increases compilation time.
+Puede delegar la declaración de parámetros (así como de todas las variables) al compilador marcando la opción ruta de compilación [**Escriba la variable** ](../Project/compiler.md#compilation-path). Sin embargo, esta opción aumenta considerablemente el tiempo de compilación.
 
 :::
 
 
-### Parameters declared in prototypes
+### Parámetros declarados en prototipos
 
-When using the `#DECLARE` or `Function` keywords, parameters are automatically declared and no additional information is needed for the compiler. Ejemplos:
+Cuando se utilizan las palabras clave `#DECLARE` o `Function`, los parámetros se declaran automáticamente y no se necesita información adicional para el compilador. Ejemplos:
 
 ```4d
 #DECLARE($myParam : Text; $myOtherParam : Integer) : Boolean
-    // all method parameters are declared with their type
+    // todos los parámetros del método se declaran con su tipo
 ```
 
 ```4d
-    // On Web Connection Database Method
+    // En el método base  On Web Connection
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)
@@ -339,26 +339,26 @@ When using the `#DECLARE` or `Function` keywords, parameters are automatically d
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-    // all function parameters are declared with their type
+    // todos los parámetros de la función se declaran con su tipo
 ```
 
 :::tip
 
-Declaring parameters in prototypes is a good practice, even in non-compiled projects.
+Declarar parámetros en prototipos es una buena práctica, incluso en proyectos no compilados.
 
 :::
 
-### Method parameters declared outside prototypes
+### Parámetros de método declarados fuera de los prototipos
 
-It can happen that method parameters are not declared in `#DECLARE` prototypes. Such statements can be found in particular in legacy 4D code. In this case, you must configure a `Compiler_Methods` method to gather the declarations for these method parameters.
+Puede ocurrir que los parámetros del método no se declaren en prototipos `#DECLARE`. Tales afirmaciones pueden encontrarse, en particular, en el código 4D heredado. En este caso, debe configurar un método `Compiler_Methods` para reunir las declaraciones de estos parámetros de método.
 
 #### Método `Compiler_Methods`
 
-When some method parameters are not declared in `#DECLARE` prototypes, the 4D compiler needs that you declare them in a specific method using a special syntax:
+Cuando algunos parámetros de método no se declaran en prototipos `#DECLARE`, el compilador 4D necesita que los declare en un método específico utilizando una sintaxis especial:
 
 - puede agrupar todos los parámetros de variables locales para métodos de proyecto en uno o más métodos de proyecto
-- the method name(s) must start with "**Compiler_**", by default "Compiler_Methods".
-- within such a method, you predeclare the parameters for each method using the following syntax: `C_XXX(methodName;parameter)`.
+- los nombres de los métodos deben empezar por "**Compiler_**", por defecto "Compiler_Methods".
+- dentro de un método de este tipo, se predeclaran los parámetros de cada método utilizando la siguiente sintaxis: `C_XXX(nombredelmétodo;parámetro)`.
 
 Por ejemplo:
 
@@ -373,13 +373,13 @@ Esta sintaxis no es ejecutable en modo interpretado.
 
 :::
 
-You can create and fill automatically a `Compiler_Methods` method containing all your parameters declared outside prototypes using the [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** button in the Compiler Settings dialog box.
+Puede crear y llenar automáticamente un método `Compiler_Methods` que contenga todos sus parámetros declarados fuera de los prototipos utilizando el botón [**Compiler Methods for...**](../Project/compiler.md#compiler-methods-for) **Methods** en el diálogo Parámetros del compilador.
 
 :::info
 
-#### Particular cases
+#### Casos particulares
 
-Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
+Algunos contextos no soportan la declaración en un método "Compiler_", por lo que se tratan de forma específica:
 
 - Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio trigger.
 
@@ -399,10 +399,10 @@ Some contexts do not support declaration in a "Compiler_" method, thus they are 
 
 :::
 
-### Conflicts between declarations
+### Conflictos entre declaraciones
 
-- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method, the entry from the  *Compiler_* method is ignored.
-- If a parameter is declared in both a `#DECLARE` prototype and a *Compiler_* method but with a different data type, the Code Live Checker generates an error during syntax checking and compilation.
+- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método *Compiler_*, se ignora la entrada del método  *Compiler_*.
+- Si un parámetro se declara tanto en un prototipo `#DECLARE` como en un método *Compiler_* pero con un tipo de datos diferente, Code Live Checker genera un error durante la verificación de sintaxis y la compilación.
 
 
 

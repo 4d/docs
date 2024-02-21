@@ -14,7 +14,7 @@ var $created : Boolean
 $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ```
 
-### Caminhos
+### Pathnames
 
 `Os objectos` suportam vários pathnames, incluindo `filesystems` ou `posix` syntax. Os pathnames suportados são detalhados na página [**Pathnames**](../Concepts/paths.md) .
 
@@ -116,7 +116,7 @@ No parâmetro *fileConstant* , passe um ficheiro 4D incorporado ou de sistema, u
 | Debug log file                    | 12    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(Debug log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                              |
 | Diagnostic log file               | 11    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(Diagnostic log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                         |
 | Directory file                    | 16    | directório.json, contendo a descrição dos usuários e grupos (se houver) para a aplicação do projecto. Pode ser localizado ou na pasta de configurações do usuário (por padrão, global ao projecto), ou na pasta de definições de dados (específica a um arquivo de dados).                                                                                                                                                                    |
-| HTTP Client log file              | 24    | Log file created by the `HTTP SET OPTION(HTTP client log)` command. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                                 |
+| HTTP Client log file              | 24    | Arquivo de histórico criado pelo comando `HTTP SET OPTION (HTTP client log)`. Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                       |
 | HTTP debug log file               | 9     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web debug log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                            |
 | HTTP log file                     | 8     | Arquivo de registo criado pelo comando `WEB SET OPTION(Web log recording)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                        |
 | IMAP Log file                     | 23    | Arquivo de registo criado pelo comando `SET DATABASE PARAMETER(IMAP Log)` . Armazenado na pasta Logs.                                                                                                                                                                                                                                                                                                                                         |
@@ -742,13 +742,13 @@ Se uma marca de ordem de byte (BOM) existe para o conjunto de caracteres, 4D a i
 
 Em *breakMode*, pode passar um número indicando o processamento a aplicar aos caracteres de fim de linha antes de os guardar no ficheiro. Estão disponíveis as seguintes constantes, encontradas no tema **System Documents**:
 
-| Parâmetros                    | Valor | Comentário                                                                                                                                               |
-| ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Document unchanged`          | 0     | Não processado                                                                                                                                           |
-| `Document with native format` | 1     | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) on macOS, CRLF (carriage return + line feed) on Windows |
-| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                       |
-| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                  |
-| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                   |
+| Parâmetros                    | Valor | Comentário                                                                                                                                                                   |
+| ----------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Document unchanged`          | 0     | Não processado                                                                                                                                                               |
+| `Document with native format` | 1     | (Padrão) As quebras de linha são convertidas para o formato nativo do sistema operativo: LF (avanço de linha) no macOS, CRLF (retorno de carro + avanço de linha) no Windows |
+| `Documento com CRLF`          | 2     | As quebras de linha são convertidas em CRLF (retorno de carro + avanço de linha), o formato predefinido do Windows                                                           |
+| `Documento com CR`            | 3     | As quebras de linha são convertidas em CR (carriage return), o formato padrão do Mac OS                                                                                      |
+| `Documento com LF`            | 4     | As quebras de linha são convertidas para LF (line feed), o formato padrão Unix e macOS                                                                                       |
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 

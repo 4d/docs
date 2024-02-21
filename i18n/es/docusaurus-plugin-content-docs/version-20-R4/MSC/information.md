@@ -1,7 +1,6 @@
 ---
 id: information
-title: Página de información
-sidebar_label: Página de información
+title: Information Page
 ---
 
 La página Información proporciona información sobre los entornos 4D y sistema, así como sobre los archivos de la base de datos y de la aplicación. Cada página puede visualizarse mediante los controles de pestañas en la parte superior de la ventana.

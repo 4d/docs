@@ -1,6 +1,6 @@
 ---
 id: writeprointerface
-title: Interfaz 4D Write Pro
+title: 4D Write Pro Interface
 ---
 
 4D WritePro Interface ofrece un conjunto de paletas, que permiten a los usuarios finales personalizar fácilmente un documento 4D Write Pro.
@@ -102,7 +102,7 @@ El archivo de plantilla en formato JSON contiene los siguientes atributos:
 
 :::note Francés
 
-If your application is likely to be run on a 4D with language set to French, make sure that you use [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) in your formulas so that they are correctly interpreted no matter the user's language configuration.
+Si es probable que su aplicación se ejecute en un 4D con el idioma configurado en francés, asegúrese de utilizar [tokens](https://doc.4d.com/4Dv20/4D/20/Using-tokens-in-formulas.300-6237731.en.html) en sus fórmulas para que se interpreten correctamente independientemente de la configuración de idioma del usuario.
 
 :::
 
@@ -164,12 +164,12 @@ El archivo de traducción en formato JSON contiene los siguientes atributos:
 
 | Atributo  | Tipo       | Obligatorio | Descripción                                                                               |
 |:--------- |:---------- |:----------- |:----------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Colección de objetos de tabla traducidos                                                  |
+| tablas    | Collection |             | Colección de objetos de tabla traducidos                                                  |
 | fields    | Collection |             | Colección de objetos de campo traducidos                                                  |
 | formulas  | Collection |             | Colección de objetos fórmula traducidos                                                   |
 | fileNames | Collection |             | Colección de objetos fileName traducidos (aplicables al tema y al nombre de la plantilla) |
 
-Whitin each one of these attribute, the translation object includes the following attributes:
+En cada uno de estos atributos, el objeto de traducción incluye los atributos siguientes:
 
 | Atributo    | Tipo | Obligatorio | Descripción                           |
 |:----------- |:---- |:----------- |:------------------------------------- |
@@ -223,7 +223,7 @@ El archivo del tema en formato JSON contiene los siguientes atributos:
 | Atributo | Tipo   | Obligatorio | Descripción                                                                                                                                            |
 |:-------- |:------ |:----------- |:------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | default  | Object |             | Objeto que contiene el estilo por defecto aplicable a todas las líneas.                                                                                |
-| table    | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                                      |
+| tabla    | Object |             | Objeto que contiene la definición de estilo aplicable a la tabla.                                                                                      |
 | rows     | Object |             | Objeto que contiene la definición de estilo aplicable a todas las líneas.                                                                              |
 | cells    | Object |             | Objeto que contiene la definición de estilo aplicable a todas las celdas.                                                                              |
 | header1  | Object |             | Objeto que contiene la definición de estilo aplicable a la primera línea del encabezado.                                                               |

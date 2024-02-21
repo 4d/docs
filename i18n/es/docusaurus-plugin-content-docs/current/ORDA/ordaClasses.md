@@ -131,17 +131,16 @@ Function GetBestOnes()
 A continuación, puede obtener una selección de entidades de las "mejores" empresas ejecutando:
 
 
-
-
-
-
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
 ```
 
-> [Los atributos calculados](#computed-attributes) se definen en [la clase Entity](#entity-class).
+:::info
 
+[Los atributos calculados](#computed-attributes) se definen en [la clase Entity](#entity-class).
+
+:::
 
 #### Ejemplo con un datastore remoto
 
@@ -196,16 +195,15 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 #### Ejemplo
 
 ```4d
-// Clase cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Clase extends EntitySelection
+Class extends EntitySelection
 
-//Extrae de esta selección de entidades los empleados con un salario superior a la media  
+//Extract the employees with a salary greater than the average from this entity selection 
 
-Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+    return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -214,6 +212,13 @@ A continuación, puede obtener los empleados con un salario superior a la media 
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
+
+:::info
+
+[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class).
+
+:::
+
 
 ### Entity Class
 
@@ -250,13 +255,13 @@ Para más información, consulte la sección [Atributos alias](#alias-attributes
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("population")
 
 
 Function isBigCity(): Boolean
-// La función getPopulation() es utilizable e la clase
-$0:=This.getPopulation()>50000
+// The getPopulation() function is usable inside the class
+    return This.getPopulation()>50000
 ```
 
 Luego puede llamar este código:
@@ -762,8 +767,6 @@ $arch:=ds.Course.query("courseName = :1"; "Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName y name son "Archaeology II"
 ```
-
-
 
 
 ## Funciones expuestas y no expuestas

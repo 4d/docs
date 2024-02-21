@@ -1,6 +1,6 @@
 ---
 id: writeProAreaOverview
-title: Área 4D Write Pro
+title: 4D Write Pro area
 ---
 
 4D Write Pro ofrece a los usuarios de 4D una herramienta avanzada de procesamiento de textos, totalmente integrada a su aplicación 4D. Con 4D Write Pro, puede escribir correos electrónicos y/o cartas preformateadas que contengan imágenes, una firma escaneada, texto formateado y marcadores de posición para variables dinámicas. También puede crear facturas o informes de forma dinámica, incluyendo texto e imágenes con formato.

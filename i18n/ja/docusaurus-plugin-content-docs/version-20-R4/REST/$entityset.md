@@ -1,6 +1,6 @@
 ---
 id: entityset
-title: '$entityset'
+title: $entityset
 ---
 
 `$method=entityset` を使って [エンティティセットを作成]($method.md#methodentityset) すると、それを後で再利用することができます。

@@ -1,9 +1,9 @@
 ---
 id: forms
-title: Page Formulaires
+title: Forms Page
 ---
 
- 
+
 Cette page permet de paramétrer des options de fonctionnement et d'affichage de l'éditeur de formulaires de 4D.
 
 ## Déplacement

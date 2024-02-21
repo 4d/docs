@@ -1,6 +1,6 @@
 ---
 id: compiler
-title: Compilación
+title: Compilation
 ---
 
 Puede compilar sus proyectos, es decir, traducir todos sus métodos a lenguaje máquina. La compilación de un proyecto permite verificar la coherencia del código y acelerar su ejecución, además de posibilitar ocultar el código en su totalidad. La compilación es un paso indispensable entre el desarrollo de proyectos con 4D y su despliegue como aplicaciones independientes.
@@ -42,7 +42,7 @@ El número de errores encontrados durante las primeras compilaciones puede ser d
 
 ## Ejecutar la compilación
 
-Una vez compilado un proyecto, es posible pasar del [modo interpretado al modo compilado](Concepts/interpreted.md), y viceversa, en cualquier momento y sin tener que salir de la aplicación 4D (excepto cuando se ha eliminado el código interpretado). To do this, use the **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. La [caja de diálogo de apertura del proyecto](GettingStarted/creating.md#options) también ofrece elegir entre el modo interpretado o compilado para iniciar la base de datos.
+Una vez compilado un proyecto, es posible pasar del [modo interpretado al modo compilado](Concepts/interpreted.md), y viceversa, en cualquier momento y sin tener que salir de la aplicación 4D (excepto cuando se ha eliminado el código interpretado). Para ello, utilice los comandos **Reiniciar en interpretado** y **Reiniciar en compilado** del menú **Ejecución**. La [caja de diálogo de apertura del proyecto](GettingStarted/creating.md#options) también ofrece elegir entre el modo interpretado o compilado para iniciar la base de datos.
 
 Cuando pasa de un modo al otro, 4D cierra el modo actual y abre el nuevo. Esto equivale a salir y volver a abrir la aplicación. Cada vez que se cambia de un modo a otro, 4D ejecuta los dos métodos base siguientes (si se especifican) en este orden: `On Exit` -> `On Startup`.
 
@@ -60,7 +60,7 @@ El control sintáctico también puede lanzarse directamente con el comando **Ver
 
 ### Declarar tipos
 
-El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
+El botón **Declarar Tipos** crea o actualiza los métodos del compilador. Los métodos de compilación son métodos proyecto que agrupan todas las declaraciones de tipo variable y array (proceso e interproceso), así como los parámetros de método [declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Estos métodos, cuando existen, son utilizados directamente por el compilador durante la compilación del código, lo que da lugar a tiempos de compilación más rápidos.
 
 El nombre de estos métodos debe comenzar por `Compiler_`. Puede definir el nombre por defecto de cada uno de los 5 métodos del compilador en [la ventana de los parámetros del compilador](#compiler-methods-for). Los métodos de compilación que son generados y mantenidos por 4D tienen automáticamente el atributo `Invisible`:
 
@@ -134,13 +134,13 @@ Se utiliza para generar el archivo de errores (ver [archivo de errores](#error-f
 
 Permite definir el número de pases (análisis de código) que realiza el compilador y, por tanto, la duración de la compilación.
 
-- **Type the variables**: Check this option if you want the compiler to infer the type of variables and parameters in your code. This option requires the compiler to perform all the stages that make compilation possible, which increases the duration of compilation.
-- **Process and interprocess variables are typed**: The pass for typing process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
-- **All variables are typed**: The pass for typing local, process and interprocess variables as well as method parameters declared outside prototypes is not carried out. Use this option when you are certain that all the local, process, and interprocess variables as well as method parameters have been clearly typed.
+- **Declare las variables**: marque esta opción si quiere que el compilador infiera el tipo de variables y parámetros en su código. Esta opción requiere que el compilador realice todas las etapas que hacen posible la compilación, lo que aumenta la duración de la compilación.
+- **Las variables proceso e interproceso se declaran**: el paso para declarar variables proceso e interproceso así como parámetros de método declarados fuera de prototipos no se realiza. Esta opción se puede utilizar cuando ya ha definido el tipo de todas sus variables proceso e interproceso por sí mismo o utilizando la función de generación automática de los métodos compilador.
+- **Todas las variables están declaradas**: no se realiza el paso para declarar variables locales, proceso e interproceso, así como parámetros de método declarados fuera de prototipos. Utilice esta opción cuando esté seguro de que todas las variables locales, proceso e interproceso, así como los parámetros de los métodos, han sido claramente declarados.
 
 :::tip
 
-You can use the [Generate Typing](#generate-typing) button then compile with one of the two last options.
+Puede utilizar el botón [Generar declaración](#generate-typing) y luego compilar con una de las dos últimas opciones.
 
 :::
 
@@ -186,7 +186,7 @@ Se pueden generar hasta 5 métodos de compilación; un método de compilación s
 - **Variables interproceso**: agrupa las declaraciones de variables interproceso;
 - **Arrays**: agrupa las declaraciones de arrays de proceso;
 - **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
-- **Methods**: Groups together method parameter declarations (e.g `C_LONGINT(mymethod;$1;$2)`) for [method parameters declared outside prototypes](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). For more information, see [`Compiler_Methods` method](../Concepts/parameters.md#compiler_methods-method).
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo `C_LONGINT(mymethod;$1;$2)`) para [parámetros de métodos declarados fuera de prototipos](../Concepts/parameters.md#method-parameters-declared-outside-prototypes). Para más información, consulte método [`Compiler_Methods`](../Concepts/parameters.md#compiler_methods-method).
 
 Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 

@@ -1,6 +1,6 @@
 ---
 id: real-time-monitor
-title: Página de seguimiento en tiempo real
+title: Real Time Monitor Page
 ---
 
 

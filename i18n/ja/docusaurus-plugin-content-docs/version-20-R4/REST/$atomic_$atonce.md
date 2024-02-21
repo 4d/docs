@@ -1,6 +1,6 @@
 ---
 id: atomic_$atonce
-title: '$atomic/$atOnce'
+title: $atomic/$atOnce
 ---
 
 

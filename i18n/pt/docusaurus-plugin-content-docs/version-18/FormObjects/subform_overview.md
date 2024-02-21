@@ -20,7 +20,7 @@ In order to clearly define the concepts implemented with subforms, here are some
 
 ## Sub formulários lista
 
-Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
+Um subformulário lista permite que você insira, visualize e modifique dados em outras tabelas. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. Você pode ter vários subformulários provenientes de tabelas diferentes no mesmo formulário. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
 
 For example, a Contacts manager database might use a list subform to display all the telephone numbers for a particular contact. Although the telephone numbers appear on the Contacts screen, the information is actually stored in a related table. Using a One to Many relation, this database design makes it easy to store an unlimited number of telephone numbers per contact. With automatic relations, you can support data entry directly into the related Many table without programming.
 

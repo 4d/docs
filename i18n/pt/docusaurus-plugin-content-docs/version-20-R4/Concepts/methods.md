@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Página Métodos
+title: Methods
 ---
 
 

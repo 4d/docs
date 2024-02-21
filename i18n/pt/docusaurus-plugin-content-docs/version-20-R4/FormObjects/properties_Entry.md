@@ -1,13 +1,13 @@
 ---
 id: propertiesEntry
-title: Entrada
+title: Entry
 ---
 
 ## Verificação automática da ortografia
 
 4D inclui funcionalidades de verificação ortográfica integrado e personalizável. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
-The Auto Spellcheck property activates the spell-check for each object. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+A propriedade Auto Spellcheck ativa a verificação ortográfica para cada objeto. Quando usada, a verificação ortográfica é realizada automaticamente durante a entrada de dados. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
 #### Gramática JSON
 
@@ -29,11 +29,11 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
-- **Fonts...**: displays the font system dialog box
+- **Fontes...**: exibe a caixa de diálogo do sistema de fontes
 - **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defeito, esta lista está vazia e a opção não é apresentada. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
 - comandos para as modificações de estilo suportadas: tipo de letra, tamanho, estilo, cor e cor de fundo. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
-For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
+For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. É possível controlar o acesso ao menu contextual por meio do comando [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html).
 
 #### Gramática JSON
 
@@ -84,7 +84,7 @@ Most of the time, you can use one of the [built-in filters](#default-entry-filte
 - pode introduzir diretamente uma cadeia de definição de filtro
 - or you can enter the name of an entry filter created in the Filters editor in the Toolbox. Os nomes dos filtros personalizados que criar começam com uma barra vertical (|).
 
-For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
+Para obter informações sobre como criar filtros de entrada, consulte [Códigos de filtro e formato](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
 ### Filtros de entrada predefinidos
 
@@ -108,7 +108,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9###-###-###               | Número de telefone interurbano. Apresentar zeros nos espaços de entrada. Permitir qualquer número. Três entradas, hífen, três entradas, hífen, quatro entradas.       |
 | !0&9###-##-####               | Número de segurança social. Apresentar zeros nos espaços de entrada. Permitir quaisquer números.                                                                      |
 | ~"A-Z;0-9; ;,;.;-"            | Letras maiúsculas e pontuação. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                             |
-| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                   |
+| &"a-z;0-9; ;,;.;-"            | Letras maiúsculas e minúsculas e pontuação. Permitir letras minúsculas, números, espaços, vírgulas, pontos e hífens.                                                  |
 | &"0-9;.;-"                    | Números. Só são permitidos números, pontos decimais e hífenes (sinal de menos).                                                                                       |
 
 #### Gramática JSON
@@ -260,7 +260,7 @@ This property allows setting special meaning keys (keyboard shortcuts) for [butt
 You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> Também é possível atribuir um atalho a um comando de menu personalizado. Se houver um conflito entre dois atalhos, o objeto ativo terá prioridade. Para obter mais informações sobre como associar atalhos a menus, consulte [Definição das propriedades dos menus](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 

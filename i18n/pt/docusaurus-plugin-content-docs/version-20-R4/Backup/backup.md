@@ -1,7 +1,6 @@
 ---
 id: backup
-slug: backup
-title: Página de Backup
+title: Backup
 ---
 
 Uma cópia de segurança pode ser iniciada de três maneiras:

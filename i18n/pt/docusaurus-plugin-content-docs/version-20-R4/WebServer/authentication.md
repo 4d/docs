@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Autenticação
+title: Authentication
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
@@ -12,7 +12,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Using a **custom** authentication is recommended.
+> É recomendado usar uma autenticação **personalizada**.
 
 ### Visão Geral
 
@@ -25,9 +25,9 @@ O funcionamento do sistema de acesso do servidor web 4D está resumido no diagra
 
 ### Personalizado (padrão)
 
-Basically in this mode, it's up to the developer to define how to authenticate users. 4D only evaluates HTTP requests [that require an authentication](#method-calls).
+Basically in this mode, it's up to the developer to define how to authenticate users. 4D só avalia solicitações HTTP [que requerem uma autenticação](#method-calls).
 
-This authentication mode is the most flexible because it allows you to:
+Este modo de autenticação é o mais flexível porque permite que você:
 
 - either, delegate the user authentication to a third-party application (e.g. a social network, SSO);
 - or, provide an interface to the user (e.g. a web form) so that they can create their account in your customer database; then, you can authenticate users with any custom algorithm (see [this example](sessions.md#example) from the "User sessions" chapter). The important thing is that you never store the password in clear, using such code:
@@ -71,7 +71,7 @@ Como no modo BASIC, os usuários devem digitar seu nome e senha ao se conectarem
 
 ## On Web Authentication
 
-The `On Web Authentication` database method is in charge of managing web server engine access. It is called by 4D or 4D Server when a dynamic HTTP request is received.
+The `On Web Authentication` database method is in charge of managing web server engine access. É chamado por 4D ou 4D Server quando uma solicitação HTTP dinâmica é recebida.
 
 ### Chamadas métodos de base
 
@@ -144,9 +144,9 @@ Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu W
 
 #### $2 - Cabeçalho e corpo do pedido HTTP
 
-The second parameter (`$2`) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
+O segundo parâmetro (`$2`) é o cabeçalho e o corpo da solicitação HTTP enviada pelo navegador Web. Note that this information is passed to your `On Web Authentication` database method as it is. Its contents will vary depending on the nature of the web browser which is attempting the connection.
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
+If your application uses this information, it is up to you to parse the header and the body. Você pode usar os comandos `WEB GET HTTP HEADER` e `WEB GET HTTP BODY`.
 > For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Para além deste tamanho, são truncados pelo servidor HTTP 4D.
 
 #### $3 - Endereço IP do cliente Web

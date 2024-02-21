@@ -1,6 +1,6 @@
 ---
 id: distinct
-title: '$distinct'
+title: $distinct
 ---
 
 

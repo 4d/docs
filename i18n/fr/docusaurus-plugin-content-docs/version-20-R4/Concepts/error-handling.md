@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Gestion des erreurs
+title: Error handling
 ---
 
 Le traitement des erreurs consiste à anticiper les erreurs pouvant survenir dans votre application et à y répondre. 4D fournit un support complet pour la détection et la signalisation des erreurs lors de l'exécution, ainsi que pour l'analyse de leurs conditions.

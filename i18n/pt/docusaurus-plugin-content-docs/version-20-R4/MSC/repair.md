@@ -1,7 +1,6 @@
 ---
 id: repair
-title: Página de reparação
-sidebar_label: Página de reparação
+title: Repair Page
 ---
 
 Esta página é utilizada para reparar o ficheiro de dados quando este foi danificado. Geralmente só se usa essas funções sob a supervisão de times técnicos 4D, quando anomalias forem detectadas quando abrir a aplicação ou após uma [verificação](verify.md).
@@ -33,7 +32,7 @@ Use this low-level repair option only when the data file is severely damaged and
 
 4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
 
-> Se desmarcou a opção **Registros eliminados definitivamente** nas propriedades de uma tabela na estrutura do banco de dados, a reparação por marcadores de cabeçalhos pode fazer que reapareçam os registros eliminados anteriormente. 
+> Se desmarcou a opção **Registros eliminados definitivamente** nas propriedades de uma tabela na estrutura do banco de dados, a reparação por marcadores de cabeçalhos pode fazer que reapareçam os registros eliminados anteriormente.
 > 
 > A recuperação por cabeçalhos não tem em conta as restrições de integridade. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
 
@@ -61,9 +60,9 @@ If several groups of records could not be assigned to tables due to a damaged ad
 Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. Também pode atribuir uma tabela utilizando a função arrastar e largar. The group of records is then associated with the table and it will be recovered in this table. Os nomes das tabelas atribuídas manualmente aparecem a preto. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
 
 
-## Abrir ficheiro de registo
+## Abrir arquivo de registo
 
-Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este ficheiro permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
+Depois que a reparação terminar, 4D gera um arquivo de histórico na pasta Logs do banco de dados. Este arquivo permite visualizar todas as operações efectuadas. É criado no formato XML e chamado: *DatabaseName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
 - *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
 - *yyyy-mm-dd hh-mm-ss* é o carimbo de data/hora do arquivo, com base na hora do sistema local quando a operação de manutenção foi iniciada, por exemplo "2019-02-11 15-20-45".

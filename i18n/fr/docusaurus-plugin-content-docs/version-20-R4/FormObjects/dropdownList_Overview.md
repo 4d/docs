@@ -1,6 +1,6 @@
 ---
 id: dropdownListOverview
-title: Liste déroulante
+title: Drop-down List
 ---
 
 Drop-down lists are form objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an object, an array, a choice list, or a standard action.

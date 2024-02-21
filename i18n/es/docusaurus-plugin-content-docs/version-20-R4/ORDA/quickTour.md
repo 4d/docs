@@ -1,6 +1,6 @@
 ---
 id: quickTour
-title: Un recorrido rápido en ORDA
+title: A Quick Tour in ORDA
 ---
 
 Dado que ORDA está basado en objetos, su uso requiere conocimientos básicos de programación de objetos.

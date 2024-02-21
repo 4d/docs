@@ -5,7 +5,7 @@ title: Collection
 
 Les collections sont des listes ordonnées de valeurs de types similaires ou différents (texte, nombre, date, objet, booléen, collection ou null).
 
-Les variables de type collection sont gérées à l'aide de la [notation objet](dt_object.md#properties).
+Collection type variables are managed using [object notation](dt_object.md#properties).
 
 Pour accéder à un élément d'une collection, vous devez passer le numéro de l'élément entre crochets :
 
@@ -151,6 +151,6 @@ Plusieurs fonctions acceptent un paramètre nommé _propertyPath_. Ce paramètre
 La lecture de la propriété **length** d'une collection indéfinie renvoie 0 :
 
 ```4d
-     var $c : Collection //variable created but no collection is defined
+     var $c : Collection //variable créée mais aucune collection n'est définie
      $size:=$c.length //$size = 0
 ```

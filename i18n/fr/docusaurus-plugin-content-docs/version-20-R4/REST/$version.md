@@ -1,6 +1,6 @@
 ---
 id: version
-title: '$version'
+title: $version
 ---
 
 Numéro de version de l'image

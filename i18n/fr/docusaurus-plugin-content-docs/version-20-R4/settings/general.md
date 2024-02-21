@@ -1,6 +1,6 @@
 ---
 id: general
-title: Page Général
+title: General page
 ---
 
 La page Général contient des options permettant de configurer les paramètres génériques du projet 4D.

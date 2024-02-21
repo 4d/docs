@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: Case à cocher
+title: Check Box
 ---
 
 Une case à cocher est un type de bouton utilisée pour saisir ou afficher une donnée binaire (vrai-faux). Fondamentalement, elle est soit cochée, soit décochée, mais [un troisième état](#three-states-check-box) peut être défini.

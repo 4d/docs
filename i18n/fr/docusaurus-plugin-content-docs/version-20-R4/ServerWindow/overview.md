@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Fenêtre d'administration de 4D Server
+title: 4D Server Administration Window
 ---
 
 Lorsque 4D Server est lancé avec interface sous Windows ou macOS, une fenêtre d'administration graphique est disponible, fournissant de nombreux outils d'analyse et de contrôle pour l'application 4D publiée. Pour afficher la fenêtre d'administration de 4D Server du projet ouvert, sélectionnez l'élément de menu **Window > Administration**, ou appuyez sur **Ctrl+U**.

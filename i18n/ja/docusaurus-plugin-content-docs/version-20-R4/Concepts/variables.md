@@ -3,9 +3,9 @@ id: variables
 title: 変数
 ---
 
-4D のデータは、根本的に異なっている 2つの方法で保持されます。 **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+4D のデータは、根本的に異なっている 2つの方法で保持されます。 **フィールド** はディスクに永続的にデータを保存するのに対し、**変数** はメモリ上に一時的にデータを格納します。
 
-データベースを作成する際には、フィールドに名前とデータタイプを指定します。 Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+データベースを作成する際には、フィールドに名前とデータタイプを指定します。 同様に、変数にも名前と [データタイプ](Concepts/data-types.md) を指定します。
 
 いったん作成された変数は、アプリケーションで必要とされる場所に使用できます。 たとえば、テキスト変数を同じタイプのフィールドに格納するには次のように書きます:
 
@@ -17,28 +17,28 @@ title: 変数
 
 ## 変数の宣言
 
-You usually create variables by declaring them. 4D ランゲージでは、変数の宣言方法は2つあります:
+変数の作成は通常、宣言によっておこないます。 4D ランゲージでは、変数の宣言方法は2つあります:
 
-- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
+- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合、このシンタックスによりコードエディターの提案や自動補完機能が強化されます)
+- "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (旧シンタックス)。
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
+変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が [代入](#変数への代入) されない限り、セッション中はこの値が保持されます。 あるいは、変数を宣言するときに、データ型と値を1行で [初期化](#宣言と同時に変数を初期化する) することもできます。
 
 :::note
 
-Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
+この方法は推奨されませんが、ただ "使用する" ことによって変数を宣言することもできます。 正式にそれらを宣言することは必須ではありません。 たとえば、今日の日付に30日足した値を格納した変数を作成するには、次のように書くことができます:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created  
- // 4D guesses it is of date type  
- // and assigns the current date plus 30 days
+ MyDate:=Current date+30 //  MyDateを作成します
+ // これは日付型の変数であると 4D は推測します 
+ // 30日後の日付が代入されます
 ```
 
-When a variable is created before being declared, it is not initialized at the declaration step.
+宣言前に変数が作成された場合、宣言による初期化はおこなわれません。
 
 :::
 
-To declare a variable of any type, use the following syntax:
+変数を宣言するには、次のシンタックスを用います:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -51,35 +51,35 @@ var $myFile : 4D.File  // File クラスオブジェクト変数
 var $myVar // バリアント型変数
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。
+このシンタックスは [ローカル変数とプロセス変数](#ローカル変数とプロセス変数) の宣言のみサポートしています。[インタープロセス変数](#インタープロセス変数) および [配列](Concepts/arrays.md) には使用できません。
 
-`varType` can be:
+`varType` には次が指定できます:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- [基本のデータ型](Concepts/data-types.md): 変数には、宣言された型の値が格納されます
+- [クラス参照](Concepts/classes.md) (4Dクラスまたはユーザークラス): 変数には、定義されたクラスのオブジェクトへの参照が格納されます
 
-If `varType` is omitted, a variable of the **variant** type is created.
+`varType` を省略すると、**variant** 型の変数が作成されます。
 
-The following table lists all supported `varType` values:
+サポートされている `varType` 値の一覧です:
 
-| varType                     | 内容                                               |
-| --------------------------- | ------------------------------------------------ |
-| `Text`                      | テキスト値                                            |
-| `Date`                      | 日付値                                              |
-| `Time`                      | 時間値                                              |
-| `Boolean`                   | ブール値                                             |
-| `Integer`                   | 倍長整数値                                            |
-| `Real`                      | 実数値                                              |
-| `Pointer`                   | ポインター値                                           |
-| `Picture`                   | ピクチャー値                                           |
-| `Blob`                      | スカラーBLOB値                                        |
-| `Collection`                | コレクション値                                          |
-| `Variant`                   | バリアント値                                           |
-| `Object`                    | デフォルトクラス (4D.Object) のオブジェクト  |
-| `4D.<className>`            | 4Dクラス名のオブジェクト                                    |
-| `cs.<className>`            | ユーザークラス名のオブジェクト                                  |
-| `cs.<namespace><className>` | Object of the `<namespace>` component class name |
+| varType                     | 内容                                              |
+| --------------------------- | ----------------------------------------------- |
+| `Text`                      | テキスト値                                           |
+| `Date`                      | 日付値                                             |
+| `Time`                      | 時間値                                             |
+| `Boolean`                   | ブール値                                            |
+| `Integer`                   | 倍長整数値                                           |
+| `Real`                      | 実数値                                             |
+| `Pointer`                   | ポインター値                                          |
+| `Picture`                   | ピクチャー値                                          |
+| `Blob`                      | スカラーBLOB値                                       |
+| `Collection`                | コレクション値                                         |
+| `Variant`                   | バリアント値                                          |
+| `Object`                    | デフォルトクラス (4D.Object) のオブジェクト |
+| `4D.<className>`            | 4Dクラス名のオブジェクト                                   |
+| `cs.<className>`            | ユーザークラス名のオブジェクト                                 |
+| `cs.<namespace><className>` | `<namespace>` コンポーネントクラス名のオブジェクト                |
 
 ### 例題
 
@@ -124,16 +124,16 @@ var $d : cs.Customer:=cs.Customer.new()
 変数は、データ型を明示的に指定せずに宣言および初期化することもできます。その場合、変数の型は 4D によって推論されます。 次に例を示します:
 
 ```4d
-var $text:="hello"  // Inferred as Text 
-var $number:=20  // Inferred as Real 
-var $obj:={}  // Inferred as an Object 
-var $mycol:=[]  // Inferred as a Collection  
+var $text:="hello"  // テキストと推論されます
+var $number:=20  // 実数と推論されます
+var $obj:={}  // オブジェクトと推論されます
+var $mycol:=[]  // コレクションと推論されます
 
 ```
 
 :::note
 
-The inferred type might be different between [interpreted and compiled mode](interpreted.md) if the evaluation of the value is too ambiguous. この場合、コンパイラーによって警告が生成され、バリアント型が使用されます。 たとえば、次の $a の型はインタープリターモードでは正しくテキスト型と推論されますが、シンタックスチェックを実行すると警告が生成され、$a はコンパイル済みモードでバリアントとして型付けされます。
+値の評価があいまいである場合、推論される型は [インタープリターモードとコンパイル済みモード](interpreted.md) で異なる可能性があります。 この場合、コンパイラーによって警告が生成され、バリアント型が使用されます。 たとえば、次の $a の型はインタープリターモードでは正しくテキスト型と推論されますが、シンタックスチェックを実行すると警告が生成され、$a はコンパイル済みモードでバリアントとして型付けされます。
 
 ```4d
 var $class:={test: "a"}
@@ -143,7 +143,7 @@ var $a:=$class.test
 
 :::
 
-4D は最も一般的なタイプを推論しようとします。 For instance, it uses the Real type rather than the Integer type when a variable is initialized with an integer value (e.g., `var $a:=10 //Real type is inferred`). このような場合や、クラスのインスタンス化など複雑な型を持つ変数を初期化する場合は、明示的に型を指定することが推奨されます。
+4D は最も一般的なタイプを推論しようとします。 たとえば、変数が整数値で初期化される場合、整数型ではなく実数型が使用されます (例: `var $a:=10 //実数型が推論されます`)。 このような場合や、クラスのインスタンス化など複雑な型を持つ変数を初期化する場合は、明示的に型を指定することが推奨されます。
 
 ほとんどの場合、変数の型は自動的に決まります。 例外は、プロセス変数やインタープロセス変数に値を代入した場合で、その場合は警告メッセージが表示されます。
 
@@ -152,7 +152,7 @@ var $a:=$class.test
 複数同時の代入はサポートされていません:
 
 ```4d
-var $a; $b : Integer:=15 //error
+var $a; $b : Integer:=15 //エラー
 
 ```
 
@@ -160,7 +160,7 @@ var $a; $b : Integer:=15 //error
 
 ## 変数への代入
 
-変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). 代入演算子はフィールドに対してデータを代入する場合にも使います。
+変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、**変数にデータを代入する** と言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドに対してデータを代入する場合にも使います。
 
 代入演算子は、変数を作成し、変数にデータを代入するために使用します。 作成する変数名を代入演算子の左側に書きます。 例:
 
@@ -168,17 +168,17 @@ var $a; $b : Integer:=15 //error
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. MyNumber が既に存在していれば、そこに数値 3が代入されます。
+は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
+> [データ型の宣言](#変数の宣言) をせずに変数を作成することは通常推奨されません。
 
-もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
+これで、_[Products]Size_ の値は 3 になります。 この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
 
 配列要素にデータを代入するには中カッコ ({...}) を使用します:
 
@@ -188,7 +188,7 @@ atNames{1}:="Richard"
 
 ## ローカル、プロセス、およびインタープロセス変数
 
-You can create three types of variables: **local**, **process**, and **interprocess**. これらの変数の違いは使用できるスコープにあります。また、それらを使用することのできるオブジェクトも異なります。
+**ローカル**、**プロセス**、および **インタープロセス** という、3種類の変数の変数を作成することができます。 これらの変数の違いは使用できるスコープにあります。また、それらを使用することのできるオブジェクトも異なります。
 
 ### ローカル変数
 
@@ -204,10 +204,10 @@ You can create three types of variables: **local**, **process**, and **interproc
 
 多くのメソッドや変数を持つアプリケーションプロジェクトで作業する場合、現在作業しているメソッドの範囲内で一時的に変数が必要となる場合がよくあります。 この場合、同じ変数名が他で使用されていないかどうかを気にすることなくローカル変数を作成することができます。
 
-アプリケーションではしばしば、ユーザーによる少量のデータ入力を必要とする場合があります。 The `Request` command can obtain this information. このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長時間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:
+アプリケーションではしばしば、ユーザーによる少量のデータ入力を必要とする場合があります。 `Request` コマンドを使って、この情報を取得することができます。 このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長時間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("ID を入力してください:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
@@ -215,7 +215,7 @@ You can create three types of variables: **local**, **process**, and **interproc
 
 このメソッドは、ユーザーに ID を入力するように要求します。 ローカル変数 $vsID にレスポンスが代入され、ユーザーが入力した ID に基づいた検索がおこなわれます。 このメソッドが終了した時点で、$vsID ローカル変数はメモリから消去されます。 この変数は 1回のみ、このメソッド内でしか使われないため、これ以上維持する必要はありません。
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**注:** メソッドに渡される $1, $2...等の引数は ローカル変数です。 詳細については [パラメーター](Concepts/parameters.md) を参照ください。
 
 ### プロセス変数
 
@@ -225,13 +225,13 @@ You can create three types of variables: **local**, **process**, and **interproc
 
 インタープリターモードでは、変数は動的にメモリ上に作成・消去されます。 これに対してコンパイルモードでは、作成したすべてのプロセス (ユーザープロセス) で同じプロセス変数定義が共有されますが、変数のインスタンスはプロセス毎に異なるものとなります。 たとえば、プロセスP_1 とプロセスP_2 の両方においてプロセス変数 myVar が存在していても、それらはそれぞれ別のインスタンスです。
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
+`GET PROCESS VARIABLE` や `SET PROCESS VARIABLE` を使用して、あるプロセスから他のプロセスのプロセス変数の値を取得したり、設定したりできます。 これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
 
 - コード内の特定の箇所におけるプロセス間通信
 - プロセス間のドラッグ＆ドロップ処理
 - クライアント/サーバーにおいて、クライアントマシン上のプロセスとサーバーマシン上のストアドプロシージャー間の通信
 
-For more information, see the chapter **Processes** and the description of these commands.
+詳細については **プロセス** の章と、各コマンドの説明を参照ください。
 
 ### インタープロセス変数
 
@@ -239,6 +239,6 @@ For more information, see the chapter **Processes** and the description of these
 
 > プリエンプティブプロセスにおいては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
-The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+インタープロセス変数の名前は、必ずインタープロセス記号 (`<>`) で始めます。記号の後に31バイトまでの名前を指定できます。
 
 クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。

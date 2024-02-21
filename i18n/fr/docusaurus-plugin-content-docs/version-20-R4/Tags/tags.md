@@ -1,7 +1,6 @@
 ---
 id: tags
-slug: tags
-title: Balises de transformation
+title: Transformation tags
 ---
 
 4D fournit un ensemble de balises de transformation qui vous permettent d'insérer des références à des variables ou des expressions 4D, ou d'effectuer différents types de traitement dans un texte source, appelé "template". Ces balises sont interprétées lors de l'exécution du texte source et génèrent un texte de sortie.
@@ -79,7 +78,7 @@ Passez le mot-clé "WEBFOLDER" pour rétablir le chemin par défaut (relatif à 
 Le code suivant, qui doit spécifier un chemin relatif pour chaque appel :
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DINCLUDE folder/subpage1.html-->
 <!--#4DINCLUDE folder/subpage2.html-->
 <!--#4DINCLUDE folder/subpage3.html-->
@@ -89,7 +88,7 @@ Le code suivant, qui doit spécifier un chemin relatif pour chaque appel :
 ...équivaut à :
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DBASE folder/-->
 <!--#4DINCLUDE subpage1.html-->
 <!--#4DINCLUDE subpage2.html-->
@@ -217,7 +216,7 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. À c
 
 ```html
     <table class="table">    
-         <!--#4DCODE 
+         <!--#4DCODE
             $salePersons:=getSalesPersons
           -->          
        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
@@ -264,9 +263,9 @@ var customers : cs.CustomersSelection
 var $input; $output : Text
 
 customers:=ds.Customers.all()
-$input:="<!--#4DEACH $cust in customers-->" 
+$input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->" 
+$input:=$input+"<!--#4DENDEACH-->"
 PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
@@ -514,7 +513,7 @@ The following code example:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/> 
+<!--#4DTEXT var--> <br/>
 <!--#4DENDLOOP-->
 ```
 

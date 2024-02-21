@@ -1,6 +1,6 @@
 ---
 id: sessions
-title: Sessões usuário
+title: User sessions
 ---
 
 The 4D web server provides built-in features for managing **user sessions**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
@@ -42,7 +42,7 @@ When [sessions are enabled](#enabling-sessions), automatic mechanisms are implem
 
 2. If the cookie has a value, 4D looks for the session that created this cookie among the existing sessions; if this session is found, it is reused for the call.
 
-2. If the client request does not correspond to an already opened session:
+2. Se a solicitação do cliente não corresponder a uma sessão já aberta:
 
 - a new session with a private "4DSID_*AppName*" cookie is created on the web server
 - a new Guest `Session` object is created and is dedicated to the scalable web session.

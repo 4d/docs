@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Prise en main
+title: Getting Started
 ---
 
 

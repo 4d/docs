@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Generalidades
+title: Overview
 ---
 
 Un proyecto 4D contiene todo el código fuente de una aplicación 4D, sin importar su tipo de despliegue (web, móvil o escritorio), de la estructura de la base de datos hasta la interfaz de usuario, incluyendo el código, los formularios, los menús, los parámetros usuario o cualquier recurso necesario. Un proyecto 4D se compone principalmente de archivos texto.

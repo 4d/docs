@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title: Affichage
+title: Display
 ---
 
 ---

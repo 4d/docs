@@ -1,6 +1,6 @@
 ---
 id: shapesOverview
-title: Formas
+title: Shapes
 ---
 
 As formas são [objectos estáticos](formObjects_overview.md#active-and-static-objects) que podem ser adicionados a formas 4D.

@@ -1,7 +1,6 @@
 ---
 id: verify
-title: Page Vérification
-sidebar_label: Page Vérification
+title: Verify Page
 ---
 
 Cette page permet de vérifier l’intégrité des données et de la structure. La vérification peut porter sur les enregistrements et/ou les index ainsi que sur les objets du développement (méthodes, formulaires...). La page effectue uniquement une vérification des objets. Si des erreurs sont trouvées et des réparations requises, il vous sera nécessaire d’utiliser la [Page Réparation](repair.md).

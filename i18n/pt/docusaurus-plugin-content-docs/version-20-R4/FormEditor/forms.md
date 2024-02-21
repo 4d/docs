@@ -1,6 +1,6 @@
 ---
 id: forms
-title: Formulários
+title: Forms
 ---
 
 
@@ -89,13 +89,13 @@ Cada formulário é composto por, pelo menos, duas páginas:
 - Place the most important information on the first page and less important information on other pages.
 - Organize cada tópico na sua própria página.
 - Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
-- Provide space around the form elements for an attractive screen design.
+- Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
 
 Não há restrições quanto ao número de páginas que um formulário pode ter. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
 
-A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
+Um formulário de múltiplas páginas possui tanto uma página de fundo quanto várias páginas de exibição. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
 
 ## Formulários herdados
 

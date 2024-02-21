@@ -74,9 +74,9 @@ Si la tabla *dsTable* no está expuesto en [`ds`](API/DataStoreClass.md#ds), se 
 
 En el parámetro opcional *settings*, puede pasar un objeto que contenga la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                             |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el [contexto de optimización](ORDA/entities.md#clientserver-optimization) aplicado a la entity selection. |
+| Propiedad | Tipo | Descripción                                                                                                                  |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Ejemplo
@@ -112,16 +112,27 @@ El comando `USE ENTITY SELECTION` actualiza la selección actual de la tabla que
 
 Este comando no puede utilizarse con un [datastore remoto](../ORDA/remoteDatastores.md).
 
-> Después de una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en la memoria. Si necesita utilizar los valores de los campos del registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
+
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+Después de una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en la memoria. Si necesita utilizar los valores de los campos del registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
+
+:::
 
 #### Ejemplo
 
 ```4d
-var $entitySel : Object
+var $entitySel : cs.EmployeeSelection
 
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel está asociado a la dataclass Employee 
+$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
 REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla Employee
+USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
 ```
 
 

@@ -1,6 +1,6 @@
 ---
 id: jsonReference
-title: Lista de propiedades JSON del formulario
+title: Form JSON property list
 ---
 
 Esta página ofrece una lista completa de todas las propiedades de los formularios, ordenadas por su nombre JSON. Haga clic en el nombre de una propiedad para acceder a su descripción detallada.

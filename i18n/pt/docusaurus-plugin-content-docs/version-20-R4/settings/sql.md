@@ -1,6 +1,6 @@
 ---
 id: sql
-title: Página SQL
+title: SQL page
 ---
 
 Esta página é utilizada para configurar os parâmetros de publicação, os direitos de acesso e as opções do motor do [servidor SQL 4D](https://doc.4d.com/What-s-new/4D-SQL-Reference-19-R3/Using-SQL-in-4D.200-5680718.en.html).

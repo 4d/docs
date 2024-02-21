@@ -116,7 +116,7 @@ Puede crear dos tipos de objetos:
 
 ## Propiedades
 
-You access object property values through a chain of tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
+Se accede a los valores de las propiedades de los objetos a través de una cadena de tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 
 - utilizando un símbolo de "punto":
   > object.propertyName
@@ -140,7 +140,7 @@ Ejemplos:
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+Dado que un valor de propiedad de un objeto puede ser un objeto o una colección, puede utilizar una secuencia de símbolos para acceder a subpropiedades, por ejemplo:
 
 ```4d
  $vAge:=employee.children[2].age
@@ -187,7 +187,7 @@ La notación de objetos está disponible en cualquier elemento del lenguaje que 
 
 ### Valor Null
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+When using the objects, the **null** value is supported though the **Null** command. Este comando se puede utilizar para asignar o comparar el valor null a propiedades de objetos, por ejemplo:
 
 ```4d
  myObject.address.zip:=Null
@@ -198,7 +198,7 @@ For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
 ### Valor indefinido
 
-La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Assigning an undefined value to an existing object property reinitializes or clears its value. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
+La evaluación de una propiedad de un objeto puede producir a veces un valor indefinido. Asignar un valor indefinido a una propiedad de objeto existente reinicializa o borra su valor. La asignación de un valor indefinido a una propiedad de objeto no existente no hace nada.
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 

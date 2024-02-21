@@ -1,6 +1,6 @@
 ---
 id: compute
-title: '$compute'
+title: $compute
 ---
 
 指定した属性を対象に計算をおこないます (*例*: `Employee/salary/?$compute=sum`。オブジェクト属性の例: `Employee/objectAtt.property1/?$compute=sum`)。

@@ -1,6 +1,6 @@
 ---
 id: propertiesPrint
-title: Imprimir
+title: Print
 ---
 
 ## Impresión marco

@@ -53,7 +53,7 @@ L'Explorateur de données prend en charge les navigateurs Web suivants :
 
 La résolution minimale pour utiliser l'Explorateur de données est de 1280x720. La résolution recommandée est de 1920x1080.
 
-### Principes de base
+### Basics
 
 L'Explorateur de données fournit un accès global au modèle de données ORDA conformément aux [règles de mapping ORDA](ORDA/dsMapping.md#general-rules).
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesScale
-title: Echelle
+title: Scale
 ---
 
 ## Barber shop

@@ -1,6 +1,6 @@
 ---
 id: expand
-title: '$expand'
+title: $expand
 ---
 
 

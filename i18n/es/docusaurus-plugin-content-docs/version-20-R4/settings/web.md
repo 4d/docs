@@ -1,6 +1,6 @@
 ---
 id: web
-title: Página Web
+title: Web page
 ---
 
 A través de las pestañas de la página **Web**, puede configurar varios aspectos del servidor web integrado de 4D (seguridad, inicio, conexiones, servicios web, etc.). Para más información sobre el funcionamiento del servidor web de 4D, consulte [Servidor web](../WebServer/webServer.md). Para más información sobre los servicios web de 4D, consulte el capítulo [Publicación y uso de los servicios web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).

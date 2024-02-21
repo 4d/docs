@@ -1,6 +1,6 @@
 ---
 id: top_$limit
-title: '$top/$limit'
+title: $top/$limit
 ---
 
 Limite le nombre d'entités à retourner (par exemple, `$top=50`)

@@ -85,7 +85,7 @@ En el parámetro *server*, pase un objeto que contenga las siguientes propiedade
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
-#### Resultado
+#### Result
 
 La función devuelve un [**IMAP transporter**](#imap-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 > La conexión IMAP se cierra automáticamente cuando se destruye el objeto transportador.
@@ -1069,7 +1069,7 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > * Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión con el último buzón especificado por [`.selectBox()`](#selectbox).
 
-#### Resultado
+#### Result
 
 `.getMails()` devuelve un objeto que contiene las siguientes colecciones:
 

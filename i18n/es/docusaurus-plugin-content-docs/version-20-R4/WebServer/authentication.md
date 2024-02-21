@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Autenticación
+title: Authentication
 ---
 
 La autentificación de los usuarios es necesaria cuando se desea ofrecer derechos de acceso específicos a los usuarios Web. La autenticación designa el modo en que se recoge y procesa la información relativa a las credenciales del usuario (normalmente nombre y contraseña).

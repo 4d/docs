@@ -148,7 +148,7 @@ El objeto `.bodyStructure` contiene las siguientes propiedades:
 
 #### Descripción
 
-La propiedad `.bodyValues` contiene el <!-- REF #EmailObjectClass.bodyValues.Summary -->objeto *EmailBodyValue*, que contiene un objeto para cada \<partID\> de `bodyStructure` (opcional)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#handling-body-part).
+La propiedad `.bodyValues` contiene el <!-- REF #EmailObjectClass.bodyValues.Summary -->objeto *EmailBodyValue*, que contiene un objeto para cada \<partID\> de `bodyStructure` (opcional)<!-- END REF -->. .
 
 El objeto `.bodyValues` contiene las siguientes propiedades:
 
@@ -215,7 +215,7 @@ Cada objeto de la colección de encabezados puede contener las siguientes propie
 
 #### Descripción
 
-La propiedad `.htmlBody` contiene la <!-- REF #EmailObjectClass.htmlBody.Summary -->representación HTML del mensaje de correo electrónico (el conjunto de caracteres por defecto es UTF-8) (opcional, sólo SMTP)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#handling-body-part).
+La propiedad `.htmlBody` contiene la <!-- REF #EmailObjectClass.htmlBody.Summary -->representación HTML del mensaje de correo electrónico (el conjunto de caracteres por defecto es UTF-8) (opcional, sólo SMTP)<!-- END REF -->. .
 
 ## .id
 
@@ -350,7 +350,7 @@ La propiedad `.subject` contiene la <!-- REF #EmailObjectClass.subject.Summary -
 
 #### Descripción
 
-La propiedad `.textBody` contiene el <!-- REF #EmailObjectClass.textBody.Summary -->Representación en texto plano del mensaje de correo electrónico (el conjunto de caracteres por defecto es UTF-8) (opcional, sólo SMTP)<!-- END REF -->. Ver la sección [Gestión del cuerpo](#handling-body-part).
+La propiedad `.textBody` contiene el <!-- REF #EmailObjectClass.textBody.Summary -->Representación en texto plano del mensaje de correo electrónico (el conjunto de caracteres por defecto es UTF-8) (opcional, sólo SMTP)<!-- END REF -->. .
 
 ## .to
 

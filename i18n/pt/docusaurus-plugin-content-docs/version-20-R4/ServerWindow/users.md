@@ -1,6 +1,6 @@
 ---
 id: users
-title: Página Usuários
+title: Users Page
 ---
 
 
@@ -38,7 +38,7 @@ Este estado liberta recursos no servidor. In addition, the 4D remote application
 
 The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. A máquina passa para o modo de suspensão. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
+> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. Você pode modificar esse tempo limite padrão usando o comando [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) com o seletor `Remote connection sleep timeout`.
 
 
 ## Área de pesquisa/filtragem

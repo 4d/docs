@@ -112,7 +112,17 @@ El comando `USE ENTITY SELECTION` actualiza la selección actual de la tabla que
 
 Este comando no puede utilizarse con un [datastore remoto](../ORDA/remoteDatastores.md).
 
-> Después de una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en la memoria. Si necesita utilizar los valores de los campos del registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+Después de una llamada a `USE ENTITY SELECTION`, el primer registro de la selección actual actualizada (si no está vacío) se convierte en el registro actual, pero no se carga en la memoria. Si necesita utilizar los valores de los campos del registro actual, utilice el comando `LOAD RECORD` después del comando `USE ENTITY SELECTION`.
+
+:::
 
 #### Ejemplo
 
@@ -814,6 +824,7 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 //$paths[4]="Children.length"
 ///...
 ```
+
 
 
 
@@ -1651,11 +1662,11 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
 
 ```4d
-// orden con fórmula
+// ordenar por fórmula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // orden con collection con o sin órdenes de clasificación
+  // ordenar por colección con o sin órdenes de clasificación
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1663,6 +1674,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
+
  $orderColl.push(New object("propertyPath";"salary"))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
 ```
@@ -2097,6 +2109,7 @@ Assuming we have ds. Employee.all().length = 10
 
 ```4d
 var $slice : cs.EmployeeSelection
+
 
 $slice:=ds.Employee.all().slice(-1;-2) //intenta devolver entidades del índice 9 al 8, pero como 9 > 8, devuelve una entity selection vacía
 

@@ -1,7 +1,6 @@
 ---
 id: encrypt
-title: Página de criptografia
-sidebar_label: Página de criptografia
+title: Encrypt Page
 ---
 
 Pode utilizar esta página para encriptar ou *decriptar* (ou seja, remover a encriptação) o ficheiro de dados, conforme o estado do atributo **Cifrável** definido para cada tabela no banco de dados.

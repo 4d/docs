@@ -1,6 +1,6 @@
 ---
 id: bars
-title: Barras de menus
+title: Menu bar features
 ---
 
 As barras de menu constituem a principal interface das aplicações personalizadas. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.

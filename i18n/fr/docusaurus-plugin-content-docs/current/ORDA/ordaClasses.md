@@ -131,17 +131,16 @@ Function GetBestOnes()
 Vous pouvez ensuite obtenir une sélection d'entité des "meilleures" entreprises en exécutant le code suivant :
 
 
-
-
-
-
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
 ```
 
-> [Les champs calculés](#computed-attributes) sont définis dans [la classe Entity](#entity-class).
+:::info
 
+[Les champs calculés](#computed-attributes) sont définis dans [la classe Entity](#entity-class).
+
+:::
 
 #### Exemple avec un datastore distant
 
@@ -196,16 +195,15 @@ Chaque table exposée avec ORDA affiche une classe EntitySelection dans le class
 #### Exemple
 
 ```4d
-// Classe cs.EmployeeSelection 
+// cs.EmployeeSelection class
 
 
-Classe extends EntitySelection
+Class extends EntitySelection
 
-//Extrait, de cette sélection d'entité, les employés ayant un salaire supérieur à la moyenne
+//Extract the employees with a salary greater than the average from this entity selection 
 
-Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+    return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -214,6 +212,13 @@ Vous pouvez alors obtenir les employés dont le salaire est supérieur à la moy
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
+
+:::info
+
+[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class).
+
+:::
+
 
 ### Entity Class
 
@@ -250,13 +255,13 @@ For information, please refer to the [Alias attributes](#alias-attributes-1) sec
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("population")
 
 
 Function isBigCity(): Boolean
-// La fonction getPopulation() est utilisable dans la classe
-$0:=This.getPopulation()>50000
+// The getPopulation() function is usable inside the class
+    return This.getPopulation()>50000
 ```
 
 Vous pouvez ensuite appeler ce code :
@@ -789,8 +794,6 @@ $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName and name are "Archaeology II"
 ```
-
-
 
 
 ## Fonctions exposées et non exposées

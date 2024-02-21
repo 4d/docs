@@ -1,7 +1,6 @@
 ---
 id: backup
-title: Página de respaldo
-sidebar_label: Página de respaldo
+title: Backup Page
 ---
 
 Puede utilizar la página de copia de seguridad para ver algunos parámetros de la copia de seguridad de la base y para lanzar una copia de seguridad manual:

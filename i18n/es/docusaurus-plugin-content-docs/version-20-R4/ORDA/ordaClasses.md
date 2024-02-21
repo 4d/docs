@@ -1,6 +1,6 @@
 ---
 id: ordaClasses
-title: Clases del modelo de datos
+title: Data Model Classes
 ---
 
 
@@ -679,9 +679,9 @@ Atributo alias [`kind`](../API/DataClassClass.md#attributename) es "alias".
 Un atributo alias hereda su propiedad [`type`](../API/DataClassClass.md#attributename) del atributo destino:
 
 - si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "storage", el tipo de datos del alias es del mismo tipo,
-- if the target attribute [`kind`](../API/DataClassClass.md#attributename) is "relatedEntity" or "relatedEntities", the alias data type is of the `4D.Entity` or `4D.EntitySelection` type ("*classname*Entity" or "*classname*Selection").
+- si el atributo de destino [`kind`](../API/DataClassClass.md#attributename) es "relatedEntity" o "relatedEntities", el tipo de datos del alias es del tipo `4D.Entity` o `4D.EntitySelection` ("*classname*Entity" o "*classname*Selection").
 
-Alias attributes based upon relations have a specific [`path`](../API/DataClassClass.md#attributename) property, containing the path of their target attributes. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
+Los atributos alias basados en relaciones tienen una propiedad específica [`path`](../API/DataClassClass.md#attributename), que contiene la ruta de sus atributos de destino. Los atributos de alias basados en atributos de la misma clase de datos tienen las mismas propiedades que sus atributos de destino (y ninguna propiedad `path`).
 
 
 ### Ejemplos

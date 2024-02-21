@@ -1,10 +1,9 @@
 ---
 id: information
-title: Página de informação
-sidebar_label: Página de informação
+title: Information Page
 ---
 
-The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
+The Information page provides information about the 4D and system environments, as well as the database and application files. Cada página pode ser exibida usando controles de guia na parte superior da janela.
 
 ## Programa
 
@@ -15,7 +14,7 @@ A parte central da janela indica o nome e local do projeto de bancos de dados e 
 - **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
   ![](../assets/en/MSC/MSC_popup.png) If you select a menu item (disk or folder), it is displayed in a new system window. The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
 
-- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. For more information about the location of this folder, refer to the `Get 4D folder` command. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
+- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. Para obter mais informações sobre a localização desta pasta, consulte o comando `Get 4D folder`. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
 
 ## Tabelas
 

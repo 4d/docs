@@ -1,6 +1,6 @@
 ---
 id: architecture
-title: Arquitetura de um projeto 4D
+title: Architecture of a project
 ---
 
 Um projeto 4D é composto por várias pastas e arquivos, armazenados numa pasta raiz do projeto (pasta de pacotes). Por exemplo:
@@ -150,7 +150,7 @@ A pasta Resources contém todos os arquivos e pastas de recursos personalizados 
 (*) apenas se o projeto tiver sido exportado de um banco de dados binário .4db.
 
 
-## `Data`
+## `Dados`
 
 A pasta Data contém o ficheiro de dados e todos os arquivo e pastas relacionados com os dados.
 

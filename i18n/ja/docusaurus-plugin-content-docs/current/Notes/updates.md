@@ -4,6 +4,17 @@ title: リリースノート
 ---
 
 
+## 4D v20 R5
+
+[**4D v20 R5 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R5/): 4D v20 R5 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+
+#### ハイライト
+
+- [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) エラー処理構文のサポート。
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
+- Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
+
+
 ## 4D v20 R4
 
 [**4D v20 R4 の新機能**](https://blog.4d.com/ja-whats-new-in-4d-v20-R4/): 4D v20 R4 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -16,18 +27,22 @@ title: リリースノート
 - HTML への直接の [ストラクチャー定義の書き出し](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.ja.html) をサポート。
 - 実行エラーを防ぐため、コード入力、シンタックスチェック、およびコンパイルステップにおけるコード管理を強化する新しい [コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー)。
 - `#DECLARE` プロトタイプで宣言されたメソッドの引数は、["Compiler_" メソッドではもはや必要ありません](../Concepts/parameters.md#コンパイル)。
+- [カスタムの日付と時間のフォーマット](../Project/date-time-formats.md) をサポート。
 - 新しい [`Try(expression)` キーワード](../Concepts/error-handling.md#tryexpression) で単純なエラーケースを処理できます。
 - 新しい [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message) コマンド。
 - 新しい [ノンブロッキング印刷](../settings/compatibility.md) 互換性オプション。
+- データエクスプローラーの新しい [編集モード](../Admin/dataExplorer.md#データの編集)。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6655756.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20R4/4D/20-R4/What-s-new.901-6683440.ja.html) ページ。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R4): 4D v20 R4 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/4/release-note-version-20r4/))。
 
 
+
 #### 動作の変更
 
-- Using a legacy syntax for declaring parameters (e.g. `C_TEXT($1)` or `var $1 : Text`) is now deprecated and generates warnings at code typing, syntax checking, and compilation steps.
-- In the updated [OpenSSL library](#library-table), the default SSL/TLS security level has been changed from 1 to 2. RSA, DSA and DH keys of 1024 bits and above and less than 2048 bits as well as ECC keys of 160 bits and above and less than 224 bits are now no longer allowed. By default, TLS compression was already disabled in previous OpenSSL versions. At security level 2 it cannot be enabled.
+- 引数を宣言するための従来のシンタックス (例: `C_TEXT($1)` や `var $1 : Text`) は非推奨となり、コードの入力時、シンタックスチェック、コンパイル時に警告が生成されます。
+- Selections are now kept consistent after some records have been deleted and others records created (see [this blog post](https://blog.4d.com/4d-keeps-your-selections-of-records-consistent-regarding-deletion-of-records/).
+- 更新された [OpenSSL ライブラリ](#ライブラリの一覧) では、デフォルトの SSL/TLS セキュリティレベルが 1 から 2 に変更されました。 1024ビット以上2048ビット未満のRSA、DSA、DH鍵、および 160ビット以上224ビット未満の ECC鍵は使用できなくなりました。 デフォルトでは、以前の OpenSSLバージョンですでに TLS圧縮が無効にされていました。 セキュリティレベル2では、これを有効化できません。
 
 
 ## 4D v20 R3
@@ -127,14 +142,13 @@ title: リリースノート
 - ユーザークラス定義で [`property`](../Concepts/classes.md#property) キーワードをサポート。
 - データストアをロック/ロック解除する新しい関数が追加されました: [`.flushAndLock()`](../API/DataStoreClass.md#flushandlock), [`.locked()`](../API/DataStoreClass.md#locked), [`.unlock()`](../API/DataStoreClass.md#unlock)。
 - EntitySelection クラスに新しく [`.at()`](../API/EntitySelectionClass.md#at) 関数が追加されました。
-- Collection クラスに次の新しい関数が追加されました: [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap), [`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright)。
+- Collection クラスに次の新しい関数が追加されました: [`.at()`](../API/CollectionClass.md#at), [`.first()`](../API/CollectionClass.md#first), [`.flat()`](../API/CollectionClass.md#flat), [`.flatMap()`](../API/CollectionClass.md#flatmap),[`.includes()`](../API/CollectionClass.md#includes), [`.last()`](../API/CollectionClass.md#last), [`.reduceRight()`](../API/CollectionClass.md#reduceright)。
 - コードエディター: 強化された [検索/置換機能](../code-editor/write-class-method.md#検索と置換)。
 - [**デザインモードを検索**](https://doc.4d.com/4Dv20/4D/20/Performing-a-search.300-6263762.ja.html#6337726) ダイアログボックスにおいて、"property" ランゲージ要素が新たに検索可能になりました。
 - コード簡素化のため、一部の比較演算子は [未定義値](../Concepts/dt_null_undefined.md#未定義演算子) に使用しても、エラーが発生しないようになりました。
 - [`POP3Transporter.getMail()`](../API/POP3TransporterClass.md#getmail) で *headerOnly* パラメーターをサポート。
 - [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
 - 新しい [`entitySelection.distinctPaths()`](../API/EntitySelectionClass.md#distinctpaths) 関数を追加しました。
-- [`entitySelection.distinct()`](../API/EntitySelectionClass.md#distinct) および [`collection.distinct()`](../API/CollectionClass.md#distinct) 関数で `count values` オプションをサポートしました。
 - ORDAリクエストログが [サーバー上 ](../Debugging/debugLogFiles.md#ordaリクエスト) で利用可能になり、[`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog) 関数に引数が追加されました。
 - CLI でコードを実行するための新しいツール: [tool4d](../Admin/cli.md#tool4d) および [ユーティリティモードの 4D Server](../Admin/cli.md#ユーティリティモードの-4d-server)。
 - [データエクスプローラー](../Admin/dataExplorer.md#データエクスプローラーを開く) 用の新しいツールバーボタンと 4Dウィンドウでの表示。
@@ -143,7 +157,7 @@ title: リリースノート
 - [`4D.HTTPRequest.new()`](../API/HTTPRequestClass.md#new) の新しいオプション `validateTLSCertificate` で、証明書の自動検証を管理できるようになりました。
 - 4Dランゲージコマンド: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6237190.ja.html) ページ。
 - 4D Write Pro: doc.4d.com の [新着](https://doc.4d.com/4Dv20/4D/20/What-s-new.901-6229455.ja.html) ページ。
-- 修正されたバグリスト: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) ([日本語版はこちら](https://4d-jp.github.io//2023/191/release-note-version-20/))。
+- 修正されたバグリスト: [4D v20](https://bugs.4d.fr/fixedbugslist?version=20) - [4D v20.1](https://bugs.4d.fr/fixedbugslist?version=20.1) ([日本語版はこちら](https://4d-jp.github.io/2024/35/release-note-version-20/))。
 
 
 #### 動作の変更
@@ -180,7 +194,7 @@ title: リリースノート
 
 - HTTP RFC に準拠するため、[`HTTPRequestClass.response.headers`](../API/HTTPRequestClass.md#response) プロパティは、すべてのヘッダー名を **小文字で** 返すようになりました。 以前と同じふるまいが必要な場合には、新しい [`HTTPRequestClass.response.rawHeaders`](../API/HTTPRequestClass.md#response) プロパティを使用します。
 - 標準アクションが適用されている [リンクされているポップアップメニューの付いたベベルボタン](../FormObjects/properties_TextAndPicture.md/#ポップアップメニューあり) で、ポップアップメニューのオプションが選択された場合、その標準アクションは実行されなくなりました。
-- Blink (CEF) を使用する Webエリアにおいて、外部スクリプトによって表示されるダイアログは、 `setTimeout()` JS 関数から呼び出されていないとブロックされるようになりました。 これは、現在のCEFのアップデートにより、`alert()` や `print()` などの関数によって表示されるダイアログが、OS ではなく Web エリアで処理されるようになったためです。 [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) と [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/ja/page1043.html) 参照。
+- Blink (CEF) を使用する Webエリアにおいて、外部スクリプトによって表示されるダイアログは、 `setTimeout()` JS 関数から呼び出されていないとブロックされるようになりました。 これは、現在のCEFのアップデートにより、`alert()` や `print()` などの関数によって表示されるダイアログが、OS ではなく Web エリアで処理されるようになったためです。 [`WA Evaluate JavaScript`](https://doc.4d.com/4dv19/help/command/ja/page1029.html) および [`WA EXECUTE JAVASCRIPT`](https://doc.4d.com/4dv19/help/command/ja/page1043.html) 参照。
 
 
 
@@ -217,7 +231,7 @@ title: リリースノート
 ## 4D v19 R6
 
 - 新しい [HTTPRequest](../API/HTTPRequestClass.md) クラス。
-- コードを呼び出すタイプの Collectionクラス関数が、*formula* 引数として Formulaオブジェクトをサポートするようになりました: [`.every()`](../API/CollectionClass,md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
+- コードを呼び出すタイプの Collectionクラス関数が、*formula* 引数として Formulaオブジェクトをサポートするようになりました: [`.every()`](../API/CollectionClass.md#every), [`.filter()`](../API/CollectionClass.md#filter), [`.find()`](../API/CollectionClass.md#find), [`.findIndex()`](../API/CollectionClass.md#findindex), [`.map()`](../API/CollectionClass.md#map), [`.orderByMethod()`](../API/CollectionClass.md#orderbymethod), [`.reduce()`](../API/CollectionClass.md#reduce), [`.some()`](../API/CollectionClass.md#some), [`.sort()`](../API/CollectionClass.md#sort)
 - リストボックスのセルは、[横方向](../FormObjects/properties_CoordinatesAndSizing.md#横方向パディング) および [縦方向](../FormObjects/properties_CoordinatesAndSizing.md#縦方向パディング) のパディングをサポートするようになりました。
 - 4D View Pro: 新しい [VP CREATE TABLE](../ViewPro/method-list.md#vp-create-table) と [VP REMOVE TABLE](../ViewPro/method-list.md#vp-remove-table) コマンドを使用して、シート内のテーブルを操作します。
 - [Webデータエクスプローラー](../Admin/dataExplorer.md#基本) でリレート属性、計算属性、およびエイリアス属性を表示することができます。
@@ -375,18 +389,18 @@ ALERT($param1+" "+$param2)
 
 
 
-| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                                                            |
-| --------- | --------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
-| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                                                              |
-| CEF       | 118       | 20 R3          | Chromium 5993                                                                                                 |
-| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                        |
-| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                                                                           |
-| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                                                              |
-| OpenSSL   | 3.2.0     | 20 R4          | Default TLS/SSL security level has been upgraded. See [Behavior changes](#behavior-changes) for release 20 R4 |
-| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                         |
-| LZMA      | 5.4.1     | 20             |                                                                                                               |
-| Zlib      | 1.2.13    | 20             |                                                                                                               |
-| webKit    | WKWebView | 19             |                                                                                                               |
-| PHP       | 8.2.4     | 20             |                                                                                                               |
-| libldap   | 2.6.4     | 20 R3          |                                                                                                               |
-| libsasl   | 2.1.28    | 20             |                                                                                                               |
+| ライブラリ     | 現在のバージョン  | 更新された 4D バージョン | 説明                                                                      |
+| --------- | --------- | -------------- | ----------------------------------------------------------------------- |
+| ICU       | 73.2      | 20.1           | このアップグレードにより、英数字とテキスト、オブジェクトのインデックスが自動的に再構築されます。                        |
+| CEF       | 121       | 20 R5          | Chromium 6167                                                           |
+| Hunspell  | 1.7.2     | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                  |
+| PDFWriter | 4.3       | 20             | 12.2.1 で FreeType依存                                                     |
+| SpreadJS  | 16.2.6    | 20 R4          | 4D View Pro エンジン                                                        |
+| OpenSSL   | 3.2.0     | 20 R4          | デフォルトの TLS/SSL セキュリティレベルがアップグレードされました。 リリース v20R4 の [動作の変更](#動作の変更) 参照。 |
+| libZip    | 1.9.2     | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                   |
+| LZMA      | 5.4.1     | 20             |                                                                         |
+| Zlib      | 1.2.13    | 20             |                                                                         |
+| webKit    | WKWebView | 19             |                                                                         |
+| PHP       | 8.2.4     | 20             |                                                                         |
+| libldap   | 2.6.4     | 20 R3          |                                                                         |
+| libsasl   | 2.1.28    | 20             |                                                                         |

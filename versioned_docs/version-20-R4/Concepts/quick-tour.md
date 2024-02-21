@@ -1,7 +1,6 @@
 ---
 id: quick-tour
 title: A Quick Tour
-sidebar_label: A Quick Tour
 ---
 
 Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
@@ -211,6 +210,7 @@ $o:=cs.myClass.new()
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance. 
 
 ```4d  
+
 //in the myClass.4dm file
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who

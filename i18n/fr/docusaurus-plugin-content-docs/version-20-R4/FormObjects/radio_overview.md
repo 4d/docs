@@ -1,6 +1,6 @@
 ---
 id: radiobuttonOverview
-title: Bouton radio
+title: Radio Button
 ---
 
 Les boutons radio sont des objets qui permettent à l’utilisateur de sélectionner une valeur parmi un groupe de valeurs.
@@ -24,7 +24,7 @@ Les boutons radio sont contrôlés par des méthodes. Comme pour tous les bouton
 ![](../assets/en/FormObjects/radio2.png)
 
 Sélectionner un bouton radio d’un groupe met ce bouton à 1 et les autres boutons du groupe à 0. Un seul bouton radio du groupe peut être sélectionné à la fois.
-> You can associate [Boolean type expressions](properties_Object.md#variable-or-expression) with radio buttons. In this case, when a radio button in a group is selected, its variable is True and the variables for the group's other radio buttons are False.
+> You can associate [Boolean type expressions](properties_Object.md#variable-or-expression) with radio buttons. Dans ce cas, lorsqu'un bouton radio d'un groupe est sélectionné, sa variable est True et les variables des autres boutons radio du groupe sont False.
 
 La valeur contenue dans un objet bouton radio n’est pas sauvegardée automatiquement (hormis s'il s'agit de la représentation d'un champ booléen) ; les valeurs des boutons radio doivent être stockées dans leurs variables et gérées à l’aide de méthodes.
 

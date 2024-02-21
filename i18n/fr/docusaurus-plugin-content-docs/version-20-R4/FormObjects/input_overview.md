@@ -1,6 +1,6 @@
 ---
 id: inputOverview
-title: Zone de saisie
+title: Input
 ---
 
 

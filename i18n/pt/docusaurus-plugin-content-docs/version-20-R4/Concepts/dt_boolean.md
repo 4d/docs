@@ -1,6 +1,6 @@
 ---
 id: boolean
-title: Parâmetros
+title: Boolean
 ---
 
 Um campo booleano, variável ou expressão pode ser VERDADEIRO ou FALSO.

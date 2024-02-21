@@ -1,7 +1,6 @@
 ---
 id: webServer
-slug: overview
-title: Serveur Web
+title: Web Server
 ---
 
 4D en mode local et remote ainsi que 4D Server disposent d'un moteur de serveur web intégré (aussi appelé serveur HTTP) qui vous permet de créer et publier des applications web afin de tirer le maximum de vos bases de données 4D.
@@ -54,7 +53,7 @@ Le serveur web 4D offre un accès aux données stockées dans vos applications 4
 
 * **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
-* [specific URLs](httpRequests.md) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+* [Les URLs spécifiques](httpRequests.md) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des formulaires HTML.
 
 ## Méthodes base dédiées
 

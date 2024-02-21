@@ -1,7 +1,6 @@
 ---
 id: encrypt
-title: Page chiffrement
-sidebar_label: Page chiffrement
+title: Encrypt Page
 ---
 
 Vous pouvez vous aider de cette page pour chiffrer ou *déchiffrer* (i.e. enlever le chiffrement) le fichier de données, en fonction du statut de l'attribut **Chiffrable** défini pour chaque table de la base.

@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Página Métodos
+title: Methods Page
 ---
 
 Esta página contém parâmetros que definem a interface do Editor de código e a sua visualização predefinida, bem como opções relativas ao seu funcionamento. Está dividida em duas secções às quais se acede através dos separadores Tema e Opções.

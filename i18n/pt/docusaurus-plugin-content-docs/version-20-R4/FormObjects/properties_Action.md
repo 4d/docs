@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Ação
+title: Action
 ---
 
 
@@ -17,7 +17,7 @@ Estão disponíveis dois modos de arrastamento:
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png) Neste modo, o evento do formulário `On Begin Drag` NÃO é gerado. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. Esta opção não está disponível para as imagens.
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
+Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) no manual *Linguajem 4D*.
 
 #### Gramática JSON
 
@@ -48,7 +48,7 @@ Há dois modos de soltar em 4D:
   In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
 - **Automático**: neste modo, 4D gere automaticamente - se possível - a inserção de dados arrastados do tipo texto ou imagem largada no objeto (os dados são colados no objeto). Os eventos formulário `On Drag Over` e `On Drop` NÃO são gerados. Por outro lado, são gerados os eventos `On After Edit` (durante a descida) e `On Data Change` (quando o objeto perde o foco).
 
-For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
+Para mais informações, consulte [Arraste e Solte](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) no manual *Linguajem 4D*.
 
 
 #### Gramática JSON

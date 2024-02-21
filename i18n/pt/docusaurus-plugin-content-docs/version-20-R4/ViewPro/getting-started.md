@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Começando
+title: Getting Started
 ---
 
 
@@ -83,7 +83,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   clique numa célula ou num intervalo de células:
-    *   **Filter**: allows hiding row through filters (see "Filtering rows" in the [SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/)).
+    *   **Filtrar**: permite ocultar linhas através de filtros (consulte "Filtragem linhas" na [documentação SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
     *   **Ordenar**: ordena o conteúdo da coluna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](../assets/en/ViewPro/vpContext2.PNG)
@@ -154,7 +154,7 @@ Os objectos intervalo 4D View Pro são compostos por várias propriedades:
 
 ## Importação e exportação de documentos
 
-4D View Pro supports the import and export of several document formats:
+4D View Pro suporta a importação e exportação de vários formatos de documentos:
 
 * .4vp
 * .xlsx

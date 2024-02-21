@@ -1,7 +1,6 @@
 ---
 id: webServer
-slug: overview
-title: Servidor Web
+title: Web Server
 ---
 
 4D en modo local y remoto y 4D Server incluyen un motor de servidor web (también conocido como servidor http) que le permite diseñar y publicar poderosas aplicaciones web que pueden aprovechar al máximo sus bases de datos 4D.

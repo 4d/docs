@@ -1,6 +1,6 @@
 ---
 id: data-collect
-title: Recolha de dados
+title: Data Collection
 ---
 
 Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário.

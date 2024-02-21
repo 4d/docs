@@ -3,15 +3,15 @@ id: qodly-studio
 title: Qodly Studio
 ---
 
-:::caution Developer Preview
+:::caution デベロッパー・プレビュー
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. 本番環境で使用すべきではありません。
+4D の Qodly Studio は現在、**デベロッパー・プレビュー** の段階です。 本番環境で使用すべきではありません。
 
 :::
 
-**Qodly Studio** is part of the **Qodly platform**, dedicated to the development of web business applications designed, tested and published entirely in the Qodly Cloud.
+**Qodly Studio** は、設計・テスト・公開がすべて Qodlyクラウドでおこなわれる Webビジネスアプリケーションの開発に特化した **Qodly プラットフォーム** の一部です。
 
-As of 4D v20 R2, you can use Qodly Studio directly from 4D to build modern and sophisticated web interfaces that you can easily integrate to your existing 4D projects and deploy **on premise**.
+4D v20 R2 では、 4D から直接 Qodly Studio を使用して、モダンで洗練された Webインターフェースをビルドし、既存の 4Dプロジェクトに簡単に統合して、**オンプレミス** で運用することができます。
 
 Qodly Studio では、全く新しい WebUI を使い、データソースの概念に慣れ、次の操作を学ぶことができます:
 
@@ -50,7 +50,7 @@ Qodly Studio は、以下の Webブラウザーをサポートしています:
 
 デフォルトでは、Qodly Studio へのアクセスは許可されていません。
 
-Qodly Studio is served by the [WebAdmin web server](../Admin/webAdmin.md) and displays data from 4D projects handled by the [4D web server](webServer.md).
+Qodly Studioは、[WebAdmin Webサーバー](../Admin/webAdmin.md) によって提供され、表示される 4Dプロジェクトのデータは [4D Webサーバー](webServer.md) によって処理されます。
 
 Qodly Studio へのアクセスを有効化するには、2つのレベルで明示的に許可する必要があります:
 
@@ -61,7 +61,7 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 #### 4Dレベルで
 
-As a first security level, you need to [allow access to Qodly Studio on the WebAdmin web server](../Admin/webAdmin.md#enable-access-to-qodly-studio).
+最初のセキュリティレベルとして、[WebAdmin Webサーバーで Qodly Studio へのアクセスを許可](../Admin/webAdmin.md#qodly-studio-へのアクセスを有効化する) する必要があります。
 
 この設定は、ホストマシンの 4Dアプリケーション (4D または 4D Server) が対象となります。 つまり、その 4Dアプリケーションで開くすべてのプロジェクトで、この設定が適用されます。
 
@@ -69,48 +69,48 @@ As a first security level, you need to [allow access to Qodly Studio on the WebA
 
 このオプションにチェックを入れると、Qodly Studio にアクセスできるようになります。 さらに、各プロジェクトのレベルでも許可が必要です。
 
-Additionally, you can [configure the WebAdmin web server's HTTP/HTTPS port used](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+さらに、[WebAdmin Webサーバーの HTTP/HTTPS ポートを設定](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) することもできます。
 
 :::note
 
-After any change to these settings, you must [restart the WebAdmin web server](../Admin/webAdmin.md#start-and-stop) for the new configuration to be effective.
+これらの設定を変更した後、新しい設定を有効にするには、[WebAdmin Web サーバー](../Admin/webAdmin.md#開始と停止) を再起動する必要があります。
 
 :::
 
 #### プロジェクトレベルで
 
-4Dレベルで Qodly Studio へのアクセスを有効にした後、アクセスできるプロジェクトをそれぞれ明示的に指定する必要があります。 The **Enable access to Qodly Studio** option must be enabled on the [Web Features page of the 4D application's Settings](../settings/web.md#enable-access-to-qodly-studio).
+4Dレベルで Qodly Studio へのアクセスを有効にした後、アクセスできるプロジェクトをそれぞれ明示的に指定する必要があります。 **Qodly Studio へのアクセスを有効化する** オプションは、[プロジェクト設定の Web機能ページ](../settings/web.md#qodly-studio-へのアクセスを有効化する) で有効にする必要があります。
 
-Keep in mind that [user settings](../settings/overview.md) can be defined at several levels, and that priorities apply.
+[ユーザー設定](../settings/overview.md) はいくつかのレベルで定義でき、優先順位が適用されることに留意してください。
 
 ### 認証を有効化する
 
-WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 For more details, see [Access key](../Admin/webAdmin.md#access-key).
+WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 詳しくは、[アクセスキー](../Admin/webAdmin.md#アクセスキー) を参照ください。
 
 ### レンダリングを有効化する
 
 Qodly Studio で作成した Webフォームのレンダリングを有効にするには、以下のオプションを設定する必要があります。
 
-- The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated
-- The [4D web server](webServer.md) must be running
+- 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
+- [4D Webサーバー](webServer.md) を起動しておく必要があります。
 
-When rendering webforms in the Web Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Qodly Studio で Webフォームをレンダリングする際、レンダラーは設定により、[WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render webforms in Qodly.
+Qodly で Webフォームをレンダリングする方法については [このページ](https://developer.qodly.com/docs/studio/rendering) を参照ください。
 
 :::
 
-Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=WebFormName` on your machine.
+"新しいタブでプレビュー" ボタンをクリックすると、マシン上で `IP:port/$lib/renderer/?w=WebFormName` のタブが開くことに注意してください。
 
 Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 開発者として Qodly Studio を使用する場合、Webフォームをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
 
-しかし、実際の Webフォームのレンダリングは 4D Web Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
+しかし、実際の Webフォームのレンダリングは 4D Web Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
 
 :::note
 
-[Renderer buttons](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) are hidden if the configuration options are not activated.
+設定オプションが有効になっていない場合、[レンダラー ボタン](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) は非表示です。
 
 :::
 
@@ -123,16 +123,16 @@ Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに�
 推奨される方法は、プロジェクトメソッドではなく、クラス関数を使用することです。 コンポーネントから呼び出すことが可能なのは、クラス関数のみです。 それでも、次の 2つの方法で、Qodly Studio でもプロジェクトメソッドを使用できます:
 
 - クラス関数からメソッドを呼び出すことができます。
-- You can directly [execute your methods](https://developer.qodly.com/docs/studio/coding#methods-and-classes) from the Qodly Explorer.
+- Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
 
 ## Qodly Studio を開く
 
-The Qodly Studio page is available when the [WebAdmin web server is running](../Admin/webAdmin.md#start-and-stop) and authentication is activated (see above).
+Qodly Studio ページは、[WebAdmin Webサーバーが起動されており](../Admin/webAdmin.md#開始と停止)、認証が有効化されている場合に使用できます (上述参照)。
 
 Qodly Studio にアクセスするには 2つの方法があります:
 
-- from your 4D single-user application, go to **Design** > **Qodly Studio...**.
-  If the WebAdmin web server is already running, depending on its configuration, your default browser opens at `IPaddress:HTTPPort/studio` or `IPaddress:HTTPSPort/studio`. それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
+- 4Dシングルユーザーアプリケーションから、**デザイン** > **Qodly Studio...** を選択します。
+  WebAdmin Webサーバーがすでに起動されている場合は、その設定に応じて、デフォルトのブラウザーが `IPaddress:HTTPPort/studio` または `IPaddress:HTTPSPort/studio` を開きます。 それ以外の場合は、最初に WebAdmin Webサーバーを起動するかどうかを尋ねるメッセージが表示されます。
 
 - 4D または 4D Server から WebAdmin Webサーバーが起動されている状態で、ブラウザーに次のアドレスを入力します:
 
@@ -146,11 +146,11 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 `localhost:7080/studio`
 
-You will then be prompted to enter the [access key](../Admin/webAdmin.md#access-key) to access Qodly Studio.
+すると、Qodly Studio にアクセスするための [アクセスキー](../Admin/webAdmin.md#アクセスキー) の入力を求められます。
 
 ## Qodly Studio を使う
 
-The official Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
+公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
 Webフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します。
 
@@ -162,33 +162,33 @@ Webフォームを利用した Webアプリケーションを開発するには�
 
 ### 機能の比較
 
-|                                                                               | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                                                          | Qodlyデベロッパー向けの Qodly Studio               |
-| ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                           | Qodly Studio Model Editor                 |
-| Webフォーム                                                                       | Qodly Studio Webform Editor                                                                                    | Qodly Studio Webform Editor               |
-| デスクトップフォーム                                                                    | 4D IDE                                                                                                         | _not supported_                           |
-| プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                          | QodlyScript (ORDA を使用) |
-| コーディング IDE                                                                    | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio コードエディター                     |
-| デバッガー                                                                         | 4D IDE デバッガー                                                                                                   | Qodly Studio デバッガー                        |
-| REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                 | Qodly Studio ロールとアクセス権エディター               |
+|                                                                               | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                                                 | Qodlyデベロッパー向けの Qodly Studio               |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor                 |
+| Webフォーム                                                                       | Qodly Studio Webform Editor                                                                           | Qodly Studio Webform Editor               |
+| デスクトップフォーム                                                                    | 4D IDE                                                                                                | _サポートされていません_                             |
+| プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                 | QodlyScript (ORDA を使用) |
+| コーディング IDE                                                                    | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター                     |
+| デバッガー                                                                         | 4D IDE デバッガー                                                                                          | Qodly Studio デバッガー                        |
+| REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                        | Qodly Studio ロールとアクセス権エディター               |
 
-(1) If you click on the **Model** button in Qodly Studio, nothing happens.
+(1) Qodly Studio で **Model** ボタンをクリックしても、何も起こりません。
 (2) Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 ### プロジェクト管理
 
 4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
-- development with Qodly Studio must be done using **4D** (single-user).
-- deployment of 4D applications powered with Qodly webforms must be done using **4D Server**.
+- Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
+- Qodly Webフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 ### QodlyScript から 4Dランゲージへ
 
-4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their webforms in Qodly Studio. コードの例は QodlyScript で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 QodlyScript コードを 4Dランゲージに変換するのは簡単で、いくつかの調整が必要なだけです:
+[Qodly Studio ドキュメント](developer.qodly.com/docs/studio) を使用して、4Dデベロッパーは、Qodly Studio で Webフォームを設計する方法を学ぶことができます。 コードの例は QodlyScript で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 QodlyScript コードを 4Dランゲージに変換するのは簡単で、いくつかの調整が必要なだけです:
 
 #### 変数名
 
-QodlyScript only support local variables, so variables in QodlyScript examples are not prefixed with `$`. In the 4D code, make sure to **prefix variable names with `$`** so that they are identifed as local variables by 4D.
+QodlyScript はローカル変数のみをサポートするため、QodlyScript の例題では、変数に `$` という接頭辞が付きません。 4Dコードでは、4D によってローカル変数として識別されるように、**変数名の前には必ず `$` を付けてください**。
 
 #### 記号とキーワード
 
@@ -208,13 +208,13 @@ QodlyScript only support local variables, so variables in QodlyScript examples a
 | string      | Text                                                        | 変数の型     |
 | number      | Real                                                        | 変数の型     |
 
-Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
+他の一部の項目では文字の大小が異なりますが (例: `this` と `This`)、4Dコードに直接貼り付けることができます。
 
 #### コマンド名
 
 QodlyScript のコマンド名は、スペースを入れずにキャメルケースで記述されます。 これらのコマンドを 4Dランゲージに変換する必要がある場合があります。
 
-- 通常は、単に名前を変換するだけで十分です。 For example, `newCollection` in QodlyScript is `New collection` in 4D Language.
+- 通常は、単に名前を変換するだけで十分です。 たとえば、QodlyScript の `newCollection` は 4Dランゲージの `New collection` です。
 - ただし、コンプライアンス向上のため、一部のコマンドでは名前が変更されました。 以下に一覧を示します:
 
 | QodlyScript            | 4Dランゲージ          |
@@ -273,8 +273,8 @@ QodlyScript のコマンド名は、スペースを入れずにキャメルケ�
 
 コンピュータがインターネットに接続されていない状態でも、Qodly Studio を使って開発することができます。 ただしこの場合、以下の機能は使用できません:
 
-- [Templates](https://developer.qodly.com/docs/studio/design-webforms/templates): the Template library is empty
-- UI tips: they are not displayed when you click on ![alt-text](../assets/en/WebServer/tips.png) icons.
+- [テンプレート](https://developer.qodly.com/docs/studio/design-webforms/templates): テンプレートライブラリは空です。
+- UI Tips: ![alt-text](../assets/en/WebServer/tips.png)アイコンをクリックしても表示されません。
 
 ## ライセンスの使用について
 
@@ -284,19 +284,19 @@ Webフォームをレンダリングするには、プロジェクトデータ�
 
 Qodly Studio の URLスキーム設定 (HTTP および HTTPS) によって、Webフォームのレンダリング時に使用されるライセンスの数が決まります。 適切な設定により、不要なライセンスの使用を回避できます。
 
-As explained in the [configuration](#configuration) section, the WebAdmin web server provides a secured web access to Qodly Studio. On the other hand, the [renderer](#rendering-webforms) communicates with the 4D web server of the database using REST requests. そのため、従来の 4Dクライアントと同じように動作します。
+[設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 一方、[レンダラー](#レンダリングを有効化する) は RESTリクエストを使用してデータベースの 4D Webサーバーと通信します。 そのため、従来の 4Dクライアントと同じように動作します。 そのため、従来の 4Dクライアントと同じように動作します。
 
 Qodly Studio からレンダラーを実行する際、これら 2つの Webサーバーに同じ URLスキーム (HTTP または HTTPS) 経由でアクセスしていない場合には、ライセンスのカウントが正しくおこなわれない可能性があります。
 
 #### 例題
 
-1. You run the Qodly Studio on an HTTPS URL scheme (e.g. `https://127.0.0.1:7443/studio/`)
+1. Qodly Studio を HTTPS URLスキームで実行します (例: `https://127.0.0.1:7443/studio/`)
 
 2. データベースの Webサーバーは HTTPポート上でのみ起動します。
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **rendering** icon. You are warned that the two web servers are started on different schemes, but despite this you click on the **Confirm** button.
+3. Qodly Studioで、**レンダリング** アイコンをクリックします。 2つの Webサーバーが異なるスキームで起動されていることを警告されますが、それにもかかわらず、**Confirm** ボタンをクリックします。
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
@@ -310,19 +310,19 @@ Qodly Studio のユーザー設定で、レンダラーのポップオーバー�
 
 ### SameSite 属性
 
-先に説明したふるまいは、4D Webサーバーのセッションcookie によるものです。 This session cookie has a `SameSite` attribute that determines if the session cookie is sent to the web server.
+先に説明したふるまいは、4D Webサーバーのセッションcookie によるものです。 このセッションcookie には、`SameSite` 属性があり、セッションcookie が Webサーバーに送信されるかどうかを決定します。
 
-If the `SameSite` attribute's value is `Strict` (default), the session cookie is not sent to the web server, so a new session is opened each time a page is rendered or refreshed.
+`SameSite` 属性の値が `Strict` (デフォルト) の場合、セッションcookie は Webサーバーに送信されないため、ページが表示されたり更新されたりするたびに新しいセッションが開かれます。
 
-For more information on the `SameSite` attribute, check out [this blog post](https://blog.4d.com/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/).
+`SameSite` 属性の詳細については、[このブログ記事](https://blog.4d.com/ja/get-ready-for-the-new-SameSite-and-secure-attributes-for-cookies/) を参照ください。
 
 ### 推奨事項
 
 必要以上のライセンスを使用しないため、次のいずれかをお勧めします:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=WebFormName`).
+- 別のブラウザータブでレンダラーを実行します (Webフォームがレンダリングされた URL `IP:port/$lib/renderer/?w=WebFormName` を入力します)。
 - Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
-- Use the `Lax` value for the [session cookie](webServerConfig.md#session-cookie-samesite) of your project database's web server.
+- プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
 
 ## Hello, World
 

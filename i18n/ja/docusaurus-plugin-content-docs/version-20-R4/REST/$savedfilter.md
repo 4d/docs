@@ -1,6 +1,6 @@
 ---
 id: savedfilter
-title: '$savedfilter'
+title: $savedfilter
 ---
 
 エンティティセット作成時に、$filter に定義したフィルターを保存します (*例*: `$savedfilter="{filter}"`)

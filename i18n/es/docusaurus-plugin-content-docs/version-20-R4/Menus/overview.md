@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Menús
+title: Menus
 ---
 
 Puede crear barras de menús y menús para sus aplicaciones 4D. Dado que los menús desplegables son una funcionalidad estándar de toda aplicación de escritorio, su adición facilitará el uso de sus aplicaciones y hará que los usuarios las sientan familiares.

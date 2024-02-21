@@ -1,6 +1,6 @@
 ---
 id: about
-title: Sobre a linguagem 4D
+title: About the 4D Language
 ---
 
 A linguagem integrada 4D, que conta com mais de 1300 comandos, faz com que 4D seja uma ferramenta de desenvolvimento poderosa para aplicações de banco de dados em computadores desktop. Pode usar a linguagem 4D para muitas tarefas diferentes, desde a realização de cálculos simples até a criação de interfaces complexas de usuário personalizadas. Por exemplo é possível:

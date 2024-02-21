@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Evénements formulaire
+title: Form Events
 ---
 
 Les événements formulaire sont des événements qui peuvent conduire à l'exécution de la méthode de formulaire et/ou de la ou des méthodes objet de formulaire. Les événements de formulaire vous permettent de contrôler le flux de votre application et d'écrire du code qui n'est exécuté que lorsqu'un événement spécifique se produit.

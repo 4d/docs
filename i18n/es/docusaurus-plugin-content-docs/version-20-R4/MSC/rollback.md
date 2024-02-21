@@ -1,7 +1,6 @@
 ---
 id: rollback
-title: Página Retroceso
-sidebar_label: Página Retroceso
+title: Rollback Page
 ---
 
 La página Retroceso permite acceder a la función de retorno entre las operaciones realizadas en el archivo de datos. Se asemeja a una función de anulación aplicada en varios niveles. Es especialmente útil cuando un registro ha sido borrado por error en una base de datos.

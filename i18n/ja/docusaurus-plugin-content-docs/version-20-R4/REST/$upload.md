@@ -1,6 +1,6 @@
 ---
 id: upload
-title: '$upload'
+title: $upload
 ---
 
 

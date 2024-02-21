@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Gestão de erros
+title: Error handling
 ---
 
 O manejo de erros é o processo de antecipar e responder aos erros que possam ocorrer em sua aplicação. 4D oferece assistência completa à detecção e notificação de erros no tempo de execução, assim como a análise de suas condições.
@@ -148,7 +148,7 @@ Try (expression) : any | Undefined
 
 If an error occurred during its execution, it is intercepted and no error dialog is displayed, whether an [error-handling method](#installing-an-error-handling-method) was installed or not before the call to `Try()`. Se *expression* retorna um valor, `Try()` retorna o último valor calculado, caso contrário, ele retorna `Undefined`.
 
-You can handle the error(s) using the [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html) command. If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
+Você pode tratar o(s) erro(s) usando o comando [`Last errors`](https://doc.4d.com/4dv20/help/command/en/page1799.html). If *expression* throws an error within a stack of `Try()` calls, the execution flow stops and returns to the latest executed `Try()` (the first found back in the call stack).
 
 :::note
 

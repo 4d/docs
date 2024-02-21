@@ -1,6 +1,6 @@
 ---
 id: web
-title: Page Web
+title: Web page
 ---
 
 Les onglets de la page **Web** permettent de paramétrer les multiples aspects du serveur Web intégré de 4D (sécurité, démarrage, connexions, services Web, etc.). Pour plus d’informations sur le fonctionnement du serveur Web de 4D, reportez-vous au chapitre [Serveur Web](../WebServer/webServer.md). Pour plus d’informations sur les services Web de 4D, reportez-vous au chapitre [Publication et utilisation de Services Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).

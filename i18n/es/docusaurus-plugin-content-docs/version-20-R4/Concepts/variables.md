@@ -38,7 +38,7 @@ Cuando una variable se crea antes de ser declarada, no se inicializa en el paso 
 
 :::
 
-To declare a variable of any type, use the following syntax:
+Para declarar una variable de cualquier tipo, utilice la siguiente sintaxis:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
@@ -59,9 +59,9 @@ This syntax only supports [local and process variables](#local-process-and-inter
 - a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
 
-If `varType` is omitted, a variable of the **variant** type is created.
+Si se omite `varType`, se crea una variable de tipo **variant**.
 
-The following table lists all supported `varType` values:
+La siguiente tabla enumera todos los valores `varType` soportados:
 
 | varType                     | Contenido                                                   |
 | --------------------------- | ----------------------------------------------------------- |
@@ -133,7 +133,7 @@ var $mycol:=[] // Inferido como Colección
 
 :::note
 
-The inferred type might be different between [interpreted and compiled mode](interpreted.md) if the evaluation of the value is too ambiguous. En este caso, el compilador genera una advertencia y se utiliza un tipo variable. Por ejemplo, en el siguiente $a el tipo se inferirá correctamente en modo interpretado (Texto), pero la comprobación sintáctica generará una advertencia y $a se escribirá como una variable para el modo compilado.
+El tipo inferido podría ser diferente entre [modo interpretado y compilado](interpreted.md) si la evaluación del valor es demasiado ambigua. En este caso, el compilador genera una advertencia y se utiliza un tipo variable. Por ejemplo, en el siguiente $a el tipo se inferirá correctamente en modo interpretado (Texto), pero la comprobación sintáctica generará una advertencia y $a se escribirá como una variable para el modo compilado.
 
 ```4d
 var $class:={test: "a"}
@@ -143,7 +143,7 @@ var $a:=$class.test
 
 :::
 
-4D intenta deducir el tipo más general. For instance, it uses the Real type rather than the Integer type when a variable is initialized with an integer value (e.g., `var $a:=10 //Real type is inferred`). En tales casos, o cuando se inicializa una variable con un tipo complejo como la instanciación de una clase, se recomienda pasar el tipo explícitamente.
+4D intenta deducir el tipo más general. Por ejemplo, utiliza el tipo Real en lugar del tipo Entero cuando una variable se inicializa con un valor entero (por ejemplo, `var $a:=10 //Se infiere el tipo Real`). En tales casos, o cuando se inicializa una variable con un tipo complejo como la instanciación de una clase, se recomienda pasar el tipo explícitamente.
 
 En la mayoría de los casos, todos los tipos de variables se determinan automáticamente. La excepción es cuando se asigna un valor a una variable de proceso o interproceso, lo que desencadena un mensaje de advertencia.
 
@@ -160,7 +160,7 @@ var $a; $b : Integer:=15 //error
 
 ## Asignar los valores
 
-Los datos pueden introducirse y copiarse en variables y arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). El operador de asignación también se utiliza para asignar datos a campos.
+Los datos pueden introducirse y copiarse en variables y arrays. Poner datos en una variable se llama **asignar los datos a la variable** y se hace con el operador de asignación (:=). El operador de asignación también se utiliza para asignar datos a campos.
 
 El operador de asignación es un primer medio para crear una variable e introducir datos en ella. Se escribe el nombre de la variable que se quiere crear a la izquierda del operador de asignación. Por ejemplo:
 
@@ -170,9 +170,9 @@ MyNumber:=3
 
 crea la variable _MyNumber_ y pone el número 3 en ella. Si MyNumber ya existe, entonces toma el valor 3.
 
-> It is usually not recommended to create variables without [declaring their type](#declaring-variables).
+> Normalmente no se recomienda crear variables sin [declarar su tipo](#declaring-variables).
 
-Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+Por supuesto, las variables no serían muy útiles si no se pudieran obtener valores de ellas. Una vez más, se utiliza el operador de asignación. Si necesita poner el valor de MyNumber en un campo llamado [Products]Size, escribiría _MyNumber_ a la derecha del operador de asignación:
 
 ```4d
 [Products]Size:=MyNumber
@@ -188,7 +188,7 @@ atNames{1}:="Richard"
 
 ## Variables locales, proceso e interproceso
 
-You can create three types of variables: **local**, **process**, and **interprocess**. La diferencia entre los tres tipos de elementos es su alcance, o los objetos para los que están disponibles.
+Puede crear tres tipos de variables: **local**, **proceso** e interproceso\*\*. La diferencia entre los tres tipos de elementos es su alcance, o los objetos para los que están disponibles.
 
 ### Variables locales
 
@@ -215,7 +215,7 @@ Con frecuencia, en una aplicación, se necesitan pequeñas piezas de informació
 
 Este método simplemente pide al usuario que introduzca un ID. Pone la respuesta en una variable local, $vsID, y luego busca el ID que el usuario introdujo. Cuando este método termina, la variable local $vsID se borra de la memoria. Este funcionamiento está bien, porque la variable se necesita sólo una vez y sólo en este método.
 
-**Nota:** los parámetros $1, $2... pasadas a los métodos son variables locales. For more information, please refer to [Parameters](Concepts/parameters.md).
+**Nota:** los parámetros $1, $2... pasadas a los métodos son variables locales. Para más información, consulte [Parámetros](Concepts/parameters.md).
 
 ### Variables proceso
 
@@ -225,13 +225,13 @@ Una variable proceso no tiene un prefijo antes de su nombre. Un nombre de variab
 
 En modo interpretado, las variables se mantienen dinámicamente; se crean y se borran de la memoria "sobre la marcha". En modo compilado, todos los procesos que se crean (procesos usuario) comparten la misma definición de variables proceso, pero cada proceso tiene una instancia diferente para cada variable. Por ejemplo, la variable miVar es una variable en el proceso P_1 y otra en el proceso P_2.
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. Es una buena práctica de programación restringir el uso de estos comandos a la situación para la que fueron creados en 4D:
+Un proceso puede leer y escribir las variables proceso de otro proceso utilizando los comandos `GET PROCESS VARIABLE` y `SET PROCESS VARIABLE`. Es una buena práctica de programación restringir el uso de estos comandos a la situación para la que fueron creados en 4D:
 
 - Comunicación interprocesos en lugares específicos de su código
 - Gestión de arrastrar y soltar interproceso
 - En Cliente/Servidor, la comunicación entre los procesos en las máquinas cliente y los procedimientos almacenados ejecutados en las máquinas servidoras
 
-For more information, see the chapter **Processes** and the description of these commands.
+Para más información, consulte el capítulo **Procesos** y la descripción de estos comandos.
 
 ### Variables interproceso
 
@@ -239,6 +239,6 @@ Las variables interproceso están disponibles en todo el proyecto y son comparti
 
 > No se recomienda el uso de variables interproceso, ya que no están disponibles para los procesos apropiativos y tienden a hacer que el código sea menos mantenible.
 
-The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+El nombre de una variable interproceso siempre comienza con los símbolos `<>` — un signo "menor que" seguido de un signo "mayor que"— seguido de 31 caracteres.
 
 En modo cliente/servidor, cada máquina (cliente y servidor) comparten la misma definición de las variables interproceso, pero cada máquina tiene una instancia diferente para cada variable.

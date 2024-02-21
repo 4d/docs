@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Onglets
+title: Tab Controls
 ---
 
 Un onglet crée un objet qui permet à l’utilisateur de choisir entre plusieurs écrans virtuels affichés dans les limites de l’onglet. L’utilisateur accède à chaque écran en cliquant sur l’onglet correspondant.

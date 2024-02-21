@@ -1,10 +1,10 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
 
- 
+
 Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
 
 

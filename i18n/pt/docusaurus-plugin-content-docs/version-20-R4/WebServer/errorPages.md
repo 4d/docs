@@ -1,15 +1,15 @@
 ---
 id: errorPages
-title: Páginas de erro HTTP personalizadas
+title: Custom HTTP Error Pages
 ---
 
-The 4D Web Server allows you to customize HTTP error pages sent to clients, based on the status code of the server response. As páginas de erro referem-se a:
+4D Web Server permite que você personalize as páginas de erro HTTP enviadas aos clientes, com base no código de status da resposta do servidor. As páginas de erro referem-se a:
 
 *   os códigos de estado que começam por 4 (erros do cliente), por exemplo, 404
 
 *   os códigos de estado que começam por 5 (erros do servidor), por exemplo, 501.
 
-For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
+Para obter uma descrição completa dos códigos de status de erro HTTP, consulte [Lista de códigos de estado HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
 
 
 ## Substituir páginas predefinidas
@@ -36,7 +36,7 @@ Se definir as seguintes páginas personalizadas na sua pasta Web:
 
 ![](../assets/en/WebServer/errorPage.png)
 
-*   the "403.html" or "404.html" pages will be served when 403 or 404 HTTP responses are returned respectively,
+*   as páginas "403.html" ou "404.html" serão exibidas quando as respostas HTTP 403 ou 404 forem retornadas, respectivamente,
 
 *   the "4xx.html" page will be served for any other 4xx error status (400, 401, etc.),
 

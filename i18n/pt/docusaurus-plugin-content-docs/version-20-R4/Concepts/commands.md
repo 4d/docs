@@ -1,6 +1,6 @@
 ---
 id: commands
-title: Comandos
+title: Commands
 ---
 
 A linguagem 4D contém um grande número de comandos incorporados, permitindo ao programador realizar uma vasta gama de acções.

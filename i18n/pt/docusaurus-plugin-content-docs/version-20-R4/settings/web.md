@@ -1,9 +1,9 @@
 ---
 id: web
-title: Página da Web
+title: Web page
 ---
 
-Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html) chapter.
+Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). Para obter mais informações sobre os serviços Web 4D, consulte o capítulo [Publicação e uso de Serviços Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).
 
 ## Configuração
 
@@ -34,7 +34,7 @@ Indicates whether or not the Web server will accept secure connections. Consulte
 
 #### Porta HTTPS
 
-Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
+Permite modificar o número da porta TCP/IP usada pelo servidor Web para as conexões HTTP seguras sobre TLS (protocolo HTTPS). Ver [Porta HTTPS](../WebServer/webServerConfig.md#https-port).
 
 #### Allow database Access through 4DSYNC URLs
 
@@ -99,7 +99,7 @@ Neste modo, pode configurar parâmetros do servidor Web adicionais:
 
 *Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
 
-This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
+Esta opção permite o gerenciamento de sessões de usuário legadas pelo servidor 4D HTTP. Este mecanismo é descrito na secção [Gerenciamento de sessões Web (Legado)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html). Veja [Manter Sessão](../WebServer/webServerConfig.md#keep-session).
 
 When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
 
@@ -177,7 +177,7 @@ Lista de hosts e métodos permitidos para o serviço CORS. Ver [Parâmetros CORS
 
 Inicia ou interrompe o registro das solicitações recebidas pelo servidor da Web 4D no arquivo *logweb.txt* e define seu formato. Consulte [Registro de logs](../WebServer/webServerConfig.md#log-recording).
 
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
+> A ativação e a desativação do arquivo de histórico de solicitações também podem ser realizadas por programação usando o comando [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html).
 
 
 O menu de formato do histórico oferece as seguintes opções:
@@ -190,7 +190,7 @@ O menu de formato do histórico oferece as seguintes opções:
 
     -   host: endereço IP do cliente (ex. 192.100.100.10)
     -   rfc931: informação não é gerada por 4D, é sempre - (um sinal de menos)
-    -   user: user name as it is authenticated, or else it is - (a minus sign). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
+    -   usuário: nome de usuário como ele está autenticado, ou então é - (um sinal menos). Se o nome de usuário contiver espaços, eles serão substituídos por _ (um sublinhado).
     -   DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds
 
 > A data e a hora são locais para o servidor.
@@ -201,7 +201,7 @@ O menu de formato do histórico oferece as seguintes opções:
 
 > **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
 
--   **DLF (Combined Log Format)**: When this option is selected, the request log is generated in DLF format. DLF format is similar to CLF format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent.
+-   **DLF (Combined Log Format)**: When this option is selected, the request log is generated in DLF format. DLF format is similar to CLF format and uses exactly the same structure. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent.
 
     -   Referer: Contains the URL of the page pointing to the requested document.
     -   User-agent: Contains the name and version of the browser or software of the client at the origin of the request.
@@ -256,7 +256,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 -   **Every X day(s) at X**: This option is used to program backups on a daily basis. Introduza 1 se pretender efetuar uma cópia de segurança diária. When this option is checked, you must indicate the time when the backup must be started.
 -   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started.
 -   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
--   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+-   **Every X MB**: This option is used to program backups based on the size of the current request log file. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
 
 > In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
 
@@ -264,7 +264,7 @@ Configure the automatic backup parameters for the request log. Configure the aut
 
 You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html) chapter.
+Para obter mais informações sobre o suporte de serviços Web em 4D, consulte o capítulo [Publicação e uso de serviços Web](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html).
 
 ### Servidor
 
@@ -272,7 +272,7 @@ This area contains various options related to the use of 4D as a Web Services "s
 
 -   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. Quando essa opção está marcada, 4D cria o arquivo WSDL.
 -   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. Por padrão, 4D usa o nome A_WebService.
--   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
+-   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Cada serviço Web publicado na Internet deve ser único. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Normalmente, o namespace começa com a URL da empresa (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. Por padrão, o 4D usa o seguinte namespace: http://www.4d.com/namespace/default.
 
 > In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
 

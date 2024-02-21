@@ -1,6 +1,6 @@
 ---
 id: building
-title: Générateur d'application
+title: Build Application
 ---
 
 4D inclut un générateur d’application pour créer un package de projet (version finale). Ce générateur simplifie le processus de finalisation et de déploiement des applications compilées 4D. Il gère automatiquement les fonctionnalités spécifiques de différents systèmes d'exploitation et facilite le déploiement d'applications client-serveur.

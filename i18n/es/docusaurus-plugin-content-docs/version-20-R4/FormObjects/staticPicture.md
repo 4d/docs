@@ -1,6 +1,6 @@
 ---
 id: staticPicture
-title: Imagen estática
+title: Static picture
 ---
 
 

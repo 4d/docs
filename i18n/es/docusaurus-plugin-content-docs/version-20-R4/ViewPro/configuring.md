@@ -1,6 +1,6 @@
 ---
 id: configuring
-title: Configuración de las áreas de 4D View Pro
+title: Configuring 4D View Pro Areas
 ---
 
 Las propiedades del área 4D View Pro pueden configurarse utilizando la lista de propiedades. Las propiedades de las hojas de cálculo están disponibles a través del lenguaje.

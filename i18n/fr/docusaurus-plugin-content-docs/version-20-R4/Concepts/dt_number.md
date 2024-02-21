@@ -1,6 +1,6 @@
 ---
 id: number
-title: Numérique (Réel, Entier, Entier long)
+title: Number (Real, Longint, Integer)
 ---
 
 Numérique est un terme générique utilisé pour :
@@ -59,16 +59,33 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple 
 | Inférieur ou égal à | Nombre <= Nombre | Boolean  | 10 <= 11   | True   |
 |                     |                  |          | 11 <= 10   | False  |
 
+### Modulo
+
 L'opérateur modulo % divise le premier nombre par le second et retourne le reste de la division entière. Voici quelques exemples :
 
 - 10 % 2 retourne 0 car la division de 10 par 2 ne donne pas de reste.
 - 10 % 3 retourne 1 car le reste est 1.
 - 10,5 % 2 retourne 0 car le reste n'est pas un nombre entier.
 
-**ATTENTION :**
+:::warning
 
-- L'opérateur modulo % retourne des valeurs significatives avec des nombres appartenant à la catégorie des entiers longs (de –2^31 à +2^31 moins 1). Pour calculer le modulo de nombres qui ne sont pas dans cet intervalle, utilisez la fonction `Modulo`.
-- L'opérateur division entière \ retourne des valeurs significatives avec des nombres entiers uniquement.
+L'opérateur modulo % retourne des valeurs significatives avec des nombres appartenant à la catégorie des entiers longs (de –2^31 à +2^31 moins 1). To calculate the modulo with numbers outside of this range, use the [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)] command.
+
+:::
+
+### Division entière
+
+L'opérateur division entière \ retourne des valeurs significatives avec des nombres entiers uniquement.
+
+### Real comparison
+
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. See the [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html) command.
+
+:::note
+
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+
+:::
 
 ### Priorité
 

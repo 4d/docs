@@ -1,6 +1,6 @@
 ---
 id: orderby
-title: '$orderby'
+title: $orderby
 ---
 
 
@@ -21,7 +21,7 @@ O exemplo abaixo ordena o conjunto de entidades pelo atributo lastName em ordem 
 
  `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$orderby="lastName"`
 
-**Resultado**:
+**Resultadoi**:
 
 ```
 {

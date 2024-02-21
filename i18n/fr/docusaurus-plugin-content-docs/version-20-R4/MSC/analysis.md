@@ -1,7 +1,6 @@
 ---
 id: analysis
-title: Page Analyse d'activités
-sidebar_label: Page Analyse d'activités
+title: Activity analysis Page
 ---
 
 La page Analyse d'activités du CSM permet de visualiser le contenu du fichier d’historique courant. Cette fonction est utile pour analyser l'utilisation d'une application ou pour détecter la ou les opération(s) à l'origine d'erreurs ou de dysfonctionnements. Dans le cas d'une application en mode client-serveur, elle permet de vérifier les opérations effectuées par chaque machine cliente.
@@ -40,4 +39,3 @@ Les informations affichées permettent d’identifier la source et le contexte d
 - **Enregistrements** : Numéro de l’enregistrement.
 
 Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. Le bouton **Exporter...** vous permet d’exporter le contenu du fichier sous forme de texte.
-

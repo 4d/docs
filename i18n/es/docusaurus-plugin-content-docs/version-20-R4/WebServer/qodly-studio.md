@@ -3,7 +3,7 @@ id: qodly-studio
 title: Qodly Studio
 ---
 
-:::caution Developer Preview
+:::caution Vista previa para desarrolladores
 
 Qodly Studio in 4D is currently in the **Developer Preview** phase. No debe utilizarse en producción.
 
@@ -205,8 +205,8 @@ Algunos símbolos básicos, operadores y palabras clave difieren en QodlyScript 
 | extends     | Class extends                                               |                         |
 | end         | End for, End For each, End if, End case, End use, End while |                         |
 | forEach     | For each                                                    |                         |
-| string      | Text                                                        | var type                |
-| number      | Real                                                        | var type                |
+| string      | Text                                                        | tipo de variable        |
+| number      | Real                                                        | tipo de variable        |
 
 Some other items have a different case (ex: `this` vs `This`) but can be pasted directly in 4D code.
 

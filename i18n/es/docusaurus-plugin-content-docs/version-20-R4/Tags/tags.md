@@ -1,7 +1,6 @@
 ---
 id: tags
-slug: tags
-title: Etiquetas de transformación
+title: Transformation tags
 ---
 
 4D ofrece un conjunto de etiquetas de transformación que le permiten insertar referencias a las variables o a las expresiones 4D, o efectuar diferentes tipos de procesamiento en un texto fuente, llamado "plantilla". Estas etiquetas se interpretan durante la ejecución del texto fuente y generan un texto de salida.
@@ -79,7 +78,7 @@ Pase la palabra clave "WEBFOLDER" para restablecer la ruta por defecto (relativa
 El siguiente código, que debe especificar una ruta relativa para cada llamada:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DINCLUDE folder/subpage1.html-->
 <!--#4DINCLUDE folder/subpage2.html-->
 <!--#4DINCLUDE folder/subpage3.html-->
@@ -89,7 +88,7 @@ El siguiente código, que debe especificar una ruta relativa para cada llamada:
 ... es equivalente a:
 
 ```html
-<!--#4DINCLUDE subpage.html--> 
+<!--#4DINCLUDE subpage.html-->
 <!--#4DBASE folder/-->
 <!--#4DINCLUDE subpage1.html-->
 <!--#4DINCLUDE subpage2.html-->
@@ -217,7 +216,7 @@ El número de bucles se basa en el número de elementos de la colección. En cad
 
 ```html
     <table class="table">    
-         <!--#4DCODE 
+         <!--#4DCODE
             $salePersons:=getSalesPersons
           -->          
        <tr><th>ID</th><th>Firstname</th><th>Lastname</th></tr>
@@ -264,9 +263,9 @@ var customers : cs.CustomersSelection
 var $input; $output : Text
 
 customers:=ds.Customers.all()
-$input:="<!--#4DEACH $cust in customers-->" 
+$input:="<!--#4DEACH $cust in customers-->"
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->" 
+$input:=$input+"<!--#4DENDEACH-->"
 PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
@@ -514,7 +513,7 @@ El siguiente ejemplo de código:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/> 
+<!--#4DTEXT var--> <br/>
 <!--#4DENDLOOP-->
 ```
 

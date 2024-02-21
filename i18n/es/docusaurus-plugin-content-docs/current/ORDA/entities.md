@@ -85,8 +85,15 @@ Y el método es:
 ```
 
 Puede manejar las entidades como cualquier otro objeto en 4D y pasar sus referencias directamente como [parámetros](Concepts/parameters.md).
-> Con las entidades, no existe el concepto de "registro actual" como en el lenguaje 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
 
+:::info
+
+Con las entidades, no existe el concepto de "registro actual" como en el lenguaje 4D. Puede utilizar tantas entidades como necesite al mismo tiempo. Tampoco existe un bloqueo automático de una entidad (ver [Bloqueo de una entidad](#entity-locking)). Cuando se carga una entidad, se utiliza el mecanismo de [lazy loading](glossary.md#lazy-loading), lo que significa que sólo se carga la información necesaria. No obstante, en cliente/servidor, la entidad puede cargarse directamente de forma automática si es necesario.
+
+
+
+
+:::
 
 ## Uso de los atributos de entidades
 
@@ -234,12 +241,19 @@ Puede crear un objeto de tipo [entity selection](dsMapping.md#entity-selection) 
 
 *   Lance una búsqueda en las entidades [en una dataclass](API/DataClassClass.md#query) o en una [selección de entidades existente](API/EntitySelectionClass.md#query);
 *   Utilice la función de dataclass [`.all()`](API/DataClassClass.md#all) para seleccionar todas las entidades de una dataclass;
-*   Utilice el comando `Create entity selection` o la función de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) para crear una selección de entidades vacía;
+*   Using the [`Create entity selection`](../API/EntitySelectionClass.md#create-entity-selection) command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
 *   Utilice la función [`.copy()`](API/EntitySelectionClass.md#copy) para duplicar una selección de entidades existente;
 *   Utilice una de las diversas funciones de [Entity selection class](API/EntitySelectionClass.md) que devuelve una nueva selección de entidades, como [`.or()`](API/EntitySelectionClass.md#or);
 *   Utilizando un atributo de relación de tipo "related entities" (ver abajo).
 
 Puede crear y utilizar simultáneamente tantas selecciones de entidades diferentes como desee para una dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
+
+:::note
+
+You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature.
+
+:::
+
 
 ### Entity selections compartibles o modificables
 
@@ -275,8 +289,10 @@ Una nueva entity selection es **compartible** en los siguientes casos:
 Ejemplo:
 
 ```4d
-$myComp:=ds.Empresa.get(2) //$myComp no pertenece a una entity selection
-$employees:=$myComp.empleados //$employees es compartible
+var $myComp : cs.CompanyEntity
+var $employees : cs.EmployeeSelection
+$myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
+$employees:=$myComp.employees //$employees is shareable
 ```
 
 Una nueva entity selection es **compartible** en los siguientes casos:
@@ -286,7 +302,8 @@ Una nueva entity selection es **compartible** en los siguientes casos:
 
 Ejemplo:
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify es modificable
+var $toModify : cs.CompanySelection
+$toModify:=ds.Company.all().copy() //$toModify is alterable
 ```
 
 
@@ -301,14 +318,17 @@ Una nueva entity selection **hereda** de la naturaleza de la entity selection or
 Ejemplos:
 
 ```4d
+var $highSal; $lowSal : cs.EmployeeSelection
+var $comp; $comp2 : cs.Company
+
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
 
-    //$highSal es compartible debido a la búsqueda en dataClass
-$comp:=$highSal.employer //$comp es compartible porque $highSal es compartible
+    //$highSal is shareable because of the query on dataClass
+$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
-    //$lowSal es modificable debido a copy()
-$comp2:=$lowSal.employer //$comp2 es modificable porque $lowSal es modificable
+    //$lowSal is alterable because of the copy()
+$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
 :::note Selecciones de entidades devueltas por el servidor
@@ -388,8 +408,10 @@ El método `sendMails`:
 Todos los atributos de almacenamiento (texto, número, booleano, fecha) están disponibles como propiedades de las selecciones de entidades, así como de las entidades. Cuando se utiliza junto con una selección de entidad, un atributo escalar devuelve una colección de valores escalares. Por ejemplo:
 
 ```4d
- $locals:=ds.Person.query("ciudad = :1"; "San José") //entity selection de personas
- $localEmails:=$locals.emailAddress //colección de direcciones de correo electrónico (cadenas)
+var $locals : cs.PersonSelection
+var $localEmails : Collection
+$locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
+$localEmails:=$locals.emailAddress //collection of email addresses (strings)
 ```
 
 Este código devuelve en *$localEmails* una colección de direcciones de correo electrónico como cadenas.
@@ -401,12 +423,130 @@ Además de la variedad de formas en que puede consultar, también puede utilizar
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
 ```4d
- $myParts:=ds.Part.query("ID < 100") //Devuelve las piezas con ID inferior a 100
- $myInvoices:=$myParts.invoiceItems.invoice
-  //Todas las facturas con al menos un elemento relacionado con una pieza en $myParts
+var $myParts : cs.PartSelection
+var $myInvoices : cs.InvoiceSelection
+$myParts:=ds.Part.query("ID < 100") //Return parts with ID less than 100
+$myInvoices:=$myParts.invoiceItems.invoice
+  //All invoices with at least one line item related to a part in $myParts
 ```
 
-La última línea devolverá en $myInvoices una selección de entidades de todas las facturas que tengan al menos un elemento de factura relacionado con una pieza en la selección de entidades myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
+The last line will return in *$myInvoices* an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades, el resultado es siempre otra selección de entidades, aunque sólo se devuelva una entidad. Cuando se utiliza un atributo de relación como propiedad de una selección de entidades y no se devuelve ninguna entidad, el resultado es una selección de entidades vacía, no nula.
+
+
+## Restricting entity selections
+
+In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by **ORDA class functions** such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by the [**REST API**](../category/api-dataclass) (which involves the [Data Explorer](../Admin/dataExplorer.md) and [remote datastores](remoteDatastores.md)).
+
+A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson.
+
+:::info
+
+Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](../privileges.md) which are more appropriate in this case.
+
+:::
+
+
+### How to define a restrict filter
+
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
+
+
+### `Function event restrict`
+
+#### Sintaxis
+
+```4d
+Function event restrict() -> $result : cs.*DataClassName*Selection
+// code
+```
+
+This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created.
+
+The filter must return an entity selection of the dataclass. It can be an entity selection built upon a query, stored in the [`Storage`], etc.
+
+:::note
+
+For performance reasons, we recommend to use **indexed attributes** in the definition of the filter.
+
+:::
+
+The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
+
+- the function returns **null**,
+- the function returns **undefined**,
+- the function does not return a valid entity selection.
+
+
+#### Ejemplo
+
+When accessed from a web or REST request, we want the Customers dataclass to only expose customers belonging to the identified sales person. During the authentication phase, the sales person is stored in the `Session` object. Other types of requests are also handled.
+
+```4d
+Class extends DataClass
+
+
+Function event restrict() : cs.CustomersSelection
+
+
+        //We work in a web or REST context
+    If (Session#Null)
+
+        Case of 
+                // Only return the customers of the authenticated sales person stored in the session
+            : (Session.storage.salesInfo#Null)
+                return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
+
+                //Data explorer - No filter is applied
+            : (Session.hasPrivilege("WebAdmin"))
+                return Null
+            Else 
+                //No customers can be read
+                return This.newSelection()
+
+        End case 
+
+    Else // We work in client server
+        return This.query("sales.userName = :1"; Current user)
+    End if 
+```
+
+
+### Filter activation details
+
+Filters apply to all ORDA or REST requests executed in your 4D projects (standalone and client/server architectures). A filter is activated as soon as the project is opened, i.e. it can be triggered in the `On Startup` database method.
+
+
+:::info
+
+Filters do not apply to legacy selections of records handled through the 4D interface or the 4D language (for example when calling `ALL RECORDS`).
+
+:::
+
+
+| Funciones                                                                            | Comentario                                                                                                                                |
+| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| [dataclass.get()](../API/DataClassClass.md#get)                                      | If the entity does not match the filter, `null` is returned                                                                               |
+| [entity.reload()](../API/EntityClass.md#reload)                                      | Only in client/server and remote datastores                                                                                               |
+| [dataclass.all()](../API/DataClassClass.md#all)                                      |                                                                                                                                           |
+| [dataclass.fromCollection()](../API/DataClassClass.md#fromcollection)                | <li>In case of update, only entities matching the filter can be updated. If the collection refers to entities not matching the filter, they are created as new entities (if no duplicate PK error)</li><li>In case of creation, entities not matching the filter are created but will not be read after creation</li>                                                                                        |
+| [entitySelection.and()](../API/EntitySelectionClass.md#and)                          | Only entities matching the filter are returned                                                                                            |
+| [entitySelection.or()](../API/EntitySelectionClass.md#or)                            | Only entities matching the filter are returned                                                                                            |
+| [entitySelection.minus()](../API/EntitySelectionClass.md#minus)                      | Only entities matching the filter are returned                                                                                            |
+| [dataclass.query()](../API/DataClassClass.md#query)                                  |                                                                                                                                           |
+| [entitySelection.query()](../API/EntitySelectionClass.md#query)                      |                                                                                                                                           |
+| [entitySelection.attributeName](../API/EntitySelectionClass.md#attributename)        | Filter applied if *attributeName* is a related entity or related entities of a filtered dataclass (including alias or computed attribute) |
+| [entity.attributeName](../API/EntityClass.md#attributename)                          | Filter applied if *attributeName* corresponds to related entities of a filtered dataclass (including alias or computed attribute)         |
+| [Crear una entity selection](../API/EntitySelectionClass.md#create-entity-selection) |                                                                                                                                           |
+
+
+Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
+
+:::note
+
+If there is an error in the filter at runtime, it is thrown as if the error came from the ORDA function itself.
+
+:::
+
 
 
 ## Bloqueo de una entidad
@@ -426,6 +566,7 @@ Este mecanismo automático se basa en el concepto de "bloqueo optimista", especi
 *   Cada entidad tiene un sello de bloqueo interno que se incrementa cada vez que se guarda.
 *   Cuando un usuario o proceso intenta guardar una entidad utilizando el método `entity.save( )`, 4D compara el valor del marcador de la entidad a guardar con el de la entidad encontrada en los datos (en el caso de modificación):
     *   Cuando los valores coinciden, se guarda la entidad y se incrementa el valor del marcador interno.
+
     *   Cuando los valores no coinciden, significa que otro usuario ha modificado esta entidad mientras tanto. No se guarda y se devuelve un error.
 
 El siguiente diagrama ilustra el bloqueo optimista:

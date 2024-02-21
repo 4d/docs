@@ -53,9 +53,9 @@ O valor por defeito depende do tipo de variável:
 | Diferente de | indefinido          |
 
 
-### Null as default value
+### Null como valor padrão
 
-Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.
+As variáveis do tipo Object, Collection, Pointer e Picture têm **null** como valor padrão, mas na verdade recebem um status intermediário quando são declaradas e não atribuídas. Eles *se comportam como* os valores **null**, mas com algumas diferenças, gerando menos erros quando o código tenta acessá-los.
 
 
 

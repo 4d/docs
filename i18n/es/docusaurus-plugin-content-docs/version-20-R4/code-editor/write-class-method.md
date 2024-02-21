@@ -1,6 +1,6 @@
 ---
 id: write-class-method
-title: Editor de código
+title: Code Editor
 ---
 
 4D tiene un poderoso editor de código integrado que ofrece un amplio conjunto de funcionalidades para la edición de código altamente productivo, como la finalización inteligente de código, la navegación de código, la depuración, la búsqueda y más.
@@ -13,7 +13,7 @@ Puede desplazarse por el contenido de métodos, clases y funciones, que pueden i
 
 El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis. Cuando se ejecuta el código se realiza una comprobación adicional de errores. Para más información sobre cómo gestionar los errores, consulte [Depuración](../Debugging/basics.md).
 
-## Interfaz
+## Interface
 
 ### Toolbar (Barra de herramientas)
 
@@ -489,30 +489,30 @@ Gracias al Verificador en vivo de código 4D, la sintaxis, la consistencia y la 
 El Verificador en vivo de código se activa en tres niveles:
 
 - cuando escriba código en el editor de código,
-- when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
-- when you [compile](../Project/compiler.md) the project.
+- cuando [verifique la sintaxis](../Project/compiler.md#check-syntax) en el compilador,
+- cuando [compile](../Project/compiler.md) el proyecto.
 
-4D automatically checks the code syntax to see if it is correct. If you enter text or select a component that is not correct, 4D displays a symbol to indicate the incorrect expression.
+4D comprueba automáticamente la sintaxis del código para ver si es correcta. Si introduce texto o selecciona un componente que no es correcto, 4D muestra un símbolo para indicar la expresión incorrecta.
 
 Se muestran dos tipos de símbolos:
 
-- **warnings** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): Warnings are intended to draw your attention to statements that might lead to execution errors. No impiden la compilación.
-- **errors**![error](../assets/en/code-editor/error-icon.png): errors are anomalies that prevent the code from being executed correctly. They must be fixed, otherwise the project will not compile.
+- **advertencias** ![warning](../assets/en/code-editor/incorrect-expression-icon.png): las advertencias pretenden llamar su atención sobre declaraciones que podrían provocar errores de ejecución. No impiden la compilación.
+- **errores**![error](../assets/en/code-editor/error-icon.png): los errores son anomalías que impiden que el código se ejecute correctamente. Deben ser corregidos, de lo contrario el proyecto no se compilará.
 
 Al pasar el ratón por encima del símbolo, un mensaje de ayuda muestra la causa del error:
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-The Code Live Checker is activated while you enter the code. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método.
+El Verificador en vivo de código se activa mientras ingresa el código. Cuando una línea de un método, clase o función esté marcada como de sintaxis incorrecta, compruebe y corrija la entrada. Si la línea es correcta, 4D elimina el símbolo de error. Al guardar o cerrar la ventana, se valida todo el método.
 
-You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
+Puede formatear la línea actual (sin avanzar a la línea siguiente) presionando la tecla **Intro** del teclado numérico. 4D evalúa la línea, le da formato, marca cualquier error y coloca el punto de inserción al final de la línea.
 
-The Code Live Checker checks for:
+El Verificador en vivo de código verifica lo siguiente:
 
-- basic syntax errors (wrong operators, misspellings and the like)
+- errores de sintaxis básicos (operadores equivocados, errores ortográficos y similares)
 - la estructura de las instrucciones (`If`, `End if` y así sucesivamente)
-- matching enclosing characters in the code such as parentheses or brackets (see tip below)
-- the calls of attributes and functions according to your model (ORDA) and user class definitions. Por ejemplo, el Verificador de código en vivo genera un error cuando una llamada a un atributo calculado de base de datos no es compatible con el tipo de atributo calculado declarado.
+- coincidencia de caracteres en el código, tales como paréntesis o corchetes (ver el consejo más abajo)
+- las llamadas de atributos y funciones según su modelo (ORDA) y las definiciones de clase de usuario. Por ejemplo, el Verificador de código en vivo genera un error cuando una llamada a un atributo calculado de base de datos no es compatible con el tipo de atributo calculado declarado.
 
 :::tip
 
@@ -520,11 +520,11 @@ Cuando escribe un caracter de encierro, 4D indica la coincidencia enmarcando los
 
 ![](../assets/en/code-editor/matching-enclosing-characters.png)
 
-You can modify the way 4D indicates matching enclosing characters or disable this feature in the [**Preferences**](../Preferences/methods.md#options-1).
+Puede modificar la forma en que 4D indica los caracteres de coincidencia de encerramiento o desactivar esta función en las [**Preferencias**](../Preferences/methods.md#options-1).
 
 :::
 
-The Code Live Checker cannot detect some errors that only occur during execution. Los errores de ejecución son detectados por 4D cuando se ejecuta el código. However, keep in mind that the [compiler](../Project/compiler.md) also provides indispensable help for detecting errors.
+El Verificador en vivo de código no puede detectar algunos errores que solo ocurren durante la ejecución. Los errores de ejecución son detectados por 4D cuando se ejecuta el código. Sin embargo, tenga en cuenta que el compilador [](../Project/compiler.md) también proporciona una ayuda indispensable para detectar errores.
 
 
 ## Mensajes de ayuda

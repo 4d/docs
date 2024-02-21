@@ -44,7 +44,7 @@ Os editores dos usuários e grupos estão localizados na caixa de ferramentas de
 
 ![](../assets/en/Users/editor.png)
 
-> O editor de usuários e grupos pode ser exibido em execução com ajuda do comando [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html). The whole users and groups configuration can also be edited during application execution using 4D language commands of the [Users and Groups](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.en.html) theme.
+> O editor de usuários e grupos pode ser exibido em execução com ajuda do comando [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html). Toda a configuração de usuários e grupos pode também ser editada durante a execução da aplicação utilizando comandos de linguagem 4D do tema [Usuários e grupos](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.en.html).
 
 ## Ficheiro Directory.json
 

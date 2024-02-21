@@ -1,6 +1,6 @@
 ---
 id: database
-title: Page Base de données
+title: Database page
 ---
 
 ## Page Stockage de données

@@ -966,7 +966,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |includeBindingSource| boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).|
 |sheet| number| PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only|
 |pdfOptions| object| PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>author</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>|
-|csvOptions|object| CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>|
+|csvOptions|object| CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: `"\r\n"`</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: `","`</td></tr></table></p>|
 |sjsOptions| object| SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p>|
 |`\<customProperty>`| any| Any custom property that will be available through the $3 parameter in the callback method.|
 
@@ -1276,6 +1276,7 @@ $condition.flags:=vk find flag exact match
  
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
   // Check for empty range object 
@@ -1528,6 +1529,7 @@ The `VP Get cell style` command <!-- REF #_method_.VP Get cell style.Summary -->
 In *rangeObj*, pass a range containing the style to retrieve.
 
 * If *rangeObj* contains a cell range, the cell style is returned.
+
 * If *rangeObj* contains a range that is not a cell range, the style of the first cell in the range is returned.
 * If *rangeObj* contains several ranges, only the style of the first cell in the first range is returned.
 
@@ -1815,7 +1817,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |name  |Text|->|Name of the named range|
 |scope  |Number|->|Target scope (default=current sheet)|
-|Result  |Text|<-|Named formula or named range definition|<!-- END REF -->
+|Result  |Object|<-|Named formula or named range definition|<!-- END REF -->
 
 #### Description
 
@@ -1888,6 +1890,7 @@ You want to retrieve the formulas in the Sum and Average columns from this docum
 You can use this code:
 
 ```4d
+
 $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 //$formulas[0]=[Sum(B2:D2),Average(B2:D2)]
 //$formulas[1]=[Sum(B3:D3),Average(B3:D3)]
@@ -3539,6 +3542,7 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 |vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
 
 
+
 #### Description
 
 The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. The new empty document replaces any data already inserted in the area.
@@ -4838,6 +4842,7 @@ The document's current sheet is the first sheet:
 Set the current sheet to the third sheet:
 
 ```4d
+
 VP SET CURRENT SHEET("ViewProArea";2)
 ```
 
@@ -5837,6 +5842,7 @@ Result:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6134,6 +6140,7 @@ The *timeValue* parameter specifies a time expressed in seconds to be assigned t
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
 
+
 #### Example
 
 ```4d
@@ -6326,6 +6333,7 @@ The following table lists the available workbook options:
 | referenceStyle | number | Style for cell and range references in cell formulas. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk reference style A1 </td><td>0</td><td> Use A1 style.</td></tr><tr><td> vk reference style R1C1 </td><td>1</td><td> Use R1C1 style</td></tr></table> |
 | resizeZeroIndicator | number | Drawing policy when the row or column is resized to zero. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk resize zero indicator default </td><td>0</td><td> Uses the current drawing policy when the row or column is resized to zero.</td></tr><tr><td> vk resize zero indicator enhanced </td><td>1</td><td> Draws two short lines when the row or column is resized to zero.</td></tr></table> |
 | rowResizeMode | number | The way rows are resized. Available values are the same as columnResizeMode |
+
 | scrollbarAppearance | number | Scrollbar appearance. Available values: <table><tr><th>Constant</th><th>Value</th><th>Description</th></tr><tr><td> vk scrollbar appearance mobile</td><td>1</td><td> Mobile scrollbar appearance.</td></tr><tr><td> vk scrollbar appearance skin (default)</td><td>0</td><td> Excel-like classic scrollbar appearance.</td></tr></table>|
 | scrollbarMaxAlign | boolean | The scroll bar aligns with the last row and column of the active sheet. |
 | scrollbarShowMax | boolean | The displayed scroll bars are based on the entire number of columns and rows in the sheet. |

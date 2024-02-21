@@ -1,6 +1,6 @@
 ---
 id: lock
-title: '$lock'
+title: $lock
 ---
 
 

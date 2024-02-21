@@ -1,6 +1,6 @@
 ---
 id: windowSize
-title: Tamaño de la ventana
+title: Window Size
 ---
 
 

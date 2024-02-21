@@ -1721,7 +1721,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 |vpAreaName  |Text|->|4D View Pro area form object name|
 |name  |Text|->|Name of the named range|
 |scope  |Number|->|Target scope (default=current sheet)|
-|Result  |Text|<-|Named formula or named range definition|<!-- END REF -->
+|Result  |Object|<-|Named formula or named range definition|<!-- END REF -->
 
 #### Description
 
@@ -2116,6 +2116,7 @@ The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
 
+
 #### Example
 
 In the following document:
@@ -2309,6 +2310,7 @@ The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves 
 In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
 
 #### Example
+
 
 You want to center the text for the spanned cells in this document:
 
@@ -4150,6 +4152,7 @@ Function onEvent()
  
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
+
 ```
 
 The *OffscreenArea* callback method:  
@@ -5056,6 +5059,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 
 <!-- REF #_method_.VP SET FORMULA.Params -->

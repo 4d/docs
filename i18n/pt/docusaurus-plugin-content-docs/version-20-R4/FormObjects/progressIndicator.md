@@ -1,6 +1,6 @@
 ---
 id: progressIndicator
-title: Indicador de progresso
+title: Progress Indicator
 ---
 
 

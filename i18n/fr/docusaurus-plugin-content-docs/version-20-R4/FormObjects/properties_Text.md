@@ -2,7 +2,6 @@
 id: propertiesText
 title: Text
 ---
-
 ---
 
 ## Autoriser sélecteur police/couleur

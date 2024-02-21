@@ -1,13 +1,13 @@
 ---
 id: write-class-method
-title: Editor de código
+title: Code Editor
 ---
 
 4D tem um poderoso editor de código embutido que oferece um amplo conjunto de funcionalidades para edição de código altamente produtiva, como preenchimento inteligente de código, navegação de código, depuração, busca, e mais.
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
-O editor de código funciona de forma semelhante a um editor de texto. Escrever um método ou uma classe é geralmente uma combinação de digitar texto, selecionar componentes e arrastar itens do Explorador ou de outras janelas. You can also use various type-ahead functions to create methods faster.
+O editor de código funciona de forma semelhante a um editor de texto. Escrever um método ou uma classe é geralmente uma combinação de digitar texto, selecionar componentes e arrastar itens do Explorador ou de outras janelas. Você também pode usar várias funções de preenchimento automático para criar métodos mais rapidamente.
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
@@ -114,7 +114,7 @@ To save a Code Editor window as a template, choose **Method** > **Save As Templa
 
 ### Área de pontos de paragem
 
-This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.
+This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Os pontos de interrupção são úteis durante a fase de depuração de sua programação. They stop the execution of your code at specific locations and display the debugger.
 
 For more information on break points, see the [Debugging](../Debugging/breakpoints.md#breakpoints) section.
 
@@ -488,7 +488,7 @@ Thanks to the 4D Code Live Checker, the syntax, consistency, and structure of th
 
 The Code Live Checker is activated at three levels:
 
-- when you write code in the code editor,
+- quando você escreve código no editor de código,
 - when you [check the syntax](../Project/compiler.md#check-syntax) in the compiler,
 - quando você [compila](../Project/compiler.md) o projeto.
 
@@ -503,7 +503,7 @@ When you move the mouse over the symbol, a help tip displays the cause of the er
 
 ![](../assets/en/code-editor/incorrect-expression-message.png)
 
-The Code Live Checker is activated while you enter the code. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Se a linha estiver correta, 4D removerá o símbolo de erro. Quando salvar ou fechar a janela, todo o método é validado.
+O Verificador de código ao vivo é ativado enquanto você insere o código. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. Se a linha estiver correta, 4D removerá o símbolo de erro. Quando salvar ou fechar a janela, todo o método é validado.
 
 You can format the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line.
 

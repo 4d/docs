@@ -1,6 +1,6 @@
 ---
 id: pictures
-title: Imagens
+title: Pictures
 ---
 
 4D inclui suporte específico para imagens utilizadas nos seus formulários.

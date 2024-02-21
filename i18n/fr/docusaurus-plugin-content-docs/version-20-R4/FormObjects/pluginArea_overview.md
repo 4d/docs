@@ -1,6 +1,6 @@
 ---
 id: pluginAreaOverview
-title: Zones de plug-in
+title: Plug-in Area
 ---
 
 

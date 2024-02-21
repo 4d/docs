@@ -1,6 +1,6 @@
 ---
 id: entities
-title: Trabalhar com dados
+title: Working with data
 ---
 
 No ORDA, acede-se aos dados através das [entidades](dsMapping.md#entity) e das [selecções de entidades](dsMapping.md#entity-selection). Estes objectos permitem-lhe criar, atualizar, consultar ou ordenar os dados do datastore.
@@ -129,7 +129,7 @@ Note that both *theClient* and *companyProjects* in the above example are primar
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Cada trabalhador pode ser um gestor e pode ter um gestor. To get the manager of the manager of an employee, you can simply write:
+Cada trabalhador pode ser um gestor e pode ter um gestor. Para obter o gerente do gerente de um funcionário, você pode simplesmente escrever:
 
 ```4d
  $myEmp:=ds. Employee.get(50)

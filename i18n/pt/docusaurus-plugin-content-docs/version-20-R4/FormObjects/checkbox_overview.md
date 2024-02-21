@@ -1,6 +1,6 @@
 ---
 id: checkboxOverview
-title: Caixa de selecção
+title: Check Box
 ---
 
 Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basicamente, ou é verificada ou não, mas um [terceiro estado](#three-states-check-box) pode ser definido.

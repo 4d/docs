@@ -1,6 +1,6 @@
 ---
 id: parameters
-title: Paramètres
+title: Parameters
 ---
 
 

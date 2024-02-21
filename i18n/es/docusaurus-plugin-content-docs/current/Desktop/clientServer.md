@@ -35,13 +35,11 @@ Para conectarse remotamente a un proyecto 4D Server:
 
 Aparece el diálogo de conexión de 4D Server. Este diálogo tiene tres pestañas: **Reciente**, **Disponible** y **Personalizado**.
 
-Si 4D Server está conectado a la misma red que el 4D remoto, seleccione **Disponible**. 4D Server incluye un sistema de difusión TCP/IP integrado que, por defecto, publica el nombre de los proyectos 4D Server disponibles en la red. La lista se ordena por orden de aparición y se actualiza dinámicamente.
+If 4D Server is connected to the same subnetwork as the remote 4D, select **Available**. 4D Server includes a built-in broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. La lista se ordena por orden de aparición y se actualiza dinámicamente.
 
 ![](../assets/en/getStart/serverConnect.png)
 
 Para conectarse a un servidor de la lista, haga doble clic en su nombre o selecciónelo y presione el botón **Aceptar**.
-
-> Se antepone un acento circunflejo (^) al nombre de los proyectos publicados con la opción de encripción activada.
 
 Si el proyecto publicado no aparece en la lista **Disponible**, seleccione **Personalizado**. La página Personalizada le permite conectarse a un servidor publicado en la red utilizando su dirección de red y asignándole un nombre personalizado.
 

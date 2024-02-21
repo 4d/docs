@@ -1,6 +1,6 @@
 ---
 id: info
-title: '$info'
+title: $info
 ---
 
 Renvoie des informations sur les ensembles d'entités stockés couramment dans le cache de 4D Server ainsi que sur les sessions utilisateur

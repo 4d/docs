@@ -206,9 +206,9 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 以下のサポートされる型であれば、いくつでも値を渡すことができます:
 
 *   数値 (実数、倍長整数...)。 数値は常に実数として保存されます。
-*   text
-*   boolean
-*   date
+*   テキスト
+*   ブール
+*   日付
 *   時間 (ミリ秒の数 (実数) として保存されます)。
 *   null
 *   共有オブジェクト(*)
@@ -2296,14 +2296,15 @@ var $city : Collection
 var $country : Collection
 var $continent : Collection
 
-$city:=["Paris"; "Lyon"; "Rabat"; "Eching"; "San Diego"]
-$country:=["France"; "France"; "Morocco"; "Germany"; "US"]
-$continent:=["Europe"; "Europe"; "Africa"; "Europe"; "America"]
+$city:=["Eching"; "Rabat"; "Paris"; "Lyon"; "San Diego"]
+$country:=["Germany"; "Morocco"; "France"; "France"; "US"]
+$continent:=["Europe"; "Africa"; "Europe"; "Europe"; "America"]
 
 $continent.multiSort([$country; {collection: $city; order: ck ascending}])
-//$continent=["Africa","America","Europe","Europe","Europe"]
-//$country=["Morocco","US","France","France","Germany"]
-//$city=["Rabat","San Diego","Lyon","Paris","Eching"]
+
+//$continent=["Africa", "America","Europe","Europe","Europe"]
+//$country=["Morocco", "US","Germany","France","France"]
+//$city=["Rabat","San Diego","Eching","Lyon","Paris"]
 
 ```
 

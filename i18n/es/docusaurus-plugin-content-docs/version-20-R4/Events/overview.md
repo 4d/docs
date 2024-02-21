@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Eventos formulario
+title: Eventos de formulario
 ---
 
 Los eventos formulario son eventos que pueden llevar a la ejecución del método de formulario y/o del o de los métodos objeto de formulario. Los eventos de formulario le permiten controlar el flujo de su aplicación y escribir código que se ejecuta sólo cuando ocurre un evento específico.

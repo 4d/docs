@@ -1,6 +1,6 @@
 ---
 id: shared
-title: Objets et collections partagés
+title: Shared objects and collections
 ---
 
 **Les objets partagés** et **les collections partagées** sont des [objets](Concepts/dt_object.md) et des [collections](Concepts/dt_collection.md) spécifiques dont le contenu est partagé entre les process. Comparés aux [Variables interprocess](Concepts/variables.md#interprocess-variables), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **process 4D préemptifs** : il peuvent être passés en paramètres (par référence) aux commandes telles que `New process` ou `CALL WORKER`.

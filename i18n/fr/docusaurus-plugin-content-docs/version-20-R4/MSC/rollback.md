@@ -1,7 +1,6 @@
 ---
 id: rollback
-title: Page Retour en arrière
-sidebar_label: Page Retour en arrière
+title: Rollback Page
 ---
 
 La page Retour arrière du CSM permet d’accéder à la fonction de retour en arrière parmi les opérations effectuées dans le fichier de données. Elle s’apparente à une fonction d’annulation multi-niveaux. Elle est utile notamment lorsqu’un enregistrement a été supprimé par erreur dans la base de données.

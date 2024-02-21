@@ -1,6 +1,6 @@
 ---
 id: users
-title: Page Utilisateurs
+title: Users Page
 ---
 
 

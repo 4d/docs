@@ -1,6 +1,6 @@
 ---
 id: develop-components
-title: Componentes de desarrollo
+title: Desarrollar componentes
 ---
 
 Un componente 4D es un conjunto de funciones, métodos y formularios 4D que representan una o varias funcionalidades que pueden ser [instaladas y utilizadas en aplicaciones 4D](Concepts/components.md). Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D.
@@ -14,7 +14,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
 - **Componente**: proyecto matricial, compilado o [generado](Desktop/building.md#build-component), copiado en la carpeta [`Components`](Project/architecture.md) de la aplicación local y cuyo contenido se utiliza en la aplicación local.
 
-## Básicos
+## Basics
 
 La creación e instalación de los componentes 4D se realiza directamente desde 4D:
 

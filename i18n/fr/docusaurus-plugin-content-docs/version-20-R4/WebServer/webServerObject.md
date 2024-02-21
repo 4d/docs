@@ -1,6 +1,6 @@
 ---
 id: webServerObject
-title: Objet Web Server
+title: Web Server object
 ---
 
 

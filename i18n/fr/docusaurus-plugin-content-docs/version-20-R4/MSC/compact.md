@@ -1,7 +1,6 @@
 ---
 id: compact
-title: Page compactage
-sidebar_label: Page compactage
+title: Compact Page
 ---
 
 Cette page permet d’accéder aux fonctions de compactage du fichier de données et de structure.

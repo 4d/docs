@@ -1,10 +1,10 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
 
- 
+
 Permite consultar los datos de una clase de datos o de un método *(p. ej.*, `$filter="firstName!='' AND salary>30000"`)
 
 

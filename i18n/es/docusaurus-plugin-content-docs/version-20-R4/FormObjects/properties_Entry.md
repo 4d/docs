@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entrada
+title: Entry
 ---
 
 ## Corrección ortográfica automática

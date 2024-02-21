@@ -1,6 +1,6 @@
 ---
 id: number
-title: Número (Real, Longint, Integer)
+title: Number (Real, Longint, Integer)
 ---
 
 Número é um termo genérico que significa:
@@ -59,16 +59,33 @@ Números negativos são especificados com o sinal de menos (-). Por exemplo:
 | Menor que ou igual a | Number <= Number | Parâmetros | 10 <= 11   | True  |
 |                      |                  |            | 11 <= 10   | False |
 
+### Módulo
+
 O operador do módulo % divide o primeiro número pelo segundo número e devolve um número inteiro restante. Aqui estão alguns exemplos:
 
 - 10 % 2 retorna 0 porque 10 é dividido uniformemente por 2.
 - 10 % 3 devolve 1 porque o resto é 1.
 - 10,5% 2 devolve 0 porque o resto não é um número inteiro.
 
-**AVISO:**
+:::warning
 
-- O operador do módulo % devolve valores significativos com números que se encontram na gama do Long Integer (de menos 2^31 a 2^31 menos um). Para calcular o modulo com números fora deste intervalo, utilizar o comando `Mod` .
-- O operador da divisão de longint retorna valores significativos apenas com números inteiros.
+O operador do módulo % devolve valores significativos com números que se encontram na gama do Long Integer (de menos 2^31 a 2^31 menos um). Para calcular o módulo com números fora desse intervalo, use o comando [`Mod`(https://doc.4d.com/4dv20/help/command/en/page98.html)].
+
+:::
+
+### Divisão inteira
+
+O operador da divisão de longint retorna valores significativos apenas com números inteiros.
+
+### Comparação real
+
+To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. Veja o comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+
+:::note
+
+For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+
+:::
 
 ### Precedência
 

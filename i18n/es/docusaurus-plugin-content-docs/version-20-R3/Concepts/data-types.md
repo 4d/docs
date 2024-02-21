@@ -53,9 +53,9 @@ El valor por defecto depende del tipo de variable:
 | Variant    | indefinido        |
 
 
-### Null as default value
+### Null como valor por defecto
 
-Variables of type Object, Collection, Pointer, and Picture have **null** as default value, but actually get an intermediary status when declared and not assigned. They *behave like* **null** values, but with some differences, generating less errors when the code tries do access them.
+Las variables de tipo Object, Collection, Pointer y Picture tienen **null** como valor por defecto, pero en realidad obtienen un estado intermedio cuando se declaran y no se asignan. *Se comportan como* los valores **null**, pero con algunas diferencias, generando menos errores cuando el código intenta acceder a ellos.
 
 
 

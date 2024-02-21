@@ -1,6 +1,6 @@
 ---
 id: shortcuts
-title: Página Atalhos
+title: Shortcuts Page
 ---
 
 Esta página lista todos os atalhos usados no modo Desenho de 4D (exceto os atalhos padrão do "sistema", como Ctrl+C/Command+C para o comando Copiar).

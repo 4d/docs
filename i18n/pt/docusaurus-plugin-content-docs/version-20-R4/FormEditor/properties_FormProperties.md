@@ -1,6 +1,6 @@
 ---
 id: propertiesForm
-title: Propriedades do formulário
+title: Form Properties
 ---
 
 ---

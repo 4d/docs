@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Acción
+title: Action
 ---
 
 

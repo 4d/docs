@@ -1,6 +1,6 @@
 ---
 id: control-flow
-title: Conditions et boucles
+title: Control flow
 ---
 
 Quelle que soit la simplicité ou la complexité d’une méthode ou d'une fonction, vous utiliserez toujours un ou plusieurs types de structure de programmation. Les structures de programmation déterminent si et dans quel ordre les lignes d’instructions sont exécutées à l’intérieur d’une méthode. Il existe trois types de structures :

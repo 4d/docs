@@ -79,11 +79,11 @@ El operador de división entero largo \ devuelve valores significativos sólo co
 
 ### Comparación real
 
-To compare two reals for equality, the 4D language actually compares the absolute value of the difference with *epsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
+Para comparar dos reales por igualdad, el lenguaje 4D realmente compara el valor absoluto de la diferencia con el *épsilon*. Ver el comando [`SET REAL COMPARISON LEVEL`](https://doc.4d.com/4dv20/help/command/en/page623.html).
 
 :::note
 
-For consistency, the 4D database engine always compares database fields of the real type using a 10^-6 value for *epsilon* and does not take the `SET REAL COMPARISON LEVEL` setting into account.
+Por coherencia, el motor de base de datos 4D siempre compara los campos de base de datos de tipo real utilizando un valor de 10^-6 para *épsilon* y no tiene en cuenta el parámetro `SET REAL COMPARISON LEVEL`.
 
 :::
 

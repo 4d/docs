@@ -1,6 +1,6 @@
 ---
 id: webServerAdmin
-title: Administração
+title: Administration
 ---
 
 4D provides several integrated tools to start, stop, or monitor the integrated web server.
@@ -8,7 +8,7 @@ title: Administração
 
 ## Iniciando o servidor Web 4D
 
-> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. For more information, please refer to the [4D Web site](https://www.4d.com).
+> To be able to launch the web server of 4D or 4D Server, you must have a "4D Web Application" license. Para obter mais informações, consulte o site [4D](https://www.4d.com).
 
 
 A 4D project can start and monitor a web server for the main (host) application as well as for each hosted component.
@@ -17,7 +17,7 @@ O servidor web principal de 4D pode ser iniciado de diferentes maneiras:
 
 *   Utilizar um botão/comando de menu.
     *   4D: **Execução\>iniciar servidor Web**<br/>![](../assets/en/WebServer/start1.png)
-    *   4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
+    *   4D Server: botão **Iniciar servidor HTTP** da página Servidor HTTP<br/>![](../assets/en/WebServer/start2.png)
 
 *   Inicia automaticamente cada vez que a aplicação 4D é aberta. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 
@@ -49,7 +49,7 @@ When you select this command, the home page of the website published by the 4D a
 ![](../assets/en/WebServer/defaultHomePage.png)
 
 
-This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
+This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. O comando considera o número da [porta de publicação TCP](#http-port) especificado nos parâmetros.
 
 
 
@@ -60,7 +60,7 @@ At any moment, you can clear the cache of the pages and images that it contains 
 Para o fazer, pode:
 
 -   To do so, you just have to click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box.
--   4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
+-   4D Server: clique no botão **Limpar Cache** na página HTTP da janela de administração do 4D Server.
 
 A cache é então imediatamente limpa.
 > Você também pode usar o URL [/4DCACHECLEAR](#cacheclear).
@@ -122,7 +122,7 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 ### /4DWEBTEST
 
-The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
+The */4DWEBTEST* URL is designed to check the web server status. Quando esse URL é chamado, 4D retorna um arquivo texto com os campos HTTP seguintes preenchidos:
 
 | Campo HTTP | Descrição                              | Exemplo                                                                                                                         |
 | ---------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -136,7 +136,7 @@ The */4DWEBTEST* URL is designed to check the web server status. When this URL i
 
 4D permite gerar dois logs de pedidos web:
 
-- a debug log, useful in the web server development phase (*HTTPDebugLog.txt*),
+- um histórico de depuração, útil na fase de desenvolvimento do servidor Web (*HTTPDebugLog.txt*),
 - a standardized web request log, rather used for statistic purposes (*logweb.txt*).
 
 Both log files are automatically created in the **Logs** folder of the application project.
@@ -167,7 +167,7 @@ The [web log recording file](webServerConfig.md#log-recording) can be enabled us
 
 Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/YYYY:HH:MM:SS] "request" state length* Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
-DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
+DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. Simplesmente adiciona dois campos HTTP adicionais no final de cada solicitação: Referer e User-agent. Eis a descrição dos formatos CLF/DLF (não personalizáveis):
 
 | Campo nome           | Descrição                                                                                                                                                            |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,7 +183,7 @@ DLF (Combined Log Format) format is similar to CLF (Common Log Format) format an
 
 #### ELF/WLF
 
-The ELF (Extended Log Format) format is very widespread in the world of HTTP browsers. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+O formato ELF (Extended Log Format) é muito difundido no mundo dos navegadores HTTP. Ele pode ser usado para criar registros sofisticados que atendam a necessidades específicas. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
 
 The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR server.
 
@@ -248,4 +248,4 @@ Configure the automatic backup parameters for the request log. First you must ch
 
 *   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Digite 1 se quiser realizar uma cópia de segurança mensal.
 
-*   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.
+*   **Every X MB**: This option is used to program backups based on the size of the current request log file. Um backup é acionado automaticamente quando o arquivo atinge o tamanho definido. Pode definir um limite de tamanho de 1, 10, 100 ou 1000 MB.

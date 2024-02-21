@@ -1,6 +1,6 @@
 ---
 id: binary
-title: '$binary'
+title: $binary
 ---
 
 Passe "true" para guardar o BLOB como um documento (deve também passar `$expand={blobAttributeName}`)

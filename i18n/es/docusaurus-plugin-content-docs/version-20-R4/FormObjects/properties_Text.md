@@ -2,7 +2,6 @@
 id: propertiesText
 title: Text
 ---
-
 ---
 
 ## Autorizar selector fuente/color

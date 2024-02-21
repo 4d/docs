@@ -1,6 +1,6 @@
 ---
 id: catalog
-title: '$catalog'
+title: $catalog
 ---
 
 
@@ -196,7 +196,7 @@ title: '$catalog'
 *   メソッド (あれば)
 *   プライマリーキー
 
-### データクラス
+### DataClass
 
 公開されているデータクラスについて、次のプロパティが返されます:
 

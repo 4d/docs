@@ -1,6 +1,6 @@
 ---
 id: client-server
-title: Page Client/Serveur
+title: Client-server page
 ---
 
 Les pages Client-serveur regroupent les propriétés liées à l'utilisation de la base de données en mode client-serveur. Bien entendu, ces propriétés ne sont prises en compte que lorsque la base de données est utilisée en mode distant.

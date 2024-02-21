@@ -1,8 +1,8 @@
 ---
 id: querypath
-title: '$querypath'
+title: $querypath
 ---
-   	
+
 Retorna a consulta como foi executada pelo 4D Server (*por exemplo*, `$querypath=true`)
 
 ## Descrição

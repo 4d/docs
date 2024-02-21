@@ -37,6 +37,11 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 - データクラスレベルで定義されたパーミッションは、データストアの設定をオーバーライドします (あれば)。 デフォルトでは、データクラスのすべての属性が、データクラスのパーミッションを継承します。
 - データクラスとは異なり、属性レベルで定義されたパーミッションは、親のデータクラスの設定をオーバーライドするのではなく、それに追加されます。 たとえば、同じ許諾アクションに対し、データクラスのレベルでは "general" という権限名を、データクラスの属性のレベルでは "detail" という権限名を割り当てた場合、その属性にアクセスするには、セッションに "general" と "detail" の両方の権限が設定されている必要があります。
 
+:::info
+
+Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](../entities.md#restricting-entity-selections) which can be more appropriate in this case.
+
+:::
 
 ## 許諾アクション
 
@@ -130,7 +135,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 | permissions |                 |               | Object                     | ○  | 設定されたパーミッションのリスト                                                   |
 |             | allowed         |               | `permission` オブジェクトのコレクション |    | 許可されたパーミッションのリスト                                                   |
 |             |                 | \[].applyTo  | String                     | ○  | 対象の [リソース](#リソース) 名                                                |
-|             |                 | \[].type     | String                     | ○  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
+|             |                 | \[].type     | String                     | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method" |
 |             |                 | \[].read     | String の Collection        |    | 権限名のリスト                                                            |
 |             |                 | \[].create   | String の Collection        |    | 権限名のリスト                                                            |
 |             |                 | \[].update   | String の Collection        |    | 権限名のリスト                                                            |

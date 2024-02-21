@@ -1,6 +1,6 @@
 ---
 id: properties
-title: Propriétés des menus
+title: Menu item properties
 ---
 
 Vous pouvez définir plusieurs propriétés à partir des lignes de menu, telles que des actions, des styles de police, les lignes de séparation, des raccourcis clavier ou des icônes.

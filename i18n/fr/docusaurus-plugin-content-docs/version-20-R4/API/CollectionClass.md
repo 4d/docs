@@ -796,7 +796,7 @@ La collection retournée est automatiquement triée. Les valeurs **Null** ne son
 
 Si la collection contient des objets, vous pouvez passer le paramètre *propertyPath* pour indiquer la propriété de l'objet dont vous souhaitez obtenir les valeurs distinctes.
 
-Dans le paramètre *options* , vous pouvez passer une ou une combinaison des constantes suivantes :
+Dans le paramètre *options*, vous pouvez passer une ou une combinaison des constantes suivantes :
 
 | Constante         | Valeur | Commentaire                                                                                                                                                                                                        |
 | ----------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -1524,7 +1524,7 @@ Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les 
 - *formula* (syntaxe recommandée), un [objet formule](FunctionClass.md) qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;
 - *methodName*, le nom d'une méthode projet (texte).
 
-La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `Objet` en premier paramètre ($1).
+La callback est appelée avec le(s) paramètre(s) passés dans *param* (facultatif). La callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s), et doit renvoyer une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un `objet` en premier paramètre ($1).
 
 La callback reçoit les paramètres suivants :
 
@@ -3252,7 +3252,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 #### Description
 
-La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, découpée depuis l'élément numéro *startFrom*jusqu'au numéro *end* (non inclus). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `slice()` <!-- REF #collection.slice().Summary -->retourne une partie de la collection dans une nouvelle collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Cette fonction retourne une *copie superficielle* de la collection. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 La collection retournée contient l'élément spécifié par *startFrom* et tous les éléments suivants jusqu'à l'élément spécifié par *end* (mais non compris). Si seul le paramètre *startFrom* est spécifié, la collection retournée contient tous les éléments de *startFrom* au dernier élément de la collection d'origine.

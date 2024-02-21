@@ -1,7 +1,6 @@
 ---
 id: formEditor
-slug: overview
-title: Éditeur de formulaires
+title: Form Editor
 ---
 
 4D propose un éditeur de formulaires très complet qui vous permet de modifier votre formulaire jusqu’à ce que vous ayez atteint le résultat escompté. Dans l’éditeur de formulaires, vous pouvez créer et supprimer des objets, manipuler directement des objets et définir les propriétés des objets et des formulaires.

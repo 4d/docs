@@ -1,6 +1,6 @@
 ---
 id: httpRequests
-title: Procesamiento de peticiones HTTP
+title: Processing HTTP requests
 ---
 
 El servidor web de 4D ofrece varias funcionalidades para gestionar las peticiones HTTP:

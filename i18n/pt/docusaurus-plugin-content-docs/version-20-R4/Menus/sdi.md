@@ -1,6 +1,6 @@
 ---
 id: sdi
-title: Modo SDI em Windows
+title: SDI mode on Windows
 ---
 
 
@@ -50,7 +50,7 @@ Os menus são adicionados por cima das janelas sem alterar o tamanho do seu cont
 
 Assim, as janelas podem ser utilizadas nos modos MDI ou SDI sem que seja necessário recalcular a posição dos objectos.
 
-#### Splash screen
+#### Tela inicial
 
 - Se selecionar a opção de interface **Splash screen** nas [ Definições](../settings/interface.md#display-windows), a janela inicial conterá todos os menus que teriam sido apresentados na janela MDI. Note também que fechar a janela splash screen resultará na saída da aplicação, tal como no modo MDI.
 - Se a opção Splash screen não tiver sido selecionada, os menus serão apresentados apenas nas janelas abertas, dependendo das escolhas do programador.

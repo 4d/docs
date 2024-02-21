@@ -1,6 +1,6 @@
 ---
 id: propertiesHelp
-title: Aide
+title: Help
 ---
 
 ## Infobulle

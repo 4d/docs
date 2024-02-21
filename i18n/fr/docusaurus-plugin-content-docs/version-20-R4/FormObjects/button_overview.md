@@ -1,6 +1,6 @@
 ---
 id: buttonOverview
-title: Bouton
+title: Button
 ---
 
 Un bouton est un objet actif auquel une action peut être assignée (*ex :* une tâche de base de données ou une fonction d'interface) pour qu'elle soit réalisée lorsque l'utilisateur clique dessus.

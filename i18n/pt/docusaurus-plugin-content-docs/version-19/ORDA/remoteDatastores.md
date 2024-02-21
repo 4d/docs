@@ -53,6 +53,6 @@ Os recursos do ORDA relacionados ao bloqueio de entidades e à transação são 
 
 ## Fechamento das sessões
 
-Uma sessão é automaticamente encerrada por 4D quando não há atividade durante seu período de tempo limite. The default timeout is 60 mn, but this value can be modified using the `connectionInfo` parameter of the `Open datastore` command.
+Uma sessão é automaticamente encerrada por 4D quando não há atividade durante seu período de tempo limite. O tempo limite padrão é de 60 minutos, mas esse valor pode ser modificado usando o parâmetro `connectionInfo` do comando `Open datastore` .
 
 Se uma solicitação for enviada ao repositório de dados remoto depois que a sessão tiver sido fechada, ela será recriada automaticamente, se possível (licença disponível, servidor não parado...). No entanto, lembre-se de que o contexto da sessão em relação a bloqueios e transações é perdido (veja acima).

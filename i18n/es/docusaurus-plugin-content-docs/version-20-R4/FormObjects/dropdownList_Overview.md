@@ -1,6 +1,6 @@
 ---
 id: dropdownListOverview
-title: Lista desplegable
+title: Drop-down List
 ---
 
 Las listas desplegables son objetos de formulario que permiten al usuario seleccionar de una lista. Los elementos mostrados en la lista desplegable se gestionan mediante un objeto, array, una lista de selección o una acción estándar.

@@ -1,6 +1,6 @@
 ---
 id: propertiesCrop
-title: Découpage
+title: Crop
 ---
 
 

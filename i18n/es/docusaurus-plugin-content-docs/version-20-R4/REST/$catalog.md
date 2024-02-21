@@ -1,6 +1,6 @@
 ---
 id: catalog
-title: '$catalog'
+title: $catalog
 ---
 
 

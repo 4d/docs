@@ -1,6 +1,6 @@
 ---
 id: propertiesFooters
-title: Rodapés
+title: Footers
 ---
 
 ## Exibir rodapés

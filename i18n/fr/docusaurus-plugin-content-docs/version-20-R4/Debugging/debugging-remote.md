@@ -1,6 +1,6 @@
 ---
 id: debugging-remote
-title: Débogage depuis des machines distantes
+title: Debugging from remote machines
 ---
 
 ## Vue d’ensemble

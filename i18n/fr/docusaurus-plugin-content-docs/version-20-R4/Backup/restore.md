@@ -1,6 +1,6 @@
 ---
 id: restore
-title: Restitution
+title: Restore
 ---
 
 4D vous permet de récupérer l’intégralité des données d’une application en cas d’incident, quelles que soient ses causes. Deux catégories principales d’incidents peuvent se produire :

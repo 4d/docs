@@ -74,7 +74,7 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 | Versão | Mudanças                                                       |
 | ------ | -------------------------------------------------------------- |
 | v20    | Validação TLS por padrão                                       |
-| v19 R7 | Support of *automaticRedirections* and *decodeData* properties |
+| v19 R7 | Suporte às propriedades *automaticRedirections* e *decodeData* |
 
 </details>
 

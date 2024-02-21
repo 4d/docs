@@ -1004,7 +1004,7 @@ When including the optional _paramObj_ parameter, the command allows you to use 
 
 | Parâmetro |               | Tipo    | Descrição                                                    |
 | --------- | ------------- | ------- | ------------------------------------------------------------ |
-| param1    |               | text    | O nome do objeto 4D View Pro                                 |
+| param1    |               | text    | The name of the 4D View Pro area object                      |
 | param2    |               | text    | O caminho do ficheiro do objeto 4D View Pro exportado        |
 | param3    |               | object  | A reference to the command's _paramObj_                      |
 | param4    |               | object  | Um objeto devolvido pelo método com uma mensagem de estado   |
@@ -1103,16 +1103,16 @@ The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->
 
 In _paramObj_, you can pass several properties:
 
-| Propriedade             | Tipo         | Descrição                                                                                                                                        |
-| ----------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| formula                 | 4D. Function | (obrigatório) Método de retorno de chamada a ser lançado quando a exportação estiver concluída.                               |
-| includeAutoMergedCells  | Parâmetros   | Se deve incluir as células mescladas automaticamente ao salvar; padrão=falso.                                                                    |
-| includeBindingSource    | Parâmetros   | Se deve incluir a fonte de vinculação ao salvar, padrão = true.                                                                                  |
-| includeCalcModelCache   | Parâmetros   | Se deve incluir os dados extras de cálculo. Pode afetar a velocidade de abertura do arquivo; padrão=false.                                       |
-| includeEmptyRegionCells | Parâmetros   | Se devem ser incluídas células vazias (células sem dados ou apenas com estilo) fora do intervalo de dados usado, default=true |
-| includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                                         |
-| includeStyles           | Parâmetros   | Se deve incluir o estilo ao salvar, padrão=true.                                                                                                 |
-| includeUnusedNames      | Parâmetros   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                                       |
+| Propriedade             | Tipo         | Descrição                                                                                                                                                                                                            |
+| ----------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D. Function | (obrigatório) Método de retorno de chamada a ser lançado quando a exportação estiver concluída. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
+| includeAutoMergedCells  | Parâmetros   | Se deve incluir as células mescladas automaticamente ao salvar; padrão=falso.                                                                                                                                        |
+| includeBindingSource    | Parâmetros   | Se deve incluir a fonte de vinculação ao salvar, padrão = true.                                                                                                                                                      |
+| includeCalcModelCache   | Parâmetros   | Se deve incluir os dados extras de cálculo. Pode afetar a velocidade de abertura do arquivo; padrão=false.                                                                                                           |
+| includeEmptyRegionCells | Parâmetros   | Se devem ser incluídas células vazias (células sem dados ou apenas com estilo) fora do intervalo de dados usado, default=true                                                                     |
+| includeFormulas         | Parâmetros   | Se a fórmula deve ser incluída ao salvar, padrão = true.                                                                                                                                                             |
+| includeStyles           | Parâmetros   | Se deve incluir o estilo ao salvar, padrão=true.                                                                                                                                                                     |
+| includeUnusedNames      | Parâmetros   | Se deve incluir o nome personalizado não utilizado ao salvar, padrão=true.                                                                                                                                           |
 
 |saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
@@ -1279,6 +1279,7 @@ $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
  
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
   // Check for empty range object 
@@ -1940,6 +1941,7 @@ Pretende obter informações sobre o número de colunas e linhas congeladas:
 
 ```4d
 var $panesObj : Object
+
  
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2896,7 +2898,7 @@ If _rangeObj_ contains multiple cells or multiple ranges, the value of the first
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -2963,11 +2965,10 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 
-|Parâmetro|Tipo||Descrição|
-
-\|---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|Result |Object|<-|Object containing the workbook options|<!-- END REF -->
+| Parâmetro  | Tipo   |    | Descrição                                        |                  |
+| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
+| vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro       |                  |
+| Resultados | Object | <- | Objeto que contém as opções do livro de trabalho | <!-- END REF --> |
 
 #### Descrição
 
@@ -2993,63 +2994,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
 ## I
-
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-
-**VP IMPORT FROM BLOB** ( _vpAreaName_ : Text ; _vpBlob_ : 4D.blob { ; _paramObj_ : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| Parâmetro  | Tipo     |    | Descrição                                  |                  |
-| ---------- | -------- | -- | ------------------------------------------ | ---------------- |
-| vpAreaName | Text     | -> | Nome de objeto formulário área 4D View Pro |                  |
-| vpBlob     | 4D. Blob | -> | Blob contendo um documento 4D View Pro     |                  |
-| paramObj   | Object   | -> | Opções de importação                       | <!-- END REF --> |
-
-#### Descrição
-
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
-
-In _paramObj_, you can pass several properties:
-
-| Propriedade         | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D. Function | Método de retorno de chamada a ser iniciado quando a importação for concluída.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| calcOnDemand        | Parâmetros   | Se as fórmulas devem ser calculadas somente quando forem exigidas; padrão=falso.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| dynamicReferences   | Parâmetros   | Se deve calcular funções com referência dinâmica; padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| fullRecalc          | Parâmetros   | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| includeFormulas     | Parâmetros   | Se deve incluir a fórmula ao carregar, padrão=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| includeUnusedStyles | Parâmetros   | Se deve incluir o estilo de nome não utilizado ao converter o xml do Excel para o json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| openMode            | Integer      | pode ser: <br/>0: modo aberto normal, sem lazy e incremental. Ao abrir o documento, a interface do usuário e o evento da interface do usuário podem ser atualizados e responsivos em momentos específicos. <br/>1: modo aberto preguiçoso. Quando abrir o documento, só a folha ativa será carregada diretamente. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. Quando abrir o documento, UI e evento UI poderiam ser recarregados e diretamente responsivos. |
-
-Os seguintes parâmetros podem ser usados no método de retorno de chamada:
-
-| Parâmetro |               | Tipo     | Descrição                                                    |
-| :-------- | :------------ | :------- | :----------------------------------------------------------- |
-| param1    |               | text     | O nome do objeto 4D View Pro                                 |
-| param2    |               | 4D. Blob | O blob importado                                             |
-| param3    |               | object   | A reference to the command's _paramObj_ parameter            |
-| param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado   |
-|           | .success      | boolean  | True se a importação for bem-sucedida, False caso contrário. |
-|           | .errorCode    | integer  | Código de erro.                                              |
-|           | .errorMessage | text     | Mensagem de erro.                                            |
-
-#### Exemplo
-
-Você deseja importar para a "ViewProArea" um documento 4D View Pro salvo anteriormente como Blob na primeira entidade da classe de dados Table.
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### Veja também
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT DOCUMENT
 
@@ -3134,11 +3078,24 @@ End if
 Você deseja importar um documento do Microsoft Excel protegido por senha para uma área do 4D View Pro:
 
 ```4d
+	//Import code
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
  
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
+```
+
+```4d
+	//myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
 ```
 
 #### Exemplo 3
@@ -3159,6 +3116,63 @@ Here's the result:
 #### Veja também
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+
+**VP IMPORT FROM BLOB** ( _vpAreaName_ : Text ; _vpBlob_ : 4D.blob { ; _paramObj_ : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| Parâmetro  | Tipo     |    | Descrição                                  |                  |
+| ---------- | -------- | -- | ------------------------------------------ | ---------------- |
+| vpAreaName | Text     | -> | Nome de objeto formulário área 4D View Pro |                  |
+| vpBlob     | 4D. Blob | -> | Blob contendo um documento 4D View Pro     |                  |
+| paramObj   | Object   | -> | Opções de importação                       | <!-- END REF --> |
+
+#### Descrição
+
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+
+In _paramObj_, you can pass several properties:
+
+| Propriedade         | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D. Function | Método de retorno de chamada a ser iniciado quando a importação for concluída. See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                                                                                     |
+| calcOnDemand        | Parâmetros   | Se as fórmulas devem ser calculadas somente quando forem exigidas; padrão=falso.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| dynamicReferences   | Parâmetros   | Se deve calcular funções com referência dinâmica; padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| fullRecalc          | Parâmetros   | Para decidir se calcula depois do carregamento do dado json, falso por padrão                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| includeFormulas     | Parâmetros   | Se deve incluir a fórmula ao carregar, padrão=true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| includeStyles       | Parâmetros   | Se deve incluir o estilo ao carregar, padrão = true.                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| includeUnusedStyles | Parâmetros   | Se deve incluir o estilo de nome não utilizado ao converter o xml do Excel para o json, default=true.                                                                                                                                                                                                                                                                                                                                                                                                                |
+| openMode            | Integer      | pode ser: <br/>0: modo aberto normal, sem lazy e incremental. Ao abrir o documento, a interface do usuário e o evento da interface do usuário podem ser atualizados e responsivos em momentos específicos. <br/>1: modo aberto preguiçoso. Quando abrir o documento, só a folha ativa será carregada diretamente. Outras folhas serão carregadas somente quando estiverem sendo usadas. <br/>2: incremental open mode. Quando abrir o documento, UI e evento UI poderiam ser recarregados e diretamente responsivos. |
+
+Os seguintes parâmetros podem ser usados no método de retorno de chamada:
+
+| Parâmetro |               | Tipo     | Descrição                                                    |
+| :-------- | :------------ | :------- | :----------------------------------------------------------- |
+| param1    |               | text     | The name of the 4D View Pro area object                      |
+| param2    |               | 4D. Blob | O blob importado                                             |
+| param3    |               | object   | A reference to the command's _paramObj_ parameter            |
+| param4    |               | object   | Um objeto devolvido pelo método com uma mensagem de estado   |
+|           | .success      | boolean  | True se a importação for bem-sucedida, False caso contrário. |
+|           | .errorCode    | integer  | Código de erro.                                              |
+|           | .errorMessage | text     | Mensagem de erro.                                            |
+
+#### Exemplo
+
+Você deseja importar para a "ViewProArea" um documento 4D View Pro salvo anteriormente como Blob na primeira entidade da classe de dados Table.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### Veja também
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT FROM OBJECT
 
@@ -4341,6 +4355,7 @@ Function onEvent()
          This.isWaiting:=False
  
 
+
  // Stop the timer
    SET TIMER(0)
  
@@ -4578,7 +4593,7 @@ The _borderStyleObj_ parameter allows you to define the style for the lines of t
 
 | Propriedade | Tipo    | Descrição                                       | Valores possíveis                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ----------- | ------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color       | text    | Define a cor da margem. Predefinição = black.   | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                                                                |
+| color       | text    | Define a cor da margem. Predefinição = black.   | Sintaxe da cor CSS "#rrggbb" (sintaxe preferencial), sintaxe da cor CSS "rgb(r,g,b)" (sintaxe alternativa), nome da cor CSS (sintaxe alternativa)                                                                                                                                                                                                                                                                 |
 | style       | Integer | Define o estilo da borda. Predefinição = vazio. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 You can define the position of the _borderStyleObj_ (i.e., where the line is applied) with the _borderPosObj_:
@@ -4702,13 +4717,13 @@ In _rangeObj_, pass an object containing a range. If the range contains both col
 
 The _propertyObj_ parameter lets you specify the attributes to apply to the columns in the _rangeObj_. Estes atributos são:
 
-| Propriedade | Tipo    | Descrição                                                                    |
-| ----------- | ------- | ---------------------------------------------------------------------------- |
-| width       | number  | Largura da coluna expressa em píxeis                                         |
-| pageBreak   | boolean | True to insert a page break before the first column of the range, else false |
-| visible     | boolean | True se a coluna for visível, senão false                                    |
-| resizable   | boolean | True se a coluna puder ser redimensionada, senão false                       |
-| header      | text    | Texto do cabeçalho da coluna                                                 |
+| Propriedade | Tipo    | Descrição                                                                                 |
+| ----------- | ------- | ----------------------------------------------------------------------------------------- |
+| width       | number  | Largura da coluna expressa em píxeis                                                      |
+| pageBreak   | boolean | True para inserir uma quebra de página antes da primeira coluna do intervalo, senão false |
+| visible     | boolean | True se a coluna for visível, senão false                                                 |
+| resizable   | boolean | True se a coluna puder ser redimensionada, senão false                                    |
+| header      | text    | Texto do cabeçalho da coluna                                                              |
 
 #### Exemplo
 

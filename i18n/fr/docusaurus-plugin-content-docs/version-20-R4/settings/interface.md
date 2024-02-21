@@ -1,9 +1,9 @@
 ---
 id: interface
-title: Page Interface
+title: Interface page
 ---
 
- 
+
 La page Interface vous permet de régler diverses options liées à l'interface du projet.
 
 ## Général

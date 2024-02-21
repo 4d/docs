@@ -1,6 +1,5 @@
 ---
 id: webServer
-slug: overview
 title: Web サーバー
 ---
 

@@ -1,13 +1,13 @@
 ---
 id: writeprointerface
-title: Interface 4D Write Pro
+title: 4D Write Pro Interface
 ---
 
 4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
 A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+A [documentação principal da interface 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) pode ser encontrada no manual *Desenho 4D*.
 
 Você encontrará abaixo a documentação de configuração do Assistente de tabelas.
 
@@ -49,7 +49,7 @@ The user adjusts the zoom level according to their preference by selecting the d
 
 After finalizing the table creation and customization, the user can click on the **Insert** button to add the table to their WP document.
 
-Once the table has been integrated into the document, the user can customize its style. The formatting tools of the toolbar and sidebar are still available.
+Once the table has been integrated into the document, the user can customize its style. As ferramentas de formatação da barra de ferramentas e da barra lateral ainda estão disponíveis.
 
 ### Configuração do modelo do WP Table Wizard
 
@@ -164,7 +164,7 @@ O arquivo de tradução no formato JSON contém os seguintes atributos:
 
 | Atributo  | Tipo       | Obrigatório | Descrição                                                                             |
 |:--------- |:---------- |:----------- |:------------------------------------------------------------------------------------- |
-| tables    | Collection |             | Coleção de objetos de tabela traduzidos                                               |
+| tabelas   | Collection |             | Coleção de objetos de tabela traduzidos                                               |
 | fields    | Collection |             | Coleção de objetos de campo traduzidos                                                |
 | formulas  | Collection |             | Coleção de objetos fórmula traduzidos                                                 |
 | fileNames | Collection |             | Collection of translated fileName objects (applicable to the theme and template name) |

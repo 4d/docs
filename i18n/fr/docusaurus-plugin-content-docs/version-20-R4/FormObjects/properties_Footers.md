@@ -1,6 +1,6 @@
 ---
 id: propertiesFooters
-title: Pieds
+title: Footers
 ---
 
 ## Afficher pieds

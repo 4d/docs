@@ -14,7 +14,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
 - **Composant** : Projet utilisé comme matrice, pouvant être compilé ou [généré](Desktop/building.md#build-component), copié dans le dossier [`Components`](Project/architecture.md) de l'application hôte et dont le contenu est utilisé dans l'application hôte.
 
-## Principes de base
+## Basics
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 

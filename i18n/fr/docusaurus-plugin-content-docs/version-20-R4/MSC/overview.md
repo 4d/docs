@@ -1,7 +1,6 @@
 ---
 id: overview
-title: CSM
-sidebar_label: CSM
+title: MSC
 ---
 
 La fenêtre du Centre de sécurité et de maintenance (CSM) rassemble tous les outils nécessaires au contrôle, à l’analyse, à la maintenance, à la sauvegarde, au compactage et au chiffrement des fichiers de données et de structure. Le CSM est disponible dans toutes les applications 4D : 4D monoposte, 4D Server ou 4D Desktop.
@@ -37,4 +36,4 @@ Certaines fonctions du CSM ne sont pas disponibles suivant le mode d’ouverture
 
 - Les informations relatives à la sauvegarde sont disponibles uniquement lorsque le projet est ouvert (le CSM doit avoir été ouvert en mode standard).
 - Les fonctions de compactage, retour arrière, restitution, réparation et chiffrement des données ne sont utilisables qu’avec des bases de données non ouvertes (le CSM doit avoir été ouvert en mode maintenance). Si ces fonctions sont utilisées alors que le projet est ouvert en mode standard, une boîte de dialogue s’affiche, vous permettant de relancer l’application en mode maintenance.
-- Dans les bases chiffrées, l'accès aux données chiffrées ou au fichier .journal nécessite qu'une clé de chiffrement des données valide soit fournie (voir [Page Chiffrement](encrypt.md)). Sinon, les données chiffrées ne sont pas visibles. 
+- Dans les bases chiffrées, l'accès aux données chiffrées ou au fichier .journal nécessite qu'une clé de chiffrement des données valide soit fournie (voir [Page Chiffrement](encrypt.md)). Sinon, les données chiffrées ne sont pas visibles.

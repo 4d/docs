@@ -17,13 +17,13 @@ In the 4D language and for object field attributes, null values are managed thro
 
 ## Indefinido
 
-Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Evaluating an object property can also produce an undefined value. Reading a property of an undefined value returns **undefined**.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. La evaluación de una propiedad de objeto también puede producir un valor indefinido. Reading a property of an undefined value returns **undefined**.
 
 A variant variable has **undefined** as [default value](data-types.md#default-values).
 
 A field cannot be undefined (the `Undefined` command always returns False for a field).
 
-Typically when trying to read or assign undefined expressions, 4D will generate errors, except in the following cases:
+Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará errores, excepto en los siguientes casos:
 
 - Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
 

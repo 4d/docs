@@ -1,6 +1,6 @@
 ---
 id: templates
-title: Páginas de modelo
+title: Template pages
 ---
 
 O servidor Web 4D permite que você use páginas de modelo HTML contendo tags, ou seja, uma mistura de código HTML estático e referências 4D adicionadas por meio de [tags de transformação](Tags/tags.md) como 4DTEXT, 4DIF, ou 4DINCLUDE. Essas tags geralmente são inseridas como comentários do tipo HTML (`<!--#4DTagName TagValue-->`) no código-fonte HTML.

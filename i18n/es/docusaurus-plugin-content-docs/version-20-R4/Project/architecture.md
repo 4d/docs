@@ -1,6 +1,6 @@
 ---
 id: architecture
-title: Arquitectura de un proyecto
+title: Architecture of a project
 ---
 
 Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una carpeta raíz del proyecto (carpeta paquete). Por ejemplo:

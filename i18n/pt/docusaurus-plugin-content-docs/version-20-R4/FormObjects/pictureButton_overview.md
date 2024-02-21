@@ -1,6 +1,6 @@
 ---
 id: pictureButtonOverview
-title: Botão imagem
+title: Picture Button
 ---
 
 A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
@@ -43,7 +43,7 @@ You can organize pictures as columns, rows, or a row-by-column grid (as shown ab
 
 ## Animação
 
-In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
+In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. Estas opções de propriedade podem ser combinadas para melhorar seus botões de imagem.
 
 - By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. Por outras palavras, não regressa à primeira imagem da série.
 

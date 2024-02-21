@@ -1,6 +1,6 @@
 ---
 id: properties
-title: Propiedades de los menús
+title: Menu item properties
 ---
 
 Puede definir varias propiedades para los elementos del menú, como las acción, el estilo de la fuente, las líneas de separación, los atajos de teclado o los iconos.

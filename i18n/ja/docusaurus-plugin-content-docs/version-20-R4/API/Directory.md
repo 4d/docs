@@ -1,6 +1,6 @@
 ---
 id: Directory
-title: Directory クラス
+title: Directory Class
 ---
 
 

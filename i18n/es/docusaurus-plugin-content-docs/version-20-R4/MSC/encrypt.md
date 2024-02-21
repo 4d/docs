@@ -1,7 +1,6 @@
 ---
 id: encrypt
-title: Página de cifrado
-sidebar_label: Página de cifrado
+title: Encrypt Page
 ---
 
 Puede utilizar esta página para cifrar o *descifrar* (es decir, eliminar el cifrado) el archivo de datos, según el estado del atributo **Encriptable** definido para cada tabla de la base.

@@ -17,16 +17,16 @@ title: 変数
 
 ## 変数の宣言
 
-You usually create variables by declaring them. 4D ランゲージでは、変数の宣言方法は2つあります:
+変数の作成は通常、宣言によっておこないます。 4D ランゲージでは、変数の宣言方法は2つあります:
 
-- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).
+- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合、このシンタックスによりコードエディターの提案や自動補完機能が強化されます)
+- "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (旧シンタックス)。
 
 変数は宣言されると、[**その型に対応するデフォルト値**](data-types.md#デフォルト値) に初期化されます。別の値が [代入](#変数への代入) されない限り、セッション中はこの値が保持されます。 あるいは、変数を宣言するときに、データ型と値を1行で [初期化](#宣言と同時に変数を初期化する) することもできます。
 
 :::note
 
-Although it is not recommended, you can create variables simply by using them; you do not necessarily need to formally declare them. For example, to create a variable that will hold the current date plus 30 days, you can write:
+この方法は推奨されませんが、ただ "使用する" ことによって変数を宣言することもできます。 正式にそれらを宣言することは必須ではありません。 たとえば、今日の日付に30日足した値を格納した変数を作成するには、次のように書くことができます:
 
 ```4d
  MyDate:=Current date+30 //  MyDateを作成します
@@ -34,11 +34,11 @@ Although it is not recommended, you can create variables simply by using them; y
  // 30日後の日付が代入されます
 ```
 
-When a variable is created before being declared, it is not initialized at the declaration step.
+宣言前に変数が作成された場合、宣言による初期化はおこなわれません。
 
 :::
 
-To declare a variable of any type, use the following syntax:
+変数を宣言するには、次のシンタックスを用います:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 

@@ -10,7 +10,10 @@ title: エラー処理
 - 開発フェーズにおいて、問題となりうるコードのエラーやバグを発見して修正したい。
 - 運用フェーズにおいて、予期しないエラーを検知して回復したい。とくに、システムエラーダイアログ (ディスクが一杯、ファイルがない、など) を独自のインターフェースに置換できます。
 
-基本的に、4D でエラー処理する方法は 2つあります。 [エラー処理メソッドをインストール](#エラー処理メソッドの実装) するか、エラーを投げる可能性のある関数・メソッド・式を呼び出すコードの前に [`Try()`キーワード](#tryexpression) を書く方法です。
+基本的に、4D でエラー処理する方法は 2つあります。 次のことが可能です:
+
+- [エラー処理メソッドを実装](#エラー処理メソッドの実装) する
+- エラーを投げる可能性のある関数・メソッド・式を呼び出すコードの前に [`Try()`キーワード](#tryexpression) または [`Try/Catch` 文](#trycatchend-try) を使う
 
 :::tip グッドプラクティス
 
@@ -44,7 +47,7 @@ ON ERR CALL("IO_Errors";ek local) // ローカルなエラー処理メソッド�
 ON ERR CALL("";ek local) // ローカルプロセスにおいてエラーの検知を中止します
 ```
 
-[`Method called on error`](https://doc.4d.com/4dv19/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
+[`Method called on error`](https://doc.4d.com/4dv20/help/command/ja/page704.html) コマンドは、`ON ERR CALL` によってカレントプロセスにインストールされているエラー処理メソッド名を返します。 このコマンドは汎用的なコードでとくに有用です。エラー処理メソッドを一時的に変更し、後で復元することができます:
 
 ```4d
  $methCurrent:=Method called on error(ek local)
@@ -138,6 +141,12 @@ ON ERR CALL("")
 
 `Try(expression)` 文は、実際の実行コンテキスト (特にローカル変数の値を含む) で単一行の式をテストし、スローされるエラーをキャッチすることで、4D のエラーダイアログボックスが表示されないようにできます。 `Try(expression)` を使用すると、非常に少ないコードで単純なエラーケースを処理することができ、エラー処理メソッドを必要としません。
 
+:::note
+
+単一行の式よりも複雑なコードを試したい場合は、[`Try/Catch` 文](#trycatchend-try) の使用も検討できます。
+
+:::
+
 `Try(expression)` 文の正式なシンタックスは、以下の通りです:
 
 ```4d
@@ -204,8 +213,85 @@ Else
    ALERT( "エラー: "+JSON Stringify($status.errors))
 End if
 
-``` 
+```
 
 
 
+## Try...Catch...End try
 
+`Try...Catch...End try` 文は、実際の実行コンテキスト (特にローカル変数の値を含む) でコードブロックをテストし、スローされるエラーをキャッチすることで、4D のエラーダイアログボックスが表示されないようにできます。
+
+`Try(expression)` キーワードが単一の行の式を評価するのとは異なり、`Try...Catch...End try` 文は、単純なものから複雑なものまで、任意のコードブロックを評価することができます。エラー処理メソッドは必要としない点は同じです。 また、`Catch` ブロックは、任意の方法でエラーを処理するために使用できます。
+
+
+`Try...Catch...End try` 構文の正式なシンタックスは、以下の通りです:
+
+```4d
+
+Try 
+    statement(s) // 評価するコード
+Catch
+    statement(s) // エラーの場合に実行するコード
+End try
+
+```
+
+`Try` と `Catch` キーワード間のコードが最初に実行されます。 その後のフローは、実行状況によって異なります。
+
+- エラーがスローされなかった場合には、対応する `End try` キーワードの後へとコード実行が継続されます。 `Catch` と `End try` キーワード間のコードは実行されません。
+- コードブロックの実行が *非遅延エラー* をスローした場合、実行フローは停止し、対応する `Catch` コードブロックを実行します。
+- コードブロックの実行が *遅延エラー* をスローした場合には、実行フローは停止しません。`Try` の最後まで実行したのちに、対応する `Catch` コードブロックを実行します。
+
+:::note
+
+*遅延* エラーが `Try` ブロック外で投げられた場合、メソッドまたは関数の終わりまでコードが実行されます。
+
+:::
+
+:::info
+
+*遅延* および *非遅延* エラーについての詳細は、[`throw`](https://doc.4d.com/4dv20R/help/command/ja/page1805.html) コマンドの説明を参照ください。
+
+:::
+
+
+`Catch` コードブロックでは、標準のエラー処理コマンドを使用してエラーを処理できます。 [`Last errors`](https://doc.4d.com/4dv20/help/command/ja/page1799.html) コマンドは、現在のエラースタックをコレクションとして返します。 このコードブロック内で [エラー処理メソッド](#エラー処理メソッドの実装) を宣言すると、エラー発生時にはそれが呼び出されます (宣言しない場合には、4Dエラーダイアログが表示されます)。
+
+:::note
+
+[エラー処理メソッド](#エラー処理メソッドの実) が `Try` と `Catch` キーワード間のコード内でインストールされている場合には、エラー発生時にそれが呼ばれます。
+
+:::
+
+### 例題
+
+トランザクションと `Try...Catch...End try` 文を組み合わせることで、重要な機能のためにセキュアなコードを書くことができます。
+
+```4d
+Function createInvoice($customer : cs.customerEntity; $items : Collection; $invoiceRef : Text) : cs.invoiceEntity
+    var $newInvoice : cs.invoiceEntity
+    var $newInvoiceLine : cs.invoiceLineEntity
+    var $item : Object
+    ds.startTransaction()
+    Try
+        $newInvoice:=This.new()
+        $newInvoice.customer:=$customer
+        $newInvoice.invoiceRef:=$invoiceRef
+        For each ($item; $items)
+            $newInvoiceLine:=ds.invoiceLine.new()
+            $newInvoiceLine.item:=$item.item
+            $newInvoiceLine.amount:=$item.amount
+            $newInvoiceLine.invoice:=$newInvoice
+            // インボイス項目を検証するその他の関数を呼び出します
+            $newInvoiceLine.save()
+        End for each 
+        $newInvoice.save()
+        ds.validateTransaction()
+    Catch
+        ds.cancelTransaction()
+        ds.logErrors(Last errors)
+        $newInvoice:=Null
+    End try
+    return $newInvoice
+
+```

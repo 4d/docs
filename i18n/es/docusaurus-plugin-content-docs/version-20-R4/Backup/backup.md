@@ -1,6 +1,5 @@
 ---
 id: backup
-slug: backup
 title: Copia de seguridad
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: methods
-title: Métodos
+title: Methods
 ---
 
 

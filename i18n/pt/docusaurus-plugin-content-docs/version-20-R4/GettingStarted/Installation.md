@@ -1,6 +1,6 @@
 ---
 id: installation
-title: Instalação
+title: Installation
 ---
 
 Bem-vindo a 4D! Vai encontrar abaixo toda informação necessário para instalar e registrar sua aplicação 4D.

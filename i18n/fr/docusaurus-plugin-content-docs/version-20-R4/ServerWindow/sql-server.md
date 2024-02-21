@@ -1,6 +1,6 @@
 ---
 id: sql-server
-title: Page Serveur SQL
+title: SQL Server Page
 ---
 
 

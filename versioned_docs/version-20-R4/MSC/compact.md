@@ -1,20 +1,19 @@
 ---
 id: compact
 title: Compact Page
-sidebar_label: Compact Page
 ---
 
 You use this page to access the data file compacting functions.
 
-## Why compact your files? 
+## Why compact your files?
 
 Compacting files meets two types of needs:
 
-- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. 
-The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. 
+- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file.
+The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”.
 The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
 
-- **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure. 
+- **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
 
 >Compacting is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the application will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the application (see [Compact records and indexes](#compact-records-and-indexes) below).
 
@@ -22,16 +21,16 @@ The “Information” area summarizes the data concerning the fragmentation of t
 
 To directly begin the compacting of the data file, click on the compacting button in the MSC window.
 
-![](../assets/en/MSC/MSC_compact.png) 
+![](../assets/en/MSC/MSC_compact.png)
 
 
->Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file. 
+>Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file.
 
 This operation compacts the main file as well as any index files. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. If you have carried out several compacting operations, a new folder is created each time. It will be named “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, and so on. You can modify the folder where the original files are saved using the advanced mode.
 
 When the operation is completed, the compacted files automatically replace the original files. The application is immediately operational without any further manipulation.
 
->When the database is encrypted, compacting includes decryption and encryption steps and thus, requires the current data encryption key. If no valid data key has already been provided, a dialog box requesting the passphrase or the data key is displayed. 
+>When the database is encrypted, compacting includes decryption and encryption steps and thus, requires the current data encryption key. If no valid data key has already been provided, a dialog box requesting the passphrase or the data key is displayed.
 
 **Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. It is important to take this into account (especially under macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful in order to keep the package size down.
 
@@ -51,7 +50,7 @@ The Compact page contains an **Advanced>** button, which can be used to access a
 
 ### Compact records and indexes
 
-The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window. 
+The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
 
 The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. This option can be used more particularly when compacting voluminous files while using different disks.
 
@@ -74,7 +73,7 @@ In this case, 4D does not convert data already entered retroactively; data is co
 
 This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.
 
-Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data. 
+Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
 
 :::note Notes
 

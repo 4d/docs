@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulación de datos
+title: Manipulating Data
 ---
 
 Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-and-fields) y todas las [funciones](ClassFunctions.md) pueden ser accedidos a través de REST. Los nombres de clases de datos, de atributos y de funciones son sensibles a las mayúsculas y minúsculas; sin embargo, los datos de las búsquedas no lo son.
@@ -87,7 +87,7 @@ Siempre se puede definir qué atributos devolver en la respuesta REST después d
 
 Puede aplicar este filtro de las siguientes maneras:
 
-| Objeto                  | Sintaxis                                            | Ejemplo                                                       |
+| Object                  | Sintaxis                                            | Ejemplo                                                       |
 | ----------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
 | Dataclass               | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | Collection de entidades | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |

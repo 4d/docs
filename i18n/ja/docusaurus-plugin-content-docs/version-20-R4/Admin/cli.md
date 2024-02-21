@@ -1,6 +1,6 @@
 ---
 id: cli
-title: コマンドライン・インターフェース
+title: Command Line Interface
 ---
 
 macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server、組み込みアプリケーション、[tool4d](#tool4d)) の起動ができます。 この機能により、以下のことが可能になります:

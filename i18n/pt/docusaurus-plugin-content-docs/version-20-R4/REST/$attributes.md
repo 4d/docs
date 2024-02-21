@@ -1,6 +1,6 @@
 ---
 id: attributes
-title: '$attributes'
+title: $attributes
 ---
 
 Permite selecionar os atributos relacionados que deseja obter da classe de dados (*por exemplo*, `Company(1)?$attributes=employees.lastname` ou `Employee?$attributes=employer.name`).

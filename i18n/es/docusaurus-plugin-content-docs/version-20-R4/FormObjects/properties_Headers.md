@@ -1,6 +1,6 @@
 ---
 id: propertiesHeaders
-title: Encabezados
+title: Headers
 ---
 
 ## Mostrar encabezados

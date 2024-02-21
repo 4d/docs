@@ -390,7 +390,7 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
-// Function definition
+// Definição da função
 Function getArea()
  var $0 : Integer
  $0:=(This.height)*(This.width)

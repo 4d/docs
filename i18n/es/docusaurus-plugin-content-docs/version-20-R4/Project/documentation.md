@@ -1,6 +1,6 @@
 ---
 id: documentation
-title: Documentar un proyecto
+title: Documenting a project
 ---
 
 

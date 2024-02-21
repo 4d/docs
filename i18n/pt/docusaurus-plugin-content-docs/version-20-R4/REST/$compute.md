@@ -1,6 +1,6 @@
 ---
 id: compute
-title: '$compute'
+title: $compute
 ---
 
 Calcular em atributos específicos (*por exemplo*, `Employee/salary/?$compute=sum)` ou no caso de um atributo de objeto (*por exemplo.*, Employee/objectAtt.property1/?$compute=sum)

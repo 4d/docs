@@ -131,17 +131,16 @@ Function GetBestOnes()
 全会社データから平均以上の会社データをエンティティセレクションに抽出するには次を実行します:
 
 
-
-
-
-
 ```4d
     var $best : cs.CompanySelection
     $best:=ds.Company.GetBestOnes()
 ```
 
-> [計算属性](#計算属性) は [Entity クラス](#entity-クラス) において定義されます。
+:::info
 
+[計算属性](#計算属性) は [Entity クラス](#entity-クラス) において定義されます。
+
+:::
 
 #### リモートデータストアの例
 
@@ -203,9 +202,8 @@ Class extends EntitySelection
 
 // 給与が平均超えの社員を当該エンティティセレクションから抽出します
 
-Function withSalaryGreaterThanAverage
-    C_OBJECT($0)
-    $0:=This.query("salary > :1";This.average("salary")).orderBy("salary")
+Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
+    return This.query("salary > :1";This.average("salary")).orderBy("salary")
 
 ```
 
@@ -214,6 +212,13 @@ Function withSalaryGreaterThanAverage
 ```4d
 $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 ```
+
+:::info
+
+[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class).
+
+:::
+
 
 ### Entity クラス
 
@@ -250,13 +255,13 @@ Entity クラスでは、`Alias` キーワードを使用して **エイリア�
 
 Class extends Entity
 
-Function getPopulation()
-    $0:=This.zips.sum("population")
+Function getPopulation() : Integer
+    return This.zips.sum("population")
 
 
 Function isBigCity(): Boolean
 // 関数 getPopulation() をクラス内で使用することができます
-$0:=This.getPopulation()>50000
+    return This.getPopulation()>50000
 ```
 
 次のように関数を呼び出すことができます:
@@ -789,8 +794,6 @@ $arch:=ds.Course.query("courseName = :1";"Archaeology")
 $arch.courseName:="Archaeology II"
 $arch.save() //courseName と name は "Archaeology II" に変更されます
 ```
-
-
 
 
 ## 公開vs非公開関数

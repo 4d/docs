@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Controles Abas
+title: Tab Controls
 ---
 
 A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. O usuário acessa cada tela clicando na guia correspondente.

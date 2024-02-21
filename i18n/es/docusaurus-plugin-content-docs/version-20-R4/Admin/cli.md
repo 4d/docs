@@ -1,6 +1,6 @@
 ---
 id: cli
-title: Interfaz de línea de comando
+title: Command Line Interface
 ---
 
 Puede utilizar el Terminal de macOS o la consola de Windows para manejar sus aplicaciones 4D (4D, 4D Server, aplicación fusionada y [tool4d](#tool4d)) utilizando líneas de comando. Más concretamente, esta funcionalidad le permite:

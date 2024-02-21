@@ -1,6 +1,6 @@
 ---
 id: webServerConfig
-title: Configuração
+title: Configuration
 ---
 
 As configurações do servidor web 4D incluem parâmetros de segurança, portas de escuta, caminhos padrão e várias opções que abrangem todos os recursos do servidor. 4D fornece valores padrão para cada configuração.

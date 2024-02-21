@@ -1,6 +1,6 @@
 ---
 id: Document
-title: Document クラス
+title: Document Class
 ---
 
 ## 説明

@@ -120,7 +120,7 @@ L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    //Faire quelque chose avec le caractère si c'est un Tab
 
 
     If(Character code(vtSomeText[[$vlChar]])=Tab)

@@ -1,6 +1,6 @@
 ---
 id: REST_requests
-title: Acerca de las peticiones REST
+title: About REST Requests
 ---
 
 

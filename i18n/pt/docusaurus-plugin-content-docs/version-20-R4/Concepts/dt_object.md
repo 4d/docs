@@ -116,7 +116,7 @@ Pode criar dois tipos de objetos:
 
 ## Propriedades
 
-You access object property values through a chain of tokens. Object properties can be accessed in two ways:
+Você acessa os valores de propriedade do objeto por meio de uma cadeia de tokens. As propriedades do objeto podem ser acessadas de duas maneiras:
 
 - using a "dot" symbol:
   > object.propertyName
@@ -140,7 +140,7 @@ Exemplos:
 
 ```
 
-Since an object property value can be an object or a collection, you can use a sequence of symbols to access sub-properties, for example:
+Como o valor de uma propriedade de objeto pode ser um objeto ou uma coleção, é possível usar uma sequência de símbolos para acessar subpropriedades, por exemplo:
 
 ```4d
  $vAge:=employee.children[2].age
@@ -187,7 +187,7 @@ A notação de objetos está disponível em qualquer elemento da lenguagem que p
 
 ### Valor Null
 
-When using the objects, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties, for example:
+When using the objects, the **null** value is supported though the **Null** command. Esse comando pode ser usado para atribuir ou comparar o valor nulo às propriedades do objeto, por exemplo:
 
 ```4d
  myObject.address.zip:=Null
@@ -198,7 +198,7 @@ For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 
 ### Valor não definido
 
-A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. Assigning an undefined value to an existing object property reinitializes or clears its value. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
+A avaliação de uma propriedade de um objeto pode produzir às vezes um valor indefinido. A atribuição de um valor indefinido a uma propriedade de objeto existente reinicializa ou limpa seu valor. Atribuir um valor indefinido a uma propriedade objecto não existente não faz nada.
 
 For more information, please refer to [Null and Undefined](dt_null_undefined.md)
 

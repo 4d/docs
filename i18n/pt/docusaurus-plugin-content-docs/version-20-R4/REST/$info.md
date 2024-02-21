@@ -1,6 +1,6 @@
 ---
 id: info
-title: '$info'
+title: $info
 ---
 
 Devolve informação sobre os conjuntos de entidades armazenados atualmente na cache de 4D Server, bem como as sessões utilizador

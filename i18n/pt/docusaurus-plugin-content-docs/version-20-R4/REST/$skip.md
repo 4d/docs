@@ -1,6 +1,6 @@
 ---
 id: skip
-title: '$skip'
+title: $skip
 ---
 
 Inicia a entidade definida por este número na coleção (*e.g.*, `$skip=10`)

@@ -1,7 +1,6 @@
 ---
 id: repair
-title: Page Réparation
-sidebar_label: Page Réparation
+title: Repair Page
 ---
 
 Cette page permet de réparer le fichier de données ou le fichier de structure lorsqu’il a été endommagé. Generally, you will only use these functions under the supervision of 4D technical teams, when anomalies have been detected while opening the application or following a [verification](verify.md).
@@ -33,7 +32,7 @@ Cette option de réparation de bas niveau est à utiliser uniquement dans le cas
 
 Les enregistrements de 4D sont de taille variable : il est donc nécessaire, pour les retrouver, de conserver dans une table spéciale l’endroit où ils sont stockés sur votre disque. Le programme accède donc à l’adresse de l’enregistrement par l’intermédiaire d’un index et d’une table d’adresses. Si seuls des enregistrements ou des index sont endommagés, l’option de réparation standard suffira généralement pour résoudre le problème. C’est lorsque la table d’adresses est touchée qu’il faudra en venir à une récupération plus sophistiquée, puisqu’il faut la reconstituer. Pour réaliser cette opération, le CSM utilise le marqueur qui se trouve en en-tête de chaque enregistrement. Les marqueurs peuvent être comparés à des résumés des enregistrements, comportant l’essentiel de leurs informations, et à partir desquels une reconstitution de la table d’adresses est possible.
 
-> Si tous les enregistrements et toutes les tables ont été attribués, seule la zone principale est affichée. 
+> Si tous les enregistrements et toutes les tables ont été attribués, seule la zone principale est affichée.
 > 
 > La récupération par en-têtes ne tient pas compte des éventuelles contraintes d’intégrité. En particulier, à l’issue de cette opération, vous pouvez obtenir des valeurs dupliquées avec des champs uniques ou des valeurs NULL avec des champs déclarés **non NULL**.
 

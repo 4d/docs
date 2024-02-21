@@ -1008,7 +1008,7 @@ When including the optional _paramObj_ parameter, the command allows you to use 
 
 | Paramètres |               | Type    | Description                                             |
 | ---------- | ------------- | ------- | ------------------------------------------------------- |
-| param1     |               | text    | Nom de l'objet 4D View Pro                              |
+| param1     |               | text    | The name of the 4D View Pro area object                 |
 | param2     |               | text    | Chemin d'accès de l'objet 4D View Pro exporté           |
 | param3     |               | object  | A reference to the command's _paramObj_                 |
 | param4     |               | object  | Objet retourné par la méthode avec un message de statut |
@@ -1108,16 +1108,16 @@ The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->
 
 In _paramObj_, you can pass several properties:
 
-| Propriété               | Type        | Description                                                                                                                       |
-| ----------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed.                                      |
-| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                                     |
-| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                                                  |
-| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.                        |
-| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true |
-| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                                         |
-| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                                           |
-| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                                              |
+| Propriété               | Type        | Description                                                                                                                                                                                    |
+| ----------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula                 | 4D.Function | (mandatory) Callback method to be launched when the export has completed. See [Passing a callback method (formula)](#passing-a-callback-method-formula). |
+| includeAutoMergedCells  | Boolean     | Whether to include the automatically merged cells when saving, default=false.                                                                                                                  |
+| includeBindingSource    | Boolean     | Whether to include the binding source when saving, default=true.                                                                                                                               |
+| includeCalcModelCache   | Boolean     | Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.                                                                                     |
+| includeEmptyRegionCells | Boolean     | Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true                                                              |
+| includeFormulas         | Boolean     | Whether to include the formula when saving, default=true.                                                                                                                                      |
+| includeStyles           | Boolean     | Whether to include the style when saving, default=true.                                                                                                                                        |
+| includeUnusedNames      | Boolean     | Whether to include the unused custom name when saving, default=true.                                                                                                                           |
 
 |saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
 
@@ -1284,6 +1284,7 @@ $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
  
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
   // Check for empty range object 
@@ -1949,6 +1950,7 @@ Vous souhaitez récupérer des informations sur le nombre de colonnes et de lign
 
 ```4d
 var $panesObj : Object
+
  
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2581,7 +2583,7 @@ The `VP Get table column attributes` command <!-- REF #_method_.VP Get table col
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -2643,7 +2645,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area.
 
 In _columnName_, pass the name of the table column for which you want to get the index.
 
-In _sheet_, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -2697,7 +2699,7 @@ In _tableName_, pass the name of the table for which you want to get the dirty r
 
 By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
 
-In _sheet_, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -2762,7 +2764,7 @@ In the _onlyData_ parameter, you can pass one of the following constants to indi
 | `vk table full range` | 0      | Get the cell range for the table area with footer and header (default if omitted) |
 | `vk table data range` | 1      | Get the cell range for the table data area only                                                      |
 
-In _sheet_, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 
@@ -2849,7 +2851,7 @@ The `VP Get tables` command <!-- REF #_method_.VP Get tables.Summary -->returns 
 
 In _vpAreaName_, pass the name of the 4D View Pro area.
 
-In _sheet_, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 
@@ -2908,7 +2910,7 @@ If _rangeObj_ contains multiple cells or multiple ranges, the value of the first
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
+    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
 End if
 ```
 
@@ -2975,11 +2977,10 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 <!-- REF #_method_.VP Get workbook options.Params -->
 
-|Paramètre|Type||Description|
-
-\|---|---|---|---|
-|vpAreaName  |Text|->|4D View Pro area form object name|
-|Result |Object|<-|Object containing the workbook options|<!-- END REF -->
+| Paramètres | Type   |    | Description                             |                  |
+| ---------- | ------ | -- | --------------------------------------- | ---------------- |
+| vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
+| Résultat   | Object | <- | Objet contenant les options de workbook | <!-- END REF --> |
 
 #### Description
 
@@ -3006,63 +3007,6 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 ## I
 
-### VP IMPORT FROM BLOB
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
-
-**VP IMPORT FROM BLOB** ( _vpAreaName_ : Text ; _vpBlob_ : 4D.blob { ; _paramObj_ : Object} ) <!-- END REF -->
-
-<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
-
-| Paramètres | Type    |    | Description                             |                  |
-| ---------- | ------- | -- | --------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
-| vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro  |                  |
-| paramObj   | Object  | -> | Import options                          | <!-- END REF --> |
-
-#### Description
-
-The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
-
-In _paramObj_, you can pass several properties:
-
-| Propriété           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | Callback method to be launched when the import has completed.                                                                                                                                                                                                                                                                                                                                                                             |
-| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                 |
-| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                      |
-| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                              |
-| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                |
-| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                  |
-| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                             |
-| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
-
-Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
-
-| Paramètres |               | Type    | Description                                             |
-| :--------- | :------------ | :------ | :------------------------------------------------------ |
-| param1     |               | text    | Nom de l'objet 4D View Pro                              |
-| param2     |               | 4D.Blob | Le blob importé                                         |
-| param3     |               | object  | A reference to the command's _paramObj_ parameter       |
-| param4     |               | object  | Objet retourné par la méthode avec un message de statut |
-|            | .success      | boolean | Vrai si l'import est réussi, Faux sinon.                |
-|            | .errorCode    | entier  | Code d'erreur.                                          |
-|            | .errorMessage | text    | Message d'erreur.                                       |
-
-#### Exemple
-
-Vous souhaitez importer dans la "ViewProArea" un document 4D View Pro précédemment enregistré en tant que Blob dans la première entité de la dataclass Table.
-
-```4d
-var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
-VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
-
-```
-
-#### Voir également
-
-[VP EXPORT TO BLOB](#vp-export-to-blob)
-
 ### VP IMPORT DOCUMENT
 
 <details><summary>Historique</summary>
@@ -3083,7 +3027,7 @@ VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
 | ---------- | ------ | -- | --------------------------------------- | ---------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro |                  |
 | filePath   | Text   | -> | Chemin d'accès du document              |                  |
-| paramObj   | Object | -> | Import options                          | <!-- END REF --> |
+| paramObj   | Object | -> | Options d'import                        | <!-- END REF --> |
 
 #### Description
 
@@ -3146,11 +3090,24 @@ End if
 Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :
 
 ```4d
+	//Import code
+var $o : Object
 $o:=New object
 $o.password:="excel123"
 $o.formula:=Formula(myImport)
  
 VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
+```
+
+```4d
+	//myImport callback method
+#DECLARE($area : Text; $filePath : Text; $param : Object; $status : Object)
+
+If ($status.success)
+     ALERT("Import successfully completed")
+Else 
+     ALERT("Error: "+$status.errorMessage)
+End if
 ```
 
 #### Exemple 3
@@ -3171,6 +3128,63 @@ Here's the result:
 #### Voir également
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
+
+### VP IMPORT FROM BLOB
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Syntax -->
+
+**VP IMPORT FROM BLOB** ( _vpAreaName_ : Text ; _vpBlob_ : 4D.blob { ; _paramObj_ : Object} ) <!-- END REF -->
+
+<!-- REF #_method_.VP IMPORT FROM BLOB.Params -->
+
+| Paramètres | Type    |    | Description                             |                  |
+| ---------- | ------- | -- | --------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |                  |
+| vpBlob     | 4D.Blob | -> | Blob contenant un document 4D View Pro  |                  |
+| paramObj   | Object  | -> | Options d'import                        | <!-- END REF --> |
+
+#### Description
+
+The `VP IMPORT FROM BLOB` command <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->imports the _vpBlob_ in the 4D View Pro area _vpAreaName_ and replaces its contents<!-- END REF -->. _vpBlob_ must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+
+In _paramObj_, you can pass several properties:
+
+| Propriété           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | Callback method to be launched when the import has completed. See [Passing a callback method (formula)](#passing-a-callback-method-formula).                                                                                                                                                                                                                                                                           |
+| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                 |
+| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                      |
+| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                              |
+| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                |
+| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                  |
+| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                             |
+| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
+
+Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
+
+| Paramètres |               | Type    | Description                                             |
+| :--------- | :------------ | :------ | :------------------------------------------------------ |
+| param1     |               | text    | The name of the 4D View Pro area object                 |
+| param2     |               | 4D.Blob | Le blob importé                                         |
+| param3     |               | object  | A reference to the command's _paramObj_ parameter       |
+| param4     |               | object  | Objet retourné par la méthode avec un message de statut |
+|            | .success      | boolean | Vrai si l'import est réussi, Faux sinon.                |
+|            | .errorCode    | entier  | Code d'erreur.                                          |
+|            | .errorMessage | text    | Message d'erreur.                                       |
+
+#### Exemple
+
+Vous souhaitez importer dans la "ViewProArea" un document 4D View Pro précédemment enregistré en tant que Blob dans la première entité de la dataclass Table.
+
+```4d
+var $myBlobDocument : 4D.Blob :=ds.Table.all().first().blob
+VP IMPORT FROM BLOB("ViewProArea"; $myBlobDocument)
+
+```
+
+#### Voir également
+
+[VP EXPORT TO BLOB](#vp-export-to-blob)
 
 ### VP IMPORT FROM OBJECT
 
@@ -3374,7 +3388,7 @@ If _tableName_ does not exist or if there is not enough space in the sheet, noth
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -4113,7 +4127,7 @@ If _tableName_ does not exist, nothing happens.
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context : Object
@@ -4360,6 +4374,7 @@ Function onEvent()
  // To be sure to not restart the timer if you call others 4D View command after this point
          This.isWaiting:=False
  
+
 
  // Stop the timer
    SET TIMER(0)
@@ -5858,7 +5873,7 @@ In _vpAreaName_, pass the name of the 4D View Pro area.
 
 In _visible_, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
 
-In _sheet_, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 
 > La numérotation démarre à 0.
 
@@ -5924,7 +5939,7 @@ In the _attributes_ parameter, pass an object that contains the properties to se
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                      |
 | filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                     |
 
-In _sheet_, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+In _sheet_, pass the index of the target sheet. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
@@ -5932,7 +5947,7 @@ If _tableName_ is not found or if _column_ is higher than the number of columns,
 
 #### Exemple
 
-You create a table with a data context:
+Vous créez une table avec un contexte de données :
 
 ```4d
 var $context;$options : Object
@@ -6162,11 +6177,11 @@ In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 The parameter _valueObj_ is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to _rangeObj_. Il peut contenir les propriétés suivantes :
 
-| Propriété | Type                                     | Description                                                                                                                                                      |
-| --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Passez null pour effacer le contenu de la cellule.                                              |
-| time      | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                               |
-| format    | Text                                     | Pattern for value/time property. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propriété | Type                                     | Description                                                                                                                                                          |
+| --------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value     | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Passez null pour effacer le contenu de la cellule.                                                  |
+| time      | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                   |
+| format    | Text                                     | Modèle pour la propriété value/time. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
 
 #### Exemple
 

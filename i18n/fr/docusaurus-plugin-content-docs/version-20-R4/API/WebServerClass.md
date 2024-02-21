@@ -201,7 +201,7 @@ Le <!-- REF #WebServerClass.characterSet.Summary -->jeu de caractères devant ê
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
 
-La <!-- REF #WebServerClass.cipherSuite.Summary -->liste de chiffrement utilisée pour le protocole sécurisé<!-- END REF -->. Définit la priorité des algorithmes de chiffrement implémentés par le serveur Web de 4D. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la [page des chiffrements](https://www.openssl.org/docs/manmaster/man1/ciphers.html) sur le site OpenSSL.
+Le <!-- REF #WebServerClass.cipherSuite.Summary -->liste de chiffrement utilisée pour le protocole sécurisé<!-- END REF -->. Définit la priorité des algorithmes de chiffrement implémentés par le serveur Web de 4D. Peut être une séquence de chaînes séparées par des deux-points (par exemple "ECDHE-RSA-AES128 -..."). Voir la [page des chiffrements](https://www.openssl.org/docs/manmaster/man1/ciphers.html) sur le site OpenSSL.
 
 <!-- END REF -->
 
@@ -294,7 +294,7 @@ Le <!-- REF #WebServerClass.HSTSEnabled.Summary -->statut du HTTP Strict Transpo
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
-La <!-- REF #WebServerClass.HSTSMaxAge.Summary -->durée maximale (en secondes) d'activation de HSTS pour chaque nouvelle connexion cliente<!-- END REF -->. Ces informations sont stockées côté client pendant la durée spécifiée.
+Le <!-- REF #WebServerClass.HSTSMaxAge.Summary -->durée maximale (en secondes) d'activation de HSTS pour chaque nouvelle connexion cliente<!-- END REF -->. Ces informations sont stockées côté client pendant la durée spécifiée.
 
 Valeur par défaut : 63072000 (2 ans).
 
@@ -362,7 +362,7 @@ Par défaut = 80
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
 
-L' <!-- REF #WebServerClass.HTTPTrace.Summary -->activation de `HTTP TRACE`<!-- END REF -->. Pour des raisons de sécurité, le serveur Web rejette par défaut les requêtes `HTTP TRACE` avec une erreur 405. Lorsque le `HTTP TRACE` est activé, le serveur Web répond aux requêtes `HTTP TRACE` avec la ligne, l'en-tête et le corps de la requête.
+Le <!-- REF #WebServerClass.HTTPTrace.Summary -->activation de `HTTP TRACE`<!-- END REF -->. Pour des raisons de sécurité, le serveur Web rejette par défaut les requêtes `HTTP TRACE` avec une erreur 405. Lorsque le `HTTP TRACE` est activé, le serveur Web répond aux requêtes `HTTP TRACE` avec la ligne, l'en-tête et le corps de la requête.
 
 <!-- END REF -->
 
@@ -398,7 +398,7 @@ Par défaut = 443
 
 > Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
-La <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->durée de vie (en minutes) des process de session legacy inactifs<!-- END REF -->. À la fin du délai d'attente, le process est tué sur le serveur, la méthode base `On Web Legacy Close Session` est appelée, puis le contexte de session legacy est détruit.
+Le <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->durée de vie (en minutes) des process de session legacy inactifs<!-- END REF -->. À la fin du délai d'attente, le process est tué sur le serveur, la méthode base `On Web Legacy Close Session` est appelée, puis le contexte de session legacy est détruit.
 
 Par défaut = 480 minutes
 
@@ -412,7 +412,7 @@ Par défaut = 480 minutes
 
 > Cette propriété n'est pas retournée [en mode sessions évolutives](#scalablesession).
 
-La <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->durée de vie (en minutes) des sessions legacy inactives (durée définie dans le cookie)<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
+Le <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->durée de vie (en minutes) des sessions legacy inactives (durée définie dans le cookie)<!-- END REF -->. À la fin de cette période, le cookie de session expire et n'est plus envoyé par le client HTTP.
 
 Par défaut = 480 minutes
 
@@ -425,7 +425,7 @@ Par défaut = 480 minutes
 <!-- REF #WebServerClass.IPAddressToListen.Syntax -->**.IPAddressToListen** : Text<!-- END REF -->
 
 
-L' <!-- REF #WebServerClass.IPAddressToListen.Summary -->Adresse IP sur laquelle le serveur Web 4D recevra les requêtes HTTP<!-- END REF -->. Par défaut, aucune adresse spécifique n'est définie. Les formats de chaîne IPv6 et IPv4 sont pris en charge.
+Le <!-- REF #WebServerClass.IPAddressToListen.Summary -->Adresse IP sur laquelle le serveur Web 4D recevra les requêtes HTTP<!-- END REF -->. Par défaut, aucune adresse spécifique n'est définie. Les formats de chaîne IPv6 et IPv4 sont pris en charge.
 
 <!-- END REF -->
 
@@ -521,7 +521,7 @@ Contient le <!-- REF #WebServerClass.maxSessions.Summary -->nombre maximum de se
 <!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Number<!-- END REF -->
 
 
-La <!-- REF #WebServerClass.minTLSVersion.Summary -->version TLS minimale acceptée pour les connexions<!-- END REF -->. Les tentatives de connexion de clients prenant en charge uniquement les versions inférieures au minimum seront rejetées.
+Le <!-- REF #WebServerClass.minTLSVersion.Summary -->version TLS minimale acceptée pour les connexions<!-- END REF -->. Les tentatives de connexion de clients prenant en charge uniquement les versions inférieures au minimum seront rejetées.
 
 Valeurs possibles :
 
@@ -556,7 +556,7 @@ Le <!-- REF #WebServerClass.name.Summary -->nom de l'application de serveur Web<
 
 *Propriété en lecture seulement.*
 
-La <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèque OpenSSL utilisée<!-- END REF -->.
+Le <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèque OpenSSL utilisée<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -569,7 +569,7 @@ La <!-- REF #WebServerClass.openSSLVersion.Summary -->version de la bibliothèqu
 
 *Propriété en lecture seulement.*
 
-La <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité de PFS sur le serveur<!-- END REF -->.
+Le <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilité de PFS sur le serveur<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -648,7 +648,7 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-La <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur du cookie de session "SameSite"<!-- END REF -->. Valeurs possibles (avec constantes) :
+Le <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valeur du cookie de session "SameSite"<!-- END REF -->. Valeurs possibles (avec constantes) :
 
 | Constante           | Valeur   | Description                                                                                                                               |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -669,7 +669,7 @@ Voir [cookie de session SameSite](WebServer/webServerConfig.md#session-cookie-sa
 > Cette propriété n'est pas utilisée dans le [mode de sessions évolutives](#scalablesession) (il n'existe pas de validation d'adresse IP).
 
 
-La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation d'adresse IP pour les cookies de session<!-- END REF -->. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. Par exemple, lorsque les appareils mobiles basculent entre les réseaux Wifi et 3G/4G, leur adresse IP change. Dans ce cas, vous pouvez permettre aux clients de continuer à utiliser leurs sessions Web même lorsque les adresses IP changent (ce paramétrage abaisse le niveau de sécurité de votre application).
+Le <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation d'adresse IP pour les cookies de session<!-- END REF -->. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. Par exemple, lorsque les appareils mobiles basculent entre les réseaux Wifi et 3G/4G, leur adresse IP change. Dans ce cas, vous pouvez permettre aux clients de continuer à utiliser leurs sessions Web même lorsque les adresses IP changent (ce paramétrage abaisse le niveau de sécurité de votre application).
 
 <!-- END REF -->
 

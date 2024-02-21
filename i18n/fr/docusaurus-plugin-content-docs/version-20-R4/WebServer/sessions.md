@@ -1,6 +1,6 @@
 ---
 id: sessions
-title: Sessions utilisateur
+title: User sessions
 ---
 
 Le serveur Web de 4D offre des fonctions intégrées pour la gestion des **sessions utilisateur**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.

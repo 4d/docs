@@ -1,6 +1,6 @@
 ---
 id: savedorderby
-title: '$savedorderby'
+title: $savedorderby
 ---
 
 エンティティセット作成時に、`$orderby` に定義した並べ替え情報を保存します (*例*: `$savedorderby="{orderby}"`)

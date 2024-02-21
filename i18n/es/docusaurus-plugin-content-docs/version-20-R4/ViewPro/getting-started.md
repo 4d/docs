@@ -1,6 +1,6 @@
 ---
 id: getting-started
-title: Comencemos
+title: Getting Started
 ---
 
 

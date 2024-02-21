@@ -5,7 +5,7 @@ title: Collection
 
 Las colecciones son listas ordenadas de valores de tipos similares o diferentes (texto, número, fecha, objeto, booleano, colección o null).
 
-Collection type variables are managed using [object notation](dt_object.md#properties)).
+Las variables de tipo Collection se administran utilizando [notación de objetos](dt_object.md#properties).
 
 Para acceder a un elemento de la colección, hay que pasar el número del elemento entre corchetes:
 
@@ -13,10 +13,10 @@ Para acceder a un elemento de la colección, hay que pasar el número del elemen
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in _expression_. Ejemplos:
+Puede pasar toda expresión 4D válida que devuelva un entero positivo en _expression_. Ejemplos:
 
 ```4d
- myCollection[5]  //access to 6th element of the collection
+ myCollection[5]  //acceso al 6º elemento de la colección
  myCollection[$var]
 ```
 
@@ -46,12 +46,12 @@ Las colecciones deben haber sido instanciadas, de lo contrario intentar leer o m
 
 La instanciación de la colección puede realizarse de una de las siguientes maneras:
 
-- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
+- utilizando el comando [`New collection`](../API/CollectionClass.md#new-collection),
 - utilizando el operador `[]`.
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
+Varios comandos y funciones 4D devuelven colecciones, por ejemplo [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) o [`collection.copy`](../API/CollectionClass.md#copy). En este caso, no es necesario instanciar explícitamente la colección, el lenguaje 4D lo hace por usted.
 
 :::
 
@@ -62,11 +62,11 @@ El comando [`New collection`](../API/CollectionClass.md#new-collection) crea una
 Ejemplos:
 
 ```4d
- var $colVar : Collection //declaration of a collection type 4D variable
- $colVar:=New collection //instantiation of the collection and assignment to the 4D variable
+ var $colVar : Collection //declaración de una colección de tipo 4D variable
+ $colVar:=New collection //instanciación de la colección y asignación a la variable 4D
  
  var $colFilled : Collection
- $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
+ $colFilled:=New collection("a";"b";1;42;{}) //instanciación y asignación de una colección pre-rellenada
 ```
 
 ### operador `[]`

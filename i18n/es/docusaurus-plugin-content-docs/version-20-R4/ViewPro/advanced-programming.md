@@ -1,6 +1,6 @@
 ---
 id: advanced-programming
-title: Programación avanzada con Javascript
+title: Advanced programming with Javascript
 ---
 
 Un Área 4D View Pro es un [objeto de formulario de Área Web](../FormObjects/webArea_overview.md) que utiliza el [motor de renderizado web integrado](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). Como tal, se comporta como cualquier otra área web, y puede hacer ejecutar código Javascript llamando al comando 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html).

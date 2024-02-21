@@ -2,7 +2,6 @@
 id: SMTPTransporterClass
 title: SMTPTransporter
 ---
-
 `SMTPTransporter` クラスを使って、SMTP接続の設定や、*SMTP transporter* オブジェクトを介したメールの送信をおこなうことができます。
 
 ### SMTP Transporter オブジェクト

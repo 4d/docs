@@ -1,6 +1,6 @@
 ---
 id: breakpoints
-title: Points d'arrêt et points d'arrêt sur commande
+title: Breakpoints and Command Catching
 ---
 
 ## Vue d’ensemble

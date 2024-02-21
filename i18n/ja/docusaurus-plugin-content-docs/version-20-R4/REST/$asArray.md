@@ -1,6 +1,6 @@
 ---
 id: asArray
-title: '$asArray'
+title: $asArray
 ---
 
 

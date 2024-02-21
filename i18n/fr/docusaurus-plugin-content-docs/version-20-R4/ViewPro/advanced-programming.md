@@ -1,6 +1,6 @@
 ---
 id: advanced-programming
-title: Programmation avancée avec Javascript
+title: Advanced programming with Javascript
 ---
 
 Une zone 4D View Pro est un [objet de formulaire de zone Web](../FormObjects/webArea_overview.md) qui utilise le [moteur de rendu Web intégré](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). As such, it behaves just like any other web area, and you can get it to execute Javascript code by calling the [`WA Evaluate Javascript`](https://doc.4d.com/4dv20/help/command/en/page1029.html) 4D command.

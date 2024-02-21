@@ -1,6 +1,6 @@
 ---
 id: preemptiveWeb
-title: Uso de procesos web apropiativos
+title: Using preemptive web processes
 ---
 
 

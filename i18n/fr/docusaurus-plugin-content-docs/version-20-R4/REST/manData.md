@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulation des données
+title: Manipulating Data
 ---
 
 Tous [les attributs, dataclasses exposés](configuration.md#exposing-tables-and-fields) et toutes les [fonctions](ClassFunctions.md) sont accessibles via REST. Les noms de dataclass, d'attributs et de fonctions sont sensibles à la casse; contrairement aux données des requêtes.
@@ -48,7 +48,7 @@ Si vous souhaitez supprimer un entity set du cache de 4D Server, vous pouvez uti
 
 Si vous modifiez l'un des attributs de l'entité dans l'entity set, les valeurs seront mises à jour. Toutefois, si vous modifiez une valeur qui faisait partie de la requête exécutée pour créer l'entity set, elle ne sera pas supprimée de l'entity set même si elle ne correspond plus aux critères de recherche. Bien entendu, les entités que vous supprimez ne feront plus partie de l'entity set.
 
-Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'entity set sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
+Si l'entity set ne se trouve plus dans le cache de 4D Server, il sera recréé avec un nouveau timeout de 10 minutes. L'ensemble d'entités sera actualisé (certaines entités peuvent être incluses tandis que d'autres peuvent être supprimées) depuis la dernière fois qu'il a été créé, s'il n'existait plus avant de le recréer.
 
 En utilisant [`$entityset/{entitySetID}?$logicOperator... &$otherCollection`]($entityset.md#entitysetentitysetidoperatorothercollection), vous pouvez combiner deux entity sets que vous avez précédemment créés. Vous pouvez combiner les résultats dans les deux, retourner uniquement ce qui est commun aux deux, ou renvoyer ce qui n'est pas commun aux deux.
 

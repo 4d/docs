@@ -1,7 +1,6 @@
 ---
 id: overview
-title: CSM
-sidebar_label: CSM
+title: MSC
 ---
 
 The Maintenance and Security Center (MSC) window contains all the tools needed for verification, analysis, maintenance, backup, compacting, and encrypting of data files. The MSC window is available in all 4D applications: 4D single user, 4D Server or 4D Desktop.
@@ -37,4 +36,4 @@ Certas funções do CSM não estão disponíveis dependendo do modo de abertura 
 
 - Backup function is only available when the project is open (the MSC must have been opened in standard mode).
 - Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
-- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Caso contrário, os dados encriptados não são visíveis. 
+- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Caso contrário, os dados encriptados não são visíveis.

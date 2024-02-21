@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Débogueur
+title: Debugger
 ---
 
 Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".

@@ -1,6 +1,6 @@
 ---
 id: onGettingFocus
-title: On getting focus
+title: On Getting focus
 ---
 
 | Code | Pode ser chamado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Definição                                  |

@@ -1,6 +1,6 @@
 ---
 id: propertiesDataSource
-title: Fonte de dados
+title: Data Source
 ---
 
 ## Inserção automática
@@ -57,9 +57,9 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados     | Valores possíveis                        |
-| ------ | ----------------- | ---------------------------------------- |
-| labels | liste, collection | A list of values to fill the tab control |
+| Nome   | Tipo de dados     | Valores possíveis                                          |
+| ------ | ----------------- | ---------------------------------------------------------- |
+| labels | liste, collection | Uma lista de valores para preencher o controlo de pestanas |
 
 #### Objectos suportados
 
@@ -220,9 +220,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis                                                       |
-| ---------- | ------------- | ----------------------------------------------------------------------- |
-| dataSource | string        | A 4D variable, field name, or an arbitrary complex language expression. |
+| Nome       | Tipo de dados | Valores possíveis                                                                 |
+| ---------- | ------------- | --------------------------------------------------------------------------------- |
+| dataSource | string        | Uma variável 4D, nome de campo ou uma expressão de linguagem complexa arbitrária. |
 
 #### Objectos suportados
 

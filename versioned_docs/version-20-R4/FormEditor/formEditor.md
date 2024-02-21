@@ -1,6 +1,5 @@
 ---
 id: formEditor
-slug: overview
 title: Form Editor
 ---
 
@@ -517,9 +516,9 @@ The final list box:
 
 ## Insert fields
 
-The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms. 
+The **Insert fields** button inserts all fields (except object and blob type fields) of the form table in the form, along with their labels and with respect to interface standards. This wizard is a shortcut to design basic entry forms or list forms.
 
-The **Insert fields** button is only available with table forms. 
+The **Insert fields** button is only available with table forms.
 
 The design of the resulting form depends on the form type:
 
@@ -594,9 +593,9 @@ There are three ways to access the View palette:
 - **Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View**
 
  ![](../assets/en/FormEditor/contextMenu.png)
-  
+
 The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
-  
+
 - **Form menu**: Click on the **Form** menu and select **View List**
 
 ![](../assets/en/FormEditor/formMenu.png)

@@ -1,11 +1,11 @@
 ---
 id: security
-title: Página segurança
+title: Security page
 ---
 
 This page contains options related to data access and protection for your desktop applications.
 
-**Note**: For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+**Note**: Para uma visão geral dos recursos de segurança de 4D, consulte o [guia de segurança 4D](https://blog.4d.com/4d-security-guide/).
 
 ## Acesso aos dados / Acesso de usuários remotos
 
@@ -23,7 +23,7 @@ This page contains options related to data access and protection for your deskto
     -   If you have associated a password with the Default User, a dialog box appears when the database is opened and the users must enter a password.
     -   If you haven't associated a password with the Default User, the User Identification dialog box will not appear.**Note:** You can "force" the display of the User Identification dialog box when the "Default User" mode is active, for instance in order to connect as Administrator or Designer. To do so, press the **Shift** key while opening the database or connecting to it.
 
--   **Display User List in Password Dialog Box**: If this option is checked, users must choose their name from the list of users and enter their password in the User Identification dialog box. Se essa opção não estiver marcada, os usuários deverão digitar o nome e a senha. For more information about the two versions of the password dialog box, see the section "Access system overview" in [Access system overview](https://doc.4d.com/4Dv19/4D/19/Access-system-overview.300-5416896.en.html).
+-   **Display User List in Password Dialog Box**: If this option is checked, users must choose their name from the list of users and enter their password in the User Identification dialog box. Se essa opção não estiver marcada, os usuários deverão digitar o nome e a senha. Para obter mais informações sobre as duas versões da caixa de diálogo de senha, consulte a seção "Visão geral do controle de acesso" em [Visão geral do controle de acesso](https://doc.4d.com/4Dv19/4D/19/Access-system-overview.300-5416896.en.html).
 
     -   **User List in Alphabetical Order** (only available if the previous option is checked): When this option is checked, the list of users in the password entry dialog box is sorted by alphabetical order.
 
@@ -34,7 +34,7 @@ This page contains options related to data access and protection for your deskto
 -   **Filtering of commands and project methods in the formula editor and 4D Write Pro documents**: For security reasons, by default 4D restricts access to the commands, functions and project methods in the [Formula editor](https://doc.4d.com/4Dv19/4D/19/Formula-editor.200-5416596.en.html) in Application mode or added to mutlistyle areas or 4D Write Pro documents using the [ST INSERT EXPRESSION](https://doc.4d.com/4dv19R/help/command/en/page1281.html) command: only certain 4D functions and project methods that have been explicitly declared using the [SET ALLOWED METHODS](https://doc.4d.com/4dv19R/help/command/en/page805.html) command can be used. You can completely or partially remove this filtering using the following options.
     -   **Enabled for all** (default option): Access to commands, functions and project methods is restricted for all users, including the Designer and the Administrator.
     -   **Disable for the Designer and the Administrator**: This option grants full access to 4D commands and to methods only for the Designer and Administrator. It can be used to set up an unlimited access mode to commands and methods while remaining in control of the operations carried out. During the development phase, this mode can be used to freely test all the formulas, reports, and so on. During operation, it can be used to set up secure solutions that allow access to commands and methods on a temporary basis. This consists in changing the user (via the [CHANGE CURRENT USER](https://doc.4d.com/4dv19R/help/command/en/page289.html) command) before calling a dialog box or starting a printing process that requires full access to the commands, then returning to the original user when the specific operation is completed. **Note:** If full access has been enabled using the previous option, this option will have no effect.
-    -   **Disabled for all**: This option disables control within formulas. When this option is checked, users have access to all the 4D commands and plug-ins as well as all project methods (except for invisible ones). **Note:** This option takes priority over the [SET ALLOWED METHODS](https://doc.4d.com/4dv19R/help/command/en/page805.html) command. Quando está selecionado, este comando não faz nada.
+    -   **Disabled for all**: This option disables control within formulas. When this option is checked, users have access to all the 4D commands and plug-ins as well as all project methods (except for invisible ones). **Nota:** essa opção tem prioridade sobre o comando [SET PERMITIDO DE METES](https://doc.4d.com/4dv19R/help/command/en/page805.html). Quando está selecionado, este comando não faz nada.
 
 -   **Enable User Settings**: You need to check this option to be able to display separated dialog boxes for user settings. When this option is checked, up to three dialog boxes are available: **Structure Settings**, **User Settings**, and **User Settings for Data File**. For more information, refer to [User settings](overview.md#user-settings).
 

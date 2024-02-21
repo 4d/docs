@@ -1,6 +1,6 @@
 ---
 id: queryplan
-title: '$queryplan'
+title: $queryplan
 ---
 
 

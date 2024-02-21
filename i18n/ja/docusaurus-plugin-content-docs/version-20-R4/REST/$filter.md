@@ -1,10 +1,10 @@
 ---
 id: filter
-title: '$filter'
+title: $filter
 ---
 
 
- 
+
 データクラスまたはメソッドが返すデータをフィルターします *(例*: `$filter="firstName!='' AND salary>30000"`)
 
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-title: Aparência
+title: Appearance
 ---
 
 ## Botão predefinido
@@ -363,7 +363,7 @@ Valores disponíveis:
 
 #### Objectos suportados
 
-[Hierárquica Lista](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [Lista Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
+[Lista hierárquica](list_overview.md#overview) - [Subformulário](subform_overview.md#overview) - [Caixa de listagem](listbox_overview.md#overview) - [Entrada](input_overview.md) - [Área 4D Write Pro](writeProArea_overview.md)
 
 #### Veja também
 

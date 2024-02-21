@@ -1,6 +1,6 @@
 ---
 id: application-server
-title: Página Servidor de aplicación
+title: Application Server Page
 ---
 
 

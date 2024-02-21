@@ -75,9 +75,9 @@ title: EntitySelection
 
 任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
-| プロパティ   | タイプ  | 説明                                                                      |
-| ------- | ---- | ----------------------------------------------------------------------- |
-| context | Text | エンティティセレクションに適用されている [最適化コンテキスト](ORDA/entities.md#クライアントサーバーの最適化) のラベル。 |
+| プロパティ   | タイプ  | 説明                                                                                 |
+| ------- | ---- | ---------------------------------------------------------------------------------- |
+| context | Text | エンティティセレクションに適用されている [最適化コンテキスト](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) のラベル。 |
 
 
 #### 例題
@@ -113,16 +113,27 @@ $employees:=Create entity selection([Employee])
 
 [リモートデータストア](../ORDA/remoteDatastores.md) の場合は、このコマンドは使用できません。
 
-> `USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+
+:::info
+
+このコマンドは、4Dのカレントセレクションが ORDAクエリの力を活用するためのものです。 パフォーマンス上の理由により、シングルユーザーの 4D と 4D Server では、このコマンドは *entitySelection* をカレントセレクションと直結します。 そのため、このコマンドに受け渡した *entitySelection* をその後に再利用したり変更したりすることは避けなければなりません。
+
+:::
+
+:::note
+
+`USE ENTITY SELECTION` の呼び出し後、更新された (空でない) カレントセレクションの最初のレコードがカレントレコードとなりますが、それはメモリ内にはロードされません。 カレントレコードのフィールド値を使用するには、`USE ENTITY SELECTION` コマンドの後に `LOAD RECORD` コマンドを使用します。
+
+:::
 
 #### 例題
 
 ```4d
-var $entitySel : Object
+var $entitySel : cs.EmployeeSelection
 
 $entitySel:=ds.Employee.query("lastName = :1";"M@") // $entitySel は Employee データクラスにリレートされています
 REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されました
+USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレクションが更新されます
 ```
 
 

@@ -339,7 +339,7 @@ La fonction `.drop()` <!-- REF #EntityClass.drop().Summary -->supprime du datast
 
 Dans une application multiprocess ou multi-utilisateurs, la fonction `.drop()` est exécutée en mode ["verrouillage optimiste"](ORDA/entities.md#verrouillage-d-une-entite) dans lequel un marqueur de verrouillage interne est automatiquement incrémenté à chaque sauvegarde de l'enregistrement.
 
-Par défaut, lorsque le paramètre *mode* est omis, la méthode retourne une erreur (cf. ci-dessous) si l'entité a été modifiée (i.e. le marqueur interne a changé) entre-temps par un autre process ou utilisateur.
+Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 
 Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le paramètre *mode* : dans ce cas, l'entité est supprimée même si la valeur du marqueur interne est différente (si la clé primaire est identique).
 
@@ -935,7 +935,7 @@ Un enregistrement verrouillé peut être déverrouillé :
 
 > Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
 
-Par défaut, lorsque le paramètre *mode* est omis, la méthode retourne une erreur (cf. ci-dessous) si l'entité a été modifiée (i.e. le marqueur interne a changé) entre-temps par un autre process ou utilisateur.
+Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 
 Sinon, vous pouvez passer l'option `dk reload if stamp changed` dans le paramètre *mode* : dans ce cas, aucune erreur n'est générée et l'entité est simplement rechargée si le stamp a changé (si l'entité existe toujours et si la clé primaire est toujours la même).
 

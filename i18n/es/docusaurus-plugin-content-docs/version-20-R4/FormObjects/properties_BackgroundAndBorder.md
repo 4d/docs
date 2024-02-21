@@ -1,6 +1,6 @@
 ---
 id: propertiesBackgroundAndBorder
-title: Fondo y borde
+title: Background and Border
 ---
 
 

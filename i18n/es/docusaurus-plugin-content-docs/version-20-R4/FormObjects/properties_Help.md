@@ -1,6 +1,6 @@
 ---
 id: propertiesHelp
-title: Ayuda
+title: Help
 ---
 
 ## Mensaje de ayuda

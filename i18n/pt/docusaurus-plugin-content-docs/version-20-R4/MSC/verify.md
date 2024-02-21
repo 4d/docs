@@ -1,7 +1,6 @@
 ---
 id: verify
-title: Página Verificação
-sidebar_label: Página Verificação
+title: Verify Page
 ---
 
 Esta página é utilizada para verificar a integridade dos dados. A verificação pode ser efetuada em registos e/ou índices. Esta página apenas verifica a integridade dos dados. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).

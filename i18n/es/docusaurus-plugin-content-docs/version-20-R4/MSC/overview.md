@@ -1,7 +1,6 @@
 ---
 id: overview
-title: CSM
-sidebar_label: CSM
+title: MSC
 ---
 
 La ventana del Centro de Mantenimiento y Seguridad (CSM) contiene todas las herramientas necesarias para la verificación, el análisis, el mantenimiento, la copia de seguridad, la compactación y el cifrado de los archivos de datos. La ventana CSM está disponible en todas las aplicaciones 4D: 4D monousuario, 4D Server o 4D Desktop.
@@ -37,4 +36,4 @@ Algunas funciones del CSM no están disponibles dependiendo del modo de apertura
 
 - La función de copia de seguridad sólo está disponible cuando el proyecto está abierto (el CSM debe haber sido abierto en modo estándar).
 - Las funciones de compactación, reversión, restauración, reparación y cifrado de datos sólo pueden utilizarse con archivos de datos que no estén abiertos (el CSM debe haberse abierto en modo de mantenimiento). Si se intentan estas funciones mientras el proyecto está abierto en modo estándar, una caja de diálogo le advierte que implica que la aplicación se cierre y se reinicie en modo mantenimiento.
-- En las bases encriptadas, el acceso a los datos encriptados o al archivo .journal requiere que se proporcione una clave de datos de encriptación válida (ver [Página cifrado](encrypt.md)). De lo contrario, los datos encriptados no son visibles. 
+- En las bases encriptadas, el acceso a los datos encriptados o al archivo .journal requiere que se proporcione una clave de datos de encriptación válida (ver [Página cifrado](encrypt.md)). De lo contrario, los datos encriptados no son visibles.

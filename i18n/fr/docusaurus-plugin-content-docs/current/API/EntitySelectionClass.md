@@ -75,9 +75,9 @@ Si la table *dsTable* n'est pas exposée dans [`ds`](API/DataStoreClass.md#ds), 
 
 Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant la propriété suivante :
 
-| Propriété | Type | Description                                                                                                 |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
-| context   | Text | Nom du [contexte d'optimisation](ORDA/entities.md#clientserver-optimization) appliqué à l'entity selection. |
+| Propriété | Type | Description                                                                                                                  |
+| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| context   | Text | Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection. |
 
 
 #### Exemple
@@ -113,16 +113,27 @@ La commande `USE ENTITY SELECTION` met à jour la sélection courante de la tabl
 
 Cette commande ne peut pas être utilisée avec un [datastore distant](../ORDA/remoteDatastores.md).
 
-> Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la sélection courante mise à jour (s'il n'est pas vide) devient l'enregistrement courant, mais il n'est pas chargé en mémoire. Si vous avez besoin d'utiliser les valeurs des champs de l'enregistrement courant, utilisez la commande `LOAD RECORD` après la commande `USE ENTITY SELECTION`.
+
+:::info
+
+This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+
+:::
+
+:::note
+
+Après un appel à `USE ENTITY SELECTION`, le premier enregistrement de la sélection courante mise à jour (s'il n'est pas vide) devient l'enregistrement courant, mais il n'est pas chargé en mémoire. Si vous avez besoin d'utiliser les valeurs des champs de l'enregistrement courant, utilisez la commande `LOAD RECORD` après la commande `USE ENTITY SELECTION`.
+
+:::
 
 #### Exemple
 
 ```4d
-var $entitySel : Object
+var $entitySel : cs.EmployeeSelection
 
-$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel est associé à la dataclass Employee
+$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
 REDUCE SELECTION([Employee];0)
-USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee est mise à jour
+USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
 ```
 
 

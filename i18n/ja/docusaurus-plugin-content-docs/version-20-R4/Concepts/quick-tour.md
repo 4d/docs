@@ -1,7 +1,6 @@
 ---
 id: quick-tour
 title: 概要
-sidebar_label: 概要
 ---
 
 4D ランゲージを使用して "Hello, world!" メッセージを表示するには複数の方法があります。 一番簡単な方法はおそらく、プロジェクトメソッドにコードを1行、次のように書くやり方です:
@@ -208,6 +207,7 @@ $o:=cs.myClass.new()
 `myClass` クラスメソッド内では、*methodName* クラスメンバー関数を宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバー関数は引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
 
 ```4d  
+
 // myClass.4dm ファイル内
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who

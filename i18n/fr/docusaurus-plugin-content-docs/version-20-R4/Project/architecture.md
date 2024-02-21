@@ -1,12 +1,12 @@
 ---
 id: architecture
-title: Architecture d'un projet
+title: Architecture of a project
 ---
 
 Un projet 4D est composé de plusieurs dossiers et fichiers, stockés dans un dossier racine de projet (dossier package). Par exemple :
 
 - MyPackage (*dossier racine du projet*)
-    - `Components`
+    - `Composants`
     - `Data`
         - `Logs`
         - `Settings`
@@ -63,8 +63,8 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 | lists.json              | Listes définies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | JSON   |
 | filters.json            | Filtres définis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | JSON   |
 | styleSheets.css         | Feuilles de style CSS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | CSS    |
-| styleSheets_mac.css     | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | CSS    |
-| styleSheets_windows.css | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | CSS    |
+| styleSheets_mac.css     | Feuilles de style css sur Windows (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | CSS    |
+| styleSheets_windows.css | Feuilles de style css sur Mac (à partir d'une base binaire convertie)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | CSS    |
 
 
 #### `DatabaseMethods`
@@ -218,7 +218,7 @@ Ce dossier contient des fichiers qui mémorisent les configurations utilisateur,
 | CompilerIntermediateFiles  | Fichiers intermédiaires résultant de la compilation Apple Silicon     | Folder |
 
 
-## `Components`
+## `Composants`
 
 Ce dossier contient les composants qui seront disponibles dans le projet d'application. Il doit être stocké au même niveau que le dossier Project.
 

@@ -1,12 +1,12 @@
 ---
 id: forms
-title: Página formulario
+title: Forms Page
 ---
 
- 
+
 Esta página le permite establecer el funcionamiento y la visualización por defecto del editor de formularios 4D.
 
-## Desplazamiento
+## Mover
 
 Este grupo de opciones establece los parámetros para mover objetos utilizando el teclado o el ratón en el editor de formularios.
 

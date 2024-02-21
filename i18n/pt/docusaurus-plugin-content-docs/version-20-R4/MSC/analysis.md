@@ -1,7 +1,6 @@
 ---
 id: analysis
-title: Página análise de atividades
-sidebar_label: Página análise de atividades
+title: Activity analysis Page
 ---
 
 A página Análise da atividade permite visualizar o conteúdo do ficheiro de registo atual. Esta função é útil para analisar o uso de um banco de dados ou detectar as operações que causaram erros ou mal funcionamento. No caso de um banco de dados em modo cliente-servidor, permite verificar as operações realizadas por cada máquina cliente.
@@ -40,4 +39,3 @@ This information allows you to identify the source and context of each operation
 - **Registos**: número de registo.
 
 Clique em **Analisar** para atualizar o conteúdo do arquivo de histórico atual do banco selecionada (chamado como padrão dataname.journal). O botão Navegar pode ser usado para selecionar e abrir outro arquivo de histórico para o banco de dados. The **Export...** button can be used to export the contents of the file as text.
-

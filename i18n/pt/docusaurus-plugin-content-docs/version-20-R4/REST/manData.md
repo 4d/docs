@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulação de dados
+title: Manipulating Data
 ---
 
 Todos [os atributos, classes](configuration.md#exposing-tables-and-fields) e métodos da datastore expostos podem ser acessados através de REST. Os nomes de classes de dados, atributos e métodos são sensíveis às maiúsculas e minúsculas, entretanto, os dados das pesquisas não são.
@@ -114,7 +114,7 @@ As petições abaixo retornar apenas o primeiro nome e o último nome da classe 
  `GET  /rest/People/firstName,lastName/`
 
 
-**Resultado**:
+**Resultadoi**:
 
 ````
 {
@@ -195,7 +195,7 @@ As petições abaixo retornar apenas os atributos primeiro nome e último sobren
 
  `GET  /rest/People(3)/`
 
-**Resultado**:
+**Resultadoi**:
 
 ````
 {

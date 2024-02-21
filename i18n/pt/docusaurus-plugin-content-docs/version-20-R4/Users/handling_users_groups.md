@@ -1,6 +1,6 @@
 ---
 id: editing
-title: Gestão de usuários e grupos 4D
+title: Managing 4D users and groups
 ---
 
 
