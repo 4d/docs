@@ -292,24 +292,57 @@ You can develop with Qodly Studio while your computer is not connected to the in
 
 ## Force login
 
-With Qodly Studio in 4D, the user login mode defines if and when REST requests open web sessions. You can choose between two user login modes, available in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) of Qodly Studio:
+With Qodly Studio in 4D, the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/) allows you to select the **Force login** option:
 
 ![alt-text](../assets/en/WebServer/forcelogin.png) 
 
-- the **default mode** (selector off): in this mode, a REST request automatically creates a web session if not already created and is processed by the server. Use this mode if you don't need to control how many web sessions are opened on the server.
-- the **force login** mode (selector on): in this mode, basic REST requests (`rest/$catalog` for example) are always processed by the server and do not need any web session. On the other hand, all other REST requests (asking data or executing a function) return an error if they are not executed within a web session. You must login the user by calling the `rest/$catalog/authentify` entrypoint function and then the `setPrivilege()` function. The web session is opened when the `setPrivilege()` function is executed. Use this mode if you want to control how many web sessions are opened on the server. 
+When selected, this option automatically enables the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application. This mode allows you to optimize the number of web sessions opened by Qodly forms, and thus the 4D Client licence consuming. 
 
-:::note
+In "default" login mode, rendering an authentication web form (login + password inputs) opens automatically a session on the server and gets a 4D Client licence, whatever the result of authentication.
 
-Since web sessions opened upon REST requests require a license, the **force login** mode allows you to manage your license usage. 
+In the "force login" mode, a simple authentication Qodly form is rendered without consuming any licence. Thus, once you have implemented the `authentify()` function in the datastore class to handle the authentication, it can be called by the Qodly form. The web session/licence is consumed only when the user is logged.
 
-:::
+### __logout function
+
+
+### Example
+
+In a simple Qodly form with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the datastore class:
+
+```4d
+
+exposed Function authentify($credentials : Object) : Text
+	
+var $salesPersons : cs.SalesPersonsSelection
+var $sp : cs.SalesPersonsEntity
+	
+$salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
+$sp:=$salesPersons.first()
+	
+If ($sp#Null)
+	If (Verify password hash($credentials.password; $sp.password))
+			
+		Session.clearPrivileges()
+		Session.setPrivileges("") //guest session
+			
+		return "Authentication successful"
+	Else 
+		return "Wrong password"
+	End if
+Else 
+	return "Wrong user"
+End if 
+```
+
+This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no web session is opened and REST requests are rejected. Once `Session.setPrivileges()` is called, a web session is opened, a 4D client licence is consumed and any REST request is now accepted.
+
+
 
 
 
 ## About license usage
 
-To render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
+In default mode or in "force login" mode when the form that calls data or a function (see above), to render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
 
 ### URL Schemes
 
