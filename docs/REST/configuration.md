@@ -7,9 +7,6 @@ Using standard HTTP requests, the 4D REST Server allows external applications to
 
 To start using the REST features, you need to start and configure the 4D REST server. 
 
-> - On 4D Server, opening a REST session requires that a free 4D client licence is available.<br/>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.
-> - You need to manage the [session](authUsers.md) for your requesting application.  
 
 
 
@@ -95,3 +92,12 @@ To remove the REST exposure for a field:
 Repeat this for each field whose exposure needs to be modified.
 
 > In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+
+
+## Preemptive mode
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
+
+With 4D single-user, interpreted code always runs in cooperative mode.

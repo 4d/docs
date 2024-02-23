@@ -7,19 +7,14 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 When a web user session is opened, you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests reuse the same session cookie. 
 
-As a first step to open a REST session on the 4D server, the user sending the request must be logged. 
-
+> - On 4D Server, opening a REST session might require that a free 4D client licence is available, depending on the [user login mode](#user-login-modes).<br/>
+> - On 4D single-user, you can open up to three REST sessions for testing purposes.
 
 
 ## User login modes
 
 The user login mode allows you to control how REST requests acquire web sessions. You can choose between two user login modes: "default", or "force login".
 
-:::note
-
-Since non-guest web sessions opened upon REST requests require a license, the user login mode impacts your license usage. 
-
-:::
 
 You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
 
@@ -237,13 +232,5 @@ Use (Session.storage)
 End use
 ```
 
-
-## Preemptive mode
-
-On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
-
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
-
-With 4D single-user, interpreted code always runs in cooperative mode.
 
 
