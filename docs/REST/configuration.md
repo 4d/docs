@@ -23,15 +23,16 @@ The warning message "Caution, check the access privileges" is displayed when you
 > You must restart the 4D application for your changes to take effect. 
 
 
-## Configuring REST access
+## Controlling REST access
 
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.  
 
 You can configuring REST accesses with one of the following means:
+- enabling the **force login** mode and creating an `authentify()` datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)). 
 - assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
 - writing an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+> You cannot use all features simultaneously. If the **force login** mode is enabled, all other features are ignored. If the **force login** mode is not enabled, once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
 
 
 ### Using the Structure Settings
