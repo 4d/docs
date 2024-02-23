@@ -26,6 +26,12 @@ You set the user login mode through the `forceLogin` property in the [`roles.jso
 - the **default mode** is used if the "forceLogin" property is missing or set to "false",
 - the **force login** mode is used if the "forceLogin" property is set to "true".
 
+:::caution
+
+If you modify this property, the server must be restarted to take the change into account. 
+
+:::
+
 :::note
 
 In Qodly Studio in 4D, the mode can be set using the [**Force login** option](../webServer/qodly-studio.md#force-login) in the Privileges panel. 
@@ -63,7 +69,7 @@ Therefore, the "force login" mode is designed to set up the following sequence:
 
 :::note
 
-The logout
+The `ds.__logout()` function can only be called [in the context of a Qodly form](../WebServer/qodly-studio.md#logout). 
 
 :::
 
