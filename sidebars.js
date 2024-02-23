@@ -354,9 +354,32 @@ module.exports =
 								"ViewPro/getting-started",
 								"ViewPro/configuring",
 								"ViewPro/formulas",
-								"ViewPro/method-list",
 								"ViewPro/classes",
-								"ViewPro/advanced-programming"
+								"ViewPro/advanced-programming",
+								{
+									type: "category",
+									label: "Commands",
+									link: {
+										type: 'doc',
+										id: 'ViewPro/commands'
+										},
+									items: [
+										"ViewPro/commands-a",
+										"ViewPro/commands-c",
+										"ViewPro/commands-d",
+										"ViewPro/commands-e",
+										"ViewPro/commands-f",
+										"ViewPro/commands-g",
+										"ViewPro/commands-i",
+										"ViewPro/commands-m",
+										"ViewPro/commands-n",
+										"ViewPro/commands-o",
+										"ViewPro/commands-p",
+										"ViewPro/commands-r",
+										"ViewPro/commands-s"
+											]
+									},
+								
 									]
 							},
 						{
