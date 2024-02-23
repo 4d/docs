@@ -13,6 +13,7 @@ Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
 - QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
 - Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
+- New [force login mode for REST requests](../REST/authUsers.md#force-login-mode) with a [specific implementation for Qodly Studio in 4D](../WebServer/qodly-studio.md#force-login).
 
 
 ## 4D v20 R4

@@ -43,27 +43,95 @@ When the default mode is enabled, you can authentify users through the `On REST 
 
 In "force login" mode, web user sessions are created only when necessary and are controlled through a login sequence. 
 
-To allow you to set up this sequence, specific REST requests are processed without requiring any registered web session (guest sessions). These requests are:
+To allow you to set up this sequence, specific REST requests are processed without requiring any registered web session (they are guest sessions). These requests are:
 
 - `/rest/$catalog/$all` - the list of all exposed dataclasses
 - `/rest/$catalog/authentify` - the datastore function used to login the user 
 - `/rest/$getWebForm` - the rendering of a Qodly form
 
+![alt-text](../assets/en/REST/force-login-1.jpeg)
+
 All other REST requests (asking for data or executing a function) will only be processed if they are executed within an opened web session. Otherwise, they return an error. A web session is only opened when the `setPrivileges()` function is called for that session.
 
 Therefore, the "force login" mode is designed to set up the following sequence:
 
-1. You create an exposed datastore class function named  `authentify()`, in which you check the user credentials and call `Session.setPrivileges()` with appropriate privileges.
+1. You create an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named  `authentify()`, in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
 2. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
 3. If the user is successfully authentified, a web session is opened on the server and all REST requests are accepted. 
 
+![alt-text](../assets/en/REST/force-login-2.jpeg)
 
+:::note
+
+The logout
+
+:::
+
+### `Function authentify`
+
+#### Syntax
+
+```4d
+exposed Function authentify({params : type}) {-> result : type}
+	// code
+```
+
+The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request. 
+
+This function is the entry point of initial REST requests (i.e. requests not already executed within a web session) when the "force login" mode is enabled: any other function call or data access is rejected until a session is opened.
+
+The function can receive any authentication or contextual information as [parameter(s)](classFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request. 
+
+This function should contain two parts:
+
+- some code to identify and authenticate the REST request sender,
+- if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that creates the web session on the server and assigns appropriate privileges to the session.
+
+If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no session is created and subsequent REST requests are rejected.
+
+If the function is called from another context than a REST request, it does nothing. 
+
+#### Example
+
+You only want the know users to open a web session on the server. You created the following `authentify()` function in the datastore class:
+
+```4d
+exposed Function authentify($credentials : Object)
+
+var $users : cs.UsersSelection
+var $user : cs.UsersEntity
+	
+$users:=ds.Users.query("name = :1"; $credentials.name)
+$user:=$users.first()
+
+If ($user#Null) //the user is known
+	If (Verify password hash($credentials.password; $user.password))
+		Session.setPrivileges("vip")
+	Else 
+		return "Wrong password"
+	End if 
+Else 
+        return "Wrong user"
+End if 
+```
+
+
+To call the `authentify()` function:
+
+**POST** `127.0.0.1:8111/rest/$catalog/authentify`
+
+Body of the request: 
+
+```json
+["name":"Henry",
+"password":"123"]
+```
 
 
 
 ## Using `On REST Authentication`
 
-When the "force login" mode is disabled, you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below). 
+When the "force login" mode is disabled (default mode), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below). 
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened. 
 
