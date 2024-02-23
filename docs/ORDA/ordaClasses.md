@@ -83,10 +83,6 @@ A 4D database exposes its own DataStore class in the `cs` class store.
 You can create functions in the DataStore class that will be available through the `ds` object. 
 
 
-#### `authentify` function
-
-The [authentify()](../REST/authUsers.md#function-authentify) function, used for REST requests, must be defined in the DataStore Class.
-
 
 #### Example
 

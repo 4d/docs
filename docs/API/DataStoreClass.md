@@ -129,8 +129,13 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
 
 * its web server must be launched with http and/or https enabled,
-* its [**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option must be checked,
-* at least one client license is available.
+* the datastore must be exposed ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked) as well as [dataclasses and attributes](../REST/configuration.md#exposing-tables-and-fields). 
+
+:::note
+
+Since `Open datastore` requests rely on the 4D REST API, you need to make sure that they can be handled by a web session as described in the [user login mode section](../REST/authUsers.md#user-login-modes).
+
+::: 
 
 If no matching database is found, `Open datastore` returns **Null**.
 
@@ -912,6 +917,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 
 <!-- REF DataStoreClass.setAdminProtection().Desc -->
 ## .setAdminProtection()
+
 
 
 <details><summary>History</summary>
