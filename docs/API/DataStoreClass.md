@@ -133,7 +133,7 @@ The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
 
 :::note
 
-Since `Open datastore` requests rely on the 4D REST API, you need to make sure that they can be handled by a web session as described in the [user login mode section](../REST/authUsers.md#user-login-modes).
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode. 
 
 ::: 
 
