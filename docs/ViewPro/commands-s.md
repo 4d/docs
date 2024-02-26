@@ -3,9 +3,6 @@ id: commands-s
 title: S
 ---
 
-> **Warning**: The commands on this page are not thread-safe.
-
-
 ### VP SET ACTIVE CELL
 
 <!-- REF #_method_.VP SET ACTIVE CELL.Syntax -->
@@ -43,9 +40,8 @@ VP SET ACTIVE CELL($activeCell)
 <!-- REF #_method_.VP SET ALLOWED METHODS.Syntax -->
 **VP SET ALLOWED METHODS** ( *methodObj* : Object) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
-
-
 |Parameter|Type||Description|
 |---|---|---|---|
 |methodObj   |Object|->|Allowed methods in the 4D View Pro areas|<!-- END REF -->
@@ -70,7 +66,7 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 ||method|  |Text |(mandatory) Name of the existing 4D project method to allow|
 ||parameters|  |Collection of objects |Collection of parameters (in the order they are defined in the method).|
 |||\[ ].name| Text| Name of a parameter to display for the `<functionName>`.**Note**: Parameter names must not contain space characters.|
-|||\[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If type is `Is object`, the object has the same structure as the object returned by [`VP Get value`](#vp-get-value).
+|||\[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is collection`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* can be omitted (except when at least one parameter is of collection type, in which case parameter's type declaration is mandatory). If *type* is omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If type is `Is object`, the object has the same structure as the object returned by [`VP Get value`](#vp-get-value).
 ||summary | |Text |Function description to display in 4D View Pro|
 ||minParams|  |Number |Minimum number of parameters|
 ||maxParams|  |Number |Maximum number of parameters. Passing a number higher than the length of parameters allows declaring "optional" parameters with default type|
@@ -459,6 +455,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Syntax -->
 **VP SET CUSTOM FUNCTIONS** ( *vpAreaName* : Text ; *formulaObj* : Object  ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
 
 |Parameter|Type||Description|
@@ -484,7 +481,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 | | formula | |Object|4D formula object (mandatory). See the `Formula` command.|
 | |parameters|  |Collection of objects |Collection of parameters (in the order they are defined in the formula)|
  | | |  \[ ].name| Text| Name of parameter to display in 4D View Pro|
- | |  | \[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>If *type* is omitted or if the default value (-1) is passed, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section).If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value).|
+ | |  | \[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is collection`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* can be omitted or the default value (-1) can be passed (except when at least one parameter is of collection type, in which case parameter's type declaration is mandatory). If *type* is omitted or -1, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value).|
 | |  summary |   |Text | Formula description to display in 4D View Pro|
 | |  minParams|   |Number|  Minimum number of parameters |
 | |  maxParams |   |Number | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type |
@@ -497,7 +494,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 
 #### Example
 
-You want to use formula objects in a 4D View Pro area to add numbers, retrieve a customer's last name and gender:
+You want to use formula objects in a 4D View Pro area to add numbers, retrieve a customer's last name and gender and the company's peak month:
 
 ```4d
 Case of
@@ -524,6 +521,12 @@ Case of
        $o.label.parameters:=New collection
        $o.label.parameters.push(New object("name";"ID";"type";Is Integer))
  
+// Define "AverageValues" function from a method named "AverageValues"
+       $o.AverageValues:=New object
+       $o.AverageValues.formula:=Formula(AverageValues)
+       $o.AverageValues.parameters:=New collection
+       $o.AverageValues.parameters.push(New object("name";"Mycollection";"type";Is collection))
+        
 // Define "Title" function from a variable named "Title"
        $o.Title:=New object
        $o.Title.formula:=Formula(Title)
@@ -535,7 +538,8 @@ End case
 
 #### See also
 
-[VP SET ALLOWED METHODS](#vp-set-allowed-methods)
+[VP SET ALLOWED METHODS](#vp-set-allowed-methods)<br/>
+[4D View Pro: enhancement of custom functions (blog post)](https://blog.4d.com/4d-view-pro-enhancement-of-custom-functions)
 
 ### VP SET DATA CONTEXT
 
