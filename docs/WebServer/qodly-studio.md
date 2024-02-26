@@ -306,9 +306,9 @@ You can also set this option directly in the [**roles.json** file](../ORDA/privi
 
 :::
 
-This option automatically enables the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application.  
+This option enables the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application.  
 
-In default login mode, any REST request, including the rendering of an authentication web form, creates a web session on the server and gets a 4D Client license, whatever the actual result of authentication. In the "force login" mode, a simple authentication Qodly form can be rendered without consuming any web session/license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. The licence is consumed only when the user is actually logged. 
+In default login mode, any REST request, including the rendering of an authentication web form, creates a web session on the server and gets a 4D Client license, whatever the actual result of authentication. In the "force login" mode, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. The licence is consumed only when the user is actually logged. 
 
 :::info
 
@@ -355,27 +355,22 @@ When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly S
 
 Calling the logout feature from a web user session has the following effects:
 
-- the current web user session loses its privileges, only "basic" REST requests are allowed,
+- the current web user session loses its privileges, only descriptive REST requests are allowed,
 - the associated 4D license is released,
-- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour, it can be more if the `Open datastore` command was used). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
+- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
  
-To logout the user, you only need to call the `__logout()` datastore class function. You must have created this function as an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) beforehand.
+To logout the user, you only need to call the `**ds.__logout()**` [datastore class function](../ORDA/ordaClasses.md#datastore-class).
 
-#### Syntax
-
-```4d
-exposed Function __logout()
-```
 
 When this function is called:
 
-- the session becomes "non logged", its privileges are cleared
+- the session becomes guest, its privileges are cleared
 - one 4D Client license is freed
 - the `Session.storage` is left untouched
 
 :::info
 
-The `__logout()` function can only be used in the context of Qodly forms. 
+The `ds.__logout()` function can only be used in the context of Qodly forms. 
 
 :::
 
@@ -390,7 +385,7 @@ ds.__logout()
 
 ## About license usage for rendering
 
-In default mode or in "force login" mode when the form that calls data or a function (see above), to render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
+In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
 ### URL Schemes
 

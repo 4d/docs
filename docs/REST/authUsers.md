@@ -29,14 +29,14 @@ If you modify this property, the server must be restarted to take the change int
 
 :::note
 
-In Qodly Studio in 4D, the mode can be set using the [**Force login** option](../webServer/qodly-studio.md#force-login) in the Privileges panel. 
+In Qodly Studio for 4D, the mode can be set using the [**Force login** option](../webServer/qodly-studio.md#force-login) in the Privileges panel. 
 
 :::
 
 
 ### Default mode
 
-In the default mode, any REST request is processed in a web session that automatically consumes a license (the web user session is created if it does not already exist). You can use this simple mode if you don't need to control how many licenses are retained on the server.
+In the default mode, any REST request is processed in a web user session that automatically consumes a license (the web user session is created if it does not already exist). You can use this simple mode if you don't need to control how many licenses are retained on the server.
 When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
 
 
@@ -44,7 +44,7 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 In "force login" mode, web user sessions and license usage are disconnected. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.    
 
-Basic REST requests are processed in "guest" web user sessions that do not require licenses. These requests are:
+Descriptive REST requests are processed in "guest" web user sessions that do not require licenses. These requests are:
 
 - `/rest/$catalog/$all` - the list of all exposed dataclasses
 - `/rest/$catalog/authentify` - the datastore function used to login the user 
@@ -52,12 +52,12 @@ Basic REST requests are processed in "guest" web user sessions that do not requi
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
-All other REST requests (asking for data or executing a function) will only be processed if they are executed within a web session with relevant privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session, which requires a 4D license.  
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with relevant privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Executing this function triggers the 4D license consumption.  
 
 This mode allows you to implement the following login sequence:
 
-1. At the first REST call (webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than basic requests, no license consumption.
-2. If necessary, you call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
+1. At the first REST call (for a webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than descriptive requests, no license consumption.
+2. You call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
 3. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
 4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted. 
 
@@ -125,8 +125,8 @@ To call the `authentify()` function:
 Body of the request: 
 
 ```json
-["name":"Henry",
-"password":"123"]
+[{"name":"Henry",
+"password":"123"}]
 ```
 
 
