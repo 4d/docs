@@ -13,7 +13,7 @@ When a web user session is opened, you can handle it through the `Session` objec
 
 ## User login modes
 
-The user login mode allows you to control how REST requests acquire web sessions. You can choose between two user login modes: "default", or "force login".
+The user login mode allows you to control how REST requests acquire 4D Client licenses. You can choose between two user login modes: "default", or "force login".
 
 
 You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
@@ -36,15 +36,15 @@ In Qodly Studio in 4D, the mode can be set using the [**Force login** option](..
 
 ### Default mode
 
-In the default mode, all REST requests automatically creates a web session on the server (if not already created) and is processed. You can use this simple mode if you don't need to control how many web sessions are opened on the server.
-When the default mode is enabled, you can authentify users through the `On REST Authentication` database method (see below).
+In the default mode, any REST request is processed in a web session that automatically consumes a license (the web user session is created if it does not already exist). You can use this simple mode if you don't need to control how many licenses are retained on the server.
+When the default mode is enabled, you can authenticate users through the `On REST Authentication` database method (see below).
 
 
 ### Force login mode
 
-In "force login" mode, web user sessions are created only when necessary and are controlled through a login sequence. 
+In "force login" mode, web user sessions and license usage are disconnected. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.    
 
-To allow you to set up this sequence, specific REST requests are processed without requiring any registered web session (they are guest sessions). These requests are:
+Basic REST requests are processed in "guest" web user sessions that do not require licenses. These requests are:
 
 - `/rest/$catalog/$all` - the list of all exposed dataclasses
 - `/rest/$catalog/authentify` - the datastore function used to login the user 
@@ -52,13 +52,14 @@ To allow you to set up this sequence, specific REST requests are processed witho
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
-All other REST requests (asking for data or executing a function) will only be processed if they are executed within an opened web session. Otherwise, they return an error. A web session is only opened when the `setPrivileges()` function is called for that session.
+All other REST requests (asking for data or executing a function) will only be processed if they are executed within a web session with relevant privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session, which requires a 4D license.  
 
-Therefore, the "force login" mode is designed to set up the following sequence:
+This mode allows you to implement the following login sequence:
 
-1. You create an exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named  `authentify()`, in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
-2. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
-3. If the user is successfully authentified, a web session is opened on the server and all REST requests are accepted. 
+1. At the first REST call (webform call for example), a "guest" web user session is created. It has no privileges, no rights to execute requests other than basic requests, no license consumption.
+2. If necessary, you call your exposed [datastore class function](../ORDA/ordaClasses.md#datastore-class) named `authentify()` (created beforehand), in which you check the user credentials and call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) with appropriate privileges.
+3. The `/rest/$catalog/authentify` request is sent to the server along with user credentials. This step only requires a basic login form that do not access data; it can be a Qodly form (called via the `/rest/$getWebForm` request).
+4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted. 
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
@@ -79,7 +80,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request. 
 
-This function is the entry point of initial REST requests (i.e. requests not already executed within a web session) when the "force login" mode is enabled: any other function call or data access is rejected until a session is opened.
+This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires privileges.
 
 The function can receive any authentication or contextual information as [parameter(s)](classFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request. 
 
@@ -88,7 +89,7 @@ This function should contain two parts:
 - some code to identify and authenticate the REST request sender,
 - if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that creates the web session on the server and assigns appropriate privileges to the session.
 
-If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no session is created and subsequent REST requests are rejected.
+If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent REST requests are rejected.
 
 If the function is called from another context than a REST request, it does nothing. 
 
