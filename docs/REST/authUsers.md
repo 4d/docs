@@ -7,14 +7,13 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (r
 
 When a web user session is opened, you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests reuse the same session cookie. 
 
-> - On 4D Server, opening a REST session might require that a free 4D client licence is available, depending on the [user login mode](#user-login-modes).<br/>
+> - On 4D Server, opening a REST session might require that a free 4D client license is available, depending on the [user login mode](#user-login-modes).<br/>
 > - On 4D single-user, you can open up to three REST sessions for testing purposes.
 
 
 ## User login modes
 
 The user login mode allows you to control how REST requests acquire 4D Client licenses. You can choose between two user login modes: "default", or "force login".
-
 
 You set the user login mode through the `forceLogin` property in the [`roles.json` file](../ORDA/privileges.md#rolesjson-file):
 
@@ -42,17 +41,11 @@ When the default mode is enabled, you can authenticate users through the `On RES
 
 ### Force login mode
 
-In "force login" mode, web user sessions and license usage are disconnected. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.    
+In "force login" mode, license usage is disconnected from web user sessions. A license is required only when the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) is executed, allowing you to control the number of used licenses.    
 
-Descriptive REST requests are processed in "guest" web user sessions that do not require licenses. These requests are:
+[Descriptive REST requests](#descriptive-rest-requests) are always processed by the server, even if no web user session using a license is opened. In this case, they are processed through "guest" sessions.
 
-- `/rest/$catalog/$all` - the list of all exposed dataclasses
-- `/rest/$catalog/authentify` - the datastore function used to login the user 
-- `/rest/$getWebForm` - the rendering of a Qodly form
-
-![alt-text](../assets/en/REST/force-login-1.jpeg)
-
-All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with relevant privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Executing this function triggers the 4D license consumption.  
+All other REST requests (handling data or executing a function) will only be processed if they are executed within a web session with appropriate privileges, otherwise they return an error. To assign privileges to a web session, you need to execute the [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) function for the session. Executing this function triggers the 4D license consumption.  
 
 This mode allows you to implement the following login sequence:
 
@@ -63,11 +56,16 @@ This mode allows you to implement the following login sequence:
 
 ![alt-text](../assets/en/REST/force-login-2.jpeg)
 
-:::note
+### Descriptive REST requests
 
-The `ds.__logout()` function can only be called [in the context of a Qodly form](../WebServer/qodly-studio.md#logout). 
+Descriptive REST requests can be processed in web user sessions that do not require licenses ("guest" sessions). These requests are:
 
-:::
+- [`/rest/$catalog`]($catalog.md) requests (e.g. `/rest/$catalog/$all`) - access to available dataclasses
+- `/rest/$catalog/authentify` - the datastore function used to login the user 
+- `/rest/$getWebForm` - the rendering of a Qodly form
+
+![alt-text](../assets/en/REST/force-login-1.jpeg)
+
 
 ### `Function authentify`
 
@@ -80,25 +78,24 @@ exposed Function authentify({params : type}) {-> result : type}
 
 The `authentify()` function must be implemented in the [DataStore class](../ORDA/ordaClasses.md#datastore-class) of the project and must be called through a REST request. 
 
-This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires privileges.
+This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the session acquires appropriate privileges.
 
 The function can receive any authentication or contextual information as [parameter(s)](classFunctions.md#parameters) and can return any value. Since this function can only be called from a REST request, parameters must be passed through the body of the POST request. 
 
 This function should contain two parts:
 
 - some code to identify and authenticate the REST request sender,
-- if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that creates the web session on the server and assigns appropriate privileges to the session.
+- if the authentication is successful, a call to [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) that assigns appropriate privileges to the session.
 
-If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent REST requests are rejected.
+If the function does not call [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), no privileges are assigned, no license is consumed and subsequent non-descriptive REST requests are rejected.
 
-If the function is called from another context than a REST request, it does nothing. 
 
 #### Example
 
-You only want the know users to open a web session on the server. You created the following `authentify()` function in the datastore class:
+You only want to know users to open a web session on the server. You created the following `authentify()` function in the datastore class:
 
 ```4d
-exposed Function authentify($credentials : Object)
+exposed Function authentify($credentials : Object) : Text
 
 var $users : cs.UsersSelection
 var $user : cs.UsersEntity
@@ -133,7 +130,7 @@ Body of the request:
 
 ## Using `On REST Authentication`
 
-When the "force login" mode is disabled (default mode), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below). 
+In default login mode (i.e. the "force login" mode is disabled), you can log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below). 
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened. 
 
