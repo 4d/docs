@@ -8,19 +8,19 @@ The 4D web server provides built-in features for managing **web sessions**. Crea
 Web sessions allow to:
 
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
-- share data between the processes of a web client,
-- associate privileges to web sessions,
-- handle access through a `Session` object and the [Session API](API/SessionClass.md).
+- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- associate privileges to the user running the session.
 
 ## Usages
 
 Web sessions are used for:
 
 - [Web applications](gettingStarted.md) sending http requests,
-- calls to the [REST API](../REST/authUsers.md), which is used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md). 
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md). 
 
 
-## Enabling sessions
+## Enabling web sessions
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
@@ -84,7 +84,9 @@ A scalable web session is closed when:
 - the web server is stopped,
 - the timeout of the session cookie has been reached.
 
-The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes. This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes).
+The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes. 
+
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DatastoreClass.md#open-datastore) command. 
 
 When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
@@ -103,7 +105,12 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 A session is associated to one or more privileges. On the 4D server, you can provide specific access or features depending on the privileges of the session. You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
-Privileges are at the heart of the REST/ORDA security architecture, along with permissions and resources. For a detailed description, refer to [this page](../ORDA/privileges.md). 
+:::info
+
+Privileges are at the heart of the REST and ORDA security architecture, along with permissions and resources. For a detailed description, refer to the [**Privileges** page in the ORDA section](../ORDA/privileges.md). 
+
+:::
+
 
 By default, only the "WebAdmin" privilege is available.
 
