@@ -1681,7 +1681,7 @@ You can also pass a criteria parameter to define how the collection elements mus
  |ck ascending|Longint|0|Elements are ordered in ascending order (default)|
  |ck descending|Longint|1|Elements are ordered in descending order
 
- This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 
 If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
 

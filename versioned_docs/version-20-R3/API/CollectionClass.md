@@ -2314,7 +2314,7 @@ This function returns a *shallow copy*, which means that objects or collections 
 
 >This function does not modify the original collection.
 
-If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned unordered). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
+If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
 
 You can also pass a criteria parameter to define how the collection elements must be sorted. Three syntaxes are supported for this parameter:
 
