@@ -4,18 +4,18 @@ title: Remote datastores
 ---
 
 
-A local [datastore](dsMapping.md#datastore) can be used by other 4D applications (4D, 4D Server) when they call the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
+A **remote datastore** is a reference, on a local 4D application (4D or 4D Server), to a [datastore](dsMapping.md#datastore) stored in another 4D application.
 
-On the 4D application calling `Open datastore`, the **remote datastore** is a reference to the datastore opened on the remote machine. 
+The local 4D application connects to and references the remote datastore through a call to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command.
 
-On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the other application. Requests internally use the [REST API](../REST/gettingStarted.md). 
+On the remote machine, 4D opens a [session](../WebServer/sessions.md) to handle requests from the application that call `Open datastore`. Requests internally use the [REST API](../REST/gettingStarted.md), which means that they might require [available licenses](../REST/authUsers.md). 
 
  
-## Using sessions  
+## Using web sessions
 
-When you work with a remote datastore referenced through calls to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command, the connection between the requesting processes and the remote datastore is handled via [web sessions](../WebServer/sessions.md). 
+When you work with a remote datastore referenced through calls to the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command, the connection with the requesting processes is handled via [web sessions](../WebServer/sessions.md) on the remote machine. 
 
-The web sessionn created on the remote datastore is identified using a internal session ID which is associated to the `localID` on the 4D application side. This session automatically manages access to data, entity selections, or entities. 
+The web session created on the remote datastore is identified using a internal session ID which is associated to the `localID` on the 4D application side. This session automatically manages access to data, entity selections, or entities. 
 
 The `localID` is local to the machine that connects to the remote datastore, which means:
 

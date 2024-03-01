@@ -14,7 +14,7 @@ title: Client/Server Optimization
 ORDA client/server architectures that support the optimization are:
 
 - Server datastores accessed by 4D remote desktop applications through [**`ds`**](../API/DataStoreClass.md#ds),
-- Server datastores accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests). 
+- Datastores accessed via [**`Open datastore`**](../API/DataStoreClass.md#open-datastore) (client REST requests). 
 
 
 
