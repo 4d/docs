@@ -54,6 +54,7 @@ For example, if you want to define a class named "Polygon", you need to create t
 ```
 Project folder
  Project
+
   Sources
    Classes
     Polygon.4dm
@@ -167,10 +168,10 @@ When 4D does not find a function or a property in a class, it searches it in its
 
 Specific 4D keywords can be used in class definitions:
 
-- `{shared} Function <Name>` to define class functions of the objects.
-- `{shared} Class constructor` to initialize new objects of the class.
+- `Function <Name>` to define class functions of the objects.
+- `Class constructor` to initialize new objects of the class.
 - `property` to define static properties of the objects with a type.
-- `{shared} Function get <Name>` and `{shared} Function set <Name>` to define computed properties of the objects.
+- `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
 
 ### `Function`
@@ -308,7 +309,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 // Class: MyClass
-{shared} Class Constructor({$parameterName : type; ...})
+{shared} {singleton} Class Constructor({$parameterName : type; ...})
 // code
 ```
 
@@ -320,8 +321,9 @@ There can only be one constructor function in a class (otherwise an error is ret
 
 You can create and type instance properties inside the constructor (see example). Alternatively, if your instance properties' values do not depend on parameters passed to the constructor, you can define them using the [`property`](#property) keyword.
 
-Inserting the `shared` keyword before the `Class Constructor` keyword creates a **shared class**, used to automatically instantiates shared objects. For more information, refer to the [Shared classes](#shared-classes) section.
+Using the `shared` keyword creates a **shared class**, used to only instantiate shared objects. For more information, refer to the [Shared classes](#shared-classes) paragraph.
 
+Using the `singleton` keyword creates a **singleton**, used to create a single instance. For more information, refer to the [Singleton classes](#singleton-classes) paragraph.
 
 
 #### Example
@@ -781,3 +783,13 @@ Shared functions can only be defined within shared classes. If the `shared` func
 
 :::
 
+
+## Singleton classes
+
+The 4D language supports **singleton classes**. A singleton class is a user class that only produces a single instance. The class singleton is instantiated at the first call of the [`new()`](../API/ClassClass.md#new) function on the class, and is returned afterwards. 
+
+The scope of a singleton instance can be the process or all processes (interprocess singleton). A process singleton has a unique value for the process in which it is instantiated, while an interprocess singleton has a unique value for all processes of the application.
+
+Singletons are useful to create global constant values. 
+
+ 
