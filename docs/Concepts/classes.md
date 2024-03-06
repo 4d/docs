@@ -51,11 +51,14 @@ When naming classes, you should keep in mind the following rules:
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
+```
 Project folder
  Project
   Sources
    Classes
     Polygon.4dm
+```
+
 
 ### Deleting a class
 
@@ -94,7 +97,7 @@ In the various 4D windows (code editor, compiler, debugger, runtime explorer), c
   - a class function is a code block
   - **Goto definition** on an object member searches for class Function declarations; for example, "$o.f()" will find "Function f".
   - **Search references** on class function declaration searches for the function used as object member; for example, "Function f" will find "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the `\<ClassName>` constructor or `\<ClassName>.\<FunctionName>` format.
+- In the Runtime explorer and Debugger, class functions are displayed with the `<ClassName>` constructor or `<ClassName>.<FunctionName>` format.
 
 ## Class stores
 
@@ -148,10 +151,11 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - [`name`](API/ClassClass.md#name) string
 - [`superclass`](API/ClassClass.md#superclass) object (null if none)
 - [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects.
+- [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes).
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
 
-A class object is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
+A class object itself is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
 
 ### Inheritance
 
@@ -163,10 +167,10 @@ When 4D does not find a function or a property in a class, it searches it in its
 
 Specific 4D keywords can be used in class definitions:
 
-- `Function <Name>` to define class functions of the objects.
-- `Class constructor` to initialize new objects of the class.
+- `{shared} Function <Name>` to define class functions of the objects.
+- `{shared} Class constructor` to initialize new objects of the class.
 - `property` to define static properties of the objects with a type.
-- `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
+- `{shared} Function get <Name>` and `{shared} Function set <Name>` to define computed properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
 
 ### `Function`
@@ -180,7 +184,7 @@ Specific 4D keywords can be used in class definitions:
 
 Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
 
-If the function is declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared#useend-use) (it will be automatically applied). For more information, refer to the [Shared classes and functions] section.
+If the function is declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
 The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
@@ -316,10 +320,7 @@ There can only be one constructor function in a class (otherwise an error is ret
 
 You can create and type instance properties inside the constructor (see example). Alternatively, if your instance properties' values do not depend on parameters passed to the constructor, you can define them using the [`property`](#property) keyword.
 
-
-#### Shared Class Constructor
-
-Using the `shared` keyword before the `Class Constructor` keyword creates a **shared class**. A shared class can only be used for shared objects, it automatically instantiates shared objects and collections. For more information, refer to the [Shared classes and functions] section.
+Inserting the `shared` keyword before the `Class Constructor` keyword creates a **shared class**, used to automatically instantiates shared objects. For more information, refer to the [Shared classes](#shared-classes) section.
 
 
 
@@ -408,12 +409,12 @@ $o.age:="Smith"  //error with check syntax
 #### Syntax
 
 ```4d
-Function get <name>()->$result : type
+{shared} Function get <name>()->$result : type
 // code
 ```
 
 ```4d
-Function set <name>($parameterName : type)
+{shared} Function set <name>($parameterName : type)
 // code
 ```
 
@@ -493,6 +494,7 @@ Class extension must respect the following rules:
 - A user class cannot extend a user class from another project or component.
 - A user class cannot extend itself.
 - It is not possible to extend classes in a circular way (i.e. "a" extends "b" that extends "a").
+- It is not possible to define a [shared user class](#shared-classes) extended from a non-shared user class.  
 
 Breaking such a rule is not detected by the code editor or the interpreter, only the compiler and `check syntax` will throw an error in this case.
 
@@ -719,3 +721,63 @@ Several commands of the 4D language allows you to handle class features.
 #### `OB Instance of ( object ; class ) -> Boolean`
 
 `OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.
+
+
+## Shared classes
+
+You can create **shared classes**. A shared class is a user class that automatically instantiates [shared objects](shared.md) when calling the [`new()`](../API/ClassClass.md#new) function on the class constructor, thus reducing the code to write. A shared class can only create shared objects. 
+
+Shared classes also support **shared functions** that can be called without [`Use..End use`](shared.md#useend-use) structures. 
+
+The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allows to know if the class is shared. 
+
+:::info
+
+- A class [inheriting](#class-extends-classname) from a non-shared class cannot be defined as shared. 
+- Shared classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.md). 
+
+:::
+
+
+### Creating a shared class
+
+To create a shared class, add the `shared` keyword before the [Class Constructor](#class-constructor). For example:
+
+```4d
+	//shared class: Person
+shared Class Constructor($firstname : Text; $lastname : Text)
+ This.firstName:=$firstname
+ This.lastName:=$lastname
+ 
+```
+
+```4d
+//myMethod
+var $person := cs.Person.new("John"; "Smith")
+OB Is shared($person) // true
+cs.Person.isShared //true
+```
+
+
+
+### Shared functions
+
+If a function defined inside a shared class modifies objects of the class, it should call [`Use..End use`](shared.md#useend-use) structure to protect access to the shared objects. However, to simplify the code, you can define the function as **shared** so that it automatically triggers internal `Use..End use` when executed. 
+
+To create a shared function, add the `shared` keyword before the [Function](#function) keyword in a shared class. For example:
+
+```4d
+	//shared class Foo
+shared Class Constructor()
+  This.variable:=1
+	
+shared Function bar($value : Integer)
+  This.variable:=$value //no need to call use/end use
+```  
+
+:::note
+
+Shared functions can only be defined within shared classes. If the `shared` function keyword is used in a regular user class, it is ignored. 
+
+:::
+

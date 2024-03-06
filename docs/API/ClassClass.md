@@ -13,10 +13,33 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 ||
 |---|
+|[<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isShared.Summary -->|
 |[<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
 |[<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
 |[<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
 
+
+
+<!-- REF ClassClass.isShared.Desc -->
+## .isShared   
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R5|Added|
+
+</details>
+
+<!-- REF #ClassClass.isShared.Syntax -->**.isShared** : Boolean<!-- END REF -->
+
+#### Description
+
+The `.isShared` property <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.   
+
+This property is **read-only**.
+
+<!-- END REF -->
 
 
 <!-- REF ClassClass.name.Desc -->

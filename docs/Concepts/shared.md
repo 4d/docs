@@ -3,11 +3,11 @@ id: shared
 title: Shared objects and collections
 ---
 
-**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) or [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
 
 Shared objects and shared collections are stored in standard [`Object`](dt_object.md) and [`Collection`](dt_collection.md) type variables, but must be instantiated using specific commands:
 
-- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](***),
+- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
 - to create a shared collection, use the [`New shared collection`](../API/CollectionClass.md#new-shared-collection) command.
 
 :::note
@@ -18,7 +18,7 @@ Shared objects and collections can be set as properties of standard (not shared)
 
 In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
 
-A unique, global catalog returned by the `Storage` command is always available throughout the application and its components, and can be used to store all shared objects and collections.
+A unique, global catalog returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Using shared objects or collections
 
@@ -82,11 +82,11 @@ Calling `OB Copy` with a shared object (or with an object containing shared obje
 
 ### Storage
 
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
 
 Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
 
-For more information, refer to the `Storage` command description.
+For more information, refer to the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command description.
 
 ## Use...End use
 
@@ -111,7 +111,10 @@ Shared objects and shared collections are designed to allow communication betwee
 
 :::note
 
-Keep in mind that [collection functions](../API/CollectionClass.md) that modify shared collections automatically trigger an internal **Use** for this shared collection while the function is executed.
+The following functions automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when the function is executed:
+   
+- [collection functions](../API/CollectionClass.md) that modify shared collections 
+- [shared functions](classes.md#shared-functions) (defined in [shared classes](classes.md#shared-classes)). 
 
 :::
 
