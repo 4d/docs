@@ -40,8 +40,8 @@ Result:
 
 #### See also
 
-[VP Get active cell](commands-g.md#vp-get-active-cell)<br/>
-[VP Get selection](commands-g.md#vp-get-selection)<br/>
+[VP Get active cell](vp-get-active-cell.md)<br/>
+[VP Get selection](vp-get-selection.md)<br/>
 [VP RESET SELECTION](commands-r.md#vp-reset-selection)<br/>
 [VP SET ACTIVE CELL](commands-s.md#vp-set-active-cell)<br/>
 [VP SET SELECTION](commands-s.md#vp-set-selection)<br/>
