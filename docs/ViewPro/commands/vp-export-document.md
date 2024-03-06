@@ -1,12 +1,8 @@
 ---
-id: commands-e
-title: E
+id: vp-export-document
+title: VP EXPORT DOCUMENT
 ---
 
-> **Warning**: The commands on this page are not thread-safe.
-
-
-### VP EXPORT DOCUMENT
 
 <details><summary>History</summary>
 
@@ -52,7 +48,7 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |---|---|---
 |format| text| (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", ".pdf", or ".sjs". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li><li>`vk sjs format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used.|
 |password| text| Microsoft Excel only (optional) - Password used to protect the MS Excel document|
-|formula| 4D.Function |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
+|formula| 4D.Function |Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be passed with the [`Formula`](../../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
 |valuesOnly| boolean| Specifies that only the values from formulas (if any) will be exported.|
 |includeFormatInfo| boolean| True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.|
 |includeBindingSource| boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).|
@@ -87,7 +83,7 @@ Once the export operation is finished, `VP EXPORT DOCUMENT` automatically trigge
 
 #### Passing a callback method (formula)  
 
-When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local parameters:
+When including the optional *paramObj* parameter, the command allows you to use the [`Formula`](../../API/FunctionClass.md#formula) command to call a 4D method which will be executed once the export has completed. The callback method will receive the following values in local parameters:
 
 |Parameter|  |Type| Description|
 |---|---|---|---|
@@ -153,7 +149,7 @@ You want to export a 4D View Pro document in ".xlsx" format and call a method th
 
 You want to export the current sheet to a `.txt` file with pipe-separated values:
 
-![example-export-csv](../assets/en/ViewPro/vp-export-document-csv.png)
+![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv.png)
 
 ```4d
 var $params : Object
@@ -166,134 +162,10 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 
 Here's the result:
 
-![example-export-csv](../assets/en/ViewPro/vp-export-document-csv-result.png)
+![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv-result.png)
 
 #### See also
 
 
 [VP Convert to picture](#vp-convert-to-picture)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP Column](#vp-import-document)<br/>[VP Print](#vp-print)
 
-### VP EXPORT TO BLOB
-
-<!-- REF #_method_.VP EXPORT TO BLOB.Syntax -->
-**VP EXPORT TO BLOB** ( *vpAreaName* : Text ; *paramObj* : Object ) <!-- END REF -->
-
-<!-- REF #_method_.VP EXPORT TO BLOB.Params -->
-
-|Parameter|Type||Description|
-|---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-|paramObj   |Object|->|Export options|<!-- END REF -->
-
-#### Description
-
-The `VP EXPORT TO BLOB` command <!-- REF #_method_.VP EXPORT TO BLOB.Summary -->exports the *vpAreaName* 4D View Pro document in a 4D.Blob according to the *paramObj* options.<!-- END REF --> The exported blob is available through the export callback. Exporting and importing 4D View Pro areas as blobs is fast and memory-efficient.
-
-In *paramObj*, you can pass several properties:
-
-|Property|Type|Description|
-|---------|--- |------|
-|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
-|includeAutoMergedCells|Boolean|Whether to include the automatically merged cells when saving, default=false.|
-|includeBindingSource|Boolean|Whether to include the binding source when saving, default=true.|
-|includeCalcModelCache|Boolean|Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.|
-|includeEmptyRegionCells|Boolean|Whether to include any empty cells(cells with no data or only style) outside the used data range, default=true|
-|includeFormulas|Boolean|Whether to include the formula when saving, default=true.|
-|includeStyles|Boolean|Whether to include the style when saving, default=true.|
-|includeUnusedNames|Boolean|Whether to include the unused custom name when saving, default=true.|
-
-|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
-
-
-The following parameters can be used in the callback method:
-
-|Parameter| |Type|Description|
-|:----|:----|:----|:----|
-|param1| |text|The name of the 4D View Pro object|
-|param2| |4D.blob|The exported blob|
-|param3| |object|A reference to the command's *paramObj* parameter|
-|param4| |object|An object returned by the method with a status message|
-| |.success|boolean|True if export with success, False otherwise.|
-| |.errorCode|integer|Error code.|
-| |.errorMessage|text|Error message.
-
-
-#### Example
-
-The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named *VPBlobCallback* in our example) to use the export results.
-
-```4d
-//Export the VP document
-VP EXPORT TO BLOB("ViewProArea"; {formula: Formula(VPBlobCallback)})
-```
-
-```4d
-//VPBlobCallback method
-#DECLARE($area : Text; $data : 4D.Blob; $parameters : Object; $status : Object)
-var $myEntity : cs.myTableEntity
-
-If ($status.success)
-   // Save the document in a table
-   $myEntity:=ds.myTable.new()
-   $myEntity.blob:=$data
-   $myEntity.save()
-End if
-
-```
-
-#### See also
-
-[VP IMPORT FROM BLOB](#vp-import-from-blob)
-
-### VP Export to object
-
-<!-- REF #_method_.VP Export to object.Syntax -->
-**VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object<!-- END REF -->
-
-<!-- REF #_method_.VP Export to object.Params -->
-
-|Parameter|Type| |Description|
-|---|---|---|---|
-|vpAreaName| Text|->|4D View Pro area form object name|
-|options| Object|->|Export options|
-|Result| Object|<-|4D View Pro object|<!-- END REF -->
-
-#### Description
-
-The `VP Export to object` command <!-- REF #_method_.VP Export to object.Summary --> returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->. You can use this command for example to store the 4D View Pro area in a 4D database object field.
-
-In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
-
-In the *options* parameter, you can pass the following export options, if required:
-
-|Property| Type| Description|
-|---|---|---
-|includeFormatInfo| Boolean | True (default) to include formatting information, false otherwise. Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to False allows reducing export time. |
-|includeBindingSource| Boolean | True (default) to export the current data context values as cell values in the exported object (data contexts themselves are not exported). False otherwise. Cell binding is always exported.|
-
-For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) paragraph.
-
-#### Example 1
-
-You want to get the "version" property of the current 4D View Pro area:
-
-```4d
-var $vpAreaObj : Object
-var $vpVersion : Number
-$vpAreaObj:=VP Export to object("vpArea")
- // $vpVersion:=OB Get($vpAreaObj;"version")
-$vpVersion:=$vpAreaObj.version
-```
-
-#### Example 2
-
-You want to export the area, excluding formatting information:
-
-```4d
-var $vpObj : Object
-$vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
-```
-
-#### See also
-
-[VP Convert to picture](#vp-convert-to-picture)<br/>[VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP IMPORT FROM OBJECT](#vp-import-from-object)

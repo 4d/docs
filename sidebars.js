@@ -364,11 +364,86 @@ module.exports =
 										id: 'ViewPro/commands'
 										},
 									items: [
-										"ViewPro/commands-a",
-										"ViewPro/commands-c",
-										"ViewPro/commands-d",
-										"ViewPro/commands-e",
-										"ViewPro/commands-f",
+										{
+											type: "category",
+											label: "A",
+											link: {
+												type: 'generated-index',
+												title: 'A',
+												slug: '/commands/A',
+												},
+											items: [
+												"ViewPro/commands/vp-add-formula-name",
+												"ViewPro/commands/vp-add-range-name",
+												"ViewPro/commands/vp-add-selection",
+												"ViewPro/commands/vp-add-sheet",
+												"ViewPro/commands/vp-add-span",
+												"ViewPro/commands/vp-add-stylesheet",
+												"ViewPro/commands/vp-all"
+												]
+										},
+										{
+											type: "category",
+											label: "C",
+											link: {
+												type: 'generated-index',
+												title: 'C',
+												slug: '/commands/C',
+												},
+											items: [
+												"ViewPro/commands/vp-cell",
+												"ViewPro/commands/vp-cells",
+												"ViewPro/commands/vp-column",
+												"ViewPro/commands/vp-column-autofit",
+												"ViewPro/commands/vp-combine-ranges",
+												"ViewPro/commands/vp-convert-from-4d-view",
+												"ViewPro/commands/vp-convert-to-picture",
+												"ViewPro/commands/vp-copy-to-object",
+												"ViewPro/commands/vp-create-table"
+												]
+										},
+										{
+											type: "category",
+											label: "D",
+											link: {
+												type: 'generated-index',
+												title: 'D',
+												slug: '/commands/D',
+												},
+											items: [
+												"ViewPro/commands/vp-delete-columns",
+												"ViewPro/commands/vp-delete-rows"
+												]
+										},
+										{
+											type: "category",
+											label: "E",
+											link: {
+												type: 'generated-index',
+												title: 'E',
+												slug: '/commands/E',
+												},
+											items: [
+												"ViewPro/commands/vp-export-document",
+												"ViewPro/commands/vp-export-to-blob",
+												"ViewPro/commands/vp-export-to-object"
+												]
+										},
+										{
+											type: "category",
+											label: "F",
+											link: {
+												type: 'generated-index',
+												title: 'F',
+												slug: '/commands/F',
+												},
+											items: [
+												"ViewPro/commands/vp-find",
+												"ViewPro/commands/vp-find-table",
+												"ViewPro/commands/vp-flush-commands",
+												"ViewPro/commands/vp-font-to-object"
+												]
+										},
 										"ViewPro/commands-g",
 										"ViewPro/commands-i",
 										"ViewPro/commands-m",

@@ -5,168 +5,168 @@ title: Commands
 
 > **Warning**: The following commands are not thread-safe.
 
-  [A](#A) - [C](#c) - [D](#d) - [E](#E) - [F](#F) - [G](#G) - [I](#I) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [R](#R) - [S](#S)
+  [A](#A.md) - [C](#c.md) - [D](#d.md) - [E](#E.md) - [F](#F.md) - [G](#G.md) - [I](#I.md) - [M](#M.md) - [N](#N.md) - [O](#O.md) - [P](#P.md) - [R](#R.md) - [S](#S.md)
 
 
 <a name="A"><b>A</b></a>
 
-[VP ADD FORMULA NAME](commands-a.md#vp-add-formula-name) -
-[VP ADD RANGE NAME](commands-a.md#vp-add-range-name) -
-[VP ADD SELECTION](commands-a.md#vp-add-selection) -
-[VP ADD SHEET](commands-a.md#vp-add-sheet) -
-[VP ADD SPAN](commands-a.md#vp-add-span) -
-[VP ADD STYLESHEET](commands-a.md#vp-add-stylesheet) -
-[VP All](commands-a.md#vp-all)
+[VP ADD FORMULA NAME](commands/vp-add-formula-name.md) -
+[VP ADD RANGE NAME](commands/vp-add-range-name.md) -
+[VP ADD SELECTION](commands/vp-add-selection.md) -
+[VP ADD SHEET](commands/vp-add-sheet.md) -
+[VP ADD SPAN](commands/vp-add-span.md) -
+[VP ADD STYLESHEET](commands/vp-add-stylesheet.md) -
+[VP All](commands/vp-all.md)
 
 <a name="C"><b>C</b></a>
 
-[VP Cell](commands-c.md#vp-cell) - 
-[VP Cells](commands-c.md#vp-cells) -
-[VP Column](commands-c.md#vp-column) - 
-[VP COLUMN AUTOFIT](commands-c.md#vp-column-autofit) - 
-[VP Combine ranges](commands-c.md#vp-combine-ranges) - 
-[VP Convert from 4D View](commands-c.md#vp-convert-from-4d-view) - 
-[VP Convert to picture](commands-c.md#vp-convert-to-picture) - 
-[VP Copy to object](commands-c.md#vp-copy-to-object) - 
-[VP CREATE TABLE](commands-c.md#vp-create-table)
+[VP Cell](commands/vp-cell.md.md) - 
+[VP Cells](commands/vp-cells.md) -
+[VP Column](commands/vp-column.md) - 
+[VP COLUMN AUTOFIT](commands/vp-column-autofit.md) - 
+[VP Combine ranges](commands/vp-combine-ranges.md) - 
+[VP Convert from 4D View](commands/vp-convert-from-4d-view.md) - 
+[VP Convert to picture](commands/vp-convert-to-picture.md) - 
+[VP Copy to object](commands/vp-copy-to-object.md) - 
+[VP CREATE TABLE](commands/vp-create-table.md)
 
 <a name="D"><b>D</b></a>
 
-[VP DELETE COLUMNS](commands-d.md#vp-delete-columns) - 
-[VP DELETE ROWS](commands-d.md#vp-delete-rows) 
+[VP DELETE COLUMNS](commands/vp-delete-columns.md) - 
+[VP DELETE ROWS](commands/vp-delete-rows.md) 
 
 <a name="E"><b>E</b></a>
 
-[VP EXPORT DOCUMENT](commands-e.md#vp-export-document) - 
-[VP EXPORT TO BLOB](commands-e.md#vp-export-to-blob) - 
-[VP Export to object](commands-e.md#vp-export-to-object) 
+[VP EXPORT DOCUMENT](commands/vp-export-document.md) - 
+[VP EXPORT TO BLOB](commands/vp-export-to-blob.md) - 
+[VP Export to object](commands/vp-export-to-object.md) 
 
 <a name="F"><b>F</b></a>
 
-[VP Find](commands-f.md#vp-find) - 
-[VP Find table](commands-f.md#vp-find-table) - 
-[VP FLUSH COMMANDS](commands-f.md#vp-flush-commands) - 
-[VP Font to object](commands-f.md#vp-font-to-object)
+[VP Find](commands/vp-find.md) - 
+[VP Find table](commands/vp-find-table.md) - 
+[VP FLUSH COMMANDS](commands/vp-flush-commands.md) - 
+[VP Font to object](commands/vp-font-to-object.md)
 
 <a name="G"><b>G</b></a>
 
-[VP Get active cell](commands-g.md#vp-get-active-cell) - 
-[VP Get binding path](commands-g.md#vp-get-binding-path) -
-[VP Get cell style](commands-g.md#vp-get-cell-style) - 
-[VP Get column attributes](commands-g.md#vp-get-column-attributes) - 
-[VP Get column count](commands-g.md#vp-get-column-count) - 
-[VP Get current sheet](commands-g.md#vp-get-current-sheet) -
-[VP Get data context](commands-g.md#vp-get-data-context) - 
-[VP Get default style](commands-g.md#vp-get-default-style) - 
-[VP Get formula](commands-g.md#vp-get-formula) -
-[VP Get formula by name](commands-g.md#vp-get-formula-by-name) - 
-[VP Get formulas](commands-g.md#vp-get-formulas) - 
-[VP Get frozen panes](commands-g.md#vp-get-frozen-panes) -
-[VP Get names](commands-g.md#vp-get-names) - 
-[VP Get print info](commands-g.md#vp-get-print-info) - 
-[VP Get row attributes](commands-g.md#vp-get-row-attributes) -
-[VP Get row count](commands-g.md#vp-get-row-count) - 
-[VP Get selection](commands-g.md#vp-get-selection) - 
-[VP Get sheet count](commands-g.md#vp-get-sheet-count) -
-[VP Get sheet index](commands-g.md#vp-get-sheet-index) - 
-[VP Get sheet name](commands-g.md#vp-get-sheet-name) - 
-[VP Get sheet options](commands-g.md#vp-get-sheet-options) -
-[VP Get show print lines](commands-g.md#vp-get-show-print-lines) - 
-[VP Get spans](commands-g.md#vp-get-spans) - 
-[VP Get stylesheet](commands-g.md#vp-get-stylesheet) -
-[VP Get stylesheets](commands-g.md#vp-get-stylesheets) - 
-[VP Get table column attributes](commands-g.md#vp-get-table-column-attributes) - 
-[VP Get table column index](commands-g.md#vp-get-table-column-index) -
-[VP Get table dirty rows](commands-g.md#vp-get-table-dirty-rows) - 
-[VP Get table range](commands-g.md#vp-get-table-range) - 
-[VP Get table theme](commands-g.md#vp-get-table-theme) -
-[VP Get tables](commands-g.md#vp-get-tables) - 
-[VP Get value](commands-g.md#vp-get-value) - 
-[VP Get values](commands-g.md#vp-get-values) -
-[VP Get workbook options](commands-g.md#vp-get-workbook-options) 
+[VP Get active cell](commands/vp-get-active-cell.md) - 
+[VP Get binding path](commands/vp-get-binding-path.md) -
+[VP Get cell style](commands/vp-get-cell-style.md) - 
+[VP Get column attributes](commands/vp-get-column-attributes.md) - 
+[VP Get column count](commands/vp-get-column-count.md) - 
+[VP Get current sheet](commands/vp-get-current-sheet.md) -
+[VP Get data context](commands/vp-get-data-context.md) - 
+[VP Get default style](commands/vp-get-default-style.md) - 
+[VP Get formula](commands/vp-get-formula.md) -
+[VP Get formula by name](commands/vp-get-formula-by-name.md) - 
+[VP Get formulas](commands/vp-get-formulas.md) - 
+[VP Get frozen panes](commands/vp-get-frozen-panes.md) -
+[VP Get names](commands/vp-get-names.md) - 
+[VP Get print info](commands/vp-get-print-info.md) - 
+[VP Get row attributes](commands/vp-get-row-attributes.md) -
+[VP Get row count](commands/vp-get-row-count.md) - 
+[VP Get selection](commands/vp-get-selection.md) - 
+[VP Get sheet count](commands/vp-get-sheet-count.md) -
+[VP Get sheet index](commands/vp-get-sheet-index.md) - 
+[VP Get sheet name](commands/vp-get-sheet-name.md) - 
+[VP Get sheet options](commands/vp-get-sheet-options.md) -
+[VP Get show print lines](commands/vp-get-show-print-lines.md) - 
+[VP Get spans](commands/vp-get-spans.md) - 
+[VP Get stylesheet](commands/vp-get-stylesheet.md) -
+[VP Get stylesheets](commands/vp-get-stylesheets.md) - 
+[VP Get table column attributes](commands/vp-get-table-column-attributes.md) - 
+[VP Get table column index](commands/vp-get-table-column-index.md) -
+[VP Get table dirty rows](commands/vp-get-table-dirty-rows.md) - 
+[VP Get table range](commands/vp-get-table-range.md) - 
+[VP Get table theme](commands/vp-get-table-theme.md) -
+[VP Get tables](commands/vp-get-tables.md) - 
+[VP Get value](commands/vp-get-value.md) - 
+[VP Get values](commands/vp-get-values.md) -
+[VP Get workbook options](commands/vp-get-workbook-options.md) 
 
 
 
 <a name="I"><b>I</b></a>
 
-[VP IMPORT DOCUMENT](commands-i.md#vp-import-document) - 
-[VP IMPORT FROM BLOB](commands-i.md#vp-import-from-blob) -
-[VP IMPORT FROM OBJECT](commands-i.md#vp-import-from-object) - 
-[VP INSERT COLUMNS](commands-i.md#vp-insert-columns) - 
-[VP INSERT ROWS](commands-i.md#vp-insert-rows) -
-[VP INSERT TABLE COLUMNS](commands-i.md#vp-insert-table-columns) -
-[VP INSERT TABLE ROWS](commands-i.md#vp-insert-table-rows) 
+[VP IMPORT DOCUMENT](commands/vp-import-document.md) - 
+[VP IMPORT FROM BLOB](commands/vp-import-from-blob.md) -
+[VP IMPORT FROM OBJECT](commands/vp-import-from-object.md) - 
+[VP INSERT COLUMNS](commands/vp-insert-columns.md) - 
+[VP INSERT ROWS](commands/vp-insert-rows.md) -
+[VP INSERT TABLE COLUMNS](commands/vp-insert-table-columns.md) -
+[VP INSERT TABLE ROWS](commands/vp-insert-table-rows.md) 
 
 <a name="M"><b>M</b></a>
 
-[VP MOVE CELLS](commands-m.md#vp-move-cells)
+[VP MOVE CELLS](commands/vp-move-cells.md)
 
 <a name="N"><b>N</b></a>
 
-[VP Name](commands-n.md#vp-name) -
-[VP NEW DOCUMENT](commands-n.md#vp-new-document) 
+[VP Name](commands/vp-name.md) -
+[VP NEW DOCUMENT](commands/vp-new-document.md) 
 
 <a name="O"><b>O</b></a>
 
-[VP Object to font](commands-o.md#vp-object-to-font) 
+[VP Object to font](commands/vp-object-to-font.md) 
 
 <a name="P"><b>P</b></a>
 
-[VP PASTE FROM OBJECT](commands-p.md#vp-paste-from-object) -
-[VP PRINT](commands-p.md#vp-print) 
+[VP PASTE FROM OBJECT](commands/vp-paste-from-object.md) -
+[VP PRINT](commands/vp-print.md) 
 
 <a name="R"><b>R</b></a>
 
-[VP RECOMPUTE FORMULAS](commands-r.md#vp-recompute-formulas) -
-[VP REMOVE NAME](commands-r.md#vp-remove-name) -
-[VP REMOVE SHEET](commands-r.md#vp-remove-sheet) -
-[VP REMOVE SPAN](commands-r.md#vp-remove-span) -
-[VP REMOVE STYLESHEET](commands-r.md#vp-remove-stylesheet) -
-[VP REMOVE TABLE](commands-r.md#vp-remove-table) -
-[VP REMOVE TABLE COLUMNS](commands-r.md#vp-remove-table-columns) -
-[VP REMOVE TABLE ROWS](commands-r.md#vp-remove-table-rows) -
-[VP RESET SELECTION](commands-r.md#vp-reset-selection) -
-[VP RESIZE TABLE](commands-r.md#vp-resize-table) -
-[VP RESUME COMPUTING](commands-r.md#vp-resume-computing) -
-[VP Row](commands-r.md#vp-row) -
-[VP ROW AUTOFIT](commands-r.md#vp-row-autofit) -
-[VP Run offscreen area](commands-r.md#vp-run-offscreen-area) 
+[VP RECOMPUTE FORMULAS](commands/vp-recompute-formulas.md) -
+[VP REMOVE NAME](commands/vp-remove-name.md) -
+[VP REMOVE SHEET](commands/vp-remove-sheet.md) -
+[VP REMOVE SPAN](commands/vp-remove-span.md) -
+[VP REMOVE STYLESHEET](commands/vp-remove-stylesheet.md) -
+[VP REMOVE TABLE](commands/vp-remove-table.md) -
+[VP REMOVE TABLE COLUMNS](commands/vp-remove-table-columns.md) -
+[VP REMOVE TABLE ROWS](commands/vp-remove-table-rows.md) -
+[VP RESET SELECTION](commands/vp-reset-selection.md) -
+[VP RESIZE TABLE](commands/vp-resize-table.md) -
+[VP RESUME COMPUTING](commands/vp-resume-computing.md) -
+[VP Row](commands/vp-row.md) -
+[VP ROW AUTOFIT](commands/vp-row-autofit.md) -
+[VP Run offscreen area](commands/vp-run-offscreen-area.md) 
 
 <a name="S"><b>S</b></a>
 
-[VP SET ACTIVE CELL](commands-s.md#vp-set-active-cell) -
-[VP SET ALLOWED METHODS](commands-s.md#vp-set-allowed-methods) -
-[VP SET BINDING PATH](commands-s.md#vp-set-binding-path) -
-[VP SET BOOLEAN VALUE](commands-s.md#vp-set-boolean-value) -
-[VP SET BORDER](commands-s.md#vp-set-border) -
-[VP SET CELL STYLE](commands-s.md#vp-set-cell-style) -
-[VP SET COLUMN ATTRIBUTES](commands-s.md#vp-set-column-attributes) -
-[VP SET COLUMN COUNT](commands-s.md#vp-set-column-count) -
-[VP SET CURRENT SHEET](commands-s.md#vp-set-current-sheet) -
-[VP SET CUSTOM FUNCTIONS](commands-s.md#vp-set-custom-functions) -
-[VP SET DATA CONTEXT](commands-s.md#vp-set-data-context) -
-[VP SET DATE TIME VALUE](commands-s.md#vp-set-date-time-value) -
-[VP SET DATE VALUE](commands-s.md#vp-set-date-value) -
-[VP SET DEFAULT STYLE](commands-s.md#vp-set-default-style) -
-[VP SET FIELD](commands-s.md#vp-set-field) -
-[VP SET FORMULA](commands-s.md#vp-set-formula) -
-[VP SET FORMULAS](commands-s.md#vp-set-formulas) -
-[VP SET FROZEN PANES](commands-s.md#vp-set-frozen-panes) -
-[VP SET NUM VALUE](commands-s.md#vp-set-num-value) -
-[VP SET PRINT INFO](commands-s.md#vp-set-print-info) -
-[VP SET ROW ATTRIBUTES](commands-s.md#vp-set-row-attributes) -
-[VP SET ROW COUNT](commands-s.md#vp-set-row-count) -
-[VP SET SELECTION](commands-s.md#vp-set-selection) -
-[VP SET SHEET COUNT](commands-s.md#vp-set-sheet-count) -
-[VP SET SHEET NAME](commands-s.md#vp-set-sheet-name) -
-[VP SET SHEET OPTIONS](commands-s.md#vp-set-sheet-options) -
-[VP SET SHOW PRINT LINES](commands-s.md#vp-set-show-print-lines) -
-[VP SET TABLE COLUMN ATTRIBUTES](commands-s.md#vp-set-table-column-attributes) -
-[VP SET TABLE THEME](commands-s.md#vp-set-table-theme) -
-[VP SET TEXT VALUE](commands-s.md#vp-add-formula-name) -
-[VP SET TIME VALUE](commands-s.md#vp-set-text-value) -
-[VP SET VALUE](commands-s.md#vp-set-value) -
-[VP SET VALUES](commands-s.md#vp-set-values) -
-[VP SET WORKBOOK OPTIONS](commands-s.md#vp-set-workbook-options) -
-[VP SHOW CELL](commands-s.md#vp-show-cell) -
-[VP SUSPEND COMPUTING](commands-s.md#vp-suspend-computing) -
+[VP SET ACTIVE CELL](commands/vp-set-active-cell.md) -
+[VP SET ALLOWED METHODS](commands/vp-set-allowed-methods.md) -
+[VP SET BINDING PATH](commands/vp-set-binding-path.md) -
+[VP SET BOOLEAN VALUE](commands/vp-set-boolean-value.md) -
+[VP SET BORDER](commands/vp-set-border.md) -
+[VP SET CELL STYLE](commands/vp-set-cell-style.md) -
+[VP SET COLUMN ATTRIBUTES](commands/vp-set-column-attributes.md) -
+[VP SET COLUMN COUNT](commands/vp-set-column-count.md) -
+[VP SET CURRENT SHEET](commands/vp-set-current-sheet.md) -
+[VP SET CUSTOM FUNCTIONS](commands/vp-set-custom-functions.md) -
+[VP SET DATA CONTEXT](commands/vp-set-data-context.md) -
+[VP SET DATE TIME VALUE](commands/vp-set-date-time-value.md) -
+[VP SET DATE VALUE](commands/vp-set-date-value.md) -
+[VP SET DEFAULT STYLE](commands/vp-set-default-style.md) -
+[VP SET FIELD](commands/vp-set-field.md) -
+[VP SET FORMULA](commands/vp-set-formula.md) -
+[VP SET FORMULAS](commands/vp-set-formulas.md) -
+[VP SET FROZEN PANES](commands/vp-set-frozen-panes.md) -
+[VP SET NUM VALUE](commands/vp-set-num-value.md) -
+[VP SET PRINT INFO](commands/vp-set-print-info.md) -
+[VP SET ROW ATTRIBUTES](commands/vp-set-row-attributes.md) -
+[VP SET ROW COUNT](commands/vp-set-row-count.md) -
+[VP SET SELECTION](commands/vp-set-selection.md) -
+[VP SET SHEET COUNT](commands/vp-set-sheet-count.md) -
+[VP SET SHEET NAME](commands/vp-set-sheet-name.md) -
+[VP SET SHEET OPTIONS](commands/vp-set-sheet-options.md) -
+[VP SET SHOW PRINT LINES](commands/vp-set-show-print-lines.md) -
+[VP SET TABLE COLUMN ATTRIBUTES](commands/vp-set-table-column-attributes.md) -
+[VP SET TABLE THEME](commands/vp-set-table-theme.md) -
+[VP SET TEXT VALUE](commands/vp-add-formula-name.md) -
+[VP SET TIME VALUE](commands/vp-set-text-value.md) -
+[VP SET VALUE](commands/vp-set-value.md) -
+[VP SET VALUES](commands/vp-set-values.md) -
+[VP SET WORKBOOK OPTIONS](commands/vp-set-workbook-options.md) -
+[VP SHOW CELL](commands/vp-show-cell.md) -
+[VP SUSPEND COMPUTING](commands/vp-suspend-computing.md) -
