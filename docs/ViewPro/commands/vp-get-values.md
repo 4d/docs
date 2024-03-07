@@ -22,7 +22,7 @@ In *rangeObj*, pass a range whose values you want to retrieve. If *rangeObj* inc
 The collection returned by `VP Get values` contains a two-dimensional collection:
 
 * Each element of the first-level collection represents a row and contains a subcollection of values
-* Each subcollection contains cell values for the row. Values can be Integer, Real, Boolean, Text, Null. If a value is a date or time, it is returned in an object with the following properties:
+* Each subcollection contains cell values for the row. Values can be Integer, Real, Boolean, Text, Object, or Null. If a value is a date or time, it is returned in an object with the following properties:
 
  |Property |Type| Description|
  |---|---|---|

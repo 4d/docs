@@ -148,7 +148,7 @@ See [**SpreadJS's extented list of functions**](https://developer.mescius.com/sp
 You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Examples:
 
 ```4d
-o:=New object
+$o:=New object
 
 //Name of the function in 4D View Pro: "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
@@ -181,7 +181,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 1.	Create a "myMethod" project method with the following code:  
 
 ```4d
- #DECLARE->$hw Text
+ #DECLARE->$hw :Text
  $hw:="Hello World"
 
 ```
@@ -230,24 +230,30 @@ You can declare the name, type, and number of parameters through the *parameters
 
 For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description. 
 
-:::note
+If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. 
 
-If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:  
+Date and Object parameters are handled in the following way:
+
+* Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:  
     
 |Property|	Type|	Description|
 |---|---|---|
 |value|	Date|	Date value|
 |time	|Real|	Time in seconds|
 
-:::
+* Objects will be passed as [object](Concepts/dt_object.md) with a  `.value` property containing the parameter:
 
+|Property|	Type|	Description|
+|---|---|---|
+|value|	Object|	Object parameter|
+
+### Returned values
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. The following data types are supported for returned parameters:
 
 * [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
 * [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
-
 * [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
 * [boolean](Concepts/dt_boolean.md) (converted to bool in 4D View Pro)
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed

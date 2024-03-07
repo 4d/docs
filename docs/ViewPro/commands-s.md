@@ -64,9 +64,9 @@ In the *methodObj* parameter, pass an object in which each property is the name 
 |---|---|---|---|---|
 |`<functionName>` ||  |Object |Custom function definition. The `<functionName>` property name defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)|
 ||method|  |Text |(mandatory) Name of the existing 4D project method to allow|
-||parameters|  |Collection of objects |Collection of parameters (in the order they are defined in the method).|
+||parameters|  |Collection of objects |Collection of parameters (in the order they are defined in the method). For more information, please refer to the [Parameters](formulas.md#parameters) section.|
 |||\[ ].name| Text| Name of a parameter to display for the `<functionName>`.**Note**: Parameter names must not contain space characters.|
-|||\[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is collection`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* can be omitted (except when at least one parameter is of collection type, in which case parameter's type declaration is mandatory). If *type* is omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If type is `Is object`, the object has the same structure as the object returned by [`VP Get value`](#vp-get-value).
+|||\[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is collection`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* can be omitted (except when at least one parameter is of collection type, in which case parameter's type declaration is mandatory). <br/> If *type* is omitted, by default the value is automatically sent with its type, except date or time values which are sent as an object.  If *type* is `Is object`, the object is sent in a `.value` property. See [Parameters](formulas.md#parameters) section.
 ||summary | |Text |Function description to display in 4D View Pro|
 ||minParams|  |Number |Minimum number of parameters|
 ||maxParams|  |Number |Maximum number of parameters. Passing a number higher than the length of parameters allows declaring "optional" parameters with default type|
@@ -479,9 +479,9 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 |---|---|---|---|---|
 |`<customFunction>`| |   |Object| Custom function definition. `<customFunction>` defines the name of the custom function to display in 4D View Pro formulas (no spaces allowed)|
 | | formula | |Object|4D formula object (mandatory). See the `Formula` command.|
-| |parameters|  |Collection of objects |Collection of parameters (in the order they are defined in the formula)|
+| |parameters|  |Collection of objects |Collection of parameters (in the order they are defined in the formula). For more information, please refer to the [Parameters](formulas.md#parameters) section.|
  | | |  \[ ].name| Text| Name of parameter to display in 4D View Pro|
- | |  | \[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is collection`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* can be omitted or the default value (-1) can be passed (except when at least one parameter is of collection type, in which case parameter's type declaration is mandatory). If *type* is omitted or -1, the value is automatically sent with its type, except date or time values which are sent as an object (see [Parameters](formulas.md#parameters) section). If *type* is `Is object`, the object has the same structure as the object returned by [VP Get value](#vp-get-value).|
+ | |  | \[ ].type| Number| Type of the parameter. Supported types:<li>`Is Boolean`</li><li>`Is collection`</li><li>`Is date`</li><li>`Is Integer`</li><li>`Is object`</li><li>`Is real`</li><li>`Is text`</li><li>`Is time`</li>*type* can be omitted or the default value (-1) can be passed (except when at least one parameter is of collection type, in which case parameter's type declaration is mandatory). <br/> If *type* is omitted or -1, the value is automatically sent with its type, except date or time values which are sent as an object. If *type* is `Is object`, the object is sent in a `.value` property. See [Parameters](formulas.md#parameters) section.|
 | |  summary |   |Text | Formula description to display in 4D View Pro|
 | |  minParams|   |Number|  Minimum number of parameters |
 | |  maxParams |   |Number | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type |
@@ -538,6 +538,7 @@ End case
 
 #### See also
 
+[4D functions](formulas.md#4d-functions)<br/>
 [VP SET ALLOWED METHODS](#vp-set-allowed-methods)<br/>
 [4D View Pro: enhancement of custom functions (blog post)](https://blog.4d.com/4d-view-pro-enhancement-of-custom-functions)
 

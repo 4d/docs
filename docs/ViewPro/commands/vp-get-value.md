@@ -25,7 +25,7 @@ The object returned will contain the `value` property, and, in case of a js date
 
 |Property |Type |Description|
 |---|---|---|
-|value |Integer, Real, Boolean, Text, Date |Value in the *rangeObj* (except- time)|
+|value |Integer, Real, Boolean, Text, Date, Object |Value in the *rangeObj* (except- time)|
 |time |Real |Time value (in seconds) if the value is of the js date type|
 
 If the object returned includes a date or time, it is treated as a datetime and completed as follows:
