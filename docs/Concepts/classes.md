@@ -20,7 +20,7 @@ Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
 
-Function get fullName() -> $fullName : text
+Function get fullName() -> $fullName : Text
  $fullName:=This.firstName+" "+This.lastName
 
 Function sayHello()->$welcome : Text
@@ -786,10 +786,80 @@ Shared functions can only be defined within shared classes. If the `shared` func
 
 ## Singleton classes
 
-The 4D language supports **singleton classes**. A singleton class is a user class that only produces a single instance. The class singleton is instantiated at the first call of the [`new()`](../API/ClassClass.md#new) function on the class, and is returned afterwards. 
+A **singleton class** is a user class that only produces a single instance. The class singleton is instantiated at the first call of the [`new()`](../API/ClassClass.md#new) function or [`me`](../API/ClassClass.md#me) property on the class, and is always returned afterwards, even if [`new()`](../API/ClassClass.md#new) or [`me`](../API/ClassClass.md#me) is called again. 
 
-The scope of a singleton instance can be the process or all processes (interprocess singleton). A process singleton has a unique value for the process in which it is instantiated, while an interprocess singleton has a unique value for all processes of the application.
+The [`cs.<class>.me`](../API/ClassClass.md#me) property calls the singleton class constructor. Calling this property is similar to calling the [`new()`](../API/ClassClass.md#new) function without parameters. If the singleton class constructor does not need parameters, you can use the [`me`](../API/ClassClass.md#me) property instead. 
 
-Singletons are useful to create global constant values. 
+Singletons are useful to create **constant values**. The scope of a singleton instance can be the current process or all processes. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application.
 
- 
+
+The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton. 
+
+
+:::info
+
+Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.md). 
+
+:::
+
+
+
+
+### Creating a process singleton
+
+To create a process singleton class, add the `singleton` keyword before the [Class Constructor](#class-constructor). For example:
+
+```4d
+	//class: ProcessTag
+singleton Class Constructor()
+ This.tag:=Random
+```
+
+To use the process singleton:
+
+```4d
+	//in a process
+var $mySingleton := cs.ProcessTag.new() //First instantiation
+	//$mySingleton.tag = 5425 for example  
+...  
+var $myOtherSingleton := cs.ProcessTag.new()  
+	//$myOtherSingleton.tag = 5425
+
+```
+
+```4d
+	//in another process
+var $mySingleton := cs.ProcessTag.new() //First instantiation
+	//$mySingleton.tag = 14856 for example  
+...  
+var $myOtherSingleton := cs.ProcessTag.me  
+	//$myOtherSingleton.tag = 14856 
+```
+
+
+### Creating an interprocess singleton
+
+A interprocess singleton class is a singleton class with that is [shared](#shared-classes). To create an interprocess singleton, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). For example:
+
+```4d
+	//class: InterprocessTag
+shared singleton Class Constructor( $param : Integer )
+ This.tag:=100+$param
+```
+To use the interprocess singleton:
+
+```4d
+	//in a process
+var $mySingleton := cs.ProcessTag.new(10) //first instantiation
+	//$mySingleton.tag = 110  
+...  
+var $myOtherSingleton := cs.ProcessTag.new(20) //other instantiation  
+	//$myOtherSingleton.tag = 110  
+```
+
+```4d
+	//in another process
+var $mySingleton := cs.ProcessTag.me //first instantiation in the process   
+	//without parameter
+	//$mySingleton.tag = 110 because it has already been instantiated
+```

@@ -102,6 +102,12 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 
 > Predefined constants appear <u>underlined</u> by default in the 4D Code Editor. 
 
+:::tip
+
+[Singleton classes](classes.md#singleton-classes) provide a concept similar to constants, allowing 4D developers to create their own constant values.
+
+:::
+
 ## Methods
 
 4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language.
@@ -211,6 +217,7 @@ $o:=cs.myClass.new()
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance. 
 
 ```4d  
+
 //in the myClass.4dm file
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
