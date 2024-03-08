@@ -557,8 +557,79 @@ module.exports =
 												"ViewPro/commands/vp-print"
 												]
 										},
-										"ViewPro/commands-r",
-										"ViewPro/commands-s"
+										{
+											type: "category",
+											label: "R",
+											link: {
+												type: 'generated-index',
+												title: 'R',
+												slug: '/commands/R',
+												},
+											items: [
+												"ViewPro/commands/vp-recompute-formulas",
+												"ViewPro/commands/vp-remove-name",
+												"ViewPro/commands/vp-remove-sheet",
+												"ViewPro/commands/vp-remove-span",
+												"ViewPro/commands/vp-remove-stylesheet",
+												"ViewPro/commands/vp-remove-table",
+												"ViewPro/commands/vp-remove-table-columns",
+												"ViewPro/commands/vp-remove-table-rows",
+												"ViewPro/commands/vp-reset-selection",
+												"ViewPro/commands/vp-resize-table",
+												"ViewPro/commands/vp-resume-computing",
+												"ViewPro/commands/vp-row",
+												"ViewPro/commands/vp-row-autofit",
+												"ViewPro/commands/vp-run-offscreen-area"
+
+												]
+										},
+										{
+											type: "category",
+											label: "S",
+											link: {
+												type: 'generated-index',
+												title: 'S',
+												slug: '/commands/S',
+												},
+											items: [
+												"ViewPro/commands/vp-set-active-cell",
+												"ViewPro/commands/vp-set-allowed-methods",
+												"ViewPro/commands/vp-set-binding-path",
+												"ViewPro/commands/vp-set-boolean-value",
+												"ViewPro/commands/vp-set-border",
+												"ViewPro/commands/vp-set-cell-style",
+												"ViewPro/commands/vp-set-column-attributes",
+												"ViewPro/commands/vp-set-column-count",
+												"ViewPro/commands/vp-set-current-sheet",
+												"ViewPro/commands/vp-set-custom-functions",
+												"ViewPro/commands/vp-set-data-context",
+												"ViewPro/commands/vp-set-date-time-value",
+												"ViewPro/commands/vp-set-date-value",
+												"ViewPro/commands/vp-set-default-style",
+												"ViewPro/commands/vp-set-field",
+												"ViewPro/commands/vp-set-formula",
+												"ViewPro/commands/vp-set-formulas",
+												"ViewPro/commands/vp-set-frozen-panes",
+												"ViewPro/commands/vp-set-num-value",
+												"ViewPro/commands/vp-set-print-info",
+												"ViewPro/commands/vp-set-row-attributes",
+												"ViewPro/commands/vp-set-row-count",
+												"ViewPro/commands/vp-set-selection",
+												"ViewPro/commands/vp-set-sheet-count",
+												"ViewPro/commands/vp-set-sheet-name",
+												"ViewPro/commands/vp-set-sheet-options",
+												"ViewPro/commands/vp-set-show-print-lines",
+												"ViewPro/commands/vp-set-table-column-attributes",
+												"ViewPro/commands/vp-set-table-theme",
+												"ViewPro/commands/vp-set-text-value",
+												"ViewPro/commands/vp-set-time-value",
+												"ViewPro/commands/vp-set-value",
+												"ViewPro/commands/vp-set-values",
+												"ViewPro/commands/vp-set-workbook-options",
+												"ViewPro/commands/vp-show-cell",
+												"ViewPro/commands/vp-suspend-computing"
+												]
+										}
 											]
 									},
 								

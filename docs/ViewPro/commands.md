@@ -163,8 +163,8 @@ title: Commands
 [VP SET SHOW PRINT LINES](commands/vp-set-show-print-lines.md) -
 [VP SET TABLE COLUMN ATTRIBUTES](commands/vp-set-table-column-attributes.md) -
 [VP SET TABLE THEME](commands/vp-set-table-theme.md) -
-[VP SET TEXT VALUE](commands/vp-add-formula-name.md) -
-[VP SET TIME VALUE](commands/vp-set-text-value.md) -
+[VP SET TEXT VALUE](commands/vp-set-text-value.md) -
+[VP SET TIME VALUE](commands/vp-set-time-value.md) -
 [VP SET VALUE](commands/vp-set-value.md) -
 [VP SET VALUES](commands/vp-set-values.md) -
 [VP SET WORKBOOK OPTIONS](commands/vp-set-workbook-options.md) -
