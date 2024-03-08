@@ -1,12 +1,8 @@
 ---
-id: commands-n
-title: N
+id: vp-name
+title: VP Name
 ---
-
-> **Warning**: The commands on this page are not thread-safe.
-
-
-### VP Name
+ 
 
 <!-- REF #_method_.VP Name.Syntax -->
 **VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object <!-- END REF -->
@@ -46,37 +42,12 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 #### See also
 
-[VP ADD RANGE NAME](#vp-add-range-name)<br/>[VP ALL](#vp-all)<br/>[VP Cell](#vp-cell)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Get names](#vp-get-names)<br/>[VP REMOVE NAME](#vp-remove-name)<br/>[VP Row](#vp-row)
-
-### VP NEW DOCUMENT
-
-<!-- REF #_method_.VP NEW DOCUMENT.Syntax -->
-**VP NEW DOCUMENT** ( *vpAreaName* : Text ) <!-- END REF -->
-
-<!-- REF #_method_.VP NEW DOCUMENT.Params -->
-
-|Parameter|Type||Description|
-|---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
-
-
-
-#### Description
-
-The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. The new empty document replaces any data already inserted in the area.
-
-In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.  
-
-#### Example
-
-You want to display an empty document in the "myVPArea" form object:
-
-```4d
-VP NEW DOCUMENT("myVPArea")
-```
-
-#### See also
-
-[VP IMPORT DOCUMENT](#vp-import-document)
-
----
+[VP ADD RANGE NAME](vp-add-range-name.md)<br/>
+[VP ALL](vp-all.md)<br/>
+[VP Cell](vp-cell.md)<br/>
+[VP Cells](vp-cells.md)<br/>
+[VP Column](vp-column.md)<br/>
+[VP Combine ranges](vp-combine-ranges.md)<br/>
+[VP Get names](vp-get-names.md)<br/>
+[VP REMOVE NAME](vp-remove-name.md)<br/>
+[VP Row](vp-row.md)

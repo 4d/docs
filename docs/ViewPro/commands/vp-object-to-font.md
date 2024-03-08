@@ -1,12 +1,8 @@
 ---
-id: commands-o
-title: O
+id: vp-object-to-font
+title: VP Object to font
 ---
 
-> **Warning**: The commands on this page are not thread-safe.
-
-
-### VP Object to font
 
 <!-- REF #_method_.VP Object to font.Syntax -->
 **VP Object to font** ( *fontObj* : Object ) : Text <!-- END REF -->
@@ -32,9 +28,9 @@ In *fontObj*, pass an object containing the font properties. The following prope
 |variant |text |Specifies font in small capital letters. |<li>`vk font variant small caps`</li>| No|
 |weight |text| Defines the thickness of the font.|<li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>| No|
 
-This object can be created with the [VP Font to object](#vp-font-to-object) command.
+This object can be created with the [VP Font to object](vp-font-to-object.md) command.
 
-The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](#vp-set-cell-style), for example.
+The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](vp-set-cell-style.md), for example.
 
 #### Example
 
@@ -52,4 +48,7 @@ $cellStyle.font:=VP Object to font($font)
 
 #### See also
 
-[4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>[VP Font to object](#vp-font-to-object)<br/>[VP SET CELL STYLE](#vp-set-cell-style)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
+[4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/> 
+[VP Font to object](vp-font-to-object.md)<br/>
+[VP SET CELL STYLE](vp-set-cell-style.md)<br/>
+[VP SET DEFAULT STYLE](vp-set-default-style.md)

@@ -489,11 +489,74 @@ module.exports =
 												"ViewPro/commands/vp-get-workbook-options"
 												]
 										},
-										"ViewPro/commands-i",
-										"ViewPro/commands-m",
-										"ViewPro/commands-n",
-										"ViewPro/commands-o",
-										"ViewPro/commands-p",
+										{
+											type: "category",
+											label: "I",
+											link: {
+												type: 'generated-index',
+												title: 'I',
+												slug: '/commands/I',
+												},
+											items: [
+												"ViewPro/commands/vp-import-document",
+												"ViewPro/commands/vp-import-from-blob",
+												"ViewPro/commands/vp-import-from-object",
+												"ViewPro/commands/vp-insert-columns",
+												"ViewPro/commands/vp-insert-rows",
+												"ViewPro/commands/vp-insert-table-columns",
+												"ViewPro/commands/vp-insert-table-rows"
+												]
+										},
+										{
+											type: "category",
+											label: "M",
+											link: {
+												type: 'generated-index',
+												title: 'M',
+												slug: '/commands/M',
+												},
+											items: [
+												"ViewPro/commands/vp-move-cells"
+												]
+										},
+										{
+											type: "category",
+											label: "N",
+											link: {
+												type: 'generated-index',
+												title: 'N',
+												slug: '/commands/N',
+												},
+											items: [
+												"ViewPro/commands/vp-name",
+												"ViewPro/commands/vp-new-document"
+												]
+										},
+										{
+											type: "category",
+											label: "O",
+											link: {
+												type: 'generated-index',
+												title: 'O',
+												slug: '/commands/O',
+												},
+											items: [
+												"ViewPro/commands/vp-object-to-font",
+												]
+										},
+										{
+											type: "category",
+											label: "P",
+											link: {
+												type: 'generated-index',
+												title: 'P',
+												slug: '/commands/P',
+												},
+											items: [
+												"ViewPro/commands/vp-paste-from-object",
+												"ViewPro/commands/vp-print"
+												]
+										},
 										"ViewPro/commands-r",
 										"ViewPro/commands-s"
 											]

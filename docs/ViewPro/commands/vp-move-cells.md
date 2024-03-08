@@ -1,12 +1,8 @@
 ---
-id: commands-m
-title: M
+id: vp-move-cells
+title: VP MOVE CELLS
 ---
 
-> **Warning**: The commands on this page are not thread-safe.
-
-
-### VP MOVE CELLS
 
 <details><summary>History</summary>
 
@@ -44,7 +40,7 @@ The *options* parameter has several properties:
 |pasteOptions|Longint|Specifies what is pasted. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Pastes all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Pastes only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Pastes only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Pastes the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Pastes only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Pastes the values and formatting.</td></tr></table></p>|
 
 
-The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
+The paste options defined in the [workbook options](vp-set-workbook-options.md) are taken into account.
 
 #### Example
 
@@ -66,4 +62,6 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 
 #### See also
 
-[VP Copy to object](#vp-copy-to-object)<br/>[VP PASTE FROM OBJECT](#vp-paste-from-object)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
+[VP Copy to object](vp-copy-to-object.md)<br/>
+[VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>
+[VP SET WORKBOOK OPTIONS](vp-set-workbook-options.md)
