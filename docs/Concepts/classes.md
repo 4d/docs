@@ -867,7 +867,7 @@ var $mySingleton := cs.ProcessTag.me
 	//without parameter
 	//$mySingleton.tag = 110
   ...  
-var $myOtherSingleton := cs.ProcessTag.new(20) //other instantiation  
+var $myOtherSingleton := cs.ProcessTag.new(20) //other call to new()  
   //$myOtherSingleton.tag = 110  
 
 ```
