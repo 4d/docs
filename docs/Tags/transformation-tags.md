@@ -1,5 +1,5 @@
 ---
-id: tags
+id: transformation-tags
 title: Transformation tags
 ---
 
@@ -32,6 +32,22 @@ It is possible to mix several types of tags. For example, the following HTML str
 </BODY>
 </HTML>
 ```
+
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Health check
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+
 
 ## Principles for using tags
 
