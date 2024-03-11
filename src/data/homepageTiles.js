@@ -93,7 +93,7 @@ const Sections = [
         <Link to="Develop/processes" >
           <Translate>Processes</Translate>
         </Link>
-        <Link to="Tags/tags" >
+        <Link to="Tags/transformation-tags" >
           <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Preferences/overview" >

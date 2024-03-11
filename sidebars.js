@@ -151,7 +151,7 @@ module.exports =
 										"Concepts/plug-ins",
 										"Concepts/identifiers",
 										"Concepts/paths"
-									],	
+									],
 						},
 						{
 							type: 'link',
