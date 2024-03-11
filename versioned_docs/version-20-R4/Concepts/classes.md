@@ -180,7 +180,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class.
+Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md) class.
 
 In the class definition file, function declarations use the `Function` keyword, and the name of the function. The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
@@ -209,7 +209,7 @@ Function getFullname()->$fullname : Text
 
 For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myFunction".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#parameters) if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
 - use of a "4D.Function" class member method:
@@ -231,15 +231,6 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 >If the type is not stated, the parameter will be defined as `Variant`.
 
-The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
-
-```4d
-Function add($x : Integer)
- var $2; $value : Integer
- var $0 : Text
- $value:=$x+$2
- $0:=String($value)
-```
 
 #### Return value
 
@@ -523,7 +514,6 @@ Class constructor ($side : Integer)
 
 ### `Super`
 
-#### Syntax
 
 <!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
@@ -632,8 +622,6 @@ $message:=$square.description() //I have 4 sides which are all equal
 ```
 
 ### `This`
-
-#### Syntax
 
 <!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
