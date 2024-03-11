@@ -213,7 +213,7 @@ module.exports =
 						"Develop/preemptive",
 					]
 				},
-				"Tags/tags",
+				"Tags/transformation-tags",
 				{
 					type: "category",
 					label: "Preferences",
