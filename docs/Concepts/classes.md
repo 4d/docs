@@ -24,6 +24,7 @@ Function get fullName() -> $fullName : Text
  $fullName:=This.firstName+" "+This.lastName
 
 Function sayHello() -> $welcome : Text
+
  $welcome:="Hello "+This.fullName
 ```
 
@@ -110,13 +111,16 @@ Available classes are accessible from their class stores. Two class stores are a
 
 ### `cs`
 
-#### cs -> classStore
 
+<!-- REF #_command_.cs.Syntax -->**cs** : Object<!-- END REF -->
+
+
+<!-- REF #_command_.cs.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|object|<-|User class store for the project or component|
+|classStore|Object|<-|User class store for the project or component|<!-- END REF -->
 
-The `cs` command returns the user class store for the current project or component. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
+The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. It returns all user classes [defined](#class-definition) in the opened project or component. By default, only project [ORDA classes](ORDA/ordaClasses.md) are available.
 
 #### Example
 
@@ -128,13 +132,14 @@ $instance:=cs.myClass.new()
 
 ### `4D`
 
-#### 4D -> classStore
+<!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
+<!-- REF #_command_.4D.Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|classStore|object|<-|4D class store|
+|classStore|Object|<-|4D class store|<!-- END REF -->
 
-The `4D` command returns the class store for available built-in 4D classes. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
+The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. It provides access to specific APIs such as [CryptoKey](API/CryptoKeyClass.md).
 
 #### Example
 
@@ -184,7 +189,7 @@ Specific 4D keywords can be used in class definitions:
 // code
 ```
 
-Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
+Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
 
 If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
@@ -527,28 +532,23 @@ Class constructor ($side : Integer)
 
 
 
- Function getArea()
-  C_LONGINT($0)
-  $0:=This.height*This.width
+ Function getArea() -> $area : Integer
+  $area:=This.height*This.width
 ```
 
 
 
 ### `Super`
 
-#### Syntax
+<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
-```4d
-Super {( param{;...;paramN} )} {-> Object}
-```
-
-
+<!-- REF #_command_.Super.Params -->
 |Parameter|Type||Description|  
 |---|---|---|---|
-|param|mixed|->|Parameter(s) to pass to the parent constructor|
-|Result|object|<-|Object's parent|
+|param|any|->|Parameter(s) to pass to the parent constructor|
+|Result|Object|<-|Object's parent|<!-- END REF -->
 
-The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
+The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
 
 `Super` serves two different purposes:
 
@@ -648,21 +648,19 @@ $message:=$square.description() //I have 4 sides which are all equal
 
 ### `This`
 
-#### Syntax
 
-```4d
-This -> Object
-```
+<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
+<!-- REF #_command_.This.Params -->
 |Parameter|Type||Description|  
 |---|---|---|---|
-|Result|object|<-|Current object|
+|Result|Object|<-|Current object|<!-- END REF -->
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
+The `This` keyword <!-- REF #_command_.This.Summary -->returns a reference to the currently processed object<!-- END REF -->.
 
 In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
 
-When a formula is called as a member method of an object, its `This` is set to the object the method is called on. For example:
+When a [formula](../API/FunctionClass.md) is called as a member method of an object, its `This` is set to the object the method is called on. For example:
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
@@ -710,6 +708,7 @@ $val:=$o.f() //8
 ```
 
 In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
+
 
 ## Class commands
 

@@ -171,7 +171,7 @@ The following fields are logged for both Request and Response:
 |Field name| Description|
 |---|---|
 |SequenceID |Unique and sequential operation number in the logging session|
-|ConnectionID| UUID identifier of process connection| 
+|ConnectionID| UUID identifier of process connection|
 |LocalIP| Client IP address|
 |PeerIP| Server IP address|
 |TimeStamp |Timestamp (ms) at the time the request is sent or the response is fully received|
@@ -363,7 +363,7 @@ How to start this log:
 ```4d
 	//on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 	//can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
@@ -413,9 +413,9 @@ How to start this log:
 ```4d
 	//on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-	//srl... parameter is optional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+	//srl... parameter is optional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note
@@ -433,7 +433,6 @@ The following fields are logged for each request:
 |startTime| Starting date and time using ISO 8601 format| "2019-05-28T08:25:12.346Z"|
 |duration|Server processing duration in microseconds (µ) |2500|
 |response|Server response object, can be configured in [`.startRequestLog()`](../API/DataStoreClass.md#startrequestlog)|{"status":200,"body":{"__entityModel":"Persons",\[...]}}|
-|ipAddress|User IP address|"192.168.1.5"|
 |userName| Name of the 4D user|"henry"|
 |systemUserName| Login name of the user on the machine|"hsmith"|
 |machineName|Name of the user machine|"PC of Henry Smith"|
@@ -468,7 +467,7 @@ You can use a **log configuration file** to easily manage log recording in a pro
 
 ### How to enable the file
 
-There are several ways to enable the log configuration file, depending on your configuration: 
+There are several ways to enable the log configuration file, depending on your configuration:
 
 - **4D Server with interface**: you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. It is immediately enabled on the server.
 - **an interpreted or compiled project**: the file must be named `logConfig.json` and copied in the [Settings folder](../Project/architecture.md#settings-1) of the project (located at the same level as the [`Project` folder](../Project/architecture.md#project-folder)). It is enabled at project startup (only on the server in client/server).
@@ -481,7 +480,7 @@ There are several ways to enable the log configuration file, depending on your c
 - **all projects with 4D Server**: the file must be named `logConfig.json` and copied in the following folder:
 	* Windows: `Users\[userName]\AppData\Roaming\4D Server`
 	* macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
-	
+
 :::note
 
 If a `logConfig.json` file is installed in both Settings and AppData/Library folders, the Settings folder file will have priority.
