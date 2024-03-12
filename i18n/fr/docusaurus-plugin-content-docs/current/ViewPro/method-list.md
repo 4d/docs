@@ -1864,7 +1864,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
 | name       | Text   | -> | Nom de la plage nommée                                                           |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
-| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
+| Résultat   | Object   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
 |
 
