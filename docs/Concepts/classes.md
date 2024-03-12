@@ -186,7 +186,7 @@ Specific 4D keywords can be used in class definitions:
 
 Class functions are specific properties of the class. They are objects of the [4D.Function](API/FunctionClass.md#about-4dfunction-objects) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
 
-If the function is declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
+If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
 The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
@@ -217,7 +217,7 @@ Function getFullname()->$fullname : Text
 
 For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myFunction".
 
-In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
+In the application code, class functions are called as member methods of the object instance and can receive [parameters](#parameters) if any. The following syntaxes are supported:
 
 - use of the `()` operator. For example, `myObject.methodName("hello")`
 - use of a "4D.Function" class member method:
@@ -738,7 +738,7 @@ Several commands of the 4D language allows you to handle class features.
 
 You can create **shared classes**. A shared class is a user class that automatically instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class, thus reducing the code to write. A shared class can only create shared objects.
 
-Shared classes also support **shared functions** that can be called without [`Use..End use`](shared.md#useend-use) structures.
+Shared classes also support **shared functions** that can be called without [`Use...End use`](shared.md#useend-use) structures.
 
 The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allows to know if the class is shared.
 
@@ -773,7 +773,7 @@ cs.Person.isShared //true
 
 ### Shared functions
 
-If a function defined inside a shared class modifies objects of the class, it should call [`Use..End use`](shared.md#useend-use) structure to protect access to the shared objects. However, to simplify the code, you can define the function as **shared** so that it automatically triggers internal `Use..End use` when executed.
+If a function defined inside a shared class modifies objects of the class, it should call [`Use...End use`](shared.md#useend-use) structure to protect access to the shared objects. However, to simplify the code, you can define the function as **shared** so that it automatically triggers internal `Use...End use` when executed.
 
 To create a shared function, add the `shared` keyword before the [Function](#function) keyword in a shared class. For example:
 
@@ -782,7 +782,7 @@ To create a shared function, add the `shared` keyword before the [Function](#fun
 shared Class Constructor()
   This.variable:=1
 
-shared Function bar($value : Integer)
+shared Function Bar($value : Integer)
   This.variable:=$value //no need to call use/end use
 ```  
 
