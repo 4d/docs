@@ -39,13 +39,13 @@ You MUST distinguish the assignment operator := from the other operators. Rather
 The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using the `var` keyword. For example, to create a variable of the date type, you can write:
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 The `var` keyword allows declaring object variables of a defined class type, for example:
 
 ```4d
-var myPerson : cs.Person 
+var myPerson : cs.Person
 //variable of the Person user class
 ```
 
@@ -66,7 +66,7 @@ The line of code reads “MyOtherDate gets the current date plus 30 days.” Thi
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. For example: 
+Some commands are attached to collections or objects, in which case they are named functions and are used using the dot notation. For example:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -75,7 +75,7 @@ $nc:=$c.slice(0;3) //$nc=[1,2,3]
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment. 
+You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
 
 There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
 
@@ -94,19 +94,15 @@ objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 
 ## Constants
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. They allow writing more readable code. For example, `Read Mode` is a constant (value 2). 
+4D proposes an extensed set of predefined constants, whose values are accessible by name. They allow writing more readable code. For example, `Read Mode` is a constant (value 2).
 
 ```4d
 vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
 ```
 
-> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor. 
+> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
 
-:::tip
 
-[Singleton classes](classes.md#singleton-classes) provide a concept similar to constants, allowing 4D developers to create their own constant values.
-
-:::
 
 ## Methods
 
@@ -142,7 +138,7 @@ A project method can call another project method with or without parameters (arg
 $myText:="hello"
 $myText:=Do_Something($myText) //Call the Do_Something method
 ALERT($myText) //"HELLO"
- 
+
   //Here the code of the method Do_Something  
 #DECLARE ($in : Text) -> $out : Text
 $out:=Uppercase($in)
@@ -167,7 +163,7 @@ If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
 
 The data types are fully defined in the section [Data Types](Concepts/data-types.md).
 
-## Objects and collections 
+## Objects and collections
 
 You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
 
@@ -205,16 +201,16 @@ myColl[3]  //access to 4th element of the collection
 
 ## Classes
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass". 
+The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
 
 To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
 
 ```4d  
 // in a 4D method
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
-In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance. 
+In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
 
@@ -223,7 +219,7 @@ Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
 
-To execute a class member function, just use the `()` operator on the member function of the object instance. 
+To execute a class member function, just use the `()` operator on the member function of the object instance.
 
 ```4d
 $o:=cs.myClass.new()
@@ -238,7 +234,7 @@ Optionally, use the `Class constructor` keyword to declare properties of the obj
 //in the Rectangle.4dm file
 Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
-This.width:=$width 
+This.width:=$width
 This.name:="Rectangle"
 ```
 
@@ -247,7 +243,7 @@ A class can extend another class by using `Class extends <ClassName>`. Superclas
 ```4d  
 //in the Square.4dm file
 Class extends rectangle
- 
+
 Class constructor ($length : Integer)
   // It calls the parent class's constructor with lengths   
   // provided for the Rectangle's width and height
@@ -279,7 +275,7 @@ The same symbols are often used for different operations, depending on the data 
 |Date and Number	|Date addition	|!1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989|
 
 
-## Expressions 
+## Expressions
 
 Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
 
@@ -335,9 +331,9 @@ Form.pageNumber:=10 //assign 10 to Form.pageNumber
 //Form.pageTotal-Form.pageNumber is not assignable:
 Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable. 
+In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
- 
+
 ## Pointers
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
@@ -366,18 +362,18 @@ $str:=String("hello"+\
 
 ## Comments
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called. 
+Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
 
 There are two ways to create comments:
 
 - `//` for single line comments
 - `/*...*/` for inline or multiline commnents.
 
-Both styles of comments can be used simultaneously. 
+Both styles of comments can be used simultaneously.
 
 #### Single line comments (`//comment`)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example: 
+Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
 
 ```4d
 //This is a comment
@@ -406,7 +402,7 @@ End for
 For ($vCounter;1;100)
 /*
 comments  
-	/* 
+	/*
 	other comments
 	*/
 */
@@ -435,4 +431,3 @@ In 4D, the following escape sequences can be used:
 In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-

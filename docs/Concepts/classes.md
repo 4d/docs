@@ -23,7 +23,7 @@ Class constructor($firstname : Text; $lastname : Text)
 Function get fullName() -> $fullName : Text
  $fullName:=This.firstName+" "+This.lastName
 
-Function sayHello()->$welcome : Text
+Function sayHello() -> $welcome : Text
  $welcome:="Hello "+This.fullName
 ```
 
@@ -54,7 +54,6 @@ For example, if you want to define a class named "Polygon", you need to create t
 ```
 Project folder
  Project
-
   Sources
    Classes
     Polygon.4dm
@@ -154,6 +153,7 @@ When a class is [defined](#class-definition) in the project, it is loaded in the
 - [`new()`](API/ClassClass.md#new) function, allowing to instantiate class objects
 - [`isShared`](API/ClassClass.md#isshared) property, true if the class is [shared](#shared-classes)
 - [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
+- [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
 
 In addition, a class object can reference a [`constructor`](#class-constructor) object (optional).
 
@@ -412,7 +412,7 @@ $o.age:="Smith"  //error with check syntax
 #### Syntax
 
 ```4d
-Function get <name>()->$result : type
+{shared} Function get <name>()->$result : type
 // code
 ```
 
@@ -436,13 +436,7 @@ In the class definition file, computed property declarations use the `Function g
 
 When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
 
-If the functions are declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword with the `Function set` so that it could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
-
-:::note
-
-The `shared` keyword is useless with the `Function get` since read access functions do not require a [`Use...End use` structure](shared.md#useend-use) structure.
-
-:::
+If the functions are declared in a [shared class](#shared-class-constructor), you can use the `shared` keyword with them so that they could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
 The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md).
 
@@ -736,7 +730,7 @@ Several commands of the 4D language allows you to handle class features.
 
 ## Shared classes
 
-You can create **shared classes**. A shared class is a user class that automatically instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class, thus reducing the code to write. A shared class can only create shared objects.
+You can create **shared classes**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. A shared class can only create shared objects.
 
 Shared classes also support **shared functions** that can be called without [`Use...End use`](shared.md#useend-use) structures.
 
@@ -788,16 +782,20 @@ shared Function Bar($value : Integer)
 
 :::note
 
-Shared functions can only be defined within shared classes. If the `shared` function keyword is used in a regular user class, it is ignored.
+If the `shared` function keyword is used in a non-shared user class, it is ignored.
 
 :::
 
 
 ## Singleton classes
 
-A **singleton class** is a user class that only produces a single instance. The class singleton is instantiated at the first call of the [`new()`](../API/ClassClass.md#new) function with the class, with or without parameters. The [`cs.<class>.me`](../API/ClassClass.md#me) property is therefore used to call the class singleton in the code. The instantiated class singleton is always returned when the [`me`](../API/ClassClass.md#me) property is called, even if `new()` is called again.
+A **singleton class** is a user class that only produces a single instance. For more information on singletons, please see the [Wikipedia page about singletons](https://en.wikipedia.org/wiki/Singleton_pattern).
 
-Singletons are useful to create **constant values**. The scope of a singleton instance can be the current process or all processes. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application.
+The class singleton is instantiated at the first call of the [`cs.<class>.me`](../API/ClassClass.md#me) property. The instantiated class singleton is then always returned when the [`me`](../API/ClassClass.md#me) property is used.
+
+If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. In this case, it is recommended to instantiate the singleton in some code executed at application startup.  
+
+The scope of a singleton instance can be the current process or all processes. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application. Singletons are useful to define values that need to be available from anywhere in an application or process.
 
 
 The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
@@ -826,17 +824,16 @@ To use the process singleton:
 
 ```4d
 	//in a process
-var $mySingleton := cs.ProcessTag.new() //First instantiation
+var $mySingleton := cs.ProcessTag.me //First instantiation
 	//$mySingleton.tag = 5425 for example  
 ...  
 var $myOtherSingleton := cs.ProcessTag.me
 	//$myOtherSingleton.tag = 5425
 
 ```
-
 ```4d
 	//in another process
-var $mySingleton := cs.ProcessTag.new() //First instantiation
+var $mySingleton := cs.ProcessTag.me //First instantiation
 	//$mySingleton.tag = 14856 for example  
 ...  
 var $myOtherSingleton := cs.ProcessTag.me  
@@ -844,30 +841,44 @@ var $myOtherSingleton := cs.ProcessTag.me
 ```
 
 
+
 ### Creating an interprocess singleton
 
 To create an interprocess singleton, add the `shared singleton` keywords before the [Class Constructor](#class-constructor). For example:
 
 ```4d
-	//class: InterprocessTag
-shared singleton Class Constructor( $param : Integer )
- This.tag:=100+$param
+//Class VehicleFactory
+
+property vehicleBuilt : Integer
+
+shared singleton Class constructor()
+  This.vehicleBuilt := 0 //Number of vehicles built by the factory
+
+shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
+
+  Case of
+    : $type="car"
+      $vehicle:=cs.Car.new()
+    : $type="truck"
+      $vehicle:=cs.Truck.new()
+    : $type="sport car"
+      $vehicle:=cs.SportCar.new()
+    : $type="motorbike"
+      $vehicle:=cs.Motorbike.new()
+  Else
+    $vehicle:=cs.Car.new()
+  End case
+  This.vehicleBuilt+=1
 ```
-To use the interprocess singleton:
+
+You can the call the **cs.VehicleFactory** singleton to get a new vehicle from everywhere in your application with a single line:
 
 ```4d
-	//in a process
-var $mySingleton := cs.ProcessTag.new(10) //first instantiation
-	//$mySingleton.tag = 110  
+$vehicle:=cs.VehicleFactory.me.buildVehicle("truck")
 ```
 
-```4d
-	//in another process
-var $mySingleton := cs.ProcessTag.me    
-	//without parameter
-	//$mySingleton.tag = 110
-  ...  
-var $myOtherSingleton := cs.ProcessTag.new(20) //other call to new()  
-  //$myOtherSingleton.tag = 110  
+Since the *buildVehicle()* function modifies the **cs.VehicleFactory** (by incrementing `This.vehicleBuilt`) you need to add the `shared` keyword to it.
 
-```
+#### See also
+
+See also [this blog post](https://blog.4d.com/singleton) for more details.
