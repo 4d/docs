@@ -1827,7 +1827,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                  |                  |
 | name       | Text   | -> | Nombre del rango nombrado                                     |                  |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual) |                  |
-| Result     | Text   | <- | Named formula or named range definition                       | <!-- END REF --> |
+| Result     | Object   | <- | Named formula or named range definition                       | <!-- END REF --> |
 
 #### Descripción
 
