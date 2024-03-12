@@ -1858,7 +1858,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                         |
 | name       | Text   | -> | 命名レンジの名前                                        |
 | scope      | Number | -> | ターゲットのスコープ (デフォルト=カレントシート)                      |
-| 戻り値        | Text   | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
+| 戻り値        | Object   | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
 
 |
 

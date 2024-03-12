@@ -151,7 +151,7 @@ module.exports =
 										"Concepts/plug-ins",
 										"Concepts/identifiers",
 										"Concepts/paths"
-									],	
+									],
 						},
 						{
 							type: 'link',
@@ -213,7 +213,7 @@ module.exports =
 						"Develop/preemptive",
 					]
 				},
-				"Tags/tags",
+				"Tags/transformation-tags",
 				{
 					type: "category",
 					label: "Preferences",

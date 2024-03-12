@@ -3,7 +3,7 @@ id: entities
 title: Working with data
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore. 
+In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
 
 
 ## Creating an entity  
@@ -27,10 +27,10 @@ $myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
 $myEntity.save() //save the entity
 ```
 
->An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process. 
+>An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
 
-## Entities and references 
- 
+## Entities and references
+
 An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
 
 If you execute the following code:
@@ -73,7 +73,7 @@ In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entit
     do_Capitalize($entity)
  End for each
 ```
- 
+
 And the method is:
 
 ```4d
@@ -84,7 +84,7 @@ And the method is:
  End if
  $entity.lastname:=$name
 ```
- 
+
 You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
 
 :::info
@@ -98,12 +98,12 @@ With the entities, there is no concept of "current record" as in the 4D language
 
 ## Using entity attributes  
 
-Entity attributes store data and map corresponding fields in the corresponding table. 
+Entity attributes store data and map corresponding fields in the corresponding table.
 
 - attributes of the **storage** kind can be set or get as simple properties of the entity object,
 - attributes of the **relatedEntity** kind will return an entity,
 - attributes of the **relatedEntities** kind will return an entity selection,
-- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured. 
+- attributes of the **computed** and **alias** kind can return any type of data, depending on how they are configured.
 
 :::info
 
@@ -147,9 +147,9 @@ Each employee can be a manager and can have a manager. To get the manager of the
 
 ### Assigning files to picture or blob attributes
 
-You can store images in picture attributes; similarly, you can store any binary data in blob attributes. 
+You can store images in picture attributes; similarly, you can store any binary data in blob attributes.
 
-ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity. 
+ORDA lets you assign either the data itself, i.e. an image or a blob object, or a **reference to a file** containing the data to the attribute. Only the file path is saved within the entity.
 
 Thanks to this feature, you can reuse the same picture in multiple entities without duplicating it, organize the files the way you want, or use them outside of 4D. Also, you can control the size of the data file.
 
@@ -166,17 +166,17 @@ Function createCompany($name : Text; $logo : 4D.File)
 	var $company : cs.CompanyEntity
 	$company:=ds.Company.new()
 
-	$company.name:=$name 
+	$company.name:=$name
 		//assignment using a file object
-	$company.logo:=$logo 
+	$company.logo:=$logo
 		//assignment using a path
 	$company.datablob:="/RESOURCES/"+$name+"/data.bin"
-	$company.save() 
+	$company.save()
 ```
 
-Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view. 
+Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view.
 
-The file does not have to exist on disk at the time of assignment (no error is returned in this case). If the referenced file is not found when the attribute is read, a null value is returned. 
+The file does not have to exist on disk at the time of assignment (no error is returned in this case). If the referenced file is not found when the attribute is read, a null value is returned.
 
 :::tip
 
@@ -186,10 +186,10 @@ The file does not have to exist on disk at the time of assignment (no error is r
 
 :::note
 
-File reference assignment is only supported in local mode (4D Server or 4D single-user). An error is generated if the assignment is made remotely or via a REST request. 
+File reference assignment is only supported in local mode (4D Server or 4D single-user). An error is generated if the assignment is made remotely or via a REST request.
 
 :::
-  
+
 
 ### Assigning values to relation attributes  
 
@@ -248,18 +248,18 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 *	Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 *	Using a relation attribute of type "related entities" (see below).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities. 
+You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
 
 :::note
 
-You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature. 
+You can filter which entities must be included in entity selections for a dataclass depending on any business rules, thanks to the [restricted entity selection](#restricting-entity-selections) feature.
 
 :::
 
 
 ### Shareable or alterable entity selections
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process). 
+An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
 
 #### Properties
 
@@ -268,18 +268,18 @@ A **shareable** entity selection has the following characteristics:
 - it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
 - it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
 - it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
-	
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one). 
-	
+
+> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+
 An **alterable** entity selection has the following characteristics:
 
 - it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
 - it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
-	
+
 
 #### How are they defined?
 
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command. 
+The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
 
 
 A new entity selection is **shareable** in the following cases:
@@ -288,7 +288,7 @@ A new entity selection is **shareable** in the following cases:
 - the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
-Example: 
+Example:
 
 ```4d
 var $myComp : cs.CompanyEntity
@@ -318,7 +318,7 @@ A new entity selection **inherits** from the original entity selection nature in
 	- [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
 
 Examples:
- 
+
 ```4d
 var $highSal; $lowSal : cs.EmployeeSelection
 var $comp; $comp2 : cs.Company
@@ -328,7 +328,7 @@ $highSal:=ds.Employee.query("salary >= :1"; 1000000)
 	//$highSal is shareable because of the query on dataClass
 $comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 	//$lowSal is alterable because of the copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
@@ -341,7 +341,7 @@ In client/server architecture, entity selections returned from the server are al
 	//a function is always executed on the server
 exposed Function getSome() : cs.MembersSelection
     return This.query("ID >= :1"; 15).orderBy("ID ASC")
- 
+
 	//in a method, executes on the remote side
 var $result : cs.MembersSelection
 var $alterable : Boolean
@@ -368,18 +368,18 @@ $unpaid:=ds.Invoices.query("status=:1"; "Unpaid")
 
 //We pass entity selection references as parameters to the worker
 CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
- 
+
 ```
 
 The `sendMails` method:
 
-```4d 
+```4d
 
  #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
- 
+
  var $server; $transporter; $email; $status : Object
- 
+
   //Prepare emails
  $server:=New object()
  $server.host:="exchange.company.com"
@@ -388,7 +388,7 @@ The `sendMails` method:
  $transporter:=SMTP New transporter($server)
  $email:=New object()
  $email.from:="myName@company.com"
- 
+
   //Loops on entity selections
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // email address of the customer
@@ -396,7 +396,7 @@ The `sendMails` method:
 
     $status:=$transporter.send($email)
  End for each
- 
+
  For each($invoice;$unpaid)
     $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Please pay invoice # "+String($invoice.number)
@@ -420,7 +420,7 @@ This code returns in *$localEmails* a collection of email addresses as strings.
 
 ### Entity selections and Relation attributes  
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure: 
+In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
@@ -439,18 +439,18 @@ The last line will return in *$myInvoices* an entity selection of all invoices t
 
 In ORDA, you can create filters to restrict access to entities of any of your dataclasses. Once implemented, a filter is automatically applied whenever the entities of the dataclass are accessed either by **ORDA class functions** such as [`all()`](../API/DataClassClass.md#all) or [`query()`](../API/EntitySelectionClass.md#query), or by the [**REST API**](../category/api-dataclass) (which involves the [Data Explorer](../Admin/dataExplorer.md) and [remote datastores](remoteDatastores.md)).
 
-A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson. 
+A filter creates a restricted view of the data, built upon any business rules such as current session user. For example, in an application used by salespersons to make deals with their customers, you can restrict the read customers to those managed by the authenticated salesperson.
 
 :::info
 
-Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](../privileges.md) which are more appropriate in this case. 
+Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](privileges.md) which are more appropriate in this case. 
 
 :::
 
 
 ### How to define a restrict filter
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled. 
+You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
 
 
 ### `Function event restrict`
@@ -462,7 +462,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 // code
 ```
 
-This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created. 
+This function is called whenever an entity selection or an entity of the dataclass is requested. The filter is run once, when the entity selection is created.
 
 The filter must return an entity selection of the dataclass. It can be an entity selection built upon a query, stored in the [`Storage`], etc.
 
@@ -474,9 +474,9 @@ For performance reasons, we recommend to use **indexed attributes** in the defin
 
 The function must return a valid entity selection of the dataclass. No filter is applied (all entities corresponding of the initial request are returned) if:
 
-- the function returns **null**, 
-- the function returns **undefined**, 
-- the function does not return a valid entity selection. 
+- the function returns **null**,
+- the function returns **undefined**,
+- the function does not return a valid entity selection.
 
 
 #### Example
@@ -488,28 +488,28 @@ Class extends DataClass
 
 
 Function event restrict() : cs.CustomersSelection
-    
-  
+
+
     	//We work in a web or REST context
     If (Session#Null)
-        
-        Case of 
+
+        Case of
                 // Only return the customers of the authenticated sales person stored in the session
             : (Session.storage.salesInfo#Null)
                 return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
-                
+
                 //Data explorer - No filter is applied
             : (Session.hasPrivilege("WebAdmin"))
                 return Null
-            Else 
+            Else
                 //No customers can be read
                 return This.newSelection()
-                
-        End case 
-        
+
+        End case
+
     Else // We work in client server
         return This.query("sales.userName = :1"; Current user)
-    End if 
+    End if
 ```
 
 
@@ -541,7 +541,7 @@ Filters do not apply to legacy selections of records handled through the 4D inte
 |[Create entity selection](../API/EntitySelectionClass.md#create-entity-selection)||
 
 
-Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities. 
+Other ORDA functions accessing data do not directly trigger the filter, but they nevertheless benefit from it. For example, the [`entity.next()`](../API/EntityClass.md#next) function will return the next entity in the already-filtered entity selection. On the other hand, if the entity selection is not filtered, [`entity.next()`](../API/EntityClass.md#next) will work on non-filtered entities.
 
 :::note
 
