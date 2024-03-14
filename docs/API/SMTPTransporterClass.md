@@ -44,7 +44,8 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+<!-- END REF -->
 
 #### Description
 
@@ -118,7 +119,8 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
+<!-- END REF -->
 
 #### Description
 
@@ -206,7 +208,8 @@ The SMTP connection is automatically closed:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mail|Object|->|[Email](EmailObjectClass.md#email-object) to send|
-|Result|Object|<-|SMTP status|<!-- END REF -->
+|Result|Object|<-|SMTP status|
+<!-- END REF -->
 
 #### Description
 

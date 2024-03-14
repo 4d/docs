@@ -78,7 +78,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |fileConstant|Integer|->|4D file constant|
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return file of host database|
-|Result|4D.File|<-|New file object|<!-- END REF -->
+|Result|4D.File|<-|New file object|
+<!-- END REF -->
 
 #### Description
 
@@ -171,7 +172,8 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF #FileClass.create().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if the file was created successfully, false otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
+<!-- END REF -->
 
 #### Description
 
@@ -213,7 +215,8 @@ Creation of a preferences file in the database folder:
 |destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut file reference|<!-- END REF -->
+|Result|4D.File|<-|Alias or shortcut file reference|
+<!-- END REF -->
 
 #### Description
 
@@ -265,7 +268,8 @@ You want to create an alias to a file in your database folder:
 <!-- REF #FileClass.delete().Params -->
 |Parameter|Type||Description|
 |---|----|:---:|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -319,7 +323,8 @@ You want to delete a specific file in the database folder:
 <!--REF #FileClass.getAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
+<!-- END REF -->
 
 
 #### Description
@@ -413,7 +418,8 @@ ALERT($info.Copyright)
 |---|----|---|---|
 |destinationFolder|4D.Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved file|
-|Result|4D.File|<-|Moved file|<!-- END REF -->
+|Result|4D.File|<-|Moved file|
+<!-- END REF -->
 
 
 #### Description
@@ -457,7 +463,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |---|---|---|---|
 |mode|Text|->|Opening mode: "read", "write", "append"|
 |options|Object|->|Opening options|
-|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|<!-- END REF -->
+|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+<!-- END REF -->
 
 #### Description
 
@@ -533,7 +540,8 @@ $fhandle:=$f.open("read")
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the file|
-|Result|4D.File|<-|Renamed file|<!-- END REF -->
+|Result|4D.File|<-|Renamed file|
+<!-- END REF -->
 
 #### Description
 
@@ -574,7 +582,8 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
+<!-- END REF -->
 
 #### Description
 
@@ -662,7 +671,8 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setContent().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|content|BLOB|->|New contents for the file|<!-- END REF -->
+|content|BLOB|->|New contents for the file|
+<!-- END REF -->
 
 #### Description
 
@@ -698,7 +708,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 |text|Text|->|Text to store in the file|
 |charSetName|Text|->|Name of character set|
 |charSetNum|Integer|->|Number of character set|
-|breakMode|Integer|->|Processing mode for line breaks|<!-- END REF -->
+|breakMode|Integer|->|Processing mode for line breaks|
+<!-- END REF -->
 
 
 #### Description

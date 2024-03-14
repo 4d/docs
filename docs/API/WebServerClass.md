@@ -753,7 +753,8 @@ The function returns an object describing the Web server launch status. This obj
 <!-- REF #WebServerClass.stop().Params -->
 |Parameter|Type||Description|
 |---|---|----|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 

@@ -60,7 +60,8 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Class|<-|New object of the class|<!-- END REF -->
+|Result|4D.Class|<-|New object of the class|
+<!-- END REF -->
 
 
 #### Description

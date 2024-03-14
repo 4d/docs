@@ -73,7 +73,8 @@ This property is read-only.
 <!-- REF #WebSocketConnectionClass.send().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|message|Text / Blob / Object|->|The message to send|<!-- END REF -->
+|message|Text / Blob / Object|->|The message to send|
+<!-- END REF -->
 
 #### Description
 
@@ -116,7 +117,8 @@ This property is read-only.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |code|Integer|->|Error code sent to the client (must be > 3000, otherwise the message is not sent)|
-|message|Text|->|Error message sent to the client|<!-- END REF -->
+|message|Text|->|Error message sent to the client|
+<!-- END REF -->
 
 
 #### Description

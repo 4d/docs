@@ -85,7 +85,8 @@ WebSocket objects provide the following properties and functions:
 |---------|--- |:---:|------|
 |url|Text|->|URL to which to connect|
 |[connectionHandler](#connectionHandler-parameter)|Object|->|Object declaring WebSocket callbacks|
-|Result|4D.WebSocket|<-|New [WebSocket object](#websocket-object)|<!-- END REF -->
+|Result|4D.WebSocket|<-|New [WebSocket object](#websocket-object)|
+<!-- END REF -->
 
 
 The `4D.WebSocket.new()` function <!-- REF #4D.WebSocket.new().Summary -->creates and returns a new [`4D.WebSocket` object](#websocket-object) connected to the WebSocket server at the address you passed in *url*<!-- END REF -->. The `4D.WebSocket` object provides an API for creating and managing a WebSocket connection to a server, as well as sending and receiving data to and from the server.
@@ -235,7 +236,8 @@ This property is read-only.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |code|Integer|->|Status code explaining why the connection is being closed|
-|reason|Text|->|The reason why the connection is closing|<!-- END REF -->
+|reason|Text|->|The reason why the connection is closing|
+<!-- END REF -->
 
 
 
