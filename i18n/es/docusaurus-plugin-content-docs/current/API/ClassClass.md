@@ -11,12 +11,83 @@ Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en 
 ### Resumen
 
 
-|                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isShared.Summary -->|
+| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isSingleton.Summary -->|
+| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.me.Summary -->|
 | [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
 | [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
 | [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
 
+
+
+<!-- REF ClassClass.isShared.Desc -->
+## .isShared
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20 R5  | Añadidos       |
+
+</details>
+
+<!-- REF #ClassClass.isShared.Syntax -->**.isShared** : Boolean<!-- END REF -->
+
+#### Descripción
+
+The `.isShared` property <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.
+
+Esta propiedad es **de sólo lectura**.
+
+<!-- END REF -->
+
+
+<!-- REF ClassClass.isSingleton.Desc -->
+## .isSingleton
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20 R5  | Añadidos       |
+
+</details>
+
+<!-- REF #ClassClass.isSingleton.Syntax -->**.isSingleton** : Boolean<!-- END REF -->
+
+#### Descripción
+
+The `.isSingleton` property <!-- REF #ClassClass.isSingleton.Summary -->returns `true` if the user class has been defined as a [singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+
+Esta propiedad es **de sólo lectura**.
+
+<!-- END REF -->
+
+
+<!-- REF ClassClass.me.Desc -->
+## .me
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v20 R5  | Añadidos       |
+
+</details>
+
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+
+#### Descripción
+
+The `.me` property <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
+
+If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
+
+Esta propiedad es **de sólo lectura**.
+
+<!-- END REF -->
 
 
 <!-- REF ClassClass.name.Desc -->
@@ -56,23 +127,27 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
 
 
+
 <!-- REF #ClassClass.new().Params -->
-| Parámetros | Tipo     |    | Descripción                                         |
-| ---------- | -------- |:--:| --------------------------------------------------- |
-| param      | any      | -> | Parámetro(s) a pasar a la función constructor       |
-| Result     | 4D.Class | <- | Nuevo objeto de la clase|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo     |    | Descripción                                   |
+| ---------- | -------- |:--:| --------------------------------------------- |
+| param      | any      | -> | Parámetro(s) a pasar a la función constructor |
+| Result     | 4D.Class | <- | Nuevo objeto de la clase                      |
+<!-- END REF -->
 
 
 #### Descripción
 
 La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases del class store [`cs`](Concepts/classes.md#cs).
 
-Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la función [constructor de la clase](Concepts/classes.md#class-constructor) (si la hay) en la definición de la clase className. Dentro de la función constructor, [`This`](Concepts/classes.md#this) está ligado al nuevo objeto que se está construyendo.
+You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the *className* class definition. Dentro de la función constructor, [`This`](Concepts/classes.md#this) está ligado al nuevo objeto que se está construyendo.
 
-Si se llama a `.new()` en una clase inexistente, se devuelve un error.
+:::note Notas
+
+- If `.new()` is called on a [singleton class](../Concepts/classes.md#singleton-classes) that has already been instantiated, the singleton instance is returned, not a new instance.
+- Si se llama a `.new()` en una clase inexistente, se devuelve un error.
+
+:::
 
 #### Ejemplos
 
