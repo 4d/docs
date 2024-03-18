@@ -76,9 +76,8 @@ Los objetos `Folder` soportan varios nombres de ruta, incluyendo las sintaxis `f
 | folderConstant | Integer   | -> | Constante de la carpeta 4D                         |
 | pathType       | Integer   | -> | `fk posix path` (por defecto) o `fk platform path` |
 | *              |           | -> | * para devolver la carpeta de la base local        |
-| Result         | 4D.Folder | <- | Nuevo objeto de carpeta|<!-- END REF -->
-
-|
+| Result         | 4D.Folder | <- | Nuevo objeto de carpeta                            |
+<!-- END REF -->
 
 #### Descripción
 
@@ -157,12 +156,10 @@ La función `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crea y devuel
 
 
 <!--REF #FolderClass.create().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                   |
-| ---------- | ------- | -- | --------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la carpeta se ha creado con éxito, false en caso contrario|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo    |    | Descripción                                                        |
+| ---------- | ------- | -- | ------------------------------------------------------------------ |
+| Result     | Boolean | <- | True si la carpeta se ha creado con éxito, false en caso contrario |
+<!-- END REF -->
 
 
 #### Descripción
@@ -217,14 +214,13 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parámetros        | Tipo      |    | Descripción                                                        |
-| ----------------- | --------- | -- | ------------------------------------------------------------------ |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo               |
-| aliasName         | Text      | -> | Nombre del alias o del atajo                                       |
-| aliasType         | Integer   | -> | Tipo de enlace del alias                                           |
-| Result            | 4D.File   | <- | Referencia de alias o de acceso directo|<!-- END REF -->
-
-|
+| Parámetros        | Tipo      |    | Descripción                                          |
+| ----------------- | --------- | -- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Text      | -> | Nombre del alias o del atajo                         |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                             |
+| Result            | 4D.File   | <- | Referencia de alias o de acceso directo              |
+<!-- END REF -->
 
 #### Descripción
 
@@ -273,11 +269,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parámetros | Tipo    |    | Descripción                                                 |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| option     | Integer | -> | Opción de eliminación de carpeta|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                      |
+| ---------- | ------- | -- | -------------------------------- |
+| option     | Integer | -> | Opción de eliminación de carpeta |
+<!-- END REF -->
 
 #### Descripción
 
@@ -347,13 +342,12 @@ Cuando se pasa `Delete with contents`:
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                               |
-| ----------------- | --------- | -- | ----------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
-| newName           | Text      | -> | Nombre completo de la carpeta trasladada  |
-| Result            | 4D.Folder | <- | Carpeta movida|<!-- END REF -->
-
-|
+| Parámetros        | Tipo      |    | Descripción                              |
+| ----------------- | --------- | -- | ---------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                       |
+| newName           | Text      | -> | Nombre completo de la carpeta trasladada |
+| Result            | 4D.Folder | <- | Carpeta movida                           |
+<!-- END REF -->
 
 #### Descripción
 
@@ -403,12 +397,11 @@ Quiere mover y renombrar una carpeta:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parámetros | Tipo      |    | Descripción                                   |
-| ---------- | --------- | -- | --------------------------------------------- |
-| newName    | Text      | -> | Nuevo nombre completo para la carpeta         |
-| Result     | 4D.Folder | <- | Carpeta renombrada|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                           |
+| ---------- | --------- | -- | ------------------------------------- |
+| newName    | Text      | -> | Nuevo nombre completo para la carpeta |
+| Result     | 4D.Folder | <- | Carpeta renombrada                    |
+<!-- END REF -->
 
 #### Descripción
 
