@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Imagen
 ---
 
 ## Ruta de acceso
