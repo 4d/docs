@@ -1,6 +1,6 @@
 ---
 id: radiobuttonOverview
-title: Radio Button
+title: Botón radio
 ---
 
 Los botones radio son objetos que permiten al usuario seleccionar uno de un grupo de botones.
