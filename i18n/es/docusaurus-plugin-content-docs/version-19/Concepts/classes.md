@@ -67,13 +67,13 @@ Los archivos de clase se almacenan automáticamente en la ubicación adecuada cu
 
 #### Menú Archivo y barra de herramientas
 
-Puede crear un nuevo archivo de clase para el proyecto seleccionando **Nuevo > Clase...** en el menú **Archivo** de 4D Developer o en la barra de herramientas.
+You can create a new class file for the project by selecting **New > Class...** in the 4D Developer **File** menu or from the toolbar.
 
-También puede utilizar el atajo **Ctrl+Mayús+Alt+k**.
+You can also use the **Ctrl+Shift+Alt+k** shortcut.
 
 #### Explorador
 
-En la página **Métodos** del Explorador, las clases se agrupan en la categoría **Clases**.
+In the **Methods** page of the Explorer, classes are grouped in the **Classes** category.
 
 Para crear una nueva clase, puede:
 
