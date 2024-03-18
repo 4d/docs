@@ -66,7 +66,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 #### ファイルメニューとツールバー
 
-4D 開発の **ファイル** メニューまたはツールバーより **新規 ＞ クラス...** を選択することで、開いているプロジェクトにクラスファイルを新規作成することができます。
+4D Developer の **ファイル** メニューまたはツールバーより **新規 ＞ クラス...** を選択することで、開いているプロジェクトにクラスファイルを新規作成することができます。
 
 **Ctrl+Shift+Alt+k** ショートカットも使用できます。
 
@@ -102,13 +102,16 @@ Project フォルダー Project Sources Classes Polygon.4dm
 
 ### `cs`
 
-#### cs -> classStore
+<!-- REF #_command_.cs.Syntax -->**cs** : Object <!-- END REF -->
 
-| 引数         | タイプ    |    | 説明                          |
-| ---------- | ------ | -- | --------------------------- |
-| classStore | object | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
+<!-- REF #_command_.cs.Params -->
+| 引数         | タイプ    |    | 説明                                                     |
+| ---------- | ------ | -- | ------------------------------------------------------ |
+| classStore | Object | <- | プロジェクトまたはコンポーネントのユーザークラスストア|<!-- END REF -->
 
-`cs` コマンドは、カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
+|
+
+`cs` コマンドは、 <!-- REF #_command_.cs.Summary -->カレントプロジェクトまたはコンポーネントのユーザークラスストアを返します<!-- END REF -->。 これには、プロジェクトまたはコンポーネントにて [定義](#クラス定義) されている、すべてのユーザークラスが含まれます。 デフォルトでは、 [ORDAクラス](ORDA/ordaClasses.md) のみ利用可能です。
 
 #### 例題
 
@@ -120,13 +123,16 @@ $instance:=cs.myClass.new()
 
 ### `4D`
 
-#### 4D -> classStore
+<!-- REF #_command_.4D.Syntax -->**4D** : Object <!-- END REF -->
 
-| 引数         | タイプ    |    | 説明       |
-| ---------- | ------ | -- | -------- |
-| classStore | object | <- | 4Dクラスストア |
+<!-- REF #_command_.4D.Params -->
+| 引数         | タイプ    |    | 説明                                  |
+| ---------- | ------ | -- | ----------------------------------- |
+| classStore | Object | <- | 4Dクラスストア|<!-- END REF -->
 
-`4D` コマンドは、ビルトイン 4Dクラスのクラスストアを返します。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
+|
+
+`4D` コマンドは、 <!-- REF #_command_.4D.Summary -->ビルトイン 4Dクラスのクラスストアを返します<!-- END REF -->。 [CryptoKey](API/CryptoKeyClass.md) などの専用 API へのアクセスを提供します。
 
 #### 例題
 
@@ -173,7 +179,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // コード
 ```
 
-クラス関数とは、当該クラスのプロパティです。 クラス関数は [4D.Function](API/FunctionClass.md#4dfunction-オブジェクトについて) クラスのオブジェクトです。
+クラス関数とは、当該クラスのプロパティです。 クラス関数は [4D.Function](API/FunctionClass.md) クラスのオブジェクトです。
 
 クラス定義ファイルでは、`Function` キーワードと関数名を使用して宣言をおこないます。 関数名は [プロパティ名の命名規則](Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
@@ -202,7 +208,7 @@ Function getFullname()->$fullname : Text
 
 クラス関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myFunction")。
 
-アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数) を受け取ることができます。 以下のシンタックスがサポートされています:
+アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#引数) を受け取ることができます。 以下のシンタックスがサポートされています:
 
 - `()` 演算子の使用。 例: `myObject.methodName("hello")`
 - "4D.Function" クラスメンバーメソッドの使用:
@@ -223,15 +229,6 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > パラメーターの型が宣言されていない場合には、`バリアント` 型として定義されます。
 
-関数内の引数宣言に使用される [従来の 4Dシンタックス](parameters.md#順番引数) を、クラス関数の引数宣言に使うこともできます。 両方のシンタックスは併用することができます。 例:
-
-```4d
-Function add($x : Integer)
- var $2; $value : Integer
- var $0 : Text
- $value:=$x+$2
- $0:=String($value)
-```
 
 #### 戻り値
 
@@ -348,12 +345,12 @@ $o:=cs.MyClass.new("John";42)
 | propertyType                             | 内容                                     |
 | ---------------------------------------- | -------------------------------------- |
 | `Text`                                   | テキスト値                                  |
-| `Date`                                   | 日付値                                    |
-| `Time`                                   | 時間値                                    |
+| `日付`                                     | 日付値                                    |
+| `時間`                                     | 時間値                                    |
 | `Boolean`                                | ブール値                                   |
 | `Integer`                                | 倍長整数値                                  |
 | `Real`                                   | 実数値                                    |
-| `Pointer`                                | ポインター値                                 |
+| `ポインター`                                  | ポインター値                                 |
 | `Picture`                                | ピクチャー値                                 |
 | `Blob`                                   | スカラーBLOB値                              |
 | `Collection`                             | コレクション値                                |
@@ -459,7 +456,7 @@ Function get fullAddress()->$result : Object
  $result.zipCode:=This.zipCode
  $result.city:=This.city
  $result.state:=This.state
- $result.country:=This.country 
+ $result.country:=This.country
 ```
 
 ### `Class extends <ClassName>`
@@ -495,6 +492,7 @@ Class extends <ParentClass>
 
 Class extends Polygon
 
+
 Class constructor ($side : Integer)
 
  // 親クラスのコンストラクターを呼び出します
@@ -503,8 +501,6 @@ Class constructor ($side : Integer)
  // 派生クラスにおいては、'This' を使用するより先に
  // Super を呼び出しておく必要があります
  This.name:="Square"
-
-
 
  Function getArea()
   C_LONGINT($0)
@@ -515,19 +511,18 @@ Class constructor ($side : Integer)
 
 ### `Super`
 
-#### シンタックス
 
-```4d
-Super {( param{;...;paramN} )} {-> Object}
-```
+<!-- REF #_command_.Super.Syntax -->**Super**( ...param : any )<br/>**Super** : Object<!-- END REF -->
 
+<!-- REF #_command_.Super.Params -->
+| 引数    | タイプ    |    | 説明                                 |
+| ----- | ------ | -- | ---------------------------------- |
+| param | any    | -> | 親コンストラクターに受け渡す引数                   |
+| 戻り値   | Object | <- | 親オブジェクト|<!-- END REF -->
 
-| 引数    | タイプ    |    | 説明               |
-| ----- | ------ | -- | ---------------- |
-| param | mixed  | -> | 親コンストラクターに受け渡す引数 |
-| 戻り値   | object | <- | 親オブジェクト          |
+|
 
-`Super` キーワードによってスーパークラス (親クラス) を呼び出すことができます。
+`Super` キーワードによって、 <!-- REF #_command_.Super.Summary -->スーパークラス (親クラス) を呼び出すことができます<!-- END REF -->。
 
 `Super` は次の 2つの目的のために使います:
 
@@ -627,17 +622,16 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 
 ### `This`
 
-#### シンタックス
+<!-- REF #_command_.This.Syntax -->**This** : Object<!-- END REF -->
 
-```4d
-This -> Object
-```
+<!-- REF #_command_.This.Params -->
+| 引数  | タイプ    |    | 説明                                    |
+| --- | ------ | -- | ------------------------------------- |
+| 戻り値 | Object | <- | カレントオブジェクト|<!-- END REF -->
 
-| 引数  | タイプ    |    | 説明         |
-| --- | ------ | -- | ---------- |
-| 戻り値 | object | <- | カレントオブジェクト |
+|
 
-`This` キーワードは、現在処理中のオブジェクトへの参照を返します。 `This` は、4Dにおいて [様々なコンテキスト](https://doc.4d.com/4Dv19/help/command/ja/page1470.html) で使用することができます。
+`This` キーワードは、 <!-- REF #_command_.This.Summary -->現在処理中のオブジェクトへの参照を返します<!-- END REF -->。
 
 `This` の値は、呼ばれ方によって決まります。 `This` の値は実行時に代入により設定することはできません。また、呼び出されるたびに違う値となりえます。
 
@@ -657,7 +651,7 @@ Class Constructor
 
  // This のプロパティを
  // 代入によって作成します
- This.a:=42 
+ This.a:=42
 ```
 
 ```4d
