@@ -1,6 +1,6 @@
 ---
 id: monitor
-title: Monitor Page
+title: Página Monitor
 ---
 
 La página **Monitor** muestra información dinámica relativa al uso de la base de datos, así como información sobre el sistema y la aplicación 4D Server.
