@@ -1,6 +1,6 @@
 ---
 id: privileges
-title: Privileges
+title: Privilegios
 ---
 
 
