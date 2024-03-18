@@ -47,10 +47,8 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
 | disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->
-
-
-|
+| Resultados  | 4D. MailAttachment | <- | Attachment object                                                     |
+<!-- END REF -->
 
 
 #### Descrição
@@ -189,10 +187,8 @@ $transporter.send($email)
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
 | disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->
-
-
-|
+| Resultados  | 4D. MailAttachment | <- | Attachment object                                                     |
+<!-- END REF -->
 
 
 #### Descrição
@@ -229,12 +225,10 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                    |
-| ---------- | -------- |:--:| -------------------------------------------- |
-| Resultados | 4D. Blob | <- | Conteúdo do anexo|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo     |    | Descrição         |
+| ---------- | -------- |:--:| ----------------- |
+| Resultados | 4D. Blob | <- | Conteúdo do anexo |
+<!-- END REF -->
 
 
 #### Descrição
