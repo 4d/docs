@@ -14,7 +14,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
 - **Composant** : Projet utilisé comme matrice, pouvant être compilé ou [généré](Desktop/building.md#build-component), copié dans le dossier [`Components`](Project/architecture.md) de l'application hôte et dont le contenu est utilisé dans l'application hôte.
 
-## Basics
+## Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
@@ -77,7 +77,7 @@ En revanche, par défaut ces méthodes projet ne seront ni visibles ni appelable
 
 ![](../assets/en/Concepts/shared-methods.png)
 
-Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). Ces méthodes constituent les **points d’entrée** du composant.
+Les méthodes projet partagée peuvent être appelées dans le code du projet hôte (mais elles ne peuvent pas être modifiées dans l'éditeur de code du projet hôte). Ces méthodes constituent les **points d’entrée** du composant.
 
 A l’inverse, pour des raisons de sécurité, par défaut un composant ne peut pas exécuter de méthode projet appartenant au projet hôte. Dans certains cas, vous pourrez avoir besoin d’autoriser un composant à accéder à des méthodes projet de votre projet hôte. In certain cases, you may need to allow a component to access the project methods of your host project.
 
@@ -103,7 +103,7 @@ component_method("host_method_name")
 
 ## Partage des classes et des fonctions
 
-Si vous souhaitez que les classes et fonctions de vos composants soient exposées dans les projets hôtes, vous devez déclarer un namespace. By default, component classes and functions cannot be called from the 4D Code Editor of the host project. Additionally, you can control how component classes and functions are suggested in the host Code Editor.
+Par défaut, les classes et fonctions des composants ne peuvent pas être appelées depuis l'éditeur de code 4D du projet hôte. Si vous voulez que vos classes et fonctions de composants soient exposées dans les projets hôtes, vous devez déclarer un espace de nom (namespace) du composant. De plus, vous pouvez contrôler comment les classes de composants et les fonctions sont suggérées dans l'éditeur de code hôte.
 
 ### Déclaration du namespace
 
@@ -124,7 +124,7 @@ $area:=$rect.getArea()
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+L'espace de nom d'un composant [compilé](#protection-of-components-compilation) sera ajouté entre parenthèses après le nom du composant dans la page [Component Methods page](../Concepts/components.md#using-components) des projets hôtes :
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
@@ -161,7 +161,7 @@ Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les
 
 ## Passage de variables
 
-Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. The local, process and interprocess variables are not shared between components and host projects.
+Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
 
 Exemple utilisant un tableau :
 
@@ -220,7 +220,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ## Gestion des erreurs
 
-Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à l'application en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du prpjet hôte n'est pas appelée, et inversement.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à l'application en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
 
 ## Accès aux tables du projet hôte
@@ -332,7 +332,7 @@ Lecture dans une base de données externe :
 
 ## Utilisation de formulaires
 
-- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant.
+- Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans le projet matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table du projet hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
 
 > Si un composant utilise la commande `ADD RECORD`, le formulaire Entrée courant du projet hôte sera affiché, dans le contexte du projet hôte. Par conséquent, si le formulaire comporte des variables, le composant n’y aura pas accès.
