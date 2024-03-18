@@ -55,9 +55,8 @@ End if
 | zipStructure    | Object     | -> | Objeto File ou Folder a comprimir                    |
 | destinationFile | 4D. File   | -> | Arquivo destino para o arquivo                       |
 | options         | Integer    | -> | Option *folderToZip*: `ZIP Without enclosing folder` |
-| Resultados      | Object     | <- | Objeto de estado|<!-- END REF -->
-
-|
+| Resultados      | Object     | <- | Objeto de estado                                     |
+<!-- END REF -->
 
 #### Descrição
 
@@ -203,13 +202,12 @@ $err:=ZIP Create archive($zip; $destination)
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parâmetro  | Tipo       |    | Descrição                                 |
-| ---------- | ---------- |:--:| ----------------------------------------- |
-| zipFile    | 4D. File   | -> | Arquivos Zip                              |
-| senha      | Text       | -> | Senha do arquivo ZIP, se houver           |
-| Resultados | Parâmetros | <- | Objeto arquivo|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                       |
+| ---------- | ---------- |:--:| ------------------------------- |
+| zipFile    | 4D. File   | -> | Arquivos Zip                    |
+| senha      | Text       | -> | Senha do arquivo ZIP, se houver |
+| Resultados | Parâmetros | <- | Objeto arquivo                  |
+<!-- END REF -->
 
 #### Descrição
 
