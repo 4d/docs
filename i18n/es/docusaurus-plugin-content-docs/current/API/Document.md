@@ -421,7 +421,9 @@ Esta propiedad es **de sólo lectura**.
 | destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
 | newName           | Text      | -> | Nombre para la copia                                   |
 | overwrite         | Integer   | -> | `fk overwrite` para sustituir los elementos existentes |
-| Result            | 4D.File   | <- | Archivo copiado|<!-- END REF -->             |
+| Result            | 4D.File   | <- | Archivo copiado                                        |
+
+<!-- END REF -->
 
 #### Descripción
 
@@ -471,9 +473,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| Parámetros | Tipo    |    | Descripción                                      |
-| ---------- | ------- | -- | ------------------------------------------------ |
-| Result     | 4D.Blob | <- | Contenido del archivo|<!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción           |
+| ---------- | ------- | -- | --------------------- |
+| Result     | 4D.Blob | <- | Contenido del archivo |
+
+<!-- END REF -->
 
 #### Descripción
 
@@ -517,7 +521,9 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 | Parámetros | Tipo    |    | Descripción                                       |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
-| Result     | Picture | <- | Icono|<!-- END REF -->                  |
+| Result     | Picture | <- | Icono                                             |
+
+<!-- END REF -->
 
 #### Descripción
 
@@ -549,12 +555,14 @@ Icono de archivo [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parámetros  | Tipo    |    | Descripción                                    |
-| ----------- | ------- | -- | ---------------------------------------------- |
-| charSetName | Text    | -> | Nombre del juego de caracteres                 |
-| charSetNum  | Integer | -> | Número del conjunto de caracteres              |
-| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea     |
-| Result      | Text    | <- | Texto del documento|<!-- END REF --> |
+| Parámetros  | Tipo    |    | Descripción                                |
+| ----------- | ------- | -- | ------------------------------------------ |
+| charSetName | Text    | -> | Nombre del juego de caracteres             |
+| charSetNum  | Integer | -> | Número del conjunto de caracteres          |
+| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea |
+| Result      | Text    | <- | Texto del documento                        |
+
+<!-- END REF -->
 
 #### Descripción
 
