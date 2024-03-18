@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointer
+title: Puntero
 ---
 
 Una variable o expresión puntero es una referencia a otra variable (incluyendo arrays y elementos de arrays), tabla, campo u objeto. No hay ningún campo de tipo Puntero.
