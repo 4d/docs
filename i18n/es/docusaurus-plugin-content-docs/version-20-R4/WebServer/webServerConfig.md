@@ -1,6 +1,6 @@
 ---
 id: webServerConfig
-title: Configuration
+title: Configuración
 ---
 
 Los parámetros del servidor web 4D incluye parámetros de seguridad, puertos de escucha, rutas por defecto y varias opciones que cubren todas las funcionalidades del servidor. 4D ofrece valores por defecto para todos los parámetros.
