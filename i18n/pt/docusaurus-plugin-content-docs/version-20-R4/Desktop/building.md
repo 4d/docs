@@ -1,7 +1,6 @@
----
-id: building
-title: Build Application
----
+- - -
+id: building título: Criar aplicação
+- - -
 
 4D inclui um gerador de aplicativos para criar um pacote de projeto (versão final). Esse gerador simplifica o processo de finalização e desenvolvimento de aplicativos compilados 4D. Trata automaticamente as funcionalidades específicas de diferentes sistemas operacionais e facilita a implementação de aplicações cliente-servidor.
 
