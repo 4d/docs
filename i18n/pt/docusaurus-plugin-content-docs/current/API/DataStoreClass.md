@@ -49,12 +49,11 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 
 <!-- REF #_command_.ds.Params -->
-| Parâmetro  | Tipo          |    | Descrição                                                 |
-| ---------- | ------------- | -- | --------------------------------------------------------- |
-| localID    | Text          | -> | ID local del armazém de dados remoto a devolver           |
-| Resultados | cs. DataStore | <- | Referencia ao armazém de dados|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo          |    | Descrição                                       |
+| ---------- | ------------- | -- | ----------------------------------------------- |
+| localID    | Text          | -> | ID local del armazém de dados remoto a devolver |
+| Resultados | cs. DataStore | <- | Referencia ao armazém de dados                  |
+<!-- END REF -->
 
 #### Descrição
 
@@ -121,9 +120,8 @@ Usar a datastore principal do banco de dados 4D:
 | -------------- | ------------- | -- | ---------------------------------------------------------------------------- |
 | connectionInfo | Object        | -> | Propriedades de conexão utilizadas para alcançar o armazém de datos remoto   |
 | localID        | Text          | -> | Id para assignar ao armazém de dados aberto na aplicação local (obrigatorio) |
-| Resultados     | cs. DataStore | <- | Objeto do armazém de dados|<!-- END REF -->
-
-|
+| Resultados     | cs. DataStore | <- | Objeto do armazém de dados                                                   |
+<!-- END REF -->
 
 #### Descrição
 
@@ -257,11 +255,10 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -292,11 +289,10 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -325,11 +321,10 @@ Nestes casos, pode usar `.clearAllRemoteContexts()` para limpar os seus contexto
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                                        |
-| ---------- | ------ |:--:| ------------------------------------------------------------------------------------------------ |
-| Resultados | Object | <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo   |    | Descrição                                                             |
+| ---------- | ------ |:--:| --------------------------------------------------------------------- |
+| Resultados | Object | <- | Informação sobre o cifrado do armazém de dados atual e de cada tabela |
+<!-- END REF -->
 
 #### Descrição
 
@@ -404,12 +399,10 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |  | ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |  | -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição
@@ -486,11 +479,10 @@ ds.unlock() //Nossa cópia terminou, podemos desbloquear a datastore
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                  |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------- |
-| Resultados | Collection | <- | Colecção de objectos de contexto de optimização|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                       |
+| ---------- | ---------- | -- | ----------------------------------------------- |
+| Resultados | Collection | <- | Colecção de objectos de contexto de optimização |
+<!-- END REF -->
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
@@ -560,12 +552,10 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
-| Parâmetro  | Tipo |    | Descrição                                                                |
-| ---------- | ---- | -- | ------------------------------------------------------------------------ |
-| Resultados | Real | <- | Valor atual do marcador de modificação global|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo |    | Descrição                                     |
+| ---------- | ---- | -- | --------------------------------------------- |
+| Resultados | Real | <- | Valor atual do marcador de modificação global |
+<!-- END REF -->
 
 
 #### Descrição
@@ -614,11 +604,10 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                           |
-| ---------- | ------ |:--:| --------------------------------------------------- |
-| Resultados | Object | <- | Propiedades de datastore|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo   |    | Descrição                |
+| ---------- | ------ |:--:| ------------------------ |
+| Resultados | Object | <- | Propiedades de datastore |
+<!-- END REF -->
 
 #### Descrição
 
@@ -691,12 +680,11 @@ Em um armazém de dados remoto:
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Parâmetro   | Tipo   |    | Descrição                                                       |
-| ----------- | ------ | -- | --------------------------------------------------------------- |
-| contextName | Text   | -> | Nome do contexto                                                |
-| Resultados  | Object | <- | Descrição do contexto de optimização|<!-- END REF -->
-
-|
+| Parâmetro   | Tipo   |    | Descrição                            |
+| ----------- | ------ | -- | ------------------------------------ |
+| contextName | Text   | -> | Nome do contexto                     |
+| Resultados  | Object | <- | Descrição do contexto de optimização |
+<!-- END REF -->
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
@@ -742,11 +730,10 @@ Ver o exemplo da secção [.setRemoteContextInfo()](#example-1-3).
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                           |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
-| Resultados | Collection | <- | Coleção de objetos onde cada objeto descreve uma petição|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                |
+| ---------- | ---------- |:--:| -------------------------------------------------------- |
+| Resultados | Collection | <- | Coleção de objetos onde cada objeto descreve uma petição |
+<!-- END REF -->
 
 #### Descrição
 
@@ -781,11 +768,10 @@ Ver o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                                                    |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | True se o acesso ao Explorador de Dados estiver desativado, False se estiver ativado (por padrão)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                                                         |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se o acesso ao Explorador de Dados estiver desativado, False se estiver ativado (por padrão) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -815,12 +801,10 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                         |
-| ---------- | ---------- | -- | ------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se trancado|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo       |    | Descrição              |
+| ---------- | ---------- | -- | ---------------------- |
+| Resultados | Parâmetros | <- | Verdadeiro se trancado |
+<!-- END REF -->
 
 
 #### Descrição
@@ -857,11 +841,10 @@ A função também retornará `True` se a datastore foi bloqueada por outra func
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -890,13 +873,12 @@ quando nesta função não for chamada, as novas seleções de entidades podem s
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Parâmetro     | Tipo   |    | Descrição                                                                     |
-| ------------- | ------ | -- | ----------------------------------------------------------------------------- |
-| curPassPhrase | Text   | -> | Frase de cifrado atual                                                        |
-| curDataKey    | Object | -> | Chave de criptografia de dados atual                                          |
-| Resultados    | Object | <- | Resultado da coincidência da chave de criptografia|<!-- END REF -->
-
-|
+| Parâmetro     | Tipo   |    | Descrição                                          |
+| ------------- | ------ | -- | -------------------------------------------------- |
+| curPassPhrase | Text   | -> | Frase de cifrado atual                             |
+| curDataKey    | Object | -> | Chave de criptografia de dados atual               |
+| Resultados    | Object | <- | Resultado da coincidência da chave de criptografia |
+<!-- END REF -->
 
 #### Descrição
 
@@ -966,11 +948,10 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parâmetro | Tipo       |    | Descrição                                                                                                                                      |
-| --------- | ---------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| status    | Parâmetros | -> | True para desativar o acesso Data Explorer aos dados do porto `webAdmin`, False (por padrão) para outorgar o acesso|<!-- END REF -->
-
-|
+| Parâmetro | Tipo       |    | Descrição                                                                                                           |
+| --------- | ---------- | -- | ------------------------------------------------------------------------------------------------------------------- |
+| status    | Parâmetros | -> | True para desativar o acesso Data Explorer aos dados do porto `webAdmin`, False (por padrão) para outorgar o acesso |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1010,12 +991,10 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
-| Parâmetro | Tipo |    | Descrição                                                               |
-| --------- | ---- | -- | ----------------------------------------------------------------------- |
-| newStamp  | Real | -> | Novo valor do marcador de modificação global|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |    | Descrição                                    |
+| --------- | ---- | -- | -------------------------------------------- |
+| newStamp  | Real | -> | Novo valor do marcador de modificação global |
+<!-- END REF -->
 
 
 :::info Modo avançado
@@ -1069,17 +1048,16 @@ ds.setGlobalStamp($newValue)
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| Parâmetro                                                | Tipo          |    | Descrição                                                                                                 |
-| -------------------------------------------------------- | ------------- | -- | --------------------------------------------------------------------------------------------------------- |
-| contextName                                              | Text          | -> | Nome do contexto                                                                                          |
-| dataClassName                                            | Text          | -> | Nome da dataclass                                                                                         |
-| dataClassObject                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)                                                                |
-| attributes                                               | Text          | -> | Lista de atributos separada por vírgulas                                                                  |
-| Atributos do tipo BLOB não são gerenciados na datastore. | Collection    | -> | Coleção de nomes de atributos (text)                                                                      |
-| contextType                                              | Text          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                                    |
-| pageLength                                               | Integer       | -> | Duração da página da selecção da entidade ligada ao contexto (por padrão é 80)|<!-- END REF -->
-
-|
+| Parâmetro                                                | Tipo          |    | Descrição                                                                      |
+| -------------------------------------------------------- | ------------- | -- | ------------------------------------------------------------------------------ |
+| contextName                                              | Text          | -> | Nome do contexto                                                               |
+| dataClassName                                            | Text          | -> | Nome da dataclass                                                              |
+| dataClassObject                                          | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)                                     |
+| attributes                                               | Text          | -> | Lista de atributos separada por vírgulas                                       |
+| Atributos do tipo BLOB não são gerenciados na datastore. | Collection    | -> | Coleção de nomes de atributos (text)                                           |
+| contextType                                              | Text          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                         |
+| pageLength                                               | Integer       | -> | Duração da página da selecção da entidade ligada ao contexto (por padrão é 80) |
+<!-- END REF -->
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
@@ -1196,13 +1174,12 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parâmetro | Tipo     |    | Descrição                                                                         |
-| --------- | -------- | -- | --------------------------------------------------------------------------------- |
-| file      | 4D. File | -> | Objeto File                                                                       |
-| options   | Integer  | -> | Opção de registo de resposta (apenas servidor)                                    |
-| reqNum    | Integer  | -> | Número de pedidos a manter na memória (apenas cliente)|<!-- END REF -->
-
-|
+| Parâmetro | Tipo     |    | Descrição                                              |
+| --------- | -------- | -- | ------------------------------------------------------ |
+| file      | 4D. File | -> | Objeto File                                            |
+| options   | Integer  | -> | Opção de registo de resposta (apenas servidor)         |
+| reqNum    | Integer  | -> | Número de pedidos a manter na memória (apenas cliente) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1310,12 +1287,10 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição
@@ -1376,11 +1351,10 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |  | ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |  | -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -1412,12 +1386,10 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.unlock().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |  | ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |  | -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição
@@ -1451,11 +1423,10 @@ Se a função `.unlock()` for chamada numa datastore desbloqueada, não faz nada
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |  | ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |  | -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 

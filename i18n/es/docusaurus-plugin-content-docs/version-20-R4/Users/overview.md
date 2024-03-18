@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Access Control overview
+title: Visión general del control de acceso
 ---
 
 Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arquitectura cliente-servidor o de interfaces web, es necesario controlar el acceso u ofrecer diferentes funcionalidades según de los usuarios conectados. También es esencial ofrecer la seguridad de los datos sensibles, incluso en las aplicaciones monopuesto.

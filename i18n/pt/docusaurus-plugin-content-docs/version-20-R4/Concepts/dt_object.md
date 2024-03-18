@@ -51,7 +51,7 @@ Several 4D commands and functions return objects, for example [`Get database mea
 
 :::
 
-### `New object` command
+### Comando `New object`
 
 O comando [`New object`] (https\://doc.4d.com/4dv19R/help/command/en/page1471.html) cria um objeto vazio ou pré-preenchido e retorna sua referência.
 
@@ -112,7 +112,7 @@ Pode criar dois tipos de objetos:
 
 - regular (non-shared) objects, using the [`New object`](https://doc.4d.com/4Dv20/4D/20/New-object.301-6237618.en.html) command or object literal syntax (`{}`). Estes objetos podem ser editados sem qualquer controle de acesso específico, mas não podem ser compartilhados entre processos.
 - shared objects, using the [`New shared object`](https://doc.4d.com/4Dv20/4D/20/New-shared-object.301-6237617.en.html) command. Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. Access to these objects is controlled by `Use...End use` structures.
-  For more information, refer to the [Shared objects and collections](shared.md) section.
+  Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
 
 ## Propriedades
 

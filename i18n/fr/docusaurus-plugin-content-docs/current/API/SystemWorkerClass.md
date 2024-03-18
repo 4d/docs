@@ -265,11 +265,10 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -432,9 +431,8 @@ Cette propriété est en **lecture seule**.
 | Paramètres  | Type |    | Description                                                     |
 | ----------- | ---- |:--:| --------------------------------------------------------------- |
 | message     | Text | -> | Texte à écrire dans le flux d'entrée (stdin) du process externe |
-| messageBLOB | Blob | -> | Octets écrits dans le flux d'entrée|<!-- END REF -->
-
-|
+| messageBLOB | Blob | -> | Octets écrits dans le flux d'entrée                             |
+<!-- END REF -->
 
 #### Description
 
@@ -482,11 +480,10 @@ La propriété `.responseError` <!-- REF #SystemWorkerClass.responseError.Summar
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -542,12 +539,11 @@ Cette propriété est en **lecture seule**.
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| Paramètres | Type            |    | Description                                  |
-| ---------- | --------------- |:--:| -------------------------------------------- |
-| timeout    | Real            | -> | Temps d'attente (en secondes)                |
-| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker<!-- END REF -->
-
-|
+| Paramètres | Type            |    | Description                   |
+| ---------- | --------------- |:--:| ----------------------------- |
+| timeout    | Real            | -> | Temps d'attente (en secondes) |
+| Résultat   | 4D.SystemWorker | <- | Objet SystemWorker            |
+<!-- END REF -->
 
 #### Description
 

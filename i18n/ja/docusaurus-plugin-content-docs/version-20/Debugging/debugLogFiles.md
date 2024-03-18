@@ -359,7 +359,7 @@ ORDAリクエストログは、ORDAリクエストとサーバーのレスポン
 ```4d
     // リモートマシンにて
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
     // メモリに送ることもできます
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
@@ -409,9 +409,9 @@ SET DATABASE PARAMETER(Client Log Recording;0)
 ```4d
     // サーバーマシンにて
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
     // srl... パラメーターは任意です
-SET DATABASE PARAMETER(4D Server log recording;0) 
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note

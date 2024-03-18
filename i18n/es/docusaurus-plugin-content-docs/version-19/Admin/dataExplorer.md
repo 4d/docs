@@ -53,7 +53,7 @@ El Explorador de datos es compatible con los siguientes navegadores web:
 
 La resolución mínima para utilizar el Explorador de Datos es de 1280x720. La resolución recomendada es de 1920x1080.
 
-### Basics
+### Básicos
 
 El Explorador de Datos ofrece un acceso global al modelo de datos ORDA con respecto a las reglas de mapeo [ORDA](ORDA/dsMapping.md#general-rules).
 

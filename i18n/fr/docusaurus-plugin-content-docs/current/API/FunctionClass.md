@@ -120,13 +120,11 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 
 <!-- REF #_command_.Formula.Params -->
-| Paramètres | Type        |    | Description                                                       |
-| ---------- | ----------- |:--:| ----------------------------------------------------------------- |
-| formulaExp | Expression  | -> | Formule à retourner comme objet                                   |
-| Résultat   | 4D.Function | <- | Fonction native encapsulant la formule|<!-- END REF -->
-
-
-|
+| Paramètres | Type        |    | Description                            |
+| ---------- | ----------- |:--:| -------------------------------------- |
+| formulaExp | Expression  | -> | Formule à retourner comme objet        |
+| Résultat   | 4D.Function | <- | Fonction native encapsulant la formule |
+<!-- END REF -->
 
 
 #### Description
@@ -264,10 +262,8 @@ Appeler une formule à l'aide de la notation objet :
 | ------------- | ----------- |:--:| ------------------------------------------------------------------------------ |
 | formulaString | Text        | -> | Formule texte à retourner comme objet                                          |
 | context       | Number      | -> | `sk execute in current database` (par défaut) ou `sk execute in host database` |
-| Résultat      | 4D.Function | <- | Objet natif encapsulant la formule|<!-- END REF -->
-
-
-|
+| Résultat      | 4D.Function | <- | Objet natif encapsulant la formule                                             |
+<!-- END REF -->
 
 
 #### Description
@@ -331,10 +327,8 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 | ------------- | ---------- |:--:| --------------------------------------------------------------------------------- |
 | thisObj       | Object     | -> | Objet à retourner par la commande This dans la formule                            |
 | formulaParams | Collection | -> | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
-| Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule|<!-- END REF -->
-
-
-|
+| Résultat      | any        | <- | Valeur obtenue à partir de l'exécution de la formule                              |
+<!-- END REF -->
 
 
 #### Description
@@ -392,14 +386,12 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 
 <!-- REF #FunctionClass.call().Params -->
-| Paramètres | Type   |    | Description                                                                     |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- |
-| thisObj    | Object | -> | Objet à retourner par la commande This dans la formule                          |
-| params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté              |
-| Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule|<!-- END REF -->
-
-
-|
+| Paramètres | Type   |    | Description                                                        |
+| ---------- | ------ | -- | ------------------------------------------------------------------ |
+| thisObj    | Object | -> | Objet à retourner par la commande This dans la formule             |
+| params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté |
+| Résultat   | any    | <- | Valeur obtenue à partir de l'exécution de la formule               |
+<!-- END REF -->
 
 
 #### Description

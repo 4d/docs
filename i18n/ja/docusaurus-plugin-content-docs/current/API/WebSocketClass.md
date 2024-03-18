@@ -81,14 +81,12 @@ WebSocketオブジェクトは、以下のプロパティと機能を提供し�
 
 
 <!-- REF #4D.WebSocket.new().Params -->
-| 引数                                             | タイプ          |    | 説明                                                                  |
-| ---------------------------------------------- | ------------ |:--:| ------------------------------------------------------------------- |
-| url                                            | Text         | -> | 接続先の URL                                                            |
-| [connectionHandler](#connectionHandler-パラメーター) | Object       | -> | WebSocket用コールバックを宣言しているオブジェクト                                       |
-| 戻り値                                            | 4D.WebSocket | <- | 新規の [WebSocketオブジェクト](#websocket-オブジェクト)|<!-- END REF -->
-
-
-|
+| 引数                                             | タイプ          |    | 説明                                       |
+| ---------------------------------------------- | ------------ |:--:| ---------------------------------------- |
+| url                                            | Text         | -> | 接続先の URL                                 |
+| [connectionHandler](#connectionHandler-パラメーター) | Object       | -> | WebSocket用コールバックを宣言しているオブジェクト            |
+| 戻り値                                            | 4D.WebSocket | <- | 新規の [WebSocketオブジェクト](#websocket-オブジェクト) |
+<!-- END REF -->
 
 
 `4D.WebSocket.new()` 関数は、 <!-- REF #4D.WebSocket.new().Summary -->*url* で指定したアドレスの WebSocketサーバーに接続された新しい [`4D.WebSocket` オブジェクト](#websocket-オブジェクト) を作成して返します<!-- END REF -->。 `4D.WebSocket` オブジェクトは、サーバーとの WebSocket接続の作成と管理、およびデータの送受信のための API を提供します。
@@ -235,14 +233,11 @@ This.headers.Cookie:="yummy_cookie=choco; tasty_cookie=strawberry"
 
 
 <!-- REF #WebSocketClass.terminate().Params -->
-| 引数     | タイプ     |    | 説明                                             |
-| ------ | ------- |:--:| ---------------------------------------------- |
-| code   | Integer | -> | 接続が切断される理由を示すステータスコード                          |
-| reason | Text    | -> | 接続が切断される理由を説明するテキスト|<!-- END REF -->
-
-
-
-|
+| 引数     | タイプ     |    | 説明                    |
+| ------ | ------- |:--:| --------------------- |
+| code   | Integer | -> | 接続が切断される理由を示すステータスコード |
+| reason | Text    | -> | 接続が切断される理由を説明するテキスト   |
+<!-- END REF -->
 
 
 

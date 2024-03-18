@@ -1,6 +1,6 @@
 ---
 id: code-overview
-title: Methods and classes
+title: Métodos y clases
 ---
 
 

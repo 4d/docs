@@ -352,11 +352,10 @@ A propriedade `.user` contém <!-- REF #transporter.user.Summary --> o nome de u
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                             |
-| ---------- | ------ |:--:| --------------------------------------------------------------------- |
-| Resultados | Object | <- | Estado da ligação do objecto transportador|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo   |    | Descrição                                  |
+| ---------- | ------ |:--:| ------------------------------------------ |
+| Resultados | Object | <- | Estado da ligação do objecto transportador |
+<!-- END REF -->
 
 #### Descrição
 

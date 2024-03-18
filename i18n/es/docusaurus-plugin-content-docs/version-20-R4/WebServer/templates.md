@@ -1,6 +1,6 @@
 ---
 id: templates
-title: Template pages
+title: Páginas de plantillas
 ---
 
 El servidor web de 4D le permite utilizar las páginas de plantillas HTML que contengan etiquetas, es decir, una mezcla de código HTML estático y de referencias 4D añadidas mediante [etiquetas de transformación](Tags/tags.md) como 4DTEXT, 4DIF o 4DINCLUDE. Estas etiquetas suelen insertarse como comentarios de tipo HTML (`<!--#4DTagName TagValue-->`) en el código fuente HTML.

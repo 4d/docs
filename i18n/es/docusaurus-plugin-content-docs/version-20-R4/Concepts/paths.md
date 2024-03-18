@@ -1,6 +1,6 @@
 ---
 id: paths
-title: Pathnames
+title: Rutas
 ---
 
 Las funciones, propiedades y comandos de las clases File y Folder le permiten manejar los archivos y las carpetas como objetos. Esto hace que la gestión de archivos y carpetas sea poderosa y flexible. Por ejemplo, para crear un nuevo archivo en la carpeta Documentos del usuario actual, puede escribir:

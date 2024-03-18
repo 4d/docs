@@ -1,6 +1,6 @@
 ---
 id: analysis
-title: Activity analysis Page
+title: Página de análisis de actividad
 ---
 
 La página Análisis de actividades permite ver el contenido del archivo de registro actual. Esta función es útil para analizar el uso de una aplicación o detectar la(s) operación(es) que ha(n) causado errores o mal funcionamiento. En el caso de una aplicación en modo cliente-servidor, permite verificar las operaciones realizadas por cada máquina cliente.

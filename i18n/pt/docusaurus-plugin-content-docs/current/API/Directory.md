@@ -404,9 +404,8 @@ Essa propriedade é **apenas leitura**.
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Text       | -> | Nome para a copia                                      |
 | overwrite         | Integer    | -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado|<!-- END REF -->
-
-|
+| Resultados        | 4D. Folder | <- | Pasta ou arquivo copiado                               |
+<!-- END REF -->
 
 #### Descrição
 
@@ -454,12 +453,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                                                |
-| ---------- | -------- | -- | ------------------------------------------------------------------------ |
-| path       | Text     | -> | Rota POSIX relativa                                                      |
-| Resultados | 4D. File | <- | Objeto `File` (null se a rota não for válida)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo     |    | Descrição                                     |
+| ---------- | -------- | -- | --------------------------------------------- |
+| path       | Text     | -> | Rota POSIX relativa                           |
+| Resultados | 4D. File | <- | Objeto `File` (null se a rota não for válida) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -496,12 +494,11 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                      |
-| ---------- | ---------- | -- | -------------------------------------------------------------- |
-| options    | Integer    | -> | Opções da lista de arquivos                                    |
-| Resultados | Collection | <- | Coleção de objetos de arquivo filho|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                           |
+| ---------- | ---------- | -- | ----------------------------------- |
+| options    | Integer    | -> | Opções da lista de arquivos         |
+| Resultados | Collection | <- | Coleção de objetos de arquivo filho |
+<!-- END REF -->
 
 #### Descrição
 
@@ -561,12 +558,11 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 
 <!-- REF #directory.folder().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                     |
-| ---------- | ---------- | -- | ----------------------------------------------------------------------------- |
-| path       | Text       | -> | Rota POSIX relativa                                                           |
-| Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path*não for válido)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                          |
+| ---------- | ---------- | -- | -------------------------------------------------- |
+| path       | Text       | -> | Rota POSIX relativa                                |
+| Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path*não for válido) |
+<!-- END REF -->
 
 #### Descrição
 
@@ -603,12 +599,11 @@ Um objeto `Folder` ou null se *path* não for válido.
 
 
 <!-- REF #directory.folders().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
-| options    | Integer    | -> | Opções da lista de pasta                                     |
-| Resultados | Collection | <- | Coleção de objetos de pasta filho|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                         |
+| ---------- | ---------- | -- | --------------------------------- |
+| options    | Integer    | -> | Opções da lista de pasta          |
+| Resultados | Collection | <- | Coleção de objetos de pasta filho |
+<!-- END REF -->
 
 #### Descrição
 
@@ -655,9 +650,8 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 | Parâmetro  | Tipo    |    | Descrição                                       |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
-| Resultados | Imagem  | <- | Ícone|<!-- END REF -->
-
-|
+| Resultados | Imagem  | <- | Ícone                                           |
+<!-- END REF -->
 
 #### Descrição
 

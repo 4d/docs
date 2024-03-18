@@ -792,9 +792,11 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 
 
 <!-- REF #WebServerClass.stop().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |  | ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF --> |
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |  | ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+
+<!-- END REF -->
 
 La función `.stop()` <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web en el que se aplica<!-- END REF -->.
 

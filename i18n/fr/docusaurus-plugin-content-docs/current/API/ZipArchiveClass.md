@@ -57,9 +57,8 @@ End if
 | zipStructure    | Object    | -> | Objet fichier ou dossier à compresser                     |
 | destinationFile | 4D.File   | -> | Fichier de destination de l'archive                       |
 | options         | Integer   | -> | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
-| Résultat        | Object    | <- | Objet statut|<!-- END REF -->
-
-|
+| Résultat        | Object    | <- | Objet statut                                              |
+<!-- END REF -->
 
 #### Description
 
@@ -208,9 +207,8 @@ $err:=ZIP Create archive($zip; $destination)
 | ---------- | ------------- |:--:| --------------------------------------------- |
 | zipFile    | 4D.File       | -> | Fichier archive ZIP                           |
 | password   | Text          | -> | Mot de passe de l'archive ZIP, le cas échéant |
-| Résultat   | 4D.ZipArchive | <- | Objet archive|<!-- END REF -->
-
-|
+| Résultat   | 4D.ZipArchive | <- | Objet archive                                 |
+<!-- END REF -->
 
 #### Description
 

@@ -733,11 +733,10 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 
 <!-- REF #WebServerClass.stop().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |  | -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-|
+| 引数 | タイプ |  | 説明         |
+| -- | --- |  | ---------- |
+|    |     |  | 引数を必要としません |
+<!-- END REF -->
 
 `.stop()` 関数は、 <!-- REF #WebServerClass.stop().Summary -->対象の Webサーバーを停止します<!-- END REF -->。
 

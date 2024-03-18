@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -1012,7 +1012,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utili
 
 | Parámetros |               | Tipo    | Descripción                                               |
 | ---------- | ------------- | ------- | --------------------------------------------------------- |
-| param1     |               | text    | The name of the 4D View Pro area object                   |
+| param1     |               | text    | El nombre del objeto de área 4D View Pro                  |
 | param2     |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
 | param3     |               | object  | Referencia al *paramObj* del comando                      |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
@@ -1125,7 +1125,7 @@ En *paramObj*, puede pasar varias propiedades:
 | includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                                                                           |
 | includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                                                                                |
 
-|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+|saveAsView|Boolean|Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.|
 
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
@@ -1294,6 +1294,8 @@ $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
 
   // Reemplazar las celdas que contienen sólo "Total" en la hoja actual con "Grand Total"
+
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
   // Comprobar si el objeto de rango está vacío
@@ -1857,7 +1859,7 @@ En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* design
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                           |
 | name       | Text   | -> | Nombre del rango nombrado                                              |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual)                             |
-| Result     | Text   | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
+| Result     | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
 
 |
 
@@ -3246,7 +3248,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 | Parámetros |               | Tipo    | Descripción                                                               |
 |:---------- |:------------- |:------- |:------------------------------------------------------------------------- |
-| param1     |               | text    | The name of the 4D View Pro area object                                   |
+| param1     |               | text    | El nombre del objeto de área 4D View Pro                                  |
 | param2     |               | 4D.Blob | El blob importado                                                         |
 | param3     |               | object  | Referencia al parámetro *paramObj* del comando                            |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado                 |
@@ -3643,7 +3645,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | vpAreaName | Text | -> | Nombre del área 4D View Pro en el formulario|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción
@@ -6014,6 +6018,7 @@ Resultado:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6319,6 +6324,7 @@ En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 El parámetro *timeValue* indica una hora expresada en segundos que se asignará al *rangeObj*.
 
 El parámetro opcional *formatPattern* define un [pattern](configuring.md#cell-format) para el parámetro *timeValue*.
+
 
 #### Ejemplo
 

@@ -1858,7 +1858,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                         |
 | name       | Text   | -> | 命名レンジの名前                                        |
 | scope      | Number | -> | ターゲットのスコープ (デフォルト=カレントシート)                      |
-| 戻り値        | Text   | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
+| 戻り値        | Object | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
 
 |
 
@@ -3644,7 +3644,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名|<!-- END REF -->
 
 
+
 |
+
 
 
 #### 説明
@@ -6013,6 +6015,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6318,6 +6321,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 *timeValue* 引数に、*rangeObj* 引数のレンジに割り当てる時間 (秒単位) を指定します。
 
 任意の *formatPattern* 引数は、*timeValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。
+
 
 #### 例題
 

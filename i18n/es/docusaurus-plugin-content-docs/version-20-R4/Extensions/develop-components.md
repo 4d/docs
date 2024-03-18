@@ -14,7 +14,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
 - **Componente**: proyecto matricial, compilado o [generado](Desktop/building.md#build-component), copiado en la carpeta [`Components`](Project/architecture.md) de la aplicación local y cuyo contenido se utiliza en la aplicación local.
 
-## Basics
+## Básicos
 
 La creación e instalación de los componentes 4D se realiza directamente desde 4D:
 

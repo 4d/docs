@@ -104,11 +104,13 @@ Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 
 <!-- REF #4D.WebSocketServer.new().Params -->
 
-| Paramètres                          | Type               |     | Description                                                                 |                  |
-| ----------------------------------- | ------------------ | :-: | --------------------------------------------------------------------------- | ---------------- |
-| [WSSHandler](#wsshandler-parameter) | Object             |  -> | Objet de la classe utilisateur déclarant les callbacks du serveur WebSocket |                  |
-| [options](#options-parameter)       | Object             |  -> | Paramètres de configuration du WebSocket                                    |                  |
-| Résultat                            | 4D.WebSocketServer |  <- | Nouvel objet WebSocketServer                                                | <!-- END REF --> |
+| Paramètres                          | Type               |     | Description                                                                 |
+| ----------------------------------- | ------------------ | :-: | --------------------------------------------------------------------------- |
+| [WSSHandler](#wsshandler-parameter) | Object             |  -> | Objet de la classe utilisateur déclarant les callbacks du serveur WebSocket |
+| [options](#options-parameter)       | Object             |  -> | Paramètres de configuration du WebSocket                                    |
+| Résultat                            | 4D.WebSocketServer |  <- | Nouvel objet WebSocketServer                                                |
+
+<!-- END REF -->
 
 La fonction `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->crée et démarre un serveur WebSocket qui utilisera les callbacks _WSSHandler_ et les _options_ spécifiées (optionnellement), et renvoie un objet `4D.WebSocketServer`<!-- END REF -->.
 
@@ -370,9 +372,11 @@ Cette propriété est en lecture seule.
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| Paramètres | Type |     | Description                 |                  |
-| ---------- | ---- | :-: | --------------------------- | ---------------- |
-|            |      |     | Ne requiert aucun paramètre | <!-- END REF --> |
+| Paramètres | Type |     | Description                 |
+| ---------- | ---- | :-: | --------------------------- |
+|            |      |     | Ne requiert aucun paramètre |
+
+<!-- END REF -->
 
 #### Description
 

@@ -1,6 +1,6 @@
 ---
 id: sessions
-title: User sessions
+title: Sesiones usuario
 ---
 
 El servidor web de 4D ofrece funciones integradas para la gestión de **sesiones de usuario**. La creación y el mantenimiento de sesiones de usuario le permiten controlar y mejorar la experiencia del usuario en su aplicación web. Cuando se activan las sesiones de usuario, los clientes web pueden reutilizar el mismo contexto de servidor de una solicitud a otra.

@@ -232,7 +232,7 @@ Para más información sobre los tipos de parámetros entrantes soportados, cons
 
 :::note
 
-Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:
+Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente. Las fechas en *jstype* se pasarán como [objeto](Concepts/dt_object.md) en código 4D con dos propiedades:
 
 | Propiedad | Tipo  | Descripción      |
 | --------- | ----- | ---------------- |

@@ -71,9 +71,9 @@ Ejemplos:
 
 ### operador `[]`
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). Cuando se crea una colección utilizando un literal de colección, se instancia con los valores especificados como sus elementos, y su longitud se establece en el número de argumentos especificados.
+El operador `[]` permite crear un **literal de colección**. Un literal de colección es una lista de cero o más expresiones, cada una de las cuales representa un elemento de la colección, encerradas entre corchetes (`[]`). Cuando se crea una colección utilizando un literal de colección, se instancia con los valores especificados como sus elementos, y su longitud se establece en el número de argumentos especificados.
 
-Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
+Dado que cualquier elemento se considera una expresión, puede crear subcolecciones utilizando `[]` en los elementos.  También puede crear y referenciar **literales objeto**.
 
 Si un elemento no está definido, aparecerá como Null en la colección.
 
@@ -105,8 +105,8 @@ Si crea un literal de colección que contenga un único elemento, asegúrese de 
 
 Puede crear dos tipos de colecciones:
 
-- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
-- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- colecciones normales (no compartidas), utilizando el comando [`New collection`](API/CollectionClass.md#new-collection) o la sintaxis literal de colección (`[]`). Estas colecciones pueden ser editadas sin ningún control de acceso específico, pero no pueden ser compartidas entre procesos.
+- colecciones compartidas, utilizando el comando [`New shared collection`](API/CollectionClass.md#new-shared-collection). Estas colecciones pueden ser compartidas entre procesos, incluidos los hilos apropiativos. El acceso a estas colecciones se controla mediante estructuras [`Use...End use`](Concepts/shared.md#useend-use).
 
 Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
@@ -130,12 +130,12 @@ Ciertas funciones devuelven la colección original después de la modificación,
 
 ### parámetro rutaPropiedad
 
-Several functions accept a _propertyPath_ as parameter. Este parámetro significa:
+Varias funciones aceptan un _propertyPath_ como parámetro. Este parámetro significa:
 
 - o bien un nombre de propiedad del objeto, por ejemplo "apellido"
 - o una ruta de propiedades del objeto, es decir, una secuencia jerárquica de subpropiedades vinculadas con caracteres de punto, por ejemplo "empleado.hijos.nombre".
 
-**Warning:** When using functions and _propertyPath_ parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Atención:** Cuando utilice funciones y parámetros _propertyPath_, no puede utilizar ".", "[ ]", o espacios en los nombres de las propiedades ya que impedirá que 4D analice correctamente la ruta:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined
@@ -144,9 +144,9 @@ Several functions accept a _propertyPath_ as parameter. Este parámetro signific
 
 ## Indefinido
 
-Reading the **length** property of an undefined collection produces 0:
+La lectura de la propiedad **length** de una colección indefinida produce 0:
 
 ```4d
-     var $c : Collection //variable created but no collection is defined
+     var $c : Collection //variable creada pero sin colección definida
      $size:=$c.length //$size = 0
 ```

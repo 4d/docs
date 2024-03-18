@@ -47,10 +47,8 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 | cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
 | type        | Text              | -> | content-type ヘッダーの値                                    |
 | disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
-| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト|<!-- END REF -->
-
-
-|
+| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -196,10 +194,8 @@ $transporter.send($email)
 | cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
 | type        | Text              | -> | content-type ヘッダーの値                                    |
 | disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
-| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト|<!-- END REF -->
-
-
-|
+| 戻り値         | 4D.MailAttachment | <- | Attachment オブジェクト                                      |
+<!-- END REF -->
 
 
 #### 説明
@@ -236,12 +232,10 @@ $transporter.send($email)
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 引数  | タイプ     |    | 説明                               |
-| --- | ------- |:--:| -------------------------------- |
-| 戻り値 | 4D.Blob | <- | 添付の中身|<!-- END REF -->
-
-
-|
+| 引数  | タイプ     |    | 説明    |
+| --- | ------- |:--:| ----- |
+| 戻り値 | 4D.Blob | <- | 添付の中身 |
+<!-- END REF -->
 
 
 #### 説明

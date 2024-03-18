@@ -1,6 +1,6 @@
 ---
 id: breakpoints
-title: Breakpoints and Command Catching
+title: Puntos de interrupción y captura de comandos
 ---
 
 ## Generalidades

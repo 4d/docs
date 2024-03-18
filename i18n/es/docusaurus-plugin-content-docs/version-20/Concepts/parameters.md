@@ -266,7 +266,7 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 ## Método `Compilador`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos llamados tan pronto como pretenda compilar su proyecto.
 
 Cuando se utiliza la palabra clave `#DECLARE`, los parámetros se declaran automáticamente. Por ejemplo:
 

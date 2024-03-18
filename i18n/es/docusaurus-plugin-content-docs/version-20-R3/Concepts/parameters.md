@@ -310,7 +310,7 @@ La sintaxis heredada para declarar parámetros variádicos (`C_TEXT(${4})`) sigu
 
 ## Método `Compiler_Methods`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos llamados tan pronto como pretenda compilar su proyecto.
 
 Cuando se utiliza la palabra clave `#DECLARE`, se declaran los parámetros. Por ejemplo:
 

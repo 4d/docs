@@ -1706,7 +1706,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
  | ck ascending  | Longint | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
  | ck descending | Longint | 1     | Los elementos se ordenan de forma descendente              |
 
- Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 

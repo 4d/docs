@@ -1,6 +1,6 @@
 ---
 id: time
-title: Time
+title: Hora
 ---
 
 Las variables, campos o expresiones de tipo Hora pueden estar comprendidas entre 00:00:00 y 596,000:00:00.

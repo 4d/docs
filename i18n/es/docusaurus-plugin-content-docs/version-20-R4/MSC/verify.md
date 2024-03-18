@@ -1,6 +1,6 @@
 ---
 id: verify
-title: Verify Page
+title: Verificar página
 ---
 
 Esta página se utiliza para verificar la integridad de los datos. La verificación puede llevarse a cabo en los registros y/o índices. Esta página sólo comprueba la integridad de los datos. Si se encuentran errores y es necesario repararlos, se le indicará que utilice la página [Reparación](repair.md).

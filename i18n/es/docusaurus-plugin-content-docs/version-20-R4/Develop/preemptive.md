@@ -1,6 +1,6 @@
 ---
 id: preemptive
-title: Preemptive Processes
+title: Procesos apropiativos
 ---
 
 
@@ -77,7 +77,7 @@ Se ofrecen las siguientes opciones:
 
 Note that with this option, whatever the internal thread safety evaluation, the method will always be executed in cooperative mode when called directly by 4D as the first parent method (for example through the `New process` command). Si se marca como "thread-safe" internamente, sólo se tiene en cuenta cuando se llama desde otros métodos dentro de una cadena de llamadas.
 
-:::note Particular case
+:::note Caso particular
 
 If the method has also the [**Shared by components and host database**](../Project/code-overview.md#shared-by-components-and-host-database) property, setting the **Indifferent** option will automatically tag the method as thread-unsafe. Si quiere que un método de componente compartido sea hilo seguro, debe configurarlo explícitamente como **Puede ejecutarse en procesos apropiativos**.
 
