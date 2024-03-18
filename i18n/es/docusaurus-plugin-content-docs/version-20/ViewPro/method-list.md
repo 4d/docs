@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -990,7 +990,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando `VP EXPORT DOCUM
 
 | Variable |               | Tipo    | Descripción                                               |
 | -------- | ------------- | ------- | --------------------------------------------------------- |
-| $1       |               | text    | The name of the 4D View Pro area object                   |
+| $1       |               | text    | El nombre del objeto de área 4D View Pro                  |
 | $2       |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
 | $3       |               | object  | Referencia al *paramObj* del comando                      |
 | $4       |               | object  | Un objeto devuelto por el método con un mensaje de estado |
@@ -1760,7 +1760,7 @@ En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* design
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                           |
 | name       | Text   | -> | Nombre del rango nombrado                                              |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual)                             |
-| Result     | Text   | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
+| Result     | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
 
 |
 
@@ -2173,6 +2173,7 @@ El comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary --
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
 
+
 #### Ejemplo
 
 En el siguiente documento:
@@ -2374,6 +2375,7 @@ El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera la
 En *rangeObj*, pase un rango de celdas fusionadas que desee recuperar. Si *rangeObj* no contiene celdas fusionadas, se devuelve un rango vacío.
 
 #### Ejemplo
+
 
 Para centrar el texto de las celdas fusionadas en este documento:
 
@@ -4277,6 +4279,7 @@ Function onEvent()
 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
+
 ```
 
 El método de retrollamada *OffscreenArea*:
@@ -5210,6 +5213,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
