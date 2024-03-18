@@ -39,14 +39,14 @@ Vous devez impérativement distinguer l'opérateur d'affectation := des autres o
 Le langage 4D est fortement typé, bien qu'une certaine flexibilité soit autorisée dans de nombreux cas. Vous créez une variable typée à l'aide du mot-clé `var`. Par exemple, pour créer une variable du type date, vous pouvez écrire : Par exemple, pour créer une variable du type date, vous pouvez écrire :
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 Le mot-clé `var` permet de déclarer des variables objet d'un type de classe défini, par exemple :
 
 ```4d
-var myPerson : cs.Person 
-//variable de la classe utilisateur Person
+var myPerson : cs.Person
+//variable of the Person user class
 ```
 
 
@@ -101,6 +101,8 @@ vRef:=Open document("PassFile";"TEXTE";Read Mode) // ouvrir le doc en mode lectu
 ```
 
 > Les constantes prédéfinies apparaissent <u>soulignées</u> par défaut dans l'éditeur de code 4D.
+
+
 
 ## Methods
 
@@ -204,12 +206,13 @@ Pour instancier un objet de la classe dans une méthode, appelez la classe utili
 
 ```4d  
 // dans une méthode 4D
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
 In the `myClass` class method, use the `Function <methodName>` statement to define the *methodName* class member function. A class member function can receive and return parameters like any method, and use `This` as the object instance.
 
 ```4d  
+
 //in the myClass.4dm file
 Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
@@ -230,7 +233,7 @@ Vous pouvez utiliser le mot-clé `Class constructor` pour déclarer les proprié
 //in the Rectangle.4dm file
 Class constructor ($width : Integer; $height : Integer)
 This.height:=$height
-This.width:=$width 
+This.width:=$width
 This.name:="Rectangle"
 ```
 
@@ -426,4 +429,3 @@ In 4D, the following escape sequences can be used:
 In the following example, the **Carriage return** character (escape sequence `\r`) is inserted in a statement in order to obtain a dialog box:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-
