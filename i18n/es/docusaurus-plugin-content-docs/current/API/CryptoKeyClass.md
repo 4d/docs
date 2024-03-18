@@ -55,10 +55,12 @@ ASSERT($status.success)
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parámetros | Tipo         |    | Descripción                                                                    |
-| ---------- | ------------ | -- | ------------------------------------------------------------------------------ |
-| settings   | Object       | -> | Parámetros para generar o cargar un par de llaves                              |
-| result     | 4D.CryptoKey | <- | Objeto que contiene un par de llaves de encriptación<!-- END REF --> |
+| Parámetros | Tipo         |    | Descripción                                       |
+| ---------- | ------------ | -- | ------------------------------------------------- |
+| settings   | Object       | -> | Parámetros para generar o cargar un par de llaves |
+| result     | 4D.CryptoKey | <- | Object encapsulating an encryption key pair       |
+
+<!-- END REF -->
 
 La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, basado en el parámetro objeto *settings*. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.
 
@@ -113,7 +115,9 @@ Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
 | message    | Text   | -> | Cadena de mensajes a decodificar utilizando `options.encodingEncrypted` y descifrar. |
 | options    | Object | -> | Opciones de decodificación                                                           |
-| Result     | Object | <- | Status|<!-- END REF -->                                                    |
+| Result     | Object | <- | Estado                                                                               |
+
+<!-- END REF -->
 
 La función `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descifra el parámetro *mensaje* utilizando la llave **privada**<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
 
@@ -156,11 +160,13 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                                 |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | Cadena de mensajes a codificar utilizando `options.encodingDecrypted` y encriptado.                         |
-| options    | Object | -> | Opciones de codificación                                                                                    |
-| Result     | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`|<!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                                                         |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------------- |
+| message    | Text   | -> | Cadena de mensajes a codificar utilizando `options.encodingDecrypted` y encriptado. |
+| options    | Object | -> | Opciones de codificación                                                            |
+| Result     | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`    |
+
+<!-- END REF -->
 
 La función `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta el parámetro *mensaje* utilizando la llave **pública**<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
 
@@ -195,9 +201,11 @@ El valor devuelto es un mensaje encriptado.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parámetros | Tipo |    | Descripción                                             |
-| ---------- | ---- | -- | ------------------------------------------------------- |
-| Result     | Text | <- | Llave privada en formato PEM|<!-- END REF --> |
+| Parámetros | Tipo |    | Descripción                  |
+| ---------- | ---- | -- | ---------------------------- |
+| Result     | Text | <- | Llave privada en formato PEM |
+
+<!-- END REF -->
 
 La función `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devuelve la llave privada del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
@@ -222,9 +230,11 @@ El valor devuelto es la llave privada.
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parámetros | Tipo |    | Descripción                                             |
-| ---------- | ---- | -- | ------------------------------------------------------- |
-| Result     | Text | <- | Llave pública en formato PEM|<!-- END REF --> |
+| Parámetros | Tipo |    | Descripción                  |
+| ---------- | ---- | -- | ---------------------------- |
+| Result     | Text | <- | Llave pública en formato PEM |
+
+<!-- END REF -->
 
 La función `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->devuelve la llave pública del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
@@ -266,11 +276,13 @@ El valor devuelto es la llave pública.
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                      |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------ |
-| message    | Text   | -> | Cadena mensaje a firmar                                                                          |
-| options    | Object | -> | Opciones de firma                                                                                |
-| Result     | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding|<!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                                           |
+| ---------- | ------ | -- | --------------------------------------------------------------------- |
+| message    | Text   | -> | Cadena mensaje a firmar                                               |
+| options    | Object | -> | Opciones de firma                                                     |
+| Result     | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
+
+<!-- END REF -->
 
 La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
 
@@ -352,7 +364,9 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 | message    | Text   | -> | Cadena mensaje utilizada para generar la firma                                                       |
 | signature  | Text   | -> | Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding` |
 | options    | Object | -> | Opciones de firma                                                                                    |
-| Result     | Object | <- | Estado de la verificación|<!-- END REF -->                                                 |
+| Result     | Object | <- | Estado de la verificación                                                                            |
+
+<!-- END REF -->
 
 
 La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas.
@@ -373,7 +387,9 @@ La `CryptoKey` debe contener una llave **pública** válida.
 
 La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 
-| Propiedad | Tipo       | Descripción                                                                                 |
-| --------- | ---------- | ------------------------------------------------------------------------------------------- |
-| success   | boolean    | True si la firma coincide con el mensaje                                                    |
-| errors    | collection | Si `success` es `false`, puede contener una colección de errores|<!-- END REF --> |
+| Propiedad | Tipo       | Descripción                                                      |
+| --------- | ---------- | ---------------------------------------------------------------- |
+| success   | boolean    | True si la firma coincide con el mensaje                         |
+| errors    | collection | Si `success` es `false`, puede contener una colección de errores |
+
+<!-- END REF -->
