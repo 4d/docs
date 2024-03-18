@@ -39,7 +39,7 @@ Una acción de permiso definida en un nivel determinado se hereda por defecto en
 
 :::info
 
-Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](../entities.md#restricting-entity-selections) which can be more appropriate in this case.
+Los permisos controlan el acceso a los objetos del almacén de datos. Si desea filtrar los datos leídos según algún criterio, puede considerar [restringir las selecciones de entidades](entities.md#restricting-entity-selections) que puede ser más apropiado en este caso.
 
 :::
 
@@ -166,7 +166,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // puede evitar que el proyecto se abra
  ALERT("El archivo roles.json está malformado o contiene inconsistencias, la aplicación se cerrará.")
  QUIT 4D
-End if 
+End if
 ```
 
 ## Inicialización de privilegios para el despliegue
