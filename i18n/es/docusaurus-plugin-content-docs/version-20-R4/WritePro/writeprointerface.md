@@ -1,6 +1,6 @@
 ---
 id: writeprointerface
-title: 4D Write Pro Interface
+title: Interfaz 4D Write Pro
 ---
 
 4D WritePro Interface ofrece un conjunto de paletas, que permiten a los usuarios finales personalizar fácilmente un documento 4D Write Pro.
