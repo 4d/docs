@@ -1,7 +1,6 @@
----
-id: objectLibrary
-title: Object libraries
----
+- - -
+id: objectLibrary título: Librerías de objetos
+- - -
 
 
 Puede utilizar librerías de objetos en sus formularios. Una librería de objetos ofrece una colección de objetos preconfigurados que pueden ser utilizados en sus formularios mediante un simple copiar y pegar o arrastrar y soltar.
