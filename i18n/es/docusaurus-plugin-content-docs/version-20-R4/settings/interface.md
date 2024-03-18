@@ -1,6 +1,6 @@
 ---
 id: interface
-title: Interface page
+title: Página Interfaz
 ---
 
 
