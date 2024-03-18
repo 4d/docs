@@ -1,6 +1,6 @@
 ---
 id: bars
-title: Menu bar features
+title: Funcionalidades de la barra de menú
 ---
 
 Las barras de menú constituyen la principal interfaz de las aplicaciones personalizadas. Para cada aplicación personalizada, debe crear al menos una barra de menú con al menos un menú. Por defecto, Menu Bar #1 es la barra de menús que se muestra en el entorno de la aplicación. Puede cambiar la barra de menús que se muestra utilizando el comando `SET MENU BAR`.
