@@ -9,7 +9,7 @@ title: Qodly Studio
 
 :::
 
-**Qodly Studio** is an interface builder for web applications. It provides developers with a graphical form editor to design applications running in web browsers or smartphones. It supports natively the [ORDA objects](../ORDA/overview.md).
+**Qodly Studio** は Webアプリケーション用のインターフェースビルダーです。 Webブラウザーやスマートフォンで動作するアプリケーションを設計するためのグラフィカルなフォームエディターをデベロッパーに提供します。 Qodly Studio は [ORDAオブジェクト](../ORDA/overview.md) をネイティブにサポートします。
 
 **4D環境** から直接 Qodly Studio を使用して、モダンで洗練されたインターフェースをビルドし、既存の 4Dプロジェクトに簡単に統合して、**オンプレミス** で運用することができます。
 
@@ -17,14 +17,14 @@ Qodly Studioは、Webビジネスアプリケーションの開発に特化し�
 
 Qodly Studio では、全く新しい WebUI を使い、データソースの概念に慣れ、次の操作を学ぶことができます:
 
-- create Qodly forms by placing components on a page
+- ページ上にコンポーネントを配置して Qodlyフォームを作成する
 - コンポーネントをデータにマッピングする
 - イベントを設定して 4Dコードをトリガーする
 - さらに沢山のことが可能です
 
 :::info
 
-The development with Qodly Studio in 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
+4D で Qodly Studio を使って開発するには、シルバー以上の [4Dパートナーライセンス](https://jp.4d.com/4d-partner-program) が必要です。 ライセンスが有効化されていない場合、Qodly Studio に関するオプションやメニュー項目は表示されません。
 
 :::
 
@@ -93,24 +93,24 @@ WebAdmin Webサーバーでの認証には、アクセスキーを使用しま�
 
 ### レンダリングを有効化する
 
-To enable the rendering of Qodly forms, the following options must be set.
+Qodlyフォームのレンダリングを有効にするには、以下のオプションを設定する必要があります。
 
 * 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
 * [4D Webサーバー](webServer.md) を起動しておく必要があります。
 
-When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost).
+Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。
 
 :::info
 
-See [this page](https://developer.qodly.com/docs/studio/rendering) for information on how to render Qodly forms in Qodly.
+Qodly で Qodlyフォームをレンダリングする方法については [このページ](https://developer.qodly.com/docs/studio/rendering) を参照ください。
 
 :::
 
-Note that when you click on the "Preview in a new tab" button, a tab will open at `IP:port/$lib/renderer/?w=QodlyFormName` on your machine.
+"新しいタブでプレビュー" ボタンをクリックすると、マシン上で `IP:port/$lib/renderer/?w=QodlyFormName` のタブが開くことに注意してください。
 
-Keep in mind that the Qodly Studio runs through the 4D WebAdmin web server. When you use Qodly Studio as a developer, even when you preview a Qodly form in the studio, you're using the 4D WebAdmin web server. これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
+Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyフォームをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
 
-However, form rendering happens outside 4D Web Studio, and is served by the standard 4D web server. このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
+しかし、実際のフォームのレンダリングは 4D Web Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
 
 :::note
 
@@ -157,7 +157,7 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
-You can rely on this documentation and its associated resources for developing web applications powered by Qodly forms. ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します。
+Qodlyフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します。
 
 :::info
 
@@ -170,7 +170,7 @@ You can rely on this documentation and its associated resources for developing w
 |                                         | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                              | Qodlyデベロッパー向けの Qodly Studio |
 | --------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------- |
 | テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor   |
-| Qodly form                              | Qodly Studio Webform Editor                                                        | Qodly Studio Webform Editor |
+| Qodlyフォーム                               | Qodly Studio Webform Editor                                                        | Qodly Studio Webform Editor |
 | デスクトップフォーム                              | 4D IDE                                                                             | *サポートされていません*               |
 | プログラミング言語                               | 4Dランゲージ (ORDA を使用)                                                                 | QodlyScript (ORDA を使用)      |
 | コーディング IDE                              | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター       |
@@ -185,13 +185,13 @@ You can rely on this documentation and its associated resources for developing w
 4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
 - Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
-- deployment of 4D applications powered with Qodly forms must be done using **4D Server**.
+- Qodlyフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 
 
 ### QodlyScript から 4Dランゲージへ
 
-4D developers can use the [Qodly Studio documentation](developer.qodly.com/docs/studio) to learn how to design their Qodly forms in Qodly Studio. コードの例は QodlyScript で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 QodlyScript コードを 4Dランゲージに変換するのは簡単で、いくつかの調整が必要なだけです:
+[Qodly Studio ドキュメント](developer.qodly.com/docs/studio) を使用して、4Dデベロッパーは、Qodly Studio で Qodlyフォームを設計する方法を学ぶことができます。 コードの例は QodlyScript で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 QodlyScript コードを 4Dランゲージに変換するのは簡単で、いくつかの調整が必要なだけです:
 
 #### 変数名
 
@@ -290,11 +290,11 @@ QodlyScript のコマンド名は、スペースを入れずにキャメルケ�
 
 ## ライセンスの使用について
 
-To render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
+Qodlyフォームをレンダリングするには、プロジェクトデータベースのメインの Webサーバーでセッションが開かれるため、使用可能なライセンスが必要です。
 
 ### URLスキーム
 
-Qodly Studio's URL scheme configuration (HTTP and HTTPS) determines how many licenses are retained when rendering Qodly forms. 適切な設定により、不要なライセンスの使用を回避できます。
+Qodly Studio の URLスキーム設定 (HTTP および HTTPS) によって、Qodlyフォームのレンダリング時に使用されるライセンスの数が決まります。 適切な設定により、不要なライセンスの使用を回避できます。
 
 [設定](#設定) セクションで説明したように、WebAdmin Webサーバーは Qodly Studio へのセキュアな Webアクセスを提供します。 一方、[レンダラー](#レンダリングを有効化する) は RESTリクエストを使用してデータベースの 4D Webサーバーと通信します。 そのため、従来の 4Dクライアントと同じように動作します。
 
@@ -332,7 +332,7 @@ Qodly Studio のユーザー設定で、レンダラーのポップオーバー�
 
 必要以上のライセンスを使用しないため、次のいずれかをお勧めします:
 
-- Run the renderer on another browser tab (by entering the rendered URL of your Web form: `IP:port/$lib/renderer/?w=QodlyFormName`).
+- 別のブラウザータブでレンダラーを実行します (Qodlyフォームがレンダリングされた URL `IP:port/$lib/renderer/?w=QodlyFormName` を入力します)。
 - Qodly Studio とデータベースが同じ URLスキームでアクセスされていることを確認します。
 - プロジェクトデータベースの Webサーバーの [セッションcookie](webServerConfig.md#セッションcookie-samesite) には、`Lax` の値を使用してください。
 
