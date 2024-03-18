@@ -232,9 +232,11 @@ Cette propriété est en **lecture-écriture**.
 
 ```4d
 If (Session.isGuest())
-        // La session d'un invité se ferme après 60 minutes d'inactivité. Session.idleTimeout:=60
+        // Une session Guest se ferme après 60 minutes d'inactivité.
+    Session.idleTimeout:=60
 Else
-        //D'autres sessions se fermeront après 60 minutes d'inactivité. Session.idleTimeout:=120
+        //Les autres sessions se ferment après 120 minutes d'inactivité.
+    Session.idleTimeout:=120
 End if
 
 ```
