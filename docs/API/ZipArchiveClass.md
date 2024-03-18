@@ -57,7 +57,8 @@ End if
 |zipStructure|Object|->|File or Folder object to compress|
 |destinationFile|4D.File|->|Destination file for the archive|
 |options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
-|Result|Object|<-|Status object|<!-- END REF -->
+|Result|Object|<-|Status object|
+<!-- END REF -->
 
 #### Description
 
@@ -206,7 +207,8 @@ $err:=ZIP Create archive($zip; $destination)
 |---------|--- |:---:|------|
 |zipFile|4D.File|->|Zip archive file|
 |password|Text|->|ZIP archive password if any|
-|Result|4D.ZipArchive|<-|Archive object|<!-- END REF -->
+|Result|4D.ZipArchive|<-|Archive object|
+<!-- END REF -->
 
 #### Description
 

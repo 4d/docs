@@ -13,10 +13,81 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 ||
 |---|
+|[<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isShared.Summary -->|
+|[<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isSingleton.Summary -->|
+|[<!-- INCLUDE #ClassClass.me.Syntax -->](#me)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.me.Summary -->|
 |[<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->|
 |[<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary --> |
 |[<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
 
+
+
+<!-- REF ClassClass.isShared.Desc -->
+## .isShared   
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R5|Added|
+
+</details>
+
+<!-- REF #ClassClass.isShared.Syntax -->**.isShared** : Boolean<!-- END REF -->
+
+#### Description
+
+The `.isShared` property <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.   
+
+This property is **read-only**.
+
+<!-- END REF -->
+
+
+<!-- REF ClassClass.isSingleton.Desc -->
+## .isSingleton   
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R5|Added|
+
+</details>
+
+<!-- REF #ClassClass.isSingleton.Syntax -->**.isSingleton** : Boolean<!-- END REF -->
+
+#### Description
+
+The `.isSingleton` property <!-- REF #ClassClass.isSingleton.Summary -->returns `true` if the user class has been defined as a [singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.   
+
+This property is **read-only**.
+
+<!-- END REF -->
+
+
+<!-- REF ClassClass.me.Desc -->
+## .me   
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v20 R5|Added|
+
+</details>
+
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+
+#### Description
+
+The `.me` property <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance. 
+
+If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.   
+
+This property is **read-only**.
+
+<!-- END REF -->
 
 
 <!-- REF ClassClass.name.Desc -->
@@ -56,20 +127,27 @@ This property is **read-only**.
 <!-- REF #ClassClass.new().Syntax -->**.new**( { *...param* : any } ) : 4D.Class<!-- END REF -->
 
 
+
 <!-- REF #ClassClass.new().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |param|any|->|Parameter(s) to pass to the constructor function|
-|Result|4D.Class|<-|New object of the class|<!-- END REF -->
+|Result|4D.Class|<-|New object of the class|
+<!-- END REF -->
 
 
 #### Description
 
 The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
 
-You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
+You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the *className* class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
 
-If `.new()` is called on a non-existing class, an error is returned.
+:::note Notes
+
+- If `.new()` is called on a [singleton class](../Concepts/classes.md#singleton-classes) that has already been instantiated, the singleton instance is returned, not a new instance.
+- If `.new()` is called on a non-existing class, an error is returned.
+
+:::
 
 #### Examples
 
