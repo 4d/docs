@@ -201,7 +201,7 @@ The selector is intended to prevent accidental modifications since no confirmati
 
 :::
 
-### Entering values
+### Inserção de valores
 
 When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass.
 
@@ -220,7 +220,7 @@ Blob attributes cannot be modified.
 New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data.
 
 
-### Creating entities
+### Criação de entidades
 
 You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
 
