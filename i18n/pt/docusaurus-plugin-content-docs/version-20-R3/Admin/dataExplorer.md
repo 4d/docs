@@ -52,7 +52,7 @@ O Data Explorer suporta os seguintes navegadores web:
 
 A resolução mínima para utilizar o Data Explorer é de 1280x720. A resolução recomendada é 1920x1080.
 
-### Basics
+### Básicos
 
 O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
