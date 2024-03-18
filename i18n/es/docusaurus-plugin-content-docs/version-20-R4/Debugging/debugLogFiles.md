@@ -1,6 +1,6 @@
 ---
 id: debugLogFiles
-title: Log files
+title: Archivos de registro
 ---
 
 Las aplicaciones 4D pueden generar varios archivos de historial que son útiles para depurar u optimizar su ejecución. Los historiales suelen iniciarse o detenerse utilizando los selectores de los comandos [SET DATABASE PARAMETER](https://doc.4d.com/4dv20/help/command/en/page642.html), [WEB SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1210.html) o [HTTP SET OPTION](https://doc.4d.com/4dv20/help/command/en/page1160.html) y se almacenan en la carpeta [Logs folder](Project/architecture.md#logs) del proyecto.
@@ -359,10 +359,10 @@ El registro ORDA del lado del cliente registra cada petición ORDA enviada desde
 Como iniciar este historial:
 
 ```4d
-    //en una máquina remota
+    //on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //también se puede enviar a la memoria
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
+    //can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -409,11 +409,11 @@ El registro ORDA del lado del servidor registra cada petición ORDA procesada po
 Como iniciar este historial:
 
 ```4d
-    //en el servidor
+    //on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-    //srl... el parámetro es opcional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+    //srl... parameter is optional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note
