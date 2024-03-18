@@ -1,6 +1,6 @@
 ---
 id: propertiesFooters
-title: Footers
+title: Pies de página
 ---
 
 ## Mostrar pies
