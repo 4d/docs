@@ -1,6 +1,6 @@
 ---
 id: authUsers
-title: Users and sessions
+title: Usuarios y sesiones
 ---
 
 Las peticiones REST pueden beneficiarse de [sesiones de usuario web](WebServer/sessions.md), ofreciendo funcionalidades extra como la gestión de múltiples peticiones, la posibilidad de compartir datos entre los procesos del cliente web y los privilegios del usuario.
