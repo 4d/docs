@@ -200,7 +200,7 @@ Cada tabla expuesta con ORDA ofrece una clase EntitySelection en el class store 
 
 Class extends EntitySelection
 
-//Extract the employees with a salary greater than the average from this entity selection 
+//Extraer los empleados con un salario superior a la media de esta selección de entidades 
 
 Function withSalaryGreaterThanAverage() : cs.EmployeeSelection
     return This.query("salary > :1";This.average("salary")).orderBy("salary")
@@ -215,7 +215,7 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 :::info
 
-[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class).
+[Los filtros de selección de entidades restringidas](entities.md#restricting-entity-selections) se definen en la clase de datos [](#dataclass-class).
 
 :::
 
@@ -256,11 +256,11 @@ Para más información, consulte la sección [Atributos alias](#alias-attributes
 Class extends Entity
 
 Function getPopulation() : Integer
-    return This.zips.sum("population")
+    return This.zips.sum("población")
 
 
 Function isBigCity(): Boolean
-// The getPopulation() function is usable inside the class
+// La función getPopulation() es utilizable dentro de la clase
     return This.getPopulation()>50000
 ```
 
