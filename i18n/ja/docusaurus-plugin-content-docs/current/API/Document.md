@@ -395,14 +395,13 @@ title: Document クラス
 
 
 <!-- REF #document.copyTo().Params -->
-| 引数                | タイプ       |    | 説明                                    |
-| ----------------- | --------- |:--:| ------------------------------------- |
-| destinationFolder | 4D.Folder | -> | 宛先フォルダー                               |
-| newName           | Text      | -> | コピー先フォルダーの名前                          |
-| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します     |
-| 戻り値               | 4D.File   | <- | コピーされたファイル|<!-- END REF -->
-
-|
+| 引数                | タイプ       |    | 説明                                |
+| ----------------- | --------- |:--:| --------------------------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                           |
+| newName           | Text      | -> | コピー先フォルダーの名前                      |
+| overwrite         | Integer   | -> | 既存要素を上書きするには `fk overwrite` を渡します |
+| 戻り値               | 4D.File   | <- | コピーされたファイル                        |
+<!-- END REF -->
 
 #### 説明
 
@@ -449,11 +448,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| 引数  | タイプ     |    | 説明                                    |
-| --- | ------- | -- | ------------------------------------- |
-| 戻り値 | 4D.Blob | <- | ファイルのコンテンツ|<!-- END REF -->
-
-|
+| 引数  | タイプ     |    | 説明         |
+| --- | ------- | -- | ---------- |
+| 戻り値 | 4D.Blob | <- | ファイルのコンテンツ |
+<!-- END REF -->
 
 #### 説明
 
@@ -491,12 +489,11 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getIcon().Params -->
-| 引数   | タイプ     |    | 説明                              |
-| ---- | ------- | -- | ------------------------------- |
-| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
-| 戻り値  | Picture | <- | アイコン|<!-- END REF -->
-
-|
+| 引数   | タイプ     |    | 説明                       |
+| ---- | ------- | -- | ------------------------ |
+| size | Integer | -> | 取得するピクチャーの一辺の長さ (ピクセル単位) |
+| 戻り値  | Picture | <- | アイコン                     |
+<!-- END REF -->
 
 #### 説明
 
@@ -526,14 +523,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getText().Params -->
-| 引数          | タイプ     |    | 説明                                          |
-| ----------- | ------- | -- | ------------------------------------------- |
-| charSetName | Text    | -> | 文字セットの名前                                    |
-| charSetNum  | Integer | -> | 文字セットの番号                                    |
-| breakMode   | Integer | -> | 改行の処理モード                                    |
-| 戻り値         | Text    | <- | ドキュメントから取得したテキスト|<!-- END REF -->
-
-|
+| 引数          | タイプ     |    | 説明               |
+| ----------- | ------- | -- | ---------------- |
+| charSetName | Text    | -> | 文字セットの名前         |
+| charSetNum  | Integer | -> | 文字セットの番号         |
+| breakMode   | Integer | -> | 改行の処理モード         |
+| 戻り値         | Text    | <- | ドキュメントから取得したテキスト |
+<!-- END REF -->
 
 #### 説明
 
