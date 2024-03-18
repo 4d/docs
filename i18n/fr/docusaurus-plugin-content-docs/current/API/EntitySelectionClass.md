@@ -59,10 +59,8 @@ Les entity selections peuvent être créées à partir de sélections existantes
 | ---------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------- |
 | dsTable    | Table              | -> | Table de la base 4D dont la sélection courante doit être utilisée pour construire l'entity selection |
 | settings   | Object             | -> | Option de création : contexte                                                                        |
-| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection liée à la dataclass de la table|<!-- END REF -->
-
-
-|
+| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection liée à la dataclass de la table                                            |
+<!-- END REF -->
 
 
 #### Description
@@ -101,11 +99,10 @@ $employees:=Create entity selection([Employee])
 
 
 <!-- REF #_command_.USE ENTITY SELECTION.Params -->
-| Paramètres      | Type            |    | Description                                     |
-| --------------- | --------------- |:--:| ----------------------------------------------- |
-| entitySelection | EntitySelection | -> | Une entity selection|<!-- END REF -->
-
-|
+| Paramètres      | Type            |    | Description          |
+| --------------- | --------------- |:--:| -------------------- |
+| entitySelection | EntitySelection | -> | Une entity selection |
+<!-- END REF -->
 
 #### Description
 
@@ -294,14 +291,12 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Paramètres      | Type               |    | Description                                                                                 |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entité à ajouter à l'entity selection                                                       |
-| entitySelection | 4D.EntitySelection | -> | Entity selection à ajouter à l'entity selection d'origine                                   |
-| Résultat        | 4D.EntitySelection | -> | Entity selection incluant l'*entity* ou *entitySelection*ajoutée|<!-- END REF -->
-
-
-|
+| Paramètres      | Type               |    | Description                                                        |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------ |
+| entity          | 4D.Entity          | -> | Entité à ajouter à l'entity selection                              |
+| entitySelection | 4D.EntitySelection | -> | Entity selection à ajouter à l'entity selection d'origine          |
+| Résultat        | 4D.EntitySelection | -> | Entity selection including the added *entity* or *entitySelection* |
+<!-- END REF -->
 
 
 #### Description
@@ -383,14 +378,12 @@ $sellist2:=$sellist2.add($sellist1)
 
 
 <!-- REF #EntitySelectionClass.and().Params -->
-| Paramètres      | Type               |    | Description                                                                                                 |
-| --------------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entité à intersecter                                                                                        |
-| entitySelection | 4D.EntitySelection | -> | Entity selection à intersecter                                                                              |
-| Résultat        | 4D.EntitySelection | <- | Entity selection résultante de l'intersection à l'aide de l'opérateur logique ET|<!-- END REF -->
-
-
-|
+| Paramètres      | Type               |    | Description                                                                      |
+| --------------- | ------------------ |:--:| -------------------------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | Entité à intersecter                                                             |
+| entitySelection | 4D.EntitySelection | -> | Entity selection à intersecter                                                   |
+| Résultat        | 4D.EntitySelection | <- | Entity selection résultante de l'intersection à l'aide de l'opérateur logique ET |
+<!-- END REF -->
 
 
 #### Description
@@ -452,13 +445,11 @@ Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à Ne
 
 
 <!-- REF #EntitySelectionClass.at().Params -->
-| Paramètres | Type      |    | Description                                    |
-| ---------- | --------- |:--:| ---------------------------------------------- |
-| index      | Integer   | -> | Index de l'entité à renvoyer                   |
-| Résultat   | 4D.Entity | <- | L'entité à cet index<!-- END REF -->
-
-
-|
+| Paramètres | Type      |    | Description                  |
+| ---------- | --------- |:--:| ---------------------------- |
+| index      | Integer   | -> | Index de l'entité à renvoyer |
+| Résultat   | 4D.Entity | <- | The entity at that index     |
+<!-- END REF -->
 
 
 #### Description
@@ -500,12 +491,11 @@ $emp2:=$employees.at(-3) //en partant de la fin, 3e entité
 
 
 <!-- REF #EntitySelectionClass.average().Params -->
-| Paramètres    | Type |    | Description                                                                                                                        |
-| ------------- | ---- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
-| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                                                                                     |
-| Résultat      | Real | <- | Moyenne arithmétique des valeurs des entités pour l'attribut (Undefined pour une entity selection vide)|<!-- END REF -->
-
-|
+| Paramètres    | Type |    | Description                                                                                             |
+| ------------- | ---- |:--:| ------------------------------------------------------------------------------------------------------- |
+| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                                                          |
+| Résultat      | Real | <- | Moyenne arithmétique des valeurs des entités pour l'attribut (Undefined pour une entity selection vide) |
+<!-- END REF -->
 
 #### Description
 
@@ -554,12 +544,11 @@ Nous voulons obtenir la liste des employés dont le salaire est supérieur au sa
 
 
 <!-- REF #EntitySelectionClass.contains().Params -->
-| Paramètres | Type      |    | Description                                                                             |
-| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
-| entity     | 4D.Entity | -> | Entité à évaluer                                                                        |
-| Résultat   | Boolean   | <- | Vrai si l'entité appartient à l'entity selection, sinon Faux|<!-- END REF -->
-
-|
+| Paramètres | Type      |    | Description                                                  |
+| ---------- | --------- |:--:| ------------------------------------------------------------ |
+| entity     | 4D.Entity | -> | Entité à évaluer                                             |
+| Résultat   | Boolean   | <- | Vrai si l'entité appartient à l'entity selection, sinon Faux |
+<!-- END REF -->
 
 #### Description
 
@@ -604,12 +593,11 @@ Si *entity* et l'entity selection n'appartiennent pas à la même dataclass, une
 
 
 <!-- REF #EntitySelectionClass.count().Params -->
-| Paramètres    | Type |    | Description                                                                                      |
-| ------------- | ---- |:--:| ------------------------------------------------------------------------------------------------ |
-| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                                                   |
-| Résultat      | Real | <- | Nombre de valeurs de *attributePath* non null dans l'entity selection|<!-- END REF -->
-
-|
+| Paramètres    | Type |    | Description                                                           |
+| ------------- | ---- |:--:| --------------------------------------------------------------------- |
+| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                        |
+| Résultat      | Real | <- | Nombre de valeurs de *attributePath* non null dans l'entity selection |
+<!-- END REF -->
 
 #### Description
 
@@ -654,9 +642,8 @@ Nous voulons trouver le nombre total d'employés d'une entreprise sans compter c
 | Paramètres | Type               |    | Description                                             |
 | ---------- | ------------------ |:--:| ------------------------------------------------------- |
 | option     | Integer            | -> | `ck shared` : retourne une entity selection partageable |
-| Résultat   | 4D.EntitySelection | <- | Copie de l'entity selection|<!-- END REF -->
-
-|
+| Résultat   | 4D.EntitySelection | <- | Copie de l'entity selection                             |
+<!-- END REF -->
 
 #### Description
 
@@ -717,13 +704,12 @@ Cette entity selection est ensuite mise à jour avec les produits et vous souhai
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Paramètres    | Type       |    | Description                                                                 |
-| ------------- | ---------- |:--:| --------------------------------------------------------------------------- |
-| attributePath | Text       | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes     |
-| options       | Integer    | -> | `dk diacritical`, `dk count values`                                         |
-| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes|<!-- END REF -->
-
-|
+| Paramètres    | Type       |    | Description                                                             |
+| ------------- | ---------- |:--:| ----------------------------------------------------------------------- |
+| attributePath | Text       | -> | Chemin de l'attribut dont vous souhaitez obtenir les valeurs distinctes |
+| options       | Integer    | -> | `dk diacritical`, `dk count values`                                     |
+| Résultat      | Collection | <- | Collection avec seulement les valeurs distinctes                        |
+<!-- END REF -->
 
 #### Description
 
@@ -808,13 +794,11 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 
 <!-- REF #EntitySelectionClass.distinctPaths().Params -->
-| Paramètres | Type       |    | Description                                                              |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| attribute  | Text       | -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès  |
-| Résultat   | Collection | <- | Nouvelle collection avec les chemins distincts<!-- END REF -->
-
-
-|
+| Paramètres | Type       |    | Description                                                             |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------- |
+| attribute  | Text       | -> | Nom de l'attribut objet dont vous souhaitez obtenir les chemins d'accès |
+| Résultat   | Collection | <- | New collection with distinct paths                                      |
+<!-- END REF -->
 
 
 #### Description
@@ -868,12 +852,11 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Paramètres | Type               |    | Description                                                                                                                         |
-| ---------- | ------------------ |:--:| ----------------------------------------------------------------------------------------------------------------------------------- |
-| mode       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable               |
-| Résultat   | 4D.EntitySelection | <- | Entity selection vide si succès, sinon entity selection contenant la ou les entité(s) non supprimable(s)|<!-- END REF -->
-
-|
+| Paramètres | Type               |    | Description                                                                                                           |
+| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------------- |
+| mode       | Integer            | -> | `dk stop dropping on first error` : stoppe l'exécution de la fonction au niveau de la première entité non-supprimable |
+| Résultat   | 4D.EntitySelection | <- | Entity selection vide si exécutée avec succès, sinon entity selection contenant la ou les entité(s) non supprimée(s)  |
+<!-- END REF -->
 
 #### Description
 
@@ -943,9 +926,8 @@ Exemple avec l'option `dk stop dropping on first error` :
 | attributePath | Text       | -> | Chemin d'attribut dont les valeurs doivent être extraites dans la nouvelle collection          |
 | targetPath    | Text       | -> | Chemin ou nom d'attribut cible                                                                 |
 | option        | Integer    | -> | `ck keep null` : inclure les attributs null dans la collection retournée (ignorés par défaut). |
-| Résultat      | Collection | <- | Collection contenant les valeurs extraites|<!-- END REF -->
-
-|
+| Résultat      | Collection | <- | Collection contenant les valeurs extraites                                                     |
+<!-- END REF -->
 
 #### Description
 
@@ -1042,11 +1024,10 @@ Considérons les tables et relations suivantes :
 
 
 <!-- REF #EntitySelectionClass.first().Params -->
-| Paramètres | Type      |    | Description                                                                                                        |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------ |
-| Résultat   | 4D.Entity | <- | Référence vers la première entité de l'entity selection (Null si la selection est vide)|<!-- END REF -->
-
-|
+| Paramètres | Type      |    | Description                                                                             |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Référence vers la première entité de l'entity selection (Null si la selection est vide) |
+<!-- END REF -->
 
 #### Description
 
@@ -1101,11 +1082,10 @@ Il existe cependant une différence entre les deux instructions lorsque la séle
 
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
-| Paramètres | Type         |    | Description                                                                   |
-| ---------- | ------------ |:--:| ----------------------------------------------------------------------------- |
-| Résultat   | 4D.DataClass | <- | Dataclass à laquelle appartient l'entity selection|<!-- END REF -->
-
-|
+| Paramètres | Type         |    | Description                                        |
+| ---------- | ------------ |:--:| -------------------------------------------------- |
+| Résultat   | 4D.DataClass | <- | Dataclass à laquelle appartient l'entity selection |
+<!-- END REF -->
 
 #### Description
 
@@ -1151,11 +1131,10 @@ Le code générique suivant duplique toutes les entités de l'entity selection :
 
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
-| Paramètres | Type |    | Description                                                                                             |
-| ---------- | ---- | -- | ------------------------------------------------------------------------------------------------------- |
-| result     | Text | <- | Attributs de contexte associés à l'entity selection, séparés par une virgule|<!-- END REF -->
-
-|
+| Paramètres | Type |    | Description                                                                  |
+| ---------- | ---- | -- | ---------------------------------------------------------------------------- |
+| result     | Text | <- | Attributs de contexte associés à l'entity selection, séparés par une virgule |
+<!-- END REF -->
 
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
 
@@ -1207,11 +1186,10 @@ $info:=$persons.getRemoteContextAttributes()
 
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
-| Paramètres | Type    |    | Description                                                                      |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai si l'entity selection est modifiable, sinon Faux|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                           |
+| ---------- | ------- |:--:| ----------------------------------------------------- |
+| Résultat   | Boolean | <- | Vrai si l'entity selection est modifiable, sinon Faux |
+<!-- END REF -->
 
 #### Description
 
@@ -1250,11 +1228,10 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
-| Paramètres | Type    |    | Description                                                                 |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai si l'entity selection est triée, sinon Faux|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                      |
+| ---------- | ------- |:--:| ------------------------------------------------ |
+| Résultat   | Boolean | <- | Vrai si l'entity selection est triée, sinon Faux |
+<!-- END REF -->
 
 #### Description
 
@@ -1305,11 +1282,10 @@ Pour plus d'informations, voir [Entity selections triées vs Entity selections n
 
 
 <!-- REF #EntitySelectionClass.last().Params -->
-| Paramètres | Type      |    | Description                                                                                                              |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------------------ |
-| Résultat   | 4D.Entity | <- | Référence vers la dernière entité de l'entity selection (Null si l'entity selection est vide)|<!-- END REF -->
-
-|
+| Paramètres | Type      |    | Description                                                                                   |
+| ---------- | --------- |:--:| --------------------------------------------------------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Référence vers la dernière entité de l'entity selection (Null si l'entity selection est vide) |
+<!-- END REF -->
 
 #### Description
 
@@ -1391,12 +1367,11 @@ Les entity selections ont toujours une propriété `.length`.
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Paramètres    | Type |    | Description                                                   |
-| ------------- | ---- | -- | ------------------------------------------------------------- |
-| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                |
-| Résultat      | any  | <- | Valeur la plus haute de l'attribut|<!-- END REF -->
-
-|
+| Paramètres    | Type |    | Description                                    |
+| ------------- | ---- | -- | ---------------------------------------------- |
+| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul |
+| Résultat      | any  | <- | Valeur la plus haute de l'attribut             |
+<!-- END REF -->
 
 #### Description
 
@@ -1445,12 +1420,11 @@ Nous souhaitons connaître le salaire le plus élevé parmi les employées :
 
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| Paramètres    | Type |    | Description                                                   |
-| ------------- | ---- |:--:| ------------------------------------------------------------- |
-| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                |
-| Résultat      | any  | <- | Valeur la plus basse de l'attribut|<!-- END REF -->
-
-|
+| Paramètres    | Type |    | Description                                    |
+| ------------- | ---- |:--:| ---------------------------------------------- |
+| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul |
+| Résultat      | any  | <- | Valeur la plus basse de l'attribut             |
+<!-- END REF -->
 
 #### Description
 
@@ -1496,14 +1470,13 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
-| Paramètres      | Type               |    | Description                                                                                                     |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entité à soustraire                                                                                             |
-| entitySelection | 4D.EntitySelection | -> | Entity selection à soustraire                                                                                   |
-| keepOrder       | Integer            | -> | `dk keep ordered` (integer) pour conserver l'ordre initial dans l'entity selection résultante                   |
-| Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou une nouvelle référence sur l'entity selection existante|<!-- END REF -->
-
-|
+| Paramètres      | Type               |    | Description                                                                                   |
+| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | Entité à soustraire                                                                           |
+| entitySelection | 4D.EntitySelection | -> | Entity selection à soustraire                                                                 |
+| keepOrder       | Integer            | -> | `dk keep ordered` (integer) pour conserver l'ordre initial dans l'entity selection résultante |
+| Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou une nouvelle référence sur l'entity selection existante          |
+<!-- END REF -->
 
 #### Description
 
@@ -1580,13 +1553,12 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 
 <!-- REF #EntitySelectionClass.or().Params -->
-| Paramètres      | Type               |    | Description                                                                                               |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entité à intersecter                                                                                      |
-| entitySelection | 4D.EntitySelection | -> | Entity selection à intersecter                                                                            |
-| Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou nouvelle référence à l'entity selection d'origine|<!-- END REF -->
-
-|
+| Paramètres      | Type               |    | Description                                                                    |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
+| entity          | 4D.Entity          | -> | Entité à intersecter                                                           |
+| entitySelection | 4D.EntitySelection | -> | Entity selection à intersecter                                                 |
+| Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou nouvelle référence à l'entity selection d'origine |
+<!-- END REF -->
 
 #### Description
 
@@ -1642,13 +1614,12 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| Paramètres  | Type               |    | Description                                                                |
-| ----------- | ------------------ |:--:| -------------------------------------------------------------------------- |
-| pathString  | Text               | -> | Chemin(s) d'attribut(s) et mode(s) de tri pour l'entity selection          |
-| pathObjects | Collection         | -> | Collection d'objets critère                                                |
-| Résultat    | 4D.EntitySelection | <- | Nouvelle entity selection dans l'ordre spécifié|<!-- END REF -->
-
-|
+| Paramètres  | Type               |    | Description                                                       |
+| ----------- | ------------------ |:--:| ----------------------------------------------------------------- |
+| pathString  | Text               | -> | Chemin(s) d'attribut(s) et mode(s) de tri pour l'entity selection |
+| pathObjects | Collection         | -> | Collection d'objets critère                                       |
+| Résultat    | 4D.EntitySelection | <- | Nouvelle entity selection dans l'ordre spécifié                   |
+<!-- END REF -->
 
 #### Description
 
@@ -1723,15 +1694,14 @@ Si vous passez un chemin d'attribut non valide dans *pathString* ou *pathObject*
 
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
-| Paramètres    | Type               |    | Description                                                |
-| ------------- | ------------------ |:--:| ---------------------------------------------------------- |
-| formulaString | Text               | -> | Chaîne formule                                             |
-| formulaObj    | Object             | -> | Objet formule                                              |
-| sortOrder     | Integer            | -> | `dk ascending` (par défaut) ou`dk descending`              |
-| settings      | Object             | -> | Paramètre(s) de la formule                                 |
-| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection triée|<!-- END REF -->
-
-|
+| Paramètres    | Type               |    | Description                                   |
+| ------------- | ------------------ |:--:| --------------------------------------------- |
+| formulaString | Text               | -> | Chaîne formule                                |
+| formulaObj    | Object             | -> | Objet formule                                 |
+| sortOrder     | Integer            | -> | `dk ascending` (par défaut) ou`dk descending` |
+| settings      | Object             | -> | Paramètre(s) de la formule                    |
+| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection triée               |
+<!-- END REF -->
 
 #### Description
 
@@ -1848,15 +1818,14 @@ Dans cet exemple, le champ objet "marks" de la dataclass **Students** contient l
 
 
 <!-- REF #EntitySelectionClass.query().Params -->
-| Paramètres    | Type               |    | Description                                                                                                                                                                        |
-| ------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Critères de recherche en texte                                                                                                                                                     |
-| formula       | Object             | -> | Critères de recherche en objet formule                                                                                                                                             |
-| value         | any                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                                                          |
-| querySettings | Object             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                                  |
-| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection composée d'entités issues de l'entity selection répondant aux critères de recherche spécifiés dans *queryString* ou *formula*|<!-- END REF -->
-
-|
+| Paramètres    | Type               |    | Description                                                                                                                                             |
+| ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| queryString   | Text               | -> | Critères de recherche en texte                                                                                                                          |
+| formula       | Object             | -> | Critères de recherche en objet formule                                                                                                                  |
+| value         | any                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                               |
+| querySettings | Object             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                       |
+| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection composée d'entités issues de l'entity selection répondant aux critères de recherche spécifiés dans *queryString* ou *formula* |
+<!-- END REF -->
 
 #### Description
 
@@ -1954,11 +1923,10 @@ Pour plus d'informations, veuillez vous reporter au paragraphe **querySettings**
 
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 > Cette fonction est utilisable uniquement avec un datastore distant (client/serveur ou connexion `Open datastore`).
@@ -2038,11 +2006,8 @@ Une list box affiche l'entity selection Form.students, sur laquelle plusieurs cl
 | Paramètres       | Type               |    | Description                                                                              |
 | ---------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
 | selectedEntities | 4D.EntitySelection | -> | Entity selection avec des entités dont il faut connaître le rang dans l'entity selection |
-| Résultat         | Object             | <- | Plage(s) d'entités sélectionnées dans l'entity selection|<!-- END REF -->
-
-
-
-|
+| Résultat         | Object             | <- | Plage(s) d'entités sélectionnées dans l'entity selection                                 |
+<!-- END REF -->
 
 
 
@@ -2109,13 +2074,12 @@ $result2:=$invoices.selected($creditSel)
 
 
 <!-- REF #EntitySelectionClass.slice().Params -->
-| Paramètres | Type               |    | Description                                                                                       |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------- |
-| startFrom  | Integer            | -> | Position à laquelle démarrer l'opération (incluse)                                                |
-| end        | Integer            | -> | Position de fin (non incluse)                                                                     |
-| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection contenant les entités copiées (shallow copy)|<!-- END REF -->
-
-|
+| Paramètres | Type               |    | Description                                                            |
+| ---------- | ------------------ |:--:| ---------------------------------------------------------------------- |
+| startFrom  | Integer            | -> | Position à laquelle démarrer l'opération (incluse)                     |
+| end        | Integer            | -> | Position de fin (non incluse)                                          |
+| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection contenant les entités copiées (shallow copy) |
+<!-- END REF -->
 
 #### Description
 
@@ -2176,12 +2140,11 @@ $slice:=ds.Employee.all().slice(-1;-2) //essaie de retourner les entités de l'i
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
-| Paramètres    | Type |    | Description                                                        |
-| ------------- | ---- |:--:| ------------------------------------------------------------------ |
-| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul                     |
-| Résultat      | Real | <- | Somme des valeurs de l'entity selection|<!-- END REF -->
-
-|
+| Paramètres    | Type |    | Description                                    |
+| ------------- | ---- |:--:| ---------------------------------------------- |
+| attributePath | Text | -> | Chemin de l'attribut à utiliser pour le calcul |
+| Résultat      | Real | <- | Somme des valeurs de l'entity selection        |
+<!-- END REF -->
 
 #### Description
 
@@ -2228,16 +2191,15 @@ $sum:=$sel.sum("salary")
 
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
-| Paramètres   | Type       |    | Description                                                                                             |
-| ------------ | ---------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | Chemin(s) d'attribut(s) à extraire                                                                      |
-| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                     |
-| options      | Integer    | -> | `dk with primary key` : ajoute la clé primaire<br/>`dk with stamp` : ajoute le marqueur           |
-| begin        | Integer    | -> | Désigne la position de début                                                                            |
-| howMany      | Integer    | -> | Nombre d'entités à extraire                                                                             |
-| Résultat     | Collection | <- | Collection d'objets contenant les attributs et valeurs de l'entity selection|<!-- END REF -->
-
-|
+| Paramètres   | Type       |    | Description                                                                                   |
+| ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | Chemin(s) d'attribut(s) à extraire                                                            |
+| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                           |
+| options      | Integer    | -> | `dk with primary key` : ajoute la clé primaire<br/>`dk with stamp` : ajoute le marqueur |
+| begin        | Integer    | -> | Désigne la position de début                                                                  |
+| howMany      | Integer    | -> | Nombre d'entités à extraire                                                                   |
+| Résultat     | Collection | <- | Collection d'objets contenant les attributs et valeurs de l'entity selection                  |
+<!-- END REF -->
 
 #### Description
 
