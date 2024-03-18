@@ -49,12 +49,11 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 
 
 <!-- REF #_command_.ds.Params -->
-| Paramètres | Type         |    | Description                                                |
-| ---------- | ------------ | -- | ---------------------------------------------------------- |
-| localID    | Text         | -> | Identifiant local du datastore distant                     |
-| Résultat   | cs.DataStore | <- | Nouvelle référence de datastore|<!-- END REF -->
-
-|
+| Paramètres | Type         |    | Description                            |
+| ---------- | ------------ | -- | -------------------------------------- |
+| localID    | Text         | -> | Identifiant local du datastore distant |
+| Résultat   | cs.DataStore | <- | Nouvelle référence de datastore        |
+<!-- END REF -->
 
 #### Description
 
@@ -121,9 +120,8 @@ Utilisation du datastore principal de la base 4D :
 | -------------- | ------------ | -- | --------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
 | localID        | Text         | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Résultat       | cs.DataStore | <- | Objet datastore|<!-- END REF -->
-
-|
+| Résultat       | cs.DataStore | <- | Objet datastore                                                                   |
+<!-- END REF -->
 
 #### Description
 
@@ -257,11 +255,10 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -292,11 +289,10 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -325,11 +321,10 @@ Si cela se produit, vous pouvez utiliser `.clearAllRemoteContexts()` pour réini
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Paramètres | Type   |    | Description                                                                                        |
-| ---------- | ------ |:--:| -------------------------------------------------------------------------------------------------- |
-| Résultat   | Object | <- | Informations sur le chiffrement du datastore courant et de chaque table|<!-- END REF -->
-
-|
+| Paramètres | Type   |    | Description                                                             |
+| ---------- | ------ |:--:| ----------------------------------------------------------------------- |
+| Résultat   | Object | <- | Informations sur le chiffrement du datastore courant et de chaque table |
+<!-- END REF -->
 
 #### Description
 
@@ -398,12 +393,10 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 
 <!-- REF #DataStoreClass.flushAndLock().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 
 #### Description
@@ -480,11 +473,10 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Paramètres | Type       |    | Description                                                             |
-| ---------- | ---------- | -- | ----------------------------------------------------------------------- |
-| Résultat   | Collection | <- | Collection d'objets contextes d'optimisation|<!-- END REF -->
-
-|
+| Paramètres | Type       |    | Description                                  |
+| ---------- | ---------- | -- | -------------------------------------------- |
+| Résultat   | Collection | <- | Collection d'objets contextes d'optimisation |
+<!-- END REF -->
 
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
 
@@ -558,12 +550,10 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getGlobalStamp().Params -->
-| Paramètres | Type |    | Description                                                                  |
-| ---------- | ---- | -- | ---------------------------------------------------------------------------- |
-| Résultat   | Real | <- | Valeur courante du marqueur de modification global<!-- END REF -->
-
-
-|
+| Paramètres | Type |    | Description                                    |
+| ---------- | ---- | -- | ---------------------------------------------- |
+| Résultat   | Real | <- | Current value of the global modification stamp |
+<!-- END REF -->
 
 
 #### Description
@@ -612,11 +602,10 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Paramètres | Type   |    | Description                                        |
-| ---------- | ------ |:--:| -------------------------------------------------- |
-| Résultat   | Object | <- | Propriétés du datastore|<!-- END REF -->
-
-|
+| Paramètres | Type   |    | Description             |
+| ---------- | ------ |:--:| ----------------------- |
+| Résultat   | Object | <- | Propriétés du datastore |
+<!-- END REF -->
 
 #### Description
 
@@ -681,12 +670,11 @@ Sur un datastore distant :
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Paramètres  | Type   |    | Description                                        |
-| ----------- | ------ | -- | -------------------------------------------------- |
-| contextName | Text   | -> | Nom du contexte                                    |
-| Résultat    | Object | <- | Description du contexte|<!-- END REF -->
-
-|
+| Paramètres  | Type   |    | Description             |
+| ----------- | ------ | -- | ----------------------- |
+| contextName | Text   | -> | Nom du contexte         |
+| Résultat    | Object | <- | Description du contexte |
+<!-- END REF -->
 
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
 
@@ -732,11 +720,10 @@ Voir l'exemple de la section [.setRemoteContextInfo()](#example-1-3).
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Paramètres | Type       |    | Description                                                           |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------- |
-| Résultat   | Collection | <- | Collection d'objets décrivant les requêtes|<!-- END REF -->
-
-|
+| Paramètres | Type       |    | Description                                |
+| ---------- | ---------- |:--:| ------------------------------------------ |
+| Résultat   | Collection | <- | Collection d'objets décrivant les requêtes |
+<!-- END REF -->
 
 #### Description
 
@@ -771,11 +758,10 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Paramètres | Type    |    | Description                                                                                              |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai si l'accès au Data Explorer est désactivé, Faux s'il est activé (défaut)|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                                                   |
+| ---------- | ------- |:--:| ----------------------------------------------------------------------------- |
+| Résultat   | Boolean | <- | Vrai si l'accès au Data Explorer est désactivé, Faux s'il est activé (défaut) |
+<!-- END REF -->
 
 #### Description
 
@@ -805,12 +791,10 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 
 <!-- REF #DataStoreClass.locked().Params -->
-| Paramètres | Type    |    | Description                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai si verrouillé|<!-- END REF -->
-
-
-|
+| Paramètres | Type    |    | Description        |
+| ---------- | ------- | -- | ------------------ |
+| Résultat   | Boolean | <- | Vrai si verrouillé |
+<!-- END REF -->
 
 
 #### Description
@@ -847,11 +831,10 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -880,13 +863,12 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Paramètres    | Type   |    | Description                                                                               |
-| ------------- | ------ | -- | ----------------------------------------------------------------------------------------- |
-| curPassPhrase | Text   | -> | Phrase secrète courante                                                                   |
-| curDataKey    | Object | -> | Clé de chiffrement des données courante                                                   |
-| Résultat      | Object | <- | Résultat de la mise en correspondance de la clé de chiffrement|<!-- END REF -->
-
-|
+| Paramètres    | Type   |    | Description                                                    |
+| ------------- | ------ | -- | -------------------------------------------------------------- |
+| curPassPhrase | Text   | -> | Phrase secrète courante                                        |
+| curDataKey    | Object | -> | Clé de chiffrement des données courante                        |
+| Résultat      | Object | <- | Résultat de la mise en correspondance de la clé de chiffrement |
+<!-- END REF -->
 
 #### Description
 
@@ -956,11 +938,10 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Paramètres | Type    |    | Description                                                                                                                           |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| status     | Boolean | -> | Vrai pour désactiver l'accès au Data Explorer sur le port `webAdmin`, Faux (défaut) pour permettre l'accès|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                                                                                |
+| ---------- | ------- | -- | ---------------------------------------------------------------------------------------------------------- |
+| status     | Boolean | -> | Vrai pour désactiver l'accès au Data Explorer sur le port `webAdmin`, Faux (défaut) pour permettre l'accès |
+<!-- END REF -->
 
 #### Description
 
@@ -1000,12 +981,10 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 
 <!-- REF #DataStoreClass.setGlobalStamp().Params -->
-| Paramètres | Type |    | Description                                                                   |
-| ---------- | ---- | -- | ----------------------------------------------------------------------------- |
-| newStamp   | Real | -> | Nouvelle valeur du marqueur de modification global|<!-- END REF -->
-
-
-|
+| Paramètres | Type |    | Description                                        |
+| ---------- | ---- | -- | -------------------------------------------------- |
+| newStamp   | Real | -> | Nouvelle valeur du marqueur de modification global |
+<!-- END REF -->
 
 
 :::info Mode avancé
@@ -1059,17 +1038,16 @@ ds.setGlobalStamp($newValue)
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| Paramètres      | Type         |    | Description                                                                                         |
-| --------------- | ------------ | -- | --------------------------------------------------------------------------------------------------- |
-| contextName     | Text         | -> | Nom du contexte                                                                                     |
-| dataClassName   | Text         | -> | Nom de la dataclass                                                                                 |
-| dataClassObject | 4D.DataClass | -> | Objet dataclass (e.g datastore.Employee)                                                            |
-| attributes      | Text         | -> | Liste d'attributs séparés par des virgules                                                          |
-| attributesColl  | Collection   | -> | Collection de noms d'attributs (text)                                                               |
-| contextType     | Text         | -> | Si passé, "main" ou "currentItem"                                                                   |
-| pageLength      | Integer      | -> | Taille de page de l'entity selection associée au contexte (80 par défaut)<!-- END REF -->
-
-|
+| Paramètres      | Type         |    | Description                                                               |
+| --------------- | ------------ | -- | ------------------------------------------------------------------------- |
+| contextName     | Text         | -> | Nom du contexte                                                           |
+| dataClassName   | Text         | -> | Nom de la dataclass                                                       |
+| dataClassObject | 4D.DataClass | -> | Objet dataclass (e.g datastore.Employee)                                  |
+| attributes      | Text         | -> | Liste d'attributs séparés par des virgules                                |
+| attributesColl  | Collection   | -> | Collection de noms d'attributs (text)                                     |
+| contextType     | Text         | -> | Si passé, "main" ou "currentItem"                                         |
+| pageLength      | Integer      | -> | Taille de page de l'entity selection associée au contexte (80 par défaut) |
+<!-- END REF -->
 
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
 
@@ -1191,13 +1169,12 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Paramètres | Type    |    | Description                                                                          |
-| ---------- | ------- | -- | ------------------------------------------------------------------------------------ |
-| file       | 4D.File | -> | Objet File                                                                           |
-| options    | Integer | -> | Option d'enregistrement de réponse (serveur uniquement)                              |
-| reqNum     | Integer | -> | Nombre de demandes à garder en mémoire (client uniquement)<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                             |
+| ---------- | ------- | -- | ------------------------------------------------------- |
+| file       | 4D.File | -> | Objet File                                              |
+| options    | Integer | -> | Option d'enregistrement de réponse (serveur uniquement) |
+| reqNum     | Integer | -> | Number of requests to keep in memory (client only)      |
+<!-- END REF -->
 
 #### Description
 
@@ -1305,12 +1282,10 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 
 #### Description
@@ -1371,11 +1346,10 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -1407,12 +1381,10 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.unlock().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 
 #### Description
@@ -1446,11 +1418,10 @@ Si la fonction `.unlock()` est appelée dans un datastore déverrouillé, elle n
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
