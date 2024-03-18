@@ -1018,13 +1018,13 @@ Quiere obtener el mensaje con ID = 1:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                          |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------ |
-| ids        | Collection | -> | Colección de identificadores de mensajes                                             |
-| startMsg   | Integer    | -> | Número de secuencia del primer mensaje                                               |
-| endMsg     | Integer    | -> | Número de secuencia del último mensaje                                               |
-| options    | Object     | -> | Instrucciones sobre la gestión de mensajes                                           |
-| Result     | Object     | <- | Objeto que contiene:<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de identificadores o números para los mensajes que faltan, si los hay</li></ul>|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                                |
+| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
+| ids        | Collection | -> | Colección de identificadores de mensajes                                   |
+| startMsg   | Integer    | -> | Número de secuencia del primer mensaje                                     |
+| endMsg     | Integer    | -> | Número de secuencia del último mensaje                                     |
+| options    | Object     | -> | Instrucciones sobre la gestión de mensajes                                 |
+| Result     | Object     | <- | Comentario<br/><ul><li>una colección de [objetos Email](EmailObjectClass.md#email-object) y</li><li>una colección de identificadores o números para los mensajes que faltan, si los hay</li></ul>|<!-- END REF -->
 
 
 |
