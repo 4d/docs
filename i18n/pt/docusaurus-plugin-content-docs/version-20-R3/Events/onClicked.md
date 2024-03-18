@@ -10,29 +10,29 @@ title: On Clicked
 
 ## Descrição
 
-The `On Clicked` event is generated when the user clicks on an object.
+O evento `On Clicked` é gerado quando o usuário clicar em um objeto.
 
 > Alguns objetos do formulário podem ser ativados com o teclado. Por exemplo, quando uma caixa de verificação recebe o foco, pode ser introduzida utilizando a barra de espaços. Nesse caso, o evento `On Clicked` ainda é gerado.
 
-The `On Clicked` event usually occurs once the mouse button is released. No entanto, há várias excepções:
+O evento `On Clicked` geralmente ocorre quando o botão do mouse for liberado. No entanto, há várias excepções:
 
-- [Invisible buttons](FormObjects/properties_Display.md#not-rendered): The `On Clicked` event occurs as soon as the click is made and does not wait for the mouse button to be released.
-- [Rulers](FormObjects/ruler.md): If the [Execute object method](FormObjects/properties_Action.md#execute-object-method) option is set to **true**, the `On Clicked` event occurs as soon as the click is made.
-- [Combo boxes](FormObjects/comboBox_overview.md): The `On Clicked` event occurs only if the user selects another value in the associated menu. A [combo box](FormObjects/comboBox_overview.md) must be treated as an enterable text area whose associated drop-down list provides default values. Consequently, you handle data entry within a combo box through the `On Before Keystroke`, `On After Keystroke` and `On Data Change` events.
-- [Drop-down lists](FormObjects/dropdownList_Overview.md): The `On Clicked` event occurs only if the user selects another value in the menu. The `On Data Change` event allows you to detect the activation of the object when a value different from the current value is selected
-- When a list box input cell is [being edited](FormObjects/listbox_overview.md#managing-entry), the `On Clicked` event is generated when the mouse button is pressed, allowing to use the `Contextual click` command for example.
+- [Botões invisíveis](FormObjects/properties_Display.md#not-rendered): O evento `On Clicked` ocorre assim que o clique é feito e não espera que o botão do mouse seja liberado.
+- [Réguas](FormObjects/ruler.md): Se a opção [Execute object method](FormObjects/properties_Action.md#execute-object-method) for definida como **true**, o evento `On Clicked` ocorrerá assim que o clique for feito.
+- [Caixas de combinação](FormObjects/comboBox_overview.md): O evento `On Clicked` ocorre somente se o usuário selecionar outro valor no menu associado. Uma  [caixa de combinação](FormObjects/comboBox_overview.md) deve ser tratada como uma área de texto digitável cuja lista suspensa associada fornece valores padrão. Consequentemente, você lida com a entrada de dados em uma caixa de combinação por meio dos eventos `On Before Keystroke`, `On After Keystroke` e `On Data Change` .
+- [Listas suspensas](FormObjects/dropdownList_Overview.md): O evento `On Clicked` ocorre somente se o usuário selecionar outro valor no menu. O evento `On Data Change` permite que você detecte a ativação do objeto quando um valor diferente do valor atual é selecionado.
+- Quando uma célula de entrada da caixa de listagem está [sendo editada](FormObjects/listbox_overview.md#managing-entry), o evento `On Clicked` é gerado quando o botão do mouse é pressionado, o que permite usar o comando `Contextual click` , por exemplo.
 
-In the context of an `On Clicked` event, you can test the number of clicks made by the user by means of the `Clickcount` command.
+No contexto de um evento `On Clicked` , você pode testar o número de cliques feitos pelo usuário por meio do comando `Clickcount` .
 
 ### On Clicked e On Double Clicked
 
-After the `On Clicked` or [`On Double Clicked`](onDoubleClicked.md) object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns `On Clicked` or [`On Double Clicked`](onDoubleClicked.md), depending on the case.
+Depois que a propriedade de evento de objeto `On Clicked` ou [`On Double Clicked`](onDoubleClicked.md) for selecionada para um objeto, você poderá detectar e tratar os cliques dentro ou no objeto usando o comando `FORM event` que retorna `On Clicked` ou [`On Double Clicked`](onDoubleClicked.md), dependendo do caso.
 
-If both events are selected for an object, the `On Clicked` and then the `On Double Clicked` events will be generated when the user double-clicks the object.
+Se ambos os eventos forem selecionados para um objeto, os eventos `On Clicked` e `On Double Clicked` serão gerados quando o usuário der duplo clique no objeto.
 
 ### 4D View Pro
 
-This event is generated when the user clicks anywhere on a 4D View Pro document. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Este evento é gerado quando o usuário clica em qualquer lugar em um documento 4D View Pro. Neste contexto, o  [objeto de evento](overview.md#event-object) retornado pelo comando `FORM Event` contém:
 
 | Propriedade | Tipo          | Descrição                |
 | ----------- | ------------- | ------------------------ |
