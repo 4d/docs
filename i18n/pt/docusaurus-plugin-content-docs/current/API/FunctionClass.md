@@ -120,13 +120,11 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 
 <!-- REF #_command_.Formula.Params -->
-| Parâmetro  | Tipo         |    | Descrição                                                       |
-| ---------- | ------------ |:--:| --------------------------------------------------------------- |
-| formulaExp | Expression   | -> | Fórmula a ser retornada como objeto                             |
-| Resultados | 4D. Function | <- | Função nativa encapsulando a fórmula|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo         |    | Descrição                            |
+| ---------- | ------------ |:--:| ------------------------------------ |
+| formulaExp | Expression   | -> | Fórmula a ser retornada como objeto  |
+| Resultados | 4D. Function | <- | Função nativa encapsulando a fórmula |
+<!-- END REF -->
 
 
 #### Descrição
@@ -264,10 +262,8 @@ Chamar uma fórmula usando notação de objeto:
 | ------------- | ------------ |:--:| ------------------------------------------------------------------------------ |
 | formulaString | Text         | -> | Fórmula texto a ser retornada como objeto                                      |
 | context       | Number       | -> | `sk execute in current database` (por padrão) ou `sk execute in host database` |
-| Resultados    | 4D. Function | <- | Objeto nativo encapsulando a fórmula|<!-- END REF -->
-
-
-|
+| Resultados    | 4D. Function | <- | Objeto nativo encapsulando a fórmula                                           |
+<!-- END REF -->
 
 
 #### Descrição
@@ -331,10 +327,8 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 | ------------- | ---------- |:--:| ------------------------------------------------------------------------------- |
 | thisObj       | Object     | -> | Objeto a ser retornado pelo comando This na fórmula                             |
 | formulaParams | Collection | -> | Coleção de valores a serem passados como $1...$n quando `formula` for executado |
-| Resultados    | any        | <- | Valores de execução de fórmula|<!-- END REF -->
-
-
-|
+| Resultados    | any        | <- | Valores de execução de fórmula                                                  |
+<!-- END REF -->
 
 
 #### Descrição
@@ -396,10 +390,8 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 | ---------- | ------ | -- | -------------------------------------------------------------------- |
 | thisObj    | Object | -> | Objeto a ser retornado pelo comando This na fórmula                  |
 | params     | any    | -> | Valores a serem passados como $1...$n quando a fórmula for executada |
-| Resultados | any    | <- | Valores de execução de fórmula|<!-- END REF -->
-
-
-|
+| Resultados | any    | <- | Valores de execução de fórmula                                       |
+<!-- END REF -->
 
 
 #### Descrição
