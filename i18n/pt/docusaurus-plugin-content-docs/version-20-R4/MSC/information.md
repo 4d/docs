@@ -1,7 +1,6 @@
----
-id: information
-title: Information Page
----
+- - -
+id: informação título: Página Informação
+- - -
 
 The Information page provides information about the 4D and system environments, as well as the database and application files. Cada página pode ser exibida usando controles de guia na parte superior da janela.
 
