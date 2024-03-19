@@ -85,7 +85,7 @@ O código seguinte, que deve especificar um caminho relativo para cada chamada:
 <!--#4DINCLUDE ../folder/subpage.html-->
 ```
 
-... is equivalent to:
+... é equivalente a:
 
 ```html
 <!--#4DINCLUDE subpage.html-->
@@ -256,7 +256,7 @@ The number of loops is based on the number of entities of the entity selection. 
     </table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### Exemplo com `PROCESS 4D TAGS`
 
 ```4d
 var customers : cs.CustomersSelection
@@ -447,7 +447,7 @@ Exemplos:
 
 ## 4DLOOP e 4DENDLOOP
 
-#### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
+#### Sintaxe: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
 This comment allows repetition of a portion of code as long as the condition is fulfilled. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
 
