@@ -18,94 +18,94 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 The following table lists all supported patterns for date and time formats.
 
-| Símbolo | Significado                                   | Modelo        | Ejemplo de salida    |
-| ------- | --------------------------------------------- | ------------- | -------------------- |
-| G       | designador de era                             | G, GG o GGG   | AD                   |
-|         |                                               | GGGG          | Anno Domini          |
-|         |                                               | GGGGG         | A                    |
-| y       | año                                           | yy            | 96                   |
-|         |                                               | y o yyyy      | 1996                 |
-| Y       | año de "Semana del año"                       | Y             | 1997                 |
-| u       | año prolongado                                | u             | 4601                 |
-| Q       | trimestre                                     | Q             | 2                    |
-|         |                                               | QQ            | 02                   |
-|         |                                               | QQQ           | Q2                   |
-|         |                                               | QQQQ          | 2do trimestre        |
-|         |                                               | QQQQQ         | 2                    |
-| q       | trimestre independiente                       | q             | 2                    |
-|         |                                               | qq            | 02                   |
-|         |                                               | qqq           | Q2                   |
-|         |                                               | qqqq          | 2do trimestre        |
-|         |                                               | qqqqq         | 2                    |
-| M       | mes en año                                    | M             | 9                    |
-|         |                                               | MM            | 09                   |
-|         |                                               | MMM           | Sept                 |
-|         |                                               | MMMM          | Septiembre           |
-|         |                                               | MMMMM         | S                    |
-| L       | mes independiente en año                      | L             | 9                    |
-|         |                                               | LL            | 09                   |
-|         |                                               | LLL           | Sept                 |
-|         |                                               | LLLL          | Septiembre           |
-|         |                                               | LLLLL         | S                    |
-| w       | week of year                                  | w             | 27                   |
-|         |                                               | ww            | 27                   |
-| d       | day in month                                  | d             | 2                    |
-|         |                                               | dd            | 2                    |
-| D       | day of year                                   | D             | 189                  |
-| E       | day of week                                   | E, EE, or EEE | Tue                  |
-|         |                                               | EEEE          | Tuesday              |
-|         |                                               | EEEEE         | T                    |
-|         |                                               | EEEEEE        | Tu                   |
-| e       | local day of week                             | e             | 2                    |
-|         |                                               | ee            | 02                   |
-|         |                                               | eee           | Tue                  |
-|         |                                               | eeee          | Tuesday              |
-|         |                                               | eeeee         | T                    |
-|         |                                               | eeeeee        | Tu                   |
-| c       | stand-alone local day of week                 | c or cc       | 2                    |
-|         |                                               | ccc           | Tue                  |
-|         |                                               | cccc          | Tuesday              |
-|         |                                               | ccccc         | T                    |
-|         |                                               | cccccc        | Tu                   |
-| a       | AM or PM                                      | a, aa, or aaa | PM [abbrev]          |
-|         |                                               | aaaa          | PM [wide]            |
-|         |                                               | aaaaa         | p                    |
-| b       | AM, PM, noon, midnight                        | b, bb, or bbb | mid.                 |
-|         |                                               | bbbb          | midnight             |
-|         |                                               | bbbbb         | md                   |
-| B       | flexible day periods                          | B, BB, or BBB | at night [abbrev]    |
-|         |                                               | BBBB          | at night [wide]      |
-|         |                                               | BBBBB         | at night [narrow]    |
-| h       | hour in am/pm (1~12)                          | h             | 7                    |
-|         |                                               | hh            | 07                   |
-| H       | hour in day (0~23)                            | H             | 0                    |
-|         |                                               | HH            | 00                   |
-| K       | hour in am/pm (0~11)                          | K             | 0                    |
-|         |                                               | KK            | 00                   |
-| k       | hour in day (1~24)                            | k             | 24                   |
-|         |                                               | kk            | 24                   |
-| m       | minute in hour                                | m             | 4                    |
-|         |                                               | mm            | 04                   |
-| s       | second in minute                              | s             | 5                    |
-|         |                                               | ss            | 05                   |
-| X       | Time Zone: ISO8601 basic hm?, with Z for 0    | X             | -08, +0530, Z        |
-|         | Time Zone: ISO8601 basic hm, with Z           | XX            | -0800, Z             |
-|         | Time Zone: ISO8601 extended hm, with Z        | XXX           | -08:00, Z            |
-|         | Time Zone: ISO8601 basic hms?, with Z         | XXXX          | -0800, -075258, Z    |
-|         | Time Zone: ISO8601 extended hms?, with Z      | XXXXX         | -08:00, -07:52:58, Z |
-| x       | Time Zone: ISO8601 basic hm?, without Z for 0 | x             | -08, +0530           |
-|         | Time Zone: ISO8601 basic hm, without Z        | xx            | -800                 |
-|         | Time Zone: ISO8601 extended hm, without Z     | xxx           | -08:00               |
-|         | Time Zone: ISO8601 basic hms?, without Z      | xxxx          | -0800, -075258       |
-|         | Time Zone: ISO8601 extended hms?, without Z   | xxxxx         | -08:00, -07:52:58    |
-| O       | Time Zone: short localized GMT                | O             | GMT-8                |
-|         | Time Zone: long localized GMT (=ZZZZ)         | OOOO          | GMT-08:00            |
-| z       | Time Zone: specific non-location              | z, zz, or zzz | -0800                |
-|         |                                               | zzzz          | GMT-08:00            |
-|         |                                               | zzzzz         | -08:00, -07:52:58, Z |
-|         |                                               |               |                      |
-| '       | escape for text                               | '             | '                    |
-| ' '     | two single quotes produce one                 | ' '           | ' '                  |
+| Símbolo | Significado                                   | Modelo       | Ejemplo de salida    |
+| ------- | --------------------------------------------- | ------------ | -------------------- |
+| G       | designador de era                             | G, GG o GGG  | AD                   |
+|         |                                               | GGGG         | Anno Domini          |
+|         |                                               | GGGGG        | A                    |
+| y       | año                                           | yy           | 96                   |
+|         |                                               | y o yyyy     | 1996                 |
+| Y       | año de "Semana del año"                       | Y            | 1997                 |
+| u       | año prolongado                                | u            | 4601                 |
+| Q       | trimestre                                     | Q            | 2                    |
+|         |                                               | QQ           | 02                   |
+|         |                                               | QQQ          | Q2                   |
+|         |                                               | QQQQ         | 2do trimestre        |
+|         |                                               | QQQQQ        | 2                    |
+| q       | trimestre independiente                       | q            | 2                    |
+|         |                                               | qq           | 02                   |
+|         |                                               | qqq          | Q2                   |
+|         |                                               | qqqq         | 2do trimestre        |
+|         |                                               | qqqqq        | 2                    |
+| M       | mes en año                                    | M            | 9                    |
+|         |                                               | MM           | 09                   |
+|         |                                               | MMM          | Sept                 |
+|         |                                               | MMMM         | Septiembre           |
+|         |                                               | MMMMM        | S                    |
+| L       | mes independiente en año                      | L            | 9                    |
+|         |                                               | LL           | 09                   |
+|         |                                               | LLL          | Sept                 |
+|         |                                               | LLLL         | Septiembre           |
+|         |                                               | LLLLL        | S                    |
+| w       | semana del año                                | w            | 27                   |
+|         |                                               | ww           | 27                   |
+| d       | día del mes                                   | d            | 2                    |
+|         |                                               | dd           | 2                    |
+| D       | día del año                                   | D            | 189                  |
+| E       | día de la semana                              | E, EE o EEE  | Tue                  |
+|         |                                               | EEEE         | Tuesday              |
+|         |                                               | EEEEE        | T                    |
+|         |                                               | EEEEEE       | Tu                   |
+| e       | local day of week                             | e            | 2                    |
+|         |                                               | ee           | 02                   |
+|         |                                               | eee          | Tue                  |
+|         |                                               | eeee         | Tuesday              |
+|         |                                               | eeeee        | T                    |
+|         |                                               | eeeeee       | Tu                   |
+| c       | stand-alone local day of week                 | c o cc       | 2                    |
+|         |                                               | ccc          | Tue                  |
+|         |                                               | cccc         | Tuesday              |
+|         |                                               | ccccc        | T                    |
+|         |                                               | cccccc       | Tu                   |
+| a       | AM o PM                                       | a, aa, o aaa | PM [abbrev]          |
+|         |                                               | aaaa         | PM [wide]            |
+|         |                                               | aaaaa        | p                    |
+| b       | AM, PM, mediodía, medianoche                  | b, bb o bbb  | mid.                 |
+|         |                                               | bbbb         | medianoche           |
+|         |                                               | bbbbb        | md                   |
+| B       | flexible day periods                          | B, BB o BBB  | at night [abbrev]    |
+|         |                                               | BBBB         | at night [wide]      |
+|         |                                               | BBBBB        | at night [narrow]    |
+| h       | hour in am/pm (1~12)                          | h            | 7                    |
+|         |                                               | hh           | 07                   |
+| H       | hour in day (0~23)                            | H            | 0                    |
+|         |                                               | HH           | 00                   |
+| K       | hour in am/pm (0~11)                          | K            | 0                    |
+|         |                                               | KK           | 00                   |
+| k       | hour in day (1~24)                            | k            | 24                   |
+|         |                                               | kk           | 24                   |
+| m       | minuto en hora                                | m            | 4                    |
+|         |                                               | mm           | 04                   |
+| s       | segundo en minuto                             | s            | 5                    |
+|         |                                               | ss           | 05                   |
+| X       | Time Zone: ISO8601 basic hm?, with Z for 0    | X            | -08, +0530, Z        |
+|         | Zona horaria: ISO8601 hm básico, con Z        | XX           | -0800, Z             |
+|         | Time Zone: ISO8601 extended hm, with Z        | XXX          | -08:00, Z            |
+|         | Time Zone: ISO8601 basic hms?, with Z         | XXXX         | -0800, -075258, Z    |
+|         | Time Zone: ISO8601 extended hms?, with Z      | XXXXX        | -08:00, -07:52:58, Z |
+| x       | Time Zone: ISO8601 basic hm?, without Z for 0 | x            | -08, +0530           |
+|         | Time Zone: ISO8601 basic hm, without Z        | xx           | -0800, +0000         |
+|         | Time Zone: ISO8601 extended hm, without Z     | xxx          | -08:00               |
+|         | Time Zone: ISO8601 basic hms?, without Z      | xxxx         | -0800, -075258       |
+|         | Time Zone: ISO8601 extended hms?, without Z   | xxxxx        | -08:00, -07:52:58    |
+| O       | Time Zone: short localized GMT                | O            | GMT-8                |
+|         | Time Zone: long localized GMT (=ZZZZ)         | OOOO         | GMT-08:00            |
+| z       | Time Zone: specific non-location              | z, zz, o zzz | -0800                |
+|         |                                               | zzzz         | GMT-08:00            |
+|         |                                               | zzzzz        | -08:00, -07:52:58, Z |
+|         |                                               |              |                      |
+| '       | escape for text                               | '            | '                    |
+| ' '     | two single quotes produce one                 | ' '          | ' '                  |
 
 
 
@@ -130,7 +130,7 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 ### Ceros a la izquierda
 
-In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ex: "yyyyyy" would give "001996".
+In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ej: "yyyyy" daría "001996".
 
 ### Partes localizadas
 
