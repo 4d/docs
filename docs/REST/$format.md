@@ -17,7 +17,7 @@ The following formats are supported:
 |Format|Description|
 |---|-----|
 |`json`|Standard 4D REST server format (used by default)| 
-|`looker`|JSON format compliant with looker connector. Allows you to connect the 4D datastore to [Looker Studio](https://lookerstudio.google.com/).  | 
+|`looker`|JSON format compliant with the [Looker Studio](https://lookerstudio.google.com/).  | 
 
 
 ## Example
