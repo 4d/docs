@@ -2378,11 +2378,11 @@ End if
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                      |                  |
-| ---------- | ------- | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro     |                  |
-| sheet      | Integer | <- | Índice de la hoja                                |                  |
-| Resultado  | Boolean | <- | True if print lines are visible, False otherwise | <!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                                         |                  |
+| ---------- | ------- | -- | ------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                        |                  |
+| sheet      | Integer | <- | Índice de la hoja                                                   |                  |
+| Resultado  | Boolean | <- | True si las líneas de impresión son visibles, de lo contrario False | <!-- END REF --> |
 
 #### Descripción
 
@@ -2424,7 +2424,7 @@ El siguiente código comprueba si las líneas de vista previa se muestran u ocul
 
 The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range of cell spans you want to retrieve. If _rangeObj_ does not contain a cell span, an empty range is returned.
+En _rangeObj_, pase un rango de celdas fusionadas que desee recuperar. Si _rangeObj_ no contiene celdas fusionadas, se devuelve un rango vacío.
 
 #### Ejemplo
 
@@ -2466,7 +2466,7 @@ The `VP Get stylesheet` command <!-- REF #_method_.VP Get stylesheet.Summary -->
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-In _styleName_, pass the name of the style sheet to get.
+En _styleName_, pase el nombre de la hoja de estilo a obtener.
 
 You can define where to get the style sheet in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
 
@@ -2636,7 +2636,7 @@ End if
 | tableName  | Text    | -> | Nombre de la tabla                                             |                  |
 | columnName | Text    | -> | Nombre de la columna de la tabla                               |                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite) |                  |
-| Result     | Integer | <- | Index of _columnName_                                          | <!-- END REF --> |
+| Result     | Integer | <- | Índice de _columnName_                                         | <!-- END REF --> |
 
 #### Descripción
 
@@ -2650,7 +2650,7 @@ En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 > La indexación comienza en 0.
 
-If _tableName_ or _columnName_ is not found, the command returns -1.
+Si no se encuentra _tableName_ o _columnName_, el comando devuelve -1.
 
 #### Ejemplo
 
@@ -2769,7 +2769,7 @@ En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 > La indexación comienza en 0.
 
-If _tableName_ is not found, the command returns **null**.
+Si no se encuentra _tableName_, el comando devuelve **null**.
 
 #### Ver también
 
@@ -2887,7 +2887,7 @@ $tables:=VP Get tables("ViewProArea")
 
 The `VP Get value` command <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range whose value you want to retrieve.
+En _rangeObj_, pase un rango cuyo valor desea recuperar.
 
 #### Objeto devuelto
 
@@ -2936,7 +2936,7 @@ End if
 
 The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retrieves the values from the designated _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range whose values you want to retrieve. If _rangeObj_ includes multiple ranges, only the first range is used.
+En _rangeObj_, pase un rango cuyos valores desea recuperar. If _rangeObj_ includes multiple ranges, only the first range is used.
 
 The collection returned by `VP Get values` contains a two-dimensional collection:
 
@@ -3581,7 +3581,7 @@ VP NEW DOCUMENT("myVPArea")
 
 The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->returns a font shorthand string from _fontObj_<!-- END REF -->.
 
-In _fontObj_, pass an object containing the font properties. Se soportan las siguientes propiedades:
+En _fontObj_, pase un objeto que contenga las propiedades de la fuente. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo | Descripción                                                                                                         | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                             | Obligatorio |
 | --------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
@@ -3635,13 +3635,13 @@ $cellStyle.font:=VP Object to font($font)
 | ---------- | ------- | -- | ------------------------------------- | ---------------- |
 | rangeObj   | Object  | -> | Objeto de rango de celda              |                  |
 | dataObject | Object  | -> | Objeto que contiene los datos a pegar |                  |
-| options    | Longint | -> | Specifies what is pasted              | <!-- END REF --> |
+| options    | Longint | -> | Especifica lo que se pega             | <!-- END REF --> |
 
 #### Descripción
 
 The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in _dataObject_ to the _rangeObj_ object<!-- END REF -->.
 
-In _rangeObj_, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If _rangeObj_ refers to more than one cell, only the first one is used.
+In _rangeObj_, pass the cell range object where the values, formatting, and/or formula cells will be pasted. Si _rangeObj_ se refiere a más de una celda, sólo se utiliza la primera.
 
 In _dataObject_, pass the object that contains the cell data, formatting, and formulas to be pasted.
 
@@ -3813,7 +3813,7 @@ The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->remo
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In _index_, pass the index of the sheet to remove. If the passed _index_ does not exist, the command does nothing.
+In _index_, pass the index of the sheet to remove. Si el _index_ pasado no existe, el comando no hace nada.
 
 > La indexación comienza en 0.
 
@@ -3892,7 +3892,7 @@ The `VP REMOVE STYLESHEET` command <!-- REF #_method_.VP REMOVE STYLESHEET.Summa
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pass the style sheet to remove in the _styleName_ parameter.
+Pase la hoja de estilo a eliminar en el parámetro _styleName_.
 
 You can define where to remove the style in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
 
@@ -4036,7 +4036,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->removes one or _count_ row(s) from the specified _tableName_ at the specified _row_ index<!-- END REF -->. El comando elimina valores y estilos.
 
-This command removes rows from the _tableName_ table, NOT from the sheet. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia arriba en función del número de líneas eliminadas.
+Este comando elimina las líneas de la tabla _tableName_, NO de la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia arriba en función del número de líneas eliminadas.
 
 If the _tableName_ table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
 
@@ -4182,7 +4182,7 @@ En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 #### Ejemplo
 
-See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
+Ver ejemplo en [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 #### Ver también
 
@@ -4211,7 +4211,7 @@ The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range ob
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-The _row_ parameter defines the first row of the row range. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. If the range contains multiple rows, you should also use the optional _rowCount_ parameter.
+El parámetro _row_ define la primera fila del rango de filas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. If the range contains multiple rows, you should also use the optional _rowCount_ parameter.
 
 The optional _rowCount_ parameter allows you to define the total number of rows of the range. _rowCount_ debe ser mayor que 0. Si se omite, el valor será 1 por defecto.
 
@@ -4615,7 +4615,7 @@ The `VP SET BORDER` command <!-- REF #_method_.VP SET BORDER.Summary -->applies 
 
 In _rangeObj_, pass a range of cells where the border style will be applied. If the _rangeObj_ contains multiple cells, borders applied with `VP SET BORDER` will be applied to the _rangeObj_ as a whole (as opposed to the [`VP SET CELL STYLE`](#vp-set-cell-style) command which applies borders to each cell of the _rangeObj_). If a style sheet has already been applied, `VP SET BORDER` will override the previously applied border settings for the _rangeObj_.
 
-The _borderStyleObj_ parameter allows you to define the style for the lines of the border. The _borderStyleObj_ supports the following properties:
+The _borderStyleObj_ parameter allows you to define the style for the lines of the border. _borderStyleObj_ soporta las siguientes propiedades:
 
 | Propiedad | Tipo    | Descripción                                      | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------- | ------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -4739,7 +4739,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the _propertyObj_ to the columns in the _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass an object containing a range. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las columnas.
+En _rangeObj_, pase un objeto que contenga un rango. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las columnas.
 
 The _propertyObj_ parameter lets you specify the attributes to apply to the columns in the _rangeObj_. Estos atributos son:
 
@@ -4829,7 +4829,7 @@ The `VP SET CURRENT SHEET` command <!-- REF #_method_.VP SET CURRENT SHEET.Summa
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In _sheet_, pass the index of the sheet to be set as current sheet. Si el índice pasado es inferior a 0 o supera el número de hojas, el comando no hace nada.
+En _sheet_, pase el índice de la hoja que se va a definir como hoja actual. Si el índice pasado es inferior a 0 o supera el número de hojas, el comando no hace nada.
 
 > La indexación comienza en 0.
 
@@ -4973,7 +4973,7 @@ To pass a time value in _dataObj_ or _dataColl_, encapsulate it in an object wit
 | value     | Integer, Real, Boolean, Text, Date, Null | Valor a poner en el contexto                                               |
 | time      | Real                                     | Valor de tiempo (en segundos) para poner en el contexto |
 
-In _options_, you can pass an object that specifies additional options. Las propiedades posibles son:
+En _options_, puede pasar un objeto que especifique las opciones adicionales. Las propiedades posibles son:
 
 | Propiedad           | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -5229,7 +5229,7 @@ In _rangeObj_, pass a range of the cell(s) whose value you want to specify. If _
 
 The _field_ parameter specifies a 4D database [virtual field](formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the _rangeObj_. The virtual structure name for _field_ can be viewed in the formula bar. If any of the cells in _rangeObj_ have existing content, it will be replaced by _field_.
 
-The optional _formatPattern_ defines a pattern for the _field_ parameter. You can pass any valid [custom format](configuring.md#cell-format).
+El parámetro opcional _formatPattern_ define un modelo para el parámetro _field_. You can pass any valid [custom format](configuring.md#cell-format).
 
 #### Ejemplo
 
@@ -5596,7 +5596,7 @@ The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->de
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pass the total number of rows in the _rowCount_ parameter. _rowCount_ debe ser mayor que 0.
+Pase el número total de líneas en el parámetro _rowCount_. _rowCount_ debe ser mayor que 0.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet where the _rowCount_ will be applied (counting begins at 0). Si se omite, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 
@@ -6275,10 +6275,10 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                      |                  |
-| ---------- | ------ | -- | ------------------------------------------------ | ---------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro     |                  |
-| optionObj  | Object | -> | Object containing the workbook options to be set | <!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                                     |                  |
+| ---------- | ------ | -- | --------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                    |                  |
+| optionObj  | Object | -> | Objeto que contiene las opciones del libro de trabajo a definir | <!-- END REF --> |
 
 #### Descripción
 

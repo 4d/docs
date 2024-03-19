@@ -47,7 +47,7 @@ La palabra clave `var` permite declarar variables objeto de un tipo de clase def
 
 ```4d
 var myPerson : cs.Person
-//variable of the Person user class
+//variable de la clase usuario Person
 ```
 
 

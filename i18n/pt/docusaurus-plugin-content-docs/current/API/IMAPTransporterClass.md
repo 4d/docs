@@ -146,7 +146,7 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection | -> | Coleção de strings: IDs únicos de mensagens (texto)<br/>Texto: ID único de uma mensagem<br/>Longint (todos IMAP): Todas as mensagens na caixa de correio seleccionada |
 | keywords   | Object     | -> | Flags de palavras chaves a adicionar                                                                                                                                              |
-| Resultados | Object     | <- | Status of the addFlags operation                                                                                                                                                  |
+| Resultados | Object     | <- | Estado da operação addFlags                                                                                                                                                       |
 <!-- END REF -->
 
 #### Descrição

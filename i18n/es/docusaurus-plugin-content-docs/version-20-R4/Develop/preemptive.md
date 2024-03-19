@@ -8,7 +8,7 @@ The compiled 4D code can be executed in **preemptive processes**. Gracias a esta
 
 ## ¿Qué es un proceso apropiativo?
 
-When run in *preemptive* mode, a process is dedicated to a CPU. La gestión de procesos se delega entonces en el sistema, que puede asignar cada CPU por separado en una máquina multinúcleo.
+Cuando se ejecuta en modo *apropiativo*, un proceso se dedica a una CPU. La gestión de procesos se delega entonces en el sistema, que puede asignar cada CPU por separado en una máquina multinúcleo.
 
 When run in *cooperative* mode, all processes are managed by the parent application thread and share the same CPU, even on a multi-core machine.
 
@@ -18,13 +18,13 @@ Como resultado, en modo apropiativo, se mejora el rendimiento general de la apli
 
 El uso del modo apropiativo está soportado en los siguientes contextos de ejecución:
 
-| Contexto          | Ejecución apropiativa                                                  |
-| ----------------- | ---------------------------------------------------------------------- |
-| 4D Server         | sí                                                                     |
-| 4D remoto         | yes, with [ServerNet or QUIC](../settings/client-server#network-layer) |
-| 4D monopuesto     | sí                                                                     |
-| Modo compilado    | sí                                                                     |
-| Modo interpretado | no                                                                     |
+| Contexto          | Ejecución apropiativa                                               |
+| ----------------- | ------------------------------------------------------------------- |
+| 4D Server         | sí                                                                  |
+| 4D remoto         | sí, con [ServerNet o QUIC](../settings/client-server#network-layer) |
+| 4D monopuesto     | sí                                                                  |
+| Modo compilado    | sí                                                                  |
+| Modo interpretado | no                                                                  |
 
 If the execution context supports preemptive mode and if the method is "thread-safe", a new 4D process launched using the `New process` or `CALL WORKER` commands, or the "Run method" menu item, will be executed in a preemptive thread.
 
@@ -122,7 +122,7 @@ Por ejemplo, considere los siguientes métodos proyecto:
 ```
 
 ```4d
-  //CallComp project method
+  //Método proyecto CallComp
  var $vAge : Integer
  MyComp($vAge)
 ```
@@ -182,7 +182,7 @@ Los métodos con la propiedad "Se puede ejecutar en procesos apropiativos" será
 
 :::info
 
-It is possible to [disable locally the thread-safety verification](#).
+Es posible [desactivar localmente la verificación de la seguridad de los hilos](#).
 
 :::
 
@@ -194,7 +194,7 @@ Dado que se trata de accesos "externos", las llamadas a objetos de la interfaz d
 
 Los únicos accesos posibles a la interfaz de usuario desde un hilo apropiativo son:
 
-- [Standard error dialog](../Debugging/basics). El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). The **Trace** button is disabled.
+- [Standard error dialog](../Debugging/basics). El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). El botón **Rastrear** está desactivado.
 - Indicadores de progreso estándar
 - `ALERT`, `Request` and `CONFIRM` dialogs. El diálogo se muestra en el proceso de modo usuario (en 4D) o en el proceso de interfaz de usuario del servidor (4D Server). Tenga en cuenta que si 4D Server se ha lanzado como un servicio en Windows sin permitir la interacción del usuario, los diálogos no se mostrarán.
 

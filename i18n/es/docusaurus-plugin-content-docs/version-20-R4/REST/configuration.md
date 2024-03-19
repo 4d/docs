@@ -1,6 +1,6 @@
 ---
 id: configuration
-title: Server Configuration
+title: Configuración del servidor
 ---
 
 Utilizando peticiones HTTP estándar, el servidor 4D REST permite a las aplicaciones externas acceder directamente a los datos de su aplicación, *es decir,* recuperar información sobre las clases de datos de su proyecto, manipular datos, entrar en su aplicación web, y mucho más.

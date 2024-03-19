@@ -37,7 +37,7 @@ Cuando una clase usuario es [definida](Concepts/classes.md#class-definition) en 
 
 #### Descripción
 
-The `.isShared` property <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.
+La propiedad `.isShared` <!-- REF #ClassClass.isShared.Summary -->devuelve `true` si la clase usuario ha sido definida como [clase compartida](../Concepts/classes.md#shared-classes)<!-- END REF -->y `false` en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -59,7 +59,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isSingleton` property <!-- REF #ClassClass.isSingleton.Summary -->returns `true` if the user class has been defined as a [singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+La propiedad `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->devuelve `true` si la clase usuario se ha definido como [clase singleton](../Concepts/classes.md#singleton-classes)<!-- END REF -->y `false` en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -81,7 +81,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.me` property <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
+La propiedad `.me` <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
 
 If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
 

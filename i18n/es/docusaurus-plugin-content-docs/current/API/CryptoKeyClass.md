@@ -58,7 +58,7 @@ ASSERT($status.success)
 | Parámetros | Tipo         |    | Descripción                                       |
 | ---------- | ------------ | -- | ------------------------------------------------- |
 | settings   | Object       | -> | Parámetros para generar o cargar un par de llaves |
-| result     | 4D.CryptoKey | <- | Object encapsulating an encryption key pair       |
+| result     | 4D.CryptoKey | <- | Objeto que encapsula un par de llaves de cifrado  |
 
 <!-- END REF -->
 

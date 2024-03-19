@@ -738,11 +738,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças                                                                                                    |
-| ------ | ----------------------------------------------------------------------------------------------------------- |
-| v19 R8 | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | Support of `allowAutoExpand` option                                                                         |
-| v19 R6 | Adicionado                                                                                                  |
+| Versão | Mudanças                                                                                                      |
+| ------ | ------------------------------------------------------------------------------------------------------------- |
+| v19 R8 | Suporte das opções do tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| v19 R7 | Suporte da opção `allowAutoExpand`                                                                            |
+| v19 R6 | Adicionado                                                                                                    |
 
 </details>
 
@@ -1700,7 +1700,7 @@ $index:=VP Get current sheet("ViewProArea")
 | ---------- | -------------------- | -- | ------------------------------------------------------------- | ---------------- |
 | vpAreaName | Object               | -> | Nome de objeto formulário área 4D View Pro                    |                  |
 | sheet      | Integer              | -> | Índice da folha a partir da qual se obtém o contexto de dados |                  |
-| Resultados | Object \| Collection | <- | Data context                                                  | <!-- END REF --> |
+| Resultados | Object \| Collection | <- | Contexto de dados                                             | <!-- END REF --> |
 
 #### Descrição
 

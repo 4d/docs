@@ -65,7 +65,7 @@ Novo `4D. <!-- REF #Blob.size.Summary -->Blob`|<!-- END REF -->
 | ---------- | -------- |:--:| ---------------------------------------------------------------- |
 | start      | Real     | -> | índice do primeiro byte a incluir no novo `4D. Blob`.            |
 | end        | Real     | -> | índice do primeiro byte que não será incluído no novo `4D. Blob` |
-| Resultados | 4D. Blob | <- | New `4D.Blob`                                                    |
+| Resultados | 4D. Blob | <- | Novo `4D.Blob`                                                   |
 <!-- END REF -->
 
 #### Descrição

@@ -86,12 +86,12 @@ Un fichier .4DLink de type "projet distant" peut être copié et utilisé sur pl
 
 Les fichiers portant l'extension `.4DLink` sont des fichiers XML contenant des paramètres destinés à automatiser et à simplifier l'ouverture de projets 4D locaux ou distants.
 
-`Les fichiers .4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que ses identifiants de connexion et son mode d'ouverture, ce qui permet de gagner du temps lors de l'ouverture des projets.
+Les fichiers `.4DLink` peuvent enregistrer l'adresse d'un projet 4D ainsi que ses identifiants de connexion et son mode d'ouverture, ce qui permet de gagner du temps lors de l'ouverture des projets.
 
 4D génère automatiquement un fichier `.4DLink` lors de la première ouverture d'un projet local ou lors de la première connexion à un serveur. Le fichier est stocké dans le dossier des préférences locales à l'emplacement suivant :
 
 * Windows: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
-* macOS: Users/UserName/Library/Application Support/4D/Favorites vXX/
+* macOS : Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX représente le numéro de version de l'application. Par exemple, "Favoris v19" pour 4D v19.
 
@@ -100,7 +100,7 @@ Ce dossier est divisé en deux sous-dossiers :
 * le dossier **Local** contient les fichiers `.4DLink` qui peuvent être utilisés pour ouvrir des projets locaux
 * le dossier **Remote** contient les fichiers `.4DLink` des projets distants récents
 
-`Les fichiers .4DLink` peuvent également être créés à l'aide d'un éditeur XML.
+Les fichiers `.4DLink` peuvent également être créés à l'aide d'un éditeur XML.
 
-4D fournit une DTD décrivant les clés XML qui peuvent être utilisées pour construire un fichier `.4DLink` . This DTD is named database_link.dtd and is found in the `\Resources\DTD\` subfolder of the 4D application.
+4D fournit une DTD décrivant les clés XML qui peuvent être utilisées pour construire un fichier `.4DLink` . Cette DTD est nommée database_link.dtd et se trouve dans le sous-dossier `\Resources\DTD\` de l'application 4D.
 

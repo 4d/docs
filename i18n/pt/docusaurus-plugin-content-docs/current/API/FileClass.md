@@ -170,9 +170,9 @@ A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um
 
 
 <!--REF #FileClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                  |
-| ---------- | ---------- | -- | ---------------------------------------------------------- |
-| Resultados | Parâmetros | <- | True if the file was created successfully, false otherwise |
+| Parâmetro  | Tipo       |    | Descrição                                                      |
+| ---------- | ---------- | -- | -------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se o arquivo foi criado com sucesso, false caso contrário |
 <!-- END REF -->
 
 #### Descrição

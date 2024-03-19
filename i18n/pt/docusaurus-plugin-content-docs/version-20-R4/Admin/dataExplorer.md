@@ -55,7 +55,7 @@ A resolução mínima para utilizar o Data Explorer é de 1280x720. A resoluçã
 Para além de uma visão abrangente e personalizável dos seus dados, o Explorador de Dados permite-lhe consultar e ordenar os seus dados.
 
 
-### Basics
+### Básicos
 
 O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
@@ -183,7 +183,7 @@ Clique com o botão direito do mouse na área de consulta para exibir as consult
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
 
 
-## Editing Data
+## Edição de dados
 
 The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to test implementations or fix issues with invalid data.
 
