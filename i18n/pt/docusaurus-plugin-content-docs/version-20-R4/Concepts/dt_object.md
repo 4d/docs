@@ -43,7 +43,7 @@ Os objetos devem ter sido inicializados, por exemplo utilizando o comando <code>
 Com a notação de objetos, pode acessar às propriedades dos objetos de duas maneiras:
 
 - usando o comando [`New object`] (https\://doc.4d.com/4dv19R/help/command/en/page1471.html),
-- using the `{}` operator.
+- usando o operador '{}'.
 
 :::info
 
@@ -90,7 +90,7 @@ Exemplos:
 
 ```
 
-You can mix the `New object` and literal syntaxes:
+Você pode misturar as sintaxes `New object` e literal:
 
 ```4d
 $o:={\
