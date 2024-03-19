@@ -75,11 +75,11 @@ Para asegurar la correcta evaluación de las expresiones procesadas a través de
 
 ### Utilizando el "." como separador decimal
 
-4D always uses the period character (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Los parámetros regionales se ignoran. Esta funcionalidad facilita el mantenimiento del código y la compatibilidad entre los lenguajes y las versiones de 4D.
+4D utiliza siempre el punto (.) as a decimal separator when evaluating a numerical expression using a 4D tag `4DTEXT`, `4DHTML`, and `4DEVAL`. Los parámetros regionales se ignoran. Esta funcionalidad facilita el mantenimiento del código y la compatibilidad entre los lenguajes y las versiones de 4D.
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### Sintaxis: `<!--#4DBASE folderPath-->`
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
@@ -99,7 +99,7 @@ El siguiente código, que debe especificar una ruta relativa para cada llamada:
 <!--#4DINCLUDE ../folder/subpage.html-->
 ```
 
-... is equivalent to:
+... es equivalente a:
 
 ```html
 <!--#4DINCLUDE subpage.html-->
@@ -141,9 +141,9 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ## 4DCODE
 
-#### Syntax: `<!--#4DCODE codeLines-->`
+#### Sintaxis: `<!--#4DCODE codeLines-->`
 
-The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
+La etiqueta `4DCODE` permite insertar un bloque de código 4D de varias líneas en una plantilla.
 
 When a `<!--#4DCODE` sequence is detected that is followed by a space, a CR or a LF character, 4D interprets all the lines of code up to the next `-->` sequence. El bloque de código en sí puede contener retornos de carro, saltos de línea o ambos; será interpretado secuencialmente por 4D.
 
@@ -197,19 +197,19 @@ El número de iteraciones se evalúa al inicio y no cambiará durante el proceso
 
 This syntax iterates on each _item_ of the _collection_. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
 
-The _item_ parameter is a variable of the same type as the collection elements.
+El parámetro _item_ es una variable del mismo tipo que los elementos de la colección.
 
 The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the _item_ variable is assigned the first mismatched value type.
 
 El número de bucles se basa en el número de elementos de la colección. At each iteration, the _item_ variable is automatically filled with the matching element of the collection. Hay que tener en cuenta los siguientes puntos:
 
 - If the _item_ variable is of the object type or collection type (i.e. if _expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable es de tipo escalar, sólo se modificará la variable.
-- The _item_ variable gets the same type as the first collection element. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- La variable _item_ obtiene el mismo tipo que el primer elemento de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 - If the collection contains elements with a Null value, an error is generated if the _item_ variable type does not support Null values (such as longint variables).
 
 #### Ejemplo con una colección de valores escalares
 
-_getNames_ returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+_getNames_ devuelve una colección de cadenas. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
 
 ```html
  <table class="table">    
@@ -247,7 +247,7 @@ _getSalesPersons_ returns a collection of objects.
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each _entity_ of the _entitySelection_. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+Esta sintaxis itera en cada _entidad_ de la _entitySelection_. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
 
 The _entity_ parameter is an object variable of the entity selection class.
 
@@ -270,7 +270,7 @@ El número de bucles se basa en el número de entidades presentes en la selecci�
     </table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### Ejemplo con `PROCESS 4D TAGS`
 
 ```4d
 var customers : cs.CustomersSelection
@@ -315,11 +315,11 @@ _getGamers_ is a project method that returns an object like ("Mary"; 10; "Ann"; 
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
+#### Sintaxis: `<!--#4DEVAL expression-->`
 
-#### Alternative syntax: `$4DEVAL(expression)`
+#### Sintaxis alternativa: `$4DEVAL(expression)`
 
-The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
+La etiqueta `4DEVAL` permite evaluar una variable o expresión 4D. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
 
 Por ejemplo, puede ejecutar:
 
@@ -336,9 +336,9 @@ In case of an error during interpretation, the text inserted will be in the form
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
+#### Sintaxis: `<!--#4DHTML expression-->`
 
-#### Alternative syntax: `$4DHTML(expression)`
+#### Sintaxis alternativa: `$4DHTML(expression)`
 
 Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
 
@@ -361,16 +361,16 @@ Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!
 
 The _expression_ parameter can contain any valid 4D expression returning a Boolean value. Debe indicarse entre paréntesis y cumplir con las reglas de sintaxis de 4D.
 
-The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
+`<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
-Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`).
+Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Sólo se ejecuta el código que sigue a la primera condición evaluada como `True`. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`).
 You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the conditions are false, the statements following the `<!--#4DELSE-->` are executed.
 
 Los dos códigos siguientes son equivalentes.
 
-Code using `4DELSE` only:
+Código utilizando `4DELSE` solamente:
 
 ```html
 <!--#4DIF Condition1-->
@@ -432,7 +432,7 @@ Este ejemplo inserta diferentes páginas dependiendo del usuario que esté conec
 
 ## 4DINCLUDE
 
-#### Syntax: `<!--#4DINCLUDE path-->`
+#### Sintaxis: `<!--#4DINCLUDE path-->`
 
 This tag is mainly designed to include an HTML page (indicated by the _path_ parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Esto le permite evitar conflictos relacionados con las metaetiquetas presentes en los encabezados.
 
@@ -443,7 +443,7 @@ When including, regardless of the file name extension, 4D analyzes the called pa
 
 An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
 
-In _path_, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
+En _path_, coloque la ruta que va al documento a incluir. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Utilice la barra oblicua (/) como separador de carpetas y los dos puntos (..) para subir un nivel (sintaxis HTML). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
 
 > You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
 
@@ -465,7 +465,7 @@ Ejemplos:
 
 Este comentario permite la repetición de una porción de código siempre que se cumpla la condición. The portion is delimited by `<!--#4DLOOP-->` and `<!--#4DENDLOOP-->`.
 
-The `<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` blocks can be nested. Like in 4D, each `<!--#4DLOOP condition-->` must match a `<!--#4DENDLOOP-->`.
+`<!--#4DLOOP condition-->` ... `<!--#4DENDLOOP-->` blocks can be nested. Like in 4D, each `<!--#4DLOOP condition-->` must match a `<!--#4DENDLOOP-->`.
 
 Hay cinco tipos de condiciones:
 
@@ -483,7 +483,7 @@ El código siguiente:
 <!--#4DENDLOOP-->
 ```
 
-... could be expressed in 4D language in the following way:
+... podría expresarse en lenguaje 4D de la siguiente manera:
 
 ```4d
  FIRST RECORD([People])
@@ -507,7 +507,7 @@ El siguiente ejemplo de código:
 <!--#4DENDLOOP-->
 ```
 
-... could be expressed in 4D language in the following way:
+... podría expresarse en lenguaje 4D de la siguiente manera:
 
 ```4d
  For($Elem;1;Size of array(arr_names))
@@ -532,7 +532,7 @@ El siguiente ejemplo de código:
 <!--#4DENDLOOP-->
 ```
 
-... could be expressed in 4D language in the following way:
+... podría expresarse en lenguaje 4D de la siguiente manera:
 
 ```4d
  If(AuthenticationWebOK)
@@ -546,7 +546,7 @@ El siguiente ejemplo de código:
  End if
 ```
 
-The `my_method` method can be as follows:
+El método `my_method` puede ser el siguiente:
 
 ```4d
  C_LONGINT($1)
@@ -623,17 +623,17 @@ Se pueden mostrar los siguientes mensajes:
 
 ## 4DSCRIPT/
 
-#### Syntax: `<!--#4DSCRIPT/MethodName/MyParam-->`
+#### Sintaxis: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
 The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string in `$1`.
 
 > If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). Si devuelve True, 4D ejecuta el método.
 
-The method must return text in `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
+El método debe devolver texto en `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
 For example, let’s say that you insert the following comment `“Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
-The `MYMETH` method is as follows:
+El método `MYMETH` es el siguiente:
 
 ```4d
   //MYMETH
@@ -647,9 +647,9 @@ Como 4D ejecuta los métodos en su orden de aparición, es absolutamente posible
 
 ## 4DTEXT
 
-#### Syntax: `<!--#4DTEXT expression-->`
+#### Sintaxis: `<!--#4DTEXT expression-->`
 
-#### Alternative syntax: `$4DTEXT(expression)`
+#### Sintaxis alternativa: `$4DTEXT(expression)`
 
 The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. Por ejemplo, si se escribe (en una página HTML):
 
@@ -667,8 +667,8 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 
 - Debe utilizar las variables proceso.
 - Puede mostrar el contenido de un campo imagen. Sin embargo, no es posible mostrar el contenido de un elemento del array de imágenes.
-- Es posible mostrar el contenido de un campo objeto mediante una fórmula 4D. For example, you can write `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
-- Normalmente se trabaja con variables de tipo texto. Sin embargo, también se pueden utilizar las variables BLOB. You just need to generate BLOBs in `Text without length` mode.
+- Es posible mostrar el contenido de un campo objeto mediante una fórmula 4D. Por ejemplo, puede escribir `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
+- Normalmente se trabaja con variables de tipo texto. Sin embargo, también se pueden utilizar las variables BLOB. Basta con generar BLOBs en modo `Texto sin longitud`.
 
 ## Sintaxis alternativa para 4DTEXT, 4DHTML, 4DEVAL
 
