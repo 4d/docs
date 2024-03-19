@@ -33,7 +33,7 @@ Read [**What’s new in 4D v20 R3**](https://blog.4d.com/en-whats-new-in-4d-v20-
 
 #### Destaques
 
-- New [`collection.multiSort`](../API/CollectionClass.md#multisort) function.
+- Nova função [`collection.multiSort`](../API/CollectionClass.md#multisort).
 - Support of _context_ parameter in [`Formula from string`](../API/FunctionClass.md#formula-from-string).
 - Support of `headers` property in _connectionHandler_ parameter of [4D.WebSocket.new](../API/WebSocketClass.md#4dwebsocketnew).
 - [Global modification stamp](../ORDA/global-stamp.md) to help implementing data synchronization modules. New functions: [`ds.getGlobalStamp`](../API/DataStoreClass.md#getglobalstamp) and [`ds.setGlobalStamp`](../API/DataStoreClass.md#setglobalstamp).
@@ -79,7 +79,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 Leia [**O que há de novo no 4D v20**](https://blog.4d.com/en-whats-new-in-4d-v20/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D v20.
 
-:::caution Minimal client version for 4D Server v20.2 and later
+:::caution Versão mínima do cliente para 4D Server v20.2 e posterior
 
 For internal reasons, the version of remote clients connecting to 4D Server v20.2 and later must be at least 4D v20.2.
 
@@ -304,7 +304,7 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 
 ## Lançamentos anteriores
 
-<details><summary>Click to see the release notes for previous versions</summary>
+<details><summary>Clique para ver as notas de versão das versões anteriores</summary>
 
 ### 4D v19
 
@@ -335,7 +335,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 </details>
 
-## Library table
+## Tabela da biblioteca
 
 | Biblioteca | Versão atual | Atualizado em 4D | Comentário                                                                                                    |
 | ---------- | ------------ | ---------------- | ------------------------------------------------------------------------------------------------------------- |
