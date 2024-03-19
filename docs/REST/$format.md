@@ -5,7 +5,7 @@ title: $format
 
 
  
-Defines a specific format to return data of a dataclass, *(e.g.*, `$format=looker`)
+Defines a specific format to return data of a dataclass, (*e.g.*, `$format=looker`)
 
 
 ## Description   
@@ -17,7 +17,7 @@ The following formats are supported:
 |Format|Description|
 |---|-----|
 |`json`|Standard 4D REST server format (used by default)| 
-|`looker`|Allows you to connect the 4D datastore to [Looker Studio](https://lookerstudio.google.com/). The returned JSON object is compliant with the looker connector. | 
+|`looker`|JSON format compliant with looker connector. Allows you to connect the 4D datastore to [Looker Studio](https://lookerstudio.google.com/).  | 
 
 
 ## Example
@@ -32,31 +32,47 @@ The REST server returns a JSON object that contains the schema and data for the 
 "__FIRST":10,
 "schema": [
   {
-    'name': 'Income',
-    'dataType': 'NUMBER',
-    'semantics': {
-      'conceptType': 'METRIC',
-      'semanticGroup': 'CURRENCY',
-      'semanticType': 'CURRENCY_USD'
+    "name": "ID",
+    "dataType": "NUMBER",
+    "semantics": {
+      "conceptType": "METRIC",
+      "semanticGroup": "NUMERIC",
+      "semanticType": "NUMBER"
     }
   }, {
-    'name': 'Filing Year',
-    'dataType': 'STRING',
-    'semantics': {
-      'conceptType': 'METRIC',
-      'semanticGroup': 'DATETIME',
-      'semanticType': 'YEAR_MONTH_DAY'
+    "name": "name",
+    "dataType": "STRING",
+    "semantics": {
+      "conceptType": "DIMENSION",
+      "semanticGroup": "TEXT",
+      "semanticType": "TEXT"
+    }, {
+    "name": "address",
+    "dataType": "STRING",
+    "semantics": {
+      "conceptType": "DIMENSION",
+      "semanticGroup": "TEXT",
+      "semanticType": "TEXT"
     }
   }
 ],"rows": [
     {
-      "values": [ "120453.65","20170523"]
+      "values": [ 
+      	1,
+      	"Alpha Astral Animations",
+        "Ullman Drive (82)"]
     },
     {
-      "values": ["362705286.92","20170303" ]
+      "values": [ 
+      	2,
+      	"Alpha Bart Computing",
+        "Lehigh Square (110)"]
     },
     {
-      "values": [ "870.12", "20170421"]
+      "values": [ 
+      	3,
+      	"Alpha Business Clock-making",
+        "Larchmont Terrace (90)"]
     }
   ],
   "filtersApplied": false
