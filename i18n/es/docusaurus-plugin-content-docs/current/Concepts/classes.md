@@ -746,7 +746,7 @@ Varios comandos del lenguaje 4D permiten manejar las funcionalidades de las clas
 
 ## Clases compartidas
 
-You can create **shared classes**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. A shared class can only create shared objects.
+You can create **shared classes**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. Una clase compartida sólo puede crear objetos compartidos.
 
 Shared classes also support **shared functions** that can be called without [`Use...End use`](shared.md#useend-use) structures.
 
@@ -781,7 +781,7 @@ cs.Person.isShared //true
 
 
 
-### Shared functions
+### Funciones compartidas
 
 If a function defined inside a shared class modifies objects of the class, it should call [`Use...End use`](shared.md#useend-use) structure to protect access to the shared objects. However, to simplify the code, you can define the function as **shared** so that it automatically triggers internal `Use...End use` when executed.
 
