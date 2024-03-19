@@ -14,7 +14,7 @@ Lee [**Novedades en 4D v20 R4**](https://blog.4d.com/en-whats-new-in-4d-v20-R4/)
 - Formato HTML directo para [exportaciones de definición de estructura](https://doc.4d.com/4Dv20R4/4D/20-R4/Exporting-and-importing-structure-definitions.300-6654851.en.html).
 - Nuevo [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) que mejora el control del código durante los pasos de declaración, comprobación de sintaxis y compilación para evitar errores de ejecución.
 - Los parámetros de métodos declarados en prototipos `#DECLARE` [ya no son necesarios en métodos "Compiler_"](../Concepts/parameters.md#compilation).
-- Support of [custom date and time formats](../Project/date-time-formats.md)
+- Soporte de [formatos personalizados de fecha y hora](../Project/date-time-formats.md)
 - Nueva [palabra clave `Try(expression)`](../Concepts/error-handling.md#tryexpression) para tratar casos de error simples.
 - Nuevo comando [`HTTP Parse message`](../API/HTTPRequestClass.md#http-parse-message).
 - Nueva opción de compatibilidad [Impresión no bloqueante](../settings/compatibility.md).
