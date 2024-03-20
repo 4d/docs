@@ -474,7 +474,7 @@ The following code:
 
 ```4d
  FIRST RECORD([People])
- While(Not(End selec tion([People])))
+ While(Not(End selection([People])))
     ...
     NEXT RECORD([People])
  End while
