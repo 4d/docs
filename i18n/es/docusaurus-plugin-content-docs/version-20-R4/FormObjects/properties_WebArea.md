@@ -1,6 +1,6 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Área Web
 ---
 
 ---

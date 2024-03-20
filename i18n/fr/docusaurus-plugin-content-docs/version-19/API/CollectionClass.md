@@ -1727,7 +1727,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
  | ck ascending  | Longint | 0      | Les éléments sont triés par ordre croissant (défaut) |
  | ck descending | Longint | 1      | Les éléments sont triés par ordre décroissant        |
 
- Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 

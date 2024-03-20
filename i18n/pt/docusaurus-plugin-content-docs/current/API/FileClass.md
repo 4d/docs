@@ -78,9 +78,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | fileConstant | Integer  | -> | Constante de arquivo 4D                             |
 | pathType     | Integer  | -> | `fk posix path` (por defeito) ou `fk platform path` |
 | *            |          | -> | * para devolver o arquivo da base de dados anfitriã |
-| Resultados   | 4D. File | <- | Novo objeto arquivo|<!-- END REF -->
-
-|
+| Resultados   | 4D. File | <- | Novo objeto arquivo                                 |
+<!-- END REF -->
 
 #### Descrição
 
@@ -171,11 +170,10 @@ A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um
 
 
 <!--REF #FileClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                      |
-| ---------- | ---------- | -- | ---------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se o arquivo foi criado com sucesso, falso caso contrário<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                      |
+| ---------- | ---------- | -- | -------------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se o arquivo foi criado com sucesso, false caso contrário |
+<!-- END REF -->
 
 #### Descrição
 
@@ -212,14 +210,13 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                                                |
-| ----------------- | ---------- | -- | ------------------------------------------------------------------------ |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho                             |
-| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                                             |
-| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                                            |
-| Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho|<!-- END REF -->
-
-|
+| Parâmetro         | Tipo       |    | Descrição                                     |
+| ----------------- | ---------- | -- | --------------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho  |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                  |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                 |
+| Resultados        | 4D. File   | <- | Referência a pseudónimo ou ficheiro de atalho |
+<!-- END REF -->
 
 #### Descrição
 
@@ -269,11 +266,10 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -325,12 +321,10 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parâmetro  | Tipo   |    | Descrição                                                                            |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
-| Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo   |    | Descrição                                                 |
+| ---------- | ------ | -- | --------------------------------------------------------- |
+| Resultados | Object | <- | Conteúdo do arquivo de versão recurso .exe/.dll ou .plist |
+<!-- END REF -->
 
 
 #### Descrição
@@ -420,14 +414,12 @@ ALERT($info.
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                 |
-| ----------------- | ---------- | -- | ----------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                          |
-| newName           | Text       | -> | Nome completo do ficheiro movido          |
-| Resultados        | 4D. File   | <- | Arquivo movido|<!-- END REF -->
-
-
-|
+| Parâmetro         | Tipo       |    | Descrição                        |
+| ----------------- | ---------- | -- | -------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                 |
+| newName           | Text       | -> | Nome completo do ficheiro movido |
+| Resultados        | 4D. File   | <- | Arquivo movido                   |
+<!-- END REF -->
 
 
 #### Descrição
@@ -467,13 +459,12 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Parâmetro  | Tipo                             |    | Descrição                                          |
-| ---------- | -------------------------------- | -- | -------------------------------------------------- |
-| mode       | Text                             | -> | Modo de abertura: "read", "write", "append"        |
-| options    | Object                           | -> | Opções de abertura                                 |
-| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo                             |    | Descrição                                   |
+| ---------- | -------------------------------- | -- | ------------------------------------------- |
+| mode       | Text                             | -> | Modo de abertura: "read", "write", "append" |
+| options    | Object                           | -> | Opções de abertura                          |
+| Resultados | [4D.FileHandle](FileHandleClass) | <- | Novo objeto File handle                     |
+<!-- END REF -->
 
 #### Descrição
 
@@ -546,12 +537,11 @@ $fhandle:=$f.open("read")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                     |
-| ---------- | -------- | -- | --------------------------------------------- |
-| newName    | Text     | -> | Novo nome completo para o ficheiro            |
-| Resultados | 4D. File | <- | Ficheiro renomeado|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo     |    | Descrição                          |
+| ---------- | -------- | -- | ---------------------------------- |
+| newName    | Text     | -> | Novo nome completo para o ficheiro |
+| Resultados | 4D. File | <- | Ficheiro renomeado                 |
+<!-- END REF -->
 
 #### Descrição
 
@@ -590,11 +580,10 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parâmetro | Tipo   |    | Descrição                                                                                                        |
-| --------- | ------ | -- | ---------------------------------------------------------------------------------------------------------------- |
-| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll|<!-- END REF -->
-
-|
+| Parâmetro | Tipo   |    | Descrição                                                                             |
+| --------- | ------ | -- | ------------------------------------------------------------------------------------- |
+| info      | Object | -> | Propriedades para escrever no arquivo .plist ou o recurso versão do arquivo .exe/.dll |
+<!-- END REF -->
 
 #### Descrição
 
@@ -677,11 +666,10 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parâmetro | Tipo |    | Descrição                                                 |
-| --------- | ---- | -- | --------------------------------------------------------- |
-| content   | BLOB | -> | Novos conteúdos para o arquivo|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |    | Descrição                      |
+| --------- | ---- | -- | ------------------------------ |
+| content   | BLOB | -> | Novos conteúdos para o arquivo |
+<!-- END REF -->
 
 #### Descrição
 
@@ -712,15 +700,13 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 
 <!--REF #FileClass.setText().Params -->
-| Parâmetro   | Tipo    |    | Descrição                                                               |
-| ----------- | ------- | -- | ----------------------------------------------------------------------- |
-| text        | Text    | -> | Texto a armazenar no arquivo                                            |
-| charSetName | Text    | -> | Nome do conjunto de caracteres                                          |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres                                       |
-| breakMode   | Integer | -> | Modo de processamento para retornos de linha|<!-- END REF -->
-
-
-|
+| Parâmetro   | Tipo    |    | Descrição                                   |
+| ----------- | ------- | -- | ------------------------------------------- |
+| text        | Text    | -> | Texto a armazenar no arquivo                |
+| charSetName | Text    | -> | Nome do conjunto de caracteres              |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres           |
+| breakMode   | Integer | -> | Modo de processamento para quebras de linha |
+<!-- END REF -->
 
 
 #### Descrição

@@ -1,6 +1,6 @@
 ---
 id: formSize
-title: Form Size
+title: Tamaño del formulario
 ---
 
 

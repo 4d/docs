@@ -55,7 +55,7 @@ A resolução mínima para utilizar o Data Explorer é de 1280x720. A resoluçã
 Para além de uma visão abrangente e personalizável dos seus dados, o Explorador de Dados permite-lhe consultar e ordenar os seus dados.
 
 
-### Basics
+### Básicos
 
 O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
@@ -183,7 +183,7 @@ Clique com o botão direito do mouse na área de consulta para exibir as consult
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
 
 
-## Editing Data
+## Edição de dados
 
 The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to test implementations or fix issues with invalid data.
 
@@ -201,7 +201,7 @@ The selector is intended to prevent accidental modifications since no confirmati
 
 :::
 
-### Entering values
+### Inserção de valores
 
 When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass.
 
@@ -220,7 +220,7 @@ Blob attributes cannot be modified.
 New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data.
 
 
-### Creating entities
+### Criação de entidades
 
 You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
 

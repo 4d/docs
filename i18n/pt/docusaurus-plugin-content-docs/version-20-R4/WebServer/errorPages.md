@@ -14,19 +14,19 @@ Para obter uma descrição completa dos códigos de status de erro HTTP, consult
 
 ## Substituir páginas predefinidas
 
-To replace default 4D Web Server error pages with your own pages you just need to:
+Para substituir as páginas de erro padrão do 4D Web Server por suas próprias páginas, basta fazer isso:
 
-*   put custom HTML pages at the first level of the application's web folder,
+*   coloque páginas HTML personalizadas no primeiro nível da pasta da Web do aplicativo,
 
 *   nomeie as páginas personalizadas "{statusCode}.html" (por exemplo, "404.html").
 
-You can define one error page per status code and/or a generic error page for a range of errors, named "{number}xx.html". Por exemplo, você pode criar "4xx.html" para erros genéricos do cliente. The 4D Web Server will first look for a {statusCode}.html page then, if it does not exist, a generic page.
+Você pode definir uma página de erro por código de status e/ou uma página de erro genérica para um intervalo de erros, denominada "{number}xx.html". Por exemplo, você pode criar "4xx.html" para erros genéricos do cliente. O 4D Web Server procurará primeiro uma página {statusCode}.html e, se ela não existir, uma página genérica.
 
 Por exemplo, quando uma resposta HTTP devolve um código de estado 404:
 
-1.  4D Web Server tries to send a "404.html" page located in the application's web folder.
+1.  O 4D Web Server tenta enviar uma página "404.html" localizada na pasta web do aplicativo.
 
-2.  If it is not found, 4D Web Server tries to send a "4xx.html" page located in the application's web folder.
+2.  Se não for encontrado, o 4D Web Server tenta enviar uma página "4xx.html" localizada na pasta web do aplicativo.
 
 3.  Se não for encontrado, 4D Web Server usa sua página de erro padrão.
 
@@ -38,7 +38,7 @@ Se definir as seguintes páginas personalizadas na sua pasta Web:
 
 *   as páginas "403.html" ou "404.html" serão exibidas quando as respostas HTTP 403 ou 404 forem retornadas, respectivamente,
 
-*   the "4xx.html" page will be served for any other 4xx error status (400, 401, etc.),
+*   a página "4xx.html" será servida para qualquer outro status de erro 4xx (400, 401, etc.),
 
 *   a página "5xx.html" será apresentada para qualquer estado de erro 5xx.
 

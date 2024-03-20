@@ -1,6 +1,6 @@
 ---
 id: picture
-title: Picture
+title: Imagen
 ---
 
 Un campo, variable o expresión de tipo Imagen puede ser cualquier imagen de Windows o Macintosh. En general, esto incluye toda imagen que pueda ser puesta en el portapapeles o leída desde el disco utilizando comandos 4D como `READ PICTURE FILE`.

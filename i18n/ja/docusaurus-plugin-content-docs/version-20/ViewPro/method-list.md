@@ -1761,7 +1761,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                         |
 | name       | Text   | -> | 命名レンジの名前                                        |
 | scope      | Number | -> | ターゲットのスコープ (デフォルト=カレントシート)                      |
-| 戻り値        | Text   | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
+| 戻り値        | Object | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
 
 |
 
@@ -2174,6 +2174,7 @@ $currentSelection:=VP Get selection("myVPArea")
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
 
+
 #### 例題
 
 以下のドキュメントにおいて:
@@ -2375,6 +2376,7 @@ End if
 *rangeObj* 引数で、セル結合を取得したいレンジを指定します。 *rangeObj* にセル結合が含まれない場合には、空のレンジが返されます。
 
 #### 例題
+
 
 ドキュメント内の結合セルにおいて、テキストを中央揃えに変更します:
 
@@ -4278,6 +4280,7 @@ Function onEvent()
 
             ALERT("The G23 cell contains the value: "+String(This.result))
     End case
+
 ```
 
 *OffscreenArea* コールバックメソッドの内容は以下の通りです:
@@ -5209,6 +5212,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 
 <!-- REF #_method_.VP SET FORMULA.Params -->

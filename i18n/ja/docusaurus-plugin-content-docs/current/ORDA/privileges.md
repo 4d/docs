@@ -39,7 +39,7 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 
 :::info
 
-Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](../entities.md#restricting-entity-selections) which can be more appropriate in this case.
+パーミッションは、データストアオブジェクトへのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
 
 :::
 
@@ -166,7 +166,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // プロジェクトが開かれるのを防ぐことができます
  ALERT("roles.json ファイルが不正なため、アプリケーションを終了します。")
  QUIT 4D
-End if 
+End if
 ```
 
 ## 運用のための権限の初期化

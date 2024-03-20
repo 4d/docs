@@ -82,13 +82,12 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parâmetro  | Tipo           |    | Descrição                                           |
-| ---------- | -------------- |:--:| --------------------------------------------------- |
-| url        | Text           | -> | URL para onde enviar o pedido                       |
-| options    | Object         | -> | Pedir propriedades de configuração                  |
-| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo           |    | Descrição                          |
+| ---------- | -------------- |:--:| ---------------------------------- |
+| url        | Text           | -> | URL para onde enviar o pedido      |
+| options    | Object         | -> | Pedir propriedades de configuração |
+| Resultados | 4D.HTTPRequest | <- | Novo objecto HTTPRequest           |
+<!-- END REF -->
 
 #### Descrição
 
@@ -201,12 +200,11 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                  |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------ |
-| data       | Text, Blob | -> | Dados a serem analisados                                                                   |
-| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                       |
+| ---------- | ---------- |:--:| --------------------------------------------------------------- |
+| data       | Text, Blob | -> | Dados a serem analisados                                        |
+| Resultados | Object     | <- | Objeto, cada propriedade é uma parte dos dados de várias partes |
+<!-- END REF -->
 
 #### Descrição
 
@@ -390,11 +388,10 @@ A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnRes
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -447,9 +444,8 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->o URL do 
 | Parâmetro  | Tipo           |    | Descrição                                           |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Tempo máximo em segundos para esperar pela resposta |
-| Resultados | 4D.HTTPRequest | <- | HTTPRequest object|<!-- END REF -->
-
-|
+| Resultados | 4D.HTTPRequest | <- | HTTPRequest object                                  |
+<!-- END REF -->
 
 #### Descrição
 

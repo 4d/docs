@@ -1,6 +1,6 @@
 ---
 id: sdi
-title: SDI mode on Windows
+title: Modo SDI en Windows
 ---
 
 

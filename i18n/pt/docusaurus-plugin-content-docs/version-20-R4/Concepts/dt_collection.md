@@ -5,7 +5,7 @@ title: Collection
 
 Coleções são listas ordenadas de valores de tipos diferentes ou não (texto, número, objeto, booleano, coleção ou null).
 
-Collection type variables are managed using [object notation](dt_object.md#properties).
+Variáveis do tipo de coleção são gerenciadas usando [notação do objeto](dt_object.md#properties).
 
 Para acessar a um elemento de coleção, é necessário passar o número do elemento dentro de parênteses rectos:
 
@@ -13,14 +13,14 @@ Para acessar a um elemento de coleção, é necessário passar o número do elem
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in _expression_. Exemplos:
+Você pode passar qualquer expressão 4D válida que retorne um inteiro positivo em _expressão_. Exemplos:
 
 ```4d
- myCollection[5]  //access to 6th element of the collection
+ myCollection[5]  //access ao sexto elemento da coleção
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Warning:** Os elementos da coleção são numerados a partir de 0.
 
 Pode atribuir um valor a um elemento da coleção ou obter o valor de um elemento da coleção utilizando a notação de objetos:
 
@@ -46,34 +46,34 @@ As coleções devem ter sido inicializadas, por exemplo utilizando o comando <co
 
 A instanciação da colecção pode ser feita de uma das seguintes formas:
 
-- using the [`New collection`](../API/CollectionClass.md#new-collection) command,
-- using the `[]` operator.
+- usando o comando [`New collection`](../API/CollectionClass.md#new-collection),
+- utilizando o operador [].
 
 :::info
 
-Several 4D commands and functions return collections, for example [`Get Monitored Activity`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) or [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
+Vários comandos 4D e coleções de retorno de funções, por exemplo [`Obter Atividade Monitorizada`](https://doc.4d.com/4dv19R/help/command/en/page1713.html) ou [`collection.copy`](../API/CollectionClass.md#copy). Neste caso, não é necessário instanciar explicitamente a coleção, a linguagem 4D fá-lo por si.
 
 :::
 
-### `New collection` command
+### Comando `New object`
 
-The [`New collection`](../API/CollectionClass.md#new-collection) command creates a new empty or prefilled collection and returns its reference.
+O comando [`Nova coleção`](../API/CollectionClass.md#new-collection) cria uma nova coleção vazia ou pré-preenchida e retorna sua referência.
 
 Exemplos:
 
 ```4d
- var $colVar : Collection //declaration of a collection type 4D variable
- $colVar:=New collection //instantiation of the collection and assignment to the 4D variable
+ var $colVar : Collection //declaração de uma variável 4D do tipo coleção
+ $colVar:=New collection //instanciação da coleção e atribuição à variável 4D
  
  var $colFilled : Collection
- $colFilled:=New collection("a";"b";1;42;{}) //instantiation and assignment of a prefilled collection
+ $colFilled:=New collection("a"; "b";1;42;{}) //instanciação e atribuição de uma coleção pré-preenchida
 ```
 
 ### Operador `[]`
 
-The `[]` operator allows you to create a **collection literal**. A collection literal is a list of zero or more expressions, each of which represents a collection element, enclosed in square brackets (`[]`). Quando cria uma coleção utilizando um literal de coleção, esta é instanciada com os valores especificados como seus elementos e o seu comprimento é definido para o número de argumentos especificados.
+O operador `[]` permite que você crie um **literal da coleção**. Um literal de coleção é uma lista de zero ou mais expressões, cada um dos quais representa um elemento de coleção, entre colchetes quadrados (`[]`). Quando cria uma coleção utilizando um literal de coleção, esta é instanciada com os valores especificados como seus elementos e o seu comprimento é definido para o número de argumentos especificados.
 
-Since any element is considered an expression, you can create sub-collections using `[]` in elements.  You can also create and reference **object literals**.
+Como qualquer elemento é considerado uma expressão, você pode criar subcoleções usando `[]` em elementos.  Você também pode criar e fazer referência **literais de objeto**.
 
 Se um elemento for indefinido, aparecerá como Nulo na coleção.
 
@@ -97,7 +97,7 @@ $users:=[{name: "Alice"; \
 
 :::note
 
-If you create a collection literal containing a single element, make sure you do not use a name corresponding to an existing table name, otherwise the table syntax `[tableName]` will take priority.
+Se você criar um literal de coleção contendo um único elemento, certifique-se de não usar um nome que corresponda a um nome de tabela existente, caso contrário, a sintaxe de tabela `[tableName]` terá prioridade.
 
 :::
 
@@ -105,14 +105,14 @@ If you create a collection literal containing a single element, make sure you do
 
 Pode criar dois tipos de coleções:
 
-- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command or collection literal syntax (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
-- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- coleções regulares (não compartilhadas), usando o comando [`New collection`] (API/CollectionClass.md#new-collection) ou a sintaxe literal da coleção (`[]`). Essas coleções podem ser editadas sem qualquer controle de acesso específico mas não podem ser compartilhadas entre processos.
+- coleções compartilhadas, usando o comando [`New shared collection`] (API/CollectionClass.md#new-shared-collection). Essas coleções podem ser partilhadas entre processos, incluindo threads preemptivos. O acesso a essas coleções é controlado pelas estruturas [`Use...End use`] (Concepts/shared.md#useend-use).
 
-For more information, refer to the [Shared objects and collections](shared.md) section.
+Para obter mais informações, consulte a seção [Shared objects and collections] (shared.md).
 
 ## Funções de Collection
 
-4D collection references benefit from special class functions (sometimes named _member functions_). Collection functions are listed in the [Class API Reference](../API/CollectionClass.md) section.
+As referências de coleções 4D se beneficiam de funções de classe especiais (às vezes denominadas _funções de membro_). As funções da coleção estão listadas na seção [Referência de API de classe](../API/CollectionClass.md)
 
 Por exemplo:
 
@@ -130,23 +130,23 @@ Alguns métodos retornam a coleção original depois de moficiação, para que p
 
 ### parâmetro caminoPropriedade
 
-Several functions accept a _propertyPath_ as parameter. Este parâmetro significa:
+Várias funções aceitam um _propriedadePath_ como parâmetro. Este parâmetro significa:
 
 - um nome de objeto propriedade por exemplo "Sobrenome"
 - ou uma rota de propriedades de objeto, ou seja, uma sequência hierárquica de subpropriedades vinculadas com caracteres de ponto, por exemplo "empregado.filhos.nome".
 
-**Warning:** When using functions and _propertyPath_ parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Aviso:** Ao usar funções e parâmetros _propertyPath_, você não pode usar ".", "[ ]" ou espaços nos nomes das propriedades, pois isso impedirá que 4D analise corretamente o caminho:
 
 ```4d
- $vmin:=$col.min("My.special.property") //undefined
- $vmin:=$col.min(["My.special.property"]) //error
+ $vmin:=$col.min("My.special.property") //indefinido
+ $vmin:=$col.min(["My.special.property"]) //erro
 ```
 
 ## Indefinido
 
-Reading the **length** property of an undefined collection produces 0:
+A leitura da propriedade **length** de uma coleção indefinida produz 0:
 
 ```4d
-     var $c : Collection //variable created but no collection is defined
+     var $c : Collection //variável criada, mas nenhuma coleção foi definida
      $size:=$c.length //$size = 0
 ```

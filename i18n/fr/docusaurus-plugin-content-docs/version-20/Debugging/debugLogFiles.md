@@ -358,10 +358,10 @@ Le journal ORDA côté client enregistre chaque requête ORDA envoyée depuis un
 Pour lancer ce journal :
 
 ```4d
-    //sur une machine distante
+    //on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //peut également être envoyé en mémoire
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
+    //can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -408,11 +408,11 @@ Le journal ORDA côté serveur enregistre chaque requête ORDA traitée par le s
 Pour lancer ce journal :
 
 ```4d
-    //sur le serveur
+    //on the server
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-    //srl... parameter is optional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+    //srl... parameter is optional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note

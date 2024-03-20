@@ -750,11 +750,10 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 
 <!-- REF #WebServerClass.stop().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |  | ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |  | --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 La fonction `.stop()` <!-- REF #WebServerClass.stop().Summary -->arrête le serveur web sur lequel elle est appliquée<!-- END REF -->.
 

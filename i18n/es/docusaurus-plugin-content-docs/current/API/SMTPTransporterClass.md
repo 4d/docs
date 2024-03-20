@@ -42,12 +42,11 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 
 
 <!-- REF #_command_.SMTP New transporter.Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.SMTPTransporter | <- | [objeto SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
-
-|
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Object             | -> | Información del servidor de correo                  |
+| Result     | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -118,12 +117,11 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.SMTPTransporter | <- | [objeto SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
-
-|
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Object             | -> | Información del servidor de correo                  |
+| Result     | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -214,9 +212,8 @@ La conexión SMTP se cierra automáticamente:
 | Parámetros | Tipo   |    | Descripción                                        |
 | ---------- | ------ |:--:| -------------------------------------------------- |
 | mail       | Object | -> | [Email](EmailObjectClass.md#email-object) a enviar |
-| Result     | Object | <- | Estado SMTP|<!-- END REF -->
-
-|
+| Result     | Object | <- | Estado SMTP                                        |
+<!-- END REF -->
 
 #### Descripción
 

@@ -1,6 +1,6 @@
 ---
 id: components
-title: Components
+title: Componentes
 ---
 
 Um componente 4D é um conjunto de código 4D e formulários que representam uma ou mais funcionalidades que pode instalar e usar nos seus projectos. Por exemplo, o [componente 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) adiciona comandos avançados e um motor de renderização integrado que pode ser utilizado para apresentar ficheiros SVG.

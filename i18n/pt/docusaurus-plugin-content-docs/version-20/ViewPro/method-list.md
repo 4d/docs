@@ -1747,7 +1747,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                   |
 | name       | Text   | -> | Nome do intervalo nomeado                                                    |
 | scope      | Number | -> | Âmbito alvo (padrão=folha atual)                                             |
-| Resultados | Text   | <- | Definição da fórmula nomeada ou intervalo nomeado|<!-- END REF -->
+| Resultados | Object | <- | Definição da fórmula nomeada ou intervalo nomeado|<!-- END REF -->
 
 |
 
@@ -2160,6 +2160,7 @@ O comando `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -->
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
 
+
 #### Exemplo
 
 No documento seguinte:
@@ -2360,6 +2361,7 @@ O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os 
 Em *rangeObj*, passe um intervalo de células fusionadas que queira recuperar. Se *rangeObj* não contiver um intervalo de células, um intervalo vazio será retornado.
 
 #### Exemplo
+
 
 Se quiser centrar o texto das células fusionadas neste documento:
 
@@ -4245,6 +4247,7 @@ Se quiser criar uma zona fora da área da tela do 4D View Pro e ler o valor de u
 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
+
 ```
 
 O método de retorno de chamada *OffscreenArea*:
@@ -5145,6 +5148,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 
 <!-- REF #_method_.VP SET FORMULA.Params -->

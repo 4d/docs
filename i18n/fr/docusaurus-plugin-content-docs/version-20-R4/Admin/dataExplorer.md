@@ -55,7 +55,7 @@ La résolution minimale pour utiliser l'Explorateur de données est de 1280x720.
 En plus d'une vue complète et personnalisable de vos données, l'Explorateur de données vous permet de rechercher et d'ordonner vos données.
 
 
-### Basics
+### Principes de base
 
 L'Explorateur de données fournit un accès global au modèle de données ORDA conformément aux [règles de mapping ORDA](ORDA/dsMapping.md#general-rules).
 

@@ -1,6 +1,6 @@
 ---
 id: buttonGridOverview
-title: Button Grid
+title: Rejilla de botones
 ---
 
 Una rejilla de botones es un objeto transparente que se coloca sobre una imagen. La imagen debe corresponder a la forma d eun array. Cuando se hace clic en uno de los gráficos, éste tendrá un aspecto presionado:

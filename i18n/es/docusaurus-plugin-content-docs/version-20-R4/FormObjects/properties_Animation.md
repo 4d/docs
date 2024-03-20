@@ -1,6 +1,6 @@
 ---
 id: propertiesAnimation
-title: Animation
+title: Animación
 ---
 
 ## Vuelve a la primera secuencia

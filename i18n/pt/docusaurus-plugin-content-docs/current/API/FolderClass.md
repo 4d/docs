@@ -76,9 +76,8 @@ Objetos `Pasta` são compatíveis com vários pathnames, incluindo `filesystems`
 | folderConstant | Integer    | -> | Constante Pasta 4D                                    |
 | pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path`   |
 | *              |            | -> | * para devolver a pasta da base de dados do anfitrião |
-| Resultados     | 4D. Folder | <- | Novo Objeto Folder|<!-- END REF -->
-
-|
+| Resultados     | 4D. Folder | <- | Novo Objeto Folder                                    |
+<!-- END REF -->
 
 #### Descrição
 
@@ -157,12 +156,10 @@ A função `4D. Folder.new()` <!-- REF #4D.Folder.new().Summary -->cria e devolv
 
 
 <!--REF #FolderClass.create().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                    |
-| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | Verdadeiro se a pasta foi criada com sucesso, falso caso contrário<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                    |
+| ---------- | ---------- | -- | ------------------------------------------------------------ |
+| Resultados | Parâmetros | <- | True se a pasta foi criada com sucesso, false caso contrário |
+<!-- END REF -->
 
 
 #### Descrição
@@ -217,14 +214,13 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parâmetro         | Tipo       |    | Descrição                                                |
-| ----------------- | ---------- | -- | -------------------------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho             |
-| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                             |
-| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                            |
-| Resultados        | 4D. File   | <- | Alias ou referência de atalho|<!-- END REF -->
-
-|
+| Parâmetro         | Tipo       |    | Descrição                                    |
+| ----------------- | ---------- | -- | -------------------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino para o pseudónimo ou atalho |
+| aliasName         | Text       | -> | Nome do pseudónimo ou atalho                 |
+| aliasType         | Integer    | -> | Tipo de ligação do pseudónimo                |
+| Resultados        | 4D. File   | <- | Alias ou referência de atalho                |
+<!-- END REF -->
 
 #### Descrição
 
@@ -273,11 +269,10 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Parâmetro | Tipo    |    | Descrição                                               |
-| --------- | ------- | -- | ------------------------------------------------------- |
-| option    | Integer | -> | Opção de eliminação de pasta|<!-- END REF -->
-
-|
+| Parâmetro | Tipo    |    | Descrição                    |
+| --------- | ------- | -- | ---------------------------- |
+| option    | Integer | -> | Opção de eliminação de pasta |
+<!-- END REF -->
 
 #### Descrição
 
@@ -347,13 +342,12 @@ Quando `Apagar com conteúdo` for aprovado:
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parâmetro         | Tipo       |    | Descrição                               |
-| ----------------- | ---------- | -- | --------------------------------------- |
-| destinationFolder | 4D. Folder | -> | Pasta de destino                        |
-| newName           | Text       | -> | Nome completo para a pasta movida       |
-| Resultados        | 4D. Folder | <- | Pasta movida|<!-- END REF -->
-
-|
+| Parâmetro         | Tipo       |    | Descrição                         |
+| ----------------- | ---------- | -- | --------------------------------- |
+| destinationFolder | 4D. Folder | -> | Pasta de destino                  |
+| newName           | Text       | -> | Nome completo para a pasta movida |
+| Resultados        | 4D. Folder | <- | Pasta movida                      |
+<!-- END REF -->
 
 #### Descrição
 
@@ -403,12 +397,11 @@ Quer mover-se e renomear uma pasta:
 
 
 <!--REF #FolderClass.rename().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                    |
-| ---------- | ---------- | -- | -------------------------------------------- |
-| newName    | Text       | -> | Novo nome completo para a pasta              |
-| Resultados | 4D. Folder | <- | Renomeado arquivo|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                       |
+| ---------- | ---------- | -- | ------------------------------- |
+| newName    | Text       | -> | Novo nome completo para a pasta |
+| Resultados | 4D. Folder | <- | Renomeado arquivo               |
+<!-- END REF -->
 
 #### Descrição
 

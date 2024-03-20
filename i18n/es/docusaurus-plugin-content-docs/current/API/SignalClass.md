@@ -109,13 +109,11 @@ Método ***OpenForm***:
 
 
 <!-- REF #_command_.New signal.Params -->
-| Parámetros  | Tipo      |    | Descripción                                                     |
-| ----------- | --------- |:--:| --------------------------------------------------------------- |
-| description | Text      | -> | Descripción para la señal                                       |
-| Result      | 4D.Signal | <- | Objeto nativo que encapsula la señal|<!-- END REF -->
-
-
-|
+| Parámetros  | Tipo      |    | Descripción                          |
+| ----------- | --------- |:--:| ------------------------------------ |
+| description | Text      | -> | Descripción para la señal            |
+| Result      | 4D.Signal | <- | Objeto nativo que encapsula la señal |
+<!-- END REF -->
 
 
 #### Descripción
@@ -233,12 +231,10 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 
 #### Descripción
@@ -266,13 +262,11 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 
 <!-- REF #SignalClass.wait().Params -->
-| Parámetros | Tipo    |    | Descripción                                                   |
-| ---------- | ------- | -- | ------------------------------------------------------------- |
-| timeout    | Real    | -> | Tiempo máximo de espera de la señal en segundos               |
-| Result     | Boolean | <- | Estado de la propiedad `.signaled`|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo    |    | Descripción                                     |
+| ---------- | ------- | -- | ----------------------------------------------- |
+| timeout    | Real    | -> | Tiempo máximo de espera de la señal en segundos |
+| Result     | Boolean | <- | Estado de la propiedad `.signaled`              |
+<!-- END REF -->
 
 
 #### Descripción

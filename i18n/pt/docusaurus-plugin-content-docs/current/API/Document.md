@@ -400,9 +400,8 @@ Essa propriedade é **apenas leitura**.
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Text       | -> | Nome para a copia                                      |
 | overwrite         | Integer    | -> | `fk overwrite` para substituir os elementos existentes |
-| Resultados        | 4D. File   | <- | Arquivo copiado|<!-- END REF -->
-
-|
+| Resultados        | 4D. File   | <- | Arquivo copiado                                        |
+<!-- END REF -->
 
 #### Descrição
 
@@ -449,11 +448,10 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| Parâmetro  | Tipo     |    | Descrição                                      |
-| ---------- | -------- | -- | ---------------------------------------------- |
-| Resultados | 4D. Blob | <- | Conteúdo do arquivo|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo     |    | Descrição           |
+| ---------- | -------- | -- | ------------------- |
+| Resultados | 4D. Blob | <- | Conteúdo do arquivo |
+<!-- END REF -->
 
 #### Descrição
 
@@ -494,9 +492,8 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 | Parâmetro  | Tipo    |    | Descrição                                       |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
-| Resultados | Imagem  | <- | Ícone|<!-- END REF -->
-
-|
+| Resultados | Imagem  | <- | Ícone                                           |
+<!-- END REF -->
 
 #### Descrição
 
@@ -526,14 +523,13 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 
 <!-- REF #document.getText().Params -->
-| Parâmetro   | Tipo    |    | Descrição                                     |
-| ----------- | ------- | -- | --------------------------------------------- |
-| charSetName | Text    | -> | Nome do conjunto de caracteres                |
-| charSetNum  | Integer | -> | Número de conjuntos de caracteres             |
-| breakMode   | Integer | -> | Modo de processamento para quebras de linha   |
-| Resultados  | Text    | <- | Texto do documento|<!-- END REF -->
-
-|
+| Parâmetro   | Tipo    |    | Descrição                                   |
+| ----------- | ------- | -- | ------------------------------------------- |
+| charSetName | Text    | -> | Nome do conjunto de caracteres              |
+| charSetNum  | Integer | -> | Número de conjuntos de caracteres           |
+| breakMode   | Integer | -> | Modo de processamento para quebras de linha |
+| Resultados  | Text    | <- | Texto do documento                          |
+<!-- END REF -->
 
 #### Descrição
 

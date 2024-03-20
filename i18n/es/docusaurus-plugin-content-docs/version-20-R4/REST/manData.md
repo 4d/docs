@@ -1,6 +1,6 @@
 ---
 id: manData
-title: Manipulating Data
+title: Manipulación de datos
 ---
 
 Todos [los atributos, dataclasses expuestos](configuration.md#exposing-tables-and-fields) y todas las [funciones](ClassFunctions.md) pueden ser accedidos a través de REST. Los nombres de clases de datos, de atributos y de funciones son sensibles a las mayúsculas y minúsculas; sin embargo, los datos de las búsquedas no lo son.

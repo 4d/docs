@@ -1,6 +1,6 @@
 ---
 id: quick-tour
-title: A Quick Tour
+title: Una visita rápida
 ---
 
 Utilizando el lenguaje 4D, la impresión del tradicional mensaje "Hello, world!" en pantalla puede hacerse de varias maneras. Lo más sencillo es probablemente escribir la siguiente línea única en un método de proyecto:

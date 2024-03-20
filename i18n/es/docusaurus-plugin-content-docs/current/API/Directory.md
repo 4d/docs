@@ -404,9 +404,8 @@ Esta propiedad es **de sólo lectura**.
 | destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
 | newName           | Text      | -> | Nombre para la copia                                   |
 | overwrite         | Integer   | -> | `fk overwrite` para sustituir los elementos existentes |
-| Result            | 4D.Folder | <- | Carpeta o archivo copiado|<!-- END REF -->
-
-|
+| Result            | 4D.Folder | <- | Carpeta o archivo copiado                              |
+<!-- END REF -->
 
 #### Descripción
 
@@ -454,12 +453,11 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| Parámetros | Tipo    |    | Descripción                                                             |
-| ---------- | ------- | -- | ----------------------------------------------------------------------- |
-| path       | Text    | -> | Ruta POSIX relativa                                                     |
-| Result     | 4D.File | <- | Objeto `File` (null si la ruta no es válida)|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                  |
+| ---------- | ------- | -- | -------------------------------------------- |
+| path       | Text    | -> | Ruta POSIX relativa                          |
+| Result     | 4D.File | <- | Objeto `File` (null si la ruta no es válida) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -496,12 +494,11 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| Parámetros | Tipo       |    | Descripción                                                     |
-| ---------- | ---------- | -- | --------------------------------------------------------------- |
-| options    | Integer    | -> | Opciones de la lista de archivos                                |
-| Result     | Collection | <- | Colección de objetos de archivo hijo|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| options    | Integer    | -> | Opciones de la lista de archivos     |
+| Result     | Collection | <- | Colección de objetos de archivo hijo |
+<!-- END REF -->
 
 #### Descripción
 
@@ -560,12 +557,11 @@ Quiere obtener todos los archivos que no son invisibles en la carpeta Documents:
 
 
 <!-- REF #directory.folder().Params -->
-| Parámetros | Tipo      |    | Descripción                                                                   |
-| ---------- | --------- | -- | ----------------------------------------------------------------------------- |
-| path       | Text      | -> | Ruta POSIX relativa                                                           |
-| Result     | 4D.Folder | <- | Objeto carpeta creado (null si *path*no es válido)|<!-- END REF -->
-
-|
+| Parámetros | Tipo      |    | Descripción                                        |
+| ---------- | --------- | -- | -------------------------------------------------- |
+| path       | Text      | -> | Ruta POSIX relativa                                |
+| Result     | 4D.Folder | <- | Objeto carpeta creado (null si *path*no es válido) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -602,12 +598,11 @@ Un objeto `Folder` o null si *path* no es válido.
 
 
 <!-- REF #directory.folders().Params -->
-| Parámetros | Tipo       |    | Descripción                                                     |
-| ---------- | ---------- | -- | --------------------------------------------------------------- |
-| options    | Integer    | -> | Opciones de la lista de carpetas                                |
-| Result     | Collection | <- | Colección de objetos de carpeta hijo|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                          |
+| ---------- | ---------- | -- | ------------------------------------ |
+| options    | Integer    | -> | Opciones de la lista de carpetas     |
+| Result     | Collection | <- | Colección de objetos de carpeta hijo |
+<!-- END REF -->
 
 #### Descripción
 
@@ -654,9 +649,8 @@ Quiere obtener la colección de todas las carpetas y subcarpetas de la carpeta d
 | Parámetros | Tipo    |    | Descripción                                       |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
-| Result     | Picture | <- | Icono|<!-- END REF -->
-
-|
+| Result     | Picture | <- | Icono                                             |
+<!-- END REF -->
 
 #### Descripción
 

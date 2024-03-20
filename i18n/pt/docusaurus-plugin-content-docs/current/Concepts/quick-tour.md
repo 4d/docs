@@ -38,13 +38,13 @@ Você DEVE diferenciar o operador atribuição := dos outros operadores. Ao inv�
 A linguagem 4D é baseada em tipos, mas com alguma flexibilidade. Pode criar uma variável digitada utilizando um comando `C_XXX`. Por exemplo, para criar uma variável do tipo dados, pode escrever:
 
 ```4d
-var MyDate : Date 
+var MyDate : Date
 ```
 
 A palavra-chave `var` permite declarar variáveis objecto de um tipo de classe definido, por exemplo:
 
 ```4d
-var myPerson : cs. Person 
+var myPerson : cs.Person
 //variable of the Person user class
 ```
 
@@ -100,6 +100,8 @@ vRef:=Open document("PassFile";"TEXT";Read Mode) // abre documento em modo apena
 ```
 
 > As constantes pré-definidas aparecem sublinhadas como padrão no editor de métodos 4D.
+
+
 
 ## Página Métodos
 
@@ -206,12 +208,13 @@ Para instanciar um objeto da classe num método, chame a classe usuário a parti
 
 ```4d  
 // num método 4D
-$o:=cs.myClass.new() 
+$o:=cs.myClass.new()
 ```
 
 No método classe `myClass`, utilize a instrução `Function <methodName>` para definir a função membro classe *methodName*. Uma função membro da classe pode receber e devolver parâmetros como qualquer método e utilizar `This` como instância do objeto.
 
 ```4d  
+
 //in o ficheiro myClass.4dm Function hello -> $welcome : Text
   $welcome:="Hello "+This.who
 ```
@@ -227,8 +230,11 @@ $f.message() //displays "Hello world!"
 Opcionalmente, utilize a palavra-chave `Class constructor` para declarar as propriedades do objeto.
 
 ```4d  
-//in the Rectangle.4dm file Class constructor ($height: Integer; $width : Integer)
-This.height:=$height This.width:=$width This.name:="Rectangle"
+//in the Rectangle.4dm file
+Class constructor ($width : Integer; $height : Integer)
+This.height:=$height
+This.width:=$width
+This.name:="Rectangle"
 ```
 
 Uma classe pode estender outra classe utilizando `Class extends <ClassName>`. As superclasses podem ser chamadas utilizando o comando `Super`. Por exemplo:
@@ -384,9 +390,9 @@ End for
 For ($vCounter;1;100)
 /*
 comments  
- /*
- other comments
- */
+    /*
+    other comments
+    */
 */
 ...
 End for
@@ -413,4 +419,3 @@ Em 4D, podem ser utilizadas as seguintes sequências de escape:
 No exemplo seguinte, o carácter **Retorno de carro** (sequência de escape `\r`) é inserido numa expressão para obter uma caixa de diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
-

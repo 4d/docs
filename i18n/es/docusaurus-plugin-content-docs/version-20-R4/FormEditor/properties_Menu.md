@@ -1,6 +1,6 @@
 ---
 id: menu
-title: Menu
+title: Menú
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 id: pictureButtonOverview
-title: Picture Button
+title: Botón imagen
 ---
 
 Un botón imagen es similar a un [botón estándar](button_overview.md). Sin embargo, a diferencia de un botón estándar (que acepta tres estados: activado, desactivado y pulsado), un botón imagen tiene una imagen diferente para representar cada estado.

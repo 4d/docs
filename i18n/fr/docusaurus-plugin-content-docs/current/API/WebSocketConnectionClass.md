@@ -71,11 +71,10 @@ Cette propriété est en lecture seule.
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| Paramètres | Type                 |    | Description                                    |
-| ---------- | -------------------- |:--:| ---------------------------------------------- |
-| message    | Text / Blob / Object | -> | Le message à envoyer<!-- END REF -->
-
-|
+| Paramètres | Type                 |    | Description         |
+| ---------- | -------------------- |:--:| ------------------- |
+| message    | Text / Blob / Object | -> | The message to send |
+<!-- END REF -->
 
 #### Description
 
@@ -118,10 +117,8 @@ Cette propriété est en lecture seule.
 | Paramètres | Type    |    | Description                                                                          |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | code       | Integer | -> | Code d'erreur envoyé au client (doit être > 3000, sinon le message n'est pas envoyé) |
-| message    | Text    | -> | Message d'erreur envoyé au client<!-- END REF -->
-
-
-|
+| message    | Text    | -> | Error message sent to the client                                                     |
+<!-- END REF -->
 
 
 #### Description

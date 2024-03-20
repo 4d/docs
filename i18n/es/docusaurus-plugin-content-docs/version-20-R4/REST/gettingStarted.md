@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: Getting Started
+title: Primeros pasos
 ---
 
 4D le ofrece un servidor REST poderoso, que permite el acceso directo a los datos almacenados en sus aplicaciones 4D.

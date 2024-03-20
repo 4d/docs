@@ -1,6 +1,6 @@
 ---
 id: buttonGridOverview
-title: Button Grid
+title: Grade de botões
 ---
 
 Uma grelha de botões é um objecto transparente colocado em cima de um gráfico. O gráfico deve representar um array linha por coluna. Quando um dos gráficos é clicado, terá uma aparência afundada ou prensada:

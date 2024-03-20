@@ -1,6 +1,6 @@
 ---
 id: allowProject
-title: Allowing project methods
+title: Permitir métodos projeto
 ---
 
 

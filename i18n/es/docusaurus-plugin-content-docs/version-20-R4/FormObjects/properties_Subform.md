@@ -1,6 +1,6 @@
 ---
 id: propertiesSubform
-title: Subform
+title: Subformulario
 ---
 
 ---

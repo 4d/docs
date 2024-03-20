@@ -1,6 +1,6 @@
 ---
 id: clientServer
-title: Client/Server Management
+title: Gestión cliente/servidor
 ---
 
 

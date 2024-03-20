@@ -44,13 +44,11 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 
 
 <!-- REF #_command_.POP3 New transporter.Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | object             | -> | Información del servidor de correo                  |
+| Result     | 4D.POP3Transporter | <- | [Objeto POP3 transporter](#pop3-transporter-object) |
+<!-- END REF -->
 
 
 #### Descripción
@@ -104,12 +102,11 @@ La función devuelve un [**objeto POP3 transporter**](#pop3-transporter-object).
 
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| Parámetros | Tipo               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| server     | Object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.POP3Transporter | <- | [objeto POP3 transporter](#pop3-transporter-object)|<!-- END REF -->
-
-|
+| Parámetros | Tipo               |    | Descripción                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------- |
+| server     | Object             | -> | Información del servidor de correo                  |
+| Result     | 4D.POP3Transporter | <- | [Objeto POP3 transporter](#pop3-transporter-object) |
+<!-- END REF -->
 
 #### Descripción
 
@@ -166,11 +163,10 @@ La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 
 
 <!-- REF #POP3TransporterClass.delete().Params -->
-| Parámetros | Tipo    |    | Descripción                                              |
-| ---------- | ------- |:--:| -------------------------------------------------------- |
-| msgNumber  | Integer | -> | Número del mensaje a eliminar|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                   |
+| ---------- | ------- |:--:| ----------------------------- |
+| msgNumber  | Integer | -> | Número del mensaje a eliminar |
+<!-- END REF -->
 
 ##### Descripción
 
@@ -212,11 +208,10 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                               |
-| ---------- | ------ |:--:| ----------------------------------------- |
-| Result     | Object | <- | objeto boxInfo|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción    |
+| ---------- | ------ |:--:| -------------- |
+| Result     | Object | <- | objeto boxInfo |
+<!-- END REF -->
 
 ##### Descripción
 
@@ -266,9 +261,8 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | msgNumber  | Integer | -> | Número del mensaje en la lista                                                       |
 | headerOnly | Boolean | -> | True para descargar sólo los encabezados del correo electrónico (por defecto, False) |
-| Result     | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)|<!-- END REF -->
-
-|
+| Result     | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)                                     |
+<!-- END REF -->
 
 ##### Descripción
 
@@ -330,12 +324,11 @@ Quiere saber el remitente del primer correo del buzón:
 
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| Parámetros | Tipo    |    | Descripción                                |
-| ---------- | ------- |:--:| ------------------------------------------ |
-| msgNumber  | Integer | -> | Número del mensaje en la lista             |
-| Result     | Object  | <- | objeto mailInfo|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                    |
+| ---------- | ------- |:--:| ------------------------------ |
+| msgNumber  | Integer | -> | Número del mensaje en la lista |
+| Result     | Object  | <- | objeto mailInfo                |
+<!-- END REF -->
 
 ##### Descripción
 
@@ -391,11 +384,10 @@ El método devuelve **Null** si:
 
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| Parámetros | Tipo       |    | Descripción                                                |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| Result     | Collection | <- | Colección de objetos `mailInfo`|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                     |
+| ---------- | ---------- |:--:| ------------------------------- |
+| Result     | Collection | <- | Colección de objetos `mailInfo` |
+<!-- END REF -->
 
 ##### Descripción
 
@@ -456,12 +448,11 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                          |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
-| msgNumber  | Integer | -> | Número del mensaje en la lista                                                       |
-| Result     | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                               |
+| ---------- | ------- |:--:| --------------------------------------------------------- |
+| msgNumber  | Integer | -> | Número del mensaje en la lista                            |
+| Result     | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo |
+<!-- END REF -->
 
 ##### Descripción
 
@@ -521,11 +512,10 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 ##### Descripción
 

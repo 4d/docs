@@ -1,6 +1,6 @@
 ---
 id: global-stamp
-title: Using the Global Stamp
+title: Uso del sello global
 ---
 
 

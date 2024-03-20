@@ -1,6 +1,6 @@
 ---
 id: repair
-title: Repair Page
+title: Página Reparación
 ---
 
 Esta página se utiliza para reparar el archivo de datos cuando se ha dañado. Generalmente, sólo utilizará estas funciones bajo la supervisión de los equipos técnicos de 4D, cuando se hayan detectado anomalías al abrir la aplicación o tras una [verificación](verify.md).

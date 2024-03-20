@@ -3,11 +3,11 @@ id: shared
 title: Objetos e coleções compartilhados
 ---
 
-**Os objectos partilhados** e as coleções partilhadas **** são objectos específicos [](Concepts/dt_object.md) e coleções [](Concepts/dt_collection.md) cujos conteúdos são partilhados entre processos. Ao contrário das [variáveis interprocessos](Concepts/variables.md#interprocess-variables), os objetos partilhados e as coleções partilhadas têm a vantagem de serem compatíveis com **processos 4D preemptivos**: podem ser passados por referência como parâmetros de comandos como `New process` ou `CALL WORKER`.
+**Os objectos partilhados** e as coleções partilhadas **** são objectos específicos [](Concepts/dt_object.md) e coleções [](Concepts/dt_collection.md) cujos conteúdos são partilhados entre processos. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](https://doc.4d.com/4dv20/help/command/en/page317.html) or [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html).
 
-Os objetos partilhados e as coleções partilhadas podem ser armazenados em variáveis de tipo normalizadas `Object` e `Collection` , mas têm de ser instanciados utilizando comandos específicos:
+Shared objects and shared collections are stored in standard [`Object`](dt_object.md) and [`Collection`](dt_collection.md) type variables, but must be instantiated using specific commands:
 
-- Para criar um objeto partilhado, utilize o comando [`New shared object`](https://doc.4d.com/4dv19R/help/command/en/page1471.html) ,
+- to create a shared object, use the [`New shared object`](https://doc.4d.com/4dv20/help/command/en/page1471.html) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](classes.md#shared-classes),
 - Para criar uma coleção partilhada, utilize o comando [`New shared collection`](../API/CollectionClass.md#new-shared-collection) .
 
 :::note
@@ -18,7 +18,7 @@ Os objectos e coleções partilhados podem ser definidos como propriedades de ob
 
 Para modificar um objeto/coleção partilhado, é necessário chamar a estrutura **Use...End use** . A leitura de um valor de objeto/coleção partilhado não requer **Use...End use**.
 
-Um catálogo único e global devolvido  pelo comando `Storage` está sempre disponível em todo o banco de dados e seus componentes, e pode ser utilizado para armazenar todos os objetos e coleções compartidos.
+A unique, global catalog returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command is always available throughout the application and its components, and can be used to store all shared objects and collections.
 
 ## Utilização de objetos ou coleções compartidos
 
@@ -82,11 +82,11 @@ No entanto, é necessário ler um objeto/coleção partilhado em `Use...End use`
 
 ### Armazenamento
 
-**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. Este objeto partilhado é devolvido pelo comando [`Storage`](https://doc.4d.com/4dv19R/help/command/en/page1525.html) . É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
+**Armazenamento** é um objeto partilhado único, automaticamente disponível em cada aplicação e máquina. This shared object is returned by the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command. É possível utilizar este objeto para fazer referência a todos os objetos/coleções partilhados definidos durante a sessão que se pretende que estejam disponíveis a partir de quaisquer processos preemptivos ou padrão.
 
 Note-se que, ao contrário dos objetos partilhados padrão, o objeto `storage` não cria um grupo partilhado quando são adicionados objetos/coleções partilhados como suas propriedades. Esta exceção permite que o objeto **Storage** seja utilizado sem bloquear todos os objectos partilhados ou colecções ligados.
 
-Para mais informações, consulte a descrição do comando `Storage` .
+For more information, refer to the [`Storage`](https://doc.4d.com/4dv20/help/command/en/page1525.html) command description.
 
 ## Use... End use
 
@@ -111,7 +111,10 @@ Os objectos partilhados e as colecções partilhadas são concebidos para permit
 
 :::note
 
-Lembre que as funções de coleção [](../API/CollectionClass.md) que modificam coleções partilhadas desencadeiam automaticamente uma utilização interna **** para esta coleção partilhada enquanto a função for executada.
+The following functions automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when the function is executed:
+
+- [collection functions](../API/CollectionClass.md) that modify shared collections
+- [shared functions](classes.md#shared-functions) (defined in [shared classes](classes.md#shared-classes)).
 
 :::
 

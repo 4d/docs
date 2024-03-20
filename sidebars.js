@@ -506,6 +506,7 @@ module.exports =
 								"REST/entityset",
 								"REST/expand",
 								"REST/filter",
+								"REST/format",
 								"REST/imageformat",
 								"REST/lock",
 								"REST/method",

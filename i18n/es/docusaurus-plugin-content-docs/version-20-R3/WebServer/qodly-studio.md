@@ -173,7 +173,7 @@ No existe compatibilidad directa entre las aplicaciones implementadas con 4D y l
 | Lenguaje de programación                                      | Lenguaje 4D con ORDA                                                                            | QodlyScript con ORDA                          |
 | IDE de código                                                 | Editor de código IDE 4D/VS Code con [extensión 4D](https://github.com/4d/4D-Analyzer-VSCode)(2) | Editor de código Qodly Studio                 |
 | Debugger                                                      | Depurador 4D IDE                                                                                | Qodly Studio debugger                         |
-| Roles y privilegios REST/Web                                  | roles.json direct edit/Qodly Studio roles and privileges editor                                 | Editor de roles y privilegios de Qodly Studio |
+| Roles y privilegios REST/Web                                  | Edición directa de roles.json/Editor de roles y permisos Qodly Studio                           | Editor de roles y privilegios de Qodly Studio |
 
 (1) Si hace clic en el botón **Model** en Qodly Studio, no ocurre nada. (2) Cuando abre algún código 4D en Qodly Studio, el coloreado de sintaxis no está disponible y se muestra una advertencia "Lsp not loaded".
 
@@ -188,7 +188,7 @@ De acuerdo con la gestión de proyectos 4D, sólo se admiten los siguientes usos
 
 ### Problema conocido
 
-- In the current implementation, building merged 4D applications (stand-alone and server) that use Qodly webforms requires that the *.4dz* packed architecture be disabled, otherwise 404 errors are returned. Si crea este tipo de aplicaciones fusionadas, asegúrese de definir la llave XML [`PackProject`](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) en `False` en el archivo buildApp.4DSettings.
+- En la implementación actual, la creación de aplicaciones 4D fusionadas (autónomas y de servidor) que utilizan webforms Qodly requiere que la arquitectura empaquetada *.4dz* esté desactivada, de lo contrario se devuelven errores 404. Si crea este tipo de aplicaciones fusionadas, asegúrese de definir la llave XML [`PackProject`](https://doc.4d.com/4Dv20R2/4D/20-R2/PackProject.300-6439954.en.html) en `False` en el archivo buildApp.4DSettings.
 
 
 ### De QodlyScript al lenguaje 4D

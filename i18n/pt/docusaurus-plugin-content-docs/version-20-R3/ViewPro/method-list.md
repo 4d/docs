@@ -1287,6 +1287,7 @@ $condition.flags:=vk find flag exact match
 
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
   // Check for empty range object 
@@ -1845,7 +1846,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | Nome de objeto formulário área 4D View Pro                                   |
 | name       | Text   | -> | Nome do intervalo nomeado                                                    |
 | scope      | Number | -> | Âmbito alvo (padrão=folha atual)                                             |
-| Resultados | Text   | <- | Definição da fórmula nomeada ou intervalo nomeado|<!-- END REF -->
+| Resultados | Object | <- | Definição da fórmula nomeada ou intervalo nomeado|<!-- END REF -->
 
 |
 
@@ -3622,7 +3623,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | vpAreaName | Text | -> | Nome da área 4D View Pro no formulário|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descrição
@@ -5934,6 +5937,7 @@ Resultados:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6230,6 +6234,7 @@ Em *rangeObj*, passe um intervalo da(s) célula(s) (criada(s), por exemplo, com 
 The *timeValue* parameter specifies a time expressed in seconds to be assigned to the *rangeObj*.
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *timeValue* parameter.
+
 
 #### Exemplo
 
