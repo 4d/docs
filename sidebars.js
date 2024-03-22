@@ -441,6 +441,24 @@ module.exports =
 						"WebServer/qodly-studio"
 					],
 				},
+		{
+				 type: "category",
+				 label: "Qodly Studio",
+				 link: {
+					type: 'generated-index',
+					title: 'Qodly Studio',
+					description: 'Using Qodly Studio to build powerful web interfaces.',
+					slug: '/category/qodly-studio-in-4d',
+					keywords: [
+					  'Qodly Studio'
+					],
+					image: '/img/docusaurus.png'
+				  },
+				 items: [
+					"WebServer/qodly-studio",
+					"WebServer/from-qodlyscript-to-4d",
+				  ],
+				},
 				{
 					type: "category",
 					label: "REST Server",

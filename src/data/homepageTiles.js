@@ -207,6 +207,9 @@ const Sections = [
         <Link to="WebServer/gettingStarted">
           <Translate>Web Development</Translate>
         </Link>
+        <Link to="WebServer/qodly-studio">
+          <Translate>Qodly Studio</Translate>
+        </Link>
         <Link to="REST/gettingStarted">
           <Translate>REST Server</Translate>
         </Link>

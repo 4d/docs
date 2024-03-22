@@ -3,6 +3,14 @@ id: WebSocketClass
 title: WebSocket
 ---
 
+
+
+
+The `WebSocket` class allows you to open a WebSocket client connection with a server, send and receive data, and close the connection.
+
+WebSocket client connections are useful, for example, to receive financial data in real time or send and receive messages from a chat.
+
+
 <details><summary>History</summary>
 
 |Version|Changes|
@@ -11,10 +19,6 @@ title: WebSocket
 
 </details>
 
-
-The `WebSocket` class allows you to open a WebSocket client connection with a server, send and receive data, and close the connection.
-
-WebSocket client connections are useful, for example, to receive financial data in real time or send and receive messages from a chat.
 
 ### Example 
 

@@ -3,6 +3,9 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+
+The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
+
 <details><summary>History</summary>
 
 |Version|Changes|
@@ -11,8 +14,6 @@ title: WebSocketServer
 
 </details>
 
-
-The `WebSocketServer` class allows you to create and configure a WebSocket server in 4D. Once the 4D WebSocket server is active, you can open and use WebSocket connections between 4D and clients using the [`WebSocketConnection` class](WebSocketConnectionClass.md).
 
 :::note About WebSocket Servers
 
@@ -114,7 +115,8 @@ WebSocket server objects provide the following properties and functions:
 |---------|--- |:---:|------|
 |[WSSHandler](#wsshandler-parameter)|Object|->|Object of the user class declaring the WebSocket Server callbacks|
 |[options](#options-parameter)|Object|->|WebSocket configuration parameters|
-|Result|4D.WebSocketServer|<-|New WebSocketServer object|<!-- END REF -->
+|Result|4D.WebSocketServer|<-|New WebSocketServer object|
+<!-- END REF -->
 
 
 The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server that will use the specified *WSSHandler* callbacks and (optionally) *options*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
@@ -391,7 +393,8 @@ This property is read-only.
 <!-- REF #WebSocketServerClass.terminate().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 
 #### Description

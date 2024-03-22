@@ -3,6 +3,14 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
+The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md). 
+
+:::info
+
+For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
+
+:::
+
 <details><summary>History</summary>
 
 |Version|Changes|
@@ -11,13 +19,6 @@ title: WebSocketConnection
 
 </details>
 
-The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md). 
-
-:::info
-
-For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
-
-:::
 
 
 ### WebSocketConnection object
