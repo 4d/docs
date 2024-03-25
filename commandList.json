@@ -76,7 +76,11 @@
       "web server": "API/WebServerClass",
       "web server list": "API/WebServerClass",
       "zip create archive": "API/ZipArchiveClass",
-      "zip read archive": "API/ZipArchiveClass"
+      "zip read archive": "API/ZipArchiveClass",
+      "cs": "Concepts/classes",
+      "4d": "Concepts/classes",
+      "super": "Concepts/classes",
+      "this": "Concepts/classes"
     },
     "classes": {
       "blob": "API/BlobClass",
@@ -134,7 +138,11 @@
       "web server": "API/WebServerClass",
       "web server list": "API/WebServerClass",
       "zip create archive": "API/ZipArchiveClass",
-      "zip read archive": "API/ZipArchiveClass"
+      "zip read archive": "API/ZipArchiveClass",
+      "cs": "Concepts/classes",
+      "4d": "Concepts/classes",
+      "super": "Concepts/classes",
+      "this": "Concepts/classes"
     },
     "classes": {
       "blob": "API/BlobClass",
@@ -196,7 +204,11 @@
       "web server": "API/WebServerClass",
       "web server list": "API/WebServerClass",
       "zip create archive": "API/ZipArchiveClass",
-      "zip read archive": "API/ZipArchiveClass"
+      "zip read archive": "API/ZipArchiveClass",
+      "cs": "Concepts/classes",
+      "4d": "Concepts/classes",
+      "super": "Concepts/classes",
+      "this": "Concepts/classes"
     },
     "classes": {
       "blob": "API/BlobClass",
@@ -257,7 +269,11 @@
       "web server": "API/WebServerClass",
       "web server list": "API/WebServerClass",
       "zip create archive": "API/ZipArchiveClass",
-      "zip read archive": "API/ZipArchiveClass"
+      "zip read archive": "API/ZipArchiveClass",
+      "cs": "Concepts/classes",
+      "4d": "Concepts/classes",
+      "super": "Concepts/classes",
+      "this": "Concepts/classes"
     },
     "classes": {
       "blob": "API/BlobClass",
