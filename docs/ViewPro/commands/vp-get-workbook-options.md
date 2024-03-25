@@ -25,7 +25,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area.
 
 The returned object contains all the workbook options (default and modified ones), in the workbook.
 
-The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](#vp-set-workbook-options).
+The list of workbook options is referenced in [`VP SET WORKBOOK OPTIONS`'s description](vp-set-workbook-options.md).
 
 #### Example
 
@@ -37,4 +37,4 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 #### See also
 
-[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
+[VP SET WORKBOOK OPTIONS](vp-set-workbook-options.md)

@@ -50,5 +50,5 @@ End if
 #### See also
 
 [VP Get values](vp-get-values.md)<br/>
-[VP SET VALUE](#vp-set-value)<br/>
-[VP SET VALUES](#vp-set-values)
+[VP SET VALUE](vp-set-value.md)<br/>
+[VP SET VALUES](vp-set-values.md)

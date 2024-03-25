@@ -51,5 +51,5 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 [VP Get formulas](vp-get-formulas.md)<br/>
 [VP Get value](vp-get-value.md)<br/>
-[VP SET FORMULAS](#vp-set-formulas)<br/>
-[VP SET VALUES](#vp-set-values)
+[VP SET FORMULAS](vp-set-formulas.md)<br/>
+[VP SET VALUES](vp-set-values.md)
