@@ -2,6 +2,7 @@
 id: vp-add-range-name
 title: VP ADD RANGE NAME
 ---
+
 <!-- REF #_method_.VP ADD RANGE NAME.Syntax -->
 
 **VP ADD RANGE NAME** ( *rangeObj* : Object ; *name* : Text { ; *options* : Object } )<!-- END REF -->
@@ -29,8 +30,8 @@ You can pass an object with additional properties for the named range in *option
 |scope| Number| Scope for the range. You can pass the sheet index (counting begins at 0) or use the following constants: <li>`vk current sheet`</li><li>`vk workbook`</li>The scope determines whether a range name is local to a given worksheet (*scope*=sheet index or `vk current sheet`), or global across the entire workbook (*scope*=`vk workbook`).|
 |comment|Text|Comment associated to named range|
 
->* A named range is actually a named formula containing coordinates. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](#vp-add-formula-name) method to create named ranges.
-> * Formulas defining named ranges can be retrieved with the [`VP Get formula by name`](#vp-get-formula-by-name) method.
+>* A named range is actually a named formula containing coordinates. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](vp-add-formula-name.md) method to create named ranges.
+> * Formulas defining named ranges can be retrieved with the [`VP Get formula by name`](vp-get-formula-by-name.md) method.
 
 #### Example  
 
@@ -43,5 +44,5 @@ VP ADD RANGE NAME($range;"Total1")
 
 #### See also
 
-[VP Get names](commands-g.md#vp-get-names)<br/>
-[VP Name](commands-n.md#vp-name)
+[VP Get names](vp-get-names.md)<br/>
+[VP Name](vp-name.md)

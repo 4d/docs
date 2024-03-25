@@ -42,5 +42,5 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 #### See also
 
-[VP REMOVE SHEET](commands-r.md#vp-remove-sheet)
+[VP REMOVE SHEET](vp-remove-sheet.md)
 

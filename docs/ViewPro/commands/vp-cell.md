@@ -21,7 +21,7 @@ title: VP Cell
 
 The `VP Cell` command <!-- REF #_method_.VP Cell.Summary -->returns a new range object referencing a specific cell<!-- END REF -->.
 
-> This command is intended for ranges of a single cell. To create a range object for multiple cells, use the [VP Cells](#vp-cells) command.
+> This command is intended for ranges of a single cell. To create a range object for multiple cells, use the [VP Cells](vp-cells.md) command.
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -47,4 +47,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 #### See also
 
-[VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row))
+[VP All](vp-all.md)<br/>
+[VP Cells](vp-cells.md)<br/>
+[VP Column](vp-column.md)<br/>
+[VP Combine ranges](vp-combine-ranges.md)<br/>
+[VP Name](vp-name.md)<br/>
+[VP Row](vp-row.md)

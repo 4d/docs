@@ -42,5 +42,11 @@ The code would be:
 
 #### See also
 
-[VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)<br/>[VP SET COLUMN ATTRIBUTES](#vp-set-column-attributes)
+[VP All](vp-all.md)<br/>
+[VP Cells](vp-cells.md)<br/>
+[VP Cell](vp-cell.md)<br/>
+[VP Combine ranges](vp-combine-ranges.md)<br/>
+[VP Name](vp-name.md)<br/>
+[VP Row](vp-row.md)<br/>
+[VP SET COLUMN ATTRIBUTES](vp-set-column-attributes.md)
 

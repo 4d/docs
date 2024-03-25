@@ -22,11 +22,11 @@ title: VP CREATE TABLE
 |rangeObj|Object|->|Range object|
 |tableName|Text|->|Name for the table|
 |source|Text|->|Data context property name to display in the table|
-|options|[cs.ViewPro.TableOptions](classes.md#tableoptions)|->|Additional options|<!-- END REF -->
+|options|[cs.ViewPro.TableOptions](../classes.md#tableoptions)|->|Additional options|<!-- END REF -->
 
 #### Description
 
-The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](#vp-set-data-context).
+The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. You can create a table in a range of cells to make managing and analyzing a group of related data easier. A table typically contains related data in rows and columns, and takes advantage of a [data context](vp-set-data-context).
 
 ![](../../assets/en/ViewPro/vp-create-table.png)
 
@@ -38,12 +38,12 @@ In *tableName*, pass a name for the table. The name must:
 * include at least 5 characters
 * not include spaces or start with a number
 
-In *source*, you can pass a property name of a [data context](#vp-set-data-context) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row. 
+In *source*, you can pass a property name of a [data context](vp-set-data-context.md) to display its data in the table. This binds the table to the data context. When the data context is updated, the data displayed in the table is updated accordingly. The *source* property must contain a collection of objects and each element represents a row. 
 
   * If you don't specify a *source*, the command creates an empty table with the size defined in *rangeObj*. 
   * If the specified *source* cannot be fully displayed in the document, no table is created.
 
-In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](classes.md#tableoptions) that contains the table properties to set. 
+In the *options* parameter, pass an object of the [`cs.ViewPro.TableOptions` class](../classes.md#tableoptions) that contains the table properties to set. 
 
 Within the *options* object, the *tableColumns* collection determines the structure of the table's columns. The length of the *tableColumns* collection must be equal to the range column count:
 
@@ -63,7 +63,7 @@ Here the titles of the columns would be `LastName` and `FirstName`.
 
   * The first-level collection contains subcollections of values. Each subcollection defines a row. Pass an empty collection to skip a row. The number of values in the first subcollection determines how many columns are created.
   * The subcollections' indices are used as column titles.
-  * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](#vp-set-value). 
+  * Each subcollection defines cell values for the row. Values can be `Integer`, `Real`, `Boolean`, `Text`, `Date`, `Null`, `Time` or `Picture`. A `Time` value must be an a object containing a time attribute, as described in [VP SET VALUE](vp-set-value.md). 
 
 > This only works when generating columns automatically. You cannot use a collection of scalar data with the *tableColumns* option.
 
@@ -103,5 +103,14 @@ Here's the result:
 
 #### See also
 
-[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP SET TABLE THEME](#vp-set-table-theme)
+[VP Find table](vp-find-table.md)<br/>
+[VP Get table column attributes](vp-get-table-column-attributes.md)<br/>
+[VP Get table column index](vp-get-table-column-index.md)<br/>
+[VP INSERT TABLE COLUMNS](vp-insert-table-columns.md)<br/>
+[VP INSERT TABLE ROWS](vp-insert-table-rows.md)<br/>
+[VP REMOVE TABLE](vp-remove-table.md)<br/>
+[VP RESIZE TABLE](vp-resize-table.md)<br/>
+[VP SET DATA CONTEXT](vp-set-data-context.md)<br/>
+[VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md)<br/>
+[VP SET TABLE THEME](vp-set-table-theme.md)
 

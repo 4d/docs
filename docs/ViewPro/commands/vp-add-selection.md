@@ -42,7 +42,7 @@ Result:
 
 [VP Get active cell](vp-get-active-cell.md)<br/>
 [VP Get selection](vp-get-selection.md)<br/>
-[VP RESET SELECTION](commands-r.md#vp-reset-selection)<br/>
-[VP SET ACTIVE CELL](commands-s.md#vp-set-active-cell)<br/>
-[VP SET SELECTION](commands-s.md#vp-set-selection)<br/>
-[VP SHOW CELL](commands-s.md#vp-show-cell)
+[VP RESET SELECTION](vp-reset-selection.md)<br/>
+[VP SET ACTIVE CELL](vp-set-active-cell.md)<br/>
+[VP SET SELECTION](vp-set-selection.md)<br/>
+[VP SHOW CELL](vp-show-cell.md)

@@ -32,9 +32,9 @@ $all:=VP All("ViewProArea") // all cells of the current sheet
 
 #### See also
 
-[VP Cell](commands-c.md#vp-cell)<br/>
-[VP Cells](commands-c.md#vp-cells)<br/>
-[VP Column](commands-c.md#vp-column)<br/>
-[VP Combine ranges](commands-c.md#vp-combine-ranges)<br/>
-[VP Name](commands-n.md#vp-name)<br/>
-[VP Row](commands-r.md#vp-row)
+[VP Cell](vp-cell)<br/>
+[VP Cells](vp-cells)<br/>
+[VP Column](vp-column.md)<br/>
+[VP Combine ranges](vp-combine-ranges.md)<br/>
+[VP Name](vp-name.md)<br/>
+[VP Row](vp-row.md)

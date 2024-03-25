@@ -24,7 +24,7 @@ The `VP ADD FORMULA NAME` command <!-- REF #_method_.VP ADD FORMULA NAME.Summary
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-Pass the 4D View Pro formula that you want to name in *vpFormula*. For detailed information about formula syntax, see [Formulas and Functions](formulas.md) page.
+Pass the 4D View Pro formula that you want to name in *vpFormula*. For detailed information about formula syntax, see [Formulas and Functions](../formulas.md) page.
 
 Pass the new name for the formula in *name*. If the name is already used within the same scope, the new named formula replaces the existing one. Note that you can use the same name for different scopes (see below).
 
@@ -43,7 +43,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### See also
 
-[Cell references](formulas.md#cell-references)<br/>
-[VP Get formula by name](commands-g.md#vp-get-formula-by-name)<br/>
-[VP Get names](commands-g.md#vp-get-names)
+[Cell references](../formulas.md#cell-references)<br/>
+[VP Get formula by name](vp-get-formula-by-name.md)<br/>
+[VP Get names](vp-get-names.md)
 

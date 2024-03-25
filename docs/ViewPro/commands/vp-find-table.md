@@ -42,7 +42,7 @@ End if
 
 #### See also
 
-[VP Get table range](#vp-get-table-range)
+[VP Get table range](vp-get-table-range.md)
 
 
 

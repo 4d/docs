@@ -38,5 +38,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 #### See also
 
-[VP All](#vp-delete-rows)<br/>[VP Cells](#vp-insert-columns)<br/>[VP Column](#vp-insert-rows)
+[VP DELETE ROWS](vp-delete-rows.md)<br/>
+[VP INSERT COLUMNS](vp-insert-columns.md)<br/>
+[VP INSERT ROWS](vp-insert-rows.md)
 

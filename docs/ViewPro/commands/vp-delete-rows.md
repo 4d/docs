@@ -38,4 +38,6 @@ use the following code:
 
 #### See also
 
-[VP All](#vp-delete-columns)<br/>[VP Cells](#vp-insert-columns)<br/>[VP Column](#vp-insert-rows)
+[VP DELETE ROWS](vp-delete-columns.md)<br/>
+[VP INSERT COLUMNS](vp-insert-columns.md)<br/>
+[VP INSERT ROWS](vp-insert-rows.md)

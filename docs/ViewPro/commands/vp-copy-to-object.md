@@ -35,7 +35,7 @@ You can pass an optional *options* parameter with the following properties:
 |copy|Boolean|*True* (default) to keep the copied values, formatting and formulas after the command executes. *False* to remove them.|
 |copyOptions|Longint|Specifies what is copied or moved. Possible values: <p><table><tr><th>Value</th><th>Description</th></tr><tr><td>`vk clipboard options all` (default)</td><td>Copies all data objects, including values, formatting, and formulas.</td></tr><tr><td>`vk clipboard options formatting`</td><td>Copies only the formatting.</td></tr><tr><td>`vk clipboard options formulas`</td><td>Copies only the formulas.</td></tr><tr><td>`vk clipboard options formulas and formatting`</td><td>Copies the formulas and formatting.</td></tr><tr><td>`vk clipboard options values`</td><td>Copies only the values.</td></tr><tr><td>`vk clipboard options value and formatting`</td><td>Copies the values and formatting.</td></tr></table></p>|
 
-The paste options defined in the [workbook options](#vp-set-workbook-options) are taken into account.
+The paste options defined in the [workbook options](vp-set-workbook-options.md) are taken into account.
 
 The command returns an object that contains the copied data.
 
@@ -60,8 +60,8 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### See also
 
-
-
-
-[VP PASTE FROM OBJECT](#vp-paste-from-object)<br/>[VP MOVE CELLS](#vp-move-cells)<br/>[VP Get workbook options](#vp-get-workbook-options)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
+[VP PASTE FROM OBJECT](vp-paste-from-object.md)<br/>
+[VP MOVE CELLS](vp-move-cells.md)<br/>
+[VP Get workbook options](vp-get-workbook-options.md)<br/>
+[VP SET WORKBOOK OPTIONS](vp-set-workbook-options.md)
 

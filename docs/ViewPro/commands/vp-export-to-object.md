@@ -28,7 +28,7 @@ In the *options* parameter, you can pass the following export options, if requir
 |includeFormatInfo| Boolean | True (default) to include formatting information, false otherwise. Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to False allows reducing export time. |
 |includeBindingSource| Boolean | True (default) to export the current data context values as cell values in the exported object (data contexts themselves are not exported). False otherwise. Cell binding is always exported.|
 
-For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) paragraph.
+For more information on 4D View Pro objects, please refer to the [4D View Pro object](../configuring.md#4d-view-pro-object) paragraph.
 
 #### Example 1
 
@@ -53,4 +53,6 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 #### See also
 
-[VP Convert to picture](#vp-convert-to-picture)<br/>[VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP IMPORT FROM OBJECT](#vp-import-from-object)
+[VP Convert to picture](vp-convert-to-picture.md)<br/>
+[VP EXPORT DOCUMENT](vp-export-document.md)<br/>
+[VP IMPORT FROM OBJECT](vp-import-from-object.md)

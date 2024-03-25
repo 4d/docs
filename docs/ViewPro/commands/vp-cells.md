@@ -56,5 +56,10 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 
 #### See also
 
-[VP All](#vp-all)<br/>[VP Cells](#vp-cells)<br/>[VP Column](#vp-column)<br/>[VP Combine ranges](#vp-combine-ranges)<br/>[VP Name](#vp-name)<br/>[VP Row](#vp-row)
+[VP All](vp-all.md)<br/>
+[VP Cell](vp-cell.md)<br/>
+[VP Column](vp-column.md)<br/>
+[VP Combine ranges](vp-combine-ranges.md)<br/>
+[VP Name](vp-name.md)<br/>
+[VP Row](vp-row.md)
 

@@ -25,7 +25,7 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 The *styleName* parameter lets you assign a name to the style sheet. If the name is already used within the same scope, the new style sheet replaces the existing one. Note that you can use the same name for different scopes (see below).
 
-Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
+Within the *styleObj*, designate the settings for the style sheet (e.g., font, text decoration, alignment, borders, etc.). For the full list of style properties, see [Style object properties](../configuring.md#style-object-properties).
 
 You can designate where to define the style sheet in the optional *sheet* parameter using the sheet index (indexing starts at 0) or with the following constants:
 
@@ -34,7 +34,7 @@ You can designate where to define the style sheet in the optional *sheet* parame
 
 If a *styleName* style sheet is defined at the workbook level and at a sheet level, the sheet level has priority over the workbook level when the style sheet is set.
 
-To apply the style sheet, use the [VP SET DEFAULT STYLE](#vp-set-default-style) or [VP SET CELL STYLE](#vp-set-cell-style) commands.
+To apply the style sheet, use the [VP SET DEFAULT STYLE](vp-set-default-style.md) or [VP SET CELL STYLE](vp-set-cell-style.md) commands.
 
 #### Example  
 
@@ -72,11 +72,11 @@ will create and apply the following style object named *GreenDashDotStyle*:
 
 #### See also
 
-[4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>
-[VP Get stylesheet](commands-g.md#vp-get-stylesheet)<br/>
-[VP Get stylesheets](commands-g.md#vp-get-stylesheets)<br/>
-[VP REMOVE STYLESHEET](commands-r.md#vp-remove-stylesheet)<br/>
-[VP SET CELL STYLE](commands-s.md#vp-set-cell-style)<br/>
-[VP SET DEFAULT STYLE](commands-s.md#vp-set-default-style)
+[4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
+[VP Get stylesheet](vp-get-stylesheet.md)<br/>
+[VP Get stylesheets](vp-get-stylesheets.md)<br/>
+[VP REMOVE STYLESHEET](vp-remove-stylesheet.md)<br/>
+[VP SET CELL STYLE](vp-set-cell-style.md)<br/>
+[VP SET DEFAULT STYLE](vp-set-default-style.md)
 
 

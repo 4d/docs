@@ -22,7 +22,7 @@ In *paramObj*, you can pass several properties:
 
 |Property|Type|Description|
 |---------|--- |------|
-|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed. See [Passing a callback method (formula)](#passing-a-callback-method-formula).|
+|formula|4D.Function|(mandatory) Callback method to be launched when the export has completed. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula).|
 |includeAutoMergedCells|Boolean|Whether to include the automatically merged cells when saving, default=false.|
 |includeBindingSource|Boolean|Whether to include the binding source when saving, default=true.|
 |includeCalcModelCache|Boolean|Whether to include the extra data of calculation. Can impact the speed of opening the file, default=false.|
@@ -72,5 +72,5 @@ End if
 
 #### See also
 
-[VP IMPORT FROM BLOB](#vp-import-from-blob)
+[VP IMPORT FROM BLOB](vp-import-from-blob.md)
 

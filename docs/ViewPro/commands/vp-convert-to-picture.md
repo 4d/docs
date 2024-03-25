@@ -24,9 +24,9 @@ This command is useful, for example:
 * to embed a 4D View Pro document in an other document such as a 4D Write Pro document
 * to print a 4D View Pro document without having to load it into a 4D View Pro area.
 
-In *vpObject*, pass the 4D View Pro object that you want to convert. This object must have been previously parsed using [VP Export to object](#vp-export-to-object) or saved using [VP EXPORT DOCUMENT](#vp-export-document).  
+In *vpObject*, pass the 4D View Pro object that you want to convert. This object must have been previously parsed using [VP Export to object](vp-export-to-object.md) or saved using [VP EXPORT DOCUMENT](vp-export-document.md).  
 
->SVG conversion process requires that expressions and formats (cf. [Cell Format](configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. If you convert a document that was not evaluated beforehand, expressions or formats may be rendered in an unexpected way.
+>SVG conversion process requires that expressions and formats (cf. [Cell Format](../configuring.md#cell-format)) included in the 4D View Pro area be evaluated at least once, so that they can be correctly exported. If you convert a document that was not evaluated beforehand, expressions or formats may be rendered in an unexpected way.
 
 In *rangeObj*, pass a range of cells to convert. By default, if this parameter is omitted, the whole document contents are converted.
 
@@ -41,7 +41,7 @@ Document contents are converted with respect to their viewing attributes, includ
 * Column width
 * Hidden columns / rows.
 
->Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](#vp-set-print-info).
+>Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](vp-set-print-info.md).
 
 #### Function result
 
@@ -60,5 +60,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 
 #### See also
 
-[VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP Export to object](#vp-export-to-object)<br/>[VP SET PRINT INFO](#vp-set-print-info)
+[VP EXPORT DOCUMENT](vp-export-document.md)<br/>
+[VP Export to object](vp-export-to-object.md)<br/>
+[VP SET PRINT INFO](vp-set-print-info.md)
 

@@ -23,7 +23,7 @@ The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Sum
 
 In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
 
-The returned object contains defined font attributes as properties. For more information about the available properties, see the [VP Object to font](#vp-object-to-font) command.
+The returned object contains defined font attributes as properties. For more information about the available properties, see the [VP Object to font](vp-object-to-font.md) command.
 
 #### Example 1
 
@@ -45,8 +45,11 @@ size:16pt
 
 #### Example 2  
 
-See example for [`VP Object to font`](#vp-object-to-font).
+See example for [`VP Object to font`](vp-object-to-font.md).
 
 #### See also
 
-[4D View Pro Style Objects and Style Sheets](configuring.md#style-objects--style-sheets)<br/>[VP Object to font](#vp-object-to-font)<br/>[VP SET CELL STYLE](#vp-set-cell-style)<br/>[VP SET DEFAULT STYLE](#vp-set-default-style)
+[4D View Pro Style Objects and Style Sheets](../configuring.md#style-objects--style-sheets)<br/>
+[VP Object to font](vp-object-to-font.md)<br/>
+[VP SET CELL STYLE](vp-set-cell-style.md)<br/>
+[VP SET DEFAULT STYLE](vp-set-default-style.md)
