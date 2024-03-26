@@ -37,7 +37,7 @@ Quando uma classe de usuário for [definida](Concepts/classes.md#class-definitio
 
 #### Descrição
 
-A propriedade `.isShared` <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.
+A propriedade `.isShared` <!-- REF #ClassClass.isShared.Summary -->retorna `true` se a classe usuário tiver sido definida como [classe compartilhada](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.
 
 Essa propriedade é **apenas leitura**.
 
