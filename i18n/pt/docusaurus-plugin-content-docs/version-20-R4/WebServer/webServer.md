@@ -1,6 +1,6 @@
 ---
 id: webServer
-title: Web Server
+title: Servidor Web
 ---
 
 4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
