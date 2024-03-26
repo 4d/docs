@@ -3,6 +3,8 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois que le serveur WebSocket 4D est actif, vous pouvez ouvrir et utiliser des connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
+
 <details><summary>Historique</summary>
 
 | Version | Modifications |
@@ -10,8 +12,6 @@ title: WebSocketServer
 | v20     | Ajout         |
 
 </details>
-
-La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois que le serveur WebSocket 4D est actif, vous pouvez ouvrir et utiliser des connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 :::note À propos des serveurs WebSocket
 
