@@ -3,6 +3,9 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+
+`WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 4D WebSocketサーバーがアクティブになると、[`WebSocketConnection`](WebSocketConnectionClass.md) クラスを使用して 4D とクライアント間で WebSocket 接続を開き、使用することができます。
+
 <details><summary>履歴</summary>
 
 | バージョン | 内容 |
@@ -11,8 +14,6 @@ title: WebSocketServer
 
 </details>
 
-
-`WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 4D WebSocketサーバーがアクティブになると、[`WebSocketConnection`](WebSocketConnectionClass.md) クラスを使用して 4D とクライアント間で WebSocket 接続を開き、使用することができます。
 
 :::note WebSocket サーバーについて
 
@@ -110,14 +111,12 @@ WebSocketサーバーオブジェクトは、以下のプロパティと機能�
 
 
 <!-- REF #4D.WebSocketServer.new().Params -->
-| 引数                           | タイプ                |    | 説明                                                      |
-| ---------------------------- | ------------------ |:--:| ------------------------------------------------------- |
-| [WSSHandler](#wsshandler-引数) | Object             | -> | WebSocketサーバー用コールバックを宣言しているユーザークラスのオブジェクト               |
-| [options](#options-引数)       | Object             | -> | WebSocket の設定パラメーター                                     |
-| 戻り値                          | 4D.WebSocketServer | <- | あたらしい WebSocketServer オブジェクト|<!-- END REF -->
-
-
-|
+| 引数                           | タイプ                |    | 説明                                        |
+| ---------------------------- | ------------------ |:--:| ----------------------------------------- |
+| [WSSHandler](#wsshandler-引数) | Object             | -> | WebSocketサーバー用コールバックを宣言しているユーザークラスのオブジェクト |
+| [options](#options-引数)       | Object             | -> | WebSocket の設定パラメーター                       |
+| 戻り値                          | 4D.WebSocketServer | <- | 新しい WebSocketServer オブジェクト                |
+<!-- END REF -->
 
 
 `4D.WebSocketServer.new()` 関数は、 <!-- REF #4D.WebSocketServer.new().Summary -->指定した *WSSHandler* コールバックと、*options* の設定 (任意) を使用して WebSocketサーバーを作成および起動し、`4D.WebSocketServer` オブジェクトを返します<!-- END REF -->。
@@ -392,12 +391,10 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |::| -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-
-|
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
+<!-- END REF -->
 
 
 #### 説明
