@@ -79,7 +79,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 ## 4DBASE
 
-#### Syntax: `<!--#4DBASE folderPath-->`
+#### Sintaxe: `<!--#4DBASE folderPath-->`
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
@@ -130,9 +130,9 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ```html
 /* Head.htm */
-/* the working directory here is relative to the included file (FR/ or US/) */
+/* O diretório de trabalho aqui é relativo ao arquivo incluído (FR/ ou US/) */
 <!--#4DBASE Styles/-->
-<!--#4DINCLUDE main.css-->
+<!--#4DINCLUDE main. ss-->
 <!--#4DINCLUDE product.css-->
 <!--#4DBASE Scripts/-->
 <!--#4DINCLUDE main.js-->
@@ -141,7 +141,7 @@ In the "head.html" file, the current folder is modified through `<!--#4DBASE -->
 
 ## 4DCODE
 
-#### Syntax: `<!--#4DCODE codeLines-->`
+#### Sintaxe: `<!--#4DCODE codeLines-->`
 
 The `4DCODE` tag allows you to insert a multi-line 4D code block in a template.
 
@@ -315,7 +315,7 @@ _getGamers_ is a project method that returns an object like ("Mary"; 10; "Ann"; 
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
+#### Sintaxe: `<!--#4DEVAL expression-->`
 
 #### Alternative syntax: `$4DEVAL(expression)`
 
@@ -336,9 +336,9 @@ In case of an error during interpretation, the text inserted will be in the form
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
+#### Sintaxe: `<!--#4DHTML expression-->`
 
-#### Alternative syntax: `$4DHTML(expression)`
+#### Sintaxe alternativa: `$4DHTML(expression)`
 
 Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
 
@@ -355,7 +355,7 @@ In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar
 
 ## 4DIF, 4DELSE, 4DELSEIF e 4DENDIF
 
-#### Syntax: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
+#### Sintaxe: `<!--#4DIF expression-->` {`<!--#4DELSEIF expression2-->...<!--#4DELSEIF expressionN-->`} {`<!--#4DELSE-->`} `<!--#4DENDIF-->`
 
 Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!--#4DENDIF-->` comments, the `<!--#4DIF expression-->` comment offers the possibility to execute portions of code conditionally.
 
@@ -370,7 +370,7 @@ You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the
 
 Os dois códigos seguintes são equivalentes.
 
-Code using `4DELSE` only:
+Código usando somente `4DELSE`:
 
 ```html
 <!--#4DIF Condition1-->
@@ -432,9 +432,9 @@ Este exemplo insere páginas diferentes dependendo de qual usuário está conect
 
 ## 4DINCLUDE
 
-#### Syntax: `<!--#4DINCLUDE path-->`
+#### Sintaxe: `<!--#4DINCLUDE path-->`
 
-This tag is mainly designed to include an HTML page (indicated by the _path_ parameter) in another HTML page. By default, only the body of the specified HTML page, i.e. the contents found within the `<body>` and `</body>` tags, is included (the tags themselves are not included). Isso permite evitar conflitos relacionados a meta etiquetas presentes nos cabeçalhos.
+Essa tag foi projetada principalmente para incluir uma página HTML (indicada pelo parâmetro _path_) em outra página HTML. Por padrão, somente o corpo da página HTML especificada, ou seja, o conteúdo encontrado dentro das tags `<body>` e `</body>`, é incluído (as próprias tags não são incluídas). Isso permite evitar conflitos relacionados a meta etiquetas presentes nos cabeçalhos.
 
 However, if the HTML page specified does not contain `<body>``</body>` tags, the entire page is included. Cabe-lhe a você verificar a coerência das meta etiquetas.
 
@@ -487,7 +487,7 @@ O seguinte código:
 
 ```4d
  FIRST RECORD([People])
- While(Not(End selec tion([People])))
+ While(Not(End selection([People])))
     ...
     NEXT RECORD([People])
  End while
@@ -551,7 +551,7 @@ The `my_method` method can be as follows:
 ```4d
  C_LONGINT($1)
  C_BOOLEAN($0)
- If($1=0) `Initialisation
+ If($1=0) `Inicialização
     $0:=True
  Else
     If($1<50)
@@ -559,7 +559,7 @@ The `my_method` method can be as follows:
        var:=...
        $0:=True
     Else
-       $0:=False `Stops the loop
+       $0:=False `Para o loop
     End if
  End if
 ```
@@ -637,7 +637,7 @@ The `MYMETH` method is as follows:
 
 ```4d
   //MYMETH
- C_TEXT($0;$1) //These parameters must always be declared
+ C_TEXT($0;$1) //Estes parâmetros devem ser sempre declarados
  $0:=String(Current date)
 ```
 
@@ -647,14 +647,14 @@ As 4D executes methods in their order of appearance, it is absolutely possible t
 
 ## 4DTEXT
 
-#### Syntax: `<!--#4DTEXT expression-->`
+#### Sintaxe: `<!--#4DTEXT expression-->`
 
-#### Alternative syntax: `$4DTEXT(expression)`
+#### Sintaxe alternativa: `$4DTEXT(expression)`
 
 The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D variable or expression returning a value. Por exemplo, se escrever (numa página HTML):
 
 ```html
-<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P>Bem-vindo a <!--#4DTEXT vtSiteName-->!</P>
 ```
 
 The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
