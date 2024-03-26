@@ -14,6 +14,8 @@ Lea las [**Novedades de 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-
 - La capa de red QUIC soporta ahora [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
 - Soporte de [selecciones de entidades restringidas](../ORDA/entities.md#restricting-entity-selections).
 - Support of [shared classes](../Concepts/classes.md#shared-classes) and [singleton classes](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me)
+- New [$format](../REST/$format.md) REST parameter.
+
 
 
 #### Cambios de comportamiento
@@ -368,7 +370,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v1
 
 - [IMAPTransporter Class](../API/IMAPTransporterClass.md): funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` y `.unsubscribe()`.
 - [Clase File](../API/FileClass.md): nuevas funciones `setAppInfo()` y `getAppInfo()`.
-- Nueva etiqueta de transformación [4DEACH](../Tags/tags.md#4deach-and-4dendeach).
+- Nueva etiqueta de transformación [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach).
 - Servidor Web: nuevo parámetro [cookie de sesión SameSite](../WebServer/webServerConfig.md#session-cookie-samesite).
 - Soporte del esquema color oscuro y claro para los [formularios](../FormEditor/properties_FormProperties.md#color-scheme) y [hojas de estilo](../FormEditor/stylesheets#media-queries)
 - Nuevos temas oscuros y claros por defecto en las [preferencias del editor de código](../Preferences/methods.md#theme-list).
