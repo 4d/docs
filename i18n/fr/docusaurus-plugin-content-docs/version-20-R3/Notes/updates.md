@@ -300,7 +300,7 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass.md#settext)
 
 
-## Previous releases
+## Versions précédentes
 
 <details><summary>Cliquez pour voir les notes de mise à jour des versions précédentes</summary>
 
@@ -308,7 +308,7 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 
 :::warning Note de sécurité
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. Pour plus d'informations, reportez-vous à ce [bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour vers 4D v19.7 LTS build 288986 ou plus. Pour plus d'informations, reportez-vous à ce [bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
@@ -337,7 +337,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 </details>
 
 
-## Library table
+## Tableau des bibliothèques
 
 
 
