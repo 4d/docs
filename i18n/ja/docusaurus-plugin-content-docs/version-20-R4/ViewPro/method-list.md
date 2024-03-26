@@ -1313,10 +1313,10 @@ End if
 
 <!-- REF #_method_.VP Find table.Params -->
 
-| 引数       | タイプ    |    | 説明     |                  |
-| -------- | ------ | -- | ------ | ---------------- |
-| rangeObj | Object | -> | セルのレンジ |                  |
-| 戻り値      | Text   | <- | 表組みの名称 | <!-- END REF --> |
+| 引数       | タイプ    |    | 説明         |                  |
+| -------- | ------ | -- | ---------- | ---------------- |
+| rangeObj | Object | -> | セルのレンジ     |                  |
+| 戻り値      | Text   | <- | Table name | <!-- END REF --> |
 
 #### 説明
 
@@ -2574,7 +2574,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 | 引数         | タイプ     |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | 表組みの名称                                         |                  |
+| tableName  | Text    | -> | Table name                                     |                  |
 | column     | Integer | -> | 表の列のインデックス                                     |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Object  | <- | _column_ の属性                                   | <!-- END REF --> |
@@ -2634,7 +2634,7 @@ End if
 | 引数         | タイプ     |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | 表組みの名称                                         |                  |
+| tableName  | Text    | -> | Table name                                     |                  |
 | columnName | Text    | -> | 列の名称                                           |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) |                  |
 | 戻り値        | Integer | <- | _columnName_ のインデックス                           | <!-- END REF --> |
@@ -2686,7 +2686,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | 引数         | タイプ        |    | 説明                                                                    |                  |
 | ---------- | ---------- | -- | --------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名                                               |                  |
-| tableName  | Text       | -> | 表組みの名称                                                                |                  |
+| tableName  | Text       | -> | Table name                                                            |                  |
 | reset      | Boolean    | -> | 現在の表から "ダーティ" ステータスをクリアするには true、そのままにするには false を指定します。 デフォルト = true |                  |
 | sheet      | Integer    | -> | シートのインデックス (省略した場合はカレントシート)                        |                  |
 | 戻り値        | Collection | <- | 前回のリセット以降に変更された全項目を格納するオブジェクトのコレクション                                  | <!-- END REF --> |
@@ -2748,7 +2748,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | 引数         | タイプ     |    | 説明                                                                         |                  |
 | ---------- | ------- | -- | -------------------------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                                    |                  |
-| tableName  | Text    | -> | 表組みの名称                                                                     |                  |
+| tableName  | Text    | -> | Table name                                                                 |                  |
 | onlyData   | Integer | -> | `vk table full range` (デフォルト) または `vk table data range` |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                             |                  |
 | 戻り値        | Object  | <- | 表組みが含まれるレンジ                                                                | <!-- END REF --> |
@@ -2796,7 +2796,7 @@ _tableName_ に指定した名称の表組みが見つからない場合、コ�
 | 引数         | タイプ                                            |    | 説明                      |                  |
 | ---------- | ---------------------------------------------- | -- | ----------------------- | ---------------- |
 | vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名 |                  |
-| tableName  | Text                                           | -> | 表組みの名称                  |                  |
+| tableName  | Text                                           | -> | Table name              |                  |
 | 戻り値        | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | 現在の表テーマのプロパティ値          | <!-- END REF --> |
 
 #### 説明
@@ -3315,7 +3315,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 | 引数          | タイプ     |    | 説明                                                   |                  |
 | ----------- | ------- | -- | ---------------------------------------------------- | ---------------- |
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                              |                  |
-| tableName   | Text    | -> | 表組みの名称                                               |                  |
+| tableName   | Text    | -> | Table name                                           |                  |
 | column      | Integer | -> | 列の挿入場所を指定する表組み内のインデックス                               |                  |
 | count       | Text    | -> | 挿入する列の数 (>0)                      |                  |
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after` |                  |
@@ -3365,7 +3365,7 @@ _tableName_ の表組みが存在しない場合、あるいはシートに十�
 | 引数          | タイプ     |    | 説明                                                   |                  |
 | ----------- | ------- | -- | ---------------------------------------------------- | ---------------- |
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                              |                  |
-| tableName   | Text    | -> | 表組みの名称                                               |                  |
+| tableName   | Text    | -> | Table name                                           |                  |
 | row         | Integer | -> | 行の挿入場所を指定する表組み内のインデックス                               |                  |
 | count       | Text    | -> | 挿入する行の数 (>0)                      |                  |
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after` |                  |
@@ -3984,7 +3984,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | 引数         | タイプ     |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | 表組みの名称                                         |                  |
+| tableName  | Text    | -> | Table name                                     |                  |
 | column     | Integer | -> | 列の削除の開始場所を指定する表組み内のインデックス                      |                  |
 | count      | Text    | -> | 削除する列の数 (>0)                |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
@@ -4028,7 +4028,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 | 引数         | タイプ     |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | 表組みの名称                                         |                  |
+| tableName  | Text    | -> | Table name                                     |                  |
 | row        | Integer | -> | 行の削除の開始場所を指定する表組み内のインデックス                      |                  |
 | count      | Text    | -> | 削除する行の数 (>0)                |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
@@ -5920,7 +5920,7 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 | 引数         | タイプ     |    | 説明                                             |                  |
 | ---------- | ------- | -- | ---------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                        |                  |
-| tableName  | Text    | -> | 表組みの名称                                         |                  |
+| tableName  | Text    | -> | Table name                                     |                  |
 | column     | Integer | -> | 表の列のインデックス                                     |                  |
 | attributes | Object  | -> | _column_ の列に適用する属性                             |                  |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート) | <!-- END REF --> |
@@ -6021,7 +6021,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 | 引数         | タイプ                                            |    | 説明                      |                  |
 | ---------- | ---------------------------------------------- | -- | ----------------------- | ---------------- |
 | vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名 |                  |
-| tableName  | Text                                           | -> | 表組みの名称                  |                  |
+| tableName  | Text                                           | -> | Table name              |                  |
 | options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | 設定する表テーマのプロパティ          | <!-- END REF --> |
 
 #### 説明
