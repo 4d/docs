@@ -1,6 +1,6 @@
 ---
 id: restore
-title: Restore
+title: Restaurar
 ---
 
 4D lhe permite restaurar conjuntos inteiros de dados de um banco de dados no caso de que se apresente um incidente, independentemente da causa do mesmo. Podem ocorrer dois tipos principais de incidentes:
