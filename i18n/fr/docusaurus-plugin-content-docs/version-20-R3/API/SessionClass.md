@@ -38,9 +38,9 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 
 
 <!-- REF #_command_.Session.Params -->
-| Paramètres | Type       |    | Description                              |
-| ---------- | ---------- |:--:| ---------------------------------------- |
-| Résultat   | 4D.Session | <- | Objet session|<!-- END REF -->
+| Paramètres | Type       |    | Description                               |
+| ---------- | ---------- |:--:| ----------------------------------------- |
+| Résultat   | 4D.Session | <- | Session object|<!-- END REF -->
 
 
 |
