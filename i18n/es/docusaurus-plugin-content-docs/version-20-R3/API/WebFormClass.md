@@ -3,6 +3,9 @@ id: WebFormClass
 title: WebForm
 ---
 
+
+La clase `WebForm` contiene funciones y propiedades que permiten manejar sus componentes de webforms Qodly. Esta clase se detalla en la [documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass).
+
 <details><summary>Histórico</summary>
 
 | Versión | Modificaciones |
@@ -10,9 +13,6 @@ title: WebForm
 | v20 R2  | Añadidos       |
 
 </details>
-
-
-La clase `WebForm` contiene funciones y propiedades que permiten manejar sus componentes de webforms Qodly. Esta clase se detalla en la [documentación de Qodly](https://developer.qodly.com/docs/language/WebFormClass).
 
 
 
