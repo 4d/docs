@@ -22,7 +22,7 @@ Por ejemplo: `$filter="firstName=john"` donde `firstName` es el **atributo**, `=
 
 ### Utilizar un filtro complejo
 
-Un filtro más compejo se compone de los siguientes elementos, que unen dos consultas:
+A more complex filter is composed of the following elements, which joins two queries:
 
 **{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
 
@@ -37,7 +37,7 @@ También puede utilizar la propiedad params de 4D.
 
 Por ejemplo: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` donde firstName y salary son los atributos de la clase de datos Employee.
 
-Para más información sobre cómo consultar los datos en 4D, consulte la [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentación.
+For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
 > Al insertar comillas (') o comillas dobles ("), debe escaparlas utilizando su código de caracteres:
 > 
 > <li>Comillas ('): \u0027</li>
