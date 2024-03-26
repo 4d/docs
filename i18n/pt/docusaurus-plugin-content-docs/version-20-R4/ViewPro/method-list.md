@@ -1433,7 +1433,7 @@ See example for [`VP Object to font`](#vp-object-to-font).
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Range object of single cell                                 | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto intervalo de uma única célula                        | <!-- END REF --> |
 
 #### Descrição
 
@@ -1575,10 +1575,10 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 
 <!-- REF #_method_.VP Get column attributes.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição                       |                  |
-| ---------- | ---------- | -- | ------------------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo                |                  |
-| Resultados | Collection | <- | Collection of column properties | <!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição                          |                  |
+| ---------- | ---------- | -- | ---------------------------------- | ---------------- |
+| rangeObj   | Object     | -> | Objeto intervalo                   |                  |
+| Resultados | Collection | <- | Coleção de propriedades da colunas | <!-- END REF --> |
 
 #### Descrição
 
@@ -1620,7 +1620,7 @@ $attr:=VP Get column attributes($range)
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                      |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Integer | <- | Total number of columns                                     | <!-- END REF --> |
+| Resultados | Integer | <- | Número total de colunas                                     | <!-- END REF --> |
 
 #### Descrição
 
@@ -1738,7 +1738,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                      |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Default style settings                                      | <!-- END REF --> |
+| Resultados | Object  | <- | Configurações de estilo padrão                              | <!-- END REF --> |
 
 #### Descrição
 
@@ -2018,7 +2018,7 @@ $list:=VP Get names("ViewProArea";2) //nomes na 3ª folha
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                  |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Object of printing information                              | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto com informação de impressão                          | <!-- END REF --> |
 
 #### Descrição
 
@@ -2138,7 +2138,7 @@ $attr:=VP Get row attributes($range)
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                      |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Integer | <- | Total number of rows                                        | <!-- END REF --> |
+| Resultados | Integer | <- | Número total de linhas                                      | <!-- END REF --> |
 
 #### Descrição
 
@@ -2627,7 +2627,7 @@ End if
 | tableName  | Text    | -> | Nome da tabela                                              |                  |
 | columnName | Text    | -> | Nome da coluna da tabela                                    |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Integer | <- | Index of _columnName_                                       | <!-- END REF --> |
+| Resultados | Integer | <- | Índice de _columnName_                                      | <!-- END REF --> |
 
 #### Descrição
 
@@ -2867,10 +2867,10 @@ $tables:=VP Get tables("ViewProArea")
 
 <!-- REF #_method_.VP Get value.Params -->
 
-| Parâmetro  | Tipo   |    | Descrição                      |                  |
-| ---------- | ------ | -- | ------------------------------ | ---------------- |
-| rangeObj   | Object | -> | Objeto intervalo               |                  |
-| Resultados | Object | <- | Object containing a cell value | <!-- END REF --> |
+| Parâmetro  | Tipo   |    | Descrição                            |                  |
+| ---------- | ------ | -- | ------------------------------------ | ---------------- |
+| rangeObj   | Object | -> | Objeto intervalo                     |                  |
+| Resultados | Object | <- | Objeto que contém um valor de célula | <!-- END REF --> |
 
 #### Descrição
 
@@ -2916,10 +2916,10 @@ End if
 
 <!-- REF #_method_.VP Get values.Params -->
 
-| Parâmetro  | Tipo       |    | Descrição            |                  |
-| ---------- | ---------- | -- | -------------------- | ---------------- |
-| rangeObj   | Object     | -> | Objeto intervalo     |                  |
-| Resultados | Collection | <- | Collection of values | <!-- END REF --> |
+| Parâmetro  | Tipo       |    | Descrição          |                  |
+| ---------- | ---------- | -- | ------------------ | ---------------- |
+| rangeObj   | Object     | -> | Objeto intervalo   |                  |
+| Resultados | Collection | <- | Coleção de valores | <!-- END REF --> |
 
 #### Descrição
 
@@ -3485,7 +3485,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro                           |                  |
 | rangeName  | Text    | -> | Nome do intervalo existente                                          |                  |
 | sheet      | Integer | -> | Localização do intervalo (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Range object of name                                                 | <!-- END REF --> |
+| Resultados | Object  | <- | Objeto intervalo de nome                                             | <!-- END REF --> |
 
 #### Descrição
 
@@ -4548,10 +4548,10 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
-| Parâmetro | Tipo       |    | Descrição            |                  |
-| --------- | ---------- | -- | -------------------- | ---------------- |
-| rangeObj  | Object     | -> | Objeto intervalo     |                  |
-| boolValue | Parâmetros | -> | Boolean value to set | <!-- END REF --> |
+| Parâmetro | Tipo       |    | Descrição                |                  |
+| --------- | ---------- | -- | ------------------------ | ---------------- |
+| rangeObj  | Object     | -> | Objeto intervalo         |                  |
+| boolValue | Parâmetros | -> | Valor booliano a definir | <!-- END REF --> |
 
 #### Descrição
 
@@ -4797,7 +4797,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 | Parâmetro  | Tipo    |    | Descrição                                  |                  |
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
-| sheet      | Integer | <- | Index of the new current sheet             | <!-- END REF --> |
+| sheet      | Integer | <- | Índice da nova folha atual                 | <!-- END REF --> |
 
 #### Descrição
 
@@ -5275,7 +5275,7 @@ VP SET FORMULA($range; "SUM(A1,B7,C11)") //"," para separar parâmetros
 | Parâmetro   | Tipo       |    | Descrição                   |                  |
 | ----------- | ---------- | -- | --------------------------- | ---------------- |
 | rangeObj    | Object     | -> | Objeto intervalo de células |                  |
-| formulasCol | Collection | -> | Collection of formulas      | <!-- END REF --> |
+| formulasCol | Collection | -> | Colecção de fórmulas        | <!-- END REF --> |
 
 #### Descrição
 
@@ -6132,10 +6132,10 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| Parâmetro | Tipo   |    | Descrição                      |                  |
-| --------- | ------ | -- | ------------------------------ | ---------------- |
-| rangeObj  | Object | -> | Objeto intervalo               |                  |
-| valueObj  | Object | -> | Cell values and format options | <!-- END REF --> |
+| Parâmetro | Tipo   |    | Descrição                              |                  |
+| --------- | ------ | -- | -------------------------------------- | ---------------- |
+| rangeObj  | Object | -> | Objeto intervalo                       |                  |
+| valueObj  | Object | -> | Valores de células e opções de formato | <!-- END REF --> |
 
 #### Descrição
 
@@ -6193,10 +6193,10 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 <!-- REF #_method_.VP SET VALUES.Params -->
 
-| Parâmetro | Tipo       |    | Descrição            |                  |
-| --------- | ---------- | -- | -------------------- | ---------------- |
-| rangeObj  | Object     | -> | Objeto intervalo     |                  |
-| valuesCol | Collection | -> | Collection of values | <!-- END REF --> |
+| Parâmetro | Tipo       |    | Descrição          |                  |
+| --------- | ---------- | -- | ------------------ | ---------------- |
+| rangeObj  | Object     | -> | Objeto intervalo   |                  |
+| valuesCol | Collection | -> | Coleção de valores | <!-- END REF --> |
 
 #### Descrição
 
@@ -6362,7 +6362,7 @@ In _rangeObj_, pass a range of cells as an object to designate the cells to be v
 
 Estão disponíveis os seguintes selectores:
 
-| Selector              | Descrição                                                                                                                                                                                                                                                                                                                                                                                  | Available with _vPos_ | Available with _hPos_ |
+| Selector              | Descrição                                                                                                                                                                                                                                                                                                                                                                                  | Disponível com _vPos_ | Disponível com _hPos_ |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- | --------------------- |
 | `vk position bottom`  | Alinhamento vertical para o fundo da célula ou linha.                                                                                                                                                                                                                                                                                                                                      | X                     |                       |
 | `vk position center`  | Alinhamento com o centro. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position - cell or row</li><li>Horizontal view position - cell or column</li>                                                                                                                                                                 | X                     | X                     |

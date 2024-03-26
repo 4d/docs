@@ -37,7 +37,7 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 
 #### Description
 
-The `.isShared` property <!-- REF #ClassClass.isShared.Summary -->returns `true` if the user class has been defined as [shared class](../Concepts/classes.md#shared-classes)<!-- END REF -->, and `false` otherwise.
+La propriété `.isShared` <!-- REF #ClassClass.isShared.Summary -->renvoie `true` si la classe utilisateur a été définie comme classe [partagée](../Concepts/classes.md#shared-classes)<!-- END REF -->, et `false` sinon.
 
 Cette propriété est en **lecture seule**.
 
@@ -59,7 +59,7 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.isSingleton` property <!-- REF #ClassClass.isSingleton.Summary -->returns `true` if the user class has been defined as a [singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, and `false` otherwise.
+La propriété `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->renvoie `true` si la classe utilisateur a été définie comme une classe [singleton](../Concepts/classes.md#singleton-classes)<!-- END REF -->, et `false` sinon.
 
 Cette propriété est en **lecture seule**.
 
@@ -81,9 +81,9 @@ Cette propriété est en **lecture seule**.
 
 #### Description
 
-The `.me` property <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
+La propriété `.me` <!-- REF #ClassClass.me.Summary -->renvoie l'instance singleton de la classe singleton `cs.className`<!-- END REF -->. Si la classe singleton n'a jamais été instanciée au préalable, cette propriété appelle le constructeur de la classe sans paramètres et crée l'instance. Sinon, elle renvoie l'instance singleton existante.
 
-If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
+Si `cs.className` n'est pas une [classe singleton](../Concepts/classes.md#singleton-classes), `.me` est **indéfini** par défaut.
 
 Cette propriété est en **lecture seule**.
 
@@ -140,11 +140,11 @@ Cette propriété est en **lecture seule**.
 
 La fonction `.new()` <!-- REF #ClassClass.new().Summary -->crée et retourne un objet `cs.className` qui est une nouvelle instance de la classe sur laquelle il est appelé<!-- END REF -->. Cette fonction est automatiquement disponible sur toutes les classes à partir du class store [`cs`](Concepts/classes.md#cs).
 
-You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the *className* class definition. A l'intérieur de la fonction constructor, [`This`](Concepts/classes.md#this) est lié au nouvel objet en cours de construction.
+Vous pouvez passer un ou plusieurs paramètre(s) optionnel(s) *param*, qui seront passés à la fonction [class constructor](Concepts/classes.md#class-constructor) (le cas échéant) dans la définition de la classe *className*. A l'intérieur de la fonction constructor, [`This`](Concepts/classes.md#this) est lié au nouvel objet en cours de construction.
 
 :::note Notes
 
-- If `.new()` is called on a [singleton class](../Concepts/classes.md#singleton-classes) that has already been instantiated, the singleton instance is returned, not a new instance.
+- Si `.new()` est appelé sur une [classe singleton](../Concepts/classes.md#singleton-classes) qui a déjà été instanciée, c'est l'instance singleton qui est renvoyée, et non une nouvelle instance.
 - Si `.new()` si appelé sur une classe qui n'existe pas, une erreur est retournée.
 
 :::

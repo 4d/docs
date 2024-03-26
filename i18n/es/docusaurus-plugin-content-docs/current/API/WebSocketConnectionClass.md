@@ -3,6 +3,14 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
+La API de la clase `WebSocketConnection` permite gestionar conexiones WebSocket, una vez definidas mediante la clase [`WebSocketServer`](WebSocketServerClass.md).
+
+:::info
+
+Para obtener una visión general y algunos ejemplos de la implementación del servidor WebSocket en 4D, consulte la clase [`WebSocketServer`](WebSocketServerClass.md).
+
+:::
+
 <details><summary>Histórico</summary>
 
 | Versión | Modificaciones |
@@ -11,13 +19,6 @@ title: WebSocketConnection
 
 </details>
 
-La API de la clase `WebSocketConnection` permite gestionar conexiones WebSocket, una vez definidas mediante la clase [`WebSocketServer`](WebSocketServerClass.md).
-
-:::info
-
-Para obtener una visión general y algunos ejemplos de la implementación del servidor WebSocket en 4D, consulte la clase [`WebSocketServer`](WebSocketServerClass.md).
-
-:::
 
 
 ### Objeto WebSocketConnection

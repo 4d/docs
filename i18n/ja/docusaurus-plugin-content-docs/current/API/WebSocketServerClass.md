@@ -3,6 +3,8 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+`WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 4D WebSocketサーバーがアクティブになると、[`WebSocketConnection` クラス](WebSocketConnectionClass.md) を使用して 4D とクライアント間で WebSocket 接続を開き、使用することができます。
+
 <details><summary>履歴</summary>
 
 | バージョン | 内容 |
@@ -10,8 +12,6 @@ title: WebSocketServer
 | v20   | 追加 |
 
 </details>
-
-`WebSocketServer` クラスを使って、4D で WebSocketサーバーを作成および設定することができます。 4D WebSocketサーバーがアクティブになると、[`WebSocketConnection` クラス](WebSocketConnectionClass.md) を使用して 4D とクライアント間で WebSocket 接続を開き、使用することができます。
 
 :::note WebSocket サーバーについて
 

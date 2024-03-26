@@ -3,6 +3,9 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+
+A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Uma vez que o servidor 4D WebSocket está ativo, você pode abrir e usar conexões WebSocket entre 4D e clientes usando a classe [`WebSocketConnection`](WebSocketConnectionClass.md).
+
 <details><summary>Histórico</summary>
 
 | Versão | Mudanças   |
@@ -11,8 +14,6 @@ title: WebSocketServer
 
 </details>
 
-
-A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Uma vez que o servidor 4D WebSocket está ativo, você pode abrir e usar conexões WebSocket entre 4D e clientes usando a classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 :::note Sobre os servidores WebSocket
 
@@ -114,10 +115,8 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 | ----------------------------------- | ------------------ |:--:| ---------------------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
 | [options](#options-parameter)       | Object             | -> | Parâmetros de configuração do WebSocket                                                  |
-| Resultados                          | 4D.WebSocketServer | <- | Novo objecto WebSocketServer|<!-- END REF -->
-
-
-|
+| Resultados                          | 4D.WebSocketServer | <- | Novo objeto WebSocketServer                                                              |
+<!-- END REF -->
 
 
 A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que utilizará as chamadas de retorno *WSSHandler* e (opcionalmente) as opções *especificadas*, e devolve um objecto `4D.WebSocketServer`<!-- END REF -->.
@@ -392,12 +391,10 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição

@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointer
+title: Ponteiro
 ---
 
 Uma variável ou expressão ponteiro é uma referência a outra variável (incluindo matrizes e elementos de matriz), tabela, campo, ou objecto. Não há campo do tipo Pointer.

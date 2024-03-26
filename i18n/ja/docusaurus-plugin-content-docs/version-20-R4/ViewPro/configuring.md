@@ -333,7 +333,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | blackAndWhite   | boolean | 白黒で印刷します。 <p>デフォルト値 = false</p><p>**注**: PDF はこの属性に影響されません。 PDF のカラーはそのままです。</p>                                                                                                          |
 | centering       | longint | 印刷ページ上でコンテンツをどのように中央揃えするかを指定します。 とりうる値: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (デフォルト), `vk print centering vertical` |
 | firstPageNumber | longint | 最初のページに印刷するページ番号。デフォルト値 = 1                                                                                                                                          |
-| pageOrder       | longint | ページの印刷順。 とりうる値: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                    |
+| pageOrder       | longint | ページの印刷順。 とりうる値: `vk print page order auto` (デフォルト), `vk print page order down then over`, `vk print page order over then down`.                                      |
 | pageRange       | text    | 印刷されるページの範囲                                                                                                                                                          |
 | qualityFactor   | longint | 印刷の品質指定 (1 - 8)。  高ければ印刷の質は高くなりますが、印刷のパフォーマンスに影響する可能性があります。<p>デフォルト値 = 2</p>                                                                                 |
 | useMax          | boolean | データのあるカラムと行のみが印刷されます。<p>デフォルト値 = true</p>                                                                                                                       |
@@ -374,12 +374,12 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 
 表示 / 非表示属性は 4D View Pro エリア要素の表示 (印刷) 状態を指定するのに使用されます。
 
-| プロパティ            | タイプ     | 説明                                                                                                                                                    |
-| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                            |
-| showColumnHeader | longint | カラムヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean | 枠線を印刷します。 デフォルト値 = false                                                                                                                              |
-| showRowHeader    | longint | 行ヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
+| プロパティ            | タイプ     | 説明                                                                                                                                                  |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean | 外枠の境界線を印刷します。デフォルト値 = true                                                                                                                          |
+| showColumnHeader | longint | カラムヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (デフォルト), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean | 枠線を印刷します。 デフォルト値 = false                                                                                                                            |
+| showRowHeader    | longint | 行ヘッダーの印刷設定。 とりうる値: `vk print visibility hide`, `vk print visibility inherit` (デフォルト), `vk print visibility show`, `vk print visibility show once`   |
 
 ### ウォーターマーク
 

@@ -3,6 +3,9 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+
+La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois le serveur WebSocket 4D actif, vous pouvez ouvrir et utiliser les connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
+
 <details><summary>Historique</summary>
 
 | Version | Modifications |
@@ -11,8 +14,6 @@ title: WebSocketServer
 
 </details>
 
-
-La classe `WebSocketServer` vous permet de créer et configurer un serveur WebSocket en 4D. Une fois le serveur WebSocket 4D actif, vous pouvez ouvrir et utiliser les connexions WebSocket entre 4D et les clients en utilisant la classe [`WebSocketConnection`](WebSocketConnectionClass.md).
 
 :::note À propos des serveurs WebSocket
 
@@ -114,10 +115,8 @@ Les objets WebSocketServer offrent les propriétés et fonctions suivantes :
 | ----------------------------------- | ------------------ |:--:| --------------------------------------------------------------------------- |
 | [WSSHandler](#wsshandler-parameter) | Object             | -> | Objet de la classe utilisateur déclarant les callbacks du serveur WebSocket |
 | [options](#options-parameter)       | Object             | -> | Paramètres de configuration du WebSocket                                    |
-| Résultat                            | 4D.WebSocketServer | <- | Nouvel objet WebSocketServer|<!-- END REF -->
-
-
-|
+| Résultat                            | 4D.WebSocketServer | <- | Nouvel objet WebSocketServer                                                |
+<!-- END REF -->
 
 
 The `4D.WebSocketServer.new()` function <!-- REF #4D.WebSocketServer.new().Summary -->creates and starts a WebSocket server that will use the specified *WSSHandler* callbacks and (optionally) *options*, and returns a `4D.WebSocketServer` object<!-- END REF -->.
@@ -392,12 +391,10 @@ Cette propriété est en lecture seule.
 
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 
 #### Description

@@ -5,18 +5,18 @@ title: Formatos Fecha y hora
 
 
 
-Throughout your 4D projects, you might need to format date and/or time values according to the specificities of the application, the platform, or the interface.
+A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valores de fecha y/u hora en función de las especificidades de la aplicación, la plataforma o la interfaz.
 
-4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
+4D incluye una lista completa de patrones que puede utilizar para crear y aplicar formatos personalizados de fecha y hora en sus aplicaciones, además de los formatos por defecto. Los patrones de formato personalizados son compatibles con las siguientes funciones:
 
-- the [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html) command,
-- the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html) commands,
-- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
+- el comando [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html),
+- los comandos [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) y [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html),
+- el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md/#date-format) y [`timeFormat`](../FormObjects/properties_Display.md/#time-format).
 
 
 ## Lista de patrones
 
-The following table lists all supported patterns for date and time formats.
+La siguiente tabla muestra todos los patrones soportados para formatos de fecha y hora.
 
 | Símbolo | Significado                                   | Modelo       | Ejemplo de salida    |
 | ------- | --------------------------------------------- | ------------ | -------------------- |
@@ -104,8 +104,8 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | zzzz         | GMT-08:00            |
 |         |                                               | zzzzz        | -08:00, -07:52:58, Z |
 |         |                                               |              |                      |
-| '       | escape for text                               | '            | '                    |
-| ' '     | two single quotes produce one                 | ' '          | ' '                  |
+| '       | escape para texto                             | '            | '                    |
+| ' '     | dos comillas simples producen una             | ' '          | ' '                  |
 
 
 
@@ -114,11 +114,11 @@ The following table lists all supported patterns for date and time formats.
 
 ### `y` vs `Y`
 
-`y` is the calendar year, while `Y` is the year based on the week number. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
+`y` es el año calendario, mientras que `Y` es el año basado en el número de semana. Por ejemplo, si los primeros días de enero de 2010 no son la semana #1, entonces y = 2010 pero Y = 2009 (hasta la fecha en la que comienza la primera semana de 2010).
 
 ### `L` (monopuesto) vs `M`
 
-In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
+En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
 

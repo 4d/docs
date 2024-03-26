@@ -3,6 +3,11 @@ id: WebFormItemClass
 title: WebFormItem
 ---
 
+
+Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormItemClass.md) devuelto por el comando [`Web Form`](WebFormClass.md#web-form).
+
+La clase `WebFormItem` se detalla en la documentación de [Qodly](https://developer.qodly.com/docs/language/WebFormItemClass).
+
 <details><summary>Histórico</summary>
 
 | Versión | Modificaciones |
@@ -10,11 +15,6 @@ title: WebFormItem
 | v20 R2  | Añadidos       |
 
 </details>
-
-
-Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormItemClass.md) devuelto por el comando [`Web Form`](WebFormClass.md#web-form).
-
-La clase `WebFormItem` se detalla en la documentación de [Qodly](https://developer.qodly.com/docs/language/WebFormItemClass).
 
 
 ### Objeto WebFormItem

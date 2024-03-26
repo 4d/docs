@@ -408,10 +408,10 @@ El registro ORDA del lado del servidor registra cada petición ORDA procesada po
 Como iniciar este historial:
 
 ```4d
-    //on the server
+    //en el servidor
 SET DATABASE PARAMETER(4D Server log recording;1)
 ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
-    //srl... parameter is optional
+    //srl... el parámetro es opcional
 SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 

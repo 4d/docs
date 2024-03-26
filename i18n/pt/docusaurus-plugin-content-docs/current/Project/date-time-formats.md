@@ -25,24 +25,24 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | GGGGG         | A                    |
 | y       | ano                                           | yy            | 96                   |
 |         |                                               | y ou yyyy     | 1996                 |
-| Y       | year of "Week of Year"                        | Y             | 1997                 |
+| Y       | ano da "Semana do ano"                        | Y             | 1997                 |
 | u       | ano prolongado                                | u             | 4601                 |
 | Q       | trimestre                                     | Q             | 2                    |
 |         |                                               | QQ            | 02                   |
 |         |                                               | QQQ           | Q2                   |
-|         |                                               | QQQQ          | 2nd quarter          |
+|         |                                               | QQQQ          | 2º trimestre         |
 |         |                                               | QQQQQ         | 2                    |
-| q       | stand-alone quarter                           | q             | 2                    |
+| q       | trimestre autônomo                            | q             | 2                    |
 |         |                                               | qq            | 02                   |
 |         |                                               | qqq           | Q2                   |
-|         |                                               | qqqq          | 2nd quarter          |
+|         |                                               | qqqq          | 2º trimestre         |
 |         |                                               | qqqqq         | 2                    |
 | M       | mês no ano                                    | M             | 9                    |
 |         |                                               | MM            | 09                   |
 |         |                                               | MMM           | Set                  |
 |         |                                               | MMMM          | Setembro             |
 |         |                                               | MMMMM         | S                    |
-| L       | stand-alone month in year                     | L             | 9                    |
+| L       | mês autônomo no ano                           | L             | 9                    |
 |         |                                               | LL            | 09                   |
 |         |                                               | LLL           | Set                  |
 |         |                                               | LLLL          | Setembro             |
@@ -51,7 +51,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | ww            | 27                   |
 | d       | dia no mês                                    | d             | 2                    |
 |         |                                               | dd            | 2                    |
-| D       | day of year                                   | D             | 189                  |
+| D       | dia do ano                                    | D             | 189                  |
 | E       | day of week                                   | E, EE ou EEE  | Tue                  |
 |         |                                               | EEEE          | Tuesday              |
 |         |                                               | EEEEE         | T                    |
@@ -70,23 +70,23 @@ The following table lists all supported patterns for date and time formats.
 | a       | AM ou PM                                      | a, aa, ou aaa | PM [abbrev]          |
 |         |                                               | aaaa          | PM [wide]            |
 |         |                                               | aaaaa         | p                    |
-| b       | AM, PM, noon, midnight                        | b, bb ou bbb  | mid.                 |
+| b       | AM, PM, meio-dia, meia-noite                  | b, bb ou bbb  | mid.                 |
 |         |                                               | bbbb          | meia-noite           |
 |         |                                               | bbbbb         | md                   |
 | B       | flexible day periods                          | B, BB ou BBB  | at night [abbrev]    |
 |         |                                               | BBBB          | at night [wide]      |
 |         |                                               | BBBBB         | at night [narrow]    |
-| h       | hour in am/pm (1~12)                          | h             | 7                    |
+| h       | hora em am/pm (1~12)                          | h             | 7                    |
 |         |                                               | hh            | 07                   |
 | H       | hour in day (0~23)                            | H             | 0                    |
 |         |                                               | HH            | 00                   |
-| K       | hour in am/pm (0~11)                          | K             | 0                    |
+| K       | hora em am/pm (0~11)                          | K             | 0                    |
 |         |                                               | KK            | 00                   |
 | k       | hour in day (1~24)                            | k             | 24                   |
 |         |                                               | kk            | 24                   |
 | m       | minute in hour                                | m             | 4                    |
 |         |                                               | mm            | 04                   |
-| s       | second in minute                              | s             | 5                    |
+| s       | segundo em minuto                             | s             | 5                    |
 |         |                                               | ss            | 05                   |
 | X       | Time Zone: ISO8601 basic hm?, with Z for 0    | X             | -08, +0530, Z        |
 |         | Time Zone: ISO8601 basic hm, with Z           | XX            | -0800, Z             |
@@ -98,7 +98,7 @@ The following table lists all supported patterns for date and time formats.
 |         | Time Zone: ISO8601 extended hm, without Z     | xxx           | -08:00               |
 |         | Time Zone: ISO8601 basic hms?, without Z      | xxxx          | -0800, -075258       |
 |         | Time Zone: ISO8601 extended hms?, without Z   | xxxxx         | -08:00, -07:52:58    |
-| O       | Time Zone: short localized GMT                | O             | GMT-8                |
+| O       | Fuso horário: GMT localizado curto            | O             | GMT-8                |
 |         | Time Zone: long localized GMT (=ZZZZ)         | OOOO          | GMT-08:00            |
 | z       | Time Zone: specific non-location              | z, zz ou zzz  | -0800                |
 |         |                                               | zzzz          | GMT-08:00            |
@@ -147,7 +147,7 @@ Por exemplo:
 
 "15:30:00" with pattern "HH 'hours and' mm 'minutes'" produces "15 hours and 30 minutes".
 
-### Starting and ending spaces
+### Espaços iniciais e finais
 
 Starting and ending spaces in patterns are automatically trimmed in outputs. If you want to add spaces before or after the resulting string, you must enclose them in single quotes.
 
@@ -158,15 +158,15 @@ Por exemplo:
 
 ## Exemplos
 
-| Data ou hora | Padrão       | Resultados       | Comentários           |
-| ------------ | ------------ | ---------------- | --------------------- |
-| 15/06/2000   | "QQQQ"       | "2º trimestre"   | localizado            |
-| 17/03/2001   | "D"          | "76"             | 76th day of the year  |
-| 17/03/1954   | "w"          | "11"             | 11th week of the year |
-| 17/03/1954   | "eeee"       | "Wednesday"      | localizado            |
-| 15:00:00     | "a"          | "PM"             |                       |
-| 18:00:00     | "K a"        | "6 PM"           |                       |
-| 13:30:15     | "hh:mm aa O" | "01:30 PM GMT+1" |                       |
+| Data ou hora | Padrão       | Resultados       | Comentários       |
+| ------------ | ------------ | ---------------- | ----------------- |
+| 15/06/2000   | "QQQQ"       | "2º trimestre"   | localizado        |
+| 17/03/2001   | "D"          | "76"             | 76º dia do ano    |
+| 17/03/1954   | "w"          | "11"             | 11ª semana do ano |
+| 17/03/1954   | "eeee"       | "Quarta-feira"   | localizado        |
+| 15:00:00     | "a"          | "PM"             |                   |
+| 18:00:00     | "K a"        | "6 PM"           |                   |
+| 13:30:15     | "hh:mm aa O" | "01:30 PM GMT+1" |                   |
 
 
 

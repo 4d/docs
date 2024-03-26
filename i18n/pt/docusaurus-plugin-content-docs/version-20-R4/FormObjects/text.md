@@ -1,6 +1,6 @@
 ---
 id: text
-title: Text
+title: Texto
 ---
 
 

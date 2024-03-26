@@ -448,7 +448,7 @@ The type of the computed property is defined by the `$return` type declaration o
 
 The type of the computed property is defined by the `$return` type declaration of the *getter*.
 
-Si las funciones se declaran en una [clase compartida](#shared-class-constructor), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin [estructura`Use...End use`](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
+Si las funciones se declaran en una [clase compartida](#shared-class-constructor), puede utilizar la palabra clave `shared` con ellas para que puedan ser llamadas sin [estructura`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
 El tipo de la propiedad calculada es definido por la declaración de tipo `$return` del *getter *. Puede ser de cualquier [tipo de propiedad válido](dt_object.md).
 
@@ -831,7 +831,7 @@ Singleton classes are not supported by [ORDA-based classes](../ORDA/ordaClasses.
 To create a process singleton class, add the `singleton` keyword before [`Class Constructor`](#class-constructor). Por ejemplo:
 
 ```4d
-    //class: ProcessTag
+    //clase: ProcessTag
 singleton Class Constructor()
  This.tag:=Random
 ```

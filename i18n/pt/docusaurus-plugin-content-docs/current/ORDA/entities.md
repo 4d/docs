@@ -443,7 +443,7 @@ Filters apply to **entities**. If you want restrict access to a **dataclass** it
 :::
 
 
-### How to define a restrict filter
+### Como definir um filtro restrito
 
 You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass-class) of the dataclass. The filter is then automatically enabled.
 

@@ -5,18 +5,18 @@ title: Formatos Fecha y hora
 
 
 
-Throughout your 4D projects, you might need to format date and/or time values according to the specificities of the application, the platform, or the interface.
+A lo largo de sus proyectos 4D, es posible que necesite dar formato a los valores de fecha y/u hora en función de las especificidades de la aplicación, la plataforma o la interfaz.
 
-4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
+4D incluye una lista completa de patrones que puede utilizar para crear y aplicar formatos personalizados de fecha y hora en sus aplicaciones, además de los formatos por defecto. Los patrones de formato personalizados son compatibles con las siguientes funciones:
 
-- the [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html) command,
-- the [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) and [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html) commands,
-- the date and time format form object properties, available from the Property list or the [`dateFormat`](../FormObjects/properties_Display.md/#date-format) and [`timeFormat`](../FormObjects/properties_Display.md/#time-format) JSON properties.
+- el comando [`String`](https://doc.4d.com/4dv20R/help/command/en/page10.html),
+- los comandos [`OBJECT SET FORMAT`](https://doc.4d.com/4dv20R/help/command/en/page236.html) y [`OBJECT Get format`](https://doc.4d.com/4dv20R/help/command/en/page894.html),
+- el formato de fecha y hora de las propiedades del objeto de formulario, disponibles en la lista de propiedades o en las propiedades JSON [`dateFormat`](../FormObjects/properties_Display.md/#date-format) y [`timeFormat`](../FormObjects/properties_Display.md/#time-format).
 
 
 ## Lista de patrones
 
-The following table lists all supported patterns for date and time formats.
+La siguiente tabla muestra todos los patrones soportados para formatos de fecha y hora.
 
 | Símbolo | Significado                                   | Modelo       | Ejemplo de salida    |
 | ------- | --------------------------------------------- | ------------ | -------------------- |
@@ -56,7 +56,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | EEEE         | Tuesday              |
 |         |                                               | EEEEE        | T                    |
 |         |                                               | EEEEEE       | Tu                   |
-| e       | local day of week                             | e            | 2                    |
+| e       | día de la semana local                        | e            | 2                    |
 |         |                                               | ee           | 02                   |
 |         |                                               | eee          | Tue                  |
 |         |                                               | eeee         | Tuesday              |
@@ -73,16 +73,16 @@ The following table lists all supported patterns for date and time formats.
 | b       | AM, PM, mediodía, medianoche                  | b, bb o bbb  | mid.                 |
 |         |                                               | bbbb         | medianoche           |
 |         |                                               | bbbbb        | md                   |
-| B       | flexible day periods                          | B, BB o BBB  | at night [abbrev]    |
+| B       | períodos de días flexibles                    | B, BB o BBB  | at night [abbrev]    |
 |         |                                               | BBBB         | at night [wide]      |
 |         |                                               | BBBBB        | at night [narrow]    |
-| h       | hour in am/pm (1~12)                          | h            | 7                    |
+| h       | hora en am/pm (1~12)                          | h            | 7                    |
 |         |                                               | hh           | 07                   |
-| H       | hour in day (0~23)                            | H            | 0                    |
+| H       | hora en día (0~23)                            | H            | 0                    |
 |         |                                               | HH           | 00                   |
-| K       | hour in am/pm (0~11)                          | K            | 0                    |
+| K       | hora en am/pm (0~11)                          | K            | 0                    |
 |         |                                               | KK           | 00                   |
-| k       | hour in day (1~24)                            | k            | 24                   |
+| k       | hora en día (1~24)                            | k            | 24                   |
 |         |                                               | kk           | 24                   |
 | m       | minuto en hora                                | m            | 4                    |
 |         |                                               | mm           | 04                   |
@@ -104,8 +104,8 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | zzzz         | GMT-08:00            |
 |         |                                               | zzzzz        | -08:00, -07:52:58, Z |
 |         |                                               |              |                      |
-| '       | escape for text                               | '            | '                    |
-| ' '     | two single quotes produce one                 | ' '          | ' '                  |
+| '       | escape para texto                             | '            | '                    |
+| ' '     | dos comillas simples producen una             | ' '          | ' '                  |
 
 
 
@@ -114,11 +114,11 @@ The following table lists all supported patterns for date and time formats.
 
 ### `y` vs `Y`
 
-`y` is the calendar year, while `Y` is the year based on the week number. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
+`y` es el año calendario, mientras que `Y` es el año basado en el número de semana. Por ejemplo, si los primeros días de enero de 2010 no son la semana #1, entonces y = 2010 pero Y = 2009 (hasta la fecha en la que comienza la primera semana de 2010).
 
 ### `L` (monopuesto) vs `M`
 
-In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
+En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
 
@@ -126,30 +126,30 @@ Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and
 
 ### `E` vs `e`
 
-`e` is based on system settings: if the week is defined in the system as starting on a Wednesday, then Wednesday will have the numerical value "1" (or zero) whereas "E" always returns the same value (from 1 to 7 or from 0 to 6).
+`e` se basa en la configuración del sistema: si la semana está definida en el sistema como que comienza un miércoles, entonces el miércoles tendrá el valor numérico "1" (o cero) mientras que "E" siempre devuelve el mismo valor (de 1 a 7 o de 0 a 6).
 
 ### Ceros a la izquierda
 
-In general, when the number of letters in the formatting string is higher than the expected number, leading zeros are added. Ej: "yyyyy" daría "001996".
+En general, cuando el número de letras de la cadena de formato es superior al esperado, se añaden ceros a la izquierda. Ej: "yyyyy" daría "001996".
 
 ### Partes localizadas
 
-Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
+Algunas partes de las salidas, como "medianoche" o "martes" están localizadas, según la configuración regional.
 
-For example, for the time `13:25:34`, "B" will display *in the afternoon* on an US system, and *après-midi* on a French system.
+Por ejemplo, para la hora `13:25:34`, "B" aparecerá *in the afternoon* en un sistema estadounidense, y *après-midi* en un sistema francés.
 
 
 ### Letras adicionales
 
-Formatting strings can contain characters not to be interpreted as formatting characters: if they are between "a" and "z" or "A" and "Z", they must be enclosed in single quotes.
+Las cadenas de formato pueden contener caracteres que no deben interpretarse como caracteres de formato: si están entre "a" y "z" o "A" y "Z", deben ir entre comillas simples.
 
 Por ejemplo:
 
-"15:30:00" with pattern "HH 'hours and' mm 'minutes'" produces "15 hours and 30 minutes".
+"15:30:00" con el modelo "HH 'hours and' mm 'minutes'" produce "15 hours and 30 minutes".
 
 ### Espacios iniciales y finales
 
-Starting and ending spaces in patterns are automatically trimmed in outputs. If you want to add spaces before or after the resulting string, you must enclose them in single quotes.
+Los espacios iniciales y finales de los modelos se recortan automáticamente en las salidas. Si desea añadir espacios antes o después de la cadena resultante, debe encerrarlos entre comillas simples.
 
 Por ejemplo:
 
@@ -172,4 +172,4 @@ Por ejemplo:
 
 ## Ver también
 
-See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats.
+Ver [este blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) para más información sobre los formatos personalizados de fecha y hora.
