@@ -237,7 +237,7 @@ Attribute values that need to be calculated by 4D (IDs, computed attributes) wil
 The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.
 
 
-### Saving modifications
+### Salvar modificações
 
 Except for [deletion](#deleting-entities) (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
 
