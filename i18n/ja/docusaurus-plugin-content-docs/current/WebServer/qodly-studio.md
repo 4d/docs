@@ -1,6 +1,6 @@
 ---
 id: qodly-studio
-title: Qodly Studio
+title: Qodly Studio in 4D
 ---
 
 :::caution デベロッパー・プレビュー
@@ -13,7 +13,7 @@ title: Qodly Studio
 
 **4D環境** から直接 Qodly Studio を使用して、モダンで洗練されたインターフェースをビルドし、既存の 4Dプロジェクトに簡単に統合して、**オンプレミス** で運用することができます。
 
-Qodly Studioは、Webビジネスアプリケーションの開発に特化した [**Qodly Cloud Platform**](qodly.com) でも使用できます。
+Qodly Studioは、Webビジネスアプリケーションの開発に特化した [**Qodly Cloud Platform**](https://qodly.com) でも使用できます。
 
 Qodly Studio では、全く新しい WebUI を使い、データソースの概念に慣れ、次の操作を学ぶことができます:
 
@@ -64,13 +64,9 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 #### 4Dレベルで
 
-最初のセキュリティレベルとして、[WebAdmin Webサーバーで Qodly Studio へのアクセスを許可](../Admin/webAdmin.md#qodly-studio-へのアクセスを有効化する) する必要があります。
+最初のセキュリティレベルとして、[WebAdmin Webサーバーで Qodly Studio へのアクセスを許可](../Admin/webAdmin.md#qodly-studio-へのアクセスを有効化する) する必要があります。 この設定は、ホストマシンの 4Dアプリケーション (4D または 4D Server) が対象となります。 つまり、その 4Dアプリケーションで開くすべてのプロジェクトで、この設定が適用されます。
 
-この設定は、ホストマシンの 4Dアプリケーション (4D または 4D Server) が対象となります。 つまり、その 4Dアプリケーションで開くすべてのプロジェクトで、この設定が適用されます。
-
-アプリケーション上で Qodly Studio へのアクセスを許可しない場合は、このオプションをオフにします。
-
-このオプションにチェックを入れると、Qodly Studio にアクセスできるようになります。 さらに、各プロジェクトのレベルでも許可が必要です。
+アプリケーション上で Qodly Studio へのアクセスを許可しない場合は、このオプションをオフにします。 このオプションにチェックを入れると、Qodly Studio にアクセスできるようになります。 さらに、各プロジェクトのレベルでも許可が必要です。
 
 さらに、[WebAdmin Webサーバーの HTTP/HTTPS ポートを設定](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) することもできます。
 
@@ -91,44 +87,17 @@ Qodly Studio へのアクセスを有効化するには、2つのレベルで明
 
 WebAdmin Webサーバーでの認証には、アクセスキーを使用します。 詳しくは、[アクセスキー](../Admin/webAdmin.md#アクセスキー) を参照ください。
 
-### レンダリングを有効化する
 
-Qodlyフォームのレンダリングを有効にするには、以下のオプションを設定する必要があります。
+### プロジェクト管理
 
-* 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
-* [4D Webサーバー](webServer.md) を起動しておく必要があります。
+4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
 
-Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。
-
-:::info
-
-Qodly で Qodlyフォームをレンダリングする方法については [このページ](https://developer.qodly.com/docs/studio/rendering) を参照ください。
-
-:::
-
-"新しいタブでプレビュー" ボタンをクリックすると、マシン上で `IP:port/$lib/renderer/?w=QodlyFormName` のタブが開くことに注意してください。
-
-Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyフォームをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
-
-しかし、実際のフォームのレンダリングは 4D Web Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
-
-:::note
-
-設定オプションが有効になっていない場合、[レンダラー ボタン](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) は非表示です。
-
-:::
-
-### WebAdminサーバーと運用
-
-運用には、WebAdminサーバーは必要ありません。 Qodly Studio で作成された Webアプリケーションへのエンドユーザーアクセスは、4D RESTプロトコルに基づいているため、従来の 4Dリモートアプリケーションと同様に動作します。
+- Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
+- Qodlyフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
 
 
-### プロジェクトメソッドを使用する
 
-推奨される方法は、プロジェクトメソッドではなく、クラス関数を使用することです。 コンポーネントから呼び出すことが可能なのは、クラス関数のみです。 それでも、次の 2つの方法で、Qodly Studio でもプロジェクトメソッドを使用できます:
 
-- クラス関数からメソッドを呼び出すことができます。
-- Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
 
 ## Qodly Studio を開く
 
@@ -155,9 +124,13 @@ Qodly Studio にアクセスするには 2つの方法があります:
 
 ## Qodly Studio を使う
 
+### ドキュメント
+
 公式の Qodly Studio ドキュメントは、[Qodly ドキュメント Webサイト](https://developer.qodly.com/docs/studio/overview) から入手できます。
 
-Qodlyフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 ただし、実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します。
+Qodlyフォームを利用した Webアプリケーションを開発するには、このドキュメントとその関連リソースを参照ください。 実装の段階に応じて、4Dデベロッパーは Qodly Studio または 4D IDE を使用します ([機能の比較](#機能の比較)) 参照)。
+
+コードの例は [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 詳細については、[QodlyScript から 4Dランゲージへ](from-qodlyscript-to-4d.md) を参照ください。
 
 :::info
 
@@ -167,118 +140,37 @@ Qodlyフォームを利用した Webアプリケーションを開発するに�
 
 ### 機能の比較
 
-|                                         | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                              | Qodlyデベロッパー向けの Qodly Studio |
-| --------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------- |
-| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor   |
-| Qodlyフォーム                               | Qodly Studio Webform Editor                                                        | Qodly Studio Webform Editor |
-| デスクトップフォーム                              | 4D IDE                                                                             | *サポートされていません*               |
-| プログラミング言語                               | 4Dランゲージ (ORDA を使用)                                                                 | QodlyScript (ORDA を使用)      |
-| コーディング IDE                              | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター       |
-| デバッガー                                   | 4D IDE デバッガー                                                                       | Qodly Studio デバッガー          |
-| REST/Web ロールとアクセス権                      | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                     | Qodly Studio ロールとアクセス権エディター |
+|                                         | 4D IDE を使用する 4Dデベロッパー向けの Qodly Studio                                              | Qodlyデベロッパー向けの Qodly Studio                                                  |
+| --------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                  | Qodly Studio Model Editor                                                    |
+| Qodlyフォーム                               | Qodly Studio Webform Editor                                                        | Qodly Studio Webform Editor                                                  |
+| デスクトップフォーム                              | 4D IDE                                                                             | *サポートされていません*                                                                |
+| プログラミング言語                               | 4Dランゲージ (ORDA を使用)                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
+| コーディング IDE                              | 4D IDE コードエディター / VS Code と [4D拡張機能](https://github.com/4d/4D-Analyzer-VSCode) (2) | Qodly Studio コードエディター                                                        |
+| デバッガー                                   | 4D IDE デバッガー                                                                       | Qodly Studio デバッガー                                                           |
+| REST/Web ロールとアクセス権                      | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                     | Qodly Studio ロールとアクセス権エディター                                                  |
 
 (1) Qodly Studio で **Model** ボタンをクリックしても、何も起こりません。 (2) Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 
-### プロジェクト管理
 
-4Dプロジェクトの管理上、以下の使用法のみがサポートされます:
+### ランゲージ
 
-- Qodly Studio での開発は **4D** (シングルユーザー) でおこなう必要があります。
-- Qodlyフォームを利用した 4Dアプリケーションの運用は、**4D Server** でおこなう必要があります。
+以下のコマンドとクラスは、Qodlyフォームのサーバーサイド管理に特化しています:
 
-
-
-### QodlyScript から 4Dランゲージへ
-
-[Qodly Studio ドキュメント](developer.qodly.com/docs/studio) を使用して、4Dデベロッパーは、Qodly Studio で Qodlyフォームを設計する方法を学ぶことができます。 コードの例は QodlyScript で提供されていますが、QodlyScript は 4Dランゲージから継承しているため、困ることはありません。 QodlyScript コードを 4Dランゲージに変換するのは簡単で、いくつかの調整が必要なだけです:
-
-#### 変数名
-
-QodlyScript はローカル変数のみをサポートするため、QodlyScript の例題では、変数に `$` という接頭辞が付きません。 4Dコードでは、4D によってローカル変数として識別されるように、**変数名の前には必ず `$` を付けてください**。
-
-#### 記号とキーワード
-
-一部の基本的な記号、演算子、キーワードは QodlyScript では異なるため、4Dランゲージ用に変換する必要があります。 以下に一覧を示します:
-
-| QodlyScript | 4Dランゲージ                                                     | 説明       |
-| ----------- | ----------------------------------------------------------- | -------- |
-| ,           | ;                                                           | 引数の区切り文字 |
-| =           | :=                                                          | 代入演算子    |
-| ==          | =                                                           | 比較演算子    |
-| declare     | #Declare                                                    |          |
-| switch      | Case of                                                     |          |
-| constructor | Class constructor                                           |          |
-| extends     | Class extends                                               |          |
-| end         | End for, End For each, End if, End case, End use, End while |          |
-| forEach     | For each                                                    |          |
-| string      | Text                                                        | 変数の型     |
-| number      | Real                                                        | 変数の型     |
-
-他の一部の項目では文字の大小が異なりますが (例: `this` と `This`)、4Dコードに直接貼り付けることができます。
+- [`Web Form`](../API/WebFormClass.md#web-form) コマンド: Qodlyフォームをオブジェクトとして返します。
+- [`Web Event`](../API/WebFormClass.md#web-event) コマンド: Qodlyフォームのコンポーネント内でトリガーされたイベントを返します。
+- [`WebForm`](../API/WebFormClass.md) クラス: レンダリングされた Qodlyフォームを管理する関数とプロパティを持ちます。
+- [`WebFormItem`](../API/WebFormItemClass.md) クラス: Qodlyフォームのコンポーネントを管理する関数とプロパティを持ちます。
 
 
-#### コマンド名
+### プロジェクトメソッドを使用する
 
-QodlyScript のコマンド名は、スペースを入れずにキャメルケースで記述されます。 これらのコマンドを 4Dランゲージに変換する必要がある場合があります。
+推奨される方法は、プロジェクトメソッドではなく、クラス関数を使用することです。 コンポーネントから呼び出すことが可能なのは、クラス関数のみです。 それでも、次の 2つの方法で、Qodly Studio でもプロジェクトメソッドを使用できます:
 
-- 通常は、単に名前を変換するだけで十分です。 たとえば、QodlyScript の `newCollection` は 4Dランゲージの `New collection` です。
-- ただし、コンプライアンス向上のため、一部のコマンドでは名前が変更されました。 以下に一覧を示します:
+- クラス関数からメソッドを呼び出すことができます。
+- Qodly Explorer から直接 [メソッドを実行](https://developer.qodly.com/docs/studio/coding#methods-and-classes) できます。
 
-| QodlyScript            | 4Dランゲージ          |
-| ---------------------- | ---------------- |
-| `atan`                 | `Arctan`         |
-| `highestProcessNumber` | `Count tasks`    |
-| `callChain`            | `Get call chain` |
-| `objectClass`          | `OB Class`       |
-| `objectCopy`           | `OB Copy`        |
-| `objectEntries`        | `OB Entries`     |
-| `instanceOf`           | `OB Instance of` |
-| `objectIsDefined`      | `OB Is defined`  |
-| `objectIsEmpty`        | `OB Is empty`    |
-| `objectIsShared`       | `OB Is shared`   |
-| `objectKeys`           | `OB Keys`        |
-| `objectRemove`         | `OB REMOVE`      |
-| `objectValues`         | `OB Values`      |
-| `sqrt`                 | `Square root`    |
-
-
-#### 例題
-
-- QodlyScript コード:
-
-```qs
- declare(entitySelection : 4D.EntitySelection)  
- var dataClass : 4D.DataClass
- var entity, duplicate : 4D.Entity
- var status : object
- dataClass=entitySelection.getDataClass()
- forEach(entity,entitySelection)
-    duplicate=dataClass.new()
-    duplicate.fromObject(entity.toObject())
-    duplicate[dataClass.getInfo().primaryKey]=null
-    status=duplicate.save()
- end
-```
-
-
-
-- 上に相当する 4Dランゲージのコード:
-
-```4d
- #DECLARE ( $entitySelection : 4D.EntitySelection )  
- var $dataClass : 4D.DataClass
- var $entity; $duplicate : 4D.Entity
- var $status : Object
- $dataClass:=$entitySelection.getDataClass()
- For each($entity;$entitySelection)
-    $duplicate:=$dataClass.new()
-    $duplicate.fromObject($entity.toObject())
-    $duplicate[$dataClass.getInfo().primaryKey]:=Null
-    $status:=$duplicate.save()
- End for each
-
-```
 
 ### オフラインでの使用
 
@@ -286,6 +178,62 @@ QodlyScript のコマンド名は、スペースを入れずにキャメルケ�
 
 - [テンプレート](https://developer.qodly.com/docs/studio/design-webforms/templates): テンプレートライブラリは空です。
 - UI Tips: ![alt-text](../assets/en/WebServer/tips.png)アイコンをクリックしても表示されません。
+
+
+## 運用
+
+### レンダリングを有効化する
+
+Qodly Studio は Qodlyフォームを (含まれるレイアウト、データの紐付け、イベント駆動ロジック情報とともに) 構造化された JSONファイルにカプセル化します。 この JSONファイルは **Qodly レンダラー** によって即座に処理され、完全に機能する Webページを提供します。
+
+:::info
+
+Qodly で Qodlyフォームをレンダリングする方法の詳細については [このページ](https://developer.qodly.com/docs/studio/rendering) を参照ください。
+
+:::
+
+Qodlyフォームのレンダリングを有効にするには、以下のオプションを設定する必要があります。
+
+* 4Dプロジェクトの **設定** > **Web** > **Web機能** > [**RESTサーバーとして公開**](../settings/web.md#restサーバーとして公開) オプションを有効にする必要があります。
+* [4D Webサーバー](webServer.md) を起動しておく必要があります。
+
+:::note
+
+設定オプションが有効になっていない場合、[レンダラー ボタン](https://developer.qodly.com/docs/studio/rendering#how-to-render-a-webform) は使用できません。
+
+:::
+
+### Qodlyフォームのスコープ
+
+Qodly Studio で Qodlyフォームをレンダリングする際、レンダラーは設定により、[4D WebAdmin Webサーバー](../Admin/webAdmin.md#ローカルホストでhttp接続を受け入れる) と同じ HTTP/HTTPS 接続パターンに従って、HTTP または HTTPS で 4D Webサーバーに接続します。 URLスキームとライセンスの使い方については、[この段落](#ライセンスの使用について) も参照ください。
+
+
+Qodly Studio は、4D WebAdmin Webサーバーを通して動作することに留意してください。 デベロッパーとして Qodly Studio を使用する場合、Qodlyフォームをプレビューするには、4D WebAdmin Webサーバーを使用することになります。 これにより、たとえば RESTリソースとして公開されていないデータクラス、関数、属性を (グレーアウトされた状態で) 見ることができます。
+
+しかし、実際のフォームのレンダリングは Qodly Studio の外でおこなわれ、標準の 4D Webサーバーによって処理されます。 このような状況では、Webアプリケーションは RESTリソースとして公開されていないデータにアクセスできません。 [公開vs非公開関数](../ORDA/ordaClasses.md#公開vs非公開関数) および [テーブルの公開](../REST/configuration.md#テーブルの公開) を参照ください。
+
+
+
+
+### Qodlyフォームへのアクセス
+
+運用には、WebAdminサーバーは必要ありません。 Qodly Studio で作成された Webアプリケーションへのエンドユーザーアクセスは、4D RESTプロトコルに基づいているため、従来の 4Dリモートアプリケーションと同様に動作します。
+
+Qodlyフォームは以下の URL からダウンロードできます:
+
+```
+IP:port/$lib/renderer/?w=QodlyFormName
+```
+
+*IP:port* は Webサーバーのアドレスを表し、*QodlyFormName* は Qodlyフォームの名前です。
+
+例:
+
+```
+https://www.myWebSite.com/$lib/renderer/?w=welcome
+```
+
+
 
 
 ## ライセンスの使用について
@@ -308,7 +256,7 @@ Qodly Studio からレンダラーを実行する際、これら 2つの Webサ�
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. Qodly Studioで、**レンダリング** アイコンをクリックします。 2つの Webサーバーが異なるスキームで起動されていることを警告されますが、それにもかかわらず、**Confirm** ボタンをクリックします。
+3. Qodly Studioで、**Preview** アイコンをクリックします。 2つの Webサーバーが異なるスキームで起動されていることを警告されますが、それにもかかわらず、**Confirm** ボタンをクリックします。
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
