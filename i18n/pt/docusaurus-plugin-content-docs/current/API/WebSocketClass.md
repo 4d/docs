@@ -3,6 +3,14 @@ id: WebSocketClass
 title: WebSocket
 ---
 
+
+
+
+A classe `WebSocket` permite-lhe abrir uma ligação de cliente WebSocket com um servidor, enviar e receber dados e fechar a ligação.
+
+As ligações cliente WebSocket são úteis, por exemplo, para receber dados financeiros em tempo real ou enviar e receber mensagens de um chat.
+
+
 <details><summary>Histórico</summary>
 
 | Versão | Mudanças   |
@@ -11,10 +19,6 @@ title: WebSocket
 
 </details>
 
-
-A classe `WebSocket` permite-lhe abrir uma ligação de cliente WebSocket com um servidor, enviar e receber dados e fechar a ligação.
-
-As ligações cliente WebSocket são úteis, por exemplo, para receber dados financeiros em tempo real ou enviar e receber mensagens de um chat.
 
 ### Exemplo
 
