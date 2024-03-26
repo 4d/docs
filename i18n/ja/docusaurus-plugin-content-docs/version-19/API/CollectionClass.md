@@ -837,7 +837,7 @@ End if
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -861,7 +861,7 @@ End if
 
  デフォルトでは、*propertyPath* のパスの要素が null あるいは undefined であった場合には、その要素は無視され、返されるコレクションに格納されません。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの要素は返されるコレクションに null 要素として格納されます。
 
-* 一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、対応する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
+* 一つ以上の *propertyPath* 引数に相当する、一つ以上の *targetPath* 引数が渡された場合、`.extract()` は元のコレクションの *propertyPath* から値を抽出し、合致する *targetPath* に値を保存したオブジェクトを新しいコレクションの各要素として格納します。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
 #### 例題 1
 
@@ -1686,6 +1686,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 * *pathStrings* : Text (フォーミュラ)。 **シンタックス**: `propertyPath1 {desc または asc}, propertyPath2 {desc または asc},...` (デフォルトの並び順: asc)。 *pathStrings* はカンマで区切られた、1〜n のプロパティパスと並び順 (任意) で構成されたフォーミュラを格納します。 プロパティを渡す順番が、コレクション要素の並べ替えの優先順位を決定します。 デフォルトでは、プロパティは昇順に並べ替えられます。 並び順を設定するには、プロパティパスの後に半角スペースで区切ったあとに、昇順を指定するには "asc"、降順を指定するには "desc" を渡します。
 
 * *pathObjects* : Collection。 *pathObjects* コレクションには必要な数だけオブジェクトを追加することができます。 デフォルトでは、プロパティは昇順に並べ替えられます ("descending" は false)。 コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
+
 
 ```4d
 {
