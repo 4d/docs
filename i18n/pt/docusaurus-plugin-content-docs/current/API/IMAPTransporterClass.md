@@ -59,7 +59,7 @@ Os objectos do IMAP Transporter são instanciados com o comando [IMAP New Transp
 | Parâmetro  | Tipo               |    | Descrição                                           |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Object             | -> | Informação de servidor de correio                   |
-| Resultados | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
+| Resultados | 4D.IMAPTransporter | <- | [Objeto IMAP Transporter](#imap-transporter-object) |
 <!-- END REF -->
 
 
@@ -116,7 +116,7 @@ End if
 | Parâmetro  | Tipo               |    | Descrição                                           |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Object             | -> | Informação de servidor de correio                   |
-| Resultados | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object) |
+| Resultados | 4D.IMAPTransporter | <- | [Objeto IMAP Transporter](#imap-transporter-object) |
 <!-- END REF -->
 
 #### Descrição
