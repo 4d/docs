@@ -80,25 +80,25 @@ The template file must be stored in a "[`Resources`](../Project/architecture.md#
 
 O arquivo de modelo no formato JSON contém os seguintes atributos:
 
-| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                 |
-|:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDataSource      | Text       | x           | Fórmula da fonte de dados da tabela                                                                                                                       |
-| columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                              |
-| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                           |
-| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| columns.source       | Text       | x           | Formula                                                                                                                                                   |
-| breaks               | Collection |             | Collection of break objects. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
-| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| breaks.source        | Text       | x           | Formula                                                                                                                                                   |
-| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                               |
-| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| breakFormulas.source | Text       | x           | Formula                                                                                                                                                   |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                        |
-| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                   |
-| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                  |
-| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                              |
-| extraFormulas.source | Text       | x           | Formula                                                                                                                                                   |
+| Atributo             | Tipo       | Obrigatório | Descrição                                                                                                                                                       |
+|:-------------------- |:---------- |:----------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDataSource      | Text       | x           | Fórmula da fonte de dados da tabela                                                                                                                             |
+| columns              | Collection | x           | Coleção de colunas de tabela                                                                                                                                    |
+| columns.check        | Text       | x           | True quando a coluna já está selecionada no editor de modelos. False quando a coluna não está selecionada no editor de modelos.                                 |
+| columns.header       | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| columns.source       | Text       | x           | Formula                                                                                                                                                         |
+| breaks               | Collection |             | Coleção de objetos de interrupção. A ordem das interrupções é importante. It corresponds to the order in the document when the breaks are above the data lines. |
+| breaks.label         | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| breaks.source        | Text       | x           | Formula                                                                                                                                                         |
+| breakFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas de quebra                                                                                                     |
+| breakFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| breakFormulas.source | Text       | x           | Formula                                                                                                                                                         |
+| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                              |
+| bcorFormulas.label   | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                         |
+| extraFormulas        | Collection |             | Coleção de objetos de fórmula aplicáveis a linhas extras                                                                                                        |
+| extraFormulas.label  | Text       | x           | Etiqueta mostrada ao usuário                                                                                                                                    |
+| extraFormulas.source | Text       | x           | Formula                                                                                                                                                         |
 
 :::note idioma francês
 
