@@ -219,6 +219,7 @@ End if
 
 
 
+
 ## Obter valores de pedidos HTTP
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
@@ -337,7 +338,7 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_TEXT($user)
+ C_LONGINT($user)
 
  Case of
 
