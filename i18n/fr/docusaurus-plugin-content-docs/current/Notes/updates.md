@@ -14,6 +14,8 @@ Lisez [**Les nouveautés de 4D v20 R5**](https://blog.4d.com/fr-whats-new-in-4d-
 - La couche réseau QUIC prend désormais en charge le [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
 - Prise en charge des [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
 - Support of [shared classes](../Concepts/classes.md#shared-classes) and [singleton classes](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me)
+- New [$format](../REST/$format.md) REST parameter.
+
 
 
 #### Changements de comportement
@@ -353,7 +355,7 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass.md#settext)
 
 
-## Previous releases
+## Versions précédentes
 
 <details><summary>Cliquez pour voir les notes de mise à jour des versions précédentes</summary>
 
@@ -361,14 +363,14 @@ Pour plus d'informations, veuillez vous référer à [ce billet de blog](https:/
 
 :::warning Note de sécurité
 
-If your 4D applications use TLS connections, it is recommended that you upgrade to 4D v19.7 LTS build 288986 or higher. Pour plus d'informations, reportez-vous à ce [bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettre à jour vers 4D v19.7 LTS build 288986 ou plus. Pour plus d'informations, reportez-vous à ce [bulletin de sécurité](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
 
 - [IMAPTransporter Class](../API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
 - [File Class](../API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](../Tags/tags.md#4deach-and-4dendeach) transformation tag.
+- New [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach) transformation tag.
 - Web Server: new [SameSite session cookie](../WebServer/webServerConfig.md#session-cookie-samesite) setting.
 - Prise en charge des couleurs dark et light pour les [formulaires](../FormEditor/properties_FormProperties.md#color-scheme) et les [feuilles de style](../FormEditor/stylesheets#media-queries)
 - New default dark and light themes in [Code Editor preferences](../Preferences/methods.md#theme-list).
@@ -391,7 +393,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 </details>
 
 
-## Library table
+## Tableau des bibliothèques
 
 
 
