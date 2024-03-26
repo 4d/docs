@@ -117,7 +117,7 @@ As classes disponíveis são acessíveis a partir das suas class stores. Estão 
 
 |
 
-The `cs` command <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
+O comando `cs` <!-- REF #_command_.cs.Summary -->returns the user class store for the current project or component<!-- END REF -->. Devolve todas as classes de usuários [definidas](#class-definition) no projecto ou componente aberto. Como padrão, apenas as classes ORDA do projecto [](ORDA/ordaClasses.md) estão disponíveis.
 
 #### Exemplo
 
@@ -138,7 +138,7 @@ $instance:=cs.myClass.new()
 
 |
 
-The `4D` command <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
+O comando `4D` <!-- REF #_command_.4D.Summary -->returns the class store for available built-in 4D classes<!-- END REF -->. Fornece acesso a APIs específicas, tais como [CryptoKey](API/CryptoKeyClass.md).
 
 #### Exemplo
 
@@ -534,7 +534,7 @@ Class constructor ($side : Integer)
 
 |
 
-The `Super` keyword <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
+A palavra-chave `Super` <!-- REF #_command_.Super.Summary -->allows calls to the `superclass`, i.e. the parent class<!-- END REF -->.
 
 `Super` tem dois objectivos diferentes:
 
@@ -724,7 +724,7 @@ The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allow
 :::
 
 
-### Creating a shared class
+### Criação de uma classe compartilhada
 
 To create a shared class, add the `shared` keyword before the [Class Constructor](#class-constructor). Por exemplo:
 
