@@ -3,6 +3,14 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
+`WebSocketConnection` クラス API は、[`WebSocketServer` クラス](WebSocketServerClass.md) を使って確立された WebSocket 接続を管理するのに使用します。
+
+:::info
+
+4D における WebSocketサーバーの実装の概要といくつかの例題については、[`WebSocketServer` クラス](WebSocketServerClass.md) を参照ください。
+
+:::
+
 <details><summary>履歴</summary>
 
 | バージョン | 内容 |
@@ -11,13 +19,6 @@ title: WebSocketConnection
 
 </details>
 
-`WebSocketConnection` クラス API は、[`WebSocketServer` クラス](WebSocketServerClass.md) を使って確立された WebSocket 接続を管理するのに使用します。
-
-:::info
-
-4D における WebSocketサーバーの実装の概要といくつかの例題については、[`WebSocketServer` クラス](WebSocketServerClass.md) を参照ください。
-
-:::
 
 
 ### WebSocketConnection オブジェクト
