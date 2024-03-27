@@ -5,7 +5,7 @@ title: VP SET BORDER
 
 <!-- REF #_method_.VP SET BORDER.Syntax -->
 
-**VP SET BORDER** ( _rangeObj_ : Object ; _borderStyleObj_ : Object  ; _borderPosObj_ : Object ) <!-- END REF -->
+**VP SET BORDER** ( _rangeObj_ : Object ; _borderStyleObj_ : Object ; _borderPosObj_ : Objeto ) <!-- END REF -->
 
 <!-- REF #_method_.VP SET BORDER.Params -->
 
@@ -17,18 +17,18 @@ title: VP SET BORDER
 
 #### Descripción
 
-The `VP SET BORDER` command <!-- REF #_method_.VP SET BORDER.Summary -->applies the border style(s) defined in _borderStyleObj_ and _borderPosObj_ to the range defined in the _rangeObj_<!-- END REF -->.
+El comando `VP SET BORDER` <!-- REF #_method_.VP SET BORDER.Summary -->aplica los estilos de borde definidos en _borderStyleObj_ y _borderPosObj_ al rango definido en _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range of cells where the border style will be applied. If the _rangeObj_ contains multiple cells, borders applied with `VP SET BORDER` will be applied to the _rangeObj_ as a whole (as opposed to the [`VP SET CELL STYLE`](vp-set-cell-style.md) command which applies borders to each cell of the _rangeObj_). If a style sheet has already been applied, `VP SET BORDER` will override the previously applied border settings for the _rangeObj_.
+En _rangeObj_, pase un rango de celdas donde se aplicará el estilo de borde. If the _rangeObj_ contains multiple cells, borders applied with `VP SET BORDER` will be applied to the _rangeObj_ as a whole (as opposed to the [`VP SET CELL STYLE`](vp-set-cell-style.md) command which applies borders to each cell of the _rangeObj_). Si ya se ha aplicado una hoja de estilo, `VP SET BORDER` anulará la configuración de bordes aplicada anteriormente para el _rangeObj_.
 
-The _borderStyleObj_ parameter allows you to define the style for the lines of the border. _borderStyleObj_ soporta las siguientes propiedades:
+El parámetro _borderStyleObj_ permite definir el estilo de las líneas del borde. _borderStyleObj_ soporta las siguientes propiedades:
 
 | Propiedad | Tipo    | Descripción                                      | Valores posibles                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | --------- | ------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | color     | text    | Define el color del borde. Por defecto = black.  | Sintaxis de color CSS "#rrggbb" (sintaxis preferida), sintaxis de color CSS "rgb(r,g,b)" (sintaxis alternativa), nombre de color CSS (sintaxis alternativa)                                                                                                                                                                                                                                                       |
 | style     | Integer | Define el estilo del borde. Por defecto = empty. | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
-You can define the position of the _borderStyleObj_ (i.e., where the line is applied) with the _borderPosObj_:
+Puede definir la posición del _borderStyleObj_ (es decir, dónde se aplica la línea) con el _borderPosObj_:
 
 | Propiedad       | Tipo    | Descripción                                                                           |
 | --------------- | ------- | ------------------------------------------------------------------------------------- |
@@ -59,12 +59,12 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 This code demonstrates the difference between `VP SET BORDER` and setting borders with the [`VP SET CELL STYLE`](vp-set-cell-style.md) command:
 
 ```4d
-// Set borders using VP SET BORDER
+// Definir los bordes con VP SET BORDER
 $border:=New object("color";"red";"style";vk line style thick)
 $option:=New object("outline";True)
 VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
- 
-// // Set borders using VP SET CELL STYLE
+
+// // Definir los bordes con VP SET CELL STYLE
 $cellStyle:=New object
 $cellStyle.borderBottom:=New object("color";"blue";"style";vk line style thick)
 $cellStyle.borderRight:=New object("color";"blue";"style";vk line style thick)
