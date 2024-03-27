@@ -69,7 +69,7 @@ Depending on the process from which the command is called, the current user sess
 
 For more information, see the [Session types](#session-types) paragraph.
 
-The `Session` object is available from any process in the above contexts. If the command is called from another context (single-user application, scalable sessions disabled...), it returns *Null*.
+If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
 #### Web session
 
@@ -83,15 +83,18 @@ The `Session` object is available from any web process:
 
 #### Remote client session
 
-The `Session` object is available from:
+The `Session` object of remote client sessions is available from:
 
--
+- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- Triggers
+- All server processes related to the user session. 
 
 #### Stored procedures session
 
-The `Session` object is available from:
+All stored procedure processes share the same virtual session. The `Session` object of stored procedures is available from:
 
--
+- methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
+- `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
 
 #### Example
