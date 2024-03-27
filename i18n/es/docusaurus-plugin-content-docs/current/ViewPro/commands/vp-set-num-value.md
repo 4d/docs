@@ -17,21 +17,21 @@ title: VP SET NUM VALUE
 
 #### Descripción
 
-The `VP SET NUM VALUE` command <!-- REF #_method_.VP SET NUM VALUE.Summary -->assigns a specified numeric value to a designated cell range<!-- END REF -->.
+The `VP SET NUM VALUE` command<!-- REF #_method_.VP SET NUM VALUE. Summary -->assigns a specified numeric value to a designated cell range<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. If _rangeObj_ includes multiple cells, the value specified will be repeated in each cell.
+In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`](vp-cell.md) or [`VP Column`](vp-column.md)) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The _numberValue_ parameter specifies a numeric value to be assigned to the _rangeObj_.
+El parámetro _numberValue_ especifica un valor numérico que se asignará al _rangeObj_.
 
 The optional _formatPattern_ defines a [pattern](../configuring.md#cell-format) for the _numberValue_ parameter.
 
 #### Ejemplo
 
 ```4d
-//Set the cell value to 2
+//Definir el valor de la celda en 2
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);2)
  
-//Set the cell value and format it in dollars
+/Definir el valor de la celda y formatear en dólares
 VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 ```
 

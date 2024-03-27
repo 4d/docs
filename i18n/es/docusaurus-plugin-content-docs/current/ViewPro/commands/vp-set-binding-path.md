@@ -24,20 +24,20 @@ title: VP SET BINDING PATH
 
 #### Descripción
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to _rangeObj_<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. When loaded, if the data context contains the attribute, the value of _dataContextAttribute_ is automatically displayed in the cells in _rangeObj_.
+El comando `VP SET BINDING PATH` <!-- REF #_method_.VP SET BINDING PATH.Summary -->vincula un atributo del contexto de datos de una hoja a _rangeObj_<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](vp-set-data-context.md) method. Cuando se carga, si el contexto de datos contiene el atributo, el valor de _dataContextAttribute_ se muestra automáticamente en las celdas en _rangeObj_.
 
 En _rangeObj_, pase un objeto que es un rango de celdas o un rango combinado de celdas.
 
-- If _rangeObj_ is a range with several cells, the command binds the attribute to the first cell of the range.
-- If _rangeObj_ contains several ranges of cells, the command binds the attribute to the first cell of each range.
+- Si _rangeObj_ es un rango con varias celdas, el comando vincula el atributo a la primera celda del rango.
+- Si _rangeObj_ contiene varios rangos de celdas, el comando vincula el atributo a la primera celda de cada rango.
 
-In _dataContextAttribute_, pass the name of the attribute to bind to _rangeObj_. If _dataContextAttribute_ is an empty string, the function removes the current binding.
+En _dataContextAttribute_, pase el nombre del atributo a vincular a _rangeObj_. Si _dataContextAttribute_ es una cadena vacía, la función elimina el enlace actual.
 
 > Los atributos de tipo colección no están soportados. Cuando se pasa el nombre de un atributo de la colección, el comando no hace nada.
 
 #### Ejemplo
 
-Set a data context and bind the `firstName` and `lastName` attribute to cells:
+Define un contexto de datos y vincula el atributo `firstName`y `lastName`a las celdas:
 
 ```4d
 var $p : Object

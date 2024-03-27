@@ -91,7 +91,7 @@ Se quiser lançar vários processos que executem uma tarefa de inventário em di
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... //preencher o array com itens para contar
  $nbItems:=Size of array($_items)
  C_OBJECT($inventory)
  $inventory:=New shared object
@@ -99,10 +99,10 @@ Se quiser lançar vários processos que executem uma tarefa de inventário em di
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  //Criar processos
  For($i;1;$nbItems)
-    $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
-  //$inventory object sent by reference
+    $ps:=New process("HowMany";0; "HowMany_"+$_items{$i};$_items{$i};$inventory)
+  //objeto $inventory  enviado por referência
  End for
 ```
 

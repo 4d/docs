@@ -16,18 +16,18 @@ title: VP SET CELL STYLE
 
 #### Descripción
 
-The `VP SET CELL STYLE` command <!-- REF #_method_.VP SET CELL STYLE.Summary -->applies the style(s) defined in the _styleObj_ to the cells defined in the _rangeObj_<!-- END REF -->.
+El comando `VP SET CELL STYLE` <!-- REF #_method_.VP SET CELL STYLE.Summary -->aplica el estilo o estilos definidos en el _styleObj_ a las celdas definidas en el _rangeObj_<!-- END REF -->.
 
-In _rangeObj_, pass a range of cells where the style will be applied. If the _rangeObj_ contains multiple cells, the style is applied to each cell.
+En _rangeObj_, pase un rango de celdas donde se aplicará el estilo. Si _rangeObj_ contiene múltiples celdas, el estilo se aplica a cada celda.
 
 > Borders applied with `VP SET CELL STYLE` will be applied to each cell of the _rangeObj_, as opposed to the [VP SET BORDER](vp-set-border.md) command which applies borders to the _rangeObj_ as a whole.
 
-The _styleObj_ parameter lets you pass an object containing style settings. Puede utilizar una hoja de estilo existente o crear una nueva. If the _styleObj_ contains both an existing style sheet and additional style settings, the existing style sheet is applied first, followed by the additional settings.
+El parámetro _styleObj_ permite pasar un objeto que contiene propiedades de estilo. Puede utilizar una hoja de estilo existente o crear una nueva. Si _styleObj_ contiene a la vez una hoja de estilo existente y propiedades de estilo adicionales, se aplica primero la hoja de estilo existente, seguida de las propiedades adicionales.
 
 Para eliminar un estilo y volver a la configuración de estilo por defecto (si la hay), pase un valor NULL:
 
-- giving the _styleObj_ parameter a NULL value will remove any style settings from the _rangeObj_,
-- giving an attribute a NULL value will remove this specific attribute from the _rangeObj_.
+- dar al parámetro _styleObj_ un valor NULL eliminará toda configuración de estilo del _rangeObj_,
+- si se le da a un atributo un valor NULL, se eliminará este atributo específico de _rangeObj_.
 
 For more information about style objects and style sheets, see the [Style Objects](../configuring.md#style-objects) paragraph.
 
@@ -41,7 +41,7 @@ $style.foreColor:="red"
 $style.hAlign:=1
 $style.isVerticalText:=True
 $style.borderBottom:=New object("color";"#800080";"style";vk line style thick)
-$style.backgroundImage:=Null //remove a specific attribute
+$style.backgroundImage:=Null //eliminar un atributo específico
  
 VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 ```
