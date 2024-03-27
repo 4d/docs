@@ -9,10 +9,11 @@ Session objects are returned by the [`Session`](#session) command. These objects
 
 Three types of sessions are supported by this class:
 
-- **Web user sessions**: Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges. For information on web user sessions, please refer to the [web server Sessions](WebServer/sessions.md) section.
-- **Remote client user sessions**: In client/server applications, remote users have their own sessions managed on the server. For information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
-- **Stored procedures session**: All stored procedures executed on the server share the same virtual session. For information on server virtual session, please refer to the [XXXX](XXX) section.
+- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges. 
+- [**Remote client user sessions**](Desktop/client-server.md): In client/server applications, remote users have their own sessions managed on the server. 
+- [**Stored procedures session**](XXX): All stored procedures executed on the server share the same virtual session. 
 
+The availability of properties and functions in the `Session` object depend on the session type. 
 
 
 
@@ -71,9 +72,9 @@ For more information, see the [Session types](#session-types) paragraph.
 
 If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
-#### Web session
+#### Web sessions
 
-The `Session` object is available from any web process:
+The `Session` object of web sessions is available from any web process:
 
 - `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
 - code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
@@ -81,13 +82,16 @@ The `Session` object is available from any web process:
 - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
 - ORDA functions [called with REST requests](../REST/ClassFunctions.md).
 
-#### Remote client session
+For more information on web user sessions, please refer to the [Web Server Sessions](WebServer/sessions.md) section.
+
+#### Remote client sessions
 
 The `Session` object of remote client sessions is available from:
 
 - Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- Triggers
-- All server processes related to the user session. 
+- Triggers.
+
+For information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
 
 #### Stored procedures session
 
@@ -96,6 +100,7 @@ All stored procedure processes share the same virtual session. The `Session` obj
 - methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
+For information on stored procedures virtual session, please refer to the [XXXX](XXX) section. 
 
 #### Example
 
@@ -144,7 +149,7 @@ IP:port/4DACTION/action_Session
 
 #### Description
 
-:::info
+:::note
 
 This function can only be used with web user sessions. With other session types, it does nothing and always returns **False**.
 
@@ -183,7 +188,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 #### Description
 
-:::info
+:::note
 
 This property is only available with web user sessions.
 
@@ -229,7 +234,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 #### Description
 
-:::info
+:::note
 
 This function can only be used with web user sessions. With other session types, it does nothing and always returns **False**.
 
@@ -270,7 +275,7 @@ End if
 
 #### Description
 
-:::info
+:::note
 
 This property is only available with remote client and stored procedure sessions. 
 
@@ -298,7 +303,7 @@ The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique iden
 
 #### Description
 
-:::info
+:::note
 
 This property is only available with web user sessions.
 
@@ -346,7 +351,7 @@ End if
 
 #### Description
 
-:::info
+:::note
 
 This property is only available with remote client and stored procedure sessions. 
 
@@ -361,13 +366,13 @@ The `.info` object contains the following properties:
 |type|Text|Session type: "remote" or "storedProcedure"|
 |userName|Text|4D user name (same value as [`.userName`](#username))|
 |machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine|
-|systemUserName|Text|Remote sessions: name of the system session opened on the remote machine. Stored procedures session: "Store Procedures" |
-|IPAddress|Text|Remote sessions: IP address of the remote machine. Stored procedures session: empty string|
-|hostType|Text|Host type: "windows", "mac", or "linux"|
+|systemUserName|Text|Remote sessions: name of the system session opened on the remote machine.  |
+|IPAddress|Text|IP address of the remote machine|
+|hostType|Text|Host type: "windows" or "mac"|
 |creationDateTime|Date ISO 8601|Date and time of session creation|
 |state|Text|Session state: "active", "postponed", "sleeping"|
 |ID|Text|Session UUID (same value as [`.id`](#id))|
-|persistentID|Text|Remote sessions: Session's persistent ID. Stored procedures session: empty string|
+|persistentID|Text|Session's persistent ID|
 
 
 
@@ -396,7 +401,7 @@ The `.info` object contains the following properties:
 
 #### Description
 
-:::info
+:::note
 
 This function can only be used with web user sessions. With other session types, it always returns **True**.
 
@@ -445,7 +450,7 @@ End if
 
 #### Description
 
-:::info
+:::note
 
 This function can only be used with web user sessions. With other session types, it does nothing and always returns **False**.
 
@@ -465,7 +470,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 |roles|Text or Collection|<li>String containing a role, or</li><li>Collection of strings containing roles</li>|
 |userName|Text|User name to associate to the session (optional)|
 
-:::info
+:::note
 
 Privileges and roles are defined in [`roles.json`](../ORDA/privileges.md#rolesjson-file) file of the project. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) section.
 
@@ -523,6 +528,7 @@ When a `Session` object is created, the `.storage` property is empty. Since it i
 This property is **read only** itself but it returns a read-write object.
 
 <Tabs>
+
 <TabItem value="Web session example">
 
 You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
@@ -536,6 +542,7 @@ End if
 
 ```
 </TabItem>
+
 <TabItem value="Remote session example">
 
 You want to share data between processes in the same session:
@@ -547,6 +554,9 @@ End use
 ```
 
 </TabItem>
+
+</Tabs>
+
 <!-- END REF -->
 
 
@@ -572,7 +582,7 @@ End use
 The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. You can use it to identify the user within your code.
 
 - With web sessions, this property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
-- With remote sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
+- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
 
 This property is **read only**.
 
