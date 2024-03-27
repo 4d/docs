@@ -3,6 +3,10 @@ id: SessionClass
 title: Session
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 ### Session types
@@ -10,12 +14,19 @@ Session objects are returned by the [`Session`](#session) command. These objects
 Three types of sessions are supported by this class:
 
 - [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges. 
-- [**Remote client user sessions**](Desktop/client-server.md): In client/server applications, remote users have their own sessions managed on the server. 
-- [**Stored procedures session**](XXX): All stored procedures executed on the server share the same virtual session. 
+- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server. 
+- [**Stored procedures session**](XXX): All stored procedures executed on the server share the same virtual user session. 
+
+:::note
 
 The availability of properties and functions in the `Session` object depend on the session type. 
 
+:::
 
+#### See also (blog posts)
+
+- [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+- [4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
 
 
 ### Summary
@@ -89,9 +100,10 @@ For more information on web user sessions, please refer to the [Web Server Sessi
 The `Session` object of remote client sessions is available from:
 
 - Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- Triggers.
+- Triggers,
+- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
 
-For information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
+For more information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
 
 #### Stored procedures session
 
@@ -151,7 +163,7 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-This function can only be used with web user sessions. With other session types, it does nothing and always returns **False**.
+Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
 
 :::
 
@@ -236,7 +248,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 :::note
 
-This function can only be used with web user sessions. With other session types, it does nothing and always returns **False**.
+Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
 
 :::
 
@@ -275,13 +287,7 @@ End if
 
 #### Description
 
-:::note
-
-This property is only available with remote client and stored procedure sessions. 
-
-:::
-
-The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the remote client session on the server<!-- END REF -->. This unique string is automatically assigned by the server for each remote client session and allows you to identify its processes. 
+The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. This unique string is automatically assigned by the server for each session and allows you to identify its processes. 
 
 
 <!-- END REF -->
@@ -403,7 +409,7 @@ The `.info` object contains the following properties:
 
 :::note
 
-This function can only be used with web user sessions. With other session types, it always returns **True**.
+This function always returns **True** with remote client and stored procedure sessions.
 
 :::
 
@@ -452,7 +458,7 @@ End if
 
 :::note
 
-This function can only be used with web user sessions. With other session types, it does nothing and always returns **False**.
+Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
 
 :::
 
