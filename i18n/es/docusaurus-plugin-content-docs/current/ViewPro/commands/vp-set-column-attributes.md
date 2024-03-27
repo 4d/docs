@@ -16,11 +16,11 @@ title: VP SET COLUMN ATTRIBUTES
 
 #### Descripción
 
-The `VP SET COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> applies the attributes defined in the _propertyObj_ to the columns in the _rangeObj_<!-- END REF -->.
+El comando `VP SET COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Summary --> aplica los atributos definidos en _propertyObj_ a las columnas de _rangeObj_<!-- END REF -->.
 
 En _rangeObj_, pase un objeto que contenga un rango. Si el rango contiene tanto columnas como líneas, los atributos se aplican sólo a las columnas.
 
-The _propertyObj_ parameter lets you specify the attributes to apply to the columns in the _rangeObj_. Estos atributos son:
+The _propertyObj_ parameter lets you specify the attributes to apply to the rows in the _rangeObj_. Estos atributos son:
 
 | Propiedad       | Tipo    | Descripción                                                                               |
 | --------------- | ------- | ----------------------------------------------------------------------------------------- |
