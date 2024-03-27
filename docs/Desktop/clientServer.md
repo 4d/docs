@@ -109,7 +109,7 @@ The `Session` object is available from:
 
 :::info
 
-All stored procedures on the server share the same virtual user session. For more information, see [this page] on doc.4d.com.
+All stored procedures on the server share the same virtual user session. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
 
 :::
 
