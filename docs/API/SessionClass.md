@@ -3,14 +3,14 @@ id: SessionClass
 title: Session
 ---
 
-Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage privileges.
+Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 ### Session types
 
-Three kinds of sessions are supported by this class:
+Three types of sessions are supported by this class:
 
 - **Web user sessions**: Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges. For information on web user sessions, please refer to the [web server Sessions](WebServer/sessions.md) section.
-- **Remote client sessions**: In a client/server desktop application, remote users have their own sessions. For information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
+- **Remote client user sessions**: In client/server applications, remote users have their own sessions managed on the server. For information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
 - **Stored procedures session**: All stored procedures executed on the server share the same virtual session. For information on server virtual session, please refer to the [XXXX](XXX) section.
 
 
@@ -76,10 +76,10 @@ The `Session` object is available from any process in the above contexts. If the
 The `Session` object is available from any web process:
 
 - `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
-- [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
-- ORDA [Data Model Class functions](ORDA/ordaClasses.md) called with REST requests,
 - code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
-- project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls.
+- project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls,
+- [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
+- ORDA functions [called with REST requests](../REST/ClassFunctions.md).
 
 #### Remote client session
 
@@ -180,6 +180,12 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 #### Description
 
+:::info
+
+This property is only available with web user sessions.
+
+:::
+
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
@@ -263,11 +269,11 @@ End if
 
 :::info
 
-This property can only be used with the remote client sessions. With other session types, it returns an empty string.
+This property is only available with remote client and stored procedure sessions. 
 
 :::
 
-The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier of the remote client session<!-- END REF -->.
+The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the remote client session on the server<!-- END REF -->. This unique string is automatically assigned by the server for each remote client session and allows you to identify its processes. 
 
 
 <!-- END REF -->
@@ -288,6 +294,12 @@ The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique iden
 <!-- REF #SessionClass.idleTimeout.Syntax -->**.idleTimeout** : Integer<!-- END REF -->
 
 #### Description
+
+:::info
+
+This property is only available with web user sessions.
+
+:::
 
 The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
 
@@ -333,11 +345,27 @@ End if
 
 :::info
 
-This property can only be used with the remote client sessions. With other session types, it returns null.
+This property is only available with remote client and stored procedure sessions. 
 
 :::
 
-The `.info` property contains <!-- REF #SessionClass.info.Summary -->all information about the remote client session<!-- END REF -->.
+The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->.
+
+The `.info` object contains the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|type|Text|Session type: "remote" or "storedProcedure"|
+|userName|Text|4D user name (same value as [`.userName`](#username))|
+|machineName|Text|Remote sessions: name of the remote machine. Stored procedures session: name of the server machine|
+|systemUserName|Text|Remote sessions: name of the system session opened on the remote machine. Stored procedures session: "Store Procedures" |
+|IPAddress|Text|Remote sessions: IP address of the remote machine. Stored procedures session: empty string|
+|hostType|Text|Host type: "windows", "mac", or "linux"|
+|creationDateTime|Date ISO 8601|Date and time of session creation|
+|state|Text|Session state: "active", "postponed", "sleeping"|
+|ID|Text|Session UUID (same value as [`.id`](#id))|
+|persistentID|Text|Remote sessions: Session's persistent ID. Stored procedures session: empty string|
+
 
 
 <!-- END REF -->
