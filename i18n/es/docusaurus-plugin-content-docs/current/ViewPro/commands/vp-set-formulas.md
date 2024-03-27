@@ -20,25 +20,25 @@ El comando `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->asign
 
 In _rangeObj_, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. If _rangeObj_ includes multiple ranges, only the first range is used.
 
-The _formulasCol_ is a two-dimensional collection:
+El parámetro _formulasCol_ es una colección bidimensional:
 
 - La colección de primer nivel contiene subcolecciones de fórmulas. Cada subcolección define una línea.
 - Cada subcolección define los valores de las celdas para la línea. Los valores deben ser elementos textuales que contengan las fórmulas a asignar a las celdas.
 
-> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
+> Si la fórmula es una cadena, utilice el punto `.` como separador numérico y la coma `,` como separador de parámetros.
 > If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
 
-You remove the formulas in _rangeObj_ by replacing them with an empty string ("").
+Las fórmulas de _rangeObj_ se eliminan sustituyéndolas por una cadena vacía ("").
 
 #### Ejemplo 1
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // Primera línea
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Segunda línea
 
  
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Definir las celdas con las fórmulas
 ```
 
 _myMethod_:
@@ -55,10 +55,10 @@ Para eliminar las fórmulas:
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("";"")) // first collection
-$formulas.push(New collection("";"")) // second collection
+$formulas.push(New collection("";"")) // primera colección
+$formulas.push(New collection("";"")) // segunda colección
  
-VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
+VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Asignar a celdas
 ```
 
 #### Ver también
