@@ -42,13 +42,13 @@ Usted quiere autorizar dos métodos en sus áreas 4D View Pro:
 
 ```4d
 C_OBJECT($allowed)
-$allowed:=New object //parameter for the command
+$allowed:=New object //parámetro para el comando
  
-$allowed.Hello:=New object //create a first simple function named "Hello"
-$allowed.Hello.method:="My_Hello_Method" //sets the 4D method
+$allowed.Hello:=New object //crea una primera función simple llamada "Hello"
+$allowed.Hello.method:="My_Hello_Method" //define el método 4D
 $allowed.Hello.summary:="Hello prints hello world"
  
-$allowed.Byebye:=New object //create a second function with parameters named "Byebye"
+$allowed.Byebye:=New object //crea una segunda función con parámetros llamada "Byebye"
 $allowed.Byebye.method:="My_ByeBye_Method"
 $allowed.Byebye.parameters:=New collection
 $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))
