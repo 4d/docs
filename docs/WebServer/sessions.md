@@ -177,3 +177,7 @@ Else
     WEB SEND TEXT("This userId is unknown")
 End if
 ```
+
+## See also (blog post)
+
+[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)

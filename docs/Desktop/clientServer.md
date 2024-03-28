@@ -89,19 +89,19 @@ However, you need to pay attention to the following behavior differences compare
 
 ## Remote user sessions
 
-On the server, the [`Session`](../API/SessionClass.md#session) command returns an object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
 
 
 ### Usage
 
-The `Session` object allows you to get information about the user session. You can also share data between all processes of the user session using the [`.storage`](../API/SessionClass.md#storage) shared object. 
+The `session` object allows you to get information about the remote user session. You can share data between all processes of the user session using the [`session.storage`](../API/SessionClass.md#storage) shared object. 
 
 For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. You then add the user information to the session storage, enabling the server to identify the user. This way, the 4D server can access user information for all client processes, enabling customized code to be written according to the user's role.
 
 
 ### Availability
  
-The `Session` object is available from:
+The remote user `session` object is available from:
 
 - Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
 - Triggers,
@@ -113,7 +113,7 @@ All stored procedures on the server share the same virtual user session. For mor
 
 :::
 
-### See also
+### See also (blog post)
 
-[4D remote session object with Client/Server connection and Stored procedure (blog post)](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+[4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
 

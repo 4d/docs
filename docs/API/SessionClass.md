@@ -15,18 +15,14 @@ Three types of sessions are supported by this class:
 
 - [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges. 
 - [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server. 
-- [**Stored procedures session**](XXX): All stored procedures executed on the server share the same virtual user session. 
+- [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+): All stored procedures executed on the server share the same virtual user session. 
 
 :::note
 
 The availability of properties and functions in the `Session` object depend on the session type. 
 
 :::
-
-#### See also (blog posts)
-
-- [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
 
 
 ### Summary
@@ -384,13 +380,10 @@ The `.info` object contains the following properties:
 
 :::note
 
-Since `.info` is a [computed property](../Concepts/classes.md#function-get-and-function-set), it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties. 
+Since `.info` is a computed property, it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties. 
 
 :::
 
-#### See also
-
-[`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html)
 
 <!-- END REF -->
 
