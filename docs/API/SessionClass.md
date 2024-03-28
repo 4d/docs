@@ -103,16 +103,16 @@ The `Session` object of remote client sessions is available from:
 - Triggers,
 - `On Server Open Connection` and `On Server Shutdown Connection` database methods.
 
-For more information on remote user sessions, please refer to the [XXXX](Desktop/client-server.md) section.
+For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
 
 #### Stored procedures session
 
-All stored procedure processes share the same virtual session. The `Session` object of stored procedures is available from:
+All stored procedure processes share the same virtual user session. The `Session` object of stored procedures is available from:
 
 - methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
-For information on stored procedures virtual session, please refer to the [XXXX](XXX) section. 
+For information on stored procedures virtual user session, please refer to the [XXXX](XXX) page. 
 
 #### Example
 
