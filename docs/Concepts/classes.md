@@ -361,7 +361,13 @@ The `property` keyword can be used to declare a property inside a user class. A 
 
 Declaring class properties enhances code editor suggestions, type-ahead features and error detection.
 
-Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value).
+Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value). 
+
+:::note
+
+A property is automatically added to the object when it is [inititalized in the declaration line](#initializing-the-property-in-the-declaration-line).
+
+:::
 
 Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
 
@@ -386,9 +392,45 @@ The property type can be one of the following supported types:
 |`cs.<className>`|Object of the user class name|
 |`cs.<namespace>.<className>`|Object of the `<namespace>` component class name|
 
+
+If you omit the type in the declaration line, the property is created as a variant. 
+
 :::info
 
 The `property` keyword can only be used in class methods and outside any `Function` or `Class Constructor` block.
+
+:::
+
+
+
+
+#### Initializing the property in the declaration line
+
+When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. The supported syntax is:
+
+`property <propertyName> { : <propertyType>} := <Propertyvalue>`
+
+:::note
+
+When using this syntax, you cannot declare several properties in the declaration line. 
+
+:::
+
+You can omit the type in the declaration line, in which case the type will be inferred when possible. For example:
+
+```4d
+// Class: MyClass
+
+property name : Text := "Smith"
+property age : Integer := 42
+
+property birthDate := !1988-09-29! //date is inferred
+property fuzzy //variant
+```
+
+:::info
+
+When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called. 
 
 :::
 
@@ -400,14 +442,15 @@ The `property` keyword can only be used in class methods and outside any `Functi
 
 property name : Text
 property age : Integer
+property color : Text := "Blue"
 ```
 
 In a method:
 
 ```4d
 var $o : cs.MyClass
-$o:=cs.MyClass.new() //$o:{}
-$o.name:="John" //$o:{"name" : "John"}
+$o:=cs.MyClass.new() //$o:{"color" : "Blue"}
+$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
 $o.age:="Smith"  //error with check syntax
 ```
 
