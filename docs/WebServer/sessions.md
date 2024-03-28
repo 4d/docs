@@ -78,7 +78,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 ## Privileges
 
-Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
+Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 
 You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
@@ -92,6 +92,12 @@ Else
 	//Display an authentication page
 End if
 ```
+
+:::info
+
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter. 
+
+:::
 
 
 ## Example
