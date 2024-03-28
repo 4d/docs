@@ -363,7 +363,9 @@ This property is only available with remote client and stored procedure sessions
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->.
+The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->. 
+
+The `.info` object is the same object as the one returned by the [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) command for remote client and stored procedure sessions.
 
 The `.info` object contains the following properties:
 
@@ -380,7 +382,15 @@ The `.info` object contains the following properties:
 |ID|Text|Session UUID (same value as [`.id`](#id))|
 |persistentID|Text|Session's persistent ID|
 
+:::note
 
+Since `.info` is a [computed property](../Concepts/classes.md#function-get-and-function-set), it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties. 
+
+:::
+
+#### See also
+
+[`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html)
 
 <!-- END REF -->
 
