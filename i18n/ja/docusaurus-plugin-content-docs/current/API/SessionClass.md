@@ -7,19 +7,19 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Session オブジェクトは [`Session`](#session) コマンドによって返されます。 このオブジェクトは、カレントユーザーセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理を可能にします。
 
-### Session types
+### セッションの種類
 
-Three types of sessions are supported by this class:
+このクラスは 3種類のセッションをサポートしています:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges.
-- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
-- [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
+- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは Web および REST 接続に使用され、権限を割り当てることができます。
+- [**リモートクライアントユーザー セッション**](../Desktop/clientServer.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
+- [**ストアドプロシージャーセッション**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html): サーバ上で実行されるすべてのストアドプロシージャーは、同じ仮想ユーザーセッションを共有します。
 
 :::note
 
-The availability of properties and functions in the `Session` object depend on the session type.
+`Session` オブジェクトにおいて利用可能なプロパティと関数は、セッションの種類に依存します。
 
 :::
 
@@ -47,10 +47,10 @@ The availability of properties and functions in the `Session` object depend on t
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                     |
-| ------ | ------------------------------------------------------ |
-| v20 R5 | Support of remote client and stored procedure sessions |
-| v18 R6 | 追加                                                     |
+| バージョン  | 内容                               |
+| ------ | -------------------------------- |
+| v20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
+| v18 R6 | 追加                               |
 
 </details>
 
@@ -66,46 +66,46 @@ The availability of properties and functions in the `Session` object depend on t
 
 #### 説明
 
-`Session` コマンドは、 <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->。
+`Session` コマンドは、 <!-- REF #_command_.Session.Summary -->カレントユーザーセッションに対応する `Session` オブジェクトを返します<!-- END REF -->。
 
-Depending on the process from which the command is called, the current user session can be:
+コマンドを呼び出したプロセスによって、カレントユーザーセッションは次のいずれかです:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
-- a remote client session,
-- the stored procedures session.
+- Webセッション ([スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合)
+- リモートクライアントセッション
+- ストアドプロシージャーセッション
 
-For more information, see the [Session types](#session-types) paragraph.
+詳細については、[セッションの種類](#セッションの種類) の段落を参照ください。
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
+サポートされていないコンテキスト (シングルユーザーアプリケーション、スケーラブルセッションが無効...) から呼び出されると、コマンドは *Null* を返します。
 
-#### Web sessions
+#### Webセッション
 
-The `Session` object of web sessions is available from any web process:
+Webセッションの `Session` オブジェクトは、どの Webプロセスからも利用できます:
 
 - `On Web Authentication`、`On Web Connection`、および `On REST Authentication` データベースメソッド
 - セミダイナミックページにおいて、4Dタグ (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE) を介して処理されるコード
-- project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls,
+- "公開オプション: 4DタグとURL(4DACTION...)" を有効化されたうえで、4DACTION/ URL から呼び出されたプロジェクトメソッド
 - モバイルリクエスト用の [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) データベースメソッド
-- ORDA functions [called with REST requests](../REST/ClassFunctions.md).
+- [RESTリクエストで呼び出された](../REST/ClassFunctions.md) ORDA関数。
 
-For more information on web user sessions, please refer to the [Web Server Sessions](WebServer/sessions.md) section.
+Webユーザーセッションの詳細については、[Webサーバーセッション](WebServer/sessions.md) の章を参照ください。
 
-#### Remote client sessions
+#### リモートクライアントセッション
 
-The `Session` object of remote client sessions is available from:
+リモートクライアントの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- トリガー,
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+- [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
+- トリガー
+- `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド
 
-For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
+リモートユーザーセッションの詳細については、[**リモートクライアントユーザーセッション**](../Desktop/clientServer.md#リモートユーザーセッション) の段落を参照ください。
 
-#### Stored procedures session
+#### ストアドプロシージャーセッション
 
-All stored procedure processes share the same virtual user session. The `Session` object of stored procedures is available from:
+すべてのストアドプロシージャープロセスは、同じ仮想ユーザーセッションを共有します。 ストアドプロシージャーの `Session` オブジェクトは、次のいずれかから利用できます:
 
-- methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
-- `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
+- [`Execute on server`](https://doc.4d.com/4dv20/help/command/ja/page373.html) コマンドで呼び出されるメソッド
+- `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
 For information on stored procedures virtual user session, please refer to the [XXXX](XXX) page.
 
@@ -118,16 +118,16 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //action_Session メソッド
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
-          WEB SEND TEXT("4DACTION --> Session is WebAdmin")
+       If(Session.hasPrivilege("WebAdmin")) // hasPrivilege 関数を呼び出します
+          WEB SEND TEXT("4DACTION --> セッションは WebAdmin です")
        Else
-          WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
+          WEB SEND TEXT("4DACTION --> セッションは WebAdmin ではありません")
        End if
     Else
-       WEB SEND TEXT("4DACTION --> Session is null")
+       WEB SEND TEXT("4DACTION --> セッションは null です")
  End case
 ```
 
@@ -148,9 +148,9 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| 引数  | タイプ     |    | 説明                                  |
-| --- | ------- |:--:| ----------------------------------- |
-| 戻り値 | Boolean | <- | True if the execution is successful |
+| 引数  | タイプ     |    | 説明                  |
+| --- | ------- |:--:| ------------------- |
+| 戻り値 | Boolean | <- | 実行が正常に終わった場合には true |
 <!-- END REF -->
 
 
@@ -158,22 +158,22 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+権限は Webユーザーセッションでのみサポートされるため、他のセッションタイプではこの関数は何もせず、常に **false** を返します。
 
 :::
 
-`.clearPrivileges()` 関数は、 <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。
+`.clearPrivileges()` 関数は、 <!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除し、実行が成功した場合に **true** を返します<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。
 
 
 #### 例題
 
 ```4d
-//Invalidate a session
+// セッションを無効にします
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest is True
+$isGuest:=Session.isGuest() // $isGuest は true
 ```
 
 <!-- END REF -->
@@ -197,7 +197,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 :::note
 
-This property is only available with web user sessions.
+このプロパティは、Webユーザーセッションの場合にのみ使用できます。
 
 :::
 
@@ -243,7 +243,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+権限は Webユーザーセッションでのみサポートされるため、他のセッションタイプではこの関数は何もせず、常に **false** を返します。
 
 :::
 
@@ -282,7 +282,7 @@ End if
 
 #### 説明
 
-`.id` プロパティは、 <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->。 This unique string is automatically assigned by the server for each session and allows you to identify its processes. 
+`.id` プロパティは、 <!-- REF #SessionClass.id.Summary -->サーバー上のセッションの一意な識別子 (UUID) を格納します<!-- END REF -->。 この一意の文字列は、サーバーによって各セッションに対して自動的に割り当てられ、そのプロセスを識別することを可能にします。 
 
 
 <!-- END REF -->
@@ -306,7 +306,7 @@ End if
 
 :::note
 
-This property is only available with web user sessions.
+このプロパティは、Webユーザーセッションの場合にのみ使用できます。
 
 :::
 
@@ -354,13 +354,13 @@ End if
 
 :::note
 
-This property is only available with remote client and stored procedure sessions.
+このプロパティは、リモートクライアントおよびストアドプロシージャーセッションの場合にのみ使用できます。
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->。
+`.info` プロパティは、 <!-- REF #SessionClass.info.Summary -->サーバー上のリモートクライアントまたはストアドプロシージャーセッションの情報を格納します<!-- END REF -->。
 
-The `.info` object is the same object as the one returned by the [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) command for remote client and stored procedure sessions.
+`.info` オブジェクトは、リモートクライアントおよびストアドプロシージャーセッションに対して [`Get process activity`](https://doc.4d.com/4dv20/help/command/ja/page1495.html) コマンドによって返されるオブジェクトと同じです。
 
 The `.info` object contains the following properties:
 
@@ -453,14 +453,14 @@ End if
 | privilege  | Text       | -> | アクセス権の名称                                    |
 | privileges | Collection | -> | アクセス権の名称のコレクション                             |
 | settings   | Object     | -> | "privileges" プロパティ (文字列またはコレクション) を持つオブジェクト |
-| 戻り値        | Boolean    | <- | True if the execution is successful         |
+| 戻り値        | Boolean    | <- | 実行が正常に終わった場合には true                         |
 <!-- END REF -->
 
 #### 説明
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+権限は Webユーザーセッションでのみサポートされるため、他のセッションタイプではこの関数は何もせず、常に **false** を返します。
 
 :::
 
@@ -516,10 +516,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                     |
-| ------ | ------------------------------------------------------ |
-| v20 R5 | Support of remote client and stored procedure sessions |
-| v18 R6 | 追加                                                     |
+| バージョン  | 内容                               |
+| ------ | -------------------------------- |
+| v20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
+| v18 R6 | 追加                               |
 
 </details>
 
@@ -576,10 +576,10 @@ End use
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                     |
-| ------ | ------------------------------------------------------ |
-| v20 R5 | Support of remote client and stored procedure sessions |
-| v18 R6 | 追加                                                     |
+| バージョン  | 内容                               |
+| ------ | -------------------------------- |
+| v20 R5 | リモートクライアントとストアドプロシージャーセッションをサポート |
+| v18 R6 | 追加                               |
 
 </details>
 
