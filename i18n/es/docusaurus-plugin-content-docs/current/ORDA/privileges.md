@@ -4,7 +4,7 @@ title: Privilegios
 ---
 
 
-Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. La arquitectura de seguridad ORDA se implementa en el corazón de su almacén de datos y le permite definir privilegios específicos a todas las sesiones de usuario para los distintos recursos de su proyecto (datastore, dataclasses, funciones, etc.).
+Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all web or REST user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
 
 
 
@@ -12,7 +12,7 @@ Proteger los datos a la vez que se permite un acceso rápido y sencillo a los us
 
 La arquitectura de seguridad ORDA se basa en los conceptos de privilegios, acciones de permiso (read, create, etc.) y recursos.
 
-Cuando los usuarios se registran, su sesión se carga automáticamente con los privilegios asociados. Los privilegios se asignan a la sesión utilizando la función [`session.setPrivileges()`](../API/SessionClass.md#setprivileges).
+When web users or REST users get logged, their session is automatically loaded with associated privilege(s). Los privilegios se asignan a la sesión utilizando la función [`session.setPrivileges()`](../API/SessionClass.md#setprivileges).
 
 Cada solicitud de usuario enviada dentro de la sesión se evalúa en función de los privilegios definidos en el archivo `roles.json` del proyecto.
 
