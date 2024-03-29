@@ -34,11 +34,10 @@ Para obtener información detallada sobre la implementación de la sesión, cons
 
 
 <!-- REF #_command_.Session.Params -->
-| Parámetros | Tipo       |    | Descripción                               |
-| ---------- | ---------- |:--:| ----------------------------------------- |
-| Result     | 4D.Session | <- | Objeto Session|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción    |
+| ---------- | ---------- |:--:| -------------- |
+| Result     | 4D.Session | <- | Objeto Session |
+<!-- END REF -->
 
 #### Descripción
 
@@ -90,11 +89,10 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -155,12 +153,11 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                             |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------------------- |
-| privilege  | Text    | <- | Nombre del privilegio a verificar                                                       |
-| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                  |
+| ---------- | ------- |:--:| ------------------------------------------------------------ |
+| privilege  | Text    | <- | Nombre del privilegio a verificar                            |
+| Result     | Boolean | <- | True si la sesión tiene *privilege*, False en caso contrario |
+<!-- END REF -->
 
 #### Descripción
 
@@ -236,11 +233,10 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                               |
-| ---------- | ------- |:--:| ----------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                    |
+| ---------- | ------- |:--:| -------------------------------------------------------------- |
+| Result     | Boolean | <- | True si la sesión es una sesión Guest, False en caso contrario |
+<!-- END REF -->
 
 #### Descripción
 
@@ -273,13 +269,12 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parámetros | Tipo       |    | Descripción                                                                            |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------- |
-| privilege  | Text       | -> | Nombre del privilegio                                                                  |
-| privileges | Collection | -> | Colección de nombres de privilegios                                                    |
-| settings   | Object     | -> | Objeto con una propiedad "privilegios" (cadena o colección)|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                                                 |
+| ---------- | ---------- |:--:| ----------------------------------------------------------- |
+| privilege  | Text       | -> | Nombre del privilegio                                       |
+| privileges | Collection | -> | Colección de nombres de privilegios                         |
+| settings   | Object     | -> | Objeto con una propiedad "privilegios" (cadena o colección) |
+<!-- END REF -->
 
 #### Descripción
 
