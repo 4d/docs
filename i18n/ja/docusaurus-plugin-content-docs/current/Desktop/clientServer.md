@@ -87,7 +87,7 @@ title: クライアント/サーバー管理
 > プラグインやコンポーネントを 4D あるいは 4D Server アプリケーションレベルにインストールすることは、推奨されません。
 
 
-## Remote user sessions
+## リモートユーザーセッション
 
 On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
 
@@ -103,9 +103,9 @@ For example, you can launch a user authentication and verification procedure whe
 
 The remote user `session` object is available from:
 
-- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
-- トリガー,
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+- [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
+- トリガー
+- `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド
 
 :::info
 
