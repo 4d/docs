@@ -372,14 +372,14 @@ End if
 | systemUserName   | Text          | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。               |
 | IPAddress        | Text          | リモートマシンの IPアドレス。                                    |
 | hostType         | Text          | ホストタイプ: "windows" または "mac"                         |
-| creationDateTime | 日付 (ISO 8601) | Date and time of session creation                   |
-| state            | Text          | Session state: "active", "postponed", "sleeping"    |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))           |
-| persistentID     | Text          | Session's persistent ID                             |
+| creationDateTime | 日付 (ISO 8601) | セッション作成の日時                                          |
+| state            | Text          | セッションの状態: "active", "postponed", "sleeping"         |
+| ID               | Text          | セッションUUID ([`.id`](#id) と同じ値)                       |
+| persistentID     | Text          | セッションの永続的な ID                                       |
 
 :::note
 
-Since `.info` is a computed property, it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties.
+`.info` は計算プロパティなため、そのプロパティに対して何らかの処理をおこないたい場合は、呼び出し後にローカル変数に保存することが推奨されます。
 
 :::
 
@@ -411,7 +411,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **True** with remote client and stored procedure sessions.
+この関数は、リモートクライアントとストアドプロシージャーのセッションでは常に **true** を返します。
 
 :::
 
@@ -464,7 +464,7 @@ End if
 
 :::
 
-`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->。
+`.setPrivileges()` 関数は、 <!-- REF #SessionClass.setPrivileges().Summary -->引数として渡したアクセス権やロールをセッションと紐づけ、実行が成功した場合に **true** を返します<!-- END REF -->。
 
 - *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
@@ -527,7 +527,7 @@ End if
 
 #### 説明
 
-`.storage` プロパティは、 <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all processes of the session<!-- END REF -->。
+`.storage` プロパティは、 <!-- REF #SessionClass.storage.Summary -->セッションのすべてのプロセスで利用可能な情報を保存しておける共有オブジェクトを格納します<!-- END REF -->。
 
 `Session` オブジェクトの作成時には、`.storage` プロパティは空です。 共有オブジェクトのため、このプロパティはサーバー上の `Storage` オブジェクトにおいて利用可能です。
 
@@ -539,10 +539,10 @@ End if
 
 <TabItem value="Web session example">
 
-You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
+クライアントの IP を `.storage` プロパティに保存します。 `On Web Authentication` データベースメソッドに以下のように記述できます:
 
 ```4d
-If (Session.storage.clientIP=Null) //first access
+If (Session.storage.clientIP=Null) // 最初のアクセス
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
     End use
@@ -553,11 +553,11 @@ End if
 
 <TabItem value="Remote session example">
 
-You want to share data between processes in the same session:
+同じセッションのプロセス間でデータを共有したい場合:
 
 ```4d
 Use (Session.storage)
- Session.storage.settings:=New shared object("property"; $value; "property2"; $value2)
+ Session. torage.settings:=New shared object("property"; $value; "property2"; $value2)
 End use
 ```
 
@@ -589,8 +589,8 @@ End use
 
 `.userName` プロパティは、 <!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名を格納します<!-- END REF -->。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
-- With web sessions, this property is an empty string by default. これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
+- Webセッションでは、このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
+- リモートおよびストアドプロシージャーセッションでは、このプロパティは [`Current user`](https://doc.4d.com/4dv20/help/command/ja/page182.html) コマンドと同じユーザー名を返します。
 
 このプロパティは **読み取り専用** です。
 
