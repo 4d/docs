@@ -19,7 +19,7 @@ title: VP SET FIELD
 
 El comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->asigna un campo virtual de base de datos 4D a un rango de celdas designado<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) whose value you want to specify. En _rangeObj_, pase un rango de la(s) celda(s) cuyo valor desea indicar.
+En _rangeObj_, pase un rango de la(s) celda(s) cuyo valor desea indicar. En _rangeObj_, pase un rango de la(s) celda(s) cuyo valor desea indicar.
 
 The _field_ parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the _rangeObj_. El nombre de la estructura virtual para el _field_ se puede ver en la barra de fórmulas. Si alguna de las celdas de _rangeObj_ tiene contenido, se sustituirá por _field_.
 
