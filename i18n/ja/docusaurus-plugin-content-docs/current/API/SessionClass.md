@@ -362,20 +362,20 @@ End if
 
 `.info` オブジェクトは、リモートクライアントおよびストアドプロシージャーセッションに対して [`Get process activity`](https://doc.4d.com/4dv20/help/command/ja/page1495.html) コマンドによって返されるオブジェクトと同じです。
 
-The `.info` object contains the following properties:
+`.info` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ            | タイプ           | 説明                                                                                                 |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote" or "storedProcedure"                                                        |
-| userName         | Text          | 4D user name (same value as [`.userName`](#username))                                              |
-| machineName      | Text          | Remote sessions: name of the remote machine. Stored procedures session: name of the server machine |
-| systemUserName   | Text          | Remote sessions: name of the system session opened on the remote machine.                          |
-| IPAddress        | Text          | IP address of the remote machine                                                                   |
-| hostType         | Text          | Host type: "windows" or "mac"                                                                      |
-| creationDateTime | Date ISO 8601 | Date and time of session creation                                                                  |
-| state            | Text          | Session state: "active", "postponed", "sleeping"                                                   |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                          |
-| persistentID     | Text          | Session's persistent ID                                                                            |
+| プロパティ            | タイプ           | 説明                                                  |
+| ---------------- | ------------- | --------------------------------------------------- |
+| type             | Text          | セッションタイプ: "remote" または "storedProcedure"            |
+| userName         | Text          | 4Dユーザー名 ([`.userName`](#username) と同じ値)             |
+| machineName      | Text          | リモートセッション: リモートマシンの名前。 ストアドプロシージャーセッション: サーバーマシンの名前 |
+| systemUserName   | Text          | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。               |
+| IPAddress        | Text          | リモートマシンの IPアドレス。                                    |
+| hostType         | Text          | ホストタイプ: "windows" または "mac"                         |
+| creationDateTime | 日付 (ISO 8601) | Date and time of session creation                   |
+| state            | Text          | Session state: "active", "postponed", "sleeping"    |
+| ID               | Text          | Session UUID (same value as [`.id`](#id))           |
+| persistentID     | Text          | Session's persistent ID                             |
 
 :::note
 
