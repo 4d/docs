@@ -89,19 +89,19 @@ title: クライアント/サーバー管理
 
 ## リモートユーザーセッション
 
-On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
+サーバー上では、[`Session`](../API/SessionClass.md#session) コマンドはカレントユーザーセッションの情報を格納する `Session` オブジェクトを返します。 このオブジェクトを扱うには、[`Session`クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 
 ### 効果
 
-The `session` object allows you to get information about the remote user session. You can share data between all processes of the user session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+`Session`オブジェクトを使用すると、リモートユーザーセッションに関する情報を取得できます。 ユーザーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。
 
-For example, you can launch a user authentication and verification procedure when a client connects to the server, involving entering a code sent by e-mail or SMS into the application. You then add the user information to the session storage, enabling the server to identify the user. This way, the 4D server can access user information for all client processes, enabling customized code to be written according to the user's role.
+たとえば、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
 
 
-### Availability
+### 利用可能性
 
-The remote user `session` object is available from:
+リモートユーザー `Session` オブジェクトは以下から利用できます:
 
 - [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
 - トリガー
@@ -109,7 +109,7 @@ The remote user `session` object is available from:
 
 :::info
 
-All stored procedures on the server share the same virtual user session. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+サーバー上のすべてのストアドプロシージャーは、同じ仮想ユーザーセッションを共有します。 詳細については、[doc.4d.com のこのページ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) を参照ください。
 
 :::
 
