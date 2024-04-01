@@ -17,13 +17,13 @@ title: VP SET DATE VALUE
 
 #### Descripción
 
-The `VP SET DATE VALUE` command <!-- REF #_method_.VP SET DATE VALUE.Summary -->assigns a specified date value to a designated cell range<!-- END REF -->.
+El comando `VP SET DATE VALUE` <!-- REF #_method_.VP SET DATE VALUE.Summary -->asigna un valor de fecha especificado a un rango de celdas designado<!-- END REF -->.
 
-In _rangeObj_, pass a range of the cell(s) whose value you want to specify. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
+En _rangeObj_, pase un rango de la(s) celda(s) cuyo valor desea indicar. Si _rangeObj_ incluye varias celdas, el valor especificado se repetirá en cada una de ellas.
 
-The _dateValue_ parameter specifies a date value to be assigned to the _rangeObj_.
+El parámetro _dateValue_ indica un valor de fecha que se asignará a _rangeObj_.
 
-The optional _formatPattern_ defines a pattern for the _dateValue_ parameter. Pase un formato personalizado o puede utilizar una de las siguientes constantes:
+El parámetro opcional _formatPattern_ define un modelo para el parámetro _dateValue_. Pase un formato personalizado o puede utilizar una de las siguientes constantes:
 
 | Constante               | Descripción                             | Configuración por defecto de US |
 | ----------------------- | --------------------------------------- | ------------------------------- |
@@ -37,10 +37,10 @@ For information on patterns and formatting characters, please refer to the [Date
 #### Ejemplo
 
 ```4d
-//Set the cell value to the current date
+//Definir el valor de la celda para la fecha actual
 VP SET DATE VALUE(VP Cell("ViewProArea";4;2);Current date))
  
-//Set the cell value to a specific date with a designated format
+//Definir el valor de la celda para una fecha específica con un formato designado
 VP SET DATE VALUE(VP Cell("ViewProArea";4;4);Date("12/25/94");"d/m/yy ")
 VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 ```
