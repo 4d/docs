@@ -144,7 +144,7 @@ Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la func
 
 :::note Notas
 
-- If `.new()` is called on a [singleton class](../Concepts/classes.md#singleton-classes) that has already been instantiated, the singleton instance is returned, not a new instance.
+- Si `. ew()` es llamado en una [clase singleton](../Concepts/classes.md#singleton-classes) que ya ha sido instanciada, la instancia singleton es devuelta, no una nueva instancia.
 - Si se llama a `.new()` en una clase inexistente, se devuelve un error.
 
 :::
