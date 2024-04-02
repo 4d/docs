@@ -23,12 +23,6 @@
   "Object Relational Data Access (ORDA)": {
     "message": "ORDA"
   },
-  "Class API Reference": {
-    "message": "クラス API リファレンス"
-  },
-  "Handling code": {
-    "message": "コードの扱い方"
-  },
   "Debugging": {
     "message": "デバッガー"
   },
@@ -52,9 +46,6 @@
   },
   "TLS Protocol": {
     "message": "TLSプロトコル"
-  },
-  "Licenses & Data Collection": {
-    "message": "ライセンス＆データ収集"
   },
   "Access Rights": {
     "message": "アクセス権限"
@@ -154,9 +145,6 @@
   },
   "homepage.hero.title": {
     "message": "Documentation for 4D developers"
-  },
-  "Documentation updates": {
-    "message": "ドキュメンテーション更新情報"
   },
   "theme.ErrorPageContent.title": {
     "message": "このページはクラッシュしました。",
@@ -580,9 +568,6 @@
   "Class Functions": {
     "message": "クラス関数"
   },
-  "Handling Code": {
-    "message": "コードの扱い方"
-  },
   "Transformation Tags": {
     "message": "変換タグ"
   },
@@ -607,5 +592,8 @@
   },
   "Processes": {
     "message": "プロセス"
+  },
+  "Qodly Studio": {
+    "message": "Qodly Studio"
   }
 }
