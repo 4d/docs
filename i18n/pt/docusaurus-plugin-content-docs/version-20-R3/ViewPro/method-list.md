@@ -4976,7 +4976,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 O comando `VP SET CUSTOM FUNCTIONS` <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. Because custom functions are not stored in the document,`VP SET CUSTOM FUNCTIONS` must be executed in the `On Load` form event.
 
-The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when the first letter of their name is entered. Consulte a página [Fórmulas e funções](formulas.md).
+As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop-up quando a primeira letra de seu nome é inserida. Consulte a página [Fórmulas e funções](formulas.md).
 
 > Se `VP SET CUSTOM FUNCTIONS` for chamado várias vezes para a mesma área, na mesma sessão, apenas a última chamada é tida em conta.
 
@@ -5564,7 +5564,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";False))
 
 #### Descrição
 
-O comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
+O comando `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->define os atributos a serem usados ao imprimir o *vpAreaName*<!-- END REF -->.
 
 Passe o nome da área 4D View Pro a ser impressa em *vpAreaName*. Se passar um nome que não existe, é devolvido um erro.
 
@@ -6364,7 +6364,7 @@ define as opções do livro de trabalho em *vpAreaName*<!-- END REF -->.
 
 Em *vpAreaName*, passe o nome da área 4D View Pro.
 
-In *optionObj*, pass the workbook options to apply to *vpAreaName*.
+Em *optionObj*, passe as opções da pasta de trabalho a serem aplicadas a *vpAreaName*.
 
 Se *optionObj* estiver vazio, o comando não fará nada.
 
