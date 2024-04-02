@@ -20,13 +20,13 @@ title: VP Row
 
 #### Descripción
 
-The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+El comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devuelve un nuevo objeto de rango que hace referencia a una fila o filas específicas<!-- END REF -->.
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-El parámetro _row_ define la primera fila del rango de filas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. If the range contains multiple rows, you should also use the optional _rowCount_ parameter.
+El parámetro _row_ define la primera fila del rango de filas. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. Si el rango contiene varias columnas, también debe utilizar el parámetro opcional _columnCount_.
 
-The optional _rowCount_ parameter allows you to define the total number of rows of the range. _rowCount_ debe ser mayor que 0. Si se omite, el valor será 1 por defecto.
+El parámetro opcional _rowCount_ permite definir el número total de líneas del rango. _rowCount_ debe ser mayor que 0. Si se omite, el valor será 1 por defecto.
 
 En el parámetro opcional _sheet_, puede designar una hoja específica donde se definirá el rango (la numeración comienza en 0). Si no se especifica, se utiliza por defecto la hoja de cálculo actual. Puede seleccionar explícitamente la hoja de cálculo actual con la siguiente constante:
 

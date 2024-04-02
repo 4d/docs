@@ -16,7 +16,7 @@ title: VP RESET SELECTION
 
 #### Descripción
 
-The `VP RESET SELECTION` command <!-- REF #_method_.VP RESET SELECTION.Summary -->deselects all cells, resulting in no current selection or visible active cell<!-- END REF -->.
+El comando `VP RESET SELECTION` <!-- REF #_method_.VP RESET SELECTION.Summary -->deselecciona todas las celdas, con lo que no hay selección actual ni celda activa visible<!-- END REF -->.
 
 > Una celda activa por defecto (celda A1) permanece definida para los comandos 4D View Pro.
 

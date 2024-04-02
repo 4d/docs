@@ -9,16 +9,16 @@ title: VP Run offscreen area
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                                                     |                  |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------- | ---------------- |
-| parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla                    |                  |
-| Result     | Mixed  | <- | `.result` property of the `.onEvent` object, or Null if does not return a value | <!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                                                   |                  |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------- | ---------------- |
+| parameters | Object | -> | Objeto que contiene los atributos del área fuera de pantalla                  |                  |
+| Result     | Mixed  | <- | propiedad `.result` del objeto `.onEvent`, o Null si no devuelve ningún valor | <!-- END REF --> |
 
 #### Descripción
 
-The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Summary -->creates an offscreen area in memory which can be used to process 4D View Pro area commands and functions<!-- END REF -->.
+El comando `VP Run offscreen area` <!-- REF #_method_.VP Run offscreen area.Summary -->crea un área fuera de pantalla en la memoria que puede ser utilizada para procesar comandos y funciones del área 4D View Pro<!-- END REF -->.
 
-In _parameters_ object, pass any of the following optional properties. These properties will be available through the `This` command within the `onEvent` method and reference the instance:
+En el objeto _parameters_, pase una de las siguientes propiedades opcionales. Estas propiedades estarán disponibles a través del comando `This` dentro del método `onEvent` y harán referencia a la instancia:
 
 | Propiedad          | Tipo                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ------------------ | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

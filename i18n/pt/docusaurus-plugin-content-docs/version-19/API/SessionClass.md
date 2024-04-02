@@ -34,11 +34,10 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 
 <!-- REF #_command_.Session.Params -->
-| Parâmetro  | Tipo        |    | Descrição                                  |
-| ---------- | ----------- |:--:| ------------------------------------------ |
-| Resultados | 4D. Session | <- | Objecto Session|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo        |    | Descrição       |
+| ---------- | ----------- |:--:| --------------- |
+| Resultados | 4D. Session | <- | Objecto Session |
+<!-- END REF -->
 
 #### Descrição
 
@@ -90,11 +89,10 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -153,12 +151,11 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                           |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
-| privilege  | Text       | <- | Nome do privilegio a verificar                                                      |
-| Resultados | Parâmetros | <- | True se a sessão tiver *privilege*, False caso contrário|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                |
+| ---------- | ---------- |:--:| -------------------------------------------------------- |
+| privilege  | Text       | <- | Nome do privilegio a verificar                           |
+| Resultados | Parâmetros | <- | True se a sessão tiver *privilege*, False caso contrário |
+<!-- END REF -->
 
 #### Descrição
 
@@ -234,11 +231,10 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                              |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------------------- |
-| Resultados | Parâmetros | <- | True se a sessão for uma sessão Guest, False caso contrário|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                   |
+| ---------- | ---------- |:--:| ----------------------------------------------------------- |
+| Resultados | Parâmetros | <- | True se a sessão for uma sessão Guest, False caso contrário |
+<!-- END REF -->
 
 #### Descrição
 
@@ -271,13 +267,12 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                                                   |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------- |
-| privilege  | Text       | -> | Nome do privilégio                                                                          |
-| privileges | Collection | -> | Collection de nomes de privilégios                                                          |
-| settings   | Object     | -> | Objetos com as propriedades "privilégios" (string ou collection)|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                                        |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
+| privilege  | Text       | -> | Nome do privilégio                                               |
+| privileges | Collection | -> | Collection de nomes de privilégios                               |
+| settings   | Object     | -> | Objetos com as propriedades "privilégios" (string ou collection) |
+<!-- END REF -->
 
 #### Descrição
 

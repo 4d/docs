@@ -12,7 +12,6 @@ As sessões de usuário do servidor Web permitem:
 - associar privilégios a sessões de usuário,
 - handle access through a `Session` object and the [Session API](API/SessionClass.md).
 
-> **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
 
 
 ## Activação de sessões
@@ -51,7 +50,7 @@ The current `Session` object can then be accessed through the [`Session`](API/Se
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
+Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
 
 ## Partilhar informações
@@ -78,11 +77,10 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 
 ## Privilégios
 
-Os privilégios podem ser associados a sessões. On the web server, you can provide specific access or features depending on the privileges of the session.
+Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 
 You can assign privileges usign the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
-> In the current implementation (v18 R6), only the "WebAdmin" privilege is available.
 
 Exemplo:
 
@@ -91,6 +89,12 @@ If (Session.hasPrivilege("WebAdmin"))
  //Access is granted, do nothing Else
  //Display an authentication page End if
 ```
+
+:::info
+
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter.
+
+:::
 
 
 ## Exemplo
@@ -160,3 +164,7 @@ $sales:=ds. SalesPersons.query("userId = :1"; $userId).first() If ($sales#Null)
     WEB SEND TEXT("This userId is unknown")
 End if
 ```
+
+## See also (blog post)
+
+[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
