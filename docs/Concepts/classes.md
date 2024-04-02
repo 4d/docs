@@ -193,7 +193,14 @@ Class functions are specific properties of the class. They are objects of the [4
 
 If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
-The function name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function is not allowed (an error is thrown in this case).
+
+:::
+
 
 :::tip
 
@@ -245,7 +252,7 @@ Function parameters are declared using the parameter name and the parameter type
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-:::Note
+:::note
 
 If the type is not stated, the parameter will be defined as `Variant`.
 
@@ -361,7 +368,7 @@ The `property` keyword can be used to declare a property inside a user class. A 
 
 Declaring class properties enhances code editor suggestions, type-ahead features and error detection.
 
-Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value). 
+Properties are declared for new objects when you call the [`new()`](API/ClassClass.md#new) function, however they are not automatically added to objects (they are only added when they are assigned a value).
 
 :::note
 
@@ -370,6 +377,12 @@ A property is automatically added to the object when it is [inititalized in the 
 :::
 
 Property names must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function is not allowed (an error is thrown in this case).
+
+:::
 
 
 The property type can be one of the following supported types:
@@ -393,7 +406,7 @@ The property type can be one of the following supported types:
 |`cs.<namespace>.<className>`|Object of the `<namespace>` component class name|
 
 
-If you omit the type in the declaration line, the property is created as a variant. 
+If you omit the type in the declaration line, the property is created as a variant.
 
 :::info
 
@@ -412,7 +425,7 @@ When declaring a property, you have the flexibility to specify its data type and
 
 :::note
 
-When using this syntax, you cannot declare several properties in the declaration line. 
+When using this syntax, you cannot declare several properties in the declaration line.
 
 :::
 
@@ -428,12 +441,9 @@ property birthDate := !1988-09-29! //date is inferred
 property fuzzy //variant
 ```
 
-:::info
+When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
 
-When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called. 
-
-:::
-
+If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
 
 #### Example
 
