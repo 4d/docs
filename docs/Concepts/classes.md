@@ -197,7 +197,7 @@ The function name must be compliant with [object naming rules](Concepts/identifi
 
 :::note
 
-Since properties and functions share the same namespace, using the same name for a property and a function is not allowed (an error is thrown in this case).
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
 
 :::
 
@@ -380,7 +380,7 @@ Property names must be compliant with [property naming rules](Concepts/identifie
 
 :::note
 
-Since properties and functions share the same namespace, using the same name for a property and a function is not allowed (an error is thrown in this case).
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
 
 :::
 
