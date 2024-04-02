@@ -81,9 +81,9 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.me` <!-- REF #ClassClass.me.Summary -->devuelve la instancia singleton de la clase singleton `cs.className`<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
+La propiedad `.me` <!-- REF #ClassClass.me.Summary -->devuelve la instancia singleton de la clase singleton `cs.className`<!-- END REF -->. Si la clase singleton nunca fue instanciada de antemano, esta propiedad llama al constructor de la clase sin parámetros y crea la instancia. En caso contrario, devuelve la instancia singleton existente.
 
-If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
+Si `cs.className` no es una [clase singleton](../Concepts/classes.md#singleton-classes), `.me` es **indefinido** por defecto.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -140,7 +140,7 @@ Esta propiedad es **de sólo lectura**.
 
 La función `.new()` <!-- REF #ClassClass.new().Summary -->crea y devuelve un objeto `cs.className` que es una nueva instancia de la clase sobre la que se llama<!-- END REF -->. Esta función está disponible automáticamente en todas las clases del class store [`cs`](Concepts/classes.md#cs).
 
-You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the *className* class definition. Dentro de la función constructor, [`This`](Concepts/classes.md#this) está ligado al nuevo objeto que se está construyendo.
+Puede pasar uno o más parámetros opcionales *param*, que se pasarán a la función [constructor de la clase](Concepts/classes.md#class-constructor) (si la hay) en la definición de la clase *className*. Dentro de la función constructor, [`This`](Concepts/classes.md#this) está ligado al nuevo objeto que se está construyendo.
 
 :::note Notas
 
