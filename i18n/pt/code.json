@@ -23,12 +23,6 @@
   "Object Relational Data Access (ORDA)": {
     "message": "Object Relational Data Access (ORDA)"
   },
-  "Class API Reference": {
-    "message": "Referência da API de classe"
-  },
-  "Handling code": {
-    "message": "Gerenciamento do código"
-  },
   "Debugging": {
     "message": "Depuração"
   },
@@ -52,9 +46,6 @@
   },
   "TLS Protocol": {
     "message": "Protocolo TLS"
-  },
-  "Licenses & Data Collection": {
-    "message": "Licenças e recolha de dados"
   },
   "Access Rights": {
     "message": "Direitos de acesso"
@@ -154,9 +145,6 @@
   },
   "homepage.hero.title": {
     "message": "Documentação para os programadores 4D"
-  },
-  "Documentation updates": {
-    "message": "Actualizações da documentação"
   },
   "theme.ErrorPageContent.title": {
     "message": "Esta página caiu.",
@@ -580,9 +568,6 @@
   "Class Functions": {
     "message": "Class Functions"
   },
-  "Handling Code": {
-    "message": "Gerenciamento do código"
-  },
   "Transformation Tags": {
     "message": "Etiquetas de transformação"
   },
@@ -607,5 +592,8 @@
   },
   "Processes": {
     "message": "Processos"
+  },
+  "Qodly Studio": {
+    "message": "Qodly Studio"
   }
 }
