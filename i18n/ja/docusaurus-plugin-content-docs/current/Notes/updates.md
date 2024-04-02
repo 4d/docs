@@ -14,8 +14,8 @@ title: リリースノート
 - QUICネットワークレイヤーは [ブロードキャスト](../Desktop/clientServer.md#リモートプロジェクトを開く) に対応しました。
 - [制限付エンティティセレクション](../ORDA/entities.md#制限付エンティティセレクション) をサポート。
 - [共有クラス](../Concepts/classes.md#共有クラス) と [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) をサポート。 新しいクラスプロパティ: [`.isShared`](../API/ClassClass.md#isshared), [`.isSingleton`](../API/ClassClass.md#isingleton), [`.me`](../API/ClassClass.md#me)
-- New [$format](../REST/$format.md) REST parameter.
-- [`Session`](../API/SessionClass.md#session) object is now available in remote user sessions and stored procedures session.
+- 新しい [$format](../REST/$format.md) RESTパラメーター。
+- リモートユーザーセッションとストアドプロシージャーセッションで [`Session`](../API/SessionClass.md#session) オブジェクトが利用できるようになりました。
 
 
 
@@ -371,7 +371,7 @@ ALERT($param1+" "+$param2)
 
 - [IMAPTransporter クラス](../API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](../API/FileClass.md): 新しい `setAppInfo()` および `getAppInfo()` 関数
-- New [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach) transformation tag.
+- 新しい [4DEACH](../Tags/transformation-tags.md#4deach-and-4dendeach) 変換タグ
 - Web サーバー: 新しい [SameSite セッションcookie](../WebServer/webServerConfig.md#セッションcookie-samesite) 設定
 - [フォーム](../FormEditor/properties_FormProperties.md#カラースキーム) および [スタイルシート](../FormEditor/createStylesheet.md#メディアクエリ) 用のダークおよびライトカラースキームサポート
 - [コードエディター環境設定](../Preferences/methods.md#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
