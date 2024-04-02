@@ -295,11 +295,11 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Parámetros      | Tipo               |    | Descripción                                                              |
-| --------------- | ------------------ |:--:| ------------------------------------------------------------------------ |
-| entity          | 4D.Entity          | -> | Entidad que debe añadirse a la entity selection                          |
-| entitySelection | 4D.EntitySelection | -> | Selección de entidades que se añade a la selección de entidades original |
-| Result          | 4D.EntitySelection | -> | Entity selection including the added *entity* or *entitySelection*       |
+| Parámetros      | Tipo               |    | Descripción                                                               |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | Entidad que debe añadirse a la entity selection                           |
+| entitySelection | 4D.EntitySelection | -> | Selección de entidades que se añade a la selección de entidades original  |
+| Result          | 4D.EntitySelection | -> | Selección de entidades incluyendo la *entity* añadida o *entitySelection* |
 
 <!-- END REF -->
 
