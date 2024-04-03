@@ -20,7 +20,7 @@ The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retriev
 
 In _rangeObj_, pass a range whose values you want to retrieve. If _rangeObj_ includes multiple ranges, only the first range is used.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+A coleção retornada por `VP Get values` contém uma coleção bidimensional:
 
 - Cada elemento da coleção de primeiro nível representa uma linha e contém uma subcoleção de valores.
 - Cada subcoleção contém valores de células para a linha. Values can be Integer, Real, Boolean, Text, Object, or Null. Se um valor for uma data ou hora, é retornado em um objeto com as propriedades abaixo:
