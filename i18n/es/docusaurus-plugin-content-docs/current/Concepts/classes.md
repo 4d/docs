@@ -156,12 +156,12 @@ Cuando una clase es [definida](#class-definition) en el proyecto, se carga en el
 - objeto [`superclass`](API/ClassClass.md#superclass) (null si ninguno)
 - función [`new()`](API/ClassClass.md#new), que permite instanciar objetos clase
 - propiedad [`isShared`](API/ClassClass.md#isshared), true si la clase es [compartida](#shared-classes)
-- [`isSingleton`](API/ClassClass.md#issingleton) property, true if the class defines a [singleton](#singleton-classes).
-- [`me`](API/ClassClass.md#me) property, allowing to instantiate and access [singletons](#singleton-classes).
+- [`isSingleton`](API/ClassClass.md#issingleton) true si la clase define un [singleton](#singleton-classes).
+- propiedad [`me`](API/ClassClass.md#me), que permite instanciar y acceder a [singletons](#singleton-classes).
 
 Además, un objeto clase puede hacer referencia a un objeto [`constructor`](#class-constructor) (opcional).
 
-A class object itself is a [shared object](shared.md) and can therefore be accessed from different 4D processes simultaneously.
+Un objeto de clase en sí mismo es un [objeto compartido](shared.md) y, por tanto, se puede acceder a él desde diferentes procesos de 4D simultáneamente.
 
 ### Herencia
 
@@ -188,15 +188,15 @@ En las definiciones de clase se pueden utilizar palabras claves específicas de 
 // code
 ```
 
-Las funciones de clase son propiedades específicas de la clase. They are objects of the [4D.Function](API/FunctionClass.md) class. In the class definition file, function declarations use the `Function` keyword followed by the function name.
+Las funciones de clase son propiedades específicas de la clase. Son objetos de la clase [4D.Function](API/FunctionClass.md). En el archivo de definición de clase, las declaraciones de función utilizan la palabra clave `Function` seguida del nombre de la función.
 
-If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
+Si la función se declara en una [clase compartida](#shared-classes), puede utilizar la palabra clave `shared` para que la función pueda ser llamada sin estructura [`Use...End use`](shared.md#useend-use). Para obtener más información, consulte el párrafo [Funciones compartidas](#shared-functions) a continuación.
 
-The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
+El nombre de la función debe ser compatible con las [reglas de nomenclatura de objetos](Concepts/identifiers.md#object-properties).
 
 :::note
 
-Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+Dado que las propiedades y las funciones comparten el mismo espacio de nombres, no está permitido utilizar el mismo nombre para una propiedad y una función de la misma clase (en este caso se produce un error).
 
 :::
 
@@ -333,9 +333,9 @@ Sólo puede haber una función constructora en una clase (de lo contrario se dev
 
 Puede crear y escribir propiedades de instancia dentro del constructor (ver ejemplo). Alternativamente, si los valores de sus propiedades de instancia no dependen de parámetros pasados al constructor, puede definirlos utilizando la palabra clave [`property`](#property).
 
-Using the `shared` keyword creates a **shared class**, used to only instantiate shared objects. For more information, refer to the [Shared classes](#shared-classes) paragraph.
+Utilizando la palabra clave `shared` se crea una **clase compartida**, utilizada para instanciar únicamente objetos compartidos. Para obtener más información, consulte el párrafo [Clases compartidas](#shared-classes).
 
-Using the `singleton` keyword creates a **singleton**, used to create a single instance. For more information, refer to the [Singleton classes](#singleton-classes) paragraph.
+Utilizando la palabra clave `singleton` se crea un **singleton**, utilizado para crear una única instancia. Para obtener más información, consulte el párrafo [Clases singleton](#singleton-classes).
 
 
 #### Ejemplo
@@ -371,7 +371,7 @@ Las propiedades se declaran para los objetos nuevos cuando se llama a la funció
 
 :::note
 
-A property is automatically added to the object when it is [inititalized in the declaration line](#initializing-the-property-in-the-declaration-line).
+Una propiedad se añade automáticamente al objeto cuando se [inicializa en la línea de declaración](#initializing-the-property-in-the-declaration-line).
 
 :::
 
@@ -379,7 +379,7 @@ Los nombres de las propiedades deben cumplir [las normas de denominación de pro
 
 :::note
 
-Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+Dado que las propiedades y las funciones comparten el mismo espacio de nombres, no está permitido utilizar el mismo nombre para una propiedad y una función de la misma clase (en este caso se produce un error).
 
 :::
 
@@ -405,7 +405,7 @@ El tipo de propiedad puede ser uno de los siguientes tipos soportados:
 | `cs.<namespace>.<className>` | Objeto del nombre de la clase del componente `<namespace>` |
 
 
-If you omit the type in the declaration line, the property is created as a variant.
+Si omite el tipo en la línea de declaración, la propiedad se crea como una variante.
 
 :::info
 
@@ -416,31 +416,31 @@ La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de 
 
 
 
-#### Initializing the property in the declaration line
+#### Inicialización de la propiedad en la línea de declaración
 
-When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. The supported syntax is:
+Al declarar una propiedad, tiene la flexibilidad de especificar su tipo de datos y proporcionar su valor en una sola declaración. La sintaxis soportada es:
 
 `property <propertyName> { : <propertyType>} := <Propertyvalue>`
 
 :::note
 
-When using this syntax, you cannot declare several properties in the declaration line.
+Cuando se utiliza esta sintaxis, no se pueden declarar varias propiedades en la línea de declaración.
 
 :::
 
-You can omit the type in the declaration line, in which case the type will be inferred when possible. Por ejemplo:
+Puede omitir el tipo en la línea de declaración, en cuyo caso el tipo se deducirá cuando sea posible. Por ejemplo:
 
 ```4d
-// Class: MyClass
+// Clase: MyClass
 
 property name : Text := "Smith"
 property age : Integer := 42
 
-property birthDate := !1988-09-29! //date is inferred
+property birthDate := !1988-09-29! //la fecha se infiere
 property fuzzy //variant
 ```
 
-When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
+Cuando se inicializa una propiedad en su línea de declaración, se añade al objeto de la clase después de su instanciación con la función [`new()`](API/ClassClass.md#new) pero antes de llamar al constructor.
 
 If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
 
