@@ -11,7 +11,7 @@ Read [**What’s new in 4D v20 R5**](https://blog.4d.com/en-whats-new-in-4d-v20-
 #### Highlights
 
 - Support of [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try) error handling structures.
-- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
+- QUIC network layer now supports [broadcasting](../Desktop/clientServer.md#opening-a-remote-project) and [SSO](https://doc.4d.com/4Dv20R5/4D/20-R5/Single-Sign-On-SSO-on-Windows.300-6932709.en.html).
 - Support of [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
 - Support of [shared classes](../Concepts/classes.md#shared-classes) and [singleton classes](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
 - Support for [initializing a class property in its declaration line](../Concepts/classes.md/#initializing-the-property-in-the-declaration-line).
@@ -277,6 +277,7 @@ Read [**What’s new in 4D v19 R7**](https://blog.4d.com/en-whats-new-in-4d-v19-
 	- Enhanced security in web areas that use the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) or the [Windows system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) (based on Microsoft Edge WebView2):
 		- CORS policies now apply when accessing files on disk in web areas. For example, when opening a .html file with `WA OPEN URL`, that .html file cannot contain links that point to files outside its folder
 		- Dropping external contents in web areas is now always blocked and triggers the [`On Window Opening Denied` event](../Events/onWindowOpeningDenied.md) when the `WA enable URL drop` preference is set to True (when set to False, the `WA enable URL drop` preference only modifies the drop cursor icon and filters the `On Window Opening Denied` event). To allow a drop action, you need to execute additional code in the object method of the web area:
+
 
 ```4d
 WA OPEN URL(*;"WebArea";WA Get last filtered URL(*;"WebArea"))
