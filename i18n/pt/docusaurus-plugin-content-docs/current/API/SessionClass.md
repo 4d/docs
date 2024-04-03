@@ -7,13 +7,13 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Os objetos de sessão são retornados pelo [`Session`](#session) comando. Esses objetos fornecem ao desenvolvedor uma interface que permite gerenciar a sessão atual do usuário e executar ações como armazenar dados contextuais, compartilhar informações entre processos de sessão, iniciar processos preemptivos relacionados à sessão ou (somente na Web) gerenciar [privilégios](../ORDA/privileges.md).
 
-### Session types
+### Tipos de sessão
 
-Three types of sessions are supported by this class:
+Três tipos de sessões são suportados por essa classe:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges.
+- [**Sessões de usuários da Web**](WebServer/sessions.md): As sessões de usuário da Web estão disponíveis quando [as sessões escalonáveis estão ativadas no seu projeto](WebServer/sessions.md#enabling-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
 - [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
 - [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
 
@@ -71,14 +71,14 @@ O comando `Session` <!-- REF #_command_.Session.Summary -->returns the `Session`
 Depending on the process from which the command is called, the current user session can be:
 
 - a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
-- a remote client session,
+- uma sessão de cliente remoto,
 - the stored procedures session.
 
 For more information, see the [Session types](#session-types) paragraph.
 
 If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
 
-#### Web sessions
+#### Sessões web
 
 The `Session` object of web sessions is available from any web process:
 
@@ -90,7 +90,7 @@ The `Session` object of web sessions is available from any web process:
 
 For more information on web user sessions, please refer to the [Web Server Sessions](WebServer/sessions.md) section.
 
-#### Remote client sessions
+#### Sessões cliente remoto
 
 The `Session` object of remote client sessions is available from:
 
@@ -370,7 +370,7 @@ The `.info` object contains the following properties:
 | creationDateTime | Date ISO 8601 | Date and time of session creation                                                                  |
 | state            | Text          | Session state: "active", "postponed", "sleeping"                                                   |
 | ID               | Text          | Session UUID (same value as [`.id`](#id))                                                          |
-| persistentID     | Text          | Session's persistent ID                                                                            |
+| persistentID     | Text          | ID persistente da sessão                                                                           |
 
 :::note
 
