@@ -1248,7 +1248,7 @@ Además de las funciones de clase integradas, el lenguaje 4D contiene cientos de
 | [`VP Get default style`](https://doc.4d.com/4dv19/help/command/en/page9763.html)                   | 9763   |
 | [`VP Get formula`](https://doc.4d.com/4dv19/help/command/en/page9587.html)                         | 9587   |
 | [`VP Get formula by name`](https://doc.4d.com/4dv19/help/command/en/page9558.html)                 | 9558   |
-| [`VP Get formulas`](https://doc.4d.com/4dv19/help/command/es/page9775.html)                        | 9775   |
+| [`VP Get formulas`](https://doc.4d.com/4dv19/help/command/en/page9775.html)                        | 9775   |
 | [`VP Get frozen panes`](https://doc.4d.com/4dv19/help/command/en/page9955.html)                    | 9955   |
 | [`VP Get names`](https://doc.4d.com/4dv19/help/command/en/page9557.html)                           | 9557   |
 | [`VP Get print info`](https://doc.4d.com/4dv19/help/command/en/page9815.html)                      | 9815   |
