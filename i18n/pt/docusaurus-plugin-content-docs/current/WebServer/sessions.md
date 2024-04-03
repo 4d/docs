@@ -165,6 +165,6 @@ $sales:=ds. SalesPersons.query("userId = :1"; $userId).first() If ($sales#Null)
 End if
 ```
 
-## See also (blog post)
+## Ver também (post do blog)
 
 [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
