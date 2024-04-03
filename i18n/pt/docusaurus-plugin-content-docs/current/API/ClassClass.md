@@ -81,9 +81,9 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.me` <!-- REF #ClassClass.me.Summary -->retorna a instância singleton da classe singleton `cs.className`<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
+A propriedade `.me` <!-- REF #ClassClass.me.Summary -->retorna a instância singleton da classe singleton `cs.className`<!-- END REF -->. Se a classe singleton nunca tiver sido instanciada anteriormente, essa propriedade chamará o construtor da classe sem parâmetros e criará a instância. Caso contrário, ele retorna a instância singleton existente.
 
-If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
+Se `cs.className` não for uma [classe singleton](../Concepts/classes.md#singleton-classes), `.me` será **indefinido** por padrão.
 
 Essa propriedade é **apenas leitura**.
 
