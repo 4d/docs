@@ -360,26 +360,26 @@ Esta propiedad sólo está disponible con sesiones de cliente remoto y procedimi
 
 La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión del cliente remoto o del procedimiento almacenado en el servidor<!-- END REF -->.
 
-The `.info` object is the same object as the one returned by the [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) command for remote client and stored procedure sessions.
+El objeto `.info` es el mismo objeto devuelto por el comando [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) para sesiones de cliente remoto y procedimientos almacenados.
 
-The `.info` object contains the following properties:
+El objeto `.info` contiene las siguientes propiedades:
 
-| Propiedad        | Tipo          | Descripción                                                                                        |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------- |
-| type             | Text          | Session type: "remote" or "storedProcedure"                                                        |
-| userName         | Text          | 4D user name (same value as [`.userName`](#username))                                              |
-| machineName      | Text          | Remote sessions: name of the remote machine. Stored procedures session: name of the server machine |
-| systemUserName   | Text          | Remote sessions: name of the system session opened on the remote machine.                          |
-| IPAddress        | Text          | IP address of the remote machine                                                                   |
-| hostType         | Text          | Host type: "windows" or "mac"                                                                      |
-| creationDateTime | Date ISO 8601 | Date and time of session creation                                                                  |
-| state            | Text          | Session state: "active", "postponed", "sleeping"                                                   |
-| ID               | Text          | Session UUID (same value as [`.id`](#id))                                                          |
-| persistentID     | Text          | Session's persistent ID                                                                            |
+| Propiedad        | Tipo          | Descripción                                                                                                     |
+| ---------------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
+| type             | Text          | Tipo de sesión: "remote" o "storedProcedure"                                                                    |
+| userName         | Text          | Nombre de usuario 4D (el mismo valor que [`.userName`](#username))                                              |
+| machineName      | Text          | Sesiones remotas: nombre de la máquina remota. Sesión de procedimientos almacenados: nombre del equipo servidor |
+| systemUserName   | Text          | Sesiones remotas: nombre de la sesión del sistema abierta en la máquina remota.                                 |
+| IPAddress        | Text          | Dirección IP de la máquina remota                                                                               |
+| hostType         | Text          | Tipo de host: "windows" o "mac"                                                                                 |
+| creationDateTime | Date ISO 8601 | Fecha y hora de creación de la sesión                                                                           |
+| state            | Text          | Estado de la sesión: "active", "postponed", "sleeping"                                                          |
+| ID               | Text          | UUID de sesión (el mismo valor que [`.id`](#id))                                                                |
+| persistentID     | Text          | ID persistente de la sesión                                                                                     |
 
 :::note
 
-Since `.info` is a computed property, it is recommended to call it once and then to store it in a local variable if you want to do some processing on its properties.
+Dado que `.info` es una propiedad calculada, se recomienda llamarla una vez y luego almacenarla en una variable local si se desea realizar algún procesamiento sobre sus propiedades.
 
 :::
 
@@ -411,7 +411,7 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 :::note
 
-This function always returns **True** with remote client and stored procedure sessions.
+Esta función siempre devuelve **True** con sesiones de cliente remoto y procedimientos almacenados.
 
 :::
 
@@ -464,7 +464,7 @@ Dado que los privilegios sólo se admiten en sesiones de usuario web, esta funci
 
 :::
 
-La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
+La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->asocia los privilegios y/o roles definidos en el parámetro a la sesión y devuelve **True** si la ejecución se ha realizado correctamente<!-- END REF -->.
 
 - En el parámetro *privilege*, pase una cadena que contenga un nombre de privilegio (o varios nombres de privilegio separados por comas).
 
@@ -527,7 +527,7 @@ End if
 
 #### Descripción
 
-La propiedad `.storage` contiene <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all processes of the session<!-- END REF -->.
+La propiedad `.storage` contiene <!-- REF #SessionClass.storage.Summary -->un objeto compartido que puede utilizarse para almacenar información disponible para todos los procesos de la sesión<!-- END REF -->.
 
 Cuando se crea un objeto `Session`, la propiedad `.storage` está vacía. Al ser un objeto compartido, esta propiedad estará disponible en el objeto `Storage` del servidor.
 
@@ -539,21 +539,21 @@ Esta propiedad es **sólo lectura** en sí misma pero devuelve un objeto de lect
 
 <TabItem value="Web session example">
 
-You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
+Desea almacenar la IP del cliente en la propiedad `.storage`. Puede escribir en el método base `On Web Authentication`:
 
 ```4d
-If (Session.storage.clientIP=Null) //first access
+If (Session.storage.clientIP=Null) //primer acceso
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
     End use
 End if
 
-```
+````
 </TabItem>
 
 <TabItem value="Remote session example">
 
-You want to share data between processes in the same session:
+Quiere compartir datos entre procesos de la misma sesión:
 
 ```4d
 Use (Session.storage)
@@ -589,10 +589,10 @@ End use
 
 La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el nombre de usuario asociado a la sesión<!-- END REF -->. Puede utilizarlo para identificar al usuario dentro de su código.
 
-- With web sessions, this property is an empty string by default. Se puede establecer mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
-- With remote and stored procedure sessions, this property returns the same user name as the [`Current user`](https://doc.4d.com/4dv20/help/command/en/page182.html) command.
+- Con las sesiones web, esta propiedad es una cadena vacía por defecto. Se puede establecer mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
+- Con sesiones remotas y de procedimientos almacenados, esta propiedad devuelve el mismo nombre de usuario que el comando [`Usuario actual`](https://doc.4d.com/4dv20/help/command/en/page182.html).
 
-Esta propiedad es**de sólo lectura**.
+Esta propiedad es **de sólo lectura**.
 
 
 
