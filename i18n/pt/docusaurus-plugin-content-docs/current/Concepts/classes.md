@@ -407,7 +407,7 @@ A palavra-chave `property` só pode ser utilizada em métodos classe e fora de q
 
 #### Initializing the property in the declaration line
 
-When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. The supported syntax is:
+When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. A sintaxe suportada é:
 
 `property <propertyName> { : <propertyType>} := <Propertyvalue>`
 
@@ -764,7 +764,7 @@ Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de class
 `OB Instância de` devolve `true` se o objecto `` pertencer à classe `` ou a uma das suas classes herdadas, e `false` caso contrário.
 
 
-## Shared classes
+## Classes compartilhadas
 
 You can create **shared classes**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. A shared class can only create shared objects.
 
