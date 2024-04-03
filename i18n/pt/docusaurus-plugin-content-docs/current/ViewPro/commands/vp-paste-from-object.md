@@ -48,7 +48,7 @@ If _options_ refers to a paste option not present in the copied object (e.g. for
 
 #### Exemplo
 
-See example the example from [VP Copy to object](vp-copy-to-object.md)
+Veja o exemplo de [VP Copy to object] (vp-copy-to-object.md)
 
 #### Veja também
 
