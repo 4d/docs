@@ -103,7 +103,7 @@ var $docPath: Text
  
 $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
 VP EXPORT DOCUMENT("VPArea";$docPath)
-//MyExport.4VP is saved on your disk
+//MyExport.4VP é salvo em seu disco
 ```
 
 #### Exemplo 2
