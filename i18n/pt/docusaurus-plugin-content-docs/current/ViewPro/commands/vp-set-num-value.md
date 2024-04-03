@@ -37,5 +37,5 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 #### Veja também
 
-[Cell format](../configuring.md#cell-format)<br/>
+[Formato de célula](../configuring.md#cell-format)<br/>
 [VP SET VALUE](vp-set-value.md)
