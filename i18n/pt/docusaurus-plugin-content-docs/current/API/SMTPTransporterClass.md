@@ -45,7 +45,7 @@ Os objectos do SMTP Transporter são instanciados com o comando [SMTP New Transp
 | Parâmetro  | Tipo               |    | Descrição                                           |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Object             | -> | Informação de servidor de correio                   |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Resultados | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Descrição
@@ -120,7 +120,7 @@ A função devolve um [**objecto SMTP transporter**](#smtp-transporter-object). 
 | Parâmetro  | Tipo               |    | Descrição                                           |
 | ---------- | ------------------ |:--:| --------------------------------------------------- |
 | server     | Object             | -> | Informação de servidor de correio                   |
-| Resultados | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object) |
+| Resultados | 4D.SMTPTransporter | <- | [Objeto SMTP transporter](#smtp-transporter-object) |
 <!-- END REF -->
 
 #### Descrição
