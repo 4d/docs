@@ -21,7 +21,7 @@ sets the workbook options in _vpAreaName_<!-- END REF -->.
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _optionObj_, pass the workbook options to apply to _vpAreaName_.
+Em _optionObj_, passe as opções da pasta de trabalho a serem aplicadas a _vpAreaName_.
 
 If _optionObj_ is empty, the command does nothing.
 
