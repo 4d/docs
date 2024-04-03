@@ -59,7 +59,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->returns `true` if the user class has been defined as a [singleton class](../Concepts/classes.md#singleton-classes)<!-- END REF -->, e `false` caso contrário.
+A propriedade `.isSingleton` <!-- REF #ClassClass.isSingleton.Summary -->retorna `true` se a classe usuário tiver sido definida como uma [classe singleton](../Concepts/classes.md#singleton-classes)<!-- END REF -->, e `false` caso contrário.
 
 Essa propriedade é **apenas leitura**.
 
@@ -81,7 +81,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.me` <!-- REF #ClassClass.me.Summary -->returns the singleton instance of the `cs.className` singleton class<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
+A propriedade `.me` <!-- REF #ClassClass.me.Summary -->retorna a instância singleton da classe singleton `cs.className`<!-- END REF -->. If the singleton class was never instantiated beforehand, this property calls the class constructor without parameters and creates the instance. Otherwise, it returns the existing singleton instance.
 
 If `cs.className` is not a [singleton class](../Concepts/classes.md#singleton-classes), `.me` is **undefined** by default.
 

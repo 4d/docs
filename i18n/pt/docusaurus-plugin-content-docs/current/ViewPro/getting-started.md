@@ -126,7 +126,7 @@ Por exemplo, para criar um objeto intervalo para as seguintes células:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](commands/vp-cells.md) method:
+Você pode usar o método [VP Cells](commands/vp-cells.md):
 
 ```4d 
 var $myRange : Object

@@ -19,7 +19,7 @@ title: VP Find
 
 #### Descrição
 
-The `VP Find` command <!-- REF #_method_.VP Find.Summary -->searches the _rangeObj_ for the _searchValue_<!-- END REF -->. Podem ser utilizados parâmetros opcionais para refinar a pesquisa e/ou substituir quaisquer resultados encontrados.
+O comando `VP Find` <!-- REF #_method_.VP Find.Summary -->pesquisa o _rangeObj_ para o _searchValue_<!-- END REF -->. Podem ser utilizados parâmetros opcionais para refinar a pesquisa e/ou substituir quaisquer resultados encontrados.
 
 In the _rangeObj_ parameter, pass an object containing a range to search.
 

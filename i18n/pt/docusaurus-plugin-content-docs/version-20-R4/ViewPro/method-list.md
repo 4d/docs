@@ -1021,7 +1021,7 @@ var $docPath: Text
  
 $docPath:="C:\\Bases\\ViewProDocs\\MyExport.4VP"
 VP EXPORT DOCUMENT("VPArea";$docPath)
-//MyExport.4VP is saved on your disk
+//MyExport.4VP é salvo em seu disco
 ```
 
 #### Exemplo 2
@@ -1130,7 +1130,7 @@ Os seguintes parâmetros podem ser usados no método de retorno de chamada:
 
 #### Exemplo
 
-The command `VP EXPORT TO BLOB` is asynchronous. You must create a callback method (named _VPBlobCallback_ in our example) to use the export results.
+O comando `VP EXPORT TO BLOB` é assíncrono. Você deve criar um método de retorno de chamada (denominado _VPBlobCallback_ em nosso exemplo) para usar os resultados da exportação.
 
 ```4d
 //Exportar o documento VP
@@ -1229,7 +1229,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 #### Descrição
 
-The `VP Find` command <!-- REF #_method_.VP Find.Summary -->searches the _rangeObj_ for the _searchValue_<!-- END REF -->. Podem ser utilizados parâmetros opcionais para refinar a pesquisa e/ou substituir quaisquer resultados encontrados.
+O comando `VP Find` <!-- REF #_method_.VP Find.Summary -->pesquisa o _rangeObj_ para o _searchValue_<!-- END REF -->. Podem ser utilizados parâmetros opcionais para refinar a pesquisa e/ou substituir quaisquer resultados encontrados.
 
 In the _rangeObj_ parameter, pass an object containing a range to search.
 
@@ -1413,7 +1413,7 @@ size:16pt
 
 #### Exemplo 2
 
-See example for [`VP Object to font`](#vp-object-to-font).
+Veja um exemplo para [`VP Object to font`](#vp-object-to-to-font).
 
 #### Veja também
 
@@ -1626,7 +1626,7 @@ $attr:=VP Get column attributes($range)
 
 The `VP Get column count` command <!-- REF #_method_.VP Get column count.Summary -->returns the total number of columns from the designated _sheet_<!-- END REF -->.
 
-In _vpAreaName_, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em _vpAreaName_, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the column count in the optional _sheet_ parameter using the sheet index (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
@@ -1742,9 +1742,9 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 #### Descrição
 
-The `VP Get default style` command <!-- REF #_method_.VP Get default style.Summary -->returns a default style object for a sheet<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method. For more information about style properties, see [Style Objects & Style Sheets](configuring.md#style-objects--style-sheets).
+O comando `VP Get default style` <!-- REF #_method_.VP Get default style.Summary -->retorna um objeto de estilo padrão para uma folha<!-- END REF -->. The returned object contains basic document rendering properties as well as the default style settings (if any) previously set by the [VP SET DEFAULT STYLE](#vp-set-default-style) method. For more information about style properties, see [Style Objects & Style Sheets](configuring.md#style-objects--style-sheets).
 
-In _vpAreaName_, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em _vpAreaName_, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the column count in the optional _sheet_ parameter using the sheet index (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
@@ -1876,7 +1876,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 
 #### Descrição
 
-The `VP Get formulas` command <!-- REF #_method_.VP Get formulas.Summary -->retrieves the formulas from a designated _rangeObj_<!-- END REF -->.
+O comando `VP Get formulas` <!-- REF #_method_.VP Get formulas.Summary -->recupera as fórmulas de um _rangeObj_ designado<!-- END REF -->.
 
 In _rangeObj_, pass a range whose formulas you want to retrieve. If _rangeObj_ designates multiple ranges, the formula of the first range is returned. If _rangeObj_ does not contain any formulas, the command returns an empty string.
 
@@ -2024,7 +2024,7 @@ $list:=VP Get names("ViewProArea";2) //nomes na 3ª folha
 
 The `VP Get print info` command <!-- REF #_method_.VP Get print info.Summary -->returns an object containing the print attributes of the _vpAreaName_<!-- END REF -->.
 
-Pass the the name of the 4D View Pro area in _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0) whose printing attributes you want returned.  Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
@@ -2144,7 +2144,7 @@ $attr:=VP Get row attributes($range)
 
 The `VP Get row count` command <!-- REF #_method_.VP Get row count.Summary -->returns the total number of rows from the designated _sheet_<!-- END REF -->.
 
-In _vpAreaName_, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em _vpAreaName_, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the row count in the optional _sheet_ parameter using the sheet index (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
@@ -2413,7 +2413,7 @@ O código abaixo comprova se as linhas de visualização prévia são mostradas 
 
 #### Descrição
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated _rangeObj_<!-- END REF -->.
+O comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->recupera os intervalos de células no _rangeObj_ designado<!-- END REF -->.
 
 In _rangeObj_, pass a range of cell spans you want to retrieve. If _rangeObj_ does not contain a cell span, an empty range is returned.
 
@@ -2506,7 +2506,7 @@ borderTop:{color:green,style:10}
 
 The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated _sheet_<!-- END REF -->.
 
-In _vpAreaName_, pass the name property of the 4D View Pro area. Se passar um nome que não existe, é devolvido um erro.
+Em _vpAreaName_, passe o nome da propriedade da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
 You can define where to get the style sheets in the optional _sheet_ parameter using the sheet index (counting begins at 0) or with the following constants:
 
@@ -2687,7 +2687,7 @@ The `VP Get table dirty rows` command <!-- REF #_method_.VP Get table dirty rows
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _tableName_, pass the name of the table for which you want to get the dirty rows. Only modified columns bound to a [data context](#vp-set-data-context) will be taken into account.
+In _tableName_, pass the name of the table for which you want to get the dirty rows. Somente as colunas modificadas vinculadas a um [contexto de dados] (#vp-set-data-context) serão levadas em consideração.
 
 By default, calling the command will clear the _dirty_ status from the current table. To keep this status untouched, pass `False` in the _reset_ parameter.
 
@@ -2793,7 +2793,7 @@ If _tableName_ is not found, the command returns **null**.
 
 The `VP Get table theme` command <!-- REF #_method_.VP Get table theme.Summary -->returns the current theme propertie values of the _tableName_<!-- END REF -->. A table theme can be set using the [`VP CREATE TABLE`](#vp-create-table) or [`VP SET TABLE THEME`](#vp-set-table-theme) commands, or through the interface.
 
-In _vpAreaName_, pass the name of the 4D View Pro area and in _tableName_, the name of the table.
+Em _vpAreaName_, passe o nome da área 4D View Pro e, em _tableName_, o nome da tabela.
 
 The command returns an object of the [cs.ViewPro.TableTheme](classes.md#tabletheme) class with properties and values that describe the current table theme.
 
@@ -2851,7 +2851,7 @@ O código abaixo devolverá uma coleção de todos os nomes de tabelas da folha 
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contém por exemplo ["contextTable","emailTable"]
 
 ```
 
@@ -2927,7 +2927,7 @@ The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retriev
 
 In _rangeObj_, pass a range whose values you want to retrieve. If _rangeObj_ includes multiple ranges, only the first range is used.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+A coleção retornada por `VP Get values` contém uma coleção bidimensional:
 
 - Cada elemento da coleção de primeiro nível representa uma linha e contém uma subcoleção de valores.
 - Cada subcoleção contém valores de células para a linha. Os valores podem ser Inteiros, Reais, Booleanos, Texto, Null. Se um valor for uma data ou hora, é retornado em um objeto com as propriedades abaixo:
@@ -3112,7 +3112,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-Here's the result:
+Aqui está o resultado:
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Veja também
@@ -3195,7 +3195,7 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-In _viewPro_, pass a valid 4D View Pro object. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+In _viewPro_, pass a valid 4D View Pro object. Esse objeto pode ter sido criado usando [VP Export to object] (#vp-export-to-object) ou manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
 An error is returned if the _viewPro_ object is invalid.
 
@@ -3575,7 +3575,7 @@ In _fontObj_, pass an object containing the font properties. As propriedades aba
 | variant     | text | Especifica o tipo de letra em pequenas maiúsculas.                                                                  | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                                                                        | Não         |
 | weight      | text | Define a espessura do tipo de letra.                                                                                | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                                         | Não         |
 
-This object can be created with the [VP Font to object](#vp-font-to-object) command.
+Esse objeto pode ser criado com o comando [VP Font to object](#vp-font-to-object).
 
 The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](#vp-set-cell-style), for example.
 
@@ -3646,7 +3646,7 @@ If _options_ refers to a paste option not present in the copied object (e.g. for
 
 #### Exemplo
 
-See example the example from [VP Copy to object](#vp-copy-to-object)
+Veja o exemplo de [VP Copy to object] (#vp-copy-to-object)
 
 #### Veja também
 
@@ -3667,9 +3667,9 @@ See example the example from [VP Copy to object](#vp-copy-to-object)
 
 #### Descrição
 
-The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog window to print _vpAreaName_<!-- END REF -->.
+O comando `VP PRINT` <!-- REF #_method_.VP PRINT.Summary -->abre uma janela de diálogo de impressão para imprimir _vpAreaName_<!-- END REF -->.
 
-Pass the 4D View Pro area to be printed in _vpAreaName_. O comando abrirá a janela de diálogo de impressão do sistema onde a impressora pode ser especificada e as propriedades da página podem ser definidas.
+Passe a área 4D View Pro a ser impressa em _vpAreaName_. O comando abrirá a janela de diálogo de impressão do sistema onde a impressora pode ser especificada e as propriedades da página podem ser definidas.
 
 > As propriedades definidas na janela de diálogo de impressão são para o papel de impressora, elas não são as propriedades de impressão para a área 4D View Pro. Printing properties for 4D View Pro areas are defined using the [VP SET PRINT INFO](#vp-set-print-info) command. É altamente recomendável que as propriedades tanto para impressora quanto para correspondência 4D View Pro, caso contrário, o documento impresso pode não corresponder às suas expectativas.
 
@@ -3678,8 +3678,8 @@ In the optional _sheet_ parameter, you can designate a specific spreadsheet to p
 - `vk current sheet`
 - `vk workbook`
 
-> * 4D View Pro areas can only be printed with the `VP PRINT` command.
-> * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
+> * As áreas do 4D View Pro só podem ser impressas com o comando `VP PRINT`.
+> * Os comandos do tema de linguagem 4D **Impressão** não são compatíveis com o `VP PRINT`.
 > * Esse comando é destinado a impressão individual pelo usuário final. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
 
 #### Exemplo
@@ -3829,7 +3829,7 @@ VP REMOVE SHEET("ViewProArea";2)
 
 #### Descrição
 
-The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in _rangeObj_<!-- END REF -->.
+O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o span das células em _rangeObj_<!-- END REF -->.
 
 In _rangeObj_, pass a range object of the cell span. As células geradas no alcance são divididas em células individuais.
 
@@ -3922,7 +3922,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](#vp-create-table).
 
-In _vpAreaName_, pass the name of the area where the table to remove is located.
+Em _vpAreaName_, passe o nome da área onde a tabela a ser removida está localizada.
 
 In _tableName_, pass the name of the table to remove.
 
@@ -4022,7 +4022,7 @@ The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summa
 
 This command removes rows from the _tableName_ table, NOT from the sheet. O número total de linhas da folha não é impactado pelo  comando. Dados presentes abaixo da tabela (se houver) são movidos automaticamente de acordo com o número de linhas removidas.
 
-If the _tableName_ table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
+Se a tabela _tableName_ estiver vinculada a um [contexto de dados] (#vp-set-data-context), o comando removerá o(s) elemento(s) da coleção.
 
 If _tableName_ does not exist, nothing happens.
 
@@ -4162,7 +4162,7 @@ Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não e
 
 #### Exemplo
 
-See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
+Veja o exemplo em [VP SUSPEND COMPUTING] (#vp-suspend-computing).
 
 #### Veja também
 
@@ -4285,7 +4285,7 @@ A seguinte propriedade é automaticamente adicionada pelo comando, se necessári
 | -------------- | ------- | --------------------------------------------------------------- |
 | timeoutReached | boolean | Adicionado com valor true se o tempo limite tiver sido excedido |
 
-> The offscreen area is only available during the execution of the `VP Run offscreen area` command. Ele será destruído automaticamente após o término da execução.
+> A área fora da tela só está disponível durante a execução do comando `VP Run offscreen area`. Ele será destruído automaticamente após o término da execução.
 
 Os seguintes comandos podem ser utilizados no método de retorno de chamada:
 
@@ -4844,7 +4844,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 The `VP SET CUSTOM FUNCTIONS` command <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Summary -->designates the 4D formulas that can be called directly from 4D View Pro formulas<!-- END REF -->. Because custom functions are not stored in the document,`VP SET CUSTOM FUNCTIONS` must be executed in the `On Load` form event.
 
-The formulas specified by `VP SET CUSTOM FUNCTIONS` appear in a pop-up menu when the first letter of their name is entered. See the [Formulas and Functions](formulas.md) page.
+As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop-up quando a primeira letra de seu nome é inserida. See the [Formulas and Functions](formulas.md) page.
 
 > If `VP SET CUSTOM FUNCTIONS` is called multiple times for the same area, in the same session, only the last call is taken into account.
 
@@ -4936,7 +4936,7 @@ End case
 
 #### Descrição
 
-The `VP SET DATA CONTEXT` command <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
+O comando `VP SET DATA CONTEXT` <!-- REF #_method_.VP SET DATA CONTEXT.Summary -->define o contexto de dados de uma folha<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
 
 Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
@@ -5193,7 +5193,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 #### Descrição
 
-The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
+O comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->atribui um campo virtual do banco de dados 4D a um intervalo de células designado<!-- END REF -->.
 
 In _rangeObj_, pass a range of the cell(s) whose value you want to specify. If _rangeObj_ includes multiple cells, the specified field will be linked in each cell.
 
@@ -5443,7 +5443,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the _vpAreaName_<!-- END REF -->.
 
-Pass the name of the 4D View Pro area to print in _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro a ser impressa em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
 You can pass an object containing definitions for various printing attributes in the _printInfo_ parameter. To view the full list of the available attributes, see [Print Attributes](configuring.md#print-attributes).
 
@@ -5994,7 +5994,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 #### Descrição
 
-The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the _tableName_<!-- END REF -->.
+O comando `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifica o tema atual da _tableName_<!-- END REF -->.
 
 In _vpAreaName_, pass the name of the 4D View Pro area and in _tableName_, the name of the table to modify.
 
@@ -6139,7 +6139,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 #### Descrição
 
-The `VP SET VALUE` command <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
+O comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->atribui um valor especificado a um intervalo de células designado<!-- END REF -->.
 
 The command allows you to use a generic code to set and format the types of values in _rangeObj_, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
 
@@ -6256,7 +6256,7 @@ sets the workbook options in _vpAreaName_<!-- END REF -->.
 
 Em _vpAreaName_, passe o nome da área 4D View Pro.
 
-In _optionObj_, pass the workbook options to apply to _vpAreaName_.
+Em _optionObj_, passe as opções da pasta de trabalho a serem aplicadas a _vpAreaName_.
 
 If _optionObj_ is empty, the command does nothing.
 
@@ -6421,7 +6421,7 @@ O comando pausa o serviço de cálculo no 4D View Pro. Formulas that have alread
 
 Em _vpAreaName_, passe o nome da área 4D View Pro. Se passar um nome que não existe, é devolvido um erro.
 
-> O serviço de cálculo de 4D View Pro mantém um contador de ações de sugastar/retomar. Therefore, each execution of `VP SUSPEND COMPUTING` command  must be balanced by a corresponding execution of the `VP RESUME COMPUTING` command. Any formula impacted by modifications made while calculations are suspended will be recalculated when the command is executed.
+> O serviço de cálculo de 4D View Pro mantém um contador de ações de sugastar/retomar. Portanto, cada execução do comando `VP SUSPEND COMPUTING` deve ser equilibrada por uma execução correspondente do comando `VP RESUME COMPUTING`. Any formula impacted by modifications made while calculations are suspended will be recalculated when the command is executed.
 
 #### Exemplo
 

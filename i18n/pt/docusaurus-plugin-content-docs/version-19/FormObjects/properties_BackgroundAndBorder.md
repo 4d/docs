@@ -161,7 +161,7 @@ Designa a espessura de uma linha.
 
 `List box de tipo array`
 
-The name of an array to apply a custom background color to each row of the list box or column.
+O nome de um array para aplicar uma cor de fundo personalizada para cada linha ou coluna da list box.
 
 Deve ser introduzido o nome de um array Longint. Cada elemento deste array corresponde a uma linha do list box (se aplicada o list box) ou a uma célula da coluna (se aplicada a uma coluna), pelo que o array deve ter o mesmo tamanho que o array associado à coluna. Você pode usar as constantes do tema [SET RGB COLORS](https://doc.4d.com/4Dv20/4D/20.1/SET-RGB-COLORS.302-6481080.en.html). If you want the cell to inherit the background color defined at the higher level, pass the value -255 to the corresponding array element.
 

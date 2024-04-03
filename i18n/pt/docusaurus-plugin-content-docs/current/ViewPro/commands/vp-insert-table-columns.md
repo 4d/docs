@@ -45,7 +45,7 @@ If _tableName_ does not exist or if there is not enough space in the sheet, noth
 
 #### Exemplo
 
-See examples for [VP INSERT TABLE ROWS](vp-insert-table-rows.md) and [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
+Consulte os exemplos de [VP INSERT TABLE ROWS](vp-insert-table-rows.md) e [VP SET TABLE COLUMN ATTRIBUTES](vp-set-table-column-attributes.md).
 
 #### Veja também
 

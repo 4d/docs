@@ -7,19 +7,19 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 
-Session objects are returned by the [`Session`](#session) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
+Los objetos de sesión son devueltos por la función [`Session`](#session). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
 
-### Session types
+### Tipos de sesiones
 
-Three types of sessions are supported by this class:
+Esta clase admite tres tipos de sesiones:
 
-- [**Web user sessions**](WebServer/sessions.md): Web user sessions are available when [scalable sessions are enabled in your project](WebServer/sessions.md#enabling-sessions). They are used for Web and REST connections, and can be assigned privileges.
-- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
-- [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
+- [**Sesiones de usuarios web**](WebServer/sessions.md): las sesiones de usuario web están disponibles cuando [las sesiones escalables están activadas en su proyecto](WebServer/sessions.md#enabling-sessions). Se utilizan para conexiones Web y REST, y se les pueden asignar privilegios.
+- [**Sesiones de usuario de cliente remoto**](../Desktop/clientServer.md#remote-user-sessions): en las aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones gestionadas en el servidor.
+- [**Sesión de procedimientos almacenados**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): todos los procedimientos almacenados ejecutados en el servidor comparten la misma sesión de usuario virtual.
 
 :::note
 
-The availability of properties and functions in the `Session` object depend on the session type.
+La disponibilidad de las propiedades y funciones del objeto `Session` depende del tipo de sesión.
 
 :::
 
@@ -47,10 +47,10 @@ The availability of properties and functions in the `Session` object depend on t
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                         |
-| ------- | ------------------------------------------------------ |
-| v20 R5  | Support of remote client and stored procedure sessions |
-| v18 R6  | Añadidos                                               |
+| Versión | Modificaciones                                                     |
+| ------- | ------------------------------------------------------------------ |
+| v20 R5  | Soporte de cliente remoto y sesiones de procedimientos almacenados |
+| v18 R6  | Añadidos                                                           |
 
 </details>
 
@@ -66,48 +66,48 @@ The availability of properties and functions in the `Session` object depend on t
 
 #### Descripción
 
-El comando `Session` <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
+El comando `Session` <!-- REF #_command_.Session.Summary -->devuelve el objeto `Session` correspondiente a la sesión de usuario actual<!-- END REF -->.
 
-Depending on the process from which the command is called, the current user session can be:
+Dependiendo del proceso desde el que se llame al comando, la sesión de usuario actual puede ser:
 
-- a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
-- a remote client session,
-- the stored procedures session.
+- una sesión web (cuando [las sesiones escalables están activadas](WebServer/sessions.md#enabling-sessions)),
+- una sesión de cliente remoto,
+- la sesión de procedimientos almacenados.
 
-For more information, see the [Session types](#session-types) paragraph.
+Para obtener más información, consulte el párrafo [Tipos de sesión](#session-types).
 
-If the command is called from a non supported context (single-user application, scalable sessions disabled...), it returns *Null*.
+Si el comando se llama desde un contexto no soportado (aplicación monousuario, sesiones escalables desactivadas...), devuelve *Null*.
 
-#### Web sessions
+#### Sesiones web
 
-The `Session` object of web sessions is available from any web process:
+El objeto `Session` de las sesiones web está disponible desde cualquier proceso web:
 
 - Métodos base `On Web Authentication`, `On Web Connection`, y `On REST Authentication`,
 - código procesado a través de las etiquetas 4D en las páginas semidinámicas (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - los métodos proyecto con el atributo "Available through 4D tags and URLs (4DACTION...)" y llamados a través de 4DACTION/ urls,
 - Métodos base [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) y [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) para las peticiones móviles,
-- ORDA functions [called with REST requests](../REST/ClassFunctions.md).
+- Funciones ORDA [llamadas con peticiones REST](../REST/ClassFunctions.md).
 
-For more information on web user sessions, please refer to the [Web Server Sessions](WebServer/sessions.md) section.
+Para más información sobre las sesiones de usuario web, consulte la sección [Sesiones de servidor web](WebServer/sessions.md).
 
-#### Remote client sessions
+#### Sesiones de cliente remoto
 
-The `Session` object of remote client sessions is available from:
+El objeto `Session` de las sesiones de clientes remotos está disponible desde:
 
-- Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
+- Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
-- `On Server Open Connection` and `On Server Shutdown Connection` database methods.
+- Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
 
-For more information on remote user sessions, please refer to the [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions) paragraph.
+Para más información sobre las sesiones de usuario remoto, consulte el párrafo [**de sesiones de usuario remoto**](../Desktop/clientServer.md#remote-user-sessions).
 
-#### Stored procedures session
+#### Sesión de procedimientos almacenados
 
-All stored procedure processes share the same virtual user session. The `Session` object of stored procedures is available from:
+Todos los procesos de procedimientos almacenados comparten la misma sesión virtual de usuario. El objeto `Session` de los procedimientos almacenados está disponible en:
 
-- methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
-- `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
+- métodos llamados con el comando [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html),
+- métodos base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown` y `On System event`
 
-For information on stored procedures virtual user session, please refer to the [XXXX](XXX) page.
+Para obtener información sobre los procedimientos almacenados de sesión virtual de usuario, consulte la página [XXXX](XXX).
 
 #### Ejemplo
 
@@ -118,10 +118,10 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //método action_Session
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //calling the hasPrivilege function
+       If(Session.hasPrivilege("WebAdmin")) //llamada de la función hasPrivilege
           WEB SEND TEXT("4DACTION --> Session is WebAdmin")
        Else
           WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
@@ -148,9 +148,9 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parámetros | Tipo    |    | Descripción                         |
-| ---------- | ------- |:--:| ----------------------------------- |
-| Result     | Boolean | <- | True if the execution is successful |
+| Parámetros | Tipo    |    | Descripción                                        |
+| ---------- | ------- |:--:| -------------------------------------------------- |
+| Result     | Boolean | <- | True si la ejecución se ha realizado correctamente |
 <!-- END REF -->
 
 
@@ -158,22 +158,22 @@ IP:port/4DACTION/action_Session
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+Dado que los privilegios sólo se admiten en sesiones de usuario web, esta función no hace nada y siempre devuelve **False** en otros tipos de sesión.
 
 :::
 
-La función `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->. Como resultado, la sesión se convierte automáticamente en una sesión de invitado.
+La función `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->elimina todos los privilegios asociados a la sesión y devuelve **True** si la ejecución se ha realizado correctamente<!-- END REF -->. Como resultado, la sesión se convierte automáticamente en una sesión de invitado.
 
 
 #### Ejemplo
 
 ```4d
-//Invalidate a session
+//Invalidar una sesión
 var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
-$isGuest:=Session.isGuest() //$isGuest is True
+$isGuest:=Session.isGuest() //$isGuest es True
 ```
 
 <!-- END REF -->
@@ -197,7 +197,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 :::note
 
-This property is only available with web user sessions.
+Esta propiedad sólo está disponible con sesiones de usuario web.
 
 :::
 
@@ -243,7 +243,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+Dado que los privilegios sólo se admiten en sesiones de usuario web, esta función no hace nada y siempre devuelve **False** en otros tipos de sesión.
 
 :::
 
@@ -282,7 +282,7 @@ End if
 
 #### Descripción
 
-La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->the unique identifier (UUID) of the session on the server<!-- END REF -->. This unique string is automatically assigned by the server for each session and allows you to identify its processes. 
+La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->el identificador único (UUID) de la sesión en el servidor<!-- END REF -->. Esta cadena única es asignada automáticamente por el servidor para cada sesión y permite identificar sus procesos. 
 
 
 <!-- END REF -->
@@ -306,7 +306,7 @@ La propiedad `.id` contiene <!-- REF #SessionClass.id.Summary -->the unique iden
 
 :::note
 
-This property is only available with web user sessions.
+Esta propiedad sólo está disponible con sesiones de usuario web.
 
 :::
 
@@ -354,11 +354,11 @@ End if
 
 :::note
 
-This property is only available with remote client and stored procedure sessions.
+Esta propiedad sólo está disponible con sesiones de cliente remoto y procedimientos almacenados.
 
 :::
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the remote client or stored procedure session on the server<!-- END REF -->.
+La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión del cliente remoto o del procedimiento almacenado en el servidor<!-- END REF -->.
 
 The `.info` object is the same object as the one returned by the [`Get process activity`](https://doc.4d.com/4dv20/help/command/en/page1495.html) command for remote client and stored procedure sessions.
 
@@ -453,14 +453,14 @@ End if
 | privilege  | Text       | -> | Nombre del privilegio                                       |
 | privileges | Collection | -> | Colección de nombres de privilegios                         |
 | settings   | Object     | -> | Objeto con una propiedad "privilegios" (cadena o colección) |
-| Result     | Boolean    | <- | True if the execution is successful                         |
+| Result     | Boolean    | <- | True si la ejecución se ha realizado correctamente          |
 <!-- END REF -->
 
 #### Descripción
 
 :::note
 
-Since privileges are only supported in web user sessions, this function does nothing and always returns **False** in other session types.
+Dado que los privilegios sólo se admiten en sesiones de usuario web, esta función no hace nada y siempre devuelve **False** en otros tipos de sesión.
 
 :::
 
@@ -516,10 +516,10 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                         |
-| ------- | ------------------------------------------------------ |
-| v20 R5  | Support of remote client and stored procedure sessions |
-| v18 R6  | Añadidos                                               |
+| Versión | Modificaciones                                                     |
+| ------- | ------------------------------------------------------------------ |
+| v20 R5  | Soporte de cliente remoto y sesiones de procedimientos almacenados |
+| v18 R6  | Añadidos                                                           |
 
 </details>
 
@@ -576,10 +576,10 @@ End use
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                         |
-| ------- | ------------------------------------------------------ |
-| v20 R5  | Support of remote client and stored procedure sessions |
-| v18 R6  | Añadidos                                               |
+| Versión | Modificaciones                                                     |
+| ------- | ------------------------------------------------------------------ |
+| v20 R5  | Soporte de cliente remoto y sesiones de procedimientos almacenados |
+| v18 R6  | Añadidos                                                           |
 
 </details>
 

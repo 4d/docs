@@ -15,7 +15,7 @@ title: VP REMOVE SPAN
 
 #### Descrição
 
-The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in _rangeObj_<!-- END REF -->.
+O comando `VP REMOVE SPAN` <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove o span das células em _rangeObj_<!-- END REF -->.
 
 In _rangeObj_, pass a range object of the cell span. As células geradas no alcance são divididas em células individuais.
 

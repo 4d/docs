@@ -135,7 +135,7 @@ See [**SpreadJS's extented list of functions**](https://developer.mescius.com/sp
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
+Você declara todas as suas funções usando o método [`VP SET CUSTOM FUNCTIONS`] (method-list.md#vp-set-custom-functions). Exemplos:
 
 ```4d
 o:=New object
@@ -280,7 +280,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
 
-> **WARNING:** You cannot use the virtual structure and `VP SET CUSTOM FUNCTIONS` simultaneously. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
+> **ATENÇÃO:** Você não pode usar a estrutura virtual e `VP SET CUSTOM FUNCTIONS` simultaneamente. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
 #### Requisitos
 
@@ -353,7 +353,7 @@ You can call directly 4D project methods from within your 4D View Pro formulas. 
 
 Para ser chamado numa fórmula 4D View Pro, um método projeto deve ser:
 
-- **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+- **Allowed**: foi declarado explicitamente usando o método [VP SET ALLOWED METHODS] (method-list.md#vp-set-allowed-methods).
 - **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 - **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
 

@@ -33,5 +33,5 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 #### Veja também
 
-[Cell Format](../configuring.md#cell-format)<br/>
+[Formato de Célula](../configuring.md#cell-format)<br/>
 [VP SET VALUE](vp-set-value.md)
