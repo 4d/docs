@@ -25,7 +25,7 @@ title: VP SET TABLE THEME
 
 #### Descrição
 
-The `VP SET TABLE THEME` command <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifies the current theme of the _tableName_<!-- END REF -->.
+O comando `VP SET TABLE THEME` <!-- REF #_method_.VP SET TABLE THEME.Summary -->modifica o tema atual da _tableName_<!-- END REF -->.
 
 In _vpAreaName_, pass the name of the 4D View Pro area and in _tableName_, the name of the table to modify.
 
