@@ -192,7 +192,14 @@ Las funciones de clase son propiedades específicas de la clase. They are object
 
 If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
-El nombre de la función debe cumplir con las [reglas de nomenclatura de las propiedades](Concepts/identifiers.md#object-properties).
+The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+
+:::
+
 
 :::tip
 
@@ -244,7 +251,7 @@ Los parámetros de las funciones se declaran utilizando el nombre del parámetro
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-:::Note
+:::note
 
 Si no se declaró el tipo, el parámetro se definirá como `Variant`.
 
@@ -362,7 +369,19 @@ La declaración de propiedades de clase mejora las sugerencias del editor de có
 
 Las propiedades se declaran para los objetos nuevos cuando se llama a la función [`new()`](API/ClassClass.md#new), sin embargo no se añaden automáticamente a los objetos (sólo se añaden cuando se les asigna un valor).
 
+:::note
+
+A property is automatically added to the object when it is [inititalized in the declaration line](#initializing-the-property-in-the-declaration-line).
+
+:::
+
 Los nombres de las propiedades deben cumplir [las normas de denominación de propiedades](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+
+:::
 
 
 El tipo de propiedad puede ser uno de los siguientes tipos soportados:
@@ -385,6 +404,9 @@ El tipo de propiedad puede ser uno de los siguientes tipos soportados:
 | `cs.<className>`                   | Objeto del nombre de la clase usuario                            |
 | `cs.<namespace>.<className>` | Objeto del nombre de la clase del componente `<namespace>` |
 
+
+If you omit the type in the declaration line, the property is created as a variant.
+
 :::info
 
 La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de cualquier bloque `Function` o `Class Constructor`.
@@ -392,22 +414,53 @@ La palabra clave `property` sólo puede utilizarse en métodos clase y fuera de 
 :::
 
 
+
+
+#### Initializing the property in the declaration line
+
+When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. The supported syntax is:
+
+`property <propertyName> { : <propertyType>} := <Propertyvalue>`
+
+:::note
+
+When using this syntax, you cannot declare several properties in the declaration line.
+
+:::
+
+You can omit the type in the declaration line, in which case the type will be inferred when possible. Por ejemplo:
+
+```4d
+// Class: MyClass
+
+property name : Text := "Smith"
+property age : Integer := 42
+
+property birthDate := !1988-09-29! //date is inferred
+property fuzzy //variant
+```
+
+When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
+
+If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
+
 #### Ejemplo
 
 ```4d
-// Clase: MyClass
+// Class: MyClass
 
 property name : Text
 property age : Integer
+property color : Text := "Blue"
 ```
 
 En un método:
 
 ```4d
 var $o : cs.MyClass
-$o:=cs.MyClass.new() //$o:{}
-$o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith" //error con sintaxis de verificación
+$o:=cs.MyClass.new() //$o:{"color" : "Blue"}
+$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
+$o.age:="Smith"  //error with check syntax
 ```
 
 
