@@ -39,7 +39,7 @@ O código abaixo devolverá uma coleção de todos os nomes de tabelas da folha 
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contém por exemplo ["contextTable","emailTable"]
 
 ```
 
