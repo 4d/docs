@@ -46,9 +46,9 @@ Os objectos do IMAP Transporter são instanciados com o comando [IMAP New Transp
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 
 </details>
 
@@ -130,10 +130,10 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                              |
-| ------ | ------------------------------------- |
-| v20    | Suporta palavras-chave personalizadas |
-| v18 R6 | Adicionado                            |
+| Release | Mudanças                              |
+| ------- | ------------------------------------- |
+| 20      | Suporta palavras-chave personalizadas |
+| 18 R6   | Adicionado                            |
 
 
 </details>
@@ -221,9 +221,9 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -310,9 +310,9 @@ $status:=$imap.append($msg; "Rascunhos")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 
 </details>
 
@@ -332,9 +332,9 @@ A propriedade `.checkConnectionDelay` contém <!-- REF #IMAPTransporterClass.che
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -432,9 +432,9 @@ Para copiar todas as mensagens na caixa de correio actual:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
@@ -508,9 +508,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -606,9 +606,9 @@ Para apagar todas as mensagens na caixa de correio actual:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
@@ -680,9 +680,9 @@ $status:=$transporter.subscribe($name) If ($status.success)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -746,11 +746,11 @@ $status:=$transporter.expunge()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                         |
-| ------ | -------------------------------- |
-| v20    | Os falsos valores são ignorados. |
-| v18 R5 | *name* é opcional                |
-| v18 R4 | Adicionado                       |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 20      | Os falsos valores são ignorados. |
+| 18 R5   | *name* é opcional                |
+| 18 R4   | Adicionado                       |
 
 </details>
 
@@ -800,10 +800,10 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                           |
-| ------ | ---------------------------------- |
-| v18 R4 | Adicionado                         |
-| v19    | Adicionar parâmetro `isSubscribed` |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 18 R4   | Adicionado                         |
+| 19      | Adicionar parâmetro `isSubscribed` |
 
 </details>
 
@@ -865,9 +865,9 @@ Se a conta não contiver quaisquer caixas de correio, é devolvida uma colecçã
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 
 </details>
 
@@ -918,9 +918,9 @@ Carácter delimitador do nome da caixa de correio.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 
 </details>
 
@@ -991,9 +991,9 @@ Se quiser receber uma mensagem com ID = 1:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -1091,9 +1091,9 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 
 </details>
 
@@ -1165,9 +1165,9 @@ O parâmetro opcional *updateSeen* permite-lhe especificar se a mensagem está m
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -1266,9 +1266,9 @@ Para mover todas as mensagens na mailbox atual:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -1327,10 +1327,10 @@ A função devolve uma colecção de cordas (identificações únicas).
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                              |
-| ------ | ------------------------------------- |
-| v20    | Suporta palavras-chave personalizadas |
-| v18 R6 | Adicionado                            |
+| Release | Mudanças                              |
+| ------- | ------------------------------------- |
+| 20      | Suporta palavras-chave personalizadas |
+| 18 R6   | Adicionado                            |
 
 
 </details>
@@ -1417,9 +1417,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
@@ -1493,9 +1493,9 @@ var $server,$boxInfo,$result : Object
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -1627,10 +1627,10 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                            |
-| ------ | ----------------------------------- |
-| v20    | Note that False values are ignored. |
-| v18 R4 | Adicionado                          |
+| Release | Mudanças                            |
+| ------- | ----------------------------------- |
+| 20      | Note that False values are ignored. |
+| 18 R4   | Adicionado                          |
 
 
 </details>
@@ -1703,9 +1703,9 @@ Se a string `permanentFlags`  incluir marcador especial \*, significa que o serv
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
@@ -1774,9 +1774,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 
 </details>
 
