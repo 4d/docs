@@ -109,10 +109,10 @@ Les paramètres sont reçus dans la méthode, dans l'ordre où ils sont spécifi
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                     |
+| Release | Modifications                     |
 | ------- | --------------------------------- |
-| v17 R6  | Renommée (New formula -> Formula) |
-| v17 R3  | Ajout                             |
+| 17 R6   | Renommée (New formula -> Formula) |
+| 17 R3   | Ajout                             |
 
 </details>
 
@@ -246,11 +246,11 @@ Appeler une formule à l'aide de la notation objet :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                             |
+| Release | Modifications                                             |
 | ------- | --------------------------------------------------------- |
-| v20 R3  | Prise en charge du paramètre *context*                    |
-| v17 R6  | Renommée : New formula from string -> Formula from string |
-| v17 R3  | Ajout                                                     |
+| 20 R3   | Prise en charge du paramètre *context*                    |
+| 17 R6   | Renommée : New formula from string -> Formula from string |
+| 17 R3   | Ajout                                                     |
 
 </details>
 
@@ -313,9 +313,9 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajout         |
+| 17 R3   | Ajout         |
 
 </details>
 
@@ -376,9 +376,9 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R3  | Ajout         |
+| 17 R3   | Ajout         |
 
 </details>
 
@@ -429,9 +429,9 @@ A noter que `.call()` est similaire à [`.apply()`](#apply), néanmoins les para
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R2  | Ajout         |
+| 18 R2   | Ajout         |
 
 </details>
 
