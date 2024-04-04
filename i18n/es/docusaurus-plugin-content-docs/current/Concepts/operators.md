@@ -63,9 +63,9 @@ Los resultados del operador dependen de los **tipos de datos** a los que se apli
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 4D ofrece **operadores de asignación compuestos** que combinan la asignación con otra operación. Un ejemplo es el operador de asignación adicional (`+=`):
@@ -175,9 +175,9 @@ La diferencia con los operadores booleanos simples [**&** y **||**](dt_boolean.m
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 La regla es la siguiente:
@@ -240,9 +240,9 @@ Si $myObject es Null, el segundo argumento no se ejecuta, por lo que no se lanza
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 El operador || devuelve el valor de uno de los operandos especificados. La expresión se evalúa de izquierda a derecha y se comprueba la posible evaluación en "cortocircuito" utilizando la siguiente regla:
@@ -297,9 +297,9 @@ Esto significa que `a || b && c` se evalúa como `(a || b) && c`.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 El operador condicional ternario permite escribir expresiones condicionales de una línea. Por ejemplo, puede reemplazar una secuencia completa de instrucciones [If…Else](flow-control.md#ifelseend-if).
@@ -349,9 +349,9 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 Además de un tipo, cada valor también tiene un valor booleano inherente, conocido generalmente como **truthy** o **falsy<**.
