@@ -1,6 +1,6 @@
 ---
 id: qodly-studio
-title: Qodly Studio in 4D
+title: Qodly Studio no 4D
 ---
 
 :::caution Prévia do desenvolvedor
@@ -192,7 +192,7 @@ To enable the rendering of Qodly forms, the following options must be set.
 
 :::
 
-### Scope of Qodly forms
+### Escopo dos formulários Qodly
 
 When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [4D WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost). See also [this paragraph](#about-license_usage) about URL schemes and license usage.
 
@@ -200,7 +200,7 @@ Keep in mind that Qodly Studio runs through the 4D WebAdmin web server. When you
 
 However, form rendering happens outside Qodly Studio, and is served by the standard 4D web server. In this situation, your web application cannot access assets that are not exposed as REST resources. See [Exposed vs non-exposed functions](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) and [Exposing tables](../REST/configuration.md#exposing-tables) for more information on how to expose assets.
 
-### Accessing Qodly forms
+### Acesso aos formulários Qodly
 
 For deployment, the WebAdmin server is not necessary. End-user access to your web application made with Qodly Studio is based on the 4D REST protocol, and as such, it works as through a conventional 4D remote application.
 
