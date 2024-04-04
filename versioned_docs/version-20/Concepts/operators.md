@@ -53,9 +53,9 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 4D provides **compound assignment operators** that combine assignment with another operation. One example is the addition assignment operator (`+=`):
@@ -146,9 +146,9 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 The rule is as follows: 
@@ -210,9 +210,9 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
@@ -267,9 +267,9 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](flow-control.md#ifelseend-if) statements.
@@ -317,9 +317,9 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**. 

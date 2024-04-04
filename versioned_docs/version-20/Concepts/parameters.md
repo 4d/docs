@@ -163,9 +163,9 @@ When parameters are declared, they are initialized to the [**default value corre
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 The `return` statement ends function or method execution and can be used to return an expression to the caller. 

@@ -140,7 +140,7 @@ You create a new collection and then add a new element:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -203,7 +203,7 @@ You can pass any number of values of the following supported types:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -258,7 +258,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -294,7 +294,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -341,7 +341,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -382,9 +382,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|New *ck shared* option. New *groupWith* parameters|
+|18 R3|New *ck shared* option. New *groupWith* parameters|
 |v16 R6|Added|
 
 </details>
@@ -508,7 +508,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -551,7 +551,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -624,7 +624,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -673,7 +673,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -727,7 +727,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -818,7 +818,7 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -885,7 +885,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -936,7 +936,7 @@ In case of inconsistency, the following rules apply:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1025,7 +1025,7 @@ The code for ***TypeLookUp*** is:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1119,7 +1119,7 @@ The code for ***FindCity*** is:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1194,7 +1194,7 @@ The code for ***FindCity*** method is:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1250,7 +1250,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1302,7 +1302,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1351,7 +1351,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1392,7 +1392,7 @@ By default, null or empty elements of the collection are returned in the resulti
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1449,7 +1449,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R5|Added|
 
@@ -1479,7 +1479,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1538,7 +1538,7 @@ Here is the ***Percentage*** method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1585,7 +1585,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1632,7 +1632,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1768,7 +1768,7 @@ Ordering with a property path:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1870,7 +1870,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1913,7 +1913,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1965,9 +1965,9 @@ You want to sort the resutling collection:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of querySettings|
+|17 R5|Support of querySettings|
 |v16 R6|Added|
 
 </details>
@@ -2066,7 +2066,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2150,7 +2150,7 @@ With the following ***Flatten*** method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2202,7 +2202,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2256,7 +2256,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2291,7 +2291,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2331,7 +2331,7 @@ If the collection is empty, this method does nothing.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2378,7 +2378,7 @@ The returned collection contains the element specified by *startFrom* and all su
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2451,7 +2451,7 @@ With the following *NumberGreaterThan0* method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2534,7 +2534,7 @@ If you want to sort the collection elements in some other order or sort any type
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2592,7 +2592,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
