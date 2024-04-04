@@ -317,7 +317,7 @@ ALERT($param1+" "+$param2)
 
 - [IMAPTransporter クラス](../API/IMAPTransporterClass.md): 新しい `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, `.unsubscribe()` 関数
 - [File クラス](../API/FileClass.md): 新しい `setAppInfo()` および `getAppInfo()` 関数
-- 新しい [4DEACH](../Tags/tags#4deach-と-4dendeach) 変換タグ
+- 新しい [4DEACH](../Tags/transformation-tags#4deach-と-4dendeach) 変換タグ
 - Web サーバー: 新しい [SameSite セッションcookie](../WebServer/webServerConfig.md#セッションcookie-samesite) 設定
 - [フォーム](../FormEditor/properties_FormProperties.md#カラースキーム) および [スタイルシート](../FormEditor/createStylesheet.md#メディアクエリ) 用のダークおよびライトカラースキームサポート
 - [コードエディター環境設定](../Preferences/methods.md#テーマリスト) の新しいデフォルトの Dark および Lightテーマ
