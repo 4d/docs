@@ -34,9 +34,9 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -150,9 +150,9 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -196,9 +196,9 @@ Executing this method does not actually remove any email. The flagged email will
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -244,10 +244,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of *headerOnly* parameter|
-|v18 R2|Added|
+|20|Support of *headerOnly* parameter|
+|18 R2|Added|
 
 </details>
 
@@ -312,9 +312,9 @@ You want to know the sender of the first mail of the mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -371,9 +371,9 @@ The method returns **Null** if:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 
@@ -435,9 +435,9 @@ You want to know the total number and size of emails in the mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -499,9 +499,9 @@ You want to know the total number and size of emails in the mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 

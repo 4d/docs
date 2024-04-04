@@ -9,9 +9,9 @@ The `HTTPRequest` class is available from the `4D` class store. You create and s
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Class added|
+|19 R6|Class added|
 
 </details>
 
@@ -77,10 +77,10 @@ HTTPRequest objects provide the following properties and functions:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|TLS validation by default |
-|v19 R7|Support of *automaticRedirections* and *decodeData* properties |
+|20|TLS validation by default |
+|19 R7|Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -271,9 +271,9 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8 |`.headers` returns lowercase names. New `.rawHeaders` property|
+|19 R8 |`.headers` returns lowercase names. New `.rawHeaders` property|
 
 </details>
 

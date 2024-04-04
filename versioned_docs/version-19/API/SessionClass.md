@@ -24,9 +24,9 @@ For detailed information about the session implementation, please refer to the [
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -79,9 +79,9 @@ IP:port/4DACTION/action_Session
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -115,9 +115,9 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -143,9 +143,9 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -183,9 +183,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -223,9 +223,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -259,9 +259,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -324,9 +324,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -362,9 +362,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 

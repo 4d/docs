@@ -34,7 +34,7 @@ Some data is also collected at regular intervals.
 |memory|Number|Volume of memory storage (in bytes) available on the machine|
 |system|Text|Operating system version and build number|
 |headless|Boolean|True if the application is running in headless mode|
-|version|Number|Version number of the 4D application|
+|version|Number|Release number of the 4D application|
 |buildNumber|Number|Build number of the 4D application|
 |license|Object|Commercial name and description of product licenses|
 |isRosetta|Boolean|True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).|

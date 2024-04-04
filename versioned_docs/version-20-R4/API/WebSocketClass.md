@@ -13,9 +13,9 @@ WebSocket client connections are useful, for example, to receive financial data 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Added|
+|20 R2|Added|
 
 </details>
 
@@ -74,9 +74,9 @@ WebSocket objects provide the following properties and functions:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Support of `headers` property in *connectionHandler*|
+|20 R3|Support of `headers` property in *connectionHandler*|
 
 </details>
 

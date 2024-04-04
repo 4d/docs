@@ -109,10 +109,10 @@ Parameters are received within the method, in the order they are specified in th
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Renamed (New formula -> Formula)|
-|v17 R3|Added|
+|17 R6|Renamed (New formula -> Formula)|
+|17 R3|Added|
 
 </details>
 
@@ -246,11 +246,11 @@ Calling a formula using object notation:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Support of *context* parameter |
-|v17 R6|Renamed New formula from string -> Formula from string|
-|v17 R3|Added|
+|20 R3|Support of *context* parameter |
+|17 R6|Renamed New formula from string -> Formula from string|
+|17 R3|Added|
 
 </details>
 
@@ -314,9 +314,9 @@ The following code will create a dialog accepting a formula in text format:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R3|Added|
+|17 R3|Added|
 
 </details>
 
@@ -377,9 +377,9 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R3|Added|
+|17 R3|Added|
 
 </details>
 
@@ -430,9 +430,9 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R2|Added|
+|18 R2|Added|
 
 </details>
 

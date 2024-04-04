@@ -402,9 +402,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -663,9 +663,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -727,11 +727,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
-|v19 R7|Support of `allowAutoExpand` option
-|v19 R6|Added
+|19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
+|19 R7|Support of `allowAutoExpand` option
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -913,9 +913,9 @@ use the following code:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 
@@ -1293,9 +1293,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1463,9 +1463,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1681,9 +1681,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -2538,9 +2538,9 @@ In this case, the current sheet uses two style objects:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2598,9 +2598,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2652,9 +2652,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2716,9 +2716,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2763,9 +2763,9 @@ If *tableName* is not found, the command returns **null**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2815,9 +2815,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -3004,9 +3004,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3293,9 +3293,9 @@ The results is:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3345,9 +3345,9 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3429,9 +3429,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3621,9 +3621,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3913,9 +3913,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Added
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3965,9 +3965,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -4011,9 +4011,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4097,9 +4097,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4514,9 +4514,9 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -4941,9 +4941,9 @@ End case
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -5898,9 +5898,9 @@ With a page break:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -6002,9 +6002,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->

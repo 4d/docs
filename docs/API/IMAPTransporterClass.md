@@ -46,9 +46,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added|
+|18 R4|Added|
 
 </details>
 
@@ -132,10 +132,10 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Supports custom keywords|
-|v18 R6|Added|
+|20|Supports custom keywords|
+|18 R6|Added|
 
 
 </details>
@@ -224,9 +224,9 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -313,9 +313,9 @@ $status:=$imap.append($msg; "Drafts")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added|
+|18 R4|Added|
 
 </details>
 
@@ -336,9 +336,9 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -436,9 +436,9 @@ To copy all messages in the current mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 
@@ -512,9 +512,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -610,9 +610,9 @@ To delete all messages in the current mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 
@@ -687,9 +687,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -753,11 +753,11 @@ $status:=$transporter.expunge()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|*id* is returned|
-|v18 R5|*name* is optional|
-|v18 R4|Added|
+|20|*id* is returned|
+|18 R5|*name* is optional|
+|18 R4|Added|
 
 </details>
 
@@ -807,10 +807,10 @@ The `boxInfo` object returned contains the following properties:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added|
-|v19|Add `isSubscribed` parameter|
+|18 R4|Added|
+|19|Add `isSubscribed` parameter|
 
 </details>
 
@@ -873,9 +873,9 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added|
+|18 R4|Added|
 
 </details>
 
@@ -927,9 +927,9 @@ Mailbox name delimiter character.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added|
+|18 R4|Added|
 
 </details>
 
@@ -1001,9 +1001,9 @@ You want to get the message with ID = 1:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -1102,9 +1102,9 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added|
+|18 R4|Added|
 
 </details>
 
@@ -1177,9 +1177,9 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -1278,9 +1278,9 @@ To move all messages in the current mailbox:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -1339,10 +1339,10 @@ The function returns a collection of strings (unique IDs).
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Supports custom keywords|
-|v18 R6|Added|
+|20|Supports custom keywords|
+|18 R6|Added|
 
 
 </details>
@@ -1431,9 +1431,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 <details><summary>History</summary>
 
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 
@@ -1508,9 +1508,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -1654,10 +1654,10 @@ Examples:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|*id*, *flags*, *permanentFlags* are returned|
-|v18 R4|Added|
+|20|*id*, *flags*, *permanentFlags* are returned|
+|18 R4|Added|
 
 
 </details>
@@ -1732,9 +1732,9 @@ If `permanentFlags` string includes the special flag \*, it means that the serve
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 
@@ -1803,9 +1803,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 

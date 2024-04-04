@@ -5,9 +5,9 @@ title: VP Copy to object
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->

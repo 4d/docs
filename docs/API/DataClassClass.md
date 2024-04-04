@@ -29,10 +29,10 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added .exposed attribute|
-|v17|Added|
+|19 R3|Added .exposed attribute|
+|17|Added|
 
 </details>
 
@@ -128,10 +128,10 @@ Considering the following table properties:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of the *settings* parameter|
-|v17|Added|
+|17 R5|Support of the *settings* parameter|
+|17|Added|
 
 </details>
 
@@ -177,9 +177,9 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -229,10 +229,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of the *settings* parameter|
-|v17|Added|
+|17 R5|Support of the *settings* parameter|
+|17|Added|
 
 </details>
 
@@ -429,9 +429,9 @@ In this example, the first entity will be created and saved but the second will 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -504,9 +504,9 @@ This example illustrates the use of the *context* property:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -543,9 +543,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -595,10 +595,10 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added exposed property|
-|v17 R5|Added|
+|19 R3|Added exposed property|
+|17 R5|Added|
 
 </details>
 
@@ -668,9 +668,9 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -758,9 +758,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -803,9 +803,9 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -844,11 +844,11 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Support of Formula parameters|
-|v17 R5|Support of placeholders for values|
-|v17|Added|
+|17 R6|Support of Formula parameters|
+|17 R5|Support of placeholders for values|
+|17|Added|
 
 </details>
 
@@ -1515,9 +1515,9 @@ We want to disallow formulas, for example when the user enters their query:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 

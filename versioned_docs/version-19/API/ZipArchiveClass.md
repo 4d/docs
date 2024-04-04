@@ -39,9 +39,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 
@@ -174,9 +174,9 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 

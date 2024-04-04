@@ -13,9 +13,9 @@ For an overview and some examples of the WebSocket server implementation in 4D, 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
