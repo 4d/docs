@@ -2333,7 +2333,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 | ---------- | ------- | -- | ----------------------------------------------------------- | ---------------- |
 | vpAreaName | Text    | -> | Nome da área 4D View Pro no formulário                      |                  |
 | sheet      | Integer | -> | Índice da folha (folha atual se omitida) |                  |
-| Resultados | Object  | <- | Sheet options object                                        | <!-- END REF --> |
+| Resultados | Object  | <- | Objecto opções de folha                                     | <!-- END REF --> |
 
 #### Descrição
 
