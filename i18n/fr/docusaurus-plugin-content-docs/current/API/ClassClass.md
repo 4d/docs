@@ -27,9 +27,9 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R5  | Ajout         |
+| 20 R5   | Ajout         |
 
 </details>
 
@@ -49,9 +49,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R5  | Ajout         |
+| 20 R5   | Ajout         |
 
 </details>
 
@@ -71,9 +71,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R5  | Ajout         |
+| 20 R5   | Ajout         |
 
 </details>
 
@@ -95,9 +95,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajout         |
+| 18 R3   | Ajout         |
 
 </details>
 
@@ -118,9 +118,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajout         |
+| 18 R3   | Ajout         |
 
 </details>
 
@@ -188,9 +188,9 @@ $person:=cs.Person.new("John";"Doe";40)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajout         |
+| 18 R3   | Ajout         |
 
 </details>
 
