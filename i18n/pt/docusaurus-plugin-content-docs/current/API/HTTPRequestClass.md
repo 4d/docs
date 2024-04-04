@@ -9,9 +9,9 @@ A classe `HTTPRequest` está disponível a partir da loja de classes `4D` . Voc�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças          |
-| ------ | ----------------- |
-| v19 R6 | Classe adicionada |
+| Release | Mudanças          |
+| ------- | ----------------- |
+| 19 R6   | Classe adicionada |
 
 </details>
 
@@ -71,10 +71,10 @@ Os objectos HTTPRequest fornecem as seguintes propriedades e funções:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                       |
-| ------ | -------------------------------------------------------------- |
-| v20    | Validação TLS por padrão                                       |
-| v19 R7 | Suporte às propriedades *automaticRedirections* e *decodeData* |
+| Release | Mudanças                                                       |
+| ------- | -------------------------------------------------------------- |
+| 20      | Validação TLS por padrão                                       |
+| 18 R6   | Suporte às propriedades *automaticRedirections* e *decodeData* |
 
 </details>
 
@@ -190,9 +190,9 @@ Um objecto de autenticação lida com o `options.serverAuthentication` ou `optio
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R4   | Adicionado |
 
 </details>
 
@@ -346,9 +346,9 @@ A propriedade `.protocol` contém <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                               |
-| ------ | ---------------------------------------------------------------------- |
-| v19 R8 | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
+| Release | Mudanças                                                               |
+| ------- | ---------------------------------------------------------------------- |
+| 19 R8   | `.headers` devolve nomes em minúsculas. Novo propriedade `.rawHeaders` |
 
 </details>
 
