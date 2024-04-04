@@ -87,7 +87,7 @@ Sin embargo, debe prestar atención a las siguientes diferencias de comportamien
 > No se recomienda instalar plug-ins o componentes a nivel de la aplicación 4D o 4D Server.
 
 
-## Remote user sessions
+## Sesiones de usuarios remotos
 
 On the server, the [`Session`](../API/SessionClass.md#session) command returns a `session` object describing the current user session. This object is handled through the functions and properties of the [`Session` class](../API/SessionClass.md).
 
@@ -109,11 +109,11 @@ The remote user `session` object is available from:
 
 :::info
 
-All stored procedures on the server share the same virtual user session. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
+Todos los procedimientos almacenados en el servidor comparten la misma sesión de usuario virtual. For more information, see [this page on doc.4d.com](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html).
 
 :::
 
-### See also (blog post)
+### Ver también (entrada de blog)
 
 [4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
 
