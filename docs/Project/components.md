@@ -5,7 +5,7 @@ title: Components
 
 A 4D component is a set of 4D code and/or 4D forms representing one or more functionalities that you can add and use in your projects. For example, the [4D SVG](https://github.com/4d/4D-SVG) component adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
-You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). 
+You can [develop](../Extensions/develop-components.md) and [build](../Desktop/building.md) your own 4D components, or download public components shared by the 4D community that [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
 
 ## Interpreted and compiled components
@@ -15,7 +15,7 @@ Components can be interpreted or [compiled](../Desktop/building.md). The package
 - either a Project folder (interpreted component)
 - or a .4DZ file (compiled component)
 
-A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used. 
+A 4D project running in interpreted mode can use either interpreted or compiled components. A 4D project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
 
 
 ## Loading components
@@ -26,14 +26,14 @@ To load a component in your 4D project, you just need to:
 
 1. Reference the component name in the **dependencies.json** file of your 4D project. This manifest file must be saved in the **Sources** folder of the 4D project folder, e.g.:
 	```
-	/MyProjectRoot/Project/Sources/dependencies.json 
+	/MyProjectRoot/Project/Sources/dependencies.json
 	```
 2. By default, copy the component's package folder (*i.e.* the project root folder of the component) at the same level as your 4D project, e.g.:
 	```
 	/MyProjectRoot/
-	/MyProjectComponentRoot/ 
+	/MyProjectComponentRoot/
 	```
-Thanks to this architecture, you can easily copy all your components at the same level as your projects and reference them in your **dependencies.json** files. However, you can customize the path of your components, see below. 
+Thanks to this architecture, you can easily copy all your components at the same level as your projects and reference them in your **dependencies.json** files. However, you can customize the path of your components, see below.
 
 
 ### dependencies.json
@@ -46,7 +46,7 @@ The **/Sources/dependencies.json** file contents must be like:
 		"myComponent1" : {},
 		"myComponent2" : {}
 	}
-} 
+}
 ```
 
 ... where "myComponent1" and "myComponent2" are the name of the components located at the same level as you project that you want to be loaded in your project.
@@ -54,9 +54,9 @@ The **/Sources/dependencies.json** file contents must be like:
 
 ### Defining component path
 
-If you want to customize the location of your components, you can use a **environment4d.json** file. This file allows you to declare the paths for the components that are not stored at the same level as the project folder. 
+If you want to customize the location of your components, you can use a **environment4d.json** file. This file allows you to declare the paths for the components that are not stored at the same level as the project folder.
 
-You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file. 
+You can use absolute or relative paths, expressed in POSIX syntax as described in [this paragraph](../Concepts/paths#posix-syntax). Relative paths are relative to the environment4d.json file.
 
 Examples:
 
@@ -88,20 +88,25 @@ Components located in the legacy [**Components** folder of your project](archite
 
 ## Monitoring Project Dependencies
 
-In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel:
-
-![dependency](../assets/en/Project/dependency.png)
+In an opened project, you can get information about dependencies and their current loading status in the **Dependencies** panel.
 
 To display the Dependencies panel:
 
 - with 4D, select the **Design/Project Dependencies** menu item (Development environment),
+![dependency-menu](../assets/en/Project/dependency-menu.png)
+
 - with 4D Server, select the **Window/Project Dependencies** menu item.
+![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+
+The Dependency panel is then displayed. Dependencies are sorted by name in alphabetical order:
+
+![dependency](../assets/en/Project/dependency.png)
 
 
 ### Dependency Origin
 
-The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. Dependencies are sorted by name in alphabetical order. The dependency origin is provided by the tag under its name:
-  
+The Dependencies panel lists all project dependencies, whatever their origin, i.e. wherever they come from. The dependency origin is provided by the tag under its name:
+
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
 The following origins are supported:
@@ -119,7 +124,7 @@ The following origins are supported:
 
 :::note
 
-This item is not displayed if the dependency files is inactive because its files are not found. 
+This item is not displayed if the dependency is inactive because its files are not found.
 
 :::
 
@@ -138,11 +143,9 @@ A project dependency can have different status in the current configuration. You
 Dependencies requiring the developer's attention (**Inactive** and **Conflict**) are indicated by a label at the right side of the line and a specific background color:
 
 ![dependency-status](../assets/en/Project/dependency-status.png)
+![dependency-conflict](../assets/en/Project/dependency-conflict.png)
+
 
 In case of inactive or conflict status, a tooltip is displayed when you hover over the dependency line, detailing the reason for this status:
 
 ![dependency-tips](../assets/en/Project/dependency-tip1.png)
-
-
-
- 

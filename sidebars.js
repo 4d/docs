@@ -38,6 +38,7 @@ module.exports =
 					},
 					items: [
 						"Project/architecture",
+						"Project/components",
 						{
 							type: "category",
 							label: "Settings",
@@ -154,9 +155,9 @@ module.exports =
 										"Concepts/plug-ins",
 										"Concepts/identifiers",
 										"Concepts/paths"
-									],	
+									],
 								},
-								
+
 								{
 									type: "category",
 									label: "Processes",
