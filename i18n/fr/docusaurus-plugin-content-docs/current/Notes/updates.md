@@ -13,7 +13,8 @@ Lisez [**Les nouveautés de 4D v20 R5**](https://blog.4d.com/fr-whats-new-in-4d-
 - Prise en charge des structures de traitement des erreurs [`Try...Catch...End try`](../Concepts/error-handling.md#trycatchend-try).
 - La couche réseau QUIC prend désormais en charge le [broadcasting](../Desktop/clientServer.md#opening-a-remote-project).
 - Prise en charge des [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
-- Support of [shared classes](../Concepts/classes.md#shared-classes) and [singleton classes](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me)
+- Support of [shared classes](../Concepts/classes.md#shared-classes) and [singleton classes](../Concepts/classes.md#singleton-classes). New Class properties: [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#isingleton), [`me`](../API/ClassClass.md#me).
+- Support for [initializing a class property in its declaration line](../Concepts/classes.md/#initializing-the-property-in-the-declaration-line).
 - New [$format](../REST/$format.md) REST parameter.
 - [`Session`](../API/SessionClass.md#session) object is now available in remote user sessions and stored procedures session.
 

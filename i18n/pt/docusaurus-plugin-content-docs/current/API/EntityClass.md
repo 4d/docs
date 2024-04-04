@@ -327,7 +327,7 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 | Parâmetro  | Tipo    |    | Descrição                                                                       |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: Força a queda mesmo se a estampa tiver mudado |
-| Resultados | Object  | <- | Result of drop operation                                                        |
+| Resultados | Object  | <- | Resultado da operação de exclusão                                               |
 <!-- END REF -->
 
 #### Descrição

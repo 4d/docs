@@ -247,7 +247,7 @@ Date and Object parameters are handled in the following way:
 | ----------- | ------ | ---------------- |
 | value       | Object | Object parameter |
 
-### Returned values
+### Valores retornados
 
 4D project methods can also return values in the 4D View Pro cell formula via $0. São suportados os seguintes tipos de dados para os parâmetros devolvidos:
 

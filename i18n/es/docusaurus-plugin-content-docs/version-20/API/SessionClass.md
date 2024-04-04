@@ -418,7 +418,7 @@ La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el 
 
 Esta propiedad es una cadena vacía por defecto. Se puede establecer mediante la propiedad `privileges` de la función [`setPrivileges()`](#setprivileges).
 
-Esta propiedad es**de sólo lectura**.
+Esta propiedad es **de sólo lectura**.
 
 
 

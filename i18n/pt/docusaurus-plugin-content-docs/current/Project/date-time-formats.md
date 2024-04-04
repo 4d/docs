@@ -20,7 +20,7 @@ The following table lists all supported patterns for date and time formats.
 
 | Símbolo | Significado                                   | Padrão        | Exemplo de saída     |
 | ------- | --------------------------------------------- | ------------- | -------------------- |
-| G       | era designator                                | G, GGG ou GGG | AD                   |
+| G       | designador de era                             | G, GGG ou GGG | AD                   |
 |         |                                               | GGGG          | Anno Domini          |
 |         |                                               | GGGGG         | A                    |
 | y       | ano                                           | yy            | 96                   |
@@ -84,7 +84,7 @@ The following table lists all supported patterns for date and time formats.
 |         |                                               | KK            | 00                   |
 | k       | hour in day (1~24)                            | k             | 24                   |
 |         |                                               | kk            | 24                   |
-| m       | minute in hour                                | m             | 4                    |
+| m       | minuto em hora                                | m             | 4                    |
 |         |                                               | mm            | 04                   |
 | s       | segundo em minuto                             | s             | 5                    |
 |         |                                               | ss            | 05                   |
@@ -109,7 +109,7 @@ The following table lists all supported patterns for date and time formats.
 
 
 
-## Exploring patterns
+## Explorando padrões
 
 
 ### `y` vs `Y`

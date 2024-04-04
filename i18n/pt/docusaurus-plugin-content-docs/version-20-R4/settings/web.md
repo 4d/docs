@@ -1,6 +1,6 @@
 ---
 id: web
-title: Web page
+title: Página web
 ---
 
 Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). Para obter mais informações sobre os serviços Web 4D, consulte o capítulo [Publicação e uso de Serviços Web](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html).

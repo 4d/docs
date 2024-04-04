@@ -50,7 +50,7 @@ O Data Explorer suporta os seguintes navegadores web:
 A resolução mínima para utilizar o Data Explorer é de 1280x720. A resolução recomendada é 1920x1080.
 
 
-## Browsing Data
+## Navegação de dados
 
 Para além de uma visão abrangente e personalizável dos seus dados, o Explorador de Dados permite-lhe consultar e ordenar os seus dados.
 
@@ -213,7 +213,7 @@ The following scalar attribute values can be edited:
 - date
 - time
 - image (you can upload or drag and drop an image)
-- object (JSON string)
+- objeto (string JSON)
 
 Blob attributes cannot be modified.
 
@@ -232,7 +232,7 @@ Attribute values that need to be calculated by 4D (IDs, computed attributes) wil
 
 :::
 
-### Reloading values
+### Carregamento de valores
 
 The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.
 

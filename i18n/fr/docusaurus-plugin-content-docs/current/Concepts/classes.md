@@ -192,7 +192,14 @@ Les fonctions de classe sont des propriétés spécifiques de la classe. They ar
 
 If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
-Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
+The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+
+:::
+
 
 :::tip
 
@@ -244,7 +251,7 @@ Les paramètres des fonctions sont déclarés via le nom du paramètre et son ty
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-:::Note
+:::note
 
 Si le type n'est pas fourni, le paramètre sera défini comme `Variant`.
 
@@ -362,7 +369,19 @@ La déclaration des propriétés des classes améliore les suggestions de l'édi
 
 Les propriétés sont déclarées pour les nouveaux objets lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new) , mais elles ne sont pas automatiquement ajoutées aux objets (elles ne sont ajoutées que lorsqu'une valeur leur est assignée).
 
+:::note
+
+A property is automatically added to the object when it is [inititalized in the declaration line](#initializing-the-property-in-the-declaration-line).
+
+:::
+
 Les noms des propriétés doivent être conformes aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+
+:::
 
 
 Le type de propriété peut être l'un des types suivants :
@@ -385,12 +404,45 @@ Le type de propriété peut être l'un des types suivants :
 | `cs.<className>`                   | Object de la classe utilisateur className                      |
 | `cs.<namespace>.<className>` | Object de la classe className du composant `<namespace>` |
 
+
+If you omit the type in the declaration line, the property is created as a variant.
+
 :::info
 
 Le mot-clé `property` ne peut être utilisé que dans les méthodes de classe et en dehors de tout bloc `Function` ou `Class Constructor` .
 
 :::
 
+
+
+
+#### Initializing the property in the declaration line
+
+When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. The supported syntax is:
+
+`property <propertyName> { : <propertyType>} := <Propertyvalue>`
+
+:::note
+
+When using this syntax, you cannot declare several properties in the declaration line.
+
+:::
+
+You can omit the type in the declaration line, in which case the type will be inferred when possible. Par exemple :
+
+```4d
+// Class: MyClass
+
+property name : Text := "Smith"
+property age : Integer := 42
+
+property birthDate := !1988-09-29! //date is inferred
+property fuzzy //variant
+```
+
+When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
+
+If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
 
 #### Exemple
 
@@ -399,15 +451,16 @@ Le mot-clé `property` ne peut être utilisé que dans les méthodes de classe e
 
 property name : Text
 property age : Integer
+property color : Text := "Blue"
 ```
 
 Dans une méthode :
 
 ```4d
 var $o : cs.MyClass
-$o:=cs.MyClass.new() //$o:{}
-$o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith"  //erreur pour le check syntax
+$o:=cs.MyClass.new() //$o:{"color" : "Blue"}
+$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
+$o.age:="Smith"  //error with check syntax
 ```
 
 

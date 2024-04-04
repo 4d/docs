@@ -192,7 +192,14 @@ As funções de classe são propriedades específicas da classe. They are object
 
 If the function is declared in a [shared class](#shared-classes), you can use the `shared` keyword so that the function could be called without [`Use...End use` structure](shared.md#useend-use). For more information, refer to the [Shared functions](#shared-functions) paragraph below.
 
-O nome da função deve estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
+The function name must be compliant with [object naming rules](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+
+:::
+
 
 :::tip
 
@@ -242,7 +249,7 @@ Os parâmetros da função são declarados utilizando o nome do parâmetro e o t
 Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 
-:::Note
+:::note
 
 Se o tipo não for indicado, o parâmetro será definido como `Variant`.
 
@@ -351,7 +358,19 @@ A declaração de propriedades de classe melhora as sugestões do editor de cód
 
 As propriedades são declaradas para novos objectos quando se chama a função [`new()`](API/ClassClass.md#new). No entanto, não são automaticamente adicionadas aos objectos (só são adicionadas quando lhes é atribuído um valor).
 
+:::note
+
+A property is automatically added to the object when it is [inititalized in the declaration line](#initializing-the-property-in-the-declaration-line).
+
+:::
+
 Os nomes de propriedades devem estar em conformidade com as [regras de nomeação de propriedades](Concepts/identifiers.md#object-properties).
+
+:::note
+
+Since properties and functions share the same namespace, using the same name for a property and a function of the same class is not allowed (an error is thrown in this case).
+
+:::
 
 
 O tipo de propriedade pode ser um dos seguintes tipos suportados:
@@ -374,6 +393,9 @@ O tipo de propriedade pode ser um dos seguintes tipos suportados:
 | `cs.<className>`                   | Objecto do nome da classe de usuário                                                                                                              |
 | `cs.<namespace>.<className>` | For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor". |
 
+
+If you omit the type in the declaration line, the property is created as a variant.
+
 :::info
 
 A palavra-chave `property` só pode ser utilizada em métodos classe e fora de qualquer bloco `Function` ou `Class Constructor`.
@@ -381,19 +403,53 @@ A palavra-chave `property` só pode ser utilizada em métodos classe e fora de q
 :::
 
 
+
+
+#### Initializing the property in the declaration line
+
+When declaring a property, you have the flexibility to specify its data type and provide its value in one statement. A sintaxe suportada é:
+
+`property <propertyName> { : <propertyType>} := <Propertyvalue>`
+
+:::note
+
+When using this syntax, you cannot declare several properties in the declaration line.
+
+:::
+
+You can omit the type in the declaration line, in which case the type will be inferred when possible. Por exemplo:
+
+```4d
+// Class: MyClass
+
+property name : Text := "Smith"
+property age : Integer := 42
+
+property birthDate := !1988-09-29! //date is inferred
+property fuzzy //variant
+```
+
+When you initialize a property in its declaration line, it is added to the class object after its instantiation with the [`new()`](API/ClassClass.md#new) function but before the constructor is called.
+
+If a class [extends](#class-extends-classname) another class, the properties of the parent class are instantiated before the properties of the child class.
+
 #### Exemplo
 
 ```4d
-Sintaxe
+// Class: MyClass
+
+property name : Text
+property age : Integer
+property color : Text := "Blue"
 ```
 
 Num método:
 
 ```4d
-var $o : cs. MyClass
-$o:=cs. MyClass.new() //$o:{}
-$o.name:="John" //$o:{"name" : "John"}
-$o.age:="Smith" //erro com a sintaxe de verificação
+var $o : cs.MyClass
+$o:=cs.MyClass.new() //$o:{"color" : "Blue"}
+$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
+$o.age:="Smith"  //error with check syntax
 ```
 
 
@@ -708,7 +764,7 @@ Vários comandos da linguagem 4D permitem-lhe lidar com funcionalidades de class
 `OB Instância de` devolve `true` se o objecto `` pertencer à classe `` ou a uma das suas classes herdadas, e `false` caso contrário.
 
 
-## Shared classes
+## Classes compartilhadas
 
 You can create **shared classes**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. A shared class can only create shared objects.
 
