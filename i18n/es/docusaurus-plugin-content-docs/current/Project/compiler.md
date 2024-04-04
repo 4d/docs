@@ -149,9 +149,9 @@ Puede utilizar el botón [Generar declaración](#generate-typing) y luego compil
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
