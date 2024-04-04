@@ -86,9 +86,9 @@ Los objetos manejadores de archivos no pueden ser compartidos.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
@@ -114,9 +114,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
@@ -142,9 +142,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
@@ -166,9 +166,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
@@ -203,9 +203,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
@@ -235,9 +235,9 @@ La función `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->devuelve
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode**: Text<!-- END REF -->
@@ -260,9 +260,9 @@ Esta propiedad es **de sólo lectura**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
@@ -307,9 +307,9 @@ $s:=$fh.readText()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
@@ -346,9 +346,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
@@ -389,9 +389,9 @@ Esta función asume que la propiedad [`.offset`](#offset) es un número de carac
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
@@ -435,9 +435,9 @@ Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve un
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size*: Real)<!-- END REF -->
@@ -468,9 +468,9 @@ Si el valor del *size* es menor que el tamaño actual del documento, el contenid
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
@@ -502,9 +502,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
@@ -536,9 +536,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
