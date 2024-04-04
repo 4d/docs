@@ -14,12 +14,12 @@ Os objetos de sessão são retornados pelo [`Session`](#session) comando. Esses 
 Três tipos de sessões são suportados por essa classe:
 
 - [**Sessões de usuários da Web**](WebServer/sessions.md): As sessões de usuário da Web estão disponíveis quando [as sessões escalonáveis estão ativadas no seu projeto](WebServer/sessions.md#enabling-sessions). Eles são usados para conexões Web e REST e podem receber privilégios.
-- [**Remote client user sessions**](../Desktop/clientServer.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
-- [**Stored procedures session**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): All stored procedures executed on the server share the same virtual user session.
+- [**Sessões de usuário de cliente remoto**](../Desktop/clientServer.md#remote-user-sessions): Em aplicativos cliente/servidor, os usuários remotos têm suas próprias sessões gerenciadas no servidor.
+- [**Sessão de procedimentos armazenados**](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html): Todos os procedimentos armazenados executados no servidor compartilham a mesma sessão de usuário virtual.
 
 :::note
 
-The availability of properties and functions in the `Session` object depend on the session type.
+A disponibilidade de propriedades e funções no objeto `Session` depende do tipo de sessão.
 
 :::
 
@@ -66,9 +66,9 @@ The availability of properties and functions in the `Session` object depend on t
 
 #### Descrição
 
-O comando `Session` <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current user session<!-- END REF -->.
+O comando `Session` <!-- REF #_command_.Session.Summary -->Retorna o objeto `Session` correspondente à sessão do usuário atual<!-- END REF -->.
 
-Depending on the process from which the command is called, the current user session can be:
+Dependendo do processo a partir do qual o comando é chamado, a sessão atual do usuário pode ser:
 
 - a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions)),
 - uma sessão de cliente remoto,
