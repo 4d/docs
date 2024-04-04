@@ -13,7 +13,7 @@ The global modification stamp is a number, always maintained by 4D, even in case
 
 Once the [data change tracking is configured and enabled](#configuring-data-change-tracking), the following actions are automatically executed by 4D at each record modification (add, modify, delete):
 
-1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity. 
+1. The current global modification stamp value is saved in the special "__GlobalStamp" attribute of the involved entity.
 In case of a deletion, a new entity is also added to the `__DeletedRecords` table with information about the deleted entity and the current global modification stamp value is saved in the "__Stamp" attribute.
 
 2. The global modification stamp value is incremented.
@@ -22,7 +22,7 @@ This mechanism allows you to identify entities that have been modified, added, o
 
 :::info
 
-Do not confuse the **global modification stamp** with the internal **entity stamp**, used for the [optimistic locking feature](entities.md#automatic-optimistic-lock). 
+Do not confuse the **global modification stamp** with the internal **entity stamp**, used for the [optimistic locking feature](entities.md#automatic-optimistic-lock).
 
 :::
 
@@ -30,7 +30,7 @@ Do not confuse the **global modification stamp** with the internal **entity stam
 
 ## Configuring data change tracking
 
-By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements. 
+By default, the global modification stamp is not created (the [`.getGlobalStamp()`](../API/DataStoreClass.md#getglobalstamp) function returns 0. To enable data change tracking, you need to add special fields and a table to your structure. You can use the contextual menu of the Structure Editor to create automatically all necessary elements.
 
 ### Structure requirements
 
@@ -101,3 +101,4 @@ If ($oldStamp # ds.getGlobalStamp())
 	$deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
 	$oldStamp; $tableName)
 End if
+```
