@@ -46,9 +46,9 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 
 </details>
 
@@ -130,10 +130,10 @@ La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                 |
+| Release | Modifications                                                 |
 | ------- | ------------------------------------------------------------- |
-| v20     | Prise en charge des mots-clés personnalisés (custom keywords) |
-| v18 R6  | Ajout                                                         |
+| 20      | Prise en charge des mots-clés personnalisés (custom keywords) |
+| 18 R6   | Ajout                                                         |
 
 
 </details>
@@ -221,9 +221,9 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -310,9 +310,9 @@ $status:=$imap.append($msg; "Drafts")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 
 </details>
 
@@ -332,9 +332,9 @@ La propriété `.checkConnectionDelay` contient <!-- REF #IMAPTransporterClass.c
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -432,9 +432,9 @@ Pour copier tous les messages de la boîte de réception courante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
@@ -508,9 +508,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -606,9 +606,9 @@ Pour supprimer tous les messages de la boîte de réception courante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
@@ -682,9 +682,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -748,11 +748,11 @@ $status:=$transporter.expunge()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications        |
+| Release | Modifications        |
 | ------- | -------------------- |
-| v20     | *id* est renvoyé     |
-| v18 R5  | *name* est optionnel |
-| v18 R4  | Ajout                |
+| 20      | *id* est renvoyé     |
+| 18 R5   | *name* est optionnel |
+| 18 R4   | Ajout                |
 
 </details>
 
@@ -802,10 +802,10 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                  |
+| Release | Modifications                  |
 | ------- | ------------------------------ |
-| v18 R4  | Ajout                          |
-| v19     | Ajout paramètre `isSubscribed` |
+| 18 R4   | Ajout                          |
+| 19      | Ajout paramètre `isSubscribed` |
 
 </details>
 
@@ -867,9 +867,9 @@ Si le compte ne contient pas de boites de réception, une collection vide est re
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 
 </details>
 
@@ -920,9 +920,9 @@ Caractère de délimitation des noms de boites de réception.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 
 </details>
 
@@ -993,9 +993,9 @@ Vous souhaitez lire le message avec ID = 1 :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -1093,9 +1093,9 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajout         |
+| 18 R4   | Ajout         |
 
 </details>
 
@@ -1168,9 +1168,9 @@ Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est ma
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -1269,9 +1269,9 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -1328,10 +1328,10 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                 |
+| Release | Modifications                                                 |
 | ------- | ------------------------------------------------------------- |
-| v20     | Prise en charge des mots-clés personnalisés (custom keywords) |
-| v18 R6  | Ajout                                                         |
+| 20      | Prise en charge des mots-clés personnalisés (custom keywords) |
+| 18 R6   | Ajout                                                         |
 
 
 </details>
@@ -1422,9 +1422,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
@@ -1503,9 +1503,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -1639,10 +1639,10 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                 |
+| Release | Modifications                                 |
 | ------- | --------------------------------------------- |
-| v20     | *id*, *flags*, *permanentFlags* sont renvoyés |
-| v18 R4  | Ajout                                         |
+| 20      | *id*, *flags*, *permanentFlags* sont renvoyés |
+| 18 R4   | Ajout                                         |
 
 
 </details>
@@ -1732,9 +1732,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
@@ -1811,9 +1811,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
