@@ -27,9 +27,9 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v19 R2  | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 
@@ -174,9 +174,9 @@ $transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v19 R2  | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 
@@ -275,9 +275,9 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 </details>
 
 
