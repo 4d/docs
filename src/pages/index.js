@@ -105,9 +105,9 @@ function Lts() {
  			<div className="preview">
 			<div className="text--center"><b><Translate>This is the documentation for the latest </Translate><Link to=
                 "https://blog.4d.com/4d-versioning-feature-releases-lts-releases-explained/">4D Feature Release</Link>. <Translate>Looking for a LTS documentation? </Translate>Select <Link to=
-                "20/GettingStarted/installation">v20</Link>, <Link to=
-                "19/GettingStarted/installation">v19</Link> or <Link to=
-                "18/GettingStarted/installation">v18</Link></b>.
+                "20/GettingStarted/installation">20</Link>, <Link to=
+                "19/GettingStarted/installation">19</Link> or <Link to=
+                "18/GettingStarted/installation">18</Link></b>.
 			</div>
 		</div>
   );
@@ -115,10 +115,10 @@ function Lts() {
 
 export default function Home() {
   return (
-    <Layout>	  
+    <Layout>
       <main>
     	<Lts />
-		<HeroBanner />	
+		<HeroBanner />
         <TilesContainer />
       </main>
     </Layout>

@@ -27,9 +27,9 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Added|
+|20 R5|Added|
 
 </details>
 
@@ -49,9 +49,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Added|
+|20 R5|Added|
 
 </details>
 
@@ -71,9 +71,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Added|
+|20 R5|Added|
 
 </details>
 
@@ -95,9 +95,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -118,9 +118,9 @@ This property is **read-only**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -188,9 +188,9 @@ $person:=cs.Person.new("John";"Doe";40)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 

@@ -149,9 +149,9 @@ You can use the [Generate Typing](#generate-typing) button then compile with one
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 

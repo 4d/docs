@@ -6,9 +6,9 @@ title: VP REMOVE TABLE
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Added
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->

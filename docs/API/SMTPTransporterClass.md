@@ -29,11 +29,11 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|New logFile property|
-|v17 R5|New bodyCharset and headerCharset properties|
-|v17 R4|Added|
+|18|New logFile property|
+|17 R5|New bodyCharset and headerCharset properties|
+|17 R4|Added|
 
 </details>
 
@@ -170,9 +170,9 @@ For information about SMTP status codes, please refer to [this page](https://www
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
@@ -194,10 +194,10 @@ The SMTP connection is automatically closed:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of mime contents|
-|v17 R4|Added|
+|17 R5|Support of mime contents|
+|17 R4|Added|
 
 </details>
 

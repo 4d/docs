@@ -8,9 +8,9 @@ The `WebSocketServer` class allows you to create and configure a WebSocket serve
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 

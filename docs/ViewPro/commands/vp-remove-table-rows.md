@@ -6,9 +6,9 @@ title: VP REMOVE TABLE ROWS
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->

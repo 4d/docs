@@ -47,10 +47,10 @@ The availability of properties and functions in the `Session` object depend on t
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Support of remote client and stored procedure sessions|
-|v18 R6|Added|
+|20 R5|Support of remote client and stored procedure sessions|
+|18 R6|Added|
 
 </details>
 
@@ -138,9 +138,9 @@ IP:port/4DACTION/action_Session
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -185,9 +185,9 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -222,9 +222,9 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -272,9 +272,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Added|
+|20 R5|Added|
 
 </details>
 
@@ -294,9 +294,9 @@ The `.id` property contains <!-- REF #SessionClass.id.Summary -->the unique iden
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -342,9 +342,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Added|
+|20 R5|Added|
 
 </details>
 
@@ -392,9 +392,9 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added|
+|18 R6|Added|
 
 </details>
 
@@ -437,10 +437,10 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Support of "roles" Settings property|
-|v18 R6|Added|
+|19 R8|Support of "roles" Settings property|
+|18 R6|Added|
 
 </details>
 
@@ -516,10 +516,10 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Support of remote client and stored procedure sessions|
-|v18 R6|Added|
+|20 R5|Support of remote client and stored procedure sessions|
+|18 R6|Added|
 
 </details>
 
@@ -576,10 +576,10 @@ End use
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R5|Support of remote client and stored procedure sessions|
-|v18 R6|Added|
+|20 R5|Support of remote client and stored procedure sessions|
+|18 R6|Added|
 
 </details>
 

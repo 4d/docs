@@ -5,9 +5,9 @@ title: VP PASTE FROM OBJECT
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->

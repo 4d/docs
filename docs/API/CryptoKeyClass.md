@@ -44,9 +44,9 @@ ASSERT($status.success)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->
@@ -81,9 +81,9 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -97,9 +97,9 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->
@@ -144,9 +144,9 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->
@@ -183,9 +183,9 @@ The returned value is an encrypted message.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
@@ -210,9 +210,9 @@ The returned value is the private key.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
@@ -238,9 +238,9 @@ The returned value is the public key.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.pem.Syntax -->
@@ -255,9 +255,9 @@ PEM definition of an encryption key to load. If the key is a private key, the RS
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
@@ -295,9 +295,9 @@ The utf8 representation of the *message* string.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -311,9 +311,9 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
@@ -333,9 +333,9 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R4|Added
+|18 R4|Added
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->

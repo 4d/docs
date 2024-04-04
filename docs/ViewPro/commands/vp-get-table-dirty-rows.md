@@ -5,9 +5,9 @@ title: VP Get table dirty rows
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->

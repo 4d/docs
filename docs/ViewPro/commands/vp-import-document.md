@@ -6,9 +6,9 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->

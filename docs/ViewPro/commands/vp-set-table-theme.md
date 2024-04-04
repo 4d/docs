@@ -6,9 +6,9 @@ title: VP SET TABLE THEME
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->

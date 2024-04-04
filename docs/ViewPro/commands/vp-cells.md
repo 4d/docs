@@ -9,9 +9,9 @@ title: VP Cells
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
