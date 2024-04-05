@@ -232,9 +232,9 @@ La propriété `.path` contient <!-- REF #MailAttachmentClass.path.Summary -->le
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
