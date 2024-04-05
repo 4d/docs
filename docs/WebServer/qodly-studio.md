@@ -351,19 +351,16 @@ This call is accepted and as long as the authentication is not successful, `Sess
 
 When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application. 
 
-Calling the logout feature from a web user session has the following effects:
+To logout the user, you just need to execute the **Logout** standard action from the Qodly form. In Qodly Studio, you can associate this standard action to a button for example:
+
+![alt-text](../assets/en/WebServer/logout.png)
+
+Triggering the logout action from a web user session has the following effects:
 
 - the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
 - the associated 4D license is released,
 - the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
  
-To logout the user, you only need to use **Logout** standard action from the Qodly form .
-
-When this action is called:
-
-- the session becomes guest, its privileges are cleared
-- one 4D Client license is freed
-- the `Session.storage` is left untouched
 
 
 
