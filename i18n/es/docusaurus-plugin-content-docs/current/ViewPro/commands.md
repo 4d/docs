@@ -3,7 +3,7 @@ id: commands
 title: Comandos
 ---
 
-> **Warning**: The following commands are not thread-safe.
+> **Atención**: Los siguientes comandos no son hilo seguro.
 
 [A](#A.md) - [C](#c.md) - [D](#d.md) - [E](#E.md) - [F](#F.md) - [G](#G.md) - [I](#I.md) - [M](#M.md) - [N](#N.md) - [O](#O.md) - [P](#P.md) - [R](#R.md) - [S](#S.md)
 
