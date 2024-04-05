@@ -399,9 +399,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -668,9 +668,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -735,11 +735,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                                               |
+| Release | Modifications                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Prise en charge de l'option `allowAutoExpand`                                                               |
-| v19 R6  | Ajout                                                                                                       |
+| 19 R8   | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7   | Prise en charge de l'option `allowAutoExpand`                                                               |
+| 19 R6   | Ajout                                                                                                       |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -925,9 +925,9 @@ saisissez le code suivant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications             |
+| Release | Modifications             |
 | ------- | ------------------------- |
-| v20 R2  | Support of .sjs documents |
+| 20 R2   | Support of .sjs documents |
 </details>
 
 
@@ -1317,9 +1317,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1492,9 +1492,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1720,9 +1720,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -2611,9 +2611,9 @@ Dans ce cas, la feuille courante utilise deux objets style :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2672,9 +2672,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2728,9 +2728,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2795,9 +2795,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2842,9 +2842,9 @@ Si *tableName* n'est pas trouvé, la commande renvoie **null**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2897,9 +2897,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //vrai
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -3093,9 +3093,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications             |
+| Release | Modifications             |
 | ------- | ------------------------- |
-| v20 R2  | Support of .sjs documents |
+| 20 R2   | Support of .sjs documents |
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3383,9 +3383,9 @@ Le résultat est le suivant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3437,9 +3437,9 @@ Voir les exemples pour [VP INSERT TABLE ROWS](#vp-insert-table-rows) et [VP SET 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3523,9 +3523,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3725,9 +3725,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -4025,9 +4025,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R6  | Ajout         |
+| 19 R6   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -4079,9 +4079,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -4127,9 +4127,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4217,9 +4217,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4642,9 +4642,9 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -5081,9 +5081,9 @@ End case
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -6067,9 +6067,9 @@ Avec un saut de page :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -6171,9 +6171,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea" ; "PeopleTable" ; 0 ; \
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
