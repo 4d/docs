@@ -44,9 +44,9 @@ Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                             |
-| ------ | ------------------------------------ |
-| v19 R7 | Suporte da propriedade Raio de canto |
+| Release | Mudanças                             |
+| ------- | ------------------------------------ |
+| 18 R6   | Suporte da propriedade Raio de canto |
 
 </details>
 
