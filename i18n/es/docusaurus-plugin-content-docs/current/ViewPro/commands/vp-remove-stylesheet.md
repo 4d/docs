@@ -30,7 +30,7 @@ You can define where to remove the style in the optional _sheet_ parameter using
 
 #### Ejemplo
 
-To remove the _GreenDashDotStyle_ style object from the current sheet:
+Para eliminar el objeto estilo _GreenDashDotStyle_ de la hoja actual:
 
 ```4d
 VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
