@@ -59,10 +59,10 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                       |
+| Release | Modifications                       |
 | ------- | ----------------------------------- |
-| v19 R8  | Prise en charge de `fk home folder` |
-| v17 R5  | Ajout                               |
+| 19 R8   | Prise en charge de `fk home folder` |
+| 17 R5   | Ajout                               |
 
 </details>
 
@@ -126,9 +126,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
@@ -148,9 +148,9 @@ La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et ren
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
@@ -205,9 +205,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -261,9 +261,9 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
@@ -335,9 +335,9 @@ Lorsque la constante `Delete with contents` est passée :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
@@ -391,9 +391,9 @@ Vous souhaitez déplacer et renommer un dossier :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
