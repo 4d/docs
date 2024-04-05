@@ -39,9 +39,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 
@@ -176,9 +176,9 @@ Vous souhaitez passer une collection de dossiers et de fichiers à compresser à
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 
