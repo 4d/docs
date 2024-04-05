@@ -5,9 +5,9 @@ title: VP REMOVE TABLE ROWS
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
