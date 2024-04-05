@@ -8,9 +8,9 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R2   | Adicionado |
 
 </details>
 
