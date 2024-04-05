@@ -143,6 +143,7 @@ The `roles.json` file syntax is the following:
 |||\[].describe|Collection of strings||List of privileges|
 |||\[].execute|Collection of strings||List of privileges|
 |||\[].promote|Collection of strings||List of privileges|
+|forceLogin|||Boolean||True to enable the ["forceLogin" mode](../REST/authUsers.md#force-login-mode) |
 
 
 :::caution Reminder

@@ -7,9 +7,6 @@ Using standard HTTP requests, the 4D REST Server allows external applications to
 
 To start using the REST features, you need to start and configure the 4D REST server. 
 
-> - On 4D Server, opening a REST session requires that a free 4D client licence is available.<br/>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.
-> - You need to manage the [session](authUsers.md) for your requesting application.  
 
 
 
@@ -26,16 +23,22 @@ The warning message "Caution, check the access privileges" is displayed when you
 > You must restart the 4D application for your changes to take effect. 
 
 
-## Configuring REST access
+## Controlling REST access
 
 By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.  
 
-You can configuring REST accesses with one of the following means:
-- assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
-- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
+You can configure REST accesses with one of the following means:
+- (recommended) enable the **force login** mode and create an [`authentify()`](authUsers.md#authentify) datastore class function to authenticate users and assign privileges to their web session (see [User login modes](authUsers.md#user-login-modes)). 
+- assign a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
+- write an `On REST Authentication` database method to intercept and handle every initial REST request.
 
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
 
+:::info Important
+
+- It is recommended not to enable different REST access control features simultaneously to avoid conflicts.     
+- If an `On REST Authentication` database method has been defined, any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+
+:::
 
 ### Using the Structure Settings
 
@@ -95,3 +98,12 @@ To remove the REST exposure for a field:
 Repeat this for each field whose exposure needs to be modified.
 
 > In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+
+
+## Preemptive mode
+
+On 4D Server, REST requests are automatically handled through preemptive processes, **even in interpreted mode**. You need to make sure that your code is [compliant with a preemptive execution](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
+
+With 4D single-user, interpreted code always runs in cooperative mode.

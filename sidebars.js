@@ -737,23 +737,27 @@ module.exports =
 				},
 				{
 					type: "category",
-					label: "REST Server",
+					label: "REST API",
 					link: {
 						type: 'generated-index',
-						title: 'REST Server',
-						description: 'Configuring the 4D REST Server and using the REST API.',
+						title: 'REST API',
+						description: 'Exposing your datastore to REST and using the REST API.',
 						keywords: ['REST server'],
 						image: '/img/docusaurus.png',
 					},
 					items: [
 						{
 						type: "category",
-						label: "Guides",
+						label: "Exposing your datastore in REST",
 						link: {
-							type: 'doc',
-							id: 'REST/gettingStarted',
-						},
+								type: 'generated-index',
+								title: 'Exposing your datastore in REST',
+								description: 'Configure your datastore for REST access',
+								keywords: ['REST access'],
+								image: '/img/docusaurus.png',
+							},
 						items: [
+								'REST/gettingStarted',
 								"REST/configuration",
 								"REST/authUsers",
 								"REST/genInfo",

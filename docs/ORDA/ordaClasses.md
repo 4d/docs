@@ -82,6 +82,8 @@ A 4D database exposes its own DataStore class in the `cs` class store.
 
 You can create functions in the DataStore class that will be available through the `ds` object. 
 
+
+
 #### Example
 
 ```4d  
@@ -221,6 +223,7 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 
 ### Entity Class
+
 
 Each table exposed with ORDA offers an Entity class in the `cs` class store.
 

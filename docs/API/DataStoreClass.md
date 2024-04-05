@@ -131,8 +131,13 @@ The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->conne
 The *connectionInfo* 4D database must be available as a remote datastore, i.e.:
 
 * its web server must be launched with http and/or https enabled,
-* its [**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option must be checked,
-* at least one client license is available.
+* the datastore must be exposed ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked) as well as [dataclasses and attributes](../REST/configuration.md#exposing-tables-and-fields).
+
+:::note
+
+`Open datastore` requests rely on the 4D REST API and can require a 4D Client license to open the connection. Refer to the [user login mode section](../REST/authUsers.md#user-login-modes) to know how to configure the authentication depending on the selected current user login mode.
+
+:::
 
 If no matching database is found, `Open datastore` returns **Null**.
 
@@ -403,18 +408,18 @@ You want to know the number of encrypted tables in the current data file:
 
 #### Description
 
-The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example. 
+The `.flushAndLock()` function <!-- REF #DataStoreClass.flushAndLock().Summary -->flushes the cache of the local datastore and prevents other processes from performing write operations on the database<!-- END REF -->. The datastore is set to a consistent, frozen state. Calling this function is necessary before executing an application snapshot, for example.
 
 :::info
 
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
-Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked. 
+Once this function is executed, write operations such as `.save()` or other `.flushAndLock()` calls are frozen in all other processes until the datastore is unlocked.
 
 When multiple calls to `.flushAndLock()` have been done in the same process, the same number of [`.unlock()`](#unlock) calls must be executed to actually unlock the datastore.
 
@@ -424,14 +429,14 @@ The datastore is unlocked when:
 - the process that called the `.flushAndLock()` function is killed.
 
 
-If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked. 
+If the datastore is already locked from another process, the `.flushAndLock()` call is frozen and will be executed when the datastore will be unlocked.
 
 An error is triggered if the `.flushAndLock()` function cannot be executed (e.g. it is run on a remote 4D), .
 
 
 :::caution
 
-Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction. 
+Other 4D features and services including [backup](../Backup/backup.md), [vss](https://doc.4d.com/4Dv20/4D/20/Using-Volume-Shadow-Copy-Service-on-Windows.300-6330532.en.html), and [MSC](../MSC/overview.md) can also lock the datastore. Before calling `.flushAndLock()`, make sure no other locking action is being used, in order to avoid any unexpected interaction.
 
 :::
 
@@ -440,16 +445,16 @@ Other 4D features and services including [backup](../Backup/backup.md), [vss](ht
 You want to create a copy of the data folder along with its current journal file:
 
 ```4d
-$destination:=Folder(fk documents folder).folder("Archive") 
+$destination:=Folder(fk documents folder).folder("Archive")
 $destination.create()
 
 ds.flushAndLock() //Block write operations from other processes
 
-$dataFolder:=Folder(fk data folder) 
+$dataFolder:=Folder(fk data folder)
 $dataFolder.copyTo($destination) //Copy the data folder
 
 $oldJournalPath:=New log file //Close the journal and create a new one
-$oldJournal:=File($oldJournalPath; fk platform path) 
+$oldJournal:=File($oldJournalPath; fk platform path)
 $oldJournal.moveTo($destination) //Save the old journal with data
 
 ds.unlock() //Our copy is over, we can now unlock the datastore
@@ -486,7 +491,7 @@ ds.unlock() //Our copy is over, we can now unlock the datastore
 
 The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->.
 
-> For more information on how contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+> For more information on how contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
 Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
 
@@ -567,13 +572,13 @@ The `.getGlobalStamp()` function <!-- REF #DataStoreClass.getGlobalStamp().Summa
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
 For more information on global stamp and data change tracking, please refer to the [**Using the Global Stamp**](../ORDA/global-stamp.md) page.
 
- 
+
 #### Example
 
 ```4d
@@ -581,7 +586,7 @@ var $currentStamp : Real
 var $hasModifications : Boolean
 
 $currentStamp:=ds.getGlobalStamp()
-methodWhichCouldModifyEmployees //call some code 
+methodWhichCouldModifyEmployees //call some code
 $hasModifications:=($currentStamp # ds.getGlobalStamp())
 ```
 
@@ -684,7 +689,7 @@ On a remote datastore:
 
 The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
 
-For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/client-server-optimization.md#optimization-context).
 
 #### Returned object
 
@@ -801,7 +806,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 #### Description
 
-The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->. 
+The `.locked()` function <!-- REF #DataStoreClass.locked().Summary -->returns True if the local datastore is currently locked<!-- END REF -->.
 
 You can lock the datastore using the [.flushAndLock()](#flushandlock) function before executing a snapshot of the data file, for example.
 
@@ -929,6 +934,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 ## .setAdminProtection()
 
 
+
 <details><summary>History</summary>
 
 |Release|Changes|
@@ -1006,7 +1012,7 @@ The `.setGlobalStamp()` function <!-- REF #DataStoreClass.setGlobalStamp().Summa
 This function can only be called:
 
 - on the local datastore ([`ds`](#ds)).
-- in client/server environment, on the server machine. 
+- in client/server environment, on the server machine.
 
 :::
 
@@ -1064,7 +1070,7 @@ When you pass a context to the ORDA class functions, the REST request optimizati
 * the first entity is not fully loaded as done in automatic mode
 * pages of 80 entities (or `pageLength` entities) are immediately asked to the server with only the attributes in the context
 
-> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
+> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/client-server-optimization.md#optimization-context)
 
 In *contextName*, pass the name of the optimization context to link to the dataclass attributes.
 
@@ -1360,11 +1366,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 #### Description
 
-The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->. 
+The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the machine it is called (client or server)<!-- END REF -->.
 
-It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped. 
+It actually closes the opened document on disk. On the client side, if the log was started in memory, it is stopped.
 
-This function does nothing if logging of ORDA requests was not started on the machine. 
+This function does nothing if logging of ORDA requests was not started on the machine.
 
 #### Example
 
@@ -1396,9 +1402,9 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 #### Description
 
-The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function. 
+The `.unlock()` function <!-- REF #DataStoreClass.unlock().Summary -->removes the current lock on write operations in the datastore, if it has been set in the same process<!-- END REF -->. Write operations can be locked in the local datastore using the [`.flushAndLock()`](#flushandlock) function.
 
-If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore. 
+If the current lock was the only lock on the datastore, write operations are immediately enabled. If the `.flushAndLock()` function was called several times in the process, the same number of `.unlock()` must be called to actually unlock the datastore.
 
 The `.unlock()` function must be called from the process that called the corresponding `.flushAndLock()`, otherwise the function does nothing and the lock is not removed.
 

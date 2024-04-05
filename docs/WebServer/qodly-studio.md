@@ -1,11 +1,11 @@
 ---
 id: qodly-studio
-title: Qodly Studio in 4D
+title: Qodly Studio for 4D
 ---
 
 :::caution Developer Preview
 
-Qodly Studio in 4D is currently in the **Developer Preview** phase. It should not be used in production.
+Qodly Studio for 4D is currently in the **Developer Preview** phase. It should not be used in production. 
 
 :::
 
@@ -24,7 +24,7 @@ With Qodly Studio, you will discover a totally new web UI, get familiar with the
 
 :::info
 
-The development with Qodly Studio in 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). Qodly Studio options and menu items won't appear if the license is not activated.
+The development with Qodly Studio for 4D requires at least a [4D Silver Partner license](https://us.4d.com/4d-partner-program). Qodly Studio options and menu items won't appear if the license is not activated.
 
 :::
 
@@ -238,9 +238,83 @@ https://www.myWebSite.com/$lib/renderer/?w=welcome
 
 
 
-## About license usage
+## Force login
 
-To render Qodly forms, you must have an available license, as rendering a Qodly form opens a session on the project database's main web server.
+With Qodly Studio for 4D, you can use the ["force login" mode](../REST/authUsers.md#force-login-mode) to control the number of opened web sessions that require 4D Client licenses. You can also [logout](#logout) the user at any moment to decrement the number of retained licenses. 
+
+### Setting the force login mode
+
+You can set the ["force login" mode](../REST/authUsers.md#force-login-mode) for your 4D application in the [Roles and Privileges page](https://developer.qodly.com/docs/studio/roles/rolesPrivilegesOverview/), using the **Force login** option:
+
+![alt-text](../assets/en/WebServer/forcelogin.png) 
+
+:::note
+
+You can also set this option directly in the [**roles.json** file](../ORDA/privileges.md#rolesjson-file).
+
+:::
+
+When the "force login" mode is **disabled** (default mode), any REST request, including the rendering of an authentication Qodly form, creates a web session on the server and gets a 4D Client license, whatever the actual result of the authentication. When the "force login" mode is **enabled**, a simple authentication Qodly form can be rendered without consuming any license. You just need to implemented the [`authentify()`](../REST/authUsers.md#function-authentify) function in the datastore class and call it from the Qodly form. The licence is consumed only when the user is actually logged. 
+
+:::info
+
+For more information, refer to [this blog post](https://blog.4d.com/qodly-studio-consume-a-4d-client-licence-only-when-the-authentication-is-successful) that tells the full story. 
+
+:::
+
+#### Example
+
+In a simple Qodly form with login/password inputs, a "Submit" button calls the following `authentify()` function we have implemented in the DataStore class:
+
+```4d
+
+exposed Function authentify($credentials : Object) : Text
+	
+var $salesPersons : cs.SalesPersonsSelection
+var $sp : cs.SalesPersonsEntity
+	
+$salesPersons:=ds.SalesPersons.query("identifier = :1"; $credentials.identifier)
+$sp:=$salesPersons.first()
+	
+If ($sp#Null)
+	If (Verify password hash($credentials.password; $sp.password))
+			
+		Session.clearPrivileges()
+		Session.setPrivileges("") //guest session
+			
+		return "Authentication successful"
+	Else 
+		return "Wrong password"
+	End if
+Else 
+	return "Wrong user"
+End if 
+```
+
+This call is accepted and as long as the authentication is not successful, `Session.setPrivileges()` is not called, thus no license is consumed. Once `Session.setPrivileges()` is called, a 4D client licence is used and any REST request is then accepted.
+
+
+
+### Logout
+
+When the ["force login" mode is enabled](#setting-the-force-login-mode), Qodly Studio for 4D allows you to implement a logout feature in your application. 
+
+To logout the user, you just need to execute the **Logout** standard action from the Qodly form. In Qodly Studio, you can associate this standard action to a button for example:
+
+![alt-text](../assets/en/WebServer/logout.png)
+
+Triggering the logout action from a web user session has the following effects:
+
+- the current web user session loses its privileges, only [descriptive REST requests](../REST/authUsers.md#descriptive-rest-requests) are allowed,
+- the associated 4D license is released,
+- the `Session.storage` is kept until the web session inactivity timeout is reached (at least one hour). During this period after a logout, if the user logs in again, the same session is used and the `Session.storage` shared object is available with its current contents.
+ 
+
+
+
+## About license usage for rendering
+
+In default mode when any form is rendered, or in "force login" mode when a form handling data or calling a function is rendered, you must have an available license, as rendering Qodly forms targets the project database's main web server.
 
 ### URL Schemes
 
