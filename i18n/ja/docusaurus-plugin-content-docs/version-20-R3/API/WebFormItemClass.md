@@ -10,9 +10,9 @@ title: WebFormItem
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R2 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R2 | 追加 |
 
 </details>
 
