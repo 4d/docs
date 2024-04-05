@@ -33,7 +33,7 @@ Algunos otros elementos tienen una capitalización diferente (por ejemplo: `this
 
 ## Command and Constant names
 
-QodlyScript command and constant names are written in camel case without spaces. In addition, QodlyScript constant names start with a `k` letter. You might need to adapt these QodlyScript items to the 4D Language.
+Los nombres de comandos y constantes de QodlyScript se escriben en mayúsculas y sin espacios. In addition, QodlyScript constant names start with a `k` letter. You might need to adapt these QodlyScript items to the 4D Language.
 
 - Normalmente, sólo tendrá que convertir los nombres. Por ejemplo, `newCollection` en QodlyScript es `New collection` en lenguaje 4D.
 - However, some commands have been renamed for a better compliance, for example `atan` and `sqrt` are QodlyScript names for `Arctan` and `Square root` commands in 4D Language.
