@@ -5,9 +5,9 @@ title: VP INSERT TABLE COLUMNS
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -23,7 +23,7 @@ title: VP INSERT TABLE COLUMNS
 | tableName   | Text    | -> | Nombre de la tabla                                             |                  |
 | column      | Integer | -> | Índice en la tabla de la columna inicial a insertar            |                  |
 | count       | Text    | -> | Número de columnas a añadir (debe ser >0)   |                  |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` _column_   |                  |
+| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` _columna_   |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
 #### Descripción
@@ -34,12 +34,12 @@ When a column has been inserted with this command, you typically modify its cont
 
 In the _insertAfter_ parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the _column_ index:
 
-| Constante                | Valor | Descripción                                                                                     |
-| ------------------------ | ----- | ----------------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert column(s) before the _column_ (default if omitted) |
-| `vk table insert after`  | 1     | Insertar columna(s) después de la _columna_                                  |
+| Constante                | Valor | Descripción                                                                                               |
+| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------- |
+| `vk table insert before` | 0     | Insertar columna(s) antes de la _columna_ (por defecto si se omite) |
+| `vk table insert after`  | 1     | Insertar columna(s) después de la _columna_                                            |
 
-This command inserts some columns in the _tableName_ table, NOT in the sheet. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
+Este comando inserta algunas columnas en _tableName_, NO en la hoja. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
 
 If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
 

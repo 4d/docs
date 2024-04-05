@@ -38,9 +38,9 @@ Una [entidad](ORDA/dsMapping.md#entity) es una instancia de una [Dataclass](ORDA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -74,9 +74,9 @@ El tipo de valor del atributo depende del tipo [kind](DataClassClass.md#attribut
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -115,9 +115,9 @@ Esta función sólo puede utilizarse con entidades ya guardadas en la base de da
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -316,9 +316,9 @@ vCompareResult3 (sólo se devuelven las diferencias en atributos tocados $e1)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -423,9 +423,9 @@ Ejemplo con la opción `dk force drop if stamp changed`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -462,9 +462,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -547,9 +547,9 @@ También puede utilizar una entidad relacionada dada como objeto:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -592,9 +592,9 @@ El siguiente código genérico duplica cualquier entidad:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -633,9 +633,9 @@ Las llaves primarias pueden ser números (enteros) o cadenas. Puede "forzar" que
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19R5   | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19R5        | Añadidos       |
 
 </details>
 
@@ -691,9 +691,9 @@ Devuelve:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -734,9 +734,9 @@ Si la entidad no pertenece a una selección de entidades, la función devuelve N
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -780,9 +780,9 @@ El sello interno se incrementa automáticamente en 4D cada vez que se guarda la 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -828,9 +828,9 @@ El valor resultante se incluye entre 0 y la longitud de la selección de entidad
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -867,9 +867,9 @@ La función `.isNew()` <!-- REF #EntityClass.isNew().Summary --> devuelve True s
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -906,9 +906,9 @@ Si la entidad no pertenece a ninguna selección de entidades existente (es decir
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -962,7 +962,7 @@ El objeto devuelto por `.lock( )` contiene las siguientes propiedades:
 |                  | user4d_id           | number                | ID del usuario en el directorio de la base de datos 4D                                                                                                               |
 |                  | host_name           | text                  | Nombre de la máquina                                                                                                                                                 |
 |                  | task_name           | text                  | Nombre del proceso                                                                                                                                                   |
-|                  | client_version      | text                  | Versión del cliente                                                                                                                                                  |
+|                  | client_version      | text                  | Release of the client                                                                                                                                                |
 |                  |                     |                       | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                               |
 |                  | host                | text                  | URL que bloqueó la entidad (por ejemplo, "www.myserver.com")                                                                                                         |
 |                  | IPAddr              | text                  | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                  |
@@ -1023,9 +1023,9 @@ Ejemplo con la opción `dk reload if stamp changed`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1067,9 +1067,9 @@ Si no hay una entidad siguiente válida en la selección de entidades (es decir,
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1108,9 +1108,9 @@ Si no hay una entidad anterior válida en la selección de entidades (es decir, 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1171,9 +1171,9 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1306,9 +1306,9 @@ Actualización de una entidad con la opción `dk auto merge`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1595,9 +1595,9 @@ Ejemplo con el tipo `relatedEntity` con una forma simple:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1640,9 +1640,9 @@ En este ejemplo, comprobamos si es necesario guardar la entidad:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -1714,9 +1714,9 @@ En este caso:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 

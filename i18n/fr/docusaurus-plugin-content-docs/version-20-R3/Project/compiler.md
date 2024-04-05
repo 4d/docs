@@ -142,9 +142,9 @@ Permet de définir le nombre de passes (analyse du code) effectuées par le comp
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 

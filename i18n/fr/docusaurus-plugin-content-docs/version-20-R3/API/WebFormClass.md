@@ -8,9 +8,9 @@ La classe `WebForm` contient des fonctions et des propriétés permettant de gé
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R2  | Ajout         |
+| 20 R2   | Ajout         |
 
 </details>
 

@@ -34,9 +34,9 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 
@@ -153,9 +153,9 @@ La función `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 
@@ -198,9 +198,9 @@ La ejecución de este método no elimina realmente ningún correo electrónico. 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 
@@ -246,10 +246,10 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                     |
-| ------- | ---------------------------------- |
-| v20     | Soporte del parámetro *headerOnly* |
-| v18 R2  | Añadidos                           |
+| Lanzamiento | Modificaciones                     |
+| ----------- | ---------------------------------- |
+| 20          | Soporte del parámetro *headerOnly* |
+| 18 R2       | Añadidos                           |
 
 </details>
 
@@ -314,9 +314,9 @@ Quiere saber el remitente del primer correo del buzón:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 
@@ -374,9 +374,9 @@ El método devuelve **Null** si:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 
@@ -438,9 +438,9 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R3       | Añadidos       |
 
 </details>
 
@@ -502,9 +502,9 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 

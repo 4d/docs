@@ -160,9 +160,9 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -235,9 +235,9 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -279,9 +279,9 @@ var $col : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -342,9 +342,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -383,9 +383,9 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -434,9 +434,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -480,10 +480,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                             |
-| ------ | ---------------------------------------------------- |
-| v18 R3 | Nova opção *ck shared*. Novos parâmetros *groupWith* |
-| v16 R6 | Adicionado                                           |
+| Release | Mudanças                                             |
+| ------- | ---------------------------------------------------- |
+| 18 R3   | Nova opção *ck shared*. Novos parâmetros *groupWith* |
+| v16 R6  | Adicionado                                           |
 
 </details>
 
@@ -607,9 +607,9 @@ Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -656,9 +656,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -738,10 +738,10 @@ O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleç
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v20    | Suporte de `ck count values` |
-| v16 R6 | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 20      | Suporte de `ck count values` |
+| v16 R6  | Adicionado                   |
 
 </details>
 
@@ -800,9 +800,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -858,10 +858,10 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -948,9 +948,9 @@ $b:=$c.every("TypeLookUp";Is real) //$b=false
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1024,9 +1024,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1082,10 +1082,10 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -1169,10 +1169,10 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -1258,10 +1258,10 @@ var $c;$c2;$c3 : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -1335,9 +1335,9 @@ var $c : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1376,9 +1376,9 @@ var $col : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1431,9 +1431,9 @@ $col.flat(MAXLONG)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1521,9 +1521,9 @@ var $c; $c2 : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1583,9 +1583,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1642,9 +1642,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1699,9 +1699,9 @@ Para uma descrição detalhada dos parâmetros *queryString* e *value*, veja a f
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1752,9 +1752,9 @@ Qualquer tipo de elemento aceito por uma coleção pode ser inserido, mesmo outr
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1798,9 +1798,9 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -1847,9 +1847,9 @@ var $col : Collection
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1904,9 +1904,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R5  | Adicionado |
 
 </details>
 
@@ -1938,10 +1938,10 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -2003,9 +2003,9 @@ var $1 : Object
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2055,9 +2055,9 @@ Se a coleção estiver vazia, `.max()` devolve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2105,9 +2105,9 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R3   | Adicionado |
 
 </details>
 
@@ -2243,9 +2243,9 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2385,10 +2385,10 @@ Ordenar com uma rota de propriedade:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -2484,9 +2484,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2534,9 +2534,9 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2594,10 +2594,10 @@ Você deseja ordenar a coleção resultante:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v17 R5 | Assistência de querySettings |
-| v16 R6 | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 17 R5   | Assistência de querySettings |
+| v16 R6  | Adicionado                   |
 
 </details>
 
@@ -2702,10 +2702,10 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -2795,9 +2795,9 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -2886,9 +2886,9 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2948,9 +2948,9 @@ Se tentar remover um elemento de uma coleção vazia, o método não faz nada (n
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3009,9 +3009,9 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3053,9 +3053,9 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->devolve uma c�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3101,9 +3101,9 @@ Se a colecção estiver vazia, este método não faz nada.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3154,10 +3154,10 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -3240,10 +3240,10 @@ Quer saber se pelo menos um valor de colecção é >0.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v19 R6 | Compatibilidade de fórmula |
-| v16 R6 | Adicionado                 |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 19 R6   | Compatibilidade de fórmula |
+| v16 R6  | Adicionado                 |
 
 </details>
 
@@ -3332,9 +3332,9 @@ $strings2:=$strings1.orderByMethod("sortCollection";sk strict)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -3396,9 +3396,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 

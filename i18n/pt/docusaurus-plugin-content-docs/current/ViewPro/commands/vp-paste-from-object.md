@@ -5,9 +5,9 @@ title: VP PASTE FROM OBJECT
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 
 </details>
 

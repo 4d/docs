@@ -44,9 +44,9 @@ ASSERT($status.success)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->
@@ -82,9 +82,9 @@ O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um obje
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -98,9 +98,9 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nom
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->
@@ -146,9 +146,9 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->
@@ -186,9 +186,9 @@ O valor devolvido é uma mensagem encriptada.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
@@ -214,9 +214,9 @@ O valor devolvido é a chave privada.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
@@ -243,9 +243,9 @@ O valor devolvido é a chave pública.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.pem.Syntax -->
@@ -260,9 +260,9 @@ Definição PEM de uma chave de cifrado a carregar. Se a chave for uma chave pri
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
@@ -301,9 +301,9 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representaç
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -317,9 +317,9 @@ Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->o tamanho d
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
@@ -339,9 +339,9 @@ Contém <!-- REF #CryptoKey.type.Summary -->nome do tipo da chave - "RSA", "ECDS
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R4   | Adicionado |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->

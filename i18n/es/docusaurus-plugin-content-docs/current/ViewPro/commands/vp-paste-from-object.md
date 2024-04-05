@@ -5,9 +5,9 @@ title: VP PASTE FROM OBJECT
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 
 </details>
 
@@ -48,7 +48,7 @@ If _options_ refers to a paste option not present in the copied object (e.g. for
 
 #### Ejemplo
 
-See example the example from [VP Copy to object](vp-copy-to-object.md)
+Ver el ejemplo de [VP Copy to object](vp-copy-to-object.md)
 
 #### Ver también
 

@@ -5,9 +5,9 @@ title: VP SET TABLE THEME
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 
 </details>
 
@@ -21,7 +21,7 @@ title: VP SET TABLE THEME
 | ---------- | ------------------------------------------------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text                                              | -> | Nome de objeto formulário área 4D View Pro |                  |
 | tableName  | Text                                              | -> | Nome da tabela                             |                  |
-| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Table theme properties to modify           | <!-- END REF --> |
+| options    | [cs.ViewPro.TableTheme](../classes.md#tabletheme) | -> | Propriedades do tema da tabela a modificar | <!-- END REF --> |
 
 #### Descrição
 

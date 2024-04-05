@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "v20 R4 BETA",
+    "message": "20 R4 BETA",
     "description": "The label for version 20-R4"
   },
   "sidebar.docs.category.Getting Started": {
@@ -312,7 +312,7 @@
     "description": "The generated-index page title for category Qodly Studio in sidebar docs"
   },
   "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
-    "message": "Using Qodly Studio to build powerful web interfaces.",
+    "message": "Uso de Qodly Studio para crear poderosas interfaces web.",
     "description": "The generated-index page description for category Qodly Studio in sidebar docs"
   }
 }

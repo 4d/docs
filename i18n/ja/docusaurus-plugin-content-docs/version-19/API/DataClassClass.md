@@ -25,9 +25,9 @@ title: DataClass
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -118,10 +118,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                     |
-| ------ | ---------------------- |
-| v17 R5 | *settings* パラメーターをサポート |
-| v17    | 追加                     |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 17 R5 | *settings* パラメーターをサポート |
+| 17    | 追加                     |
 
 </details>
 
@@ -168,10 +168,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                     |
-| ------ | ---------------------- |
-| v17 R5 | *settings* パラメーターをサポート |
-| v17    | 追加                     |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 17 R5 | *settings* パラメーターをサポート |
+| 17    | 追加                     |
 
 </details>
 
@@ -365,9 +365,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -441,9 +441,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -494,9 +494,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -569,9 +569,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -611,9 +611,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -653,11 +653,11 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                  |
-| ------ | ------------------- |
-| v17 R6 | Formula パラメーターをサポート |
-| v17 R5 | 値のプレースホルダーをサポート     |
-| v17    | 追加                  |
+| リリース  | 内容                  |
+| ----- | ------------------- |
+| 17 R6 | Formula パラメーターをサポート |
+| 17 R5 | 値のプレースホルダーをサポート     |
+| 17    | 追加                  |
 
 </details>
 

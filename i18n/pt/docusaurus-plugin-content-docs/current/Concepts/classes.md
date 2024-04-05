@@ -233,7 +233,7 @@ No código da aplicação, as funções de classe são chamadas como métodos me
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-:::warning Thread-safety warning
+:::warning Aviso de segurança de thread
 
 If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
  - o compilador não gera qualquer erro (o que é diferente dos métodos normais),

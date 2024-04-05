@@ -97,7 +97,7 @@ Since 4D View Pro is a built-in 4D component, you can access its list of command
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list, see [Commands](commands.md).
+Para obtener una lista detallada, consulte [Comandos](commands.md).
 
 ### Abordando un área 4D View Pro
 
@@ -120,7 +120,7 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Utilización de objetos de rango
 
-Some 4D View Pro commands require a *rangeObj* parameter. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
+Algunos comandos 4D View Pro requieren un parámetro *rangeObj*. En 4D View Pro, un rango es un objeto que hace referencia a un área en una hoja de cálculo. Esta área puede estar compuesta de una o varias celdas. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
 
 Por ejemplo, para crear un objeto rango para las siguientes celdas:
 

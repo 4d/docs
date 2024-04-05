@@ -364,9 +364,9 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 18      | 追加 |
 
 </details>
 
@@ -448,10 +448,10 @@ $status:=$transporter.send($email)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
-| v17 R5 | 変更 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R4   | 追加 |
+| 17 R5   | 変更 |
 
 </details>
 

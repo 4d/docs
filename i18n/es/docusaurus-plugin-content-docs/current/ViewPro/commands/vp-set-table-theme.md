@@ -5,9 +5,9 @@ title: VP SET TABLE THEME
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 
 </details>
 

@@ -5,9 +5,9 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容              |
-| ------ | --------------- |
-| v20 R2 | .sjsドキュメントをサポート |
+| リリース  | 内容              |
+| ----- | --------------- |
+| 20 R2 | .sjsドキュメントをサポート |
 
 </details>
 

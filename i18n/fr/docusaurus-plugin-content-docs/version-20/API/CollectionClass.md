@@ -161,7 +161,7 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -238,9 +238,9 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -286,7 +286,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -352,7 +352,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -395,7 +395,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -448,7 +448,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -496,9 +496,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                |
+| Release | Modifications                                                |
 | ------- | ------------------------------------------------------------ |
-| v18 R3  | Nouvelle option *ck shared*. Nouveaux paramètres *groupWith* |
+| 18 R3   | Nouvelle option *ck shared*. Nouveaux paramètres *groupWith* |
 | v16 R6  | Ajout                                                        |
 
 </details>
@@ -630,7 +630,7 @@ Cet exemple illustre l'utilisation de l'option `ck resolve pointers` :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -681,7 +681,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -765,9 +765,9 @@ Le paramètre optionnel *propertyPath* vous permet de compter des valeurs à l'i
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                        |
+| Release | Modifications                        |
 | ------- | ------------------------------------ |
-| v20     | Prise en charge de `ck count values` |
+| 20      | Prise en charge de `ck count values` |
 | v16 R6  | Ajout                                |
 
 </details>
@@ -830,7 +830,7 @@ Dans le paramètre *options*, vous pouvez passer une ou une combinaison des cons
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -890,9 +890,9 @@ Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez q
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -988,7 +988,7 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1066,7 +1066,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1126,9 +1126,9 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -1216,9 +1216,9 @@ Vous voulez filtrer les éléments de la collection en fonction de leur type :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -1308,9 +1308,9 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -1387,9 +1387,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -1435,9 +1435,9 @@ $first:=$emptyCol.first() // retourne Undefined
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -1492,9 +1492,9 @@ $col.flat(MAXLONG)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -1586,9 +1586,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -1653,7 +1653,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1714,7 +1714,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1773,7 +1773,7 @@ Pour une description détaillée de la construction de recherches à l'aide des 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1828,7 +1828,7 @@ Vous pouvez passer tout type d'élément accepté par les collections, y compris
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1876,9 +1876,9 @@ Par défaut, les éléments null ou vides de la collection sont inclus dans la c
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -1927,7 +1927,7 @@ $last:=$emptyCol.last() // retourne Undefined
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -1990,7 +1990,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R5  | Ajout         |
 
@@ -2026,9 +2026,9 @@ La propriété `.length` est initialisée à la création de la collection. Elle
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -2094,7 +2094,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2148,7 +2148,7 @@ Si la collection est vide, `.max()` retourne *Undefined*.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2202,7 +2202,7 @@ Si la collection est vide, `.min()` retourne *Undefined*.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2346,9 +2346,9 @@ Tri avec un chemin de propriété :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -2456,7 +2456,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2508,7 +2508,7 @@ Lorsqu'elle est appliquée à une collection vide, .`pop()` retourne ***undefine
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2570,9 +2570,9 @@ Vous souhaitez trier la collection obtenue :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                    |
+| Release | Modifications                    |
 | ------- | -------------------------------- |
-| v17 R5  | Prise en charge de querySettings |
+| 17 R5   | Prise en charge de querySettings |
 | v16 R6  | Ajout                            |
 
 </details>
@@ -2680,9 +2680,9 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -2774,9 +2774,9 @@ Avec la méthode ***Flatten*** suivante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -2870,7 +2870,7 @@ Avec la méthode ***Flatten*** suivante :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2934,7 +2934,7 @@ Si vous essayez de supprimer un élément d'une collection vide, la méthode ne 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -2997,7 +2997,7 @@ Par défaut, les nouveaux éléments sont remplis par des valeurs **null**. Vous
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -3040,7 +3040,7 @@ La fonction `.reverse()` <!-- REF #collection.reverse().Summary -->retourne une 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -3090,7 +3090,7 @@ Si la collection est vide, cette méthode ne fait rien.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -3145,9 +3145,9 @@ La collection retournée contient l'élément spécifié par *startFrom* et tous
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -3232,9 +3232,9 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R6  | Prise en charge des formules |
+| 19 R6   | Prise en charge des formules |
 | v16 R6  | Ajout                        |
 
 </details>
@@ -3321,7 +3321,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //tri alphabétiqu
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 
@@ -3387,7 +3387,7 @@ Si la collection contient des objets, passez le paramètre *propertyPath* si vou
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 | v16 R6  | Ajout         |
 

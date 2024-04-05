@@ -408,9 +408,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
@@ -675,9 +675,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda el área
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 
 </details>
 
@@ -737,11 +737,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones                                                                                                 |
-| ------- | -------------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Soporte de opciones de tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Soporte de la opción `allowAutoExpand`                                                                         |
-| v19 R6  | Añadidos                                                                                                       |
+| Lanzamiento | Modificaciones                                                                                                 |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| 19 R8       | Soporte de opciones de tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7       | Soporte de la opción `allowAutoExpand`                                                                         |
+| 19 R6       | Añadidos                                                                                                       |
 
 </details>
 
@@ -926,9 +926,9 @@ utilice el siguiente código:
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones             |
-| ------- | -------------------------- |
-| v20 R2  | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R2       | Soporte de documentos .sjs |
 
 </details>
 
@@ -1067,7 +1067,7 @@ Método _**AfterExport**_:
 
 #### Ejemplo 4
 
-You want to export the current sheet to a `.txt` file with pipe-separated values:
+Quiere exportar la hoja actual a un archivo `.txt` con valores separados por "|":
 
 ![example-export-csv](../assets/en/ViewPro/vp-export-document-csv.png)
 
@@ -1300,9 +1300,9 @@ End if
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -1470,9 +1470,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1692,9 +1692,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -2481,7 +2481,7 @@ El código siguiente:
 $style:=VP Get stylesheet("ViewProArea";"GreenDashDotStyle")
 ```
 
-... will return the _GreenDashDotStyle_ style object from the current sheet:
+... devolverá el objeto estilo _GreenDashDotStyle_ de la hoja actual:
 
 ```4d
 {
@@ -2558,9 +2558,9 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -2588,7 +2588,7 @@ En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 > La indexación comienza en 0.
 
-The command returns an object describing the current attributes of the _column_:
+El comando devuelve un objeto que describe los atributos actuales de la _column_:
 
 | Propiedad           | Tipo    | Descripción                                                                                                                     |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -2618,9 +2618,9 @@ End if
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -2670,9 +2670,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 
 </details>
 
@@ -2732,9 +2732,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -2744,13 +2744,13 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                                                 |                  |
-| ---------- | ------- | -- | --------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                                |                  |
-| tableName  | Text    | -> | Nombre de la tabla                                                          |                  |
-| onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |                  |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)              |                  |
-| Result     | Object  | <- | Rango que contiene la tabla                                                 | <!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                                                    |                  |
+| ---------- | ------- | -- | ------------------------------------------------------------------------------ | ---------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                                   |                  |
+| tableName  | Text    | -> | Nombre de la tabla                                                             |                  |
+| onlyData   | Integer | -> | `vk table full range` (por defecto) o `vk table data range` |                  |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                 |                  |
+| Result     | Object  | <- | Rango que contiene la tabla                                                    | <!-- END REF --> |
 
 #### Descripción
 
@@ -2780,9 +2780,9 @@ Si no se encuentra _tableName_, el comando devuelve **null**.
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 
 </details>
 
@@ -2828,9 +2828,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -2938,7 +2938,7 @@ The `VP Get values` command <!-- REF #_method_.VP Get values.Summary --> retriev
 
 En _rangeObj_, pase un rango cuyos valores desea recuperar. If _rangeObj_ includes multiple ranges, only the first range is used.
 
-The collection returned by `VP Get values` contains a two-dimensional collection:
+La colección devuelta por `VP Get values` contiene una colección bidimensional:
 
 - Cada elemento de la colección de primer nivel representa una línea y contiene una subcolección de valores
 - Cada subcolección contiene los valores de las celdas de la línea. Los valores pueden ser Integer, Real, Boolean, Text, Null. Si un valor es de tipo fecha u hora, se devuelve en un objeto con las siguientes propiedades:
@@ -3012,9 +3012,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones             |
-| ------- | -------------------------- |
-| v20 R2  | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R2       | Soporte de documentos .sjs |
 
 </details>
 
@@ -3123,7 +3123,7 @@ $params.range:=VP Cells("ViewProArea";0;0;2;5)
 VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOptions";$params))
 ```
 
-Here's the result:
+Aquí está el resultado:
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Ver también
@@ -3206,9 +3206,9 @@ The `VP IMPORT FROM OBJECT` command <!-- REF #_method_.VP IMPORT FROM OBJECT.Sum
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-En _viewPro_, pase un objeto 4D View Pro válido. This object can have been created using [VP Export to object](#vp-export-to-object) or manually. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
+En _viewPro_, pase un objeto 4D View Pro válido. Este objeto puede haber sido creado utilizando [VP Export to object](#vp-export-to-object) o manualmente. For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) section.
 
-An error is returned if the _viewPro_ object is invalid.
+Se devuelve un error si el objeto _viewPro_ no es válido.
 
 #### Ejemplo
 
@@ -3299,9 +3299,9 @@ El resultado es:
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -3317,7 +3317,7 @@ El resultado es:
 | tableName   | Text    | -> | Nombre de la tabla                                             |                  |
 | column      | Integer | -> | Índice en la tabla de la columna inicial a insertar            |                  |
 | count       | Text    | -> | Número de columnas a añadir (debe ser >0)   |                  |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` _column_   |                  |
+| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` _columna_   |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
 #### Descripción
@@ -3328,12 +3328,12 @@ When a column has been inserted with this command, you typically modify its cont
 
 In the _insertAfter_ parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the _column_ index:
 
-| Constante                | Valor | Descripción                                                                                     |
-| ------------------------ | ----- | ----------------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert column(s) before the _column_ (default if omitted) |
-| `vk table insert after`  | 1     | Insertar columna(s) después de la _columna_                                  |
+| Constante                | Valor | Descripción                                                                                               |
+| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------- |
+| `vk table insert before` | 0     | Insertar columna(s) antes de la _columna_ (por defecto si se omite) |
+| `vk table insert after`  | 1     | Insertar columna(s) después de la _columna_                                            |
 
-This command inserts some columns in the _tableName_ table, NOT in the sheet. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
+Este comando inserta algunas columnas en _tableName_, NO en la hoja. El número total de columnas de la hoja no se ve afectado por el comando. Los datos presentes a la derecha de la tabla (si los hay) se desplazan automáticamente hacia la derecha según el número de columnas añadidas.
 
 If _tableName_ does not exist or if there is not enough space in the sheet, nothing happens.
 
@@ -3349,9 +3349,9 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -3367,7 +3367,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | tableName   | Text    | -> | Nombre de la tabla                                             |                  |
 | row         | Integer | -> | Índice en la tabla de la línea inicial a insertar              |                  |
 | count       | Text    | -> | Número de líneas a añadir (debe ser >0)     |                  |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` _row_      |                  |
+| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` _fila_      |                  |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite) | <!-- END REF --> |
 
 #### Descripción
@@ -3376,12 +3376,12 @@ The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summa
 
 In the _insertAfter_ parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the _row_ index:
 
-| Constante                | Valor | Descripción                                                                               |
-| ------------------------ | ----- | ----------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0     | Insert row(s) before the _row_ (default if omitted) |
-| `vk table insert after`  | 1     | Insertar línea(s) después de la _línea_                                |
+| Constante                | Valor | Descripción                                                                                         |
+| ------------------------ | ----- | --------------------------------------------------------------------------------------------------- |
+| `vk table insert before` | 0     | Insertar fila(s) antes de la _fila_ (por defecto si se omite) |
+| `vk table insert after`  | 1     | Insertar línea(s) después de la _línea_                                          |
 
-This command inserts some rows in the _tableName_ table, NOT in the sheet. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia abajo según el número de líneas añadidas.
+Este comando inserta algunas líneas en la tabla _tableName_, NO en la hoja. El número total de líneas de la hoja no se ve afectado por el comando. Los datos presentes debajo de la tabla (si los hay) se desplazan automáticamente hacia abajo según el número de líneas añadidas.
 
 If the _tableName_ table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
 
@@ -3426,9 +3426,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 
 </details>
 
@@ -3591,7 +3591,7 @@ En _fontObj_, pase un objeto que contenga las propiedades de la fuente. Se sopor
 | variant   | text | Especifica el tipo de letra en minúsculas.                                                                          | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                                                                        | No          |
 | weight    | text | Define el grosor de la fuente.                                                                                      | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                                         | No          |
 
-This object can be created with the [VP Font to object](#vp-font-to-object) command.
+Este objeto puede crearse con el comando [VP Font to object](#vp-font-to-object).
 
 The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](#vp-set-cell-style), for example.
 
@@ -3619,9 +3619,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 
 </details>
 
@@ -3662,7 +3662,7 @@ If _options_ refers to a paste option not present in the copied object (e.g. for
 
 #### Ejemplo
 
-See example the example from [VP Copy to object](#vp-copy-to-object)
+Ver el ejemplo de [VP Copy to object](#vp-copy-to-object)
 
 #### Ver también
 
@@ -3685,7 +3685,7 @@ See example the example from [VP Copy to object](#vp-copy-to-object)
 
 The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog window to print _vpAreaName_<!-- END REF -->.
 
-Pass the 4D View Pro area to be printed in _vpAreaName_. El comando abrirá la ventana de diálogo de impresión del sistema donde se puede definir la impresora y las propiedades de la página.
+Pase el área 4D View Pro a imprimir en _vpAreaName_. El comando abrirá la ventana de diálogo de impresión del sistema donde se puede definir la impresora y las propiedades de la página.
 
 > Las propiedades definidas en la ventana de diálogo de impresión son para el papel de la impresora, no son las propiedades de impresión para el área 4D View Pro. Printing properties for 4D View Pro areas are defined using the [VP SET PRINT INFO](#vp-set-print-info) command. Se recomienda encarecidamente que las propiedades de la impresora y del área 4D View Pro coincidan, de lo contrario el documento impreso podría no corresponder a sus expectativas.
 
@@ -3695,7 +3695,7 @@ In the optional _sheet_ parameter, you can designate a specific spreadsheet to p
 - `vk workbook`
 
 > * 4D View Pro areas can only be printed with the `VP PRINT` command.
-> * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
+> * Los comandos del tema de lenguaje 4D **Impresión** no son compatibles con `VP PRINT`.
 > * Este comando está destinado a la impresión individual por parte del usuario final. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
 
 #### Ejemplo
@@ -3768,7 +3768,7 @@ The `VP REMOVE NAME` command <!-- REF #_method_.VP REMOVE NAME.Summary -->remove
 
 En _vpAreaName_, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-Pass the named range or named formula that you want to remove in _name_.
+Pase el rango con nombre o la fórmula con nombre que desea eliminar en _name_.
 
 You can define where to remove the name in _scope_ using either the sheet index (counting begins at 0) or the following constants:
 
@@ -3813,7 +3813,7 @@ The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->remo
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In _index_, pass the index of the sheet to remove. Si el _index_ pasado no existe, el comando no hace nada.
+En _index_, pase el índice de la hoja que desea eliminar. Si el _index_ pasado no existe, el comando no hace nada.
 
 > La indexación comienza en 0.
 
@@ -3915,9 +3915,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Añadidos       |
 
 </details>
 
@@ -3938,11 +3938,11 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](#vp-create-table).
 
-In _vpAreaName_, pass the name of the area where the table to remove is located.
+En _vpAreaName_, pase el nombre del área donde se encuentra la tabla a eliminar.
 
 En _tableName_, pase el nombre de la tabla a eliminar.
 
-In _options_, you can specify additional behavior. Los valores posibles son:
+En _options_, puede especificar comportamientos adicionales. Los valores posibles son:
 
 | Constante               | Valor | Descripción                                  |
 | ----------------------- | ----- | -------------------------------------------- |
@@ -3968,9 +3968,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -3992,7 +3992,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or _count_ column(s) in the specified _tableName_ at the specified _column_ index<!-- END REF -->. El comando elimina valores y estilos.
 
-The command removes columns from the _tableName_ table, NOT from the sheet. El número total de columnas de la hoja no se ve afectado por el comando. Los datos a la derecha de la tabla (si los hay) se desplazan automáticamente a la izquierda según el número de columnas eliminadas.
+El comando elimina las columnas de la tabla _tableName_, NO de la hoja. El número total de columnas de la hoja no se ve afectado por el comando. Los datos a la derecha de la tabla (si los hay) se desplazan automáticamente a la izquierda según el número de columnas eliminadas.
 
 Si _tableName_ no existe, no pasa nada.
 
@@ -4012,9 +4012,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -4095,9 +4095,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -4417,9 +4417,9 @@ $result:=VP Run offscreen area($o)
 
 #### Descripción
 
-The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->defines a specified cell as active<!-- END REF -->.
+El comando `VP SET ACTIVE CELL` <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->define una célula especificada como activa<!-- END REF -->.
 
-In _rangeObj_, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). Si _rangeObj_ no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
+En _rangeObj_, pase un rango que contenga una única celda como objeto (ver [VP Cell](#vp-cell)). Si _rangeObj_ no es un rango de celdas o contiene varios rangos, se utiliza la primera celda del primer rango.
 
 #### Ejemplo
 
@@ -4510,9 +4510,9 @@ Una vez ejecutado este código, las funciones definidas pueden utilizarse en las
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -4938,9 +4938,9 @@ End case
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -5903,9 +5903,9 @@ Con un salto de página:
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -6004,9 +6004,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 
 </details>
 

@@ -40,7 +40,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 #### Ver también
 
-[4D View Pro cell format](../configuring.md#cell-format)<br/>
+[Formato de celdas 4D View Pro](../configuring.md#cell-format)<br/>
 [VP SET DATE VALUE](vp-set-date-value.md)<br/>
 [VP SET TIME VALUE](vp-set-time-value.md)<br/>
 [VP SET VALUE](vp-set-value.md)

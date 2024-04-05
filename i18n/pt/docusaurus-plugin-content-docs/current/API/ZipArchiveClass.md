@@ -37,10 +37,10 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                                       |
-| ------ | ------------------------------------------------------------------------------ |
-| v19 R3 | Adição das propriedades `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
-| v18    | Adicionado                                                                     |
+| Release | Mudanças                                                                       |
+| ------- | ------------------------------------------------------------------------------ |
+| 19 R3   | Adição das propriedades `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
+| 18      | Adicionado                                                                     |
 
 </details>
 
@@ -192,9 +192,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 

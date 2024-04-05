@@ -60,10 +60,10 @@ Leurs propriétés et fonctions sont les suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                             |
+| Release | Modifications                             |
 | ------- | ----------------------------------------- |
-| v18 R3  | Ajout                                     |
-| v19     | prise en charge de .sessionCookieSameSite |
+| 18 R3   | Ajout                                     |
+| 19      | prise en charge de .sessionCookieSameSite |
 
 </details>
 
@@ -108,9 +108,9 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajout         |
+| 18 R3   | Ajout         |
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
@@ -639,9 +639,9 @@ Le <!-- REF #WebServerClass.sessionCookiePath.Summary -->Champ "path" du cookie 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 
 </details>
 
@@ -679,9 +679,9 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validation d'a
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajout         |
+| 18 R3   | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
@@ -741,9 +741,9 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R3  | Ajout         |
+| 18 R3   | Ajout         |
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->

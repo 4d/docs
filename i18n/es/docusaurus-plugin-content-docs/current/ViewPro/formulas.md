@@ -232,7 +232,7 @@ For more information on supported incoming parameter types, please refer to the 
 
 Si no se declaran los parámetros, los valores pueden pasarse secuencialmente a los métodos (se recibirán en $1, $2...) y su tipo se convertirá automáticamente.
 
-Date and Object parameters are handled in the following way:
+Los parámetros Fecha y Objeto se tratan de la siguiente manera:
 
 * Las fechas en *jstype* se pasarán como [objeto](Concepts/dt_object.md) en código 4D con dos propiedades:
 
@@ -247,7 +247,7 @@ Date and Object parameters are handled in the following way:
 | --------- | ------ | ---------------- |
 | value     | Object | Object parameter |
 
-### Returned values
+### Valores devueltos
 
 Los métodos proyecto 4D también pueden devolver valores en la fórmula de la celda 4D View Pro a través de $0. Los siguientes tipos de datos son soportados para los parámetros devueltos:
 

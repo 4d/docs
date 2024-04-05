@@ -90,17 +90,17 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 |         |                                               | ss           | 05                   |
 | X       | Time Zone: ISO8601 basic hm?, with Z for 0    | X            | -08, +0530, Z        |
 |         | Zona horaria: ISO8601 hm básico, con Z        | XX           | -0800, Z             |
-|         | Time Zone: ISO8601 extended hm, with Z        | XXX          | -08:00, Z            |
-|         | Time Zone: ISO8601 basic hms?, with Z         | XXXX         | -0800, -075258, Z    |
-|         | Time Zone: ISO8601 extended hms?, with Z      | XXXXX        | -08:00, -07:52:58, Z |
+|         | Zona horaria: ISO8601 extendido hm, con Z     | XXX          | -08:00, Z            |
+|         | Zona horaria: ISO8601 hms básico, con Z       | XXXX         | -0800, -075258, Z    |
+|         | Zona horaria: ISO8601 hms extendido, con Z    | XXXXX        | -08:00, -07:52:58, Z |
 | x       | Time Zone: ISO8601 basic hm?, without Z for 0 | x            | -08, +0530           |
-|         | Time Zone: ISO8601 basic hm, without Z        | xx           | -0800, +0000         |
-|         | Time Zone: ISO8601 extended hm, without Z     | xxx          | -08:00               |
-|         | Time Zone: ISO8601 basic hms?, without Z      | xxxx         | -0800, -075258       |
+|         | Zona horaria: ISO8601 hm básico, sin Z        | xx           | -0800, +0000         |
+|         | Zona horaria: ISO8601 hm extendido, sin Z     | xxx          | -08:00               |
+|         | Zona horaria: ISO8601 hms básico, sin Z       | xxxx         | -0800, -075258       |
 |         | Time Zone: ISO8601 extended hms?, without Z   | xxxxx        | -08:00, -07:52:58    |
 | O       | Time Zone: short localized GMT                | O            | GMT-8                |
 |         | Time Zone: long localized GMT (=ZZZZ)         | OOOO         | GMT-08:00            |
-| z       | Time Zone: specific non-location              | z, zz, o zzz | -0800                |
+| z       | Zona horaria: no específica                   | z, zz, o zzz | -0800                |
 |         |                                               | zzzz         | GMT-08:00            |
 |         |                                               | zzzzz        | -08:00, -07:52:58, Z |
 |         |                                               |              |                      |

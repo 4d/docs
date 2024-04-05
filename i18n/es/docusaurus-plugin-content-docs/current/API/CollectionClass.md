@@ -160,9 +160,9 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -235,9 +235,9 @@ Esta función modifica la colección original.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -281,9 +281,9 @@ $element:=$col.at(10) // indefinido
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -344,9 +344,9 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -385,9 +385,9 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -436,9 +436,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -482,10 +482,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                          |
-| ------- | ------------------------------------------------------- |
-| v18 R3  | Nueva opción *ck shared*. Nuevos parámetros *groupWith* |
-| v16 R6  | Añadidos                                                |
+| Lanzamiento | Modificaciones                                          |
+| ----------- | ------------------------------------------------------- |
+| 18 R3       | Nueva opción *ck shared*. Nuevos parámetros *groupWith* |
+| v16 R6      | Añadidos                                                |
 
 </details>
 
@@ -619,9 +619,9 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -668,9 +668,9 @@ Si la colección contiene objetos, se puede pasar el parámetro *propertyPath*. 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -750,10 +750,10 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones               |
-| ------- | ---------------------------- |
-| v20     | Soporte de `ck count values` |
-| v16 R6  | Añadidos                     |
+| Lanzamiento | Modificaciones               |
+| ----------- | ---------------------------- |
+| 20          | Soporte de `ck count values` |
+| v16 R6      | Añadidos                     |
 
 </details>
 
@@ -813,9 +813,9 @@ En el parámetro *options*, puede pasar una o una combinación de las siguientes
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -871,10 +871,10 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -967,9 +967,9 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1043,9 +1043,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1101,10 +1101,10 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -1189,10 +1189,10 @@ Quiere filtrar los elementos según su tipo de valor:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -1279,10 +1279,10 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -1356,9 +1356,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1402,9 +1402,9 @@ $first:=$emptyCol.first() // devuelve Undefined
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1457,9 +1457,9 @@ $col.flat(MAXLONG)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1550,9 +1550,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1615,9 +1615,9 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1674,9 +1674,9 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1731,9 +1731,9 @@ Para una descripción detallada de los parámetros *queryString* y *value*, cons
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1784,9 +1784,9 @@ Se puede insertar cualquier tipo de elemento aceptado por una colección, inclus
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1830,9 +1830,9 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1879,9 +1879,9 @@ $last:=$emptyCol.last() // devuelve Indefinido
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -1940,9 +1940,9 @@ Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R5      | Añadidos       |
 
 </details>
 
@@ -1976,10 +1976,10 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -2042,9 +2042,9 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2094,9 +2094,9 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2144,9 +2144,9 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R3       | Añadidos       |
 
 </details>
 
@@ -2282,9 +2282,9 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2425,10 +2425,10 @@ Ordenar con una ruta de propiedad:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -2533,9 +2533,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2583,9 +2583,9 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -2643,10 +2643,10 @@ Desea ordenar la colección resultante:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones           |
-| ------- | ------------------------ |
-| v17 R5  | Soporte de querySettings |
-| v16 R6  | Añadidos                 |
+| Lanzamiento | Modificaciones           |
+| ----------- | ------------------------ |
+| 17 R5       | Soporte de querySettings |
+| v16 R6      | Añadidos                 |
 
 </details>
 
@@ -2755,10 +2755,10 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -2847,9 +2847,9 @@ Con el siguiente método ***Flatten***:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -2940,9 +2940,9 @@ Con el siguiente método ***Flatten***:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3002,9 +3002,9 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3063,9 +3063,9 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3105,9 +3105,9 @@ La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3153,9 +3153,9 @@ Si la colección está vacía, este método no hace nada.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3206,10 +3206,10 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -3292,10 +3292,10 @@ Quiere saber si al menos un valor de la colección es >0.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v19 R6  | Soporte de fórmula |
-| v16 R6  | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 19 R6       | Soporte de fórmula |
+| v16 R6      | Añadidos           |
 
 </details>
 
@@ -3378,9 +3378,9 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //orden alfabétic
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 
@@ -3442,9 +3442,9 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v16 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| v16 R6      | Añadidos       |
 
 </details>
 

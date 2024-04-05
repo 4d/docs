@@ -19,7 +19,7 @@ The `VP INSERT ROWS` command <!-- REF #_method_.VP INSERT ROWS.Summary -->insert
 
 In _rangeObj_, pass an object containing a range of the starting row (the row which designates where the new row will be inserted) and the number of rows to insert. Si se omite el número de línea a insertar (no se define), se inserta una sola línea.
 
-New rows are inserted directly before the first row in the _rangeObj_.
+Las nuevas líneas se insertan directamente antes de la primera línea de _rangeObj_.
 
 #### Ejemplo
 

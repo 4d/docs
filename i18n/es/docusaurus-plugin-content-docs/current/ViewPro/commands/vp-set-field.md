@@ -23,7 +23,7 @@ En _rangeObj_, pase un rango de la(s) celda(s) cuyo valor desea indicar. En _ran
 
 The _field_ parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the _rangeObj_. El nombre de la estructura virtual para el _field_ se puede ver en la barra de fórmulas. Si alguna de las celdas de _rangeObj_ tiene contenido, se sustituirá por _field_.
 
-El parámetro opcional _formatPattern_ define un modelo para el parámetro _field_. You can pass any valid [custom format](../configuring.md#cell-format).
+El parámetro opcional _formatPattern_ define un modelo para el parámetro _field_. Puede pasar cualquier [formato personalizado] válido(../configuring.md#cell-format).
 
 #### Ejemplo
 

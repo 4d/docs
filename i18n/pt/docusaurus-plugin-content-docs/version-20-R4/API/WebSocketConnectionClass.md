@@ -13,9 +13,9 @@ Para uma visão geral e alguns exemplos da implementação do servidor WebSocket
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 

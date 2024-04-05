@@ -29,10 +29,10 @@ title: DataClass
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容             |
-| ------ | -------------- |
-| v19 R3 | .exposed 属性を追加 |
-| v17    | 追加             |
+| Release | 内容             |
+| ------- | -------------- |
+| 19 R3   | .exposed 属性を追加 |
+| 17      | 追加             |
 
 </details>
 
@@ -127,10 +127,10 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                     |
-| ------ | ---------------------- |
-| v17 R5 | *settings* パラメーターをサポート |
-| v17    | 追加                     |
+| Release | 内容                     |
+| ------- | ---------------------- |
+| 17 R5   | *settings* パラメーターをサポート |
+| 17      | 追加                     |
 
 </details>
 
@@ -176,9 +176,9 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R5   | 追加 |
 
 </details>
 
@@ -228,10 +228,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                     |
-| ------ | ---------------------- |
-| v17 R5 | *settings* パラメーターをサポート |
-| v17    | 追加                     |
+| Release | 内容                     |
+| ------- | ---------------------- |
+| 17 R5   | *settings* パラメーターをサポート |
+| 17      | 追加                     |
 
 </details>
 
@@ -426,9 +426,9 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -501,9 +501,9 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R5   | 追加 |
 
 </details>
 
@@ -540,9 +540,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 
 </details>
 
@@ -592,10 +592,10 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容               |
-| ------ | ---------------- |
-| v19 R3 | exposed プロパティを追加 |
-| v17 R5 | 追加               |
+| Release | 内容               |
+| ------- | ---------------- |
+| 19 R3   | exposed プロパティを追加 |
+| 17 R5   | 追加               |
 
 </details>
 
@@ -665,9 +665,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R5   | 追加 |
 
 </details>
 
@@ -755,9 +755,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -800,9 +800,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -841,11 +841,11 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                  |
-| ------ | ------------------- |
-| v17 R6 | Formula パラメーターをサポート |
-| v17 R5 | 値のプレースホルダーをサポート     |
-| v17    | 追加                  |
+| Release | 内容                  |
+| ------- | ------------------- |
+| 17 R6   | Formula パラメーターをサポート |
+| 17 R5   | 値のプレースホルダーをサポート     |
+| 17      | 追加                  |
 
 </details>
 
@@ -1505,9 +1505,9 @@ softwares:{
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R5   | 追加 |
 
 </details>
 

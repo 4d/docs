@@ -5,9 +5,9 @@ title: VP IMPORT DOCUMENT
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones             |
-| ------- | -------------------------- |
-| v20 R2  | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R2       | Soporte de documentos .sjs |
 
 </details>
 
@@ -44,7 +44,7 @@ The optional _paramObj_ parameter allows you to define properties for the import
 
 | Parámetros |                     | Tipo        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | ---------- | ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula    |                     | 4D.Function | Un método de retollamada que se lanzará cuando la importación haya terminado. You must use a formula returned by the [`Formula`](../../API/FunctionClass.md#formula) command. See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula).                                                                                                                                                          |
+| formula    |                     | 4D.Function | Un método de retollamada que se lanzará cuando la importación haya terminado. Debe utilizar una fórmula devuelta por el comando [`Formula`](../../API/FunctionClass.md#formula). See [Passing a callback method (formula)](vp-export-document.md#passing-a-callback-method-formula).                                                                                                                                                       |
 | contraseña |                     | text        | Sólo Microsoft Excel (opcional) - La contraseña utilizada para proteger un documento MS Excel.                                                                                                                                                                                                                                                                                                                                             |
 | csvOptions |                     | object      | opciones de importación csv                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |            | range               | object      | Rango de celdas que contiene la primera celda donde se escribirán los datos. Si el rango especificado no es un rango de celdas, sólo se utiliza la primera celda del rango.                                                                                                                                                                                                                                                                                   |
@@ -106,7 +106,7 @@ End if
 
 #### Ejemplo 3
 
-You want to import a `.txt` file that uses a comma (",") as delimiter:
+Quiere importar un archivo `.txt` que utiliza una coma (",") como delimitador:
 
 ![example-import-csv](../../assets/en/ViewPro/vp-import-document-csv.png)
 

@@ -5,9 +5,9 @@ title: VP Get table dirty rows
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 
 </details>
 

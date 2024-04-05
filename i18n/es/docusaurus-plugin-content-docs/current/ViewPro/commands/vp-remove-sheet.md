@@ -20,7 +20,7 @@ The `VP REMOVE SHEET` command <!-- REF #_method_.VP REMOVE SHEET.Summary -->remo
 
 En _vpAreaName_, pase el nombre del área 4D View Pro.
 
-In _index_, pass the index of the sheet to remove. Si el _index_ pasado no existe, el comando no hace nada.
+En _index_, pase el índice de la hoja que desea eliminar. Si el _index_ pasado no existe, el comando no hace nada.
 
 > La indexación comienza en 0.
 

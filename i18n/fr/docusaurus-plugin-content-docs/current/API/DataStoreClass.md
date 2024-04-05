@@ -38,10 +38,10 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                        |
+| Release | Modifications                        |
 | ------- | ------------------------------------ |
-| v18     | Prise en charge du paramètre localID |
-| v17     | Ajout                                |
+| 18      | Prise en charge du paramètre localID |
+| 17      | Ajout                                |
 
 </details>
 
@@ -106,9 +106,9 @@ Utilisation du datastore principal de la base 4D :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 
@@ -213,9 +213,9 @@ En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -245,9 +245,9 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 
@@ -279,9 +279,9 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -311,9 +311,9 @@ Si cela se produit, vous pouvez utiliser `.clearAllRemoteContexts()` pour réini
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -383,9 +383,9 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -463,9 +463,9 @@ ds.unlock() //Notre copie est terminée, nous pouvons maintenant déverrouiller 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -540,9 +540,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R3  | Ajout         |
+| 20 R3   | Ajout         |
 
 </details>
 
@@ -592,9 +592,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -660,9 +660,9 @@ Sur un datastore distant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -710,9 +710,9 @@ Voir l'exemple de la section [.setRemoteContextInfo()](#example-1-3).
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R6  | Ajout         |
+| 17 R6   | Ajout         |
 
 </details>
 
@@ -748,9 +748,9 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -781,9 +781,9 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -821,9 +821,9 @@ La fonction renvoie également `True` si le datastore a été verrouillé par un
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajout         |
+| 18 R5   | Ajout         |
 
 </details>
 
@@ -853,9 +853,9 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -927,9 +927,9 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -971,9 +971,9 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R3  | Ajout         |
+| 20 R3   | Ajout         |
 
 </details>
 
@@ -1028,9 +1028,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1158,10 +1158,10 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                             |
+| Release | Modifications                                             |
 | ------- | --------------------------------------------------------- |
-| v20     | Prise en charge côté serveur, nouveau paramètre `options` |
-| v17 R6  | Ajout                                                     |
+| 20      | Prise en charge côté serveur, nouveau paramètre `options` |
+| 17 R6   | Ajout                                                     |
 
 </details>
 
@@ -1272,9 +1272,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 
@@ -1335,10 +1335,10 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 <details><summary>Historique</summary>
 
-| Version | Modifications       |
+| Release | Modifications       |
 | ------- | ------------------- |
-| v20     | Server side support |
-| v17 R6  | Ajout               |
+| 20      | Server side support |
+| 17 R6   | Ajout               |
 
 </details>
 
@@ -1371,9 +1371,9 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
@@ -1408,9 +1408,9 @@ Si la fonction `.unlock()` est appelée dans un datastore déverrouillé, elle n
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18     | Ajout         |
+| 18      | Ajout         |
 
 </details>
 

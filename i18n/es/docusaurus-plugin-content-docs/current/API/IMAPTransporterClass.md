@@ -46,9 +46,9 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 
 </details>
 
@@ -130,10 +130,10 @@ La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                         |
-| ------- | -------------------------------------- |
-| v20     | Soporta palabras claves personalizadas |
-| v18 R6  | Añadidos                               |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 20          | Soporta palabras claves personalizadas |
+| 18 R6       | Añadidos                               |
 
 
 </details>
@@ -221,9 +221,9 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 
 </details>
 
@@ -310,9 +310,9 @@ $status:=$imap.append($msg; "Drafts")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 
 </details>
 
@@ -332,9 +332,9 @@ La propiedad `.checkConnectionDelay` contiene <!-- REF #IMAPTransporterClass.che
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -432,9 +432,9 @@ Para copiar todos los mensajes del buzón actual:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
@@ -510,9 +510,9 @@ End for each
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -608,9 +608,9 @@ Para eliminar todos los mensajes del buzón actual:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
@@ -688,9 +688,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 
 </details>
 
@@ -754,11 +754,11 @@ $status:=$transporter.expunge()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones      |
-| ------- | ------------------- |
-| v20     | se devuelve el *id* |
-| v18 R5  | *name<* es opcional |
-| v18 R4  | Añadidos            |
+| Lanzamiento | Modificaciones      |
+| ----------- | ------------------- |
+| 20          | se devuelve el *id* |
+| 18 R5       | *name<* es opcional |
+| 18 R4       | Añadidos            |
 
 </details>
 
@@ -808,10 +808,10 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v18 R4  | Añadidos                         |
-| v19     | Adición parámetro `isSubscribed` |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 18 R4       | Añadidos                         |
+| 19          | Adición parámetro `isSubscribed` |
 
 </details>
 
@@ -873,9 +873,9 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 
 </details>
 
@@ -926,9 +926,9 @@ Caracter delimitador del nombre del buzón.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 
 </details>
 
@@ -999,9 +999,9 @@ Quiere obtener el mensaje con ID = 1:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -1099,9 +1099,9 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R4       | Añadidos       |
 
 </details>
 
@@ -1173,9 +1173,9 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -1274,9 +1274,9 @@ Para mover todos los mensajes del buzón actual:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -1335,10 +1335,10 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                         |
-| ------- | -------------------------------------- |
-| v20     | Soporta palabras claves personalizadas |
-| v18 R6  | Añadidos                               |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 20          | Soporta palabras claves personalizadas |
+| 18 R6       | Añadidos                               |
 
 
 </details>
@@ -1425,9 +1425,9 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
@@ -1506,9 +1506,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -1642,10 +1642,10 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                               |
-| ------- | -------------------------------------------- |
-| v20     | *id*, *flags*, *permanentFlags* se devuelven |
-| v18 R4  | Añadidos                                     |
+| Lanzamiento | Modificaciones                               |
+| ----------- | -------------------------------------------- |
+| 20          | *id*, *flags*, *permanentFlags* se devuelven |
+| 18 R4       | Añadidos                                     |
 
 
 </details>
@@ -1718,9 +1718,9 @@ Si la cadena `permanentFlags` incluye la bandera especial \*, significa que el s
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
@@ -1793,9 +1793,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 

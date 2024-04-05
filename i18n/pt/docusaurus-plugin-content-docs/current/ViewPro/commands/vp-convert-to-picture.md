@@ -41,7 +41,7 @@ O conteúdo do documento é convertido com relação aos seus atributos de visua
 - Largura da coluna
 - Colunas/linhas ocultas.
 
-> Gridline visibility depends on document attribute defined with [VP SET PRINT INFO](vp-set-print-info.md).
+> A visibilidade da linha quadriculada depende do atributo definido no documento com[VP SET PRINT INFO](vp-set-print-info.md).
 
 #### Resultado
 

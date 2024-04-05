@@ -13,9 +13,9 @@ Las conexiones cliente WebSocket son útiles, por ejemplo, para recibir datos fi
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R2       | Añadidos       |
 
 </details>
 
@@ -74,9 +74,9 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                               |
-| ------- | ------------------------------------------------------------ |
-| v20 R3  | Soporte de la propiedad `encabezados` en *connectionHandler* |
+| Lanzamiento | Modificaciones                                               |
+| ----------- | ------------------------------------------------------------ |
+| 20 R3       | Soporte de la propiedad `encabezados` en *connectionHandler* |
 
 </details>
 
@@ -89,7 +89,7 @@ Los objetos WebSocket ofrecen las siguientes propiedades y funciones:
 | ------------------------------------------------- | ------------ |:--:| ---------------------------------------------- |
 | url                                               | Text         | -> | URL a la que conectarse                        |
 | [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objeto que declara las retrollamadas WebSocket |
-| Result                                            | 4D.WebSocket | <- | New [WebSocket object](#websocket-object)      |
+| Result                                            | 4D.WebSocket | <- | Nuevo [objeto WebSocket](#websocket-object)    |
 <!-- END REF -->
 
 

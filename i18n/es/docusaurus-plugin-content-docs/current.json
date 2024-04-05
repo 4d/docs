@@ -480,7 +480,7 @@
     "description": "The generated-index page title for category Qodly Studio in sidebar docs"
   },
   "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
-    "message": "Using Qodly Studio to build powerful web interfaces.",
+    "message": "Uso de Qodly Studio para crear poderosas interfaces web.",
     "description": "The generated-index page description for category Qodly Studio in sidebar docs"
   }
 }

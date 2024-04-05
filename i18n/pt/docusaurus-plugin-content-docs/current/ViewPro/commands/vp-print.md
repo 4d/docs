@@ -39,7 +39,7 @@ O seguinte código:
  VP PRINT("myVPArea")
 ```
 
-... will open a print dialog window:
+... abre uma janela de diálogo de impressão:
 
 ![](../../assets/en/ViewPro/cmd_vpPrint.PNG)
 

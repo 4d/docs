@@ -149,9 +149,9 @@ Symbolファイルを生成するのに使用します ([Symbolファイル](#sy
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19      | 追加 |
 
 </details>
 

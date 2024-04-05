@@ -447,7 +447,7 @@ If a class [extends](#class-extends-classname) another class, the properties of 
 #### Ejemplo
 
 ```4d
-// Class: MyClass
+// Clase: MyClass
 
 property name : Text
 property age : Integer
@@ -459,8 +459,8 @@ En un método:
 ```4d
 var $o : cs.MyClass
 $o:=cs.MyClass.new() //$o:{"color" : "Blue"}
-$o.name:="John" //$o:{"color" : "Blue"; "name" : "John"}
-$o.age:="Smith"  //error with check syntax
+$o.name:="Juan" //$o:{"color" : "Azul"; "name" : "John"}
+$o.age:="Smith" //error con la sintaxis de verificación
 ```
 
 
@@ -575,19 +575,19 @@ Una clase extendida puede llamar al constructor de su clase padre utilizando el 
 Este ejemplo crea una clase llamada `Square` de una clase llamada `Polygon`.
 
 ```4d
-//Class: Square
+//Clase: Square
 
-//path: Classes/Square.4dm
+//ruta: Classes/Square.4dm
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+Llama al constructor de la clase padre con las longitudes
+ // suministradas para el ancho y alto del polígono
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // En las clases derivadas, Super debe ser llamado antes de 
+ // utilizar 'This'
  This.name:="Square"
 
 
@@ -799,11 +799,11 @@ Varios comandos del lenguaje 4D permiten manejar las funcionalidades de las clas
 
 ## Clases compartidas
 
-You can create **shared classes**. A shared class is a user class that instantiates a [shared object](shared.md) when the [`new()`](../API/ClassClass.md#new) function is called on the class. Una clase compartida sólo puede crear objetos compartidos.
+Puede crear **clases compartidas**. Una clase compartida es una clase usuario que instancia un [objeto compartido](shared.md) cuando se ejecuta la función [`new()`](../API/ClassClass.md#new) en la clase. Una clase compartida sólo puede crear objetos compartidos.
 
-Shared classes also support **shared functions** that can be called without [`Use...End use`](shared.md#useend-use) structures.
+Las clases compartidas también admiten **funciones compartidas** que pueden llamarse sin estructuras [`Use...End use`](shared.md#useend-use).
 
-The [`.isShared`](../API/ClassClass.md#isshared) property of Class objects allows to know if the class is shared.
+La propiedad [`.isShared`](../API/ClassClass.md#isshared) de los objetos de la Clase permite saber si la clase está compartida.
 
 :::info
 
@@ -841,12 +841,12 @@ If a function defined inside a shared class modifies objects of the class, it sh
 To create a shared function, add the `shared` keyword before the [Function](#function) keyword in a shared class. Por ejemplo:
 
 ```4d
-    //shared class Foo
+    //clase compartida Foo
 shared Class Constructor()
   This.variable:=1
 
 shared Function Bar($value : Integer)
-  This.variable:=$value //no need to call use/end use
+  This.variable:=$value //no es necesario llamar use/end use
 ```
 
 :::note
@@ -864,7 +864,7 @@ The class singleton is instantiated at the first call of the [`cs.<class>.me`](.
 
 If you need to instantiate a singleton with parameters, you can also call the [`new()`](../API/ClassClass.md#new) function. In this case, it is recommended to instantiate the singleton in some code executed at application startup.
 
-The scope of a singleton instance can be the current process or all processes. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application. Singletons are useful to define values that need to be available from anywhere in an application or process.
+El alcance de una instancia singleton puede ser el proceso actual o todos los procesos. A *process* singleton has a unique value for the process in which it is instantiated, while an *interprocess* singleton has a unique value for all processes of the application. Singletons are useful to define values that need to be available from anywhere in an application or process.
 
 
 The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects allows to know if the class is a singleton.
@@ -901,8 +901,8 @@ var $myOtherSingleton := cs.ProcessTag.me
 
 ```
 ```4d
-    //in another process
-var $mySingleton := cs.ProcessTag.me //First instantiation
+    //en otro proceso
+var $mySingleton := cs.ProcessTag.me //Primera instanciación
     //$mySingleton.tag = 14856 for example  
 ...  
 var $myOtherSingleton := cs.ProcessTag.me  
@@ -921,7 +921,7 @@ To create an interprocess singleton, add the `shared singleton` keywords before 
 property vehicleBuilt : Integer
 
 shared singleton Class constructor()
-  This.vehicleBuilt := 0 //Number of vehicles built by the factory
+  This.vehicleBuilt := 0 //Número de vehículos construidos por la fábrica
 
 shared Function buildVehicle ($type : Text) -> $vehicle : cs.Vehicle
 

@@ -109,10 +109,10 @@ Parâmetros são recebidos dentro do método, na ordem que são especificados na
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                           |
-| ------ | ---------------------------------- |
-| v17 R6 | Renomeado (New formula -> Formula) |
-| v17 R3 | Adicionado                         |
+| Release | Mudanças                           |
+| ------- | ---------------------------------- |
+| 17 R6   | Renomeado (New formula -> Formula) |
+| 17 R3   | Adicionado                         |
 
 </details>
 
@@ -248,11 +248,11 @@ Chamar uma fórmula usando notação de objeto:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                 |
-| ------ | -------------------------------------------------------- |
-| v20 R3 | Suporte do parâmetro *context*                           |
-| v17 R6 | Renomeado New formula from string -> Formula from string |
-| v17 R3 | Adicionado                                               |
+| Release | Mudanças                                                 |
+| ------- | -------------------------------------------------------- |
+| 20 R3   | Suporte do parâmetro *context*                           |
+| 17 R6   | Renomeado New formula from string -> Formula from string |
+| 17 R3   | Adicionado                                               |
 
 </details>
 
@@ -317,9 +317,9 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R3   | Adicionado |
 
 </details>
 
@@ -382,9 +382,9 @@ Note que `.apply()` é similar a [`.call()`](#call) exceto que parâmetros são 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R3   | Adicionado |
 
 </details>
 
@@ -437,9 +437,9 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R2   | Adicionado |
 
 </details>
 

@@ -38,10 +38,10 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                |
-| ------- | ----------------------------- |
-| v18     | Soporte del parámetro localID |
-| v17     | Añadidos                      |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 18          | Soporte del parámetro localID |
+| 17          | Añadidos                      |
 
 </details>
 
@@ -107,9 +107,9 @@ Utilizando el almacén de datos principal de la base 4D:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -215,9 +215,9 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac�
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -247,9 +247,9 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -282,9 +282,9 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -315,9 +315,9 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -391,9 +391,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -473,9 +473,9 @@ ds.unlock() //Nuestra copia ha terminado, ahora podemos desbloquear el datastore
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -551,9 +551,9 @@ $info:=$ds.getAllRemoteContexts()
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R3       | Añadidos       |
 
 </details>
 
@@ -602,9 +602,9 @@ $hasModifications:=($currentStamp # ds.getGlobalStamp())
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -671,9 +671,9 @@ En un almacén de datos remoto:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -722,9 +722,9 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R6       | Añadidos       |
 
 </details>
 
@@ -761,9 +761,9 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 
 </details>
 
@@ -795,9 +795,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -837,9 +837,9 @@ La función también devolverá `True` si el datastore fue bloqueado por otra fu
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R5       | Añadidos       |
 
 </details>
 
@@ -870,9 +870,9 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -944,9 +944,9 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 
 </details>
 
@@ -989,9 +989,9 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R3       | Añadidos       |
 
 </details>
 
@@ -1046,9 +1046,9 @@ ds.setGlobalStamp($newValue)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1176,10 +1176,10 @@ End case
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                           |
-| ------- | -------------------------------------------------------- |
-| v20     | Soporte del lado del servidor, nuevo parámetro `options` |
-| v17 R6  | Añadidos                                                 |
+| Lanzamiento | Modificaciones                                           |
+| ----------- | -------------------------------------------------------- |
+| 20          | Soporte del lado del servidor, nuevo parámetro `options` |
+| 17 R6       | Añadidos                                                 |
 
 </details>
 
@@ -1291,9 +1291,9 @@ SET DATABASE PARAMETER(4D Server Log Recording;0)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 
@@ -1356,10 +1356,10 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                |
-| ------- | ----------------------------- |
-| v20     | Soporte del lado del servidor |
-| v17 R6  | Añadidos                      |
+| Lanzamiento | Modificaciones                |
+| ----------- | ----------------------------- |
+| 20          | Soporte del lado del servidor |
+| 17 R6       | Añadidos                      |
 
 </details>
 
@@ -1393,9 +1393,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20          | Añadidos       |
 
 </details>
 
@@ -1432,9 +1432,9 @@ Si se llama a la función `.unlock()` en un datastore desbloqueado, no hace nada
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18          | Añadidos       |
 
 </details>
 

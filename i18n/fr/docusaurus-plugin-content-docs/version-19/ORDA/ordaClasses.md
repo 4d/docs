@@ -61,9 +61,9 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                                      |
+| Release | Modifications                                                                                      |
 | ------- | -------------------------------------------------------------------------------------------------- |
-| v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| 18 R5   | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
 ### Classe DataStore

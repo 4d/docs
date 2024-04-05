@@ -60,10 +60,10 @@ Ofrecen las siguientes propiedades y funciones:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                    |
-| ------- | --------------------------------- |
-| v18 R3  | Añadidos                          |
-| v19     | soporte de .sessionCookieSameSite |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 18 R3       | Añadidos                          |
+| 19          | soporte de .sessionCookieSameSite |
 
 </details>
 
@@ -109,9 +109,9 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R3       | Añadidos       |
 </details>
 
 
@@ -676,9 +676,9 @@ El <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "path" de la cook
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 
@@ -718,9 +718,9 @@ La <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R3       | Añadidos       |
 </details>
 
 
@@ -781,9 +781,9 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R3       | Añadidos       |
 </details>
 
 

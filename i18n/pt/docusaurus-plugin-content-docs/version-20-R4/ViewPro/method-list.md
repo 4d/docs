@@ -409,9 +409,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -676,9 +676,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda a área
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 
 </details>
 
@@ -738,11 +738,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças                                                                                                      |
-| ------ | ------------------------------------------------------------------------------------------------------------- |
-| v19 R8 | Suporte das opções do tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | Suporte da opção `allowAutoExpand`                                                                            |
-| v19 R6 | Adicionado                                                                                                    |
+| Release | Mudanças                                                                                                      |
+| ------- | ------------------------------------------------------------------------------------------------------------- |
+| 19 R8   | Suporte das opções do tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 18 R6   | Suporte da opção `allowAutoExpand`                                                                            |
+| 19 R6   | Adicionado                                                                                                    |
 
 </details>
 
@@ -923,9 +923,9 @@ utilizar o seguinte código:
 
 <details><summary>História</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v20 R2 | Suporte de documentos .sjs |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 20 R2   | Suporte de documentos .sjs |
 
 </details>
 
@@ -1237,14 +1237,14 @@ The _searchValue_ parameter lets you pass the text to search for within the _ran
 
 You can pass the optional _searchCondition_ parameter to specify how the search is performed. As propriedades abaixo são compatíveis:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ----------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| afterColumn | Integer    | O número da coluna imediatamente anterior à coluna inicial da pesquisa. If the _rangeObj_ is a combined range, the column number given must be from the first range. Default value: -1 (beginning of the _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| afterRow    | Integer    | O número da linha imediatamente anterior à linha inicial da pesquisa. If the _rangeObj_ is a combined range, the row number given must be from the first range. Default value: -1 (beginning of the _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| all         | Parâmetros | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| flags       | Integer    | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" is the same as "A".</td></tr><tr><td>`vk find flag none`</td><td>no search flags are considered (default)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) can be used in the search string. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>These flags can be combined. For example: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code> |
-| order       | Integer    | <table><tr><td>`vk find order by columns`</td><td>The search is performed by columns. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>The search is performed by rows. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| target      | Integer    | <table><tr><td>`vk find target formula`</td><td>The search is performed in the cell formula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. For example:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| afterColumn | Integer    | O número da coluna imediatamente anterior à coluna inicial da pesquisa. If the _rangeObj_ is a combined range, the column number given must be from the first range. Default value: -1 (beginning of the _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| afterRow    | Integer    | O número da linha imediatamente anterior à linha inicial da pesquisa. If the _rangeObj_ is a combined range, the row number given must be from the first range. Default value: -1 (beginning of the _rangeObj_)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| all         | Parâmetros | <li>True - All cells in *rangeObj* corresponding to *searchValue* are returned</li><li>False - (default value) Only the first cell in *rangeObj* corresponding to *searchValue* is returned</li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| flags       | Integer    | <table><tr><td>`vk find flag exact match`</td><td>The entire content of the cell must completely match the search value</td></tr><tr><td>`vk find flag ignore case`</td><td>Capital and lower-case letters are considered the same. Ex: "a" is the same as "A".</td></tr><tr><td>`vk find flag none`</td><td>no search flags are considered (default)</td></tr><tr><td>`vk find flag use wild cards`</td><td>Wildcard characters (\*,?) pode ser usado na string de pesquisa. Wildcard characters can be used in any string comparison to match any number of characters:<li>\* for zero or multiple characters (for example, searching for "bl*"  can find "bl", "black", or "blob")</li><li>? for a single character (for example, searching for "h?t" can find "hot", or "hit"</li></td></tr></table>These flags can be combined. For example: <code>$search.flags:=vk find flag use wild cards+vk find flag ignore case</code> |
+| order       | Integer    | <table><tr><td>`vk find order by columns`</td><td>The search is performed by columns. Each row of a column is searched before the search continues to the next column.</td></tr><tr><td>`vk find order by rows`</td><td>The search is performed by rows. Each column of a row is searched before the search continues to the next row (default)</td></tr></table>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| target      | Integer    | <table><tr><td>`vk find target formula`</td><td>The search is performed in the cell formula</td></tr><tr><td>`vk find target tag`</td><td>The search is performed in the cell tag</td></tr><tr><td>`vk find target text`</td><td>The search is performed in the cell text (default)</td></tr></table><p>These flags can be combined. For example:<code>$search.target:=vk find target formula+vk find target text</code></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 In the optional _replaceValue_ parameter, you can pass text to take the place of any instance of the text in _searchValue_ found in the _rangeObj_.
 
@@ -1296,9 +1296,9 @@ End if
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -1466,9 +1466,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -1684,9 +1684,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -2233,7 +2233,7 @@ Obter a contagem de folhas e definir a folha atual como a última folha:
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
-  //set the current sheet to the last sheet (indexing starts at 0)
+  //definir a folha atual para a última folha (a indexação começa em 0)
  VP SET CURRENT SHEET("ViewProArea";$count-1)
 ```
 
@@ -2339,7 +2339,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 The `VP Get sheet options` command <!-- REF #_method_.VP Get sheet options.Summary -->returns an object containing the current sheet options of the _vpAreaName_ area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
 In the optional _sheet_ parameter, you can designate a specific spreadsheet (counting begins at 0). Se omitido ou se você passar `vk current sheet`, a planilha atual será usada.
 
@@ -2500,7 +2500,7 @@ borderTop:{color:green,style:10}
 | ---------- | ---------- | -- | ----------------------------------------------------- | ---------------- |
 | vpAreaName | Text       | -> | Nome de objeto formulário área 4D View Pro            |                  |
 | sheet      | Integer    | -> | Âmbito alvo (padrão = folha atual) |                  |
-| Resultados | Collection | <- | Collection of style sheet objects                     | <!-- END REF --> |
+| Resultados | Collection | <- | Coleção de objectos de folhas de estilo               | <!-- END REF --> |
 
 #### Descrição
 
@@ -2549,9 +2549,9 @@ Nesse caso, a planilha atual usa dois objetos estilo:
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -2609,9 +2609,9 @@ End if
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -2661,9 +2661,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 
 </details>
 
@@ -2723,9 +2723,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -2771,9 +2771,9 @@ If _tableName_ is not found, the command returns **null**.
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 
 </details>
 
@@ -2817,9 +2817,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -3001,9 +3001,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>História</summary>
 
-| Versão | Mudanças                   |
-| ------ | -------------------------- |
-| v20 R2 | Suporte de documentos .sjs |
+| Release | Mudanças                   |
+| ------- | -------------------------- |
+| 20 R2   | Suporte de documentos .sjs |
 
 </details>
 
@@ -3288,9 +3288,9 @@ O resultado é:
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -3338,9 +3338,9 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -3411,9 +3411,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 
 </details>
 
@@ -3603,9 +3603,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 
 </details>
 
@@ -3690,7 +3690,7 @@ O seguinte código:
  VP PRINT("myVPArea")
 ```
 
-... will open a print dialog window:
+... abre uma janela de diálogo de impressão:
 
 ![](../assets/en/ViewPro/cmd_vpPrint.PNG)
 
@@ -3899,9 +3899,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R6   | Adicionado |
 
 </details>
 
@@ -3952,9 +3952,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -3996,9 +3996,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -4079,9 +4079,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -4400,7 +4400,7 @@ $result:=VP Run offscreen area($o)
 
 The `VP SET ACTIVE CELL` command <!-- REF #_method_.VP SET ACTIVE CELL.Summary -->defines a specified cell as active<!-- END REF -->.
 
-In _rangeObj_, pass a range containing a single cell as an object (see [VP Cell](#vp-cell)). If _rangeObj_ is not a cell range or contains multiple ranges, the first cell of the first range is used.
+Em _rangeObj_, passe um intervalo contendo uma única célula como um objeto (consulte [VP Cell](#vp-cell)). If _rangeObj_ is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
 #### Exemplo
 
@@ -4491,9 +4491,9 @@ Depois que esse código é executado, as funções definidas podem ser usadas na
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -4848,7 +4848,7 @@ As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop
 
 > If `VP SET CUSTOM FUNCTIONS` is called multiple times for the same area, in the same session, only the last call is taken into account.
 
-Pass the name of the 4D View Pro area in _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
 In the _formulaObj_ parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in _formulaObj_ becomes the name of a function in the 4D View Pro area.
 
@@ -4914,9 +4914,9 @@ End case
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R5   | Adicionado |
 
 </details>
 
@@ -5506,10 +5506,10 @@ O PDF:
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
-| Parâmetro   | Tipo   |    | Descrição                        |                  |
-| ----------- | ------ | -- | -------------------------------- | ---------------- |
-| rangeObj    | Object | -> | Intervalo de linhas              |                  |
-| propertyObj | Object | -> | Object containing row properties | <!-- END REF --> |
+| Parâmetro   | Tipo   |    | Descrição                                   |                  |
+| ----------- | ------ | -- | ------------------------------------------- | ---------------- |
+| rangeObj    | Object | -> | Intervalo de linhas                         |                  |
+| propertyObj | Object | -> | Objeto que contém as propriedades da linhas | <!-- END REF --> |
 
 #### Descrição
 
@@ -5668,7 +5668,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 | ---------- | ------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text    | -> | Nome de objeto formulário área 4D View Pro |                  |
 | name       | Text    | -> | Novo nome para a folha                     |                  |
-| sheet      | Integer | -> | Index of the sheet to be renamed           | <!-- END REF --> |
+| sheet      | Integer | -> | Índice da folha a ser renomeada            | <!-- END REF --> |
 
 #### Descrição
 
@@ -5721,7 +5721,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the _vpAreaName_ area<!-- END REF -->.
 
-Pass the name of the 4D View Pro area in _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
 Pass an object containing definitions for the options to set in the _sheetOptions_ parameter. To view the full list of the available options, see the [Sheet Options](configuring.md#sheet-options) paragraph.
 
@@ -5873,9 +5873,9 @@ Com uma quebra de página:
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 
@@ -5974,9 +5974,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R8 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R8   | Adicionado |
 
 </details>
 
@@ -5990,7 +5990,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 | ---------- | ---------------------------------------------- | -- | ------------------------------------------ | ---------------- |
 | vpAreaName | Text                                           | -> | Nome de objeto formulário área 4D View Pro |                  |
 | tableName  | Text                                           | -> | Nome da tabela                             |                  |
-| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Table theme properties to modify           | <!-- END REF --> |
+| options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | Propriedades do tema da tabela a modificar | <!-- END REF --> |
 
 #### Descrição
 
@@ -6147,11 +6147,11 @@ In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 The parameter _valueObj_ is an object that includes properties for the value and the [format](configuring.md#cell-format) to assign to _rangeObj_. Pode incluir as seguintes propriedades:
 
-| Propriedade | Tipo                                     | Descrição                                                                                                                                                        |
-| ----------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value       | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Passar null para apagar o conteúdo da célula.                                                   |
-| time        | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                               |
-| format      | Text                                     | Pattern for value/time property. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
+| Propriedade | Tipo                                     | Descrição                                                                                                                                                            |
+| ----------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value       | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Passar null para apagar o conteúdo da célula.                                                       |
+| time        | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                   |
+| format      | Text                                     | Padrão para propriedade valor/tempo. For information on patterns and formatting characters, please refer to the [Cell Format](configuring.md#cell-format) paragraph. |
 
 #### Exemplo
 

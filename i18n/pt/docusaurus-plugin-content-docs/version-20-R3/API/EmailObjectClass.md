@@ -364,9 +364,9 @@ The `MAIL Convert from MIME` command <!-- REF #EmailObjectClass.to.Summary -->co
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18      | Adicionado |
 
 </details>
 
@@ -448,10 +448,10 @@ $status:=$transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
-| v17 R5 | Modificado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
+| 17 R5   | Modificado |
 
 </details>
 

@@ -47,10 +47,10 @@ The availability of properties and functions in the `Session` object depend on t
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                          |
+| Release | Modifications                                          |
 | ------- | ------------------------------------------------------ |
-| v20 R5  | Support of remote client and stored procedure sessions |
-| v18 R6  | Ajout                                                  |
+| 20 R5   | Support of remote client and stored procedure sessions |
+| 18 R6   | Ajout                                                  |
 
 </details>
 
@@ -138,9 +138,9 @@ IP:port/4DACTION/action_Session
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -185,9 +185,9 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -222,9 +222,9 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -272,9 +272,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R5  | Ajout         |
+| 20 R5   | Ajout         |
 
 </details>
 
@@ -294,9 +294,9 @@ La propriété `.id` contient <!-- REF #SessionClass.id.Summary -->the unique id
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -342,9 +342,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R5  | Ajout         |
+| 20 R5   | Ajout         |
 
 </details>
 
@@ -392,9 +392,9 @@ Since `.info` is a computed property, it is recommended to call it once and then
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -437,10 +437,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                         |
+| Release | Modifications                                         |
 | ------- | ----------------------------------------------------- |
-| v19 R8  | Prise en charge de la propriété "roles" dans settings |
-| v18 R6  | Ajout                                                 |
+| 19 R8   | Prise en charge de la propriété "roles" dans settings |
+| 18 R6   | Ajout                                                 |
 
 </details>
 
@@ -516,10 +516,10 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                          |
+| Release | Modifications                                          |
 | ------- | ------------------------------------------------------ |
-| v20 R5  | Support of remote client and stored procedure sessions |
-| v18 R6  | Ajout                                                  |
+| 20 R5   | Support of remote client and stored procedure sessions |
+| 18 R6   | Ajout                                                  |
 
 </details>
 
@@ -576,10 +576,10 @@ End use
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                          |
+| Release | Modifications                                          |
 | ------- | ------------------------------------------------------ |
-| v20 R5  | Support of remote client and stored procedure sessions |
-| v18 R6  | Ajout                                                  |
+| 20 R5   | Support of remote client and stored procedure sessions |
+| 18 R6   | Ajout                                                  |
 
 </details>
 

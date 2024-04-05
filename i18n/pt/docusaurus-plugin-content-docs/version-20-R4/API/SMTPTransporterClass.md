@@ -29,11 +29,11 @@ Os objectos do SMTP Transporter são instanciados com o comando [SMTP New Transp
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                       |
-| ------ | ---------------------------------------------- |
-| v18    | Nova propriedade logFile                       |
-| v17 R5 | Novas propriedades bodyCharset e headerCharset |
-| v17 R4 | Adicionado                                     |
+| Release | Mudanças                                       |
+| ------- | ---------------------------------------------- |
+| 18      | Nova propriedade logFile                       |
+| 17 R5   | Novas propriedades bodyCharset e headerCharset |
+| 17 R4   | Adicionado                                     |
 
 </details>
 
@@ -178,9 +178,9 @@ Para informações sobre códigos de estado SMTP, consulte por favor [esta pági
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
@@ -202,10 +202,10 @@ A coleção SMTP é automaticamente fechada:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                 |
-| ------ | ------------------------ |
-| v17 R5 | Suporte de conteúdo Mime |
-| v17 R4 | Adicionado               |
+| Release | Mudanças                 |
+| ------- | ------------------------ |
+| 17 R5   | Suporte de conteúdo Mime |
+| 17 R4   | Adicionado               |
 
 </details>
 

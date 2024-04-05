@@ -64,11 +64,11 @@ De plus, les instances d'objet de classes utilisateurs du modèles de données O
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                                      |
+| Release | Modifications                                                                                      |
 | ------- | -------------------------------------------------------------------------------------------------- |
-| v19 R4  | Alias attributes in the Entity Class                                                               |
-| v19 R3  | Computed attributes in the Entity Class                                                            |
-| v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| 19 R4   | Alias attributes in the Entity Class                                                               |
+| 19 R3   | Computed attributes in the Entity Class                                                            |
+| 18 R5   | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
 </details>
 
 

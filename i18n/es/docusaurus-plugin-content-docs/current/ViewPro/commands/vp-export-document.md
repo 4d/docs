@@ -5,9 +5,9 @@ title: VP EXPORT DOCUMENT
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones             |
-| ------- | -------------------------- |
-| v20 R2  | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R2       | Soporte de documentos .sjs |
 
 </details>
 
@@ -146,7 +146,7 @@ Método _**AfterExport**_:
 
 #### Ejemplo 4
 
-You want to export the current sheet to a `.txt` file with pipe-separated values:
+Quiere exportar la hoja actual a un archivo `.txt` con valores separados por "|":
 
 ![example-export-csv](../../assets/en/ViewPro/vp-export-document-csv.png)
 

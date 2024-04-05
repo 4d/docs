@@ -61,10 +61,10 @@ Les objets de type `File` prennent en charge plusieurs noms de chemin, y compris
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                             |
+| Release | Modifications                             |
 | ------- | ----------------------------------------- |
-| v19 R4  | Nouvelle constante `HTTP Client log file` |
-| v17 R5  | Ajout                                     |
+| 19 R4   | Nouvelle constante `HTTP Client log file` |
+| 17 R5   | Ajout                                     |
 
 </details>
 
@@ -136,9 +136,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -157,9 +157,9 @@ La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et renvoie 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF file.create().Note -->
@@ -201,9 +201,9 @@ Création d'un fichier de préférences dans le dossier principal :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -256,9 +256,9 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -312,9 +312,9 @@ Vous souhaitez supprimer un fichier spécifique dans le dossier de la base de do
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19     | Ajout         |
+| 19      | Ajout         |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -405,9 +405,9 @@ ALERT($info.Copyright)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -450,9 +450,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -528,9 +528,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -570,10 +570,10 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications              |
+| Release | Modifications              |
 | ------- | -------------------------- |
-| v20     | Prise en charge de WinIcon |
-| v19     | Ajout                      |
+| 20      | Prise en charge de WinIcon |
+| 19      | Ajout                      |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -660,9 +660,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -691,10 +691,10 @@ La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécri
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                       |
+| Release | Modifications                                                                       |
 | ------- | ----------------------------------------------------------------------------------- |
-| v19 R3  | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
-| v17 R5  | Ajout                                                                               |
+| 19 R3   | Par défaut pour les nouveaux projets : pas de BOM et (macOS) LF comme saut de ligne |
+| 17 R5   | Ajout                                                                               |
 
 </details>
 

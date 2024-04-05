@@ -10,9 +10,9 @@ A classe `WebFormItem` está detalhada na documentação[Qodly](https://develope
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20 R2 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20 R2   | Adicionado |
 
 </details>
 
