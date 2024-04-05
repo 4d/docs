@@ -107,7 +107,7 @@ All stored procedure processes share the same virtual user session. The `Session
 - methods called with the [`Execute on server`](https://doc.4d.com/4dv20/help/command/en/page373.html) command,
 - `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown`, and `On System event` database methods
 
-For information on stored procedures virtual user session, please refer to the [XXXX](XXX) page. 
+For information on stored procedures virtual user session, please refer to the [4D Server and the 4D Language](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.en.html) page. 
 
 #### Example
 
@@ -541,19 +541,21 @@ This property is **read only** itself but it returns a read-write object.
 
 You want to store the client IP in the `.storage` property. You can write in the `On Web Authentication` database method:
 
+
 ```4d
 If (Session.storage.clientIP=Null) //first access
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
     End use
 End if
-
 ```
+
 </TabItem>
 
 <TabItem value="Remote session example">
 
 You want to share data between processes in the same session:
+
 
 ```4d
 Use (Session.storage)

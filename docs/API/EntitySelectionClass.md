@@ -75,7 +75,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 
 |Property|Type|Description|
 |---|---|---|
-|context|Text|Label for the [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) applied to the entity selection.|
+|context|Text|Label for the [optimization context](../ORDA/client-server-optimization.md) applied to the entity selection.|
 
 
 #### Example
@@ -881,6 +881,7 @@ If a locked entity is encountered during the execution of `.drop()`, it is not r
 
 Example without the `dk stop dropping on first error` option:
 
+
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
  $employees:=ds.Employee.query("firstName=:1";"S@")
@@ -1676,6 +1677,7 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 // order by formula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
+
 
   // order by collection with or without sort orders
  $orderColl:=New collection
