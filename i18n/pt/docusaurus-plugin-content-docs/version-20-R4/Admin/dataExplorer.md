@@ -50,12 +50,12 @@ O Data Explorer suporta os seguintes navegadores web:
 A resolução mínima para utilizar o Data Explorer é de 1280x720. A resolução recomendada é 1920x1080.
 
 
-## Browsing Data
+## Navegação de dados
 
 Para além de uma visão abrangente e personalizável dos seus dados, o Explorador de Dados permite-lhe consultar e ordenar os seus dados.
 
 
-### Basics
+### Básicos
 
 O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
@@ -183,7 +183,7 @@ Clique com o botão direito do mouse na área de consulta para exibir as consult
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
 
 
-## Editing Data
+## Edição de dados
 
 The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to test implementations or fix issues with invalid data.
 
@@ -201,7 +201,7 @@ The selector is intended to prevent accidental modifications since no confirmati
 
 :::
 
-### Entering values
+### Inserção de valores
 
 When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass.
 
@@ -213,14 +213,14 @@ The following scalar attribute values can be edited:
 - date
 - time
 - image (you can upload or drag and drop an image)
-- object (JSON string)
+- objeto (string JSON)
 
 Blob attributes cannot be modified.
 
 New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data.
 
 
-### Creating entities
+### Criação de entidades
 
 You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
 
@@ -232,12 +232,12 @@ Attribute values that need to be calculated by 4D (IDs, computed attributes) wil
 
 :::
 
-### Reloading values
+### Carregamento de valores
 
 The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.
 
 
-### Saving modifications
+### Salvar modificações
 
 Except for [deletion](#deleting-entities) (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
 

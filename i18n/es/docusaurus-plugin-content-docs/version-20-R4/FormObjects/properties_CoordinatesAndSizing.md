@@ -1,6 +1,6 @@
 ---
 id: propertiesCoordinatesAndSizing
-title: Coordinates & Sizing
+title: Coordenadas & Dimensionamiento
 ---
 
 ## Altura de línea automática
@@ -117,9 +117,9 @@ Coordenadas superiores del objeto en el formulario.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                         |
-| ------- | -------------------------------------- |
-| v19 R7  | Soporte para entradas y áreas de texto |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 19 R7       | Soporte para entradas y áreas de texto |
 
 </details>
 

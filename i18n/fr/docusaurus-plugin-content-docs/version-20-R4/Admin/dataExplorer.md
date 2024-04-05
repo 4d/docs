@@ -3,7 +3,7 @@ id: dataExplorer
 title: Data Explorer
 ---
 
-The Data Explorer provides a web interface to view, query, and edit data in your project datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. It helps you quickly identifying issues at any step of the development process, as well as controlling and editing data.
+L'Explorateur de données fournit une interface Web pour visualiser, interroger et modifier les données de votre datastore. Grâce à cet outil, vous pouvez facilement naviguer parmi toutes vos entités et rechercher, ordonner ou filtrer les valeurs des attributs. Il vous aide à identifier rapidement les problèmes à chaque étape du processus de développement, ainsi qu'à contrôler et à modifier les données.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
@@ -50,12 +50,12 @@ L'Explorateur de données prend en charge les navigateurs Web suivants :
 La résolution minimale pour utiliser l'Explorateur de données est de 1280x720. La résolution recommandée est de 1920x1080.
 
 
-## Browsing Data
+## Parcourir les données
 
 En plus d'une vue complète et personnalisable de vos données, l'Explorateur de données vous permet de rechercher et d'ordonner vos données.
 
 
-### Basics
+### Principes de base
 
 L'Explorateur de données fournit un accès global au modèle de données ORDA conformément aux [règles de mapping ORDA](ORDA/dsMapping.md#general-rules).
 
@@ -183,89 +183,89 @@ Faites un clic droit dans la zone des requêtes pour afficher les précédentes 
 ![alt-text](../assets/en/Admin/dataExplorer11.png)
 
 
-## Editing Data
+## Modifier les données
 
-The Data Explorer allows you to modify attribute values, add or delete entities. These feature is intended to administrators, for example to test implementations or fix issues with invalid data.
+L'explorateur de données vous permet de modifier les valeurs des attributs, d'ajouter ou de supprimer des entités. Cette fonctionnalité est destinée aux administrateurs, par exemple pour tester des mises en œuvre ou résoudre des problèmes liés à des données non valides.
 
-### Allow editing
+### Autoriser les modifications
 
-For security reasons, to be able to edit data through the Data Explorer, you first need to enable the editing mode using the **Allow editing** selector. When enabled, edit action buttons are displayed to the right side:
+Pour des raisons de sécurité, pour pouvoir modifier les données via l'Explorateur de données, vous devez d'abord activer le mode d'édition en utilisant le sélecteur **Allow editing**. Lorsque cette option est activée, des boutons de modification sont affichés sur le côté droit :
 
 ![allow-editing](../assets/en/Admin/editing.png)
 
-This selector is enabled **per dataclass** and **per browser session**.
+Ce sélecteur est activé **par dataclass** et **par session de navigation**.
 
 :::info
 
-The selector is intended to prevent accidental modifications since no confirmation dialog boxes are displayed when editing data through the Data Explorer.
+Le sélecteur est destiné à éviter les modifications accidentelles car aucune boîte de dialogue de confirmation n'est affichée lors de l'édition de données via l'Explorateur de données.
 
 :::
 
-### Entering values
+### Saisie des valeurs
 
-When the **Allow editing** selector is enabled for a dataclass, you can enter values for a new or selected entity through dedicated input widgets in the **Details** area for the selected dataclass.
+Lorsque le sélecteur **Allow editing** est activé pour une dataclass, vous pouvez saisir des valeurs pour une nouvelle entité ou une entité sélectionnée par le biais de widgets de saisie dédiés dans la zone **Détails** de la dataclass sélectionnée.
 
-The following scalar attribute values can be edited:
+Les valeurs d'attributs scalaires suivants peuvent être modifiées :
 
 - text
 - boolean
-- numeric
+- numérique
 - date
 - time
-- image (you can upload or drag and drop an image)
+- image (vous pouvez télécharger ou glisser-déposer une image)
 - object (JSON string)
 
-Blob attributes cannot be modified.
+Les attributs Blob ne peuvent pas être modifiés.
 
-New or modified values are stored in the local cache, you need to [save them explicitely](#saving-modifications) to store them in the data.
-
-
-### Creating entities
-
-You can create a new, empty entity in the selected table by clicking on the creation button ![new-entity](../assets/en/Admin/data-explorer-new.png). You can then [enter values](#entering-values) for this entity.
-
-The new entity is is kept in the local cache, you need to [save it explicitely](#saving-modifications) to store it in the data.
-
-:::info
-
-Attribute values that need to be calculated by 4D (IDs, computed attributes) will be returned only after you saved the entity.
-
-:::
-
-### Reloading values
-
-The **reload** button ![reload](../assets/en/Admin/data-explorer-reload.png) reloads the entity attribute values from the data file. This button is useful for example when you want to make sure the displayed values are the most recent saved values.
+Les valeurs nouvelles ou modifiées sont stockées dans le cache local, vous devez [les enregistrer explicitement](#enregistrer-les-modifications) pour les stocker dans les données.
 
 
-### Saving modifications
+### Création d'entités
 
-Except for [deletion](#deleting-entities) (see below), entity modifications are done locally and need to be saved so that they are stored in the data file.
+Vous pouvez créer une nouvelle entité vide dans la table sélectionnée en cliquant sur le bouton de création ![new-entity](../assets/en/Admin/data-explorer-new.png). Vous pouvez alors [entrer les valeurs](#saisie-des-valeurs) pour cette entité.
 
-To save modifications or to save an entity you created in the Data Explorer, click on the **Save** button ![save](../assets/en/Admin/data-explorer-save.png).
+La nouvelle entité est conservée dans le cache local, vous devez [la sauvegarder explicitement](#enregistrer-les-modifications) pour la stocker dans les données.
 
 :::info
 
-Modifications on an existing entity are automatically saved when you select another entity of the same dataclass.
+Les valeurs d'attributs qui doivent être calculées par 4D (ID, attributs calculés) ne seront renvoyées qu'après l'enregistrement de l'entité.
+
+:::
+
+### Rechargement des valeurs
+
+Le bouton **reload** ![reload](../assets/en/Admin/data-explorer-reload.png) recharge les valeurs d'attribut d'entité depuis le fichier de données. Ce bouton est utile par exemple lorsque vous voulez vous assurer que les valeurs affichées sont les valeurs enregistrées les plus récentes.
+
+
+### Enregistrer les modifications
+
+À l'exception de la [suppression](#deleting-entities) (voir ci-dessous), les modifications de l'entité sont effectuées localement et doivent être sauvegardées afin d'être enregistrées dans le fichier de données.
+
+Pour enregistrer des modifications ou enregistrer une entité que vous avez créée dans l'explorateur de données, cliquez sur le bouton **Enregistrer** ![save](../assets/en/Admin/data-explorer-save.png).
+
+:::info
+
+Les modifications sur une entité existante sont automatiquement enregistrées lorsque vous sélectionnez une autre entité de la même dataclass.
 
 :::
 
 
-In case of conflict (e.g. another user has modified the same attribute value on the same entity), an error message is displayed at the bottom of the Data Explorer. You can click on the [**Reload** button](#reloading-values) to get the new value from the data and then, apply and save your modifications.
+En cas de conflit (par ex. un autre utilisateur a modifié la même valeur d'attribut sur la même entité), un message d'erreur est affiché au bas de l'Explorateur de données. Vous pouvez cliquer sur le bouton [**Reload**](#reloading-values) pour obtenir la nouvelle valeur des données, puis appliquer et enregistrer vos modifications.
 
-### Deleting entities
+### Suppression d'entités
 
-You can delete entities by clicking on the **delete** button ![delete](../assets/en/Admin/data-explorer-delete.png).
+Vous pouvez supprimer des entités en cliquant sur le bouton de **suppression** ![delete](../assets/en/Admin/data-explorer-delete.png).
 
-To delete a set of entities, select two or more entities in the list area using **Shift+click** (continuous selection) or **Ctrl/Command+click** (discontinuous selection) and click on the **delete** button.
+Pour supprimer un ensemble d'entités, sélectionnez deux entités ou plus dans la zone de liste en utilisant **Maj+clic** (sélection continue) ou **Ctrl/Command+clic** (sélection discontinue) et cliquez sur le bouton de **suppression**.
 
 :::note
 
-If some entities could not be deleted because of a conflict (e.g. entities locked on the server), they are highlighted in the list.
+Si certaines entités n'ont pas pu être supprimées à cause d'un conflit (par exemple, des entités verrouillées sur le serveur), elles sont surlignées dans la liste.
 
 :::
 
 :::caution
 
-No confirmation dialog is displayed when you delete entities. Selected entities are immediately deleted from the data.
+Aucune boîte de dialogue de confirmation n'est affichée lorsque vous supprimez des entités. Les entités sélectionnées sont immédiatement supprimées des données.
 
 :::

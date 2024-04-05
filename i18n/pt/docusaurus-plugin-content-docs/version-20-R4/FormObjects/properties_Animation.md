@@ -1,6 +1,6 @@
 ---
 id: propertiesAnimation
-title: Animation
+title: Animação
 ---
 
 ## Repetir a sequência

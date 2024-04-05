@@ -1,6 +1,6 @@
 ---
 id: backup
-title: Backup page
+title: Página Backup
 ---
 
 Estas opções estão descritas em pormenor no capítulo [**Parâmetros de cópia de segurança**](../Backup/settings.md).

@@ -1,6 +1,6 @@
 ---
 id: error-handling
-title: Error handling
+title: Gestión de errores
 ---
 
 El manejo de errores es el proceso de anticipar y responder a los errores que puedan ocurrir en su aplicación. 4D soporta de forma completa la detección y notificación de errores en tiempo de ejecución, así como el análisis de sus condiciones.

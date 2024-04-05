@@ -1,6 +1,6 @@
 ---
 id: control-flow
-title: Control flow
+title: Flujo de control
 ---
 
 Independientemente de la simplicidad o la complejidad de un método o de una función, siempre utilizará uno o varios de los tres tipos de estructuras de programación. Las estructuras de programación determinan el flujo de ejecución, si se ejecutan y el orden de las líneas de instrucciones dentro de un método. Hay tres tipos de estructuras:
@@ -796,9 +796,9 @@ End for
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 La instrucción `return` puede ser llamada desde cualquier lugar. Cuando se utiliza una instrucción `return` en una función o un método, se detiene la ejecución de la función o del método. El código restante no se ejecuta y el control se devuelve al llamante.

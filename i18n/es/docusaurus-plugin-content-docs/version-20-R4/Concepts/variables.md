@@ -3,9 +3,9 @@ id: variables
 title: Variables
 ---
 
-Los datos en 4D se almacenan de dos formas fundamentalmente diferentes. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+Los datos en 4D se almacenan de dos formas fundamentalmente diferentes. Los **campos** almacenan datos permanentemente en el disco; las **variables** almacenan datos temporalmente en la memoria.
 
-Cuando define su base, especifique a 4D los nombres y los tipos de campos que desea utilizar. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+Cuando define su base, especifique a 4D los nombres y los tipos de campos que desea utilizar. Las variables son muy parecidas, también se les da nombres y tipos diferentes (ver [Tipos de datos](Concepts/data-types.md)).
 
 Una vez creada, puede utilizar una variable dondequiera que la necesite en su aplicación. Por ejemplo, podría necesitar almacenar una variable texto en un campo del mismo tipo:
 
@@ -19,19 +19,19 @@ Las variables son objetos del lenguaje; puede crear y utilizar variables que nun
 
 Generalmente se crean variables declarándolas. El lenguaje 4D ofrece dos formas de declarar las variables:
 
-- using the `var` keyword (recommended specially if your code uses objects and classes, and this syntax enhances code editor suggestions and type-ahead features),
+- utilizando la palabra clave `var` (recomendada especialmente si su código utiliza objetos y clases, y esta sintaxis mejora las sugerencias del editor de código y las funciones de tecleo predictivo),
 - utilizando uno de los comandos del lenguaje 4D del tema "Compilador" o "Arrays" (sintaxis heredada).
 
-When variables are declared, they are initialized to the [**default value corresponding to their type**](data-types.md#default-values), which they will keep during the session as long as they have not been [assigned](#assigning-data). Alternatively, when declaring variables, you can [initialize](#initializing-variables-in-the-declaration-line) their value along with their data type all within one line.
+Cuando se declaran las variables, se inicializan con el [**valor por defecto correspondiente a su tipo**](data-types.md#default-values), que mantendrán durante la sesión mientras no hayan sido [asignadas](#assigning-data). Alternativamente, al declarar variables, puede [inicializar](#inicializar-variables-en-la-línea-de-declaración) su valor junto con su tipo de datos todo dentro de una línea.
 
 :::note
 
 Aunque no es recomendable, puede crear variables simplemente utilizándolas; no es necesario declararlas formalmente. Por ejemplo, para crear una variable que mantenga la fecha actual más 30 días, puede escribir:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created  
- // 4D guesses it is of date type  
- // and assigns the current date plus 30 days
+ MyDate:=Current date+30 //MyDate se crea
+ // 4D asume que es de tipo fecha  
+ //  y asigna la fecha actual más 30 días
 ```
 
 Cuando una variable se crea antes de ser declarada, no se inicializa en el paso de declaración.
@@ -51,13 +51,13 @@ var $myFile : 4D.File  //una variable objeto clase archivo
 var $myVar //una variable variant
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` es el nombre de la variable, debe cumplir con las [reglas 4D](Concepts/identifiers.md) sobre identificadores.
+Esta sintaxis sólo soporta declaraciones de [variables locales y de proceso](#local-process-and-interprocess-variables), por lo que excluye [variables interproceso](#interprocess-variables) y [arrays](Concepts/arrays.md).
 
 `varType` puede ser:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- un [tipo básico](Concepts/data-types.md), en cuyo caso la variable contiene un valor del tipo declarado,
+- una [referencia de clase](Concepts/classes.md) (clase 4D o clase usuario), en cuyo caso la variable contiene una referencia a un objeto de la clase definida.
 
 Si se omite `varType`, se crea una variable de tipo **variant**.
 
@@ -79,7 +79,7 @@ La siguiente tabla enumera todos los valores `varType` soportados:
 | `Object`                    | Objeto con clase por defecto (4D.object) |
 | `4D.<className>`            | Objeto del nombre de la clase 4D                            |
 | `cs.<className>`            | Objeto del nombre de la clase usuario                       |
-| `cs.<namespace><className>` | Object of the `<namespace>` component class name            |
+| `cs.<namespace><className>` | Objeto del componente `<namespace>` nombre de la clase      |
 
 ### Ejemplos
 

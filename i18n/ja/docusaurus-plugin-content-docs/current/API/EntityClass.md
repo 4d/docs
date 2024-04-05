@@ -38,9 +38,9 @@ title: Entity
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -74,9 +74,9 @@ title: Entity
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -84,11 +84,10 @@ title: Entity
 
 
 <!-- REF #EntityClass.clone().Params -->
-| 引数  | タイプ       |    | 説明                                             |
-| --- | --------- |:--:| ---------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ|<!-- END REF -->
-
-|
+| 引数  | タイプ       |    | 説明                  |
+| --- | --------- |:--:| ------------------- |
+| 戻り値 | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
+<!-- END REF -->
 
 #### 説明
 
@@ -115,9 +114,9 @@ title: Entity
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -125,13 +124,12 @@ title: Entity
 
 
 <!-- REF #EntityClass.diff().Params -->
-| 引数                  | タイプ        |    | 説明                                    |
-| ------------------- | ---------- |:--:| ------------------------------------- |
-| entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ                   |
-| attributesToCompare | Collection | -> | 比較する属性の名称                             |
-| 戻り値                 | Collection | <- | エンティティ間の差異|<!-- END REF -->
-
-|
+| 引数                  | タイプ        |    | 説明                  |
+| ------------------- | ---------- |:--:| ------------------- |
+| entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ |
+| attributesToCompare | Collection | -> | 比較する属性の名称           |
+| 戻り値                 | Collection | <- | エンティティ間の差異          |
+<!-- END REF -->
 
 #### 説明
 
@@ -316,9 +314,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -329,9 +327,8 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 | 引数   | タイプ     |    | 説明                                                           |
 | ---- | ------- |:--:| ------------------------------------------------------------ |
 | mode | Integer | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
-| 戻り値  | Object  | <- | ドロップの結果|<!-- END REF -->
-
-|
+| 戻り値  | Object  | <- | ドロップの結果                                                      |
+<!-- END REF -->
 
 #### 説明
 
@@ -423,9 +420,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -433,11 +430,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.first().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
-| --- | --------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null)|<!-- END REF -->
-
-|
+| 引数  | タイプ       |    | 説明                                        |
+| --- | --------- |:--:| ----------------------------------------- |
+| 戻り値 | 4D.Entity | <- | エンティティセレクションの先頭エンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -462,9 +458,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -472,11 +468,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| 引数     | タイプ    |    | 説明                                               |
-| ------ | ------ |:--:| ------------------------------------------------ |
-| filler | Object | -> | エンティティの属性値を設定するオブジェクト|<!-- END REF -->
-
-|
+| 引数     | タイプ    |    | 説明                    |
+| ------ | ------ |:--:| --------------------- |
+| filler | Object | -> | エンティティの属性値を設定するオブジェクト |
+<!-- END REF -->
 
 #### 説明
 
@@ -547,9 +542,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 
 </details>
 
@@ -557,11 +552,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| 引数  | タイプ          |    | 説明                                                        |
-| --- | ------------ |:--:| --------------------------------------------------------- |
-| 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト|<!-- END REF -->
-
-|
+| 引数  | タイプ          |    | 説明                             |
+| --- | ------------ |:--:| ------------------------------ |
+| 戻り値 | 4D.DataClass | <- | エンティティが所属している DataClass オブジェクト |
+<!-- END REF -->
 
 #### 説明
 
@@ -592,9 +586,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -633,9 +627,9 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19R5    | 追加 |
 
 </details>
 
@@ -643,11 +637,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| 引数     | タイプ  |    | 説明                                                        |
-| ------ | ---- | -- | --------------------------------------------------------- |
-| result | Text | <- | エンティティにリンクされたコンテキスト属性 (カンマ区切り)|<!-- END REF -->
-
-|
+| 引数     | タイプ  |    | 説明                             |
+| ------ | ---- | -- | ------------------------------ |
+| result | Text | <- | エンティティにリンクされたコンテキスト属性 (カンマ区切り) |
+<!-- END REF -->
 
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
 
@@ -691,9 +684,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -701,11 +694,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| 引数  | タイプ                |    | 説明                                                                 |
-| --- | ------------------ |:--:| ------------------------------------------------------------------ |
-| 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null)|<!-- END REF -->
-
-|
+| 引数  | タイプ                |    | 説明                                      |
+| --- | ------------------ |:--:| --------------------------------------- |
+| 戻り値 | 4D.EntitySelection | <- | エンティティが所属するエンティティセレクション (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -734,9 +726,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -744,11 +736,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 引数  | タイプ     |    | 説明                                                              |
-| --- | ------- |:--:| --------------------------------------------------------------- |
-| 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0)|<!-- END REF -->
-
-|
+| 引数  | タイプ     |    | 説明                                   |
+| --- | ------- |:--:| ------------------------------------ |
+| 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
+<!-- END REF -->
 
 #### 説明
 
@@ -780,9 +771,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -790,12 +781,11 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| 引数              | タイプ                |    | 説明                                                  |
-| --------------- | ------------------ |:--:| --------------------------------------------------- |
-| entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション                       |
-| 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置|<!-- END REF -->
-
-|
+| 引数              | タイプ                |    | 説明                            |
+| --------------- | ------------------ |:--:| ----------------------------- |
+| entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション |
+| 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置      |
+<!-- END REF -->
 
 #### 説明
 
@@ -828,9 +818,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -838,11 +828,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| 引数  | タイプ     |    | 説明                                                                    |
-| --- | ------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。|<!-- END REF -->
-
-|
+| 引数  | タイプ     |    | 説明                                         |
+| --- | ------- |:--:| ------------------------------------------ |
+| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
+<!-- END REF -->
 
 #### 説明
 
@@ -867,9 +856,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -877,11 +866,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.last().Params -->
-| 引数  | タイプ       |    | 説明                                                                   |
-| --- | --------- |:--:| -------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null)|<!-- END REF -->
-
-|
+| 引数  | タイプ       |    | 説明                                        |
+| --- | --------- |:--:| ----------------------------------------- |
+| 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -906,9 +894,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -919,9 +907,8 @@ $info:=$address.getRemoteContextAttributes()
 | 引数   | タイプ     |    | 説明                                                       |
 | ---- | ------- |:--:| -------------------------------------------------------- |
 | mode | Integer | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
-| 戻り値  | Object  | <- | ロックの結果|<!-- END REF -->
-
-|
+| 戻り値  | Object  | <- | ロックの結果                                                   |
+<!-- END REF -->
 
 #### 説明
 
@@ -1023,9 +1010,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1035,11 +1022,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.next().Params -->
-| 引数  | タイプ       |    | 説明                                                                    |
-| --- | --------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
-
-|
+| 引数  | タイプ       |    | 説明                                         |
+| --- | --------- |:--:| ------------------------------------------ |
+| 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -1067,9 +1053,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1077,11 +1063,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.previous().Params -->
-| 引数  | タイプ       |    | 説明                                                                    |
-| --- | --------- |:--:| --------------------------------------------------------------------- |
-| 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
-
-|
+| 引数  | タイプ       |    | 説明                                         |
+| --- | --------- |:--:| ------------------------------------------ |
+| 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null) |
+<!-- END REF -->
 
 #### 説明
 
@@ -1108,9 +1093,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1118,11 +1103,10 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.reload().Params -->
-| 引数  | タイプ    |    | 説明                                     |
-| --- | ------ |:--:| -------------------------------------- |
-| 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
-
-|
+| 引数  | タイプ    |    | 説明          |
+| --- | ------ |:--:| ----------- |
+| 戻り値 | Object | <- | ステータスオブジェクト |
+<!-- END REF -->
 
 #### 説明
 
@@ -1171,9 +1155,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1184,9 +1168,8 @@ $info:=$address.getRemoteContextAttributes()
 | 引数   | タイプ     |    | 説明                               |
 | ---- | ------- |:--:| -------------------------------- |
 | mode | Integer | -> | `dk auto merge`: 自動マージモードを有効化します |
-| 戻り値  | Object  | <- | 保存の結果|<!-- END REF -->
-
-|
+| 戻り値  | Object  | <- | 保存の結果                            |
+<!-- END REF -->
 
 #### 説明
 
@@ -1306,9 +1289,9 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1321,9 +1304,8 @@ $info:=$address.getRemoteContextAttributes()
 | filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                            |
 | filterCol    | Collection | -> | 取得する属性のコレクション                                                                              |
 | options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_STAMP プロパティを追加 |
-| 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
-
-|
+| 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト                                                                      |
+<!-- END REF -->
 
 #### 説明
 
@@ -1595,9 +1577,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1605,11 +1587,10 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touched().Params -->
-| 引数  | タイプ     |    | 説明                                                                              |
-| --- | ------- |:--:| ------------------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false|<!-- END REF -->
-
-|
+| 引数  | タイプ     |    | 説明                                                   |
+| --- | ------- |:--:| ---------------------------------------------------- |
+| 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
+<!-- END REF -->
 
 #### 説明
 
@@ -1640,9 +1621,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1650,11 +1631,10 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 引数  | タイプ        |    | 説明                                                 |
-| --- | ---------- |:--:| -------------------------------------------------- |
-| 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション|<!-- END REF -->
-
-|
+| 引数  | タイプ        |    | 説明                      |
+| --- | ---------- |:--:| ----------------------- |
+| 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション |
+<!-- END REF -->
 
 #### 説明
 
@@ -1714,9 +1694,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17      | 追加 |
 
 </details>
 
@@ -1724,11 +1704,10 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| 引数  | タイプ    |    | 説明                                     |
-| --- | ------ |:--:| -------------------------------------- |
-| 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
-
-|
+| 引数  | タイプ    |    | 説明          |
+| --- | ------ |:--:| ----------- |
+| 戻り値 | Object | <- | ステータスオブジェクト |
+<!-- END REF -->
 
 #### 説明
 

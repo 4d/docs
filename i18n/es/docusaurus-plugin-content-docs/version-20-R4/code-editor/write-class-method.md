@@ -1,6 +1,6 @@
 ---
 id: write-class-method
-title: Code Editor
+title: Editor de código
 ---
 
 4D tiene un poderoso editor de código integrado que ofrece un amplio conjunto de funcionalidades para la edición de código altamente productivo, como la finalización inteligente de código, la navegación de código, la depuración, la búsqueda y más.
@@ -37,11 +37,13 @@ Aquí es donde se escribe y edita el código. El editor aplica automáticamente 
 
 Puede personalizar la visualización del área de edición. Toda personalización se transmite automáticamente a todas las ventanas del editor de código:
 
-| Opción | Descripción | Definir en... |
-
-
-
-|---|---|---| |**fuente** y **tamaño de fuente**| Defin la fuente y el tamaño de los caracteres que se utilizarán en el área de edición| **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Ver** > **Fuente más grande** o **Fuente más pequeña** |**estilo y color de los elementos de sintaxis**| asigna un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los diferentes colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).| Haga clic derecho en un elemento del lenguaje (variable, palabra clave, etc.) > Submenú **Estilo**. O **Preferencias** > [**Métodos**](../Preferences/methods.md)| |**espacios**| Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Vista > Espacios en blanco** |**temas**| Puede seleccionar el tema Oscuro o Claro, o definir uno personalizado | **Preferencias** > [**Métodos**](../Preferences/methods.md) |**ancho de las sangrías de código**| Defina el ancho de las sangrías de código| **Preferencias** > [**Métodos**](../Preferences/methods.md)
+| Option                                          | Descripción                                                                                                                                                                                                 | Definido en...                                                                                                                                                   |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **fuente** y **tamaño de la fuente**            | Define la fuente y el tamaño de los caracteres que se utilizarán en el área de edición                                                                                                                      | **Preferencias** > [**Métodos**](../Preferences/methods.md) o **Método > Vista** > **Fuente más grande** o **Fuente más pequeña**                                |
+| **estilo y color de los elementos de sintaxis** | Asignar un color y/o estilo específico a cada tipo de elemento del lenguaje 4D.  También puede cambiar los distintos colores utilizados en la interfaz del área de edición (resaltado, fondo, etc.).        | Haga clic derecho en un elemento lingüístico (variable, palabra clave, etc.) > Submenú **Estilo**. O **Preferencias** > [**Métodos**](../Preferences/methods.md) |
+| **espacios**                                    | Puede mostrar los espacios entre palabras utilizando puntos (.) en lugar de espacios en blanco. Esta opción se aplica a todos los elementos del código (nombres de comandos, variables, comentarios, etc.). | **Método > Ver > Espacios en blanco**                                                                                                                            |
+| **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                        | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                      |
+| **ancho de indentaciones de código**            | Define el ancho de las sangrías de código                                                                                                                                                                   | **Preferencias** > [**Métodos**](../Preferences/methods.md)                                                                                                      |
 
 #### Barras de cambio
 
@@ -553,7 +555,7 @@ La [barra de estado](#status-bar) también ofrece información contextual.
 
 ## Comentar / Descomentar
 
-El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), que son líneas de código inactivas. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea. No hay límite en el número de líneas.
+El lenguaje 4D soporta los [comentarios](../Concepts/quick-tour.md#comments), que son líneas de código inactivas. El editor de código no aplica ningún estilo particular dentro de los comentarios. La longitud de los comentarios está limitada al tamaño máximo de 32.000 caracteres por línea.
 
 Existen dos tipos de comentarios: `//comment` (comentario de una línea) y `/*comment*/`(comentarios en línea o bloques de comentarios multilínea).
 

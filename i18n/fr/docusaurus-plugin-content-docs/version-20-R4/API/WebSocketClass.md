@@ -3,18 +3,22 @@ id: WebSocketClass
 title: WebSocket
 ---
 
-<details><summary>Historique</summary>
 
-| Version | Modifications |
-| ------- | ------------- |
-| v20 R2  | Ajout         |
-
-</details>
 
 
 La classe `WebSocket` permet d'ouvrir une connexion cliente WebSocket avec un serveur, d'envoyer et de recevoir des données et de fermer la connexion.
 
 Les connexions clientes WebSocket sont utiles, par exemple, pour recevoir des données financières en temps réel ou pour envoyer et recevoir des messages à partir d'une messagerie instantanée.
+
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20 R2   | Ajout         |
+
+</details>
+
 
 ### Exemple
 
@@ -70,9 +74,9 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                      |
+| Release | Modifications                                                      |
 | ------- | ------------------------------------------------------------------ |
-| v20 R3  | Prise en charge de la propriété `headers` dans *connectionHandler* |
+| 20 R3   | Prise en charge de la propriété `headers` dans *connectionHandler* |
 
 </details>
 
@@ -81,14 +85,12 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 
 <!-- REF #4D.WebSocket.new().Params -->
-| Paramètres                                        | Type         |    | Description                                                            |
-| ------------------------------------------------- | ------------ |:--:| ---------------------------------------------------------------------- |
-| url                                               | Text         | -> | URL à laquelle se connecter                                            |
-| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objet déclarant les callbacks WebSocket                                |
-| Résultat                                          | 4D.WebSocket | <- | Nouvel [objet WebSocket](#websocket-object)|<!-- END REF -->
-
-
-|
+| Paramètres                                        | Type         |    | Description                               |
+| ------------------------------------------------- | ------------ |:--:| ----------------------------------------- |
+| url                                               | Text         | -> | URL à laquelle se connecter               |
+| [connectionHandler](#connectionHandler-parameter) | Object       | -> | Objet déclarant les callbacks WebSocket   |
+| Résultat                                          | 4D.WebSocket | <- | New [WebSocket object](#websocket-object) |
+<!-- END REF -->
 
 
 La fonction `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->crée et renvoie un nouvel [objet `4D.WebSocket`](#websocket-object) connecté au serveur WebSocket à l'adresse indiquée dans *url*<!-- END REF -->. L'objet `4D.WebSocket` fournit une API pour la création et la gestion d'une connexion WebSocket à un serveur, ainsi que pour l'envoi et la réception de données vers et depuis le serveur.
@@ -238,11 +240,8 @@ Cette propriété est en lecture seule.
 | Paramètres | Type    |    | Description                                                       |
 | ---------- | ------- |:--:| ----------------------------------------------------------------- |
 | code       | Integer | -> | Code de statut indiquant la cause de la fermeture de la connexion |
-| reason     | Text    | -> | Cause de la fermeture de la connexion<!-- END REF -->
-
-
-
-|
+| reason     | Text    | -> | The reason why the connection is closing                          |
+<!-- END REF -->
 
 
 

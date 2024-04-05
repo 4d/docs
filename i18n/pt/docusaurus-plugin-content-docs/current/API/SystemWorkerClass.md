@@ -50,9 +50,9 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 
 </details>
 
@@ -254,9 +254,9 @@ Function _createFile($title : Text; $textBody : Text)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R4   | Adicionado |
 
 </details>
 
@@ -265,11 +265,10 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -432,9 +431,8 @@ Essa propriedade é **apenas leitura**.
 | Parâmetro   | Tipo |    | Descrição                                                           |
 | ----------- | ---- |:--:| ------------------------------------------------------------------- |
 | message     | Text | -> | Texto para escrever no fluxo de entrada (stdin) do processo externo |
-| messageBLOB | Blob | -> | Bytes escritos no fluxo de entrada|<!-- END REF -->
-
-|
+| messageBLOB | Blob | -> | Bytes escritos no fluxo de entrada                                  |
+<!-- END REF -->
 
 #### Descrição
 
@@ -482,11 +480,10 @@ A propriedade `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 #### Descrição
 
@@ -529,11 +526,11 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças |
-| ------ | -------- |
-|        |          |
+| Release | Mudanças |
+| ------- | -------- |
+|         |          |
 
-|v19 R4|Added|
+|19 R4|Added|
 
 </details>
 
@@ -542,12 +539,11 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| Parâmetro  | Tipo            |    | Descrição                                       |
-| ---------- | --------------- |:--:| ----------------------------------------------- |
-| timeout    | Real            | -> | Tempo de espera (em segundos)                   |
-| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo            |    | Descrição                     |
+| ---------- | --------------- |:--:| ----------------------------- |
+| timeout    | Real            | -> | Tempo de espera (em segundos) |
+| Resultados | 4D.SystemWorker | <- | Objecto SystemWorker          |
+<!-- END REF -->
 
 #### Descrição
 

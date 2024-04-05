@@ -141,9 +141,9 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -204,9 +204,9 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -261,9 +261,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -298,9 +298,9 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -345,9 +345,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -387,10 +387,10 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                             |
-| ------ | ---------------------------------------------------- |
-| v18 R3 | Nova opção *ck shared*. Novos parâmetros *groupWith* |
-| v16 R6 | Adicionado                                           |
+| Release | Mudanças                                             |
+| ------- | ---------------------------------------------------- |
+| 18 R3   | Nova opção *ck shared*. Novos parâmetros *groupWith* |
+| v16 R6  | Adicionado                                           |
 
 </details>
 
@@ -509,9 +509,9 @@ Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -554,9 +554,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -628,9 +628,9 @@ O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleç
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -678,9 +678,9 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -733,9 +733,9 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -826,13 +826,13 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -856,7 +856,7 @@ Os conteúdos da coleção retornada depende do parâmetro *targetPath*:
 
  Como padrão, elementos para os quais *propertyPath* for null ou undefined são ignorados na coleção resultante. Pode passar a constante `ck keep null` no parâmetro *option* para incluir esses valores como elementos null na coleção retornada.
 
-* Se um ou mais parâmetros *targetPath* forem passados,, `.extract()` preenche a nova coelção com as propriedades *propertyPath* e cada elemento da nova coleção é um objeto com as propriedades *targetPath* preenchidas com as propriedades correspondentes *propertyPath*. Se mantém os valores null (o parámetro *option* se ignora) com esta sintaxe.
+* If one or more *targetPath* parameter(s) are passed (corresponding to one or more *propertyPath* parameter(s)), `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the matching *propertyPath* properties. Se mantém os valores null (o parámetro *option* se ignora) com esta sintaxe.
 
 #### Exemplo 1
 
@@ -894,9 +894,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -946,9 +946,9 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1036,9 +1036,9 @@ O código para ***TypeLookUp*** é:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1130,9 +1130,9 @@ O código do método ***FindCity*** é:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1205,9 +1205,9 @@ The code for ***FindCity*** method is:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1261,9 +1261,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1314,9 +1314,9 @@ Para uma descrição detalhada dos parâmetros *queryString* e *value*, veja a f
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1363,9 +1363,9 @@ Qualquer tipo de elemento aceito por uma coleção pode ser inserido, mesmo outr
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1405,9 +1405,9 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1458,9 +1458,9 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R5  | Adicionado |
 
 </details>
 
@@ -1486,9 +1486,9 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1546,9 +1546,9 @@ Here is the ***Percentage*** method:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1594,9 +1594,9 @@ Se a coleção estiver vazia, `.max()` devolve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1642,9 +1642,9 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1676,6 +1676,7 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
 
 * *pathObjects* : Collection. Pode adicionar tantos objetos na coleção *pathObjects* como seja necessário. Como padrão, as propriedades se classificam em ordem ascendente ("descending" é false). Cada elemento da coleção contém um objeto estruturado da seguinte maneira:
 
+
 ```4d
 {
     "propertyPath": string,
@@ -1690,7 +1691,7 @@ Também pode passar um parâmetro de critérios para definir como devem ordenar-
  | ck ascending  | Longint | 0     | Os elementos são ordenados de forma ascendente (por padrão) |
  | ck descending | Longint | 1     | Os elementos são ordenados de forma descendente             |
 
- Essa sintaxe ordena apenas os valores escalares da coleção (outros tipos de elementos como objetos ou coleções são retornados sem ordenar).
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned with an internal order).
 
 Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
@@ -1776,9 +1777,9 @@ Ordenar com uma rota de propriedade:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1879,9 +1880,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1923,9 +1924,9 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -1976,10 +1977,10 @@ Se quiser ordenar a coleção resultante:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v17 R5 | Assistência de querySettings |
-| v16 R6 | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 17 R5   | Assistência de querySettings |
+| v16 R6  | Adicionado                   |
 
 </details>
 
@@ -2078,9 +2079,9 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2163,9 +2164,9 @@ Este exemplo permite reduzir vários elementos da coleção a um só:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2215,9 +2216,9 @@ Se tentar remover um elemento de uma coleção vazia, o método não faz nada (n
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2270,9 +2271,9 @@ Por padrão, são preenchidos novos elementos **null** valores. Pode especificar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2308,9 +2309,9 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->devolve uma c�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2349,9 +2350,9 @@ Se a colecção estiver vazia, este método não faz nada.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2397,9 +2398,9 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2472,9 +2473,9 @@ Com o seguinte método *NumberGreaterThan0*:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2556,9 +2557,9 @@ If you want to sort the collection elements in some other order or sort any type
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 
@@ -2616,9 +2617,9 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v16 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| v16 R6  | Adicionado |
 
 </details>
 

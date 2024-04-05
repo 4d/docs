@@ -1,6 +1,6 @@
 ---
 id: httpRequests
-title: Processing HTTP requests
+title: Procesamiento de peticiones HTTP
 ---
 
 El servidor web de 4D ofrece varias funcionalidades para gestionar las peticiones HTTP:
@@ -223,6 +223,7 @@ End if
 
 
 
+
 ## Obtener valores de las peticiones HTTP
 
 El servidor web de 4D le permite recuperar datos enviados a través de peticiones POST o GET, utilizando formularios web o URLs.
@@ -317,7 +318,7 @@ Examinemos el método 4D `WWW_STD_FORM_POST` que se llama cuando el usuario hace
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
- C_TEXT($user)
+ C_LONGINT($user)
 
  Case of
 

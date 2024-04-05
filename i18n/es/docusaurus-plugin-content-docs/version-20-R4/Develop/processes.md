@@ -94,7 +94,7 @@ Cuando crea un proceso global, se crea un proceso "doble" en el servidor, que co
 
 Un proceso Worker es una forma sencilla y poderosa de intercambiar información entre procesos. Esta funcionalidad se basa en un sistema de mensajería asíncrono que permite a los procesos y formularios ser llamados y se les pide ejecutar métodos con parámetros en su propio contexto.
 
-Un worker puede ser "contratado" por cualquier proceso (utilizando el comando [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/es/page1389.html)) para ejecutar métodos de proyecto con parámetros en su propio contexto, permitiendo así el acceso a información compartida.
+Un worker puede ser "contratado" por cualquier proceso (utilizando el comando [`CALL WORKER`](https://doc.4d.com/4dv20/help/command/en/page1389.html)) para ejecutar métodos de proyecto con parámetros en su propio contexto, permitiendo así el acceso a información compartida.
 
 :::info
 

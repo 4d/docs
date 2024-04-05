@@ -165,12 +165,12 @@ Function createCompany($name : Text; $logo : 4D.File)
     var $company : cs.CompanyEntity
     $company:=ds.Company.new()
 
-    $company.name:=$name 
+    $company.name:=$name
         //assignment using a file object
-    $company.logo:=$logo 
+    $company.logo:=$logo
         //assignment using a path
     $company.datablob:="/RESOURCES/"+$name+"/data.bin"
-    $company.save() 
+    $company.save()
 ```
 
 Regardless of how the attribute is assigned (data itself or reference to a file), read access to the attribute is transparent from the user's point of view.
@@ -326,7 +326,7 @@ $highSal:=ds.Employee.query("salary >= :1"; 1000000)
     //$highSal is shareable because of the query on dataClass
 $comp:=$highSal.employer //$comp is shareable because $highSal is shareable
 
-$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
+$lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
     //$lowSal is alterable because of the copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
@@ -371,7 +371,7 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
 
 The `sendMails` method:
 
-```4d 
+```4d
 
  #DECLARE ($paid : cs.InvoicesSelection; $unpaid : cs.InvoicesSelection)
  var $invoice : cs.InvoicesEntity
@@ -440,7 +440,7 @@ A filter creates a restricted view of the data, built upon any business rules su
 
 :::info
 
-Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](../privileges.md) which are more appropriate in this case.
+Filters apply to **entities**. If you want restrict access to a **dataclass** itself or to one or more of its **attributes**, you might consider using [session privileges](privileges.md) which are more appropriate in this case.
 
 :::
 
@@ -490,7 +490,7 @@ Function event restrict() : cs.CustomersSelection
         //We work in a web or REST context
     If (Session#Null)
 
-        Case of 
+        Case of
                 // Only return the customers of the authenticated sales person stored in the session
             : (Session.storage.salesInfo#Null)
                 return This.query("sales.internalId = :1"; Session.storage.salesInfo.internalId)
@@ -498,15 +498,15 @@ Function event restrict() : cs.CustomersSelection
                 //Data explorer - No filter is applied
             : (Session.hasPrivilege("WebAdmin"))
                 return Null
-            Else 
+            Else
                 //No customers can be read
                 return This.newSelection()
 
-        End case 
+        End case
 
     Else // We work in client server
         return This.query("sales.userName = :1"; Current user)
-    End if 
+    End if
 ```
 
 

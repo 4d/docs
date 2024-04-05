@@ -117,10 +117,10 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v17 R6  | Renombrado (New formula -> Formula) |
-| v17 R3  | Añadidos                            |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 17 R6       | Renombrado (New formula -> Formula) |
+| 17 R3       | Añadidos                            |
 
 </details>
 
@@ -128,13 +128,11 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 
 <!-- REF #_command_.Formula.Params -->
-| Parámetros | Tipo        |    | Descripción                                                        |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------ |
-| formulaExp | Expression  | -> | Fórmula a devolver como objeto                                     |
-| Result     | 4D.Function | <- | Función nativa que encapsula la fórmula|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo        |    | Descripción                             |
+| ---------- | ----------- |:--:| --------------------------------------- |
+| formulaExp | Expression  | -> | Fórmula a devolver como objeto          |
+| Result     | 4D.Function | <- | Función nativa que encapsula la fórmula |
+<!-- END REF -->
 
 
 #### Descripción
@@ -256,11 +254,11 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                             |
-| ------- | ---------------------------------------------------------- |
-| v20 R3  | Soporte del parámetro *context*                            |
-| v17 R6  | Renombrado: New formula from string -> Formula from string |
-| v17 R3  | Añadidos                                                   |
+| Lanzamiento | Modificaciones                                             |
+| ----------- | ---------------------------------------------------------- |
+| 20 R3       | Soporte del parámetro *context*                            |
+| 17 R6       | Renombrado: New formula from string -> Formula from string |
+| 17 R3       | Añadidos                                                   |
 
 </details>
 
@@ -272,10 +270,8 @@ Llamar a una fórmula utilizando la notación de objetos:
 | ------------- | ----------- |:--:| ------------------------------------------------------------------------------ |
 | formulaString | Text        | -> | Fórmula texto a devolver como objeto                                           |
 | context       | Number      | -> | `sk execute in current database` (por defecto) o `sk execute in host database` |
-| Result        | 4D.Function | <- | Objeto nativo que encapsula la fórmula|<!-- END REF -->
-
-
-|
+| Result        | 4D.Function | <- | Objeto nativo que encapsula la fórmula                                         |
+<!-- END REF -->
 
 
 #### Descripción
@@ -325,9 +321,9 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R3       | Añadidos       |
 
 </details>
 
@@ -339,10 +335,8 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 | ------------- | ---------- |:--:| ----------------------------------------------------------------------------- |
 | thisObj       | Object     | -> | Objeto a devolver por el comando This en la fórmula                           |
 | formulaParams | Collection | -> | Colección de valores que se pasan como $1...$n cuando se ejecuta la `fórmula` |
-| Result        | any        | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
-
-
-|
+| Result        | any        | <- | Valor obtenido de la ejecución de la fórmula                                  |
+<!-- END REF -->
 
 
 #### Descripción
@@ -399,9 +393,9 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R3       | Añadidos       |
 
 </details>
 
@@ -413,10 +407,8 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 | ---------- | ------ | -- | ------------------------------------------------------------------ |
 | thisObj    | Object | -> | Objeto a devolver por el comando This en la fórmula                |
 | params     | any    | -> | Valor(es) que se pasa(n) como $1...$n cuando se ejecuta la fórmula |
-| Result     | any    | <- | Valor de la ejecución de la fórmula|<!-- END REF -->
-
-
-|
+| Result     | any    | <- | Valor obtenido de la ejecución de la fórmula                       |
+<!-- END REF -->
 
 
 #### Descripción
@@ -454,9 +446,9 @@ Tenga en cuenta que `.call()` es similar a [`.apply()`](#apply) excepto que los 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 

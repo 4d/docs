@@ -18,7 +18,7 @@ As variáveis são objetos da linguagem; pode criar e utilizar variables que nun
 
 ## Criação de variáveis
 
-You usually create variables by declaring them. A linguagem 4D oferece duas maneiras de declarar variáveis:
+Normalmente, você cria variáveis declarando-as. A linguagem 4D oferece duas maneiras de declarar variáveis:
 
 - utilizando a palavra-chave `var` (recomendado, especialmente se o seu código utilizar objectos e classes),
 - using one of the "Compiler" or "Arrays" theme 4D language commands (legacy syntax).

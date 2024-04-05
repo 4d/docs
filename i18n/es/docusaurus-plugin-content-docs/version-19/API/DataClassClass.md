@@ -25,9 +25,9 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece una interfaz de objeto a una
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -118,10 +118,10 @@ Considerando las propiedades de tabla siguientes:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R5  | Soporte del parámetro *settings* |
-| v17     | Añadidos                         |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 17 R5       | Soporte del parámetro *settings* |
+| 17          | Añadidos                         |
 
 </details>
 
@@ -168,10 +168,10 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v17 R5  | Soporte del parámetro *settings* |
-| v17     | Añadidos                         |
+| Lanzamiento | Modificaciones                   |
+| ----------- | -------------------------------- |
+| 17 R5       | Soporte del parámetro *settings* |
+| 17          | Añadidos                         |
 
 </details>
 
@@ -365,9 +365,9 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -441,9 +441,9 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -494,9 +494,9 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -569,9 +569,9 @@ La función `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devuelve
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -611,9 +611,9 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17          | Añadidos       |
 
 </details>
 
@@ -653,11 +653,11 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                             |
-| ------- | ------------------------------------------ |
-| v17 R6  | Soporte de los parámetros Formula          |
-| v17 R5  | Soporte de los marcadores para los valores |
-| v17     | Añadidos                                   |
+| Lanzamiento | Modificaciones                             |
+| ----------- | ------------------------------------------ |
+| 17 R6       | Soporte de los parámetros Formula          |
+| 17 R5       | Soporte de los marcadores para los valores |
+| 17          | Añadidos                                   |
 
 </details>
 
@@ -962,7 +962,7 @@ En el parámetro *querySettings* se puede pasar un objeto que contenga opciones 
 | attributes    | Object  | **attributePath**: path of attribute on which you want to execute the query. Los atributos se expresan como pares propiedad / valor, donde propiedad es el nombre del marcador de posición insertado para una ruta de atributo en *queryString* o *formula* (":placeholder") y valor puede ser una cadena o una colección de cadenas. Cada valor es una ruta que puede designar un escalar o un atributo relacionado de la dataclass o una propiedad en un campo de objeto de la dataclass<table><tr><th>Tipo</th><th>Descripción</th></tr><tr><td>String</td><td>attributePath expresado con la notación de puntos, por ejemplo: "name" o "user.address.zipCode"</td></tr><tr><td>Colección de cadenas</td><td>Cada cadena de la colección representa un nivel de attributePath, por ejemplo: \["name"] o \["user","address","zipCode"]. El uso de una colección permite consultar atributos con nombres que no se ajustan a la notación de puntos, por ejemplo, ["4Dv17.1", "en/fr"]</td></tr></table>Puede combinar marcadores de posición indexados (valores pasados directamente en los parámetros *value*) y los valores de marcadores de posición con nombre en la misma búsqueda. |
 | args          | Object  | Parámetro(s) a pasar a las fórmulas, si las hay. El objeto **args** se recibirá en $1 dentro de las fórmulas y, por tanto, sus valores estarán disponibles a través de *$1.property* (ver ejemplo 3).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | allowFormulas | Boolean | True para permitir las llamadas de fórmulas en la búsqueda (por defecto). Pase false para desautorizar la ejecución de fórmulas. Si se establece como false y `query()` recibe una fórmula, se envía un error (1278 - Fórmula no permitida en este método miembro).                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| context       | Text    | Etiqueta para el contexto de optimización automática aplicado a la entity selection. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. This feature is designed for client/server processing; for more information, please refer to the [**Client/server optimization**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.en.html#4461913) page.                                                                                                                                                                                                                                                            |
+| context       | Text    | Etiqueta para el contexto de optimización automática aplicado a la entity selection. Este contexto será utilizado por el código que maneja la selección de entidades para que pueda beneficiarse de la optimización. Esta funcionalidad está diseñada para el procesamiento cliente/servidor; para más información, consulte la página [**Optimización cliente/servidor**](https://doc.4d.com/4Dv19/4D/19/Entity-selections.300-5416640.en.html#4461913).                                                                                                                                                                                                                                             |
 | queryPlan     | Boolean | En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda justo antes de que se ejecute, es decir, la búsqueda planificada. La propiedad devuelta es un objeto que incluye cada búsqueda y sub búsqueda prevista (en el caso de una búsqueda compleja). Esta opción es útil durante la fase de desarrollo de una aplicación. Suele utilizarse junto con queryPath. Por defecto si se omite: false. **Nota**: esta propiedad sólo la soportan las funciones`entitySelection.query( )` y `dataClass.query( )`.                                                                                                                                                           |
 | queryPath     | Boolean | En la entity selection resultante, devuelve o no la descripción detallada de la búsqueda tal cual es realizada. La propiedad devuelta es un objeto que contiene la ruta utilizada para la búsqueda (normalmente idéntica a la de queryPlan, pero puede diferir si el motor consigue optimizar la búsqueda), así como el tiempo de procesamiento y el número de registros encontrados. Esta opción es útil durante la fase de desarrollo de una aplicación. Por defecto si se omite: false. **Nota**: esta propiedad sólo la soportan las funciones`entitySelection.query( )` y `dataClass.query( )`.                                                                                                  |
 

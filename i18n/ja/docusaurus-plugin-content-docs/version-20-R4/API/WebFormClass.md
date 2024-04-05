@@ -3,16 +3,16 @@ id: WebFormClass
 title: WebForm
 ---
 
-<details><summary>履歴</summary>
-
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R2 | 追加 |
-
-</details>
-
 
 `WebForm` クラスには、Qodly の Webフォームコンポーネント (Webフォームの構成要素) を処理するための関数とプロパティが含まれています。 このクラスについては、[Qodly ドキュメンテーション](https://developer.qodly.com/docs/language/WebFormClass) (英語) で詳しく説明されています。
+
+<details><summary>履歴</summary>
+
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R2 | 追加 |
+
+</details>
 
 
 

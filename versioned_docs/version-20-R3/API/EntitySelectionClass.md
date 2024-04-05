@@ -137,9 +137,9 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -195,9 +195,9 @@ Note that the corresponding entity is reloaded from the datastore.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -281,11 +281,11 @@ The resulting object is an entity selection of Employee with duplications remove
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support of *entitySelection* parameter|
-|v18 R5|Only supports alterable entity selections|
-|v17|Added|
+|19 R7|Support of *entitySelection* parameter|
+|18 R5|Only supports alterable entity selections|
+|17|Added|
 
 </details>
 
@@ -372,9 +372,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -439,9 +439,9 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -483,10 +483,10 @@ $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Returns undefined if empty entity selection|
-|v17|Added|
+|18 R6|Returns undefined if empty entity selection|
+|17|Added|
 
 </details>
 
@@ -537,9 +537,9 @@ We want to obtain a list of employees whose salary is higher than the average sa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -585,9 +585,9 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -631,9 +631,9 @@ We want to find out the total number of employees for a company without counting
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -694,10 +694,10 @@ Then this entity selection is updated with products and you want to share the pr
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of `dk count values`|
-|v17|Added|
+|20|Support of `dk count values`|
+|17|Added|
 
 </details>
 
@@ -784,9 +784,9 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -841,9 +841,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -903,9 +903,9 @@ Example with the `dk stop dropping on first error` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -1012,9 +1012,9 @@ Given the following table and relation:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1069,9 +1069,9 @@ There is, however, a difference between both statements when the selection is em
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -1117,9 +1117,9 @@ The following generic code duplicates all entities of the entity selection:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19R5|Added|
+|19R5|Added|
 
 </details>
 
@@ -1171,9 +1171,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -1212,9 +1212,9 @@ Form.products.add(Form.product)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1266,9 +1266,9 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1315,9 +1315,9 @@ If the entity selection is empty, the function returns Null.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1349,10 +1349,10 @@ Entity selections always have a `.length` property.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
-|v18 R6|Returns undefined if empty entity selection|
+|17|Added|
+|18 R6|Returns undefined if empty entity selection|
 
 </details>
 
@@ -1400,10 +1400,10 @@ We want to find the highest salary among all the female employees:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
-|v18 R6|Returns undefined if empty entity selection|
+|17|Added|
+|18 R6|Returns undefined if empty entity selection|
 
 
 </details>
@@ -1450,10 +1450,10 @@ In this example, we want to find the lowest salary among all the female employee
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support of *keepOrder* parameter|
-|v17|Added|
+|19 R7|Support of *keepOrder* parameter|
+|17|Added|
 
 </details>
 
@@ -1533,9 +1533,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1594,9 +1594,9 @@ If the original entity selection and the parameter are not related to the same d
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1675,9 +1675,9 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Added|
+|17 R6|Added|
 
 </details>
 
@@ -1798,11 +1798,11 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Support of Formula parameters|
-|v17 R5|Support of placeholders for values|
-|v17|Added|
+|17 R6|Support of Formula parameters|
+|17 R5|Support of placeholders for values|
+|17|Added|
 
 </details>
 
@@ -1858,9 +1858,9 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1882,9 +1882,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1906,9 +1906,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -1986,9 +1986,9 @@ A list box displays the Form.students entity selection and several clients work 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added|
+|19 R3|Added|
 
 </details>
 
@@ -2057,9 +2057,9 @@ $result2:=$invoices.selected($creditSel)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -2119,9 +2119,9 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 
 
@@ -2173,9 +2173,9 @@ $sum:=$sel.sum("salary")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 

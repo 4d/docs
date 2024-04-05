@@ -93,7 +93,7 @@ const Sections = [
         <Link to="Develop/processes" >
           <Translate>Processes</Translate>
         </Link>
-        <Link to="Tags/tags" >
+        <Link to="Tags/transformation-tags" >
           <Translate>Transformation Tags</Translate>
         </Link>
         <Link to="Preferences/overview" >
@@ -201,11 +201,14 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="WebServer/webServer">
+        <Link to="WebServer/">
           <Translate>Web Server</Translate>
         </Link>
         <Link to="WebServer/gettingStarted">
           <Translate>Web Development</Translate>
+        </Link>
+        <Link to="WebServer/qodly-studio">
+          <Translate>Qodly Studio</Translate>
         </Link>
         <Link to="REST/gettingStarted">
           <Translate>REST Server</Translate>

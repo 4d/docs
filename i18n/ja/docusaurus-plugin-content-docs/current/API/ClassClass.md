@@ -11,21 +11,92 @@ title: Class
 ### 概要
 
 
-|                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->                   |
-| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary -->                  |
-| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary --> |
+|                                                                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #ClassClass.isShared.Syntax -->](#isshared)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isShared.Summary -->          |
+| [<!-- INCLUDE #ClassClass.isSingleton.Syntax -->](#issingleton)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.isSingleton.Summary --> |
+| [<!-- INCLUDE #ClassClass.me.Syntax -->](#me)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.me.Summary -->                            |
+| [<!-- INCLUDE #ClassClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.name.Summary -->                      |
+| [<!-- INCLUDE #ClassClass.new().Syntax -->](#new)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.new().Summary -->                     |
+| [<!-- INCLUDE #ClassClass.superclass.Syntax -->](#superclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ClassClass.superclass.Summary -->    |
 
+
+<!-- REF ClassClass.isShared.Desc -->
+## .isShared
+
+<details><summary>履歴</summary>
+
+| Release | 内容 |
+| ------- | -- |
+| 20 R5   | 追加 |
+
+</details>
+
+
+<!-- REF #ClassClass.isShared.Syntax -->**.isShared** : Boolean<!-- END REF -->
+
+#### 説明
+
+`.isShared` プロパティは、 <!-- REF #ClassClass.isShared.Summary -->ユーザークラスが [共有クラス](../Concepts/classes.md#共有クラス) として定義されている場合は `true` を返します<!-- END REF -->。そうでない場合は `false` を返します。
+
+このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
+
+<!-- REF ClassClass.isSingleton.Desc -->
+## .isSingleton
+
+<details><summary>履歴</summary>
+
+| Release | 内容 |
+| ------- | -- |
+| 20 R5   | 追加 |
+
+</details>
+
+
+<!-- REF #ClassClass.isSingleton.Syntax -->**.isSingleton** : Boolean<!-- END REF -->
+
+#### 説明
+
+`.isSingleton` プロパティは、 <!-- REF #ClassClass.isSingleton.Summary -->ユーザークラスが [ シングルトンクラス ](../Concepts/classes.md#シングルトンクラス) として定義されている場合は `true` を返します<!-- END REF -->。そうでない場合は `false` を返します。
+
+このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
+
+<!-- REF ClassClass.me.Desc -->
+## .me
+
+<details><summary>履歴</summary>
+
+| Release | 内容 |
+| ------- | -- |
+| 20 R5   | 追加 |
+
+</details>
+
+
+<!-- REF #ClassClass.me.Syntax -->**.me** : 4D.Class<!-- END REF -->
+
+#### 説明
+
+`.me` プロパティは、 <!-- REF #ClassClass.me.Summary -->`cs.className` シングルトンクラスのシングルトンインスタンスを返します<!-- END REF -->。 シングルトンクラスが前もってインスタンス化されていない場合、このプロパティは引数なしでクラスコンストラクターを呼び出し、インスタンスを作成します。 そうでない場合は、既存のシングルトンインスタンスを返します。
+
+`cs.className` が [シングルトンクラス](../Concepts/classes.md#シングルトンクラス) でない場合、`.me` はデフォルトで **undefined** です。
+
+このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
 
 <!-- REF ClassClass.name.Desc -->
 ## .name
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 18 R3   | 追加 |
 
 </details>
 
@@ -45,9 +116,9 @@ title: Class
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 18 R3   | 追加 |
 
 </details>
 
@@ -56,11 +127,14 @@ title: Class
 
 
 
+
 <!-- REF #ClassClass.new().Params -->
-| 引数    | タイプ      |    | 説明                                      |
-| ----- | -------- |:--:| --------------------------------------- |
-| param | any      | -> | コンストラクター関数に渡す引数                         |
-| 戻り値   | 4D.Class | <- | クラスの新規オブジェクト|<!-- END REF --> |
+| 引数    | タイプ      |    | 説明              |
+| ----- | -------- |:--:| --------------- |
+| param | any      | -> | コンストラクター関数に渡す引数 |
+| 戻り値   | 4D.Class | <- | クラスの新規オブジェクト    |
+
+<!-- END REF -->
 
 
 #### 説明
@@ -69,7 +143,12 @@ title: Class
 
 任意の *param* パラメーターに渡した引数は、当該クラス定義内の [Class Constructor](Concepts/classes.md#class-constructor) 関数 (あれば) が受け取ります。 コンストラクター関数においては、[`This`](Concepts/classes.md#this) は新規に作成されるオブジェクトを指します。
 
-存在しないクラスを対象に `.new()` を呼び出した場合、エラーが返されます。
+:::note 注記
+
+- すでにインスタンス化されている [シングルトンクラスに対して](../Concepts/classes.md#シングルトンクラス) `.new()` を呼び出すと、新しいインスタンスではなくシングルトンインスタンスが返されます。
+- 存在しないクラスを対象に `.new()` を呼び出した場合、エラーが返されます。
+
+:::
 
 #### 例題
 
@@ -108,9 +187,9 @@ $person:=cs.Person.new("John";"Doe";40)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 18 R3   | 追加 |
 
 </details>
 

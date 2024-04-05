@@ -44,9 +44,9 @@ Une fois qu’un texte a été orienté, il reste possible de modifier sa taille
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                 |
+| Release | Modifications                                 |
 | ------- | --------------------------------------------- |
-| v19 R7  | Prise en charge de la propriété Rayon d'angle |
+| 19 R7   | Prise en charge de la propriété Rayon d'angle |
 
 </details>
 

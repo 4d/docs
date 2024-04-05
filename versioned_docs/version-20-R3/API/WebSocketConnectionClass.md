@@ -3,14 +3,6 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v20|Added|
-
-</details>
-
 The `WebSocketConnection` class API allows you to handle WebSocket connections, once established using the [`WebSocketServer` class](WebSocketServerClass.md). 
 
 :::info
@@ -18,6 +10,15 @@ The `WebSocketConnection` class API allows you to handle WebSocket connections, 
 For an overview and some examples of the WebSocket server implementation in 4D, please refer to the [`WebSocketServer` class](WebSocketServerClass.md).
 
 :::
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20|Added|
+
+</details>
+
 
 
 ### WebSocketConnection object
@@ -73,7 +74,8 @@ This property is read-only.
 <!-- REF #WebSocketConnectionClass.send().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|message|Text / Blob / Object|->|The message to send|<!-- END REF -->
+|message|Text / Blob / Object|->|The message to send|
+<!-- END REF -->
 
 #### Description
 
@@ -116,7 +118,8 @@ This property is read-only.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |code|Integer|->|Error code sent to the client (must be > 3000, otherwise the message is not sent)|
-|message|Text|->|Error message sent to the client|<!-- END REF -->
+|message|Text|->|Error message sent to the client|
+<!-- END REF -->
 
 
 #### Description

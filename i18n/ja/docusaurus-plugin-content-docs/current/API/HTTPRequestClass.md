@@ -9,9 +9,9 @@ title: HTTPRequest
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容     |
-| ------ | ------ |
-| v19 R6 | クラスを追加 |
+| Release | 内容     |
+| ------- | ------ |
+| 19 R6   | クラスを追加 |
 
 </details>
 
@@ -77,10 +77,10 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                   |
-| ------ | ---------------------------------------------------- |
-| v20    | TLS検証がデフォルトに                                         |
-| v19 R7 | *automaticRedirections* および *decodeData* プロパティをサポート。 |
+| Release | 内容                                                   |
+| ------- | ---------------------------------------------------- |
+| 20      | TLS検証がデフォルトに                                         |
+| 19 R7   | *automaticRedirections* および *decodeData* プロパティをサポート。 |
 
 </details>
 
@@ -88,13 +88,12 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| 引数      | タイプ            |    | 説明                                               |
-| ------- | -------------- |:--:| ------------------------------------------------ |
-| url     | Text           | -> | リクエストの送信先URL                                     |
-| options | Object         | -> | リクエスト設定プロパティ                                     |
-| 戻り値     | 4D.HTTPRequest | <- | 新規 HTTPRequest オブジェクト|<!-- END REF -->
-
-|
+| 引数      | タイプ            |    | 説明                    |
+| ------- | -------------- |:--:| --------------------- |
+| url     | Text           | -> | リクエストの送信先URL          |
+| options | Object         | -> | リクエスト設定プロパティ          |
+| 戻り値     | 4D.HTTPRequest | <- | 新規 HTTPRequest オブジェクト |
+<!-- END REF -->
 
 #### 説明
 
@@ -197,9 +196,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R4 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 20 R4   | 追加 |
 
 </details>
 
@@ -207,12 +206,11 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 
 <!-- REF #HTTP Parse message.Params -->
-| 引数   | タイプ        |    | 説明                                                        |
-| ---- | ---------- |:--:| --------------------------------------------------------- |
-| data | Text, Blob | -> | 解析するデータ                                                   |
-| 戻り値  | Object     | <- | オブジェクト (各プロパティは、マルチパートの各データです)|<!-- END REF -->
-
-|
+| 引数   | タイプ        |    | 説明                             |
+| ---- | ---------- |:--:| ------------------------------ |
+| data | Text, Blob | -> | 解析するデータ                        |
+| 戻り値  | Object     | <- | オブジェクト (各プロパティは、マルチパートの各データです) |
+<!-- END REF -->
 
 #### 説明
 
@@ -354,9 +352,9 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                              |
-| ------ | ----------------------------------------------- |
-| v19 R8 | `.headers` は小文字の名前を返します。 `.rawHeaders` プロパティの追加 |
+| Release | 内容                                              |
+| ------- | ----------------------------------------------- |
+| 19 R8   | `.headers` は小文字の名前を返します。 `.rawHeaders` プロパティの追加 |
 
 </details>
 
@@ -396,11 +394,10 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |::| -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-|
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
+<!-- END REF -->
 
 #### 説明
 
@@ -450,12 +447,11 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 
 <!-- REF #HTTPRequestClass.wait().Params -->
-| 引数   | タイプ            |    | 説明                                            |
-| ---- | -------------- |:--:| --------------------------------------------- |
-| time | Real           | -> | レスポンスを待機する最長時間 (秒)                            |
-| 戻り値  | 4D.HTTPRequest | <- | HTTPRequest オブジェクト|<!-- END REF -->
-
-|
+| 引数   | タイプ            |    | 説明                 |
+| ---- | -------------- |:--:| ------------------ |
+| time | Real           | -> | レスポンスを待機する最長時間 (秒) |
+| 戻り値  | 4D.HTTPRequest | <- | HTTPRequest オブジェクト |
+<!-- END REF -->
 
 #### 説明
 

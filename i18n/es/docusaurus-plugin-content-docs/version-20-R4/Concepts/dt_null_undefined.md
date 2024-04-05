@@ -7,31 +7,31 @@ Null e Indefinido son tipos de datos que manejan los casos en los que no se cono
 
 ## Null
 
-Null is a special data type with only one possible value: **null**. Este valor es devuelto por una expresión que no contiene ningún valor. Trying to read a property of a **null** value returns an error.
+Null es un tipo de datos especial con un solo valor posible: **null**. Este valor es devuelto por una expresión que no contiene ningún valor. Al intentar leer una propiedad de un valor **null** se produce un error.
 
-In the 4D language and for object field attributes, null values are managed through the `Null` function. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
+En el lenguaje 4D y para los atributos de los campos de los objetos, los valores nulos se gestionan a través de la función `Null`. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
 - atributos de objetos
 - elementos de colecciones
-- variables of the object, collection, pointer, picture, or variant type (see also [Null as default value](data-types.md#null-as-default-value).
+- variables de tipo objeto, colección, puntero, imagen o variante (ver también [Null como valor por defecto](data-types.md#null-as-default-value).
 
 ## Indefinido
 
-Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. La evaluación de una propiedad de objeto también puede producir un valor indefinido. Reading a property of an undefined value returns **undefined**.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. La evaluación de una propiedad de objeto también puede producir un valor indefinido. La lectura de una propiedad de valor indefinido devuelve **undefined**.
 
-A variant variable has **undefined** as [default value](data-types.md#default-values).
+Una variable variante tiene **undefined** como [valor por defecto](data-types.md#default-values).
 
-A field cannot be undefined (the `Undefined` command always returns False for a field).
+Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo).
 
 Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará errores, excepto en los siguientes casos:
 
-- Assigning an undefined value to variables (except arrays) has the same effect as calling [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) with them:
+- Asignar un valor indefinido a variables (excepto arrays) tiene el mismo efecto que llamar a [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) con ellas:
 
 ```4d
      var $o : Object
      var $val : Integer
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
+     $val:=$o.a //$o. es indefinido (no hay error) y la asignación de este valor borra la variable
       //$val=0
 ```
 
@@ -57,11 +57,11 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
 
 ```4d
      var $o : Object
-     mymethod($o.a) //pass an undefined parameter
+     mymethod($o.a) //Pasar un parámetro indefinido
      
-      //In mymethod method
-     #Declare ($myText : Text) //parameter type is text
-      // $myText contains ""
+      //En el método mymethod
+     #Declare ($myText : Text) //El tipo de parámetro es texto
+      // $myText contiene ""
 ```
 
 - Una expresión de condición se convierte automáticamente en falsa cuando se evalúa a indefinido con las palabras clave If y Case of:
@@ -77,11 +77,11 @@ Normalmente, al intentar leer o asignar expresiones indefinidas, 4D generará er
 
 :::tip
 
-When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. Por ejemplo:
+Cuando se esperan expresiones de un tipo dado en su código 4D, puede asegurarse de que tienen el tipo correcto incluso cuando se evalúan como indefinido rodeándolas con el comando cast 4D apropiado: `String`, `Num`, `Date`, `Time`, `Bool`. Estos comandos devuelven un valor vacío del tipo especificado cuando la expresión se evalúa como indefinida. Por ejemplo:
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
-  //to avoid errors in the code
+ $myString:=Lowercase(String($o.a.b)) //asegurarse de obtener un valor de cadena aunque sea indefinido
+  //para evitar errores en el código
 ```
 
 :::
@@ -97,7 +97,7 @@ When expressions of a given type are expected in your 4D code, you can make sure
 |             | Null `#` Undefined      | Boolean  | a.nullProp `#` b.undefinedProp | False |
 |             | Null `#` _scalar value_ | Boolean  | a.nullProp `#` 42              | True  |
 
-_scalar values_ are values of type string, Date, Time, Boolean, number, or Blob. When declared, their [default value](data-types.md#default-values) is neither undefined nor null. Otros tipos (Puntero, Imagen, Objeto, Colección) tienen un valor por defecto indefinido o null. Ej:
+Los _valores escalares_ son valores de tipo cadena, Fecha, Hora, Booleano, número o Blob. Cuando se declaran, su [valor por defecto](data-types.md#default-values) no es ni indefinido ni null. Otros tipos (Puntero, Imagen, Objeto, Colección) tienen un valor por defecto indefinido o null. Ej:
 
 ```4d
 var $object : Object
@@ -109,7 +109,7 @@ var $text : Text
 
 :::info
 
-Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported with Null values and return an error.
+Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Greater than or equal to (`>=`) y Menor o igual que (`<=`) no son soportadas con valores Null y devuelven un error.
 
 :::
 
@@ -128,17 +128,17 @@ Comparisons with Greater than (`>`), Less than (`<`), Greater than or equal to (
 | Mayor o igual que | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"          | False |
 | Menor o igual que | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"          | False |
 
-_other values_ are expressions of any type with a value neither Undefined nor Null.
+_otros valores_ son expresiones de todo tipo con un valor ni Undefined ni Null.
 
 :::info
 
-Comparisons of Undefined values with Pointer, Picture, Blob, Object, Collection, Undefined or Null values using Greater than (`>`), Less than (`<`), Greater than or equal to (`>=`), and Less than or equal to (`<=`) operators are not supported and return an error.
+Las comparaciones de valores Undefined con valores Pointer, Picture, Blob, Object, Collection, Undefined o Null mediante los operadores Mayor que (`>`), Menor que (`<`), Mayor o igual que (`>=`) y Menor o igual que (`<=`) no se admiten y devuelven un error.
 
 :::
 
 ## Ejemplos
 
-Here are the different results of the `Undefined` command as well as the `Null` command with object properties, depending on the context:
+A continuación se muestran los diferentes resultados del comando `Undefined` así como del comando `Null` con propiedades de objetos, dependiendo del contexto:
 
 ```4d
 var $vEmp : Object
@@ -167,7 +167,7 @@ var $vVar : Variant
 
 $vObj:=New object
 $vObj.null:=Null
-//note that $vVar is not assigned 
+//note que $vVar no está asignado
 
 $result:=($vObj.undefined=42) //False
 $result:=($vObj.undefined=$vObj.null) //True

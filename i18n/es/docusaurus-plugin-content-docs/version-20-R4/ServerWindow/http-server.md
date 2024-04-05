@@ -1,6 +1,6 @@
 ---
 id: http-server
-title: HTTP Server Page
+title: Página del servidor HTTP
 ---
 
 

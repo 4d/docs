@@ -162,9 +162,9 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R4   | 追加 |
 </details>
 
 `return`文は、関数やメソッドの実行を終了させ、呼び出し元に式を返すために使用します。

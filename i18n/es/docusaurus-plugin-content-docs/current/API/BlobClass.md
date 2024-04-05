@@ -17,9 +17,9 @@ La clase Blob permite crear y manipular los [blob objects](../Concepts/dt_blob.m
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R2       | Añadidos       |
 
 </details>
 
@@ -28,12 +28,11 @@ La clase Blob permite crear y manipular los [blob objects](../Concepts/dt_blob.m
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Parámetros | Tipo           |    | Descripción                                |
-| ---------- | -------------- |:--:| ------------------------------------------ |
-| blob       | Blob o 4D.Blob | -> | Blob a copiar                              |
-| Result     | 4D.Blob        | <- | Nuevo 4D.Blob  |<!-- END REF -->
-
-|
+| Parámetros | Tipo           |    | Descripción   |
+| ---------- | -------------- |:--:| ------------- |
+| blob       | Blob o 4D.Blob | -> | Blob a copiar |
+| Result     | 4D.Blob        | <- | Nuevo 4D.Blob |
+<!-- END REF -->
 
 #### Descripción
 
@@ -52,9 +51,9 @@ La propiedad `.size` <!-- REF #Blob.size.Summary -->devuelve el tamaño de un `4
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R2       | Añadidos       |
 
 </details>
 
@@ -66,9 +65,8 @@ La propiedad `.size` <!-- REF #Blob.size.Summary -->devuelve el tamaño de un `4
 | ---------- | ------- |:--:| --------------------------------------------------------------- |
 | start      | Real    | -> | índice del primer byte a incluir en el nuevo `4D.Blob`.         |
 | end        | Real    | -> | índice del primer byte que no se incluirá en el nuevo `4D.Blob` |
-| Result     | 4D.Blob | <- | Nuevo `4D.Blob`|<!-- END REF -->
-
-|
+| Result     | 4D.Blob | <- | Nuevo `4D.Blob`                                                 |
+<!-- END REF -->
 
 #### Descripción
 

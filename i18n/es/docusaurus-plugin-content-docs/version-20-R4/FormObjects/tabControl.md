@@ -1,6 +1,6 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Controles de pestañas
 ---
 
 Un control de pestañas crea un objeto que permite al usuario elegir entre un conjunto de pantallas virtuales que están encerradas por el objeto de control de pestañas. Se accede a cada pantalla haciendo clic en su pestaña.

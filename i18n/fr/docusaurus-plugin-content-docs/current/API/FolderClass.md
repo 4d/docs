@@ -59,10 +59,10 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                       |
+| Release | Modifications                       |
 | ------- | ----------------------------------- |
-| v19 R8  | Prise en charge de `fk home folder` |
-| v17 R5  | Ajout                               |
+| 19 R8   | Prise en charge de `fk home folder` |
+| 17 R5   | Ajout                               |
 
 </details>
 
@@ -76,9 +76,8 @@ Les objets `Folder` prennent en charge plusieurs formes de chemin d'accès, y co
 | folderConstant | Integer   | -> | Constante de dossier 4D                            |
 | pathType       | Integer   | -> | `fk posix path` (par défaut) ou `fk platform path` |
 | *              |           | -> | * pour retourner le dossier de la base hôte        |
-| Résultat       | 4D.Folder | <- | Nouvel objet dossier|<!-- END REF -->
-
-|
+| Résultat       | 4D.Folder | <- | Nouvel objet dossier                               |
+<!-- END REF -->
 
 #### Description
 
@@ -126,9 +125,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
@@ -148,21 +147,19 @@ La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et ren
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 
 <!--REF #FolderClass.create().Params -->
-| Paramètres | Type    |    | Description                                                                      |
-| ---------- | ------- | -- | -------------------------------------------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai si le dossier a été créé avec succès, sinon Faux|<!-- END REF -->
-
-
-|
+| Paramètres | Type    |    | Description                                           |
+| ---------- | ------- | -- | ----------------------------------------------------- |
+| Résultat   | Boolean | <- | Vrai si le dossier a été créé avec succès, sinon Faux |
+<!-- END REF -->
 
 
 #### Description
@@ -205,23 +202,22 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| Paramètres         | Type      |    | Description                                                                |
-| ------------------ | --------- | -- | -------------------------------------------------------------------------- |
-| dossierDestination | 4D.Folder | -> | Dossier de destination pour l'alias ou le raccourci                        |
-| aliasName          | Text      | -> | Nom de l'alias ou du raccourci                                             |
-| aliasType          | Integer   | -> | Type de lien de l'alias                                                    |
-| Résultat           | 4D.File   | <- | Référence de l'alias ou du raccourci du dossier|<!-- END REF -->
-
-|
+| Paramètres         | Type      |    | Description                                         |
+| ------------------ | --------- | -- | --------------------------------------------------- |
+| dossierDestination | 4D.Folder | -> | Dossier de destination pour l'alias ou le raccourci |
+| aliasName          | Text      | -> | Nom de l'alias ou du raccourci                      |
+| aliasType          | Integer   | -> | Type de lien de l'alias                             |
+| Résultat           | 4D.File   | <- | Référence de l'alias ou du raccourci du dossier     |
+<!-- END REF -->
 
 #### Description
 
@@ -261,20 +257,19 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
 
 <!-- REF #FolderClass.delete().Params -->
-| Paramètres | Type    |    | Description                                                 |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| option     | Integer | -> | Option de suppression du dossier|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                      |
+| ---------- | ------- | -- | -------------------------------- |
+| option     | Integer | -> | Option de suppression du dossier |
+<!-- END REF -->
 
 #### Description
 
@@ -335,22 +330,21 @@ Lorsque la constante `Delete with contents` est passée :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| Paramètres         | Type      |    | Description                                |
-| ------------------ | --------- | -- | ------------------------------------------ |
-| dossierDestination | 4D.Folder | -> | Dossier de destination                     |
-| nouveauNom         | Text      | -> | Nom complet du dossier déplacé             |
-| Résultat           | 4D.Folder | <- | Dossier déplacé|<!-- END REF -->
-
-|
+| Paramètres         | Type      |    | Description                    |
+| ------------------ | --------- | -- | ------------------------------ |
+| dossierDestination | 4D.Folder | -> | Dossier de destination         |
+| nouveauNom         | Text      | -> | Nom complet du dossier déplacé |
+| Résultat           | 4D.Folder | <- | Dossier déplacé                |
+<!-- END REF -->
 
 #### Description
 
@@ -391,21 +385,20 @@ Vous souhaitez déplacer et renommer un dossier :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.rename().Params -->
-| Paramètres | Type      |    | Description                                |
-| ---------- | --------- | -- | ------------------------------------------ |
-| nouveauNom | Text      | -> | Nouveau nom complet du dossier             |
-| Résultat   | 4D.Folder | <- | Dossier renommé|<!-- END REF -->
-
-|
+| Paramètres | Type      |    | Description                    |
+| ---------- | --------- | -- | ------------------------------ |
+| nouveauNom | Text      | -> | Nouveau nom complet du dossier |
+| Résultat   | 4D.Folder | <- | Dossier renommé                |
+<!-- END REF -->
 
 #### Description
 

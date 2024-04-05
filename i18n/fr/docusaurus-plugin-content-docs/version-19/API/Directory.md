@@ -9,9 +9,9 @@ title: Classe Directory
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
@@ -29,9 +29,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
@@ -51,9 +51,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
@@ -73,9 +73,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
@@ -97,9 +97,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
@@ -119,9 +119,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
@@ -141,9 +141,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
@@ -163,9 +163,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
@@ -185,9 +185,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
@@ -208,9 +208,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
@@ -232,9 +232,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
@@ -254,9 +254,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
@@ -276,9 +276,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
@@ -298,9 +298,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.original.Syntax -->**.original** : 4D.Folder<!-- END REF -->
@@ -321,9 +321,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
@@ -345,9 +345,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
@@ -367,9 +367,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
@@ -389,9 +389,9 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
@@ -444,9 +444,9 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D.File<!-- END REF -->
@@ -486,9 +486,9 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
@@ -549,9 +549,9 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
@@ -591,9 +591,9 @@ Un objet `Folder` object ou null si *path* est invalide.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 
@@ -641,9 +641,9 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->

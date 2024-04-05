@@ -4,7 +4,7 @@ title: Getting Started
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [commands](commands.md). It allows you to embed advanced spreadsheet features in your projects.
 
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
@@ -31,9 +31,9 @@ However, 4D View Pro requires a license. You need to activate this license in yo
 
 You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md). 
 
-> 4D View Pro areas can also be [created and used offscreen](method-list.md#vp-run-offscreen-area).
+> 4D View Pro areas can also be [created and used offscreen](commands/vp-run-offscreen-area.md).
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.  
+You can [configure the area](configuring.md) using the Property List and 4D View Pro commands.  
 
 
 ## Selection, Input and Navigation Basics  
@@ -92,15 +92,15 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 		![](../assets/en/ViewPro/vpContext2.PNG)
 
 
-## Using 4D View Pro methods
+## Using 4D View Pro commands
 
-4D View Pro methods can be used in the 4D Code Editor, just like 4D language commands. 
+4D View Pro commands can be used in the 4D Code Editor, just like 4D language commands. 
 
-Since 4D View Pro is a built-in 4D component, you can access its list of methods from the Explorer, in the **Component Methods** section:
+Since 4D View Pro is a built-in 4D component, you can access its list of commands from the Explorer, in the **Component Methods** section:
 
 ![component-methods](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list of component methods, see [Method list](method-list.md).
+For a detailed list, see [Commands](commands.md).
 
 ### Addressing a 4D View Pro area
 
@@ -108,7 +108,7 @@ A 4D View Pro area handles several objects and elements.
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property. 
+Most of 4D View Pro commands require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property. 
 
 For example, if you want to set the total number of columns of an area named "myVpArea", you write:
 
@@ -123,20 +123,20 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 ### Using range objects
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. This area can be composed of one or several cells. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+Some 4D View Pro commands require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. This area can be composed of one or several cells. Using 4D View Pro commands, you can create ranges and pass them to other commands to read from or write to specific locations in your document.
 
 For example, to create a range object for the following cells:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](method-list.md#vp-cells) method:
+You can use the [VP Cells](commands/vp-cells.md) method:
 
 ```4d 
 var $myRange : Object
 $myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
 ```
 
-You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](method-list.md#vp-set-border)).
+You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](commands/vp-set-border.md)).
 
 4D View Pro range objects are composed of several properties:
 
@@ -165,4 +165,4 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 * .sjs 
 * .pdf (for export only)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](method-list.md#vp-import-document) and [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
+For more details, check out the description of [VP IMPORT DOCUMENT](commands/vp-import-document.md) and [VP EXPORT DOCUMENT](commands/vp-export-document.md).

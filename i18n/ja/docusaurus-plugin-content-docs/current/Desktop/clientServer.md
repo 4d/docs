@@ -85,3 +85,35 @@ title: クライアント/サーバー管理
 - 4D は、4D Server 上のものではなく、独自の内部的なコンポーネントやプラグインを使用します。
 
 > プラグインやコンポーネントを 4D あるいは 4D Server アプリケーションレベルにインストールすることは、推奨されません。
+
+
+## リモートユーザーセッション
+
+サーバー上では、[`Session`](../API/SessionClass.md#session) コマンドはカレントユーザーセッションの情報を格納する `Session` オブジェクトを返します。 このオブジェクトを扱うには、[`Session`クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+
+
+### 効果
+
+`Session`オブジェクトを使用すると、リモートユーザーセッションに関する情報を取得できます。 ユーザーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。
+
+たとえば、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
+
+
+### 利用可能性
+
+リモートユーザー `Session` オブジェクトは以下から利用できます:
+
+- [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
+- トリガー
+- `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド
+
+:::info
+
+サーバー上のすべてのストアドプロシージャーは、同じ仮想ユーザーセッションを共有します。 詳細については、[doc.4d.com のこのページ](https://doc.4d.com/4Dv20R5/4D/20-R5/4D-Server-and-the-4D-Language.300-6932726.ja.html) を参照ください。
+
+:::
+
+### 関連項目 (ブログ記事)
+
+[4D remote session object with Client/Server connection and Stored procedure](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+

@@ -164,9 +164,9 @@ Cuando se declaran los parámetros, se inicializan con el valor por defecto [**c
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 La instrucción `return` finaliza la ejecución de una función o de un método y puede utilizarse para devolver una expresión a quien la llama.
@@ -266,7 +266,7 @@ Este comando significa que a partir del cuarto parámetro (incluido), el método
 
 ## Método `Compilador`
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods as soon as you intend to compile your project.
+Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos llamados tan pronto como pretenda compilar su proyecto.
 
 Cuando se utiliza la palabra clave `#DECLARE`, los parámetros se declaran automáticamente. Por ejemplo:
 

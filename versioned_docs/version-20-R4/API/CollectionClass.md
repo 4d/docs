@@ -160,7 +160,7 @@ You create a new collection and then add a new element:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -234,9 +234,9 @@ Unlike standard (not shared) collections, shared collections do not support pict
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -282,7 +282,7 @@ $element:=$col.at(10) // undefined
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -344,7 +344,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -385,7 +385,7 @@ $vSize:=$col.length //$vSize=0
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -437,7 +437,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -483,9 +483,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|New *ck shared* option. New *groupWith* parameters|
+|18 R3|New *ck shared* option. New *groupWith* parameters|
 |v16 R6|Added|
 
 </details>
@@ -616,7 +616,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -664,7 +664,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -746,9 +746,9 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of `ck count values`|
+|20|Support of `ck count values`|
 |v16 R6|Added|
 
 </details>
@@ -809,7 +809,7 @@ In the *options* parameter, you can pass one or a combination of the following c
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -867,9 +867,9 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -962,13 +962,13 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathOrTargetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -993,7 +993,7 @@ The contents of the returned collection depends on the *targetPath* parameter:
 	By default, elements for which *propertyPath* is null or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as null elements in the returned collection.
 
 
-*	If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+*	If one or more *targetPath* parameter(s) are passed (corresponding to one or more *propertyPath* parameter(s)), `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the matching *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
 
 
 #### Example 1
@@ -1038,7 +1038,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1096,9 +1096,9 @@ In case of inconsistency, the following rules apply:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -1184,9 +1184,9 @@ You want to filter elements according to their value type:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -1275,9 +1275,9 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -1353,9 +1353,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1400,9 +1400,9 @@ $first:=$emptyCol.first() // returns Undefined
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1455,9 +1455,9 @@ $col.flat(MAXLONG)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1548,9 +1548,9 @@ $c2:=$c.flatMap($f; $c.sum())
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1616,7 +1616,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1677,7 +1677,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1734,7 +1734,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1788,7 +1788,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1834,9 +1834,9 @@ By default, null or empty elements of the collection are returned in the resulti
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -1884,7 +1884,7 @@ $last:=$emptyCol.last() // returns Undefined
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -1946,7 +1946,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R5|Added|
 
@@ -1982,9 +1982,9 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -2048,7 +2048,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2100,7 +2100,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2150,9 +2150,9 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R3|Added|
+|20 R3|Added|
 
 </details>
 
@@ -2288,7 +2288,7 @@ $name.multiSort(Formula($1.value.firstname<$1.value2.firstname); [$address])
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2315,7 +2315,7 @@ This function returns a *shallow copy*, which means that objects or collections 
 
 >This function does not modify the original collection.
 
-If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned unordered). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
+If you pass no parameter, the function orders scalar values in the collection in ascending order (other element types such as objects or collections are returned with an internal order). You can modify this automatic order by passing the `ck ascending` or `ck descending` constants in the *ascOrDesc* parameter (see below).
 
 You can also pass a criteria parameter to define how the collection elements must be sorted. Three syntaxes are supported for this parameter:
 
@@ -2432,9 +2432,9 @@ Ordering with a property path:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -2466,6 +2466,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 
 - or *methodName*, the name of a project method (text).
+
 
 In the callback, pass some code that compares two values and returns **true** if the first value is lower than the second value. You can provide *extraParam* parameters to the callback if necessary.
 
@@ -2540,7 +2541,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2590,7 +2591,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -2650,9 +2651,9 @@ You want to sort the resulting collection:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Support of querySettings|
+|17 R5|Support of querySettings|
 |v16 R6|Added|
 
 </details>
@@ -2757,14 +2758,15 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 
+
 <!-- REF collection.reduce().Desc -->
 ## .reduce()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -2854,9 +2856,9 @@ With the following ***Flatten*** method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -2947,7 +2949,7 @@ With the following ***Flatten*** method:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3010,7 +3012,7 @@ If you try to remove an element from an empty collection, the method does nothin
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3071,7 +3073,7 @@ By default, new elements are filled will **null** values. You can specify the va
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3113,7 +3115,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3161,7 +3163,7 @@ If the collection is empty, this method does nothing.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3214,9 +3216,9 @@ The returned collection contains the element specified by *startFrom* and all su
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -3299,9 +3301,9 @@ You want to know if at least one collection value is >0.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Support of formula|
+|19 R6|Support of formula|
 |v16 R6|Added|
 
 </details>
@@ -3385,7 +3387,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 
@@ -3448,7 +3450,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
 |v16 R6|Added|
 

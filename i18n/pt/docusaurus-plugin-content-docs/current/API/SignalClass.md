@@ -99,9 +99,9 @@ Método ***OpenForm***:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -109,13 +109,11 @@ Método ***OpenForm***:
 
 
 <!-- REF #_command_.New signal.Params -->
-| Parâmetro   | Tipo       |    | Descrição                                                     |
-| ----------- | ---------- |:--:| ------------------------------------------------------------- |
-| description | Text       | -> | Descrição para o sinal                                        |
-| Resultados  | 4D. Signal | <- | Objeto nativo encapsulando o sinal|<!-- END REF -->
-
-
-|
+| Parâmetro   | Tipo       |    | Descrição                          |
+| ----------- | ---------- |:--:| ---------------------------------- |
+| description | Text       | -> | Descrição para o sinal             |
+| Resultados  | 4D. Signal | <- | Objeto nativo encapsulando o sinal |
+<!-- END REF -->
 
 
 #### Descrição
@@ -175,9 +173,9 @@ O método ***doSomething*** poderia ser algo como:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -200,9 +198,9 @@ Essa propriedade é**apenas escrita**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -223,9 +221,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -233,12 +231,10 @@ Essa propriedade é **apenas leitura**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parâmetro | Tipo |  | Descrição                                             |
-| --------- | ---- |::| ----------------------------------------------------- |
-|           |      |  | Não exige nenhum parâmetro|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |  | Descrição                  |
+| --------- | ---- |::| -------------------------- |
+|           |      |  | Não exige nenhum parâmetro |
+<!-- END REF -->
 
 
 #### Descrição
@@ -256,9 +252,9 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R4 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R4   | Adicionado |
 
 </details>
 
@@ -266,13 +262,11 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 
 <!-- REF #SignalClass.wait().Params -->
-| Parâmetro  | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
-| timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos                  |
-| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo       |    | Descrição                                   |
+| ---------- | ---------- | -- | ------------------------------------------- |
+| timeout    | Real       | -> | Tempo máximo de espera do sinal em segundos |
+| Resultados | Parâmetros | <- | Estado da propriedade `.signaled`           |
+<!-- END REF -->
 
 
 #### Descrição

@@ -27,9 +27,9 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v19 R2  | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 
@@ -47,7 +47,9 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | cid         | Text              | -> | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid             |
 | type        | Text              | -> | Valor del encabezado content-type                                                       |
 | disposition | Text              | -> | Valor del encabezado content-disposition: "inline" o "attachment".                      |
-| Result      | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->                                               |
+| Result      | 4D.MailAttachment | <- | Objeto adjunto                                                                          |
+
+<!-- END REF -->
 
 
 #### Descripción
@@ -172,9 +174,9 @@ $transporter.send($email)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v19 R2  | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 19 R2       | Acepta 4D.File, 4D.ZipFile, 4D.Blob |
 </details>
 
 
@@ -192,7 +194,9 @@ $transporter.send($email)
 | cid         | Text              | -> | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid             |
 | type        | Text              | -> | Valor del encabezado content-type                                                       |
 | disposition | Text              | -> | Valor del encabezado content-disposition: "inline" o "attachment".                      |
-| Result      | 4D.MailAttachment | <- | Objeto adjunto|<!-- END REF -->                                               |
+| Result      | 4D.MailAttachment | <- | Objeto adjunto                                                                          |
+
+<!-- END REF -->
 
 
 #### Descripción
@@ -233,9 +237,11 @@ La propiedad `.disposition` contiene <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parámetros | Tipo    |    | Descripción                                    |
-| ---------- | ------- |:--:| ---------------------------------------------- |
-| Result     | 4D.Blob | <- | Contenido del anexo|<!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción         |
+| ---------- | ------- |:--:| ------------------- |
+| Result     | 4D.Blob | <- | Contenido del anexo |
+
+<!-- END REF -->
 
 
 #### Descripción
@@ -269,9 +275,9 @@ La propiedad `.path` contiene <!-- REF #MailAttachmentClass.path.Summary -->la r
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 </details>
 
 

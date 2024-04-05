@@ -59,7 +59,8 @@ Entity selections can be created from existing selections using various function
 |---------|--- |:---:|------|
 |dsTable|Table|->|Table in the 4D database whose current selection will be used to build the entity selection|
 |settings|Object|->|Build option: context	|
-|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection matching the dataclass related to the given table|
+<!-- END REF -->
 
 
 #### Description
@@ -100,7 +101,8 @@ $employees:=Create entity selection([Employee])
 <!-- REF #_command_.USE ENTITY SELECTION.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|entitySelection|EntitySelection|->|An entity selection|<!-- END REF -->
+|entitySelection|EntitySelection|->|An entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -137,9 +139,9 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -195,9 +197,9 @@ Note that the corresponding entity is reloaded from the datastore.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -281,11 +283,11 @@ The resulting object is an entity selection of Employee with duplications remove
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support of *entitySelection* parameter|
-|v18 R5|Only supports alterable entity selections|
-|v17|Added|
+|19 R7|Support of *entitySelection* parameter|
+|18 R5|Only supports alterable entity selections|
+|17|Added|
 
 </details>
 
@@ -298,7 +300,8 @@ The resulting object is an entity selection of Employee with duplications remove
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to be added to the entity selection|
 |entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
-|Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|<!-- END REF -->
+|Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|
+<!-- END REF -->
 
 
 #### Description
@@ -372,9 +375,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -386,7 +389,8 @@ $sellist2:=$sellist2.add($sellist1)
 |---------|--- |:---:|------|
 |entity |4D.Entity|->|Entity to intersect with|
 |entitySelection |4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection with the result of intersection with logical AND operator|
+<!-- END REF -->
 
 
 #### Description
@@ -439,9 +443,9 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -452,7 +456,8 @@ We want to have a selection of employees named "Jones" who live in New York:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |index|Integer|->|Index of entity to return|
-|Result|4D.Entity |<-|The entity at that index|<!-- END REF -->
+|Result|4D.Entity |<-|The entity at that index|
+<!-- END REF -->
 
 
 #### Description
@@ -483,10 +488,10 @@ $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Returns undefined if empty entity selection|
-|v17|Added|
+|18 R6|Returns undefined if empty entity selection|
+|17|Added|
 
 </details>
 
@@ -497,7 +502,8 @@ $emp2:=$employees.at(-3) //starting from the end, 3rd entity
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Attribute path to be used for calculation|
-|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|<!-- END REF -->
+|Result|Real|<-|Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|
+<!-- END REF -->
 
 #### Description
 
@@ -537,9 +543,9 @@ We want to obtain a list of employees whose salary is higher than the average sa
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -550,7 +556,8 @@ We want to obtain a list of employees whose salary is higher than the average sa
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to evaluate|
-|Result|Boolean|<-|True if the entity belongs to the entity selection, else False|<!-- END REF -->
+|Result|Boolean|<-|True if the entity belongs to the entity selection, else False|
+<!-- END REF -->
 
 #### Description
 
@@ -585,9 +592,9 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -598,7 +605,8 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|Real|<-|Number of non null *attributePath* values in the entity selection|<!-- END REF -->
+|Result|Real|<-|Number of non null *attributePath* values in the entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -631,9 +639,9 @@ We want to find out the total number of employees for a company without counting
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -644,7 +652,8 @@ We want to find out the total number of employees for a company without counting
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |option |Integer|->|`ck shared`: return a shareable entity selection|
-|Result|4D.EntitySelection|<-|Copy of the entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Copy of the entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -694,10 +703,10 @@ Then this entity selection is updated with products and you want to share the pr
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of `dk count values`|
-|v17|Added|
+|20|Support of `dk count values`|
+|17|Added|
 
 </details>
 
@@ -709,7 +718,8 @@ Then this entity selection is updated with products and you want to share the pr
 |---------|--- |:---:|------|
 |attributePath|Text|->|Path of attribute whose distinct values you want to get|
 |options|Integer|->|`dk diacritical`, `dk count values`|
-|Result|Collection|<-|Collection with only distinct values|<!-- END REF -->
+|Result|Collection|<-|Collection with only distinct values|
+<!-- END REF -->
 
 #### Description
 
@@ -784,9 +794,9 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Added|
+|20|Added|
 
 </details>
 
@@ -797,7 +807,8 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attribute|Text|->|Object attribute name whose paths you want to get|
-|Result|Collection|<-|New collection with distinct paths|<!-- END REF -->
+|Result|Collection|<-|New collection with distinct paths|
+<!-- END REF -->
 
 
 #### Description
@@ -841,9 +852,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -854,7 +865,8 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mode|Integer|->|`dk stop dropping on first error`: stops method execution on first non-droppable entity|
-|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|<!-- END REF -->
+|Result|4D.EntitySelection|<-|Empty entity selection if successful, else entity selection containing non-droppable entity(ies)|
+<!-- END REF -->
 
 #### Description
 
@@ -903,9 +915,9 @@ Example with the `dk stop dropping on first error` option:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -925,7 +937,8 @@ Example with the `dk stop dropping on first error` option:
 |attributePath |Text|->|Attribute path whose values must be extracted to the new collection	|
 |targetPath|Text|->|Target attribute path or attribute name|
 |option|Integer|->|`ck keep null`: include null attributes in the returned collection (ignored by default)|
-|Result|Collection|<-|Collection containing extracted values|<!-- END REF -->
+|Result|Collection|<-|Collection containing extracted values|
+<!-- END REF -->
 
 #### Description
 
@@ -1012,9 +1025,9 @@ Given the following table and relation:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1024,7 +1037,8 @@ Given the following table and relation:
 <!-- REF #EntitySelectionClass.first().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|<!-- END REF -->
+|Result|4D.Entity|<-|Reference to the first entity of the entity selection (Null if selection is empty)|
+<!-- END REF -->
 
 #### Description
 
@@ -1069,9 +1083,9 @@ There is, however, a difference between both statements when the selection is em
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added|
+|17 R5|Added|
 
 </details>
 
@@ -1081,7 +1095,8 @@ There is, however, a difference between both statements when the selection is em
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.DataClass|<-|Dataclass object to which the entity selection belongs|<!-- END REF -->
+|Result|4D.DataClass|<-|Dataclass object to which the entity selection belongs|
+<!-- END REF -->
 
 #### Description
 
@@ -1117,9 +1132,9 @@ The following generic code duplicates all entities of the entity selection:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19R5|Added|
+|19R5|Added|
 
 </details>
 
@@ -1129,7 +1144,8 @@ The following generic code duplicates all entities of the entity selection:
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|<!-- END REF -->
+|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|
+<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -1171,9 +1187,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R5|Added|
+|18 R5|Added|
 
 </details>
 
@@ -1183,7 +1199,8 @@ $info:=$persons.getRemoteContextAttributes()
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the entity selection is alterable, False otherwise|
+<!-- END REF -->
 
 #### Description
 
@@ -1212,9 +1229,9 @@ Form.products.add(Form.product)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1224,7 +1241,8 @@ Form.products.add(Form.product)
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the entity selection is ordered, False otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the entity selection is ordered, False otherwise|
+<!-- END REF -->
 
 #### Description
 
@@ -1266,9 +1284,9 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1278,7 +1296,8 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 <!-- REF #EntitySelectionClass.last().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|<!-- END REF -->
+|Result|4D.Entity |<-|Reference to the last entity of the entity selection (Null if empty entity selection)|
+<!-- END REF -->
 
 #### Description
 
@@ -1315,9 +1334,9 @@ If the entity selection is empty, the function returns Null.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1349,10 +1368,10 @@ Entity selections always have a `.length` property.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
-|v18 R6|Returns undefined if empty entity selection|
+|17|Added|
+|18 R6|Returns undefined if empty entity selection|
 
 </details>
 
@@ -1363,7 +1382,8 @@ Entity selections always have a `.length` property.
 |Parameter|Type||Description|
 |---------|--- |---|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|any|<-|Highest value of attribute|<!-- END REF -->
+|Result|any|<-|Highest value of attribute|
+<!-- END REF -->
 
 #### Description
 
@@ -1400,10 +1420,10 @@ We want to find the highest salary among all the female employees:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
-|v18 R6|Returns undefined if empty entity selection|
+|17|Added|
+|18 R6|Returns undefined if empty entity selection|
 
 
 </details>
@@ -1415,7 +1435,8 @@ We want to find the highest salary among all the female employees:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|any|<-|Lowest value of attribute|<!-- END REF -->
+|Result|any|<-|Lowest value of attribute|
+<!-- END REF -->
 
 #### Description
 
@@ -1450,10 +1471,10 @@ In this example, we want to find the lowest salary among all the female employee
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Support of *keepOrder* parameter|
-|v17|Added|
+|19 R7|Support of *keepOrder* parameter|
+|17|Added|
 
 </details>
 
@@ -1466,7 +1487,8 @@ In this example, we want to find the lowest salary among all the female employee
 |entity |4D.Entity|->|Entity to substract|
 |entitySelection|4D.EntitySelection|->|Entity selection to substract|
 |keepOrder|Integer|->|`dk keep ordered` (integer) to keep the initial order in the resulting entity selection|
-|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -1533,9 +1555,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1547,7 +1569,8 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to intersect with|
 |entitySelection|4D.EntitySelection|->|Entity selection to intersect with|
-|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection or new reference to the original entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -1594,9 +1617,9 @@ If the original entity selection and the parameter are not related to the same d
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1608,7 +1631,8 @@ If the original entity selection and the parameter are not related to the same d
 |---------|--- |:---:|------|
 |pathString |Text	|->|Attribute path(s) and sorting instruction(s) for the entity selection|
 |pathObjects |Collection	|->|Collection of criteria objects|
-|Result|4D.EntitySelection|<-|New entity selection in the specified order|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection in the specified order|
+<!-- END REF -->
 
 #### Description
 
@@ -1675,9 +1699,9 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Added|
+|17 R6|Added|
 
 </details>
 
@@ -1691,7 +1715,8 @@ If you pass an invalid attribute path in *pathString* or *pathObject*, the funct
 |formulaObj|Object|->|Formula object|
 |sortOrder |Integer|->|`dk ascending` (default) or `dk descending`|
 |settings|Object|->|Parameter(s) for the formula|
-|Result|4D.EntitySelection|<-|New ordered entity selection|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New ordered entity selection|
+<!-- END REF -->
 
 #### Description
 
@@ -1798,11 +1823,11 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R6|Support of Formula parameters|
-|v17 R5|Support of placeholders for values|
-|v17|Added|
+|17 R6|Support of Formula parameters|
+|17 R5|Support of placeholders for values|
+|17|Added|
 
 </details>
 
@@ -1816,7 +1841,8 @@ In this example, the "marks" object field in the **Students** dataClass contains
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|
+<!-- END REF -->
 
 #### Description
 
@@ -1858,9 +1884,9 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1882,9 +1908,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -1906,9 +1932,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
+|18 R3|Added|
 
 </details>
 
@@ -1918,7 +1944,8 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -1986,9 +2013,9 @@ A list box displays the Form.students entity selection and several clients work 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added|
+|19 R3|Added|
 
 </details>
 
@@ -1999,7 +2026,8 @@ A list box displays the Form.students entity selection and several clients work 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |selectedEntities |4D.EntitySelection|->|Entity selection with entities for which to know the rank in the entity selection|
-|Result|Object|<-|Range(s) of selected entities in entity selection|<!-- END REF -->
+|Result|Object|<-|Range(s) of selected entities in entity selection|
+<!-- END REF -->
 
 
 
@@ -2057,9 +2085,9 @@ $result2:=$invoices.selected($creditSel)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -2071,7 +2099,8 @@ $result2:=$invoices.selected($creditSel)
 |---------|--- |:---:|------|
 |startFrom |Integer	|->|Index to start the operation at (included)	|
 |end 	|Integer|->|End index (not included)|
-|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection containing sliced entities (shallow copy)|
+<!-- END REF -->
 
 #### Description
 
@@ -2119,9 +2148,9 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 
 
@@ -2136,7 +2165,8 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
-|Result|Real|<-|Sum of entity selection values|<!-- END REF -->
+|Result|Real|<-|Sum of entity selection values|
+<!-- END REF -->
 
 #### Description
 
@@ -2173,9 +2203,9 @@ $sum:=$sel.sum("salary")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17|Added|
+|17|Added|
 
 </details>
 
@@ -2190,7 +2220,8 @@ $sum:=$sel.sum("salary")
 |options|Integer|->|`dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp|
 |begin|Integer|	->|Designates the starting index|
 |howMany|Integer|->|Number of entities to extract|
-|Result|Collection|<-|Collection of objects containing attributes and values of entity selection|<!-- END REF -->
+|Result|Collection|<-|Collection of objects containing attributes and values of entity selection|
+<!-- END REF -->
 
 #### Description
 

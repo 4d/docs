@@ -1,6 +1,6 @@
 ---
 id: parameters
-title: Parameters
+title: Parámetros
 ---
 
 
@@ -164,9 +164,9 @@ Cuando se declaran los parámetros, se inicializan con el valor por defecto [**c
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 La instrucción `return` finaliza la ejecución de una función o de un método y puede utilizarse para devolver una expresión a quien la llama.

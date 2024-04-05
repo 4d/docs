@@ -59,10 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                     |
-| ------ | ---------------------- |
-| v19 R8 | `fk home folder` をサポート |
-| v17 R5 | 追加                     |
+| Release | 内容                     |
+| ------- | ---------------------- |
+| 19 R8   | `fk home folder` をサポート |
+| 17 R5   | 追加                     |
 
 </details>
 
@@ -76,9 +76,8 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | folderConstant | Integer   | -> | 4Dフォルダー定数                                      |
 | pathType       | Integer   | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
-| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト|<!-- END REF -->
-
-|
+| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト                                  |
+<!-- END REF -->
 
 #### 説明
 
@@ -126,9 +125,9 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 18 R6   | 追加 |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
@@ -148,21 +147,19 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 
 <!--REF #FolderClass.create().Params -->
-| 引数  | タイプ     |    | 説明                                                                |
-| --- | ------- | -- | ----------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
-
-
-|
+| 引数  | タイプ     |    | 説明                                     |
+| --- | ------- | -- | -------------------------------------- |
+| 戻り値 | Boolean | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false |
+<!-- END REF -->
 
 
 #### 説明
@@ -205,23 +202,22 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| 引数                | タイプ       |    | 説明                                                 |
-| ----------------- | --------- | -- | -------------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                           |
-| aliasName         | Text      | -> | エイリアスまたはショートカットの名称                                 |
-| aliasType         | Integer   | -> | エイリアスリンクのタイプ                                       |
-| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照|<!-- END REF -->
-
-|
+| 引数                | タイプ       |    | 説明                       |
+| ----------------- | --------- | -- | ------------------------ |
+| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー |
+| aliasName         | Text      | -> | エイリアスまたはショートカットの名称       |
+| aliasType         | Integer   | -> | エイリアスリンクのタイプ             |
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照  |
+<!-- END REF -->
 
 #### 説明
 
@@ -261,20 +257,19 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
 
 <!-- REF #FolderClass.delete().Params -->
-| 引数     | タイプ     |    | 説明                                       |
-| ------ | ------- | -- | ---------------------------------------- |
-| option | Integer | -> | フォルダー削除のオプション|<!-- END REF -->
-
-|
+| 引数     | タイプ     |    | 説明            |
+| ------ | ------- | -- | ------------- |
+| option | Integer | -> | フォルダー削除のオプション |
+<!-- END REF -->
 
 #### 説明
 
@@ -335,22 +330,21 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| 引数                | タイプ       |    | 説明                                   |
-| ----------------- | --------- | -- | ------------------------------------ |
-| destinationFolder | 4D.Folder | -> | 宛先フォルダー                              |
-| newName           | Text      | -> | 移動先でのフォルダーの完全な名称                     |
-| 戻り値               | 4D.Folder | <- | 移動したフォルダー|<!-- END REF -->
-
-|
+| 引数                | タイプ       |    | 説明               |
+| ----------------- | --------- | -- | ---------------- |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー          |
+| newName           | Text      | -> | 移動先でのフォルダーの完全な名称 |
+| 戻り値               | 4D.Folder | <- | 移動したフォルダー        |
+<!-- END REF -->
 
 #### 説明
 
@@ -391,21 +385,20 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 17 R5   | 追加 |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 
 <!--REF #FolderClass.rename().Params -->
-| 引数      | タイプ       |    | 説明                                      |
-| ------- | --------- | -- | --------------------------------------- |
-| newName | Text      | -> | フォルダーの新しい完全な名称                          |
-| 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー|<!-- END REF -->
-
-|
+| 引数      | タイプ       |    | 説明             |
+| ------- | --------- | -- | -------------- |
+| newName | Text      | -> | フォルダーの新しい完全な名称 |
+| 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー   |
+<!-- END REF -->
 
 #### 説明
 

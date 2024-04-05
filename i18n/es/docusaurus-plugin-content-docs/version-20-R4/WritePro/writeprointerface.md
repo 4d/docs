@@ -1,6 +1,6 @@
 ---
 id: writeprointerface
-title: 4D Write Pro Interface
+title: Interfaz 4D Write Pro
 ---
 
 4D WritePro Interface ofrece un conjunto de paletas, que permiten a los usuarios finales personalizar fácilmente un documento 4D Write Pro.
@@ -93,7 +93,7 @@ El archivo de plantilla en formato JSON contiene los siguientes atributos:
 | breakFormulas        | Collection |             | Colección de objetos de fórmula aplicables a las líneas de ruptura                                                                                                       |
 | breakFormulas.label  | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
 | breakFormulas.source | Text       | x           | Formula                                                                                                                                                                  |
-| bcorFormulas         | Collection |             | Collection of formula objects applicable to bottom carry over rows                                                                                                       |
+| bcorFormulas         | Collection |             | Colección de objetos de fórmula aplicables a las filas de transferencia inferiores                                                                                       |
 | bcorFormulas.label   | Text       | x           | Etiqueta mostrada al usuario                                                                                                                                             |
 | bcorFormulas.source  | Text       | x           | Formula                                                                                                                                                                  |
 | extraFormulas        | Collection |             | Colección de objetos de fórmula aplicables a líneas adicionales                                                                                                          |

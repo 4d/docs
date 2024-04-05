@@ -87,10 +87,10 @@ La siguiente tabla muestra las opciones disponibles:
 
 Se pueden crear formatos de fecha personalizados utilizando varios modelos descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
 
-| Modelo                   | Ejemplo (sistema USA) |
-| ------------------------ | --------------------- |
-| "eeee, dd"               | Wednesday, 29         |
-| "'Day' #D 'of the year'" | Day #333 of the year  |
+| Modelo               | Ejemplo (sistema USA) |
+| -------------------- | --------------------- |
+| "eeee, dd"           | Wednesday, 29         |
+| "'Día' #D 'del año'" | Día 333 del año       |
 
 
 #### Gramática JSON
@@ -360,10 +360,10 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 
 Se pueden crear formatos de hora personalizados utilizando varios modelos descritos en la página [**Formatos de fecha y hora**](../Project/date-time-formats.md). Por ejemplo:
 
-| Modelo                                 | Ejemplo (sistema USA)           |
-| -------------------------------------- | ------------------------------- |
-| "HH 'hours' mm 'minutes' ss 'seconds'" | 13 horas 25 minutos 12 segundos |
-| "hh:mm aa"                             | 01:25 PM                        |
+| Modelo                                  | Ejemplo (sistema USA)           |
+| --------------------------------------- | ------------------------------- |
+| "HH 'horas' mm 'minutos' ss 'segundos'" | 13 horas 25 minutos 12 segundos |
+| "hh:mm aa"                              | 01:25 PM                        |
 
 
 #### Gramática JSON

@@ -114,7 +114,7 @@ Este comando não pode ser utilizado com um [datastore remoto](../ORDA/remoteDat
 
 :::info
 
-This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+Esse comando foi projetado para fazer com que as seleções de corrente 4D se beneficiem do poder das consultas ORDA. Por motivos de desempenho, no 4D single-user e no 4D Server, o comando conecta diretamente *entitySelection* à seleção atual. Portanto, uma vez que *a entitySelection* tenha sido usada, ela não deve ser reutilizada ou alterada posteriormente.
 
 :::
 
@@ -136,9 +136,9 @@ Parâmetros
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -194,9 +194,9 @@ Lembre que a entidade correspondente é recarregada a partir da datastore.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -275,11 +275,11 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                              |
-| ------ | ----------------------------------------------------- |
-| v19 R7 | Suporte do parâmetro *entitySelection*                |
-| v18 R5 | Compatível apenas com seleções de entidade alteráveis |
-| v17    | Adicionado                                            |
+| Release | Mudanças                                              |
+| ------- | ----------------------------------------------------- |
+| 18 R6   | Suporte do parâmetro *entitySelection*                |
+| 18 R5   | Compatível apenas com seleções de entidade alteráveis |
+| 17      | Adicionado                                            |
 
 </details>
 
@@ -367,9 +367,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -434,9 +434,9 @@ Se quisermos ter uma seleção de empregados chamados "Jones" que morem em Nova 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -476,10 +476,10 @@ A função devolve Null se o *index* estiver para além dos limites de selecçã
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v18 R6 | Retorna indefinido se uma seleção de entidade for vazia |
-| v17    | Adicionado                                              |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 18 R6   | Retorna indefinido se uma seleção de entidade for vazia |
+| 17      | Adicionado                                              |
 
 </details>
 
@@ -531,9 +531,9 @@ Se quisermos obter uma lista de funcionários cujo salário for superior ao sal�
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -581,9 +581,9 @@ Se *entity* e a entity selection não pertencerem à mesma dataclass, se produz 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -628,9 +628,9 @@ Se quisermos encontrar o número total de empregados para uma empresa sem contar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -693,10 +693,10 @@ Então esta seleção de entidades é atualizada com produtos e se quiser compar
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                     |
-| ------ | ---------------------------- |
-| v20    | Suporte de `dk count values` |
-| v17    | Adicionado                   |
+| Release | Mudanças                     |
+| ------- | ---------------------------- |
+| 20      | Suporte de `dk count values` |
+| 17      | Adicionado                   |
 
 </details>
 
@@ -781,9 +781,9 @@ $jobs:=ds. Employee.all().distinct("jobName";dk count values)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
@@ -841,9 +841,9 @@ $paths:=ds. Employee.all().distinctPaths("fullData")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -904,9 +904,9 @@ Exemplo com a opção `dk stop dropping on first error`:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -1015,9 +1015,9 @@ Dada a seguinte tabela e relação:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1074,9 +1074,9 @@ Há, entretanto, uma diferença entre ambas as afirmações quando a seleção e
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 
 </details>
 
@@ -1124,9 +1124,9 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19R5  | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19R5    | Adicionado |
 
 </details>
 
@@ -1178,9 +1178,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R5   | Adicionado |
 
 </details>
 
@@ -1221,9 +1221,9 @@ Form.products.add(Form.product)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1269,9 +1269,9 @@ Para mais informação, consulte [Entity selection ordenadas ou desordenadas](OR
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1320,9 +1320,9 @@ Se a entity selection estiver vazia, a função devolve Null.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1354,10 +1354,10 @@ As entity selections sempre têm uma propriedade `.length`.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v17    | Adicionado                                              |
-| v18 R6 | Retorna indefinido se uma seleção de entidade for vazia |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 17      | Adicionado                                              |
+| 18 R6   | Retorna indefinido se uma seleção de entidade for vazia |
 
 </details>
 
@@ -1407,10 +1407,10 @@ Se quisermos encontrar o maior salário entre as funcionárias mulheres:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                |
-| ------ | ------------------------------------------------------- |
-| v17    | Adicionado                                              |
-| v18 R6 | Retorna indefinido se uma seleção de entidade for vazia |
+| Release | Mudanças                                                |
+| ------- | ------------------------------------------------------- |
+| 17      | Adicionado                                              |
+| 18 R6   | Retorna indefinido se uma seleção de entidade for vazia |
 
 
 </details>
@@ -1459,10 +1459,10 @@ Neste exemplo, se quisermos encontrar o menor salário entre todos os funcionár
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                         |
-| ------ | -------------------------------- |
-| v19 R7 | Suporte do parâmetro *keepOrder* |
-| v17    | Adicionado                       |
+| Release | Mudanças                         |
+| ------- | -------------------------------- |
+| 18 R6   | Suporte do parâmetro *keepOrder* |
+| 17      | Adicionado                       |
 
 </details>
 
@@ -1542,9 +1542,9 @@ Employee.newSelection(dk keep ordered)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1604,9 +1604,9 @@ Se a entity selection inicial e o parâmetro não forem relacionados com a mesma
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1684,9 +1684,9 @@ Se for passado um caminho de atributo inválido em *pathString* ou *pathObject*,
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R6   | Adicionado |
 
 </details>
 
@@ -1807,11 +1807,11 @@ Neste exemplo, o objeto campo "marks" em **Students** dataClass contém as notas
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                               |
-| ------ | -------------------------------------- |
-| v17 R6 | Soporte dos Parâmetros Formula         |
-| v17 R5 | Suporte dos marcadores para os valores |
-| v17    | Adicionado                             |
+| Release | Mudanças                               |
+| ------- | -------------------------------------- |
+| 17 R6   | Soporte dos Parâmetros Formula         |
+| 17 R5   | Suporte dos marcadores para os valores |
+| 17      | Adicionado                             |
 
 </details>
 
@@ -1867,9 +1867,9 @@ A maioria dos exemplos de pesquisa podem ser encontrados na página DataClass [`
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1891,9 +1891,9 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -1915,9 +1915,9 @@ Para saber mais veja o parágrafo **querySettings parameter** na página Datacla
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R3   | Adicionado |
 
 </details>
 
@@ -1996,9 +1996,9 @@ Uma list box exibe a seleção de entidade Form.students e vários clientes trab
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R3 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R3   | Adicionado |
 
 </details>
 
@@ -2070,9 +2070,9 @@ $result2:=$invoices.selected($creditSel)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 
@@ -2133,9 +2133,9 @@ $slice:=ds.Employee.all().slice(-1;-2) //tenta devolver entidades do índice 9 a
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 
 
@@ -2189,9 +2189,9 @@ $sum:=$sel.sum("salary")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17      | Adicionado |
 
 </details>
 

@@ -399,9 +399,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -668,9 +668,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -735,11 +735,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                                               |
+| Release | Modifications                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Prise en charge de l'option `allowAutoExpand`                                                               |
-| v19 R6  | Ajout                                                                                                       |
+| 19 R8   | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7   | Prise en charge de l'option `allowAutoExpand`                                                               |
+| 19 R6   | Ajout                                                                                                       |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -925,9 +925,9 @@ saisissez le code suivant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications             |
+| Release | Modifications             |
 | ------- | ------------------------- |
-| v20 R2  | Support of .sjs documents |
+| 20 R2   | Support of .sjs documents |
 </details>
 
 
@@ -1013,7 +1013,7 @@ When including the optional *paramObj* parameter, the command allows you to use 
 
 | Paramètres |               | Type    | Description                                             |
 | ---------- | ------------- | ------- | ------------------------------------------------------- |
-| param1     |               | text    | The name of the 4D View Pro area object                 |
+| param1     |               | text    | Nom de l'objet 4D View Pro                              |
 | param2     |               | text    | Chemin d'accès de l'objet 4D View Pro exporté           |
 | param3     |               | object  | Référence au *paramObj* de la commande                  |
 | param4     |               | object  | Objet retourné par la méthode avec un message de statut |
@@ -1292,22 +1292,24 @@ Pour trouver "Total" et le remplacer par "Grand Total" :
 ```4d
 var $range;$condition;$result : Object
 
- $range:=VP All("ViewProArea")
+$range:=VP All("ViewProArea")
 
- $condition:=New object
- $condition.target:=vk find target text
- $condition.all:=True //Rechercher le document entier
- $condition.flags:=vk find flag exact match
+$condition:=New object
+$condition.target:=vk find target text
+$condition.all:=True //Search entire document
+$condition.flags:=vk find flag exact match
 
-  // Remplacer les cellules contenant uniquement 'Total' dans la feuille courante par "Grand Total"
- $result:=VP Find($range;"Total";$condition;"Grand Total")
+  // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
-  // Rechercher un objet de plage vide
- If($result.ranges.length=0)
-    ALERT("Aucun résultat trouvé")
- Else
-    ALERT($result.ranges.length+" résultats trouvés")
- End if
+
+$result:=VP Find($range;"Total";$condition;"Grand Total")
+
+  // Check for empty range object 
+If($result.ranges.length=0)
+    ALERT("No result found")
+Else
+    ALERT($result.ranges.length+" results found")
+End if
 ```
 
 
@@ -1315,9 +1317,9 @@ var $range;$condition;$result : Object
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1490,9 +1492,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1718,9 +1720,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1862,7 +1864,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
 | name       | Text   | -> | Nom de la plage nommée                                                           |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
-| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
+| Résultat   | Object | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
 |
 
@@ -1989,7 +1991,6 @@ Vous souhaitez récupérer des informations sur le nombre de colonnes et de lign
 
 ```4d
 var $panesObj : Object
-
 
 $panesObj:=VP Get frozen panes("ViewProArea")
 ```
@@ -2505,7 +2506,7 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | styleName  | Text    | -> | Nom du style                                             |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Style sheet object|<!-- END REF -->
+| Résultat   | Object  | <- | Objet feuille de style|<!-- END REF -->
 
 |
 
@@ -2610,9 +2611,9 @@ Dans ce cas, la feuille courante utilise deux objets style :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2671,9 +2672,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2727,9 +2728,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2794,9 +2795,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2841,9 +2842,9 @@ Si *tableName* n'est pas trouvé, la commande renvoie **null**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2896,9 +2897,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //vrai
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -2988,7 +2989,7 @@ Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la p
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
+    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
 End if
 ```
 
@@ -3092,9 +3093,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications             |
+| Release | Modifications             |
 | ------- | ------------------------- |
-| v20 R2  | Support of .sjs documents |
+| 20 R2   | Support of .sjs documents |
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3171,13 +3172,7 @@ End if
 Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :
 
 ```4d
-    //Import code
-var $o : Object
-$o:=New object
-$o.password:="excel123"
-$o.formula:=Formula(myImport)
-
-VP IMPORT DOCUMENT("ViewProArea";"c:\\tmp\\excelfilefile.xlsx";$o)
+    Plage de lignes
 ```
 
 ```4d
@@ -3230,26 +3225,26 @@ Here's the result: ![example-import-csv](../assets/en/ViewPro/vp-import-document
 
 #### Description
 
-La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importe le *vpBlob* dans la zone 4D View Pro *vpAreaName* et remplace son contenu<!-- END REF -->. *vpBlob* must contain a 4D View Pro document previously saved as Blob either by using the [VP EXPORT TO BLOB](#vp-export-to-blob) command or via the 4D View Pro interface.
+La commande `VP IMPORT FROM BLOB` <!-- REF #_method_.VP IMPORT FROM BLOB.Summary -->importe le *vpBlob* dans la zone 4D View Pro *vpAreaName* et remplace son contenu<!-- END REF -->. .
 
 Dans *paramObj*, vous pouvez passer plusieurs propriétés :
 
-| Propriété           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula             | 4D.Function | Callback method to be launched when the import has completed. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command.                                                                                                                                                                                                                                                                                             |
-| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                                                   |
-| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                                                        |
-| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                                                |
-| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                  |
-| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                                                    |
-| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                                               |
-| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. When opening document, UI and UI event could be refreshed and responsive directly. |
+| Propriété           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| formula             | 4D.Function | Callback method to be launched when the import has completed. The callback method must be passed with the [`Formula`](../API/FunctionClass.md#formula) command.                                                                                                                                                                                                                                                                  |
+| calcOnDemand        | Boolean     | Whether to calculate formulas only when they are demanded, default=false.                                                                                                                                                                                                                                                                                                                                                        |
+| dynamicReferences   | Boolean     | Whether to calculate functions with dynamic reference, default=true.                                                                                                                                                                                                                                                                                                                                                             |
+| fullRecalc          | Boolean     | Indique si le calcul doit être effectué après le chargement des données json, la valeur par défaut est faux.                                                                                                                                                                                                                                                                                                                     |
+| includeFormulas     | Boolean     | Whether to include the formula when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                       |
+| includeStyles       | Boolean     | Whether to include the style when loading, default=true.                                                                                                                                                                                                                                                                                                                                                                         |
+| includeUnusedStyles | Boolean     | Whether to include the unused name style when converting excel xml to the json, default=true.                                                                                                                                                                                                                                                                                                                                    |
+| openMode            | Integer     | can be: <br/>0: normal open mode, without lazy and incremental. When opening document, UI and UI event could be refreshed and responsive at specific time points. <br/>1: lazy open mode. When opening document, only the active sheet will be loaded directly. Other sheets will be loaded only when they are be used. Other sheets will be loaded only when they are be used. <br/>2: incremental open mode. |
 
 Les paramètres suivants peuvent être utilisés dans la méthode de rappel :
 
 | Paramètres |               | Type    | Description                                             |
 |:---------- |:------------- |:------- |:------------------------------------------------------- |
-| param1     |               | text    | The name of the 4D View Pro area object                 |
+| param1     |               | text    | Nom de l'objet 4D View Pro                              |
 | param2     |               | 4D.Blob | Le blob importé                                         |
 | param3     |               | object  | Référence au *paramObj* de la commande                  |
 | param4     |               | object  | Objet retourné par la méthode avec un message de statut |
@@ -3388,9 +3383,9 @@ Le résultat est le suivant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3442,9 +3437,9 @@ Voir les exemples pour [VP INSERT TABLE ROWS](#vp-insert-table-rows) et [VP SET 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3528,9 +3523,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3646,7 +3641,9 @@ Vous souhaitez assigner une valeur à une plage nommée "Total".
 | vpAreaName | Text | -> | Nom de la zone 4D View Pro dans le formulaire|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Description
@@ -3728,9 +3725,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3767,7 +3764,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
-If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+Collection de données à charger dans le contexte de données
 
 #### Exemple
 
@@ -4028,9 +4025,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R6  | Ajout         |
+| 19 R6   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -4082,9 +4079,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -4130,9 +4127,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4220,9 +4217,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4509,7 +4506,6 @@ Function onEvent()
          This.isWaiting:=False
 
 
-
  // Stop the timer
    SET TIMER(0)
 
@@ -4646,9 +4642,9 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -4666,7 +4662,7 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 #### Description
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->The `VP SET BINDING PATH` command<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
 Dans *rangeObj*, passez un objet qui est soit une plage de cellules, soit une plage combinée de cellules.
 
@@ -4716,7 +4712,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 #### Description
 
-La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
+La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->affecte une valeur spécifiée à une plage de cellules désignée<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la valeur indiquée sera répétée dans chaque cellule.
 
@@ -4972,7 +4968,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 #### Description
 
-La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
+La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->The `VP SET CURRENT SHEET` command<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
@@ -5085,9 +5081,9 @@ End case
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -6015,6 +6011,7 @@ Résultat:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6070,9 +6067,9 @@ Avec un saut de page :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -6174,9 +6171,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea" ; "PeopleTable" ; 0 ; \
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6320,6 +6317,7 @@ Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Ce
 Le paramètre *timeValue* spécifie une heure exprimée en secondes à attribuer à *rangeObj*.
 
 Le paramètre optionnel *formatPattern* définit un [pattern](configuring.md#format-des-cellules) (modèle) pour le paramètre *timeValue*.
+
 
 #### Exemple
 
@@ -6523,8 +6521,8 @@ Le tableau suivant répertorie les options de classeur disponibles :
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
 | highlightInvalidData                  | boolean                 | Invalid data is highlighted.                                                                                                                                                                                                                           |
 | iterativeCalculation                  | boolean                 | Enables iterative calculation. See on [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/formulareference/formulaoverview/calculating-iterative).                                                                                             |
-| iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
-| iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
+| iterativeCalculationMaximumChange     | numérique               | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
+| iterativeCalculationMaximumIterations | numérique               | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                         |
 | pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [SpreadJS docs](https://developer.mescius.com/spreadjs/docs/features/rows-columns/paste-skip-data-invisible-range) for more information on invisible ranges.             |

@@ -85,9 +85,9 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
@@ -113,9 +113,9 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
@@ -141,9 +141,9 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
@@ -165,9 +165,9 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
@@ -202,20 +202,19 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| 引数  | タイプ  |    | 説明                                            |
-| --- | ---- | -- | --------------------------------------------- |
-| 戻り値 | Real | <- | ドキュメントのサイズ (バイト単位)|<!-- END REF -->
-
-|
+| 引数  | タイプ  |    | 説明                 |
+| --- | ---- | -- | ------------------ |
+| 戻り値 | Real | <- | ドキュメントのサイズ (バイト単位) |
+<!-- END REF -->
 
 #### 説明
 
@@ -235,9 +234,9 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
@@ -260,9 +259,9 @@ FileHandle オブジェクトは共有できません。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
@@ -307,23 +306,20 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| 引数      | タイプ                  |    | 説明                                       |
-| ------- | -------------------- | -- | ---------------------------------------- |
-| *bytes* | Real                 | -> | 読み取るバイト数                                 |
-| 戻り値     | [4D.Blob](BlobClass) | <- | ファイルから読み取ったバイト<!-- END REF -->
-
-
-
-|
+| 引数      | タイプ                  |    | 説明             |
+| ------- | -------------------- | -- | -------------- |
+| *bytes* | Real                 | -> | 読み取るバイト数       |
+| 戻り値     | [4D.Blob](BlobClass) | <- | ファイルから読み取ったバイト |
+<!-- END REF -->
 
 
 
@@ -349,22 +345,19 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readLine().Params -->
-| 引数  | タイプ  |    | 説明                                 |
-| --- | ---- | -- | ---------------------------------- |
-| 戻り値 | Text | <- | 1行のテキスト|<!-- END REF -->
-
-
-
-|
+| 引数  | タイプ  |    | 説明      |
+| --- | ---- | -- | ------- |
+| 戻り値 | Text | <- | 1行のテキスト |
+<!-- END REF -->
 
 
 
@@ -395,22 +388,20 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readText().Params -->
-| 引数         | タイプ  |    | 説明                                   |
-| ---------- | ---- | -- | ------------------------------------ |
-| *stopChar* | Text | -> | 読み取りを停止する文字                          |
-| 戻り値        | Text | <- | ファイルのテキスト|<!-- END REF -->
-
-
-|
+| 引数         | タイプ  |    | 説明          |
+| ---------- | ---- | -- | ----------- |
+| *stopChar* | Text | -> | 読み取りを停止する文字 |
+| 戻り値        | Text | <- | ファイルのテキスト   |
+<!-- END REF -->
 
 
 #### 説明
@@ -443,21 +434,19 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
 
 <!--REF #FileHandleClass.setSize().Params -->
-| 引数   | タイプ  |    | 説明                                               |
-| ---- | ---- | -- | ------------------------------------------------ |
-| size | Real | -> | ドキュメントの新しいサイズ (バイト単位)|<!-- END REF -->
-
-
-|
+| 引数   | タイプ  |    | 説明                    |
+| ---- | ---- | -- | --------------------- |
+| size | Real | -> | ドキュメントの新しいサイズ (バイト単位) |
+<!-- END REF -->
 
 
 #### 説明
@@ -478,21 +467,19 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| 引数     | タイプ                  |    | 説明                                        |
-| ------ | -------------------- | -- | ----------------------------------------- |
-| *blob* | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob|<!-- END REF -->
-
-
-|
+| 引数     | タイプ                  |    | 説明             |
+| ------ | -------------------- | -- | -------------- |
+| *blob* | [4D.Blob](BlobClass) | -> | ファイルに書き込む Blob |
+<!-- END REF -->
 
 
 #### 説明
@@ -514,9 +501,9 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
@@ -524,12 +511,10 @@ $s:=$fh.readText()
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| 引数           | タイプ  |    | 説明                                  |
-| ------------ | ---- | -- | ----------------------------------- |
-| *lineOfText* | Text | -> | 書き込むテキスト|<!-- END REF -->
-
-
-|
+| 引数           | タイプ  |    | 説明       |
+| ------------ | ---- | -- | -------- |
+| *lineOfText* | Text | -> | 書き込むテキスト |
+<!-- END REF -->
 
 
 #### 説明
@@ -550,21 +535,19 @@ $s:=$fh.readText()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R7   | 追加 |
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeText().Params -->
-| 引数            | タイプ  |    | 説明                                  |
-| ------------- | ---- | -- | ----------------------------------- |
-| *textToWrite* | Text | -> | 書き込むテキスト|<!-- END REF -->
-
-
-|
+| 引数            | タイプ  |    | 説明       |
+| ------------- | ---- | -- | -------- |
+| *textToWrite* | Text | -> | 書き込むテキスト |
+<!-- END REF -->
 
 
 #### 説明

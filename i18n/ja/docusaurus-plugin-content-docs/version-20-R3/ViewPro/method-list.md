@@ -399,9 +399,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -668,9 +668,9 @@ $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -735,11 +735,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------- |
-| v19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
-| v19 R6 | 追加                                                                                              |
+| リリース  | 内容                                                                                              |
+| ----- | ----------------------------------------------------------------------------------------------- |
+| 19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
+| 19 R6 | 追加                                                                                              |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -925,9 +925,9 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容              |
-| ------ | --------------- |
-| v20 R2 | .sjsドキュメントをサポート |
+| リリース  | 内容              |
+| ----- | --------------- |
+| 20 R2 | .sjsドキュメントをサポート |
 </details>
 
 
@@ -1310,9 +1310,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1486,9 +1486,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -1714,9 +1714,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -1858,7 +1858,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 | vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                         |
 | name       | Text   | -> | 命名レンジの名前                                        |
 | scope      | Number | -> | ターゲットのスコープ (デフォルト=カレントシート)                      |
-| 戻り値        | Text   | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
+| 戻り値        | Object | <- | 命名フォーミュラ、または命名レンジの定義|<!-- END REF -->
 
 |
 
@@ -2607,9 +2607,9 @@ $styles:=VP Get stylesheets("ViewProArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2620,7 +2620,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 | 引数         | タイプ     |    | 説明                                      |
 | ---------- | ------- | -- | --------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                 |
-| tableName  | Text    | -> | 表組みの名称                                  |
+| tableName  | Text    | -> | Table name                              |
 | column     | Integer | -> | 表の列のインデックス                              |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)             |
 | 戻り値        | Object  | <- | *column* の属性|<!-- END REF -->
@@ -2669,9 +2669,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2682,7 +2682,7 @@ End if
 | 引数         | タイプ     |    | 説明                                              |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                         |
-| tableName  | Text    | -> | 表組みの名称                                          |
+| tableName  | Text    | -> | Table name                                      |
 | columnName | Text    | -> | 列の名称                                            |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                     |
 | 戻り値        | Integer | <- | *columnName* のインデックス|<!-- END REF -->
@@ -2725,9 +2725,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2738,7 +2738,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | 引数         | タイプ        |    | 説明                                                                    |
 | ---------- | ---------- | -- | --------------------------------------------------------------------- |
 | vpAreaName | Text       | -> | 4D View Pro フォームオブジェクト名                                               |
-| tableName  | Text       | -> | 表組みの名称                                                                |
+| tableName  | Text       | -> | Table name                                                            |
 | reset      | Boolean    | -> | 現在の表から "ダーティ" ステータスをクリアするには true、そのままにするには false を指定します。 デフォルト = true |
 | sheet      | Integer    | -> | シートのインデックス (省略した場合はカレントシート)                                           |
 | 戻り値        | Collection | <- | 前回のリセット以降に変更された全項目を格納するオブジェクトのコレクション|<!-- END REF -->
@@ -2792,9 +2792,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2805,7 +2805,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | 引数         | タイプ     |    | 説明                                                      |
 | ---------- | ------- | -- | ------------------------------------------------------- |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                 |
-| tableName  | Text    | -> | 表組みの名称                                                  |
+| tableName  | Text    | -> | Table name                                              |
 | onlyData   | Integer | -> | `vk table full range` (デフォルト) または `vk table data range` |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)                             |
 | 戻り値        | Object  | <- | 表組みが含まれるレンジ|<!-- END REF -->
@@ -2839,9 +2839,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2853,7 +2853,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 | 引数         | タイプ                                            |    | 説明                                        |
 | ---------- | ---------------------------------------------- | -- | ----------------------------------------- |
 | vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                   |
-| tableName  | Text                                           | -> | 表組みの名称                                    |
+| tableName  | Text                                           | -> | Table name                                |
 | 戻り値        | [cs.ViewPro.TableTheme](classes.md#tabletheme) | <- | 現在の表テーマのプロパティ値|<!-- END REF -->
 
 
@@ -2894,9 +2894,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) // true
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -3090,9 +3090,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容              |
-| ------ | --------------- |
-| v20 R2 | .sjsドキュメントをサポート |
+| リリース  | 内容              |
+| ----- | --------------- |
+| 20 R2 | .sjsドキュメントをサポート |
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3386,9 +3386,9 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3399,7 +3399,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 | 引数          | タイプ     |    | 説明                                                     |
 | ----------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                |
-| tableName   | Text    | -> | 表組みの名称                                                 |
+| tableName   | Text    | -> | Table name                                             |
 | column      | Integer | -> | 列の挿入場所を指定する表組み内のインデックス                                 |
 | count       | Text    | -> | 挿入する列の数 (>0)                                           |
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after`   |
@@ -3440,9 +3440,9 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3453,7 +3453,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 | 引数          | タイプ     |    | 説明                                                     |
 | ----------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                |
-| tableName   | Text    | -> | 表組みの名称                                                 |
+| tableName   | Text    | -> | Table name                                             |
 | row         | Integer | -> | 行の挿入場所を指定する表組み内のインデックス                                 |
 | count       | Text    | -> | 挿入する行の数 (>0)                                           |
 | insertAfter | Integer | -> | `vk table insert before` または `vk table insert after`   |
@@ -3526,9 +3526,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3644,7 +3644,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | vpAreaName | Text | -> | 4D View Pro フォームオブジェクト名|<!-- END REF -->
 
 
+
 |
+
 
 
 #### 説明
@@ -3726,9 +3728,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -4027,9 +4029,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R6 | 追加 |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -4081,9 +4083,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -4094,7 +4096,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | 引数         | タイプ     |    | 説明                                                     |
 | ---------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
-| tableName  | Text    | -> | 表組みの名称                                                 |
+| tableName  | Text    | -> | Table name                                             |
 | column     | Integer | -> | 列の削除の開始場所を指定する表組み内のインデックス                              |
 | count      | Text    | -> | 削除する列の数 (>0)                                           |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
@@ -4129,9 +4131,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4142,7 +4144,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 | 引数         | タイプ     |    | 説明                                                     |
 | ---------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
-| tableName  | Text    | -> | 表組みの名称                                                 |
+| tableName  | Text    | -> | Table name                                             |
 | row        | Integer | -> | 行の削除の開始場所を指定する表組み内のインデックス                              |
 | count      | Text    | -> | 削除する行の数 (>0)                                           |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
@@ -4219,9 +4221,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4644,9 +4646,9 @@ VP SET ALLOWED METHODS($allowed)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -5083,9 +5085,9 @@ End case
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -6013,6 +6015,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6068,9 +6071,9 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -6081,7 +6084,7 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 | 引数         | タイプ     |    | 説明                                                     |
 | ---------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
-| tableName  | Text    | -> | 表組みの名称                                                 |
+| tableName  | Text    | -> | Table name                                             |
 | column     | Integer | -> | 表の列のインデックス                                             |
 | attributes | Object  | -> | *column* の列に適用する属性                                     |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
@@ -6172,9 +6175,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6185,7 +6188,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 | 引数         | タイプ                                            |    | 説明                                        |
 | ---------- | ---------------------------------------------- | -- | ----------------------------------------- |
 | vpAreaName | Text                                           | -> | 4D View Pro フォームオブジェクト名                   |
-| tableName  | Text                                           | -> | 表組みの名称                                    |
+| tableName  | Text                                           | -> | Table name                                |
 | options    | [cs.ViewPro.TableTheme](classes.md#tabletheme) | -> | 設定する表テーマのプロパティ|<!-- END REF -->
 
 
@@ -6318,6 +6321,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 *timeValue* 引数に、*rangeObj* 引数のレンジに割り当てる時間 (秒単位) を指定します。
 
 任意の *formatPattern* 引数は、*timeValue* に対する [パターン](configuring.md#セルフォーマット) を定義します。
+
 
 #### 例題
 

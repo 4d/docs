@@ -85,9 +85,9 @@ Os objectos handle de arquivos não podem ser partilhados.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
@@ -113,9 +113,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
@@ -141,9 +141,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
@@ -165,9 +165,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
@@ -202,20 +202,19 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| Parâmetro  | Tipo |    | Descrição                                                |
-| ---------- | ---- | -- | -------------------------------------------------------- |
-| Resultados | Real | <- | Tamanho do documento em bytes|<!-- END REF -->
-
-|
+| Parâmetro  | Tipo |    | Descrição                     |
+| ---------- | ---- | -- | ----------------------------- |
+| Resultados | Real | <- | Tamanho do documento em bytes |
+<!-- END REF -->
 
 #### Descrição
 
@@ -235,9 +234,9 @@ A função `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->devolve o
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
@@ -260,9 +259,9 @@ Essa propriedade é **apenas leitura**.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
@@ -281,7 +280,7 @@ Esta propriedade é **read/write**.
 
 :::caution
 
-When a file handle is created, the `.offset` value is a number of bytes. However, the unit of offset measurement differs according to the reading function: with [`readBlob()`](#readblob), `.offset` is a number of bytes, whereas with [`readText()`](#readtext)/[`readLine()`](#readline) it is a number of characters. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Então, se você começar a ler com `readBlob()` e então chamar `readText()`, a leitura do texto começará em uma posição inconsistente. Portanto, é essencial definir a propriedade `.offset` caso você altere de leitura/escrita de blob para leitura/escrita de texto no mesmo filehandle. Por exemplo:
+Quando um identificador de arquivo é criado, o valor `.offset` é um número de bytes. Entretanto, a unidade de medição de deslocamento (offset) difere de acordo com a função de leitura: com [`readBlob()`](#readblob)`.offset` é um número de bytes, enquanto que com [`readText()`](#readtext)/[`readLine()`](#readline) ele é um número de caracteres. Dependendo do conjunto de caracteres do arquivo, um caractere corresponde a um ou mais bytes. Então, se você começar a ler com `readBlob()` e então chamar `readText()`, a leitura do texto começará em uma posição inconsistente. Portanto, é essencial definir a propriedade `.offset` caso você altere de leitura/escrita de blob para leitura/escrita de texto no mesmo filehandle. Por exemplo:
 
 ```4d
   // Abra um arquivo texto europeu usando a codificação utf-16 (dois bytes por caractere)
@@ -307,23 +306,20 @@ $s:=$fh.readText()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D. Blob](BlobClass) <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| Parâmetro  | Tipo                  |    | Descrição                                         |
-| ---------- | --------------------- | -- | ------------------------------------------------- |
-| *bytes*    | Real                  | -> | Número de bytes a ler                             |
-| Resultados | [4D. Blob](BlobClass) | <- | Bytes lidos do arquivo|<!-- END REF -->
-
-
-
-|
+| Parâmetro  | Tipo                  |    | Descrição              |
+| ---------- | --------------------- | -- | ---------------------- |
+| *bytes*    | Real                  | -> | Número de bytes a ler  |
+| Resultados | [4D. Blob](BlobClass) | <- | Bytes lidos do arquivo |
+<!-- END REF -->
 
 
 
@@ -349,22 +345,19 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readLine().Params -->
-| Parâmetro  | Tipo |    | Descrição                                 |
-| ---------- | ---- | -- | ----------------------------------------- |
-| Resultados | Text | <- | Linha de texto|<!-- END REF -->
-
-
-
-|
+| Parâmetro  | Tipo |    | Descrição      |
+| ---------- | ---- | -- | -------------- |
+| Resultados | Text | <- | Linha de texto |
+<!-- END REF -->
 
 
 
@@ -395,22 +388,20 @@ Essa função assume que a propriedade [`.offset`](#offset) é um número de car
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 
 <!--REF #FileHandleClass.readText().Params -->
-| Parâmetro  | Tipo |    | Descrição                                   |
-| ---------- | ---- | -- | ------------------------------------------- |
-| *stopChar* | Text | -> | Caracter no qual parar a leitura            |
-| Resultados | Text | <- | Texto do arquivo|<!-- END REF -->
-
-
-|
+| Parâmetro  | Tipo |    | Descrição                        |
+| ---------- | ---- | -- | -------------------------------- |
+| *stopChar* | Text | -> | Caracter no qual parar a leitura |
+| Resultados | Text | <- | Texto do arquivo                 |
+<!-- END REF -->
 
 
 #### Descrição
@@ -443,21 +434,19 @@ Se o parâmetro *stopChar* for passado e não for encontrado, `.readText()` devo
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
 
 <!--REF #FileHandleClass.setSize().Params -->
-| Parâmetro | Tipo |    | Descrição                                                     |
-| --------- | ---- | -- | ------------------------------------------------------------- |
-| size      | Real | -> | Novo tamanho do documento em bytes|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo |    | Descrição                          |
+| --------- | ---- | -- | ---------------------------------- |
+| size      | Real | -> | Novo tamanho do documento em bytes |
+<!-- END REF -->
 
 
 #### Descrição
@@ -478,21 +467,19 @@ Se o tamanho ** for inferior ao tamanho atual do documento, o conteúdo do docum
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->| <!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Parâmetro | Tipo                  |    | Descrição                                                |
-| --------- | --------------------- | -- | -------------------------------------------------------- |
-| *blob*    | [4D. Blob](BlobClass) | -> | Blob para escrever no arquivo|<!-- END REF -->
-
-
-|
+| Parâmetro | Tipo                  |    | Descrição                     |
+| --------- | --------------------- | -- | ----------------------------- |
+| *blob*    | [4D. Blob](BlobClass) | -> | Blob para escrever no arquivo |
+<!-- END REF -->
 
 
 #### Descrição
@@ -514,9 +501,9 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
@@ -524,12 +511,10 @@ Quando esta função é executada, a posição atual ([.offset](#offset)) é atu
 
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| Parâmetro    | Tipo |    | Descrição                                    |
-| ------------ | ---- | -- | -------------------------------------------- |
-| *lineOfText* | Text | -> | Texto para string|<!-- END REF -->
-
-
-|
+| Parâmetro    | Tipo |    | Descrição         |
+| ------------ | ---- | -- | ----------------- |
+| *lineOfText* | Text | -> | Texto para string |
+<!-- END REF -->
 
 
 #### Descrição
@@ -550,21 +535,19 @@ Quando esta função for executada, a posição atual ([.offset](#offset)) é at
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 
 <!--REF #FileHandleClass.writeText().Params -->
-| Parâmetro     | Tipo |    | Descrição                                    |
-| ------------- | ---- | -- | -------------------------------------------- |
-| *textToWrite* | Text | -> | Texto para string|<!-- END REF -->
-
-
-|
+| Parâmetro     | Tipo |    | Descrição         |
+| ------------- | ---- | -- | ----------------- |
+| *textToWrite* | Text | -> | Texto para string |
+<!-- END REF -->
 
 
 #### Descrição

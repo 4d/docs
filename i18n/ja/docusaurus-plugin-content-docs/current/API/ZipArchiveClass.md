@@ -39,10 +39,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                              |
-| ------ | --------------------------------------------------------------- |
-| v19 R3 | `ZIP Compression LZMA`, `ZIP Compression XZ`, `.level` プロパティを追加 |
-| v18    | 追加                                                              |
+| Release | 内容                                                              |
+| ------- | --------------------------------------------------------------- |
+| 19 R3   | `ZIP Compression LZMA`, `ZIP Compression XZ`, `.level` プロパティを追加 |
+| 18      | 追加                                                              |
 
 </details>
 
@@ -57,9 +57,8 @@ End if
 | zipStructure    | Object    | -> | 圧縮する File または Folder オブジェクト                                                    |
 | destinationFile | 4D.File   | -> | アーカイブの保存先ファイル                                                                  |
 | options         | Integer   | -> | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| 戻り値             | Object    | <- | ステータスオブジェクト|<!-- END REF -->
-
-|
+| 戻り値             | Object    | <- | ステータスオブジェクト                                                                    |
+<!-- END REF -->
 
 #### 説明
 
@@ -194,9 +193,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v18   | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 18      | 追加 |
 
 </details>
 
@@ -204,13 +203,12 @@ $err:=ZIP Create archive($zip; $destination)
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| 引数       | タイプ           |    | 説明                                     |
-| -------- | ------------- |:--:| -------------------------------------- |
-| zipFile  | 4D.File       | -> | ZIPアーカイブファイル                           |
-| password | Text          | -> | ZIPアーカイブのパスワード (必要であれば)                |
-| 戻り値      | 4D.ZipArchive | <- | アーカイブオブジェクト|<!-- END REF -->
-
-|
+| 引数       | タイプ           |    | 説明                      |
+| -------- | ------------- |:--:| ----------------------- |
+| zipFile  | 4D.File       | -> | ZIPアーカイブファイル            |
+| password | Text          | -> | ZIPアーカイブのパスワード (必要であれば) |
+| 戻り値      | 4D.ZipArchive | <- | アーカイブオブジェクト             |
+<!-- END REF -->
 
 #### 説明
 

@@ -402,9 +402,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R4|Added
+|17 R4|Added
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -663,9 +663,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -727,11 +727,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
-|v19 R7|Support of `allowAutoExpand` option
-|v19 R6|Added
+|19 R8|Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme`
+|19 R7|Support of `allowAutoExpand` option
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -913,9 +913,9 @@ use the following code:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 
@@ -966,9 +966,9 @@ The optional *paramObj* parameter allows you to define multiple properties for t
 |includeBindingSource| boolean | 4DVP and Microsoft Excel only. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).|
 |sheet| number| PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only|
 |pdfOptions| object| PDF only (optional) - Options for pdf export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>creator</td><td>text</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>text</td><td>title of the document.</td></tr><tr><td>author</td><td>text</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>text</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>text</td><td>subject of the document.</td></tr></table></p>|
-|csvOptions|object| CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>|
+|csvOptions|object| CSV only (optional) - Options for csv export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>text</td><td>Row delimiter. Default: "<code>\r\n</code>"</td></tr><tr><td>columnDelimiter</td><td>text</td><td>Column delimiter. Default: ","</td></tr></table></p>|
 |sjsOptions| object| SJS only (optional) - Options for sjs export <p><table><tr><th>Property</th><th>Type</th><th>Description</th></tr><tr><td>includeAutoMergedCells</td><td>boolean</td><td>whether to include the automatically merged cells, default is false.</td></tr><tr><td>includeBindingSource</td><td>boolean</td><td>whether to include the binding source, default is true.</td></tr><tr><td>includeCalcModelCache</td><td>boolean</td><td>whether to include the extra data of calculation. Can be faster when open the file with those data, default is false.</td></tr><tr><td>includeEmptyRegionCells</td><td>boolean</td><td>whether to include any empty cells (cells with no data or only style) outside the used data range, default is true.</td></tr><tr><td>includeFormulas</td><td>boolean</td><td>whether to include the formulas, default is true.</td></tr><tr><td>includeStyles</td><td>boolean</td><td>whether to include the style, default is true.</td></tr><tr><td>includeUnusedNames</td><td>boolean</td><td>whether to include the unused custom names, default is true.</td></tr><tr><td>saveAsView</td><td>boolean</td><td>whether to apply the format string to exporting values, default is false.</td></tr></table></p>|
-|`\<customProperty>`| any| Any custom property that will be available through the $3 parameter in the callback method.|
+|*customProperty*| any| Any custom property that will be available through the $3 parameter in the callback method.|
 
 **Notes about Excel format**:
 
@@ -1277,6 +1277,7 @@ $condition.flags:=vk find flag exact match
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 
 
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
  
   // Check for empty range object 
@@ -1292,9 +1293,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1462,9 +1463,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -1680,9 +1681,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -2537,9 +2538,9 @@ In this case, the current sheet uses two style objects:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2597,9 +2598,9 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2651,9 +2652,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2715,9 +2716,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2762,9 +2763,9 @@ If *tableName* is not found, the command returns **null**.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2814,9 +2815,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -3003,9 +3004,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R2|Support of .sjs documents|
+|20 R2|Support of .sjs documents|
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3212,7 +3213,9 @@ QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
 VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 ```
 
+
 #### See also
+
 
 [VP Export to object](#vp-export-to-object)
 
@@ -3290,9 +3293,9 @@ The results is:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3342,9 +3345,9 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3426,9 +3429,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3618,9 +3621,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|Added
+|19 R4|Added
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3680,6 +3683,7 @@ See example the example from [VP Copy to object](#vp-copy-to-object)
 #### Description
 
 The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dialog window to print *vpAreaName*<!-- END REF -->.
+
 
 Pass the 4D View Pro area to be printed in *vpAreaName*. The command will open the system print dialog window where the printer can be specified and the page properties can be defined.
 
@@ -3769,6 +3773,7 @@ You can define where to remove the name in *scope* using either the sheet index 
 
 * `vk current sheet`
 * `vk workbook`  
+
 
 #### Example
 
@@ -3908,9 +3913,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Added
+|19 R6|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3960,9 +3965,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -4006,9 +4011,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4092,9 +4097,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4509,9 +4514,9 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -4936,9 +4941,9 @@ End case
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R5|Added|
+|19 R5|Added|
 
 </details>
 
@@ -5893,9 +5898,9 @@ With a page break:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -5997,9 +6002,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8|Added
+|19 R8|Added
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6012,6 +6017,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
 |options|[cs.ViewPro.TableTheme](classes.md#tabletheme)|->|Table theme properties to modify|<!-- END REF -->
+
 
 
 #### Description

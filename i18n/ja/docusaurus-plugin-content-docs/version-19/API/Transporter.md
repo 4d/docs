@@ -10,9 +10,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
@@ -43,9 +43,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -75,9 +75,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -108,9 +108,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -140,10 +140,10 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                |
-| ------ | ----------------- |
-| v18    | UTF8 base64 をサポート |
-| v17 R5 | 追加                |
+| リリース  | 内容                |
+| ----- | ----------------- |
+| 18    | UTF8 base64 をサポート |
+| 17 R5 | 追加                |
 
 </details>
 
@@ -172,9 +172,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -193,9 +193,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -227,9 +227,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -248,9 +248,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -275,9 +275,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -300,9 +300,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
@@ -320,9 +320,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -341,9 +341,9 @@ title: Transporter クラス
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 

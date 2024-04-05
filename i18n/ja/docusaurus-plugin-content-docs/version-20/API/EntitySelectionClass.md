@@ -115,7 +115,7 @@ $employees:=Create entity selection([Employee])
 
 :::info
 
-This command is designed to make 4D current selections benefit from the power of ORDA queries. For performance reasons, in 4D single-user and 4D Server, the command directly connects *entitySelection* to the current selection. Therefore, once *entitySelection* has been used, it must not be reused or altered afterwards.
+このコマンドは、4Dのカレントセレクションが ORDAクエリの力を活用するためのものです。 パフォーマンス上の理由により、シングルユーザーの 4D と 4D Server では、このコマンドは *entitySelection* をカレントセレクションと直結します。 そのため、このコマンドに受け渡した *entitySelection* をその後に再利用したり変更したりすることは避けなければなりません。
 
 :::
 
@@ -141,9 +141,9 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -199,9 +199,9 @@ $result:=$sel[0].lock() //動作しません
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -280,11 +280,11 @@ $result:=$sel[0].lock() //動作しません
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                            |
-| ------ | ----------------------------- |
-| v19 R7 | *entitySelection* パラメーターをサポート |
-| v18 R5 | 追加可能なエンティティセレクションのみをサポート      |
-| v17    | 追加                            |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 19 R7 | *entitySelection* パラメーターをサポート |
+| 18 R5 | 追加可能なエンティティセレクションのみをサポート      |
+| 17    | 追加                            |
 
 </details>
 
@@ -372,9 +372,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -441,9 +441,9 @@ $sellist2:=$sellist2.add($sellist1)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -488,10 +488,10 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                  |
-| ------ | ----------------------------------- |
-| v18 R6 | エンティティセレクションが空の場合には undefined を返します |
-| v17    | 追加                                  |
+| リリース  | 内容                                  |
+| ----- | ----------------------------------- |
+| 18 R6 | エンティティセレクションが空の場合には undefined を返します |
+| 17    | 追加                                  |
 
 </details>
 
@@ -543,9 +543,9 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -593,9 +593,9 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -640,9 +640,9 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -705,10 +705,10 @@ $emp2:=$employees.at(-3) // $employees エンティティセレクションの
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容                      |
-| ----- | ----------------------- |
-| v20   | `dk count values` をサポート |
-| v17   | 追加                      |
+| リリース | 内容                      |
+| ---- | ----------------------- |
+| 20   | `dk count values` をサポート |
+| 17   | 追加                      |
 
 </details>
 
@@ -797,9 +797,9 @@ $jobs:=ds.Employee.all().distinct("jobName";dk count values)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
 
 </details>
 
@@ -857,9 +857,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -920,9 +920,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 
 </details>
 
@@ -1031,9 +1031,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1090,9 +1090,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -1140,9 +1140,9 @@ $paths:=ds.Employee.all().distinctPaths("fullData")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19R5 | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19R5 | 追加 |
 
 </details>
 
@@ -1196,9 +1196,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R5 | 追加 |
 
 </details>
 
@@ -1239,9 +1239,9 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1294,9 +1294,9 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1345,9 +1345,9 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1379,10 +1379,10 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                  |
-| ------ | ----------------------------------- |
-| v17    | 追加                                  |
-| v18 R6 | エンティティセレクションが空の場合には undefined を返します |
+| リリース  | 内容                                  |
+| ----- | ----------------------------------- |
+| 17    | 追加                                  |
+| 18 R6 | エンティティセレクションが空の場合には undefined を返します |
 
 </details>
 
@@ -1432,10 +1432,10 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                  |
-| ------ | ----------------------------------- |
-| v17    | 追加                                  |
-| v18 R6 | エンティティセレクションが空の場合には undefined を返します |
+| リリース  | 内容                                  |
+| ----- | ----------------------------------- |
+| 17    | 追加                                  |
+| 18 R6 | エンティティセレクションが空の場合には undefined を返します |
 
 
 </details>
@@ -1484,10 +1484,10 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                      |
-| ------ | ----------------------- |
-| v19 R7 | *keepOrder* パラメーターをサポート |
-| v17    | 追加                      |
+| リリース  | 内容                      |
+| ----- | ----------------------- |
+| 19 R7 | *keepOrder* パラメーターをサポート |
+| 17    | 追加                      |
 
 </details>
 
@@ -1569,9 +1569,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1631,9 +1631,9 @@ $listsel:=$listsel.minus($selectedItems; dk keep ordered)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1711,9 +1711,9 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R6 | 追加 |
 
 </details>
 
@@ -1834,11 +1834,11 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                  |
-| ------ | ------------------- |
-| v17 R6 | Formula パラメーターをサポート |
-| v17 R5 | 値のプレースホルダーをサポート     |
-| v17    | 追加                  |
+| リリース  | 内容                  |
+| ----- | ------------------- |
+| 17 R6 | Formula パラメーターをサポート |
+| 17 R5 | 値のプレースホルダーをサポート     |
+| 17    | 追加                  |
 
 </details>
 
@@ -1894,9 +1894,9 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1918,9 +1918,9 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -1942,9 +1942,9 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R3 | 追加 |
 
 </details>
 
@@ -2023,9 +2023,9 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R3 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R3 | 追加 |
 
 </details>
 
@@ -2097,9 +2097,9 @@ $result2:=$invoices.selected($creditSel)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 
@@ -2160,9 +2160,9 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 
 
@@ -2216,9 +2216,9 @@ $sum:=$sel.sum("salary")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 17   | 追加 |
 
 </details>
 

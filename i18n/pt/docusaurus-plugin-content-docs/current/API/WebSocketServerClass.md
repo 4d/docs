@@ -3,15 +3,15 @@ id: WebSocketServerClass
 title: WebSocketServer
 ---
 
+A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Quando o servidor 4D WebSocket estiver ativo, você poderá abrir e usar conexões WebSocket entre o 4D e os clientes usando a classe [`WebSocketConnection`] (WebSocketConnectionClass.md).
+
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
-
-A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket em 4D. Quando o servidor 4D WebSocket estiver ativo, você poderá abrir e usar conexões WebSocket entre o 4D e os clientes usando a classe [`WebSocketConnection`] (WebSocketConnectionClass.md).
 
 :::note Sobre os servidores WebSocket
 
@@ -105,11 +105,13 @@ Os objectos de servidor WebSocket fornecem as seguintes propriedades e funções
 
 <!-- REF #4D.WebSocketServer.new().Params -->
 
-| Parâmetro                           | Tipo               |     | Descrição                                                                                |                  |
-| ----------------------------------- | ------------------ | :-: | ---------------------------------------------------------------------------------------- | ---------------- |
-| [WSSHandler](#wsshandler-parameter) | Object             |  -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |                  |
-| [options](#options-parameter)       | Object             |  -> | Parâmetros de configuração do WebSocket                                                  |                  |
-| Resultados                          | 4D.WebSocketServer |  <- | Novo objeto WebSocketServer                                                              | <!-- END REF --> |
+| Parâmetro                           | Tipo               |     | Descrição                                                                                |
+| ----------------------------------- | ------------------ | :-: | ---------------------------------------------------------------------------------------- |
+| [WSSHandler](#wsshandler-parameter) | Object             |  -> | Objecto da classe de utilizador que declara as chamadas de retorno do servidor WebSocket |
+| [options](#options-parameter)       | Object             |  -> | Parâmetros de configuração do WebSocket                                                  |
+| Resultados                          | 4D.WebSocketServer |  <- | Novo objeto WebSocketServer                                                              |
+
+<!-- END REF -->
 
 A função `4D.WebSocketServer.new()` <!-- REF #4D.WebSocketServer.new().Summary -->cria e inicia um servidor WebSocket que usará os retornos de chamada especificados _WSSHandler_ e (opcionalmente) _opções_  e retorna um objeto `4D.WebSocketServer`<!-- END REF -->.
 
@@ -371,9 +373,11 @@ Esta propriedade é só de leitura.
 
 <!-- REF #WebSocketServerClass.terminate().Params -->
 
-| Parâmetro | Tipo |     | Descrição                  |                  |
-| --------- | ---- | :-: | -------------------------- | ---------------- |
-|           |      |     | Não exige nenhum parâmetro | <!-- END REF --> |
+| Parâmetro | Tipo |     | Descrição                  |
+| --------- | ---- | :-: | -------------------------- |
+|           |      |     | Não exige nenhum parâmetro |
+
+<!-- END REF -->
 
 #### Descrição
 

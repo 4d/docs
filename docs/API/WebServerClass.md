@@ -60,10 +60,10 @@ They provide the following properties and functions:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added|
-|v19|support for .sessionCookieSameSite|
+|18 R3|Added|
+|19|support for .sessionCookieSameSite|
 
 </details>
 
@@ -108,9 +108,9 @@ From your component, you want to know if the Web server of the host database is 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added
+|18 R3|Added
 </details>
 
 <!-- REF #_command_.WEB Server list.Syntax -->**WEB Server list** : Collection<!-- END REF -->
@@ -639,9 +639,9 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added|
+|19|Added|
 
 </details>
 
@@ -679,9 +679,9 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added
+|18 R3|Added
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
@@ -742,9 +742,9 @@ The function returns an object describing the Web server launch status. This obj
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R3|Added
+|18 R3|Added
 </details>
 
 <!-- REF #WebServerClass.stop().Syntax -->**.stop()**<!-- END REF -->
@@ -753,7 +753,8 @@ The function returns an object describing the Web server launch status. This obj
 <!-- REF #WebServerClass.stop().Params -->
 |Parameter|Type||Description|
 |---|---|----|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 

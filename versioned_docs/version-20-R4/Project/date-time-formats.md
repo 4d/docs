@@ -5,7 +5,7 @@ title: Date and Time Formats
 
 
 
-Throughout your 4D projects, you might need to format date and/or time values according to the specificities of the application, the platform, or the interface. 
+Throughout your 4D projects, you might need to format date and/or time values according to the specificities of the application, the platform, or the interface.
 
 4D includes a comprehensive list of patterns that you can use to create and apply customized date and time formats in your applications, in addition to default formats. Customized format patterns are supported by the following features:
 
@@ -16,7 +16,7 @@ Throughout your 4D projects, you might need to format date and/or time values ac
 
 ## Pattern list
 
-The following table lists all supported patterns for date and time formats. 
+The following table lists all supported patterns for date and time formats.
 
 |Symbol|Meaning|Pattern|Example Output|
 |---|---|---|----|
@@ -47,8 +47,8 @@ The following table lists all supported patterns for date and time formats.
 | | |LLL|Sep|
 | | |LLLL|September|
 | | |LLLLL|S|
-w|week of year|w|27
- | |ww|27
+|w|week of year|w|27|
+| | |ww|27|
 |d|day in month|d|2|
 | | |dd|2|
 |D|day of year|D|189|
@@ -103,7 +103,7 @@ w|week of year|w|27
 |z|Time Zone: specific non-location|z, zz, or zzz|-0800|
 | | |zzzz|GMT-08:00|
 | | |zzzzz|-08:00, -07:52:58, Z|
-|| | | | 
+|| | | |
 |'|escape for text|'|'|
 |' '|two single quotes produce one|' '|' '|
 
@@ -116,12 +116,12 @@ w|week of year|w|27
 
 `y` is the calendar year, while `Y` is the year based on the week number. For example, if the first days of January 2010 are not week #1, then y = 2010 but Y = 2009 (until the date where the 1st week of 2010 begins).
 
-### `L` (stand-alone) vs `M` 
+### `L` (stand-alone) vs `M`
 
 In some languages (Russian, Slovak), the month used alone is different from the month in a date. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
 
 ### `e` vs `c`
- 
+
 Same remark as for `L` and `M`: `c` is for a day used alone "every tuesday") and `e` is for a day in a date ("Tuesday January 15, 1951").
 
 ### `E` vs `e`
@@ -136,16 +136,16 @@ In general, when the number of letters in the formatting string is higher than t
 
 Some parts of the outputs, such as "midnight" or "Tuesday" are localized, according to regional settings.
 
-For example, for the time `13:25:34`, "B" will display *in the afternoon* on an US system, and *après-midi* on a French system. 
+For example, for the time `13:25:34`, "B" will display *in the afternoon* on an US system, and *après-midi* on a French system.
 
 
 ### Extra letters
 
-Formatting strings can contain characters not to be interpreted as formatting characters: if they are between "a" and "z" or "A" and "Z", they must be enclosed in single quotes. 
+Formatting strings can contain characters not to be interpreted as formatting characters: if they are between "a" and "z" or "A" and "Z", they must be enclosed in single quotes.
 
 For example:
 
-"15:30:00" with pattern "HH 'hours and' mm 'minutes'" produces "15 hours and 30 minutes". 
+"15:30:00" with pattern "HH 'hours and' mm 'minutes'" produces "15 hours and 30 minutes".
 
 ### Starting and ending spaces
 
@@ -173,4 +173,4 @@ For example:
 
 ## See also
 
-See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats. 
+See [this blogpost](https://blog.4d.com/tailored-customization-for-dates-and-times) for more information on the custom date and time formats.

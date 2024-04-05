@@ -4,7 +4,7 @@ title: 権限
 ---
 
 
-データ保護と、承認ユーザーによる迅速かつ容易なデータアクセスを両立することは、Webアプリケーションにとって大きな課題です。 ORDA のセキュリティアーキテクチャーはデータストアの中心に実装されており、プロジェクト内のさまざまなリソース (データストア、データクラス、関数など) に対して、すべてのユーザーセッションに特定の権限を定義することができます。
+データ保護と、承認ユーザーによる迅速かつ容易なデータアクセスを両立することは、Webアプリケーションにとって大きな課題です。 ORDA のセキュリティアーキテクチャーはデータストアの中心に実装されており、プロジェクト内のさまざまなリソース (データストア、データクラス、関数など) に対して、すべての Web または REST ユーザーセッションに特定の権限を定義することができます。
 
 
 
@@ -12,7 +12,7 @@ title: 権限
 
 ORDA のセキュリティアーキテクチャーは、権限、許諾アクション (read、create など)、およびリソースの概念に基づいています。
 
-ユーザーがログインすると、そのセッションには自動的に関連する権限がロードされます。 権限は、[`session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数によって、セッションに割り当てられます。
+Webユーザーまたは RESTユーザーがログインすると、そのセッションには自動的に関連する権限がロードされます。 権限は、[`session.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数によって、セッションに割り当てられます。
 
 セッション内で送信されるユーザーリクエストは、プロジェクトの `roles.json` ファイルで定義された権限に対して評価されます。
 
@@ -39,7 +39,7 @@ ORDA のセキュリティアーキテクチャーは、権限、許諾アクシ
 
 :::info
 
-Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](../entities.md#restricting-entity-selections) which can be more appropriate in this case.
+パーミッションは、データストアオブジェクトへのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
 
 :::
 
@@ -166,7 +166,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // プロジェクトが開かれるのを防ぐことができます
  ALERT("roles.json ファイルが不正なため、アプリケーションを終了します。")
  QUIT 4D
-End if 
+End if
 ```
 
 ## 運用のための権限の初期化

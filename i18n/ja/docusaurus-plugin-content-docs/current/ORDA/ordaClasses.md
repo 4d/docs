@@ -64,11 +64,11 @@ ORDA データモデルユーザークラスのオブジェクトインスタン
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                   |
-| ------ | -------------------------------------------------------------------- |
-| v19 R4 | Entity クラスのエイリアス属性                                                   |
-| v19 R3 | Entity クラスの計算属性                                                      |
-| v18 R5 | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
+| Release | 内容                                                                   |
+| ------- | -------------------------------------------------------------------- |
+| 19 R4   | Entity クラスのエイリアス属性                                                   |
+| 19 R3   | Entity クラスの計算属性                                                      |
+| 18 R5   | データモデルクラス関数は、デフォルトでは REST に公開されません。 新しい `exposed` および `local` キーワード。 |
 </details>
 
 
@@ -215,7 +215,7 @@ $moreThanAvg:=ds.Company.all().employees.withSalaryGreaterThanAverage()
 
 :::info
 
-[Restricted entity selection filters](entities.md#restricting-entity-selections) are defined in the [Dataclass Class](#dataclass-class).
+[エンティティセレクションを制限する](entities.md#制限付エンティティセレクション) フィルターは [DataClass クラス](#dataclass-クラス) 内で定義されます。
 
 :::
 

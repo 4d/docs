@@ -39,10 +39,10 @@ End if
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property|
-|v18|Added|
+|19 R3|Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property|
+|18|Added|
 
 </details>
 
@@ -192,9 +192,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18|Added|
+|18|Added|
 
 </details>
 

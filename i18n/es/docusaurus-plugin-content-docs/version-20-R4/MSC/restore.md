@@ -1,6 +1,6 @@
 ---
 id: restore
-title: Restore Page
+title: Página Restauración
 ---
 
 Puede restaurar manualmente un archivo de la aplicación actual utilizando la página **Restaurar**. Esta página ofrece varias opciones que pueden utilizarse para controlar la restauración:

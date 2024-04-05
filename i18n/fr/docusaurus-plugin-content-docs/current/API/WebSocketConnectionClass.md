@@ -3,14 +3,6 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
-<details><summary>Historique</summary>
-
-| Version | Modifications |
-| ------- | ------------- |
-| v20     | Ajout         |
-
-</details>
-
 L'API de la classe `WebSocketConnection` vous permet de gérer les connexions WebSocket, une fois qu'elles ont été établies à l'aide de la classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::info
@@ -18,6 +10,15 @@ L'API de la classe `WebSocketConnection` vous permet de gérer les connexions We
 Pour une vue d'ensemble et quelques exemples de la mise en œuvre du serveur WebSocket dans 4D, veuillez vous référer à la classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::
+
+<details><summary>Historique</summary>
+
+| Release | Modifications |
+| ------- | ------------- |
+| 20      | Ajout         |
+
+</details>
+
 
 
 ### Objet WebSocketConnection
@@ -71,11 +72,10 @@ Cette propriété est en lecture seule.
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| Paramètres | Type                 |    | Description                                    |
-| ---------- | -------------------- |:--:| ---------------------------------------------- |
-| message    | Text / Blob / Object | -> | Le message à envoyer<!-- END REF -->
-
-|
+| Paramètres | Type                 |    | Description         |
+| ---------- | -------------------- |:--:| ------------------- |
+| message    | Text / Blob / Object | -> | The message to send |
+<!-- END REF -->
 
 #### Description
 
@@ -118,10 +118,8 @@ Cette propriété est en lecture seule.
 | Paramètres | Type    |    | Description                                                                          |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | code       | Integer | -> | Code d'erreur envoyé au client (doit être > 3000, sinon le message n'est pas envoyé) |
-| message    | Text    | -> | Message d'erreur envoyé au client<!-- END REF -->
-
-
-|
+| message    | Text    | -> | Error message sent to the client                                                     |
+<!-- END REF -->
 
 
 #### Description

@@ -258,7 +258,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 El parámetro *styleName* permite asignar un nombre a la hoja de estilo. Si el nombre ya se utiliza dentro del mismo alcance, la nueva hoja de estilo sustituye a la existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). For the full list of style properties, see [Style object properties](configuring.md#style-object-properties).
+Dentro del *styleObj*, designe la configuración de la hoja de estilo (por ejemplo, fuente, decoración del texto, alineación, bordes, etc.). Para ver la lista completa de propiedades de estilo, consulte [Propiedades de los objetos de estilo](configuring.md#style-object-properties).
 
 Puede designar dónde definir la hoja de estilo en el parámetro opcional *sheet* utilizando el índice de la hoja (la indexación comienza en 0) o con las siguientes constantes:
 
@@ -398,9 +398,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -667,9 +667,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exportar toda el área
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -734,11 +734,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                                  |
-| ------- | --------------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Soporte de opciones del tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Soporte de la opción `allowAutoExpand`                                                                          |
-| v19 R6  | Añadidos                                                                                                        |
+| Lanzamiento | Modificaciones                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------------- |
+| 19 R8       | Soporte de opciones del tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7       | Soporte de la opción `allowAutoExpand`                                                                          |
+| 19 R6       | Añadidos                                                                                                        |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -924,9 +924,9 @@ utilice el siguiente código:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones             |
-| ------- | -------------------------- |
-| v20 R2  | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R2       | Soporte de documentos .sjs |
 </details>
 
 
@@ -1012,7 +1012,7 @@ Cuando se incluye el parámetro opcional *paramObj*, el comando le permite utili
 
 | Parámetros |               | Tipo    | Descripción                                               |
 | ---------- | ------------- | ------- | --------------------------------------------------------- |
-| param1     |               | text    | The name of the 4D View Pro area object                   |
+| param1     |               | text    | El nombre del objeto de área 4D View Pro                  |
 | param2     |               | text    | Ruta de acceso del objeto 4D View Pro exportado           |
 | param3     |               | object  | Referencia al *paramObj* del comando                      |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado |
@@ -1125,7 +1125,7 @@ En *paramObj*, puede pasar varias propiedades:
 | includeStyles           | Boolean     | Si se incluye el estilo al guardar, por defecto=true.                                                                                                                           |
 | includeUnusedNames      | Boolean     | Si se incluye el nombre personalizado no utilizado al guardar, por defecto=true.                                                                                                |
 
-|saveAsView|Boolean|Whether to apply the format string to exporting value when saving, default=false.|
+|saveAsView|Boolean|Si aplicar la cadena de formato al valor exportado al guardar, por defecto=false.|
 
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
@@ -1294,6 +1294,8 @@ $condition.all:=True //Search entire document
 $condition.flags:=vk find flag exact match
 
   // Reemplazar las celdas que contienen sólo "Total" en la hoja actual con "Grand Total"
+
+
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
   // Comprobar si el objeto de rango está vacío
@@ -1309,9 +1311,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1485,9 +1487,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1713,9 +1715,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -1857,7 +1859,7 @@ En *rangeObj*, pase un rango cuya fórmula desea recuperar. Si *rangeObj* design
 | vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro                           |
 | name       | Text   | -> | Nombre del rango nombrado                                              |
 | scope      | Number | -> | Alcance objetivo (por defecto=hoja actual)                             |
-| Result     | Text   | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
+| Result     | Object | <- | Definición de la fórmula o rango con nombre|<!-- END REF -->
 
 |
 
@@ -2606,9 +2608,9 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2668,9 +2670,9 @@ End if
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2724,9 +2726,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2791,9 +2793,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2838,9 +2840,9 @@ Si no se encuentra *tableName*, el comando devuelve **null**.
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2893,9 +2895,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //true
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -3089,9 +3091,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones             |
-| ------- | -------------------------- |
-| v20 R2  | Soporte de documentos .sjs |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 20 R2       | Soporte de documentos .sjs |
 </details>
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
@@ -3246,7 +3248,7 @@ Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 
 | Parámetros |               | Tipo    | Descripción                                                               |
 |:---------- |:------------- |:------- |:------------------------------------------------------------------------- |
-| param1     |               | text    | The name of the 4D View Pro area object                                   |
+| param1     |               | text    | El nombre del objeto de área 4D View Pro                                  |
 | param2     |               | 4D.Blob | El blob importado                                                         |
 | param3     |               | object  | Referencia al parámetro *paramObj* del comando                            |
 | param4     |               | object  | Un objeto devuelto por el método con un mensaje de estado                 |
@@ -3385,9 +3387,9 @@ El resultado es:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3439,9 +3441,9 @@ Ver ejemplos para [VP INSERT TABLE ROWS](#vp-insert-table-rows) y [VP SET TABLE 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3525,9 +3527,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3643,7 +3645,9 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 | vpAreaName | Text | -> | Nombre del área 4D View Pro en el formulario|<!-- END REF -->
 
 
+
 |
+
 
 
 #### Descripción
@@ -3725,9 +3729,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R4       | Añadidos       |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -4026,9 +4030,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -4080,9 +4084,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -4128,9 +4132,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4218,9 +4222,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4643,9 +4647,9 @@ Una vez ejecutado este código, las funciones definidas pueden utilizarse en las
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -5084,9 +5088,9 @@ End case
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R5       | Añadidos       |
 
 </details>
 
@@ -6014,6 +6018,7 @@ Resultado:
 
 [4D View Pro sheet options](configuring.md#sheet-options)<br/>[VP Get sheet options](#vp-get-sheet-options)
 
+
 ### VP SET SHOW PRINT LINES
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
@@ -6069,9 +6074,9 @@ Con un salto de página:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -6173,9 +6178,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R8  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R8       | Añadidos       |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6319,6 +6324,7 @@ En *rangeObj*, pase un rango de la(s) celda(s) (creada(s) por ejemplo con [`VP C
 El parámetro *timeValue* indica una hora expresada en segundos que se asignará al *rangeObj*.
 
 El parámetro opcional *formatPattern* define un [pattern](configuring.md#cell-format) para el parámetro *timeValue*.
+
 
 #### Ejemplo
 

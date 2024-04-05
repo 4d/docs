@@ -61,10 +61,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R4|New `HTTP Client log file` constant|
-|v17 R5|Added|
+|19 R4|New `HTTP Client log file` constant|
+|17 R5|Added|
 
 </details>
 
@@ -78,7 +78,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |fileConstant|Integer|->|4D file constant|
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return file of host database|
-|Result|4D.File|<-|New file object|<!-- END REF -->
+|Result|4D.File|<-|New file object|
+<!-- END REF -->
 
 #### Description
 
@@ -135,9 +136,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v18 R6|Added
+|18 R6|Added
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -156,9 +157,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF file.create().Note -->
@@ -171,7 +172,8 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF #FileClass.create().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Boolean|<-|True if the file was created successfully, false otherwise|<!-- END REF -->
+|Result|Boolean|<-|True if the file was created successfully, false otherwise|
+<!-- END REF -->
 
 #### Description
 
@@ -199,9 +201,9 @@ Creation of a preferences file in the database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -213,7 +215,8 @@ Creation of a preferences file in the database folder:
 |destinationFolder|4D.Folder|->|Destination folder for the alias or shortcut|
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
-|Result|4D.File|<-|Alias or shortcut file reference|<!-- END REF -->
+|Result|4D.File|<-|Alias or shortcut file reference|
+<!-- END REF -->
 
 #### Description
 
@@ -253,9 +256,9 @@ You want to create an alias to a file in your database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 
 </details>
 
@@ -265,7 +268,8 @@ You want to create an alias to a file in your database folder:
 <!-- REF #FileClass.delete().Params -->
 |Parameter|Type||Description|
 |---|----|:---:|---|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -308,9 +312,9 @@ You want to delete a specific file in the database folder:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added
+|19|Added
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -319,7 +323,8 @@ You want to delete a specific file in the database folder:
 <!--REF #FileClass.getAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+|Result|Object|<-|Contents of .exe/.dll version resource or .plist file|
+<!-- END REF -->
 
 
 #### Description
@@ -400,9 +405,9 @@ ALERT($info.Copyright)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -413,7 +418,8 @@ ALERT($info.Copyright)
 |---|----|---|---|
 |destinationFolder|4D.Folder|->|Destination folder|
 |newName|Text|->|Full name for the moved file|
-|Result|4D.File|<-|Moved file|<!-- END REF -->
+|Result|4D.File|<-|Moved file|
+<!-- END REF -->
 
 
 #### Description
@@ -444,9 +450,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R7|Added
+|19 R7|Added
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -457,7 +463,8 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |---|---|---|---|
 |mode|Text|->|Opening mode: "read", "write", "append"|
 |options|Object|->|Opening options|
-|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|<!-- END REF -->
+|Result|[4D.FileHandle](FileHandleClass)|<-|New File handle object|
+<!-- END REF -->
 
 #### Description
 
@@ -521,9 +528,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -533,7 +540,8 @@ $fhandle:=$f.open("read")
 |Parameter|Type||Description|
 |---|---|---|---|
 |newName|Text|->|New full name for the file|
-|Result|4D.File|<-|Renamed file|<!-- END REF -->
+|Result|4D.File|<-|Renamed file|
+<!-- END REF -->
 
 #### Description
 
@@ -562,10 +570,10 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|Support of WinIcon|
-|v19|Added|
+|20|Support of WinIcon|
+|19|Added|
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -574,7 +582,8 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 <!--REF #FileClass.setAppInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+|info|Object|->|Properties to write in .exe/.dll version resource or .plist file|
+<!-- END REF -->
 
 #### Description
 
@@ -651,9 +660,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v17 R5|Added
+|17 R5|Added
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -662,7 +671,8 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setContent().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|content|BLOB|->|New contents for the file|<!-- END REF -->
+|content|BLOB|->|New contents for the file|
+<!-- END REF -->
 
 #### Description
 
@@ -681,10 +691,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R3|Default for new projects: no BOM and (macOS) LF for EOL|
-|v17 R5|Added|
+|19 R3|Default for new projects: no BOM and (macOS) LF for EOL|
+|17 R5|Added|
 
 </details>
 
@@ -698,7 +708,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 |text|Text|->|Text to store in the file|
 |charSetName|Text|->|Name of character set|
 |charSetNum|Integer|->|Number of character set|
-|breakMode|Integer|->|Processing mode for line breaks|<!-- END REF -->
+|breakMode|Integer|->|Processing mode for line breaks|
+<!-- END REF -->
 
 
 #### Description

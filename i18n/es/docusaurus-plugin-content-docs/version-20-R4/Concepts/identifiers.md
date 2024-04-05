@@ -1,6 +1,6 @@
 ---
 id: identifiers
-title: Identifiers
+title: Identificadores
 ---
 
 Esta sección describe las convenciones y reglas para nombrar los distintos elementos del lenguaje 4D (variables, propiedades objeto, tablas, formularios, etc.).

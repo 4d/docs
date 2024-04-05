@@ -61,10 +61,10 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                         |
-| ------- | -------------------------------------- |
-| v19 R4  | Nueva constante `HTTP Client log file` |
-| v17 R5  | Añadidos                               |
+| Lanzamiento | Modificaciones                         |
+| ----------- | -------------------------------------- |
+| 19 R4       | Nueva constante `HTTP Client log file` |
+| 17 R5       | Añadidos                               |
 
 </details>
 
@@ -78,9 +78,8 @@ Los objetos de tipo `File` soportan varios nombres de ruta, incluida las sintaxi
 | fileConstant | Integer | -> | Constante del archivo 4D                           |
 | pathType     | Integer | -> | `fk posix path` (por defecto) o `fk platform path` |
 | *            |         | -> | * para devolver el archivo de la base local        |
-| Result       | 4D.File | <- | Nuevo objeto de archivo|<!-- END REF -->
-
-|
+| Result       | 4D.File | <- | Nuevo objeto de archivo                            |
+<!-- END REF -->
 
 #### Descripción
 
@@ -137,9 +136,9 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R6       | Añadidos       |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -158,9 +157,9 @@ La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve u
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF file.create().Note -->
@@ -171,11 +170,10 @@ La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve u
 
 
 <!--REF #FileClass.create().Params -->
-| Parámetros | Tipo    |    | Descripción                                                                                   |
-| ---------- | ------- | -- | --------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                                                        |
+| ---------- | ------- | -- | ------------------------------------------------------------------ |
+| Result     | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario |
+<!-- END REF -->
 
 #### Descripción
 
@@ -203,23 +201,22 @@ Creación de un archivo de preferencias en la carpeta principal:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Parámetros        | Tipo      |    | Descripción                                                            |
-| ----------------- | --------- | -- | ---------------------------------------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo                   |
-| aliasName         | Text      | -> | Nombre del alias o del atajo                                           |
-| aliasType         | Integer   | -> | Tipo de enlace del alias                                               |
-| Result            | 4D.File   | <- | Referencia del archivo del alias o de atajo|<!-- END REF -->
-
-|
+| Parámetros        | Tipo      |    | Descripción                                          |
+| ----------------- | --------- | -- | ---------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo |
+| aliasName         | Text      | -> | Nombre del alias o del atajo                         |
+| aliasType         | Integer   | -> | Tipo de enlace del alias                             |
+| Result            | 4D.File   | <- | Referencia del archivo del alias o de atajo          |
+<!-- END REF -->
 
 #### Descripción
 
@@ -259,9 +256,9 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 
 </details>
 
@@ -269,11 +266,10 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -317,21 +313,19 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                            |
-| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
-
-
-|
+| Parámetros | Tipo   |    | Descripción                                                 |
+| ---------- | ------ | -- | ----------------------------------------------------------- |
+| Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist |
+<!-- END REF -->
 
 
 #### Descripción
@@ -412,23 +406,21 @@ ALERT($info.Copyright)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.moveTo().Params -->
-| Parámetros        | Tipo      |    | Descripción                               |
-| ----------------- | --------- | -- | ----------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
-| newName           | Text      | -> | Nombre completo del archivo trasladado    |
-| Result            | 4D.File   | <- | Archivo movido|<!-- END REF -->
-
-
-|
+| Parámetros        | Tipo      |    | Descripción                            |
+| ----------------- | --------- | -- | -------------------------------------- |
+| destinationFolder | 4D.Folder | -> | Carpeta de destino                     |
+| newName           | Text      | -> | Nombre completo del archivo trasladado |
+| Result            | 4D.File   | <- | Archivo movido                         |
+<!-- END REF -->
 
 
 #### Descripción
@@ -459,22 +451,21 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
 
 
 <!--REF #FileClass.open().Params -->
-| Parámetros | Tipo                             |    | Descripción                                         |
-| ---------- | -------------------------------- | -- | --------------------------------------------------- |
-| mode       | Text                             | -> | Modo de apertura: "read", "write", "append"         |
-| options    | Object                           | -> | Opciones de apertura                                |
-| Result     | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle|<!-- END REF -->
-
-|
+| Parámetros | Tipo                             |    | Descripción                                 |
+| ---------- | -------------------------------- | -- | ------------------------------------------- |
+| mode       | Text                             | -> | Modo de apertura: "read", "write", "append" |
+| options    | Object                           | -> | Opciones de apertura                        |
+| Result     | [4D.FileHandle](FileHandleClass) | <- | Nuevo objeto File handle                    |
+<!-- END REF -->
 
 #### Descripción
 
@@ -538,21 +529,20 @@ $fhandle:=$f.open("read")
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ): 4D.File<!-- END REF -->
 
 
 <!--REF #FileClass.rename().Params -->
-| Parámetros | Tipo    |    | Descripción                                   |
-| ---------- | ------- | -- | --------------------------------------------- |
-| newName    | Text    | -> | Nuevo nombre completo del archivo             |
-| Result     | 4D.File | <- | Archivo renombrado|<!-- END REF -->
-
-|
+| Parámetros | Tipo    |    | Descripción                       |
+| ---------- | ------- | -- | --------------------------------- |
+| newName    | Text    | -> | Nuevo nombre completo del archivo |
+| Result     | 4D.File | <- | Archivo renombrado                |
+<!-- END REF -->
 
 #### Descripción
 
@@ -581,21 +571,20 @@ Quiere renombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones     |
-| ------- | ------------------ |
-| v20     | Soporte de WinIcon |
-| v19     | Añadidos           |
+| Lanzamiento | Modificaciones     |
+| ----------- | ------------------ |
+| 20          | Soporte de WinIcon |
+| 19          | Añadidos           |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parámetros | Tipo   |    | Descripción                                                                                                       |
-| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------------- |
-| info       | Object | -> | Propiedades a escribir en el archivo .plist o el recurso versión del archivo .exe/.dll|<!-- END REF -->
-
-|
+| Parámetros | Tipo   |    | Descripción                                                                            |
+| ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
+| info       | Object | -> | Propiedades a escribir en el archivo .plist o el recurso versión del archivo .exe/.dll |
+<!-- END REF -->
 
 #### Descripción
 
@@ -672,20 +661,19 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R5  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R5       | Añadidos       |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parámetros | Tipo |    | Descripción                                                  |
-| ---------- | ---- | -- | ------------------------------------------------------------ |
-| content    | BLOB | -> | Nuevos contenidos para el archivo|<!-- END REF -->
-
-|
+| Parámetros | Tipo |    | Descripción                       |
+| ---------- | ---- | -- | --------------------------------- |
+| content    | BLOB | -> | Nuevos contenidos para el archivo |
+<!-- END REF -->
 
 #### Descripción
 
@@ -704,10 +692,10 @@ La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescri
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                       |
-| ------- | -------------------------------------------------------------------- |
-| v19 R3  | Por defecto para los nuevos proyectos: sin BOM y (macOS) LF para EOL |
-| v17 R5  | Añadidos                                                             |
+| Lanzamiento | Modificaciones                                                       |
+| ----------- | -------------------------------------------------------------------- |
+| 19 R3       | Por defecto para los nuevos proyectos: sin BOM y (macOS) LF para EOL |
+| 17 R5       | Añadidos                                                             |
 
 </details>
 
@@ -716,15 +704,13 @@ La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescri
 
 
 <!--REF #FileClass.setText().Params -->
-| Parámetros  | Tipo    |    | Descripción                                                             |
-| ----------- | ------- | -- | ----------------------------------------------------------------------- |
-| text        | Text    | -> | Texto a almacenar en el archivo                                         |
-| charSetName | Text    | -> | Nombre del juego de caracteres                                          |
-| charSetNum  | Integer | -> | Número del conjunto de caracteres                                       |
-| breakMode   | Integer | -> | Modo de tratamiento de los retornos de línea|<!-- END REF -->
-
-
-|
+| Parámetros  | Tipo    |    | Descripción                                |
+| ----------- | ------- | -- | ------------------------------------------ |
+| text        | Text    | -> | Texto a almacenar en el archivo            |
+| charSetName | Text    | -> | Nombre del juego de caracteres             |
+| charSetNum  | Integer | -> | Número del conjunto de caracteres          |
+| breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea |
+<!-- END REF -->
 
 
 #### Descripción

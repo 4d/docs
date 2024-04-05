@@ -50,9 +50,9 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R4   | 追加 |
 
 </details>
 
@@ -254,9 +254,9 @@ Function _createFile($title : Text; $textBody : Text)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| Release | 内容 |
+| ------- | -- |
+| 19 R4   | 追加 |
 
 </details>
 
@@ -265,11 +265,10 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |::| -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-|
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
+<!-- END REF -->
 
 #### 説明
 
@@ -429,12 +428,11 @@ $output:=$worker.response
 
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
-| 引数          | タイプ  |    | 説明                                          |
-| ----------- | ---- |:--:| ------------------------------------------- |
-| message     | Text | -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト            |
-| messageBLOB | Blob | -> | 入力ストリームに書き込むバイト数|<!-- END REF -->
-
-|
+| 引数          | タイプ  |    | 説明                               |
+| ----------- | ---- |:--:| -------------------------------- |
+| message     | Text | -> | 外部プロセスの入力ストリーム (stdin) に書き込むテキスト |
+| messageBLOB | Blob | -> | 入力ストリームに書き込むバイト数                 |
+<!-- END REF -->
 
 #### 説明
 
@@ -482,11 +480,10 @@ $output:=$worker.response
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| 引数 | タイプ |  | 説明                                           |
-| -- | --- |::| -------------------------------------------- |
-|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
-
-|
+| 引数 | タイプ |  | 説明         |
+| -- | --- |::| ---------- |
+|    |     |  | 引数を必要としません |
+<!-- END REF -->
 
 #### 説明
 
@@ -529,11 +526,11 @@ $output:=$worker.response
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-|       |    |
+| Release | 内容 |
+| ------- | -- |
+|         |    |
 
-|v19 R4|追加|
+|19 R4|Added|
 
 </details>
 
@@ -542,12 +539,11 @@ $output:=$worker.response
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| 引数      | タイプ             |    | 説明                                             |
-| ------- | --------------- |:--:| ---------------------------------------------- |
-| timeout | Real            | -> | 待機時間 (秒単位)                                     |
-| 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト|<!-- END REF -->
-
-|
+| 引数      | タイプ             |    | 説明                  |
+| ------- | --------------- |:--:| ------------------- |
+| timeout | Real            | -> | 待機時間 (秒単位)          |
+| 戻り値     | 4D.SystemWorker | <- | SystemWorker オブジェクト |
+<!-- END REF -->
 
 #### 説明
 

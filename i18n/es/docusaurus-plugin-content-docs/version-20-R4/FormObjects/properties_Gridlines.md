@@ -1,6 +1,6 @@
 ---
 id: propertiesGridlines
-title: Gridlines
+title: Líneas de cuadrícula
 ---
 
 ## Color líneas horizontales

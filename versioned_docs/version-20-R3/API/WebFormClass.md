@@ -3,16 +3,16 @@ id: WebFormClass
 title: WebForm
 ---
 
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v20 R2|Added|
-
-</details>
-
 
 The `WebForm` class contains functions and properties allowing to handle your Qodly webform components. This class is detailed in the [Qodly documentation](https://developer.qodly.com/docs/language/WebFormClass).
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R2|Added|
+
+</details>
 
 
 

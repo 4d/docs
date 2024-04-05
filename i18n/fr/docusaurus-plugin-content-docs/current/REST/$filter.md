@@ -22,7 +22,7 @@ Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=`
 
 ### Utiliser un filtre complexe
 
-Un filtre plus complexe est composé des éléments suivants, qui joint deux requêtes :
+A more complex filter is composed of the following elements, which joins two queries:
 
 **{attribut} {comparateur} {valeur} {AND/OR/EXCEPT} {attribut} {comparateur} {valeur}**
 
@@ -37,7 +37,7 @@ Vous pouvez également utiliser la propriété params de 4D.
 
 Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la dataclass "Employee".
 
-Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la documentation de [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
+For more information regarding how to query data in 4D, refer to the [dataClass.query()](../API/DataClassClass.md#query) documentation.
 > Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
 > 
 > <li>Quotes ('): \u0027</li>

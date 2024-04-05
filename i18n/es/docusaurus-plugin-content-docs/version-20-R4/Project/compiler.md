@@ -1,6 +1,6 @@
 ---
 id: compiler
-title: Compilation
+title: Compilación
 ---
 
 Puede compilar sus proyectos, es decir, traducir todos sus métodos a lenguaje máquina. La compilación de un proyecto permite verificar la coherencia del código y acelerar su ejecución, además de posibilitar ocultar el código en su totalidad. La compilación es un paso indispensable entre el desarrollo de proyectos con 4D y su despliegue como aplicaciones independientes.
@@ -149,9 +149,9 @@ Puede utilizar el botón [Generar declaración](#generate-typing) y luego compil
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19     | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19          | Añadidos       |
 
 </details>
 

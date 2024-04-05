@@ -83,10 +83,21 @@ Para desactivar el seguimiento de cambios de datos:
 
 ## Ejemplo
 
-```4d var $oldStamp : Real var $tableName : Text var $modifiedEmps : cs.EmployeeSelection var $deletedEmpsInfo : cs.__DeletedRecordsSelection
+```4d
+var $oldStamp : Real
+var $tableName : Text
+var $modifiedEmps : cs.EmployeeSelection
+var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
-$tableName:="Employee" $oldStamp:=... //cargar el valor del sello anterior  
-///desde el cual desea comparar el sello actual
+$tableName:="Employee"
+$oldStamp:=... //load the previous stamp value  
+    //from which you want to compare the current stamp
 
-If ($oldStamp # ds.getGlobalStamp()) //get all new or modified entities $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp) //get all deleted entities     $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-    $oldStamp; $tableName) End if
+If ($oldStamp # ds.getGlobalStamp())
+        //get all new or modified entities
+    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+        //get all deleted entities
+    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+    $oldStamp; $tableName)
+End if
+```

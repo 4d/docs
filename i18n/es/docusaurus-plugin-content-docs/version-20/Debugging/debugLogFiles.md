@@ -358,10 +358,10 @@ El registro ORDA del lado del cliente registra cada petición ORDA enviada desde
 Como iniciar este historial:
 
 ```4d
-    //en una máquina remota
+    //on a remote machine
 SET DATABASE PARAMETER(Client Log Recording;1)  
-ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt")) 
-    //también se puede enviar a la memoria
+ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
+    //can be also sent to memory
 SET DATABASE PARAMETER(Client Log Recording;0)  
 ```
 
@@ -410,9 +410,9 @@ Como iniciar este historial:
 ```4d
     //en el servidor
 SET DATABASE PARAMETER(4D Server log recording;1)
-ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body) 
-    //srl... el parámetro es opcional 
-SET DATABASE PARAMETER(4D Server log recording;0) 
+ds.startRequestLog(File("/PACKAGE/Logs/ordaRequests.jsonl");srl log response without body)
+    //srl... el parámetro es opcional
+SET DATABASE PARAMETER(4D Server log recording;0)
 ```
 
 :::note

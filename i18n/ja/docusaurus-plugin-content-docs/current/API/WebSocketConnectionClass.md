@@ -3,14 +3,6 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
-<details><summary>履歴</summary>
-
-| バージョン | 内容 |
-| ----- | -- |
-| v20   | 追加 |
-
-</details>
-
 `WebSocketConnection` クラス API は、[`WebSocketServer` クラス](WebSocketServerClass.md) を使って確立された WebSocket 接続を管理するのに使用します。
 
 :::info
@@ -18,6 +10,15 @@ title: WebSocketConnection
 4D における WebSocketサーバーの実装の概要といくつかの例題については、[`WebSocketServer` クラス](WebSocketServerClass.md) を参照ください。
 
 :::
+
+<details><summary>履歴</summary>
+
+| リリース | 内容 |
+| ---- | -- |
+| 20   | 追加 |
+
+</details>
+
 
 
 ### WebSocketConnection オブジェクト
@@ -71,11 +72,10 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| 引数      | タイプ                  |    | 説明                                   |
-| ------- | -------------------- |:--:| ------------------------------------ |
-| message | Text / Blob / Object | -> | 送信するメッセージ|<!-- END REF -->
-
-|
+| 引数      | タイプ                  |    | 説明        |
+| ------- | -------------------- |:--:| --------- |
+| message | Text / Blob / Object | -> | 送信するメッセージ |
+<!-- END REF -->
 
 #### 説明
 
@@ -118,10 +118,8 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 | 引数      | タイプ     |    | 説明                                                        |
 | ------- | ------- |:--:| --------------------------------------------------------- |
 | code    | Integer | -> | クライアントに送信されるエラーコード (> 3000 である必要があり、そうでない場合メッセージは送信されません) |
-| message | Text    | -> | クライアントに送信されるエラーメッセージ|<!-- END REF -->
-
-
-|
+| message | Text    | -> | クライアントに送信されるエラーメッセージ                                      |
+<!-- END REF -->
 
 
 #### 説明

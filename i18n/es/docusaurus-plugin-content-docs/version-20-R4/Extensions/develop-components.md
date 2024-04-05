@@ -14,7 +14,7 @@ Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en p
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
 - **Componente**: proyecto matricial, compilado o [generado](Desktop/building.md#build-component), copiado en la carpeta [`Components`](Project/architecture.md) de la aplicación local y cuyo contenido se utiliza en la aplicación local.
 
-## Basics
+## Básicos
 
 La creación e instalación de los componentes 4D se realiza directamente desde 4D:
 
@@ -31,13 +31,13 @@ La creación e instalación de los componentes 4D se realiza directamente desde 
 
 A excepción de los [comandos no utilizables](#comandos-inutilizables), un componente puede utilizar cualquier comando del lenguaje 4D.
 
-Cuando se llaman comandos desde un componente, se ejecutan en el contexto del componente, excepto el comando `EXECUTE METHOD` o `EXECUTE FORMULA` que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
+Cuando los comandos son llamados desde un componente, son ejecutados en el contexto del componente, excepto el comando [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html) o [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) que utilizan el contexto del método especificado por el comando. También hay que tener en cuenta que los comandos de lectura del tema "Usuarios y grupos" se pueden utilizar desde un componente, pero leerán los usuarios y grupos del proyecto local (un componente no tiene sus propios usuarios y grupos).
 
-Los comandos `SET DATABASE PARAMETER` y `Get database parameter` son una excepción: su alcance es global a la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
+Los comandos [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv20/help/command/en/page642.html) y [`Get database parameter`](https://doc.4d.com/4dv20/help/command/en/page643.html) son una excepción: su alcance es global a la aplicación. Cuando estos comandos se llaman desde un componente, se aplican al proyecto de la aplicación local.
 
 Además, se han especificado medidas específicas para los comandos `Structure file` y `Get 4D folder` cuando se utilizan en el marco de los componentes.
 
-El comando `COMPONENT LIST` puede utilizarse para obtener la lista de componentes cargados por el proyecto local.
+El comando [`COMPONENT LIST`](https://doc.4d.com/4dv20/help/command/en/page1001.html) puede utilizarse para obtener la lista de componentes cargados por el proyecto local.
 
 
 ### Comandos no utilizables
@@ -83,9 +83,9 @@ Por el contrario, por razones de seguridad, por defecto un componente no puede e
 
 ![](../assets/en/Concepts/pict516563.en.png)
 
-Una vez que los métodos del proyecto anfitrión están disponibles para los componentes, se puede ejecutar un método anfitrión desde dentro de un componente utilizando los comandos `EXECUTE FORMULA` o `EXECUTE METHOD`. Por ejemplo:
+Una vez que los métodos del proyecto anfitrión están disponibles para los componentes, se puede ejecutar un método anfitrión desde dentro de un componente utilizando los comandos [`EXECUTE FORMULA`](https://doc.4d.com/4dv20/help/command/en/page63.html) o [`EXECUTE METHOD`](https://doc.4d.com/4dv20/help/command/en/page1007.html). Por ejemplo:
 
-```4d 
+```4d
 // Método local
 component_method("host_method_name")
 ```
@@ -93,8 +93,8 @@ component_method("host_method_name")
 
 ```4d
 // component_method
- C_TEXT($1)
- EXECUTE METHOD($1)
+#DECLARE ($param : Text)
+EXECUTE METHOD($param)
 ```
 
 > Una base local interpretada que contenga componentes interpretados puede ser compilada o verificada sintácticamente si no llama a métodos del componente interpretado. En caso contrario, aparecerá una caja de diálogo de advertencia al intentar lanzar la compilación o una comprobación de sintaxis y no será posible realizar la operación.   
@@ -117,7 +117,7 @@ Cuando introduce un valor, declare que las clases y las funciones del componente
 
 ```4d
 //en el proyecto local
-var $rect: cs.eGeometry.Rectangle 
+var $rect: cs.eGeometry.Rectangle
 $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
@@ -336,7 +336,7 @@ Lectura en una base de datos externa:
 
 > Si un componente utiliza el comando `ADD RECORD`, se mostrará el formulario de entrada actual del proyecto local, en el contexto del proyecto local. Por consiguiente, si el formulario incluye variables, el componente no tendrá acceso a ellas.
 
-- Puede publicar formularios de componentes como subformularios en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
+- Puede [publicar formularios de componentes como subformularios](../FormEditor/properties_FormProperties.md#published-as-subform) en los proyectos locales. Esto significa que puede, más concretamente, desarrollar componentes que ofrezcan objetos gráficos. Por ejemplo, los Widgets que ofrece 4D se basan en el uso de subformularios en los componentes.
 
 > En el contexto de un componente, cualquier formulario de proyecto referenciado debe pertenecer al componente. Por ejemplo, dentro de un componente, hacer referencia a un formulario proyecto local utilizando `DIALOG` u `Open form window` arrojará un error.
 

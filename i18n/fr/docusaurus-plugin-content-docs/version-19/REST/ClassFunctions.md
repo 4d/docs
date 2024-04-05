@@ -4,13 +4,13 @@ title: Appeler des fonctions de classe ORDA
 ---
 
 
-Vous pouvez appeler les [fonctions de classe de modèles de données](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
+Vous pouvez appeler les [fonctions de classe](ORDA/ordaClasses.md) définies pour le modèle de données ORDA via vos requêtes REST, afin de bénéficier de l'API de l'application 4D ciblée.
 
 Les fonctions sont simplement appelées dans les requêtes POST sur l'interface ORDA appropriée, sans (). Par exemple, si vous avez défini une fonction `getCity()` dans la dataclass City, vous pouvez l'appeler à l'aide de la requête suivante :
 
 `/rest/City/getCity`
 
-avec des données contenues dans le corps de la requête POST : `["Paris"]`
+avec des données contenues dans le corps de la requête POST : `["Aguada"]`
 
 Dans le langage 4D, cet appel équivaut à :
 
@@ -38,7 +38,7 @@ Les fonctions sont appelées sur l'objet correspondant au datastore du serveur.
 
 > `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. Si elle n'est pas trouvée, elle est recherchée dans la dataclass. En d'autres termes, si une fonction portant le même nom est définie à la fois dans la classe DataClass et la classe EntitySelection, la fonction de classe de dataclass ne sera jamais exécutée.
 
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
+> Tout le code 4D appelé à partir de requêtes REST **doit être thread-safe** si le projet fonctionne en mode compilé, car le serveur REST utilise toujours des process préemptifs dans ce cas (la valeur du paramètre [*Utiliser un process préemptif*](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) est ignorée par le serveur REST).
 
 ## Paramètres
 
@@ -57,7 +57,7 @@ Voir [cet exemple](#request-receiving-an-entity-as-parameter) et [cet exemple](#
 
 Le(s) paramètre(s) doivent simplement être incluse dans une collection définie dans le corps. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-**Parmaètres dans le corps :** ["Aguada","Paris"]
+**Paramètres dans le body :** ["Aguada","Paris"]
 
 Tous les types de données JSON sont pris en charge dans les paramètres, y compris les pointeurs JSON. Les dates peuvent être passées sous forme de chaînes au format de date ISO 8601 (par exemple, "2020-08-22T22:00:000Z").
 
@@ -85,11 +85,11 @@ Mêmes propriétés que pour un [paramètre d'entité](#entity-parameter). De pl
 
 Reportez-vous aux exemples de [création](#creating-an-entity-with-a-related-entity) ou de [mise à jour](#updating-an-entity-with-a-related-entity) des entités avec des entités associées.
 
-### Paramètre de sélection d'entité
+### Paramètre d'entity selection
 
-La sélection d'entité doit avoir été définie au préalable à l'aide de [$method=entityset]($method.md#methodentityset).
+L'entity selection doit avoir été définie au préalable à l'aide de [$method=entityset]($method.md#methodentityset).
 
-> Si la requête envoie une sélection d'entité modifiée au serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec la sélection d'entité modifiée.
+> Si la requête envoie une entity selection modifiée au serveur, la fonction de modèle de données ORDA appelée sera automatiquement exécutée sur le serveur avec l'entity selection modifiée.
 
 | Propriétés            | Type    | Description                                                                             |
 | --------------------- | ------- | --------------------------------------------------------------------------------------- |
@@ -205,9 +205,9 @@ Vous pouvez lancer cette requête :
 }
 ```
 
-### Utiliser une fonction de classe d'une sélection d'entité
+### Utiliser une fonction de classe d'une entity selection
 
-La classe de sélection d'entité `CityEntity` fournit une API :
+La classe d'entity selection `CityEntity` fournit une API :
 
 ```
 // CitySelection class
@@ -544,7 +544,7 @@ Les entités ayant les clés primaires sont 1 et 2 ont été mises à jour.
 }
 ```
 
-### Utiliser une sélection d'entité mise à jour sur le client
+### Utiliser une entity selection mise à jour sur le client
 
 A l'aide de la fonction `getAgeAverage()` [définie ci-dessus](#using-an-entityselection-class-function-and-an-entityset).
 

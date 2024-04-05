@@ -3,14 +3,6 @@ id: WebSocketConnectionClass
 title: WebSocketConnection
 ---
 
-<details><summary>Histórico</summary>
-
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
-
-</details>
-
 A API da classe `WebSocketConnection` permite-lhe tratar as ligações WebSocket, uma vez estabelecidas utilizando a classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::info
@@ -18,6 +10,15 @@ A API da classe `WebSocketConnection` permite-lhe tratar as ligações WebSocket
 Para uma visão geral e alguns exemplos da implementação do servidor WebSocket em 4D, consulte a classe [`WebSocketServer`](WebSocketServerClass.md).
 
 :::
+
+<details><summary>Histórico</summary>
+
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
+
+</details>
+
 
 
 ### Objecto WebSocketConnection
@@ -71,11 +72,10 @@ Esta propriedade é só de leitura.
 
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
-| Parâmetro | Tipo                 |    | Descrição                                      |
-| --------- | -------------------- |:--:| ---------------------------------------------- |
-| message   | Text / Blob / Object | -> | A mensagem a enviar|<!-- END REF -->
-
-|
+| Parâmetro | Tipo                 |    | Descrição           |
+| --------- | -------------------- |:--:| ------------------- |
+| message   | Text / Blob / Object | -> | A mensagem a enviar |
+<!-- END REF -->
 
 #### Descrição
 
@@ -118,10 +118,8 @@ Esta propriedade é só de leitura.
 | Parâmetro | Tipo    |    | Descrição                                                                                    |
 | --------- | ------- |:--:| -------------------------------------------------------------------------------------------- |
 | code      | Integer | -> | Código de erro enviado ao cliente (deve ser > 3000, caso contrário a mensagem não é enviada) |
-| message   | Text    | -> | Mensagem de erro enviada ao cliente|<!-- END REF -->
-
-
-|
+| message   | Text    | -> | Mensagem de erro enviada ao cliente                                                          |
+<!-- END REF -->
 
 
 #### Descrição

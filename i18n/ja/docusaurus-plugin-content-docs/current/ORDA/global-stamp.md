@@ -83,10 +83,21 @@ title: グローバルスタンプの使い方
 
 ## 例題
 
-```4d var $oldStamp : Real var $tableName : Text var $modifiedEmps : cs.EmployeeSelection var $deletedEmpsInfo : cs.__DeletedRecordsSelection
+```4d
+var $oldStamp : Real
+var $tableName : Text
+var $modifiedEmps : cs.EmployeeSelection
+var $deletedEmpsInfo : cs.__DeletedRecordsSelection
 
-$tableName:="Employee" $oldStamp:=... // 前のスタンプ値をロードします  
-// カレントスタンプを比較します
+$tableName:="Employee"
+$oldStamp:=... //l 前のスタンプ値をロードして
+    // カレントスタンプと比較します
 
-If ($oldStamp # ds.getGlobalStamp()) // 新規の、または変更されたエンティティをすべて取得します $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp) // 削除されたエンティティをすべて取得します     $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
-    $oldStamp; $tableName) End if
+If ($oldStamp # ds.getGlobalStamp())
+        // 新規の、または変更されたエンティティをすべて取得します
+    $modifiedEmps:=ds[$tableName].query("__GlobalStamp > :1"; $oldStamp)
+        // 削除されたエンティティをすべて取得します
+    $deletedEmpsInfo:=ds.__DeletedRecords.query("__Stamp > :1 and __TableName = :2";\
+    $oldStamp; $tableName)
+End if
+```

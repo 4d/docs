@@ -399,9 +399,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajout         |
+| 17 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Cells.Params -->
@@ -668,9 +668,9 @@ $vPict:=VP Convert to picture($vpAreaObj) //exporter toute la zone
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Copy to object.Syntax -->
@@ -735,11 +735,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                                                               |
+| Release | Modifications                                                                                               |
 | ------- | ----------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Prise en charge de l'option `allowAutoExpand`                                                               |
-| v19 R6  | Ajout                                                                                                       |
+| 19 R8   | Support of theme options: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7   | Prise en charge de l'option `allowAutoExpand`                                                               |
+| 19 R6   | Ajout                                                                                                       |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -991,7 +991,7 @@ Lorsque vous passez le paramètre optionnel *paramObj*, la commande `VP EXPORT D
 
 | Variable |               | Type    | Description                                                |
 | -------- | ------------- | ------- | ---------------------------------------------------------- |
-| $1       |               | text    | The name of the 4D View Pro area object                    |
+| $1       |               | text    | Nom de l'objet 4D View Pro                                 |
 | $2       |               | text    | Chemin d'accès de l'objet 4D View Pro exporté              |
 | $3       |               | object  | Référence au *paramObj* de la commande                     |
 | $4       |               | object  | Objet retourné par la méthode avec un message de statut    |
@@ -1219,9 +1219,9 @@ var $range;$condition;$result : Object
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Find table.Syntax -->
@@ -1394,9 +1394,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1622,9 +1622,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -1760,7 +1760,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
 | name       | Text   | -> | Nom de la plage nommée                                                           |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
-| Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
+| Résultat   | Object | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
 |
 
@@ -2173,6 +2173,7 @@ La commande `VP Get sheet count` <!-- REF #_method_.VP Get sheet count.Summary -
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
 
 
+
 #### Exemple
 
 Dans le document suivant :
@@ -2374,6 +2375,7 @@ Dans *rangeObj*, passez une plage de cellules fusionnées que vous souhaitez ré
 
 #### Exemple
 
+
 Pour centrer le texte des cellules fusionnées dans ce document :
 
 ![](../assets/en/ViewPro/cmd_vpGetSpans.PNG)
@@ -2403,7 +2405,7 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                  |
 | styleName  | Text    | -> | Nom du style                                             |
 | sheet      | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) |
-| Résultat   | Object  | <- | Style sheet object|<!-- END REF -->
+| Résultat   | Object  | <- | Objet feuille de style|<!-- END REF -->
 
 |
 
@@ -2507,9 +2509,9 @@ Dans ce cas, la feuille courante utilise deux objets style :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column attributes.Syntax -->
@@ -2568,9 +2570,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table column index.Syntax -->
@@ -2624,9 +2626,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table dirty rows.Syntax -->
@@ -2691,9 +2693,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table range.Syntax -->
@@ -2738,9 +2740,9 @@ Si *tableName* n'est pas trouvé, la commande renvoie **null**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get table theme.Syntax -->
@@ -2793,9 +2795,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) //vrai
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP Get tables.Syntax -->
@@ -2887,7 +2889,7 @@ Si *rangeObj* contient plusieurs cellules ou plusieurs plages, la valeur de la p
 $cell:=VP Cell("ViewProArea";5;2)
 $value:=VP Get value($cell)
 If(Value type($value.value)=Is text)
-    VP SET VALUE($cell;New object("value";Uppercase($value.value)))
+    VP SET TEXT VALUE($cell;New object("value";Uppercase($value.value))
 End if
 ```
 
@@ -3203,9 +3205,9 @@ Le résultat est le suivant :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Syntax -->
@@ -3257,9 +3259,9 @@ Voir les exemples pour [VP INSERT TABLE ROWS](#vp-insert-table-rows) et [VP SET 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Syntax -->
@@ -3341,9 +3343,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
@@ -3539,9 +3541,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 </details>
 
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
@@ -3578,7 +3580,7 @@ In the optional *options* parameter, you can specify what to paste in the cell r
 
 Les options de collage définies dans les [options de workbook](#vp-set-workbook-options) sont prises en compte.
 
-If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+Collection de données à charger dans le contexte de données
 
 #### Exemple
 
@@ -3838,9 +3840,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R6  | Ajout         |
+| 19 R6   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
@@ -3892,9 +3894,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Syntax -->
@@ -3940,9 +3942,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP REMOVE TABLE ROWS.Syntax -->
@@ -4029,9 +4031,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP RESIZE TABLE.Syntax -->
@@ -4274,6 +4276,7 @@ Function onEvent()
 
        ALERT("The G23 cell contains the value: "+String(This.result))
  End case
+
 ```
 
 La méthode callback (de rétro-appel) *OffscreenArea* :
@@ -4452,9 +4455,9 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -4472,7 +4475,7 @@ Une fois ce code exécuté, les fonctions définies peuvent être utilisées dan
 
 #### Description
 
-The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+The `VP SET BINDING PATH` command <!-- REF #_method_.VP SET BINDING PATH.Summary -->The `VP SET BINDING PATH` command<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
 
 Dans *rangeObj*, passez un objet qui est soit une plage de cellules, soit une plage combinée de cellules.
 
@@ -4522,7 +4525,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 #### Description
 
-La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->assigns a specified boolean value to a designated cell range<!-- END REF -->.
+La commande `VP SET BOOLEAN VALUE` <!-- REF #_method_.VP SET BOOLEAN VALUE.Summary -->affecte une valeur spécifiée à une plage de cellules désignée<!-- END REF -->.
 
 Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la valeur indiquée sera répétée dans chaque cellule.
 
@@ -4778,7 +4781,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 #### Description
 
-La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->sets the current sheet in *vpAreaName*<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
+La commande `VP SET CURRENT SHEET` <!-- REF #_method_.VP SET CURRENT SHEET.Summary -->The `VP SET CURRENT SHEET` command<!-- END REF --> . La feuille courante est la feuille sélectionnée dans le document.
 
 
 Passez le nom de la zone 4D View Pro dans *vpAreaName*.
@@ -4891,9 +4894,9 @@ End case
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -5205,6 +5208,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
@@ -5875,9 +5879,9 @@ Avec un saut de page :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
@@ -5979,9 +5983,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea" ; "PeopleTable" ; 0 ; \
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R8  | Ajout         |
+| 19 R8   | Ajout         |
 </details>
 
 <!-- REF #_method_.VP SET TABLE THEME.Syntax -->
@@ -6327,8 +6331,8 @@ Le tableau suivant répertorie les options de classeur disponibles :
 | grayAreaBackColor                     | string                  | A color string used to represent the background color of the gray area , such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                              |
 | highlightInvalidData                  | boolean                 | Invalid data is highlighted.                                                                                                                                                                                                                           |
 | iterativeCalculation                  | boolean                 | Enables iterative calculation. See on [Grapecity's website](https://www.grapecity.com/spreadjs/docs/v14/online/calculating-iterative.html).                                                                                                            |
-| iterativeCalculationMaximumChange     | numeric                 | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
-| iterativeCalculationMaximumIterations | numeric                 | Number of times the formula should recalculate.                                                                                                                                                                                                        |
+| iterativeCalculationMaximumChange     | numérique               | Maximum amount of change between two calculation values.                                                                                                                                                                                               |
+| iterativeCalculationMaximumIterations | numérique               | Number of times the formula should recalculate.                                                                                                                                                                                                        |
 | newTabVisible                         | boolean                 | Display a special tab to let users insert new sheets.                                                                                                                                                                                                  |
 | numbersFitMode                        | number                  | Changes display mode when date/number data width is longer than column width. Valeurs disponibles : <table><tr><th>Constante</th><th>Valeur</th><th>Description</th></tr><tr><td> vk numbers fit mode mask</td><td>0</td><td> Replace data content with "###" and shows tip</td></tr><tr><td> vk numbers fit mode overflow </td><td>1</td><td> Display data content as a string. If next cell is empty, overflow the content.</td></tr></table>                                                                                                                         |
 | pasteSkipInvisibleRange               | boolean                 | Paste or skip pasting data in invisible ranges: <ul><li>False (default): paste data</li><li>True: Skip pasting in invisible ranges</li></ul>See [Grapecity's docs](https://www.grapecity.com/spreadjs/docs/v14/online/paste-skip-data-invisible-range.html) for more information on invisible ranges.                    |

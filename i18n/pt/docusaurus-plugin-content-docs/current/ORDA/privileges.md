@@ -4,7 +4,7 @@ title: Privilégios
 ---
 
 
-Protecting data while allowing fast and easy access to authorized users is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
+Protecting data while allowing fast and easy access to authorized users is a major challenge for web applications. The ORDA security architecture is implemented at the heart of your datastore and allows you to define specific privileges to all web or REST user sessions for the various resources in your project (datastore, dataclasses, functions, etc.).
 
 
 
@@ -12,7 +12,7 @@ Protecting data while allowing fast and easy access to authorized users is a maj
 
 The ORDA security architecture is based upon the concepts of privileges, permission actions (read, create, etc.), and resources.
 
-When users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
+When web users or REST users get logged, their session is automatically loaded with associated privilege(s). Privileges are assigned to the session using the [`session.setPrivileges()`](../API/SessionClass.md#setprivileges) function.
 
 Every user request sent within the session is evaluated against privileges defined in the project's `roles.json` file.
 
@@ -39,7 +39,7 @@ A permission action defined at a given level is inherited by default at lower le
 
 :::info
 
-Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](../entities.md#restricting-entity-selections) which can be more appropriate in this case.
+Permissions control access to datastore objects. If you want to filter read data according to some criteria, you might consider [restricting entity selections](entities.md#restricting-entity-selections) which can be more appropriate in this case.
 
 :::
 
@@ -166,7 +166,7 @@ If (Not(File("/LOGS/"+"Roles_Errors.json").exists))
 Else // you can prevent the project to open
  ALERT("The roles.json file is malformed or contains inconsistencies, the application will quit.")
  QUIT 4D
- End if 
+ End if
 ```
 
 ## Inicialização de privilégios para implantação

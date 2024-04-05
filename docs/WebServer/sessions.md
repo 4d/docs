@@ -69,7 +69,7 @@ The `Session` object of the current session can then be accessed through the [`S
 
 :::info
 
-Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information. 
+Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
 :::
 
@@ -103,16 +103,9 @@ You can close a session from a Qodly form using the [**logout**](qodly-studio.md
 
 ## Privileges
 
-A session is associated to one or more privileges. On the 4D server, you can provide specific access or features depending on the privileges of the session. You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
+Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 
-:::info
-
-Privileges are at the heart of the REST and ORDA security architecture, along with permissions and resources. For a detailed description, refer to the [**Privileges** page in the ORDA section](../ORDA/privileges.md). 
-
-:::
-
-
-By default, only the "WebAdmin" privilege is available.
+You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. In your code, you can check the session's privileges to allow or deny access using the [`.hasPrivilege()`](API/SessionClass.md#hasprivilege) function. By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Example:
 
@@ -123,6 +116,12 @@ Else
 	//Display an authentication page
 End if
 ```
+
+:::info
+
+Privileges are implemented at the heart of the ORDA architecture to provide developers with a powerful technology for controlling access to the datastore and dataclas functions. For more information, please refer to the [**Privileges**](../ORDA/privileges.md) page of the ORDA chapter. 
+
+:::
 
 
 ## Example
@@ -203,3 +202,7 @@ Else
     WEB SEND TEXT("This userId is unknown")
 End if
 ```
+
+## See also (blog post)
+
+[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)

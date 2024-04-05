@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "v20 R4 BETA",
+    "message": "20 R4 BETA",
     "description": "The label for version 20-R4"
   },
   "sidebar.docs.category.Getting Started": {
@@ -302,5 +302,17 @@
   "sidebar.docs.doc.Build Application": {
     "message": "Build Application",
     "description": "The label for the doc item Build Application in sidebar docs, linking to the doc Desktop/building"
+  },
+  "sidebar.docs.category.Qodly Studio": {
+    "message": "Qodly Studio",
+    "description": "The label for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.title": {
+    "message": "Qodly Studio",
+    "description": "The generated-index page title for category Qodly Studio in sidebar docs"
+  },
+  "sidebar.docs.category.Qodly Studio.link.generated-index.description": {
+    "message": "Using Qodly Studio to build powerful web interfaces.",
+    "description": "The generated-index page description for category Qodly Studio in sidebar docs"
   }
 }

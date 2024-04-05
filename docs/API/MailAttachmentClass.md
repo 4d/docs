@@ -27,9 +27,9 @@ Attachment objects provide the following read-only properties and functions:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
+|19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
 </details>
 
 <!-- REF #_command_.MAIL New attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -47,7 +47,8 @@ Attachment objects provide the following read-only properties and functions:
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
 |disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|<!-- END REF -->
+|Result|4D.MailAttachment|<-|Attachment object|
+<!-- END REF -->
 
 
 #### Description
@@ -172,9 +173,9 @@ $transporter.send($email)
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
+|19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
 </details>
 
 <!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
@@ -192,7 +193,8 @@ $transporter.send($email)
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|
 |type|Text|->|Value of the content-type header|
 |disposition|Text|->|Value of the content-disposition header: "inline" or "attachment".|
-|Result|4D.MailAttachment|<-|Attachment object|<!-- END REF -->
+|Result|4D.MailAttachment|<-|Attachment object|
+<!-- END REF -->
 
 
 #### Description
@@ -231,7 +233,8 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 <!-- REF #MailAttachmentClass.getContent().Params -->
 |Parameter|Type||Description|
 |---|--- |:---:|------|
-|Result|4D.Blob|<-|Content of the attachment|<!-- END REF -->
+|Result|4D.Blob|<-|Content of the attachment|
+<!-- END REF -->
 
 
 #### Description
@@ -263,9 +266,9 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19|Added
+|19|Added
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->

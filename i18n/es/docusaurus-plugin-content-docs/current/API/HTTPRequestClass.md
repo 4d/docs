@@ -9,9 +9,9 @@ La clase `HTTPRequest` está disponible en el almacén de clases `4D`. Para crea
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Clase añadida  |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Clase añadida  |
 
 </details>
 
@@ -77,10 +77,10 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                |
-| ------- | ------------------------------------------------------------- |
-| v20     | Validación TLS por defecto                                    |
-| v19 R7  | Soporte de propiedades *automaticRedirections* y *decodeData* |
+| Lanzamiento | Modificaciones                                                |
+| ----------- | ------------------------------------------------------------- |
+| 20          | Validación TLS por defecto                                    |
+| 19 R7       | Soporte de propiedades *automaticRedirections* y *decodeData* |
 
 </details>
 
@@ -88,13 +88,12 @@ Los objetos HTTPRequest ofrecen las siguientes propiedades y funciones:
 
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parámetros | Tipo           |    | Descripción                                         |
-| ---------- | -------------- |:--:| --------------------------------------------------- |
-| url        | Text           | -> | URL a la que enviar la solicitud                    |
-| options    | Object         | -> | Propiedades de configuración de la petición         |
-| Result     | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest|<!-- END REF -->
-
-|
+| Parámetros | Tipo           |    | Descripción                                 |
+| ---------- | -------------- |:--:| ------------------------------------------- |
+| url        | Text           | -> | URL a la que enviar la solicitud            |
+| options    | Object         | -> | Propiedades de configuración de la petición |
+| Result     | 4D.HTTPRequest | <- | Nuevo objeto HTTPRequest                    |
+<!-- END REF -->
 
 #### Descripción
 
@@ -197,9 +196,9 @@ Un objeto authentication maneja la propiedad `options.serverAuthentication` o `o
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v20 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R4       | Añadidos       |
 
 </details>
 
@@ -207,12 +206,11 @@ Un objeto authentication maneja la propiedad `options.serverAuthentication` o `o
 
 
 <!-- REF #HTTP Parse message.Params -->
-| Parámetros | Tipo       |    | Descripción                                                                              |
-| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
-| data       | Text, Blob | -> | Datos a analizar                                                                         |
-| Result     | Object     | <- | Objeto, cada propiedad es parte de los datos de varias partes|<!-- END REF -->
-
-|
+| Parámetros | Tipo       |    | Descripción                                                   |
+| ---------- | ---------- |:--:| ------------------------------------------------------------- |
+| data       | Text, Blob | -> | Datos a analizar                                              |
+| Result     | Object     | <- | Objeto, cada propiedad es parte de los datos de varias partes |
+<!-- END REF -->
 
 #### Descripción
 
@@ -354,9 +352,9 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                               |
-| ------- | ---------------------------------------------------------------------------- |
-| v19 R8  | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
+| Lanzamiento | Modificaciones                                                               |
+| ----------- | ---------------------------------------------------------------------------- |
+| 19 R8       | `.headers` devuelve los nombres en minúsculas. Nueva propiedad `.rawHeaders` |
 
 </details>
 
@@ -396,11 +394,10 @@ La propiedad `.returnResponseBody` contiene <!-- REF #HTTPRequestClass.returnRes
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Parámetros | Tipo |  | Descripción                                             |
-| ---------- | ---- |::| ------------------------------------------------------- |
-|            |      |  | No requiere ningún parámetro|<!-- END REF -->
-
-|
+| Parámetros | Tipo |  | Descripción                  |
+| ---------- | ---- |::| ---------------------------- |
+|            |      |  | No requiere ningún parámetro |
+<!-- END REF -->
 
 #### Descripción
 
@@ -453,9 +450,8 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 | Parámetros | Tipo           |    | Descripción                                         |
 | ---------- | -------------- |:--:| --------------------------------------------------- |
 | time       | Real           | -> | Tiempo máximo en segundos para esperar la respuesta |
-| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest|<!-- END REF -->
-
-|
+| Result     | 4D.HTTPRequest | <- | Objeto HTTPRequest                                  |
+<!-- END REF -->
 
 #### Descripción
 

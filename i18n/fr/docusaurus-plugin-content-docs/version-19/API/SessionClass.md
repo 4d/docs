@@ -24,9 +24,9 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -34,11 +34,10 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 
 
 <!-- REF #_command_.Session.Params -->
-| Paramètres | Type       |    | Description                              |
-| ---------- | ---------- |:--:| ---------------------------------------- |
-| Résultat   | 4D.Session | <- | Objet session|<!-- END REF -->
-
-|
+| Paramètres | Type       |    | Description   |
+| ---------- | ---------- |:--:| ------------- |
+| Résultat   | 4D.Session | <- | Objet session |
+<!-- END REF -->
 
 #### Description
 
@@ -80,9 +79,9 @@ IP:port/4DACTION/action_Session
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -90,11 +89,10 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Paramètres | Type |  | Description                                            |
-| ---------- | ---- |::| ------------------------------------------------------ |
-|            |      |  | Ne requiert aucun paramètre|<!-- END REF -->
-
-|
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |
+<!-- END REF -->
 
 #### Description
 
@@ -117,9 +115,9 @@ $isGuest:=Session.isGuest() //$isGuest est mis à True
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -145,9 +143,9 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -155,12 +153,11 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Paramètres | Type    |    | Description                                                                      |
-| ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
-| privilege  | Text    | <- | Nom du privilège à vérifier                                                      |
-| Résultat   | Boolean | <- | Vrai si la session dispose du *privilege*, sinon Faux|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                           |
+| ---------- | ------- |:--:| ----------------------------------------------------- |
+| privilege  | Text    | <- | Nom du privilège à vérifier                           |
+| Résultat   | Boolean | <- | Vrai si la session dispose du *privilege*, sinon Faux |
+<!-- END REF -->
 
 #### Description
 
@@ -186,9 +183,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -226,9 +223,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -236,15 +233,14 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Paramètres | Type    |    | Description                                                                 |
-| ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| Résultat   | Boolean | <- | Vrai s'il s'agit d'une session Guest, sinon Faux|<!-- END REF -->
-
-|
+| Paramètres | Type    |    | Description                                      |
+| ---------- | ------- |:--:| ------------------------------------------------ |
+| Résultat   | Boolean | <- | Vrai s'il s'agit d'une session Guest, sinon Faux |
+<!-- END REF -->
 
 #### Description
 
-The `.setPrivileges()` function <!-- REF #SessionClass.isGuest().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+La fonction `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retourne True si la session est une session invité (c'est-à-dire qu'elle n'a pas de privilèges)<!-- END REF -->.
 
 #### Exemple
 
@@ -263,9 +259,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -273,13 +269,12 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Paramètres | Type       |    | Description                                                                                 |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------- |
-| privilege  | Text       | -> | Nom de privilège                                                                            |
-| privileges | Collection | -> | Collection de noms de privilèges                                                            |
-| settings   | Object     | -> | Objet contenant une propriété "privileges" (texte ou collection)|<!-- END REF -->
-
-|
+| Paramètres | Type       |    | Description                                                      |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
+| privilege  | Text       | -> | Nom de privilège                                                 |
+| privileges | Collection | -> | Collection de noms de privilèges                                 |
+| settings   | Object     | -> | Objet contenant une propriété "privileges" (texte ou collection) |
+<!-- END REF -->
 
 #### Description
 
@@ -329,9 +324,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 
@@ -367,9 +362,9 @@ End if
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajout         |
+| 18 R6   | Ajout         |
 
 </details>
 

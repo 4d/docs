@@ -340,11 +340,11 @@ Desde el punto de vista del alcance, hay dos tipos de selecciones temporales:
 
 Una selección temporal es una selección temporal interproceso si su nombre va precedido de los símbolos (`<>`) - un signo "menor que" seguido de un signo "mayor que".
 
-An interprocess named selection name can contain up to 255 characters, not including the `<>` symbols.
+Un nombre de selección temporal interproceso puede contener hasta 255 caracteres, sin incluir los símbolos `<>`.
 
 ### Selecciones temporales proceso
 
-You denote a process named selection by using a string expression that represents its name (which cannot start with the `<>` symbols nor the dollar sign $). El nombre de una selección temporal puede contener hasta 255 caracteres.
+Una selección temporal proceso se designa mediante una expresión de cadena que representa su nombre (que no puede comenzar con los símbolos `<>` ni con el signo de dólar $). El nombre de una selección temporal puede contener hasta 255 caracteres.
 
 Ejemplos:
 

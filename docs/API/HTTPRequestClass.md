@@ -9,9 +9,9 @@ The `HTTPRequest` class is available from the `4D` class store. You create and s
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R6|Class added|
+|19 R6|Class added|
 
 </details>
 
@@ -77,10 +77,10 @@ HTTPRequest objects provide the following properties and functions:
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20|TLS validation by default |
-|v19 R7|Support of *automaticRedirections* and *decodeData* properties |
+|20|TLS validation by default |
+|19 R7|Support of *automaticRedirections* and *decodeData* properties |
 
 </details>
 
@@ -92,7 +92,8 @@ HTTPRequest objects provide the following properties and functions:
 |---------|--- |:---:|------|
 |url|Text|->|URL to which to send the request|
 |options|Object|->|Request configuration properties|
-|Result|4D.HTTPRequest|<-|New HTTPRequest object|<!-- END REF -->
+|Result|4D.HTTPRequest|<-|New HTTPRequest object|
+<!-- END REF -->
 
 #### Description
 
@@ -195,9 +196,9 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v20 R4|Added|
+|20 R4|Added|
 
 </details>
 
@@ -208,7 +209,8 @@ An authentication object handles the `options.serverAuthentication` or `options.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |data|Text, Blob|->|Data to be parsed|
-|Result|Object|<-|Object, each property is a part of the multipart data|<!-- END REF -->
+|Result|Object|<-|Object, each property is a part of the multipart data|
+<!-- END REF -->
 
 #### Description
 
@@ -350,9 +352,9 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 
 <details><summary>History</summary>
 
-|Version|Changes|
+|Release|Changes|
 |---|---|
-|v19 R8 |`.headers` returns lowercase names. New `.rawHeaders` property|
+|19 R8 |`.headers` returns lowercase names. New `.rawHeaders` property|
 
 </details>
 
@@ -394,7 +396,8 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 <!-- REF #HTTPRequestClass.terminate().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|<!-- END REF -->
+||||Does not require any parameters|
+<!-- END REF -->
 
 #### Description
 
@@ -447,7 +450,8 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |time|Real|->|Maximum time in seconds to wait for the response|
-|Result|4D.HTTPRequest|<-|HTTPRequest object|<!-- END REF -->
+|Result|4D.HTTPRequest|<-|HTTPRequest object|
+<!-- END REF -->
 
 #### Description
 
