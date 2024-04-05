@@ -28,7 +28,7 @@ En _fontObj_, pase un objeto que contenga las propiedades de la fuente. Se sopor
 | variant   | text | Especifica el tipo de letra en minúsculas.                                                                          | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                                                                                                                        | No          |
 | weight    | text | Define el grosor de la fuente.                                                                                      | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li>                                                         | No          |
 
-This object can be created with the [VP Font to object](vp-font-to-object.md) command.
+Este objeto puede crearse con el comando [VP Font to object](vp-font-to-object.md).
 
 The returned shorthand string can be assigned to the "font" property of a cell with the [VP SET CELL STYLE](vp-set-cell-style.md), for example.
 
