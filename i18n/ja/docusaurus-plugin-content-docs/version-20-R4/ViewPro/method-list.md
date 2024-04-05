@@ -409,9 +409,9 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R4 | 追加 |
 
 </details>
 
@@ -677,9 +677,9 @@ $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 
 </details>
 
@@ -739,11 +739,11 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------- |
-| v19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
-| v19 R6 | 追加                                                                                              |
+| リリース  | 内容                                                                                              |
+| ----- | ----------------------------------------------------------------------------------------------- |
+| 19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
+| 19 R6 | 追加                                                                                              |
 
 </details>
 
@@ -930,9 +930,9 @@ _rangeObj_ 引数には、削除する行を指定するレンジオブジェク
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容              |
-| ------ | --------------- |
-| v20 R2 | .sjsドキュメントをサポート |
+| リリース  | 内容              |
+| ----- | --------------- |
+| 20 R2 | .sjsドキュメントをサポート |
 
 </details>
 
@@ -1301,9 +1301,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -1471,9 +1471,9 @@ $activeCell:=VP Get active cell("myVPArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -1693,9 +1693,9 @@ $index:=VP Get current sheet("ViewProArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -2559,9 +2559,9 @@ $styles:=VP Get stylesheets("ViewProArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -2619,9 +2619,9 @@ End if
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -2671,9 +2671,9 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 
 </details>
 
@@ -2733,9 +2733,9 @@ VP SET NUM VALUE(VP Cell("ViewProArea"; 0; 0); $dirty.length)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -2781,9 +2781,9 @@ _tableName_ に指定した名称の表組みが見つからない場合、コ�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 
 </details>
 
@@ -2829,9 +2829,9 @@ $result:=Asserted(Value type($vTheme.theme)=Is object) // true
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -3013,9 +3013,9 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容              |
-| ------ | --------------- |
-| v20 R2 | .sjsドキュメントをサポート |
+| リリース  | 内容              |
+| ----- | --------------- |
+| 20 R2 | .sjsドキュメントをサポート |
 
 </details>
 
@@ -3300,9 +3300,9 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -3350,9 +3350,9 @@ _tableName_ の表組みが存在しない場合、あるいはシートに十�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -3427,9 +3427,9 @@ VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 
 </details>
 
@@ -3620,9 +3620,9 @@ $cellStyle.font:=VP Object to font($font)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 
 </details>
 
@@ -3916,9 +3916,9 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R6 | 追加 |
 
 </details>
 
@@ -3969,9 +3969,9 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -4013,9 +4013,9 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -4096,9 +4096,9 @@ VP RESET SELECTION("myVPArea")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -4510,9 +4510,9 @@ VP SET ALLOWED METHODS($allowed)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -4938,9 +4938,9 @@ End case
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R5 | 追加 |
 
 </details>
 
@@ -5905,9 +5905,9 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 
 </details>
 
@@ -6006,9 +6006,9 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 
 </details>
 
