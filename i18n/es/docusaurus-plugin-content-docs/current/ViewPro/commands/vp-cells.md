@@ -9,9 +9,9 @@ title: VP Cells
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R4  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R4       | Añadidos       |
 
 </details>
 
