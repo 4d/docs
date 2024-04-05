@@ -13,9 +13,9 @@ Les connexions clientes WebSocket sont utiles, par exemple, pour recevoir des do
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20 R2  | Ajout         |
+| 20 R2   | Ajout         |
 
 </details>
 
@@ -74,9 +74,9 @@ Les objets WebSocket exposent les propriétés et fonctions suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                                      |
+| Release | Modifications                                                      |
 | ------- | ------------------------------------------------------------------ |
-| v20 R3  | Prise en charge de la propriété `headers` dans *connectionHandler* |
+| 20 R3   | Prise en charge de la propriété `headers` dans *connectionHandler* |
 
 </details>
 
