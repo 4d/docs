@@ -5,9 +5,9 @@ title: VP REMOVE TABLE
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R6  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R6       | Añadidos       |
 
 </details>
 
@@ -28,11 +28,11 @@ title: VP REMOVE TABLE
 
 The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](vp-create-table.md).
 
-In _vpAreaName_, pass the name of the area where the table to remove is located.
+En _vpAreaName_, pase el nombre del área donde se encuentra la tabla a eliminar.
 
 En _tableName_, pase el nombre de la tabla a eliminar.
 
-In _options_, you can specify additional behavior. Los valores posibles son:
+En _options_, puede especificar comportamientos adicionales. Los valores posibles son:
 
 | Constante               | Valor | Descripción                                  |
 | ----------------------- | ----- | -------------------------------------------- |
