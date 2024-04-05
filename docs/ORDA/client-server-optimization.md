@@ -1,5 +1,5 @@
 ---
-id: client-server-otimization
+id: client-server-optimization
 title: Client/Server Optimization
 ---
 
