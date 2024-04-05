@@ -101,6 +101,7 @@ module.exports =
 						"ORDA/global-stamp",
 						"ORDA/datastores",
 						"ORDA/privileges",
+						"ORDA/client-server-optimization",
 						"ORDA/glossary"
 					],
 				},
@@ -632,7 +633,7 @@ module.exports =
 										}
 											]
 									},
-								
+
 									]
 							},
 						{
