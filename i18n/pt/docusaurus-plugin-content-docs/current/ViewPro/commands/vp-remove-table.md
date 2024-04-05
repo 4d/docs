@@ -5,9 +5,9 @@ title: VP REMOVE TABLE
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19 R6   | Adicionado |
 
 </details>
 
