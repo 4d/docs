@@ -13,9 +13,9 @@ Pour une vue d'ensemble et quelques exemples de la mise en œuvre du serveur Web
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v20     | Ajout         |
+| 20      | Ajout         |
 
 </details>
 
