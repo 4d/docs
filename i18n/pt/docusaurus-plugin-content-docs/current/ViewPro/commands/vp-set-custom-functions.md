@@ -22,7 +22,7 @@ As fórmulas especificadas por `VP SET CUSTOM FUNCTIONS` aparecem em um menu pop
 
 > If `VP SET CUSTOM FUNCTIONS` is called multiple times for the same area, in the same session, only the last call is taken into account.
 
-Pass the name of the 4D View Pro area in _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
+Passe o nome da área 4D View Pro em _vpAreaName_. Se passar um nome que não existe, é devolvido um erro.
 
 In the _formulaObj_ parameter, pass an object containing the 4D formulas that can be called from 4D View Pro formulas as well as additional properties. Each `customFunction` property passed in _formulaObj_ becomes the name of a function in the 4D View Pro area.
 
