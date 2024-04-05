@@ -5,9 +5,9 @@ title: VP Get tables
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -39,7 +39,7 @@ El siguiente código devolverá una colección de todos los nombres de tablas de
 
 ```4d
 $tables:=VP Get tables("ViewProArea")
-//$tables contains for example ["contextTable","emailTable"]
+//$tables contiene por ejemplo ["contextTable","emailTable"]
 
 ```
 
