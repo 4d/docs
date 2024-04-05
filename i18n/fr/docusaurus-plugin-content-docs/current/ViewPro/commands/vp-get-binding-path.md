@@ -5,9 +5,9 @@ title: VP Get binding path
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
