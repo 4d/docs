@@ -29,10 +29,10 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit une interface objet à une 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                |
+| Release | Modifications                |
 | ------- | ---------------------------- |
-| v19 R3  | Ajout de l'attribut .exposed |
-| v17     | Ajout                        |
+| 19 R3   | Ajout de l'attribut .exposed |
+| 17      | Ajout                        |
 
 </details>
 
@@ -125,10 +125,10 @@ Considérant les propriétés de table suivantes :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                           |
+| Release | Modifications                           |
 | ------- | --------------------------------------- |
-| v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajout                                   |
+| 17 R5   | Prise en charge du paramètre *settings* |
+| 17      | Ajout                                   |
 
 </details>
 
@@ -175,9 +175,9 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -228,10 +228,10 @@ $ds.Persons.clearRemoteCache()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                           |
+| Release | Modifications                           |
 | ------- | --------------------------------------- |
-| v17 R5  | Prise en charge du paramètre *settings* |
-| v17     | Ajout                                   |
+| 17 R5   | Prise en charge du paramètre *settings* |
+| 17      | Ajout                                   |
 
 </details>
 
@@ -427,9 +427,9 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -503,9 +503,9 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -543,9 +543,9 @@ $number:=$ds.Persons.getCount()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajout         |
+| 17 R5   | Ajout         |
 
 </details>
 
@@ -596,10 +596,10 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications           |
+| Release | Modifications           |
 | ------- | ----------------------- |
-| v19 R3  | Ajout propriété exposed |
-| v17 R5  | Ajout                   |
+| 19 R3   | Ajout propriété exposed |
+| 17 R5   | Ajout                   |
 
 </details>
 
@@ -670,9 +670,9 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
@@ -762,9 +762,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -808,9 +808,9 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v17     | Ajout         |
+| 17      | Ajout         |
 
 </details>
 
@@ -850,11 +850,11 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                                     |
+| Release | Modifications                                     |
 | ------- | ------------------------------------------------- |
-| v17 R6  | Prise en charge des paramètres Formula            |
-| v17 R5  | Prise en charge des placeholders pour les valeurs |
-| v17     | Ajout                                             |
+| 17 R6   | Prise en charge des paramètres Formula            |
+| 17 R5   | Prise en charge des placeholders pour les valeurs |
+| 17      | Ajout                                             |
 
 </details>
 
@@ -1515,9 +1515,9 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R5  | Ajout         |
+| 19 R5   | Ajout         |
 
 </details>
 
