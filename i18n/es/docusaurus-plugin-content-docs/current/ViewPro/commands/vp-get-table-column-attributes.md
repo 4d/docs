@@ -5,9 +5,9 @@ title: VP Get column attributes
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v19 R7  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 19 R7       | Añadidos       |
 
 </details>
 
@@ -35,7 +35,7 @@ En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún ín
 
 > La indexación comienza en 0.
 
-The command returns an object describing the current attributes of the _column_:
+El comando devuelve un objeto que describe los atributos actuales de la _column_:
 
 | Propiedad           | Tipo    | Descripción                                                                                                                     |
 | ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
