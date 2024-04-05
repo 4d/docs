@@ -5,11 +5,11 @@ title: VP CREATE TABLE
 
 <details><summary>Historia</summary>
 
-| Versión | Modificaciones                                                                                                 |
-| ------- | -------------------------------------------------------------------------------------------------------------- |
-| v19 R8  | Soporte de opciones de tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7  | Soporte de la opción `allowAutoExpand`                                                                         |
-| v19 R6  | Añadidos                                                                                                       |
+| Lanzamiento | Modificaciones                                                                                                 |
+| ----------- | -------------------------------------------------------------------------------------------------------------- |
+| 19 R8       | Soporte de opciones de tema: `bandColumns`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7       | Soporte de la opción `allowAutoExpand`                                                                         |
+| 19 R6       | Añadidos                                                                                                       |
 
 </details>
 
