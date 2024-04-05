@@ -50,9 +50,9 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 
 </details>
 
@@ -254,9 +254,9 @@ Function _createFile($title : Text; $textBody : Text)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R4 | 追加 |
 
 </details>
 
@@ -529,11 +529,11 @@ $output:=$worker.response
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-|       |    |
+| リリース | 内容 |
+| ---- | -- |
+|      |    |
 
-|v19 R4|追加|
+|19 R4|追加|
 
 </details>
 
