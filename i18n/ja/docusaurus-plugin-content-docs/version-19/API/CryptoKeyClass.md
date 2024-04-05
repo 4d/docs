@@ -44,9 +44,9 @@ ASSERT($status.success)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->
@@ -82,9 +82,9 @@ ASSERT($status.success)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -98,9 +98,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->
@@ -146,9 +146,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->
@@ -186,9 +186,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
@@ -216,9 +216,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
@@ -245,9 +245,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.pem.Syntax -->
@@ -262,9 +262,9 @@ ECDSA キーのみ: <!-- REF #CryptoKey.curve.Summary -->キーの楕円曲線�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Object) : Text<!-- END REF -->
@@ -303,9 +303,9 @@ utf8 形式の *message* 文字列。
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -319,9 +319,9 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
@@ -340,9 +340,9 @@ RSA キーのみ: <!-- REF #CryptoKey.size.Summary -->キーのサイズ (ビッ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R4 | 追加 |
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->
