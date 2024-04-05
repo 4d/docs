@@ -118,10 +118,10 @@ Los parámetros se reciben en el método, en el orden en que se especifican en l
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                      |
-| ------- | ----------------------------------- |
-| v17 R6  | Renombrado (New formula -> Formula) |
-| v17 R3  | Añadidos                            |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 17 R6       | Renombrado (New formula -> Formula) |
+| 17 R3       | Añadidos                            |
 
 </details>
 
@@ -257,10 +257,10 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                             |
-| ------- | ---------------------------------------------------------- |
-| v17 R6  | Renombrado: New formula from string -> Formula from string |
-| v17 R3  | Añadidos                                                   |
+| Lanzamiento | Modificaciones                                             |
+| ----------- | ---------------------------------------------------------- |
+| 17 R6       | Renombrado: New formula from string -> Formula from string |
+| 17 R3       | Añadidos                                                   |
 
 </details>
 
@@ -317,9 +317,9 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R3       | Añadidos       |
 
 </details>
 
@@ -391,9 +391,9 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v17 R3  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 17 R3       | Añadidos       |
 
 </details>
 
@@ -446,9 +446,9 @@ Tenga en cuenta que `.call()` es similar a [`.apply()`](#apply) excepto que los 
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones |
-| ------- | -------------- |
-| v18 R2  | Añadidos       |
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 18 R2       | Añadidos       |
 
 </details>
 
