@@ -38,7 +38,6 @@ module.exports =
 					},
 					items: [
 						"Project/architecture",
-						"Project/components",
 						{
 							type: "category",
 							label: "Settings",
@@ -60,6 +59,7 @@ module.exports =
 								"settings/compatibility"
 							],
 						},
+						"Project/components",
 						"Project/documentation",
 					],
 				},

@@ -49,6 +49,7 @@ The **/Sources/dependencies.json** file contents must be like:
 }
 ```
 
+
 ... where "myComponent1" and "myComponent2" are the name of the components located at the same level as you project that you want to be loaded in your project.
 
 
@@ -142,8 +143,7 @@ A project dependency can have different status in the current configuration. You
 
 Dependencies requiring the developer's attention (**Inactive** and **Conflict**) are indicated by a label at the right side of the line and a specific background color:
 
-![dependency-status](../assets/en/Project/dependency-status.png)
-![dependency-conflict](../assets/en/Project/dependency-conflict.png)
+![dependency-status](../assets/en/Project/dependency-conflict2.png)
 
 
 In case of inactive or conflict status, a tooltip is displayed when you hover over the dependency line, detailing the reason for this status:
