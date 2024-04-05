@@ -56,7 +56,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 #### Ejemplo 2
 
-This code demonstrates the difference between `VP SET BORDER` and setting borders with the [`VP SET CELL STYLE`](vp-set-cell-style.md) command:
+Este código demuestra la diferencia entre `VP SET BORDER` y la configuración de bordes con el comando [`VP SET CELL STYLE`](vp-set-cell-style.md):
 
 ```4d
 // Definir los bordes con VP SET BORDER
