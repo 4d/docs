@@ -9,9 +9,9 @@ title: HTTPRequest
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容     |
-| ------ | ------ |
-| v19 R6 | クラスを追加 |
+| リリース  | 内容     |
+| ----- | ------ |
+| 19 R6 | クラスを追加 |
 
 </details>
 
@@ -77,10 +77,10 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                   |
-| ------ | ---------------------------------------------------- |
-| v20    | TLS検証がデフォルトに                                         |
-| v19 R7 | *automaticRedirections* および *decodeData* プロパティをサポート。 |
+| リリース  | 内容                                                   |
+| ----- | ---------------------------------------------------- |
+| 20    | TLS検証がデフォルトに                                         |
+| 19 R7 | *automaticRedirections* および *decodeData* プロパティをサポート。 |
 
 </details>
 
@@ -197,9 +197,9 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v20 R4 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 20 R4 | 追加 |
 
 </details>
 
@@ -354,9 +354,9 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                              |
-| ------ | ----------------------------------------------- |
-| v19 R8 | `.headers` は小文字の名前を返します。 `.rawHeaders` プロパティの追加 |
+| リリース  | 内容                                              |
+| ----- | ----------------------------------------------- |
+| 19 R8 | `.headers` は小文字の名前を返します。 `.rawHeaders` プロパティの追加 |
 
 </details>
 
