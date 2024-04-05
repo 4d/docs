@@ -5,9 +5,9 @@ title: VP INSERT TABLE ROWS
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R7  | Ajout         |
+| 19 R7   | Ajout         |
 
 </details>
 
