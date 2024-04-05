@@ -44,7 +44,7 @@ size:16pt
 
 #### Ejemplo 2
 
-See example for [`VP Object to font`](vp-object-to-font.md).
+Ver el ejemplo de [`VP Object to font`](vp-object-to-font.md).
 
 #### Ver también
 
