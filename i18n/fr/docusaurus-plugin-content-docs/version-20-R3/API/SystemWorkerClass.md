@@ -50,9 +50,9 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 
 </details>
 
@@ -254,9 +254,9 @@ Function _createFile($title : Text; $textBody : Text)
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajout         |
+| 19 R4   | Ajout         |
 
 </details>
 
@@ -529,11 +529,11 @@ Cette propriété est en **lecture seule**.
 
 <details><summary>Historique</summary>
 
-| Version | Modifications |
+| Release | Modifications |
 | ------- | ------------- |
 |         |               |
 
-|v19 R4|Ajouté|
+|19 R4|Added|
 
 </details>
 
