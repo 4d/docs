@@ -87,7 +87,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Activando la autenticación
 
-La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. Para más detalles, consulte [Llave de acceso](../Admin/webAdmin.md#access-key).
 
 ### Activación del renderizado
 
