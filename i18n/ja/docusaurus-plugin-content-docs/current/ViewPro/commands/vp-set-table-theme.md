@@ -5,9 +5,9 @@ title: VP SET TABLE THEME
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R8 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R8 | 追加 |
 
 </details>
 
