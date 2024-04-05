@@ -7,9 +7,9 @@ A classe `WebSocketServer` permite-lhe criar e configurar um servidor WebSocket 
 
 <details><summary>História</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v20    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 20      | Adicionado |
 
 </details>
 
