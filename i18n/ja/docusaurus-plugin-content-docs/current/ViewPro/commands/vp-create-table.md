@@ -5,11 +5,11 @@ title: VP CREATE TABLE
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------- |
-| v19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
-| v19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
-| v19 R6 | 追加                                                                                              |
+| リリース  | 内容                                                                                              |
+| ----- | ----------------------------------------------------------------------------------------------- |
+| 19 R8 | テーマオプションのサポート: `bandColumn`, `bandRows`, `highlightFirstColumn`, `highlightLastColumn`, `theme` |
+| 19 R7 | `allowAutoExpand` オプションをサポート                                                                    |
+| 19 R6 | 追加                                                                                              |
 
 </details>
 
