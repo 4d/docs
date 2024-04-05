@@ -61,10 +61,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                              |
-| ------ | ------------------------------------- |
-| v19 R4 | Nova constante `HTTP Client log file` |
-| v17 R5 | Adicionado                            |
+| Release | Mudanças                              |
+| ------- | ------------------------------------- |
+| 19 R4   | Nova constante `HTTP Client log file` |
+| 17 R5   | Adicionado                            |
 
 </details>
 
@@ -137,9 +137,9 @@ Se o comando for chamado a partir de um componente, passe o parâmetro opcional 
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v18 R6 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -158,9 +158,9 @@ A função `4D. File.new()` <!-- REF #4D.File.new().Summary -->cria e devolve um
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF file.create().Note -->
@@ -203,9 +203,9 @@ Criação de um arquivo de preferências na pasta da base de dados:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
@@ -259,9 +259,9 @@ Se quiser criar um alias para um arquivo na sua pasta database:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.delete().Syntax -->**.delete**()<!-- END REF -->
@@ -320,9 +320,9 @@ Se quiser apagar um ficheiro específico na pasta da base de dados:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19    | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 19      | Adicionado |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -415,9 +415,9 @@ ALERT($info.
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
@@ -462,9 +462,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v19 R7 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -543,9 +543,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -586,10 +586,10 @@ Se quiser renomear "ReadMe.txt" em "ReadMe_new.txt":
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças           |
-| ------ | ------------------ |
-| v20    | Suporte de WinIcon |
-| v19    | Adicionado         |
+| Release | Mudanças           |
+| ------- | ------------------ |
+| 20      | Suporte de WinIcon |
+| 19      | Adicionado         |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -674,9 +674,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17 R5 | Adicionado |
+| Release | Mudanças   |
+| ------- | ---------- |
+| 17 R5   | Adicionado |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -706,10 +706,10 @@ A função `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescrev
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                   |
-| ------ | ---------------------------------------------------------- |
-| v19 R3 | Padrão para novos projectos: sem BOM e (macOS) LF para EOL |
-| v17 R5 | Adicionado                                                 |
+| Release | Mudanças                                                   |
+| ------- | ---------------------------------------------------------- |
+| 19 R3   | Padrão para novos projectos: sem BOM e (macOS) LF para EOL |
+| 17 R5   | Adicionado                                                 |
 
 </details>
 
