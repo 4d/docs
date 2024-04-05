@@ -9,9 +9,9 @@ title: On Before Keystroke
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                                                                               |
-| ------ | -------------------------------------------------------------------------------------- |
-| v18 R5 | - Support in non-enterable list boxes- The event is now triggered after IME validation |
+| Release | Mudanças                                                                               |
+| ------- | -------------------------------------------------------------------------------------- |
+| 18 R5   | - Support in non-enterable list boxes- The event is now triggered after IME validation |
 </details>
 
 ## Descrição
