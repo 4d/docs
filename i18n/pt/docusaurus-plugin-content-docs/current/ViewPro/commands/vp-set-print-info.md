@@ -72,7 +72,7 @@ O PDF:
 
 #### Veja também
 
-[4D View Pro print attributes](../configuring.md#print-attributes)<br/>
+[Atributos de impressão 4D View Pro](../configuring.md#print-attributes)<br/>
 [VP Convert to picture](vp-convert-to-picture.md)<br/>
 [VP Get print info](vp-get-print-info.md)<br/>
 [VP PRINT](vp-print.md)
