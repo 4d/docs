@@ -1,6 +1,6 @@
 ---
 id: qodly-studio
-title: Qodly Studio in 4D
+title: Qodly Studio en 4D
 ---
 
 :::caution Vista previa para desarrolladores
@@ -85,7 +85,7 @@ Keep in mind that [user settings](../settings/overview.md) can be defined at sev
 
 ### Activando la autenticación
 
-La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. For more details, see [Access key](../Admin/webAdmin.md#access-key).
+La autenticación en el servidor web WebAdmin se realiza utilizando una llave de acceso. Para más detalles, consulte [Llave de acceso](../Admin/webAdmin.md#access-key).
 
 
 ### Gestión de proyectos
@@ -195,7 +195,7 @@ See [this page](https://developer.qodly.com/docs/studio/rendering) for detailed 
 Para habilitar el renderizado de formularios Qodly, deben configurarse las siguientes opciones.
 
 * The 4D project's **Settings** > **Web** > **Web Features** > [**Expose as REST server**](../settings/web.md#exposed-as-rest-server) option must be activated.
-* The [4D web server](webServer.md) must be running.
+* El [servidor web 4D](webServer.md) debe estar en ejecución.
 
 :::note
 
@@ -203,12 +203,12 @@ Para habilitar el renderizado de formularios Qodly, deben configurarse las sigui
 
 :::
 
-### Scope of Qodly forms
+### Alcance de los formularios Qodly
 
-When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [4D WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost). See also [this paragraph](#about-license_usage) about URL schemes and license usage.
+When rendering Qodly forms in the Qodly Studio, the renderer will connect to the 4D web server through HTTP or HTTPS, depending on the settings, following the same HTTP/HTTPS connection pattern as for the [4D WebAdmin web server](../Admin/webAdmin.md#accept-http-connections-on-localhost). Ver también [este párrafo](#about-license_usage) sobre los esquemas de URL y el uso de licencias.
 
 
-Keep in mind that Qodly Studio runs through the 4D WebAdmin web server. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza un formulario Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
+Tenga en cuenta que Qodly Studio se ejecuta a través del servidor web 4D WebAdmin. Cuando utiliza Qodly Studio como desarrollador, incluso cuando previsualiza un formulario Qodly en el estudio, está utilizando el servidor web 4D WebAdmin. Esto le permite ver, por ejemplo, clases de datos, funciones y atributos que no están expuestos como recursos REST (aparecen en gris).
 
 However, form rendering happens outside Qodly Studio, and is served by the standard 4D web server. En esta situación, su aplicación web no puede acceder a activos que no estén expuestos como recursos REST. Consulte [Funciones expuestas frente a no expuestas](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) y [Exposición de tablas](../REST/configuration.md#exposing-tables) para obtener más información sobre cómo exponer activos.
 
@@ -219,7 +219,7 @@ However, form rendering happens outside Qodly Studio, and is served by the stand
 
 Para el despliegue, el servidor WebAdmin no es necesario. El acceso del usuario final a su aplicación web realizada con Qodly Studio se basa en el protocolo 4D REST, y como tal, funciona como a través de una aplicación remota 4D convencional.
 
-Your Qodly forms are available through the following url:
+Sus formularios Qodly están disponibles a través de la siguiente url:
 
 ```
 IP:port/$lib/renderer/?w=QodlyFormName
@@ -256,7 +256,7 @@ Si ejecuta el renderizador desde Qodly Studio y no se accede a estos dos servido
 
 ![alt-text](../assets/en/WebServer/schemes.png)
 
-3. In Qodly Studio, you click on the **Preview** icon. Se le advierte que los dos servidores web se están iniciando en esquemas diferentes, pero a pesar de esto, usted hace clic en el botón **Confirm**.
+3. En Qodly Studio, haga clic en el icono **Preview**. Se le advierte que los dos servidores web se están iniciando en esquemas diferentes, pero a pesar de esto, usted hace clic en el botón **Confirm**.
 
 ![alt-text](../assets/en/WebServer/render-button.png)
 
