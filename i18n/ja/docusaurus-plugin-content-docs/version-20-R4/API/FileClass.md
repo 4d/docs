@@ -61,10 +61,10 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                            |
-| ------ | ----------------------------- |
-| v19 R4 | 新しい `HTTP Client log file` 定数 |
-| v17 R5 | 追加                            |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 19 R4 | 新しい `HTTP Client log file` 定数 |
+| 17 R5 | 追加                            |
 
 </details>
 
@@ -137,9 +137,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v18 R6 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R6 | 追加 |
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
@@ -158,9 +158,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF file.create().Note -->
@@ -203,9 +203,9 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -259,9 +259,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 
 </details>
 
@@ -316,9 +316,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v19   | 追加 |
+| リリース | 内容 |
+| ---- | -- |
+| 19   | 追加 |
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
@@ -411,9 +411,9 @@ ALERT($info.Copyright)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -458,9 +458,9 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v19 R7 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 19 R7 | 追加 |
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -537,9 +537,9 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -580,10 +580,10 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容            |
-| ----- | ------------- |
-| v20   | WinIcon をサポート |
-| v19   | 追加            |
+| リリース | 内容            |
+| ---- | ------------- |
+| 20   | WinIcon をサポート |
+| 19   | 追加            |
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
@@ -671,9 +671,9 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容 |
-| ------ | -- |
-| v17 R5 | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R5 | 追加 |
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
@@ -703,10 +703,10 @@ $infoPlistFile.setAppInfo($info)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                               |
-| ------ | ------------------------------------------------ |
-| v19 R3 | 新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用 |
-| v17 R5 | 追加                                               |
+| リリース  | 内容                                               |
+| ----- | ------------------------------------------------ |
+| 19 R3 | 新規プロジェクトのデフォルト: BOMなし、(macOS の場合) EOL として LF を使用 |
+| 17 R5 | 追加                                               |
 
 </details>
 
