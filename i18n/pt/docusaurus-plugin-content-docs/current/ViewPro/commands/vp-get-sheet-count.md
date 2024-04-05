@@ -30,7 +30,7 @@ Obter a contagem de folhas e definir a folha atual como a última folha:
 
 ```4d
  $count:=VP Get sheet count("ViewProArea")
-  //set the current sheet to the last sheet (indexing starts at 0)
+  //definir a folha atual para a última folha (a indexação começa em 0)
  VP SET CURRENT SHEET("ViewProArea";$count-1)
 ```
 
