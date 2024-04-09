@@ -52,7 +52,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
 |OpenSSL|1.1.1s|19.6||
-|SpreadJS|14.1.6|19.5|4D iew Pro engine|
+|SpreadJS|14.1.6|19.5|4D View Pro engine|
 |CEF|4324|19|Chromium v88. Allows native compilation on Apple Silicon platforms.|
 |webKit|WKWebView|19||
 |ICU|68.1|18 R6|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
