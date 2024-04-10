@@ -1,20 +1,26 @@
 ---
 id: sessions
-title: Sessions utilisateur
+title: Sessions Web
 ---
 
-Le serveur Web de 4D offre des fonctions intégrées pour la gestion des **sessions utilisateur**. Creating and maintaining user sessions allows you to control and improve the user experience on your web application. When user sessions are enabled, web clients can reuse the same server context from one request to another.
+The 4D web server provides built-in features for managing **web sessions**. Creating and maintaining web sessions allows you to control and improve the user experience on your web application. When web sessions are enabled, web clients can reuse the same server context from one request to another.
 
-Web server user sessions allow to:
+Web sessions allow to:
 
-- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web server sessions are **scalable**),
-- share data between the processes of a web client,
-- associate privileges to user sessions,
-- gérer l'accès via un objet `Session` et l'[API Session](API/SessionClass.md).
+- handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
+- manage session through a `Session` object and the [Session API](API/SessionClass.md),
+- store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
+- associate privileges to the user running the session.
+
+## Usages
+
+Web sessions are used for:
+
+- [Web applications](gettingStarted.md) sending http requests,
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
 
 
-
-## Activation des sessions
+## Enabling web sessions
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
@@ -35,7 +41,11 @@ In any cases, the setting is local to the machine; so it can be different on the
 
 When [sessions are enabled](#enabling-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID_*AppName*", where *AppName* is the name of the application project. This cookie references the current web session for the application.
 
-> Le nom du cookie peut être obtenu à l'aide de la propriété [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
+:::info
+
+Le nom du cookie peut être obtenu à l'aide de la propriété [`.sessionCookieName`](API/WebServerClass.md#sessioncookiename).
+
+:::
 
 1. In each web client request, the Web server checks for the presence and the value of the private "4DSID_*AppName*" cookie.
 
@@ -46,14 +56,23 @@ When [sessions are enabled](#enabling-sessions), automatic mechanisms are implem
 - a new session with a private "4DSID_*AppName*" cookie is created on the web server
 - a new Guest `Session` object is created and is dedicated to the scalable web session.
 
-L'objet `Session` courant est alors accessible via la commande [`Session`](API/SessionClass.md#session) dans le code de n'importe quel processus Web.
+:::note
+
+Creating a web session for a REST request may require that a licence is available, see [this page](../REST/authUsers.md).
+
+:::
+
+The `Session` object of the current session can then be accessed through the [`Session`](API/SessionClass.md#session) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
+:::info
+
 Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv20/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
 
+:::
 
-## Partage d'informations
+## Storing and sharing session information
 
 Chaque objet `Session` fournit une propriété [`.storage`](API/SessionClass.md#storage) qui est un [objet partagé](Concepts/shared.md). This property allows you to share information between all processes handled by the session.
 
@@ -66,21 +85,26 @@ A scalable web session is closed when:
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes.
 
-Ce timeout peut être défini à l'aide de la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le timeout ne peut pas être inférieur à 60 minutes).
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DatastoreClass.md#open-datastore) command.
 
-Lorsqu'une session Web évolutive est fermée, si la commande [`Session`](API/SessionClass.md#session) est appelée par la suite :
+When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
 - the `Session` object does not contain privileges (it is a Guest session)
 - la propriété [`.storage`](API/SessionClass.md#storage) est vide
 - a new session cookie is associated to the session
+
+:::info
+
+You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.
+
+:::
 
 
 ## Privileges
 
 Privileges can be associated to web user sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
 
-Vous pouvez attribuer des privilèges à l'aide de la fonction [`.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **invité** (la fonction [`.isGuest()`](API/SessionClass.md#isguest) retourne true).
-
+You assign privileges using the [`.setPrivileges()`](API/SessionClass.md#setprivileges) function. Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). By default, new sessions do not have any privilege: they are **Guest** sessions ([`.isGuest()`](API/SessionClass.md#isguest) function returns true).
 
 Voici un exemple :
 
@@ -163,6 +187,7 @@ If ($sales#Null)
         Use (Session.storage)
             If (Session.storage.myTop3=Null)
                 $userTop3:=$sales.customers.orderBy("totalPurchase desc").slice(0; 3)
+
                 Session.storage.myTop3:=$userTop3
             End if
         End use
