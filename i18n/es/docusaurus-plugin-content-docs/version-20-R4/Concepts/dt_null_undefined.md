@@ -88,14 +88,14 @@ Cuando se esperan expresiones de un tipo dado en su código 4D, puede asegurarse
 
 ## Operadores Null
 
-| Operación   | Sintaxis                | Devuelve | Expression                     | Valor |
-| ----------- | ----------------------- | -------- | ------------------------------ | ----- |
+| Operación   | Sintaxis                | Devuelve | Expression                                                     | Valor |
+| ----------- | ----------------------- | -------- | -------------------------------------------------------------- | ----- |
 | Igual       | Null `=` Null           | Boolean  | a.nullProp `=` b.nullProp      | True  |
 |             | Null `=` Undefined      | Boolean  | a.nullProp `=` b.undefinedProp | True  |
-|             | Null `=` _scalar value_ | Boolean  | a.nullProp `=` 42              | False |
+|             | Null `=` _scalar value_ | Boolean  | a.nullProp `=` 42                              | False |
 | Desigualdad | Null `#` Null           | Boolean  | a.nullProp `#` b.nullProp      | False |
 |             | Null `#` Undefined      | Boolean  | a.nullProp `#` b.undefinedProp | False |
-|             | Null `#` _scalar value_ | Boolean  | a.nullProp `#` 42              | True  |
+|             | Null `#` _scalar value_ | Boolean  | a.nullProp `#` 42                              | True  |
 
 Los _valores escalares_ son valores de tipo cadena, Fecha, Hora, Booleano, número o Blob. Cuando se declaran, su [valor por defecto](data-types.md#default-values) no es ni indefinido ni null. Otros tipos (Puntero, Imagen, Objeto, Colección) tienen un valor por defecto indefinido o null. Ej:
 
@@ -115,18 +115,18 @@ Las comparaciones con los operadores Mayor que (`>`), Menor que (`<`), Greater t
 
 ## Operadores indefinidos
 
-| Operación         | Sintaxis                                           | Devuelve | Expression                          | Valor |
-| ----------------- | -------------------------------------------------- | -------- | ----------------------------------- | ----- |
+| Operación         | Sintaxis                                           | Devuelve | Expression                                                          | Valor |
+| ----------------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------- | ----- |
 | Igual             | Undefined `=` Undefined                            | Boolean  | a.undefinedProp `=` b.undefinedProp | True  |
 |                   | Undefined `=` Null                                 | Boolean  | a.undefinedProp `=` c.nullProp      | True  |
-|                   | Undefined `=` _otros valores_                      | Boolean  | a.undefinedProp `=` 42              | False |
+|                   | Undefined `=` _otros valores_                      | Boolean  | a.undefinedProp `=` 42                              | False |
 | Desigualdad       | Undefined `#` Undefined                            | Boolean  | a.undefinedProp `#` b.undefinedProp | False |
 |                   | Undefined `#` Null                                 | Boolean  | a.undefinedProp `#` b.nullProp      | False |
-|                   | Undefined `#` _otros valores_                      | Boolean  | a.undefinedProp `#` 42              | True  |
-| Mayor que         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"           | False |
-| Menor que         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"           | False |
-| Mayor o igual que | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"          | False |
-| Menor o igual que | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"          | False |
+|                   | Undefined `#` _otros valores_                      | Boolean  | a.undefinedProp `#` 42                              | True  |
+| Mayor que         | Undefined `>` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `>` "abc"                           | False |
+| Menor que         | Undefined `<` string, Date, Time, Boolean, number  | Boolean  | a.undefinedProp `<` "abc"                           | False |
+| Mayor o igual que | Undefined `>=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `>=` "abc"                          | False |
+| Menor o igual que | Undefined `<=` string, Date, Time, Boolean, number | Boolean  | a.undefinedProp `<=` "abc"                          | False |
 
 _otros valores_ son expresiones de todo tipo con un valor ni Undefined ni Null.
 
