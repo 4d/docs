@@ -109,10 +109,10 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 <details><summary>履歴</summary>
 
-| Release | 内容                            |
-| ------- | ----------------------------- |
-| 17 R6   | 名称変更 (New formula -> Formula) |
-| 17 R3   | 追加                            |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 17 R6 | 名称変更 (New formula -> Formula) |
+| 17 R3 | 追加                            |
 
 </details>
 
@@ -246,11 +246,11 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 <details><summary>履歴</summary>
 
-| Release | 内容                                                    |
-| ------- | ----------------------------------------------------- |
-| 20 R3   | *context* パラメーターをサポート                                 |
-| 17 R6   | 名称変更 (New formula from string -> Formula from string) |
-| 17 R3   | 追加                                                    |
+| リリース  | 内容                                                    |
+| ----- | ----------------------------------------------------- |
+| 20 R3 | *context* パラメーターをサポート                                 |
+| 17 R6 | 名称変更 (New formula from string -> Formula from string) |
+| 17 R3 | 追加                                                    |
 
 </details>
 
@@ -313,9 +313,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R3   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R3 | 追加 |
 
 </details>
 
@@ -376,9 +376,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 17 R3   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 17 R3 | 追加 |
 
 </details>
 
@@ -429,9 +429,9 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 <details><summary>履歴</summary>
 
-| Release | 内容 |
-| ------- | -- |
-| 18 R2   | 追加 |
+| リリース  | 内容 |
+| ----- | -- |
+| 18 R2 | 追加 |
 
 </details>
 
