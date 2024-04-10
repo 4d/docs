@@ -42,13 +42,13 @@ Todas las fórmulas tienen operandos y operadores:
 
 4D View Pro soporta cinco tipos de datos. Para cada tipo de datos, se soportan valores literales y de operadores específicos.
 
-| Tipos de datos                    | Valores                             | Operadores                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Tipos de datos                    | Valores                                                                                             | Operadores                                                                                                                                                                                                                                                                                                                                 |
+| --------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (suma)<br/>- (resta)<br/>\* (multiplicación)<br/>/ (división)<br/>^ (exponente, el número de veces que hay que multiplicar un número por sí mismo)<br/>% (porcentaje -- dividir el número antes del operador por cien) |
-| [Fecha](Concepts/dt_date.md)      | 10/24/2017                          | * (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre ambas)                                                                                   |
-| [Hora](Concepts/dt_time.md)       | 10:12:10                            | Operadores de duración:<br/>+ (suma)<br/>- (resta)<br/>\* (duración \* número -> duración)<br/>/ (duración / número -> duración)                                                                                                                               |
-| [String](Concepts/dt_string.md)   | 'Sophie' o "Sophie"                 | & (concatenación)                                                                                                                                                                                                                                                                                                       |
-| [Boolean](Concepts/dt_boolean.md) | TRUE o FALSE                        | -                                                                                                                                                                                                                                                                                                                                          |
+| [Fecha](Concepts/dt_date.md)      | 10/24/2017                                                                                          | * (fecha + número de días -> fecha)<br/>+ (fecha + hora -> fecha + hora del día)<br/>- (fecha - número de días -> fecha)<br/>- (fecha - fecha -> número de días entre ambas)                                                                                   |
+| [Hora](Concepts/dt_time.md)       | 10:12:10                                                            | Operadores de duración:<br/>+ (suma)<br/>- (resta)<br/>\* (duración \* número -> duración)<br/>/ (duración / número -> duración)                                                                                                               |
+| [String](Concepts/dt_string.md)   | 'Sophie' o "Sophie"                                                                                 | & (concatenación)                                                                                                                                                                                                                                                                                   |
+| [Boolean](Concepts/dt_boolean.md) | TRUE o FALSE                                                                                        | -                                                                                                                                                                                                                                                                                                                                          |
 
 ### Operadores de comparación
 
@@ -76,7 +76,7 @@ Lista de los operadores de la mas a menos importante:
 | ^                           | Exponente                                    |
 | - y /                       | Multiplicar y dividar                        |
 | * y -                       | Añadir y restar                              |
-| &                           | Concatenar                                   |
+| &       | Concatenar                                   |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparar                                     |
 
 ## Referencias de celdas
@@ -105,13 +105,13 @@ Una forma cómoda, rápida y precisa de especificar una referencia absoluta es n
 
 La siguiente tabla muestra el efecto de las diferentes notaciones:
 
-| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                                     |
-| ------------------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5                 | Relativo           | La referencia es a la ubicación relativa de la celda C5, dependiendo de la ubicación de la celda en la que se utiliza la referencia por primera vez             |
-| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                                     |
-| $C5                | Mixed              | La referencia es siempre a la columna C, pero la referencia de línea es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez. |
-| C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez |
-| Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](method-list.md#vp-add-range-name) sin importar donde se use la referencia.         |
+| Ejemplo            | Tipo de referencia | Descripción                                                                                                                                                                             |
+| ------------------ | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5                 | Relativo           | La referencia es a la ubicación relativa de la celda C5, dependiendo de la ubicación de la celda en la que se utiliza la referencia por primera vez                                     |
+| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                             |
+| $C5                | Mixed              | La referencia es siempre a la columna C, pero la referencia de línea es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez.         |
+| C$5                | Mixed              | La referencia es siempre la línea 5, pero la referencia de la columna es relativa a la ubicación de la celda en la que se utiliza la referencia por primera vez                         |
+| Nombre de la celda | Absoluto           | La referencia es absoluta. Siempre se referirá a la [celda o rango nombrado](method-list.md#vp-add-range-name) sin importar donde se use la referencia. |
 
 ## Funciones integradas
 
@@ -345,7 +345,7 @@ Queremos imprimir el nombre de una persona en una celda del área 4D View Pro ut
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
 
-> La tabla [Employee] debe tener un registro actual.
+> La tabla \[Employee] debe tener un registro actual.
 
 ### Declarar los métodos autorizados
 
