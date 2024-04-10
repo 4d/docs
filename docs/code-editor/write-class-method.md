@@ -395,14 +395,14 @@ If the characters typed correspond to different types of objects, the list displ
 - Table names
 - Field names
 - Constants
-- Local, process or interprocess variable, declared in the method
+- Variables declared in the method
 - Object property names
 - Plug-in commands
 - 4D keywords
 - SQL keywords
 - Macros (displayed between < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes**, **tables** and/or **prototypes**. These options are found in **Preferences** > **Methods** > **Options**
 
 #### Object property names
 
