@@ -24,10 +24,10 @@ In _rangeObj_, pass a range of the cell(s) (created for example with [`VP Cell`]
 
 The parameter _valueObj_ is an object that includes properties for the value and the [format](../configuring.md#cell-format) to assign to _rangeObj_. Pode incluir as seguintes propriedades:
 
-| Propriedade | Tipo                                     | Descrição                                                                                                                                                               |
-| ----------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Propriedade | Tipo                                     | Descrição                                                                                                                                                                                               |
+| ----------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | value       | Integer, Real, Boolean, Text, Date, Null | Value to assign to _rangeObj_ (except- time). Passar null para apagar o conteúdo da célula.                                                          |
-| time        | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                      |
+| time        | Real                                     | Time value (in seconds) to assign to _rangeObj_                                                                                                                                      |
 | format      | Text                                     | Padrão para propriedade valor/tempo. For information on patterns and formatting characters, please refer to the [Cell Format](../configuring.md#cell-format) paragraph. |
 
 #### Exemplo
