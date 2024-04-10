@@ -18,7 +18,7 @@ Some basic symbols, operators, and keywords differ in QodlyScript and must be ad
 | QodlyScript | 4D Language                                                 | Commentaire             |
 | ----------- | ----------------------------------------------------------- | ----------------------- |
 | ,           | ;                                                           | argument separator      |
-| =           | :=                                                          | opérateur d'assignation |
+| =           | :=                                          | opérateur d'assignation |
 | ==          | =                                                           | comparison operator     |
 | declare     | #Declare                                                    |                         |
 | switch      | Case of                                                     |                         |
