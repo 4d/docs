@@ -141,7 +141,7 @@ There is no direct compatibility between apps implemented with 4D and apps imple
 | Programming language                                                            | 4D Language featuring ORDA                                                                                     | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) featuring ORDA |
 | Coding IDE                                                                      | 4D IDE code editor/VS Code with [4D extension](https://github.com/4d/4D-Analyzer-VSCode)(2) | Qodly Studio code editor                                                            |
 | Débogueur                                                                       | 4D IDE debugger                                                                                                | Qodly Studio debugger                                                               |
-| REST/Web roles and privileges                                                   | roles.json direct edit/Qodly Studio roles and privileges editor                                                | Qodly Studio role and privileges editor                                             |
+| REST/Web roles and privileges                                                   | roles.json direct edit/Qodly Studio roles and privileges editor                                | Qodly Studio role and privileges editor                                             |
 
 (1) If you click on the **Model** button in Qodly Studio, nothing happens.
 (2) When you open some 4D code in Qodly Studio, syntax coloring is not available and a "Lsp not loaded" warning is displayed.
