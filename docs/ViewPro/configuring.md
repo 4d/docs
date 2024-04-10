@@ -451,7 +451,7 @@ Example:
 |Property|| Type| Description| Possible values|
 |---|---|---|---|---|
 |font|  |text| Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes.| A CSS font shorthand. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](commands/vp-font-to-object.md) and [`VP Object to font`](commands/vp-object-to-font.md)|
-|formatter|  |text|Pattern for value/time property.|Number/text/date/time formats, special characters. See [Cell Format](#cell-format.md).|
+|formatter|  |text|Pattern for value/time property.|Number/text/date/time formats, special characters. See [Cell Format](#cell-format).|
 |isVerticalText|  |boolean|Specifies text direction.|True = vertical text, False = horizontal text.|
 |labelOptions|  |object| Defines cell label options (watermark options).| |
 ||alignment| longint|Specifies the position of the cell label. Optional property.|`vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`|

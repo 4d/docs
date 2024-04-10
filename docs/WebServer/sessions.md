@@ -86,7 +86,7 @@ A scalable web session is closed when:
 
 The lifespan of an inactive cookie is 60 minutes by default, which means that the web server will automatically close inactive sessions after 60 minutes. 
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DatastoreClass.md#open-datastore) command. 
+This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command. 
 
 When a web session is closed, if the [`Session`](API/SessionClass.md#session) command is called afterwards:
 
