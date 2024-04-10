@@ -15,7 +15,7 @@ La página Compatibilidad agrupa los parámetros relacionados con el mantenimien
 
   - el caracter inicial "/" no es sólo el nodo raíz - la utilización del caracter / como primer caracter en una expresión XPath no declara una ruta absoluta desde el nodo raíz
   - no hay nodo actual implícito - el nodo actual debe incluirse en la expresión XPath
-  - no hay búsquedas recursivas en las estructuras repetidas: sólo se analiza el primer elemento. \\
+  - no hay búsquedas recursivas en las estructuras repetidas: sólo se analiza el primer elemento. \
 
   Aunque no es estándar, es posible que desee seguir utilizando estas funcionalidades para que su código siga funcionando como antes -- en este caso, basta con establecer la opción _desmarcarcada_. Por otra parte, si su código no se basa en la implementación no estándar y si desea beneficiarse de las funcionalidades extendidas de XPath en sus bases de datos (como se describe en el comando [`DOM Find XML element`](https://doc.4d.com/4dv20/help/command/en/page864.html)), asegúrese de que la opción \*_Utilizar XPath estándar_ esté _marcada_.
 
