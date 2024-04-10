@@ -41,7 +41,7 @@ _テンプレート_ ソースの解析は、2つのコンテキストでおこ�
 
 - `PROCESS 4D TAGS` コマンド使用時: このコマンドは _テンプレート_ に加えて任意の引数を受け入れ、処理の結果であるテキストを返します。
 
-- 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: http\://www\.server.com/dir/page.shtm)。
+- 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: http://www.server.com/dir/page.shtm)。
 
 ### 再起的処理
 
