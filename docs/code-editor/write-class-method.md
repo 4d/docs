@@ -38,6 +38,7 @@ This is where you write and edit your code. The editor automatically indents cod
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
 | Option | Description | Set in... |
+
 |---|---|---|
 |**font** and **font size**| Sets the character font and size to be used in the editing area| **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**
 |**style and color of syntax elements**| assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on).| Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md)|
@@ -293,7 +294,7 @@ The backslash character (`\`) has a specific support in the 4D language:
 
 :::caution
 
-The backslash character (`\`) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash `\\`. For instance, `C:\MyDocuments` will become `C:\\MyDocuments`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash `\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+The backslash character (```\```) is used as a separator in [pathnames under Windows](../Concepts/paths.md#windows). In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash ```\``` with a double backslash ```\\```. For instance, ```C:\MyDocuments``` will become ```C:\\MyDocuments```. However, if you write ```"C:\MyDocuments\New"```, 4D will display ```"C:\\MyDocuments\New"```. In this case, the second backslash is interpreted incorrectly as ```\N``` (an existing [escape sequence](../Concepts/quick-tour.md#escape-sequences)). You must therefore enter a double backslash ```\\``` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 :::
 
