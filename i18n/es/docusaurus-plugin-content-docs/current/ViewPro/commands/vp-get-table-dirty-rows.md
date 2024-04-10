@@ -17,13 +17,13 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Parámetros | Tipo       |    | Descripción                                                                                          |                  |
-| ---------- | ---------- | -- | ---------------------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                                                         |                  |
-| tableName  | Text       | -> | Nombre de la tabla                                                                                   |                  |
+| Parámetros | Tipo       |    | Descripción                                                                                                          |                  |
+| ---------- | ---------- | -- | -------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                                                                         |                  |
+| tableName  | Text       | -> | Nombre de la tabla                                                                                                   |                  |
 | reset      | Boolean    | -> | True para borrar el estado sucio de la tabla actual, False para mantenerlo intacto. Por defecto=True |                  |
-| sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                       |                  |
-| Result     | Collection | <- | Collection of objects with all the items modified since the last reset                               | <!-- END REF --> |
+| sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                                       |                  |
+| Result     | Collection | <- | Collection of objects with all the items modified since the last reset                                               | <!-- END REF --> |
 
 #### Descripción
 
