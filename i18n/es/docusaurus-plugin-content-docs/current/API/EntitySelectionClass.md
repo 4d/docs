@@ -76,9 +76,9 @@ Si la tabla *dsTable* no está expuesto en [`ds`](API/DataStoreClass.md#ds), se 
 
 En el parámetro opcional *settings*, puede pasar un objeto que contenga la siguiente propiedad:
 
-| Propiedad | Tipo | Descripción                                                                                                                              |
-| --------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| context   | Text | Etiqueta para el [contexto de optimización](../ORDA/remoteDatastores.md#clientserver-optimization) aplicado a la selección de entidades. |
+| Propiedad | Tipo | Descripción                                                                                                              |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------------ |
+| context   | Text | Etiqueta para el [contexto de optimización](../ORDA/client-server-optimization.md) aplicado a la selección de entidades. |
 
 
 #### Ejemplo
@@ -894,6 +894,7 @@ Si se encuentra una entidad bloqueada durante la ejecución de `.drop()`, no se 
 #### Ejemplo
 
 Ejemplo sin la opción `dk stop dropping on first error`:
+
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
@@ -1715,7 +1716,7 @@ Si pasa una ruta de atributo inválida en *pathString* o *pathObject*, la funci�
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // ordenar por colección con o sin órdenes de clasificación
+   // ordenar por colección con o sin órdenes de clasificación
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
