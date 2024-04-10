@@ -17,13 +17,13 @@ title: VP Get table dirty rows
 
 <!-- REF #_method_.VP Get table dirty rows.Params -->
 
-| Paramètres | Type       |    | Description                                                                                     |                  |
-| ---------- | ---------- | -- | ----------------------------------------------------------------------------------------------- | ---------------- |
-| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                                         |                  |
-| tableName  | Text       | -> | Nom de table                                                                                    |                  |
+| Paramètres | Type       |    | Description                                                                                                     |                  |
+| ---------- | ---------- | -- | --------------------------------------------------------------------------------------------------------------- | ---------------- |
+| vpAreaName | Text       | -> | Nom d'objet formulaire zone 4D View Pro                                                                         |                  |
+| tableName  | Text       | -> | Nom de table                                                                                                    |                  |
 | reset      | Boolean    | -> | True to clear the dirty status from the current table, False to keep it untouched. Default=True |                  |
-| sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)                     |                  |
-| Résultat   | Collection | <- | Collection of objects with all the items modified since the last reset                          | <!-- END REF --> |
+| sheet      | Integer    | -> | Numéro d'indice de la feuille (feuille courante si omis)                                     |                  |
+| Résultat   | Collection | <- | Collection of objects with all the items modified since the last reset                                          | <!-- END REF --> |
 
 #### Description
 
