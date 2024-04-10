@@ -33,14 +33,14 @@ En _vpAreaName_, pase el nombre del área 4D View Pro.
 
 En el parámetro _attributes_, pase un objeto que contenga las propiedades a definir:
 
-| Propiedad           | Tipo    | Descripción                                                                                                                                                                                |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dataField           | text    | Nombre de la propiedad de la columna de la tabla en el contexto de datos.                                                                                                                  |
-| name                | text    | Nombre de la columna de la tabla. Debe ser único en la tabla. Si este nombre ya es utilizado por otra columna, no se aplica y se utiliza automáticamente un nombre por defecto.            |
-| formula             | text    | Define la fórmula para cada celda de la columna. Ver [Structured Reference Formulas en la documentación SpreadJS](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | text    | Valor del pie de columna.                                                                                                                                                                  |
-| footerFormula       | text    | Fórmula del pie de columna.                                                                                                                                                                |
-| filterButtonVisible | boolean | Define si se muestra el botón de filtro de la columna de la tabla (por defecto es `True` cuando se crea la tabla).                                                      |
+| Propiedad           | Tipo    | Descripción                                                                                                                                                                                                                     |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | Nombre de la propiedad de la columna de la tabla en el contexto de datos.                                                                                                                                       |
+| name                | text    | Nombre de la columna de la tabla. Debe ser único en la tabla. Si este nombre ya es utilizado por otra columna, no se aplica y se utiliza automáticamente un nombre por defecto. |
+| formula             | text    | Define la fórmula para cada celda de la columna. Ver [Structured Reference Formulas en la documentación SpreadJS](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)                      |
+| footerText          | text    | Valor del pie de columna.                                                                                                                                                                                       |
+| footerFormula       | text    | Fórmula del pie de columna.                                                                                                                                                                                     |
+| filterButtonVisible | boolean | Define si se muestra el botón de filtro de la columna de la tabla (por defecto es `True` cuando se crea la tabla).                                                                           |
 
 En _sheet_, pase el índice de la hoja objetivo. Si no se especifica ningún índice o si pasa -1, el comando se aplica a la hoja actual.
 
