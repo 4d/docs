@@ -63,23 +63,23 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType                     | Contenu                                                   |
-| --------------------------- | --------------------------------------------------------- |
-| `Text`                      | Valeur texte                                              |
-| `Date`                      | Valeur date                                               |
-| `Time`                      | Valeur Heure                                              |
-| `Boolean`                   | Valeur booléen                                            |
-| `Integer`                   | Valeur entier long                                        |
-| `Real`                      | Valeur réel                                               |
-| `Pointer`                   | Valeur pointeur                                           |
-| `Picture`                   | Valeur image                                              |
-| `Blob`                      | Valeur Blob scalaire                                      |
-| `Collection`                | Valeur collection                                         |
-| `Variant`                   | Valeur variant                                            |
+| varType                     | Contenu                                                                   |
+| --------------------------- | ------------------------------------------------------------------------- |
+| `Text`                      | Valeur texte                                                              |
+| `Date`                      | Valeur date                                                               |
+| `Time`                      | Valeur Heure                                                              |
+| `Boolean`                   | Valeur booléen                                                            |
+| `Integer`                   | Valeur entier long                                                        |
+| `Real`                      | Valeur réel                                                               |
+| `Pointer`                   | Valeur pointeur                                                           |
+| `Picture`                   | Valeur image                                                              |
+| `Blob`                      | Valeur Blob scalaire                                                      |
+| `Collection`                | Valeur collection                                                         |
+| `Variant`                   | Valeur variant                                                            |
 | `Object`                    | Objet de classe par défaut (4D.Object) |
-| `4D.<className>`            | Object de la classe 4D className                          |
-| `cs.<className>`            | Object de la classe utilisateur className                 |
-| `cs.<namespace><className>` | Object of the `<namespace>` component class name          |
+| `4D.<className>`            | Object de la classe 4D className                                          |
+| `cs.<className>`            | Object de la classe utilisateur className                                 |
+| `cs.<namespace><className>` | Object of the `<namespace>` component class name                          |
 
 ### Exemples
 
