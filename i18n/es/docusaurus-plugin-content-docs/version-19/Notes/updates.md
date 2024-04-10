@@ -5,39 +5,39 @@ title: Notas del lanzamiento
 
 :::tip
 
-Lea [**Las novedades de 4D v19**](https://blog.4d.com/en-whats-new-in-4d-v19/), la entrada del blog que lista todas las nuevas funcionalidades y mejoras de 4D v19 LTS.
+Read [**What’s new in 4D 19**](https://blog.4d.com/en-whats-new-in-4d-v19/), the blog post that lists all new features and enhancements in 4D 19 LTS.
 
 :::
 
 :::advertencia Nota de Seguridad
 
-Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D v19.7 LTS build 288986 o superior. Para más información, consulte este [boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
+If your 4D applications use TLS connections, it is recommended that you upgrade to 4D 19.7 LTS build 288986 or higher. Para más información, consulte este [boletín de seguridad](https://blog.4d.com/security-bulletin-two-cves-and-how-to-stay-secure/).
 
 :::
 
 
-## 4D v19.7
+## 4D 19.7
 
 #### Lo más destacado
 
-- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.7): lista de todos los errores que se han corregido en 4D v19.7.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.7): list of all bugs that have been fixed in 4D 19.7.
 
 
-## 4D v19.6
-
-#### Destacados
-
-- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.6): lista de todos los errores que se han corregido en 4D v19.6.
-
-
-## 4D v19.5
+## 4D 19.6
 
 #### Destacados
 
-- 4D v19.5 está certificado en Windows 11 22H2
-- 4D v19.5 está certificado en macOS Ventura (macOS 13)
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.6): list of all bugs that have been fixed in 4D 19.6.
+
+
+## 4D 19.5
+
+#### Destacados
+
+- 4D 19.5 is certified on Windows 11 22H2
+- 4D 19.5 is certified on macOS Ventura (macOS 13)
 - La versión SpreadJS ha sido actualizada (14.1.6).
-- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=19.5): lista de todos los errores que se han corregido en 4D v19.5.
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=19.5): list of all bugs that have been fixed in 4D 19.5.
 
 
 ## Lanzamientos anteriores
