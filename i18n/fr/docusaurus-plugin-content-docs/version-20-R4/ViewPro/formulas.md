@@ -42,13 +42,13 @@ Toutes les formules ont des opérandes et des opérateurs :
 
 4D View Pro prend en charge cinq types de données. Pour chaque type de données, des valeurs littérales et des opérateurs spécifiques sont pris en charge.
 
-| Types de données                  | Valeurs                             | Opérateurs                                                                                                                                                                                                                                                                                                                                            |
-| --------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Types de données                  | Valeurs                                                                                             | Opérateurs                                                                                                                                                                                                                                                                                                                                            |
+| --------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | - (addition)<br/>- (soustraction)<br/>\* (multiplication)<br/>/ (division)<br/>^ (exposant, le nombre de fois qu'il faut multiplier un nombre par lui-même)<br/>% (pourcentage -- diviser par cent le nombre précédant l'opérateur) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                          | * (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                                                                   |
-| [Time](Concepts/dt_time.md)       | 10:12:10                            | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>\* (duration \* number -> duration)<br/>/ (duration / number -> duration)                                                                                                                                    |
-| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                | & (concatenation)                                                                                                                                                                                                                                                                                                                  |
-| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                       | -                                                                                                                                                                                                                                                                                                                                                     |
+| [Date](Concepts/dt_date.md)       | 10/24/2017                                                                                          | * (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                                                                   |
+| [Time](Concepts/dt_time.md)       | 10:12:10                                                            | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>\* (duration \* number -> duration)<br/>/ (duration / number -> duration)                                                                                                                    |
+| [String](Concepts/dt_string.md)   | 'Sophie' ou "Sophie"                                                                                | & (concatenation)                                                                                                                                                                                                                                                                                              |
+| [Boolean](Concepts/dt_boolean.md) | TRUE ou FALSE                                                                                       | -                                                                                                                                                                                                                                                                                                                                                     |
 
 ### Opérateurs de comparaison
 
@@ -76,7 +76,7 @@ Liste des opérateurs, du plus important au moins important :
 | ^                           | Exposant                                       |
 | - et /                      | Multiplier et diviser                          |
 | * et -                      | Ajouter et soustraire                          |
-| &                           | Concaténer                                     |
+| &       | Concaténer                                     |
 | `=`  `>` `<` `>=` `<=` `<>` | Comparer                                       |
 
 ## Références de cellules
@@ -105,13 +105,13 @@ Un moyen pratique, rapide et précis de spécifier une référence absolue consi
 
 Le tableau suivant montre l'effet des différentes notations :
 
-| Exemple        | Type de référence | Description                                                                                                                                                                          |
-| -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| C5             | Relative          | La référence concerne l'emplacement relatif de la cellule C5, en fonction de l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois               |
-| $C$5           | Absolue           | La référence est absolue. Elle fait toujours référence à la cellule C5, quel que soit l'endroit où elle est utilisée.                                                                |
+| Exemple        | Type de référence | Description                                                                                                                                                                                          |
+| -------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| C5             | Relative          | La référence concerne l'emplacement relatif de la cellule C5, en fonction de l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois                               |
+| $C$5           | Absolue           | La référence est absolue. Elle fait toujours référence à la cellule C5, quel que soit l'endroit où elle est utilisée.                                                |
 | $C5            | Mixed             | La référence est toujours faite à la colonne C, mais la référence de ligne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois. |
-| C$5            | Mixed             | La référence est toujours la ligne 5, mais la référence de la colonne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois       |
-| Nom de cellule | Absolue           | La référence est absolue. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used.                                    |
+| C$5            | Mixed             | La référence est toujours la ligne 5, mais la référence de la colonne est relative à l'emplacement de la cellule dans laquelle la référence est utilisée pour la première fois                       |
+| Nom de cellule | Absolue           | La référence est absolue. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used.                    |
 
 ## Fonctions intégrées
 
@@ -345,7 +345,7 @@ Nous souhaitons imprimer le nom d'une personne dans une cellule de la zone 4D Vi
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
 
-> La table [Employee] doit avoir un enregistrement en cours.
+> La table \[Employee] doit avoir un enregistrement en cours.
 
 ### Déclarer des méthodes autorisées
 
